@@ -1,521 +1,749 @@
 export const id = 131;
 export const ids = [131];
 export const modules = {
-  41462: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      ShaderPackCategory: () => aG
+  34641: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => QM
     });
-    var wG = ZG(51),
-      SG = ZG(1457),
-      LG = ZG(1393),
-      yG = ZG(1444),
-      kG = ZG(1151),
-      UG = ZG(80),
-      YG = ZG(17),
-      VG = ZG(1579),
-      pG = ZG(6608),
-      fG = ZG(318),
-      QG = ZG(6653),
-      KG = ZG(6645),
-      hG = ZG(6661),
-      dG = ZG(6559),
-      JG = ZG(5019),
-      rG = ZG(5046),
-      zG = ZG(6602),
-      EG = ZG(3444);
+    var OM = iM(2590);
+    const SM = ["recordings", "videoHeaders", "videoChunks", "videoSequences", "videoProgress", "telemetry", "dom", "domTail"];
 
-    function oG(GG, bG) {
-      const ZG = (0, QG.storedPackOutcome)(GG, bG);
-      return "none" !== ZG.kind || "noCompiler" === ZG.reason
-    }
-    var XG = ZG(1006),
-      uG = ZG.n(XG),
-      iG = ZG(5055),
-      CG = ZG(1016),
-      WG = ZG(6598),
-      mG = ZG(1067);
-    const IG = {
-      ready: "shaderPack:statusReady",
-      readyAfterReload: "shaderPack:statusReadyAfterReload",
-      noWebGpu: "shaderPack:statusNoWebGpu",
-      offNoWebGpu: "shaderPack:statusOffNoWebGpu",
-      failed: "shaderPack:statusFailed",
-      failedRecheck: "shaderPack:statusFailedRecheck",
-      wrongApiVersion: "shaderPack:statusWrongApiVersion",
-      checking: "shaderPack:statusChecking",
-      unchecked: "shaderPack:statusUnchecked",
-      noCompiler: "shaderPack:statusNoCompiler"
-    };
-
-    function FG(GG, bG) {
-      return "failedRecheck" === GG && bG.listing ? "shaderPack:statusFailedRecheckListed" : IG[GG]
-    }
-
-    function vG(GG) {
-      let {
-        stored: bG,
-        checking: ZG,
-        webGpuUsable: wG,
-        changePending: SG,
-        compiler: LG,
-        t: yG
-      } = GG;
-      const kG = function(GG, bG, ZG, wG, SG) {
-          const LG = (0, QG.storedPackOutcome)(GG, SG);
-          return "none" === LG.kind ? "noCompiler" === LG.reason ? bG ? "checking" : "noCompiler" : "otherApiVersion" === LG.reason ? "wrongApiVersion" : "failed" : (0, EG.e)() ? "harnessBuild" : "blocked" === LG.kind ? (0, QG.shaderPackNeedsCheck)(GG, SG) ? bG ? "checking" : !1 === ZG ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === ZG ? "offNoWebGpu" : wG ? "readyAfterReload" : "ready"
-        }(bG, ZG, wG, SG, LG),
-        UG = "failed" === kG || "failedRecheck" === kG,
-        YG = UG || "wrongApiVersion" === kG || "noCompiler" === kG,
-        VG = "ready" === kG || "readyAfterReload" === kG ? bG.validation.offInStrict : [];
-      return (0, mG.jsxs)(mG.Fragment, {
-        children: [(0, mG.jsxs)("div", {
-          className: uG()("ShaderPackStatus", {
-            Ready: "ready" === kG,
-            Failed: YG
-          }),
-          children: ["ready" === kG && (0, mG.jsx)(CG.c, {
-            name: "circle-check"
-          }), YG && (0, mG.jsx)(CG.c, {
-            name: "triangle-exclamation"
-          }), "harnessBuild" === kG ? (0, EG.c)() : yG(FG(kG, bG), {
-            packVersion: String(bG.manifest.apiVersion),
-            version: String(iG.e)
-          })]
-        }), UG && (0, mG.jsx)(WG.c, {
-          diagnostics: bG.validation.errors,
-          more: bG.validation.moreErrors,
-          t: yG
-        }), VG.length > 0 && (0, mG.jsxs)(mG.Fragment, {
-          children: [(0, mG.jsxs)("div", {
-            className: "ShaderPackStatus OffInStrict",
-            children: [(0, mG.jsx)(CG.c, {
-              name: "triangle-exclamation"
-            }), yG("shaderPack:offInStrict")]
-          }), (0, mG.jsx)(WG.c, {
-            diagnostics: VG,
-            t: yG
-          })]
-        })]
-      })
-    }
-
-    function aG(GG) {
-      let {
-        setApplySettingsCallback: bG
-      } = GG;
-      const {
-        t: ZG
-      } = (0, kG.w)(), [SG, yG] = (0, wG.useState)(null), [YG, VG] = (0, wG.useState)(null), [EG, XG] = (0, wG.useState)(null), [uG] = (0, wG.useState)(fG.k), [iG, CG] = (0, wG.useState)(!0), [WG, IG] = (0, wG.useState)(!1), {
-        loading: FG,
-        error: aG,
-        setError: lG,
-        onFiles: jG
-      } = (0, zG.g)((async GG => {
-        const bG = await (0, pG.loadPageShaderPackCompiler)();
-        if (!bG) return void lG(ZG("shaderPack:compilerUnavailable"));
-        VG(bG);
-        const wG = (0, QG.toStoredShaderPack)(GG, await (0, KG.g)(bG, GG.files));
-        await (0, QG.saveShaderPack)(wG, bG) ? (yG(wG), PG(SG, wG, bG)) : lG(ZG("shaderPack:saveFailed"))
-      }));
-
-      function PG(GG, ZG, wG) {
-        (function(GG, bG, ZG, wG) {
-          return ZG || oG(GG, wG) || oG(bG, wG)
-        })(GG, ZG, (0, QG.isShaderPackChangePending)(), wG) && ((0, QG.markShaderPackChangePending)(), bG((() => JG.g)))
-      }
-      return (0, wG.useEffect)((() => {
-        let GG = !1;
-        return async function() {
-          const bG = (0, UG.hasUsableWebGpuAdapter)(),
-            ZG = await (0, hG.e)();
-          if (GG) return;
-          yG(ZG), IG(!0), CG(!1);
-          const wG = null !== ZG ? (0, pG.loadPageShaderPackCompiler)() : null,
-            SG = await bG;
-          if (GG) return;
-          XG(SG);
-          const LG = await wG;
-          if (!GG && (VG(LG), null !== ZG && SG && null !== LG && (0, QG.shaderPackNeedsCheck)(ZG, LG))) {
-            const bG = await (0, KG.e)(ZG, LG);
-            GG || yG((GG => GG === ZG ? bG : GG))
-          }
-        }().catch((bG => {
-          console.error("Failed to load the stored shader pack", bG), GG || lG(ZG("shaderPack:unexpectedError"))
-        })).finally((() => {
-          GG || (CG(!1), IG(!1))
-        })), () => {
-          GG = !0
+    function jM(MM) {
+      return new Promise(((rM, iM) => {
+        MM.onsuccess = () => {
+          rM(MM.result)
+        }, MM.onerror = () => {
+          iM(MM.error)
         }
-      }), []), (0, mG.jsxs)("div", {
-        className: "ShaderPackCategory SettingsMenuRightInner",
-        children: [(0, mG.jsx)("div", {
-          className: "ShaderPackIntro",
-          children: ZG("shaderPack:intro")
-        }), (0, mG.jsx)(cG, {
-          to: dG.X,
-          className: "ShaderPackBrowseLink",
-          children: (0, mG.jsx)(LG.k, {
-            className: "ShaderPackBrowseButton",
-            children: ZG("shaderPackListing:browse")
+      }))
+    }
+
+    function aM(MM) {
+      return new Promise(((rM, iM) => {
+        MM.oncomplete = () => {
+          rM()
+        }, MM.onerror = () => {
+          iM(MM.error)
+        }, MM.onabort = () => {
+          var rM;
+          iM(null !== (rM = MM.error) && void 0 !== rM ? rM : new Error("IndexedDB transaction aborted"))
+        }
+      }))
+    }
+
+    function PM(MM) {
+      return IDBKeyRange.bound([MM], [MM, []])
+    }
+
+    function nM(MM, rM) {
+      return IDBKeyRange.bound([MM, rM], [MM, rM, []])
+    }
+    class QM {
+      constructor() {
+        this.db = null, this.opening = null, this.failed = !1, this.tailRecordings = new Set
+      }
+      static get supported() {
+        try {
+          return "undefined" !== typeof indexedDB
+        } catch {
+          return !1
+        }
+      }
+      putRecording(MM) {
+        this.write(["recordings"], (rM => {
+          rM.objectStore("recordings").put(MM)
+        }))
+      }
+      putVideoSequence(MM, rM, iM) {
+        this.write(["recordings", "videoSequences"], (OM => {
+          OM.objectStore("recordings").put(MM), OM.objectStore("videoSequences").put({
+            recordingId: MM.recordingId,
+            segmentId: rM,
+            sequence: iM
           })
-        }), !1 === EG && (0, mG.jsx)("div", {
-          className: "SettingsBoxWarning",
-          children: ZG(uG ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), null !== aG && (0, mG.jsxs)("div", {
-          className: "ShaderPackCategoryError",
-          children: [ZG("general:error"), ": ", aG]
-        }), SG && (0, mG.jsxs)("div", {
-          className: "SettingBox ShaderPackSummary",
-          children: [(0, mG.jsxs)("div", {
-            className: "ShaderPackSummaryHeader",
-            children: [(0, mG.jsxs)("div", {
-              children: [(0, mG.jsx)("div", {
-                className: "ShaderPackName",
-                children: SG.manifest.name
-              }), SG.manifest.author && (0, mG.jsx)("div", {
-                className: "ShaderPackAuthor",
-                children: (0, rG.h)(ZG, "shaderPack:byAuthor", {
-                  author: SG.manifest.author
-                })
-              }), SG.manifest.description && (0, mG.jsx)("div", {
-                className: "ShaderPackDescription",
-                children: SG.manifest.description
-              }), SG.listing && (0, mG.jsx)("div", {
-                className: "ShaderPackAuthor",
-                children: (0, mG.jsx)(cG, {
-                  to: (0, dG.bb)(SG.listing.packId),
-                  className: "ShaderPackListingLink",
-                  children: ZG("shaderPackListing:openPackPage")
-                })
-              })]
-            }), (0, mG.jsx)(LG.E, {
-              disabled: iG || FG,
-              onClick: async function() {
-                CG(!0), lG(null), await (0, QG.removeShaderPack)(), yG(null), CG(!1), PG(SG, null, YG)
-              },
-              children: ZG("shaderPack:removePack")
-            })]
-          }), (0, mG.jsx)(vG, {
-            stored: SG,
-            checking: WG,
-            webGpuUsable: EG,
-            changePending: (0, QG.isShaderPackChangePending)(),
-            compiler: YG,
-            t: ZG
-          })]
-        }), (0, mG.jsx)(zG.c, {
-          busy: iG || FG || WG,
-          disabled: iG || FG || WG || !0 !== EG,
-          onFiles: jG
-        })]
-      })
-    }
-
-    function cG(GG) {
-      let {
-        to: bG,
-        className: ZG,
-        children: wG
-      } = GG;
-      const {
-        gameState: LG
-      } = (0, YG.o)(["gameState"]), {
-        pathname: kG,
-        search: UG
-      } = (0, SG.n)(), pG = "landingPage" !== LG && "studio" !== LG;
-      return (0, mG.jsx)(yG.LinkPreserveSearch, {
-        to: bG,
-        className: ZG,
-        target: pG ? "_blank" : void 0,
-        onClick: () => {
-          pG || ((0, dG.N)(`${kG}${UG}`), (0, VG.h)())
-        },
-        children: wG
-      })
-    }
-  },
-  6559: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      D: () => KG,
-      G: () => JG,
-      K: () => mG,
-      N: () => VG,
-      R: () => FG,
-      S: () => hG,
-      V: () => AG,
-      W: () => PG,
-      X: () => yG,
-      Z: () => MG,
-      bb: () => UG,
-      c: () => rG,
-      eb: () => kG,
-      f: () => CG,
-      g: () => dG,
-      hb: () => lG,
-      jb: () => jG,
-      k: () => fG,
-      mb: () => zG,
-      n: () => pG,
-      q: () => vG,
-      qb: () => IG,
-      s: () => QG,
-      v: () => aG,
-      z: () => sG
-    });
-    var wG = ZG(6561),
-      SG = ZG(140),
-      LG = ZG(4575);
-    const yG = "/shader-packs",
-      kG = `${yG}/publish`;
-
-    function UG(GG) {
-      return `${yG}/${encodeURIComponent(GG)}`
-    }
-    let YG = null;
-
-    function VG(GG) {
-      YG = GG
-    }
-
-    function pG() {
-      return YG
-    }
-
-    function fG() {
-      YG = null
-    }
-
-    function QG(GG) {
-      return GG.playerHasRank("developer") || GG.playerHasRank("admin")
-    }
-    const KG = ["terrain", "water", "models", "sunShadows", "strict"],
-      hG = {
-        terrain: "shaderPackListing:filterTerrain",
-        water: "shaderPackListing:filterWater",
-        models: "shaderPackListing:filterModels",
-        sunShadows: "shaderPackListing:filterShadows",
-        strict: "shaderPackListing:filterAllGames"
-      };
-
-    function dG(GG, bG) {
-      return GG.withFeatures.includes(bG) ? "with" : GG.withoutFeatures.includes(bG) ? "without" : null
-    }
-
-    function JG(GG) {
-      return null === GG ? "with" : "with" === GG ? "without" : null
-    }
-
-    function rG(GG) {
-      return "with" === GG ? "only" : null === GG ? "include" : void 0
-    }
-
-    function zG(GG, bG) {
-      const ZG = dG(GG, bG),
-        wG = GG => GG.filter((GG => GG !== bG));
-      return {
-        withFeatures: null === ZG ? [...GG.withFeatures, bG] : wG(GG.withFeatures),
-        withoutFeatures: "with" === ZG ? [...GG.withoutFeatures, bG] : wG(GG.withoutFeatures)
+        }))
       }
-    }
-    const EG = "section",
-      oG = "sort",
-      XG = "filters",
-      uG = "q",
-      iG = "banned",
-      CG = "popular",
-      WG = "strict";
-
-    function mG(GG) {
-      var bG, ZG, SG;
-      const yG = GG.get(EG),
-        kG = (null !== (bG = GG.get(XG)) && void 0 !== bG ? bG : WG).split(","),
-        UG = GG.get(iG);
-      return {
-        section: "favourites" === yG || "mine" === yG ? yG : "explore",
-        sort: null !== (ZG = wG.z.find((bG => bG === GG.get(oG)))) && void 0 !== ZG ? ZG : CG,
-        withFeatures: KG.filter((GG => kG.includes(GG) && !kG.includes(`-${GG}`))),
-        withoutFeatures: KG.filter((GG => kG.includes(`-${GG}`))),
-        searchQuery: (null === (SG = GG.get(uG)) || void 0 === SG ? void 0 : SG.slice(0, wG.K)) || null,
-        pageNumber: (0, LG.d)(GG.get(LG.c)),
-        banned: "only" === UG ? "with" : "include" === UG ? null : "without"
+      appendVideo(MM, rM) {
+        this.write(["videoHeaders", "videoChunks"], (iM => {
+          iM.objectStore("videoHeaders").put(MM);
+          const OM = iM.objectStore("videoChunks");
+          for (const MM of rM) OM.put(MM)
+        }))
       }
-    }
-
-    function IG(GG, bG) {
-      var ZG;
-      const wG = cG(bG);
-      (0, LG.g)(GG, EG, "explore" === bG.section ? null : bG.section), (0, LG.g)(GG, oG, bG.sort === CG ? null : bG.sort), (0, LG.g)(GG, XG, wG === WG ? null : wG), (0, LG.g)(GG, uG, bG.searchQuery), (0, LG.g)(GG, iG, null !== (ZG = rG(bG.banned)) && void 0 !== ZG ? ZG : null), (0, LG.k)(GG, bG.pageNumber)
-    }
-
-    function FG(GG) {
-      const bG = new URLSearchParams;
-      return IG(bG, {
-        section: "explore",
-        sort: CG,
-        withFeatures: "strict" === GG ? [GG] : [GG, "strict"],
-        withoutFeatures: [],
-        searchQuery: null,
-        pageNumber: 1,
-        banned: "without"
-      }), `${yG}?${bG.toString()}`
-    }
-
-    function vG(GG) {
-      return cG(GG) === WG
-    }
-
-    function aG(GG) {
-      return null !== GG.searchQuery || "with" === GG.banned || cG(GG) !== WG
-    }
-
-    function cG(GG) {
-      return KG.flatMap((bG => {
-        const ZG = dG(GG, bG);
-        return "with" === ZG ? [bG] : "without" === ZG ? [`-${bG}`] : []
-      })).join(",")
-    }
-    const lG = {
-        popular: "shaderPackListing:sortPopular",
-        updated: "shaderPackListing:sortUpdated",
-        newest: "shaderPackListing:sortNewest"
-      },
-      jG = {
-        forest: "shaderPackListing:viewForest",
-        desert: "shaderPackListing:viewDesert",
-        water: "shaderPackListing:viewWater",
-        night: "shaderPackListing:viewNight",
-        cave: "shaderPackListing:viewCave"
-      };
-
-    function PG(GG) {
-      return Math.round(100 * Math.max(0, 1 - 1 / GG))
-    }
-
-    function MG(GG, bG, ZG, SG) {
-      const LG = [];
-      GG.isBanned && LG.push({
-        tone: "warning",
-        text: SG("shaderPackListing:ownerBanned"),
-        detail: null
-      });
-      const {
-        pending: yG
-      } = GG;
-      if (null === GG.brokenError || yG && !yG.error || LG.push({
-          tone: "warning",
-          text: SG("shaderPackListing:ownerBroken"),
-          detail: GG.brokenError
-        }), null !== yG && void 0 !== yG && yG.error) LG.push({
-        tone: "warning",
-        text: SG(bG ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, wG.l)(yG.error) ? null : yG.error
-      });
-      else if (yG) {
-        const GG = null === yG.renderNotBefore ? 0 : yG.renderNotBefore - ZG,
-          wG = String(Math.ceil(GG / 6e4)),
-          kG = SG(bG ? GG > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : GG > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: wG
-          });
-        LG.push({
-          tone: "info",
-          text: kG,
-          detail: null
-        })
+      putVideoProgress(MM, rM) {
+        this.write(["videoProgress", "videoChunks"], (iM => {
+          if (iM.objectStore("videoProgress").put(MM), rM > 0) {
+            const {
+              recordingId: OM,
+              segmentId: SM
+            } = MM;
+            iM.objectStore("videoChunks").delete(IDBKeyRange.bound([OM, SM, 0], [OM, SM, rM], !1, !0))
+          }
+        }))
       }
-      return GG.listed || LG.push({
-        tone: "info",
-        text: SG("shaderPackListing:ownerUnlisted"),
-        detail: null
-      }), LG
-    }
-
-    function AG(GG) {
-      return Math.max(1, Math.round(GG / 1024))
-    }
-
-    function sG(GG, bG, ZG) {
-      return GG instanceof SG.b && GG.errorMessageForUser ? GG.errorMessageForUser : bG(ZG)
-    }
-  },
-  6561: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      B: () => kG,
-      C: () => yG,
-      F: () => wG,
-      G: () => fG,
-      K: () => VG,
-      O: () => EG,
-      S: () => pG,
-      T: () => YG,
-      b: () => KG,
-      c: () => dG,
-      e: () => hG,
-      h: () => QG,
-      l: () => zG,
-      n: () => XG,
-      q: () => UG,
-      u: () => SG,
-      v: () => oG,
-      z: () => LG
-    });
-    const wG = ["forest", "desert", "water", "night", "cave"];
-    const SG = {
-        full: {
-          width: 3840,
-          height: 2160
-        },
-        large: {
-          width: 1920,
-          height: 1080
-        },
-        thumb: {
-          width: 640,
-          height: 360
+      removeVideoChunks(MM, rM) {
+        this.write(["videoChunks"], (iM => {
+          iM.objectStore("videoChunks").delete(nM(MM, rM))
+        }))
+      }
+      removeVideo(MM, rM) {
+        this.write(["videoHeaders", "videoChunks", "videoSequences", "videoProgress"], (iM => {
+          iM.objectStore("videoHeaders").delete([MM, rM]), iM.objectStore("videoChunks").delete(nM(MM, rM)), iM.objectStore("videoSequences").delete([MM, rM]), iM.objectStore("videoProgress").delete([MM, rM])
+        }))
+      }
+      putTelemetry(MM) {
+        this.write(["telemetry"], (rM => {
+          rM.objectStore("telemetry").put(MM)
+        }))
+      }
+      removeTelemetry(MM, rM) {
+        this.write(["telemetry"], (iM => {
+          iM.objectStore("telemetry").delete([MM, rM])
+        }))
+      }
+      putDom(MM) {
+        this.write(["dom"], (rM => {
+          rM.objectStore("dom").put(MM)
+        }))
+      }
+      queueDom(MM, rM, iM) {
+        this.write(["recordings", "dom", "domTail"], (OM => {
+          OM.objectStore("recordings").put(MM), OM.objectStore("dom").put(rM), OM.objectStore("domTail").delete(nM(rM.recordingId, iM))
+        }))
+      }
+      putDomTail(MM) {
+        this.tailRecordings.add(MM.recordingId), this.write(["domTail"], (rM => {
+          rM.objectStore("domTail").put(MM)
+        }))
+      }
+      removeDomTail(MM, rM) {
+        this.write(["domTail"], (iM => {
+          iM.objectStore("domTail").delete(nM(MM, rM))
+        }))
+      }
+      removeDom(MM, rM) {
+        this.write(["dom"], (iM => {
+          iM.objectStore("dom").delete([MM, rM])
+        }))
+      }
+      async listRecordings() {
+        const MM = await this.open();
+        return await jM(MM.transaction("recordings", "readonly").objectStore("recordings").getAll())
+      }
+      async read(MM) {
+        const rM = (await this.open()).transaction(["videoHeaders", "videoChunks", "videoSequences", "videoProgress", "telemetry", "dom", "domTail"], "readonly"),
+          iM = PM(MM.recordingId),
+          OM = MM => jM(rM.objectStore(MM).getAll(iM)),
+          [SM, aM, nM, QM, zM, LM, mM] = await Promise.all([OM("videoHeaders"), OM("videoChunks"), OM("videoSequences"), OM("videoProgress"), OM("telemetry"), OM("dom"), OM("domTail")]);
+        return {
+          recording: MM,
+          telemetry: zM,
+          dom: LM,
+          domTails: mM,
+          video: SM.map((MM => {
+            var rM, iM, OM;
+            return {
+              header: MM,
+              sequence: null !== (rM = null === (iM = nM.find((rM => rM.segmentId === MM.segmentId))) || void 0 === iM ? void 0 : iM.sequence) && void 0 !== rM ? rM : null,
+              progress: null !== (OM = QM.find((rM => rM.segmentId === MM.segmentId))) && void 0 !== OM ? OM : null,
+              chunks: aM.filter((rM => rM.segmentId === MM.segmentId))
+            }
+          }))
         }
+      }
+      async deleteRecording(MM) {
+        const rM = (await this.open()).transaction([...SM], "readwrite");
+        rM.objectStore("recordings").delete(MM);
+        for (const iM of SM.slice(1)) rM.objectStore(iM).delete(PM(MM));
+        await aM(rM)
+      }
+      async forgetSent(MM, rM) {
+        const iM = (await this.open()).transaction([...SM], "readwrite"),
+          {
+            recordingId: OM
+          } = MM;
+        iM.objectStore("recordings").put(MM);
+        for (const SM of rM.videoSegmentIds) iM.objectStore("videoHeaders").delete([OM, SM]), iM.objectStore("videoChunks").delete(nM(OM, SM)), iM.objectStore("videoSequences").delete([OM, SM]), iM.objectStore("videoProgress").delete([OM, SM]);
+        for (const SM of rM.telemetrySequences) iM.objectStore("telemetry").delete([OM, SM]);
+        for (const SM of rM.domSequences) iM.objectStore("dom").delete([OM, SM]);
+        for (const SM of rM.domTailChunks) iM.objectStore("domTail").delete(nM(OM, SM));
+        await aM(iM)
+      }
+      write(MM, rM) {
+        if (this.failed) return;
+        const iM = iM => {
+          try {
+            var OM;
+            const SM = iM.transaction(MM, "readwrite");
+            rM(SM), null === (OM = SM.commit) || void 0 === OM || OM.call(SM), aM(SM).catch((MM => {
+              this.fail(MM)
+            }))
+          } catch (SM) {
+            this.fail(SM)
+          }
+        };
+        null === this.db ? this.open().then(iM, (MM => {
+          this.fail(MM)
+        })) : iM(this.db)
+      }
+      fail(MM) {
+        this.failed || (this.failed = !0, console.warn("Session replay can't keep its upload journal; what a closing tab leaves unsent will be lost.", MM), this.dropTails())
+      }
+      dropTails() {
+        if (null === this.db || 0 === this.tailRecordings.size) return;
+        const MM = MM => {
+          console.warn("Session replay couldn't drop its page recording tails from its upload journal.", MM)
+        };
+        try {
+          const rM = this.db.transaction(["domTail"], "readwrite");
+          for (const MM of this.tailRecordings) rM.objectStore("domTail").delete(PM(MM));
+          aM(rM).catch(MM)
+        } catch (rM) {
+          MM(rM)
+        }
+      }
+      open() {
+        return this.opening ??= new Promise(((MM, rM) => {
+          const iM = indexedDB.open(OM.i, 4);
+          iM.onupgradeneeded = MM => {
+            const rM = iM.result;
+            MM.oldVersion < 1 && (rM.createObjectStore("recordings", {
+              keyPath: "recordingId"
+            }), rM.createObjectStore("videoHeaders", {
+              keyPath: ["recordingId", "segmentId"]
+            }), rM.createObjectStore("videoChunks", {
+              keyPath: ["recordingId", "segmentId", "index"]
+            }), rM.createObjectStore("videoSequences", {
+              keyPath: ["recordingId", "segmentId"]
+            }), rM.createObjectStore("telemetry", {
+              keyPath: ["recordingId", "sequence"]
+            })), MM.oldVersion < 2 && rM.createObjectStore("videoProgress", {
+              keyPath: ["recordingId", "segmentId"]
+            }), MM.oldVersion < 3 && rM.createObjectStore("dom", {
+              keyPath: ["recordingId", "sequence"]
+            }), rM.createObjectStore("domTail", {
+              keyPath: ["recordingId", "chunkIndex", "fromChar"]
+            })
+          };
+          let SM = !1;
+          iM.onblocked = () => {
+            SM = !0, rM(new Error("An older tab holds the upload journal at an earlier version"))
+          }, iM.onsuccess = () => {
+            SM ? iM.result.close() : (this.db = iM.result, this.db.onversionchange = () => {
+              var MM;
+              this.dropTails(), null === (MM = this.db) || void 0 === MM || MM.close(), this.db = null, this.opening = null
+            }, MM(iM.result))
+          }, iM.onerror = () => {
+            rM(iM.error)
+          }
+        })), this.opening
+      }
+    }
+  },
+  34788: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => nM,
+      i: () => jM,
+      l: () => PM
+    });
+    var OM = iM(34639);
+    const SM = new TextEncoder;
+
+    function jM(MM, rM) {
+      return new Blob([SM.encode(`${JSON.stringify(MM)}\n`), rM], {
+        type: "text/plain"
+      })
+    }
+    class aM {
+      constructor(MM, rM) {
+        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now;
+        this.token = MM, this.relay = rM, this.nowMs = iM, this.refused = !1, this.skipUntilMs = 0
+      }
+      async send(MM, rM, iM, SM, aM) {
+        if (this.goesDirect(rM, iM)) return null;
+        const PM = jM({
+            token: this.token,
+            contentType: iM,
+            target: MM
+          }, rM),
+          nM = {
+            method: "POST",
+            headers: {
+              "Content-Type": "text/plain"
+            },
+            body: PM,
+            signal: SM
+          };
+        let QM;
+        try {
+          const MM = rM.byteLength <= OM.e ? await OM.h.fetch(this.relay.url, nM, PM.size, iM) : await fetch(this.relay.url, nM);
+          if (!MM.ok) throw new Error(`HTTP ${MM.status}`);
+          if (QM = await MM.json(), "refused" !== QM.outcome && ("forwarded" !== QM.outcome || !Number.isInteger(QM.status))) throw new Error(`Unexpected relay answer ${JSON.stringify(QM)}`)
+        } catch (zM) {
+          if (!0 === (null === aM || void 0 === aM ? void 0 : aM.aborted)) throw zM;
+          return console.warn("Session replay couldn't relay an upload through the part joiner; uploading straight to storage.", zM), this.skipUntilMs = this.nowMs() + 12e4, null
+        }
+        return "refused" === QM.outcome ? (console.info(`Session replay's part joiner refused to relay (${QM.reason}); uploading straight to storage.`), this.refused = !0, null) : QM.status
+      }
+      beacon(MM, rM, iM, OM) {
+        if (this.goesDirect(rM, iM)) return null;
+        const SM = jM({
+          token: this.token,
+          contentType: iM,
+          target: MM
+        }, rM);
+        return OM.sendUploadBeacon(this.relay.url, SM, SM.size)
+      }
+      goesDirect(MM, rM) {
+        return this.refused || this.nowMs() < this.skipUntilMs || MM.byteLength > this.relay.maxBytes || "video/mp4" === rM
+      }
+    }
+
+    function PM(MM) {
+      return void 0 === (null === MM || void 0 === MM ? void 0 : MM.relay) ? null : new aM(MM.token, MM.relay)
+    }
+    class nM {
+      constructor() {
+        this.relays = new Map
+      }
+      for (MM) {
+        let rM = this.relays.get(MM.recordingId);
+        return void 0 === rM && (rM = PM(MM.partJoiner), this.relays.set(MM.recordingId, rM)), rM
+      }
+    }
+  },
+  34793: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => mM,
+      e: () => LM,
+      f: () => nM
+    });
+    var OM = iM(34639),
+      SM = iM(1215),
+      jM = iM(34799);
+    const aM = 1024;
+
+    function PM(MM) {
+      return 6e4 + Math.ceil(MM / 16384 * 1e3)
+    }
+
+    function nM(MM, rM, iM) {
+      const SM = new FormData;
+      let jM = rM.byteLength + aM;
+      for (const [aM, PM] of Object.entries(MM.fields)) SM.append(aM, PM), jM += (0, OM.k)(aM) + (0, OM.k)(PM);
+      return SM.append("file", new Blob([rM], {
+        type: iM
+      })), {
+        form: SM,
+        byteLength: jM
+      }
+    }
+
+    function QM(MM) {
+      if (MM < 200 || MM > 299) throw new jM.d(`Segment POST failed with ${MM}`, MM)
+    }
+
+    function zM(MM, rM) {
+      if ((MM < 200 || MM > 299) && (!rM || 412 !== MM)) throw new jM.d(`Segment PUT failed with ${MM}`, MM)
+    }
+    class LM {
+      constructor(MM) {
+        var rM;
+        let iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.segmentUploadUrl = MM, this.deadline = void 0, this.relay = void 0, this.deadline = iM.deadline, this.relay = null !== (rM = iM.relay) && void 0 !== rM ? rM : null
+      }
+      requestPutUrl(MM) {
+        return this.presign(MM)
+      }
+      requestPostTargets(MM) {
+        return this.presign(MM)
+      }
+      async presign(MM) {
+        const rM = await fetch(this.segmentUploadUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(MM),
+          signal: this.signal(6e4)
+        });
+        if (!rM.ok) throw new jM.d(`Segment presign failed with ${rM.status}`, rM.status);
+        return await rM.json()
+      }
+      async put(MM, rM, iM, SM) {
+        const jM = await this.sendThroughRelay({
+          method: "PUT",
+          url: MM,
+          ifNoneMatch: SM
+        }, rM, iM);
+        if (null !== jM) return void zM(jM, SM);
+        const aM = {
+          method: "PUT",
+          headers: {
+            "Content-Type": iM,
+            ...SM ? {
+              "If-None-Match": "*"
+            } : {}
+          },
+          body: rM,
+          signal: this.signal(PM(rM.byteLength))
+        };
+        zM((rM.byteLength <= OM.e ? await OM.h.fetch(MM, aM, rM.byteLength, iM) : await fetch(MM, aM)).status, SM)
+      }
+      async post(MM, rM, iM) {
+        const SM = await this.sendThroughRelay({
+          method: "POST",
+          url: MM.url,
+          fields: MM.fields
+        }, rM, iM);
+        if (null !== SM) return void QM(SM);
+        const {
+          form: jM,
+          byteLength: aM
+        } = nM(MM, rM, iM), zM = {
+          method: "POST",
+          body: jM,
+          signal: this.signal(PM(aM))
+        };
+        QM((aM <= OM.e ? await OM.h.fetch(MM.url, zM, aM, iM) : await fetch(MM.url, zM)).status)
+      }
+      async sendThroughRelay(MM, rM, iM) {
+        return null === this.relay ? null : await this.relay.send(MM, rM, iM, this.signal(PM(rM.byteLength)), this.deadline)
+      }
+      signal(MM) {
+        const rM = (0, SM.q)(MM);
+        return void 0 === this.deadline ? rM : (0, SM.m)([this.deadline, rM])
+      }
+    }
+    class mM {
+      async requestPutUrl(MM) {
+        return {
+          uploadUrl: "",
+          key: `dry-run/${MM.kind}/${MM.sequence}`
+        }
+      }
+      async requestPostTargets(MM) {
+        return {
+          targets: Array.from({
+            length: MM.parts.count
+          }, (() => ({
+            url: "",
+            fields: {}
+          }))),
+          expiresInSecs: 900
+        }
+      }
+      put() {
+        return Promise.resolve()
+      }
+      post() {
+        return Promise.resolve()
+      }
+    }
+  },
+  34647: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => SM
+    });
+    var OM = iM(34654);
+
+    function SM(MM) {
+      const rM = (new TextEncoder).encode(MM);
+      return {
+        bytes: (0, OM.e)(rM),
+        inflatedBytes: rM.byteLength
+      }
+    }
+  },
+  34785: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => jM
+    });
+    const OM = 20;
+    let SM = Date.now() - performance.now();
+
+    function jM() {
+      const MM = performance.now(),
+        rM = Date.now();
+      return Math.abs(rM - (MM + SM)) > OM && (SM = rM - MM), MM + SM
+    }
+  },
+  34631: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => jM
+    });
+    var OM = iM(5479),
+      SM = iM(1202);
+
+    function jM() {
+      return {
+        segmentUploadUrl: `${SM.clientSideServerUrls.indexUrl}${OM.w}`,
+        manifestUrl: `${SM.clientSideServerUrls.indexUrl}${OM.o}`
+      }
+    }
+  },
+  34639: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM,
+      h: () => jM,
+      k: () => SM
+    });
+    const OM = 32768;
+
+    function SM(MM) {
+      return (new TextEncoder).encode(MM).byteLength
+    }
+    const jM = new class {
+      constructor() {
+        this.inFlightBytes = 0, this.inFlightLabels = new Map
+      }
+      async fetch(MM, rM, iM, OM) {
+        if (this.inFlightBytes + iM > 49152) return await fetch(MM, rM);
+        this.inFlightBytes += iM, this.countLabel(OM, 1);
+        const SM = () => {
+          this.inFlightBytes -= iM, this.countLabel(OM, -1)
+        };
+        let jM;
+        try {
+          jM = await fetch(MM, {
+            ...rM,
+            keepalive: !0
+          })
+        } catch (PM) {
+          var aM;
+          if (SM(), null !== (aM = rM.signal) && void 0 !== aM && aM.aborted) throw PM;
+          return console.info("Session replay keepalive request failed; retrying without keepalive.", PM), await fetch(MM, rM)
+        }
+        return SM(), jM
+      }
+      isInFlight(MM) {
+        var rM;
+        return (null !== (rM = this.inFlightLabels.get(MM)) && void 0 !== rM ? rM : 0) > 0
+      }
+      sendBeacon(MM, rM) {
+        const iM = SM(rM);
+        return !(this.inFlightBytes + iM > 57344) && this.beaconSent(navigator.sendBeacon(MM, new Blob([rM], {
+          type: "text/plain"
+        })), iM)
+      }
+      sendUploadBeacon(MM, rM, iM) {
+        return !(this.inFlightBytes + iM > 40960) && this.beaconSent(navigator.sendBeacon(MM, rM), iM)
+      }
+      countLabel(MM, rM) {
+        var iM;
+        void 0 !== MM && this.inFlightLabels.set(MM, (null !== (iM = this.inFlightLabels.get(MM)) && void 0 !== iM ? iM : 0) + rM)
+      }
+      beaconSent(MM, rM) {
+        return MM && (this.inFlightBytes += rM, setTimeout((() => {
+          this.inFlightBytes -= rM
+        }), 1e4)), MM
+      }
+    }
+  },
+  34633: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => aM
+    });
+    var OM = iM(34639),
+      SM = iM(1215);
+    const jM = 6e4;
+    async function aM(MM, rM) {
+      const iM = JSON.stringify(rM);
+      try {
+        const rM = await OM.h.fetch(MM, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: iM,
+          signal: (0, SM.q)(jM)
+        }, (0, OM.k)(iM));
+        return await async function(MM) {
+          if (!MM.ok) return MM.status >= 400 && MM.status < 500 && 408 !== MM.status && 429 !== MM.status ? "refused" : "retryLater";
+          const rM = await MM.json();
+          return "rejected" in rM ? (console.warn(`Session replay manifest refused: ${rM.reason}`), rM.retryable ? "retryLater" : "refused") : "uploaded"
+        }(rM)
+      } catch (aM) {
+        return console.warn("Session replay manifest upload failed.", aM), "retryLater"
+      }
+    }
+  },
+  34670: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => PM,
+      d: () => nM
+    });
+    var OM = iM(34639);
+    const SM = 16384,
+      jM = 100,
+      aM = (0, OM.k)(',"domSegments":[]');
+
+    function PM(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : SM;
+      const {
+        domSegments: PM,
+        ...nM
+      } = MM.manifest, QM = () => ({
+        ...MM,
+        manifest: {
+          ...nM,
+          videoSegments: [],
+          telemetrySegments: [],
+          games: []
+        },
+        creatorGrants: []
+      }), zM = (0, OM.k)(JSON.stringify(QM())), LM = [];
+      let mM = {
+          request: QM(),
+          items: []
+        },
+        HM = zM;
+      const hM = (MM, rM) => {
+          var iM;
+          return "domSegments" === rM ? null !== (iM = MM.manifest.domSegments) && void 0 !== iM ? iM : [] : "creatorGrants" === rM ? MM.creatorGrants : MM.manifest[rM]
+        },
+        JM = (MM, rM, iM) => iM + (MM.length > 0 ? 1 : "domSegments" === rM.list ? aM : 0);
+      for (const SM of rM) {
+        const MM = (0, OM.k)(JSON.stringify(SM.value));
+        let rM = hM(mM.request, SM.list);
+        mM.items.length > 0 && (HM + JM(rM, SM, MM) > iM || rM.length >= jM) && (LM.push(mM), mM = {
+          request: QM(),
+          items: []
+        }, HM = zM, rM = hM(mM.request, SM.list)), HM += JM(rM, SM, MM), "domSegments" === SM.list && (mM.request.manifest.domSegments = rM), rM.push(SM.value), mM.items.push(SM)
+      }
+      return LM.push(mM), LM
+    }
+
+    function nM(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SM;
+      return PM(MM, function(MM) {
+        var rM;
+        return [...MM.creatorGrants.map((MM => ({
+          list: "creatorGrants",
+          value: MM
+        }))), ...MM.manifest.games.map((MM => ({
+          list: "games",
+          value: MM
+        }))), ...MM.manifest.videoSegments.map((MM => ({
+          list: "videoSegments",
+          value: MM
+        }))), ...MM.manifest.telemetrySegments.map((MM => ({
+          list: "telemetrySegments",
+          value: MM
+        }))), ...(null !== (rM = MM.manifest.domSegments) && void 0 !== rM ? rM : []).map((MM => ({
+          list: "domSegments",
+          value: MM
+        })))]
+      }(MM), rM).map((MM => {
+        let {
+          request: rM
+        } = MM;
+        return rM
+      }))
+    }
+  },
+  34799: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => OM
+    });
+    class OM extends Error {
+      constructor(MM, rM) {
+        super(MM), this.status = rM
+      }
+    }
+  },
+  5479: (MM, rM, iM) => {
+    iM.d(rM, {
+      A: () => LM,
+      E: () => HM,
+      G: () => zM,
+      J: () => aM,
+      c: () => jM,
+      g: () => lM,
+      h: () => EM,
+      j: () => dM,
+      l: () => JM,
+      o: () => nM,
+      r: () => yM,
+      s: () => QM,
+      v: () => hM,
+      w: () => PM,
+      x: () => mM
+    });
+    const OM = {
+        maxFps: 30,
+        bitrate: 178e4,
+        minBitrate: 5e5,
+        maxMacroblocks: 3600,
+        keyframeIntervalMs: 2e3,
+        segmentDurationMs: 3e4,
+        manifestIntervalMs: 3e4,
+        partDurationMs: 4e3,
+        captureBudgetMsPerSecond: 20,
+        captureFrameCostFloorMs: .6,
+        softwareEncoderOnWindows: !0
       },
-      LG = ["popular", "updated", "newest"],
-      yG = 3,
-      kG = 32,
-      UG = 300;
+      SM = {
+        ...OM,
+        maxFps: 15,
+        bitrate: 5e5,
+        maxMacroblocks: 2040,
+        softwareEncoderOnWindows: !1
+      },
+      jM = {
+        desktop: OM,
+        mobile: SM,
+        tablet: SM
+      };
 
-    function YG(GG, bG) {
-      return GG.slice(0, bG).replace(/[\uD800-\uDBFF]$/, "")
+    function aM(MM, rM) {
+      return {
+        ...jM[rM],
+        ...MM
+      }
     }
-    const VG = 64,
-      pG = 512,
-      fG = 18e5;
+    const PM = "/index/replay/segment-upload-url",
+      nM = "/index/replay/manifest",
+      QM = 65536;
 
-    function QG(GG) {
-      const bG = GG,
-        ZG = null === bG || void 0 === bG ? void 0 : bG.files;
-      return "number" === typeof(null === bG || void 0 === bG ? void 0 : bG.apiVersion) && "string" === typeof bG.name && (null === bG.author || "string" === typeof bG.author) && (void 0 === bG.keepCircleShadows || "boolean" === typeof bG.keepCircleShadows) && "object" === typeof ZG && null !== ZG && Object.values(ZG).every((GG => "string" === typeof GG))
+    function zM(MM) {
+      return {
+        count: Math.ceil(MM.segmentDurationMs / MM.partDurationMs) + 1,
+        maxBytes: Math.ceil(1.5 * MM.bitrate / 8 * (MM.partDurationMs / 1e3)) + 32768
+      }
     }
-    const KG = "Bloxdhub",
-      hG = "https://bloxdhub.com/shaders";
-
-    function dG(GG) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(GG)}`
-    }
-    const JG = "Screenshot generation failed.",
-      rG = "Its screenshots couldn't be generated:";
-
-    function zG(GG) {
-      var bG;
-      return GG === JG || null !== (bG = null === GG || void 0 === GG ? void 0 : GG.startsWith(rG)) && void 0 !== bG && bG
-    }
-
-    function EG(GG, bG) {
-      return `shaderPacks/${GG}/${bG}.json`
-    }
-
-    function oG(GG, bG, ZG, wG) {
-      return null === bG.renderId ? XG(GG, bG.baselineVersion, ZG, wG) : `${GG}/${function(GG,bG,ZG,wG){return`shaderPacks/${GG}/${bG}/${ZG}-${wG}.webp`}(bG.packId,bG.renderId,ZG,wG)}`
-    }
-
-    function XG(GG, bG, ZG, wG) {
-      return `${GG}/${function(GG,bG,ZG){return`shaderPacks/baseline/${GG}/${bG}-${ZG}.webp`}(bG,ZG,wG)}`
-    }
+    const LM = "/index/studio/replay-segment-urls",
+      mM = 20,
+      HM = 50,
+      hM = 6e4,
+      JM = 432e5,
+      dM = "Chat",
+      yM = {
+        clock: "bloxd-clock",
+        active: "bloxd-active",
+        death: "player_death",
+        error: "error"
+      },
+      lM = {
+        FullSnapshot: 2,
+        IncrementalSnapshot: 3,
+        Meta: 4,
+        Custom: 5,
+        Plugin: 6
+      },
+      EM = {
+        Mutation: 0,
+        MouseMove: 1,
+        MouseInteraction: 2,
+        Scroll: 3,
+        ViewportResize: 4,
+        Input: 5,
+        TouchMove: 6,
+        MediaInteraction: 7,
+        StyleSheetRule: 8,
+        Drag: 12
+      }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

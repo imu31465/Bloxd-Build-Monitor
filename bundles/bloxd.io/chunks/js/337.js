@@ -1,77 +1,9 @@
 export const id = 337;
 export const ids = [337];
 export const modules = {
-  42632: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => yG
-    });
-    var wG = ZG(40237);
-    const SG = "clipPlaneFragment",
-      LG = "#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6)\nif (false) {}\n#endif\n#ifdef CLIPPLANE\nelse if (fClipDistance>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE2\nelse if (fClipDistance2>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE3\nelse if (fClipDistance3>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE4\nelse if (fClipDistance4>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE5\nelse if (fClipDistance5>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE6\nelse if (fClipDistance6>0.0)\n{discard;}\n#endif\n";
-    wG.e.IncludesShadersStore[SG] || (wG.e.IncludesShadersStore[SG] = LG);
-    const yG = {
-      name: SG,
-      shader: LG
-    }
-  },
-  42620: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => yG
-    });
-    var wG = ZG(40237);
-    const SG = "clipPlaneFragmentDeclaration",
-      LG = "#ifdef CLIPPLANE\nvarying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nvarying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nvarying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nvarying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nvarying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nvarying float fClipDistance6;\n#endif\n";
-    wG.e.IncludesShadersStore[SG] || (wG.e.IncludesShadersStore[SG] = LG);
-    const yG = {
-      name: SG,
-      shader: LG
-    }
-  },
-  42674: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => yG
-    });
-    var wG = ZG(40237);
-    const SG = "fogFragment",
-      LG = "#ifdef FOG\nfloat fog=CalcFogFactor();\n#ifdef PBR\nfog=toLinearSpace(fog);\n#endif\ncolor.rgb=mix(vFogColor,color.rgb,fog);\n#endif\n";
-    wG.e.IncludesShadersStore[SG] || (wG.e.IncludesShadersStore[SG] = LG);
-    const yG = {
-      name: SG,
-      shader: LG
-    }
-  },
-  42623: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => yG
-    });
-    var wG = ZG(40237);
-    const SG = "fogFragmentDeclaration",
-      LG = "#ifdef FOG\n#define FOGMODE_NONE 0.\n#define FOGMODE_EXP 1.\n#define FOGMODE_EXP2 2.\n#define FOGMODE_LINEAR 3.\n#define E 2.71828\nuniform vec4 vFogInfos;uniform vec3 vFogColor;varying vec3 vFogDistance;float CalcFogFactor()\n{float fogCoeff=1.0;float fogStart=vFogInfos.y;float fogEnd=vFogInfos.z;float fogDensity=vFogInfos.w;float fogDistance=length(vFogDistance);if (FOGMODE_LINEAR==vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);}\nelse if (FOGMODE_EXP==vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDensity);}\nelse if (FOGMODE_EXP2==vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDistance*fogDensity*fogDensity);}\nreturn clamp(fogCoeff,0.0,1.0);}\n#endif\n";
-    wG.e.IncludesShadersStore[SG] || (wG.e.IncludesShadersStore[SG] = LG);
-    const yG = {
-      name: SG,
-      shader: LG
-    }
-  },
-  43021: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      colorPixelShader: () => pG
-    });
-    var wG = ZG(40237),
-      SG = ZG(42620),
-      LG = ZG(42623),
-      yG = ZG(42632),
-      kG = ZG(42674);
-    const UG = "colorPixelShader",
-      YG = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\n#define VERTEXCOLOR\nvarying vec4 vColor;\n#else\nuniform vec4 color;\n#endif\n#include<clipPlaneFragmentDeclaration>\n#include<fogFragmentDeclaration>\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\n#include<clipPlaneFragment>\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\ngl_FragColor=vColor;\n#else\ngl_FragColor=color;\n#endif\n#include<fogFragment>(color,gl_FragColor)\n#define CUSTOM_FRAGMENT_MAIN_END\n}";
-    wG.e.ShadersStore[UG] || (wG.e.ShadersStore[UG] = YG);
-    const VG = [SG.e, LG.d, yG.e, kG.d];
-    for (const fG of VG) wG.e.IncludesShadersStore[fG.name] || (wG.e.IncludesShadersStore[fG.name] = fG.shader);
-    const pG = {
-      name: UG,
-      shader: YG
-    }
+  42499: MM => {
+    MM.exports = JSON.parse('{"texture":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAAChSURBVDiNY2RgYGCYla7xnwEK0mbeYETnd0UawPkMDAwMZcsvMOa7qqOITdx9k5GJgYqAhYGBgYGbE8USDP63n3+JMoz6LiMEGtZdZkQXm7j7JoYYUYZhiwBs6qjvzS9fv6EIovMHJAKoChgZcAQwsWLIfOpHALYAJjbQkcEQjIClBYgiJnrCTcaZqbJwfvrsx7TPAfQpNaInoJYKuLyGDAAD/0eT8CVFJAAAAABJRU5ErkJggg==","alphaCutoff":0.05,"vertices":[0.5,0.2435,0.6132,0.5,0.2435,0.6132,0.5,0.2435,0.6132,0.77086,0.12175,0.4219,0.77086,0.12175,0.4219,0.77086,0.12175,0.4219,0.5,0.54171,0.457,0.5,0.54171,0.457,0.5,0.54171,0.457,0.77086,0.41997,0.2656,0.77086,0.41997,0.2656,0.77086,0.41997,0.2656,0.5,0,0.2305,0.5,0,0.2305,0.5,0,0.2305,0.22914,0.12175,0.4219,0.22914,0.12175,0.4219,0.22914,0.12175,0.4219,0.22914,0.41997,0.2656,0.22914,0.41997,0.2656,0.22914,0.41997,0.2656,0.5,0.29822,0.0743,0.5,0.29822,0.0743,0.5,0.29822,0.0743,0.5,0.29275,0.1282,0.5,0.29275,0.1282,0.5,0.29275,0.1282,0.28331,0.39015,0.2812,0.28331,0.39015,0.2812,0.28331,0.39015,0.2812,0.5,0.05417,0.2532,0.5,0.05417,0.2532,0.5,0.05417,0.2532,0.28331,0.15157,0.4062,0.28331,0.15157,0.4062,0.28331,0.15157,0.4062,0.5,0.48755,0.4343,0.5,0.48755,0.4343,0.5,0.48755,0.4343,0.71669,0.39015,0.2812,0.71669,0.39015,0.2812,0.71669,0.39015,0.2812,0.71669,0.15157,0.4062,0.71669,0.15157,0.4062,0.71669,0.15157,0.4062,0.5,0.24897,0.5593,0.5,0.24897,0.5593,0.5,0.24897,0.5593,0.5,0.85389,-0.1148,0.5,0.85389,-0.1148,0.5,0.85389,-0.1148,0.33748,0.92695,0,0.33748,0.92695,0,0.33748,0.92695,0,0.5,0.34841,0.15,0.5,0.34841,0.15,0.5,0.34841,0.15,0.33748,0.42147,0.2648,0.33748,0.42147,0.2648,0.33748,0.42147,0.2648,0.5,1,0.1148,0.5,1,0.1148,0.5,1,0.1148,0.66252,0.92695,0,0.66252,0.92695,0,0.66252,0.92695,0,0.66252,0.42147,0.2648,0.66252,0.42147,0.2648,0.66252,0.42147,0.2648,0.5,0.49452,0.3797,0.5,0.49452,0.3797,0.5,0.49452,0.3797],"uvs":[0.740142,0.207226,0.740142,0.003289,0.944079,0.003289,0.944079,0.003289,0.740142,0.003289,0.740142,0.003289,0.740142,0.207226,0.740142,0.207226,0.944079,0.207226,0.740142,0.207226,0.740142,0.003289,0.944079,0.207226,0.740142,0.003289,0.944079,0.003289,0.944079,0.003289,0.944079,0.207226,0.740142,0.003289,0.944079,0.003289,0.944079,0.207226,0.740142,0.207226,0.944079,0.207226,0.740142,0.207226,0.944079,0.003289,0.944079,0.207226,0.259841,0.996686,0.259841,0.733533,0.476989,0.470379,0.476989,0.207226,0.259841,0.792749,0.680926,0.470379,0.259841,0.529596,0.786214,0.733533,0.476989,0.266443,0.680926,0.266443,0.786214,0.529596,0.476989,0.003289,0.680926,0.207226,0.319057,0.733533,0.055904,0.792749,0.055904,0.996686,0.522994,0.733533,0.055904,0.733533,0.055904,0.529596,0.522994,0.529596,0.58221,0.733533,0.680926,0.003289,0.58221,0.529596,0.319057,0.529596,0.680926,0.944109,-0.003312,0.470379,-0.154605,0.996686,0.26648,0.470379,0.680926,0.792749,-0.003312,0.996686,-0.003312,0.003289,0.470417,0.944109,-0.154605,0.529596,-0.003312,0.529596,0.470417,0.792749,0.26648,0.003289,0.417773,0.470379,0.055904,0.470379,0.529633,0.792749,0.529633,0.944109,0.207264,0.470379,-0.154605,0.470379,-0.154605,0.003289,0.207264,0.003289,0.319057,0.944109,0.417773,0.003289,0.319057,0.792749,0.055904,0.003289],"indices":[11,3,12,20,7,22,7,10,22,11,12,21,13,16,23,35,27,36,44,31,46,31,34,46,35,36,45,37,40,47,59,51,60,68,55,70,55,58,70,59,60,69,61,64,71,67,71,64,43,47,40,19,23,16],"shades":[0.85,1,1,0.85,0.7,0.85,1,1,0.85,0.7,0.85,1,1,0.85,0.7,0.7,0.7,0.7]}')
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

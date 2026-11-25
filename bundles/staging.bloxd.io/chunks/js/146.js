@@ -1,146 +1,386 @@
 export const id = 146;
 export const ids = [146];
 export const modules = {
-  8127: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      BloxdDiscordSDK: () => hG,
-      DiscordLoginCancelledError: () => KG,
-      discordPopupTimeoutMs: () => QG
+  44398: (MM, rM, iM) => {
+    iM.d(rM, {
+      startHarnessShaderPack: () => LM
     });
-    var wG = ZG(140),
-      SG = ZG(1185),
-      LG = ZG(1096),
-      yG = ZG(1117),
-      kG = ZG.n(yG),
-      UG = ZG(1163),
-      YG = ZG(29),
-      VG = ZG(604),
-      pG = ZG(1311),
-      fG = ZG(1036);
-    const QG = 6e5;
-    class KG extends Error {
-      constructor() {
-        super(...arguments), this.name = LG.discordLoginCancelledErrorName
-      }
-    }
-    class hG {
-      constructor() {
-        this.popupWindowPromise = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindow = null, this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.bloxdDiscordRefreshTokenKey = "4PSIDTCPM", this.discordRedirectUrl = SG.m[fG.c.clientEnvironment];
-        const GG = new URL(this.discordRedirectUrl).origin;
-        window.addEventListener("message", (bG => {
-          var ZG;
-          if (bG.origin !== GG || "oauth_authentication_discord" !== (null === (ZG = bG.data) || void 0 === ZG ? void 0 : ZG.type)) return;
-          if ("string" !== typeof bG.data.code || !bG.data.code) return void this.failPopup(new KG("Discord authentication was cancelled on Discord"));
-          const wG = this.popupWindowPromiseResolve;
-          this.resetPopupState(), null === wG || void 0 === wG || wG(bG.data.code)
-        }))
-      }
-      resetPopupState() {
-        null !== this.popupWindowCheckInterval && window.clearInterval(this.popupWindowCheckInterval), null !== this.popupWindowTimeout && window.clearTimeout(this.popupWindowTimeout), this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindowPromise = null, this.popupWindow = null
-      }
-      failPopup(GG) {
-        var bG;
-        const ZG = this.popupWindowPromiseReject;
-        null === (bG = this.popupWindow) || void 0 === bG || bG.close(), this.resetPopupState(), null === ZG || void 0 === ZG || ZG(GG)
-      }
-      openDiscordOAuthWindow() {
-        const GG = fG.c.discordClientID;
-        return window.open(`https://discord.com/oauth2/authorize?response_type=code&client_id=${GG}&scope=identify%20guilds&redirect_uri=${this.discordRedirectUrl}&integration_type=0`, "oauth_authentication", `popup,width=480,height=720,top=${window.screen.height/2-360},left=${window.screen.width/2-240}`)
-      }
-      async showDiscordAuthPrompt() {
-        return new Promise(((GG, bG) => {
-          pG.NotificationProvider.showPromptPopup({
-            title: "Discord Login Required",
-            confirmText: "Continue",
-            confirmTooltip: "Open Discord login window",
-            cancelText: "Cancel",
-            cancelTooltip: "Cancel Discord login"
-          }).getResult().then((ZG => {
-            !0 === ZG ? GG() : bG(new KG("Discord login was cancelled"))
-          })).catch(bG)
-        }))
-      }
-      signInWithPopup() {
-        if (null !== this.popupWindowPromise) return this.popupWindowPromise;
-        const GG = new Promise(((GG, bG) => {
-          this.popupWindowPromiseResolve = GG, this.popupWindowPromiseReject = bG
-        }));
-        return this.popupWindowPromise = GG, YG.c.removeItem(this.bloxdDiscordRefreshTokenKey), this.popupWindowTimeout = window.setTimeout((() => {
-          this.failPopup(new Error("Discord authentication timed out"))
-        }), QG), this.openPopup(GG).catch((bG => {
-          this.popupWindowPromise === GG && this.failPopup(bG instanceof Error ? bG : new Error(String(bG)))
-        })), GG
-      }
-      async openPopup(GG) {
-        let bG = this.openDiscordOAuthWindow();
-        if (!bG) {
-          if (await this.showDiscordAuthPrompt(), this.popupWindowPromise !== GG) return;
-          bG = this.openDiscordOAuthWindow()
-        }
-        if (console.log("Discord OAuth window opened:", bG), !bG) throw new Error("Failed to open Discord authentication popup - popup may have been blocked");
-        this.popupWindow = bG;
-        const ZG = window.setInterval((() => {
-          bG.closed && this.popupWindowPromise === GG && (window.clearInterval(ZG), this.popupWindowCheckInterval = null, window.setTimeout((() => {
-            this.popupWindowPromise === GG && this.failPopup(new KG("Discord authentication was cancelled - popup window was closed"))
-          }), 1e3))
-        }), 200);
-        this.popupWindowCheckInterval = ZG
-      }
-      async exchangeAuthorizationCodeForAccessToken(GG, bG) {
-        const {
-          accessToken: ZG,
-          refreshToken: wG
-        } = await kG()((async () => await (0, LG.postJsonWithMetricsCookiesAndJsonResponse)(`${UG.clientSideServerUrls.indexUrl}/index/discord/log-event`, {
-          authorizationCode: GG,
-          bloxdClientEnvironment: fG.c.clientEnvironment,
-          instanceId: null
-        }, {
-          retries: 0
-        }, bG.getMetricsCookies())), {
-          retries: 3
-        });
-        return console.log("Discord access token received:", wG, this.bloxdDiscordRefreshTokenKey), YG.c.setItem(this.bloxdDiscordRefreshTokenKey, wG), ZG
-      }
-      hasCurrentUser() {
-        const GG = YG.c.getItem(this.bloxdDiscordRefreshTokenKey);
-        return !(0, VG.L)(GG)
-      }
-      async getCurrentUser(GG) {
-        const bG = YG.c.getItem(this.bloxdDiscordRefreshTokenKey);
-        if (!bG) return null;
-        let ZG;
-        try {
-          const wG = await kG()((async () => {
-            try {
-              return await (0, LG.postJsonWithMetricsCookiesAndJsonResponse)(`${UG.clientSideServerUrls.indexUrl}/index/discord/collect-event`, {
-                refreshToken: bG
-              }, {
-                retries: 0
-              }, GG.getMetricsCookies())
-            } catch (ZG) {
-              if (dG(ZG)) throw new(kG().AbortError)(ZG);
-              throw ZG
-            }
-          }), {
-            retries: 3
-          });
-          ZG = wG.accessToken, YG.c.setItem(this.bloxdDiscordRefreshTokenKey, wG.refreshToken)
-        } catch (wG) {
-          return dG(wG) ? (YG.c.removeItem(this.bloxdDiscordRefreshTokenKey), null) : (console.error("Failed to refresh Discord access token:", wG), null)
+    var OM = iM(7054),
+      SM = iM(5442),
+      jM = iM(7131),
+      aM = iM(7111),
+      PM = iM(5435),
+      nM = iM(40300),
+      QM = iM(7120),
+      zM = iM(7134);
+    async function LM(MM, rM) {
+      const {
+        stored: iM,
+        info: LM
+      } = await async function(MM, rM) {
+        const iM = await async function(MM) {
+          const rM = await fetch(MM);
+          if (!rM.ok) throw new Error(`Couldn't fetch the shader pack at ${MM}: HTTP ${rM.status}`);
+          const iM = await rM.json();
+          if (!(0, OM.k)(iM)) throw new Error(`The shader pack at ${MM} isn't a shader pack listing source`);
+          return iM
+        }(MM);
+        if (!(0, PM.k)(iM.apiVersion)) throw new Error(`The pack is for shader pack API version ${iM.apiVersion}; this build runs version ${PM.e}`);
+        const nM = {
+            manifest: {
+              apiVersion: iM.apiVersion,
+              name: iM.name,
+              author: iM.author,
+              description: null,
+              keepCircleShadows: !0 === iM.keepCircleShadows
+            },
+            files: iM.files,
+            validation: null
+          },
+          LM = {
+            url: MM,
+            name: iM.name,
+            features: [],
+            errors: [],
+            runsInMode: !1
+          },
+          mM = (0, SM.t)(iM.files);
+        if ("string" === typeof mM) return LM.errors = [{
+          file: null,
+          line: 0,
+          message: mM
+        }], {
+          stored: nM,
+          info: LM
+        };
+        const HM = await (0, aM.loadPageShaderPackCompiler)();
+        if (!HM) throw new Error("The shader pack compiler couldn't load");
+        const hM = await (0, zM.f)(HM, mM);
+        if (!hM) throw new Error("No WebGPU device could validate the shader pack");
+        if (LM.errors = [...hM.errors], hM.ok) {
+          const MM = HM.zMM(mM, (0, QM.shaderPackTextures)());
+          LM.features = (0, SM.q)(MM), LM.runsInMode = (0, jM.l)(MM.variants, rM)
         }
         return {
-          accessToken: ZG
+          stored: {
+            ...nM,
+            validation: hM
+          },
+          info: LM
+        }
+      }(MM, rM), [mM] = LM.errors;
+      if (mM) {
+        const MM = null === mM.file ? "" : `${mM.file}:${mM.line}: `,
+          rM = LM.errors.length > 1 ? ` (${LM.errors.length-1} more)` : "";
+        return {
+          info: LM,
+          problem: `The shader pack doesn't compile: ${MM}${mM.message}${rM}`
         }
       }
-      signOut() {
-        this.failPopup(new KG("Signed out of Discord during login")), YG.c.removeItem(this.bloxdDiscordRefreshTokenKey)
+      return LM.runsInMode ? ((0, nM.setHarnessUrlShaderPack)(iM, rM), {
+        info: LM,
+        problem: null
+      }) : {
+        info: LM,
+        problem: `The shader pack runs nothing in ${rM} mode`
+      }
+    }
+  },
+  7142: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      forgetShaderPackActiveHint: () => uM,
+      isOtherApiVersion: () => bM,
+      isShaderPackActive: () => UM,
+      isShaderPackChangePending: () => eM,
+      markShaderPackChangePending: () => CM,
+      pageShaderPackValidationVersion: () => wM,
+      reconcileStoredShaderPackHint: () => gM,
+      removeShaderPack: () => EM,
+      replaceShaderPack: () => dM,
+      saveShaderPack: () => JM,
+      shaderPackNeedsCheck: () => tM,
+      storedPackOutcome: () => GM,
+      storedShaderPackFiles: () => mM,
+      toStoredShaderPack: () => LM
+    });
+    var OM = iM(5442),
+      SM = iM(5435),
+      jM = iM(30),
+      aM = iM(3855),
+      PM = iM(7148),
+      nM = iM(7120);
+    const QM = "shaderPackChangePending";
+    let zM = null;
+
+    function LM(MM, rM, iM) {
+      return {
+        manifest: MM.manifest,
+        files: (0, OM.w)(MM.files),
+        validation: rM,
+        ...iM && {
+          listing: iM
+        }
       }
     }
 
-    function dG(GG) {
-      return GG instanceof wG.b && 435 === GG.httpCode
+    function mM(MM) {
+      return Object.keys(MM.files).map((rM => ({
+        path: rM,
+        source: MM.files[rM]
+      })))
+    }
+    let HM = Promise.resolve();
+
+    function hM(MM) {
+      const rM = HM.then(MM);
+      return HM = rM.catch((() => {})), rM
+    }
+
+    function JM(MM, rM) {
+      return hM((() => yM(MM, rM)))
+    }
+
+    function dM(MM, rM, iM) {
+      return hM((async () => JSON.stringify(await (0, PM.d)()) === JSON.stringify(MM) && (null === rM ? (await lM(), !0) : yM(rM, iM))))
+    }
+    async function yM(MM, rM) {
+      const iM = await jM.f.setItem(PM.b, MM);
+      return iM && RM(MM, rM), iM
+    }
+    async function lM() {
+      await jM.f.removeItem(PM.b), jM.g.removeItem(aM.c)
+    }
+
+    function EM() {
+      return hM(lM)
+    }
+
+    function UM(MM, rM) {
+      return "active" === GM(MM, rM).kind
+    }
+
+    function GM(MM, rM) {
+      var iM;
+      return null === MM ? {
+        kind: "none",
+        reason: "nothingStored"
+      } : bM(MM) ? {
+        kind: "none",
+        reason: "otherApiVersion"
+      } : !1 !== (null === (iM = MM.validation) || void 0 === iM ? void 0 : iM.ok) || MM.validation.fromRecheck ? null === rM ? {
+        kind: "none",
+        reason: "noCompiler"
+      } : tM(MM, rM) ? {
+        kind: "blocked",
+        messageKey: "shaderPack:failedUnchecked"
+      } : MM.validation.ok ? {
+        kind: "active"
+      } : {
+        kind: "blocked",
+        messageKey: "shaderPack:failedValidation"
+      } : {
+        kind: "none",
+        reason: "failedWhenLoaded"
+      }
+    }
+
+    function CM() {
+      jM.k.setItem(QM, performance.timeOrigin)
+    }
+
+    function eM() {
+      return jM.k.getItem(QM) === performance.timeOrigin
+    }
+
+    function bM(MM) {
+      return !(0, SM.k)(MM.manifest.apiVersion)
+    }
+
+    function wM(MM) {
+      return zM ??= MM.KD((0, nM.shaderPackTextures)()), zM
+    }
+
+    function tM(MM, rM) {
+      var iM;
+      return (null === (iM = MM.validation) || void 0 === iM ? void 0 : iM.headerVersion) !== wM(rM)
+    }
+
+    function gM(MM) {
+      return hM((async () => {
+        RM(await (0, PM.d)(!0), MM)
+      }))
+    }
+
+    function uM() {
+      return hM((async () => {
+        jM.g.removeItem(aM.c)
+      }))
+    }
+
+    function RM(MM, rM) {
+      UM(MM, rM) ? jM.g.setItem(aM.c, !0) : jM.g.removeItem(aM.c)
+    }
+  },
+  7134: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => nM,
+      f: () => PM
+    });
+    var OM = iM(7142),
+      SM = iM(7120),
+      jM = iM(106);
+    const aM = 100;
+    async function PM(MM, rM) {
+      var iM;
+      let OM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (iM = navigator.gpu) && void 0 !== iM ? iM : null;
+      const aM = MM.zMM(rM, (0, SM.shaderPackTextures)());
+      if (aM.errors.length > 0) return QM(MM, aM.errors, aM.offInStrict);
+      const PM = await async function(MM) {
+        if (!MM) return null;
+        try {
+          const rM = await (0, jM.z)(MM);
+          return rM ? await rM.requestDevice() : null
+        } catch (rM) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", rM), null
+        }
+      }(OM);
+      if (!PM) return null;
+      let nM = !1;
+      PM.lost.then((() => {
+        nM = !0
+      }));
+      try {
+        const rM = await Promise.all(aM.validationModules.map((rM => async function(MM, rM, iM) {
+          rM.pushErrorScope("validation");
+          const OM = rM.createShaderModule({
+              code: iM.code
+            }),
+            SM = rM.popErrorScope(),
+            {
+              messages: jM
+            } = await OM.getCompilationInfo(),
+            aM = jM.filter((MM => "error" === MM.type)).map((rM => MM.mapValidationMessage(iM, rM))),
+            PM = await SM;
+          PM && 0 === aM.length && aM.push({
+            file: null,
+            line: 0,
+            message: PM.message,
+            variants: [iM.key]
+          });
+          return aM
+        }(MM, PM, rM))));
+        return nM ? null : QM(MM, MM.ciM(rM.flat()), aM.offInStrict)
+      } catch (zM) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", zM), null
+      } finally {
+        PM.destroy()
+      }
+    }
+    async function nM(MM, rM) {
+      var iM;
+      if (!(0, OM.shaderPackNeedsCheck)(MM, rM) || (0, OM.isOtherApiVersion)(MM)) return MM;
+      const SM = await PM(rM, (0, OM.storedShaderPackFiles)(MM));
+      if (!SM) return MM;
+      const jM = !1 === (null === (iM = MM.validation) || void 0 === iM ? void 0 : iM.ok) && !MM.validation.fromRecheck,
+        aM = {
+          ...MM,
+          validation: jM ? SM : {
+            ...SM,
+            fromRecheck: !0
+          }
+        };
+      return await (0, OM.replaceShaderPack)(MM, aM, rM) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), aM
+    }
+
+    function QM(MM, rM, iM) {
+      return {
+        headerVersion: (0, OM.pageShaderPackValidationVersion)(MM),
+        ok: 0 === rM.length,
+        errors: rM.slice(0, aM),
+        moreErrors: Math.max(0, rM.length - aM),
+        offInStrict: iM
+      }
+    }
+  },
+  7054: (MM, rM, iM) => {
+    iM.d(rM, {
+      D: () => aM,
+      E: () => OM,
+      I: () => mM,
+      M: () => zM,
+      Q: () => UM,
+      U: () => LM,
+      V: () => QM,
+      b: () => hM,
+      e: () => dM,
+      g: () => JM,
+      k: () => HM,
+      m: () => EM,
+      q: () => CM,
+      t: () => nM,
+      v: () => SM,
+      w: () => GM,
+      y: () => jM,
+      z: () => PM
+    });
+    const OM = ["forest", "desert", "water", "night", "cave"];
+    const SM = {
+        full: {
+          width: 3840,
+          height: 2160
+        },
+        large: {
+          width: 1920,
+          height: 1080
+        },
+        thumb: {
+          width: 640,
+          height: 360
+        }
+      },
+      jM = ["popular", "updated", "newest"],
+      aM = 3,
+      PM = 32,
+      nM = 300;
+
+    function QM(MM, rM) {
+      return MM.slice(0, rM).replace(/[\uD800-\uDBFF]$/, "")
+    }
+    const zM = 64,
+      LM = 512,
+      mM = 18e5;
+
+    function HM(MM) {
+      const rM = MM,
+        iM = null === rM || void 0 === rM ? void 0 : rM.files;
+      return "number" === typeof(null === rM || void 0 === rM ? void 0 : rM.apiVersion) && "string" === typeof rM.name && (null === rM.author || "string" === typeof rM.author) && (void 0 === rM.keepCircleShadows || "boolean" === typeof rM.keepCircleShadows) && "object" === typeof iM && null !== iM && Object.values(iM).every((MM => "string" === typeof MM))
+    }
+    const hM = "Bloxdhub",
+      JM = "https://bloxdhub.com/shaders";
+
+    function dM(MM) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(MM)}`
+    }
+    const yM = "Screenshot generation failed.",
+      lM = "Its screenshots couldn't be generated:";
+
+    function EM(MM) {
+      var rM;
+      return MM === yM || null !== (rM = null === MM || void 0 === MM ? void 0 : MM.startsWith(lM)) && void 0 !== rM && rM
+    }
+
+    function UM(MM, rM) {
+      return `shaderPacks/${MM}/${rM}.json`
+    }
+
+    function GM(MM, rM, iM, OM) {
+      return null === rM.renderId ? CM(MM, rM.baselineVersion, iM, OM) : `${MM}/${function(MM,rM,iM,OM){return`shaderPacks/${MM}/${rM}/${iM}-${OM}.webp`}(rM.packId,rM.renderId,iM,OM)}`
+    }
+
+    function CM(MM, rM, iM, OM) {
+      return `${MM}/${function(MM,rM,iM){return`shaderPacks/baseline/${MM}/${rM}-${iM}.webp`}(rM,iM,OM)}`
     }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

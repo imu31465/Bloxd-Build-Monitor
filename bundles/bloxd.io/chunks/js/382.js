@@ -1,19 +1,9 @@
 export const id = 382;
 export const ids = [382];
 export const modules = {
-  62086: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      fxaaVertexShader: () => yG
-    });
-    var wG = ZG(40237);
-    const SG = "fxaaVertexShader",
-      LG = "attribute vec2 position;uniform vec2 texelSize;varying vec2 vUV;varying vec2 sampleCoordS;varying vec2 sampleCoordE;varying vec2 sampleCoordN;varying vec2 sampleCoordW;varying vec2 sampleCoordNW;varying vec2 sampleCoordSE;varying vec2 sampleCoordNE;varying vec2 sampleCoordSW;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvUV=(position*madd+madd);sampleCoordS=vUV+vec2( 0.0,1.0)*texelSize;sampleCoordE=vUV+vec2( 1.0,0.0)*texelSize;sampleCoordN=vUV+vec2( 0.0,-1.0)*texelSize;sampleCoordW=vUV+vec2(-1.0,0.0)*texelSize;sampleCoordNW=vUV+vec2(-1.0,-1.0)*texelSize;sampleCoordSE=vUV+vec2( 1.0,1.0)*texelSize;sampleCoordNE=vUV+vec2( 1.0,-1.0)*texelSize;sampleCoordSW=vUV+vec2(-1.0,1.0)*texelSize;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
-    wG.e.ShadersStore[SG] || (wG.e.ShadersStore[SG] = LG);
-    const yG = {
-      name: SG,
-      shader: LG
-    }
+  42731: MM => {
+    MM.exports = JSON.parse('{"texture":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAABCSURBVBiVY1RSVv7PAAWXr1yHMRl0dTTh7Ht37zIyMRAJiFbI+PX7L7jVyNYhO4Obk40GVrPgsg5ZnCQTiVZINAAAQoERlZZrqhQAAAAASUVORK5CYII=","alphaCutoff":0.05,"vertices":[1,0.77526,0,1,0.77526,0,1,0.77526,0,0.5,0.55051,-0.3062,0.5,0.55051,-0.3062,0.5,0.55051,-0.3062,0.5,0,-0.0562,0.5,0,-0.0562,0.5,0,-0.0562,0,0.22474,0.25,0,0.22474,0.25,0,0.22474,0.25,0,0.77526,0,0,0.77526,0,0,0.77526,0,0.5,0.44949,0.5562,0.5,0.44949,0.5562,0.5,0.44949,0.5562,0.5,1,0.3062,0.5,1,0.3062,0.5,1,0.3062,1,0.22474,0.25,1,0.22474,0.25,1,0.22474,0.25],"uvs":[0.896875,0.896875,0.896875,0.896875,0.003125,0.896875,0.003125,0.896875,0.003125,0.896875,0.896875,0.896875,0.896875,0.003125,0.003125,0.003125,0.003125,0.003125,0.896875,0.003125,0.003125,0.896875,0.003125,0.003125,0.003125,0.896875,0.003125,0.003125,0.896875,0.896875,0.896875,0.896875,0.003125,0.003125,0.896875,0.003125,0.896875,0.003125,0.896875,0.896875,0.003125,0.896875,0.003125,0.003125,0.896875,0.003125,0.896875,0.003125],"indices":[2,5,6,8,3,9,3,14,9,11,12,17,17,12,19,13,4,18,4,0,18,20,1,22,2,6,21,7,10,23,10,15,23,20,22,16],"shades":[0.85,0.7,0.7,0.85,0.85,0.85,0.85,0.7,0.85,1,1,0.7]}')
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

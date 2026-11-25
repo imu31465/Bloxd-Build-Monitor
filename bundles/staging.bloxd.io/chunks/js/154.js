@@ -1,115 +1,249 @@
 export const id = 154;
 export const ids = [154];
 export const modules = {
-  8178: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => YG
+  7124: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => UM,
+      c: () => GM,
+      f: () => lM,
+      g: () => yM
     });
-    var wG = ZG(2897);
-    const SG = [1, 8, 9],
-      LG = 5,
-      yG = 200,
-      kG = 150;
+    var OM = iM(7131);
+    const SM = 6,
+      jM = 3,
+      aM = 1,
+      PM = 2,
+      nM = 4,
+      QM = 8,
+      zM = 16,
+      LM = 32,
+      mM = 64,
+      HM = 128,
+      hM = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function UG(GG, bG) {
-      let ZG = 0;
-      GG("addEventListener", 2, ((GG, yG) => {
-        if (!yG) return void console.warn("TCF CMP couldn't report a consent event, so our consent defaults stand");
-        const kG = function(GG) {
-          const bG = "useractioncomplete" === GG.eventStatus || "tcloaded" === GG.eventStatus && !!GG.tcString;
-          return GG.gdprApplies && bG ? SG.every((bG => !0 === GG.purpose.consents[bG])) : null
-        }(GG);
-        if (null === kG) return;
-        const UG = ++ZG;
-        if (!kG) return void(0, wG.updateAnalyticsConsent)(!1);
-        if ("nitro" === bG) return void(0, wG.updateAnalyticsConsent)(!0);
-        const YG = window.__tcfapi;
-        YG ? YG("getNonIABVendorConsents", 2, ((GG, bG) => {
-          var SG;
-          UG === ZG && (0, wG.updateAnalyticsConsent)(bG && !0 === (null === (SG = GG.nonIabVendorConsents) || void 0 === SG ? void 0 : SG[LG]))
-        })) : console.warn("TCF CMP reported a choice but its __tcfapi is gone, so our consent defaults stand")
+    function JM(MM) {
+      if (!MM) return 0;
+      const rM = hM.indexOf(MM);
+      if (rM <= 0) throw new Error(`"${MM}" is not a shader pack hook function`);
+      return rM
+    }
+
+    function dM(MM) {
+      if (0 === MM) return null;
+      const rM = hM[MM];
+      if (void 0 === rM) throw new Error(`${MM} is not a shader pack hook function id`);
+      return rM
+    }
+
+    function yM(MM) {
+      const rM = OM.e.length;
+      return {
+        strict: MM >= rM,
+        program: OM.e[MM % rM]
+      }
+    }
+
+    function lM(MM) {
+      return Number(MM.strict) * OM.e.length + OM.e.indexOf(MM.program)
+    }
+
+    function EM(MM) {
+      return "" === MM ? [] : MM.split(" ")
+    }
+
+    function UM(MM) {
+      const rM = {
+        variantFlags: new Uint8Array(SM),
+        hooks: new Uint8Array(SM * jM),
+        moduleCodes: Array(SM).fill(""),
+        reads: Array(2 * SM).fill("")
+      };
+      for (const iM of MM) {
+        const MM = lM(iM.key),
+          OM = (MM, rM) => null === iM.hooks.surface || iM.reads.fragment.includes(MM) ? 0 : rM;
+        rM.variantFlags[MM] = (iM.sceneDepth ? aM : 0) | (iM.movesVertices ? PM : 0) | (iM.sunShadow ? nM : 0) | (iM.airShadow ? QM : 0) | (iM.discards ? zM : 0) | OM("localPosition", LM) | OM("enchantSpeed", mM) | OM("enchantTier", HM), rM.hooks[MM * jM] = JM(iM.hooks.vertex), rM.hooks[MM * jM + 1] = JM(iM.hooks.surface), rM.hooks[MM * jM + 2] = JM(iM.hooks.light), rM.moduleCodes[MM] = iM.moduleCode, rM.reads[2 * MM] = iM.reads.vertex.join(" "), rM.reads[2 * MM + 1] = iM.reads.fragment.join(" ")
+      }
+      return rM
+    }
+
+    function GM(MM) {
+      const {
+        hooks: rM,
+        moduleCodes: iM,
+        reads: OM
+      } = MM;
+      return Array.from(MM.variantFlags, ((MM, SM) => {
+        const LM = SM * jM;
+        return {
+          key: yM(SM),
+          hooks: {
+            vertex: dM(rM[LM]),
+            surface: dM(rM[LM + 1]),
+            light: dM(rM[LM + 2])
+          },
+          moduleCode: iM[SM],
+          sceneDepth: 0 !== (MM & aM),
+          sunShadow: 0 !== (MM & nM),
+          airShadow: 0 !== (MM & QM),
+          movesVertices: 0 !== (MM & PM),
+          discards: 0 !== (MM & zM),
+          reads: {
+            vertex: EM(OM[2 * SM]),
+            fragment: EM(OM[2 * SM + 1])
+          }
+        }
       }))
     }
+  },
+  41782: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => SM,
+      f: () => OM,
+      h: () => mM,
+      i: () => zM,
+      l: () => dM,
+      n: () => jM,
+      p: () => PM,
+      q: () => nM,
+      r: () => aM,
+      s: () => JM,
+      w: () => HM,
+      x: () => hM
+    });
+    const OM = 3,
+      SM = 0,
+      jM = 1,
+      aM = 2,
+      PM = {
+        uniform: 3,
+        Xm: 4,
+        special: 5,
+        volume: 6,
+        sampler: 7,
+        entities: 8,
+        entityGrids: 9
+      },
+      nM = 10,
+      QM = "BloxdPackInputs",
+      zM = "bloxdPackInputs",
+      LM = [{
+        name: "seconds",
+        type: "f32",
+        offset: 0
+      }, {
+        name: "lit",
+        type: "u32",
+        offset: 4
+      }, {
+        name: "renderOffset",
+        type: "vec3i",
+        offset: 16
+      }, {
+        name: "sunDirection",
+        type: "vec3f",
+        offset: 32
+      }, {
+        name: "eyePosition",
+        type: "vec3f",
+        offset: 48
+      }, {
+        name: "shadowDirection",
+        type: "vec3f",
+        offset: 64
+      }],
+      mM = 80;
 
-    function YG(GG) {
-      if (window.__tcfapi) return void UG(window.__tcfapi, GG);
-      let bG = 0;
-      const ZG = window.setInterval((() => {
-        bG++;
-        const wG = window.__tcfapi;
-        wG ? (window.clearInterval(ZG), UG(wG, GG)) : bG >= kG && window.clearInterval(ZG)
-      }), yG)
+    function HM() {
+      const MM = LM.map((MM => {
+        let {
+          name: rM,
+          type: iM
+        } = MM;
+        return `    ${rM}: ${iM},\n`
+      })).join("");
+      return `struct ${QM} {\n${MM}}\n@group(${OM}) @binding(${SM}) var<uniform> ${zM}: ${QM};\n`
+    }
+
+    function hM(MM, rM) {
+      const iM = new DataView(MM, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, mM),
+        [OM, SM, jM, aM, PM, nM] = LM;
+      iM.setFloat32(OM.offset, rM.seconds, !0), iM.setUint32(SM.offset, rM.lit ? 1 : 0, !0);
+      for (let QM = 0; QM < 3; QM++) iM.setInt32(jM.offset + 4 * QM, rM.renderOffset[QM], !0), iM.setFloat32(aM.offset + 4 * QM, rM.mMM[QM], !0), iM.setFloat32(PM.offset + 4 * QM, rM.eyePosition[QM], !0), iM.setFloat32(nM.offset + 4 * QM, rM.shadowDirection[QM], !0)
+    }
+
+    function JM(MM) {
+      const rM = new Uint32Array(Math.max(1, MM.length));
+      return MM.forEach(((MM, iM) => {
+        let {
+          id: OM,
+          rotation: SM
+        } = MM;
+        rM[iM] = 65535 & OM | (3 & SM) << 16
+      })), rM
+    }
+    const dM = {
+      off: 0,
+      strict: 1,
+      allow: 2
     }
   },
-  8172: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      AdinPlaySdkAdaptor: () => YG
+  7131: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM,
+      h: () => aM,
+      l: () => PM,
+      m: () => SM,
+      o: () => jM
     });
-    var wG = ZG(1280),
-      SG = ZG(1143),
-      LG = ZG(233),
-      yG = ZG(8178),
-      kG = ZG(2897);
-    const UG = ["CN", "VN", "IN", "PK", "ID", "EG", "BD", "SV", "DZ", "EC", "VE", "UA", "MA", "LK", "NG", "BO", "KE", "TN", "RU", "NP", "IQ", "MM", "HN", "UY", "JO", "PY", "PS", "ET", "GH", "JM", "CM", "AS", "SY", "BY", "AO", "MN", "GY", "LB", "MV", "BW", "UG"];
-    class YG extends wG.e {
-      constructor() {
-        super(), this.name = "adinplay", this.bannerAutoRefresh = "disableable", this.noAdCountries = UG
-      }
-      static async setup() {
-        return (0, LG.canonicaliseZonesWhenIdle)(UG), (0, kG.setUpGtag)(), await (0, SG.b)("https://api.adinplay.com/libs/aiptag/pub/RBN/bloxd.io/tag.min.js"), (0, yG.b)("inMobi"), new YG
-      }
-      playRewarded(GG, bG) {
-        if ("undefined" !== typeof window.aiptag.adplayer) {
-          console.log("AD: Requesting AdInPlay preroll ad for rewarded placement");
-          const ZG = "video_reward";
-          window.aiptag.cmd.player.push((function() {
-            window.aiptag.adplayer.startPreRoll({
-              alias: ZG
-            })
-          })), window.adStartSoPause(GG, {
-            onFailCb: bG
-          })
-        } else console.log("AD: AIP ad lib not loaded, no rewarded ad playing"), bG()
-      }
-      playVideoAd(GG, bG) {
-        "undefined" !== typeof window.aiptag.adplayer ? (console.log("AD: Requesting AdInPlay video ad" + (bG ? ` (alias: ${bG})` : "")), window.aiptag.cmd.player.push((function() {
-          window.aiptag.adplayer.startPreRoll({
-            alias: bG
-          })
-        })), window.adStartSoPause(GG)) : (GG(), console.error("AIP ad lib not loaded, no ad playing"))
-      }
-      renderBanner(GG) {
-        if ("undefined" === typeof window.aiptag.adplayer) return void console.log("AD: User has adblock, not requesting new banners");
-        const {
-          divId: bG,
-          alias: ZG
-        } = GG;
-        window.aiptag.cmd.display.push((function() {
-          window.aipDisplayTag.display({
-            adUnitName: bG,
-            alias: ZG
-          })
-        })), console.log("AD: Requested aip banner", document.getElementById(GG.divId), ZG ? `(alias: ${ZG})` : "")
-      }
-      clearBanner(GG) {
-        "undefined" !== typeof window.aiptag.adplayer ? (window.aiptag.cmd.display.push((function() {
-          window.aipDisplayTag.destroy(GG.divId)
-        })), console.log(`AD: Clearing aip banner ad ${GG.divId}`)) : console.log("AD: User has adblock, not requesting new banners")
-      }
-      setBannerAutoRefreshEnabled(GG, bG) {
-        window.aiptag.cmd.display.push((function() {
-          window.aipDisplayTag.setAutoRefresh(GG.divId, bG)
-        }))
-      }
-      newPageSession() {
-        console.log("AD: Requesting new page session"), window.aiptag.cmd.display.push((function() {
-          window.__VM.push((function(GG, bG) {
-            bG.Instances.pageManager.newPageSession(!1)
-          }))
-        }))
-      }
+    const OM = ["terrain", "liquid", "model"];
+
+    function SM() {
+      const MM = [];
+      for (const rM of [!1, !0])
+        for (const iM of OM) MM.push({
+          strict: rM,
+          program: iM
+        });
+      return MM
     }
+
+    function jM(MM) {
+      return `${MM.strict?"strict":"allow"}.${MM.program}`
+    }
+
+    function aM(MM) {
+      return !MM.hooks.vertex && !MM.hooks.surface && !MM.hooks.light
+    }
+
+    function PM(MM, rM) {
+      return "off" !== rM && (null === MM || MM.some((MM => MM.key.strict === ("strict" === rM) && !aM(MM))))
+    }
+  },
+  43945: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      SHADER_PACK_INPUTS_BINDING: () => jM.b,
+      SHADER_PACK_INPUTS_GROUP: () => jM.f,
+      SHADER_PACK_INPUTS_SIZE: () => jM.h,
+      SHADER_PACK_INPUTS_VAR: () => jM.i,
+      SHADER_PACK_MODES: () => jM.l,
+      SHADER_PACK_PROGRAMS: () => OM.e,
+      SHADER_PACK_SCENE_DEPTH_BINDING: () => jM.n,
+      SHADER_PACK_SUN_SHADOW_BINDINGS: () => jM.p,
+      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => jM.q,
+      SHADER_PACK_TEXTURES_BINDING: () => jM.r,
+      encodeTextureLayers: () => jM.s,
+      flattenVariants: () => SM.b,
+      isVariantOff: () => OM.h,
+      packRunsIn: () => OM.l,
+      shaderPackInputsWgsl: () => jM.w,
+      shaderPackVariantKeys: () => OM.m,
+      variantKeyId: () => OM.o,
+      writeShaderPackInputs: () => jM.x
+    });
+    var OM = iM(7131),
+      SM = iM(7124),
+      jM = iM(41782)
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

@@ -1,364 +1,126 @@
 export const id = 108;
 export const ids = [108];
 export const modules = {
-  36686: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => UG
+  5265: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      Howl: () => SM.Howl,
+      Howler: () => SM.Howler,
+      musicOutput: () => dM,
+      readyAudioContext: () => yM
     });
-    var wG = ZG(1006),
-      SG = ZG.n(wG),
-      LG = ZG(51),
-      yG = ZG(4596),
-      kG = ZG(1067);
+    var OM, SM = iM(5269),
+      jM = iM(3839),
+      aM = iM(5026);
+    const PM = SM.Howler;
 
-    function UG(GG) {
-      let {
-        locked: bG,
-        children: ZG
-      } = GG;
-      const wG = (0, LG.useRef)(null),
-        UG = (0, yG.e)(wG, "y");
-      return (0, kG.jsx)("div", {
-        ref: wG,
-        className: SG()("CreateCustomLobbyBody", {
-          CreateCustomLobbyBodyMoreAbove: UG.before,
-          CreateCustomLobbyBodyMoreBelow: UG.after
-        }),
-        "data-pad-ignore": bG || void 0,
-        children: ZG
-      })
-    }
-  },
-  36769: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      showFirstWorldSetupPopup: () => hG
-    });
-    ZG(4967), ZG(36670);
-    var wG = ZG(4655),
-      SG = ZG(51),
-      LG = ZG(4611),
-      yG = ZG(1151),
-      kG = ZG(1311),
-      UG = ZG(36686),
-      YG = ZG(4973),
-      VG = ZG(1393),
-      pG = ZG(3465),
-      fG = ZG(36680),
-      QG = ZG(4651),
-      KG = ZG(1067);
-
-    function hG(GG) {
-      const bG = {
-        requested: !1,
-        closed: !1
-      };
-      kG.NotificationProvider.showCustomPopup({
-        body: ZG => (0, KG.jsx)(dG, {
-          flow: bG,
-          close: ZG,
-          ...GG
-        }),
-        middleScreenPopupClassName: "CreateCustomLobbyPopup",
-        onClose: () => {
-          bG.closed = !0, bG.requested || (0, QG.i)()
-        }
-      })
-    }
-
-    function dG(GG) {
-      let {
-        flow: bG,
-        close: ZG,
-        onCreating: kG,
-        onCreated: hG,
-        onFailedClosed: dG,
-        join: JG
-      } = GG;
-      const {
-        t: rG
-      } = (0, yG.w)(), [zG, EG] = (0, SG.useState)(wG.t), [oG, XG] = (0, SG.useState)(!1), [uG, iG] = (0, SG.useState)(""), CG = (0, pG.c)();
-      (0, SG.useEffect)((() => {
-        (0, QG.o)()
-      }), []);
-      const WG = GG => ({
-        isEnabled: () => zG.plugins[GG],
-        DW: bG => {
-          (0, QG.l)({
-            plugin: GG,
-            enabled: bG
-          }), EG({
-            ...zG,
-            plugins: {
-              ...zG.plugins,
-              [GG]: bG
-            }
-          })
-        }
-      });
-      return (0, KG.jsxs)("div", {
-        className: "CreateCustomLobby",
-        children: [(0, KG.jsx)("div", {
-          className: "CreateCustomLobbyTitleContainer",
-          children: (0, KG.jsx)("div", {
-            className: "CreateCustomLobbyTitle",
-            children: rG("homePage:myWorld")
-          })
-        }), (0, KG.jsx)(UG.d, {
-          locked: oG,
-          children: (0, KG.jsxs)("div", {
-            className: "CreateCustomLobbyFields",
-            children: [(0, KG.jsx)(fG.d, {
-              value: zG.defaultGamemode,
-              onChange: GG => {
-                (0, wG.w)(GG) && GG !== zG.defaultGamemode && ((0, QG.l)({
-                  defaultGamemode: GG
-                }), EG({
-                  ...zG,
-                  defaultGamemode: GG
-                }))
-              },
-              showAll: !1,
-              disabled: oG
-            }), (0, KG.jsx)(fG.f, {
-              mapTypes: wG.h,
-              value: zG.mapType,
-              onChange: GG => {
-                (0, wG.A)(GG) && GG !== zG.mapType && ((0, QG.l)({
-                  mapType: GG
-                }), EG({
-                  ...zG,
-                  mapType: GG
-                }))
-              },
-              showAll: !1,
-              disabled: oG
-            }), (0, KG.jsx)(YG.d, {
-              callbacks: {
-                dayNight: WG("dayNight"),
-                fallDamage: WG("fallDamage"),
-                survivalGuns: WG("survivalGuns")
-              },
-              disabled: oG,
-              advancedMode: !1
-            })]
-          })
-        }), (0, KG.jsxs)("div", {
-          className: "CreateCustomLobbyFooter",
-          children: [(0, KG.jsx)(VG.k, {
-            className: "CreateCustomLobbyButton",
-            padDefaultFocus: !0,
-            loading: oG,
-            onClick: () => {
-              bG.requested = !0, XG(!0), kG(!0), iG(""), (0, QG.m)(zG), LG.d.createPersonalWorld(zG).then((GG => {
-                kG(!1);
-                const wG = hG(GG);
-                !bG.closed && CG.current ? (ZG(), JG(GG)) : wG || (0, QG.i)()
-              }), (GG => {
-                if (console.error("Failed to create personal world:", GG), kG(!1), bG.requested = !1, bG.closed || !CG.current) return (0, QG.i)(), void dG(GG);
-                iG(GG.message), XG(!1)
-              }))
-            },
-            children: rG("general:play")
-          }), uG && (0, KG.jsx)("div", {
-            className: "CreateCustomLobbyError AnimFadeInScaleUp",
-            children: uG
-          })]
-        })]
-      })
-    }
-  },
-  4973: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => YG
-    });
-    var wG = ZG(1006),
-      SG = ZG.n(wG),
-      LG = ZG(4655),
-      yG = ZG(1151),
-      kG = ZG(1067);
-    const UG = [...LG.i, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
-
-    function YG(GG) {
-      const {
-        disabled: bG,
-        hideWrapper: ZG
-      } = GG, {
-        t: wG
-      } = (0, yG.w)(), YG = GG.advancedMode ? UG.map((bG => [bG, GG.callbacks[bG]])) : LG.i.map((bG => [bG, GG.callbacks[bG]])), pG = (0, kG.jsx)("div", {
-        className: SG()("PluginsGrid", {
-          SectionBody: !ZG
-        }),
-        children: YG.map((GG => {
-          let [ZG, wG] = GG;
-          return (0, kG.jsx)(VG, {
-            plugin: ZG,
-            callbacks: wG,
-            disabled: bG
-          }, ZG)
-        }))
-      });
-      return ZG ? pG : (0, kG.jsxs)("div", {
-        className: "BloxdForm",
-        children: [(0, kG.jsx)("div", {
-          className: "SectionTitle",
-          children: wG("worldBuilder:pluginsSection")
-        }), pG]
-      })
-    }
-
-    function VG(GG) {
-      let {
-        plugin: bG,
-        callbacks: {
-          isEnabled: ZG,
-          DW: wG
-        },
-        disabled: LG
-      } = GG;
-      const {
-        t: UG
-      } = (0, yG.w)(), YG = ZG();
-      return (0, kG.jsxs)("div", {
-        className: SG()("PluginCard", {
-          PluginCardEnabled: YG,
-          PluginCardDisabledForm: LG
-        }),
-        "data-pad-focusable": !0,
-        "aria-disabled": LG || void 0,
-        onClick: () => {
-          LG || wG(!YG)
-        },
-        children: [(0, kG.jsx)("div", {
-          className: "PluginCardIcon",
-          children: (0, kG.jsx)("img", {
-            src: `/textures/games/classic/customGames/${bG}.png`,
-            alt: bG
-          })
-        }), (0, kG.jsxs)("div", {
-          className: "PluginCardBody",
-          children: [(0, kG.jsx)("div", {
-            className: "PluginCardTitle",
-            children: UG(pG[bG])
-          }), (0, kG.jsx)("div", {
-            className: "PluginCardDescription",
-            children: UG(fG[bG])
-          })]
-        }), (0, kG.jsx)("span", {
-          className: "PluginCardToggleLabel",
-          children: UG(YG ? "general:on" : "general:off")
-        })]
-      })
-    }
-    const pG = {
-        fallDamage: "classic:enableFallDamage",
-        tpRequests: "classic:enableTpRequests",
-        spawnProtection: "classic:enableSpawnProtection",
-        spawnReset: "classic:enableSpawnReset",
-        smpMarketplace: "classic:enableSmpMarketplace",
-        survivalGuns: "classic:enableSurvivalGuns",
-        dayNight: "classic:enableDayNight"
-      },
-      fG = {
-        fallDamage: "classic:enableFallDamageDescription",
-        tpRequests: "classic:enableTpRequestsDescription",
-        spawnProtection: "classic:enableSpawnProtectionDescription",
-        spawnReset: "classic:enableSpawnResetDescription",
-        smpMarketplace: "classic:enableSmpMarketplaceDescription",
-        survivalGuns: "classic:enableSurvivalGunsDescription",
-        dayNight: "classic:enableDayNightDescription"
+    function nM() {
+      var MM, rM;
+      if (PM.ctx || !PM.usingWebAudio || "undefined" === typeof AudioContext || !(0, aM.k)()) return;
+      const iM = navigator.audioSession;
+      let OM;
+      "auto" === (null === iM || void 0 === iM ? void 0 : iM.type) && (iM.type = "ambient");
+      try {
+        OM = new AudioContext({
+          sampleRate: 44100
+        })
+      } catch {
+        return
       }
-  },
-  36680: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => YG,
-      f: () => VG
+      const SM = OM.createGain();
+      SM.gain.setValueAtTime(PM._muted ? 0 : null !== (MM = PM._volume) && void 0 !== MM ? MM : 1, OM.currentTime), SM.connect(OM.destination), PM.ctx = OM, PM.masterGain = SM, null === (rM = PM._setup) || void 0 === rM || rM.call(PM)
+    }
+    PM._mobileUnloaded = !0;
+    const QM = PM.volume.bind(SM.Howler);
+    PM.volume = function() {
+      return nM(), QM(...arguments)
+    };
+    const zM = PM.mute.bind(SM.Howler);
+    PM.mute = MM => (nM(), zM(MM));
+    const LM = SM.Howl.prototype,
+      mM = LM.init;
+
+    function HM() {
+      for (; PM._html5AudioPool.length < PM.html5PoolSize;) {
+        const MM = new Audio;
+        MM._unlocked = !0, PM._releaseHtml5Audio(MM)
+      }
+      for (const rM of PM._howls)
+        if (!rM._webAudio)
+          for (const iM of rM._getSoundIds()) {
+            var MM;
+            const OM = null === (MM = rM._soundById(iM)) || void 0 === MM ? void 0 : MM._node;
+            OM && !OM._unlocked && (OM._unlocked = !0, OM.load())
+          }
+    }
+    LM.init = function(MM) {
+      return nM(), mM.call(this, MM)
+    }, (0, aM.k)() && (PM._unlockAudio = () => {
+      const MM = PM.ctx;
+      if (PM._audioUnlocked || !MM) return;
+      PM.autoUnlock = !1;
+      const rM = MM.createBuffer(1, 1, 22050);
+      PM._scratchBuffer = rM;
+      const iM = new AbortController;
+      let OM = "afterPaint";
+      const SM = () => {
+          var OM;
+          if (PM._audioUnlocked) return;
+          null === (OM = PM._autoResume) || void 0 === OM || OM.call(PM);
+          const SM = MM.createBufferSource();
+          SM.buffer = rM, SM.connect(MM.destination), SM.start(0), MM.resume().catch((() => {})), SM.onended = () => {
+            SM.disconnect(0), PM._audioUnlocked = !0, iM.abort();
+            for (const MM of PM._howls) MM._emit("unlock")
+          }
+        },
+        nM = () => {
+          HM(), SM()
+        },
+        QM = rM => {
+          if (HM(), "inTap" === OM) {
+            if ("running" === MM.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), SM()
+          } else "afterPaint" === OM && (OM = "queued", (0, jM.d)(rM.timeStamp, (() => {
+            OM = "inTap", SM()
+          })))
+        };
+      for (const jM of ["touchstart", "touchend"]) document.addEventListener(jM, nM, {
+        capture: !0,
+        signal: iM.signal
+      });
+      for (const jM of aM.e) document.addEventListener(jM, QM, {
+        capture: !0,
+        signal: iM.signal
+      })
     });
-    ZG(51);
-    var wG = ZG(1006),
-      SG = ZG.n(wG),
-      LG = ZG(4655),
-      yG = ZG(333),
-      kG = ZG(1151),
-      UG = ZG(1067);
+    let hM = 0;
+    const JM = null === (OM = PM._autoSuspend) || void 0 === OM ? void 0 : OM.bind(SM.Howler);
 
-    function YG(GG) {
-      let {
-        value: bG,
-        onChange: ZG,
-        showAll: wG,
-        disabled: YG = !1
-      } = GG;
+    function dM() {
+      yM();
       const {
-        t: VG
-      } = (0, kG.w)();
-      return (0, UG.jsxs)("div", {
-        className: SG()("BloxdForm GamemodeForm", {
-          BasicOptions: !wG
-        }),
-        children: [(0, UG.jsx)("div", {
-          className: "SectionTitle",
-          children: VG("classic:defaultGamemode")
-        }), (0, UG.jsx)("div", {
-          className: "SectionBody",
-          children: LG.F.map((GG => wG || (0, LG.w)(GG) ? (0, UG.jsx)("button", {
-            type: "button",
-            className: SG()("WorldGamemode", {
-              Selected: bG === GG
-            }),
-            disabled: YG,
-            onClick: () => {
-              ZG(GG)
-            },
-            style: {
-              "--background-image": `url(${yG.C[GG]})`
-            },
-            children: yG.y[GG]
-          }, GG) : null))
-        })]
-      })
+        ctx: MM,
+        masterGain: rM
+      } = PM;
+      return MM && rM ? {
+        ctx: MM,
+        destination: rM,
+        holdAwake: MM => {
+          var rM, iM;
+          (hM += MM ? 1 : -1, MM) ? null === (rM = PM._autoResume) || void 0 === rM || rM.call(PM): null === (iM = PM._autoSuspend) || void 0 === iM || iM.call(PM)
+        },
+        wake: () => {
+          var rM;
+          "running" !== MM.state && (null === (rM = PM._autoResume) || void 0 === rM || rM.call(PM), MM.resume().catch((() => {})))
+        }
+      } : null
     }
 
-    function VG(GG) {
-      let {
-        mapTypes: bG,
-        value: ZG,
-        onChange: wG,
-        showAll: YG,
-        disabled: VG = !1,
-        children: pG
-      } = GG;
-      const {
-        t: fG
-      } = (0, kG.w)();
-      return (0, UG.jsxs)("div", {
-        className: SG()("BloxdForm MapTypeForm", {
-          BasicOptions: !YG
-        }),
-        children: [(0, UG.jsx)("div", {
-          className: "SectionTitle",
-          children: fG("customLobby:mapType")
-        }), (0, UG.jsx)("div", {
-          className: "SectionBody",
-          children: bG.map((GG => YG || (0, LG.A)(GG) ? (0, UG.jsx)("button", {
-            type: "button",
-            className: SG()("MapType", {
-              Selected: ZG === GG
-            }),
-            disabled: VG,
-            onClick: () => {
-              wG(GG)
-            },
-            style: {
-              "--background-image": `url(${yG.r[GG]})`
-            },
-            children: yG.n[GG]
-          }, GG) : null))
-        }), pG]
-      })
+    function yM() {
+      var MM;
+      (PM.volume(), PM.ctx && PM.autoUnlock) && (null === (MM = PM._unlockAudio) || void 0 === MM || MM.call(PM))
     }
-  },
-  4967: () => {},
-  36670: () => {}
+    JM && (PM._autoSuspend = () => hM > 0 ? SM.Howler : JM())
+  }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

@@ -1,757 +1,404 @@
 export const id = 136;
 export const ids = [136];
 export const modules = {
-  6608: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      loadPageShaderPackCompiler: () => fb
+  9349: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => aM,
+      d: () => jM
     });
-    var wG = {};
-    ZG.r(wG), ZG.d(wG, {
-      uSG: () => SG,
-      EGG: () => LG,
-      default: () => RG,
-      iSG: () => yG,
-      CSG: () => kG,
-      initSync: () => eG,
-      Gp: () => UG,
-      QwG: () => YG,
-      WSG: () => VG,
-      mSG: () => pG,
-      Qv: () => fG,
-      ISG: () => QG,
-      sF: () => KG,
-      FSG: () => hG
+    var OM = iM(2099);
+    const SM = /^(?:Key[A-Z]|Digit[0-9]|Arrow(?:Up|Down|Left|Right)|Space)$/,
+      jM = MM => "string" === typeof MM.icon && "" !== MM.icon && "string" === typeof MM.keycode && SM.test(MM.keycode),
+      aM = MM => "Space" === MM ? "_" : OM.k[MM]
+  },
+  34822: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => SM,
+      d: () => jM
     });
-    class SG {
-      static __wrap(GG) {
-        const bG = Object.create(SG.prototype);
-        return bG.__wbg_ptr = GG, JG.register(bG, bG.__wbg_ptr, bG), bG
-      }
-      __destroy_into_raw() {
-        const GG = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, JG.unregister(this), GG
-      }
-      free() {
-        const GG = this.__destroy_into_raw();
-        qG.rGHs(GG, 0)
-      }
-      get vSG() {
-        let GG, bG;
-        try {
-          const ZG = qG.hszr(this.__wbg_ptr);
-          return GG = ZG[0], bG = ZG[1], uG(ZG[0], ZG[1])
-        } finally {
-          qG.MiUz(GG, bG, 1)
-        }
-      }
-      get features() {
-        const GG = qG.r8Pt(this.__wbg_ptr);
-        var bG = zG(GG[0], GG[1]);
-        return qG.MiUz(GG[0], 4 * GG[1], 4), bG
-      }
-      get hooks() {
-        const GG = qG.q07X(this.__wbg_ptr);
-        var bG = EG(GG[0], GG[1]).slice();
-        return qG.MiUz(GG[0], 1 * GG[1], 1), bG
-      }
-      mapValidationMessage(GG, bG, ZG, wG, SG) {
-        let LG, yG;
-        try {
-          const YG = qG.jfrd(this.__wbg_ptr, GG, bG, ZG, rG(wG), rG(SG));
-          var kG = YG[0],
-            UG = YG[1];
-          if (YG[3]) throw kG = 0, UG = 0, cG(YG[2]);
-          return LG = kG, yG = UG, uG(kG, UG)
-        } finally {
-          qG.MiUz(LG, yG, 1)
-        }
-      }
-      get moduleCodes() {
-        const GG = qG.bSLr(this.__wbg_ptr);
-        var bG = zG(GG[0], GG[1]);
-        return qG.MiUz(GG[0], 4 * GG[1], 4), bG
-      }
-      get aSG() {
-        let GG, bG;
-        try {
-          const ZG = qG.fprP(this.__wbg_ptr);
-          return GG = ZG[0], bG = ZG[1], uG(ZG[0], ZG[1])
-        } finally {
-          qG.MiUz(GG, bG, 1)
-        }
-      }
-      get reads() {
-        const GG = qG.Obr0(this.__wbg_ptr);
-        var bG = zG(GG[0], GG[1]);
-        return qG.MiUz(GG[0], 4 * GG[1], 4), bG
-      }
-      get validationModuleCodes() {
-        const GG = qG.NFyo(this.__wbg_ptr);
-        var bG = zG(GG[0], GG[1]);
-        return qG.MiUz(GG[0], 4 * GG[1], 4), bG
-      }
-      get validationModuleKeys() {
-        const GG = qG.cNde(this.__wbg_ptr);
-        var bG = EG(GG[0], GG[1]).slice();
-        return qG.MiUz(GG[0], 1 * GG[1], 1), bG
-      }
-      get variantFlags() {
-        const GG = qG.ibVV(this.__wbg_ptr);
-        var bG = EG(GG[0], GG[1]).slice();
-        return qG.MiUz(GG[0], 1 * GG[1], 1), bG
-      }
+    let OM = !1;
+
+    function SM() {
+      return OM
     }
 
-    function LG(GG, bG, ZG, wG, LG, yG, kG) {
-      const UG = aG(GG, qG.IkNL),
-        YG = nG,
-        VG = aG(bG, qG.IkNL),
-        pG = nG,
-        fG = aG(ZG, qG.IkNL),
-        QG = nG,
-        KG = vG(wG, qG.IkNL),
-        hG = nG,
-        dG = aG(LG, qG.IkNL),
-        JG = nG,
-        rG = aG(yG, qG.IkNL),
-        zG = nG,
-        EG = aG(kG, qG.IkNL),
-        oG = nG,
-        XG = qG.x3gQ(UG, YG, VG, pG, fG, QG, KG, hG, dG, JG, rG, zG, EG, oG);
-      if (XG[2]) throw cG(XG[1]);
-      return SG.__wrap(XG[0])
-    }
-
-    function yG() {
-      const GG = qG.Qn0E();
-      var bG = zG(GG[0], GG[1]);
-      return qG.MiUz(GG[0], 4 * GG[1], 4), bG
-    }
-
-    function kG() {
-      const GG = qG.RfwA();
-      var bG = zG(GG[0], GG[1]);
-      return qG.MiUz(GG[0], 4 * GG[1], 4), bG
-    }
-
-    function UG() {
-      qG.aNxG()
-    }
-
-    function YG(GG, bG, ZG, wG, SG) {
-      let LG, yG;
-      try {
-        const YG = aG(GG, qG.IkNL),
-          VG = nG,
-          pG = vG(bG, qG.IkNL),
-          fG = nG,
-          QG = aG(ZG, qG.IkNL),
-          KG = nG,
-          hG = vG(wG, qG.IkNL),
-          dG = nG,
-          JG = function(GG, bG) {
-            const ZG = bG(1 * GG.length, 1) >>> 0;
-            return WG().set(GG, ZG / 1), nG = GG.length, ZG
-          }(SG, qG.IkNL),
-          rG = nG,
-          zG = qG.dfb7(YG, VG, pG, fG, QG, KG, hG, dG, JG, rG);
-        var kG = zG[0],
-          UG = zG[1];
-        if (zG[3]) throw kG = 0, UG = 0, cG(zG[2]);
-        return LG = kG, yG = UG, uG(kG, UG)
-      } finally {
-        qG.MiUz(LG, yG, 1)
-      }
-    }
-
-    function VG() {
-      let GG, bG;
-      try {
-        const ZG = qG.xAzR();
-        return GG = ZG[0], bG = ZG[1], uG(ZG[0], ZG[1])
-      } finally {
-        qG.MiUz(GG, bG, 1)
-      }
-    }
-
-    function pG(GG) {
-      let bG, ZG;
-      try {
-        const LG = qG.VgDR(GG);
-        var wG = LG[0],
-          SG = LG[1];
-        if (LG[3]) throw wG = 0, SG = 0, cG(LG[2]);
-        return bG = wG, ZG = SG, uG(wG, SG)
-      } finally {
-        qG.MiUz(bG, ZG, 1)
-      }
-    }
-
-    function fG() {
-      return qG.DRsQ() >>> 0
-    }
-
-    function QG() {
-      let GG, bG;
-      try {
-        const ZG = qG.TnOr();
-        return GG = ZG[0], bG = ZG[1], uG(ZG[0], ZG[1])
-      } finally {
-        qG.MiUz(GG, bG, 1)
-      }
-    }
-
-    function KG(GG, bG) {
-      let ZG, wG;
-      try {
-        const yG = aG(GG, qG.IkNL),
-          kG = nG,
-          UG = vG(bG, qG.IkNL),
-          YG = nG,
-          VG = qG.AbPv(yG, kG, UG, YG);
-        var SG = VG[0],
-          LG = VG[1];
-        if (VG[3]) throw SG = 0, LG = 0, cG(VG[2]);
-        return ZG = SG, wG = LG, uG(SG, LG)
-      } finally {
-        qG.MiUz(ZG, wG, 1)
-      }
-    }
-
-    function hG(GG) {
-      let bG, ZG;
-      try {
-        const LG = qG.caAm(rG(GG));
-        var wG = LG[0],
-          SG = LG[1];
-        if (LG[3]) throw wG = 0, SG = 0, cG(LG[2]);
-        return bG = wG, ZG = SG, uG(wG, SG)
-      } finally {
-        qG.MiUz(bG, ZG, 1)
-      }
-    }
-
-    function dG() {
-      return {
-        __proto__: null,
-        ThAz: {
-          __proto__: null,
-          eaV4: function(GG, bG) {
-            return rG(Error(uG(GG, bG)))
-          },
-          pwbw: function(GG) {
-            return null === mG(GG)
-          },
-          COkK: function(GG) {
-            return "string" === typeof mG(GG)
-          },
-          WXY0: function(GG, bG) {
-            const ZG = mG(bG),
-              wG = "string" === typeof ZG ? ZG : void 0;
-            var SG, LG = void 0 === (SG = wG) || null === SG ? 0 : function(GG, bG, ZG) {
-                if (void 0 === ZG) {
-                  const ZG = MG.encode(GG),
-                    wG = bG(ZG.length, 1) >>> 0;
-                  return WG().subarray(wG, wG + ZG.length).set(ZG), nG = ZG.length, wG
-                }
-                let wG = GG.length,
-                  SG = bG(wG, 1) >>> 0;
-                const LG = WG();
-                let yG = 0;
-                for (; yG < wG; yG++) {
-                  const bG = GG.charCodeAt(yG);
-                  if (bG > 127) break;
-                  LG[SG + yG] = bG
-                }
-                if (yG !== wG) {
-                  0 !== yG && (GG = GG.slice(yG)), SG = ZG(SG, wG, wG = yG + 3 * GG.length, 1) >>> 0;
-                  const bG = WG().subarray(SG + yG, SG + wG);
-                  yG += MG.encodeInto(GG, bG).written, SG = ZG(SG, wG, yG, 1) >>> 0
-                }
-                return nG = yG, SG
-              }(wG, qG.IkNL, qG.Pd9B),
-              yG = nG;
-            XG().setInt32(GG + 4, yG, !0), XG().setInt32(GG + 0, LG, !0)
-          },
-          INXc: function(GG, bG) {
-            throw new Error(uG(GG, bG))
-          },
-          Oo6P: function(GG, bG) {
-            return mG(GG).charCodeAt(bG >>> 0)
-          },
-          Ik02: function(GG, bG) {
-            console.error(uG(GG, bG))
-          },
-          pzYM: function(GG) {
-            return mG(GG).length
-          },
-          Rqbq: function(GG, bG) {
-            return rG(uG(GG, bG))
-          },
-          NEmb: function(GG) {
-            cG(GG)
-          }
-        }
-      }
-    }
-    Symbol.dispose && (SG.prototype[Symbol.dispose] = SG.prototype.free);
-    const JG = "undefined" === typeof FinalizationRegistry ? {
-      register: () => {},
-      unregister: () => {}
-    } : new FinalizationRegistry((GG => qG.rGHs(GG, 1)));
-
-    function rG(GG) {
-      FG === IG.length && IG.push(IG.length + 1);
-      const bG = FG;
-      return FG = IG[bG], IG[bG] = GG, bG
-    }
-
-    function zG(GG, bG) {
-      GG >>>= 0;
-      const ZG = XG(),
-        wG = [];
-      for (let SG = GG; SG < GG + 4 * bG; SG += 4) wG.push(cG(ZG.getUint32(SG, !0)));
-      return wG
-    }
-
-    function EG(GG, bG) {
-      return GG >>>= 0, WG().subarray(GG / 1, GG / 1 + bG)
-    }
-    let oG = null;
-
-    function XG() {
-      return null !== oG && oG.buffer === qG.memory.buffer || (oG = new DataView(qG.memory.buffer)), oG
-    }
-
-    function uG(GG, bG) {
-      return function(GG, bG) {
-        PG += bG, PG >= jG && (lG = new TextDecoder("utf-8", {
-          ignoreBOM: !0,
-          fatal: !0
-        }), lG.decode(), PG = bG);
-        return lG.decode(WG().subarray(GG, GG + bG))
-      }(GG >>> 0, bG)
-    }
-    let iG = null;
-    let CG = null;
-
-    function WG() {
-      return null !== CG && 0 !== CG.byteLength || (CG = new Uint8Array(qG.memory.buffer)), CG
-    }
-
-    function mG(GG) {
-      return IG[GG]
-    }
-    let IG = new Array(1024).fill(void 0);
-    IG.push(void 0, null, !0, !1);
-    let FG = IG.length;
-
-    function vG(GG, bG) {
-      const ZG = bG(4 * GG.length, 4) >>> 0;
-      return (null !== iG && 0 !== iG.byteLength || (iG = new Uint32Array(qG.memory.buffer)), iG).set(GG, ZG / 4), nG = GG.length, ZG
-    }
-
-    function aG(GG, bG) {
-      const ZG = bG(4 * GG.length, 4) >>> 0,
-        wG = XG();
-      for (let SG = 0; SG < GG.length; SG++) wG.setUint32(ZG + 4 * SG, rG(GG[SG]), !0);
-      return nG = GG.length, ZG
-    }
-
-    function cG(GG) {
-      const bG = mG(GG);
-      return function(GG) {
-        GG < 1028 || (IG[GG] = FG, FG = GG)
-      }(GG), bG
-    }
-    let lG = new TextDecoder("utf-8", {
-      ignoreBOM: !0,
-      fatal: !0
-    });
-    lG.decode();
-    const jG = 2146435072;
-    let PG = 0;
-    const MG = new TextEncoder;
-    "encodeInto" in MG || (MG.encodeInto = function(GG, bG) {
-      const ZG = MG.encode(GG);
-      return bG.set(ZG), {
-        read: GG.length,
-        written: ZG.length
-      }
-    });
-    let AG, sG, qG, nG = 0;
-
-    function gG(GG, bG) {
-      return sG = GG, qG = GG.exports, AG = bG, oG = null, iG = null, CG = null, qG.ttYv(), qG
-    }
-
-    function eG(GG) {
-      if (void 0 !== qG) return qG;
-      void 0 !== GG && (Object.getPrototypeOf(GG) === Object.prototype ? ({
-        module: GG
-      } = GG) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const bG = dG();
-      GG instanceof WebAssembly.Module || (GG = new WebAssembly.Module(GG));
-      return gG(new WebAssembly.Instance(GG, bG), GG)
-    }
-    async function RG(GG) {
-      if (void 0 !== qG) return qG;
-      void 0 !== GG && (Object.getPrototypeOf(GG) === Object.prototype ? ({
-        module_or_path: GG
-      } = GG) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const bG = dG();
-      ("string" === typeof GG || "function" === typeof Request && GG instanceof Request || "function" === typeof URL && GG instanceof URL) && (GG = fetch(GG));
-      const {
-        instance: ZG,
-        module: wG
-      } = await async function(GG, bG) {
-        if ("function" === typeof Response && GG instanceof Response) {
-          if (!GG.ok) throw new Error(`failed to fetch Wasm: ${GG.status} ${GG.statusText} fetching '${GG.url}'`);
-          if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(GG, bG)
-          } catch (ZG) {
-            if (! function(GG) {
-                switch (GG) {
-                  case "basic":
-                  case "cors":
-                  case "default":
-                    return !0
-                }
-                return !1
-              }(GG.type) || "application/wasm" === GG.headers.get("Content-Type")) throw ZG;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", ZG)
-          }
-          const wG = await GG.arrayBuffer();
-          return await WebAssembly.instantiate(wG, bG)
-        } {
-          const ZG = await WebAssembly.instantiate(GG, bG);
-          return ZG instanceof WebAssembly.Instance ? {
-            instance: ZG,
-            module: GG
-          } : ZG
-        }
-      }(await GG, bG);
-      return gG(ZG, wG)
-    }
-    var TG = ZG(2872),
-      HG = ZG(6617);
-    class tG extends Error {
-      stage;
-      constructor(GG, bG) {
-        super((0, TG.D)(GG, bG), {
-          cause: bG
-        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = GG
-      }
-    }
-    let DG = null,
-      NG = null;
-
-    function OG() {
-      return DG ? Promise.resolve(DG) : (NG || (NG = async function() {
-        let GG;
-        try {
-          GG = await (0, TG.G)(new ZG.U(ZG(6620)), (0, HG.e)("bloxd_wasm_shader_pack"))
-        } catch (bG) {
-          throw new tG((0, TG.L)(bG), bG)
-        }
-        try {
-          await RG({
-            module_or_path: GG
-          })
-        } catch (bG) {
-          throw new tG("instantiate", bG)
-        }
-        return DG = wG, DG
-      }(), NG.then(void 0, (() => {
-        NG = null
-      }))), NG)
-    }
-    var xG = ZG(6629);
-
-    function BG(GG) {
-      let [bG, ZG, wG, SG] = GG;
-      const LG = {
-        file: bG,
-        line: ZG,
-        message: wG
-      };
-      return SG && (LG.variants = SG.map(xG.o)), LG
-    }
-
-    function Gb(GG) {
-      return JSON.parse(GG).map(BG)
-    }
-
-    function bb(GG, bG) {
-      if (!Number.isInteger(GG) || GG < 0 || GG > 4294967295) throw new Error(`${bG} ${GG} is not a whole number from 0 to 4294967295`);
-      return GG
-    }
-
-    function Zb(GG) {
-      return [GG.named.map((GG => GG.name)), Uint32Array.from(GG.named, (GG => bb(GG.id, "Texture ID")))]
-    }
-    const wb = new WeakMap;
-    const Sb = new WeakMap,
-      Lb = new WeakSet;
-
-    function yb(GG, bG) {
-      if (Lb.has(GG)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
-      try {
-        return bG()
-      } catch (ZG) {
-        throw ZG instanceof WebAssembly.RuntimeError && Lb.add(GG), ZG
-      }
-    }
-
-    function kb(GG) {
-      let bG = Sb.get(GG);
-      if (!bG) {
-        let ZG, wG;
-        bG = {
-          EGG: (bG, ZG) => yb(GG, (() => function(GG, bG, ZG) {
-            const wG = GG.EGG(bG.map((GG => GG.path)), bG.map((GG => GG.source)), ...Zb(ZG), ZG.aliases.map((GG => GG.name)), ZG.aliases.map((GG => GG.texture)), ZG.aliases.map((GG => GG.kind)));
-            let SG = !1;
-            try {
-              const GG = wG.validationModuleCodes,
-                bG = Array.from(wG.validationModuleKeys, ((bG, ZG) => ({
-                  key: (0, xG.o)(bG),
-                  code: GG[ZG]
-                }))),
-                ZG = {
-                  errors: Gb(wG.vSG),
-                  offInStrict: Gb(wG.aSG),
-                  variants: (0, xG.h)(wG),
-                  validationModules: bG,
-                  features: wG.features
-                };
-              return bG.forEach(((GG, bG) => {
-                wb.set(GG, {
-                  pack: wG,
-                  index: bG
-                })
-              })), SG = bG.length > 0, ZG
-            } finally {
-              SG || wG.free()
-            }
-          }(GG, bG, ZG))),
-          mapValidationMessage: (bG, ZG) => {
-            const wG = wb.get(bG);
-            if (!wG) throw new Error("mapValidationMessage takes a validation module this compiler made");
-            return BG(JSON.parse(yb(GG, (() => wG.pack.mapValidationMessage(wG.index, ZG.lineNum, ZG.linePos, ZG.message, ZG.type)))))
-          },
-          QwG: bG => yb(GG, (() => function(GG, bG) {
-            const ZG = new Int32Array(bG.length),
-              wG = [];
-            return bG.forEach(((GG, bG) => {
-              ZG[bG] = GG.variants ? GG.variants.length : -1;
-              for (const ZG of GG.variants ?? []) wG.push((0, xG.k)(ZG))
-            })), Gb(GG.QwG(bG.map((GG => GG.file)), Uint32Array.from(bG, (GG => bb(GG.line, "Diagnostic line"))), bG.map((GG => GG.message)), ZG, Uint8Array.from(wG)))
-          }(GG, bG))),
-          sF: bG => yb(GG, (() => GG.sF(...Zb(bG)))),
-          get SHADER_PACK_HEADER_VERSION() {
-            return ZG ??= yb(GG, (() => GG.ISG())), ZG
-          },
-          get DEFAULT_SHADER_PACK_FILES() {
-            return wG ??= yb(GG, (() => {
-              const bG = GG.CSG();
-              return GG.iSG().map(((GG, ZG) => ({
-                path: GG,
-                source: bG[ZG]
-              })))
-            })), wG
-          },
-          FSG: bG => yb(GG, (() => GG.FSG(bG))),
-          resolveHeader: bG => yb(GG, (() => GG.mSG((0, xG.k)(bG)))),
-          WSG: () => yb(GG, (() => GG.WSG()))
-        }, Sb.set(GG, bG)
-      }
-      return bG
-    }
-    var Ub = ZG(3201),
-      Yb = ZG(6627);
-    const Vb = "bloxdShaderPackWasmFailureReported";
-    let pb = null;
-
-    function fb() {
-      return pb ??= async function() {
-        if ("undefined" === typeof WebAssembly) return Qb("unsupported", "This browser has no WebAssembly"), null;
-        const GG = (0, Yb.loadShaderPackTextures)().then((() => !0), (GG => (console.error("Could not load the shader pack textures, so shader packs can't run", GG), !1)));
-        try {
-          const bG = await async function() {
-            let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : OG;
-            return kb(await GG())
-          }();
-          return await GG ? bG : null
-        } catch (bG) {
-          const GG = bG instanceof Error ? bG.message : String(bG);
-          return Qb(Ub.b[bG instanceof tG ? bG.stage : "instantiate"], GG), null
-        }
-      }(), pb
-    }
-
-    function Qb(GG, bG) {
-      (0, Ub.g)(Vb, `Shader pack wasm ${GG}, so shader packs can't run: ${bG}`, bG, `shader_pack_${GG}`)
+    function jM(MM) {
+      return OM !== MM && (OM = MM, !0)
     }
   },
-  6620: (GG, bG, ZG) => {
-    GG.exports = ZG.p + "static/media/bloxd_wasm_shader_pack_bg.b2efd01bad4a0b498959.wasm"
-  },
-  6617: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => yG
+  34833: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM
     });
-    var wG = ZG(2872);
-    const SG = {
-      bloxd_wasm: () => "227276669bc81789ae0877e56ad1fa5148b881f36403e765502d7e555a33087b",
-      bloxd_wasm_client: () => "fde6efab397f5d28c36c7f7a90c3f8e1e62ec9f2af8488ddf98fdaa9b2cebcf1",
-      bloxd_wasm_workers: () => "a8f5ca009ba569fbb81d001dc1c9c7b54b8e4226097b17169475b4bb5e1b6f99",
-      bloxd_wasm_models: () => "097716d2f3ac493be1328cd23cfea825beae0b4d004cb4793fdff4648d25e301",
-      bloxd_wasm_webgpu: () => "67fd54aabb1d4d6967e430405453b87c364949978d0f7829b088145aae1e9ce5",
-      bloxd_wasm_webgl: () => "cdb0cf8160692e68dd70a2abf12e1128a08d64229d0469d4cc325cafd535e3d2",
-      bloxd_wasm_webgl1: () => "e8028f55daf732b5703910fe0886408ee732d8fa1e0480d554692849ab6badfa",
-      bloxd_wasm_replay: () => "218045edbe3647b06370037bf62e2cd5b77074e838aa33d42c210d12a23e3077",
-      bloxd_wasm_recorder: () => "8c52d908a7d9cbdccb92ee77564b71599d585f3b620f197e3396dcac8eca4f39",
-      bloxd_wasm_anim: () => "4aa0ad1549e0d5c6e1e816ef89f5c6c760fcacd619ca992ecbfbe1cf2f199e59",
-      bloxd_wasm_textures: () => "e5d65888cff795e87fa902109722e0986a22a654053de444a1b316ec7c6a343f",
-      bloxd_wasm_shader_pack: () => "1379c312c4022055abc387da5e4950082e1556f2bea4656a45cd7e8eb7e7ab66"
-    };
-    var LG = ZG(4708);
-
-    function yG(GG) {
-      const bG = Object.prototype.hasOwnProperty.call(SG, GG) ? SG[GG]() : void 0;
-      if (void 0 !== bG) return {
-        sha256: bG,
-        onMismatch: LG.y
-      };
-      throw new wG.k(`${GG} has no release digest, so this build refuses it`)
-    }
-  },
-  6629: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => EG,
-      h: () => oG,
-      k: () => rG,
-      o: () => JG
-    });
-    var wG = ZG(6636);
-    const SG = 6,
-      LG = 3,
-      yG = 1,
-      kG = 2,
-      UG = 4,
-      YG = 8,
-      VG = 16,
-      pG = 32,
-      fG = 64,
-      QG = 128,
-      KG = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
-
-    function hG(GG) {
-      if (!GG) return 0;
-      const bG = KG.indexOf(GG);
-      if (bG <= 0) throw new Error(`"${GG}" is not a shader pack hook function`);
-      return bG
-    }
-
-    function dG(GG) {
-      if (0 === GG) return null;
-      const bG = KG[GG];
-      if (void 0 === bG) throw new Error(`${GG} is not a shader pack hook function id`);
-      return bG
-    }
-
-    function JG(GG) {
-      const bG = wG.e.length;
-      return {
-        strict: GG >= bG,
-        program: wG.e[GG % bG]
+    class OM {
+      constructor(MM) {
+        this.events = MM, this.recent = [], this.episode = null, this.sampleSum = 0, this.sampleCount = 0, this.minWindowAvg = null
       }
-    }
-
-    function rG(GG) {
-      return Number(GG.strict) * wG.e.length + wG.e.indexOf(GG.program)
-    }
-
-    function zG(GG) {
-      return "" === GG ? [] : GG.split(" ")
-    }
-
-    function EG(GG) {
-      const bG = {
-        variantFlags: new Uint8Array(SG),
-        hooks: new Uint8Array(SG * LG),
-        moduleCodes: Array(SG).fill(""),
-        reads: Array(2 * SG).fill("")
-      };
-      for (const ZG of GG) {
-        const GG = rG(ZG.key),
-          wG = (GG, bG) => null === ZG.hooks.surface || ZG.reads.fragment.includes(GG) ? 0 : bG;
-        bG.variantFlags[GG] = (ZG.sceneDepth ? yG : 0) | (ZG.movesVertices ? kG : 0) | (ZG.sunShadow ? UG : 0) | (ZG.airShadow ? YG : 0) | (ZG.discards ? VG : 0) | wG("localPosition", pG) | wG("enchantSpeed", fG) | wG("enchantTier", QG), bG.hooks[GG * LG] = hG(ZG.hooks.vertex), bG.hooks[GG * LG + 1] = hG(ZG.hooks.surface), bG.hooks[GG * LG + 2] = hG(ZG.hooks.light), bG.moduleCodes[GG] = ZG.moduleCode, bG.reads[2 * GG] = ZG.reads.vertex.join(" "), bG.reads[2 * GG + 1] = ZG.reads.fragment.join(" ")
+      addSample(MM, rM) {
+        if (null === MM) return this.recent.length = 0, void this.endEpisode(rM);
+        if (this.sampleSum += MM, this.sampleCount++, this.recent.push(MM), this.recent.length > 5 && this.recent.shift(), null !== this.episode && (this.episode.minFps = Math.min(this.episode.minFps, MM), this.episode.sum += MM, this.episode.count++), this.recent.length < 5) return;
+        const iM = function(MM) {
+          let rM = 0;
+          for (const iM of MM) rM += iM;
+          return rM / MM.length
+        }(this.recent);
+        this.minWindowAvg = null === this.minWindowAvg ? iM : Math.min(this.minWindowAvg, iM), null === this.episode && iM < 20 ? (this.episode = {
+          startedAtMs: rM - 5e3,
+          minFps: Math.min(...this.recent),
+          sum: 5 * iM,
+          count: 5
+        }, this.events.onEpisodeStarted(iM)) : null !== this.episode && iM >= 25 && this.endEpisode(rM)
       }
-      return bG
-    }
-
-    function oG(GG) {
-      const {
-        hooks: bG,
-        moduleCodes: ZG,
-        reads: wG
-      } = GG;
-      return Array.from(GG.variantFlags, ((GG, SG) => {
-        const pG = SG * LG;
-        return {
-          key: JG(SG),
-          hooks: {
-            vertex: dG(bG[pG]),
-            surface: dG(bG[pG + 1]),
-            light: dG(bG[pG + 2])
-          },
-          moduleCode: ZG[SG],
-          sceneDepth: 0 !== (GG & yG),
-          sunShadow: 0 !== (GG & UG),
-          airShadow: 0 !== (GG & YG),
-          movesVertices: 0 !== (GG & kG),
-          discards: 0 !== (GG & VG),
-          reads: {
-            vertex: zG(wG[2 * SG]),
-            fragment: zG(wG[2 * SG + 1])
-          }
+      endEpisode(MM) {
+        if (null === this.episode) return;
+        const {
+          startedAtMs: rM,
+          minFps: iM,
+          sum: OM,
+          count: SM
+        } = this.episode;
+        this.episode = null, this.events.onEpisodeEnded({
+          startedAtMs: rM,
+          durationMs: MM - rM,
+          minFps: jM(iM),
+          avgFps: jM(OM / SM)
+        })
+      }
+      getTags() {
+        return null === this.minWindowAvg ? null : {
+          fps_min_bucket: SM(this.minWindowAvg),
+          fps_avg_bucket: SM(this.sampleSum / this.sampleCount)
         }
+      }
+    }
+
+    function SM(MM) {
+      return MM < 15 ? "<15" : MM < 30 ? "15-30" : MM < 50 ? "30-50" : "50+"
+    }
+
+    function jM(MM) {
+      return Math.round(10 * MM) / 10
+    }
+  },
+  34841: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => QM,
+      f: () => PM
+    });
+    var OM = iM(1073),
+      SM = iM(1573),
+      jM = iM(1144);
+    const aM = 5e3;
+
+    function PM(MM) {
+      let rM;
+      const iM = jM.userContextManager.getCurrentUserContext().then((rM => SM.c.getGame(rM, MM))).then((MM => MM.name)).catch((rM => (console.warn(`Session replay: couldn't fetch the title of custom game ${MM}.`, rM), null))),
+        OM = new Promise((MM => {
+          rM = setTimeout((() => {
+            MM(null)
+          }), aM)
+        }));
+      return Promise.race([iM, OM]).finally((() => {
+        clearTimeout(rM)
       }))
     }
-  },
-  6636: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => wG,
-      i: () => yG,
-      m: () => kG,
-      q: () => SG,
-      u: () => LG
-    });
-    const wG = ["terrain", "liquid", "model"];
 
-    function SG() {
-      const GG = [];
-      for (const bG of [!1, !0])
-        for (const ZG of wG) GG.push({
-          strict: bG,
-          program: ZG
+    function nM(MM) {
+      var rM;
+      return !0 !== MM.is_custom_game ? String(MM.game_name) : `custom: ${String(null!==(rM=MM.game_display_name)&&void 0!==rM?rM:MM.game_analytics_id)}`
+    }
+    class QM {
+      constructor(MM) {
+        this.replay = MM, this.pending = null
+      }
+      send(MM, rM, iM) {
+        if (this.flush(), !(0, OM.m)(MM)) return this.replay.capture("game_joined", rM), void this.replay.capture("$screen", {
+          $screen_name: nM(rM)
         });
-      return GG
+        const SM = {
+          properties: rM,
+          joinedAtMs: iM
+        };
+        this.pending = SM, PM((0, OM.p)(MM)).then((MM => {
+          this.pending === SM && (null !== MM && (SM.properties = {
+            ...rM,
+            game_display_name: MM
+          }, this.replay.addGameContext({
+            game_display_name: MM
+          })), this.flush())
+        }))
+      }
+      flush() {
+        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        if (null === this.pending) return;
+        const {
+          properties: rM,
+          joinedAtMs: iM
+        } = this.pending;
+        this.pending = null;
+        const OM = {
+          $screen_name: nM(rM)
+        };
+        MM ? (this.replay.captureOnExit("game_joined", rM, iM), this.replay.captureOnExit("$screen", OM, iM)) : (this.replay.captureAt("game_joined", rM, iM), this.replay.captureAt("$screen", OM, iM))
+      }
+    }
+  },
+  34820: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => tM
+    });
+    var OM = iM(19),
+      SM = iM(2067),
+      jM = iM(34822),
+      aM = iM(22),
+      PM = iM(1717),
+      nM = iM(34831),
+      QM = iM(9349),
+      zM = iM(1830),
+      LM = iM(2093),
+      mM = iM(30),
+      HM = iM(34785),
+      hM = iM(2096),
+      JM = iM(7006);
+    const dM = [...Object.values(hM.h).flat(), "ShiftLeft", "ShiftRight", "Enter", "KeyT", "Slash", "Escape", "Tab", "MetaLeft", "MetaRight", "ContextMenu", "PrintScreen", "ScrollLock", "Pause", "NumLock", "F1", "F5", "F6", "F7", "F11", "F12", "Mouse4", "Mouse5"],
+      yM = [
+        [1, "Mouse1"],
+        [4, "Mouse2"],
+        [2, "Mouse3"],
+        [8, "Mouse4"],
+        [16, "Mouse5"]
+      ],
+      lM = {
+        forward: "forward",
+        backward: "backward",
+        left: "left",
+        right: "right",
+        jump: "jump",
+        sprint: "sprint",
+        crouch: "crouch",
+        "primary-fire": "primary",
+        "alt-fire": "secondary",
+        "mid-fire": "middle"
+      };
+    class EM {
+      constructor(MM) {
+        this.source = MM, this.keyListeners = [], this.actionsListeners = [], this.pointerLockListeners = [], this.sQ = new Uint8Array(JM.e.length), this.heldCount = 0, this.actionBits = 0, this.typing = !1, this.pointerLocked = !1, this.mouseButtons = 0, this.keyTable = null, MM.onBindingsChanged((() => {
+          this.keyTable = null
+        }))
+      }
+      onKey(MM) {
+        return GM(this.keyListeners, MM)
+      }
+      onUnboundKey(MM) {
+        return this.onKey(((rM, iM, OM, SM, jM) => {
+          iM && SM && !OM && MM(rM, jM)
+        }))
+      }
+      onActions(MM) {
+        return GM(this.actionsListeners, MM)
+      }
+      onPointerLock(MM) {
+        return GM(this.pointerLockListeners, MM)
+      }
+      getActionBits() {
+        return this.actionBits
+      }
+      listen(MM, rM) {
+        this.typing = this.source.isTyping(rM.activeElement), this.pointerLocked = null !== rM.pointerLockElement;
+        const iM = {
+          capture: !0,
+          passive: !0
+        };
+        MM.addEventListener("keydown", (MM => {
+          this.setTyping(this.source.isTyping(UM(MM))), MM.isComposing || this.typing || this.keyDown(MM.code, MM.altKey || MM.ctrlKey || MM.metaKey)
+        }), iM), MM.addEventListener("keyup", (MM => {
+          this.typing || ("MetaLeft" === MM.code || "MetaRight" === MM.code ? this.releaseAll() : this.keyUp((0, JM.f)(MM.code)))
+        }), iM);
+        const OM = MM => {
+          "mouse" === MM.pointerType && MM.isTrusted && this.setMouseButtons(MM.buttons, MM.altKey || MM.ctrlKey || MM.metaKey)
+        };
+        MM.addEventListener("pointerdown", OM, iM), MM.addEventListener("pointermove", OM, iM), MM.addEventListener("pointerup", OM, iM), MM.addEventListener("focusin", (MM => {
+          this.setTyping(this.source.isTyping(UM(MM)))
+        }), iM), MM.addEventListener("focusout", (MM => {
+          this.setTyping(this.source.isTyping(MM.relatedTarget))
+        }), iM), MM.addEventListener("blur", (rM => {
+          rM.target === MM && this.releaseAll()
+        }), iM), rM.addEventListener("visibilitychange", (() => {
+          rM.hidden && this.releaseAll()
+        })), rM.addEventListener("pointerlockchange", (() => {
+          const MM = null !== rM.pointerLockElement;
+          if (MM !== this.pointerLocked) {
+            this.pointerLocked = MM;
+            const rM = this.source.now();
+            for (const iM of this.pointerLockListeners) iM(MM, rM)
+          }
+        }))
+      }
+      keyDown(MM, rM) {
+        const iM = (0, JM.f)(MM);
+        if (0 !== this.sQ[iM]) return;
+        const OM = this.source.isInPlay(),
+          SM = OM ? this.getKeyTable() : null,
+          jM = null === SM || rM || 1 === SM.bound[iM];
+        this.sQ[iM] = 1 + (jM ? 1 : 0) + (OM ? 2 : 0), this.heldCount++, this.emit(iM, !0, jM, OM), null !== SM && 0 !== SM.actionBits[iM] && this.updateActionBits()
+      }
+      keyUp(MM) {
+        this.release(MM) && this.updateActionBits()
+      }
+      setMouseButtons(MM, rM) {
+        const iM = MM ^ this.mouseButtons;
+        if (0 !== iM) {
+          this.mouseButtons = MM;
+          for (const [OM, SM] of yM) 0 !== (iM & OM) && (0 === (MM & OM) ? this.keyUp((0, JM.f)(SM)) : !this.typing && this.source.isInPlay() && this.keyDown(SM, rM))
+        }
+      }
+      releaseAll() {
+        let MM = !1;
+        for (let rM = 0; this.heldCount > 0 && rM < this.sQ.length; rM++) MM = this.release(rM) || MM;
+        this.mouseButtons = 0, MM && this.updateActionBits()
+      }
+      release(MM) {
+        const rM = this.sQ[MM];
+        if (0 === rM) return !1;
+        this.sQ[MM] = 0, this.heldCount--;
+        const iM = 0 !== (rM - 1 & 2);
+        return this.emit(MM, !1, 0 !== (rM - 1 & 1), iM), iM
+      }
+      updateActionBits() {
+        let MM = 0;
+        if (this.heldCount > 0) {
+          const rM = this.getKeyTable().actionBits;
+          for (let iM = 0; iM < this.sQ.length; iM++) {
+            const OM = this.sQ[iM];
+            0 !== OM && 0 !== (OM - 1 & 2) && (MM |= rM[iM])
+          }
+        }
+        if (MM === this.actionBits) return;
+        this.actionBits = MM;
+        const rM = this.source.now();
+        for (const iM of this.actionsListeners) iM(MM, rM)
+      }
+      getKeyTable() {
+        return this.keyTable ??= function(MM, rM) {
+          const iM = new Uint8Array(JM.e.length),
+            OM = new Uint16Array(JM.e.length);
+          iM[0] = 1;
+          for (const SM of dM) iM[(0, JM.f)(SM)] = 1;
+          for (const [SM, jM] of Object.entries(MM)) {
+            if (rM.has(SM)) continue;
+            const MM = lM[SM],
+              aM = void 0 === MM ? 0 : (0, JM.h)(MM);
+            for (const rM of jM) {
+              const MM = (0, JM.f)(rM);
+              iM[MM] = 1, 0 !== MM && (OM[MM] |= aM)
+            }
+          }
+          return {
+            bound: iM,
+            actionBits: OM
+          }
+        }(this.source.getBindings(), this.source.ignoredActions), this.keyTable
+      }
+      setTyping(MM) {
+        MM && !this.typing && (this.typing = !0, this.releaseAll()), this.typing = MM
+      }
+      emit(MM, rM, iM, OM) {
+        const SM = JM.e[MM],
+          jM = this.source.now();
+        for (const aM of this.keyListeners) aM(SM, rM, iM, OM, jM)
+      }
     }
 
-    function LG(GG) {
-      return `${GG.strict?"strict":"allow"}.${GG.program}`
+    function UM(MM) {
+      var rM;
+      return null !== (rM = MM.composedPath()[0]) && void 0 !== rM ? rM : MM.target
     }
 
-    function yG(GG) {
-      return !GG.hooks.vertex && !GG.hooks.surface && !GG.hooks.light
+    function GM(MM, rM) {
+      return MM.push(rM), () => {
+        const iM = MM.indexOf(rM); - 1 !== iM && MM.splice(iM, 1)
+      }
+    }
+    const CM = "replayInput",
+      eM = new Set([...LM.A, ...LM.k].filter((MM => "replayViewerOpen" !== MM && "toggleFreeCam" !== MM)));
+    let bM = null;
+
+    function wM() {
+      var MM;
+      return (null !== (MM = SM.d.get("customButtons")) && void 0 !== MM ? MM : []).filter(QM.d).map((MM => MM.keycode))
     }
 
-    function kG(GG, bG) {
-      return "off" !== bG && (null === GG || GG.some((GG => GG.key.strict === ("strict" === bG) && !yG(GG))))
+    function tM() {
+      return null === bM && "0" !== String(mM.g.getItem(CM)) && (bM = new EM({
+        isInPlay: () => "inGame" === OM.d.get("gameState") && !(0, PM.r)() && !(0, jM.b)(),
+        isTyping: zM.isTextEntry,
+        getBindings: () => ({
+          ...LM.v,
+          customButtons: wM(),
+          pageKeys: (0, nM.e)()
+        }),
+        ignoredActions: eM,
+        onBindingsChanged: MM => {
+          aM.i.subscribe("customBindingsChanged", MM), SM.d.subscribe("customButtons", MM), SM.d.subscribeReset(MM), (0, nM.f)(MM)
+        },
+        now: HM.e
+      }), bM.listen(window, document)), bM
+    }
+  },
+  34831: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => aM,
+      e: () => PM,
+      f: () => nM
+    });
+    const OM = new Map,
+      SM = [];
+
+    function jM() {
+      for (const MM of SM) MM()
+    }
+
+    function aM(MM) {
+      var rM;
+      return OM.set(MM, (null !== (rM = OM.get(MM)) && void 0 !== rM ? rM : 0) + 1), jM(), () => {
+        const rM = OM.get(MM) - 1;
+        0 === rM ? OM.delete(MM) : OM.set(MM, rM), jM()
+      }
+    }
+
+    function PM() {
+      return [...OM.keys()]
+    }
+
+    function nM(MM) {
+      SM.push(MM)
+    }
+  },
+  7006: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM,
+      f: () => jM,
+      h: () => PM
+    });
+    const OM = ["Unidentified", ...[..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"].map((MM => `Key${MM}`)), ...Array.from({
+        length: 10
+      }, ((MM, rM) => `Digit${rM}`)), ...Array.from({
+        length: 12
+      }, ((MM, rM) => `F${rM+1}`)), "Escape", "Tab", "CapsLock", "ShiftLeft", "ShiftRight", "ControlLeft", "ControlRight", "AltLeft", "AltRight", "MetaLeft", "MetaRight", "Space", "Enter", "Backspace", "Delete", "Insert", "Home", "End", "PageUp", "PageDown", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Minus", "Equal", "BracketLeft", "BracketRight", "Backslash", "IntlBackslash", "Semicolon", "Quote", "Backquote", "Comma", "Period", "Slash", "ContextMenu", "PrintScreen", "ScrollLock", "Pause", "NumLock", ...Array.from({
+        length: 10
+      }, ((MM, rM) => `Numpad${rM}`)), "NumpadAdd", "NumpadSubtract", "NumpadMultiply", "NumpadDivide", "NumpadDecimal", "NumpadEnter", "Mouse1", "Mouse2", "Mouse3", "Mouse4", "Mouse5"],
+      SM = new Map(OM.map(((MM, rM) => [MM, rM])));
+
+    function jM(MM) {
+      var rM;
+      return null !== (rM = SM.get(MM)) && void 0 !== rM ? rM : 0
+    }
+    const aM = ["forward", "backward", "left", "right", "jump", "sprint", "crouch", "primary", "secondary", "middle"];
+
+    function PM(MM) {
+      return 1 << aM.indexOf(MM)
     }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

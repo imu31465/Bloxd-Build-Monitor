@@ -1,897 +1,4505 @@
-/*! For license information please see wp3j0a.98.8490a80e.chunk.js.LICENSE.txt */
 export const id = 98;
 export const ids = [98];
 export const modules = {
-  4889: (GG, bG, ZG) => {
-    var wG;
-    ! function() {
-      var SG = function() {
-        this.init()
-      };
-      SG.prototype = {
-        init: function() {
-          var GG = this || LG;
-          return GG._counter = 1e3, GG._html5AudioPool = [], GG.html5PoolSize = 10, GG._codecs = {}, GG._howls = [], GG._muted = !1, GG._volume = 1, GG._canPlayEvent = "canplaythrough", GG._navigator = "undefined" !== typeof window && window.navigator ? window.navigator : null, GG.masterGain = null, GG.noAudio = !1, GG.usingWebAudio = !0, GG.autoSuspend = !0, GG.ctx = null, GG.autoUnlock = !0, GG._setup(), GG
-        },
-        volume: function(GG) {
-          var bG = this || LG;
-          if (GG = parseFloat(GG), bG.ctx || QG(), "undefined" !== typeof GG && GG >= 0 && GG <= 1) {
-            if (bG._volume = GG, bG._muted) return bG;
-            bG.usingWebAudio && bG.masterGain.gain.setValueAtTime(GG, LG.ctx.currentTime);
-            for (var ZG = 0; ZG < bG._howls.length; ZG++)
-              if (!bG._howls[ZG]._webAudio)
-                for (var wG = bG._howls[ZG]._getSoundIds(), SG = 0; SG < wG.length; SG++) {
-                  var yG = bG._howls[ZG]._soundById(wG[SG]);
-                  yG && yG._node && (yG._node.volume = yG._volume * GG)
-                }
-            return bG
-          }
-          return bG._volume
-        },
-        mute: function(GG) {
-          var bG = this || LG;
-          bG.ctx || QG(), bG._muted = GG, bG.usingWebAudio && bG.masterGain.gain.setValueAtTime(GG ? 0 : bG._volume, LG.ctx.currentTime);
-          for (var ZG = 0; ZG < bG._howls.length; ZG++)
-            if (!bG._howls[ZG]._webAudio)
-              for (var wG = bG._howls[ZG]._getSoundIds(), SG = 0; SG < wG.length; SG++) {
-                var yG = bG._howls[ZG]._soundById(wG[SG]);
-                yG && yG._node && (yG._node.muted = !!GG || yG._muted)
-              }
-          return bG
-        },
-        stop: function() {
-          for (var GG = this || LG, bG = 0; bG < GG._howls.length; bG++) GG._howls[bG].stop();
-          return GG
-        },
-        unload: function() {
-          for (var GG = this || LG, bG = GG._howls.length - 1; bG >= 0; bG--) GG._howls[bG].unload();
-          return GG.usingWebAudio && GG.ctx && "undefined" !== typeof GG.ctx.close && (GG.ctx.close(), GG.ctx = null, QG()), GG
-        },
-        codecs: function(GG) {
-          return (this || LG)._codecs[GG.replace(/^x-/, "")]
-        },
-        _setup: function() {
-          var GG = this || LG;
-          if (GG.state = GG.ctx && GG.ctx.state || "suspended", GG._autoSuspend(), !GG.usingWebAudio)
-            if ("undefined" !== typeof Audio) try {
-              "undefined" === typeof(new Audio).oncanplaythrough && (GG._canPlayEvent = "canplay")
-            } catch (bG) {
-              GG.noAudio = !0
-            } else GG.noAudio = !0;
-          try {
-            (new Audio).muted && (GG.noAudio = !0)
-          } catch (bG) {}
-          return GG.noAudio || GG._setupCodecs(), GG
-        },
-        _setupCodecs: function() {
-          var GG = this || LG,
-            bG = null;
-          try {
-            bG = "undefined" !== typeof Audio ? new Audio : null
-          } catch (VG) {
-            return GG
-          }
-          if (!bG || "function" !== typeof bG.canPlayType) return GG;
-          var ZG = bG.canPlayType("audio/mpeg;").replace(/^no$/, ""),
-            wG = GG._navigator ? GG._navigator.userAgent : "",
-            SG = wG.match(/OPR\/([0-6].)/g),
-            yG = SG && parseInt(SG[0].split("/")[1], 10) < 33,
-            kG = -1 !== wG.indexOf("Safari") && -1 === wG.indexOf("Chrome"),
-            UG = wG.match(/Version\/(.*?) /),
-            YG = kG && UG && parseInt(UG[1], 10) < 15;
-          return GG._codecs = {
-            mp3: !(yG || !ZG && !bG.canPlayType("audio/mp3;").replace(/^no$/, "")),
-            mpeg: !!ZG,
-            opus: !!bG.canPlayType('audio/ogg; codecs="opus"').replace(/^no$/, ""),
-            ogg: !!bG.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ""),
-            oga: !!bG.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ""),
-            wav: !!(bG.canPlayType('audio/wav; codecs="1"') || bG.canPlayType("audio/wav")).replace(/^no$/, ""),
-            aac: !!bG.canPlayType("audio/aac;").replace(/^no$/, ""),
-            caf: !!bG.canPlayType("audio/x-caf;").replace(/^no$/, ""),
-            m4a: !!(bG.canPlayType("audio/x-m4a;") || bG.canPlayType("audio/m4a;") || bG.canPlayType("audio/aac;")).replace(/^no$/, ""),
-            m4b: !!(bG.canPlayType("audio/x-m4b;") || bG.canPlayType("audio/m4b;") || bG.canPlayType("audio/aac;")).replace(/^no$/, ""),
-            mp4: !!(bG.canPlayType("audio/x-mp4;") || bG.canPlayType("audio/mp4;") || bG.canPlayType("audio/aac;")).replace(/^no$/, ""),
-            weba: !(YG || !bG.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, "")),
-            webm: !(YG || !bG.canPlayType('audio/webm; codecs="vorbis"').replace(/^no$/, "")),
-            dolby: !!bG.canPlayType('audio/mp4; codecs="ec-3"').replace(/^no$/, ""),
-            flac: !!(bG.canPlayType("audio/x-flac;") || bG.canPlayType("audio/flac;")).replace(/^no$/, "")
-          }, GG
-        },
-        _unlockAudio: function() {
-          var GG = this || LG;
-          if (!GG._audioUnlocked && GG.ctx) {
-            GG._audioUnlocked = !1, GG.autoUnlock = !1, GG._mobileUnloaded || 44100 === GG.ctx.sampleRate || (GG._mobileUnloaded = !0, GG.unload()), GG._scratchBuffer = GG.ctx.createBuffer(1, 1, 22050);
-            var bG = function(ZG) {
-              for (; GG._html5AudioPool.length < GG.html5PoolSize;) try {
-                var wG = new Audio;
-                wG._unlocked = !0, GG._releaseHtml5Audio(wG)
-              } catch (ZG) {
-                GG.noAudio = !0;
-                break
-              }
-              for (var SG = 0; SG < GG._howls.length; SG++)
-                if (!GG._howls[SG]._webAudio)
-                  for (var LG = GG._howls[SG]._getSoundIds(), yG = 0; yG < LG.length; yG++) {
-                    var kG = GG._howls[SG]._soundById(LG[yG]);
-                    kG && kG._node && !kG._node._unlocked && (kG._node._unlocked = !0, kG._node.load())
-                  }
-              GG._autoResume();
-              var UG = GG.ctx.createBufferSource();
-              UG.buffer = GG._scratchBuffer, UG.connect(GG.ctx.destination), "undefined" === typeof UG.start ? UG.noteOn(0) : UG.start(0), "function" === typeof GG.ctx.resume && GG.ctx.resume(), UG.onended = function() {
-                UG.disconnect(0), GG._audioUnlocked = !0, document.removeEventListener("touchstart", bG, !0), document.removeEventListener("touchend", bG, !0), document.removeEventListener("click", bG, !0), document.removeEventListener("keydown", bG, !0);
-                for (var ZG = 0; ZG < GG._howls.length; ZG++) GG._howls[ZG]._emit("unlock")
-              }
-            };
-            return document.addEventListener("touchstart", bG, !0), document.addEventListener("touchend", bG, !0), document.addEventListener("click", bG, !0), document.addEventListener("keydown", bG, !0), GG
-          }
-        },
-        _obtainHtml5Audio: function() {
-          var GG = this || LG;
-          if (GG._html5AudioPool.length) return GG._html5AudioPool.pop();
-          var bG = (new Audio).play();
-          return bG && "undefined" !== typeof Promise && (bG instanceof Promise || "function" === typeof bG.then) && bG.catch((function() {
-            console.warn("HTML5 Audio pool exhausted, returning potentially locked audio object.")
-          })), new Audio
-        },
-        _releaseHtml5Audio: function(GG) {
-          var bG = this || LG;
-          return GG._unlocked && bG._html5AudioPool.push(GG), bG
-        },
-        _autoSuspend: function() {
-          var GG = this;
-          if (GG.autoSuspend && GG.ctx && "undefined" !== typeof GG.ctx.suspend && LG.usingWebAudio) {
-            for (var bG = 0; bG < GG._howls.length; bG++)
-              if (GG._howls[bG]._webAudio)
-                for (var ZG = 0; ZG < GG._howls[bG]._sounds.length; ZG++)
-                  if (!GG._howls[bG]._sounds[ZG].pE) return GG;
-            return GG._suspendTimer && clearTimeout(GG._suspendTimer), GG._suspendTimer = setTimeout((function() {
-              if (GG.autoSuspend) {
-                GG._suspendTimer = null, GG.state = "suspending";
-                var bG = function() {
-                  GG.state = "suspended", GG._resumeAfterSuspend && (delete GG._resumeAfterSuspend, GG._autoResume())
-                };
-                GG.ctx.suspend().then(bG, bG)
-              }
-            }), 3e4), GG
-          }
-        },
-        _autoResume: function() {
-          var GG = this;
-          if (GG.ctx && "undefined" !== typeof GG.ctx.resume && LG.usingWebAudio) return "running" === GG.state && "interrupted" !== GG.ctx.state && GG._suspendTimer ? (clearTimeout(GG._suspendTimer), GG._suspendTimer = null) : "suspended" === GG.state || "running" === GG.state && "interrupted" === GG.ctx.state ? (GG.ctx.resume().then((function() {
-            GG.state = "running";
-            for (var bG = 0; bG < GG._howls.length; bG++) GG._howls[bG]._emit("resume")
-          })), GG._suspendTimer && (clearTimeout(GG._suspendTimer), GG._suspendTimer = null)) : "suspending" === GG.state && (GG._resumeAfterSuspend = !0), GG
-        }
-      };
-      var LG = new SG,
-        yG = function(GG) {
-          GG.src && 0 !== GG.src.length ? this.init(GG) : console.error("An array of source files must be passed with any new Howl.")
-        };
-      yG.prototype = {
-        init: function(GG) {
-          var bG = this;
-          return LG.ctx || QG(), bG._autoplay = GG.autoplay || !1, bG._format = "string" !== typeof GG.format ? GG.format : [GG.format], bG._html5 = GG.html5 || !1, bG._muted = GG.mute || !1, bG._loop = GG.loop || !1, bG._pool = GG.pool || 5, bG._preload = "boolean" !== typeof GG.preload && "metadata" !== GG.preload || GG.preload, bG._rate = GG.rate || 1, bG._sprite = GG.sprite || {}, bG._src = "string" !== typeof GG.src ? GG.src : [GG.src], bG._volume = void 0 !== GG.volume ? GG.volume : 1, bG._xhr = {
-            method: GG.xhr && GG.xhr.method ? GG.xhr.method : "GET",
-            headers: GG.xhr && GG.xhr.headers ? GG.xhr.headers : null,
-            withCredentials: !(!GG.xhr || !GG.xhr.withCredentials) && GG.xhr.withCredentials
-          }, bG._duration = 0, bG._state = "unloaded", bG._sounds = [], bG._endTimers = {}, bG._queue = [], bG._playLock = !1, bG._onend = GG.onend ? [{
-            BQ: GG.onend
-          }] : [], bG._onfade = GG.onfade ? [{
-            BQ: GG.onfade
-          }] : [], bG._onload = GG.onload ? [{
-            BQ: GG.onload
-          }] : [], bG._onloaderror = GG.onloaderror ? [{
-            BQ: GG.onloaderror
-          }] : [], bG._onplayerror = GG.onplayerror ? [{
-            BQ: GG.onplayerror
-          }] : [], bG._onpause = GG.onpause ? [{
-            BQ: GG.onpause
-          }] : [], bG._onplay = GG.onplay ? [{
-            BQ: GG.onplay
-          }] : [], bG._onstop = GG.onstop ? [{
-            BQ: GG.onstop
-          }] : [], bG._onmute = GG.onmute ? [{
-            BQ: GG.onmute
-          }] : [], bG._onvolume = GG.onvolume ? [{
-            BQ: GG.onvolume
-          }] : [], bG._onrate = GG.onrate ? [{
-            BQ: GG.onrate
-          }] : [], bG._onseek = GG.onseek ? [{
-            BQ: GG.onseek
-          }] : [], bG._onunlock = GG.onunlock ? [{
-            BQ: GG.onunlock
-          }] : [], bG._onresume = [], bG._webAudio = LG.usingWebAudio && !bG._html5, "undefined" !== typeof LG.ctx && LG.ctx && LG.autoUnlock && LG._unlockAudio(), LG._howls.push(bG), bG._autoplay && bG._queue.push({
-            event: "play",
-            action: function() {
-              bG.play()
-            }
-          }), bG._preload && "none" !== bG._preload && bG.load(), bG
-        },
-        load: function() {
-          var GG = this,
-            bG = null;
-          if (LG.noAudio) GG._emit("loaderror", null, "No audio support.");
-          else {
-            "string" === typeof GG._src && (GG._src = [GG._src]);
-            for (var ZG = 0; ZG < GG._src.length; ZG++) {
-              var wG, SG;
-              if (GG._format && GG._format[ZG]) wG = GG._format[ZG];
-              else {
-                if ("string" !== typeof(SG = GG._src[ZG])) {
-                  GG._emit("loaderror", null, "Non-string found in selected audio sources - ignoring.");
-                  continue
-                }(wG = /^data:audio\/([^;,]+);/i.exec(SG)) || (wG = /\.([^.]+)$/.exec(SG.split("?", 1)[0])), wG && (wG = wG[1].toLowerCase())
-              }
-              if (wG || console.warn('No file extension was found. Consider using the "format" property or specify an extension.'), wG && LG.codecs(wG)) {
-                bG = GG._src[ZG];
-                break
-              }
-            }
-            if (bG) return GG._src = bG, GG._state = "loading", "https:" === window.location.protocol && "http:" === bG.slice(0, 5) && (GG._html5 = !0, GG._webAudio = !1), new kG(GG), GG._webAudio && YG(GG), GG;
-            GG._emit("loaderror", null, "No codec support for selected audio sources.")
-          }
-        },
-        play: function(GG, bG) {
-          var ZG = this,
-            wG = null;
-          if ("number" === typeof GG) wG = GG, GG = null;
-          else {
-            if ("string" === typeof GG && "loaded" === ZG._state && !ZG._sprite[GG]) return null;
-            if ("undefined" === typeof GG && (GG = "__default", !ZG._playLock)) {
-              for (var SG = 0, yG = 0; yG < ZG._sounds.length; yG++) ZG._sounds[yG].pE && !ZG._sounds[yG]._ended && (SG++, wG = ZG._sounds[yG]._id);
-              1 === SG ? GG = null : wG = null
-            }
-          }
-          var kG = wG ? ZG._soundById(wG) : ZG._inactiveSound();
-          if (!kG) return null;
-          if (wG && !GG && (GG = kG._sprite || "__default"), "loaded" !== ZG._state) {
-            kG._sprite = GG, kG._ended = !1;
-            var UG = kG._id;
-            return ZG._queue.push({
-              event: "play",
-              action: function() {
-                ZG.play(UG)
-              }
-            }), UG
-          }
-          if (wG && !kG.pE) return bG || ZG._loadQueue("play"), kG._id;
-          ZG._webAudio && LG._autoResume();
-          var YG = Math.max(0, kG._seek > 0 ? kG._seek : ZG._sprite[GG][0] / 1e3),
-            VG = Math.max(0, (ZG._sprite[GG][0] + ZG._sprite[GG][1]) / 1e3 - YG),
-            pG = 1e3 * VG / Math.abs(kG._rate),
-            fG = ZG._sprite[GG][0] / 1e3,
-            QG = (ZG._sprite[GG][0] + ZG._sprite[GG][1]) / 1e3;
-          kG._sprite = GG, kG._ended = !1;
-          var KG = function() {
-            kG.pE = !1, kG._seek = YG, kG._start = fG, kG._stop = QG, kG._loop = !(!kG._loop && !ZG._sprite[GG][2])
-          };
-          if (!(YG >= QG)) {
-            var hG = kG._node;
-            if (ZG._webAudio) {
-              var dG = function() {
-                ZG._playLock = !1, KG(), ZG._refreshBuffer(kG);
-                var GG = kG._muted || ZG._muted ? 0 : kG._volume;
-                hG.gain.setValueAtTime(GG, LG.ctx.currentTime), kG._playStart = LG.ctx.currentTime, "undefined" === typeof hG.bufferSource.start ? kG._loop ? hG.bufferSource.noteGrainOn(0, YG, 86400) : hG.bufferSource.noteGrainOn(0, YG, VG) : kG._loop ? hG.bufferSource.start(0, YG, 86400) : hG.bufferSource.start(0, YG, VG), pG !== 1 / 0 && (ZG._endTimers[kG._id] = setTimeout(ZG._ended.bind(ZG, kG), pG)), bG || setTimeout((function() {
-                  ZG._emit("play", kG._id), ZG._loadQueue()
-                }), 0)
-              };
-              "running" === LG.state && "interrupted" !== LG.ctx.state ? dG() : (ZG._playLock = !0, ZG.once("resume", dG), ZG._clearTimer(kG._id))
-            } else {
-              var JG = function() {
-                hG.currentTime = YG, hG.muted = kG._muted || ZG._muted || LG._muted || hG.muted, hG.volume = kG._volume * LG.volume(), hG.playbackRate = kG._rate;
-                try {
-                  var wG = hG.play();
-                  if (wG && "undefined" !== typeof Promise && (wG instanceof Promise || "function" === typeof wG.then) ? (ZG._playLock = !0, KG(), wG.then((function() {
-                      ZG._playLock = !1, hG._unlocked = !0, bG ? ZG._loadQueue() : ZG._emit("play", kG._id)
-                    })).catch((function() {
-                      ZG._playLock = !1, ZG._emit("playerror", kG._id, "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction."), kG._ended = !0, kG.pE = !0
-                    }))) : bG || (ZG._playLock = !1, KG(), ZG._emit("play", kG._id)), hG.playbackRate = kG._rate, hG.paused) return void ZG._emit("playerror", kG._id, "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction.");
-                  "__default" !== GG || kG._loop ? ZG._endTimers[kG._id] = setTimeout(ZG._ended.bind(ZG, kG), pG) : (ZG._endTimers[kG._id] = function() {
-                    ZG._ended(kG), hG.removeEventListener("ended", ZG._endTimers[kG._id], !1)
-                  }, hG.addEventListener("ended", ZG._endTimers[kG._id], !1))
-                } catch (SG) {
-                  ZG._emit("playerror", kG._id, SG)
-                }
-              };
-              "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA" === hG.src && (hG.src = ZG._src, hG.load());
-              var rG = window && window.ejecta || !hG.readyState && LG._navigator.isCocoonJS;
-              if (hG.readyState >= 3 || rG) JG();
-              else {
-                ZG._playLock = !0, ZG._state = "loading";
-                var zG = function() {
-                  ZG._state = "loaded", JG(), hG.removeEventListener(LG._canPlayEvent, zG, !1)
-                };
-                hG.addEventListener(LG._canPlayEvent, zG, !1), ZG._clearTimer(kG._id)
-              }
-            }
-            return kG._id
-          }
-          ZG._ended(kG)
-        },
-        pause: function(GG) {
-          var bG = this;
-          if ("loaded" !== bG._state || bG._playLock) return bG._queue.push({
-            event: "pause",
-            action: function() {
-              bG.pause(GG)
-            }
-          }), bG;
-          for (var ZG = bG._getSoundIds(GG), wG = 0; wG < ZG.length; wG++) {
-            bG._clearTimer(ZG[wG]);
-            var SG = bG._soundById(ZG[wG]);
-            if (SG && !SG.pE && (SG._seek = bG.seek(ZG[wG]), SG._rateSeek = 0, SG.pE = !0, bG._stopFade(ZG[wG]), SG._node))
-              if (bG._webAudio) {
-                if (!SG._node.bufferSource) continue;
-                "undefined" === typeof SG._node.bufferSource.stop ? SG._node.bufferSource.noteOff(0) : SG._node.bufferSource.stop(0), bG._cleanBuffer(SG._node)
-              } else isNaN(SG._node.duration) && SG._node.duration !== 1 / 0 || SG._node.pause();
-            arguments[1] || bG._emit("pause", SG ? SG._id : null)
-          }
-          return bG
-        },
-        stop: function(GG, bG) {
-          var ZG = this;
-          if ("loaded" !== ZG._state || ZG._playLock) return ZG._queue.push({
-            event: "stop",
-            action: function() {
-              ZG.stop(GG)
-            }
-          }), ZG;
-          for (var wG = ZG._getSoundIds(GG), SG = 0; SG < wG.length; SG++) {
-            ZG._clearTimer(wG[SG]);
-            var LG = ZG._soundById(wG[SG]);
-            LG && (LG._seek = LG._start || 0, LG._rateSeek = 0, LG.pE = !0, LG._ended = !0, ZG._stopFade(wG[SG]), LG._node && (ZG._webAudio ? LG._node.bufferSource && ("undefined" === typeof LG._node.bufferSource.stop ? LG._node.bufferSource.noteOff(0) : LG._node.bufferSource.stop(0), ZG._cleanBuffer(LG._node)) : isNaN(LG._node.duration) && LG._node.duration !== 1 / 0 || (LG._node.currentTime = LG._start || 0, LG._node.pause(), LG._node.duration === 1 / 0 && ZG._clearSound(LG._node))), bG || ZG._emit("stop", LG._id))
-          }
-          return ZG
-        },
-        mute: function(GG, bG) {
-          var ZG = this;
-          if ("loaded" !== ZG._state || ZG._playLock) return ZG._queue.push({
-            event: "mute",
-            action: function() {
-              ZG.mute(GG, bG)
-            }
-          }), ZG;
-          if ("undefined" === typeof bG) {
-            if ("boolean" !== typeof GG) return ZG._muted;
-            ZG._muted = GG
-          }
-          for (var wG = ZG._getSoundIds(bG), SG = 0; SG < wG.length; SG++) {
-            var yG = ZG._soundById(wG[SG]);
-            yG && (yG._muted = GG, yG._interval && ZG._stopFade(yG._id), ZG._webAudio && yG._node ? yG._node.gain.setValueAtTime(GG ? 0 : yG._volume, LG.ctx.currentTime) : yG._node && (yG._node.muted = !!LG._muted || GG), ZG._emit("mute", yG._id))
-          }
-          return ZG
-        },
-        volume: function() {
-          var GG, bG, ZG, wG = this,
-            SG = arguments;
-          if (0 === SG.length) return wG._volume;
-          if (1 === SG.length || 2 === SG.length && "undefined" === typeof SG[1] ? wG._getSoundIds().indexOf(SG[0]) >= 0 ? bG = parseInt(SG[0], 10) : GG = parseFloat(SG[0]) : SG.length >= 2 && (GG = parseFloat(SG[0]), bG = parseInt(SG[1], 10)), !("undefined" !== typeof GG && GG >= 0 && GG <= 1)) return (ZG = bG ? wG._soundById(bG) : wG._sounds[0]) ? ZG._volume : 0;
-          if ("loaded" !== wG._state || wG._playLock) return wG._queue.push({
-            event: "volume",
-            action: function() {
-              wG.volume.apply(wG, SG)
-            }
-          }), wG;
-          "undefined" === typeof bG && (wG._volume = GG), bG = wG._getSoundIds(bG);
-          for (var yG = 0; yG < bG.length; yG++)(ZG = wG._soundById(bG[yG])) && (ZG._volume = GG, SG[2] || wG._stopFade(bG[yG]), wG._webAudio && ZG._node && !ZG._muted ? ZG._node.gain.setValueAtTime(GG, LG.ctx.currentTime) : ZG._node && !ZG._muted && (ZG._node.volume = GG * LG.volume()), wG._emit("volume", ZG._id));
-          return wG
-        },
-        fade: function(GG, bG, ZG, wG) {
-          var SG = this;
-          if ("loaded" !== SG._state || SG._playLock) return SG._queue.push({
-            event: "fade",
-            action: function() {
-              SG.fade(GG, bG, ZG, wG)
-            }
-          }), SG;
-          GG = Math.min(Math.max(0, parseFloat(GG)), 1), bG = Math.min(Math.max(0, parseFloat(bG)), 1), ZG = parseFloat(ZG), SG.volume(GG, wG);
-          for (var yG = SG._getSoundIds(wG), kG = 0; kG < yG.length; kG++) {
-            var UG = SG._soundById(yG[kG]);
-            if (UG) {
-              if (wG || SG._stopFade(yG[kG]), SG._webAudio && !UG._muted) {
-                var YG = LG.ctx.currentTime,
-                  VG = YG + ZG / 1e3;
-                UG._volume = GG, UG._node.gain.setValueAtTime(GG, YG), UG._node.gain.linearRampToValueAtTime(bG, VG)
-              }
-              SG._startFadeInterval(UG, GG, bG, ZG, yG[kG], "undefined" === typeof wG)
-            }
-          }
-          return SG
-        },
-        _startFadeInterval: function(GG, bG, ZG, wG, SG, LG) {
-          var yG = this,
-            kG = bG,
-            UG = ZG - bG,
-            YG = Math.abs(UG / .01),
-            VG = Math.max(4, YG > 0 ? wG / YG : wG),
-            pG = Date.now();
-          GG._fadeTo = ZG, GG._interval = setInterval((function() {
-            var SG = (Date.now() - pG) / wG;
-            pG = Date.now(), kG += UG * SG, kG = Math.round(100 * kG) / 100, kG = UG < 0 ? Math.max(ZG, kG) : Math.min(ZG, kG), yG._webAudio ? GG._volume = kG : yG.volume(kG, GG._id, !0), LG && (yG._volume = kG), (ZG < bG && kG <= ZG || ZG > bG && kG >= ZG) && (clearInterval(GG._interval), GG._interval = null, GG._fadeTo = null, yG.volume(ZG, GG._id), yG._emit("fade", GG._id))
-          }), VG)
-        },
-        _stopFade: function(GG) {
-          var bG = this,
-            ZG = bG._soundById(GG);
-          return ZG && ZG._interval && (bG._webAudio && ZG._node.gain.cancelScheduledValues(LG.ctx.currentTime), clearInterval(ZG._interval), ZG._interval = null, bG.volume(ZG._fadeTo, GG), ZG._fadeTo = null, bG._emit("fade", GG)), bG
-        },
-        loop: function() {
-          var GG, bG, ZG, wG = this,
-            SG = arguments;
-          if (0 === SG.length) return wG._loop;
-          if (1 === SG.length) {
-            if ("boolean" !== typeof SG[0]) return !!(ZG = wG._soundById(parseInt(SG[0], 10))) && ZG._loop;
-            GG = SG[0], wG._loop = GG
-          } else 2 === SG.length && (GG = SG[0], bG = parseInt(SG[1], 10));
-          for (var LG = wG._getSoundIds(bG), yG = 0; yG < LG.length; yG++)(ZG = wG._soundById(LG[yG])) && (ZG._loop = GG, wG._webAudio && ZG._node && ZG._node.bufferSource && (ZG._node.bufferSource.loop = GG, GG && (ZG._node.bufferSource.loopStart = ZG._start || 0, ZG._node.bufferSource.loopEnd = ZG._stop, wG.playing(LG[yG]) && (wG.pause(LG[yG], !0), wG.play(LG[yG], !0)))));
-          return wG
-        },
-        rate: function() {
-          var GG, bG, ZG, wG = this,
-            SG = arguments;
-          if (0 === SG.length) bG = wG._sounds[0]._id;
-          else if (1 === SG.length) {
-            wG._getSoundIds().indexOf(SG[0]) >= 0 ? bG = parseInt(SG[0], 10) : GG = parseFloat(SG[0])
-          } else 2 === SG.length && (GG = parseFloat(SG[0]), bG = parseInt(SG[1], 10));
-          if ("number" !== typeof GG) return (ZG = wG._soundById(bG)) ? ZG._rate : wG._rate;
-          if ("loaded" !== wG._state || wG._playLock) return wG._queue.push({
-            event: "rate",
-            action: function() {
-              wG.rate.apply(wG, SG)
-            }
-          }), wG;
-          "undefined" === typeof bG && (wG._rate = GG), bG = wG._getSoundIds(bG);
-          for (var yG = 0; yG < bG.length; yG++)
-            if (ZG = wG._soundById(bG[yG])) {
-              wG.playing(bG[yG]) && (ZG._rateSeek = wG.seek(bG[yG]), ZG._playStart = wG._webAudio ? LG.ctx.currentTime : ZG._playStart), ZG._rate = GG, wG._webAudio && ZG._node && ZG._node.bufferSource ? ZG._node.bufferSource.playbackRate.setValueAtTime(GG, LG.ctx.currentTime) : ZG._node && (ZG._node.playbackRate = GG);
-              var kG = wG.seek(bG[yG]),
-                UG = 1e3 * ((wG._sprite[ZG._sprite][0] + wG._sprite[ZG._sprite][1]) / 1e3 - kG) / Math.abs(ZG._rate);
-              !wG._endTimers[bG[yG]] && ZG.pE || (wG._clearTimer(bG[yG]), wG._endTimers[bG[yG]] = setTimeout(wG._ended.bind(wG, ZG), UG)), wG._emit("rate", ZG._id)
-            } return wG
-        },
-        seek: function() {
-          var GG, bG, ZG = this,
-            wG = arguments;
-          if (0 === wG.length) ZG._sounds.length && (bG = ZG._sounds[0]._id);
-          else if (1 === wG.length) {
-            ZG._getSoundIds().indexOf(wG[0]) >= 0 ? bG = parseInt(wG[0], 10) : ZG._sounds.length && (bG = ZG._sounds[0]._id, GG = parseFloat(wG[0]))
-          } else 2 === wG.length && (GG = parseFloat(wG[0]), bG = parseInt(wG[1], 10));
-          if ("undefined" === typeof bG) return 0;
-          if ("number" === typeof GG && ("loaded" !== ZG._state || ZG._playLock)) return ZG._queue.push({
-            event: "seek",
-            action: function() {
-              ZG.seek.apply(ZG, wG)
-            }
-          }), ZG;
-          var SG = ZG._soundById(bG);
-          if (SG) {
-            if (!("number" === typeof GG && GG >= 0)) {
-              if (ZG._webAudio) {
-                var yG = ZG.playing(bG) ? LG.ctx.currentTime - SG._playStart : 0,
-                  kG = SG._rateSeek ? SG._rateSeek - SG._seek : 0;
-                return SG._seek + (kG + yG * Math.abs(SG._rate))
-              }
-              return SG._node.currentTime
-            }
-            var UG = ZG.playing(bG);
-            UG && ZG.pause(bG, !0), SG._seek = GG, SG._ended = !1, ZG._clearTimer(bG), ZG._webAudio || !SG._node || isNaN(SG._node.duration) || (SG._node.currentTime = GG);
-            var YG = function() {
-              UG && ZG.play(bG, !0), ZG._emit("seek", bG)
-            };
-            if (UG && !ZG._webAudio) {
-              var VG = function() {
-                ZG._playLock ? setTimeout(VG, 0) : YG()
-              };
-              setTimeout(VG, 0)
-            } else YG()
-          }
-          return ZG
-        },
-        playing: function(GG) {
-          var bG = this;
-          if ("number" === typeof GG) {
-            var ZG = bG._soundById(GG);
-            return !!ZG && !ZG.pE
-          }
-          for (var wG = 0; wG < bG._sounds.length; wG++)
-            if (!bG._sounds[wG].pE) return !0;
-          return !1
-        },
-        duration: function(GG) {
-          var bG = this,
-            ZG = bG._duration,
-            wG = bG._soundById(GG);
-          return wG && (ZG = bG._sprite[wG._sprite][1] / 1e3), ZG
-        },
-        state: function() {
-          return this._state
-        },
-        unload: function() {
-          for (var GG = this, bG = GG._sounds, ZG = 0; ZG < bG.length; ZG++) bG[ZG].pE || GG.stop(bG[ZG]._id), GG._webAudio || (GG._clearSound(bG[ZG]._node), bG[ZG]._node.removeEventListener("error", bG[ZG]._errorFn, !1), bG[ZG]._node.removeEventListener(LG._canPlayEvent, bG[ZG]._loadFn, !1), bG[ZG]._node.removeEventListener("ended", bG[ZG]._endFn, !1), LG._releaseHtml5Audio(bG[ZG]._node)), delete bG[ZG]._node, GG._clearTimer(bG[ZG]._id);
-          var wG = LG._howls.indexOf(GG);
-          wG >= 0 && LG._howls.splice(wG, 1);
-          var SG = !0;
-          for (ZG = 0; ZG < LG._howls.length; ZG++)
-            if (LG._howls[ZG]._src === GG._src || GG._src.indexOf(LG._howls[ZG]._src) >= 0) {
-              SG = !1;
-              break
-            } return UG && SG && delete UG[GG._src], LG.noAudio = !1, GG._state = "unloaded", GG._sounds = [], GG = null, null
-        },
-        on: function(GG, bG, ZG, wG) {
-          var SG = this["_on" + GG];
-          return "function" === typeof bG && SG.push(wG ? {
-            id: ZG,
-            BQ: bG,
-            once: wG
-          } : {
-            id: ZG,
-            BQ: bG
-          }), this
-        },
-        off: function(GG, bG, ZG) {
-          var wG = this,
-            SG = wG["_on" + GG],
-            LG = 0;
-          if ("number" === typeof bG && (ZG = bG, bG = null), bG || ZG)
-            for (LG = 0; LG < SG.length; LG++) {
-              var yG = ZG === SG[LG].id;
-              if (bG === SG[LG].BQ && yG || !bG && yG) {
-                SG.splice(LG, 1);
-                break
-              }
-            } else if (GG) wG["_on" + GG] = [];
-            else {
-              var kG = Object.keys(wG);
-              for (LG = 0; LG < kG.length; LG++) 0 === kG[LG].indexOf("_on") && Array.isArray(wG[kG[LG]]) && (wG[kG[LG]] = [])
-            } return wG
-        },
-        once: function(GG, bG, ZG) {
-          return this.on(GG, bG, ZG, 1), this
-        },
-        _emit: function(GG, bG, ZG) {
-          for (var wG = this, SG = wG["_on" + GG], LG = SG.length - 1; LG >= 0; LG--) SG[LG].id && SG[LG].id !== bG && "load" !== GG || (setTimeout(function(GG) {
-            GG.call(this, bG, ZG)
-          }.bind(wG, SG[LG].BQ), 0), SG[LG].once && wG.off(GG, SG[LG].BQ, SG[LG].id));
-          return wG._loadQueue(GG), wG
-        },
-        _loadQueue: function(GG) {
-          var bG = this;
-          if (bG._queue.length > 0) {
-            var ZG = bG._queue[0];
-            ZG.event === GG && (bG._queue.shift(), bG._loadQueue()), GG || ZG.action()
-          }
-          return bG
-        },
-        _ended: function(GG) {
-          var bG = this,
-            ZG = GG._sprite;
-          if (!bG._webAudio && GG._node && !GG._node.paused && !GG._node.ended && GG._node.currentTime < GG._stop) return setTimeout(bG._ended.bind(bG, GG), 100), bG;
-          var wG = !(!GG._loop && !bG._sprite[ZG][2]);
-          if (bG._emit("end", GG._id), !bG._webAudio && wG && bG.stop(GG._id, !0).play(GG._id), bG._webAudio && wG) {
-            bG._emit("play", GG._id), GG._seek = GG._start || 0, GG._rateSeek = 0, GG._playStart = LG.ctx.currentTime;
-            var SG = 1e3 * (GG._stop - GG._start) / Math.abs(GG._rate);
-            bG._endTimers[GG._id] = setTimeout(bG._ended.bind(bG, GG), SG)
-          }
-          return bG._webAudio && !wG && (GG.pE = !0, GG._ended = !0, GG._seek = GG._start || 0, GG._rateSeek = 0, bG._clearTimer(GG._id), bG._cleanBuffer(GG._node), LG._autoSuspend()), bG._webAudio || wG || bG.stop(GG._id, !0), bG
-        },
-        _clearTimer: function(GG) {
-          var bG = this;
-          if (bG._endTimers[GG]) {
-            if ("function" !== typeof bG._endTimers[GG]) clearTimeout(bG._endTimers[GG]);
-            else {
-              var ZG = bG._soundById(GG);
-              ZG && ZG._node && ZG._node.removeEventListener("ended", bG._endTimers[GG], !1)
-            }
-            delete bG._endTimers[GG]
-          }
-          return bG
-        },
-        _soundById: function(GG) {
-          for (var bG = this, ZG = 0; ZG < bG._sounds.length; ZG++)
-            if (GG === bG._sounds[ZG]._id) return bG._sounds[ZG];
-          return null
-        },
-        _inactiveSound: function() {
-          var GG = this;
-          GG._drain();
-          for (var bG = 0; bG < GG._sounds.length; bG++)
-            if (GG._sounds[bG]._ended) return GG._sounds[bG].reset();
-          return new kG(GG)
-        },
-        _drain: function() {
-          var GG = this,
-            bG = GG._pool,
-            ZG = 0,
-            wG = 0;
-          if (!(GG._sounds.length < bG)) {
-            for (wG = 0; wG < GG._sounds.length; wG++) GG._sounds[wG]._ended && ZG++;
-            for (wG = GG._sounds.length - 1; wG >= 0; wG--) {
-              if (ZG <= bG) return;
-              GG._sounds[wG]._ended && (GG._webAudio && GG._sounds[wG]._node && GG._sounds[wG]._node.disconnect(0), GG._sounds.splice(wG, 1), ZG--)
-            }
-          }
-        },
-        _getSoundIds: function(GG) {
-          if ("undefined" === typeof GG) {
-            for (var bG = [], ZG = 0; ZG < this._sounds.length; ZG++) bG.push(this._sounds[ZG]._id);
-            return bG
-          }
-          return [GG]
-        },
-        _refreshBuffer: function(GG) {
-          return GG._node.bufferSource = LG.ctx.createBufferSource(), GG._node.bufferSource.buffer = UG[this._src], GG._panner ? GG._node.bufferSource.connect(GG._panner) : GG._node.bufferSource.connect(GG._node), GG._node.bufferSource.loop = GG._loop, GG._loop && (GG._node.bufferSource.loopStart = GG._start || 0, GG._node.bufferSource.loopEnd = GG._stop || 0), GG._node.bufferSource.playbackRate.setValueAtTime(GG._rate, LG.ctx.currentTime), this
-        },
-        _cleanBuffer: function(GG) {
-          var bG = LG._navigator && LG._navigator.vendor.indexOf("Apple") >= 0;
-          if (LG._scratchBuffer && GG.bufferSource && (GG.bufferSource.onended = null, GG.bufferSource.disconnect(0), bG)) try {
-            GG.bufferSource.buffer = LG._scratchBuffer
-          } catch (ZG) {}
-          return GG.bufferSource = null, this
-        },
-        _clearSound: function(GG) {
-          /MSIE |Trident\//.test(LG._navigator && LG._navigator.userAgent) || (GG.src = "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA")
-        }
-      };
-      var kG = function(GG) {
-        this._parent = GG, this.init()
-      };
-      kG.prototype = {
-        init: function() {
-          var GG = this,
-            bG = GG._parent;
-          return GG._muted = bG._muted, GG._loop = bG._loop, GG._volume = bG._volume, GG._rate = bG._rate, GG._seek = 0, GG.pE = !0, GG._ended = !0, GG._sprite = "__default", GG._id = ++LG._counter, bG._sounds.push(GG), GG.create(), GG
-        },
-        create: function() {
-          var GG = this,
-            bG = GG._parent,
-            ZG = LG._muted || GG._muted || GG._parent._muted ? 0 : GG._volume;
-          return bG._webAudio ? (GG._node = "undefined" === typeof LG.ctx.createGain ? LG.ctx.createGainNode() : LG.ctx.createGain(), GG._node.gain.setValueAtTime(ZG, LG.ctx.currentTime), GG._node.paused = !0, GG._node.connect(LG.masterGain)) : LG.noAudio || (GG._node = LG._obtainHtml5Audio(), GG._errorFn = GG._errorListener.bind(GG), GG._node.addEventListener("error", GG._errorFn, !1), GG._loadFn = GG._loadListener.bind(GG), GG._node.addEventListener(LG._canPlayEvent, GG._loadFn, !1), GG._endFn = GG._endListener.bind(GG), GG._node.addEventListener("ended", GG._endFn, !1), GG._node.src = bG._src, GG._node.preload = !0 === bG._preload ? "auto" : bG._preload, GG._node.volume = ZG * LG.volume(), GG._node.load()), GG
-        },
-        reset: function() {
-          var GG = this,
-            bG = GG._parent;
-          return GG._muted = bG._muted, GG._loop = bG._loop, GG._volume = bG._volume, GG._rate = bG._rate, GG._seek = 0, GG._rateSeek = 0, GG.pE = !0, GG._ended = !0, GG._sprite = "__default", GG._id = ++LG._counter, GG
-        },
-        _errorListener: function() {
-          var GG = this;
-          GG._parent._emit("loaderror", GG._id, GG._node.error ? GG._node.error.code : 0), GG._node.removeEventListener("error", GG._errorFn, !1)
-        },
-        _loadListener: function() {
-          var GG = this,
-            bG = GG._parent;
-          bG._duration = Math.ceil(10 * GG._node.duration) / 10, 0 === Object.keys(bG._sprite).length && (bG._sprite = {
-            __default: [0, 1e3 * bG._duration]
-          }), "loaded" !== bG._state && (bG._state = "loaded", bG._emit("load"), bG._loadQueue()), GG._node.removeEventListener(LG._canPlayEvent, GG._loadFn, !1)
-        },
-        _endListener: function() {
-          var GG = this,
-            bG = GG._parent;
-          bG._duration === 1 / 0 && (bG._duration = Math.ceil(10 * GG._node.duration) / 10, bG._sprite.__default[1] === 1 / 0 && (bG._sprite.__default[1] = 1e3 * bG._duration), bG._ended(GG)), GG._node.removeEventListener("ended", GG._endFn, !1)
-        }
-      };
-      var UG = {},
-        YG = function(GG) {
-          var bG = GG._src;
-          if (UG[bG]) return GG._duration = UG[bG].duration, void fG(GG);
-          if (/^data:[^;]+;base64,/.test(bG)) {
-            for (var ZG = atob(bG.split(",")[1]), wG = new Uint8Array(ZG.length), SG = 0; SG < ZG.length; ++SG) wG[SG] = ZG.charCodeAt(SG);
-            pG(wG.buffer, GG)
-          } else {
-            var LG = new XMLHttpRequest;
-            LG.open(GG._xhr.method, bG, !0), LG.withCredentials = GG._xhr.withCredentials, LG.responseType = "arraybuffer", GG._xhr.headers && Object.keys(GG._xhr.headers).forEach((function(bG) {
-              LG.setRequestHeader(bG, GG._xhr.headers[bG])
-            })), LG.onload = function() {
-              var bG = (LG.status + "")[0];
-              "0" === bG || "2" === bG || "3" === bG ? pG(LG.response, GG) : GG._emit("loaderror", null, "Failed loading audio file with status: " + LG.status + ".")
-            }, LG.onerror = function() {
-              GG._webAudio && (GG._html5 = !0, GG._webAudio = !1, GG._sounds = [], delete UG[bG], GG.load())
-            }, VG(LG)
-          }
-        },
-        VG = function(GG) {
-          try {
-            GG.send()
-          } catch (bG) {
-            GG.onerror()
-          }
-        },
-        pG = function(GG, bG) {
-          var ZG = function() {
-              bG._emit("loaderror", null, "Decoding audio data failed.")
-            },
-            wG = function(GG) {
-              GG && bG._sounds.length > 0 ? (UG[bG._src] = GG, fG(bG, GG)) : ZG()
-            };
-          "undefined" !== typeof Promise && 1 === LG.ctx.decodeAudioData.length ? LG.ctx.decodeAudioData(GG).then(wG).catch(ZG) : LG.ctx.decodeAudioData(GG, wG, ZG)
-        },
-        fG = function(GG, bG) {
-          bG && !GG._duration && (GG._duration = bG.duration), 0 === Object.keys(GG._sprite).length && (GG._sprite = {
-            __default: [0, 1e3 * GG._duration]
-          }), "loaded" !== GG._state && (GG._state = "loaded", GG._emit("load"), GG._loadQueue())
-        },
-        QG = function() {
-          if (LG.usingWebAudio) {
-            try {
-              "undefined" !== typeof AudioContext ? LG.ctx = new AudioContext : "undefined" !== typeof webkitAudioContext ? LG.ctx = new webkitAudioContext : LG.usingWebAudio = !1
-            } catch (SG) {
-              LG.usingWebAudio = !1
-            }
-            LG.ctx || (LG.usingWebAudio = !1);
-            var GG = /iP(hone|od|ad)/.test(LG._navigator && LG._navigator.platform),
-              bG = LG._navigator && LG._navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/),
-              ZG = bG ? parseInt(bG[1], 10) : null;
-            if (GG && ZG && ZG < 9) {
-              var wG = /safari/.test(LG._navigator && LG._navigator.userAgent.toLowerCase());
-              LG._navigator && !wG && (LG.usingWebAudio = !1)
-            }
-            LG.usingWebAudio && (LG.masterGain = "undefined" === typeof LG.ctx.createGain ? LG.ctx.createGainNode() : LG.ctx.createGain(), LG.masterGain.gain.setValueAtTime(LG._muted ? 0 : LG._volume, LG.ctx.currentTime), LG.masterGain.connect(LG.ctx.destination)), LG._setup()
-          }
-        };
-      void 0 === (wG = function() {
-        return {
-          Howler: LG,
-          Howl: yG
-        }
-      }.apply(bG, [])) || (GG.exports = wG), bG.Howler = LG, bG.Howl = yG, "undefined" !== typeof ZG.g ? (ZG.g.HowlerGlobal = SG, ZG.g.Howler = LG, ZG.g.Howl = yG, ZG.g.Sound = kG) : "undefined" !== typeof window && (window.HowlerGlobal = SG, window.Howler = LG, window.Howl = yG, window.Sound = kG)
-    }(),
-    function() {
-      var GG;
-      HowlerGlobal.prototype._pos = [0, 0, 0], HowlerGlobal.prototype._orientation = [0, 0, -1, 0, 1, 0], HowlerGlobal.prototype.stereo = function(GG) {
-        var bG = this;
-        if (!bG.ctx || !bG.ctx.listener) return bG;
-        for (var ZG = bG._howls.length - 1; ZG >= 0; ZG--) bG._howls[ZG].stereo(GG);
-        return bG
-      }, HowlerGlobal.prototype.pos = function(GG, bG, ZG) {
-        var wG = this;
-        return wG.ctx && wG.ctx.listener ? (bG = "number" !== typeof bG ? wG._pos[1] : bG, ZG = "number" !== typeof ZG ? wG._pos[2] : ZG, "number" !== typeof GG ? wG._pos : (wG._pos = [GG, bG, ZG], "undefined" !== typeof wG.ctx.listener.positionX ? (wG.ctx.listener.positionX.setTargetAtTime(wG._pos[0], Howler.ctx.currentTime, .1), wG.ctx.listener.positionY.setTargetAtTime(wG._pos[1], Howler.ctx.currentTime, .1), wG.ctx.listener.positionZ.setTargetAtTime(wG._pos[2], Howler.ctx.currentTime, .1)) : wG.ctx.listener.setPosition(wG._pos[0], wG._pos[1], wG._pos[2]), wG)) : wG
-      }, HowlerGlobal.prototype.orientation = function(GG, bG, ZG, wG, SG, LG) {
-        var yG = this;
-        if (!yG.ctx || !yG.ctx.listener) return yG;
-        var kG = yG._orientation;
-        return bG = "number" !== typeof bG ? kG[1] : bG, ZG = "number" !== typeof ZG ? kG[2] : ZG, wG = "number" !== typeof wG ? kG[3] : wG, SG = "number" !== typeof SG ? kG[4] : SG, LG = "number" !== typeof LG ? kG[5] : LG, "number" !== typeof GG ? kG : (yG._orientation = [GG, bG, ZG, wG, SG, LG], "undefined" !== typeof yG.ctx.listener.forwardX ? (yG.ctx.listener.forwardX.setTargetAtTime(GG, Howler.ctx.currentTime, .1), yG.ctx.listener.forwardY.setTargetAtTime(bG, Howler.ctx.currentTime, .1), yG.ctx.listener.forwardZ.setTargetAtTime(ZG, Howler.ctx.currentTime, .1), yG.ctx.listener.upX.setTargetAtTime(wG, Howler.ctx.currentTime, .1), yG.ctx.listener.upY.setTargetAtTime(SG, Howler.ctx.currentTime, .1), yG.ctx.listener.upZ.setTargetAtTime(LG, Howler.ctx.currentTime, .1)) : yG.ctx.listener.setOrientation(GG, bG, ZG, wG, SG, LG), yG)
-      }, Howl.prototype.init = (GG = Howl.prototype.init, function(bG) {
-        var ZG = this;
-        return ZG._orientation = bG.orientation || [1, 0, 0], ZG._stereo = bG.stereo || null, ZG._pos = bG.pos || null, ZG._pannerAttr = {
-          coneInnerAngle: "undefined" !== typeof bG.coneInnerAngle ? bG.coneInnerAngle : 360,
-          coneOuterAngle: "undefined" !== typeof bG.coneOuterAngle ? bG.coneOuterAngle : 360,
-          coneOuterGain: "undefined" !== typeof bG.coneOuterGain ? bG.coneOuterGain : 0,
-          distanceModel: "undefined" !== typeof bG.distanceModel ? bG.distanceModel : "inverse",
-          maxDistance: "undefined" !== typeof bG.maxDistance ? bG.maxDistance : 1e4,
-          panningModel: "undefined" !== typeof bG.panningModel ? bG.panningModel : "HRTF",
-          refDistance: "undefined" !== typeof bG.refDistance ? bG.refDistance : 1,
-          rolloffFactor: "undefined" !== typeof bG.rolloffFactor ? bG.rolloffFactor : 1
-        }, ZG._onstereo = bG.onstereo ? [{
-          BQ: bG.onstereo
-        }] : [], ZG._onpos = bG.onpos ? [{
-          BQ: bG.onpos
-        }] : [], ZG._onorientation = bG.onorientation ? [{
-          BQ: bG.onorientation
-        }] : [], GG.call(this, bG)
-      }), Howl.prototype.stereo = function(GG, ZG) {
-        var wG = this;
-        if (!wG._webAudio) return wG;
-        if ("loaded" !== wG._state) return wG._queue.push({
-          event: "stereo",
-          action: function() {
-            wG.stereo(GG, ZG)
-          }
-        }), wG;
-        var SG = "undefined" === typeof Howler.ctx.createStereoPanner ? "spatial" : "stereo";
-        if ("undefined" === typeof ZG) {
-          if ("number" !== typeof GG) return wG._stereo;
-          wG._stereo = GG, wG._pos = [GG, 0, 0]
-        }
-        for (var LG = wG._getSoundIds(ZG), yG = 0; yG < LG.length; yG++) {
-          var kG = wG._soundById(LG[yG]);
-          if (kG) {
-            if ("number" !== typeof GG) return kG._stereo;
-            kG._stereo = GG, kG._pos = [GG, 0, 0], kG._node && (kG._pannerAttr.panningModel = "equalpower", kG._panner && kG._panner.pan || bG(kG, SG), "spatial" === SG ? "undefined" !== typeof kG._panner.positionX ? (kG._panner.positionX.setValueAtTime(GG, Howler.ctx.currentTime), kG._panner.positionY.setValueAtTime(0, Howler.ctx.currentTime), kG._panner.positionZ.setValueAtTime(0, Howler.ctx.currentTime)) : kG._panner.setPosition(GG, 0, 0) : kG._panner.pan.setValueAtTime(GG, Howler.ctx.currentTime)), wG._emit("stereo", kG._id)
-          }
-        }
-        return wG
-      }, Howl.prototype.pos = function(GG, ZG, wG, SG) {
-        var LG = this;
-        if (!LG._webAudio) return LG;
-        if ("loaded" !== LG._state) return LG._queue.push({
-          event: "pos",
-          action: function() {
-            LG.pos(GG, ZG, wG, SG)
-          }
-        }), LG;
-        if (ZG = "number" !== typeof ZG ? 0 : ZG, wG = "number" !== typeof wG ? -.5 : wG, "undefined" === typeof SG) {
-          if ("number" !== typeof GG) return LG._pos;
-          LG._pos = [GG, ZG, wG]
-        }
-        for (var yG = LG._getSoundIds(SG), kG = 0; kG < yG.length; kG++) {
-          var UG = LG._soundById(yG[kG]);
-          if (UG) {
-            if ("number" !== typeof GG) return UG._pos;
-            UG._pos = [GG, ZG, wG], UG._node && (UG._panner && !UG._panner.pan || bG(UG, "spatial"), "undefined" !== typeof UG._panner.positionX ? (UG._panner.positionX.setValueAtTime(GG, Howler.ctx.currentTime), UG._panner.positionY.setValueAtTime(ZG, Howler.ctx.currentTime), UG._panner.positionZ.setValueAtTime(wG, Howler.ctx.currentTime)) : UG._panner.setPosition(GG, ZG, wG)), LG._emit("pos", UG._id)
-          }
-        }
-        return LG
-      }, Howl.prototype.orientation = function(GG, ZG, wG, SG) {
-        var LG = this;
-        if (!LG._webAudio) return LG;
-        if ("loaded" !== LG._state) return LG._queue.push({
-          event: "orientation",
-          action: function() {
-            LG.orientation(GG, ZG, wG, SG)
-          }
-        }), LG;
-        if (ZG = "number" !== typeof ZG ? LG._orientation[1] : ZG, wG = "number" !== typeof wG ? LG._orientation[2] : wG, "undefined" === typeof SG) {
-          if ("number" !== typeof GG) return LG._orientation;
-          LG._orientation = [GG, ZG, wG]
-        }
-        for (var yG = LG._getSoundIds(SG), kG = 0; kG < yG.length; kG++) {
-          var UG = LG._soundById(yG[kG]);
-          if (UG) {
-            if ("number" !== typeof GG) return UG._orientation;
-            UG._orientation = [GG, ZG, wG], UG._node && (UG._panner || (UG._pos || (UG._pos = LG._pos || [0, 0, -.5]), bG(UG, "spatial")), "undefined" !== typeof UG._panner.orientationX ? (UG._panner.orientationX.setValueAtTime(GG, Howler.ctx.currentTime), UG._panner.orientationY.setValueAtTime(ZG, Howler.ctx.currentTime), UG._panner.orientationZ.setValueAtTime(wG, Howler.ctx.currentTime)) : UG._panner.setOrientation(GG, ZG, wG)), LG._emit("orientation", UG._id)
-          }
-        }
-        return LG
-      }, Howl.prototype.pannerAttr = function() {
-        var GG, ZG, wG, SG = this,
-          LG = arguments;
-        if (!SG._webAudio) return SG;
-        if (0 === LG.length) return SG._pannerAttr;
-        if (1 === LG.length) {
-          if ("object" !== typeof LG[0]) return (wG = SG._soundById(parseInt(LG[0], 10))) ? wG._pannerAttr : SG._pannerAttr;
-          GG = LG[0], "undefined" === typeof ZG && (GG.pannerAttr || (GG.pannerAttr = {
-            coneInnerAngle: GG.coneInnerAngle,
-            coneOuterAngle: GG.coneOuterAngle,
-            coneOuterGain: GG.coneOuterGain,
-            distanceModel: GG.distanceModel,
-            maxDistance: GG.maxDistance,
-            refDistance: GG.refDistance,
-            rolloffFactor: GG.rolloffFactor,
-            panningModel: GG.panningModel
-          }), SG._pannerAttr = {
-            coneInnerAngle: "undefined" !== typeof GG.pannerAttr.coneInnerAngle ? GG.pannerAttr.coneInnerAngle : SG._coneInnerAngle,
-            coneOuterAngle: "undefined" !== typeof GG.pannerAttr.coneOuterAngle ? GG.pannerAttr.coneOuterAngle : SG._coneOuterAngle,
-            coneOuterGain: "undefined" !== typeof GG.pannerAttr.coneOuterGain ? GG.pannerAttr.coneOuterGain : SG._coneOuterGain,
-            distanceModel: "undefined" !== typeof GG.pannerAttr.distanceModel ? GG.pannerAttr.distanceModel : SG._distanceModel,
-            maxDistance: "undefined" !== typeof GG.pannerAttr.maxDistance ? GG.pannerAttr.maxDistance : SG._maxDistance,
-            refDistance: "undefined" !== typeof GG.pannerAttr.refDistance ? GG.pannerAttr.refDistance : SG._refDistance,
-            rolloffFactor: "undefined" !== typeof GG.pannerAttr.rolloffFactor ? GG.pannerAttr.rolloffFactor : SG._rolloffFactor,
-            panningModel: "undefined" !== typeof GG.pannerAttr.panningModel ? GG.pannerAttr.panningModel : SG._panningModel
-          })
-        } else 2 === LG.length && (GG = LG[0], ZG = parseInt(LG[1], 10));
-        for (var yG = SG._getSoundIds(ZG), kG = 0; kG < yG.length; kG++)
-          if (wG = SG._soundById(yG[kG])) {
-            var UG = wG._pannerAttr;
-            UG = {
-              coneInnerAngle: "undefined" !== typeof GG.coneInnerAngle ? GG.coneInnerAngle : UG.coneInnerAngle,
-              coneOuterAngle: "undefined" !== typeof GG.coneOuterAngle ? GG.coneOuterAngle : UG.coneOuterAngle,
-              coneOuterGain: "undefined" !== typeof GG.coneOuterGain ? GG.coneOuterGain : UG.coneOuterGain,
-              distanceModel: "undefined" !== typeof GG.distanceModel ? GG.distanceModel : UG.distanceModel,
-              maxDistance: "undefined" !== typeof GG.maxDistance ? GG.maxDistance : UG.maxDistance,
-              refDistance: "undefined" !== typeof GG.refDistance ? GG.refDistance : UG.refDistance,
-              rolloffFactor: "undefined" !== typeof GG.rolloffFactor ? GG.rolloffFactor : UG.rolloffFactor,
-              panningModel: "undefined" !== typeof GG.panningModel ? GG.panningModel : UG.panningModel
-            };
-            var YG = wG._panner;
-            YG ? (YG.coneInnerAngle = UG.coneInnerAngle, YG.coneOuterAngle = UG.coneOuterAngle, YG.coneOuterGain = UG.coneOuterGain, YG.distanceModel = UG.distanceModel, YG.maxDistance = UG.maxDistance, YG.refDistance = UG.refDistance, YG.rolloffFactor = UG.rolloffFactor, YG.panningModel = UG.panningModel) : (wG._pos || (wG._pos = SG._pos || [0, 0, -.5]), bG(wG, "spatial"))
-          } return SG
-      }, Sound.prototype.init = function(GG) {
-        return function() {
-          var bG = this,
-            ZG = bG._parent;
-          bG._orientation = ZG._orientation, bG._stereo = ZG._stereo, bG._pos = ZG._pos, bG._pannerAttr = ZG._pannerAttr, GG.call(this), bG._stereo ? ZG.stereo(bG._stereo) : bG._pos && ZG.pos(bG._pos[0], bG._pos[1], bG._pos[2], bG._id)
-        }
-      }(Sound.prototype.init), Sound.prototype.reset = function(GG) {
-        return function() {
-          var bG = this,
-            ZG = bG._parent;
-          return bG._orientation = ZG._orientation, bG._stereo = ZG._stereo, bG._pos = ZG._pos, bG._pannerAttr = ZG._pannerAttr, bG._stereo ? ZG.stereo(bG._stereo) : bG._pos ? ZG.pos(bG._pos[0], bG._pos[1], bG._pos[2], bG._id) : bG._panner && (bG._panner.disconnect(0), bG._panner = void 0, ZG._refreshBuffer(bG)), GG.call(this)
-        }
-      }(Sound.prototype.reset);
-      var bG = function(GG, bG) {
-        "spatial" === (bG = bG || "spatial") ? (GG._panner = Howler.ctx.createPanner(), GG._panner.coneInnerAngle = GG._pannerAttr.coneInnerAngle, GG._panner.coneOuterAngle = GG._pannerAttr.coneOuterAngle, GG._panner.coneOuterGain = GG._pannerAttr.coneOuterGain, GG._panner.distanceModel = GG._pannerAttr.distanceModel, GG._panner.maxDistance = GG._pannerAttr.maxDistance, GG._panner.refDistance = GG._pannerAttr.refDistance, GG._panner.rolloffFactor = GG._pannerAttr.rolloffFactor, GG._panner.panningModel = GG._pannerAttr.panningModel, "undefined" !== typeof GG._panner.positionX ? (GG._panner.positionX.setValueAtTime(GG._pos[0], Howler.ctx.currentTime), GG._panner.positionY.setValueAtTime(GG._pos[1], Howler.ctx.currentTime), GG._panner.positionZ.setValueAtTime(GG._pos[2], Howler.ctx.currentTime)) : GG._panner.setPosition(GG._pos[0], GG._pos[1], GG._pos[2]), "undefined" !== typeof GG._panner.orientationX ? (GG._panner.orientationX.setValueAtTime(GG._orientation[0], Howler.ctx.currentTime), GG._panner.orientationY.setValueAtTime(GG._orientation[1], Howler.ctx.currentTime), GG._panner.orientationZ.setValueAtTime(GG._orientation[2], Howler.ctx.currentTime)) : GG._panner.setOrientation(GG._orientation[0], GG._orientation[1], GG._orientation[2])) : (GG._panner = Howler.ctx.createStereoPanner(), GG._panner.pan.setValueAtTime(GG._stereo, Howler.ctx.currentTime)), GG._panner.connect(GG._node), GG.pE || GG._parent.pause(GG._id, !0).play(GG._id, !0)
-      }
-    }()
+  5169: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      default: () => OM
+    });
+    const OM = String.raw`export interface GameApi {
+		/** The ID of the player running the code.
+		 *
+		 * Lobby code usually has nobody running it, so this is null.
+		 */
+		myId: string | null
+		/** The position of the code block or press to code board */
+		thisPos: [number, number, number]
+		/** The owner of the current custom lobby */
+		lobbyOwnerId: string | null
+		/**
+ * Get position of a player / entity.
+ * @param entityId
+ */
+getPosition(entityId: EntityId): Pos
+/**
+ * Set position of a player / entity.
+ * @param entityId
+ * @param x Can also be an array, in which case y and z shouldn't be passed
+ * @param y
+ * @param z
+ */
+setPosition(entityId: EntityId, x: number | number[], y?: number, z?: number): void
+/**
+ * Get the scale of a lifeform.
+ * @param lifeformId
+ */
+getLifeformScale(lifeformId: LifeformId): number
+/**
+ * Set the visual + physical scale of a lifeform. A scale of 1 is the default size.
+ * Bodies stop growing at 25 blocks wide and 90 tall (a player's at scale 50); past that only the model grows.
+ * getLifeformScale returns the scale rounded to 32-bit precision (0.7 reads back as 0.699999988079071).
+ *
+ * @param lifeformId
+ * @param scale Must be a positive number, from about 1.4e-45 to 3.4e38.
+ */
+setLifeformScale(lifeformId: LifeformId, scale: number): void
+/**
+ * Get all the player ids.
+ */
+getPlayerIds(): PlayerId[]
+/**
+ * Whether a player is currently in the game
+ *
+ * @param playerId
+ */
+playerIsInGame(playerId: PlayerId): boolean
+/**
+ * Whether a player is signed in to a Bloxd account: false for guests, who are still in the game.
+ * To check that a player is still in the game, use playerIsInGame.
+ * @param playerId
+ * @returns
+ */
+playerIsLoggedIn(playerId: PlayerId): boolean
+/**
+ * Returns the party that the player was in when they joined the game. The returned object contains the playerDbIds, as well
+ * as the playerIds if available, of the party leader and members.
+ *
+ * @param playerId
+ * @returns
+ */
+getPlayerPartyWhenJoined(playerId: PlayerId): { partyCode: string; playerDbIds: PlayerDbId[] } | null
+/**
+ * Get the number of players in the room
+ */
+getNumPlayers(): number
+/**
+ * Get the co-ordinates of the blocks the entity is standing on as a list. For example, if the centre of the entity is at 0,0,0
+ * this function will return [[0, -1, 0], [-1, -1, 0], [0, -1, -1], [-1, -1, -1]]
+ * If the entity is just standing on one block, the function would return e.g. [[0, 0, 0]]
+ * If the entity is midair or has no physics body, returns an empty list [].
+ *
+ * @param playerId
+ */
+getBlockCoordinatesPlayerStandingOn(playerId: EntityId): number[][]
+/**
+ * Get the types of block the entity is standing on
+ * For example, if an entity is standing on 4 dirt blocks, this will return ["Dirt", "Dirt", "Dirt", "Dirt"]
+ * Returns an empty list if the entity is midair or has no physics body.
+ * @param playerId
+ */
+getBlockTypesPlayerStandingOn(playerId: EntityId): any[]
+/**
+ * Get the up to 12 unit co-ordinates the entity is located within
+ * (Samples the four horizontal corners at up to three vertical levels)
+ *
+ * @param lifeformId
+ * @returns List of x, y, z positions e.g. [[-1, 0, 0], [-1, 1, 0], [-1, 2, 0]]
+ */
+getUnitCoordinatesLifeformWithin(lifeformId: EntityId): number[][]
+/**
+ * Show the shop tutorial for a player. Will not be shown if they have ever seen the shop tutorial in your game before.
+ * @param playerId
+ */
+showShopTutorial(playerId: PlayerId): void
+/**
+ * Get the current shield of an entity.
+ * @param entityId
+ */
+getShieldAmount(entityId: EntityId): number
+/**
+ * Set the current shield of a lifeform.
+ *
+ * @param lifeformId
+ * @param newShieldAmount
+ */
+setShieldAmount(lifeformId: LifeformId, newShieldAmount: number): void
+/**
+ * Get the current health of an entity.
+ * @param entityId
+ */
+getHealth(entityId: PlayerId): number
+/**
+ * @param lifeformId
+ * @param changeAmount Must be an integer. A positive amount will increase the entity's health. A negative amount will decrease the entity's shield first, then their health.
+ * @param whoDidDamage Optional - If damage done by another player
+ * @param broadcastLifeformHurt
+ *
+ * @return Whether the entity was killed
+ */
+applyHealthChange(lifeformId: LifeformId, changeAmount: number, whoDidDamage?: LifeformId | { lifeformId: LifeformId; withItem: string }, broadcastLifeformHurt?: boolean): boolean
+/**
+ * Set the current health of an entity.
+ * If you want to set their health to more than their current max health, the optional increaseMaxHealthIfNeeded must be true.
+ *
+ * @param entityId
+ * @param newHealth Can be null to make the player not have health
+ * @param whoDidDamage Optional
+ * @param increaseMaxHealthIfNeeded Optional
+ *
+ * @return Whether this change in health killed the player
+ */
+setHealth(entityId: EntityId, newHealth: number | null, whoDidDamage?: LifeformId | { lifeformId: LifeformId; withItem: string }, increaseMaxHealthIfNeeded?: boolean): boolean
+/**
+ * Make it as if hittingEId hit hitEId
+ *
+ * @param hittingEId
+ * @param hitEId
+ * @param dirFacing
+ * @param bodyPartHit
+ * @param overrides
+ * @returns whether the attack damaged the lifeform
+ */
+applyMeleeHit(hittingEId: LifeformId, hitEId: LifeformId, dirFacing: number[], bodyPartHit?: LifeformBodyPart | null, overrides?: { damage?: number | null; heldItemName?: string | null; horizontalKbMultiplier?: number; verticalKbMultiplier?: number; }): boolean
+/**
+ * Apply damage to a lifeform.
+ * eId is the player initiating the damage, hitEId is the lifeform being hit.
+ *
+ * It is recommended to self-inflict damage when the game code wants to apply damage to a lifeform.
+ *
+ * @param eId
+ * @param hitEId
+ * @param attemptedDmgAmt
+ * @param withItem
+ * @param bodyPartHit
+ * @param attackDir
+ * @param showCritParticles
+ * @param reduceVerticalKbVelocity
+ * @param horizontalKbMultiplier
+ * @param verticalKbMultiplier
+ * @param broadcastEntityHurt
+ * @param attackCooldownSettings
+ * @param hittingSoundOverride
+ * @param ignoreOtherEntitySettingCanAttack
+ * @param isTrueDamage
+ * @param damagerDbId
+ * @param damageCause What dealt the hit, passed to the damage callbacks. Defaults to null
+ *
+ * @returns whether the attack damaged the lifeform
+ */
+attemptApplyDamage({
+		eId,
+		hitEId,
+		attemptedDmgAmt,
+		withItem,
+		bodyPartHit,
+		attackDir,
+		showCritParticles,
+		reduceVerticalKbVelocity,
+		horizontalKbMultiplier,
+		verticalKbMultiplier,
+		broadcastEntityHurt,
+		attackCooldownSettings,
+		hittingSoundOverride,
+		ignoreOtherEntitySettingCanAttack,
+		isTrueDamage,
+		damagerDbId,
+		damageCause,
+	}: PlayerAttemptDamageOtherPlayerOpts): boolean
+/**
+ * Create enchantment attributes for an item at a given enchantment level. Same behaviour as if that level of enchant was selected for the item in an enchanting table.
+ * @param itemName
+ * @param enchantmentLevel
+ */
+createEnchantmentAttributesForItem(itemName: ItemName, enchantmentLevel: number): EnchantmentAttributes
+/**
+ * Force respawn a player, stopping their motion
+ * @param playerId
+ * @param respawnPos
+ */
+forceRespawn(playerId: PlayerId, respawnPos?: number[]): void
+/**
+ * Kill a lifeform, e.g. api.killLifeform(playerId).
+ * @param lifeformId
+ * @param whoKilled - Optional: who killed them, as a lifeform id or { lifeformId, withItem }. Leave it out (not null) when nothing killed them
+ */
+killLifeform(lifeformId: LifeformId, whoKilled?: LifeformId | { lifeformId: LifeformId; withItem: string }): void
+/**
+ * Gets the player's current killstreak
+ *
+ * @param playerId
+ * @returns
+ */
+getCurrentKillstreak(playerId: PlayerId): number
+/**
+ * Clears the player's current killstreak
+ *
+ * @param playerId
+ */
+clearKillstreak(playerId: PlayerId): void
+/**
+ * Whether a lifeform is alive or dead (or on the respawn screen, in a player's case).
+ *
+ * @param lifeformId
+ * @returns
+ */
+isAlive(lifeformId: LifeformId): boolean
+/**
+ * Send a message to everyone
+ *
+ * @param message The text contained within the message. Can use \`Custom Text Styling\`.
+ * @param style An optional style argument. Can contain values for fontWeight and color of the message.
+ *          style is ignored if message uses custom text styling (i.e. is not a string).
+ */
+broadcastMessage(message: string | CustomTextStyling, style?: { fontWeight?: number | string; color?: string; colour?: string }): void
+/**
+ * Send a message to a specific player
+ *
+ * @param playerId Id of the player
+ * @param message The text contained within the message. Can use \`Custom Text Styling\`.
+ * @param style An optional style argument. Can contain values for fontWeight and color of the message.
+ *              style is ignored if message uses custom text styling (i.e. is not a string).
+ */
+sendMessage(playerId: PlayerId, message: string | CustomTextStyling, style?: { fontWeight?: number | string; color?: string }): void
+/**
+ * Send a flying middle message to a specific player
+ *
+ * @param playerId Id of the player
+ * @param message The text contained within the message. Can be either a string or use \`Custom Text Styling\`.
+ * @param distanceFromAction The distance from the action that has caused this message to be displayed,
+ *                           this value will be used to determine how the message flies across the screen.
+ * @param lifetimeMs How long the message will be visible in milliseconds. Defaults to 1000ms.
+ */
+sendFlyingMiddleMessage(playerId: PlayerId, message: string | CustomTextStyling, distanceFromAction: number, lifetimeMs?: number): void
+/**
+ * Modify a client option at runtime and send to the client if it changed
+ *
+ * @param playerId
+ * @param option The name of the option
+ * @param value The new value of the option
+ */
+setClientOption<PassedOption extends ClientOption>(playerId: PlayerId, option: PassedOption, value: ClientOptions[PassedOption]): void
+/**
+ * Returns the current value of a client option
+ *
+ * @param playerId
+ * @param option
+ */
+getClientOption<PassedOption extends ClientOption>(playerId: PlayerId, option: PassedOption): ClientOptions[PassedOption]
+/**
+ * Create a new shop item under the given category.
+ * Will create a new category if it does not exist.
+ * If the shop item already exists then it will be replaced.
+ * If any per-player overrides exist under the same categoryKey and itemKey then they will be deleted.
+ *
+ * @param categoryKey - The key of the category to create the item in
+ * @param itemKey - The unique key for the item
+ * @param item - The shop item to create (will be mutated)
+ */
+createShopItem(categoryKey: ShopCategoryKey, itemKey: ShopItemKey, item: ShopItem): void
+/**
+ * Update selected properties of an existing shop item.
+ * For example, { canBuy: true } to allow players to purchase the item.
+ * Throws an error if the item does not exist.
+ *
+ * @param categoryKey - The key of the category containing the item
+ * @param itemKey - The unique key for the item
+ * @param changes - Partial shop item properties to update
+ */
+updateShopItem(categoryKey: ShopCategoryKey, itemKey: ShopItemKey, changes: Partial<ShopItem>): void
+/**
+ * Delete an existing shop item.
+ * Throws an error if the item does not exist.
+ * Will also delete all per-player overrides for the shop item.
+ *
+ * @param categoryKey - The key of the category containing the item
+ * @param itemKey - The unique key for the item
+ */
+deleteShopItem(categoryKey: ShopCategoryKey, itemKey: ShopItemKey): void
+/**
+ * Set properties of a shop category.
+ *
+ * @param categoryKey - The key of the category to configure
+ * @param config - Category configuration properties
+ */
+configureShopCategory(categoryKey: ShopCategoryKey, config: ShopCategoryConfig): void
+/**
+ * Create a new shop item for a specific player.
+ * Will create a new category if it does not exist.
+ * Will replace any overrides this player already has for the same item.
+ *
+ * @param playerId - The player to create the item for
+ * @param categoryKey - The key of the category to create the item in
+ * @param itemKey - The unique key for the item
+ * @param item - The shop item to create (will be mutated)
+ */
+createShopItemForPlayer(playerId: PlayerId, categoryKey: ShopCategoryKey, itemKey: ShopItemKey, item: ShopItem): void
+/**
+ * Update selected properties of an existing shop item for a specific player.
+ * For example, { canBuy: true } to allow this player to purchase the item.
+ * Throws an error if the item does not exist.
+ *
+ * @param playerId - The player to update the item for
+ * @param categoryKey - The key of the category containing the item
+ * @param itemKey - The unique key for the item
+ * @param changes - Partial shop item properties to update
+ */
+updateShopItemForPlayer(playerId: PlayerId, categoryKey: ShopCategoryKey, itemKey: ShopItemKey, changes: Partial<ShopItem>): void
+/**
+ * Delete a specific player's overrides for a shop item.
+ * Like other methods, it doesn't matter whether the overrides were created
+ * using createShopItemForPlayer or by using updateShopItemForPlayer instead.
+ * This method does nothing if the overrides don't exist or are defined internally by the engine.
+ *
+ * @param playerId - The player to reset the item for
+ * @param categoryKey - The key of the category containing the item
+ * @param itemKey - The unique key for the item
+ */
+resetShopItemForPlayer(playerId: PlayerId, categoryKey: ShopCategoryKey, itemKey: ShopItemKey): void
+/**
+ * Configure a shop category for a specific player.
+ *
+ * @param playerId - The player to configure the category for
+ * @param categoryKey - The key of the category to configure
+ * @param config - Category configuration properties
+ */
+configureShopCategoryForPlayer(playerId: PlayerId, categoryKey: ShopCategoryKey, config: ShopCategoryConfig): void
+/**
+ * Modify client options at runtime
+ *
+ * @param playerId
+ * @param optionsObj An object which contains key value pairs of new settings. E.g {canChange: true, speedMultiplier: false}
+ */
+setClientOptions(playerId: PlayerId, optionsObj: Partial<ClientOptions>): void
+/**
+ * Sets a client option to its default value. This will be the value stored in your game's defaultClientOptions, otherwise Bloxd's default.
+ *
+ * @param playerId
+ * @param option
+ */
+setClientOptionToDefault(playerId: PlayerId, option: ClientOption): void
+/**
+ * Set every player's other-entity setting to a specific value for a particular entity.
+ * includeNewJoiners=true means that new players joining the game will also have this other player setting applied.
+ *
+ * @param targetedPlayerId
+ * @param settingName
+ * @param settingValue
+ * @param includeNewJoiners
+ */
+setTargetedPlayerSettingForEveryone<Setting extends OtherEntitySetting>(targetedPlayerId: EntityId, settingName: Setting, settingValue: OtherEntitySettings[Setting], includeNewJoiners?: boolean): void
+/**
+ * Set a player's other-entity setting for every player, mob and Person mesh in the game.
+ * includeNewJoiners=true means that the player will have the setting applied to new joiners.
+ *
+ * @param playerId
+ * @param settingName
+ * @param settingValue
+ * @param includeNewJoiners
+ */
+setEveryoneSettingForPlayer<Setting extends OtherEntitySetting>(playerId: PlayerId, settingName: Setting, settingValue: OtherEntitySettings[Setting], includeNewJoiners?: boolean): void
+/**
+ * Set a player's other-entity setting for a specific entity.
+ *
+ * @param relevantPlayerId
+ * @param targetedEntityId
+ * @param settingName
+ * @param settingValue
+ */
+setOtherEntitySetting<Setting extends OtherEntitySetting>(relevantPlayerId: PlayerId, targetedEntityId: EntityId, settingName: Setting, settingValue: OtherEntitySettings[Setting]): void
+/**
+ * Set many of a player's other-entity settings for a specific entity.
+ *
+ * @param relevantPlayerId
+ * @param targetedEntityId
+ * @param settingsObject
+ */
+setOtherEntitySettings(relevantPlayerId: PlayerId, targetedEntityId: EntityId, settingsObject: Partial<OtherEntitySettings>): void
+/**
+ * Get the value of a player's other-entity setting for a specific entity.
+ *
+ * @param relevantPlayerId
+ * @param targetedEntityId
+ * @param settingName
+ */
+getOtherEntitySetting<Setting extends OtherEntitySetting>(relevantPlayerId: PlayerId, targetedEntityId: EntityId, settingName: Setting): OtherEntitySettings[Setting]
+/**
+ * Reset a player's other-entity setting for a specific entity to the game's default value.
+ *
+ * @param relevantPlayerId
+ * @param targetedEntityId
+ * @param settingName
+ */
+setOtherEntitySettingToDefault<Setting extends OtherEntitySetting>(relevantPlayerId: PlayerId, targetedEntityId: EntityId, settingName: Setting): void
+/**
+ * Play particle effect on all clients, or only on some clients if clientPredictedBy is specified
+ * @param opts
+ * @param clientPredictedBy Play only on clients where the entity clientPredictedBy
+ *                          is visible and not the viewing player
+ */
+playParticleEffect(opts: TempParticleSystemOpts | ParticlePresetOpts, clientPredictedBy?: EntityId | null): void
+/**
+ * Animates the given entity. Pass \`null\` for \`animation\` to stop the entity's current animation (the
+ * \`initialTimeFraction\` and \`animationSpeed\` arguments are ignored in that case). Keyframes can rotate, move and
+ * scale each part; a scale multiplies the part's own, so \`[2, 2, 2]\` doubles a head \`api.scalePlayerMeshNodes\` enlarged.
+ * Scale keyframe values are clamped to between -16 and 16.
+ *
+ * Pass a clip name instead (such as \`"animation.quadruped.head_wave"\`, or just \`"head_wave"\`) to play a clip of the texture pack's or
+ * Bloxd's built-in animation on a mob or vehicle that has animation. It adds onto the entity's automatic animation,
+ * as a head nod plays over a walk, or replaces the parts it moves if the clip sets \`override_previous_animation\`. It
+ * blends back out when a one-shot clip ends or the animation is stopped; a looping or held clip plays until
+ * stopped or replaced. An entity without animation, or a name no clip has (or several share: give the full name),
+ * plays nothing. A name must be 1 to 128 characters long, or the call throws.
+ * @param entityId
+ * @param animation
+ * @param initialTimeFraction
+ * @param animationSpeed
+ */
+animateEntity(entityId: EntityId, animation: AnimationSchema | BlockbenchAnimationSchema | string | null, initialTimeFraction?: number, animationSpeed?: number): void
+/**
+ * Get the in game name of an entity: a player's name, or "" for a mob nobody named. Use getEntityType for what kind of mob it is.
+ * @param entityId
+ */
+getEntityName(entityId: EntityId): string
+/**
+ * Given the name of a player, get their id
+ * @param playerName
+ */
+getPlayerId(playerName: string): PlayerId | null
+/**
+ * Given a player, get their permanent identifier that doesn't change when leaving and re-entering
+ *
+ * @param playerId
+ */
+getPlayerDbId(playerId: PlayerId): PlayerDbId
+/**
+ * Returns null if player not in lobby
+ *
+ * @param dbId
+ */
+getPlayerIdFromDbId(dbId: PlayerDbId): PlayerId | null
+/**
+ * Gets the persistent database ID for the given mob.
+ * This can be useful for reasoning about mobs that have been loaded from the database, such as owned mobs.
+ *
+ * @param mobId - The ID of the mob from spawnMob
+ * @returns The persistent database ID for the mob, or null if the mob is not persistent
+ */
+getMobDbId(mobId: MobId): MobDbId | null
+/**
+ * Kick a player from the lobby, showing them the reason.
+ *
+ * NOTE: In a world's own lobby, World Code can't kick the world's owner or co-owners: they stay and see why.
+ *
+ * @param playerId
+ * @param reason Shown to the kicked player
+ */
+kickPlayer(playerId: PlayerId, reason: string): void
+/**
+ * Check if the block at a specific position is in a loaded chunk.
+ * @param x
+ * @param y
+ * @param z
+ * @return boolean
+ */
+isBlockInLoadedChunk(x: number, y: number, z: number): boolean
+/**
+ * Get the name of a block.
+ * @param x could be an array [x, y, z]. If so, the other params shouldn't be passed.
+ * @param y
+ * @param z
+ * @return blockName - any block name, including 'Air'
+ */
+getBlock(x: number | number[], y?: number, z?: number): BlockName
+/**
+ * Used to get the block id at a specific position.
+ * Intended only for use in hot code paths - default to getBlock for most use cases
+ *
+ * @param x
+ * @param y
+ * @param z
+ */
+getBlockId(x: number, y: number, z: number): BlockId
+/**
+ * Set a block. Valid names are any block name, including 'Air'
+ *
+ * This function is optimised for setting broad swathes of blocks. For example, if you have a 50x50x50 area you need to turn to air, it will run performantly if you call this in double nested loops.
+ *
+ * IF you're only changing a few blocks, you want this to be super snappy for players, AND you're calling this outside of your _tick function, you can use api.setOptimisations(false).
+ *
+ * If you want the optimisations for large quantities of blocks later on, then call api.setOptimisations(true) when you're done.
+ *
+ *
+ *
+ * @param x Can be an array
+ * @param y Should be blockname if first param is array
+ * @param z
+ * @param blockName
+ */
+setBlock(x: number | number[], y: number | BlockName, z?: number, blockName?: BlockName): void
+/**
+ * Initiate a block change "by the world".
+ * Calls onWorldAttemptChangeBlock, then onWorldChangeBlock if allowed.
+ * initiatorDbId is null if the change was initiated by the game code.
+ *
+ * @param initiatorDbId
+ * @param x
+ * @param y
+ * @param z
+ * @param blockName
+ * @param extraInfo
+ *
+ * @returns "preventChange" if the change was prevented, "preventDrop" if the change was allowed but without dropping any items, and undefined if the change was allowed with an item drop
+ */
+attemptWorldChangeBlock(initiatorDbId: PlayerDbId | null, x: number, y: number, z: number, blockName: BlockName, extraInfo?: WorldBlockChangedInfo | null): "preventChange" | "preventDrop" | void
+/**
+ * Returns whether a block is solid or not.
+ * E.g. Grass block is solid, while water, ladder and water are not.
+ * Will be true if the block is unloaded.
+ *
+ * @param x
+ * @param y
+ * @param z
+ */
+getBlockSolidity(x: number | number[], y?: number, z?: number): boolean
+/**
+ * Helper function that sets all blocks in a rectangle to a specific block.
+ *
+ * @param pos1 array [x, y, z]
+ * @param pos2 array [x, y, z]
+ * @param blockName
+ */
+setBlockRect(pos1: number[], pos2: number[], blockName: BlockName): void
+/**
+ * Create walls by providing two opposite corners of the cuboid
+ *
+ *
+ * @param pos1 array [x, y, z]
+ * @param pos2 array [x, y, z]
+ * @param blockName
+ * @param hasFloor
+ * @param hasCeiling
+ */
+setBlockWalls(pos1: number[], pos2: number[], blockName: BlockName, hasFloor?: boolean, hasCeiling?: boolean): void
+/**
+ * Copies chunk from one position to another.
+ * A good use case for this is storing 'template' chunks that can be continuously copied to a new position.
+ * In order to reset an area to the template, e.g. resetting a session-based game.
+ *
+ * NOTE: Does nothing if the source chunk is not loaded.
+ *
+ * @param fromPos - A block coordinate within the chunk to copy from.
+ * @param toPos - A block coordinate within the chunk to copy to.
+ */
+copyChunk(fromPos: number[], toPos: number[]): void
+/**
+ * Use this to get a chunk ndarray you can edit and set in resetChunk.
+ *
+ * Only use chunk helpers if you REALLY need the performance (i.e. you are iterating over tens of thousands of blocks)
+ * ReturnedObject.blockData is a 32x32x32 ndarray of air.
+ * (see https://www.npmjs.com/package/ndarray)
+ * Each block id is a 16-bit number
+ */
+getEmptyChunk(): GameChunk
+/**
+ * Splits the block name by '|'. If no meta info, metaInfo is ''
+ *
+ * @param blockName
+ */
+getMetaInfo(blockName: BlockName | null | undefined): ItemMetaInfo
+/**
+ * Get the numeric id of a block used in the ndarrays returned from getChunk
+ * I.e. chunk.blockData.set(x, y, z, api.blockNameToBlockId("Dirt"))
+ * or chunk.blockData.get(x, y, z) === api.blockNameToBlockId("Dirt")
+ *
+ * @param blockName
+ * @param allowInvalidBlock Don't throw an error if the block name is invalid.
+ * Defaults false. If true and name is invalid, returns null.
+ * @returns
+ */
+blockNameToBlockId(blockName: BlockName, allowInvalidBlock?: boolean): number | null
+/**
+ * Goes from block id to block name. The reverse of blockNameToBlockId
+ *
+ * @param blockId
+ */
+blockIdToBlockName(blockId: BlockId): BlockName
+/**
+ * Get the unique id of the chunk containing pos in the current map
+ *
+ * @param pos
+ */
+blockCoordToChunkId(pos: number[]): string
+/**
+ * Get the co-ordinates of the block in the chunk with the lowest x, y, and z co-ordinates
+ *
+ * @param chunkId
+ */
+chunkIdToBotLeftCoord(chunkId: string): [number, number, number]
+/**
+ * @deprecated - prefer using other UI elements
+ * (this UI element hasn't been properly thought through in combination with other elements like killfeed, uirequests, etc)
+ *
+ * Send a player an icon in the top right corner
+ *
+ * @param playerId
+ * @param icon Can be any icon from font-awesome.
+ * @param text The text to send.
+ * @param opts Can include keys duration, width, height, color, iconSizeMult.
+ *
+ * Default opts: {
+ *  duration: 8, // seconds
+ *  width: 400px,
+ *  height: 100px,
+ *  color: 'rgb(102, 102, 102)', // must be rgb in this format (hex not supported),
+ *  iconSizeMult: 5,
+ *  textAndIconColor: "white", // can be any colour supported by css (e.g. hex, rgb),
+ *  fontSize: '17px',
+ * }
+ */
+sendTopRightHelper(playerId: PlayerId, icon: string, text: string, opts: { duration?: number; width?: number; height?: number; color?: string; iconSizeMult?: number; textAndIconColor?: string; fontSize?: string; }): void
+/**
+ * Whether the player is on a mobile device or a computer.
+ * @param playerId
+ */
+isMobile(playerId: PlayerId): boolean
+/**
+ * Get the amount of a given currency a player has.
+ * @param playerId
+ * @param currencyId
+ * @returns The amount of the currency, or null if the currency is not defined.
+ */
+getCurrencyAmount(playerId: PlayerId, currencyId: string): number | null
+/**
+ * Create a dropped item.
+ * @param x
+ * @param y
+ * @param z
+ * @param itemName Name of the item. Any item name, including blocks and 'Air'
+ * @param amount The amount of the item in the drop. Defaults to 1 when omitted. Use 0 for a collect-only trigger that does not add to inventory (fires onPlayerPickedUpItem with itemAmount 0).
+ * @param mergeItems Whether to merge the item into a nearby item of same type, if one exists. Defaults to false.
+ * @param attributes Attributes of the item being dropped
+ * @param timeTillDespawn Time till the item automatically despawns in milliseconds. Defaults to 5 mins, max of 1 hour.
+ * @param dropperId Who dropped the item.
+ * @param options Additional options, such as doPhysics and size. With doPhysics, the physics body is at most 25 blocks across.
+ * @returns the id you can pass to setCantPickUpItem, or null if the item drop limit was reached
+ */
+createItemDrop(x: number, y: number, z: number, itemName: ItemName, amount?: number | null, mergeItems?: boolean, attributes?: ItemAttributes, timeTillDespawn?: number, dropperId?: LifeformId | null, options?: ItemDropOptions): EntityId | null
+/**
+ * Prevent a player from picking up an item. itemId returned by createItemDrop
+ *
+ * @param playerId
+ * @param itemId
+ */
+setCantPickUpItem(playerId: PlayerId, itemId: EntityId): void
+/**
+ * Reset a player's ability to pick up an item. itemId returned by createItemDrop
+ *
+ * @param playerId
+ * @param itemId
+ */
+resetCanPickUpItem(playerId: PlayerId, itemId: EntityId): void
+/**
+ * Delete an item drop by item drop entity ID
+ *
+ * @param itemId
+ */
+deleteItemDrop(itemId: EntityId): void
+/**
+ * Create an invisible audio entity at a world position that loops a sound to
+ * nearby players (e.g. a waterfall or fireplace).
+ *
+ * Audio entities count against the same budget as physics-less mesh entities; returns null
+ * if that budget is exhausted.
+ *
+ * @param x
+ * @param y
+ * @param z
+ * @param soundName The sound to loop.
+ * @param volume
+ * @param options {refDistance: number, maxHearDist: number, rate: number}
+ * refDistance: higher means the sound decreases less in volume with distance. Defaults to 3. Hitting is 4. Guns are 10
+ * maxHearDist: sound is not played if player is further than this. Defaults to 30
+ * rate: The speed of playback. Also affects pitch. 0.5-4. Lower playback = lower pitch. Good for varying the sound.
+ * E.g. item pickup sound has a random rate between 1 and 1.5.
+ * @returns the audio entity ID, or null if the entity budget is exhausted
+ */
+attemptCreateAudioEntity(x: number, y: number, z: number, soundName: string, volume?: number, options?: { refDistance?: number; maxHearDist?: number; rate?: number; }): EntityId | null
+/**
+ * Update an audio entity's config (sound, volume, falloff, rate). Only the provided fields
+ * change.
+ *
+ * @param eId
+ * @param opts Any subset of soundName, volume, refDistance, maxHearDist, rate.
+ */
+updateAudioEntity(eId: EntityId, opts: Partial<AudioEntityOpts>): void
+/**
+ * Delete an audio entity by its entity ID (returned by attemptCreateAudioEntity).
+ *
+ * @param eId
+ */
+deleteAudioEntity(eId: EntityId): void
+/**
+ * Returns all items overlapping with the given player
+ *
+ * @param playerId
+ * @returns the overlapping item entity IDs
+ */
+getItemIDsOverlappingWithPlayer(playerId: PlayerId): EntityId[]
+/**
+ * Get the metadata about a block or item before stats have been modified by any client options
+ * (i.e. its entry in the initial metadata object)
+ *
+ * @param itemName
+ */
+getInitialItemMetadata(itemName: string): Partial<BlockMetadataItem & NonBlockMetadataItem>
+/**
+ * Get stat info about a block or item
+ * Either based on a client option for a player: (e.g. \`DirtTtb\`)
+ * or its entry in the initial metadata object if no client option is set.
+ *
+ * If null is passed for lifeformId, this is simply its entry in blockMetadata etc.
+ *
+ *
+ * @param lifeformId
+ * @param itemName
+ * @param stat
+ */
+getItemStat<K extends keyof AnyMetadataItem>(lifeformId: LifeformId | null, itemName: ItemName, stat: K): AnyMetadataItem[K]
+/**
+ * Set a stat attribute for a block or item
+ *
+ * NOTE: Only a subset of stats are customisable this way.
+ * afterEatenItem requires an unstackable food.
+ * minChargeStateToUse must be within the item's chargeStages and set on the base item, applying to all its charging variants.
+ * fishingRodInfo adjusts existing rods; drops names the replacement mining drop.
+ * Example: setItemStat(playerId, "Iron Dagger", "comboInfo", { comboWindowMs: 1000, comboMultipliers: [1, 1.5, 2] })
+ *
+ * @param playerId
+ * @param itemName
+ * @param stat
+ * @param value
+ */
+setItemStat<K extends CustomItemStat>(playerId: PlayerId, itemName: ItemName, stat: K, value: AnyMetadataItem[K]): void
+/**
+ * Set the direction the player is looking.
+ *
+ * @param playerId
+ * @param direction a vector of the direction to look, format [x, y, z]
+ */
+setCameraDirection(playerId: PlayerId, direction: number[]): void
+/**
+ * Shake a player's camera.
+ *
+ * @param playerId
+ * @param intensity Shake "power" (0..1); the client clamps the accumulated power to 1.
+ * @param durationMs How long the shake lasts, in milliseconds.
+ */
+shakePlayerCamera(playerId: PlayerId, intensity: number, durationMs?: number): void
+/**
+ * Set an entity's opacity
+ * A simple helper that calls setTargetedPlayerSettingForEveryone
+ *
+ * @param playerId
+ * @param opacity
+ */
+setPlayerOpacity(playerId: EntityId, opacity: number): void
+/**
+ * Set the opacity of an entity for one player
+ * A simple helper that calls setOtherEntitySetting
+ *
+ * @param playerIdWhoViewsOpacityPlayer The player who sees that with opacity
+ * @param playerIdOfOpacityPlayer The entity whose opacity is changed
+ * @param opacity
+ */
+setPlayerOpacityForOnePlayer(playerIdWhoViewsOpacityPlayer: PlayerId, playerIdOfOpacityPlayer: EntityId, opacity: number): void
+/**
+ * Obtain Date.now() value saved at start of current game tick
+ */
+now(): number
+/**
+ * Check your game (and, optionally, a entity) is still valid and executing.
+ * Useful if you're using async functions and await within your game.
+ * If you use await/async or promises and do not check this, your game could have closed and then the rest of your
+ * async code executes.
+ *
+ * @param entityId
+ */
+checkValid(entityId?: EntityId | null): boolean
+/**
+ * Let a player change a block at a specific co-ordinate. Useful when client option canChange is false.
+ * Overrides blockRect and blockType settings, so also useful when you have disallowed changing of a block type with setCantChangeBlockType.
+ * Using this on 1000s of blocks will cause lag - if that is needed, find a way to use setCanChangeBlockType.
+ *
+ * @param playerId
+ * @param x
+ * @param y
+ * @param z
+ */
+setCanChangeBlock(playerId: PlayerId, x: number, y: number, z: number): void
+/**
+ * Prevents a player from changing a block at a specific co-ordinate. Useful when client option canChange is true.
+ * Overrides blockRect and blockType settings, so also useful when you have allowed changing of a block type with setCantChangeBlockType.
+ * Using this on 1000s of blocks will cause lag - if that is needed, find a way to use setCantChangeBlockType.
+ *
+ * @param playerId
+ * @param x
+ * @param y
+ * @param z
+ */
+setCantChangeBlock(playerId: PlayerId, x: number, y: number, z: number): void
+/**
+ * Remove any previous can/cant change block settings for a player at a specific co-ordinate
+ *
+ * @param playerId
+ * @param x
+ * @param y
+ * @param z
+ */
+resetCanChangeBlock(playerId: PlayerId, x: number, y: number, z: number): void
+/**
+ * Lets a player Change a block type. Valid names are any block name, including 'Air'
+ * Less priority than cant change block pos/can change block rect
+ *
+ * @param playerId
+ * @param blockName
+ */
+setCanChangeBlockType(playerId: PlayerId, blockName: BlockName): void
+/**
+ * Stops a player from changing a block type. Valid names are any block name, including 'Air'
+ * Less priority than can change block pos/can change block rect
+ *
+ * @param playerId
+ * @param blockName
+ */
+setCantChangeBlockType(playerId: PlayerId, blockName: BlockName): void
+/**
+ * Remove any previous can/cant change block type settings for a player
+ *
+ * @param playerId
+ * @param blockName
+ */
+resetCanChangeBlockType(playerId: PlayerId, blockName: BlockName): void
+/**
+ * Make it so a player can Change blocks within two points. Coordinates are inclusive. E.g. if [0, 0, 0] is pos1
+ * and [1, 1, 1] is pos2 then the 8 blocks contained within low and high will be able to be broken.
+ * Overrides setCantChangeBlockType
+ *
+ *
+ * @param playerId
+ * @param pos1 Arg as [x, y, z]
+ * @param pos2 Arg as [x, y, z]
+ */
+setCanChangeBlockRect(playerId: PlayerId, pos1: number[], pos2: number[]): void
+/**
+ * Make it so a player cant Change blocks within two points. Coordinates are inclusive. E.g. if [0, 0, 0] is pos1
+ * and [1, 1, 1] is pos2 then the 8 blocks contained within pos1 and pos2 won't be able to be broken.
+ * Overrides setCanChangeBlockType
+ *
+ *
+ * @param playerId
+ * @param pos1 Arg as [x, y, z]
+ * @param pos2 Arg as [x, y, z]
+ */
+setCantChangeBlockRect(playerId: PlayerId, pos1: number[], pos2: number[]): void
+/**
+ * Remove any previous can/cant change block rect settings for a player
+ *
+ * @param playerId
+ * @param pos1
+ * @param pos2
+ */
+resetCanChangeBlockRect(playerId: PlayerId, pos1: number[], pos2: number[]): void
+/**
+ * Allow a player to walk through a type of block. For blocks that are normally solid and not seethrough, the player will experience slight visual glitches while inside the block.
+ *
+ * A player standing inside a block that turns solid for them is lifted onto it if there is room above. To let them stay where they are, remove the block before making its type solid again.
+ *
+ * @param playerId
+ * @param blockName
+ * @param disable If you've enabled a player to walk through a block and want to make the block solid for them again, pass this with true. Otherwise you only need to pass playerId and blockName
+ */
+setWalkThroughType(playerId: PlayerId, blockName: BlockName, disable?: boolean): void
+/**
+ * Allow a player to walk through (or not walk through) voxels that are located within a given rectangle.
+ * For blocks that are normally solid and not seethrough, the player will experience slight visual glitches while inside the block.
+ *
+ * You could set both pos1 and pos2 to [0, 0, 0] to make only 0, 0, 0 walkthrough, for example.
+ *
+ * A player standing inside a voxel that turns solid for them is lifted onto it if there is room above, including onto a CANT_WALK_THROUGH rect.
+ * To let them stay where they are, remove the block before removing its exemption.
+ *
+ * @param playerId
+ * @param pos1 The one corner of the cuboid. Format [x, y, z]
+ * @param pos2 The top right corner of the cuboid. Format [x, y, z]
+ * @param updateType The type of update. Whether to make a rect solid, or able to be walked through.
+ * Pass DEFAULT_WALK_THROUGH with a previously passed rect to disable any walkthrough setting for that rect.
+ */
+setWalkThroughRect(playerId: PlayerId, pos1: number[], pos2: number[], updateType: WalkThroughType): void
+/**
+ * Give a player an item and a certain amount of that item.
+ * Returns the amount of item added to the users inventory.
+ *
+ * @param playerId
+ * @param itemName
+ * @param itemAmount
+ * @param attributes An optional object for certain types of item. For guns this can contain the shotsLeft field which is the amount of ammo the gun currently has.
+ */
+giveItem(playerId: PlayerId, itemName: ItemName, itemAmount?: number | null, attributes?: ItemAttributes): number
+/**
+ * Whether the player has space in their inventory to get new blocks
+ * @param playerId
+ */
+inventoryIsFull(playerId: PlayerId): boolean
+/**
+ * Put an item in a specific index. Default hotbar is indexes 0-9
+ *
+ * @param playerId
+ * @param itemSlotIndex 0-indexed
+ * @param itemName Can be 'Air', in which case itemAmount will be ignored and the slot will be cleared.
+ * @param itemAmount -1 for infinity. Should not be set, or null, for items that are not stackable.
+ * @param attributes An optional object for certain types of item. For guns this can contain the shotsLeft field which is the amount of ammo the gun currently has.
+ * \`customAttributes.bar = { fraction, colour? }\` (0 to 1, hex colour) draws a charge bar on the item's slot. A stack shares one bar, so make barred items unstackable.
+ * @param tellClient whether to tell client about it - results in desync between client and server if client doesnt locally perform the same action
+ */
+setItemSlot(playerId: PlayerId, itemSlotIndex: number, itemName: ItemName, itemAmount?: number | null, attributes?: ItemAttributes, tellClient?: boolean): void
+/**
+ * Remove an amount of item from a player's inventory
+ *
+ * @param playerId
+ * @param itemName
+ * @param amount
+ */
+removeItemName(playerId: PlayerId, itemName: ItemName, amount: number): void
+/**
+ * Get the item at a specific index
+ * Returns null if there is no item at that index
+ * If there is an item, return an object of the format { name: string; amount: number | null; attributes: ItemAttributes; }
+ *
+ * @param playerId
+ * @param itemSlotIndex
+ */
+getItemSlot(playerId: PlayerId, itemSlotIndex: number): InvenItem | null
+/**
+ * Finds the index of a particular item in a player's inventory.
+ *
+ * @param playerId
+ * @param itemName
+ * @return The index of the item in the player's inventory, or null if the item is not found.
+ */
+findItem(playerId: PlayerId, itemName: ItemName): number | null
+/**
+ * Whether a player has an item
+ *
+ * @param playerId
+ * @param itemName
+ * @returns bool
+ */
+hasItem(playerId: PlayerId, itemName: ItemName): boolean
+/**
+ * The amount of an itemName a player has.
+ * Returns 0 if the player has none, and a negative number if infinite.
+ *
+ * @param playerId
+ * @param itemName
+ * @returns number
+ */
+getInventoryItemAmount(playerId: PlayerId, itemName: ItemName): number
+/**
+ * Clear the players inventory
+ *
+ * @param playerId
+ */
+clearInventory(playerId: PlayerId): void
+/**
+ * Force the player to have the ith inventory slot selected. E.g. newI 0 makes the player have the 0th inventory slot selected
+ *
+ * @param playerId
+ * @param newI integer from 0-9
+ */
+setSelectedInventorySlotI(playerId: PlayerId, newI: number): void
+/**
+ * Get a player's currently selected inventory slot
+ * @param playerId
+ * @returns
+ */
+getSelectedInventorySlotI(playerId: PlayerId): number
+/**
+ * Get the currently held item of a player
+ * Returns null if no item is being held
+ * If an item is held, return an object of the format {name: itemName, amount: amountOfItem}
+ *
+ * @param playerId
+ */
+getHeldItem(playerId: PlayerId): InvenItem | null
+/**
+ * Get the amount of free slots in a player's inventory.
+ *
+ * @param playerId
+ * @returns number
+ */
+getInventoryFreeSlotCount(playerId: PlayerId): number
+/**
+ * Checks if a player is able to open a chest at a given location,
+ * as per the rules laid out by the "onPlayerAttemptOpenChest" game callback.
+ * Returns true if the player can open the chest, false if they cannot, and void if the chest does not exist.
+ *
+ * @param playerId
+ * @param chestX
+ * @param chestY
+ * @param chestZ
+ */
+canOpenStandardChest(playerId: PlayerId, chestX: number, chestY: number, chestZ: number): boolean | null
+/**
+ * Open a chest for a player.
+ * If there is no chest, or the player cannot open it, do nothing.
+ * WARNING: This may call "onPlayerAttemptOpenChest" to determine if the player has permission to open it. Using this function inside that callback risks infinite recursion.
+ *
+ * @param playerId
+ * @param x
+ * @param y
+ * @param z
+ */
+openChestForPlayer(playerId: PlayerId, x: number, y: number, z: number): void
+/**
+ * Close a chest for a player.
+ * If the player does not have a chest open, do nothing.
+ *
+ * @param playerId
+ */
+closeChestForPlayer(playerId: PlayerId): void
+/**
+ * Read a player's current crafting recipe set, keyed by output item name. Includes any
+ * per-player overrides set via \`editItemCraftingRecipes\` / \`removeItemCraftingRecipes\`.
+ *
+ * @param playerId
+ */
+getCraftingRecipesForPlayer(playerId: PlayerId): Record<string, RecipesForItem>
+/**
+ * Give a standard chest an item and a certain amount of that item.
+ * Returns the amount of item added to the chest.
+ *
+ * @param chestPos
+ * @param itemName
+ * @param itemAmount
+ * @param playerId The player who is interacting with the chest.
+ * @param attributes An optional object for certain types of item. For guns this can contain the shotsLeft field which is the amount of ammo the gun currently has.
+ */
+giveStandardChestItem(chestPos: number[], itemName: ItemName, itemAmount?: number, playerId?: PlayerId, attributes?: ItemAttributes): number
+/**
+ * Remove an amount of item from a standardChest inventory
+ *
+ * @param chestPos
+ * @param itemName
+ * @param amount
+ * @param playerId The player who is interacting with the chest.
+ */
+removeItemNameFromStandardChest(chestPos: number[], itemName: ItemName, amount: number, playerId?: PlayerId): void
+/**
+ * Get the amount of free slots in a standard chest
+ * Returns null for non-chests
+ *
+ * @param chestPos
+ * @returns number
+ */
+getStandardChestFreeSlotCount(chestPos: number[]): number | null
+/**
+ * The amount of an itemName a standard chest has.
+ * Returns 0 if the standard chest has none, and a negative number if infinite.
+ *
+ * @param chestPos
+ * @param itemName
+ * @returns number
+ */
+getStandardChestItemAmount(chestPos: number[], itemName: ItemName): number
+/**
+ * Get the item at a chest slot. Null if empty otherwise format {name: itemName, amount: amountOfItem}
+ *
+ * @param chestPos
+ * @param idx
+ */
+getStandardChestItemSlot(chestPos: number[], idx: number): InvenItem | null
+/**
+ * Get all the items from a standard chest in order. Use this instead of repetitive calls to getStandardChestItemSlot
+ *
+ * @param chestPos
+ */
+getStandardChestItems(chestPos: number[]): (InvenItem | null)[]
+/**
+ * @param chestPos
+ * @param idx 0-indexed
+ * @param itemName Can be 'Air', in which case itemAmount will be ignored and the slot will be cleared.
+ * @param itemAmount -1 for infinity. Should not be set, or null, for items that are not stackable.
+ * @param playerId The player who is interacting with the chest.
+ * @param attributes An optional object for certain types of item. For guns this can contain the shotsLeft field which is the amount of ammo the gun currently has.
+ */
+setStandardChestItemSlot(chestPos: number[], idx: number, itemName: ItemName, itemAmount?: number | null, playerId?: PlayerId, attributes?: ItemAttributes): void
+/**
+ * Find the index of a particular item in a standard chest
+ * @param chestPos
+ * @param itemName
+ */
+findStandardChestItem(chestPos: number[], itemName: ItemName): number | null
+/**
+ * Get the item in a player's moonstone chest slot. Null if empty
+ *
+ * Moonstone chests are a type of chest where a player accesses the same contents no matter the location of the moonstone chest
+ *
+ * @param playerId
+ * @param idx
+ */
+getMoonstoneChestItemSlot(playerId: PlayerId, idx: number): InvenItem | null
+/**
+ * Get all the items from a moonstone chest in order. Use this instead of repetitive calls to getMoonstoneChestItemSlot
+ *
+ * Moonstone chests are a type of chest where a player accesses the same contents no matter the location of the moonstone chest
+ *
+ * @param playerId
+ */
+getMoonstoneChestItems(playerId: PlayerId): (InvenItem | null)[]
+/**
+ * Moonstone chests are a type of chest where a player accesses the same contents no matter the location of the moonstone chest
+ *
+ * @param playerId
+ * @param idx 0-indexed
+ * @param itemName Can be 'Air', in which case itemAmount will be ignored and the slot will be cleared.
+ * @param itemAmount -1 for infinity. Should not be set, or null, for items that are not stackable.
+ * @param metadata An optional object for certain types of item. For guns this can contain the shotsLeft field which is the amount of ammo the gun currently has.
+ */
+setMoonstoneChestItemSlot(playerId: PlayerId, idx: number, itemName: ItemName, itemAmount?: number | null, metadata?: ItemAttributes): void
+/**
+ * Store data about a block in a performant manner. Data is cleared when block changes.
+ * E.g. chest: \`persisted.chestStr\` is a JSON array of nulls and items, each with a string \`name\`; anything else in it is stored as a load reads it
+ * Works well with blocks marked tickable (e.g. wheat)
+ *
+ * @param x
+ * @param y
+ * @param z
+ * @param data
+ */
+setBlockData(x: number, y: number, z: number, data: object): void
+/**
+ * Get stored data about a block in a performant manner. Data is cleared when block changes.
+ * E.g. chest
+ * Works well with blocks marked tickable (e.g. wheat)
+ *
+ * @param x
+ * @param y
+ * @param z
+ */
+getBlockData(x: number, y: number, z: number): any
+/**
+ * Get the name of the lobby this game is running in.
+ */
+getLobbyName(): string
+/**
+ * Integer lobby names are public
+ * @returns boolean
+ */
+isPublicLobby(): boolean
+/**
+ * Returns if the current lobby the game is running in is special - e.g. a discord guild or dm, or simply a standard lobby
+ */
+getLobbyType(): LobbyType
+/**
+ * Update the progress bar in the bottom right corner.
+ * Can be queued.
+ *
+ * @param playerId
+ * @param toFraction The fraction of the progress bar you want to be filled up.
+ * @param toDuration The time it takes for the bar to reach the given toFraction in ms.
+ * If this is too low and you queue multiple updates, this toFraction could be skipped. Treat 200ms as a minimum.
+ */
+progressBarUpdate(playerId: PlayerId, toFraction: number, toDuration?: number): void
+/**
+ * This will initiate the MiddleScreenBar, starting at empty and filling up to full over the given duration.
+ * Good to represent cooldowns (eg gun reload) or charged items (eg crossbow)
+ *
+ * @param playerId
+ * @param duration ms over which the MiddleScreenBar fills up
+ * @param chargeExpiresAutomatically Defaults to true. If true, the bar will disappear upon reaching full. If false, the bar will remain at full until hidden with removeMiddleScreenBar
+ * @param horizontalBarRemOffset Offset the bar left or right (in css unit - rem)
+ */
+initiateMiddleScreenBar(playerId: PlayerId, duration: number, chargeExpiresAutomatically?: boolean, horizontalBarRemOffset?: number): void
+/**
+ * If there is any current middle screen bar running, this will hide it
+ *
+ * @param playerId
+ */
+removeMiddleScreenBar(playerId: PlayerId): void
+/**
+ * Show a hitmarker on the player's screen (the X-shaped crosshair flash indicating a successful hit).
+ * Useful for custom weapons or things that need visual hit feedback.
+ *
+ * @param playerId The player to show the hitmarker to
+ * @param isCrit If true, shows an enhanced critical-hit hitmarker with a longer, more dramatic animation
+ * @param directionVector Optional [x, y, z] direction vector. When provided, the hitmarker appears
+ *   at the projected screen position of that direction rather than at the centre of the screen.
+ *   Same flow as mobile melee attacks where the tap point differs from screen centre.
+ */
+sendHitmarker(playerId: PlayerId, isCrit?: boolean, directionVector?: number[] | null): void
+/**
+ * Show a directional arrow indicator on the player's screen pointing toward a world position.
+ * When the position is off-screen the indicator is a rotating chevron at the screen edge.
+ * When the position is on-screen it becomes a small marker dot.
+ *
+ * The arrow persists until explicitly cleared via \`clearDirectionArrow\`.
+ * Calling again with the same \`id\` updates the existing arrow in-place.
+ *
+ * @param playerId The player to show the arrow to
+ * @param id Unique identifier for this arrow (allows multiple concurrent arrows)
+ * @param position [x, y, z] world position the arrow should point toward
+ * @param text Optional label rendered below the indicator. Supports CustomTextStyling for rich text with icons/colours.
+ * @param showDistance If true, displays the distance (in blocks) from the player to the arrow position.
+ * @param style Optional style object (same format as CustomTextStyling's StyledText \`style\`). Controls chevron/marker colour, label typography, and opacity.
+ */
+setDirectionArrow(playerId: PlayerId, id: string, position: number[], text?: string | CustomTextStyling | null, showDistance?: boolean, style?: TextStyle | null): void
+/**
+ * Clear a directional arrow from the player's screen.
+ *
+ * @param playerId The player to clear the arrow for
+ * @param id The arrow identifier to clear. If null, clears all arrows for this player.
+ */
+clearDirectionArrow(playerId: PlayerId, id?: string | null): void
+/**
+ * Edit the crafting recipes for a player.
+ *
+ * @param playerId
+ * @param itemName
+ * @param recipesForItem
+ */
+editItemCraftingRecipes(playerId: PlayerId, itemName: ItemName, recipesForItem: RecipesForItem): void
+/**
+ * Reset the crafting recipes for a given back to its original bloxd state
+ *
+ * @param playerId
+ * @param itemName Resets all crafting recipes for the given player if null, otherwise resets the crafting recipes for the given item.
+ */
+resetItemCraftingRecipes(playerId: PlayerId, itemName: string | null): void
+/**
+ * Removes crafting recipes
+ *
+ * @param playerId
+ * @param itemName Removes all crafting recipes for the given player if null, otherwise removes the crafting recipes for the given item.
+ */
+removeItemCraftingRecipes(playerId: PlayerId, itemName: string | null): void
+/**
+ * Check if a position is within a cubic rectangle
+ *
+ * @param coordsToCheck
+ * @param pos1 position of one corner
+ * @param pos2 position of opposite corner
+ * @param addOneToMax
+ */
+isInsideRect(coordsToCheck: number[], pos1: number[], pos2: number[], addOneToMax?: boolean): boolean
+/**
+ * Get the entities in the rect between [minX, minY, minZ] and [maxX, maxY, maxZ]
+ *
+ * @param minCoords
+ * @param maxCoords
+ * @returns
+ */
+getEntitiesInRect(minCoords: number[], maxCoords: number[]): EntityId[]
+/**
+ * What kind of entity it is: "Player", or a mob's type like "Draugr Zombie" or "Pig"
+ * @param entityId
+ */
+getEntityType(entityId: EntityId): EntityType
+/**
+ * Gets the item name of a dropped item
+ *
+ * @param itemEId - The ID of the dropped item from createItemDrop
+ * @returns
+ */
+getItemDropName(itemEId: EntityId): ItemName | null
+/**
+ * Deletes all items dropped in the world
+ */
+deleteAllItems(): void
+/**
+ * Create a mob herd. A mob herd represents a collection of mobs that move together.
+ */
+createMobHerd(): MobHerdId
+/**
+ * Try to spawn a mob into the world at a given position. Returns null on failure.
+ * WARNING: Either the "onPlayerAttemptSpawnMob" or the "onWorldAttemptSpawnMob" game callback will be called
+ * depending on whether "spawnerId" is provided. Calling this function inside those callbacks risks infinite recursion.
+ * @param mobType
+ * @param x
+ * @param y
+ * @param z
+ * @param opts Includes:
+ *  - mobHerdId The ID of this mob's herd. (A mob herd represents a collection of mobs that move together.)
+ *  - spawnerId The ID of the player who tried to spawn this mob.
+ *  - mobDbId A persistent ID for the mob. This can be useful when loading mob data from the database. If the DB ID is already taken, null will be returned.
+ *  - name If set, gives the mob a name that will be displayed as a nametag above their head.
+ *  - playSoundOnSpawn
+ *  - variation
+ *  - physicsOpts { width: number; height: number; collidesEntities: boolean }. The body is at most 25 blocks wide and 90 tall.
+ * @returns null if the mob could not be spawned.
+ * This can happen when there are too many mobs in the world for the current number
+ * of players in the lobby, or if the area is protected e.g. by spawn area protection.
+ */
+attemptSpawnMob<TMobType extends MobType>(mobType: TMobType, x: number, y: number, z: number, opts?: MobSpawnOpts<TMobType>): MobId | null
+/**
+ * Dispose of a mob's state and remove them from the world without triggering "on death" flows.
+ * Always succeeds.
+ * @param mobId
+ */
+despawnMob(mobId: MobId): void
+/**
+ * Returns the current default value for a mob setting.
+ *
+ * @param mobType
+ * @param setting
+ */
+getDefaultMobSetting<TMobType extends MobType, TMobSetting extends MobSetting>(mobType: TMobType, setting: TMobSetting): MobSettings<TMobType>[TMobSetting]
+/**
+ * Set the default value for a mob setting.
+ * @param mobType
+ * @param setting
+ * @param value
+ */
+setDefaultMobSetting<TMobType extends MobType, TMobSetting extends MobSetting>(mobType: TMobType, setting: TMobSetting, value: MobSettings<TMobType>[TMobSetting]): void
+/**
+ * Get the current value of a mob setting for a specific mob.
+ * @param mobId
+ * @param setting
+ * @param returnDefaultIfNotOverridden - If true, return the default setting if not overridden.
+ */
+getMobSetting<TMobSetting extends MobSetting>(mobId: MobId, setting: TMobSetting, returnDefaultIfNotOverridden?: boolean): MobSettings<MobType>[TMobSetting]
+/**
+ * Set the current value of a mob setting for a specific mob.
+ * @param mobId
+ * @param setting
+ * @param value
+ */
+setMobSetting<TMobSetting extends MobSetting>(mobId: MobId, setting: TMobSetting, value: MobSettings<MobType>[TMobSetting]): void
+/**
+ * Get the number of mobs in the world.
+ */
+getNumMobs(): number
+/**
+ * Get the mob IDs of all mobs in the world.
+ */
+getMobIds(): MobId[]
+/**
+ * Gets the current AI state for the given mob.
+ * @param mobId
+ */
+getMobAiState(mobId: MobId): { state: MobAiState; params: MobAiStateParams<MobAiState> }
+/**
+ * Sets the current AI state for the given mob.
+ * Some AI states will require context such as the ID of the lifeform being chased.
+ * The mob's AI normally moves on by itself after a few seconds, or when a player comes near.
+ * Pass \`{ hold: true }\` to keep it in this state until you set another one.
+ * @param mobId
+ * @param state
+ * @param params
+ * @param opts hold: never time out, ignore nearby players and don't fight back when hit. The mob still leaves the state if its target leaves the game or turns invisible, or if it is tamed.
+ */
+setMobAiState<TState extends MobAiState>(mobId: MobId, state: TState, params: MobAiStateParams<TState>, opts?: MobAiStateOptions): void
+/**
+ * Clears any aggro the mob has towards the given lifeform.
+ * If the mob is currently chasing or running away from it, this also transitions the mob back to idle.
+ * @param mobId
+ * @param targetLifeformId
+ */
+passifyHostility(mobId: MobId, targetLifeformId: LifeformId): void
+/**
+ * Try to create a throwable entity.
+ * Similar to creating a mesh entity and uses the same rate limiting.
+ * However, this uses the predefined throwables system and physics used by throwable items with the game
+ * Each throwable item has its own behaviour already, including default velocity, damage and gravity multipliers.
+ *
+ * @param throwerEId
+ * @param itemName Must be an Item that is usually throwable in-engine
+ * @param position Starting position
+ * @param direction
+ * @param velocityMult Multiplier for the default velocity of the throwable item
+ * @param damageMult Multiplier for the default damage of the throwable item
+ * @param gravityMult Multiplier for the default gravity of the throwable item
+ * @param attributes item attributes (currently used only for the "Boomerag" item)
+ * @returns null if throwable creation failed, otherwise the entity ID.
+ */
+attemptCreateThrowable(throwerEId: EntityId, itemName: ThrowableItem, position: [number, number, number], direction: [number, number, number], velocityMult?: number, damageMult?: number, gravityMult?: number, attributes?: ItemAttributes): string
+/**
+ * Delete a throwable entity before it automatically removes itself.
+ * @param eId
+ * @returns true if the entity was deleted, false if it was not a throwable entity
+ */
+deleteThrowable(eId: EntityId): boolean
+/**
+ * Try to create a mesh entity. This creates an entity whose mesh position is synced with clients.
+ * Set entity position using setPosition
+ * There is a limit to the number of mesh entities that can be created: 400 without physics (audio entities count too), 100 with physics (throwables count too).
+ * Separately, each player sees only the nearest 100 mesh entities of one kind (the mesh type, or the block name for a BloxdBlock); farther ones are hidden.
+ * @param type
+ * @param opts
+ * @param name The default name for the nametag
+ * @param physicsOptions Physics Options. With doPhysics, the physics body is at most 25 blocks across, however big the mesh; the entity collision box is the body grown by widthExpandAmt and heightExpandAmt.
+ * @param initiatorId The entity that initiated the creation of the mesh entity.
+ * @returns null if the entity creation failed, otherwise the entity ID.
+ */
+attemptCreateMeshEntity<MeshType extends MeshEntityType>(type: MeshType, opts: MeshEntityOpts[MeshType], name?: string, physicsOptions?: MeshEntityPhysicsOpts, initiatorId?: EntityId): EntityId | null
+/**
+ * Update a mesh entity. If used on a non-mesh entity, will do nothing.
+ *
+ * @param eId
+ * @param type
+ * @param opts
+ */
+updateMeshEntity<MeshType extends MeshEntityType>(eId: EntityId, type: MeshType, opts: MeshEntityOpts[MeshType]): void
+/**
+ * Delete any non-player entity (mesh entity, mob, audio entity, item drop, throwable, etc.) and dispose of their state.
+ * @param eId
+ * @returns whether the entity's replicated state existed and was deleted
+ */
+deleteEntity(eId: EntityId): boolean
+/**
+ * Delete a mesh entity
+ *
+ * @param eId
+ * @returns whether the api successfully deleted the meshEntity
+ */
+deleteMeshEntity(eId: EntityId): boolean
+/**
+ * Apply an impulse to an entity
+ *
+ * @param eId
+ * @param xImpulse
+ * @param yImpulse
+ * @param zImpulse
+ */
+applyImpulse(eId: EntityId, xImpulse: number, yImpulse: number, zImpulse: number): void
+/**
+ * Get the velocity of an entity
+ * Will return [0, 0, 0] if the entity doesn't have a physics body
+ *
+ * @param eId
+ */
+getVelocity(eId: EntityId): Pos
+/**
+ * Set the velocity of an entity
+ *
+ * @param eId
+ * @param x
+ * @param y
+ * @param z
+ */
+setVelocity(eId: EntityId, x: number, y: number, z: number): void
+/**
+ * @deprecated use setEntityRotation
+ * Set the heading for a server-auth entity.
+ *
+ * @param entityId
+ * @param newHeading
+ */
+setEntityHeading(entityId: EntityId, newHeading: number): void
+/**
+ * @deprecated use getEntityRotation
+ * Get the heading for a server-auth entity.
+ *
+ * @param entityId
+ */
+getEntityHeading(entityId: EntityId): number
+/**
+ * Get the rotation for a server-auth entity.
+ *
+ * @param entityId
+ */
+getEntityRotation(entityId: EntityId): Pos
+/**
+ * Set the rotation for a server-auth entity.
+ * A mob or player-shaped entity turns its head first; set the lockHeadToBody entity setting to turn its whole body.
+ *
+ * @param entityId
+ * @param xRotation
+ * @param yRotation
+ * @param zRotation
+ */
+setEntityRotation(entityId: EntityId, xRotation: number, yRotation: number, zRotation: number): void
+/**
+ * Get the amount of an item in an item entity
+ *
+ * @param itemId
+ * @returns number
+ */
+getItemAmount(itemId: EntityId): number
+/**
+ * Set the amount of an item in an item entity
+ *
+ * @param itemId
+ * @param newAmount
+ */
+setItemAmount(itemId: EntityId, newAmount: number): void
+/**
+ * Update the max players and soft max players matchmaking will use
+ *
+ * softMaxPlayers is the number of players that matchmaking will route to using "Quick Play".
+ * Once the softMaxPlayers limit is reached, this lobby can only be joined by requesting the lobby name or joining a friend.
+ *
+ * maxPlayers is the absolute maximum: a lobby will not have more players than this.
+ * Tip: softMaxPlayers should be around 90% of maxPlayers
+ *
+ * WARNING: This change is not immediate, as it takes a while for matchmaking to find out.
+ * Also, this will not kick players out of the lobby if set to a lower value than the current player count.
+ *
+ * @param softMaxPlayers
+ * @param maxPlayers
+ */
+setMaxPlayers(softMaxPlayers: number, maxPlayers: number): void
+/**
+ * Set whether a player who joins while an ad plays enters the world only once the ad ends, so nothing can hurt them
+ * while they can't play. On by default. Turn it off in a round-based game, so a party's players are all in the lobby
+ * when a round starts. Games using the \`@plugins/sessionBasedGame\` plugin have it off already.
+ *
+ * @param joinsWait
+ */
+setJoinsWaitForAds(joinsWait: boolean): void
+/**
+ * Tell a player to disconnect from the current lobby and join a new one.
+ *
+ * To connect to a specific variation, format is \`gamename_variation\`.
+ * For Custom Games, this will be \`classic_playerSchematic|XXXXXXXXXX\` or
+ * \`classic_playerSchematic|XXXXXXXXXX|<varname>\` for a named sub-variation.
+ *
+ * NOTE: Players won't disconnect immediately (they may play an ad before being redirected).
+ * In a world's own lobby, the world's owner and co-owners are asked first and can choose to stay.
+ *
+ * @param playerId
+ * @param game Defaults to the current game.
+ * @param lobbyName Defaults to "Quick Play"
+ */
+matchmakePlayer(playerId: PlayerId, game?: string, lobbyName?: string): void
+/**
+ * Create and register the UI for the requested quicktime event (QTE) to the screen.
+ * Handle the result via the onPlayerFinishQTE engine callback.
+ *
+ * @param playerId
+ * @param qteParameters - includes type and parameters
+ * @returns an id that can be passed to deleteQTE
+ */
+addQTE<T extends QTEType>(playerId: PlayerId, qteParameters: QTEClientParameters<T>): QTERequestId
+/**
+ * Delete a quicktime event from the screen
+ *
+ * @param playerId
+ * @param id Returned from the addQTE request you want to cancel
+ */
+deleteQTE(playerId: PlayerId, id: QTERequestId): void
+/**
+ * Check whether the player has any qteRequests
+ */
+hasActiveQTE(playerId: PlayerId): boolean
+/**
+ * Delete a request for a player.
+ *
+ * @param playerId
+ * @param id Returned from the addUiRequest call you want to cancel
+ */
+deleteUiRequest(playerId: PlayerId, id: UiRequestId): void
+/**
+ * Show a message over the shop in the same place that a shop item's onBoughtMessage is shown.
+ * Displays for a couple seconds before disappearing
+ * Use case is to show a dynamic message when player buys an item
+ *
+ * @param playerId
+ * @param info
+ */
+sendOverShopInfo(playerId: PlayerId, info: string | CustomTextStyling): void
+/**
+ * Open the shop UI for a player
+ *
+ * @param playerId
+ * @param toggle Whether to close the shop if it's already open. Leave this off when opening from an
+ * interaction: holding the interact button re-fires the alt action every ~50-150ms, so a toggle would
+ * flicker the shop open and closed until release.
+ * @param forceCategoryKey If set, will change the shop to this category
+ * @param onlyIfNonEmpty If true, will only open the shop if the category (or shop, if no category is provided) is non-empty
+ */
+openShop(playerId: PlayerId, toggle?: boolean, forceCategoryKey?: ShopCategoryKey | null, onlyIfNonEmpty?: boolean): void
+/**
+ * Apply an effect to a lifeform.
+ * Can be an inbuilt effect E.g. "Speed" (speed boost), "Damage" (damage boost).
+ * For inbuilt just pass the name of the effect and the functionality is handled in-engine.
+ * For custom effect, you pass customEffectInfo. The icon can be an InGameIconName or a bloxd item name.
+ * The custom effect onEndCb is an optional helper within which you can undo the effect you applied.
+ * Note that onEndCb will not work for press to code boards, code blocks or world code.
+ *
+ * @param lifeformId
+ * @param effectName
+ * @param duration
+ * @param customEffectInfo
+ */
+applyEffect(lifeformId: LifeformId, effectName: string, duration: number | null, customEffectInfo: { icon?: IngameIconName | ItemName; onEndCb?: () => void; displayName?: string | TranslatedText } & Partial<InbuiltEffectInfo>): void
+/**
+ * Check if a lifeform has an effect.
+ *
+ * @param lifeformId
+ * @param name
+ * @param atOrAboveLevel Checks whether the effect is at or above the given level
+ */
+hasEffect(lifeformId: LifeformId, name: string, atOrAboveLevel?: number): boolean
+/**
+ * Get the level of an effect on a lifeform, or 0 if they don't have it.
+ *
+ * @param lifeformId
+ * @param name
+ */
+getEffectLevel(lifeformId: LifeformId, name: string): number
+/**
+ * Get all the effects currently applied to a lifeform.
+ *
+ * @param lifeformId
+ */
+getEffects(lifeformId: LifeformId): string[]
+/**
+ * Remove an effect from a lifeform.
+ *
+ * @param lifeformId
+ * @param name
+ */
+removeEffect(lifeformId: LifeformId, name: string): void
+/**
+ * Change a part of a player's skin.
+ * UGC code is restricted to cosmetics from packs with ugcSelectable; internal code can use any cosmetics.
+ * @param playerId Player to change
+ * @param cosmeticType Type of cosmetic
+ * @param cosmeticName Chosen cosmetic, will be made lowercase automatically
+ */
+changePlayerIntoSkin(playerId: PlayerId, cosmeticType: CosmeticType, cosmeticName: CosmeticName): void
+/**
+ * Remove gamemode-applied skin from a player
+ * @param playerId
+ */
+removeAppliedSkin(playerId: PlayerId): void
+/**
+ * Get a single equipped cosmetic for a player.
+ * @param playerId
+ * @param cosmeticType Type of cosmetic
+ */
+getPlayerCosmetic(playerId: PlayerId, cosmeticType: CosmeticType): CosmeticName
+/**
+ * Set an entity's meshScaling setting by 3d vector. Model node scaling is applied to lifeforms;
+ * for mesh entities, this setting affects nametag placement and interaction reach, not the model's nodes.
+ * State from prior calls to this api is lost so if you want to have multiple nodes scaled, pass in all the scales at once.
+ *
+ * @param playerId
+ * @param nodeScales
+ */
+scalePlayerMeshNodes(playerId: EntityId, nodeScales: EntityMeshScalingMap): void
+/**
+ *  Attach/detach mesh instances to/from an entity
+ *  @param eId
+ *  @param node node to attach to
+ *  @param type if null, detaches mesh from this node
+ *  @param opts
+ *  @param offset
+ *  @param rotation
+ */
+updateEntityNodeMeshAttachment<MeshType extends MeshEntityType>(eId: EntityId, node: EntityNamedNode, type: MeshType | null, opts?: MeshEntityOpts[MeshType], offset?: Pos, rotation?: Pos): void
+/**
+ * Set the pose of the player
+ * @param playerId
+ * @param pose
+ * @param poseOffset
+ */
+setPlayerPose(playerId: PlayerId, pose: PlayerPose, poseOffset?: Pos): void
+/**
+ * Set physics state of player (vehicle type and tier).
+ *
+ * For types that have tiers (e.g. BOAT, GLIDER, CAR), a \`tier\` of \`null\` defaults to the first
+ * tier (0). Types without tiers (e.g. DEFAULT) must be given a \`null\` tier.
+ * @param playerId
+ * @param physicsState
+ * @param positionOffset - Optional offset to adjust the player's collision box, which is at most 25 blocks wide and 90 tall
+ */
+setPlayerPhysicsState(playerId: PlayerId, physicsState: PlayerPhysicsState<PhysicsType>, positionOffset?: Pos): void
+/**
+ * Get physics state for player
+ * @param playerId
+ */
+getPlayerPhysicsState(playerId: PlayerId): PlayerPhysicsState<PhysicsType>
+/**
+ * Seat a player in a vehicle. Seat 0 drives; other seats follow the vehicle without movement control.
+ * The player leaves their current vehicle and replaces anyone occupying the requested seat.
+ * @param playerId
+ * @param vehicleEId A spawned vehicle or a rideable mob.
+ * @param seatIndex Seat index (default 0).
+ */
+setPlayerVehicle(playerId: PlayerId, vehicleEId: EntityId, seatIndex?: number): void
+/**
+ * Take a player off whatever they are riding, dropping them where it is. Does nothing if they are
+ * not riding anything.
+ * @param playerId
+ */
+exitPlayerVehicle(playerId: PlayerId): void
+/**
+ * The seat layout for a vehicle entity - at minimum one driver seat (index 0), optionally more
+ * passenger seats after it. Resolved from the spawned vehicle's def (\`VehicleMeshEntityDef.seats\`,
+ * falling back to a single driver seat at the physics type/tier's own \`riderOffset\` default) or a
+ * rideable mob's override (\`getMobVehicleSeats\`, falling back to its \`rideHeight\`). Throws if
+ * \`vehicleEId\` is not a vehicle.
+ */
+getVehicleSeats(vehicleEId: EntityId): VehicleSeat[]
+/**
+ * The current value of a physics setting for a specific vehicle entity: the value set via
+ * \`setVehicleSetting\` if overridden, otherwise (when \`returnDefaultIfNotOverridden\`) the type/tier
+ * default from the vehicle's physics state. Mirrors \`getMobSetting\`.
+ *
+ * The one default not read from the type/tier is a mob's \`riderOffset\`, which comes from its ride height.
+ *
+ * A per-block setting (e.g. \`"IceCanAutoStep"\`) is \`undefined\` when that block is unlisted, which means
+ * the block does not change the setting rather than that the setting is off.
+ */
+getVehicleSetting<TSetting extends SettableVehicleSetting>(vehicleEId: EntityId, setting: TSetting, returnDefaultIfNotOverridden?: boolean): SettableVehicleSettingValue<TSetting>
+/**
+ * Override a physics setting for a specific vehicle entity, replacing the type/tier default for that
+ * vehicle's rider. The override is stored on the shared Bloxd and, when the vehicle currently has a
+ * rider, replicated to that rider's client. Mirrors \`setMobSetting\`.
+ *
+ * A setting can also be overridden for one block by naming the block first, e.g.
+ * \`setVehicleSetting(boatId, "IceCanAutoStep", true)\`. That is stored as an entry of the matching
+ * \`<setting>ByBlock\` record, which the physics tick reads as a precomputed block lookup.
+ *
+ * The rider's body is at most 25 blocks wide and 90 tall: a larger \`width\` or \`height\` acts as that.
+ */
+setVehicleSetting<TSetting extends SettableVehicleSetting>(vehicleEId: EntityId, setting: TSetting, value: SettableVehicleSettingValue<TSetting>): void
+/**
+ * Try to spawn a rideable vehicle, which players can mount with an alt action.
+ * There is a limit to the number of mesh entities with physics that can be created.
+ * WARNING: Either the "onPlayerAttemptSpawnVehicle" or the "onWorldAttemptSpawnVehicle" game callback will be called
+ * depending on whether "spawnerId" is provided. Calling this function inside those callbacks risks infinite recursion.
+ * @param vehicleType
+ * @param x
+ * @param y
+ * @param z
+ * @param opts Includes:
+ *  - spawnerId The ID of the player who spawned the vehicle. The vehicle faces away from them.
+ * @returns null if the vehicle could not be spawned, otherwise the entity ID of the vehicle.
+ */
+attemptSpawnVehicle(vehicleType: MeshEntityVehicleType, x: number, y: number, z: number, opts?: VehicleSpawnOpts): EntityId | null
+/**
+ * Dispose of a vehicle's state and remove them from the world.
+ * Always succeeds.
+ * @param vehicleId
+ */
+despawnVehicle(vehicleId: EntityId): void
+/**
+ * Add following entity to an entity
+ * @param playerId
+ * @param eId
+ * @param offset
+ * @param followsPlayerRotation
+ */
+addFollowingEntityToPlayer(playerId: EntityId, eId: EntityId, offset?: number[], followsPlayerRotation?: boolean): void
+/**
+ * Remove following entity from an entity
+ * @param playerId
+ * @param entityEId
+ */
+removeFollowingEntityFromPlayer(playerId: EntityId, entityEId: EntityId): void
+/**
+ * Set camera zoom for a player
+ * @param playerId
+ * @param zoom
+ */
+setCameraZoom(playerId: PlayerId, zoom: number): void
+/**
+ * @param playerId hears the sound
+ * @param soundName Can also be a prefix. If so, a random sound with that prefix will be played
+ * @param volume 0-1. If it's too quiet and volume is 1, normalise your sound in audacity
+ * @param rate The speed of playback. Also affects pitch. 0.5-4. Lower playback = lower pitch
+ *        Good for varying the sound. E.g. item pickup sound has a random rate between 1 and 1.5.
+ * @param posSettings
+ * {playerIdOrPos: EntityId | number[], maxHearDist: number, refDistance: number}
+ * playerIdOrPos: The entity the sound originates from, or the position of the sound
+ * maxHearDist: sound is not played if player is further than this. Default 15
+ * refDistance: higher means the sound decreases less in volume with distance. Default 3. Hitting is 4. Guns are 10
+ *
+ */
+playSound(playerId: PlayerId, soundName: string, volume: number, rate: number, posSettings?: { playerIdOrPos: EntityId | number[]; maxHearDist?: number; refDistance?: number; }): void
+/**
+ * See documentation for api.playSound
+ */
+broadcastSound(soundName: string, volume: number, rate: number, posSettings?: { playerIdOrPos: EntityId | number[]; maxHearDist?: number; refDistance?: number; }, exceptPlayerId?: PlayerId | null): void
+/**
+ * See documentation for api.playSound
+ */
+playClientPredictedSound(soundName: string, volume: number, rate: number, posSettings?: { playerIdOrPos: EntityId | number[]; maxHearDist?: number; refDistance?: number; }, predictedBy?: EntityId): void
+
+calcExplosionForce(eId: EntityId, explosionType: ExplosionType, knockbackFactor: number, explosionRadius: number, explosionPos: number[], ignoreProjectiles: boolean): { force: Pos; forceFrac: number; }
+/**
+ * Add a custom killfeed message to the killfeed
+ * @param killer - The entity ID or a custom name and colour for the killer
+ * @param victim - The entity ID or a custom name and colour for the victim
+ * @param withItem - The item used
+ */
+addCustomKillfeedMessage(killer: { eId: EntityId } | { name: string; colour: string }, victim: { eId: EntityId } | { name: string; colour: string }, withItem: string): void
+/**
+ * Get the position of a player's target block and the block adjacent to it (e.g. where a block would be placed)
+ *
+ *
+ * Note: This position is a tick ahead of the client's block target info (noa.targetedBlock),
+ * since the client updates the blocktarget before the entities tick (and since it uses the renderposition of the camera)
+ *
+ * This normally doesn't matter but if you are client predicting something based on noa.targetedBlock
+ * (currently only applicable to in-engine code), you should not verify using this
+ *
+ * @param playerId
+ */
+getPlayerTargetInfo(playerId: PlayerId): { position: Pos; normal: Pos; adjacent: Pos }
+/**
+ * Get the position of a player's camera and the direction (both in Euclidean and spherical coordinates) they are attempting to use an item.
+ * The camPos has the same limitations described in getPlayerTargetInfo
+ *
+ * @param playerId
+ */
+getPlayerFacingInfo(playerId: PlayerId): { camPos: Pos; dir: Pos; angleDir: AngleDir; moveHeading: number }
+/**
+ * Raycast for a block in the world.
+ * Given a position and a direction, find the first block that the "ray" hits.
+ *
+ * @param fromPos
+ * @param dirVec
+ */
+raycastForBlock(fromPos: number[], dirVec: number[]): BlockRaycastResult
+/**
+ * Prevents the player from taking fall damage next time they land on the ground
+ * @param playerId
+ */
+preventFallDamageNextGrounding(playerId: PlayerId): void
+/**
+ * Check whether a player is crouching
+ *
+ * @param playerId
+ */
+isPlayerCrouching(playerId: PlayerId): boolean
+/**
+ * Get the aura info for a player
+ * @param playerId
+ */
+getAuraInfo(playerId: PlayerId): { level: number; totalAura: number; auraPerLevel: number }
+/**
+ * Sets the total aura for a player. Will not go over max level or under 0
+ * @param playerId
+ * @param totalAura
+ */
+setTotalAura(playerId: PlayerId, totalAura: number): void
+/**
+ * Set the aura level for a player - shortcut for setTotalAura(level * auraPerLevel)
+ * @param playerId
+ * @param level
+ */
+setAuraLevel(playerId: PlayerId, level: number): void
+/**
+ * Add (or remove if negative) aura to a player. Will not go over max level or under 0
+ * @param playerId
+ * @param auraDiff
+ * @returns The actual change in aura
+ */
+applyAuraChange(playerId: PlayerId, auraDiff: number): number
+/**
+ * Updates the particle systems of multiple mesh entities at specified nodes
+ * @param updates
+ */
+updateMeshParticleSystems(updates: MeshParticleSystemUpdates): void
+/**
+ * Register an event for analytics. Custom games only: anywhere else, World Code gets an error.
+ * Special value is eventType "match" and eventValue "match_started" to mark the start of a match when calculating average quantities
+ * Each player can send 20 events a minute. Each day a game can have 20 game categories, 20 event types in each and
+ * 50 event values for each type; once it goes past one, events at that level are dropped until midnight UTC
+ *
+ * @param playerId - The player associated with the event
+ * @param eventType - The type of event e.g. "shop" or "death", at most 64 characters
+ * @param eventValue - The detail of the event e.g. the item bought or cause of death, at most 128 characters
+ * @param gameCategoryId - The game category id e.g. the map you're playing on or the variant of the game to filter by or compare, at most 128 characters
+ * @param gameStartTimeMs - The time the game or match started in milliseconds since 1970, within the last 30 days - use to get event times relative to the start of the game.
+ * Each event also records the player's lifetime playtime
+ * @param position - Where the event happened, e.g. where the player died or the block they broke, shown on Studio's heatmap. In the same frame of reference as the game's registerAnalyticsPlayerPosition positions for this category. Without one, no position is recorded
+ * @param numericValue - A number the event measures, e.g. the coins earned, the round's score or the seconds it took.
+ */
+registerAnalyticsEvent(playerId: string, eventType: string, eventValue: string | null, gameCategoryId: string | null, gameStartTimeMs: number, position?: Pos | null, numericValue?: number | null): void
+/**
+ * Record where a player is for the analytics heatmap. Call it at a regular interval (e.g. once a second).
+ * Custom games only: anywhere else, World Code gets an error.
+ * Each player can send 120 positions a minute. Each day a game can send 100,000 different blocks (event positions
+ * included); once it goes past that, positions are dropped until midnight UTC
+ *
+ * @param playerId - The player whose position to record
+ * @param gameCategoryId - The game category id e.g. the map you're playing on or the variant of the game to filter by, at most 128 characters
+ * @param gameStartTimeMs - The time the game or match started in milliseconds since 1970, within the last 30 days - used to get a playback of positions
+ * @param position - The position of the player to record. Defaults to the player's global position.
+ */
+registerAnalyticsPlayerPosition(playerId: string, gameCategoryId: string | null, gameStartTimeMs: number, position?: Pos | null): void
+/**
+ * Gets a database value that is saved per lobby.
+ * @param key
+ */
+getLobbyDbValue(key: string): string | number | null
+/**
+ * Sets a database value that is saved per lobby. This persists between sessions.
+ * @param key
+ * @param value
+ */
+setLobbyDbValue(key: string, value: string | number): void
+/**
+ * Deletes a database value that is saved per lobby.
+ * @param key
+ */
+deleteLobbyDbValue(key: string): void
+/**
+ * Deletes all database values that are saved per lobby.
+ */
+deleteAllLobbyDbValues(): void
+/**
+ * Gets a database value that is saved per player.
+ * @param playerId
+ * @param key
+ */
+getPlayerDbValue(playerId: PlayerId, key: string): string | number | null
+/**
+ * Sets a database value that is saved per player. For custom games this persists between sessions and
+ * between lobbies, and is shared across all of the game's variations (e.g. a hub and its sub-modes).
+ * @param playerId
+ * @param key
+ * @param value
+ */
+setPlayerDbValue(playerId: PlayerId, key: string, value: string | number): void
+/**
+ * Deletes a database value that is saved per player.
+ * @param playerId
+ * @param key
+ */
+deletePlayerDbValue(playerId: PlayerId, key: string): void
+/**
+ * Deletes all database values that are saved per player, including persisted currencies.
+ * @param playerId
+ */
+deleteAllPlayerDbValues(playerId: PlayerId): void
+/**
+ * Dynamically define a currency for a player and show it on the HUD.
+ * Amounts will persist between sessions if \`persistent\` is set to true.
+ * Persistent currencies count towards db length limits.
+ *
+ * Example usage:
+ * \`\`\`js
+ * api.setCurrency(myId, "myCurrency", { amount: 100, icon: "coins", iconColour: "blue", persistent: true })
+ * \`\`\`
+ *
+ * @param playerId
+ * @param currencyId
+ * @param info - { amount, icon } are required (icon is an icon name such as "coins"); iconColour, persistent, hidden and subtext are optional
+ */
+setCurrency(playerId: PlayerId, currencyId: string, info: UgcCurrencyInfo): void
+/**
+ * Delete a currency from a player. This will make the currency unknown to the player.
+ * @param playerId
+ * @param currencyId
+ */
+deleteCurrency(playerId: PlayerId, currencyId: string): void
+/**
+ * Set the amount of a currency a player has. For persistent currencies, amount/subtext count towards db length limits.
+ * @param playerId
+ * @param currencyId
+ * @param amount
+ * @param subtext
+ */
+setCurrencyAmount(playerId: PlayerId, currencyId: string, amount: number, subtext?: string | CustomTextStyling): void
+/**
+ * Give a player an amount of currency. Can be negative to remove money.
+ * The currency must exist for the player first, or this throws: make it with setCurrency (with an icon), e.g. in onPlayerJoin.
+ * @param playerId
+ * @param currencyId
+ * @param amount
+ */
+giveCurrencyAmount(playerId: PlayerId, currencyId: string, amount: number): void
+/**
+ * Replace a world chunk with a chunk from a project schematic, including air and block data.
+ * Both positions are block coordinates selecting their containing 32-block chunk.
+ * Add schematics in the Code Editor. Missing paths or source chunks throw an error.
+ * @param schematicPath Project-relative path, including .bloxdschem.
+ * @param srcCoords Block coordinates in the schematic's chunk grid (including selection padding).
+ * @param destCoords Block coordinates in the world. Existing blocks are replaced without break drops.
+ */
+setChunkAsSchematic(schematicPath: string, srcCoords: Pos, destCoords: Pos): void
+/**
+ * Get a project schematic's stored dimensions as [x, y, z], including selection padding.
+ * Uses the active project snapshot. Missing schematic paths throw an error.
+ * @param schematicPath Project-relative path, including .bloxdschem.
+ */
+getSchematicDimensions(schematicPath: string): Pos
+/**
+ * Set a default value to be returned by your callback code if it throws an error.
+ *
+ * @param cbName The name of the callback to set the default value for.
+ * @param value The default value to return.
+ */
+setCallbackValueFallback(cbName: UserCallbacks, value: any): void
+/**
+ * Set the gamemode of a player. This is persistent across lobbies for custom games.
+ *
+ * @param playerId The ID of the player to set the gamemode of.
+ * @param gamemode The gamemode to set the player to.
+ */
+setPlayerGamemode(playerId: PlayerId, gamemode: WorldGamemode): void
+/**
+ * Get the gamemode of a player.
+ *
+ * @param playerId The ID of the player to get the gamemode of.
+ * @returns The gamemode of the player.
+ */
+getPlayerGamemode(playerId: PlayerId): WorldGamemode
+/**
+ * Returns true if your code is about to be interrupted for exceeding its time budget.
+ * Use this to break up long-running code into smaller chunks.
+ *
+ *
+ * ### Example:
+ * \`\`\`js
+ * // Resume from where we stopped last time (or 0 on the first run)
+ * let savedLoopCounter = 0
+ *
+ * // ...
+ *
+ * for (let i = savedLoopCounter; i < 1000; i++) {
+ * 	if (api.isNearInterrupt()) {
+ * 		// Out of time - remember our progress and stop before getting killed
+ * 		savedLoopCounter = i
+ * 		break
+ * 	}
+ *
+ * 	someExpensiveFunction()
+ * }
+ * \`\`\`
+ */
+isNearInterrupt(): boolean
+/**
+ * Schedule small text to be displayed in the middle of the screen (middleTextLower).
+ * This text will be removed after the duration.
+ * Stacking queued texts will schedule them to be displayed one after the other.
+ * NOTE: Overriding the middleTextLower client option may cause queued texts to be displayed incorrectly.
+ *
+ * @param playerId The ID of the player to display the text to.
+ * @param text The text to display.
+ * @param duration The duration of the text in milliseconds.
+ * @returns The ID of the queued command.
+ */
+queueMiddleTextLower(playerId: PlayerId, text: string | CustomTextStyling, duration: number): QueuedCommandId
+/**
+ * Schedule large text to be displayed in the middle of the screen (middleTextUpper).
+ * This text will be removed after the duration.
+ * Stacking queued texts will schedule them to be displayed one after the other.
+ * NOTE: Overriding the middleTextUpper client option may cause queued texts to be displayed incorrectly.
+ *
+ * @param playerId The ID of the player to display the text to.
+ * @param text The text to display.
+ * @param duration The duration of the text in milliseconds.
+ * @returns The ID of the queued command.
+ */
+queueMiddleTextUpper(playerId: PlayerId, text: string | CustomTextStyling, duration: number): QueuedCommandId
+/**
+ * Schedule text to be displayed in the crosshair.
+ * This text will be removed after the duration.
+ * Stacking queued texts will schedule them to be displayed one after the other.
+ * NOTE: Overriding the crosshairText client option may cause queued texts to be displayed incorrectly.
+ *
+ * @param playerId The ID of the player to display the text to.
+ * @param text The text to display.
+ * @param duration The duration of the text in milliseconds.
+ * @returns The ID of the queued command.
+ */
+queueCrosshairText(playerId: PlayerId, text: string | CustomTextStyling, duration: number): QueuedCommandId
+/**
+ * Get the status of a queued command.
+ *
+ * @param id The ID of the queued command to get the status of.
+ * @returns NOT_IN_QUEUE, WAITING_TO_RUN, or CURRENTLY_RUNNING.
+ */
+getQueuedStatus(id: QueuedCommandId): QueuedStatusString
+/**
+ * Remove a queued command from the queue.
+ *
+ * @param id The ID of the queued command to remove.
+ */
+removeFromQueue(id: QueuedCommandId): void
+/**
+ * Add a request for the player to answer in the top right corner. E.g. accepting or denying a tprequest.
+ *
+ * Use onUiRequestResponded to handle the response.
+ *
+ * Example Usage:
+ * \`\`\`js
+ * const myRequestId = api.addUiRequest(playerId, {
+ *   type: "standard",
+ *   title: "Do you want to join the game?",
+ * }, 5000)
+ *
+ * onUiRequestResponded = (playerId, uiRequestId, response) => {
+ *   if (uiRequestId === myRequestId) {
+ *     api.log(response)
+ *   }
+ * }
+ * \`\`\`
+ *
+ *
+ * @param playerId The ID of the player to add the request to.
+ * @param parameters The parameters of the request.
+ * @param timeoutAfterMs The timeout after which the request will be automatically deleted. A response will not be given and onUiRequestResponded will not be called.
+ * @returns The ID of the request. Pass into deleteUiRequest or cross-reference with onUiRequestResponded.
+ */
+addUiRequest(playerId: PlayerId, parameters: UiRequestClientParameters, timeoutAfterMs?: number): UiRequestId
+/**
+ * Add a request for the player to answer in the form of a popup. This blocks the player from doing anything else until they respond.
+ *
+ * Use onUiRequestResponded to handle the response.
+ *
+ * Example Usage:
+ * \`\`\`js
+ * const myRequestId = api.addUiRequestPopup(playerId, "Do you want to join the game?")
+ *
+ * onUiRequestResponded = (playerId, uiRequestId, response) => {
+ *   if (uiRequestId === myRequestId) {
+ *     api.log(response)
+ *   }
+ * }
+ * \`\`\`
+ *
+ * @param playerId The ID of the player to add the request to.
+ * @param requestText The text of the request.
+ * @returns The ID of the request, or null if the request was rate limited. Pass into deleteUiRequest or cross-reference with onUiRequestResponded.
+ */
+addUiRequestPopup(playerId: PlayerId, requestText: string): UiRequestId | null
+/**
+ * Matchmake a player into a sub-variation of the current custom game.
+ * Pass \`"default"\` for the default variation.
+ *
+ * @param playerId The player to matchmake
+ * @param varname Sub-variation name (\`[A-Za-z0-9_-]\`, 1-32 chars), or \`"default"\`
+ */
+matchmakeToVariation(playerId: PlayerId, varname: string): void
+/**
+ * Get the current sub-variation name.
+ * Returns \`"default"\` when there is no named sub-variation.
+ */
+getVariation(): string
+/**
+ * Whether the player joined with this custom game's texture pack applied. False if they skipped applying it
+ * (kicking them shows the prompt again when they rejoin).
+ * Only published custom games prompt for their pack, so anywhere else this says so and returns true.
+ * @param playerId
+ */
+isUsingCustomGameTexturePack(playerId: PlayerId): boolean
+/**
+ * Log a message to chat.
+*/
+log(message: any): void
+
+	}
+
+export interface Console {
+		/** Log a message to chat. */
+		log(message: any): void
+	}
+
+export type EntityId = string
+
+export type Pos = [number, number, number]
+
+export type LifeformId = EntityId
+
+export type PlayerId = LifeformId
+
+export type PlayerDbId = string
+
+export type LifeformBodyPart = (_TypeOf["lifeformBodyParts"])[number]
+
+export interface PlayerAttemptDamageOtherPlayerOpts {
+	eId: PlayerId
+	hitEId: PlayerId
+	attemptedDmgAmt: number
+	withItem: string
+	bodyPartHit?: LifeformBodyPart
+	attackDir?: number[]
+	showCritParticles?: boolean
+	reduceVerticalKbVelocity?: boolean
+	horizontalKbMultiplier?: number
+	verticalKbMultiplier?: number
+	broadcastEntityHurt?: boolean
+	attackCooldownSettings?: { type: string; cooldownMs: number } | null
+	hittingSoundOverride?: HittingSoundOverride
+	ignoreOtherEntitySettingCanAttack?: boolean
+	isTrueDamage?: boolean
+	// The damaging playerDbId. If null, will default to the dbId of \`eId\`
+	damagerDbId?: PlayerId | null
+	// What dealt the hit, passed to the damage callbacks as \`damageInfo.cause\`. Null when not given.
+	damageCause?: DamageCause | null
+}
+
+export type HittingSoundOverride = { sound: string; volume: number; pitch: number }
+
+export type DamageCause = (_TypeOf["damageCauses"])[number]
+
+export type ItemName = string
+
+export type EnchantmentAttributes = {
+	enchantments: Partial<Record<EnchantmentPerk, number>>
+	enchantmentTier: EnchantmentTier
+	id: string
+}
+
+export type EnchantmentPerk =
+	// Swords
+	| "Damage"
+	| "Attack Speed"
+	| "Critical Damage"
+
+	// Armour
+	| "Protection"
+	| "Health"
+	| "Health Regen"
+
+	// Special Armour
+	| "Stomp Damage"
+	| "Knockback Resist"
+
+	// Bows & Crossbows
+	| "Arrow Speed"
+	| "Arrow Damage"
+	| "Quick Charge"
+
+	// Tools
+	| "Break Speed"
+	| "Momentum"
+	| "Mining Yield"
+	| "Farming Yield"
+	| "Mining Aura"
+	| "Digging Aura"
+	| "Lumber Aura"
+	| "Farming Aura"
+
+	// Sticks
+	| "Horizontal Knockback"
+	| "Vertical Knockback"
+
+	// Hang Gliders
+	| "Firecracker Cooldown"
+	| "Firecracker Boost"
+	| "Gliding Speed"
+
+export type EnchantmentTier = (_TypeOf["enchantmentTiers"])[number]
+
+export type CustomTextStyling = (string | EntityName | TranslatedText | StyledIcon | StyledText | ProgressBar | StyledKeyBinding)[]
+
+export type TranslatedText = {
+	translationKey: string
+	params?: Record<string, string | number | boolean | EntityName>
+}
+
+export type EntityName = {
+	entityName: string
+	ranks?: Readonly<Rank[]>
+	style?: {
+		color?: string
+		colour?: string
+	}
+}
+
+export type Rank = (_TypeOf["ranks"])[number]
+
+export type StyledIcon = {
+	icon: string
+	style?: {
+		color?: string
+		colour?: string
+		fontSize?: FontSize
+		opacity?: number
+	}
+}
+
+export type FontSize = string
+
+export type StyledText = {
+	str: string | EntityName | TranslatedText
+	style?: TextStyle
+}
+
+export type TextStyle = {
+	// A CSS colour name, hex or rgb()/hsl()-style colour, e.g. "red", "#ff0000", "rgba(255, 0, 0, 0.5)"
+	color?: string
+	colour?: string
+	fontWeight?: string
+	fontSize?: FontSize
+	fontStyle?: string
+	opacity?: number
+}
+
+export type ProgressBar = {
+	// Mandatory discriminator: marks this CustomTextStyling item as a progress bar.
+	type: "ProgressBar"
+	progress: number
+	width?: FontSize
+	height?: FontSize
+	colours?: string[]
+	backgroundColour?: string
+}
+
+export type StyledKeyBinding = {
+	type: "StyledKeyBinding"
+	action: NoaAction
+	style?: TextStyle
+}
+
+export type NoaAction = (_TypeOf["noaActions"])[number]
+
+export type ClientOption = keyof ClientOptions
+
+export type EarthSkyBox = {
+	type: "earth"
+	inclination?: number
+	turbidity?: number
+	infiniteDistance?: boolean
+	luminance?: number
+	// Sky appearance (light intensity); higher = more saturated sky.
+	rayleigh?: number
+	// Mie scattering coefficient in [0, 0.1]; affects mieDirectionalG impact.
+	mieCoefficient?: number
+	// Amount of haze particles per Mie scattering theory.
+	mieDirectionalG?: number
+	// Distance of the sun from the active scene camera.
+	distance?: number
+	// When \`useSunPosition\` is true, this overrides \`inclination\` + \`azimuth\`.
+	sunPosition?: Vec3
+	useSunPosition?: boolean
+	xCameraOffset?: number
+	yCameraOffset?: number
+	zCameraOffset?: number
+	// Direction the sky considers "up"; defaults to [0, 1, 0].
+	up?: Vec3
+	// Dither the sky to reduce visible banding.
+	dithering?: boolean
+	azimuth?: number
+	// Not part of sky model by default; heavily tint to a vertex color
+	vertexTint?: Vec3
+}
+
+export type Vec3 = [number, number, number]
+
+export type LobbyLeaderboardInfo = Record<
+	string,
+	{
+		displayName?: string | CustomTextStyling
+		hidden?: boolean
+		sortOrder?: "ascending" | "descending" // No value means descending
+		sortPriority?: number
+	}
+>
+
+export type TextWithDisplayOptions = {
+	showBackground?: boolean // Defaults to true. When false, the option's background panel is hidden.
+	content: string | CustomTextStyling
+}
+
+export type CustomButtonsType = CustomButtonType[]
+
+export type CustomButtonType = {
+	id: string // Identifier for the button. Used in the callbacks onPlayerPressedButton and onPlayerReleasedButton.
+	icon: string // Icon to display for the button. Can be a font awesome icon such as "house" or a bloxd icon such as "Dirt".
+	keycode: string // Key to trigger the button. Use a keycode like "KeyR" for the letter R. Allowed keys are letters ("KeyA" to "KeyZ"), the number row ("Digit0" to "Digit9"), arrow keys ("ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight") and "Space", shown as "_" next to the button. A key keeps its usual action too, so Space also jumps for players who have not changed their jump key.
+	description?: string // Optional description for the button explaining what it does.
+}
+
+export type HeaderChip = string | CustomTextStyling | TextWithDisplayOptions
+
+export type DialogueText = string | TranslatedText
+
+export type SpeechVoice = SpeechVoicePreset | SpeechSynth
+
+export type SpeechVoicePreset = keyof _TypeOf["SPEECH_VOICE_PRESETS"]
+
+export type SpeechSynth = Readonly<{
+	/** The tone of each blip, from the purest (sine) to the buzziest (sawtooth). */
+	waveform: SpeechSynthWaveform
+	/** The voice's pitch, which intonation moves each word away from. */
+	pitchHz: number
+	/** How far the pitch slides over each blip; negative falls. */
+	glideSemitones: number
+	/** How long each blip sounds. */
+	durationMs: number
+	/** The fade in at the start of the blip. */
+	attackMs: number
+	/** The fade at the end of the blip, within \`durationMs\`. */
+	releaseMs: number
+	/** Darkens a bright waveform; null leaves it unfiltered. */
+	lowpassHz: number | null
+	/** 1 is the engine's speech level. */
+	volume: number
+	intonation: SpeechIntonation
+	/** The speaking rate: each syllable takes this long, and sets when the next word appears. */
+	syllableMs: number
+}>
+
+export type SpeechSynthWaveform = (_TypeOf["SPEECH_SYNTH_WAVEFORMS"])[number]
+
+export type SpeechIntonation = Readonly<{
+	/** How far each word sits from the voice's pitch, either way. */
+	variationSemitones: number
+	/** How far the pitch falls from the first word of a sentence to its last. */
+	declineSemitones: number
+	/** How far the last word of a question rises. */
+	questionRiseSemitones: number
+	/** How far a whole exclamation is lifted. */
+	exclaimLiftSemitones: number
+}>
+
+export type GunshotOrigin = "default" | "head"
+
+export type CameraSettings = DefaultCameraSettings | FixedCameraSettings | FollowCameraSettings | PathCameraSettings | FrameCameraSettings
+
+export type DefaultCameraSettings = Pick<CameraSettingsBase, "blendInMs" | "blendEasing" | "transition" | "letterbox" | "hideHud"> & { mode: "default" }
+
+export type FixedCameraSettings = CameraSettingsBase & {
+	mode: "fixed"
+	position: Pos
+	/** What to look at. Defaults to the player. */
+	lookAt?: CameraTarget
+	/** Look this way instead of at something. */
+	lookDirection?: Pos
+}
+
+export type FollowCameraSettings = CameraSettingsBase & {
+	mode: "follow"
+	/** The entity to follow. Defaults to the player. */
+	target?: EntityId
+	/**
+	 * What the offset is from. "feet" (default): the target's feet. "eye": a player's or mob's eye (anything else's
+	 * position), looking where the target looks, their heading and pitch, unless lookAt or lookDirection is set: watch
+	 * another player through their eyes. A player's body is hidden while the camera is inside it. The player's own eye
+	 * looks level.
+	 */
+	anchor?: CameraFollowAnchor
+	/** Where the camera sits relative to the anchor, in blocks. Default [0, 0, 0]. */
+	offset?: Pos
+	/** "world" (default) keeps the offset on world axes; "target" turns it with the target's heading, +z ahead of the target. */
+	offsetSpace?: CameraOffsetSpace
+	/** What to look at. Defaults to the target. */
+	lookAt?: CameraTarget
+	lookDirection?: Pos
+	/** Trail behind the target by about this many ms. 0 sticks to it. */
+	smoothMs?: number
+	/** Move in towards the target rather than go through terrain between them, for side-on and chase cameras. Default false: a top-down camera would dive through treetops. */
+	avoidTerrain?: boolean
+}
+
+export type PathCameraSettings = CameraSettingsBase & {
+	mode: "path"
+	keyframes: CameraPathKeyframe[]
+	/** true (default): a smooth curve through the keyframes. false: straight lines between them. */
+	smooth?: boolean
+	/** Start again from the first keyframe after the last. */
+	loop?: boolean
+}
+
+export type FrameCameraSettings = CameraSettingsBase & {
+	mode: "frame"
+	/**
+	 * The entities and positions to keep in view. Entities the player is too far from to see, or that have left, are
+	 * left out. With none to frame, an empty list too, the camera holds where and how far it last framed, at this
+	 * camera's own angle, or frames the player if it has framed nothing yet.
+	 */
+	targets: CameraTarget[]
+	/** Compass direction the camera looks in, in degrees: 0 looks along +z, 90 along +x. Default 0. */
+	viewHeading?: number
+	/** Degrees the camera looks down, from 0 (level) to 90 (straight down). Default 45. */
+	viewElevation?: number
+	/** Blocks of space to keep around the targets. Default 2. */
+	padding?: number
+	/** Closest the camera comes to the middle of the targets, in blocks. Default 6, or furthestDistance if that is closer. */
+	closestDistance?: number
+	/** Furthest the camera goes from the middle of the targets, in blocks, even if some targets leave the view. Default 64, or closestDistance if that is further. */
+	furthestDistance?: number
+	/**
+	 * Ease towards a new framing over about this many ms as the targets move, and round to a new angle from the frame
+	 * camera this one replaces. 0 sticks to them. Default 400.
+	 */
+	smoothMs?: number
+}
+
+export type CameraSettingsBase = {
+	/** Blend from the current view into this camera over this many ms. 0 cuts straight to it. */
+	blendInMs?: number
+	/** How the blend eases. Default "easeInOut". */
+	blendEasing?: CameraEasing
+	/** Fade into this camera through a colour instead, cutting to it under the colour: blendInMs is ignored. */
+	transition?: CameraTransition
+	/** Cinematic bars across the top and bottom of the screen while this camera is on. Presses on the bars do nothing in the world, and dragging on them doesn't turn the camera. */
+	letterbox?: boolean
+	/**
+	 * Hide the HUD while this camera is on. Nametags, dialogue, the chat being typed in, the respawn and sleeping screens,
+	 * QTEs, UI requests, touch controls and the settings button on touch screens stay.
+	 */
+	hideHud?: boolean
+	/** Field of view in degrees. Omit to keep the player's own. */
+	fov?: number
+	/**
+	 * Which way the player's body faces while this camera is on. Movement is always relative to the camera.
+	 * "movement" (default): turns to face where they walk. "camera": faces where the camera looks.
+	 * "cursor": shows the mouse cursor and faces what is under it, or what was last tapped on touch screens, aiming
+	 * blocks, hits and shots there; the mouse no longer turns the camera. For top-down and isometric games.
+	 */
+	playerFacing?: CameraPlayerFacing
+	playerLook?: CameraPlayerLook
+}
+
+export type CameraEasing = (_TypeOf["CAMERA_EASING_NAMES"])[number] | [number, number, number, number]
+
+export type CameraTransition = {
+	/** "#rrggbb". Default "#000000". A fade already showing keeps its colour until the screen clears. */
+	colour?: string
+	/** At least 200. */
+	outMs: number
+	/** Default 0. */
+	holdMs?: number
+	/** At least 200. */
+	inMs: number
+}
+
+export type CameraPlayerFacing = (_TypeOf["CAMERA_PLAYER_FACINGS"])[number]
+
+export type CameraPlayerLook = {
+	/** Degrees left and right of the aim; 180 lets the player turn all the way round. Default 0, locked. */
+	maxYaw?: number
+	/** Degrees up and down from the aim. Default 0, locked. */
+	maxPitch?: number
+	/** Once the player stops moving the mouse, ease back to the aim over this many ms. Omit to stay where they looked. */
+	returnMs?: number
+}
+
+export type CameraTarget = Pos | EntityId
+
+export type CameraFollowAnchor = (_TypeOf["CAMERA_FOLLOW_ANCHORS"])[number]
+
+export type CameraOffsetSpace = (_TypeOf["CAMERA_OFFSET_SPACES"])[number]
+
+export type CameraPathKeyframe = {
+	/** When the camera reaches this keyframe, in ms from the start of the path. */
+	timeMs: number
+	position: Pos
+	/** What the camera looks at here. Without it or \`lookDirection\`, the camera looks along the path. */
+	lookAt?: CameraTarget
+	lookDirection?: Pos
+	/** Field of view here, in degrees. */
+	fov?: number
+	/** How the camera eases from this keyframe to the next. Default "linear", so smooth paths keep a steady speed. */
+	easing?: CameraEasing
+}
+
+export type ShopCategoryKey = string
+
+export type ShopItemKey = string
+
+export type ShopItem = {
+	image: string
+	schematicId?: SchematicId
+	cost?: number
+	currency?: string
+	amount?: number // Display amount shown on the shop tile image (0 and 1 are not displayed)
+	imageColour?: string
+	canBuy?: boolean
+	isSelected?: boolean
+	buyButtonText?: string | CustomTextStyling
+	customTitle?: string | CustomTextStyling
+	description?: string | CustomTextStyling
+	onBoughtMessage?: string | CustomTextStyling
+	redDot?: boolean
+	forceRemoveRedDot?: boolean
+	isRewardedAd?: boolean
+	badge?: { text: string | CustomTextStyling; type: ShopItemBadgeType }
+	userInput?: ShopItemUserInput
+	enchant?: {
+		tier: EnchantmentTier
+		enchantments: Partial<Record<EnchantmentPerk, number>>
+		enchantmentData?: Record<string, { icon?: string; description?: string }>
+	}
+
+	// Not defined on client, must be defined on server
+	boughtCallback?: (
+		playerId: PlayerId,
+		cost: number,
+		currency: string,
+		categoryKey: ShopCategoryKey,
+		itemKey: ShopItemKey,
+		userInput: string,
+		amount: number | undefined,
+	) => void
+	sell?: boolean // Optional, defaults to false. If true, the sign of "cost" is flipped. So a "cost" of -25 would give the player 25 currency AND be displayed as "25" (instead of -25)
+	sortPriority?: number // Descending, bigger number means closer to the top
+	hidden?: boolean
+	smp?: SmpShopItemMeta // Set by the SMP marketplace plugin only, for its own shop screens
+}
+
+export type ShopItemUserInput =
+	| { type: "text"; placeholderText?: string; wordCharsOnly?: boolean; initialValue?: string } // wordCharsOnly defaults to false. If true, only allows \w character (alphanumeric and _). initialValue always takes precedence as the text input value when set.
+	| { type: "number"; placeholderText?: string; initialValue?: string }
+	| {
+			type: "dropdown"
+			dropdownOptions: readonly (string | { option: string; cost: number })[]
+			shouldResetSelectionOnOptionsChange?: boolean // Defaults to false. If true, the selection will reset to the first option when dropdownOptions changes.
+			initialValue?: string
+			autoSubmit?: boolean // Defaults to false. If true, the dropdown will automatically submit when the user selects an option.
+	  }
+	| { type: "player"; excludedPlayers?: PlayerId[] } // Defaults to excluding the current player
+	| { type: "color"; initialValue?: string }
+
+export type SmpShopItemMeta =
+	/**
+	 * The search box. \`item\` is the player's searched item; \`extra\` and \`excluded\` adjust the creative items it finds;
+	 * \`names\` holds the names this player sees for items a game renamed
+	 */
+	| { kind: "search"; item: string | null; extra?: readonly string[]; excluded?: readonly string[]; names?: Readonly<Record<string, string>> }
+	/** A plain listing or order box for the searched item. \`owned\` is how many the player has */
+	| { kind: "creator"; item: string | null; step: "quantity" | "price"; owned: number; quantity?: number; fee?: SmpListingFeeRule }
+	/** A listing box for one enchanted copy, listed whole */
+	| { kind: "enchantedCreator"; item: string; quantity: number }
+	/** A market listing. \`seller\` is null for the player's own */
+	| { kind: "listing"; item: string; quantity: number; pricePerItem: number; seller: string | null; expiresAt: number }
+	/** An Instant Sell stack */
+	| { kind: "sell"; item: string; quantity: number; pricePerItem: number }
+	/** Gold from a sale, or items back from an expired listing */
+	| { kind: "collect"; type: "sold" | "expired"; item: string; quantity: number; pricePerItem: number }
+	/** One of the player's active listings */
+	| { kind: "myListing"; item: string; quantity: number; pricePerItem: number; expiresAt: number }
+	/** A buy order. \`creator\` is null for the player's own; \`owned\` is how many the player could deliver; \`processing\` while a delivery to it is on its way */
+	| { kind: "order"; item: string; wanted: number; delivered: number; pricePerItem: number; creator: string | null; owned: number; processing?: boolean }
+	/** One of the player's orders, or delivered items left over from one */
+	| { kind: "myOrder"; item: string; wanted: number; delivered: number; collectable: number; pricePerItem: number }
+	/** A placeholder shown when a list is empty */
+	| { kind: "empty" }
+
+export type SmpListingFeeRule = { readonly rate: number; readonly taxFreeAllowance: number }
+
+export type SchematicId = string
+
+export type ShopItemBadgeType = (_TypeOf["shopItemBadgeTypes"])[number]
+
+export type ShopCategoryConfig = Partial<{
+	autoSelectCategory: boolean
+	customTitle: string // Supports translation keys and ordinary text
+	redDot: boolean
+	forceRemoveRedDot: boolean
+	sortPriority: number
+	description: string | CustomTextStyling
+	smp: SmpShopCategoryKind // Set by the SMP marketplace plugin with its dedicatedUi option only: clients draw this category's body with the marketplace's own screens
+}>
+
+export type SmpShopCategoryKind = "sell" | "market" | "collect" | "orders" | "myOrders"
+
+export type OtherEntitySetting = keyof OtherEntitySettings
+
+export type EntityMeshScalingMap = {
+	[key in EntityNamedNode]?: number[]
+}
+
+export type EntityNamedNode = PlayerMeshNamedNode
+
+export type PlayerMeshNamedNode = (_TypeOf["playerMeshNamedNodes"])[number]
+
+export type LobbyLeaderboardValues = Record<string, string | number | CustomTextStyling>
+
+export type ChatTags = CustomTextStyling[]
+
+export type NameTagInfo = {
+	backgroundColor?: string
+	content?: (CustomTextStyling[number] | RankInfo)[]
+	subtitle?: (CustomTextStyling[number] | RankInfo)[]
+	subtitleBackgroundColor?: string
+	minLighting?: number
+	healthbar?: HealthbarInfo
+	border?: NameTagBorder
+}
+
+export type RankInfo = {
+	// Font Awesome icon name
+	icon: string
+	mainRGB: string
+	// Defaults to mainRGB
+	bracketRGB?: string
+	chatTag: {
+		str: string
+		// Defaults to mainRGB
+		strRGB?: string
+	}[]
+	// Defaults to none
+	nameTag: {
+		// Defaults to normal name colour (white)
+		iconRGB?: string
+		// Defaults to none
+		iconShadowRGB?: string
+	}
+	visible: boolean // If false, this rank will not be shown in the player list or in the chat
+}
+
+export type HealthbarInfo = Readonly<{
+	// Controls when the healthbar is shown.
+	// "onDamage" (default) shows it for a few seconds after the entity takes damage.
+	display?: HealthbarDisplay
+	height?: FontSize
+	// Track colour behind the depleting bar. Undefined leaves the background transparent.
+	backgroundColour?: string
+	// Fill colour of the bar. Either a flat colour, or a gradient keyed on health fraction.
+	// Undefined uses the default green -> orange -> red depleting gradient.
+	foregroundColour?: string | readonly HealthbarColourGradient[]
+}>
+
+export type NameTagBorder = Readonly<{
+	colour: string
+	// Visual preset:
+	// - "solid": a flat outline.
+	// - "glow": an outline with an outer glow - reads as powerful/elite, ideal for bosses.
+	// - "double": two concentric outlines for an ornate, high-stakes look.
+	style?: NameTagBorderStyle
+	width?: FontSize
+	applyTo?: NameTagBorderTarget
+}>
+
+export type HealthbarDisplay = (_TypeOf["healthbarDisplays"])[number]
+
+export type HealthbarColourGradient = Readonly<{ healthFraction: number; colour: string }>
+
+export type NameTagBorderStyle = (_TypeOf["nameTagBorderStyles"])[number]
+
+export type NameTagBorderTarget = (_TypeOf["nameTagBorderTargets"])[number]
+
+export type MultilineTextBox = {
+	content: (CustomTextStyling[number] | RankInfo)[]
+	backgroundColor?: string
+	animateIn?: boolean
+	/** Overrides canSeeNametagsThroughWalls for this text: true draws it over blocks and entities, false lets them hide it. */
+	visibleThroughWalls?: boolean
+}
+
+export type TempParticleSystemOpts = ParticleSystemOpts & {
+	dir1: number[]
+	dir2: number[]
+	pos1: number[]
+	pos2: number[]
+	manualEmitCount: number
+	hideDist: number
+}
+
+export type ParticlePresetOpts = {
+	presetId: ParticlePresetId
+	pos1: number[]
+	pos2: number[]
+}
+
+export type ParticleSystemOpts = {
+	texture: string
+	minLifeTime: number
+	maxLifeTime: number
+	minEmitPower: number
+	maxEmitPower: number
+	minSize: number
+	maxSize: number
+	gravity: number[]
+	velocityGradients: VelocityGradient[]
+	colorGradients: TimeColorGradient[] | RandomColorGradient[]
+	blendMode: ParticleSystemBlendMode
+}
+
+export type VelocityGradient = {
+	timeFraction: number
+	factor: number
+	factor2: number
+}
+
+export type TimeColorGradient = {
+	timeFraction: number
+	minColor: [number, number, number, number]
+	maxColor?: [number, number, number, number]
+}
+
+export type RandomColorGradient = {
+	color: [number, number, number]
+}
+
+export type ParticlePresetId = keyof _TypeOf["particlePresets"]
+
+export type AnimationSchema = Readonly<{
+	animationDurationMs: number
+	loop?: LoopModeSchema
+	nodeAnimations?: NodeSkeletonAnimationSchema
+}>
+
+export type BlockbenchAnimationSchema = Readonly<{
+	animation_length: number // The duration of the animation in seconds.
+	loop?: BlockbenchLoopModeSchema
+	bones?: BlockbenchBonesAnimationSchema
+}>
+
+export type LoopModeSchema = boolean | "hold-on-last-frame"
+
+export type AnimationTimelineSchema = readonly KeyframeSchema[]
+
+export type KeyframeSchema = Readonly<{
+	timeFraction: number
+	rotation?: LerpPointSchema // Rotations are assumed to be in radians.
+	position?: LerpPointSchema // Position offsets in mesh-local units; (0, 0, 0) means the node's rest pose.
+	scale?: LerpPointSchema // Multipliers of the node's own scale, clamped to -16..16; (1, 1, 1) leaves it as it is.
+}>
+
+export type LerpPointSchema =
+	| Point
+	| Readonly<{
+			lerpMode?: LerpModeSchema
+			point: Point
+	  }>
+	| Readonly<{
+			lerpMode?: LerpModeSchema
+			pre: Point // When lerping towards a point, we lerp towards its pre.
+			post: Point // When lerping away from a point, we lerp away from its post.
+	  }>
+
+export type Point = Readonly<Vec3>
+
+export type LerpModeSchema = "linear" | "catmull-rom-spline"
+
+export type BlockbenchLoopModeSchema = boolean | "hold_on_last_frame"
+
+export type BlockbenchAnimationTimelineSchema<P = Point> = P | Readonly<Record<TimestampString, BlockbenchAnimationFrameSchema<P>>>
+
+export type TimestampString = string
+
+export type BlockbenchAnimationFrameSchema<P = Point> =
+	| P
+	| Readonly<{
+			lerp_mode?: BlockbenchLerpModeSchema
+			pre?: P // When lerping towards a point, we lerp towards its pre.
+			post: P // When lerping away from a point, we lerp away from its post.
+	  }>
+
+export type BlockbenchLerpModeSchema = "linear" | "catmullrom"
+
+export type NodeSkeletonAnimationSchema = Readonly<Record<NodeName, NodeAnimationSchema>>
+
+export type NodeName = string
+
+export type NodeAnimationSchema = Readonly<{
+	timeline: AnimationTimelineSchema
+}>
+
+export type BlockbenchBonesAnimationSchema = Readonly<Record<NodeName, BlockbenchBoneAnimationSchema>>
+
+export type BlockbenchBoneAnimationSchema = Readonly<{
+	rotation?: BlockbenchAnimationTimelineSchema // Blockbench rotations are in degrees.
+	position?: BlockbenchAnimationTimelineSchema // Blockbench position offsets in mesh-local units; rest pose is (0, 0, 0).
+	// Multipliers of the node's own scale, clamped to -16..16; (1, 1, 1) leaves it as it is. A number scales every axis
+	// alike, as Blockbench writes a uniform scale.
+	scale?: BlockbenchAnimationTimelineSchema<Point | number>
+}>
+
+export type MobId = LifeformId
+
+export type MobDbId = string
+
+export type BlockName = string
+
+export type BlockId = number
+
+export type WorldBlockChangedInfo = {
+	cause: WorldBlockChangedCause | null
+}
+
+export type WorldBlockChangedCause = "Paintball" | "FloorCreator" | "Sapling" | "StemFruit" | "MeltingIce" | "Explosion" | "AutoShape"
+
+export type GameChunk = {
+	blockData: any
+	extraInfo: PersistedExtraInfo
+}
+
+export type PersistedExtraInfo = {
+	specialBlocks: any[]
+	entities: any[]
+	// We allow games and plugins to store custom metadata in the chunk,
+	// but that metadata should be:
+	// - minimal, to avoid issues where the chunk is too large to store;
+	// - updated infrequently, to avoid excessive writes to the DB.
+	customMetadata: any
+}
+
+export type StairsCorner = (_TypeOf["stairsCorners"])[number]
+
+export type MobType = (_TypeOf["mobTypes"])[number]
+
+export type ItemAttributes = {
+	customDisplayName?: string
+	customDescription?: string
+	/** Free-form data kept with the item. \`bar: { fraction, colour? }\` (0 to 1, hex colour) draws a bar under the item's slot. */
+	customAttributes?: Record<string, any>
+}
+
+export type ItemDropOptions = Readonly<
+	Partial<{
+		doPhysics: boolean
+		size: number
+	}>
+>
+
+export type AudioEntityOpts = {
+	soundName: string
+	// Base relative volume in [0, 1], before distance attenuation.
+	volume: number
+	// Inverse-distance reference distance in blocks; larger = gentler falloff.
+	refDistance: number
+	// Hard cutoff distance in blocks; beyond this the entity is silent.
+	maxHearDist: number
+	// Playback rate multiplier (1 = normal pitch/speed).
+	rate: number
+}
+
+export type AnimParams = {
+	animTextures: string[]
+	animationInterval: number
+	/**
+	 * Whether each frame fades into the next (Minecraft's \`interpolate\`), rather than cutting to it: one in-between frame
+	 * per pair, at half the interval, for intervals of 200 ms or more. Default true.
+	 */
+	interpolateFrames?: boolean
+}
+
+export type HarvestType = "granule" | "wood" | "rock" | "cuttable"
+
+export type BlockMetadataModelType =
+	| "CentreCross"
+	| "SquareSided"
+	| "CustomPlanes"
+	| "CustomModel"
+	| "Slab"
+	| "Stairs"
+	| "door"
+	| "trapdoor"
+	| "rotatableOffset"
+	| "rotatable"
+	| "fence"
+	| "fenceGate"
+
+export type SpecialToolDrop = { tool: ItemName | ItemName[]; drops: ItemName | BlockName }
+
+export type RecursiveReadonly<T> = T extends Primitive
+	? T
+	: T extends (...args: never[]) => unknown
+		? T
+		: T extends readonly unknown[]
+			? number extends T["length"]
+				? ReadonlyArray<RecursiveReadonly<T[number]>> // T[]
+				: { readonly [K in keyof T]: RecursiveReadonly<T[K]> } // Tuple
+			: Readonly<{ [K in keyof T]: RecursiveReadonly<T[K]> }>
+
+export type Primitive = string | number | boolean | bigint | symbol | undefined | null
+
+export type SoundType = "stone" | "wood" | "gravel" | "grass" | "glass" | "sand" | "snow" | "cloth"
+
+export type GunStatsOverride = Partial<Omit<GunMetadata, NonOverridableStats>>
+
+export type GunMetadata = {
+	gunType: GunCategory // Used for sounds
+	scopeType: "none" | "sniper"
+	muzzleFlashOffsetFromGun: Vec3
+	muzzleFlashScale?: number
+	autoFireWithMouse: boolean
+	fireRate: number
+	fireRateWithHeldTouch?: number
+	/** How fast spread recovers and shot sounds are paced, in ms; unset, the fire interval */
+	cadenceMs?: number
+	/**
+	 * ms from equipping to the first shot. A game overriding fireRate, fireRateWithHeldTouch or cadenceMs without its own
+	 * equipDelay waits the fire interval less 0.9 of cadenceMs instead
+	 */
+	equipDelay?: number
+	burstCount?: number
+	burstDelay?: number
+	damage: number
+	shotPelletCount?: number
+	reloadTime?: number
+	clipSize: number
+	reloadBulletsIndividually?: boolean
+	bulletReloadTime?: number
+	cockTime?: number
+	tagSpeedMult: number
+	subsequentTagSpeedReductionScalar: number
+	inaccuracyStanding: number
+	inaccuracyFromShot: number
+	inaccuracyMovement: number
+	yVelocityInaccuracy: number
+	inaccuracyFromJump: number
+	altInaccuracyStanding: number
+	altInaccuracyFromShot: number
+	altInaccuracyMovement: number
+	recoveryRate: number
+
+	msPerRound?: number // computed from fireRate
+	msPerRoundTouchScreen?: number // computed from fireRateWithHeldTouch
+
+	altYVelocityInaccuracy?: number
+	altInaccuracyFromJump?: number
+
+	hasVerticalInaccuracy?: boolean
+
+	keepScopeOnShot?: boolean
+
+	aimZoomFactor?: number
+
+	// Kickback
+	kickbackDecreaseRate: number
+	minKickback?: number
+	maxKickback?: number
+	kickbackRate?: number
+}
+
+export type NonOverridableStats =
+	// Precomputed values
+	| "msPerRound"
+	| "msPerRoundTouchScreen"
+
+	// These two don't even work lol
+	// TODO: Fix them
+	| "tagSpeedMult"
+	| "subsequentTagSpeedReductionScalar"
+
+export type GunCategory = (_TypeOf["gunCategories"])[number]
+
+export type WeaponComboInfo = Readonly<{
+	comboWindowMs: number
+	comboMultipliers: readonly number[]
+	backstabAngle?: number // If present, hitting an enemy from behind within this angle (radians) skip to end of combo
+}>
+
+export type AnyMetadataItem = Partial<BlockMetadataItem & NonBlockMetadataItem>
+
+export type CustomItemStat = (_TypeOf["customItemStats"])[number]
+
+export type InvenItem = { name: string; amount: number | null; attributes: ItemAttributes; typeObj: any }
+
+export type RecipesForItem = RecursiveReadonly<
+	{
+		requires: { items: ItemName[]; amt: number }[]
+		produces: number
+		station?: string | string[]
+		onCraftedAura?: number
+		isStarterRecipe?: boolean
+		attributes?: ItemAttributes
+	}[]
+>
+
+export type EntityType = NetworkedEntityType | "Item" | null
+
+export type NetworkedEntityType =
+	| LifeformType
+	| ThrowableItem
+	// A mesh entity's kind and options are in MeshEntitySchema's fields
+	| "Mesh"
+	| string
+	| "AudioEntity"
+
+export type LifeformType = (_TypeOf["lifeformTypes"])[number]
+
+export type ThrowableItem = string
+
+export type MobHerdId = number
+
+export type MobSpawnOpts<TMobType extends MobType> = Partial<{
+	mobHerdId: MobHerdId
+	spawnerId: PlayerId
+	mobDbId: MobDbId
+	name: string
+	playSoundOnSpawn: boolean
+	variation: MobVariation<TMobType>
+	physicsOpts: Partial<{
+		width: number
+		height: number
+		collidesEntities: boolean
+	}>
+}>
+
+export type MobVariation<TMobType extends MobType> = (_TypeOf["mobVariations"])[TMobType][number]
+
+export type MobSetting = (_TypeOf["mobSettings"])[number]
+
+export type MobSettings<TMobType extends MobType> = {
+	variation: MobVariation<TMobType>
+	name: string
+	maxHealth: number
+	initialHealth: number
+	idleSound: string | null
+	attackSound: string | null
+	secondaryAttackSound: string | null
+	hurtSound: string | null
+	onDeathItemDrops: readonly MobItemDrop[]
+	onDeathParticleTexture: string
+	onDeathAura: number
+	baseWalkingSpeed: number
+	baseRunningSpeed: number
+	walkingSpeedMultiplier: number
+	runningSpeedMultiplier: number
+	jumpCount: number
+	baseJumpImpulseXZ: number
+	baseJumpImpulseY: number
+	jumpMultiplier: number
+	runAwayRadius: number
+	chaseRadius: number
+	territoryRadius: number
+	hostilityRadius: number
+	stoppingRadius: number
+	attackInterval: number
+	attackRadius: number
+	secondaryAttackRadius: number
+	attackDamage: number
+	secondaryAttackDamage: number
+	isReceivingDamageCooldownGlobal: boolean // When the mob is attacked, a short cooldown prevents further damage from the same attack type. If true, all attackers share that cooldown. If false, each attacker has their own.
+	knockbackReceivedMultiplier: number // Scales incoming knockback when the mob is hit: 0 = immune (no knockback), 1 = normal, 2 = double. Applied on top of any worn-armour/effect knockback resistance.
+	attackImpulse: number
+	secondaryAttackImpulse: number
+	rangedAttackInaccuracy: number // Total angular width of the random cone (in radians), 0 = perfectly accurate (laser-aim). Only affects throwable/projectile attacks
+	burstAttackInfo: MobBurstAttackInfo | null
+	secondaryBurstAttackInfo: MobBurstAttackInfo | null
+	heldItemName: ItemName | null
+	heldItemEnchantmentTier: EnchantmentTier | null
+	armour: MobArmour
+	attackItemName: ItemName | null
+	secondaryAttackItemName: ItemName | null
+	swingArmOnAttack: boolean
+	swingArmOnSecondaryAttack: boolean
+	attackEffectName: string | null
+	attackEffectDuration: number
+	warpTargetSpecialAttackInfo: MobWarpTargetSpecialAttackInfo | null
+	combatTetherInfo: MobCombatTetherCombatInfo | null
+	evadeInfo: MobEvadeInfo | null
+	chargeSpecialAttackInfo: MobChargeSpecialAttackInfo | null
+	tameInfo: Readonly<MobTameInfo> | null
+	onTamedHealthMultiplier: number
+	petInfo: Readonly<MobPetInfo> // Instance-specific information related to mob feeding
+	ownerDbId: PlayerDbId | null
+	minFollowingRadius: number
+	maxFollowingRadius: number
+	isRideable: boolean
+	healthRegen: MobHealthRegenSettings | null
+	ridingSpeedMult: number
+	bridgeInfo: MobBridgeInfo | null
+	// Impulse-driven movement (independent slide / jump / random-facing capabilities). \`walking*\` apply while
+	// moving at walking speed (idle wander + walkToPosition), \`running*\` at running speed (chase/flee/follow/
+	// runToPosition). Null = ordinary speed-driven movement.
+	walkingSlideInfo: MobSlideInfo | null
+	runningSlideInfo: MobSlideInfo | null
+	walkingJumpInfo: MobJumpInfo | null
+	runningJumpInfo: MobJumpInfo | null
+	walkingRandomFacingInfo: MobRandomFacingInfo | null
+	runningRandomFacingInfo: MobRandomFacingInfo | null
+	metaInfo: string
+}
+
+export type MobItemDrop = Readonly<{
+	itemName: ItemName
+	probabilityOfDrop?: number
+
+	// If a mob drops an item, then we choose a random amount within these bounds.
+	dropMinAmount?: number
+	dropMaxAmount?: number
+
+	// If true, the item will "burst" out of the mob rather than just dropping.
+	applyBurstImpulseToDrop?: boolean
+}>
+
+export type MobBurstAttackInfo = Readonly<{
+	burstAttackIntervals: readonly number[]
+}>
+
+export type MobArmour = Partial<Readonly<Record<ArmourPart, MobArmourPiece>>>
+
+export type MobWarpTargetSpecialAttackInfo = Readonly<{
+	cooldown: number
+	range: number
+	sound: string | null
+	delay: number
+	minDestinationRadius: number
+	maxDestinationRadius: number
+	swingArm: boolean
+	particleOpts: TempMobParticleOpts | null
+}>
+
+export type MobCombatTetherCombatInfo = Readonly<{
+	range: number
+	particleOpts: MobParticleOpts
+}>
+
+export type MobEvadeInfo = Readonly<{
+	probability: number
+	impulse: number
+	minAngle: number
+	maxAngle: number
+}>
+
+export type MobChargeSpecialAttackInfo = Readonly<{
+	// Multiplier applied to the running speed during the straight dash. Defaults to 1.
+	chargeSpeedMult?: number
+	// Max heading error (radians) at which the mob is considered "facing" its target and may dash. Defaults to a small tolerance.
+	faceTolerance?: number
+	// Pose shown while dashing, reverted to the resting pose when the charge ends. Defaults to "zombie".
+	chargePose?: PlayerPose
+}>
+
+export type MobTameInfo = {
+	tameItemName: ItemName | readonly ItemName[]
+	probabilityOfTame: number
+	isSaddleable?: boolean
+	saddleItemName?: ItemName
+	foodItemNames?: readonly ItemName[]
+	foodItemsWithEffects?: readonly Readonly<ItemNameWithEffects>[]
+	supportsFriendship?: boolean
+	likedFoods?: readonly ItemName[]
+	neutralFoods?: readonly ItemName[]
+	dislikedFoods?: readonly ItemName[]
+	guaranteedDrop?: ItemName
+	commonDrops?: ItemName[]
+	levelUpBonuses?: LevelUpBonuses
+}
+
+export type MobPetInfo = {
+	friendshipPoints: number
+	lastFedAt: number
+	highestFriendshipLevelReached: MobFeedLevel
+	superlikedFood: ItemName | null
+	superlikedFoodKnown: boolean
+	bonusesGained: readonly MobLevelUpBonus[]
+}
+
+export type MobHealthRegenSettings = Readonly<{
+	amount: number
+	interval: number
+	startAfter: number
+}>
+
+export type MobBridgeInfo = Readonly<{
+	// The block to place.
+	blockToPlace: BlockName
+	// If true, only place while stood on solid ground (decorates the surface walked over); if false, place
+	// even while airborne (lets the mob bridge a gap beneath itself).
+	mustBeGrounded: boolean
+	// Only overwrite a cell currently holding one of these blocks, so real terrain is never destroyed.
+	// Omitted means \`["Air"]\` (fill empty space only); an empty array replaces nothing at all, not even
+	// air. A cell already holding \`blockToPlace\` is skipped (would be a no-op).
+	blocksToReplace?: readonly BlockName[]
+	// Vertical offset from the cell the mob occupies. Defaults to 0 (a surface trail); -1 places beneath the
+	// mob's feet (bridging). Non-negative offsets intersect the mob, so \`blockToPlace\` must be non-solid there.
+	yOffset?: number
+	// If a |Decaying variant exists for \`blockToPlace\`, use it to turn blocks into air after \`msToDecay\` ms.
+	msToDecay?: number
+}>
+
+export type MobSlideInfo = Readonly<{
+	// Horizontal impulse at the start of a slide (initial speed = impulse / mass).
+	impulse: number
+	// Lowered friction the burst coasts on (below the mob's normal friction so it carries far), restored on end.
+	friction: number
+	// How long (ms) the low-friction coast lasts.
+	durationBounds: Bounds
+	// Rest (ms) after the coast ends before the next slide. Larger = fewer slides.
+	intervalBounds: Bounds
+}>
+
+export type MobJumpInfo = Readonly<{
+	// Rest (ms) between hops (a hop only fires once grounded). Larger = fewer hops.
+	intervalBounds: Bounds
+}>
+
+export type MobRandomFacingInfo = Readonly<{
+	// Weighted offsets to pick from (via getWeightedRandom); \`weight\`s are non-negative,
+	// and at least one must be greater than 0. E.g. \`[{ offset: Math.PI, weight: 2 },
+	// { offset: 0, weight: 1 }]\` faces backwards twice as often as forwards.
+	offsets: readonly Readonly<{ offset: number; weight: number }>[]
+	// Bounds (ms) between re-rolls.
+	intervalBounds: Bounds
+}>
+
+export type ArmourPart = (_TypeOf["armourPieces"])[number]
+
+export type MobArmourPiece = Readonly<{
+	itemName: ItemName
+	enchantmentTier?: EnchantmentTier
+}>
+
+export type TempMobParticleOpts = Readonly<{
+	duration: number
+}> &
+	MobParticleOpts
+
+export type MobParticleOpts = Readonly<Pick<MeshParticleSystemOpts, "texture" | "colorGradients">>
+
+export type MeshParticleSystemOpts = ParticleSystemOpts &
+	CommonMeshEntityOpts & {
+		height: number
+		width: number
+		depth: number
+		emitRate: number
+		/** Include the followed lifeform's visual offset, including its vehicle seat. */
+		followTargetMeshOffset?: boolean
+		/** Ring emits radially from the perimeter; width/depth set its diameters, height its thickness. */
+		emitterShape?: "box" | "ring"
+		dir1?: number[]
+		dir2?: number[]
+	}
+
+export type CommonMeshEntityOpts = {
+	hideDist?: number
+	meshOffset?: number[]
+	autoRotate?: boolean
+	lineToEId?: EntityId // EntityId to connect to using a line
+}
+
+export type PlayerPose = (_TypeOf["playerPoses"])[number]
+
+export type ItemNameWithEffects = { itemName: ItemName; effects: readonly Readonly<EffectOpts>[]; healAmt?: number }
+
+export type LevelUpBonuses = RecursiveReadonly<Record<MobFeedLevelUpLevels, MobLevelUpBonus>>
+
+export type EffectOpts = { name: PotionEffect; duration: number; level: number }
+
+export type PotionEffect = (_TypeOf["potionEffects"])[number]
+
+export type MobFeedLevelUpLevels = Exclude<MobFeedLevel, 0>
+
+export type MobLevelUpBonus = (_TypeOf["mobLevelUpBonuses"])[number]
+
+export type MobFeedLevel = InclusiveRange<_TypeOf["MAX_MOB_FEED_LEVEL"]>
+
+export type InclusiveRange<N extends number, Arr extends number[] = []> = Arr["length"] extends N
+	? Arr[number] | Arr["length"]
+	: InclusiveRange<N, [...Arr, Arr["length"]]>
+
+export type Bounds = Readonly<MutableBounds>
+
+export type MutableBounds = {
+		min: number
+		max: number
+	}
+
+export type MobAiState = (_TypeOf["mobAiStates"])[number]
+
+export type MobAiStateParams<TState extends MobAiState> = MobWorldView[TState]
+
+export type MobWorldView = {
+	// The mob is stood still, but it still has awareness of its environment.
+	// For example: if the mob is hostile, it will still chase and attack nearby players.
+	idle: null
+	// The mob is stood still, and it has no awareness of its environment.
+	// It will not even react if provoked.
+	disabled: null
+	// The mob is stood still (idle) and is about to turn.
+	idleBeforeTurning: null
+	// The mob has chosen a new direction at random and is turning to face it.
+	turning: null
+	// The mob is stood still (idle) and is about to walk.
+	idleBeforeWalking: null
+	// The mob is walking in the direction it is facing.
+	walking: null
+	// The mob is running away from the target lifeform.
+	runningAway: { targetId: LifeformId }
+	// The mob is chasing the target lifeform.
+	chasing: { targetId: LifeformId }
+	// A charge-attack mob is stood still, rotating at its \`turnRate\` until it faces the target,
+	// at which point it captures the target's current position and transitions to \`charging\`.
+	turningBeforeCharging: { targetId: LifeformId }
+	// A charge-attack mob is dashing straight at the position of the target captured when it
+	// entered the state, ignoring the target's live position mid-dash (so the charge is dodgeable).
+	charging: { targetId: LifeformId }
+	// The mob is following the target lifeform.
+	// It will stop if it is within the \`minFollowingDistance\` (mob setting) of the target,
+	// and teleport to the target if it is outside the \`maxFollowingDistance\` (mob setting) of the target.
+	following: { targetId: LifeformId }
+	// The mob is stood still looking at the target.
+	watching: { targetId: LifeformId }
+	// The mob is walking towards the position.
+	// It will stop if it is within the \`stoppingRadius\` (mob setting) of the position.
+	walkingToPosition: { pos: Pos }
+	// The mob is running towards the position.
+	// It will stop if it is within the \`stoppingRadius\` (mob setting) of the position.
+	runningToPosition: { pos: Pos }
+}
+
+export type MobAiStateOptions = {
+	/**
+	 * Keep the mob in this state until you set another one: it never times out, ignores nearby players and doesn't
+	 * fight back when hit. It still leaves the state when the state ends itself, such as when its target leaves the
+	 * game or turns invisible, or when it is tamed. A charge can't be held: it lasts one leg as usual.
+	 */
+	hold?: boolean
+}
+
+export type MeshEntityType = keyof MeshEntityOpts
+
+export type MeshEntityOpts = {
+	Box: CommonMeshEntityOpts & {
+		width: number
+		height: number
+		depth: number
+		diffuseColor?: number[]
+		emissiveColor?: number[]
+		backFaceCulling?: boolean // Default true
+		texture?: string // Can be a blockname. Wraps every one block
+		faceUV?: number[][]
+		animateTexture?: boolean // If true, \`texture\` must be an animated block name (e.g. "Lava", "Red Portal") and the Box cycles through its frames.
+	}
+	BloxdBlock: CommonMeshEntityOpts & {
+		blockName: BlockNameOrId
+		size: number | [number, number, number]
+		/** Enchantment sheen, drawn only when attached to an entity node, as a worn glider is. */
+		enchantmentTier?: EnchantmentTier
+	}
+	Person: CommonMeshEntityOpts & {
+		size?: number
+		textures?: Partial<Cosmetics>
+		pose?: PlayerPose
+	}
+	Leaderboard: LeaderboardMeshOpts
+	ParticleEmitter: MeshParticleSystemOpts
+}
+
+export type MeshEntityPhysicsOpts = {
+	doPhysics: boolean
+	onCollideTerrain?: () => void // Unsupported for custom code
+	collidesEntities?: boolean
+	collideBits?: number // bitmask category of this entity
+	collideMask?: number // bitmask category of entities this entity collides with
+	heightExpandAmt?: number // expand hitbox height by this amount
+	widthExpandAmt?: number // expand hitbox width by this amount
+}
+
+export type BlockNameOrId = BlockName | BlockId
+
+export type Cosmetics = Record<CosmeticType, CosmeticName>
+
+export type LeaderboardMeshOpts = CommonMeshEntityOpts & {
+	leaderboard: string
+	title?: string
+	scoreLabel?: string
+	/** Uniform scale of the 2.5 by 3.75 block board. Defaults to 1. */
+	size?: number
+	/** Absolute width in blocks, overriding the width derived from size. */
+	width?: number
+	/** Absolute height in blocks, overriding the height derived from size. */
+	height?: number
+}
+
+export type CosmeticType = (_TypeOf["cosmeticTypes"])[number]
+
+export type CosmeticName = string
+
+export type QTEType = keyof QTEDefinitions
+
+export type QTEClientParameters<T extends QTEType = QTEType> = {
+	type: T
+	parameters: QTEParametersForType<T>
+}
+
+export type QTEParametersForType<T extends QTEType> = QTEDefinitions[T]["params"]
+
+export interface QTEDefinitions {
+	progressBar: { params: ProgressBarQteParams; state: ProgressBarQteState }
+	timedClick: { params: TimedClickQteParams; state: TimedClickQteState }
+	gravityBar: { params: GravityBarQteParams; state: GravityBarQteState }
+	precisionBar: { params: PrecisionBarQteParams; state: PrecisionBarQteState }
+	rhythmClick: { params: RhythmClickQteParams; state: RhythmClickQteState }
+}
+
+export type ProgressBarQteParams = Readonly<{
+	/** Starting progress value (0-100) @default 30 */
+	progressStartValue?: number
+	/** How much progress drains each tick while the player isn't clicking @default 0.075 */
+	progressDecreasePerTick: number
+	/** How much progress is gained per click @default 5 */
+	progressPerClick: number
+	/** If true, the QTE fails when progress reaches 0; otherwise progress clamps at 0 @default false */
+	canFail: boolean
+	/** Rich text shown as the QTE prompt @default [{ str: "Click repeatedly to complete!" }] */
+	description: CustomTextStyling
+	/** Icon displayed on the click target @default "fa-solid fa-computer-mouse" */
+	clickIcon: string
+	/** Scale multiplier for the click icon (must be > 0) @default 1 @sensibleDefault 3 */
+	scale?: number
+	/** Rotation in degrees for the click icon (must be ≥ 0) @default 15 */
+	rotation?: number
+}>
+
+export type ProgressBarQteState = {
+	progress: number
+	clickCount: number
+}
+
+export type TimedClickQteParams = Readonly<{
+	/** Duration in milliseconds the player has to click @default 3000 */
+	timeWindow: number
+	/** Icon displayed on the click target @default "fa-solid fa-computer-mouse" */
+	icon: string
+	/** Rich text shown as the QTE prompt @default [{ str: "Click to complete the QTE!" }] */
+	label: CustomTextStyling
+	/** Whether to display a countdown timer @default true */
+	showTimer: boolean
+	/** Scale multiplier for the icon (must be > 0) @default 1 @sensibleDefault 3 */
+	scale?: number
+	/** Rotation in degrees for the icon (must be ≥ 0) @default 15 */
+	rotation?: number
+	/** If true, the icon pulses with a breathing animation anchored to the centre @default false */
+	breatheCenter?: boolean
+}>
+
+export type TimedClickQteState = {
+	timeRemaining: number
+	timeWindow: number
+}
+
+export type GravityBarQteParams = Readonly<{
+	/** Starting progress value (0-100) @default 30 */
+	progressStartValue?: number
+	/** Size of the player's catch zone as a fraction of the bar (must be > 0, 0-1) @default 0.25 */
+	catchZoneSize: number
+	/** Speed at which the mover travels along the bar (must be > 0) @default 3 */
+	moverSpeed: number
+	/** How erratically the mover changes direction (higher = more unpredictable) @default 0.8 */
+	moverErraticness: number
+	/** Downward pull on the catch zone when the player isn't holding click @default 1 */
+	gravity: number
+	/** Upward force on the catch zone while the player holds click @default 1.5 */
+	riseSpeed: number
+	/** Progress gained per second while the mover is inside the catch zone @default 8 */
+	progressGainPerSecond: number
+	/** Progress lost per second while the mover is outside the catch zone @default 4 */
+	progressDrainPerSecond: number
+	/** If true, the QTE fails when progress reaches 0; otherwise progress clamps at 0 @default false */
+	canFail: boolean
+	/** Rich text shown as the QTE prompt @default [{ str: "Hold to catch!" }] */
+	description: CustomTextStyling
+	/** Icon displayed on the mover @default "Moonfish" */
+	icon?: string
+}>
+
+export type GravityBarQteState = {
+	catchZonePosition: number
+	catchZoneSize: number
+	moverPosition: number
+	progress: number
+	isCatching: boolean
+}
+
+export type PrecisionBarQteParams = Readonly<{
+	/** Speed of the marker in full bar-widths per second (must be > 0, e.g. 1.0 = one full sweep per second) @default 0.5 */
+	speed: number
+	/** Fraction of the bar that counts as the success zone, centred in the middle (must be > 0, 0-1, e.g. 0.15 = 15%) @default 0.15 */
+	successZoneSize: number
+	/** Rich text shown as the QTE prompt @default [{ str: "Click when the marker is within the green zone." }] */
+	label: CustomTextStyling
+	/** Icon displayed on the marker @default "" */
+	icon?: string
+	/** Scale multiplier for the icon (must be > 0) @default 1 */
+	scale?: number
+	/** Rotation in degrees for the icon (must be ≥ 0) @default 0 */
+	rotation?: number
+}>
+
+export type PrecisionBarQteState = {
+	/** Marker position as 0–1 where 0.5 is the centre */
+	markerPosition: number
+}
+
+export type RhythmClickQteParams = Readonly<{
+	/** Number of successful clicks needed to complete the QTE (must be a positive integer) @default 5 */
+	requiredSuccesses: number
+	/** Duration in milliseconds for the outer circle to shrink from max size to centre (must be > 0) @default 1200 */
+	shrinkDurationMs: number
+	/** Fraction of the inner circle radius that counts as a successful overlap (must be > 0, 0-1, e.g. 0.15 = ±15%) @default 0.15 */
+	toleranceFraction: number
+	/** Max misses allowed before failing. If omitted, unlimited misses are permitted (must be a non-negative integer) @default 3 */
+	maxMisses?: number
+	/** Rich text shown as the QTE prompt @default [{ str: "Click when the circles align!" }] */
+	label: CustomTextStyling
+	/** Icon displayed in the centre of the circles @default "" */
+	icon?: string
+}>
+
+export type RhythmClickQteState = {
+	/** Current outer circle radius as a fraction of the max radius (1 = fully expanded, 0 = at centre) */
+	outerCircleProgress: number
+	/** Number of successful clicks so far */
+	successes: number
+	/** Number of required successes to complete */
+	requiredSuccesses: number
+	/** Number of misses so far */
+	misses: number
+	/** Result of the most recent click: null if no click yet, true if hit, false if miss */
+	lastClickResult: boolean | null
+}
+
+export type QTERequestId = number
+
+export type UiRequestId = number
+
+export type IngameIconName = (_TypeOf["ingameIconNames"])[number]
+
+export type InbuiltEffectInfo = { inbuiltLevel: number; initiatorId?: PlayerId }
+
+export type PlayerPhysicsState<TPhysicsType extends PhysicsType> = Readonly<{ type: TPhysicsType; tier: PhysicsTier<TPhysicsType> }>
+
+export type PhysicsTier<TPhysicsType extends PhysicsType> = PhysicsTiers[TPhysicsType] | null
+
+export type PhysicsTiers = {
+	[0]: null
+	[1]: BoatTier
+	[2]: GliderTier
+	[3]: BalloonTier
+	[4]: SleepingTier
+	[5]: null
+	[6]: CarTier
+	[7]: null
+}
+
+export type VehicleSeat = Readonly<{
+	role: "driver" | "passenger"
+	localOffset: Pos
+}>
+
+export type SettableVehicleSetting = VehicleSetting | BlockVehicleSetting
+
+export type SettableVehicleSettingValue<TSetting extends SettableVehicleSetting> = TSetting extends VehicleSetting
+	? VehicleSettingValue<TSetting>
+	: BlockVehicleSettingValue<TSetting>
+
+export type VehicleSetting = Exclude<keyof ResolvedPhysicsSettings<PhysicsType>, ByBlockRecordKey | "upwardImpulseOnUse">
+
+export type BlockVehicleSetting = string
+
+export type ResolvedPhysicsSettings<TPhysicsType extends PhysicsType> = DefaultPhysicsTypeSettings & AllPhysicsSettings[TPhysicsType]
+
+export type ByBlockRecordKey = string
+
+export type DefaultPhysicsTypeSettings = Readonly<{
+	/** How heavy it is. Heavier things resist being pushed around, and sink rather than float. */
+	mass: number
+	/** How much water and lava slow it down. \`-1\` uses the world's normal drag. */
+	fluidDrag: number
+	/** \`fluidDrag\` for sideways movement only. \`-1\` falls back to \`fluidDrag\`. */
+	fluidDragHorizontal: number
+	/** \`fluidDrag\` for up-and-down movement only. \`-1\` falls back to \`fluidDrag\`. */
+	fluidDragVertical: number
+	/** How hard gravity pulls it down, compared to a normal player. \`0\` = it never falls. */
+	gravityMultiplier: number
+	/** How wide it is, in blocks. */
+	width: number
+	/** How tall it is, in blocks. */
+	height: number
+	/** Whether the rider is allowed to sprint. */
+	canRun: boolean
+	/**
+	 * How hard the rider pushes off the ground when jumping, compared to a normal jump. \`0\` = cannot jump.
+	 * Multiplies the \`jumpAmount\` client option rather than replacing it, and heavier types need a bigger
+	 * value to reach the same height.
+	 */
+	jumpMultiplier: number
+	/** An upward shove the moment the rider uses the vehicle, like a balloon lifting off. \`0\` = none. */
+	upwardImpulseOnUse: number
+	/** Whether it climbs one-block steps by itself, rather than the rider jumping them. */
+	canAutoStep: boolean
+	/** Overrides \`canAutoStep\` for particular blocks, by block name. Unlisted blocks use \`canAutoStep\`. */
+	canAutoStepByBlock: Readonly<Record<BlockName, boolean>>
+	/**
+	 * Where the rider sits, as \`[x, y, z]\` blocks from the middle of the vehicle. A rideable mob defaults
+	 * to its own ride height rather than to this type's value.
+	 */
+	riderOffset: Pos
+	/** How the rider's body is posed while riding. */
+	pose: PlayerPose
+	/**
+	 * A badge shown to the rider for as long as they ride. \`null\` = none. \`icon\` is an ingame icon or an
+	 * item name. \`name\` must be one that a physics type already uses, such as \`"Driving"\` or \`"Boating"\`,
+	 * because only those are cleared again when the rider gets off.
+	 */
+	effect: { name: string; icon: string; duration?: number } | null
+	/** How quickly it slows to a stop once the rider stops steering. Bigger = stops sooner. */
+	standingFriction: number
+	/** Its top speed, as a multiplier on normal walking speed. \`0\` = it cannot move. */
+	speedMultiplier: number
+	/** An extra speed multiplier used while on solid ground. */
+	landSpeedMultiplier: number
+	/** An extra speed multiplier used while in water or lava. */
+	fluidSpeedMultiplier: number
+	/** An extra speed multiplier used while in the air. */
+	airSpeedMultiplier: number
+	/**
+	 * Extra speed multipliers for the block underfoot, by block name. Solid ground only, and stacks with
+	 * \`speedMultiplier\` and the land/fluid/air multiplier. When several listed blocks are underfoot, the
+	 * value furthest from \`1\` wins.
+	 */
+	speedMultiplierByBlock: Readonly<Record<BlockName, number>>
+	/** Caps how hard it is pushed while far below the speed it is aiming for, so it takes longer to get going. \`0\` = no cap. */
+	maxPushDistance: number
+	/** How hard steering pushes it. Bigger = it speeds up and changes direction more sharply. */
+	movementForceMultiplier: number
+	/** Turns off the usual steering-driven movement, as for a sleeping player. */
+	disableBaseMovement: boolean
+	/** Whether footstep sounds are silenced. */
+	disableFootstepSounds: boolean
+	/**
+	 * How bouncy walls are: \`0\` stops dead, \`1\` keeps all its speed. Stacks with the \`bounciness\` client
+	 * option. Rebounds have a floor speed, so slow bumps come back faster than they arrived.
+	 */
+	horizontalBounciness: number
+	/**
+	 * How bouncy the floor is: \`0\` lands flat, \`1\` bounces back as fast as it fell. Stacks with the
+	 * \`bounciness\` client option, and has the same rebound floor as \`horizontalBounciness\`.
+	 */
+	verticalBounciness: number
+	/** How fast it must hit a wall, in blocks per second, before \`horizontalBounciness\` applies. \`0\` = any contact. */
+	minHorizontalSpeedToBounce: number
+	/**
+	 * How fast it must be falling, in blocks per second, before \`verticalBounciness\` applies. \`0\` bounces
+	 * off any contact, leaving a bouncy vehicle jiggling in place.
+	 */
+	minVerticalSpeedToBounce: number
+	/** Shakes the camera when it hits a wall hard enough; it need not bounce. \`null\` = no shake. See \`ImpactCameraShakeOpts\`. */
+	horizontalImpactCameraShake: ImpactCameraShakeOpts | null
+	/** Shakes the camera when it hits a floor or ceiling hard enough; it need not bounce. \`null\` = no shake. See \`ImpactCameraShakeOpts\`. */
+	verticalImpactCameraShake: ImpactCameraShakeOpts | null
+	/**
+	 * Makes it steer like a car: left and right turn it rather than sliding it sideways. \`null\` moves
+	 * freely in any direction, like a walking player. See \`SteeringOpts\`.
+	 */
+	steering: SteeringOpts | null
+	/** Locks the direction it faces, in radians, ignoring the camera. \`null\` = it faces wherever the camera or steering points. */
+	fixedHeading: number | null
+	/** Makes it skip across water like a stone once it is fast enough. \`null\` = it floats normally. See \`FluidSkipOpts\`. */
+	fluidSkip: FluidSkipOpts | null
+	/**
+	 * Lets it fly once mid-air and descending. Supported movement types: \`GLIDING\` and \`FLOATING\`.
+	 * \`null\` = it cannot fly. See \`AirborneModeOpts\`.
+	 */
+	airborneMode: AirborneModeOpts | null
+	/** How it moves while flying. \`null\` = it steers the same way it does on the ground. See \`AirborneMovementOpts\`. */
+	airborneMovement: AirborneMovementOpts | null
+	/**
+	 * Caps how fast it falls while flying. Only used when \`airborneMovement\` is \`"heading"\`.
+	 * \`null\` = it falls at full speed. See \`FallSpeedLimitOpts\`.
+	 */
+	airborneFallSpeedLimit: FallSpeedLimitOpts | null
+}>
+
+export type AllPhysicsSettings = {
+	[0]: {}
+	[1]: {}
+	[2]: {}
+	[3]: {}
+	[4]: {}
+	[5]: {}
+	[6]: {}
+	[7]: {}
+}
+
+export type ImpactCameraShakeOpts = Readonly<{
+	/** The crash speed, in blocks per second, needed to shake at all, so small bumps are ignored. */
+	minSpeed: number
+	/** How much shake each extra block per second adds. Shake runs from \`0\` (still) to \`1\` (violent). */
+	intensityPerSpeed: number
+	/** The most shake one crash can cause. */
+	maxIntensity: number
+	/** How long the shake lasts, in milliseconds. */
+	durationMs: number
+}>
+
+export type SteeringOpts = Readonly<{
+	/** How fast it turns, in radians per second. Bigger = snappier steering and tighter corners. */
+	turnRate: number
+	/** How much speed a hard corner costs, from \`0\` (none) to \`1\` (all of it). */
+	corneringSpeedDamping: number
+	/**
+	 * How much it grips the ground. \`0\` slides sideways like a hovercraft on ice; bigger values make it
+	 * follow its nose round corners. Solid ground only, unless \`gripInFluid\` is on.
+	 */
+	gripStrength: number
+	/** Whether it also grips while floating in water, so a boat can corner like a kart. */
+	gripInFluid: boolean
+}>
+
+export type FluidSkipOpts = Readonly<{
+	/** How fast it must be going, in blocks per second, to start skipping. */
+	minSpeed: number
+	/** How much of its speed above \`minSpeed\` becomes upward launch speed. Bigger = higher skips. */
+	launchSpeedFraction: number
+	/** How snappily it leaves the water. Bigger = a sharp pop; smaller = a slow heave. */
+	launchApproachRate: number
+}>
+
+export type AirborneModeOpts = Readonly<{
+	/** Which movement type to switch to: \`GLIDING\` for gliders, \`FLOATING\` for balloons. */
+	activeMovementType: MovementType
+	/** How long the flying lasts, in milliseconds, before it drops the rider. \`null\` = no limit. */
+	durationMs: number | null
+	/** Whether the flying ending also throws the rider off, as a popping balloon does. */
+	exitsVehicleOnEnd: boolean
+}>
+
+export type AirborneMovementOpts = HeadingAirborneMovement | CameraDirectionAirborneMovement
+
+export type FallSpeedLimitOpts = Readonly<{
+	/** The fastest it may fall, in blocks per second. */
+	maxFallSpeed: number
+	/** Roughly how long, in seconds, it takes to slow back to the limit. Smaller = a firmer catch. */
+	slowDownSeconds: number
+	/** Whether to also cancel gravity while holding it back, so the limit is not slowly overpowered. */
+	compensateGravity: boolean
+}>
+
+export type HeadingAirborneMovement = Readonly<{ model: "heading" }>
+
+export type CameraDirectionAirborneMovement = Readonly<{
+	model: "cameraDirection"
+	/** The fastest it can fly. Better gliders get a bigger value, and dive and climb more sharply. */
+	maxSpeed: number
+	/** The slowest it can fly. It never stalls below this, however steeply it climbs. */
+	minSpeed: number
+	/** How much looking up or down changes its speed. Bigger = dives gain speed quickly. */
+	pitchAcceleration: number
+	/** How much drag slows it each tick. \`0\` = none. */
+	friction: number
+	/** How many ticks an outside shove - a fuel boost, or knockback - keeps its momentum before flight takes over again. */
+	impulseDecayTicks: number
+	/** How strongly it is nudged forwards, then gently downwards, so a level glider sinks slowly. */
+	biasMagnitude: number
+	/** How much leftover speed from a shove is shed each tick. */
+	excessVelocityBleedPerTick: number
+}>
+
+export type PerBlockVehicleSetting = (_TypeOf["perBlockVehicleSettings"])[number]
+
+export type VehicleSettingValue<TVehicleSetting extends StoredVehicleSetting> = ResolvedPhysicsSettings<PhysicsType>[TVehicleSetting]
+
+export type BlockVehicleSettingValue<TSetting extends string> = {
+	[TPerBlockSetting in PerBlockVehicleSetting]: TSetting extends string
+		? PerBlockVehicleSettingValue<TPerBlockSetting>
+		: never
+}[PerBlockVehicleSetting]
+
+export type PerBlockVehicleSettingValue<TSetting extends PerBlockVehicleSetting> = VehicleSettingValue<string>[BlockName]
+
+export type MeshEntityVehicleType = (_TypeOf["meshEntityVehiclesTypes"])[number]
+
+export type VehicleSpawnOpts = Partial<{
+	spawnerId: PlayerId
+}>
+
+export type AngleDir = {
+	theta: number
+	phi: number
+}
+
+export type BlockRaycastResult = {
+	blockID: BlockId // The block ID of the block that was hit
+	position: Pos // The position of the block that was hit
+	normal: Pos // The normal of the face that was hit
+	adjacent: Pos // The position of the block adjacent to the hit face
+} | null
+
+export type MeshParticleSystemUpdates = Record<EntityId, Record<NodeName, MeshParticleSystemUpdate>>
+
+export type MeshParticleSystemUpdate = {
+	particleSystemDir1?: number[]
+	particleSystemDir2?: number[]
+	particleSystemMinSize?: number
+	particleSystemMaxSize?: number
+	particleSystemPlayingState?: boolean
+	particleSystemColorGradients?: TimeColorGradient[]
+}
+
+export type UgcCurrencyInfo = {
+	amount: number
+	icon: string
+	iconColour?: string
+	persistent?: boolean
+	hidden?: boolean
+	subtext?: string | CustomTextStyling
+}
+
+export type UserCallbacks = "tick" | "onClose" | "onPlayerJoin" | "onPlayerLeave" | "onPlayerJump" | "onRespawnRequest" | "playerCommand" | "onPlayerChat" | "onPlayerAttemptChangeBlock" | "onPlayerChangeBlock" | "onBlockStand" | "onBlockStandStart" | "onBlockStandStop" | "onPlayerAttemptCraft" | "onPlayerCraft" | "onPlayerAttemptOpenChest" | "onPlayerOpenedChest" | "onPlayerMoveItemOutOfInventory" | "onPlayerDropItem" | "onPlayerPickedUpItem" | "onPlayerSelectInventorySlot" | "onPlayerAttack" | "onPlayerDamagingOtherPlayer" | "onPlayerDamagingMob" | "onMobDamagingPlayer" | "onMobDamagingOtherMob" | "onAttemptKillPlayer" | "onPlayerKilledOtherPlayer" | "onMobKilledPlayer" | "onPlayerKilledMob" | "onMobKilledOtherMob" | "onPlayerPotionEffect" | "onPlayerDamagingMeshEntity" | "onPlayerBreakMeshEntity" | "onPlayerUsedThrowable" | "onPlayerThrowableHitTerrain" | "onTouchscreenActionButton" | "onPlayerMoveInvenItem" | "onPlayerMoveItemIntoIdxs" | "onPlayerSwapInvenSlots" | "onPlayerMoveInvenItemWithAmt" | "onPlayerAttemptAltAction" | "onPlayerAltAction" | "onPlayerClick" | "onPlayerClickUp" | "onClientOptionUpdated" | "onMobSettingUpdated" | "onInventoryUpdated" | "onChestUpdated" | "onWorldAttemptChangeBlock" | "onWorldChangeBlock" | "onCreateBloxdMeshEntity" | "onEntityCollision" | "onPlayerAttemptSpawnMob" | "onWorldAttemptSpawnMob" | "onPlayerSpawnMob" | "onWorldSpawnMob" | "onWorldAttemptDespawnMob" | "onMobDespawned" | "onPlayerAttemptSpawnVehicle" | "onWorldAttemptSpawnVehicle" | "onPlayerSpawnVehicle" | "onWorldSpawnVehicle" | "onVehicleDespawned" | "onEntityDeleted" | "onChunkLoaded" | "onPlayerRequestChunk" | "onItemDropCreated" | "onPlayerStartChargingItem" | "onPlayerFinishChargingItem" | "onPlayerAttemptFish" | "onPlayerSucceededFishCatch" | "onPlayerFailedFishCatch" | "onPlayerFinishQTE" | "onPlayerToggledShopMenu" | "onPlayerBoughtShopItem" | "onPlayerPlayedEmote" | "onPlayerEnteredVehicle" | "onPlayerExitedVehicle" | "onPlayerPressedButton" | "onPlayerReleasedButton" | "onUiRequestResponded" | "doPeriodicSave"
+
+export type WorldGamemode = (_TypeOf["worldGamemodes"])[number]
+
+export type QueuedCommandId = string
+
+export type QueuedStatusString = (_TypeOf["QUEUED_COMMAND_STATUS_STRINGS"])[keyof _TypeOf["QUEUED_COMMAND_STATUS_STRINGS"]]
+
+export type UiRequestClientParameters = {
+	type: "standard" | "rewardedAd"
+	title: string | CustomTextStyling
+	icons?: string[]
+	acceptText?: string | CustomTextStyling
+	denyText?: string | CustomTextStyling
+	successText?: string | CustomTextStyling
+	autoDismissAfterMs?: number
+}
+
+export type MultiBlockInfo = {
+	positions: { block: string; id: number; x: number; y: number; z: number }[]
+}
+
+export type DamageInfo = Readonly<{
+	cause: DamageCause | null
+}>
+
+export type BoughtShopItem = Omit<ShopItem, "boughtCallback" | "schematicId" | "isRewardedAd">
+
+export type OnPlayerChatObjectResponse = Record<PlayerId, false | ChatMessageObject>
+
+export type ChatMessageObject = {
+	prefixContent?: ChatTags
+	chatContent?: CustomTextStyling
+}
+
+export type FishingAttemptOptions = {
+	/** Item selected for this attempt's reward. Defaults to an engine-selected fish. */
+	caughtItemName?: ItemName
+	/** Delay after entering water, in milliseconds. Defaults to the rod's metadata config. */
+	biteDelayMs?: number
+	/** Defaults to a timed-click QTE with a nine-second window. */
+	qte?: { [T in QTEType]: QTEClientParameters<T> }[QTEType]
+}
+
+export interface _TypeOf {
+	lifeformBodyParts: readonly ["Torso", "Head", "ArmRight", "ArmLeft", "LegLeft", "LegRight"]
+	damageCauses: readonly ["Melee", "Projectile", "Gun", "Explosion", "Spikes", "Fall", "Stomp", "Thorns", "Effect"]
+	enchantmentTiers: readonly ["Tier 1", "Tier 2", "Tier 3", "Tier 4", "Tier 5"]
+	ranks: readonly ["developer", "admin", "super", "youtuber", "creatorLevel1", "creatorLevel2", "creatorLevel3"]
+	noaActions: readonly ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo"]
+	SPEECH_VOICE_PRESETS: { readonly soft: { readonly waveform: "sine"; readonly pitchHz: 300; readonly glideSemitones: -0.5; readonly durationMs: 80; readonly attackMs: 6; readonly releaseMs: 18; readonly lowpassHz: any; readonly volume: 0.6; readonly intonation: { readonly variationSemitones: 1.2; readonly declineSemitones: 1.5; readonly questionRiseSemitones: 3.5; readonly exclaimLiftSemitones: 1.5; }; readonly syllableMs: 60; }; readonly regular: { readonly waveform: "triangle"; readonly pitchHz: 195; readonly glideSemitones: -0.6; readonly durationMs: 70; readonly attackMs: 2; readonly releaseMs: 12; readonly lowpassHz: any; readonly volume: 1; readonly intonation: { readonly variationSemitones: 1.5; readonly declineSemitones: 2; readonly questionRiseSemitones: 4; readonly exclaimLiftSemitones: 2; }; readonly syllableMs: 52; }; readonly dark: { readonly waveform: "sawtooth"; readonly pitchHz: 80; readonly glideSemitones: -0.6; readonly durationMs: 85; readonly attackMs: 6; readonly releaseMs: 16; readonly lowpassHz: 420; readonly volume: 1.05; readonly intonation: { readonly variationSemitones: 1; readonly declineSemitones: 3.5; readonly questionRiseSemitones: 2.5; readonly exclaimLiftSemitones: 1; }; readonly syllableMs: 64; }; readonly "high-pitched": { readonly waveform: "triangle"; readonly pitchHz: 300; readonly glideSemitones: -0.8; readonly durationMs: 55; readonly attackMs: 2; readonly releaseMs: 10; readonly lowpassHz: any; readonly volume: 0.8; readonly intonation: { readonly variationSemitones: 2.2; readonly declineSemitones: 2; readonly questionRiseSemitones: 5; readonly exclaimLiftSemitones: 3; }; readonly syllableMs: 44; }; readonly gruff: { readonly waveform: "sawtooth"; readonly pitchHz: 105; readonly glideSemitones: -0.8; readonly durationMs: 75; readonly attackMs: 4; readonly releaseMs: 14; readonly lowpassHz: 900; readonly volume: 0.85; readonly intonation: { readonly variationSemitones: 1.2; readonly declineSemitones: 3; readonly questionRiseSemitones: 3; readonly exclaimLiftSemitones: 2; }; readonly syllableMs: 58; }; readonly lively: { readonly waveform: "square"; readonly pitchHz: 230; readonly glideSemitones: 0.6; readonly durationMs: 55; readonly attackMs: 2; readonly releaseMs: 10; readonly lowpassHz: 2400; readonly volume: 0.5; readonly intonation: { readonly variationSemitones: 2.6; readonly declineSemitones: 1.5; readonly questionRiseSemitones: 5; readonly exclaimLiftSemitones: 3.5; }; readonly syllableMs: 44; }; readonly posh: { readonly waveform: "triangle"; readonly pitchHz: 175; readonly glideSemitones: 1.2; readonly durationMs: 90; readonly attackMs: 6; readonly releaseMs: 20; readonly lowpassHz: 2000; readonly volume: 1; readonly intonation: { readonly variationSemitones: 2; readonly declineSemitones: 4; readonly questionRiseSemitones: 5; readonly exclaimLiftSemitones: 2.5; }; readonly syllableMs: 60; }; readonly mechanical: { readonly waveform: "square"; readonly pitchHz: 140; readonly glideSemitones: 0; readonly durationMs: 60; readonly attackMs: 0; readonly releaseMs: 4; readonly lowpassHz: 1400; readonly volume: 0.55; readonly intonation: { readonly variationSemitones: 0; readonly declineSemitones: 0; readonly questionRiseSemitones: 0; readonly exclaimLiftSemitones: 0; }; readonly syllableMs: 62; }; }
+	SPEECH_SYNTH_WAVEFORMS: readonly ["sine", "triangle", "square", "sawtooth"]
+	CAMERA_EASING_NAMES: readonly ["linear", "easeIn", "easeOut", "easeInOut"]
+	CAMERA_PLAYER_FACINGS: readonly ["movement", "camera", "cursor"]
+	CAMERA_FOLLOW_ANCHORS: readonly ["feet", "eye"]
+	CAMERA_OFFSET_SPACES: readonly ["world", "target"]
+	shopItemBadgeTypes: readonly ["new", "lucky"]
+	playerMeshNamedNodes: readonly ["TorsoNode", "HeadMesh", "ArmRightMesh", "ArmLeftMesh", "LegLeftMesh", "LegRightMesh"]
+	healthbarDisplays: readonly ["always", "never", "onDamage"]
+	nameTagBorderStyles: readonly ["solid", "glow", "double"]
+	nameTagBorderTargets: readonly ["both", "nametag", "healthbar"]
+	particlePresets: { readonly damageInner: unknown; readonly damageOuter: unknown; readonly bouncinessInner: unknown; readonly bouncinessOuter: unknown; readonly healthRegenInner: unknown; readonly healthRegenOuter: unknown; readonly speedInner: unknown; readonly speedOuter: unknown; readonly damageReductionInner: unknown; readonly damageReductionOuter: unknown; readonly invisibleInner: unknown; readonly invisibleOuter: unknown; readonly jumpBoostInner: unknown; readonly jumpBoostOuter: unknown; readonly knockbackInner: unknown; readonly knockbackOuter: unknown; readonly poisonedInner: unknown; readonly poisonedOuter: unknown; readonly slownessInner: unknown; readonly slownessOuter: unknown; readonly weaknessInner: unknown; readonly weaknessOuter: unknown; readonly cleansedInner: unknown; readonly cleansedOuter: unknown; readonly instantDamageInner: unknown; readonly instantDamageOuter: unknown; readonly healingPulseInner: unknown; readonly healingPulseOuter: unknown; readonly instantHealthInner: unknown; readonly instantHealthOuter: unknown; readonly hasteInner: unknown; readonly hasteOuter: unknown; readonly shieldInner: unknown; readonly shieldOuter: unknown; readonly doubleJumpInner: unknown; readonly doubleJumpOuter: unknown; readonly heatResistanceInner: unknown; readonly heatResistanceOuter: unknown; readonly thiefInner: unknown; readonly thiefOuter: unknown; readonly miningYieldInner: unknown; readonly miningYieldOuter: unknown; readonly brainRotInner: unknown; readonly brainRotOuter: unknown; readonly auraInner: unknown; readonly auraOuter: unknown; readonly wallClimbingInner: unknown; readonly wallClimbingOuter: unknown; readonly airWalkInner: unknown; readonly airWalkOuter: unknown; readonly pickpocketerInner: unknown; readonly pickpocketerOuter: unknown; readonly lifestealInner: unknown; readonly lifestealOuter: unknown; readonly blindnessInner: unknown; readonly blindnessOuter: unknown; readonly poopyInner: unknown; readonly poopyOuter: unknown; readonly glowingInner: unknown; readonly glowingOuter: unknown; readonly nightVisionInner: unknown; readonly nightVisionOuter: unknown; readonly xRayVisionInner: unknown; readonly xRayVisionOuter: unknown; readonly defaultFirecrackerSmall: { readonly colorGradients: TimeColorGradient[]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly defaultFirecrackerLarge: { readonly colorGradients: TimeColorGradient[]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mango: unknown; readonly yellowFirecrackerSmall: unknown; readonly yellowFirecrackerLarge: unknown; readonly limeFirecrackerSmall: unknown; readonly limeFirecrackerLarge: unknown; readonly greenFirecrackerSmall: unknown; readonly greenFirecrackerLarge: unknown; readonly cyanFirecrackerSmall: unknown; readonly cyanFirecrackerLarge: unknown; readonly blueFirecrackerSmall: unknown; readonly blueFirecrackerLarge: unknown; readonly purpleFirecrackerSmall: unknown; readonly purpleFirecrackerLarge: unknown; readonly pinkFirecrackerSmall: unknown; readonly pinkFirecrackerLarge: unknown; readonly redFirecrackerSmall: unknown; readonly redFirecrackerLarge: unknown; readonly orangeFirecrackerSmall: unknown; readonly orangeFirecrackerLarge: unknown; readonly blackFirecrackerSmall: unknown; readonly blackFirecrackerLarge: unknown; readonly brownFirecrackerSmall: unknown; readonly brownFirecrackerLarge: unknown; readonly grayFirecrackerSmall: unknown; readonly grayFirecrackerLarge: unknown; readonly lightBlueFirecrackerSmall: unknown; readonly lightBlueFirecrackerLarge: unknown; readonly lightGrayFirecrackerSmall: unknown; readonly lightGrayFirecrackerLarge: unknown; readonly magentaFirecrackerSmall: unknown; readonly magentaFirecrackerLarge: unknown; readonly whiteFirecrackerSmall: unknown; readonly whiteFirecrackerLarge: unknown; readonly brainRot: unknown; readonly stomp: unknown; readonly fertiliser: unknown; readonly bonemeal: unknown; readonly mobTameSuccess: unknown; readonly mobTameFailure: unknown; readonly mobCatch: unknown; readonly spawnCaughtMob: unknown; readonly mobFeedDefault: unknown; readonly mobFeedSuperliked: { readonly colorGradients: TimeColorGradient[]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobFeedLike: { readonly colorGradients: TimeColorGradient[]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobFeedNeutral: { readonly colorGradients: TimeColorGradient[]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobFeedDisliked: { readonly colorGradients: TimeColorGradient[]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobDeath: unknown; readonly mobDeathSoul: unknown; readonly boardShopSuccess: unknown; readonly mobSpawnerBlockFail: { readonly colorGradients: [{ readonly timeFraction: 0; readonly minColor: [80, 80, 80, 1]; readonly maxColor: [160, 160, 160, 1]; }]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobSpawnerBlockPassive: { readonly colorGradients: [{ readonly timeFraction: 0; readonly minColor: [0, 200, 50, 1]; readonly maxColor: [0, 255, 100, 1]; }]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobSpawnerBlockNeutral: { readonly colorGradients: [{ readonly timeFraction: 0; readonly minColor: [200, 200, 0, 1]; readonly maxColor: [255, 255, 0, 1]; }]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobSpawnerBlockHostile: { readonly colorGradients: [{ readonly timeFraction: 0; readonly minColor: [200, 10, 0, 1]; readonly maxColor: [255, 20, 0, 1]; }]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobSpawnOrb: unknown; readonly aura: unknown; }
+	stairsCorners: readonly ["innerLeft", "innerRight", "outerLeft", "outerRight"]
+	mobTypes: readonly ["Pig", "Cow", "Sheep", "Horse", "Camel", "Iron Goofy Golem", "Gold Goofy Golem", "Diamond Goofy Golem", "Moonstone Goofy Golem", "Deer", "Slime", "Wolf", "Wildcat", "Spirit Golem", "Spirit Wolf", "Spirit Bear", "Spirit Stag", "Spirit Gorilla", "Bear", "Stag", "Gold Watermelon Stag", "Gorilla", "Cave Golem", "Draugr Zombie", "Draugr Skeleton", "Frost Golem", "Frost Zombie", "Frost Skeleton", "Draugr Knight", "Draugr Huntress", "Magma Golem", "Draugr Warper", "Frost Wraith", "Draugr Reaver", "Stalker", "Crone", "Iron Guardian", "Gold Guardian", "Diamond Guardian", "Moonstone Guardian", "Tiki Terror", "NPC", "67", "Bobino Musculino", "Capitano Explovissimo", "Desert Fennec", "Armour Collector", "Furnace Knight", "Lil Knight", "Glass Gremlin", "Glass Bro", "Lord Vulcan", "Zombie", "Skeleton", "Mummy", "Scorpion", "Vulcanite", "Evil Tome", "Magma Toad"]
+	gunCategories: readonly ["semi_automatic", "submachine", "rifle", "pistol", "shotgun"]
+	customItemStats: readonly ["ttb", "displayName", "harvestLevel", "stoodOnSpeedMultiplier", "specialToolDrop", "specialToolBonusDrops", "drops", "onMinedAura", "description", "altActionable", "eatHealAmt", "eatShieldAmt", "afterEatenItem", "minChargeStateToUse", "damage", "attackRange", "attackCooldownMs", "abilityCooldownMs", "dashImpulse", "knockbackHorizontalScalar", "knockbackVerticalScalar", "comboInfo", "velocityMultiplier", "fishingRodInfo", "secondaryDamage", "absorbThrowable", "armourReduction", "knockbackReduction", "CrosshairText", "gunStats", "showInCreativeInven", "bridgeLength"]
+	lifeformTypes: readonly ["Player", "Pig", "Cow", "Sheep", "Horse", "Camel", "Iron Goofy Golem", "Gold Goofy Golem", "Diamond Goofy Golem", "Moonstone Goofy Golem", "Deer", "Slime", "Wolf", "Wildcat", "Spirit Golem", "Spirit Wolf", "Spirit Bear", "Spirit Stag", "Spirit Gorilla", "Bear", "Stag", "Gold Watermelon Stag", "Gorilla", "Cave Golem", "Draugr Zombie", "Draugr Skeleton", "Frost Golem", "Frost Zombie", "Frost Skeleton", "Draugr Knight", "Draugr Huntress", "Magma Golem", "Draugr Warper", "Frost Wraith", "Draugr Reaver", "Stalker", "Crone", "Iron Guardian", "Gold Guardian", "Diamond Guardian", "Moonstone Guardian", "Tiki Terror", "NPC", "67", "Bobino Musculino", "Capitano Explovissimo", "Desert Fennec", "Armour Collector", "Furnace Knight", "Lil Knight", "Glass Gremlin", "Glass Bro", "Lord Vulcan", "Zombie", "Skeleton", "Mummy", "Scorpion", "Vulcanite", "Evil Tome", "Magma Toad"]
+	mobVariations: { readonly Pig: readonly ["default"]; readonly Cow: readonly ["default", "cream"]; readonly Sheep: readonly ["default", "black", "red", "orange", "pink", "purple", "yellow", "blue", "brown", "cyan", "gray", "green", "lightBlue", "lightGray", "lime", "magenta"]; readonly Horse: readonly ["default", "black", "brown", "cream"]; readonly Camel: readonly ["default", "brown"]; readonly Slime: readonly ["default"]; readonly "Cave Golem": readonly ["default", "iron", "corrupted"]; readonly "Draugr Zombie": readonly ["default", "longHairChestplate", "longHairClothed", "shortHairClothed", "flower", "flower2", "mushroom", "vine", "vine2", "corrupted", "corrupted2"]; readonly "Draugr Skeleton": readonly ["default"]; readonly "Frost Golem": readonly ["default"]; readonly "Frost Zombie": readonly ["default", "longHairChestplate", "shortHairClothed"]; readonly "Frost Skeleton": readonly ["default"]; readonly "Draugr Knight": readonly ["default"]; readonly Wolf: readonly ["default", "white", "brown", "grey", "spectral"]; readonly Bear: readonly ["default"]; readonly Deer: readonly ["default"]; readonly Stag: readonly ["default"]; readonly "Gold Watermelon Stag": readonly ["default"]; readonly Gorilla: readonly ["default"]; readonly Wildcat: readonly ["default", "tabby", "grey", "black", "calico", "siamese", "leopard"]; readonly "Magma Golem": readonly ["default"]; readonly "Draugr Huntress": readonly ["default", "chainmail"]; readonly "Spirit Golem": readonly ["default"]; readonly "Spirit Wolf": readonly ["default"]; readonly "Spirit Bear": readonly ["default"]; readonly "Spirit Stag": readonly ["default"]; readonly "Spirit Gorilla": readonly ["default"]; readonly "Draugr Warper": readonly ["default"]; readonly "Frost Wraith": readonly ["default", "tattered", "frostKing", "accursed"]; readonly "Draugr Reaver": readonly ["default"]; readonly Stalker: readonly ["default", "crimson", "frost", "void"]; readonly Crone: readonly ["default"]; readonly "Iron Guardian": readonly ["default"]; readonly "Gold Guardian": readonly ["default"]; readonly "Diamond Guardian": readonly ["default"]; readonly "Moonstone Guardian": readonly ["default"]; readonly "Iron Goofy Golem": readonly ["default", "flaking", "patchy", "shedding", "bare", "stone"]; readonly "Gold Goofy Golem": readonly ["default", "flaking", "patchy", "shedding", "bare", "stone"]; readonly "Diamond Goofy Golem": readonly ["default", "flaking", "patchy", "shedding", "bare", "stone"]; readonly "Moonstone Goofy Golem": readonly ["default", "flaking", "patchy", "shedding", "bare", "stone"]; readonly "Tiki Terror": readonly ["default", "titan", "tormentor", "tyrant"]; readonly NPC: readonly ["default", "emma", "leo", "isabel", "sanjay", "imara", "enoch", "sara", "carmen", "chef"]; readonly "67": readonly ["default"]; readonly "Bobino Musculino": readonly ["default"]; readonly "Capitano Explovissimo": readonly ["default"]; readonly "Desert Fennec": readonly ["default"]; readonly "Armour Collector": readonly ["default"]; readonly "Furnace Knight": readonly ["default"]; readonly "Lil Knight": readonly ["default"]; readonly "Glass Gremlin": readonly ["default"]; readonly "Glass Bro": readonly ["default"]; readonly "Lord Vulcan": readonly ["default"]; readonly Zombie: readonly ["default"]; readonly Skeleton: readonly ["default"]; readonly Mummy: readonly ["default"]; readonly Scorpion: readonly ["default"]; readonly Vulcanite: readonly ["default"]; readonly "Evil Tome": readonly ["default"]; readonly "Magma Toad": readonly ["default"]; }
+	mobSettings: readonly ["variation", "name", "maxHealth", "initialHealth", "idleSound", "attackSound", "secondaryAttackSound", "hurtSound", "onDeathItemDrops", "onDeathParticleTexture", "onDeathAura", "baseWalkingSpeed", "baseRunningSpeed", "walkingSpeedMultiplier", "runningSpeedMultiplier", "jumpCount", "baseJumpImpulseXZ", "baseJumpImpulseY", "jumpMultiplier", "runAwayRadius", "chaseRadius", "territoryRadius", "hostilityRadius", "stoppingRadius", "attackInterval", "attackRadius", "secondaryAttackRadius", "attackDamage", "secondaryAttackDamage", "isReceivingDamageCooldownGlobal", "knockbackReceivedMultiplier", "attackImpulse", "secondaryAttackImpulse", "rangedAttackInaccuracy", "burstAttackInfo", "secondaryBurstAttackInfo", "heldItemName", "heldItemEnchantmentTier", "armour", "attackItemName", "secondaryAttackItemName", "swingArmOnAttack", "swingArmOnSecondaryAttack", "attackEffectName", "attackEffectDuration", "warpTargetSpecialAttackInfo", "combatTetherInfo", "evadeInfo", "chargeSpecialAttackInfo", "tameInfo", "onTamedHealthMultiplier", "petInfo", "ownerDbId", "minFollowingRadius", "maxFollowingRadius", "isRideable", "healthRegen", "ridingSpeedMult", "bridgeInfo", "walkingSlideInfo", "runningSlideInfo", "walkingJumpInfo", "runningJumpInfo", "walkingRandomFacingInfo", "runningRandomFacingInfo", "metaInfo"]
+	armourPieces: readonly ["Helmet", "Chestplate", "Gauntlets", "Leggings", "Boots"]
+	playerPoses: readonly ["standing", "sitting", "zombie", "gliding", "driving", "sleeping", "riding"]
+	potionEffects: readonly ["Speed", "Damage Reduction", "Damage", "Invisible", "Jump Boost", "Knockback", "Poisoned", "Slowness", "Weakness", "Cleansed", "Instant Damage", "Health Regen", "Healing Pulse", "Instant Health", "Haste", "Shield", "Double Jump", "Heat Resistance", "Thief", "X-Ray Vision", "Mining Yield", "Brain Rot", "Aura", "Wall Climbing", "Air Walk", "Pickpocketer", "Lifesteal", "Bounciness", "Blindness", "Poopy", "Glowing", "Night Vision"]
+	MAX_MOB_FEED_LEVEL: 5
+	mobLevelUpBonuses: readonly ["Renaming", "Special Drops", "Thorns", "Rainbow Wool", "Max Health +", "Damage +", "Riding Speed +", "Passenger Speed +", "Double Poop", "Self Yield", "Painting", "Friends", "Pack Leader", "Poison Claws", "Mob Power", "Mob Yield", "Feed Aura", "Antlers"]
+	mobAiStates: readonly ["idle", "disabled", "idleBeforeTurning", "turning", "idleBeforeWalking", "walking", "runningAway", "chasing", "turningBeforeCharging", "charging", "following", "watching", "walkingToPosition", "runningToPosition"]
+	cosmeticTypes: readonly ["skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "cape", "nameColour", "profileEffect", "emote", "pet", "aura"]
+	ingameIconNames: readonly ["Damage", "Damage Reduction", "Speed", "VoidJump", "Fist", "Frozen", "Hydrated", "Invisible", "Jump Boost", "Poisoned", "Slowness", "Weakness", "Health Regen", "Healing Pulse", "Haste", "Double Jump", "Heat Resistance", "Gliding", "Boating", "Obsidian Boating", "Riding", "Bunny Hop", "FallDamage", "Feather Falling", "Thief", "X-Ray Vision", "Mining Yield", "Brain Rot", "Rested Damage", "Rested Haste", "Rested Speed", "Rested Farming Yield", "Rested Aura", "Blindness", "Pickpocketer", "Lifesteal", "Bounciness", "Air Walk", "Wall Climbing", "Thorns", "Poopy", "Glowing", "Night Vision", "Irradiated", "Draugr Knight Head", "Draugr Warper Head", "Magma Golem Head", "Mystery Fish", "Damage Enchantment", "Critical Damage Enchantment", "Attack Speed Enchantment", "Protection Enchantment", "Health Enchantment", "Health Regen Enchantment", "Stomp Damage Enchantment", "Knockback Resist Enchantment", "Arrow Speed Enchantment", "Arrow Damage Enchantment", "Quick Charge Enchantment", "Break Speed Enchantment", "Momentum Enchantment", "Mining Yield Enchantment", "Farming Yield Enchantment", "Mining Aura Enchantment", "Digging Aura Enchantment", "Lumber Aura Enchantment", "Farming Aura Enchantment", "Vertical Knockback Enchantment", "Horizontal Knockback Enchantment", "Firecracker Cooldown Enchantment", "Firecracker Boost Enchantment", "Gliding Speed Enchantment", "Self Yield", "Friends", "Riding Speed", "Feed Aura", "Double Poop", "Mob Slayer", "Rainbow Wool", "Pack Leader", "Max Health", "Poison Claws", "Mob Yield", "Antlers Bonus", "Health", "HealthShield", "Cross", "Friendship", "Dotted Friendship", "Hunger", "Empty Hunger", "Pixelated Heart", "Question Mark", "Trader Black", "Trader Blue", "Trader Piggy"]
+	perBlockVehicleSettings: readonly ["canAutoStep", "speedMultiplier"]
+	meshEntityVehiclesTypes: readonly ["Boat", "Obsidian Boat", "Hovercraft", "Yellow Kart", "White Kart", "Red Kart", "Purple Kart", "Pink Kart", "Orange Kart", "Magenta Kart", "Lime Kart", "Light Gray Kart", "Light Blue Kart", "Green Kart", "Gray Kart", "Cyan Kart", "Brown Kart", "Blue Kart", "Black Kart", "Off Roader", "Gold Mining Drill", "Iron Mining Drill", "Diamond Mining Drill", "Moonstone Mining Drill", "Armored Car", "Light Blue Car", "Speedboat"]
+	worldGamemodes: readonly ["survival", "peaceful", "creative", "survivaladventure", "peacefuladventure", "spectator"]
+	QUEUED_COMMAND_STATUS_STRINGS: { readonly 0: "NOT_IN_QUEUE"; readonly 1: "WAITING_TO_RUN"; readonly 2: "CURRENTLY_RUNNING"; }
+	ItemMetaInfo: {
+		readonly rootName: string
+		readonly rootId: number
+		readonly metaStr: string
+		readonly rot: number | null
+		readonly open: boolean | null
+		readonly halfblockPlacement: HalfblockPlacement | null
+		readonly growing: true | null
+		readonly treeBase: true | null
+		readonly treeCanopy: true | null
+		readonly books: number | null
+		readonly freshlyGrown: true | null
+		readonly roots: true | null
+		readonly lava: true | null
+		readonly top: true | null
+		readonly grassRoots: true | null
+		readonly breaking: true | null
+		readonly flashing: true | null
+		readonly stairsCorner: StairsCorner | null
+		readonly charging: number | null
+		readonly direction: number | null
+		readonly requiresAmmo: true | null
+		readonly woodType: string | null
+		readonly caughtMobType: MobType | null
+	}
+	BlockMetadataItem: {
+		displayName: string | TranslatedText | CustomTextStyling
+		ttb?: number
+		textureInfo: | string
+			| (string | AnimParams)[]
+			| [number, number, number, number?]
+			| ({
+					colour?: [number, number, number, number?]
+			  } & AnimParams)
+		texturePerSide: number[]
+		harvestType: HarvestType
+		transTex: boolean
+		model: BlockMetadataModelType | string
+		itemTexture: string
+		drops: string
+		/** How many of \`drops\` a normal break gives, multiplying any mining yield. Default 1. */
+		dropAmount?: number
+		solid: boolean
+		/** Compiled voxel-aabb-sweep shape; omitted for a full cube. On nonsolid blocks, used only for targeting and highlights. */
+		subvoxelShape?: number[]
+		heldItemScale: number
+		modelScale: number
+		meta: ItemMetaInfo
+		rootMetaDesc: string
+		particlesIgnoreBlack: boolean
+		harvestLevel: number
+		fluid: boolean
+		specialToolDrop: SpecialToolDrop
+		specialToolBonusDrops: RecursiveReadonly<Record<string, { bonusDrop: string; probabilityOfDrop: number }[]>>
+		damage: number
+		stoodOnSpeedMultiplier: number
+		/** Carries a player standing on this block's top at [x, y, z] blocks/s (y ignored): a moving surface they can walk on, e.g. a conveyor. Omit for a still block. */
+		surfaceVelocity?: Vec3
+		description: string | TranslatedText | CustomTextStyling
+		altActionable: boolean
+		soundType: { break: SoundType; place: SoundType }
+		unlitStandaloneMesh: boolean
+		customPlanesInfo: { textureIdx: number; yRot: number }[]
+		customModelInfo: {
+			yOffset?: number
+			/** Only honoured by onRotatableCreate. */
+			yRotOffset?: number
+			/** Only honoured by onRotatableCreate. */
+			xRotOffset?: number
+			unlit?: boolean
+			emissiveColor?: Vec3
+			backFaceCulling?: boolean
+			/** The model's texture is \`frames\` frames stacked top to bottom, each shown for \`animationInterval\` ms, 100 at least. Its UVs cover the first. */
+			textureAnimation?: { frames: number; animationInterval: number }
+		}
+		absorbThrowable?: boolean
+		CrosshairText?: string | CustomTextStyling
+		/** Light emission as [R, G, B], each 0-15. Omit for no emission. */
+		lightEmission?: Vec3
+		/** Sky light emission level: null or 0-15. 0 is equivalent to null (no emission). */
+		skyLightEmission?: number
+		/** Light attenuation when light passes through this block. Default: 1 for air/transparent, 3 for fluid, 15 for opaque. */
+		lightFilter?: number
+		name: string
+		id: number
+		atlasIdx: number | number[]
+		stackable: boolean
+		heldItemGlb?: string
+		blockModel: string
+		blockModelItem: boolean
+		twoDBlockItem: boolean
+		rotatableOffsetAmt: number
+		canBePlacedOver: boolean
+		/** The half-high top placed above this block with it, and removed or reshaped with it (a fence's). */
+		attachedTop?: BlockName
+		/** For a slab, the block it becomes when a matching slab is placed into its open half. */
+		slabFullBlock?: BlockName
+		onMinedAura: number
+		showInCreativeInven?: boolean
+		gunStats?: GunStatsOverride
+	}
+	NonBlockMetadataItem: {
+		displayName?: string | TranslatedText | CustomTextStyling
+		type: "Item" | "Tool" | "Gun" | "FullAuto" | "Armour" | "GrayscaleArmour" | "Chargeable"
+		textureInfo: string | string[] | [number, number, number, number?]
+		weight: number
+		heldItemScale: number
+		heldItemGlb?: string
+		/** Extra Euler rotation (radians) applied only to the first-person held mesh, on top of the default hand pose. */
+		firstPersonHeldRotationOffset?: Vec3
+		/** Extra Euler rotation (radians) applied only to the third-person held mesh, on top of the default pose. */
+		thirdPersonHeldRotationOffset?: Vec3
+		description?: string | TranslatedText | CustomTextStyling
+		stackable: boolean
+		eatable?: boolean
+		chargeSound?: string
+		afterEatenItem?: ItemName
+		eatShieldAmt?: number
+		eatHealAmt?: number
+		chargeStages?: number
+		chargeTime?: number
+		minChargeStateToUse?: number
+		damage?: number
+		attackRange?: number
+		secondaryDamage?: number
+		holdAsAiming?: boolean
+		hideAimingUI?: boolean
+		requiresArrow?: boolean
+		knockbackHorizontalScalar?: number
+		knockbackVerticalScalar?: number
+		attackCooldownMs?: number
+		abilityCooldownMs?: number
+		dashImpulse?: number
+		comboInfo?: WeaponComboInfo
+		velocityMultiplier?: number
+		fishingRodInfo?: {
+			/** Minimum and maximum engine fishing bite delay, in milliseconds. */
+			biteDelayMs: readonly [number, number]
+		}
+		harvests?: HarvestType
+		multiplier?: number
+		level?: number
+		lumberjackHeight?: number
+		armourReduction?: number
+		knockbackReduction?: number
+		id?: number
+		name?: string
+		isCustom?: boolean
+		/** Light emission as [R, G, B], each 0-15. Omit for no emission. */
+		lightEmission?: Vec3
+		/** Spotlight reach in blocks. When set, the local player emits a directional beam (instead of the default omnidirectional held light) while holding this item, or wearing it if a helmet. */
+		spotlightRange?: number
+		/** Full cone apex angle in degrees (smaller = tighter beam). Only used with \`spotlightRange\`; omit for the default width. */
+		spotlightConeAngle?: number
+		meta?: ItemMetaInfo
+		rootMetaDesc?: string
+		keepMetaInChest?: boolean
+		gunType?: GunCategory
+		scopeType?: "none" | "sniper"
+		muzzleFlashOffsetFromGun?: Vec3
+		muzzleFlashScale?: number
+		autoFireWithMouse?: boolean
+		fireRate?: number
+		fireRateWithHeldTouch?: number
+		/** How fast spread recovers and shot sounds are paced, in ms; unset, the fire interval */
+		cadenceMs?: number
+		/**
+		 * ms from equipping to the first shot. A game overriding fireRate, fireRateWithHeldTouch or cadenceMs without its own
+		 * equipDelay waits the fire interval less 0.9 of cadenceMs instead
+		 */
+		equipDelay?: number
+		burstCount?: number
+		burstDelay?: number
+		shotPelletCount?: number
+		reloadTime?: number
+		clipSize?: number
+		reloadBulletsIndividually?: boolean
+		bulletReloadTime?: number
+		cockTime?: number
+		tagSpeedMult?: number
+		subsequentTagSpeedReductionScalar?: number
+		inaccuracyStanding?: number
+		inaccuracyFromShot?: number
+		inaccuracyMovement?: number
+		yVelocityInaccuracy?: number
+		inaccuracyFromJump?: number
+		altInaccuracyStanding?: number
+		altInaccuracyFromShot?: number
+		altInaccuracyMovement?: number
+		recoveryRate?: number
+		aimZoomFactor?: number
+		kickbackDecreaseRate?: number
+		minKickback?: number
+		maxKickback?: number
+		kickbackRate?: number
+		hasVerticalInaccuracy?: boolean
+		keepScopeOnShot?: boolean
+		msPerRound?: number
+		msPerRoundTouchScreen?: number
+		altYVelocityInaccuracy?: number
+		altInaccuracyFromJump?: number
+		fireInterval?: number
+		bridgeLength?: number
+		gunStats?: GunStatsOverride
+		showInCreativeInven?: boolean
+	}
+	LoadedChunk: {
+		anySetsRan: boolean
+		readonly lastUpdated: number
+		set(x: number, y: number, z: number, id: BlockId): void
+		get(x: number, y: number, z: number): number
+		/**
+		 * Returns the underlying array of the chunk
+		 * This exists for performance reasons only
+		 * Be careful using this - updating the data directly without calling set or setUnderlying will result in inconsistent state
+		 */
+		getUnderlyingData(): Uint16Array<ArrayBufferLike>
+		setUnderlying(idx: number, id: BlockId): void
+	}
+}
+
+export type ItemMetaInfo = _TypeOf["ItemMetaInfo"]
+
+export type BlockMetadataItem = _TypeOf["BlockMetadataItem"]
+
+export type NonBlockMetadataItem = _TypeOf["NonBlockMetadataItem"]
+
+export type LoadedChunk = _TypeOf["LoadedChunk"]
+
+export type Song = "Adigold - A Place To Be Free" | "Adigold - Butterfly Effect" | "Adigold - Dreamless Sleep" | "Adigold - Frozen Pulse" | "Adigold - Frozen Skies" | "Adigold - Healing Thoughts" | "Adigold - Here Forever" | "Adigold - Just a Little Hope" | "Adigold - Just Like Heaven" | "Adigold - Memories Remain" | "Adigold - Place To Be" | "Adigold - The Riverside" | "Adigold - The Wonder" | "Adigold - Vetrar (Cut B)" | "Awkward Comedy Quirky" | "battle-ship-111902" | "cdk-Silence-Await" | "corsairs-studiokolomna-main-version-23542-02-33" | "ghost-Reverie-small-theme" | "happy" | "Heroic-Demise-New" | "I-am-the-Sea-The-Room-4" | "Juhani Junkala [Retro Game Music Pack] Ending" | "Juhani Junkala [Retro Game Music Pack] Level 1" | "Juhani Junkala [Retro Game Music Pack] Level 2" | "Juhani Junkala [Retro Game Music Pack] Level 3" | "Juhani Junkala [Retro Game Music Pack] Title Screen" | "LonePeakMusic-Highway-1" | "Mojo Productions - Pirates" | "Mojo Productions - Sneaky Jazz" | "Mojo Productions - The Sneaky" | "Mojo Productions - The Sneaky Jazz" | "progress" | "raise-the-sails-152124" | "ramblinglibrarian-I-Have-Often-T" | "Slow-Motion-Bensound" | "snowflake-Ethereal-Space" | "the-epic-adventure-131399" | "TownTheme" | "The Suspense Ambient" | "Epic1" | "Epic2" | "Emotional Epic" | "Enemy Marked" | "spooky" | "Shuffling Crypt" | "Tower of Doom" | "Wild Infernos" | "Molten Rift"
+
+export type ParticleSystemBlendMode = 0 | 1 | 2 | 3 | 4
+
+export type HalfblockPlacement = 0 | 1 | 2
+
+export type WalkThroughType = 0 | 1 | 2
+
+export type LobbyType = 0 | 1 | 2
+
+export type PhysicsType = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
+
+export type BoatTier = 0 | 1 | 2
+
+export type GliderTier = 0 | 1 | 2 | 3
+
+export type BalloonTier = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15
+
+export type SleepingTier = 0 | 1 | 2 | 3
+
+export type CarTier = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
+
+export type MovementType = 0 | 1 | 2
+
+export type ExplosionType = 0 | 1 | 2
+
+export type ClientOptions = {
+		canChange: boolean
+		/** How far, in blocks from the eye, the player can break, place and use blocks. 0 to 20. */
+		blockReach: number
+		ezBridging: boolean
+		/** How long an ez bridging block grows before it is solid. 0 places it instantly. Null uses 900ms, or instant in creative. */
+		ezBridgingGrowMs: number
+		ezTowering: boolean
+		/** How long an ez towering block grows before it is solid. 0 places it instantly. Null uses 900ms, or instant in creative. */
+		ezToweringGrowMs: number
+		speedMultiplier: number
+		crouchingSpeed: number
+		/** you should probably use speed multiplier - this doesn't make much sense on phone */
+		walkingSpeed: number
+		/** you should probably use speed multiplier - this doesn't make much sense on phone */
+		runningSpeed: number
+		jumpAmount: number
+		airJumpCount: number
+		/** While airborne with jump held: upward force (blocks/s per second, 0 to 45; gravity is 20) until vertical speed nears maxUpSpeed (blocks/s; negative slows a fall). Null = off. */
+		jumpHoldThrust: { maxUpSpeed: number; force: number; }
+		bunnyhopMaxMultiplier: number
+		music: Song
+		musicVolumeLevel: number
+		/** Not recommended to use as it lags when being loaded. */
+		skyBox: string | EarthSkyBox
+		minChunkAddDist: [number, number]
+		showPlayersInUnloadedChunks: boolean
+		useInventory: boolean
+		/** For now just enables the full inventory UI */
+		useFullInventory: boolean
+		/** Hotbar/inventory panel colour as a hex string e.g. #682323; slot shades derive from it */
+		inventoryColourOverride: string
+		/** Hotbar slots (0-based) that pulse to draw the player's eye, e.g. to the item a tutorial wants them to use. [] for none. */
+		highlightedHotbarSlots: number[]
+		canCraft: boolean
+		canFish: boolean
+		canPickUpItems: boolean
+		/** Whether an item the player drops or a block they break drops shows at once on their screen, before the server drops it */
+		predictDroppedItems: boolean
+		playerZoom: number
+		zoomOutDistance: number
+		maxPlayerZoom: number
+		lobbyLeaderboardInfo: LobbyLeaderboardInfo
+		canCustomiseChar: boolean
+		/** used if canChange is true but useInventory is false */
+		defaultBlock: string
+		cantChangeError: string | CustomTextStyling
+		cantBreakError: string | CustomTextStyling
+		cantBuildError: string | CustomTextStyling
+		/** The contents of the action button. Supports custom text styling. onTouchscreenActionButton will be called when button pressed. */
+		touchscreenActionButton: string | CustomTextStyling
+		strictFluidBuckets: boolean
+		preserveProtectedFluidSources: boolean
+		fillBrokenBlocksWithWater: boolean
+		canUseZoomKey: boolean
+		canAltAction: boolean
+		canSeeNametagsThroughWalls: boolean
+		showBasicMovementControls: boolean
+		/** Centred text at the very top of the screen, level with the FPS counter / coordinates / room name. Drops below that strip when a centred placement would overlap it. */
+		middleTextTop: string | CustomTextStyling | TextWithDisplayOptions
+		middleTextUpper: string | CustomTextStyling | TextWithDisplayOptions
+		middleTextLower: string | CustomTextStyling | TextWithDisplayOptions
+		/** A row of compact chips rendered in the top-left HUD strip, concatenated immediately after the FPS counter / coordinates / room name. */
+		headerChips: HeaderChip[]
+		/** Lobby-only subtitle shown after the custom game name in the top-left header */
+		customVariationTitle: string
+		RightInfoText: string | CustomTextStyling | TextWithDisplayOptions
+		crosshairText: string | CustomTextStyling
+		/** If set, clients will only be able to see the closest x players (good for client perf in games with many players) */
+		numClosestPlayersVisible: number
+		showProgressBar: boolean
+		showKillfeed: boolean
+		/** Whether the viewer renders speech bubbles above other players when they send chat messages. Off by default. */
+		showChatBubbles: boolean
+		/** A line of dialogue in the panel below the crosshair, revealed word by word in its voice. Each new value is a new line. */
+		dialogue: Readonly<{ line: DialogueText; speakerName?: string | CustomTextStyling; voice?: SpeechVoice; animateIn?: boolean; }>
+		/** Allows player to select a channel that is passed as argument to onPlayerChat. See engineGameplayTypes.ts for expected format */
+		chatChannels: { channelName: string; elementContent: string | CustomTextStyling; elementBgColor: string; }[]
+		creative: boolean
+		/** while in creative */
+		flySpeedMultiplier: number
+		/** Ignored if creative is false */
+		canPickBlocks: boolean
+		/** Position of the compass target. If string, will be parsed as a player id */
+		compassTarget: string | number | number[]
+		ttbMultiplier: number
+		/** only applicable if useInventory is true */
+		inventoryItemsMoveable: boolean
+		invincible: boolean
+		maxShield: number
+		/** Shield upon joining and respawn. */
+		initialShield: number
+		maxHealth: number
+		/** Health upon joining and respawn. Can be null for the player to not have health. */
+		initialHealth: number
+		/** Fraction of max health that regens each regen tick */
+		healthRegenAmount: number
+		/** How often health regen is ticked */
+		healthRegenInterval: number
+		/** How long after a player receives damage to start regen again */
+		healthRegenStartAfter: number
+		/** Duration of the +damage effect from plum */
+		effectDamageDuration: number
+		/** Duration of +speed effect from cracked coconut */
+		effectSpeedDuration: number
+		/** Duration of +damage reduction effect from pear */
+		effectDamageReductionDuration: number
+		/** Duration of +health regen effect from cherry */
+		effectHealthRegenDuration: number
+		/** Duration of potion effects */
+		potionEffectDuration: number
+		/** Duration of splash potion effects */
+		splashPotionEffectDuration: number
+		/** Duration of arrow potion effects */
+		arrowPotionEffectDuration: number
+		/** RGBA array [r, g, b, a] for camera screen tint effect. Values fall between 0 and 1. */
+		cameraTint: [number, number, number, number]
+		/** Fog distance which overrides graphic settings. Uses graphic settings if null. */
+		fogChunkDistanceOverride: number
+		/** Blocks from the eye at which fog turns solid, thickening all the way out. Overrides fogChunkDistanceOverride and graphic settings when set. */
+		fogBlockDistanceOverride: number
+		/** Fog colour override - as a hex string e.g. #ffffff */
+		fogColourOverride: string
+		/** Applies fog to the skybox, which is otherwise unaffected by fog */
+		fogOnSkybox: boolean
+		/** After dying, the player can respawn after this many seconds */
+		secsToRespawn: number
+		/** When player is dead, also shows a play again button matchmakes player into a new lobby. Mostly useful for sessionBased games */
+		usePlayAgainButton: boolean
+		/** If true, player will respawn automatically after secsToRespawn seconds. Won't show an ad so autoRespawn needs to be false some of the time */
+		autoRespawn: boolean
+		/** Text to show on respawn button. (E.g. "Spectate") */
+		respawnButtonText: string
+		/** Whether the player can use the respawn button. Otherwise forces either play again or exit */
+		useRespawnButton: boolean
+		/** MS before a killstreak expires. (defaults to never expiring) */
+		killstreakDuration: number
+		/** Damage multiplier for all types of damage */
+		dealingDamageMultiplier: number
+		/** Mult for when the player hits a head. Only applies to guns */
+		dealingDamageHeadMultiplier: number
+		/** Mult for when the player hits a leg. Only applies to guns */
+		dealingDamageLegMultiplier: number
+		/** Mult for when the player hits neither a leg or a head. Only applies to guns */
+		dealingDamageDefaultMultiplier: number
+		/** Where gunshots originate from. "default" preserves camera-assisted behavior. */
+		gunshotOrigin: GunshotOrigin
+		/** Mult for all types of incoming damage */
+		receivingDamageMultiplier: number
+		/** When the player is attacked, a short cooldown prevents further damage from the same attack type. If true, all attackers share that cooldown. If false, each attacker has their own. */
+		isReceivingDamageCooldownGlobal: boolean
+		/** Mult for horizontal knockback when dealing damage */
+		horizontalKnockbackMultiplier: number
+		/** Mult for vertical knockback when dealing damage */
+		verticalKnockbackMultiplier: number
+		/** Mult for the damage done by "stomping" on a lifeform, i.e.: falling on them wearing Spiked Boots. */
+		stompDamageMultiplier: number
+		/** Radius around the player that will be affected by the stomp damage. */
+		stompDamageRadius: number
+		/** Mult for the radius within which mobs can detect the player when crouching. If a player's mult is 2, then mobs will think they are twice as far away. */
+		crouchMobDetectionRadiusMultiplier: number
+		/** Scale factor to use for dropped item meshes */
+		droppedItemScale: number
+		/** Amount that player camera is affected by movement based fov */
+		movementBasedFovScale: number
+		/** Amount of friction to apply to airborne players - only change if absolutely necessary */
+		airFrictionScale: number
+		/** Amount of friction to apply to grounded players - only change if absolutely necessary */
+		groundFrictionScale: number
+		/** Amount of acceleration to apply to airborne players - only change if absolutely necessary */
+		airAccScale: number
+		/** Whether to allow players to strafe and conserve momentum while airborne */
+		airMomentumConservation: boolean
+		/** Multiplier applied to gravity during normal movement */
+		gravityMultiplier: number
+		/** How much the player bounces off of solid blocks */
+		bounciness: number
+		/** Whether the player can climb walls */
+		canClimbWalls: boolean
+		/** Whether the player can crouch */
+		canCrouch: boolean
+		/** Whether players take fall damage */
+		fallDamage: boolean
+		/** How much aura levels up the player */
+		auraPerLevel: number
+		/** Max aura the player can have */
+		maxAuraLevel: number
+		/** Distance in blocks over which we reduce the opacity of entities as they approach the camera */
+		proximityFadeDistance: number
+		/** Minimum opacity multiplier reachable when fading entities based on camera proximity */
+		proximityFadeMinOpacity: number
+		/** Force the camera to look in a specific direction [x, y, z]. Set to null to allow free camera movement. */
+		forcedCameraDirection: [number, number, number]
+		/** Duration in ms to animate/transition to the forced camera direction. 0 = instant. */
+		forcedCameraDirectionTransitionMs: number
+		/** Roll angle of the camera in radians */
+		cameraRoll: number
+		/** Duration in ms to animate/transition to the camera roll angle. 0 = instant. */
+		cameraRollTransitionMs: number
+		/** Third-person camera origin rotation offset [x, y, z] in radians. */
+		cameraRotationOffset: [number, number, number]
+		/** Third-person camera origin translation offset [x, y, z] in blocks. */
+		cameraPositionOffset: [number, number, number]
+		/** Where the camera is and what it looks at: the player's own ("default"), or a fixed, follow, path or frame camera. */
+		gameCamera: CameraSettings
+		/** When null, just use the player's graphics setting. When set, forces lighting on (true) or off (false). */
+		lightingOverride: boolean
+		/** Sky light colour override - hex string e.g. #ffffff. */
+		skyLightColourOverride: string
+		/** Ambient (absence of sky light) colour override - hex string e.g. #ffffff. */
+		ambientLightColourOverride: string
+		/** The dimmest light the player can see by - hex string e.g. #ffffff. Anywhere darker is lifted to it, e.g. caves and night. */
+		visionMinLightColour: string
+		/** Held item light colour override - hex colour string e.g. #ffffff. Applied regardless of any held item. */
+		heldLightColourOverride: string
+		/** Held item light range override. Distance is measured in blocks. */
+		heldLightRangeOverride: number
+		/** Held item light cone angle override. Angle is measured in degrees. Larger number = wider beam. */
+		heldLightConeAngleOverride: number
+		/** When true, hides world and chunk coordinates regardless of the player's setting. */
+		hideCoordinates: boolean
+		/** When false, players can't record replays or save clips. Turning it off mid-game discards any recording in progress. Set it for the whole game, not per area: chunks load before players reach them, and turning it back on lets new clips include every loaded chunk. */
+		canRecordReplays: boolean
+		/** Renders a terrain-following strip of animated chevron arrows on the ground from this player to the target position. Optional \`colour\` is any CSS colour string (e.g. "red", "#ffaa00", "rgb(255,0,0)"), or null for default white. */
+		groundArrowPath: { target: [number, number, number]; colour?: string; }
+		customButtons: CustomButtonsType
+	}
+
+export type OtherEntitySettings = {
+		opacity: number
+		zIndex: 0 | 1
+		overlayColour: string
+		canAttack: boolean
+		canSee: boolean
+		interactable: boolean
+		interactionPrompt: string | CustomTextStyling
+		showDamageAmounts: boolean
+		lockHeadToBody: boolean
+		killfeedColour: string
+		meshScaling: EntityMeshScalingMap
+		colorInLobbyLeaderboard: string
+		lobbyLeaderboardValues: LobbyLeaderboardValues
+		lobbyLeaderboardTags: ChatTags
+		nameTagInfo: NameTagInfo
+		hasPriorityNametag: boolean
+		alwaysInInterest: boolean
+		multilineTextBox: MultilineTextBox
+		nameColour: "default" | "yellow" | "lime" | "green" | "aqua" | "cyan" | "blue" | "purple" | "pink" | "red" | "orange"
+	}
+`
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

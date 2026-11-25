@@ -1,73 +1,73 @@
-export const id = 69;
-export const ids = [69];
+export const id = 80;
+export const ids = [80];
 export const modules = {
-  36758: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      noteJsEngine: () => sG,
-      noteJsJoin: () => gG,
-      noteWasmJoin: () => eG,
-      noteWasmPick: () => qG,
-      noteWebGpuLoss: () => RG,
-      startWebGpuLossDebug: () => AG
+  37376: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      noteJsEngine: () => YM,
+      noteJsJoin: () => xM,
+      noteWasmJoin: () => vM,
+      noteWasmPick: () => NM,
+      noteWebGpuLoss: () => FM,
+      startWebGpuLossDebug: () => fM
     });
-    var wG = ZG(333),
-      SG = ZG(17),
-      LG = ZG(2768),
-      yG = ZG(3441),
-      kG = ZG(631),
-      UG = ZG(80),
-      YG = ZG(86),
-      VG = ZG(2773),
-      pG = ZG(29),
-      fG = ZG(101),
-      QG = ZG(318),
-      KG = ZG(620),
-      hG = ZG(2801),
-      dG = ZG(352),
-      JG = ZG(346),
-      rG = ZG(34405);
-    const zG = 40,
-      EG = 160;
+    var OM = iM(313),
+      SM = iM(19),
+      jM = iM(3085),
+      aM = iM(3855),
+      PM = iM(656),
+      nM = iM(83),
+      QM = iM(94),
+      zM = iM(3090),
+      LM = iM(30),
+      mM = iM(106),
+      HM = iM(308),
+      hM = iM(643),
+      JM = iM(3122),
+      dM = iM(332),
+      yM = iM(327),
+      lM = iM(34954);
+    const EM = 40,
+      UM = 160;
 
-    function oG(GG, bG) {
-      return `"${(GG.length>bG?`${GG.slice(0,bG)}...`:GG).replace(/[^ -~]|["\\]/g,"?")}"`
+    function GM(MM, rM) {
+      return `"${(MM.length>rM?`${MM.slice(0,rM)}...`:MM).replace(/[^ -~]|["\\]/g,"?")}"`
     }
 
-    function XG(GG) {
-      return GG ? "yes" : "no"
+    function CM(MM) {
+      return MM ? "yes" : "no"
     }
 
-    function uG(GG) {
-      var bG;
-      const ZG = GG.storedRenderer;
-      return [`loss holds ${XG(GG.lossHolds)}`, `stops packs ${XG(GG.lossStopsPack)}`, `any loss ${XG(GG.anyLoss)}`, `old intel ${XG(GG.oldIntelDriver)}`, `default off for packs ${XG(GG.defaultOffForPacks)}`, `default off reason ${null!==(bG=GG.defaultOffReason)&&void 0!==bG?bG:"none"}`, `setting ${GG.setting?"on":"off"} (stored ${null===GG.settingStored?"unset":GG.settingStored?"on":"off"})`, `renderer url ${null===GG.urlRenderer?"none":oG(GG.urlRenderer,12)}, stored ${null===ZG||void 0===ZG?"none":oG(String(ZG),12)}`].join(", ")
+    function eM(MM) {
+      var rM;
+      const iM = MM.storedRenderer;
+      return [`loss holds ${CM(MM.lossHolds)}`, `stops packs ${CM(MM.lossStopsPack)}`, `any loss ${CM(MM.anyLoss)}`, `old intel ${CM(MM.oldIntelDriver)}`, `default off for packs ${CM(MM.defaultOffForPacks)}`, `default off reason ${null!==(rM=MM.defaultOffReason)&&void 0!==rM?rM:"none"}`, `setting ${MM.setting?"on":"off"} (stored ${null===MM.settingStored?"unset":MM.settingStored?"on":"off"})`, `renderer url ${null===MM.urlRenderer?"none":GM(MM.urlRenderer,12)}, stored ${null===iM||void 0===iM?"none":GM(String(iM),12)}`].join(", ")
     }
 
-    function iG(GG) {
-      if (null === GG) return "no renderer settled";
+    function bM(MM) {
+      if (null === MM) return "no renderer settled";
       const {
-        requested: bG,
-        choice: ZG,
-        source: wG,
-        fallbackReason: SG
-      } = GG;
-      return `renderer requested ${bG}, runs ${ZG}, from ${wG}${null===SG?"":`, fell back: ${oG(SG,80)}`}`
+        requested: rM,
+        choice: iM,
+        source: OM,
+        fallbackReason: SM
+      } = MM;
+      return `renderer requested ${rM}, runs ${iM}, from ${OM}${null===SM?"":`, fell back: ${GM(SM,80)}`}`
     }
 
-    function CG(GG, bG) {
-      return GG ? `stopping packs: iOS, ${null!==bG&&void 0!==bG?bG:1} losses in a row within a day` : "stopping packs"
+    function wM(MM, rM) {
+      return MM ? `stopping packs: iOS, ${null!==rM&&void 0!==rM?rM:1} losses in a row within a day` : "stopping packs"
     }
 
-    function WG(GG) {
-      var bG, ZG, wG;
-      return `pick (wasm): backend ${null!==(bG=GG.backend)&&void 0!==bG?bG:"none"}, webgpu fallback ${null!==(ZG=GG.reason)&&void 0!==ZG?ZG:"none"}, from ${null!==(wG=GG.source)&&void 0!==wG?wG:"none"}, storage pull breaks ${XG(GG.storagePullBreaks)}; packs run ${XG("webgpu"===GG.backend)}, else ${GG.noWebGpu}`
+    function tM(MM) {
+      var rM, iM, OM;
+      return `pick (wasm): backend ${null!==(rM=MM.backend)&&void 0!==rM?rM:"none"}, webgpu fallback ${null!==(iM=MM.reason)&&void 0!==iM?iM:"none"}, from ${null!==(OM=MM.source)&&void 0!==OM?OM:"none"}, storage pull breaks ${CM(MM.storagePullBreaks)}; packs run ${CM("webgpu"===MM.backend)}, else ${MM.noWebGpu}`
     }
 
-    function mG(GG, bG, ZG) {
-      return `pack ${null===GG?"(name not read)":oG(GG,zG)} ${bG}${null===ZG?"":`, ${ZG} variants`}`
+    function gM(MM, rM, iM) {
+      return `pack ${null===MM?"(name not read)":GM(MM,EM)} ${rM}${null===iM?"":`, ${iM} variants`}`
     }
-    const IG = "shaderPack:failedWebGpuOff",
-      FG = new class {
+    const uM = "shaderPack:failedWebGpuOff",
+      RM = new class {
         constructor() {
           this.joins = 0, this.losses = 0, this.noPackSaid = !1
         }
@@ -75,170 +75,170 @@ export const modules = {
           return this.joins++, this.joins <= 5 ? "detail" : this.joins <= 30 ? "outcome" : 31 === this.joins ? "cap" : "none"
         }
         noPack() {
-          const GG = !this.noPackSaid;
-          return this.noPackSaid = !0, GG
+          const MM = !this.noPackSaid;
+          return this.noPackSaid = !0, MM
         }
         loss() {
           return this.losses++, this.losses <= 10 ? "line" : 11 === this.losses ? "cap" : "none"
         }
       };
-    let vG = null,
-      aG = null,
-      cG = 0;
+    let pM = null,
+      WM = null,
+      sM = 0;
 
-    function lG(GG) {
-      (0, hG.j)("webgpuloss", GG)
+    function DM(MM) {
+      (0, JM.k)("webgpuloss", MM)
     }
 
-    function jG() {
+    function kM() {
       return {
-        lossHolds: (0, QG.I)(),
-        lossStopsPack: (0, QG.T)(),
-        anyLoss: (0, QG.k)(),
-        oldIntelDriver: !0 === pG.h.getItem(fG.B),
-        defaultOffForPacks: SG.e.isWebGpuDefaultOff(),
-        defaultOffReason: SG.e.webGpuDefaultOffReason(),
-        settingStored: pG.h.getItem(wG.Cc),
-        setting: SG.e.get("clientEscMenuOptions").useWebGpu,
-        urlRenderer: YG.currentUrl.getSearchParam(VG.b),
-        storedRenderer: pG.h.getItem(VG.c)
+        lossHolds: (0, HM.y)(),
+        lossStopsPack: (0, HM.D)(),
+        anyLoss: (0, HM.k)(),
+        oldIntelDriver: !0 === LM.g.getItem(mM.N),
+        defaultOffForPacks: SM.d.isWebGpuDefaultOff(),
+        defaultOffReason: SM.d.webGpuDefaultOffReason(),
+        settingStored: LM.g.getItem(OM.fc),
+        setting: SM.d.get("clientEscMenuOptions").useWebGpu,
+        urlRenderer: QM.currentUrl.getSearchParam(zM.d),
+        storedRenderer: LM.g.getItem(zM.h)
       }
     }
 
-    function PG(GG) {
-      return function(GG, bG, ZG) {
-        if (null === GG || void 0 === GG) return "none";
-        if ("object" !== typeof GG) return `unreadable (${typeof GG})`;
-        const wG = GG,
-          SG = "number" === typeof wG.at ? wG.at : null,
-          LG = ["browser " + (bG ? "this one" : "another"), null === SG ? "no time" : `set ${((ZG-SG)/dG.m).toFixed(1)} h ago`, `losses ${"number"===typeof wG.losses?wG.losses:"unset (1)"}${null!==SG&&ZG-SG<dG.j?", the last within a day":""}`, `first page ${"hidden"===wG.firstPage||"visible"===wG.firstPage?wG.firstPage:"unset (visible)"}`, `hold step ${"number"===typeof wG.holdStep?wG.holdStep:"unset (1)"}`];
-        if (void 0 !== wG.reason || void 0 !== wG.message) {
-          const GG = "string" === typeof wG.reason ? oG(wG.reason, JG.e) : "no reason";
-          LG.push(`cause ${GG} ${!0===wG.causeSent?"reported":"unreported"}`)
+    function ZM(MM) {
+      return function(MM, rM, iM) {
+        if (null === MM || void 0 === MM) return "none";
+        if ("object" !== typeof MM) return `unreadable (${typeof MM})`;
+        const OM = MM,
+          SM = "number" === typeof OM.at ? OM.at : null,
+          jM = ["browser " + (rM ? "this one" : "another"), null === SM ? "no time" : `set ${((iM-SM)/dM.m).toFixed(1)} h ago`, `losses ${"number"===typeof OM.losses?OM.losses:"unset (1)"}${null!==SM&&iM-SM<dM.i?", the last within a day":""}`, `first page ${"hidden"===OM.firstPage||"visible"===OM.firstPage?OM.firstPage:"unset (visible)"}`, `hold step ${"number"===typeof OM.holdStep?OM.holdStep:"unset (1)"}`];
+        if (void 0 !== OM.reason || void 0 !== OM.message) {
+          const MM = "string" === typeof OM.reason ? GM(OM.reason, yM.b) : "no reason";
+          jM.push(`cause ${MM} ${!0===OM.causeSent?"reported":"unreported"}`)
         }
-        return LG.join(", ")
-      }(GG, function(GG) {
+        return jM.join(", ")
+      }(MM, function(MM) {
         try {
-          return "object" === typeof GG && null !== GG && GG.browser === (0, QG.g)()
+          return "object" === typeof MM && null !== MM && MM.browser === (0, HM.j)()
         } catch {
           return !1
         }
-      }(GG), Date.now())
+      }(MM), Date.now())
     }
 
-    function MG() {
-      const GG = (0, QG.v)().now;
-      return "number" === typeof(null === GG || void 0 === GG ? void 0 : GG.losses) ? GG.losses : null
+    function oM() {
+      const MM = (0, HM.n)().now;
+      return "number" === typeof(null === MM || void 0 === MM ? void 0 : MM.losses) ? MM.losses : null
     }
 
-    function AG() {
+    function fM() {
       const {
-        atLoad: GG,
-        now: bG,
-        unreported: ZG
-      } = (0, QG.v)(), wG = JSON.stringify(GG) === JSON.stringify(bG) ? "vQ" : `now ${PG(bG)}`;
-      lG(`load (${kG.B?"wasm":"js"}, os ${(0,UG.getOperatingSystem)()}): stored loss ${PG(GG)}; ${wG}; cause kept apart ${function(GG,bG){if(null===GG||void 0===GG)return"none";const{reason:ZG,at:wG}="object"===typeof GG?GG:{},SG="number"===typeof wG?`
+        atLoad: MM,
+        now: rM,
+        unreported: iM
+      } = (0, HM.n)(), OM = JSON.stringify(MM) === JSON.stringify(rM) ? "ML" : `now ${ZM(rM)}`;
+      DM(`load (${PM.H?"wasm":"js"}, os ${(0,nM.getOperatingSystem)()}): stored loss ${ZM(MM)}; ${OM}; cause kept apart ${function(MM,rM){if(null===MM||void 0===MM)return"none";const{reason:iM,at:OM}="object"===typeof MM?MM:{},SM="number"===typeof OM?`
         set $ {
-          ((bG - wG) / dG.m).toFixed(1)
+          ((rM - OM) / dM.m).toFixed(1)
         }
         h ago`:"no time";return`
         $ {
-          "string" === typeof ZG ? oG(ZG, JG.e) : "no reason"
+          "string" === typeof iM ? GM(iM, yM.b) : "no reason"
         }, $ {
-          SG
+          SM
         }
-        `}((0,KG.k)(),Date.now())}; unreported ${function(GG,bG){if(null===GG||void 0===GG||"object"!==typeof GG)return"none";const ZG=GG;return bG.map((GG=>`${GG} ${"number"===typeof ZG[GG]?ZG[GG]:0}`)).join(", ")}(ZG,QG.e)}; webgpu_loss_page ${QG.M}`), lG(`load: ${uG(jG())}; pack expected ${(0,yG.e)(UG.featureFlags.settings.canUseShaderPacks)?"yes":"no"}; WebGPU API ${"gpu"in navigator?"yes":"no"}`)
+        `}((0,hM.h)(),Date.now())}; unreported ${function(MM,rM){if(null===MM||void 0===MM||"object"!==typeof MM)return"none";const iM=MM;return rM.map((MM=>`${MM} ${"number"===typeof iM[MM]?iM[MM]:0}`)).join(", ")}(iM,HM.g)}; webgpu_loss_page ${HM.A}`), DM(`load: ${eM(kM())}; pack expected ${(0,aM.d)(nM.featureFlags.settings.canUseShaderPacks)?"yes":"no"}; WebGPU API ${"gpu"in navigator?"yes":"no"}`)
     }
 
-    function sG(GG) {
-      vG = GG, lG(function(GG, bG, ZG) {
-        const wG = GG.setting ? "the setting is on" : (0, rG.b)(GG.packActive, GG.defaultOffForPacks) ? "the pack forces it" : GG.packActive ? "the pack can't force it: default off for packs" : "no active pack, setting off";
-        return `engine (js): useWebGpu ${XG(GG.useWebGpu)} (${wG}); ${iG(bG)}; webgpu fallback ${null!==ZG&&void 0!==ZG?ZG:"unset"}`
-      }(GG, (0, LG.k)(), (0, UG.getWebGpuFallbackReason)()))
+    function YM(MM) {
+      pM = MM, DM(function(MM, rM, iM) {
+        const OM = MM.setting ? "the setting is on" : (0, lM.e)(MM.packActive, MM.defaultOffForPacks) ? "the pack forces it" : MM.packActive ? "the pack can't force it: default off for packs" : "no active pack, setting off";
+        return `engine (js): useWebGpu ${CM(MM.useWebGpu)} (${OM}); ${bM(rM)}; webgpu fallback ${null!==iM&&void 0!==iM?iM:"unset"}`
+      }(MM, (0, jM.i)(), (0, nM.getWebGpuFallbackReason)()))
     }
 
-    function qG(GG) {
-      aG = GG, lG(WG(GG))
+    function NM(MM) {
+      WM = MM, DM(tM(MM))
     }
-    async function nG(GG, bG, wG, SG) {
-      const LG = ++cG,
-        yG = await async function(GG) {
-          var bG, wG;
+    async function AM(MM, rM, OM, SM) {
+      const jM = ++sM,
+        aM = await async function(MM) {
+          var rM, OM;
           const [{
-            shaderPackPage: SG,
-            harnessShaderPackMode: LG
+            shaderPackPage: SM,
+            harnessShaderPackMode: jM
           }, {
-            getShaderPackPolicy: yG
+            getShaderPackPolicy: aM
           }, {
-            packRunsIn: kG
-          }] = await Promise.all([ZG.e(117).then((() => ZG(39633))), ZG.e(93).then((() => ZG(41687))), ZG.e(141).then((() => ZG(41695)))]), UG = await SG.load();
-          if ("none" === UG.status) return null;
-          const YG = null !== (bG = LG()) && void 0 !== bG ? bG : yG(GG),
-            VG = "active" === UG.status ? UG.pack.variants : UG.variants,
-            pG = kG(VG, YG);
+            packRunsIn: PM
+          }] = await Promise.all([iM.e(129).then((() => iM(40300))), iM.e(106).then((() => iM(43937))), iM.e(154).then((() => iM(43945)))]), nM = await SM.load();
+          if ("none" === nM.status) return null;
+          const QM = null !== (rM = jM()) && void 0 !== rM ? rM : aM(MM),
+            zM = "active" === nM.status ? nM.pack.variants : nM.variants,
+            LM = PM(zM, QM);
           return {
-            text: `${"active"===UG.status?mG(UG.pack.name,"active",VG.length):mG(null,`blocked (${UG.messageKey})`,null!==(wG=null===VG||void 0===VG?void 0:VG.length)&&void 0!==wG?wG:null)}; game policy ${YG}, runs in it ${pG?"yes":"no"}`,
-            runs: pG
+            text: `${"active"===nM.status?gM(nM.pack.name,"active",zM.length):gM(null,`blocked (${nM.messageKey})`,null!==(OM=null===zM||void 0===zM?void 0:zM.length)&&void 0!==OM?OM:null)}; game policy ${QM}, runs in it ${LM?"yes":"no"}`,
+            runs: LM
           }
-        }(GG);
-      if (null === yG) return void(FG.noPack() && lG(`join ${LG}: no shader pack on this page (further joins without one not logged)`));
-      const kG = FG.join();
-      if ("none" === kG) return;
-      if ("cap" === kG) return void lG(`join ${LG}: further joins not logged`);
-      const UG = function(GG) {
-          switch (GG.status) {
+        }(MM);
+      if (null === aM) return void(RM.noPack() && DM(`join ${jM}: no shader pack on this page (further joins without one not logged)`));
+      const PM = RM.join();
+      if ("none" === PM) return;
+      if ("cap" === PM) return void DM(`join ${jM}: further joins not logged`);
+      const nM = function(MM) {
+          switch (MM.status) {
             case "ok":
-              return void 0 === GG.couldntRun ? "joined" : `joined without the pack: ${GG.couldntRun}`;
-            case "RZ":
-              return "RZ";
+              return void 0 === MM.couldntRun ? "joined" : `joined without the pack: ${MM.couldntRun}`;
+            case "Ti":
+              return "Ti";
             case "failed":
-              return `failed: ${GG.messageKey}`
+              return `failed: ${MM.messageKey}`
           }
-        }(bG),
-        YG = ("ok" === bG.status ? bG.couldntRun : "failed" === bG.status ? bG.messageKey : void 0) === IG ? `; cause: ${SG()}` : "";
-      "outcome" !== kG ? (lG(`join ${LG}: ${yG.text}`), yG.runs && (lG(`join ${LG}: needs WebGPU; ${wG()}`), lG(`join ${LG}: ${uG(jG())}`)), lG(`join ${LG}: ${UG}${YG}`)) : lG(`join ${LG}: ${UG}${YG}`)
+        }(rM),
+        QM = ("ok" === rM.status ? rM.couldntRun : "failed" === rM.status ? rM.messageKey : void 0) === uM ? `; cause: ${SM()}` : "";
+      "outcome" !== PM ? (DM(`join ${jM}: ${aM.text}`), aM.runs && (DM(`join ${jM}: needs WebGPU; ${OM()}`), DM(`join ${jM}: ${eM(kM())}`)), DM(`join ${jM}: ${nM}${QM}`)) : DM(`join ${jM}: ${nM}${QM}`)
     }
 
-    function gG(GG, bG, ZG) {
-      var wG;
-      const SG = null !== (wG = null === bG || void 0 === bG ? void 0 : bG.isRunning()) && void 0 !== wG && wG;
-      return nG(GG, ZG, (() => `Lite runtime ${null===bG?"no":"yes, running "+(SG?"yes":"no")}; ${iG((0,LG.k)())}`), (() => {
-        return GG = vG, bG = jG(), ZG = "ios" === (0, UG.getOperatingSystem)(), wG = MG(), null === GG ? "engine choice not seen" : GG.packActive ? (0, rG.b)(GG.packActive, GG.defaultOffForPacks) ? "the pack forced WebGPU, yet nothing asked for a renderer: unexpected" : bG.lossStopsPack ? `a loss ${CG(ZG,wG)}` : "old Intel driver verdict, worded off as a loss is stored" : "no active pack when the engine was built, so nothing forced WebGPU; worded off as a loss is stored" + (bG.lossStopsPack ? "" : " (one that doesn't stop packs)");
-        var GG, bG, ZG, wG
+    function xM(MM, rM, iM) {
+      var OM;
+      const SM = null !== (OM = null === rM || void 0 === rM ? void 0 : rM.isRunning()) && void 0 !== OM && OM;
+      return AM(MM, iM, (() => `Lite runtime ${null===rM?"no":"yes, running "+(SM?"yes":"no")}; ${bM((0,jM.i)())}`), (() => {
+        return MM = pM, rM = kM(), iM = "ios" === (0, nM.getOperatingSystem)(), OM = oM(), null === MM ? "engine choice not seen" : MM.packActive ? (0, lM.e)(MM.packActive, MM.defaultOffForPacks) ? "the pack forced WebGPU, yet nothing asked for a renderer: unexpected" : rM.lossStopsPack ? `a loss ${wM(iM,OM)}` : "old Intel driver verdict, worded off as a loss is stored" : "no active pack when the engine was built, so nothing forced WebGPU; worded off as a loss is stored" + (rM.lossStopsPack ? "" : " (one that doesn't stop packs)");
+        var MM, rM, iM, OM
       }))
     }
 
-    function eG(GG, bG, ZG) {
-      return nG(GG, null !== bG ? {
+    function vM(MM, rM, iM) {
+      return AM(MM, null !== rM ? {
         status: "failed",
-        messageKey: bG
+        messageKey: rM
       } : {
         status: "ok",
-        couldntRun: null !== ZG && void 0 !== ZG ? ZG : void 0
-      }, (() => null === aG ? "pick not seen" : WG(aG)), (() => function(GG, bG, ZG, wG) {
-        var SG, LG, yG, kG;
-        return null === GG ? "pick not seen" : "off_after_loss" === GG.reason ? `off after a loss, ${"pack"===GG.source?CG(ZG,wG):`from ${null!==(kG=GG.source)&&void 0!==kG?kG:"none"}`}` : "not_requested" === GG.reason ? `not requested, from ${null!==(yG=GG.source)&&void 0!==yG?yG:"none"} (setting ${bG.setting?"on":"off"})` : `${null!==(SG=GG.reason)&&void 0!==SG?SG:"none"}, from ${null!==(LG=GG.source)&&void 0!==LG?LG:"none"}`
-      }(aG, jG(), "ios" === (0, UG.getOperatingSystem)(), MG())))
+        couldntRun: null !== iM && void 0 !== iM ? iM : void 0
+      }, (() => null === WM ? "pick not seen" : tM(WM)), (() => function(MM, rM, iM, OM) {
+        var SM, jM, aM, PM;
+        return null === MM ? "pick not seen" : "off_after_loss" === MM.reason ? `off after a loss, ${"pack"===MM.source?wM(iM,OM):`from ${null!==(PM=MM.source)&&void 0!==PM?PM:"none"}`}` : "not_requested" === MM.reason ? `not requested, from ${null!==(aM=MM.source)&&void 0!==aM?aM:"none"} (setting ${rM.setting?"on":"off"})` : `${null!==(SM=MM.reason)&&void 0!==SM?SM:"none"}, from ${null!==(jM=MM.source)&&void 0!==jM?jM:"none"}`
+      }(WM, kM(), "ios" === (0, nM.getOperatingSystem)(), oM())))
     }
 
-    function RG(GG, bG, ZG) {
-      const wG = FG.loss();
-      if ("none" === wG) return;
-      if ("cap" === wG) return void lG("further losses not logged");
-      const SG = jG();
-      lG(function(GG, bG, ZG, wG) {
-        return `loss (${GG}): ${bG}${null===ZG?"":` ${oG(ZG,EG)}`}; ${wG}`
-      }(GG, bG, ZG, `stored ${PG((0,QG.v)().now)}; holds ${SG.lossHolds?"yes":"no"}, stops packs ${SG.lossStopsPack?"yes":"no"}`))
+    function FM(MM, rM, iM) {
+      const OM = RM.loss();
+      if ("none" === OM) return;
+      if ("cap" === OM) return void DM("further losses not logged");
+      const SM = kM();
+      DM(function(MM, rM, iM, OM) {
+        return `loss (${MM}): ${rM}${null===iM?"":` ${GM(iM,UM)}`}; ${OM}`
+      }(MM, rM, iM, `stored ${ZM((0,HM.n)().now)}; holds ${SM.lossHolds?"yes":"no"}, stops packs ${SM.lossStopsPack?"yes":"no"}`))
     }
   },
-  34405: (GG, bG, ZG) => {
-    function wG(GG, bG) {
-      return GG && !bG
+  34954: (MM, rM, iM) => {
+    function OM(MM, rM) {
+      return MM && !rM
     }
-    ZG.d(bG, {
-      b: () => wG
+    iM.d(rM, {
+      e: () => OM
     })
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

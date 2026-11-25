@@ -1,74 +1,74 @@
-export const id = 61;
-export const ids = [61];
+export const id = 72;
+export const ids = [72];
 export const modules = {
-  37353: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => pG,
-      d: () => fG
+  37913: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => LM,
+      h: () => mM
     });
-    var wG = ZG(604),
-      SG = ZG(29),
-      LG = ZG(37301);
-    const yG = "replayFileKeptForReload",
-      kG = "replayFileKeptForReloadAt",
-      UG = "replayFileKeptForReloadTab",
-      YG = 3e5,
-      VG = 5e3;
-    async function pG(GG, bG) {
-      const ZG = Date.now(),
-        LG = {
-          at: ZG,
-          bytes: GG,
-          source: bG
+    var OM = iM(625),
+      SM = iM(30),
+      jM = iM(37872);
+    const aM = "replayFileKeptForReload",
+      PM = "replayFileKeptForReloadAt",
+      nM = "replayFileKeptForReloadTab",
+      QM = 3e5,
+      zM = 5e3;
+    async function LM(MM, rM) {
+      const iM = Date.now(),
+        jM = {
+          at: iM,
+          bytes: MM,
+          source: rM
         },
-        YG = await Promise.race([(async () => await SG.e.setItem(kG, ZG) && SG.e.setItem(yG, LG))(), (0, wG.R)(VG).then((() => !1))]);
-      YG || console.warn("The replay file couldn't be kept across the reload into a newer build: the reloaded page asks for it again");
-      const pG = {
-        at: ZG,
-        vQ: YG
+        QM = await Promise.race([(async () => await SM.f.setItem(PM, iM) && SM.f.setItem(aM, jM))(), (0, OM.Q)(zM).then((() => !1))]);
+      QM || console.warn("The replay file couldn't be kept across the reload into a newer build: the reloaded page asks for it again");
+      const LM = {
+        at: iM,
+        ML: QM
       };
-      SG.l.setItem(UG, pG)
+      SM.k.setItem(nM, LM)
     }
-    async function fG() {
-      var GG;
-      const bG = SG.l.getItem(UG);
-      null !== bG && SG.l.removeItem(UG);
-      const ZG = Date.now(),
-        wG = await SG.e.getItem(kG),
-        VG = null !== bG && ZG - bG.at <= YG,
-        pG = null !== bG && wG === bG.at;
-      let fG = null;
-      if (null !== wG && (pG || ("number" !== typeof wG || ZG - wG > YG)) && (fG = VG && pG && bG.vQ ? await SG.e.getItem(yG) : null, await Promise.all([SG.e.removeItem(kG), SG.e.removeItem(yG)])), !VG) return null;
-      if ((null === (GG = fG) || void 0 === GG ? void 0 : GG.at) !== bG.at) throw new Error(LG.e.replayNotKept.text);
+    async function mM() {
+      var MM;
+      const rM = SM.k.getItem(nM);
+      null !== rM && SM.k.removeItem(nM);
+      const iM = Date.now(),
+        OM = await SM.f.getItem(PM),
+        zM = null !== rM && iM - rM.at <= QM,
+        LM = null !== rM && OM === rM.at;
+      let mM = null;
+      if (null !== OM && (LM || ("number" !== typeof OM || iM - OM > QM)) && (mM = zM && LM && rM.ML ? await SM.f.getItem(aM) : null, await Promise.all([SM.f.removeItem(PM), SM.f.removeItem(aM)])), !zM) return null;
+      if ((null === (MM = mM) || void 0 === MM ? void 0 : MM.at) !== rM.at) throw new Error(jM.c.replayNotKept.text);
       return {
-        bytes: fG.bytes,
-        source: fG.source
+        bytes: mM.bytes,
+        source: mM.source
       }
     }
   },
-  37348: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => wG,
-      g: () => LG,
-      k: () => SG
+  37905: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM,
+      h: () => jM,
+      i: () => SM
     });
-    const wG = [9];
+    const OM = [9];
 
-    function SG(GG) {
-      return wG.includes(GG)
+    function SM(MM) {
+      return OM.includes(MM)
     }
 
-    function LG(GG) {
-      return null !== GG && GG >= 3 && GG < wG[0]
+    function jM(MM) {
+      return null !== MM && MM >= 3 && MM < OM[0]
     }
   },
-  37363: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => wG,
-      f: () => SG
+  37926: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => OM,
+      c: () => SM
     });
-    const wG = "data-replay-ui-active",
-      SG = [{
+    const OM = "data-replay-ui-active",
+      SM = [{
         group: "middleTextTop",
         dataAttr: "data-replay-hide-middle-text-top",
         label: "Middle text top"
@@ -118,66 +118,66 @@ export const modules = {
         label: "Everything else"
       }]
   },
-  37368: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => YG,
-      f: () => pG,
-      h: () => VG
+  37935: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => QM,
+      f: () => LM,
+      g: () => zM
     });
-    var wG = ZG(17),
-      SG = ZG(19),
-      LG = ZG(37363);
+    var OM = iM(19),
+      SM = iM(22),
+      jM = iM(37926);
 
-    function yG() {
-      const GG = {};
+    function aM() {
+      const MM = {};
       for (const {
-          group: bG
+          group: rM
         }
-        of LG.f) GG[bG] = !0;
-      return GG
+        of jM.c) MM[rM] = !0;
+      return MM
     }
-    let kG = yG();
+    let PM = aM();
 
-    function UG() {
-      SG.l.xh("replayViewer|uiVisibilityChanged")
-    }
-
-    function YG() {
-      return kG
+    function nM() {
+      SM.i.Tz("replayViewer|uiVisibilityChanged")
     }
 
-    function VG(GG, bG) {
-      kG[GG] !== bG && (kG = {
-        ...kG,
-        [GG]: bG
-      }, "nametag" === GG && wG.e.set({
-        areNametagsHidden: !bG
-      }), UG())
+    function QM() {
+      return PM
     }
 
-    function pG() {
-      kG = yG(), wG.e.set({
+    function zM(MM, rM) {
+      PM[MM] !== rM && (PM = {
+        ...PM,
+        [MM]: rM
+      }, "nametag" === MM && OM.d.set({
+        areNametagsHidden: !rM
+      }), nM())
+    }
+
+    function LM() {
+      PM = aM(), OM.d.set({
         areNametagsHidden: !1
-      }), UG()
+      }), nM()
     }
   },
-  61147: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      HOLD_TIMEOUT_MS: () => YG,
-      ReplayViewer: () => pG
+  63239: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      HOLD_TIMEOUT_MS: () => QM,
+      ReplayViewer: () => LM
     });
-    var wG = ZG(37301),
-      SG = ZG(37353),
-      LG = ZG(37348),
-      yG = ZG(37368),
-      kG = ZG(4810),
-      UG = ZG(43029);
-    const YG = 1e4,
-      VG = new Set(["OQ"]);
-    class pG {
-      constructor(GG) {
-        var bG;
-        this.deps = GG, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (bG = GG.now) && void 0 !== bG ? bG : () => performance.now()
+    var OM = iM(37872),
+      SM = iM(37913),
+      jM = iM(37905),
+      aM = iM(37935),
+      PM = iM(5198),
+      nM = iM(53658);
+    const QM = 1e4,
+      zM = new Set(["nh"]);
+    class LM {
+      constructor(MM) {
+        var rM;
+        this.deps = MM, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (rM = MM.now) && void 0 !== rM ? rM : () => performance.now()
       }
       get inPlayback() {
         return this.playback
@@ -186,123 +186,123 @@ export const modules = {
         return this.lastView
       }
       get isOpen() {
-        return null !== this.lastView && this.lastView.state !== kG.sd.None
+        return null !== this.lastView && this.lastView.state !== PM.hd.None
       }
       get keyframes() {
         return this.deps.client.keyframes()
       }
-      get Ik() {
+      get sQ() {
         return [...this.holds.keys()]
       }
       get savePending() {
         return null !== this.pendingSave
       }
       get saveRefusal() {
-        return this.cropping ? wG.e.cropBusy.text : null
+        return this.cropping ? OM.c.cropBusy.text : null
       }
       get cropping() {
         return this.cropAsked || this.cropRunning
       }
-      async open(GG, bG) {
-        var ZG, LG, yG, UG;
+      async open(MM, rM) {
+        var iM, jM, aM, nM;
         const {
-          client: YG
+          client: QM
         } = this.deps;
         if (!this.playback) {
-          if (!YG.setPlayback(!0)) throw new Error(wG.e.cantOpen.text);
+          if (!QM.setPlayback(!0)) throw new Error(OM.c.cantOpen.text);
           this.playback = !0
         }
         this.hold("opening"), this.loadingOpens++;
-        const VG = this.epoch;
-        let pG;
+        const zM = this.epoch;
+        let LM;
         try {
-          pG = await YG.open(GG, (() => (0, SG.c)(GG, bG)))
+          LM = await QM.open(MM, (() => (0, SM.d)(MM, rM)))
         } finally {
           this.loadingOpens--
         }
-        if (VG !== this.epoch && "reloading" !== pG) throw new Error(wG.e.coreStopped.text);
-        if ("opening" !== pG) {
+        if (zM !== this.epoch && "reloading" !== LM) throw new Error(OM.c.coreStopped.text);
+        if ("opening" !== LM) {
           this.opening || 0 !== this.loadingOpens || this.release("opening");
-          const GG = function(GG) {
-            switch (GG) {
+          const MM = function(MM) {
+            switch (MM) {
               case "reloading":
                 return null;
               case "stopped":
-              case kG.ld.ModuleTrap:
-                return wG.e.coreStopped;
-              case kG.ld.ModuleLoad:
-                return wG.e.viewerLoadFailed;
-              case kG.ld.TooLarge:
-                return wG.e.cantOpen
+              case PM.Zc.ModuleTrap:
+                return OM.c.coreStopped;
+              case PM.Zc.ModuleLoad:
+                return OM.c.viewerLoadFailed;
+              case PM.Zc.TooLarge:
+                return OM.c.cantOpen
             }
-          }(pG);
-          if (null === GG) return;
-          throw new Error(GG.text)
+          }(LM);
+          if (null === MM) return;
+          throw new Error(MM.text)
         }
-        return this.rejectSave(new Error(wG.e.saveClosed.text)), this.fileName = null !== (ZG = null !== (LG = bG.fileName) && void 0 !== LG ? LG : null === (yG = bG.fileHandle) || void 0 === yG ? void 0 : yG.name) && void 0 !== ZG ? ZG : null, this.fileHandle = null !== (UG = bG.fileHandle) && void 0 !== UG ? UG : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((GG, bG) => {
+        return this.rejectSave(new Error(OM.c.saveClosed.text)), this.fileName = null !== (iM = null !== (jM = rM.fileName) && void 0 !== jM ? jM : null === (aM = rM.fileHandle) || void 0 === aM ? void 0 : aM.name) && void 0 !== iM ? iM : null, this.fileHandle = null !== (nM = rM.fileHandle) && void 0 !== nM ? nM : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((MM, rM) => {
           this.pendingOpen = {
-            resolve: GG,
-            reject: bG
+            resolve: MM,
+            reject: rM
           }
         }))
       }
       play() {
-        this.holds.has("OQ") || this.deps.client.play()
+        this.holds.has("nh") || this.deps.client.play()
       }
       pause() {
         this.deps.client.pause()
       }
       holdForShaderPackFailure() {
-        this.isOpen && this.pause(), this.hold("OQ")
+        this.isOpen && this.pause(), this.hold("nh")
       }
-      seek(GG) {
-        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const ZG = this.lastView;
-        null !== ZG && (bG || GG < ZG.Tp) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(GG, bG)
+      seek(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const iM = this.lastView;
+        null !== iM && (rM || MM < iM.bL) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(MM, rM)
       }
-      setSpeed(GG) {
-        this.deps.client.setSpeed(GG)
+      setSpeed(MM) {
+        this.deps.client.setSpeed(MM)
       }
-      setCameraMode(GG) {
-        this.deps.client.setCameraMode(GG)
+      setCameraMode(MM) {
+        this.deps.client.setCameraMode(MM)
       }
       cycleCameraMode() {
-        const GG = this.lastView;
-        null !== GG && GG.state !== kG.sd.None && this.setCameraMode(UG.b[(UG.b.indexOf(GG.cameraMode) + 1) % UG.b.length])
+        const MM = this.lastView;
+        null !== MM && MM.state !== PM.hd.None && this.setCameraMode(nM.c[(nM.c.indexOf(MM.cameraMode) + 1) % nM.c.length])
       }
       addKeyframe() {
         this.edited(this.deps.client.addKeyframe())
       }
-      setKeyframe(GG) {
-        this.edited(this.deps.client.setKeyframe(GG))
+      setKeyframe(MM) {
+        this.edited(this.deps.client.setKeyframe(MM))
       }
-      moveKeyframe(GG, bG) {
-        this.edited(this.deps.client.moveKeyframe(GG, bG))
+      moveKeyframe(MM, rM) {
+        this.edited(this.deps.client.moveKeyframe(MM, rM))
       }
-      deleteKeyframes(GG, bG) {
-        this.edited(this.deps.client.deleteKeyframes(GG, bG))
+      deleteKeyframes(MM, rM) {
+        this.edited(this.deps.client.deleteKeyframes(MM, rM))
       }
-      setMark(GG) {
-        this.edited(this.deps.client.setMark(GG))
+      setMark(MM) {
+        this.edited(this.deps.client.setMark(MM))
       }
-      crop(GG, bG) {
-        return !(bG <= GG) && (null !== this.pendingSave ? (this.deps.notify(wG.e.saveBusy), !1) : !!this.deps.client.crop(GG, bG) && (this.cropAsked = !0, this.hold("crop"), !0))
+      crop(MM, rM) {
+        return !(rM <= MM) && (null !== this.pendingSave ? (this.deps.notify(OM.c.saveBusy), !1) : !!this.deps.client.crop(MM, rM) && (this.cropAsked = !0, this.hold("crop"), !0))
       }
       save() {
-        return null !== this.pendingSave ? Promise.reject(new Error(wG.e.saveBusy.text)) : new Promise(((GG, bG) => {
-          const ZG = {
-            resolve: GG,
-            reject: bG
+        return null !== this.pendingSave ? Promise.reject(new Error(OM.c.saveBusy.text)) : new Promise(((MM, rM) => {
+          const iM = {
+            resolve: MM,
+            reject: rM
           };
-          this.pendingSave = ZG, this.editsAtSave = this.edits, this.deps.client.save((0, UG.d)()).then((GG => {
-            this.pendingSave === ZG && this.saveStarted(GG)
-          }), (GG => {
-            this.pendingSave === ZG && this.rejectSave(GG instanceof Error ? GG : new Error(String(GG)))
+          this.pendingSave = iM, this.editsAtSave = this.edits, this.deps.client.save((0, nM.e)()).then((MM => {
+            this.pendingSave === iM && this.saveStarted(MM)
+          }), (MM => {
+            this.pendingSave === iM && this.rejectSave(MM instanceof Error ? MM : new Error(String(MM)))
           }))
         }))
       }
-      saveStarted(GG) {
-        switch (GG) {
+      saveStarted(MM) {
+        switch (MM) {
           case "sealing":
             return;
           case "busy":
@@ -313,40 +313,40 @@ export const modules = {
             return void this.saveFailed(!1)
         }
       }
-      markSaved(GG, bG) {
-        var ZG, wG;
-        this.fileHandle = GG, this.fileName = null !== (ZG = null !== (wG = null === GG || void 0 === GG ? void 0 : GG.name) && void 0 !== wG ? wG : bG) && void 0 !== ZG ? ZG : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
+      markSaved(MM, rM) {
+        var iM, OM;
+        this.fileHandle = MM, this.fileName = null !== (iM = null !== (OM = null === MM || void 0 === MM ? void 0 : MM.name) && void 0 !== OM ? OM : rM) && void 0 !== iM ? iM : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
       }
       end() {
-        this.epoch++, this.resetInFlight(), this.releaseAll(), this.settleOpen(new Error(wG.e.coreStopped.text)), this.rejectSave(new Error(wG.e.saveClosed.text)), this.lastView = null, this.deps.onChange()
+        this.epoch++, this.resetInFlight(), this.releaseAll(), this.settleOpen(new Error(OM.c.coreStopped.text)), this.rejectSave(new Error(OM.c.saveClosed.text)), this.lastView = null, this.deps.onChange()
       }
       afterFrame() {
-        var GG, bG, ZG;
-        const wG = this.deps.client.view(),
-          SG = wG !== this.lastView;
-        this.lastView = wG, this.opening && null !== wG && wG.state !== kG.sd.None && wG.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, yG.f)()), this.cropAsked ? (this.cropAsked = !1, null !== wG && wG.state === kG.sd.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== wG && wG.state !== kG.sd.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
-        const LG = 0 === this.settleFrames && 0 === (null !== (GG = null === (bG = (ZG = this.deps).meshPending) || void 0 === bG ? void 0 : bG.call(ZG)) && void 0 !== GG ? GG : 0);
-        this.holds.has("opening") && !this.opening && 0 === this.loadingOpens && LG && this.release("opening"), this.holds.has("seek") && LG && this.release("seek"), this.holds.has("crop") && !this.cropRunning && LG && this.release("crop");
-        const UG = this.now();
-        for (const [yG, kG] of this.holds) !VG.has(yG) && UG - kG >= YG && this.release(yG);
-        this.saveRefused && !this.cropping && this.saveFailed(!1), SG && this.deps.onChange()
+        var MM, rM, iM;
+        const OM = this.deps.client.view(),
+          SM = OM !== this.lastView;
+        this.lastView = OM, this.opening && null !== OM && OM.state !== PM.hd.None && OM.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, aM.f)()), this.cropAsked ? (this.cropAsked = !1, null !== OM && OM.state === PM.hd.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== OM && OM.state !== PM.hd.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
+        const jM = 0 === this.settleFrames && 0 === (null !== (MM = null === (rM = (iM = this.deps).meshPending) || void 0 === rM ? void 0 : rM.call(iM)) && void 0 !== MM ? MM : 0);
+        this.holds.has("opening") && !this.opening && 0 === this.loadingOpens && jM && this.release("opening"), this.holds.has("seek") && jM && this.release("seek"), this.holds.has("crop") && !this.cropRunning && jM && this.release("crop");
+        const nM = this.now();
+        for (const [aM, PM] of this.holds) !zM.has(aM) && nM - PM >= QM && this.release(aM);
+        this.saveRefused && !this.cropping && this.saveFailed(!1), SM && this.deps.onChange()
       }
       cropped() {
-        (0, yG.f)(), this.id++, this.unsavedChanges = !0, this.suggestSaveAs = null !== this.fileHandle || null !== this.fileName, this.settleFrames = 2
+        (0, aM.f)(), this.id++, this.unsavedChanges = !0, this.suggestSaveAs = null !== this.fileHandle || null !== this.fileName, this.settleFrames = 2
       }
-      onFailed(GG) {
-        switch (GG.reason) {
-          case kG.ld.TooLarge:
+      onFailed(MM) {
+        switch (MM.reason) {
+          case PM.Zc.TooLarge:
             break;
-          case kG.ld.Open:
-          case kG.ld.NothingStaged: {
+          case PM.Zc.Open:
+          case PM.Zc.NothingStaged: {
             this.opening = !1, this.release("opening");
-            const bG = (0, LG.g)(GG.version) ? wG.e.replayTooOld : wG.e.cantOpen;
-            null === this.pendingOpen && this.deps.notify(bG), this.settleOpen(new Error(bG.text));
+            const rM = (0, jM.h)(MM.version) ? OM.c.replayTooOld : OM.c.cantOpen;
+            null === this.pendingOpen && this.deps.notify(rM), this.settleOpen(new Error(rM.text));
             break
           }
-          case kG.ld.Crop:
-            if (GG.code === kG.id.Busy) {
+          case PM.Zc.Crop:
+            if (MM.code === PM.Xc.Busy) {
               this.cropBusy();
               break
             }
@@ -354,54 +354,54 @@ export const modules = {
               this.saveFailed(!1);
               break
             }
-            this.cropAsked = !1, this.cropRunning = !1, this.release("crop"), this.deps.notify(wG.e.cropFailed);
+            this.cropAsked = !1, this.cropRunning = !1, this.release("crop"), this.deps.notify(OM.c.cropFailed);
             break;
-          case kG.ld.ModuleTrap:
-          case kG.ld.ModuleLoad:
-          case kG.ld.Port:
-            this.moduleEnded(GG.reason === kG.ld.ModuleTrap ? wG.e.coreStopped : wG.e.cantOpen);
+          case PM.Zc.ModuleTrap:
+          case PM.Zc.ModuleLoad:
+          case PM.Zc.Port:
+            this.moduleEnded(MM.reason === PM.Zc.ModuleTrap ? OM.c.coreStopped : OM.c.cantOpen);
             break;
-          case kG.ld.NotLive:
+          case PM.Zc.NotLive:
             console.warn("[bloxd-wasm-client] the core refused a recorder command in playback");
             break;
           default:
-            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${GG.reason})`), this.seekAsked = !1, this.release("seek")
+            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${MM.reason})`), this.seekAsked = !1, this.release("seek")
         }
         this.deps.onChange()
       }
-      moduleEnded(GG) {
-        this.resetInFlight(), this.release("opening"), this.release("seek"), this.release("crop"), null === this.pendingOpen && this.deps.notify(GG), this.settleOpen(new Error(GG.text))
+      moduleEnded(MM) {
+        this.resetInFlight(), this.release("opening"), this.release("seek"), this.release("crop"), null === this.pendingOpen && this.deps.notify(MM), this.settleOpen(new Error(MM.text))
       }
-      saveDone(GG) {
-        const bG = this.pendingSave;
-        this.pendingSave = null, this.saveRefused = !1, null === bG || void 0 === bG || bG.resolve(GG)
+      saveDone(MM) {
+        const rM = this.pendingSave;
+        this.pendingSave = null, this.saveRefused = !1, null === rM || void 0 === rM || rM.resolve(MM)
       }
-      saveFailed(GG) {
-        this.rejectSave(new Error(GG ? wG.e.saveBusy.text : "The replay couldn't be saved"))
+      saveFailed(MM) {
+        this.rejectSave(new Error(MM ? OM.c.saveBusy.text : "The replay couldn't be saved"))
       }
-      edited(GG) {
-        GG && !this.cropping && (this.edits++, this.unsavedChanges = !0, this.deps.onChange())
+      edited(MM) {
+        MM && !this.cropping && (this.edits++, this.unsavedChanges = !0, this.deps.onChange())
       }
       cropBusy() {
-        null !== this.pendingSave && this.saveRefused ? this.rejectSave(new Error(wG.e.cropBusy.text)) : this.deps.notify(wG.e.cropBusy)
+        null !== this.pendingSave && this.saveRefused ? this.rejectSave(new Error(OM.c.cropBusy.text)) : this.deps.notify(OM.c.cropBusy)
       }
       resetInFlight() {
         this.opening = !1, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0
       }
-      settleOpen(GG) {
-        const bG = this.pendingOpen;
-        this.pendingOpen = null, null === GG ? null === bG || void 0 === bG || bG.resolve() : null === bG || void 0 === bG || bG.reject(GG)
+      settleOpen(MM) {
+        const rM = this.pendingOpen;
+        this.pendingOpen = null, null === MM ? null === rM || void 0 === rM || rM.resolve() : null === rM || void 0 === rM || rM.reject(MM)
       }
-      rejectSave(GG) {
-        const bG = this.pendingSave;
-        this.pendingSave = null, this.saveRefused = !1, null === bG || void 0 === bG || bG.reject(GG)
+      rejectSave(MM) {
+        const rM = this.pendingSave;
+        this.pendingSave = null, this.saveRefused = !1, null === rM || void 0 === rM || rM.reject(MM)
       }
-      hold(GG) {
-        const bG = 0 === this.holds.size;
-        this.holds.set(GG, this.now()), bG && this.deps.setHoldDraws(!0)
+      hold(MM) {
+        const rM = 0 === this.holds.size;
+        this.holds.set(MM, this.now()), rM && this.deps.setHoldDraws(!0)
       }
-      release(GG) {
-        this.holds.delete(GG) && 0 === this.holds.size && this.deps.setHoldDraws(!1)
+      release(MM) {
+        this.holds.delete(MM) && 0 === this.holds.size && this.deps.setHoldDraws(!1)
       }
       releaseAll() {
         this.holds.size > 0 && (this.holds.clear(), this.deps.setHoldDraws(!1))
@@ -410,4 +410,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

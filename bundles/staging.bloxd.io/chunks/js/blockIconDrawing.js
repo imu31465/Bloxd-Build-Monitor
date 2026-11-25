@@ -1,181 +1,186 @@
 export const id = 2;
 export const ids = [2];
 export const modules = {
-  36727: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      drawBlockIcon: () => JG,
-      drawBlockIconUrl: () => rG,
-      getDrawnBlockIcon: () => dG
+  37338: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      drawBlockIcon: () => lM,
+      drawBlockIconUrl: () => EM,
+      getDrawnBlockIcon: () => yM,
+      resetBlockIconDrawingForTests: () => hM
     });
-    var wG = ZG(36729);
-    const SG = {
+    var OM = iM(37344);
+    const SM = {
         boxes: [
           [0, 0, 0, 1, 1, 1]
         ],
         cropFaces: !1
       },
-      LG = {
+      jM = {
         boxes: [
           [0, 0, 0, 1, .5, 1]
         ],
         cropFaces: !1
       },
-      yG = {
+      aM = {
         boxes: [
           [0, 0, 0, 1, .5, 1],
           [0, .5, 0, .5, 1, 1]
         ],
         cropFaces: !0
       };
-    const kG = 1e-6;
+    const PM = 1e-6;
 
-    function UG(GG, bG, ZG, wG) {
+    function nM(MM, rM, iM, OM) {
       let {
-        origin: SG,
-        across: LG,
-        down: yG,
-        texture: UG,
-        rect: [YG, VG, pG, fG],
-        shade: QG
-      } = wG;
-      const KG = LG.x * yG.y - LG.y * yG.x;
-      if (Math.abs(KG) < 1e-9) return;
-      const hG = [SG.x, SG.x + LG.x, SG.x + yG.x, SG.x + LG.x + yG.x],
-        dG = [SG.y, SG.y + LG.y, SG.y + yG.y, SG.y + LG.y + yG.y],
-        JG = Math.max(0, Math.floor(Math.min(...hG))),
-        rG = Math.min(ZG - 1, Math.ceil(Math.max(...hG))),
-        zG = Math.max(0, Math.floor(Math.min(...dG))),
-        EG = Math.min(ZG - 1, Math.ceil(Math.max(...dG)));
-      for (let oG = zG; oG <= EG; oG++)
-        for (let wG = JG; wG <= rG; wG++) {
-          const hG = wG + .5 - SG.x,
-            dG = oG + .5 - SG.y,
-            JG = (hG * yG.y - dG * yG.x) / KG,
-            rG = (LG.x * dG - LG.y * hG) / KG;
-          if (JG < -kG || JG > 1 + kG || rG < -kG || rG > 1 + kG) continue;
-          const zG = oG * ZG + wG;
-          bG[zG] = 1;
-          const EG = YG + Math.min(Math.max(JG, 0), 1) * (pG - YG),
-            XG = VG + Math.min(Math.max(rG, 0), 1) * (fG - VG),
-            uG = Math.min(UG.width - 1, Math.floor(EG * UG.width)),
-            iG = 4 * (Math.min(UG.height - 1, Math.floor(XG * UG.height)) * UG.width + uG),
-            CG = UG.pixels[iG + 3] / 255;
-          if (0 === CG) continue;
-          const WG = 4 * zG,
-            mG = GG[WG + 3] / 255 * (1 - CG),
-            IG = CG + mG;
-          for (let bG = 0; bG < 3; bG++) GG[WG + bG] = (UG.pixels[iG + bG] * QG * CG + GG[WG + bG] * mG) / IG;
-          GG[WG + 3] = 255 * IG
+        origin: SM,
+        across: jM,
+        down: aM,
+        texture: nM,
+        rect: [QM, zM, LM, mM],
+        shade: HM
+      } = OM;
+      const hM = jM.x * aM.y - jM.y * aM.x;
+      if (Math.abs(hM) < 1e-9) return;
+      const JM = [SM.x, SM.x + jM.x, SM.x + aM.x, SM.x + jM.x + aM.x],
+        dM = [SM.y, SM.y + jM.y, SM.y + aM.y, SM.y + jM.y + aM.y],
+        yM = Math.max(0, Math.floor(Math.min(...JM))),
+        lM = Math.min(iM - 1, Math.ceil(Math.max(...JM))),
+        EM = Math.max(0, Math.floor(Math.min(...dM))),
+        UM = Math.min(iM - 1, Math.ceil(Math.max(...dM)));
+      for (let GM = EM; GM <= UM; GM++)
+        for (let OM = yM; OM <= lM; OM++) {
+          const JM = OM + .5 - SM.x,
+            dM = GM + .5 - SM.y,
+            yM = (JM * aM.y - dM * aM.x) / hM,
+            lM = (jM.x * dM - jM.y * JM) / hM;
+          if (yM < -PM || yM > 1 + PM || lM < -PM || lM > 1 + PM) continue;
+          const EM = GM * iM + OM;
+          rM[EM] = 1;
+          const UM = QM + Math.min(Math.max(yM, 0), 1) * (LM - QM),
+            CM = zM + Math.min(Math.max(lM, 0), 1) * (mM - zM),
+            eM = Math.min(nM.width - 1, Math.floor(UM * nM.width)),
+            bM = 4 * (Math.min(nM.height - 1, Math.floor(CM * nM.height)) * nM.width + eM),
+            wM = nM.pixels[bM + 3] / 255;
+          if (0 === wM) continue;
+          const tM = 4 * EM,
+            gM = MM[tM + 3] / 255 * (1 - wM),
+            uM = wM + gM;
+          for (let rM = 0; rM < 3; rM++) MM[tM + rM] = (nM.pixels[bM + rM] * HM * wM + MM[tM + rM] * gM) / uM;
+          MM[tM + 3] = 255 * uM
         }
     }
-    var YG = ZG(36733);
-    const VG = new Map,
-      pG = new Map,
-      fG = new Map,
-      QG = new Map;
+    var QM = iM(37353);
+    const zM = new Map,
+      LM = new Map,
+      mM = new Map,
+      HM = new Map;
 
-    function KG(GG, bG, ZG) {
-      return `${bG}|${ZG}|${GG}`
+    function hM() {
+      zM.clear(), LM.clear(), mM.clear(), HM.clear()
     }
 
-    function hG(GG, bG, ZG) {
-      let wG = GG.get(bG);
-      return void 0 === wG && (wG = ZG().catch((ZG => {
-        throw GG.delete(bG), ZG
-      })), GG.set(bG, wG)), wG
+    function JM(MM, rM, iM) {
+      return `${rM}|${iM}|${MM}`
     }
 
-    function dG(GG, bG) {
-      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return pG.get(KG(GG, bG, ZG))
+    function dM(MM, rM, iM) {
+      let OM = MM.get(rM);
+      return void 0 === OM && (OM = iM().catch((iM => {
+        throw MM.delete(rM), iM
+      })), MM.set(rM, OM)), OM
     }
 
-    function JG(GG, bG, ZG, wG) {
-      const SG = KG(GG, bG, ZG);
-      return hG(VG, SG, (async () => {
-        const LG = await zG(wG(GG), bG, ZG);
-        return pG.set(SG, LG), LG
+    function yM(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return LM.get(JM(MM, rM, iM))
+    }
+
+    function lM(MM, rM, iM, OM) {
+      const SM = JM(MM, rM, iM);
+      return dM(zM, SM, (async () => {
+        const jM = await UM(OM(MM), rM, iM);
+        return LM.set(SM, jM), jM
       }))
     }
 
-    function rG(GG, bG, ZG, wG) {
-      return hG(fG, KG(GG, bG, ZG), (async () => {
-        var SG;
-        const LG = wG(GG);
-        return null !== (SG = await (0, YG.e)(LG, bG, ZG)) && void 0 !== SG ? SG : (await zG(LG, bG, ZG)).toDataURL()
+    function EM(MM, rM, iM, OM) {
+      return dM(mM, JM(MM, rM, iM), (async () => {
+        var SM;
+        const jM = OM(MM);
+        return null !== (SM = await (0, QM.c)(jM, rM, iM)) && void 0 !== SM ? SM : (await UM(jM, rM, iM)).toDataURL()
       }))
     }
-    async function zG(GG, bG, ZG) {
+    async function UM(MM, rM, iM) {
       let {
-        top: kG,
-        left: YG,
-        right: VG,
-        itemType: pG
-      } = GG;
-      const [fG, QG, KG] = await Promise.all([EG(kG), EG(YG), EG(VG)]), hG = function(GG, bG, ZG, SG) {
-        const LG = (0, wG.l)(ZG, SG),
-          yG = LG * wG.d.across,
-          kG = LG * wG.d.down,
-          YG = LG * wG.d.up,
-          VG = Math.max(...bG.boxes.map((GG => GG[4]))),
-          pG = ZG / 2,
-          fG = kG + (ZG - kG - kG - VG * YG) / 2,
-          QG = (GG, bG, ZG) => ({
-            x: pG + (GG - ZG) * yG,
-            y: fG - kG + (GG + ZG) * kG + (VG - bG) * YG
+        top: PM,
+        left: QM,
+        right: zM,
+        itemType: LM
+      } = MM;
+      const [mM, HM, hM] = await Promise.all([GM(PM), GM(QM), GM(zM)]), JM = function(MM, rM, iM, SM) {
+        const jM = (0, OM.h)(iM, SM),
+          aM = jM * OM.c.across,
+          PM = jM * OM.c.down,
+          QM = jM * OM.c.up,
+          zM = Math.max(...rM.boxes.map((MM => MM[4]))),
+          LM = iM / 2,
+          mM = PM + (iM - PM - PM - zM * QM) / 2,
+          HM = (MM, rM, iM) => ({
+            x: LM + (MM - iM) * aM,
+            y: mM - PM + (MM + iM) * PM + (zM - rM) * QM
           }),
-          KG = (GG, ZG, wG, SG, LG, yG) => ({
-            origin: GG,
+          hM = (MM, iM, OM, SM, jM, aM) => ({
+            origin: MM,
             across: {
-              x: ZG.x - GG.x,
-              y: ZG.y - GG.y
+              x: iM.x - MM.x,
+              y: iM.y - MM.y
             },
             down: {
-              x: wG.x - GG.x,
-              y: wG.y - GG.y
+              x: OM.x - MM.x,
+              y: OM.y - MM.y
             },
-            texture: SG,
-            rect: bG.cropFaces ? LG : [0, 0, 1, 1],
-            shade: yG
+            texture: SM,
+            rect: rM.cropFaces ? jM : [0, 0, 1, 1],
+            shade: aM
           }),
-          hG = new Uint8ClampedArray(ZG * ZG * 4),
-          dG = new Uint8Array(ZG * ZG),
-          JG = wG.h;
-        for (const [wG, rG, zG, EG, oG, XG] of bG.boxes) {
-          const bG = KG(QG(EG, oG, XG), QG(EG, oG, zG), QG(EG, rG, XG), GG.right, [1 - XG, 1 - oG, 1 - zG, 1 - rG], JG.right),
-            SG = KG(QG(wG, oG, XG), QG(EG, oG, XG), QG(wG, rG, XG), GG.left, [wG, 1 - oG, EG, 1 - rG], JG.left),
-            LG = KG(QG(wG, oG, zG), QG(EG, oG, zG), QG(wG, oG, XG), GG.top, [wG, zG, EG, XG], JG.top);
-          for (const GG of [bG, SG, LG]) UG(hG, dG, ZG, GG)
+          JM = new Uint8ClampedArray(iM * iM * 4),
+          dM = new Uint8Array(iM * iM),
+          yM = OM.f;
+        for (const [OM, lM, EM, UM, GM, CM] of rM.boxes) {
+          const rM = hM(HM(UM, GM, CM), HM(UM, GM, EM), HM(UM, lM, CM), MM.right, [1 - CM, 1 - GM, 1 - EM, 1 - lM], yM.right),
+            SM = hM(HM(OM, GM, CM), HM(UM, GM, CM), HM(OM, lM, CM), MM.left, [OM, 1 - GM, UM, 1 - lM], yM.left),
+            jM = hM(HM(OM, GM, EM), HM(UM, GM, EM), HM(OM, GM, CM), MM.top, [OM, EM, UM, CM], yM.top);
+          for (const MM of [rM, SM, jM]) nM(JM, dM, iM, MM)
         }
-        return (0, wG.n)(hG, ZG, SG, (GG => 1 === dG[GG])), hG
+        return (0, OM.k)(JM, iM, SM, (MM => 1 === dM[MM])), JM
       }({
-        top: fG,
-        left: QG,
-        right: KG
-      }, function(GG) {
-        return "SlabBlock" === GG ? LG : "StairsBlock" === GG ? yG : SG
-      }(pG), bG, ZG), dG = document.createElement("canvas");
-      dG.width = bG, dG.height = bG;
-      const JG = dG.getContext("2d");
-      if (!JG) throw new Error("Failed to get 2D context");
-      return JG.putImageData(new ImageData(hG, bG, bG), 0, 0), dG
+        top: mM,
+        left: HM,
+        right: hM
+      }, function(MM) {
+        return "SlabBlock" === MM ? jM : "StairsBlock" === MM ? aM : SM
+      }(LM), rM, iM), dM = document.createElement("canvas");
+      dM.width = rM, dM.height = rM;
+      const yM = dM.getContext("2d");
+      if (!yM) throw new Error("Failed to get 2D context");
+      return yM.putImageData(new ImageData(JM, rM, rM), 0, 0), dM
     }
 
-    function EG(GG) {
-      return hG(QG, GG, (async () => {
-        const bG = await (0, YG.k)(GG),
-          ZG = document.createElement("canvas");
-        ZG.width = bG.width, ZG.height = bG.height;
-        const wG = ZG.getContext("2d");
-        if (!wG) throw new Error("Failed to get 2D context");
-        return wG.drawImage(bG, 0, 0), {
-          width: bG.width,
-          height: bG.height,
-          pixels: wG.getImageData(0, 0, bG.width, bG.height).data
+    function GM(MM) {
+      return dM(HM, MM, (async () => {
+        const rM = await (0, QM.h)(MM),
+          iM = document.createElement("canvas");
+        iM.width = rM.width, iM.height = rM.height;
+        const OM = iM.getContext("2d");
+        if (!OM) throw new Error("Failed to get 2D context");
+        return OM.drawImage(rM, 0, 0), {
+          width: rM.width,
+          height: rM.height,
+          pixels: OM.getImageData(0, 0, rM.width, rM.height).data
         }
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

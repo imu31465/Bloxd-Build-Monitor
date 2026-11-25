@@ -1,199 +1,199 @@
-export const id = 47;
-export const ids = [47];
+export const id = 53;
+export const ids = [53];
 export const modules = {
-  40012: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => UG,
-      g: () => LG,
-      i: () => SG
+  40757: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => nM,
+      f: () => jM,
+      g: () => SM
     });
-    const wG = 6e3;
+    const OM = 6e3;
 
-    function SG(GG, bG) {
-      return [Math.floor(GG[0] / bG) * bG, Math.floor(GG[1] / bG) * bG, Math.floor(GG[2] / bG) * bG]
+    function SM(MM, rM) {
+      return [Math.floor(MM[0] / rM) * rM, Math.floor(MM[1] / rM) * rM, Math.floor(MM[2] / rM) * rM]
     }
 
-    function LG(GG) {
-      const bG = (null !== GG && void 0 !== GG ? GG : "").match(/-?\d+(?:\.\d+)?/g);
-      return bG && bG.length >= 3 ? [Number(bG[0]), Number(bG[1]), Number(bG[2])] : null
+    function jM(MM) {
+      const rM = (null !== MM && void 0 !== MM ? MM : "").match(/-?\d+(?:\.\d+)?/g);
+      return rM && rM.length >= 3 ? [Number(rM[0]), Number(rM[1]), Number(rM[2])] : null
     }
 
-    function yG(GG, bG) {
-      return GG === bG ? String(GG) : `${GG}-${bG}`
+    function aM(MM, rM) {
+      return MM === rM ? String(MM) : `${MM}-${rM}`
     }
 
-    function kG(GG, bG, ZG, wG) {
-      const SG = [];
-      let LG = new Map;
-      for (let yG = GG[2]; yG < GG[2] + bG; yG++) {
-        const kG = new Map;
-        let UG = GG[0];
-        for (; UG < GG[0] + bG;) {
-          const SG = wG(UG, ZG, yG);
-          let YG = UG;
-          for (; YG + 1 < GG[0] + bG && wG(YG + 1, ZG, yG) === SG;) YG++;
-          if (null !== SG) {
-            const GG = `${UG} ${YG} ${SG}`,
-              bG = LG.get(GG);
-            bG ? (bG.z1 = yG, LG.delete(GG), kG.set(GG, bG)) : kG.set(GG, {
-              x0: UG,
-              x1: YG,
-              z0: yG,
-              z1: yG,
-              name: SG
+    function PM(MM, rM, iM, OM) {
+      const SM = [];
+      let jM = new Map;
+      for (let aM = MM[2]; aM < MM[2] + rM; aM++) {
+        const PM = new Map;
+        let nM = MM[0];
+        for (; nM < MM[0] + rM;) {
+          const SM = OM(nM, iM, aM);
+          let QM = nM;
+          for (; QM + 1 < MM[0] + rM && OM(QM + 1, iM, aM) === SM;) QM++;
+          if (null !== SM) {
+            const MM = `${nM} ${QM} ${SM}`,
+              rM = jM.get(MM);
+            rM ? (rM.z1 = aM, jM.delete(MM), PM.set(MM, rM)) : PM.set(MM, {
+              x0: nM,
+              x1: QM,
+              z0: aM,
+              z1: aM,
+              name: SM
             })
           }
-          UG = YG + 1
+          nM = QM + 1
         }
-        SG.push(...LG.values()), LG = kG
+        SM.push(...jM.values()), jM = PM
       }
-      return SG.push(...LG.values()), SG.sort(((GG, bG) => GG.z0 - bG.z0 || GG.x0 - bG.x0)).map((GG => `x${yG(GG.x0,GG.x1)} z${yG(GG.z0,GG.z1)} ${GG.name}`))
+      return SM.push(...jM.values()), SM.sort(((MM, rM) => MM.z0 - rM.z0 || MM.x0 - rM.x0)).map((MM => `x${aM(MM.x0,MM.x1)} z${aM(MM.z0,MM.z1)} ${MM.name}`))
     }
 
-    function UG(GG, bG, ZG, SG) {
-      let LG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : wG;
-      const UG = [GG[0] + bG - 1, GG[1] + bG - 1, GG[2] + bG - 1],
-        YG = null !== SG && SG.every(((bG, ZG) => Math.floor(bG) >= GG[ZG] && Math.floor(bG) <= UG[ZG])),
-        VG = [`The chunk from ${GG.join(" ")} to ${UG.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-      null !== SG && VG.push(`The player's feet are at ${SG.map(Math.floor).join(" ")}, ${YG?"in this chunk":"outside this chunk"}.`);
-      const pG = [];
-      for (let wG = GG[1]; wG <= UG[1]; wG++) {
-        const SG = kG(GG, bG, wG, ZG).join("; "),
-          LG = pG[pG.length - 1];
-        (null === LG || void 0 === LG ? void 0 : LG.boxes) === SG ? LG.to = wG : pG.push({
-          from: wG,
-          to: wG,
-          boxes: SG
+    function nM(MM, rM, iM, SM) {
+      let jM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : OM;
+      const nM = [MM[0] + rM - 1, MM[1] + rM - 1, MM[2] + rM - 1],
+        QM = null !== SM && SM.every(((rM, iM) => Math.floor(rM) >= MM[iM] && Math.floor(rM) <= nM[iM])),
+        zM = [`The chunk from ${MM.join(" ")} to ${nM.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+      null !== SM && zM.push(`The player's feet are at ${SM.map(Math.floor).join(" ")}, ${QM?"in this chunk":"outside this chunk"}.`);
+      const LM = [];
+      for (let OM = MM[1]; OM <= nM[1]; OM++) {
+        const SM = PM(MM, rM, OM, iM).join("; "),
+          jM = LM[LM.length - 1];
+        (null === jM || void 0 === jM ? void 0 : jM.boxes) === SM ? jM.to = OM : LM.push({
+          from: OM,
+          to: OM,
+          boxes: SM
         })
       }
-      const fG = pG.filter((GG => "" !== GG.boxes));
-      0 === fG.length && VG.push("It is all air.");
-      let QG = VG.join("\n").length;
-      for (const wG of fG) {
-        const GG = `y${yG(wG.from,wG.to)}: ${wG.boxes}`;
-        if (QG += GG.length + 1, QG > LG) {
-          VG.push(`Cut short: the layers from y${wG.from} up aren't shown, as there are too many blocks.`);
+      const mM = LM.filter((MM => "" !== MM.boxes));
+      0 === mM.length && zM.push("It is all air.");
+      let HM = zM.join("\n").length;
+      for (const OM of mM) {
+        const MM = `y${aM(OM.from,OM.to)}: ${OM.boxes}`;
+        if (HM += MM.length + 1, HM > jM) {
+          zM.push(`Cut short: the layers from y${OM.from} up aren't shown, as there are too many blocks.`);
           break
         }
-        VG.push(GG)
+        zM.push(MM)
       }
-      return VG.join("\n")
+      return zM.join("\n")
     }
   },
-  8839: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => SG
+  9392: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => SM
     });
-    var wG = ZG(17);
+    var OM = iM(19);
 
-    function SG() {
-      return !wG.e.get("isTouchScreen") && null !== document.pointerLockElement
+    function SM() {
+      return !OM.d.get("isTouchScreen") && null !== document.pointerLockElement
     }
   },
-  37309: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => yG,
-      h: () => LG,
-      j: () => SG
+  37876: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => aM,
+      f: () => jM,
+      h: () => SM
     });
-    const wG = [.25, .5, 1, 2, 4, 8, 16];
+    const OM = [.25, .5, 1, 2, 4, 8, 16];
 
-    function SG(GG, bG) {
-      const ZG = wG;
-      let SG = ZG.indexOf(GG);
-      return -1 === SG && (SG = ZG.findIndex((bG => bG >= GG)), -1 === SG && (SG = ZG.length - 1)), "up" === bG ? ZG[Math.min(SG + 1, ZG.length - 1)] : ZG[Math.max(SG - 1, 0)]
+    function SM(MM, rM) {
+      const iM = OM;
+      let SM = iM.indexOf(MM);
+      return -1 === SM && (SM = iM.findIndex((rM => rM >= MM)), -1 === SM && (SM = iM.length - 1)), "up" === rM ? iM[Math.min(SM + 1, iM.length - 1)] : iM[Math.max(SM - 1, 0)]
     }
 
-    function LG(GG) {
-      return GG <= wG[0]
+    function jM(MM) {
+      return MM <= OM[0]
     }
 
-    function yG(GG) {
-      return GG >= wG[wG.length - 1]
+    function aM(MM) {
+      return MM >= OM[OM.length - 1]
     }
   },
-  39487: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => LG,
-      g: () => yG
+  40118: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => jM,
+      h: () => aM
     });
-    var wG = ZG(19);
-    let SG = !1;
+    var OM = iM(22);
+    let SM = !1;
 
-    function LG() {
-      return SG
+    function jM() {
+      return SM
     }
 
-    function yG(GG) {
-      SG !== GG && (SG = GG, wG.l.xh("replayViewer|videoExportChanged"))
+    function aM(MM) {
+      SM !== MM && (SM = MM, OM.i.Tz("replayViewer|videoExportChanged"))
     }
   },
-  36836: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => SG,
-      d: () => LG
+  34822: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => SM,
+      d: () => jM
     });
-    let wG = !1;
+    let OM = !1;
 
-    function SG() {
-      return wG
+    function SM() {
+      return OM
     }
 
-    function LG(GG) {
-      return wG !== GG && (wG = GG, !0)
+    function jM(MM) {
+      return OM !== MM && (OM = MM, !0)
     }
   },
-  39423: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => LG
+  40059: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => jM
     });
-    var wG = ZG(19),
-      SG = ZG(1923);
+    var OM = iM(22),
+      SM = iM(2067);
 
-    function LG(GG) {
+    function jM(MM) {
       let {
-        taskId: bG,
-        progress: ZG
-      } = GG;
-      const wG = SG.c.get("_tasks");
-      null !== wG && void 0 !== wG && wG[bG] && SG.c.apply({
+        taskId: rM,
+        progress: iM
+      } = MM;
+      const OM = SM.d.get("_tasks");
+      null !== OM && void 0 !== OM && OM[rM] && SM.d.apply({
         _tasks: {
-          ...wG,
-          [bG]: {
-            ...wG[bG],
-            progress: ZG
+          ...OM,
+          [rM]: {
+            ...OM[rM],
+            progress: iM
           }
         }
       })
     }
-    wG.l.subscribe("clientTaskProgress", (GG => {
-      LG(GG)
+    OM.i.subscribe("clientTaskProgress", (MM => {
+      jM(MM)
     }))
   },
-  39986: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => fG,
-      g: () => KG,
-      i: () => YG,
-      l: () => pG,
-      o: () => UG,
-      r: () => yG,
-      u: () => VG,
-      v: () => hG
+  40725: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => mM,
+      f: () => hM,
+      h: () => QM,
+      k: () => LM,
+      n: () => nM,
+      q: () => aM,
+      u: () => zM,
+      v: () => JM
     });
-    var wG = ZG(1923),
-      SG = ZG(19),
-      LG = ZG(1939);
-    const yG = (0, LG.l)((function() {
-        var GG, bG, ZG, SG;
+    var OM = iM(2067),
+      SM = iM(22),
+      jM = iM(2078);
+    const aM = (0, jM.q)((function() {
+        var MM, rM, iM, SM;
         return {
-          health: null !== (GG = wG.c.get("_health")) && void 0 !== GG ? GG : null,
-          maxHealth: null !== (bG = wG.c.get("_totalMaxHealth")) && void 0 !== bG ? bG : null,
-          shield: null !== (ZG = wG.c.get("_shield")) && void 0 !== ZG ? ZG : null,
-          maxShield: null !== (SG = wG.c.get("maxShield")) && void 0 !== SG ? SG : null
+          health: null !== (MM = OM.d.get("_health")) && void 0 !== MM ? MM : null,
+          maxHealth: null !== (rM = OM.d.get("_totalMaxHealth")) && void 0 !== rM ? rM : null,
+          shield: null !== (iM = OM.d.get("_shield")) && void 0 !== iM ? iM : null,
+          maxShield: null !== (SM = OM.d.get("maxShield")) && void 0 !== SM ? SM : null
         }
-      }), [], (0, LG.i)("_health", "_totalMaxHealth", "_shield", "maxShield")),
-      kG = [{
+      }), [], (0, jM.p)("_health", "_totalMaxHealth", "_shield", "maxShield")),
+      PM = [{
         canFly: !1,
         flying: !1
       }, {
@@ -207,820 +207,837 @@ export const modules = {
         flying: !0
       }];
 
-    function UG(GG, bG) {
-      return kG[(GG ? 2 : 0) + (bG ? 1 : 0)]
+    function nM(MM, rM) {
+      return PM[(MM ? 2 : 0) + (rM ? 1 : 0)]
     }
-    const YG = (0, LG.l)((function() {
-      var GG;
-      return null !== (GG = wG.c.get("_aura")) && void 0 !== GG ? GG : null
-    }), [], (0, LG.i)("_aura"));
+    const QM = (0, jM.q)((function() {
+      var MM;
+      return null !== (MM = OM.d.get("_aura")) && void 0 !== MM ? MM : null
+    }), [], (0, jM.p)("_aura"));
 
-    function VG(GG) {
+    function zM(MM) {
       return {
-        watch: bG => (0, SG.p)("shotPlayer", (ZG => {
+        watch: rM => (0, SM.j)("shotPlayer", (iM => {
           let {
-            playerId: wG,
-            damage: SG,
-            wasCrit: LG,
-            distance: yG
-          } = ZG;
-          GG(wG) && bG({
-            damage: SG,
-            wasCrit: LG,
-            distance: yG
+            playerId: OM,
+            damage: SM,
+            wasCrit: jM,
+            distance: aM
+          } = iM;
+          MM(OM) && rM({
+            damage: SM,
+            wasCrit: jM,
+            distance: aM
           })
         }))
       }
     }
 
-    function pG(GG) {
-      return (0, LG.c)("chat", (bG => {
+    function LM(MM) {
+      return (0, jM.d)("chat", (rM => {
         let {
-          serverChatMsgId: ZG,
-          content: wG,
-          chatterEId: SG
-        } = bG;
+          serverChatMsgId: iM,
+          worldCodeLineId: OM,
+          content: SM,
+          chatterEId: jM,
+          chatterObjectsToReplay: aM
+        } = rM;
+        const PM = jM ? MM(jM) : null;
         return {
-          serverChatMsgId: null !== ZG && void 0 !== ZG ? ZG : null,
-          content: wG,
-          author: SG ? GG(SG) : null
+          serverChatMsgId: null !== iM && void 0 !== iM ? iM : null,
+          worldCodeLineId: null !== OM && void 0 !== OM ? OM : null,
+          content: SM,
+          author: PM,
+          hiddenFromReplay: !0 === aM && !1 === (null === PM || void 0 === PM ? void 0 : PM.local)
         }
       }))
     }
-    class fG {
+    class mM {
       constructor() {
         this.shown = null, this.needed = null, this.neededSince = 0
       }
-      update(GG) {
-        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-        const ZG = this.shown;
-        return GG !== this.needed && (this.needed = GG, this.neededSince = bG, null === GG && (this.shown = null)), this.shown !== this.needed && bG - this.neededSince > 200 && (this.shown = this.needed), this.shown !== ZG
+      update(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+        const iM = this.shown;
+        return MM !== this.needed && (this.needed = MM, this.neededSince = rM, null === MM && (this.shown = null)), this.shown !== this.needed && rM - this.neededSince > 200 && (this.shown = this.needed), this.shown !== iM
       }
     }
 
-    function QG(GG) {
+    function HM(MM) {
       return [{
-        translationKey: `touchKeys:${GG}`
+        translationKey: `touchKeys:${MM}`
       }]
     }
-    const KG = {
-      open: QG("open"),
-      close: QG("close"),
-      milk: QG("milk"),
-      shear: QG("shear"),
-      tame: QG("tame"),
-      feed: QG("feed"),
-      ride: QG("ride")
+    const hM = {
+      open: HM("open"),
+      close: HM("close"),
+      milk: HM("milk"),
+      shear: HM("shear"),
+      tame: HM("tame"),
+      feed: HM("feed"),
+      ride: HM("ride")
     };
 
-    function hG(GG) {
+    function JM(MM) {
       return [{
         translationKey: "touchKeys:tameWith"
       }, " ", {
-        icon: GG
+        icon: MM
       }]
     }
   },
-  41435: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => kG,
-      f: () => yG
+  42157: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => PM,
+      g: () => aM
     });
-    var wG = ZG(3271);
-    let SG = null,
-      LG = null;
+    var OM = iM(3698);
+    let SM = null,
+      jM = null;
 
-    function yG() {
-      return LG ??= ZG.e(216).then((() => ZG(36657))).then((GG => {
+    function aM() {
+      return jM ??= iM.e(234).then((() => iM(37271))).then((MM => {
         let {
-          ITEM_SPRITES: bG,
-          ITEM_SPRITES_WITHOUT_FILE: ZG,
-          ITEM_FILES_WITHOUT_SPRITE: LG
-        } = GG;
-        SG = function(GG, bG, ZG) {
-          const SG = new Set,
-            LG = (0, wG.s)(bG);
-          let yG = 0;
-          for (const [wG, kG] of GG.entries()) wG === LG[yG] ? yG++ : SG.add(kG);
-          if ("" !== ZG)
-            for (const kG of ZG.split(wG.o)) SG.add(kG);
-          return SG
-        }(bG.split(wG.o), ZG, LG)
-      }), (GG => {
-        throw LG = null, GG
-      })), LG
+          ITEM_SPRITES: rM,
+          ITEM_SPRITES_WITHOUT_FILE: iM,
+          ITEM_FILES_WITHOUT_SPRITE: jM
+        } = MM;
+        SM = function(MM, rM, iM) {
+          const SM = new Set,
+            jM = (0, OM.u)(rM);
+          let aM = 0;
+          for (const [OM, PM] of MM.entries()) OM === jM[aM] ? aM++ : SM.add(PM);
+          if ("" !== iM)
+            for (const PM of iM.split(OM.s)) SM.add(PM);
+          return SM
+        }(rM.split(OM.s), iM, jM)
+      }), (MM => {
+        throw jM = null, MM
+      })), jM
     }
 
-    function kG(GG) {
-      var bG, ZG;
-      return null !== (bG = null === (ZG = SG) || void 0 === ZG ? void 0 : ZG.has(GG)) && void 0 !== bG && bG
+    function PM(MM) {
+      var rM, iM;
+      return null !== (rM = null === (iM = SM) || void 0 === iM ? void 0 : iM.has(MM)) && void 0 !== rM && rM
     }
   },
-  40001: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => wG,
-      f: () => LG,
-      g: () => SG
+  40745: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => OM,
+      f: () => jM,
+      g: () => SM
     });
-    const wG = 128;
+    const OM = 128;
 
-    function SG(GG, bG, ZG, wG) {
-      const SG = 2 * bG - 1,
-        LG = 1 - 2 * ZG,
-        yG = GG(0) - SG * GG(3),
-        kG = GG(4) - SG * GG(7),
-        UG = GG(8) - SG * GG(11),
-        YG = GG(1) - LG * GG(3),
-        VG = GG(5) - LG * GG(7),
-        pG = GG(9) - LG * GG(11);
-      wG[0] = kG * pG - UG * VG, wG[1] = UG * YG - yG * pG, wG[2] = yG * VG - kG * YG;
-      const fG = wG[0] * GG(3) + wG[1] * GG(7) + wG[2] * GG(11) < 0 ? -1 : 1,
-        QG = Math.hypot(wG[0], wG[1], wG[2]) * fG;
-      return wG[0] /= QG, wG[1] /= QG, wG[2] /= QG, wG
+    function SM(MM, rM, iM, OM) {
+      const SM = 2 * rM - 1,
+        jM = 1 - 2 * iM,
+        aM = MM(0) - SM * MM(3),
+        PM = MM(4) - SM * MM(7),
+        nM = MM(8) - SM * MM(11),
+        QM = MM(1) - jM * MM(3),
+        zM = MM(5) - jM * MM(7),
+        LM = MM(9) - jM * MM(11);
+      OM[0] = PM * LM - nM * zM, OM[1] = nM * QM - aM * LM, OM[2] = aM * zM - PM * QM;
+      const mM = OM[0] * MM(3) + OM[1] * MM(7) + OM[2] * MM(11) < 0 ? -1 : 1,
+        HM = Math.hypot(OM[0], OM[1], OM[2]) * mM;
+      return OM[0] /= HM, OM[1] /= HM, OM[2] /= HM, OM
     }
 
-    function LG(GG, bG, ZG, wG, SG, LG) {
-      const yG = [Math.floor(bG[0]), Math.floor(bG[1]), Math.floor(bG[2])],
-        kG = [0, 0, 0],
-        UG = [1 / 0, 1 / 0, 1 / 0],
-        YG = [1 / 0, 1 / 0, 1 / 0];
-      for (let fG = 0; fG < 3; fG++) kG[fG] = Math.sign(ZG[fG]), 0 !== kG[fG] && (YG[fG] = Math.abs(1 / ZG[fG]), UG[fG] = (yG[fG] + (kG[fG] > 0 ? 1 : 0) - bG[fG]) / ZG[fG]);
-      let VG = 0,
-        pG = Math.abs(ZG[0]) > Math.abs(ZG[1]) ? 0 : 1;
-      for (Math.abs(ZG[2]) > Math.abs(ZG[pG]) && (pG = 2); VG <= wG;) {
-        if (GG(yG[0], yG[1], yG[2])) return SG[0] = yG[0], SG[1] = yG[1], SG[2] = yG[2], LG[0] = 0, LG[1] = 0, LG[2] = 0, LG[pG] = -kG[pG], !0;
-        pG = UG[0] < UG[1] ? 0 : 1, UG[2] < UG[pG] && (pG = 2), VG = UG[pG], yG[pG] += kG[pG], UG[pG] += YG[pG]
+    function jM(MM, rM, iM, OM, SM, jM) {
+      const aM = [Math.floor(rM[0]), Math.floor(rM[1]), Math.floor(rM[2])],
+        PM = [0, 0, 0],
+        nM = [1 / 0, 1 / 0, 1 / 0],
+        QM = [1 / 0, 1 / 0, 1 / 0];
+      for (let mM = 0; mM < 3; mM++) PM[mM] = Math.sign(iM[mM]), 0 !== PM[mM] && (QM[mM] = Math.abs(1 / iM[mM]), nM[mM] = (aM[mM] + (PM[mM] > 0 ? 1 : 0) - rM[mM]) / iM[mM]);
+      let zM = 0,
+        LM = Math.abs(iM[0]) > Math.abs(iM[1]) ? 0 : 1;
+      for (Math.abs(iM[2]) > Math.abs(iM[LM]) && (LM = 2); zM <= OM;) {
+        if (MM(aM[0], aM[1], aM[2])) return SM[0] = aM[0], SM[1] = aM[1], SM[2] = aM[2], jM[0] = 0, jM[1] = 0, jM[2] = 0, jM[LM] = -PM[LM], !0;
+        LM = nM[0] < nM[1] ? 0 : 1, nM[2] < nM[LM] && (LM = 2), zM = nM[LM], aM[LM] += PM[LM], nM[LM] += QM[LM]
       }
       return !1
     }
   },
-  39982: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => SG
+  40723: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => SM
     });
-    var wG = ZG(1873);
+    var OM = iM(2e3);
 
-    function SG(GG, bG, ZG) {
-      return (0, wG.n)(GG, bG) < ZG
+    function SM(MM, rM, iM) {
+      return (0, OM.p)(MM, rM) < iM
     }
   },
-  8764: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => SG
+  9331: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => SM
     });
-    var wG = ZG(1213);
+    var OM = iM(1265);
 
-    function SG(GG, bG) {
-      var ZG, SG;
+    function SM(MM, rM) {
+      var iM, SM;
       try {
-        const ZG = (0, wG.e)();
-        if ("function" === typeof ZG) {
-          const wG = new ZG(GG, bG);
-          if (wG.type === GG) return wG
+        const iM = (0, OM.b)();
+        if ("function" === typeof iM) {
+          const OM = new iM(MM, rM);
+          if (OM.type === MM) return OM
         }
       } catch {}
-      const LG = document.createEvent("Event");
-      return LG.initEvent(GG, null !== (ZG = null === bG || void 0 === bG ? void 0 : bG.bubbles) && void 0 !== ZG && ZG, null !== (SG = null === bG || void 0 === bG ? void 0 : bG.cancelable) && void 0 !== SG && SG), LG
+      const jM = document.createEvent("Event");
+      return jM.initEvent(MM, null !== (iM = null === rM || void 0 === rM ? void 0 : rM.bubbles) && void 0 !== iM && iM, null !== (SM = null === rM || void 0 === rM ? void 0 : rM.cancelable) && void 0 !== SM && SM), jM
     }
   },
-  36808: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => fG,
-      f: () => VG,
-      g: () => QG,
-      h: () => pG
+  37416: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => mM,
+      e: () => zM,
+      g: () => HM,
+      k: () => LM
     });
-    var wG = ZG(352),
-      SG = ZG(641),
-      LG = ZG(655),
-      yG = ZG(29);
-    const kG = {
+    var OM = iM(332),
+      SM = iM(670),
+      jM = iM(680),
+      aM = iM(30);
+    const PM = {
         idStorageKey: "playSessionId",
         lastActivityStorageKey: "playSessionLastActivityMs",
         expiryMs: 3e5
       },
-      UG = "playSessionGameNameWithVariation",
-      YG = "wasMatchmakePlayer";
+      nM = "playSessionGameNameWithVariation",
+      QM = "wasMatchmakePlayer";
 
-    function VG() {
-      let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yG.l;
-      (0, LG.j)(GG, kG)
+    function zM() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k;
+      (0, jM.k)(MM, PM)
     }
 
-    function pG() {
-      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yG.l).setItem(YG, !0)
+    function LM() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k).setItem(QM, !0)
     }
 
-    function fG() {
-      let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yG.l;
-      return (0, LG.e)(GG, kG)
+    function mM() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k;
+      return (0, jM.e)(MM, PM)
     }
 
-    function QG(GG) {
-      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yG.l;
-      const ZG = (0, LG.e)(bG, kG),
-        VG = function(GG) {
-          const bG = GG.getItem(UG);
-          return "string" !== typeof bG ? null : bG
-        }(bG),
-        pG = function() {
-          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yG.l).getItem(YG)
-        }(bG);
-      let fG;
-      return fG = null !== ZG && null !== VG && (0, LG.f)(bG, kG) && function(GG, bG, ZG) {
-          const SG = (0, wG.Yb)(GG),
-            LG = (0, wG.Yb)(bG),
-            yG = (0, wG.Vb)(GG),
-            kG = (0, wG.Vb)(bG);
-          return !(SG !== LG || !ZG) || SG === LG && yG === kG
-        }(VG, GG, pG) ? ZG : (0, SG.d)(), (0, LG.n)(bG, kG, fG), bG.setItem(UG, GG),
+    function HM(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aM.k;
+      const iM = (0, jM.e)(rM, PM),
+        zM = function(MM) {
+          const rM = MM.getItem(nM);
+          return "string" !== typeof rM ? null : rM
+        }(rM),
+        LM = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k).getItem(QM)
+        }(rM);
+      let mM;
+      return mM = null !== iM && null !== zM && (0, jM.g)(rM, PM) && function(MM, rM, iM) {
+          const SM = (0, OM.Mb)(MM),
+            jM = (0, OM.Mb)(rM),
+            aM = (0, OM.Jb)(MM),
+            PM = (0, OM.Jb)(rM);
+          return !(SM !== jM || !iM) || SM === jM && aM === PM
+        }(zM, MM, LM) ? iM : (0, SM.e)(), (0, jM.o)(rM, PM, mM), rM.setItem(nM, MM),
         function() {
-          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yG.l).removeItem(YG)
-        }(bG), fG
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k).removeItem(QM)
+        }(rM), mM
     }
   },
-  39412: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => VG
+  40048: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => zM
     });
-    var wG = ZG(1177),
-      SG = ZG(1290),
-      LG = ZG(17),
-      yG = ZG(1275),
-      kG = ZG(1287),
-      UG = ZG(1444),
-      YG = ZG(36808);
+    var OM = iM(1229),
+      SM = iM(1382),
+      jM = iM(19),
+      aM = iM(1360),
+      PM = iM(1373),
+      nM = iM(1591),
+      QM = iM(37416);
 
-    function VG(GG) {
+    function zM(MM) {
       let {
-        AS: bG,
-        sS: ZG
-      } = GG;
-      const VG = null !== bG && void 0 !== bG ? bG : (0, kG.d)().gameNameWithVariation;
-      (0, wG.J)(VG) && ((0, YG.h)(), (0, yG.cb)((() => {
-        console.log("Received matchmaking order from game server to game", bG), (0, LG.n)("inGameReplay"), (0, UG.navigatePreserveSearch)((0, SG.d)(VG, null !== ZG && void 0 !== ZG ? ZG : void 0))
+        Wr: rM,
+        sr: iM
+      } = MM;
+      const zM = null !== rM && void 0 !== rM ? rM : (0, PM.e)().gameNameWithVariation;
+      (0, OM.L)(zM) && ((0, QM.k)(), (0, aM.bb)((() => {
+        console.log("Received matchmaking order from game server to game", rM), (0, jM.j)("inGameReplay"), (0, nM.navigatePreserveSearch)((0, SM.b)(zM, null !== iM && void 0 !== iM ? iM : void 0))
       }), "video_start"))
     }
   },
-  39593: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => LG
+  40270: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => jM
     });
-    var wG = ZG(19),
-      SG = ZG(1956);
+    var OM = iM(22),
+      SM = iM(2093);
 
-    function LG(GG) {
-      var bG, ZG;
-      const LG = (0, SG.t)(null !== (bG = null === (ZG = SG.B.toggleFreeCam) || void 0 === ZG ? void 0 : ZG[0]) && void 0 !== bG ? bG : null);
-      wG.l.xh("showBottomMessage", {
-        message: `Free Camera ${GG?"Enabled":"Disabled"}${LG?` - Press ${LG} to toggle`:""}`,
+    function jM(MM) {
+      var rM, iM;
+      const jM = (0, SM.m)(null !== (rM = null === (iM = SM.v.toggleFreeCam) || void 0 === iM ? void 0 : iM[0]) && void 0 !== rM ? rM : null);
+      OM.i.Tz("showBottomMessage", {
+        message: `Free Camera ${MM?"Enabled":"Disabled"}${jM?` - Press ${jM} to toggle`:""}`,
         timeoutLength: 2e3,
         type: "Warning"
       })
     }
   },
-  39404: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => UG,
-      f: () => yG,
-      i: () => kG,
-      l: () => YG
+  40043: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => zM,
+      e: () => nM,
+      g: () => QM,
+      h: () => LM
     });
-    var wG = ZG(19),
-      SG = ZG(1311);
-    const LG = new Map;
+    var OM = iM(2039),
+      SM = iM(22),
+      jM = iM(1429),
+      aM = iM(1270);
+    const PM = new Map;
 
-    function yG(GG, bG) {
-      wG.l.xh("newUiRequest", {
-        id: GG,
-        clientParameters: bG
+    function nM(MM, rM) {
+      SM.i.Tz("newUiRequest", {
+        id: MM,
+        clientParameters: rM
       }, !0)
     }
 
-    function kG(GG) {
-      wG.l.xh("removeUiRequest", GG, !0);
-      const bG = LG.get(GG);
-      bG && (bG.tearDownNotification(), LG.delete(GG))
+    function QM(MM) {
+      SM.i.Tz("removeUiRequest", MM, !0);
+      const rM = PM.get(MM);
+      rM && (rM.tearDownNotification(), PM.delete(MM))
     }
 
-    function UG() {
-      wG.l.xh("clearUiRequests");
-      for (const GG of LG.values()) GG.tearDownNotification();
-      LG.clear()
+    function zM() {
+      SM.i.Tz("clearUiRequests");
+      for (const MM of PM.values()) MM.tearDownNotification();
+      PM.clear()
     }
 
-    function YG(GG, bG, ZG, wG) {
-      const yG = SG.NotificationProvider.showPromptPopup({
-        title: bG,
-        confirmText: "general:yes",
-        cancelText: "general:no",
-        destructive: ZG,
-        unlockPointerKey: "uiRequestPopup"
-      });
-      LG.set(GG, yG), yG.getResult().then((bG => {
-        LG.delete(GG), "notificationTornDown" !== bG && wG(bG)
+    function LM(MM, rM, iM, SM) {
+      const nM = "string" === typeof rM ? {
+          translationKey: rM
+        } : rM,
+        QM = jM.NotificationProvider.showPromptPopup({
+          title: nM.translationKey,
+          textOpts: {
+            title: (0, aM.g)(nM.params, OM.gameBridge.latest("hiddenPlayerNames"))
+          },
+          confirmText: "general:yes",
+          cancelText: "general:no",
+          destructive: iM,
+          unlockPointerKey: "uiRequestPopup"
+        });
+      PM.set(MM, QM), QM.getResult().then((rM => {
+        PM.delete(MM), "notificationTornDown" !== rM && SM(rM)
       }))
     }
   },
-  40005: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => pG,
-      g: () => fG
+  40753: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => LM,
+      h: () => mM
     });
-    var wG = ZG(188),
-      SG = ZG(40012);
-    const LG = 20;
+    var OM = iM(181),
+      SM = iM(40757);
+    const jM = 20;
 
-    function yG(GG) {
-      return GG.map(Math.floor).join(" ")
+    function aM(MM) {
+      return MM.map(Math.floor).join(" ")
     }
 
-    function kG(GG) {
-      return null === GG.amount || 1 === GG.amount ? GG.name : `${GG.amount} ${GG.name}`
+    function PM(MM) {
+      return null === MM.amount || 1 === MM.amount ? MM.name : `${MM.amount} ${MM.name}`
     }
-    var UG = ZG(40021),
-      YG = ZG(1923),
-      VG = ZG(1287);
+    var nM = iM(40765),
+      QM = iM(2067),
+      zM = iM(1373);
 
-    function pG(GG, bG) {
-      if (!GG) return UG.e;
-      const ZG = GG.playerFeet();
-      if (!ZG) return "The player isn't in the world yet, so no blocks can be seen.";
-      const LG = wG.d.rK,
-        yG = (0, SG.i)(null !== bG && void 0 !== bG ? bG : ZG, LG),
-        kG = GG.chunkBlocks(yG);
-      return kG ? (0, SG.e)(yG, LG, ((bG, ZG, wG) => {
-        const SG = kG(bG, ZG, wG);
-        return 0 === SG ? null : GG.blockName(SG).split("|")[0]
-      }), ZG) : `The chunk from ${yG.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${ZG.map(Math.floor).join(" ")}.`
+    function LM(MM, rM) {
+      if (!MM) return nM.c;
+      const iM = MM.playerFeet();
+      if (!iM) return "The player isn't in the world yet, so no blocks can be seen.";
+      const jM = OM.f.HL,
+        aM = (0, SM.g)(null !== rM && void 0 !== rM ? rM : iM, jM),
+        PM = MM.chunkBlocks(aM);
+      return PM ? (0, SM.d)(aM, jM, ((rM, iM, OM) => {
+        const SM = PM(rM, iM, OM);
+        return 0 === SM ? null : MM.blockName(SM).split("|")[0]
+      }), iM) : `The chunk from ${aM.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${iM.map(Math.floor).join(" ")}.`
     }
 
-    function fG(GG) {
-      var bG, ZG, wG;
-      if (!GG) return UG.i;
-      const SG = GG.playerFeet();
-      if (!SG) return "The player isn't in the world yet, so nothing in it can be seen.";
+    function mM(MM) {
+      var rM, iM, OM;
+      if (!MM) return nM.f;
+      const SM = MM.playerFeet();
+      if (!SM) return "The player isn't in the world yet, so nothing in it can be seen.";
       const {
-        slots: pG,
-        heldSlot: fG
-      } = GG.inventory();
-      return function(GG) {
-        const bG = [];
-        null !== GG.game && bG.push(`Game: ${GG.game}.`);
-        const ZG = null === GG.health ? "" : `, health ${Math.round(GG.health)}${null===GG.maxHealth?"":` of ${Math.round(GG.maxHealth)}`}`;
-        bG.push(`The player (the creator) stands at ${yG(GG.position)}${ZG}, ${GG.creative?"in":"not in"} creative mode.`);
-        const wG = GG.slots[GG.heldSlot];
-        bG.push(wG ? `Holding (slot ${GG.heldSlot}): ${kG(wG)}.` : `Holding nothing (slot ${GG.heldSlot} is empty).`);
-        const SG = GG.slots.flatMap(((GG, bG) => GG ? [`slot ${bG}: ${kG(GG)}`] : []));
-        bG.push(SG.length > 0 ? `Inventory: ${SG.join(", ")}.` : "Inventory: empty.");
-        const UG = bG => Math.hypot(bG.position[0] - GG.position[0], bG.position[1] - GG.position[1], bG.position[2] - GG.position[2]),
-          YG = [...GG.nearby].sort(((GG, bG) => UG(GG) - UG(bG)));
-        if (0 === YG.length) bG.push("No other players or mobs are near enough to see.");
+        slots: LM,
+        heldSlot: mM
+      } = MM.inventory();
+      return function(MM) {
+        const rM = [];
+        null !== MM.game && rM.push(`Game: ${MM.game}.`);
+        const iM = null === MM.health ? "" : `, health ${Math.round(MM.health)}${null===MM.maxHealth?"":` of ${Math.round(MM.maxHealth)}`}`;
+        rM.push(`The player (the creator) stands at ${aM(MM.position)}${iM}, ${MM.creative?"in":"not in"} creative mode.`);
+        const OM = MM.slots[MM.heldSlot];
+        rM.push(OM ? `Holding (slot ${MM.heldSlot}): ${PM(OM)}.` : `Holding nothing (slot ${MM.heldSlot} is empty).`);
+        const SM = MM.slots.flatMap(((MM, rM) => MM ? [`slot ${rM}: ${PM(MM)}`] : []));
+        rM.push(SM.length > 0 ? `Inventory: ${SM.join(", ")}.` : "Inventory: empty.");
+        const nM = rM => Math.hypot(rM.position[0] - MM.position[0], rM.position[1] - MM.position[1], rM.position[2] - MM.position[2]),
+          QM = [...MM.nearby].sort(((MM, rM) => nM(MM) - nM(rM)));
+        if (0 === QM.length) rM.push("No other players or mobs are near enough to see.");
         else {
-          bG.push("Near them, nearest first:");
-          for (const GG of YG.slice(0, LG)) {
-            const ZG = "player" === GG.kind ? `player "${GG.name||"?"}"` : GG.name && GG.name !== GG.kind ? `${GG.kind} "${GG.name}"` : GG.kind,
-              wG = Math.round(UG(GG));
-            bG.push(`- ${ZG} at ${yG(GG.position)}, ${wG} block${1===wG?"":"s"} away`)
+          rM.push("Near them, nearest first:");
+          for (const MM of QM.slice(0, jM)) {
+            const iM = "player" === MM.kind ? `player "${MM.name||"?"}"` : MM.name && MM.name !== MM.kind ? `${MM.kind} "${MM.name}"` : MM.kind,
+              OM = Math.round(nM(MM));
+            rM.push(`- ${iM} at ${aM(MM.position)}, ${OM} block${1===OM?"":"s"} away`)
           }
-          YG.length > LG && bG.push(`- and ${YG.length-LG} more further away`)
+          QM.length > jM && rM.push(`- and ${QM.length-jM} more further away`)
         }
-        return GG.droppedItems > 0 && bG.push(`${GG.droppedItems} dropped item${1===GG.droppedItems?" is":"s are"} on the ground nearby.`), bG.join("\n")
+        return MM.droppedItems > 0 && rM.push(`${MM.droppedItems} dropped item${1===MM.droppedItems?" is":"s are"} on the ground nearby.`), rM.join("\n")
       }({
-        game: null !== (bG = (0, VG.d)().gameNameWithVariation) && void 0 !== bG ? bG : null,
-        position: SG,
-        health: null !== (ZG = YG.c.get("_health")) && void 0 !== ZG ? ZG : null,
-        maxHealth: null !== (wG = YG.c.get("_totalMaxHealth")) && void 0 !== wG ? wG : null,
-        creative: !0 === YG.c.get("creative"),
-        heldSlot: fG,
-        slots: pG,
-        nearby: GG.nearby(),
-        droppedItems: GG.droppedItems()
+        game: null !== (rM = (0, zM.e)().gameNameWithVariation) && void 0 !== rM ? rM : null,
+        position: SM,
+        health: null !== (iM = QM.d.get("_health")) && void 0 !== iM ? iM : null,
+        maxHealth: null !== (OM = QM.d.get("_totalMaxHealth")) && void 0 !== OM ? OM : null,
+        creative: !0 === QM.d.get("creative"),
+        heldSlot: mM,
+        slots: LM,
+        nearby: MM.nearby(),
+        droppedItems: MM.droppedItems()
       })
     }
   },
-  41263: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      A: () => lG,
-      C: () => cG,
-      F: () => NG,
-      G: () => PG,
-      K: () => FG,
-      O: () => jG,
-      R: () => IG,
-      U: () => RG,
-      W: () => eG,
-      _: () => aG,
-      e: () => TG,
-      i: () => AG,
-      k: () => WG,
-      o: () => HG,
-      q: () => mG,
-      s: () => CG,
-      v: () => MG,
-      y: () => vG
+  41975: (MM, rM, iM) => {
+    iM.d(rM, {
+      A: () => sM,
+      B: () => qM,
+      E: () => ZM,
+      F: () => RM,
+      H: () => kM,
+      J: () => uM,
+      M: () => FM,
+      N: () => vM,
+      R: () => WM,
+      c: () => BM,
+      f: () => fM,
+      h: () => tM,
+      j: () => XM,
+      n: () => gM,
+      q: () => wM,
+      s: () => oM,
+      v: () => pM,
+      z: () => DM
     });
-    var wG = ZG(1343),
-      SG = ZG(19),
-      LG = ZG(1251),
-      yG = ZG(2380),
-      kG = ZG(4842),
-      UG = ZG(4800);
-    let YG, VG = !1,
-      pG = !1,
-      fG = !1,
-      QG = !1;
-    const KG = 1300,
-      hG = 3e3;
-    let dG = 0,
-      JG = !1,
-      rG = !1,
-      zG = 0;
-    const EG = 2;
-    let oG = !1,
-      XG = !1;
-    const uG = new Set,
-      iG = new Set;
+    var OM = iM(1464),
+      SM = iM(22),
+      jM = iM(1313),
+      aM = iM(2619),
+      PM = iM(5214),
+      nM = iM(5188);
+    let QM, zM = !1,
+      LM = !1,
+      mM = !1,
+      HM = !1;
+    const hM = 1300,
+      JM = 3e3;
+    let dM = 0,
+      yM = !1,
+      lM = !1,
+      EM = 0;
+    const UM = 2;
+    let GM = !1,
+      CM = !1;
+    const eM = new Set,
+      bM = new Set;
 
-    function CG() {
-      return VG
+    function wM() {
+      return zM
     }
 
-    function WG() {
-      return rG
+    function tM() {
+      return lM
     }
 
-    function mG() {
-      return XG
+    function gM() {
+      return CM
     }
 
-    function IG() {
-      return (0, LG.A)() && !XG
+    function uM() {
+      return (0, jM.B)() && !CM
     }
 
-    function FG(GG) {
-      let bG = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (GG !== XG) {
-        XG = GG;
-        for (const GG of [...iG]) GG(XG);
-        bG && eG()
+    function RM(MM) {
+      let rM = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (MM !== CM) {
+        CM = MM;
+        for (const MM of [...bM]) MM(CM);
+        rM && vM()
       }
     }
 
-    function vG(GG) {
-      return iG.add(GG), () => {
-        iG.delete(GG)
+    function pM(MM) {
+      return bM.add(MM), () => {
+        bM.delete(MM)
       }
     }
 
-    function aG() {
-      (0, kG.j)(yG.t.Menu, (0, LG.A)() ? 0 : yG.t.Menu)
+    function WM() {
+      (0, PM.k)(aM.C.Menu, (0, jM.B)() ? 0 : aM.C.Menu)
     }
 
-    function cG() {
-      rG = !1, zG = 0, aG(), eG()
+    function sM() {
+      lM = !1, EM = 0, WM(), vM()
     }
 
-    function lG(GG) {
-      return uG.add(GG), () => {
-        uG.delete(GG)
+    function DM(MM) {
+      return eM.add(MM), () => {
+        eM.delete(MM)
       }
     }
 
-    function jG(GG) {
-      pG = !1, GG !== VG && (VG = GG, QG = !1, clearTimeout(YG), fG = !VG && oG, VG ? (JG = !1, rG = !1, zG = 0) : IG() && !oG && (rG = !0), oG = !1, VG && !IG() && DG(), OG(), fG && eG())
+    function kM(MM) {
+      LM = !1, MM !== zM && (zM = MM, HM = !1, clearTimeout(QM), mM = !zM && GM, zM ? (yM = !1, lM = !1, EM = 0) : uM() && !GM && (lM = !0), GM = !1, zM && !uM() && KM(), TM(), mM && vM())
     }
 
-    function PG(GG) {
-      GG !== JG && (JG = GG, GG || eG())
+    function ZM(MM) {
+      MM !== yM && (yM = MM, MM || vM())
     }
 
-    function MG() {
-      pG = !1, QG || !0 !== nG() || (QG = !0, clearTimeout(YG), YG = setTimeout(sG, KG))
+    function oM() {
+      LM = !1, HM || !0 !== AM() || (HM = !0, clearTimeout(QM), QM = setTimeout(YM, hM))
     }
 
-    function AG() {
-      return (!pG || performance.now() - dG > hG) && (pG = (0, UG.I)().lockPointer(), dG = performance.now()), pG
+    function fM() {
+      return (!LM || performance.now() - dM > JM) && (LM = (0, nM.I)().lockPointer(), dM = performance.now()), LM
     }
 
-    function sG() {
-      qG() && gG() && AG()
+    function YM() {
+      NM() && xM() && fM()
     }
 
-    function qG() {
-      return IG() && !VG && !JG && !(0, wG.k)()
+    function NM() {
+      return uM() && !zM && !yM && !(0, OM.l)()
     }
 
-    function nG() {
-      var GG;
-      return "undefined" === typeof navigator || null === (GG = navigator.userActivation) || void 0 === GG ? void 0 : GG.isActive
+    function AM() {
+      var MM;
+      return "undefined" === typeof navigator || null === (MM = navigator.userActivation) || void 0 === MM ? void 0 : MM.isActive
     }
 
-    function gG() {
-      return fG && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== nG()
+    function xM() {
+      return mM && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== AM()
     }
 
-    function eG() {
-      IG() ? qG() && !rG && gG() && AG() : VG && !oG && DG()
+    function vM() {
+      uM() ? NM() && !lM && xM() && fM() : zM && !GM && KM()
     }
 
-    function RG() {
-      rG ? navigator.vendor.startsWith("Apple") ? tG() : zG = EG : eG()
+    function FM() {
+      lM ? navigator.vendor.startsWith("Apple") ? IM() : EM = UM : vM()
     }
 
-    function TG() {
-      zG > 0 && 0 === --zG && tG()
+    function BM() {
+      EM > 0 && 0 === --EM && IM()
     }
 
-    function HG() {
-      zG = 0
+    function XM() {
+      EM = 0
     }
 
-    function tG() {
-      qG() && !0 === nG() && AG()
+    function IM() {
+      NM() && !0 === AM() && fM()
     }
 
-    function DG() {
-      oG = !0, (0, UG.I)().unlockPointer()
+    function KM() {
+      GM = !0, (0, nM.I)().unlockPointer()
     }
 
-    function NG() {
-      pG = !1, fG = !1, QG = !1, clearTimeout(YG), JG = !1, rG = !1, zG = 0, oG = !1;
-      const GG = VG;
-      VG = !1, GG && OG()
+    function qM() {
+      LM = !1, mM = !1, HM = !1, clearTimeout(QM), yM = !1, lM = !1, EM = 0, GM = !1;
+      const MM = zM;
+      zM = !1, MM && TM()
     }
 
-    function OG() {
-      for (const GG of [...uG]) GG(VG);
-      SG.l.xh("pointerLockUpdate", VG)
+    function TM() {
+      for (const MM of [...eM]) MM(zM);
+      SM.i.Tz("pointerLockUpdate", zM)
     }
   },
-  41056: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => fG,
-      g: () => kG,
-      k: () => pG,
-      l: () => YG,
-      m: () => yG,
-      n: () => VG,
-      q: () => UG
+  41761: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => mM,
+      f: () => PM,
+      j: () => LM,
+      n: () => QM,
+      r: () => aM,
+      s: () => zM,
+      v: () => nM
     });
-    let wG = null,
-      SG = null,
-      LG = null;
+    let OM = null,
+      SM = null,
+      jM = null;
 
-    function yG(GG) {
-      wG = GG
+    function aM(MM) {
+      OM = MM
     }
 
-    function kG() {
-      return wG
+    function PM() {
+      return OM
     }
 
-    function UG(GG) {
-      SG = GG
+    function nM(MM) {
+      SM = MM
     }
 
-    function YG() {
-      return SG
+    function QM() {
+      return SM
     }
 
-    function VG(GG) {
-      LG = GG
+    function zM(MM) {
+      jM = MM
     }
 
-    function pG() {
-      return LG
+    function LM() {
+      return jM
     }
 
-    function fG() {
-      var GG, bG;
-      return !0 === (null === (GG = SG) || void 0 === GG || null === (bG = GG.currentViewer) || void 0 === bG ? void 0 : bG.inPlayback)
+    function mM() {
+      var MM, rM;
+      return !0 === (null === (MM = SM) || void 0 === MM || null === (rM = MM.currentViewer) || void 0 === rM ? void 0 : rM.inPlayback)
     }
   },
-  41395: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      attachPlayGameSources: () => uw,
-      playGameSources: () => Xw
+  42102: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      attachPlayGameSources: () => wO,
+      playGameSources: () => bO
     });
-    var wG = ZG(1895),
-      SG = ZG(41056),
-      LG = ZG(4800),
-      yG = ZG(40971),
-      kG = ZG(41383),
-      UG = ZG(39986),
-      YG = ZG(19),
-      VG = ZG(4818),
-      pG = ZG(4810),
-      fG = ZG(40999),
-      QG = ZG(41027),
-      KG = ZG(41404),
-      hG = ZG(41012);
-    (0, hG.l)(VG.jc.Chat, (GG => {
-      if (GG.payloadKind !== pG.jc.Msgpack) return;
-      const bG = function(GG) {
-        if (null === GG || "object" !== typeof GG || !("content" in GG)) return null;
+    var OM = iM(2039),
+      SM = iM(41761),
+      jM = iM(5188),
+      aM = iM(41677),
+      PM = iM(42081),
+      nM = iM(40725),
+      QM = iM(22),
+      zM = iM(5200),
+      LM = iM(5198),
+      mM = iM(41706),
+      HM = iM(41728),
+      hM = iM(42106),
+      JM = iM(41712);
+    (0, JM.h)(zM.hc.Chat, (MM => {
+      if (MM.payloadKind !== LM.hc.Msgpack) return;
+      const rM = function(MM) {
+        if (null === MM || "object" !== typeof MM || !("content" in MM)) return null;
         const {
-          chatMsgId: bG,
-          content: ZG,
-          chatterEId: wG
-        } = GG;
+          chatMsgId: rM,
+          worldCodeLineId: iM,
+          content: OM,
+          chatterEId: SM,
+          chatterObjectsToReplay: jM
+        } = MM;
         return {
-          serverChatMsgId: null !== bG && void 0 !== bG ? bG : void 0,
-          content: ZG,
-          chatterEId: void 0 === wG || null === wG ? void 0 : String(wG)
+          serverChatMsgId: null !== rM && void 0 !== rM ? rM : void 0,
+          worldCodeLineId: null !== iM && void 0 !== iM ? iM : void 0,
+          content: OM,
+          chatterEId: void 0 === SM || null === SM ? void 0 : String(SM),
+          chatterObjectsToReplay: jM
         }
-      }((0, fG.e)(GG.payload));
-      null !== bG && YG.l.xh("chat", bG, !0)
+      }((0, mM.c)(MM.payload));
+      null !== rM && QM.i.Tz("chat", rM, !0)
     }));
-    const dG = {
-        chatReceived: (0, UG.l)((function(GG) {
-          var bG, ZG, wG;
+    const dM = {
+        chatReceived: (0, nM.k)((function(MM) {
+          var rM, iM, OM;
           return {
-            id: GG,
-            name: null !== (bG = KG.f.getName(GG)) && void 0 !== bG ? bG : null,
-            local: (0, QG.i)() === GG,
-            profileEffect: null !== (ZG = null === (wG = (0, KG.g)(GG)) || void 0 === wG ? void 0 : wG.profileEffect) && void 0 !== ZG ? ZG : null
+            id: MM,
+            name: null !== (rM = hM.e.getName(MM)) && void 0 !== rM ? rM : null,
+            local: (0, HM.f)() === MM,
+            profileEffect: null !== (iM = null === (OM = (0, hM.g)(MM)) || void 0 === OM ? void 0 : OM.profileEffect) && void 0 !== iM ? iM : null
           }
         }))
       },
-      JG = {
-        sendChatMessage(GG) {
-          var bG;
+      yM = {
+        sendChatMessage(MM) {
+          var rM;
           let {
-            vV: ZG,
-            channelName: wG
-          } = GG;
-          null === (bG = (0, yG.f)()) || void 0 === bG || bG.clientApi.sendChat(ZG, wG)
+            Kz: iM,
+            channelName: OM
+          } = MM;
+          null === (rM = (0, aM.e)()) || void 0 === rM || rM.clientApi.sendChat(iM, OM)
         }
       };
-    var rG = ZG(188),
-      zG = ZG(1923),
-      EG = ZG(40954),
-      oG = ZG(39982);
-    const XG = [0, 0, 0],
-      uG = {
-        codeBlockClickable(GG) {
-          var bG;
-          const ZG = (0, yG.f)();
-          if (null === ZG || void 0 === ZG || !ZG.isSessionLive) return !1;
-          const wG = ZG.api;
-          if (0 !== (EG.v.playerFlags(wG.apiView, 0) & EG.Hd.Crouching)) return !1;
-          const SG = wG.queries.directorEntity(wG.localId) >= EG.rb.BYTES ? wG.memoryData(wG.scratch(), EG.rb.BYTES, 8, "the local player's DirectorEntity") : null;
-          if (null === SG) return !1;
-          for (let LG = 0; LG < 3; LG++) XG[LG] = EG.rb.feet(SG, 0, LG);
-          return XG[1] += EG.rb.eyeHeight(SG, 0), (0, oG.d)(XG, GG, null !== (bG = zG.c.get("blockReach")) && void 0 !== bG ? bG : rG.d.Nd)
+    var lM = iM(181),
+      EM = iM(2067),
+      UM = iM(41669),
+      GM = iM(40723);
+    const CM = [0, 0, 0],
+      eM = {
+        codeBlockClickable(MM) {
+          var rM;
+          const iM = (0, aM.e)();
+          if (null === iM || void 0 === iM || !iM.isSessionLive) return !1;
+          const OM = iM.api;
+          if (0 !== (UM.v.playerFlags(OM.apiView, 0) & UM.yd.Crouching)) return !1;
+          const SM = OM.queries.directorEntity(OM.localId) >= UM.nb.BYTES ? OM.memoryData(OM.scratch(), UM.nb.BYTES, 8, "the local player's DirectorEntity") : null;
+          if (null === SM) return !1;
+          for (let jM = 0; jM < 3; jM++) CM[jM] = UM.nb.feet(SM, 0, jM);
+          return CM[1] += UM.nb.eyeHeight(SM, 0), (0, GM.c)(CM, MM, null !== (rM = EM.d.get("blockReach")) && void 0 !== rM ? rM : lM.f.ny)
         }
       },
-      iG = {
-        clickCodeBlock(GG) {
-          var bG;
-          null === (bG = (0, yG.f)()) || void 0 === bG || bG.clickCodeBlock(GG)
+      bM = {
+        clickCodeBlock(MM) {
+          var rM;
+          null === (rM = (0, aM.e)()) || void 0 === rM || rM.clickCodeBlock(MM)
         }
       };
-    var CG = ZG(40984),
-      WG = ZG(41410),
-      mG = ZG(982),
-      IG = ZG(39435),
-      FG = ZG(4792),
-      vG = ZG(40989),
-      aG = ZG(40976),
-      cG = ZG(40993);
+    var wM = iM(41691),
+      tM = iM(42111),
+      gM = iM(1073),
+      uM = iM(40073),
+      RM = iM(5184),
+      pM = iM(41697),
+      WM = iM(41682),
+      sM = iM(41704);
 
-    function lG(GG) {
-      if (null === GG) return null;
-      const bG = [];
-      for (const ZG of GG) {
-        const GG = Object.keys(ZG)[0];
-        if ("Gb" === GG) {
+    function DM(MM) {
+      if (null === MM) return null;
+      const rM = [];
+      for (const iM of MM) {
+        const MM = Object.keys(iM)[0];
+        if ("ki" === MM) {
           const {
-            str: GG,
-            style: wG,
-            clickableUrl: SG
-          } = ZG.Gb, LG = Object.keys(GG)[0], yG = GG[LG];
-          "string" !== LG && "styledEntityName" !== LG && "styledTranslatedText" !== LG || bG.push({
-            str: yG,
-            style: wG,
-            clickableUrl: SG
+            str: MM,
+            style: OM,
+            clickableUrl: SM
+          } = iM.ki, jM = Object.keys(MM)[0], aM = MM[jM];
+          "string" !== jM && "styledEntityName" !== jM && "styledTranslatedText" !== jM || rM.push({
+            str: aM,
+            style: OM,
+            clickableUrl: SM
           })
-        } else bG.push(ZG[GG])
+        } else rM.push(iM[MM])
       }
-      return bG
+      return rM
     }
-    const jG = {
-      screenPos(GG) {
-        var bG, ZG;
-        return null !== (bG = null === (ZG = (0, yG.f)()) || void 0 === ZG ? void 0 : ZG.renderFrame.projectWorldPosToScreenPos(GG)) && void 0 !== bG ? bG : {
+    const kM = {
+      screenPos(MM) {
+        var rM, iM;
+        return null !== (rM = null === (iM = (0, aM.e)()) || void 0 === iM ? void 0 : iM.renderFrame.projectWorldPosToScreenPos(MM)) && void 0 !== rM ? rM : {
           x: 0,
           y: 0
         }
       }
     };
-    let PG = !1;
+    let ZM = !1;
 
-    function MG() {
-      PG || (PG = !0, (0, hG.l)(VG.jc.ProgressBarUpdate, (GG => {
-        const bG = (0, cG.j)(GG);
-        (0, cG.d)(bG) && YG.l.xh("progressBarUpdate", bG, !0)
-      })), (0, hG.l)(vG.v, (GG => {
-        const bG = (0, cG.f)(vG.v, GG);
-        bG && YG.l.xh("middleScreenBarInitiate", {
-          duration: bG.cS,
-          lS: bG.lS,
-          horizBarRemOffset: bG.jS
+    function oM() {
+      ZM || (ZM = !0, (0, JM.h)(zM.hc.ProgressBarUpdate, (MM => {
+        const rM = (0, sM.f)(MM);
+        (0, sM.c)(rM) && QM.i.Tz("progressBarUpdate", rM, !0)
+      })), (0, JM.h)(pM.w, (MM => {
+        const rM = (0, sM.d)(pM.w, MM);
+        rM && QM.i.Tz("middleScreenBarInitiate", {
+          duration: rM.QO,
+          zO: rM.zO,
+          horizBarRemOffset: rM.LO
         }, !0)
-      })), (0, hG.l)(VG.jc.RemoveMiddleScreenBar, (() => {
-        YG.l.xh("middleScreenBarRemove")
-      })), (0, hG.l)(vG.db, (GG => {
-        const bG = (0, cG.f)(vG.db, GG);
-        if (bG) {
-          var ZG;
-          const GG = bG.WG ? null === (ZG = (0, yG.f)()) || void 0 === ZG ? void 0 : ZG.renderFrame.projectDirectionToScreenPos(bG.WG) : void 0;
-          YG.l.xh("sendHitmarker", {
-            eb: bG.eb,
-            screenPos: GG
+      })), (0, JM.h)(zM.hc.RemoveMiddleScreenBar, (() => {
+        QM.i.Tz("middleScreenBarRemove")
+      })), (0, JM.h)(pM._, (MM => {
+        const rM = (0, sM.d)(pM._, MM);
+        if (rM) {
+          var iM;
+          const MM = rM.HO ? null === (iM = (0, aM.e)()) || void 0 === iM ? void 0 : iM.renderFrame.projectDirectionToScreenPos(rM.HO) : void 0;
+          QM.i.Tz("sendHitmarker", {
+            mO: rM.mO,
+            screenPos: MM
           }, !0)
         }
-      })), (0, hG.l)(vG.ib, (GG => {
-        const bG = (0, cG.f)(vG.ib, GG);
-        if (bG) {
+      })), (0, JM.h)(pM.fb, (MM => {
+        const rM = (0, sM.d)(pM.fb, MM);
+        if (rM) {
           const {
-            id: GG,
-            position: ZG,
-            style: wG,
-            jb: SG,
-            Mb: LG
-          } = bG;
-          YG.l.xh("setDirectionArrow", {
-            id: GG,
-            position: ZG,
-            style: wG,
-            text: lG(SG),
-            Mb: LG
+            id: MM,
+            position: iM,
+            style: OM,
+            hO: SM,
+            dO: jM
+          } = rM;
+          QM.i.Tz("setDirectionArrow", {
+            id: MM,
+            position: iM,
+            style: OM,
+            text: DM(SM),
+            dO: jM
           }, !0)
         }
-      })), (0, hG.l)(vG.d, (GG => {
-        const bG = (0, cG.f)(vG.d, GG);
-        bG && YG.l.xh("clearDirectionArrow", {
-          id: bG.id
+      })), (0, JM.h)(pM.f, (MM => {
+        const rM = (0, sM.d)(pM.f, MM);
+        rM && QM.i.Tz("clearDirectionArrow", {
+          id: rM.id
         }, !0)
-      })), (0, hG.l)(vG.m, (GG => {
-        const bG = (0, cG.f)(vG.m, GG);
-        bG && YG.l.xh("flyingMiddleMessage", {
-          content: lG(bG.aL),
-          cL: bG.cL,
-          lL: bG.lL
+      })), (0, JM.h)(pM.n, (MM => {
+        const rM = (0, sM.d)(pM.n, MM);
+        rM && QM.i.Tz("flyingMiddleMessage", {
+          content: DM(rM.Di),
+          oi: rM.oi,
+          Yi: rM.Yi
         }, !0)
-      })), (0, hG.l)(VG.jc.WorldVariation, (GG => {
-        const bG = (0, cG.j)(GG);
-        if ("string" === typeof bG) {
-          const GG = bG === mG.d ? null : {
-            message: `Currently loaded as variation: ${bG}`,
+      })), (0, JM.h)(zM.hc.WorldVariation, (MM => {
+        const rM = (0, sM.f)(MM);
+        if ("string" === typeof rM) {
+          const MM = rM === gM.g ? null : {
+            message: `Currently loaded as variation: ${rM}`,
             type: "Warning"
           };
-          YG.l.xh("showPermanentBottomMessage", GG, !0)
+          QM.i.Tz("showPermanentBottomMessage", MM, !0)
         }
-      })), (0, hG.l)(vG.L, (GG => {
-        const bG = (0, cG.f)(vG.L, GG);
-        bG && function(GG, bG) {
+      })), (0, JM.h)(pM.J, (MM => {
+        const rM = (0, sM.d)(pM.J, MM);
+        rM && function(MM, rM) {
           const {
-            type: ZG,
-            params: wG
-          } = (0, IG.e)(bG), SG = {
-            ...wG
+            type: iM,
+            params: OM
+          } = (0, uM.e)(rM), SM = {
+            ...OM
           };
-          for (const LG of IG.b) SG[LG] && (SG[LG] = lG(SG[LG]));
-          FG.e.queueQTE(GG, ZG, SG).getResult().then((bG => {
-            var ZG;
-            "boolean" === typeof bG && (null === (ZG = (0, yG.f)()) || void 0 === ZG || ZG.send(aG.b.QteResponse, {
-              qteId: GG,
-              qteResponse: bG
+          for (const jM of uM.b) SM[jM] && (SM[jM] = DM(SM[jM]));
+          RM.d.queueQTE(MM, iM, SM).getResult().then((rM => {
+            var iM;
+            "boolean" === typeof rM && (null === (iM = (0, aM.e)()) || void 0 === iM || iM.send(WM.d.QteResponse, {
+              qteId: MM,
+              qteResponse: rM
             }))
           }))
-        }(bG.id, bG.TG)
-      })), (0, hG.l)(vG.Y, (GG => {
-        const bG = (0, cG.f)(vG.Y, GG);
-        "number" === typeof bG && FG.e.cancelQTE(bG)
-      })), (0, hG.f)((() => {
-        FG.e.reset()
-      })), (0, hG.j)((() => {
-        FG.e.reset()
-      })), (0, hG.l)(VG.jc.EditItemCraftingRecipes, (GG => {
-        const bG = (0, cG.j)(GG);
-        (0, cG.d)(bG) && YG.l.xh("craftingRecipesEdited", {
-          itemName: bG.craftingRecipeItemName,
-          recipesForItem: bG.recipesForItem
+        }(rM.id, rM.bO)
+      })), (0, JM.h)(pM.U, (MM => {
+        const rM = (0, sM.d)(pM.U, MM);
+        "number" === typeof rM && RM.d.cancelQTE(rM)
+      })), (0, JM.c)((() => {
+        RM.d.reset()
+      })), (0, JM.e)((() => {
+        RM.d.reset()
+      })), (0, JM.h)(zM.hc.EditItemCraftingRecipes, (MM => {
+        const rM = (0, sM.f)(MM);
+        (0, sM.c)(rM) && QM.i.Tz("craftingRecipesEdited", {
+          itemName: rM.craftingRecipeItemName,
+          recipesForItem: rM.recipesForItem
         })
-      })), (0, hG.l)(vG.V, (GG => {
-        const bG = (0, cG.f)(vG.V, GG);
-        bG && YG.l.xh("craftingRecipesEdited", {
-          itemName: bG.aS,
+      })), (0, JM.h)(pM.R, (MM => {
+        const rM = (0, sM.d)(pM.R, MM);
+        rM && QM.i.Tz("craftingRecipesEdited", {
+          itemName: rM.nS,
           recipesForItem: []
         })
       })))
     }
-    var AG = ZG(17);
-    const sG = [{
+    var fM = iM(19);
+    const YM = [{
       allowed: !1,
       movesFly: !1
     }, {
@@ -1034,1531 +1051,1531 @@ export const modules = {
       movesFly: !0
     }];
 
-    function qG(GG) {
-      return EG.v.playerFlags(GG.api.apiView, 0)
+    function NM(MM) {
+      return UM.v.playerFlags(MM.api.apiView, 0)
     }
-    const nG = {
-        freeCamera: (0, QG.e)((GG => () => {
-          const bG = GG.isSessionLive && 0 !== (qG(GG) & EG.Hd.FreeCamMoves),
-            ZG = GG.freeCameraAllowed() && null === AG.e.get("scriptedCameraFacing");
-          return sG[(ZG ? 2 : 0) + (bG ? 1 : 0)]
-        }), sG[0], (GG => (0, LG.r)(GG)))
+    const AM = {
+        freeCamera: (0, HM.b)((MM => () => {
+          const rM = MM.isSessionLive && 0 !== (NM(MM) & UM.yd.FreeCamMoves),
+            iM = MM.freeCameraAllowed() && null === fM.d.get("scriptedCameraFacing");
+          return YM[(iM ? 2 : 0) + (rM ? 1 : 0)]
+        }), YM[0], (MM => (0, jM.x)(MM)))
       },
-      gG = {
-        setFreeCameraMovesFly: GG => {
-          var bG;
-          null === (bG = (0, yG.f)()) || void 0 === bG || bG.setFreeCameraMovesFly(GG)
+      xM = {
+        setFreeCameraMovesFly: MM => {
+          var rM;
+          null === (rM = (0, aM.e)()) || void 0 === rM || rM.setFreeCameraMovesFly(MM)
         }
       },
-      eG = {
+      vM = {
         freeCameraPos: () => {
-          const GG = (0, yG.f)();
-          return null !== GG && void 0 !== GG && GG.isSessionLive && GG.renderFrame.hasView && 0 !== (qG(GG) & EG.Hd.FreeCam) ? GG.renderFrame.cameraPosition : null
+          const MM = (0, aM.e)();
+          return null !== MM && void 0 !== MM && MM.isSessionLive && MM.renderFrame.hasView && 0 !== (NM(MM) & UM.yd.FreeCam) ? MM.renderFrame.cameraPosition : null
         }
       };
-    var RG = ZG(39593);
-    let TG = !1,
-      HG = !1;
+    var FM = iM(40270);
+    let BM = !1,
+      XM = !1;
 
-    function tG() {
-      const GG = (0, yG.f)();
-      if (null === GG || void 0 === GG || !GG.isSessionLive) return void(TG = !1);
-      const bG = 0 !== (EG.v.playerFlags(GG.api.apiView, 0) & EG.Hd.FreeCam);
-      bG !== TG && (TG = bG, (0, RG.b)(bG))
+    function IM() {
+      const MM = (0, aM.e)();
+      if (null === MM || void 0 === MM || !MM.isSessionLive) return void(BM = !1);
+      const rM = 0 !== (UM.v.playerFlags(MM.api.apiView, 0) & UM.yd.FreeCam);
+      rM !== BM && (BM = rM, (0, FM.e)(rM))
     }
-    var DG = ZG(352),
-      NG = ZG(37396),
-      OG = ZG(1939);
-    var xG = ZG(41413),
-      BG = ZG(41020);
-    const Gb = {
+    var KM = iM(332),
+      qM = iM(37975),
+      TM = iM(2078);
+    var VM = iM(42119),
+      cM = iM(41723);
+    const Mr = {
       interactPrompt: null,
       blockText: null,
       neededTool: null
     };
-    let bb = "off";
+    let rr = "off";
 
-    function Zb(GG) {
-      var bG;
-      return null === GG ? null : {
-        label: null !== (bG = (0, xG.b)(GG, "interactionPrompt")) && void 0 !== bG ? bG : null
+    function ir(MM) {
+      var rM;
+      return null === MM ? null : {
+        label: null !== (rM = (0, VM.d)(MM, "interactionPrompt")) && void 0 !== rM ? rM : null
       }
     }
-    const wb = new Map([
-      [EG.mc.Open, {
-        label: UG.g.open
+    const Or = new Map([
+      [UM.ic.Open, {
+        label: nM.f.open
       }],
-      [EG.mc.Close, {
-        label: UG.g.close
+      [UM.ic.Close, {
+        label: nM.f.close
       }],
-      [EG.mc.Milk, {
-        label: UG.g.milk
+      [UM.ic.Milk, {
+        label: nM.f.milk
       }],
-      [EG.mc.Shear, {
-        label: UG.g.shear
+      [UM.ic.Shear, {
+        label: nM.f.shear
       }],
-      [EG.mc.Tame, {
-        label: UG.g.tame
+      [UM.ic.Tame, {
+        label: nM.f.tame
       }],
-      [EG.mc.Feed, {
-        label: UG.g.feed
+      [UM.ic.Feed, {
+        label: nM.f.feed
       }],
-      [EG.mc.Ride, {
-        label: UG.g.ride
+      [UM.ic.Ride, {
+        label: nM.f.ride
       }]
     ]);
-    class Sb {
+    class Sr {
       constructor() {
-        this.target = Gb, this.Gk = EG.Yc, this.optionName = null, this.pickaxe = new UG.d
+        this.target = Mr, this.jP = UM.Pc, this.optionName = null, this.pickaxe = new nM.d
       }
-      read(GG) {
-        var bG;
-        const ZG = EG.v.targetBlockId(GG.api.apiView, 0);
-        ZG !== this.Gk && (this.Gk = ZG, this.optionName = ZG === EG.Yc ? null : `${GG.tables.getMetaInfo(ZG).rootName}CrosshairText`);
-        const wG = null === this.optionName ? null : null !== (bG = GG.tables.getClientOption(this.optionName)) && void 0 !== bG ? bG : null;
-        this.pickaxe.update(function(GG, bG) {
-          var ZG, wG, SG;
-          if (0 === (EG.v.playerFlags(GG.api.apiView, 0) & EG.Hd.Breaking) || bG === EG.Yc || 0 === bG) return null;
+      read(MM) {
+        var rM;
+        const iM = UM.v.targetBlockId(MM.api.apiView, 0);
+        iM !== this.jP && (this.jP = iM, this.optionName = iM === UM.Pc ? null : `${MM.tables.getMetaInfo(iM).rootName}CrosshairText`);
+        const OM = null === this.optionName ? null : null !== (rM = MM.tables.getClientOption(this.optionName)) && void 0 !== rM ? rM : null;
+        this.pickaxe.update(function(MM, rM) {
+          var iM, OM, SM;
+          if (0 === (UM.v.playerFlags(MM.api.apiView, 0) & UM.yd.Breaking) || rM === UM.Pc || 0 === rM) return null;
           const {
-            tables: LG
-          } = GG;
-          if (!0 === LG.getClientOption("creative")) return null;
-          const yG = LG.nameOfId(bG),
-            kG = null === (ZG = GG.items.Ik()) || void 0 === ZG ? void 0 : ZG.name,
-            UG = null !== (wG = LG.getItemStat(yG, "harvestLevel")) && void 0 !== wG ? wG : 0;
-          return (0, DG.Kc)({
-            blockHarvestType: LG.getDefaultItemStat(yG, "harvestType"),
-            blockHarvestLevel: LG.getDefaultItemStat(yG, "harvestLevel"),
-            harvestLevel: UG,
-            heldToolType: void 0 === kG ? void 0 : LG.getDefaultItemStat(kG, "harvests"),
-            heldToolLevel: void 0 === kG ? void 0 : LG.getDefaultItemStat(kG, "level")
-          }) && null !== (SG = NG.n[UG]) && void 0 !== SG ? SG : null
-        }(GG, ZG)), GG.watchPromptPick(bb);
-        const SG = "touch" === bb ? function(GG) {
-          var bG;
-          const ZG = GG.interactLabel;
-          return ZG === EG.mc.Entity ? Zb(GG.promptEntity) : ZG === EG.mc.TameWith ? {
-            label: (0, UG.v)(GG.tables.nameOfId(GG.interactIcon))
-          } : null !== (bG = wb.get(ZG)) && void 0 !== bG ? bG : null
-        }(GG) : Zb(GG.promptEntity);
-        return this.target = (0, OG.n)(this.target, {
-          interactPrompt: SG,
-          blockText: wG,
+            tables: jM
+          } = MM;
+          if (!0 === jM.getClientOption("creative")) return null;
+          const aM = jM.nameOfId(rM),
+            PM = null === (iM = MM.items.sQ()) || void 0 === iM ? void 0 : iM.name,
+            nM = null !== (OM = jM.getItemStat(aM, "harvestLevel")) && void 0 !== OM ? OM : 0;
+          return (0, KM.Bc)({
+            blockHarvestType: jM.getDefaultItemStat(aM, "harvestType"),
+            blockHarvestLevel: jM.getDefaultItemStat(aM, "harvestLevel"),
+            harvestLevel: nM,
+            heldToolType: void 0 === PM ? void 0 : jM.getDefaultItemStat(PM, "harvests"),
+            heldToolLevel: void 0 === PM ? void 0 : jM.getDefaultItemStat(PM, "level")
+          }) && null !== (SM = qM.m[nM]) && void 0 !== SM ? SM : null
+        }(MM, iM)), MM.watchPromptPick(rr);
+        const SM = "touch" === rr ? function(MM) {
+          var rM;
+          const iM = MM.interactLabel;
+          return iM === UM.ic.Entity ? ir(MM.promptEntity) : iM === UM.ic.TameWith ? {
+            label: (0, nM.v)(MM.tables.nameOfId(MM.interactIcon))
+          } : null !== (rM = Or.get(iM)) && void 0 !== rM ? rM : null
+        }(MM) : ir(MM.promptEntity);
+        return this.target = (0, TM.r)(this.target, {
+          interactPrompt: SM,
+          blockText: OM,
           neededTool: this.pickaxe.shown
         }), this.target
       }
     }
-    let Lb = null;
-    const yb = {
+    let jr = null;
+    const ar = {
       current: () => {
-        var GG, bG;
-        return null !== (GG = null === (bG = Lb) || void 0 === bG ? void 0 : bG.target) && void 0 !== GG ? GG : Gb
+        var MM, rM;
+        return null !== (MM = null === (rM = jr) || void 0 === rM ? void 0 : rM.target) && void 0 !== MM ? MM : Mr
       },
-      watch: GG => {
-        const bG = new Sb;
-        Lb = bG;
-        const ZG = (0, QG.l)((ZG => {
-          let wG = bG.read(ZG);
-          GG(wG);
-          const SG = (0, LG.t)((() => {
-            const SG = bG.read(ZG);
-            SG !== wG && (wG = SG, GG(SG))
+      watch: MM => {
+        const rM = new Sr;
+        jr = rM;
+        const iM = (0, HM.h)((iM => {
+          let OM = rM.read(iM);
+          MM(OM);
+          const SM = (0, jM.y)((() => {
+            const SM = rM.read(iM);
+            SM !== OM && (OM = SM, MM(SM))
           }));
           return () => {
-            SG(), ZG.watchPromptPick("off")
+            SM(), iM.watchPromptPick("off")
           }
         }));
         return () => {
-          ZG(), Lb === bG && (Lb = null)
+          iM(), jr === rM && (jr = null)
         }
       }
     };
-    let kb = 0,
-      Ub = 0;
-    const Yb = {
-        health: UG.r,
-        aura: UG.i,
-        hotbar: BG.c.states.hotbar,
-        heldItemAim: BG.c.states.heldItemAim,
-        crouching: (0, QG.e)((GG => function(GG) {
-          const bG = () => 0 !== (EG.v.playerFlags(GG.apiView, 0) & EG.Hd.Crouching);
+    let Pr = 0,
+      nr = 0;
+    const Qr = {
+        health: nM.q,
+        aura: nM.h,
+        hotbar: cM.d.states.hotbar,
+        heldItemAim: cM.d.states.heldItemAim,
+        crouching: (0, HM.b)((MM => function(MM) {
+          const rM = () => 0 !== (UM.v.playerFlags(MM.apiView, 0) & UM.yd.Crouching);
           return {
-            current: bG,
-            watch(GG) {
-              let ZG = bG();
-              return (0, LG.r)((() => {
-                const wG = bG();
-                wG !== ZG && (ZG = wG, GG(wG))
+            current: rM,
+            watch(MM) {
+              let iM = rM();
+              return (0, jM.x)((() => {
+                const OM = rM();
+                OM !== iM && (iM = OM, MM(OM))
               }))
             }
           }
-        }(GG.api).current), !1, (GG => (0, LG.r)(GG))),
-        flight: (0, QG.e)((GG => () => function(GG) {
-          const bG = EG.v.playerFlags(GG.apiView, 0);
-          return (0, UG.o)(0 !== (bG & EG.Hd.CanFly), 0 !== (bG & EG.Hd.Flying))
-        }(GG.api)), (0, UG.o)(!1, !1), (GG => (0, LG.r)(GG))),
-        gliderBoostFuel: (0, QG.e)((GG => () => EG.v.gliderBoostFuel(GG.api.apiView, 0)), 0, (GG => (0, LG.r)(GG))),
-        crosshairTarget: yb
+        }(MM.api).current), !1, (MM => (0, jM.x)(MM))),
+        flight: (0, HM.b)((MM => () => function(MM) {
+          const rM = UM.v.playerFlags(MM.apiView, 0);
+          return (0, nM.n)(0 !== (rM & UM.yd.CanFly), 0 !== (rM & UM.yd.Flying))
+        }(MM.api)), (0, nM.n)(!1, !1), (MM => (0, jM.x)(MM))),
+        gliderBoostFuel: (0, HM.b)((MM => () => UM.v.gliderBoostFuel(MM.api.apiView, 0)), 0, (MM => (0, jM.x)(MM))),
+        crosshairTarget: ar
       },
-      Vb = {
-        hotbarSlotRequested: BG.c.events.hotbarSlotRequested,
-        hotbarScrolled: BG.c.events.hotbarScrolled,
-        numberKeyPressed: BG.c.events.numberKeyPressed,
-        shotDamageToShow: (0, UG.u)((GG => !0 === (0, xG.b)(GG, "showDamageAmounts")))
+      zr = {
+        hotbarSlotRequested: cM.d.events.hotbarSlotRequested,
+        hotbarScrolled: cM.d.events.hotbarScrolled,
+        numberKeyPressed: cM.d.events.numberKeyPressed,
+        shotDamageToShow: (0, nM.u)((MM => !0 === (0, VM.d)(MM, "showDamageAmounts")))
       },
-      pb = {
-        selectHotbarSlot: BG.c.commands.selectHotbarSlot,
-        setCrosshairInteractPrompt: GG => {
-          bb = GG
+      Lr = {
+        selectHotbarSlot: cM.d.commands.selectHotbarSlot,
+        setCrosshairInteractPrompt: MM => {
+          rr = MM
         }
       },
-      fb = {
+      mr = {
         momentumFrac: function() {
-          var GG, bG, ZG;
-          const wG = (0, yG.f)(),
-            SG = performance.now(),
-            LG = null === wG || void 0 === wG || null === (GG = wG.items.Ik()) || void 0 === GG || null === (bG = GG.attributes) || void 0 === bG || null === (ZG = bG.customAttributes) || void 0 === ZG ? void 0 : ZG.enchantments;
-          return kb = null !== wG && null !== LG && void 0 !== LG && LG.Momentum ? 0 !== (EG.v.playerFlags(wG.api.apiView, 0) & EG.Hd.Breaking) ? Math.max(0, EG.v.momentumFrac(wG.api.apiView, 0)) : Math.max(0, kb - (SG - Ub) / 1500) : 0, Ub = SG, kb
+          var MM, rM, iM;
+          const OM = (0, aM.e)(),
+            SM = performance.now(),
+            jM = null === OM || void 0 === OM || null === (MM = OM.items.sQ()) || void 0 === MM || null === (rM = MM.attributes) || void 0 === rM || null === (iM = rM.customAttributes) || void 0 === iM ? void 0 : iM.enchantments;
+          return Pr = null !== OM && null !== jM && void 0 !== jM && jM.Momentum ? 0 !== (UM.v.playerFlags(OM.api.apiView, 0) & UM.yd.Breaking) ? Math.max(0, UM.v.momentumFrac(OM.api.apiView, 0)) : Math.max(0, Pr - (SM - nr) / 1500) : 0, nr = SM, Pr
         }
       };
-    var Qb = ZG(40963);
-    const Kb = {
-      lobbyManage(GG) {
-        var bG;
-        null === (bG = (0, yG.f)()) || void 0 === bG || bG.send(aG.b.LobbyManage, GG)
+    var Hr = iM(41674);
+    const hr = {
+      lobbyManage(MM) {
+        var rM;
+        null === (rM = (0, aM.e)()) || void 0 === rM || rM.send(WM.d.LobbyManage, MM)
       }
     };
-    var hb = ZG(1198),
-      db = ZG(36836),
-      Jb = ZG(8839),
-      rb = ZG(1579),
-      zb = ZG(2380),
-      Eb = ZG(4827);
-    let ob = !1;
+    var Jr = iM(1242),
+      dr = iM(34822),
+      yr = iM(9392),
+      lr = iM(1717),
+      Er = iM(2619),
+      Ur = iM(5204);
+    let Gr = !1;
 
-    function Xb(GG) {
-      ob = GG
+    function Cr(MM) {
+      Gr = MM
     }
 
-    function ub() {
-      "inGame" !== AG.e.get("gameState") || (0, rb.u)() || YG.l.xh("ctrlCrouchWithoutFullscreen")
+    function er() {
+      "inGame" !== fM.d.get("gameState") || (0, lr.v)() || QM.i.Tz("ctrlCrouchWithoutFullscreen")
     }
-    let ib = !1;
-    const Cb = {
+    let br = !1;
+    const wr = {
         OpenEmoteWheel: () => {
-          Xb(!0), ib = !0, queueMicrotask((() => {
-            ib && (ib = !1, YG.l.xh("requestEmoteWheelHoldOpen"))
+          Cr(!0), br = !0, queueMicrotask((() => {
+            br && (br = !1, QM.i.Tz("requestEmoteWheelHoldOpen"))
           }))
         },
         ToggleFullCoordinateOverlay: () => {
-          YG.l.xh("toggleFullCoordinateOverlay")
+          QM.i.Tz("toggleFullCoordinateOverlay")
         },
         KeyYPressed: () => {
-          (0, db.b)() || YG.l.xh("YKeyPressed")
+          (0, dr.b)() || QM.i.Tz("YKeyPressed")
         },
         KeyXPressed: () => {
-          (0, db.b)() || YG.l.xh("XKeyPressed")
+          (0, dr.b)() || QM.i.Tz("XKeyPressed")
         },
-        CtrlCrouch: ub,
+        CtrlCrouch: er,
         "primary-fire": () => {
-          YG.l.xh("mouseState", {
-            AV: hb.d.DownFirePrimary,
+          QM.i.Tz("mouseState", {
+            ba: Jr.c.DownFirePrimary,
             isDown: !0
           })
         },
         "alt-fire": () => {
-          YG.l.xh("mouseState", {
-            AV: hb.d.DownFireSecondary,
+          QM.i.Tz("mouseState", {
+            ba: Jr.c.DownFireSecondary,
             isDown: !0
           })
         },
         TouchHold: () => {
-          YG.l.xh("mouseState", {
-            AV: hb.d.TouchDownLong,
+          QM.i.Tz("mouseState", {
+            ba: Jr.c.TouchDownLong,
             isDown: !0
           })
         }
       },
-      Wb = {
+      tr = {
         OpenEmoteWheel: () => {
-          Xb(!1), ib ? (ib = !1, (0, Jb.c)() || YG.l.xh("requestEmoteWheelHoldOpen")) : YG.l.xh("requestEmoteWheelHoldRelease")
+          Cr(!1), br ? (br = !1, (0, yr.e)() || QM.i.Tz("requestEmoteWheelHoldOpen")) : QM.i.Tz("requestEmoteWheelHoldRelease")
         },
-        CtrlCrouch: ub,
+        CtrlCrouch: er,
         "primary-fire": () => {
-          YG.l.xh("mouseState", {
-            AV: hb.d.UpFirePrimary,
+          QM.i.Tz("mouseState", {
+            ba: Jr.c.UpFirePrimary,
             isDown: !1
           })
         },
         "alt-fire": () => {
-          YG.l.xh("mouseState", {
-            AV: hb.d.UpFireSecondary,
+          QM.i.Tz("mouseState", {
+            ba: Jr.c.UpFireSecondary,
             isDown: !1
           })
         },
         TouchDig: () => {
-          YG.l.xh("mouseState", {
-            AV: hb.d.UpFirePrimary,
+          QM.i.Tz("mouseState", {
+            ba: Jr.c.UpFirePrimary,
             isDown: !1
           })
         }
       };
-    let mb = !1;
+    let gr = !1;
 
-    function Ib() {
-      mb || (mb = !0, (0, Eb.j)((GG => {
-        if ((0, SG.d)()) return;
-        const bG = (0, Eb.g)(GG) ? "primary-fire" : GG.action;
-        var ZG;
-        if (GG.down) {
-          if (0 === (GG.flags & zb.b.Synthetic)) {
-            var wG;
-            null === (wG = Cb[bG]) || void 0 === wG || wG.call(Cb)
+    function ur() {
+      gr || (gr = !0, (0, Ur.f)((MM => {
+        if ((0, SM.d)()) return;
+        const rM = (0, Ur.e)(MM) ? "primary-fire" : MM.action;
+        var iM;
+        if (MM.down) {
+          if (0 === (MM.flags & Er.d.Synthetic)) {
+            var OM;
+            null === (OM = wr[rM]) || void 0 === OM || OM.call(wr)
           }
-        } else null === (ZG = Wb[bG]) || void 0 === ZG || ZG.call(Wb)
+        } else null === (iM = tr[rM]) || void 0 === iM || iM.call(tr)
       })))
     }
-    var Fb = ZG(333),
-      vb = ZG(80),
-      ab = ZG(29),
-      cb = ZG(41263),
-      lb = ZG(1287),
-      jb = ZG(2400);
-    let Pb = !1;
-    const Mb = {
-      sendCodeCollab(GG) {
-        var bG;
-        null === (bG = (0, yG.f)()) || void 0 === bG || bG.send(aG.b.CodeCollab, (0, aG.p)(GG), (0, jb.e)(GG))
+    var Rr = iM(313),
+      pr = iM(83),
+      Wr = iM(30),
+      sr = iM(41975),
+      Dr = iM(1373),
+      kr = iM(2633);
+    let Zr = !1;
+    const or = {
+      sendCodeCollab(MM) {
+        var rM;
+        null === (rM = (0, aM.e)()) || void 0 === rM || rM.send(WM.d.CodeCollab, (0, WM.l)(MM), (0, kr.d)(MM))
       }
     };
-    var Ab = ZG(39519),
-      sb = ZG(8764);
-    let qb = null,
-      nb = !1,
-      gb = null;
+    var fr = iM(40140),
+      Yr = iM(9331);
+    let Nr = null,
+      Ar = !1,
+      xr = null;
 
-    function eb() {
-      return "inGame" === AG.e.get("gameState") && !(0, db.b)()
+    function vr() {
+      return "inGame" === fM.d.get("gameState") && !(0, dr.b)()
     }
-    const Rb = {
-        OpenInventory: GG => {
-          (0, rb.z)(GG, "inventory", (0, Qb.n)())
+    const Fr = {
+        OpenInventory: MM => {
+          (0, lr.C)(MM, "inventory", (0, Hr.m)())
         },
-        OpenShop: GG => {
-          qb && eb() && (0, rb.x)(GG, Fb.u.SHOP, !qb.shopIsEmpty(zG.c.get("shopInfo")))
+        OpenShop: MM => {
+          Nr && vr() && (0, lr.B)(MM, Rr.m.SHOP, !Nr.shopIsEmpty(EM.d.get("shopInfo")))
         },
-        OpenLobbyLeaderboard: GG => {
-          eb() && (0, rb.x)(GG, Fb.u.LOBBY_LEADERBOARD, (0, Ab.b)({
-            lobbyLeaderboardInfo: zG.c.get("lobbyLeaderboardInfo"),
-            lobbyManage: zG.c.get("lobbyManage")
+        OpenLobbyLeaderboard: MM => {
+          vr() && (0, lr.B)(MM, Rr.m.LOBBY_LEADERBOARD, (0, fr.d)({
+            lobbyLeaderboardInfo: EM.d.get("lobbyLeaderboardInfo"),
+            lobbyManage: EM.d.get("lobbyManage")
           }))
         },
-        OpenTasksAndLeaderboard: GG => {
-          var bG;
-          const ZG = null === (bG = qb) || void 0 === bG ? void 0 : bG.getClientGameMapKey();
-          ZG ? (0, rb.C)(GG, !0, ZG) : (0, rb.z)(GG, "retentionFeatures", !(!zG.c.get("_tasks") && !zG.c.get("_availableLeaderboards")))
+        OpenTasksAndLeaderboard: MM => {
+          var rM;
+          const iM = null === (rM = Nr) || void 0 === rM ? void 0 : rM.getClientGameMapKey();
+          iM ? (0, lr.E)(MM, !0, iM) : (0, lr.C)(MM, "retentionFeatures", !(!EM.d.get("_tasks") && !EM.d.get("_availableLeaderboards")))
         },
-        OpenInviteLink: GG => {
-          (0, rb.z)(GG, "inviteLink", vb.featureFlags.canUseInviteLinks)
+        OpenInviteLink: MM => {
+          (0, lr.C)(MM, "inviteLink", pr.featureFlags.canUseInviteLinks)
         },
-        OpenCodeEditor: GG => {
-          eb() && function(GG) {
-            const bG = (0, yG.f)(),
-              ZG = null !== bG && void 0 !== bG && bG.isSessionLive ? bG.api : null,
-              wG = ZG ? ZG.HJ(ZG.localId) : null;
-            (0, rb.C)(GG, null !== wG && (0, jb.c)((0, lb.d)()), (() => {
-              (0, jb.i)(wG)
+        OpenCodeEditor: MM => {
+          vr() && function(MM) {
+            const rM = (0, aM.e)(),
+              iM = null !== rM && void 0 !== rM && rM.isSessionLive ? rM.api : null,
+              OM = iM ? iM.XE(iM.localId) : null;
+            (0, lr.E)(MM, null !== OM && (0, kr.b)((0, Dr.e)()), (() => {
+              (0, kr.e)(OM)
             }))
-          }(GG)
+          }(MM)
         },
         HideUi: () => {
-          YG.l.xh("showUi", !1)
+          QM.i.Tz("showUi", !1)
         }
       },
-      Tb = {
+      Br = {
         HideUi: () => {
-          YG.l.xh("showUi", !0)
+          QM.i.Tz("showUi", !0)
         }
       };
 
-    function Hb() {
-      nb || (nb = !0, ZG.e(159).then((() => ZG(61136))).then((GG => {
-        qb = GG
-      }), (GG => {
-        console.error("[bloxd-wasm-client] the menu keys' checks did not load", GG)
-      })), (0, cb.A)((GG => {
-        GG || !(0, cb.k)() || (0, vb.isMobile)() || !ab.h.getItem("disableFullscreen") || (0, rb.t)() || AG.e.set({
-          openEverythingMenuName: Fb.u.SETTINGS
+    function Xr() {
+      Ar || (Ar = !0, iM.e(173).then((() => iM(63222))).then((MM => {
+        Nr = MM
+      }), (MM => {
+        console.error("[bloxd-wasm-client] the menu keys' checks did not load", MM)
+      })), (0, sr.z)((MM => {
+        MM || !(0, sr.h)() || (0, pr.isMobile)() || !Wr.g.getItem("disableFullscreen") || (0, lr.r)() || fM.d.set({
+          openEverythingMenuName: Rr.m.SETTINGS
         })
-      })), (0, Eb.j)((GG => {
+      })), (0, Ur.f)((MM => {
         let {
-          action: bG,
-          down: ZG,
-          press: wG
-        } = GG;
-        var LG, yG;
-        (0, SG.d)() || (ZG ? null === (LG = Rb[bG]) || void 0 === LG || LG.call(Rb, function(GG) {
-          var bG;
-          if (0 === GG || (null === (bG = gb) || void 0 === bG ? void 0 : bG.press) !== GG) {
-            const bG = {
-              press: GG,
-              event: (0, sb.c)("inputAction")
+          action: rM,
+          down: iM,
+          press: OM
+        } = MM;
+        var jM, aM;
+        (0, SM.d)() || (iM ? null === (jM = Fr[rM]) || void 0 === jM || jM.call(Fr, function(MM) {
+          var rM;
+          if (0 === MM || (null === (rM = xr) || void 0 === rM ? void 0 : rM.press) !== MM) {
+            const rM = {
+              press: MM,
+              event: (0, Yr.d)("inputAction")
             };
-            gb = bG, queueMicrotask((() => {
-              gb === bG && (gb = null)
+            xr = rM, queueMicrotask((() => {
+              xr === rM && (xr = null)
             }))
           }
-          return gb.event
-        }(wG)) : null === (yG = Tb[bG]) || void 0 === yG || yG.call(Tb))
+          return xr.event
+        }(OM)) : null === (aM = Br[rM]) || void 0 === aM || aM.call(Br))
       })))
     }
-    var tb = ZG(39423),
-      Db = ZG(39412),
-      Nb = ZG(39404);
-    const Ob = {
-      completeTask(GG) {
-        var bG;
-        null === (bG = (0, yG.f)()) || void 0 === bG || bG.send(aG.b.CompleteTask, (0, aG.t)(GG))
+    var Ir = iM(40059),
+      Kr = iM(40048),
+      qr = iM(40043);
+    const Tr = {
+      completeTask(MM) {
+        var rM;
+        null === (rM = (0, aM.e)()) || void 0 === rM || rM.send(WM.d.CompleteTask, (0, WM.n)(MM))
       },
-      setServerCookie(GG) {
-        var bG;
+      setServerCookie(MM) {
+        var rM;
         let {
-          key: ZG,
-          value: wG
-        } = GG;
-        null === (bG = (0, yG.f)()) || void 0 === bG || bG.send(aG.b.GeneralCookieSet, (0, aG.x)({
-          yk: ZG,
-          kk: wG
+          key: iM,
+          value: OM
+        } = MM;
+        null === (rM = (0, aM.e)()) || void 0 === rM || rM.send(WM.d.GeneralCookieSet, (0, WM.s)({
+          Ja: iM,
+          da: OM
         }))
       },
-      answerUiRequest(GG) {
-        var bG;
+      answerUiRequest(MM) {
+        var rM;
         let {
-          id: ZG,
-          rV: wG
-        } = GG;
-        null === (bG = (0, yG.f)()) || void 0 === bG || bG.send(aG.b.UiRequestResp, (0, aG.$)({
-          fU: ZG,
-          QU: wG,
-          KU: 5
+          id: iM,
+          IQ: OM
+        } = MM;
+        null === (rM = (0, aM.e)()) || void 0 === rM || rM.send(WM.d.UiRequestResp, (0, WM.S)({
+          fa: iM,
+          Ya: OM,
+          Na: 5
         }))
       },
-      chooseRewardedAd(GG) {
-        var bG;
+      chooseRewardedAd(MM) {
+        var rM;
         let {
-          id: ZG,
-          rV: wG
-        } = GG;
-        null === (bG = (0, yG.f)()) || void 0 === bG || bG.send(aG.b.UiRequestResponded, (0, aG.Z)({
-          id: ZG,
-          rV: wG
+          id: iM,
+          IQ: OM
+        } = MM;
+        null === (rM = (0, aM.e)()) || void 0 === rM || rM.send(WM.d.UiRequestResponded, (0, WM.P)({
+          id: iM,
+          IQ: OM
         }))
       },
-      requestLeaderboard(GG) {
-        var bG;
+      requestLeaderboard(MM) {
+        var rM;
         let {
-          category: ZG,
-          timeframe: wG,
-          seeTop: SG
-        } = GG;
-        null === (bG = (0, yG.f)()) || void 0 === bG || bG.send(aG.b.LeaderboardRequest, {
-          category: ZG,
-          timeframe: wG,
-          seeTop: SG
+          category: iM,
+          timeframe: OM,
+          seeTop: SM
+        } = MM;
+        null === (rM = (0, aM.e)()) || void 0 === rM || rM.send(WM.d.LeaderboardRequest, {
+          category: iM,
+          timeframe: OM,
+          seeTop: SM
         })
       }
     };
-    let xb = !1;
-    const Bb = rG.d.Hd / 2,
-      GZ = [Bb, -Bb, -Bb, -Bb, Bb, Bb, -Bb, Bb],
-      bZ = [0, 0, 0];
+    let Vr = !1;
+    const cr = lM.f.Sy / 2,
+      Mi = [cr, -cr, -cr, -cr, cr, cr, -cr, cr],
+      ri = [0, 0, 0];
 
-    function ZZ(GG, bG, ZG) {
-      for (let wG = 0; wG < GG.length; wG += 2)
-        if (GG[wG] === bG && GG[wG + 1] === ZG) return !0;
+    function ii(MM, rM, iM) {
+      for (let OM = 0; OM < MM.length; OM += 2)
+        if (MM[OM] === rM && MM[OM + 1] === iM) return !0;
       return !1
     }
-    const wZ = {
+    const Oi = {
       blocksStandingOn: function() {
-        const GG = (0, yG.f)();
-        if (null === GG) return [];
+        const MM = (0, aM.e)();
+        if (null === MM) return [];
         const {
-          api: bG,
-          chunks: ZG,
-          tables: wG
-        } = GG;
-        if (!bG.readPosition(bG.localId, bZ)) return [];
-        const [SG, LG, kG] = bZ, UG = Math.ceil(LG) - 1, YG = [], VG = [];
-        for (let yG = 0; yG < GZ.length; yG += 2) {
-          const GG = SG + GZ[yG],
-            bG = kG + GZ[yG + 1];
-          if (Number.isInteger(GG) || Number.isInteger(bG)) continue;
-          const LG = Math.floor(GG),
-            pG = Math.floor(bG);
-          if (ZZ(VG, LG, pG)) continue;
-          const fG = ZG.Gk(LG, UG, pG);
-          wG.isSolidBlockId(fG) && (VG.push(LG, pG), YG.push(wG.nameOfId(fG)))
+          api: rM,
+          chunks: iM,
+          tables: OM
+        } = MM;
+        if (!rM.readPosition(rM.localId, ri)) return [];
+        const [SM, jM, PM] = ri, nM = Math.ceil(jM) - 1, QM = [], zM = [];
+        for (let aM = 0; aM < Mi.length; aM += 2) {
+          const MM = SM + Mi[aM],
+            rM = PM + Mi[aM + 1];
+          if (Number.isInteger(MM) || Number.isInteger(rM)) continue;
+          const jM = Math.floor(MM),
+            LM = Math.floor(rM);
+          if (ii(zM, jM, LM)) continue;
+          const mM = iM.jP(jM, nM, LM);
+          OM.isSolidBlockId(mM) && (zM.push(jM, LM), QM.push(OM.nameOfId(mM)))
         }
-        return YG
+        return QM
       },
       dropAhead: function() {
-        const GG = (0, yG.f)();
-        return null !== GG && 0 !== (EG.v.playerFlags(GG.api.apiView, 0) & EG.Hd.DropAhead)
+        const MM = (0, aM.e)();
+        return null !== MM && 0 !== (UM.v.playerFlags(MM.api.apiView, 0) & UM.yd.DropAhead)
       }
     };
-    var SZ = ZG(37309),
-      LZ = ZG(39487),
-      yZ = ZG(1311),
-      kZ = ZG(41031);
-    const UZ = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
-      YZ = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
+    var Si = iM(37876),
+      ji = iM(40118),
+      ai = iM(1429),
+      Pi = iM(41734);
+    const ni = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
+      Qi = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
 
-    function VZ() {
-      const GG = new Set;
+    function zi() {
+      const MM = new Set;
       return {
-        add: bG => (GG.add(bG), () => {
-          GG.delete(bG)
+        add: rM => (MM.add(rM), () => {
+          MM.delete(rM)
         }),
         fire() {
-          for (const bG of GG) bG()
+          for (const rM of MM) rM()
         }
       }
     }
-    const pZ = Object.freeze([]);
+    const Li = Object.freeze([]);
 
-    function fZ(GG, bG) {
-      let ZG, {
-        rereads: wG,
-        followLocalId: SG
-      } = bG;
-      const yG = () => (ZG = (0, OG.n)(ZG, GG()), ZG);
+    function mi(MM, rM) {
+      let iM, {
+        rereads: OM,
+        followLocalId: SM
+      } = rM;
+      const aM = () => (iM = (0, TM.r)(iM, MM()), iM);
       return {
-        current: yG,
-        watch(GG) {
-          const bG = (0, KG.c)((bG => {
-            wG(bG) && GG(yG())
+        current: aM,
+        watch(MM) {
+          const rM = (0, hM.c)((rM => {
+            OM(rM) && MM(aM())
           }));
-          if (!SG) return bG;
-          let ZG = (0, QG.i)();
-          const kG = (0, LG.t)((() => {
-            const bG = (0, QG.i)();
-            bG !== ZG && (ZG = bG, GG(yG()))
+          if (!SM) return rM;
+          let iM = (0, HM.f)();
+          const PM = (0, jM.y)((() => {
+            const rM = (0, HM.f)();
+            rM !== iM && (iM = rM, MM(aM()))
           }));
           return () => {
-            bG(), kG()
+            rM(), PM()
           }
         }
       }
     }
-    const QZ = {
-        players: fZ((function() {
-          const GG = KG.f.ids(),
-            bG = {};
-          for (const LG of GG) {
-            var ZG, wG, SG;
-            bG[LG] = {
-              name: null !== (ZG = KG.f.getName(LG)) && void 0 !== ZG ? ZG : null,
-              ranks: null !== (wG = KG.f.getSetting(LG, "ranks")) && void 0 !== wG ? wG : pZ,
-              cosmetics: null !== (SG = (0, KG.g)(LG)) && void 0 !== SG ? SG : null
+    const Hi = {
+        players: mi((function() {
+          const MM = hM.e.ids(),
+            rM = {};
+          for (const jM of MM) {
+            var iM, OM, SM;
+            rM[jM] = {
+              name: null !== (iM = hM.e.getName(jM)) && void 0 !== iM ? iM : null,
+              ranks: null !== (OM = hM.e.getSetting(jM, "ranks")) && void 0 !== OM ? OM : Li,
+              cosmetics: null !== (SM = (0, hM.g)(jM)) && void 0 !== SM ? SM : null
             }
           }
           return {
-            ids: GG,
-            byId: bG,
-            localId: (0, QG.i)()
+            ids: MM,
+            byId: rM,
+            localId: (0, HM.f)()
           }
         }), {
-          rereads: GG => "roster" !== GG.kind || GG.members || GG.settings.has("ranks"),
+          rereads: MM => "roster" !== MM.kind || MM.members || MM.settings.has("ranks"),
           followLocalId: !0
         }),
-        lobbyLeaderboardRows: fZ((function() {
-          const GG = {};
-          for (const SG of KG.f.ids()) {
-            var bG, ZG, wG;
-            GG[SG] = {
-              colour: null !== (bG = KG.f.getSetting(SG, "colorInLobbyLeaderboard")) && void 0 !== bG ? bG : null,
-              values: null !== (ZG = KG.f.getSetting(SG, "lobbyLeaderboardValues")) && void 0 !== ZG ? ZG : null,
-              tags: null !== (wG = KG.f.getSetting(SG, "lobbyLeaderboardTags")) && void 0 !== wG ? wG : null
+        lobbyLeaderboardRows: mi((function() {
+          const MM = {};
+          for (const SM of hM.e.ids()) {
+            var rM, iM, OM;
+            MM[SM] = {
+              colour: null !== (rM = hM.e.getSetting(SM, "colorInLobbyLeaderboard")) && void 0 !== rM ? rM : null,
+              values: null !== (iM = hM.e.getSetting(SM, "lobbyLeaderboardValues")) && void 0 !== iM ? iM : null,
+              tags: null !== (OM = hM.e.getSetting(SM, "lobbyLeaderboardTags")) && void 0 !== OM ? OM : null
             }
           }
-          return GG
+          return MM
         }), {
-          rereads: function(GG) {
-            if ("roster" !== GG.kind) return "reset" === GG.kind;
+          rereads: function(MM) {
+            if ("roster" !== MM.kind) return "reset" === MM.kind;
             const {
-              members: bG,
-              settings: ZG
-            } = GG;
-            return bG || ZG.has("colorInLobbyLeaderboard") || ZG.has("lobbyLeaderboardValues") || ZG.has("lobbyLeaderboardTags")
+              members: rM,
+              settings: iM
+            } = MM;
+            return rM || iM.has("colorInLobbyLeaderboard") || iM.has("lobbyLeaderboardValues") || iM.has("lobbyLeaderboardTags")
           },
           followLocalId: !1
         })
       },
-      KZ = {
+      Ji = {
         cosmeticsUpdated: {
-          watch: GG => (0, KG.c)((bG => {
-            if ("cosmetics" !== bG.kind) return;
-            const ZG = (0, QG.i)();
-            GG(bG.updates.map((GG => {
+          watch: MM => (0, hM.c)((rM => {
+            if ("cosmetics" !== rM.kind) return;
+            const iM = (0, HM.f)();
+            MM(rM.updates.map((MM => {
               let {
-                IL: bG,
-                FL: wG,
-                vL: SG
-              } = GG;
+                Xi: rM,
+                Ii: OM,
+                Ki: SM
+              } = MM;
               return {
-                local: bG === ZG,
-                FL: wG,
-                vL: SG
+                local: rM === iM,
+                Ii: OM,
+                Ki: SM
               }
             })))
           }))
         }
       };
-    var hZ = ZG(2897),
-      dZ = ZG(1702),
-      JZ = ZG(647),
-      rZ = ZG(41319);
-    let zZ = !1,
-      EZ = null;
-    const oZ = {
-      setShopOpen(GG) {
-        var bG;
-        null === (bG = (0, yG.f)()) || void 0 === bG || bG.send(aG.b.ShopMenuChanged, (0, aG.T)(GG))
+    var di = iM(3241),
+      yi = iM(1830),
+      li = iM(673),
+      Ei = iM(42031);
+    let Ui = !1,
+      Gi = null;
+    const Ci = {
+      setShopOpen(MM) {
+        var rM;
+        null === (rM = (0, aM.e)()) || void 0 === rM || rM.send(WM.d.ShopMenuChanged, (0, WM.N)(MM))
       },
-      buyShopItem(GG) {
-        var bG;
+      buyShopItem(MM) {
+        var rM;
         let {
-          categoryKey: ZG,
-          itemKey: wG,
-          userInput: SG
-        } = GG;
-        null === (bG = (0, yG.f)()) || void 0 === bG || bG.send(aG.b.ItemBought, {
-          categoryKey: ZG,
-          itemKey: wG,
-          shopVersion: zG.c.get("_shopVersion"),
-          userInput: SG
+          categoryKey: iM,
+          itemKey: OM,
+          userInput: SM
+        } = MM;
+        null === (rM = (0, aM.e)()) || void 0 === rM || rM.send(WM.d.ItemBought, {
+          categoryKey: iM,
+          itemKey: OM,
+          shopVersion: EM.d.get("_shopVersion"),
+          userInput: SM
         })
       }
     };
-    let XZ = !1;
-    var uZ = ZG(4842);
-    const iZ = zb.t.LookFrozen | zb.t.ClicksSuppressed;
+    let ei = !1;
+    var bi = iM(5214);
+    const wi = Er.C.LookFrozen | Er.C.ClicksSuppressed;
 
-    function CZ(GG, bG) {
-      var ZG;
-      null !== (ZG = (0, yG.f)()) && void 0 !== ZG && ZG.send(GG, bG) || console.warn(`[bloxd-wasm-client] message ${GG} not sent: no live game or the core's command ring is full`)
-    }(0, hG.l)(vG.mb, (GG => {
-      const bG = (0, cG.f)(vG.mb, GG);
-      void 0 !== bG && YG.l.xh("setDiscordReportKey", bG)
+    function ti(MM, rM) {
+      var iM;
+      null !== (iM = (0, aM.e)()) && void 0 !== iM && iM.send(MM, rM) || console.warn(`[bloxd-wasm-client] message ${MM} not sent: no live game or the core's command ring is full`)
+    }(0, JM.h)(pM.gb, (MM => {
+      const rM = (0, sM.d)(pM.gb, MM);
+      void 0 !== rM && QM.i.Tz("setDiscordReportKey", rM)
     }));
-    const WZ = {
-      ignorePlayer(GG) {
-        CZ(aG.b.IgnoreUser, (0, aG.y)({
-          hU: GG
+    const gi = {
+      ignorePlayer(MM) {
+        ti(WM.d.IgnoreUser, (0, WM.w)({
+          KQ: MM
         }))
       },
-      reportPlayer(GG) {
+      reportPlayer(MM) {
         let {
-          playerId: bG,
-          chatMsgId: ZG,
-          Uk: wG,
-          details: SG
-        } = GG;
-        CZ(aG.b.UserReport, (0, aG.jb)({
-          hV: bG,
-          dV: ZG,
-          Uk: wG,
-          Yk: SG
+          playerId: rM,
+          chatMsgId: iM,
+          lQ: OM,
+          details: SM
+        } = MM;
+        ti(WM.d.UserReport, (0, WM.ab)({
+          dQ: rM,
+          yQ: iM,
+          lQ: OM,
+          EQ: SM
         }))
       },
-      reportWorldCodeChat(GG) {
+      reportWorldCodeChat(MM) {
         let {
-          chatMsgId: bG,
-          Uk: ZG,
-          details: wG
-        } = GG;
-        CZ(aG.b.UserReport, (0, aG.jb)({
-          hV: "",
-          dV: bG,
-          Uk: ZG,
-          Yk: wG
+          chatMsgId: rM,
+          lQ: iM,
+          details: OM
+        } = MM;
+        ti(WM.d.UserReport, (0, WM.ab)({
+          dQ: "",
+          yQ: rM,
+          lQ: iM,
+          EQ: OM
         }))
       },
-      requestDiscordReportKey(GG) {
-        CZ(aG.b.ReqDiscordReportKey, (0, aG.L)(GG))
+      requestDiscordReportKey(MM) {
+        ti(WM.d.ReqDiscordReportKey, (0, WM.H)(MM))
       },
-      reportLobbyOrGame(GG) {
+      reportLobbyOrGame(MM) {
         let {
-          target: bG,
-          Uk: ZG,
-          details: wG
-        } = GG;
-        "customGame" === bG ? CZ(aG.b.CustomGameReport, (0, aG.v)({
-          Uk: ZG,
-          Yk: wG
-        })) : CZ(aG.b.LobbyReport, (0, aG.A)({
-          Uk: ZG,
-          Yk: wG
+          target: rM,
+          lQ: iM,
+          details: OM
+        } = MM;
+        "customGame" === rM ? ti(WM.d.CustomGameReport, (0, WM.p)({
+          lQ: iM,
+          EQ: OM
+        })) : ti(WM.d.LobbyReport, (0, WM.A)({
+          lQ: iM,
+          EQ: OM
         }))
       },
-      updateMyCosmetic(GG) {
-        CZ(aG.b.UpdateMyCosmetic, (0, aG.gb)(GG))
+      updateMyCosmetic(MM) {
+        ti(WM.d.UpdateMyCosmetic, (0, WM._)(MM))
       },
-      holdEmoteWheel(GG) {
-        !GG || ob ? (0, uZ.j)(iZ, GG ? iZ : 0) : YG.l.xh("requestEmoteWheelHoldRelease")
+      holdEmoteWheel(MM) {
+        !MM || Gr ? (0, bi.k)(wi, MM ? wi : 0) : QM.i.Tz("requestEmoteWheelHoldRelease")
       }
     };
-    var mZ = ZG(41421),
-      IZ = ZG(9249),
-      FZ = ZG(40001);
-    const vZ = [0, 0, 0],
-      aZ = [0, 0, 0],
-      cZ = [0, 0, 0],
-      lZ = {
-        blockAtViewPoint(GG) {
+    var ui = iM(42126),
+      Ri = iM(9816),
+      Wi = iM(40745);
+    const si = [0, 0, 0],
+      Di = [0, 0, 0],
+      ki = [0, 0, 0],
+      Zi = {
+        blockAtViewPoint(MM) {
           let {
-            x: bG,
-            y: ZG
-          } = GG;
-          const wG = (0, yG.f)();
-          if (null === wG || void 0 === wG || !wG.renderFrame.hasView) return null;
+            x: rM,
+            y: iM
+          } = MM;
+          const OM = (0, aM.e)();
+          if (null === OM || void 0 === OM || !OM.renderFrame.hasView) return null;
           const {
-            renderFrame: SG,
-            clientApi: LG,
-            api: kG
-          } = wG;
-          let UG = 0;
-          return (0, FZ.f)(((GG, bG, ZG) => (UG = LG.getBlockId(GG, bG, ZG), 0 !== UG)), SG.cameraPosition, (0, FZ.g)((GG => EG.v.viewProj(kG.apiView, 0, GG)), bG, ZG, vZ), FZ.c, aZ, cZ) ? {
-            pos: [aZ[0], aZ[1], aZ[2]],
-            normal: [cZ[0], cZ[1], cZ[2]],
-            name: (0, IZ.i)(UG)
+            renderFrame: SM,
+            clientApi: jM,
+            api: PM
+          } = OM;
+          let nM = 0;
+          return (0, Wi.f)(((MM, rM, iM) => (nM = jM.getBlockId(MM, rM, iM), 0 !== nM)), SM.cameraPosition, (0, Wi.g)((MM => UM.v.viewProj(PM.apiView, 0, MM)), rM, iM, si), Wi.b, Di, ki) ? {
+            pos: [Di[0], Di[1], Di[2]],
+            normal: [ki[0], ki[1], ki[2]],
+            name: (0, Ri.g)(nM)
           } : null
         }
       },
-      jZ = {
-        setBlockHighlight(GG) {
-          var bG;
-          null === (bG = (0, yG.f)()) || void 0 === bG || bG.setBlockHighlight(GG)
+      oi = {
+        setBlockHighlight(MM) {
+          var rM;
+          null === (rM = (0, aM.e)()) || void 0 === rM || rM.setBlockHighlight(MM)
         }
       };
-    var PZ = ZG(1910),
-      MZ = ZG(41305),
-      AZ = ZG(41423),
-      sZ = ZG(4508),
-      qZ = ZG(4485),
-      nZ = ZG(41427),
-      gZ = ZG(3267),
-      eZ = ZG(3271);
-    let RZ = null,
-      TZ = null;
+    var fi = iM(2050),
+      Yi = iM(42017),
+      Ni = iM(42135),
+      Ai = iM(4874),
+      xi = iM(4845),
+      vi = iM(42144),
+      Fi = iM(3693),
+      Bi = iM(3698);
+    let Xi = null,
+      Ii = null;
 
-    function HZ(GG) {
-      const bG = GG.startsWith(eZ.j),
-        [ZG, wG = ZG, SG = ZG] = (bG ? GG.slice(eZ.j.length) : GG).split(eZ.h);
+    function Ki(MM) {
+      const rM = MM.startsWith(Bi.j),
+        [iM, OM = iM, SM = iM] = (rM ? MM.slice(Bi.j.length) : MM).split(Bi.h);
       return {
-        top: ZG,
-        left: wG,
-        right: SG,
-        half: bG
+        top: iM,
+        left: OM,
+        right: SM,
+        half: rM
       }
     }
 
-    function tZ(GG) {
-      const bG = null === RZ ? void 0 : (0, gZ.c)(GG),
-        ZG = void 0 === bG ? 0 : RZ.codes[bG];
-      return 0 === ZG ? void 0 : RZ.pool[ZG - 1]
+    function qi(MM) {
+      const rM = null === Xi ? void 0 : (0, Fi.d)(MM),
+        iM = void 0 === rM ? 0 : Xi.codes[rM];
+      return 0 === iM ? void 0 : Xi.pool[iM - 1]
     }
-    var DZ = ZG(3265),
-      NZ = ZG(4470),
-      OZ = ZG(4505),
-      xZ = ZG(41344),
-      BZ = ZG(41432);
-    const Gw = "item:";
-    let bw = null,
-      Zw = null,
-      ww = null,
-      Sw = null,
-      Lw = !1,
-      yw = !1;
+    var Ti = iM(3690),
+      Vi = iM(4835),
+      ci = iM(4868),
+      MO = iM(42053),
+      rO = iM(42151);
+    const iO = "item:";
+    let OO = null,
+      SO = null,
+      jO = null,
+      aO = null,
+      PO = !1,
+      nO = !1;
 
-    function kw() {
-      return yw || (yw = !0, (0, OZ.l)().then((GG => {
-        GG && (0, PZ.d)()
-      }))), ww ??= Promise.all([(0, DZ.e)(), (TZ ??= ZG.e(1).then((() => ZG(61154))).then((GG => {
+    function QO() {
+      return nO || (nO = !0, (0, ci.j)().then((MM => {
+        MM && (0, fi.c)()
+      }))), jO ??= Promise.all([(0, Ti.h)(), (Ii ??= iM.e(1).then((() => iM(63248))).then((MM => {
         let {
-          BLOCK_FACE_RUNS: bG,
-          BLOCK_FACES: ZG,
-          MAX_FACE_ITEM_ID: wG
-        } = GG;
-        RZ = {
-          codes: (0, eZ.t)(bG, wG + 1),
-          pool: ZG.split(eZ.o).map(HZ)
+          BLOCK_FACE_RUNS: rM,
+          BLOCK_FACES: iM,
+          MAX_FACE_ITEM_ID: OM
+        } = MM;
+        Xi = {
+          codes: (0, Bi.y)(rM, OM + 1),
+          pool: iM.split(Bi.s).map(Ki)
         }
-      }), (GG => {
-        throw TZ = null, GG
-      })), TZ), (0, BZ.g)(), ZG.e(201).then((() => ZG(34492)))]).then((GG => {
-        let [, , bG, ZG] = GG;
-        bG.followBundledTextures(), bw = bG, Zw = ZG, (0, PZ.d)()
-      }), (GG => {
-        ww = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", GG)
-      })), ww
+      }), (MM => {
+        throw Ii = null, MM
+      })), Ii), (0, rO.d)(), iM.e(224).then((() => iM(35037)))]).then((MM => {
+        let [, , rM, iM] = MM;
+        rM.followBundledTextures(), OO = rM, SO = iM, (0, fi.c)()
+      }), (MM => {
+        jO = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", MM)
+      })), jO
     }
 
-    function Uw(GG) {
-      var bG, ZG;
-      return null !== (bG = null === (ZG = (0, xZ.k)()) || void 0 === ZG ? void 0 : ZG.textureUrl(GG)) && void 0 !== bG ? bG : bw.itemSpriteUrl(GG)
+    function zO(MM) {
+      var rM, iM;
+      return null !== (rM = null === (iM = (0, MO.f)()) || void 0 === iM ? void 0 : iM.textureUrl(MM)) && void 0 !== rM ? rM : OO.itemSpriteUrl(MM)
     }
 
-    function Yw(GG) {
-      var bG, ZG;
-      return null !== (bG = null === (ZG = (0, xZ.k)()) || void 0 === ZG ? void 0 : ZG.textureUrl(GG)) && void 0 !== bG ? bG : bw.blockTextureUrl(GG)
+    function LO(MM) {
+      var rM, iM;
+      return null !== (rM = null === (iM = (0, MO.f)()) || void 0 === iM ? void 0 : iM.textureUrl(MM)) && void 0 !== rM ? rM : OO.blockTextureUrl(MM)
     }
 
-    function Vw(GG) {
-      var bG;
-      return null !== (bG = (0, DZ.b)(GG)) && void 0 !== bG ? bG : GG
+    function mO(MM) {
+      var rM;
+      return null !== (rM = (0, Ti.e)(MM)) && void 0 !== rM ? rM : MM
     }
 
-    function pw(GG, bG) {
-      var ZG, wG, SG;
-      return null !== (ZG = null !== (wG = null !== (SG = Yw(GG)) && void 0 !== SG ? SG : null === bG || void 0 === bG ? void 0 : bG.rotated[GG]) && void 0 !== wG ? wG : null === bG || void 0 === bG ? void 0 : bG.animated[GG]) && void 0 !== ZG ? ZG : bw.notFoundUrl()
+    function HO(MM, rM) {
+      var iM, OM, SM;
+      return null !== (iM = null !== (OM = null !== (SM = LO(MM)) && void 0 !== SM ? SM : null === rM || void 0 === rM ? void 0 : rM.rotated[MM]) && void 0 !== OM ? OM : null === rM || void 0 === rM ? void 0 : rM.animated[MM]) && void 0 !== iM ? iM : OO.notFoundUrl()
     }
 
-    function fw(GG) {
-      return void 0 !== (0, gZ.c)(GG) ? GG : /^[1-9][0-9]*$/.test(GG) ? (0, gZ.f)(Number(GG)) : void 0
+    function hO(MM) {
+      return void 0 !== (0, Fi.d)(MM) ? MM : /^[1-9][0-9]*$/.test(MM) ? (0, Fi.g)(Number(MM)) : void 0
     }
 
-    function Qw(GG) {
-      var bG;
-      if (GG.startsWith(Gw)) {
-        var ZG;
-        const bG = (0, DZ.b)(GG.slice(5));
-        return null !== (ZG = void 0 === bG ? null : Uw(bG)) && void 0 !== ZG ? ZG : bw.notFoundUrl()
+    function JO(MM) {
+      var rM;
+      if (MM.startsWith(iO)) {
+        var iM;
+        const rM = (0, Ti.e)(MM.slice(5));
+        return null !== (iM = void 0 === rM ? null : zO(rM)) && void 0 !== iM ? iM : OO.notFoundUrl()
       }
-      return null !== (bG = bw.particleUrl(GG)) && void 0 !== bG ? bG : bw.notFoundUrl()
+      return null !== (rM = OO.particleUrl(MM)) && void 0 !== rM ? rM : OO.notFoundUrl()
     }
 
-    function Kw(GG, bG) {
-      return "StairsBlock" === GG ? GG : bG ? "SlabBlock" : "CubeBlock"
+    function dO(MM, rM) {
+      return "StairsBlock" === MM ? MM : rM ? "SlabBlock" : "CubeBlock"
     }
-    const hw = {
-        async blockIcon(GG) {
-          var bG;
+    const yO = {
+        async blockIcon(MM) {
+          var rM;
           let {
-            name: wG,
-            size: SG,
-            lineWidth: LG
-          } = GG;
-          await kw();
-          const yG = null !== (bG = fw(wG)) && void 0 !== bG ? bG : wG,
-            kG = (0, OZ.d)(yG, SG, LG);
-          if (null !== kG) return kG;
-          const UG = tZ(yG),
-            YG = (0, gZ.c)(yG),
-            VG = void 0 === YG || null === Zw ? void 0 : Zw.itemTypeNameOf(YG);
-          if (null === bw || void 0 === UG) return "";
-          const pG = [UG.top, UG.left, UG.right].some((GG => null === Yw(GG))),
-            fG = pG ? await (Sw ??= ZG.e(207).then((() => ZG(34575))).then((GG => (Lw && (Lw = !1, (0, PZ.d)()), {
-              rotated: GG.rotatedBlockTextures,
-              animated: GG.animatedBlockTextures
-            })), (GG => (Sw = null, Lw = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", GG), null))), Sw) : null;
-          if (pG && null === fG) return "";
-          const QG = {
-              top: pw(UG.top, fG),
-              left: pw(UG.left, fG),
-              right: pw(UG.right, fG),
-              itemType: Kw(VG, UG.half)
+            name: OM,
+            size: SM,
+            lineWidth: jM
+          } = MM;
+          await QO();
+          const aM = null !== (rM = hO(OM)) && void 0 !== rM ? rM : OM,
+            PM = (0, ci.h)(aM, SM, jM);
+          if (null !== PM) return PM;
+          const nM = qi(aM),
+            QM = (0, Fi.d)(aM),
+            zM = void 0 === QM || null === SO ? void 0 : SO.itemTypeNameOf(QM);
+          if (null === OO || void 0 === nM) return "";
+          const LM = [nM.top, nM.left, nM.right].some((MM => null === LO(MM))),
+            mM = LM ? await (aO ??= iM.e(231).then((() => iM(35131))).then((MM => (PO && (PO = !1, (0, fi.c)()), {
+              rotated: MM.rotatedBlockTextures,
+              animated: MM.animatedBlockTextures
+            })), (MM => (aO = null, PO = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", MM), null))), aO) : null;
+          if (LM && null === mM) return "";
+          const HM = {
+              top: HO(nM.top, mM),
+              left: HO(nM.left, mM),
+              right: HO(nM.right, mM),
+              itemType: dO(zM, nM.half)
             },
-            KG = (0, xZ.g)(),
-            hG = 0 === KG ? yG : `${yG}#${KG}`;
-          return (await (0, NZ.d)()).drawBlockIconUrl(hG, SG, LG, (() => QG))
+            hM = (0, MO.e)(),
+            JM = 0 === hM ? aM : `${aM}#${hM}`;
+          return (await (0, Vi.b)()).drawBlockIconUrl(JM, SM, jM, (() => HM))
         }
       },
-      dw = {
-        itemIcon: function(GG) {
-          var bG, ZG, SG, LG;
-          if (null === bw) return kw(), wG.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(GG);
-          if ((0, qZ.h)(GG)) return {
+      lO = {
+        itemIcon: function(MM) {
+          var rM, iM, SM, jM;
+          if (null === OO) return QO(), OM.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(MM);
+          if ((0, xi.h)(MM)) return {
             kind: "icon",
-            url: null !== (ZG = null !== (SG = null === (LG = (0, xZ.k)()) || void 0 === LG ? void 0 : LG.textureUrl(GG)) && void 0 !== SG ? SG : bw.ingameIconUrl(GG)) && void 0 !== ZG ? ZG : bw.notFoundUrl()
+            url: null !== (iM = null !== (SM = null === (jM = (0, MO.f)()) || void 0 === jM ? void 0 : jM.textureUrl(MM)) && void 0 !== SM ? SM : OO.ingameIconUrl(MM)) && void 0 !== iM ? iM : OO.notFoundUrl()
           };
-          if (GG.startsWith(qZ.b)) return {
+          if (MM.startsWith(xi.b)) return {
             kind: "icon",
-            url: Qw(GG.slice(qZ.b.length))
+            url: JO(MM.slice(xi.b.length))
           };
-          if (0 === (0, gZ.j)()) return (0, nZ.e)(), wG.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(GG);
-          const yG = null !== (bG = fw(GG)) && void 0 !== bG ? bG : GG,
-            kG = (0, gZ.c)(yG),
-            UG = void 0 === kG ? void 0 : Zw.itemTypeNameOf(kG);
-          if (void 0 !== tZ(yG)) return {
+          if (0 === (0, Fi.h)()) return (0, vi.e)(), OM.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(MM);
+          const aM = null !== (rM = hO(MM)) && void 0 !== rM ? rM : MM,
+            PM = (0, Fi.d)(aM),
+            nM = void 0 === PM ? void 0 : SO.itemTypeNameOf(PM);
+          if (void 0 !== qi(aM)) return {
             kind: "drawnBlock"
           };
-          const YG = function(GG) {
-            var bG;
-            return null !== (bG = Uw(Vw(GG))) && void 0 !== bG ? bG : bw.notFoundUrl()
-          }(yG);
-          if ((0, OZ.h)(yG) && ! function(GG) {
-              const bG = (0, xZ.k)();
-              return null !== bG && (null !== bG.textureUrl(Vw(GG)) || null !== bG.modelUrl(GG))
-            }(yG)) return {
+          const QM = function(MM) {
+            var rM;
+            return null !== (rM = zO(mO(MM))) && void 0 !== rM ? rM : OO.notFoundUrl()
+          }(aM);
+          if ((0, ci.i)(aM) && ! function(MM) {
+              const rM = (0, MO.f)();
+              return null !== rM && (null !== rM.textureUrl(mO(MM)) || (0, ci.e)(MM).some((MM => null !== rM.modelUrl(MM))))
+            }(aM)) return {
             kind: "model",
-            url: YG
+            url: QM
           };
-          if ("Gun" === UG) return {
+          if ("Gun" === nM) return {
             kind: "gun",
-            url: YG
+            url: QM
           };
-          if (void 0 !== kG && "GrayscaleArmour" === Zw.itemTypeOf(kG) || Object.hasOwn(sZ.c, yG)) {
-            var VG;
-            const bG = null !== (VG = (0, sZ.d)(GG)) && void 0 !== VG ? VG : (0, sZ.d)(yG);
-            if (bG) return {
+          if (void 0 !== PM && "GrayscaleArmour" === SO.itemTypeOf(PM) || Object.hasOwn(Ai.d, aM)) {
+            var zM;
+            const rM = null !== (zM = (0, Ai.f)(MM)) && void 0 !== zM ? zM : (0, Ai.f)(aM);
+            if (rM) return {
               kind: "item",
-              url: YG,
-              tint: bG
+              url: QM,
+              tint: rM
             }
           }
           return {
             kind: "item",
-            url: YG
+            url: QM
           }
         },
-        hasIcon: function(GG) {
-          return void 0 !== fw(GG) || (0, qZ.h)(GG) || GG.startsWith(qZ.b)
+        hasIcon: function(MM) {
+          return void 0 !== hO(MM) || (0, xi.h)(MM) || MM.startsWith(xi.b)
         },
-        isItemName: function(GG) {
-          return void 0 !== fw(GG)
+        isItemName: function(MM) {
+          return void 0 !== hO(MM)
         }
       };
-    var Jw = ZG(589),
-      rw = ZG(40005);
+    var EO = iM(613),
+      UO = iM(40753);
 
-    function zw(GG) {
-      if (null === GG || void 0 === GG || !GG.isCoreRunning) return null;
+    function GO(MM) {
+      if (null === MM || void 0 === MM || !MM.isCoreRunning) return null;
       const {
-        api: bG,
-        chunks: ZG,
-        items: wG,
-        tables: SG
-      } = GG;
+        api: rM,
+        chunks: iM,
+        items: OM,
+        tables: SM
+      } = MM;
       return {
         playerFeet() {
-          const GG = bG.HJ(bG.localId);
-          return null !== GG && void 0 !== GG && GG.every(Number.isFinite) ? GG : null
+          const MM = rM.XE(rM.localId);
+          return null !== MM && void 0 !== MM && MM.every(Number.isFinite) ? MM : null
         },
-        chunkBlocks: GG => ZG.isLoaded(GG[0], GG[1], GG[2]) ? (GG, bG, wG) => ZG.Gk(GG, bG, wG) : null,
-        blockName: GG => SG.nameOfId(GG),
+        chunkBlocks: MM => iM.isLoaded(MM[0], MM[1], MM[2]) ? (MM, rM, OM) => iM.jP(MM, rM, OM) : null,
+        blockName: MM => SM.nameOfId(MM),
         inventory: () => ({
-          slots: wG.playerItems().map((GG => GG ? {
-            name: GG.name,
-            amount: GG.amount
+          slots: OM.playerItems().map((MM => MM ? {
+            name: MM.name,
+            amount: MM.amount
           } : null)),
-          heldSlot: wG.selectedSlot
+          heldSlot: OM.selectedSlot
         }),
         nearby() {
-          const ZG = [];
-          for (let SG = 0; SG < bG.idStr.length; SG++) {
-            var wG;
-            const LG = bG.idStr[SG],
-              yG = bG.serverIds[SG],
-              kG = bG.kinds[SG];
-            if (null === LG || bG.isLocal(yG) || kG >>> EG.b !== EG.r.Lifeform) continue;
-            const UG = bG.HJ(yG),
-              YG = Jw.m[kG & EG.c];
-            UG && void 0 !== YG && ZG.push({
-              kind: "Player" === YG ? "player" : YG,
-              name: null !== (wG = GG.clientApi.getEntityName(LG)) && void 0 !== wG ? wG : null,
-              position: UG
+          const iM = [];
+          for (let SM = 0; SM < rM.idStr.length; SM++) {
+            var OM;
+            const jM = rM.idStr[SM],
+              aM = rM.serverIds[SM],
+              PM = rM.kinds[SM];
+            if (null === jM || rM.isLocal(aM) || PM >>> UM.e !== UM.s.Lifeform) continue;
+            const nM = rM.XE(aM),
+              QM = EO.j[PM & UM.f];
+            nM && void 0 !== QM && iM.push({
+              kind: "Player" === QM ? "player" : QM,
+              name: null !== (OM = MM.clientApi.getEntityName(jM)) && void 0 !== OM ? OM : null,
+              position: nM
             })
           }
-          return ZG
+          return iM
         },
         droppedItems() {
-          let GG = 0;
-          for (let ZG = 0; ZG < bG.idStr.length; ZG++) null !== bG.idStr[ZG] && bG.kinds[ZG] >>> EG.b === EG.r.Item && GG++;
-          return GG
+          let MM = 0;
+          for (let iM = 0; iM < rM.idStr.length; iM++) null !== rM.idStr[iM] && rM.kinds[iM] >>> UM.e === UM.s.Item && MM++;
+          return MM
         }
       }
     }
-    const Ew = {
-        worldCodeAiChunk: GG => Promise.resolve((0, rw.d)(zw((0, yG.f)()), GG)),
-        worldCodeAiGameState: () => Promise.resolve((0, rw.g)(zw((0, yG.f)())))
+    const CO = {
+        worldCodeAiChunk: MM => Promise.resolve((0, UO.d)(GO((0, aM.e)()), MM)),
+        worldCodeAiGameState: () => Promise.resolve((0, UO.h)(GO((0, aM.e)())))
       },
-      ow = function(GG) {
-        const bG = VZ(),
-          wG = VZ(),
-          SG = new Set,
-          LG = new Set,
-          yG = () => {
-            var bG, ZG;
-            return null !== (bG = null === (ZG = GG.runtime()) || void 0 === ZG ? void 0 : ZG.currentViewer) && void 0 !== bG ? bG : null
+      eO = function(MM) {
+        const rM = zi(),
+          OM = zi(),
+          SM = new Set,
+          jM = new Set,
+          aM = () => {
+            var rM, iM;
+            return null !== (rM = null === (iM = MM.runtime()) || void 0 === iM ? void 0 : iM.currentViewer) && void 0 !== rM ? rM : null
           };
-        let kG = null,
-          UG = null;
-        const VG = (GG, bG) => ({
-            current: GG,
-            watch(ZG) {
-              let wG = GG();
-              return bG.add((() => {
-                const bG = GG();
-                bG !== wG && (wG = bG, ZG(bG))
+        let PM = null,
+          nM = null;
+        const zM = (MM, rM) => ({
+            current: MM,
+            watch(iM) {
+              let OM = MM();
+              return rM.add((() => {
+                const rM = MM();
+                rM !== OM && (OM = rM, iM(rM))
               }))
             }
           }),
-          fG = GG => ({
-            watch: bG => (GG.add(bG), () => {
-              GG.delete(bG)
+          mM = MM => ({
+            watch: rM => (MM.add(rM), () => {
+              MM.delete(rM)
             })
           }),
-          QG = GG => {
-            const bG = yG(),
-              ZG = null === bG || void 0 === bG ? void 0 : bG.view;
-            bG && ZG && bG.seek(Math.max(0, Math.min(ZG.totalTicks - 1, ZG.Tp + GG * pG.Hd)))
+          HM = MM => {
+            const rM = aM(),
+              iM = null === rM || void 0 === rM ? void 0 : rM.view;
+            rM && iM && rM.seek(Math.max(0, Math.min(iM.totalTicks - 1, iM.bL + MM * LM.ud)))
           },
-          KG = {
-            replay: VG((() => {
-              var GG;
-              const bG = yG(),
-                ZG = null !== (GG = null === bG || void 0 === bG ? void 0 : bG.view) && void 0 !== GG ? GG : null;
-              return null === bG || null === ZG || ZG.state === pG.sd.None ? (kG = null, null) : (kG = (0, OG.n)(kG, {
-                id: bG.id,
-                Tp: ZG.Tp,
-                totalTicks: ZG.totalTicks,
-                Fv: pG.Hd,
-                playing: ZG.state === pG.sd.Playing,
-                speed: ZG.speed,
-                cameraMode: ZG.cameraMode,
-                freecam: "freecam" === ZG.cameraMode
-              }), kG)
-            }), bG),
-            replayEdits: VG((() => {
-              var GG;
-              const bG = yG(),
-                ZG = null !== (GG = null === bG || void 0 === bG ? void 0 : bG.view) && void 0 !== GG ? GG : null;
-              return null === bG || null === ZG || ZG.state === pG.sd.None ? (UG = null, null) : (UG = (0, OG.n)(UG, {
-                cameraKeyframes: [...bG.keyframes],
-                playbackMark: ZG.mark,
-                fileName: bG.fileName,
-                unsavedChanges: bG.unsavedChanges,
-                suggestSaveAs: bG.suggestSaveAs
-              }), UG)
-            }), bG),
-            replayRecorder: VG((() => {
-              var bG, ZG;
-              return null !== (bG = null === (ZG = GG.runtime()) || void 0 === ZG ? void 0 : ZG.recorder.current) && void 0 !== bG ? bG : kZ.d.states.replayRecorder.current()
-            }), wG),
+          hM = {
+            replay: zM((() => {
+              var MM;
+              const rM = aM(),
+                iM = null !== (MM = null === rM || void 0 === rM ? void 0 : rM.view) && void 0 !== MM ? MM : null;
+              return null === rM || null === iM || iM.state === LM.hd.None ? (PM = null, null) : (PM = (0, TM.r)(PM, {
+                id: rM.id,
+                bL: iM.bL,
+                totalTicks: iM.totalTicks,
+                zk: LM.ud,
+                playing: iM.state === LM.hd.Playing,
+                speed: iM.speed,
+                cameraMode: iM.cameraMode,
+                freecam: "freecam" === iM.cameraMode
+              }), PM)
+            }), rM),
+            replayEdits: zM((() => {
+              var MM;
+              const rM = aM(),
+                iM = null !== (MM = null === rM || void 0 === rM ? void 0 : rM.view) && void 0 !== MM ? MM : null;
+              return null === rM || null === iM || iM.state === LM.hd.None ? (nM = null, null) : (nM = (0, TM.r)(nM, {
+                cameraKeyframes: [...rM.keyframes],
+                playbackMark: iM.mark,
+                fileName: rM.fileName,
+                unsavedChanges: rM.unsavedChanges,
+                suggestSaveAs: rM.suggestSaveAs
+              }), nM)
+            }), rM),
+            replayRecorder: zM((() => {
+              var rM, iM;
+              return null !== (rM = null === (iM = MM.runtime()) || void 0 === iM ? void 0 : iM.recorder.current) && void 0 !== rM ? rM : Pi.c.states.replayRecorder.current()
+            }), OM),
             replayVideoExporting: {
-              current: LZ.c,
-              watch: GG => (0, YG.p)("replayViewer|videoExportChanged", (() => {
-                GG((0, LZ.c)())
+              current: ji.d,
+              watch: MM => (0, QM.j)("replayViewer|videoExportChanged", (() => {
+                MM((0, ji.d)())
               }))
             }
           },
-          hG = {
-            replayUiActionRequested: fG(LG),
-            replayViewerRequested: fG(SG)
+          JM = {
+            replayUiActionRequested: mM(jM),
+            replayViewerRequested: mM(SM)
           },
-          dG = GG => {
-            for (const bG of SG) bG(GG)
+          dM = MM => {
+            for (const rM of SM) rM(MM)
           },
-          JG = () => {
-            var wG;
-            !0 === (null === (wG = yG()) || void 0 === wG ? void 0 : wG.isOpen) && Promise.all([ZG.e(98), ZG.e(67)]).then((() => ZG(61141))).then((ZG => {
+          yM = () => {
+            var OM;
+            !0 === (null === (OM = aM()) || void 0 === OM ? void 0 : OM.isOpen) && Promise.all([iM.e(111), iM.e(78)]).then((() => iM(63231))).then((iM => {
               let {
-                startWasmReplayVideoExport: wG
-              } = ZG;
-              return wG({
-                viewer: yG,
+                startWasmReplayVideoExport: OM
+              } = iM;
+              return OM({
+                viewer: aM,
                 canvas: () => {
-                  var bG, ZG;
-                  return null !== (bG = null === (ZG = GG.canvas) || void 0 === ZG ? void 0 : ZG.call(GG)) && void 0 !== bG ? bG : null
+                  var rM, iM;
+                  return null !== (rM = null === (iM = MM.canvas) || void 0 === iM ? void 0 : iM.call(MM)) && void 0 !== rM ? rM : null
                 },
-                watchViewer: bG.add,
-                requestViewer: dG
+                watchViewer: rM.add,
+                requestViewer: dM
               })
-            }), (GG => {
-              console.error("Couldn't load the video export", GG), yZ.NotificationProvider.showAlertPopup({
+            }), (MM => {
+              console.error("Couldn't load the video export", MM), ai.NotificationProvider.showAlertPopup({
                 title: "Video export failed",
                 subtitle: "Check your connection, then try again."
               })
-            })).catch((GG => {
-              console.error("The video export failed", GG)
+            })).catch((MM => {
+              console.error("The video export failed", MM)
             }))
           },
-          rG = {
-            replayAction(GG) {
-              if ((0, LZ.c)()) return;
-              const bG = yG();
-              switch (GG) {
+          lM = {
+            replayAction(MM) {
+              if ((0, ji.d)()) return;
+              const rM = aM();
+              switch (MM) {
                 case "replaySkipBack":
-                  QG(-1);
+                  HM(-1);
                   break;
                 case "replaySkipForward":
-                  QG(1);
+                  HM(1);
                   break;
                 case "replaySpeedUp":
                 case "replaySpeedDown":
-                  null !== bG && void 0 !== bG && bG.view && bG.setSpeed((0, SZ.j)(bG.view.speed, "replaySpeedUp" === GG ? "up" : "down"));
+                  null !== rM && void 0 !== rM && rM.view && rM.setSpeed((0, Si.h)(rM.view.speed, "replaySpeedUp" === MM ? "up" : "down"));
                   break;
                 case "replayRecordKeyframe":
-                  null === bG || void 0 === bG || bG.addKeyframe()
+                  null === rM || void 0 === rM || rM.addKeyframe()
               }
             },
-            setReplayPlaying(GG) {
-              var bG, ZG;
-              (0, LZ.c)() || (GG ? null === (bG = yG()) || void 0 === bG || bG.play() : null === (ZG = yG()) || void 0 === ZG || ZG.pause())
+            setReplayPlaying(MM) {
+              var rM, iM;
+              (0, ji.d)() || (MM ? null === (rM = aM()) || void 0 === rM || rM.play() : null === (iM = aM()) || void 0 === iM || iM.pause())
             },
-            seekReplay(GG) {
-              var bG;
+            seekReplay(MM) {
+              var rM;
               let {
-                Tp: ZG,
-                ignorePlaybackMark: wG
-              } = GG;
-              null === (bG = yG()) || void 0 === bG || bG.seek(ZG, null !== wG && void 0 !== wG && wG)
+                bL: iM,
+                ignorePlaybackMark: OM
+              } = MM;
+              null === (rM = aM()) || void 0 === rM || rM.seek(iM, null !== OM && void 0 !== OM && OM)
             },
-            setReplayCameraMode(GG) {
-              var bG;
-              null === (bG = yG()) || void 0 === bG || bG.setCameraMode(GG)
+            setReplayCameraMode(MM) {
+              var rM;
+              null === (rM = aM()) || void 0 === rM || rM.setCameraMode(MM)
             },
             syncReplayCameraMode() {},
-            setReplayCameraKeyframe(GG) {
-              var bG;
-              null === (bG = yG()) || void 0 === bG || bG.setKeyframe(GG)
+            setReplayCameraKeyframe(MM) {
+              var rM;
+              null === (rM = aM()) || void 0 === rM || rM.setKeyframe(MM)
             },
-            moveReplayCameraKeyframe(GG) {
-              var bG;
+            moveReplayCameraKeyframe(MM) {
+              var rM;
               let {
-                from: ZG,
-                to: wG
-              } = GG;
-              null === (bG = yG()) || void 0 === bG || bG.moveKeyframe(ZG, wG)
+                from: iM,
+                to: OM
+              } = MM;
+              null === (rM = aM()) || void 0 === rM || rM.moveKeyframe(iM, OM)
             },
-            deleteReplayCameraKeyframes(GG) {
-              var bG;
+            deleteReplayCameraKeyframes(MM) {
+              var rM;
               let {
-                start: ZG,
-                end: wG
-              } = GG;
-              null === (bG = yG()) || void 0 === bG || bG.deleteKeyframes(ZG, wG)
+                start: iM,
+                end: OM
+              } = MM;
+              null === (rM = aM()) || void 0 === rM || rM.deleteKeyframes(iM, OM)
             },
-            setReplayPlaybackMark(GG) {
-              var bG;
-              null === (bG = yG()) || void 0 === bG || bG.setMark(GG)
+            setReplayPlaybackMark(MM) {
+              var rM;
+              null === (rM = aM()) || void 0 === rM || rM.setMark(MM)
             },
-            cropReplay(GG) {
-              var bG, ZG;
+            cropReplay(MM) {
+              var rM, iM;
               let {
-                start: wG,
-                end: SG
-              } = GG;
-              return !(0, LZ.c)() && (null !== (bG = null === (ZG = yG()) || void 0 === ZG ? void 0 : ZG.crop(wG, SG)) && void 0 !== bG && bG)
+                start: OM,
+                end: SM
+              } = MM;
+              return !(0, ji.d)() && (null !== (rM = null === (iM = aM()) || void 0 === iM ? void 0 : iM.crop(OM, SM)) && void 0 !== rM && rM)
             },
-            holdReplayForShaderPackFailure(GG) {
-              const bG = yG();
-              bG && (bG.holdForShaderPackFailure(), function(GG) {
-                ZG.e(117).then((() => ZG(39633))).then((bG => {
+            holdReplayForShaderPackFailure(MM) {
+              const rM = aM();
+              rM && (rM.holdForShaderPackFailure(), function(MM) {
+                iM.e(129).then((() => iM(40300))).then((rM => {
                   let {
-                    shaderPackPage: ZG
-                  } = bG;
-                  ZG.block(GG)
-                })).catch((GG => {
-                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", GG)
+                    shaderPackPage: iM
+                  } = rM;
+                  iM.block(MM)
+                })).catch((MM => {
+                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", MM)
                 }))
-              }(GG))
+              }(MM))
             },
             exportReplayVideo() {
-              JG()
+              yM()
             },
             toggleRecording() {
-              var bG;
-              null === (bG = GG.runtime()) || void 0 === bG || bG.recorder.toggleRecording()
+              var rM;
+              null === (rM = MM.runtime()) || void 0 === rM || rM.recorder.toggleRecording()
             },
             saveClip() {
-              var bG;
-              null === (bG = GG.runtime()) || void 0 === bG || bG.recorder.saveClip()
+              var rM;
+              null === (rM = MM.runtime()) || void 0 === rM || rM.recorder.saveClip()
             },
-            setRecorderPrefs(bG) {
-              var ZG;
+            setRecorderPrefs(rM) {
+              var iM;
               let {
-                clipping: wG,
-                clipSeconds: SG
-              } = bG;
-              null === (ZG = GG.runtime()) || void 0 === ZG || ZG.recorder.setPrefs(wG, SG)
+                clipping: OM,
+                clipSeconds: SM
+              } = rM;
+              null === (iM = MM.runtime()) || void 0 === iM || iM.recorder.setPrefs(OM, SM)
             },
-            setReplayViewerOpen(bG) {
-              var ZG;
-              (0, db.d)(bG) && (null === (ZG = GG.runtime()) || void 0 === ZG || ZG.recorder.viewerShown(bG))
+            setReplayViewerOpen(rM) {
+              var iM;
+              (0, dr.d)(rM) && (null === (iM = MM.runtime()) || void 0 === iM || iM.recorder.viewerShown(rM))
             },
-            recordFlyingMiddleText(bG) {
-              var ZG;
+            recordFlyingMiddleText(rM) {
+              var iM;
               let {
-                content: wG,
-                cL: SG,
-                angle: LG,
-                lL: yG
-              } = bG;
-              null === (ZG = GG.runtime()) || void 0 === ZG || ZG.recorder.recordFlyingText(JSON.stringify(wG), SG, LG, yG)
+                content: OM,
+                oi: SM,
+                angle: jM,
+                Yi: aM
+              } = rM;
+              null === (iM = MM.runtime()) || void 0 === iM || iM.recorder.recordFlyingText(JSON.stringify(OM), SM, jM, aM)
             },
-            dragReplayCamera(bG) {
-              var ZG;
+            dragReplayCamera(rM) {
+              var iM;
               let {
-                dx: wG,
-                dy: SG
-              } = bG;
-              null === (ZG = GG.freecam()) || void 0 === ZG || ZG.drag(wG, SG)
+                dx: OM,
+                dy: SM
+              } = rM;
+              null === (iM = MM.freecam()) || void 0 === iM || iM.drag(OM, SM)
             },
-            moveReplayFreecam(bG) {
-              var ZG;
-              null === (ZG = GG.freecam()) || void 0 === ZG || ZG.move(bG)
+            moveReplayFreecam(rM) {
+              var iM;
+              null === (iM = MM.freecam()) || void 0 === iM || iM.move(rM)
             },
-            holdReplayFreecamVertical(bG) {
-              var ZG;
+            holdReplayFreecamVertical(rM) {
+              var iM;
               let {
-                action: wG,
-                Ik: SG
-              } = bG;
-              null === (ZG = GG.freecam()) || void 0 === ZG || ZG.holdVertical(wG, SG)
+                action: OM,
+                sQ: SM
+              } = rM;
+              null === (iM = MM.freecam()) || void 0 === iM || iM.holdVertical(OM, SM)
             }
           },
-          zG = GG => {
-            var bG;
-            const ZG = yG(),
-              wG = null !== (bG = null === ZG || void 0 === ZG ? void 0 : ZG.view) && void 0 !== bG ? bG : null;
-            UZ.has(GG) ? (GG => {
-              for (const bG of LG) bG(GG)
-            })(GG) : YZ.has(GG) ? rG.replayAction(GG) : "replayPlayPause" === GG ? ZG && wG && wG.state !== pG.sd.None && rG.setReplayPlaying(wG.state !== pG.sd.Playing) : "replayChangeCameraMode" === GG ? null === ZG || void 0 === ZG || ZG.cycleCameraMode() : "replayExit" === GG ? !0 === (null === ZG || void 0 === ZG ? void 0 : ZG.inPlayback) && (0, lb.j)("/") : "replayExportVideo" === GG && JG()
+          EM = MM => {
+            var rM;
+            const iM = aM(),
+              OM = null !== (rM = null === iM || void 0 === iM ? void 0 : iM.view) && void 0 !== rM ? rM : null;
+            ni.has(MM) ? (MM => {
+              for (const rM of jM) rM(MM)
+            })(MM) : Qi.has(MM) ? lM.replayAction(MM) : "replayPlayPause" === MM ? iM && OM && OM.state !== LM.hd.None && lM.setReplayPlaying(OM.state !== LM.hd.Playing) : "replayChangeCameraMode" === MM ? null === iM || void 0 === iM || iM.cycleCameraMode() : "replayExit" === MM ? !0 === (null === iM || void 0 === iM ? void 0 : iM.inPlayback) && (0, Dr.n)("/") : "replayExportVideo" === MM && yM()
           };
-        let EG = !1;
+        let UM = !1;
         return {
-          states: KG,
-          events: hG,
-          commands: rG,
+          states: hM,
+          events: JM,
+          commands: lM,
           lookups: {
             replayCamera() {
-              var bG, ZG, wG;
-              return !0 !== (null === (bG = yG()) || void 0 === bG ? void 0 : bG.isOpen) ? null : null !== (ZG = null === (wG = GG.cameraView) || void 0 === wG ? void 0 : wG.call(GG)) && void 0 !== ZG ? ZG : null
+              var rM, iM, OM;
+              return !0 !== (null === (rM = aM()) || void 0 === rM ? void 0 : rM.isOpen) ? null : null !== (iM = null === (OM = MM.cameraView) || void 0 === OM ? void 0 : OM.call(MM)) && void 0 !== iM ? iM : null
             },
             leaveGameReloadsPage() {
-              var GG;
-              return !0 === (null === (GG = yG()) || void 0 === GG ? void 0 : GG.inPlayback)
+              var MM;
+              return !0 === (null === (MM = aM()) || void 0 === MM ? void 0 : MM.inPlayback)
             }
           },
           feed: {
             viewerChanged: () => {
-              var GG;
-              const ZG = !0 === (null === (GG = yG()) || void 0 === GG ? void 0 : GG.inPlayback);
-              ZG !== EG && (EG = ZG, YG.l.xh("connectedGameChanged")), bG.fire()
+              var MM;
+              const iM = !0 === (null === (MM = aM()) || void 0 === MM ? void 0 : MM.inPlayback);
+              iM !== UM && (UM = iM, QM.i.Tz("connectedGameChanged")), rM.fire()
             },
-            recorderChanged: wG.fire,
-            keyDown: GG => {
-              var bG;
-              switch (GG) {
+            recorderChanged: OM.fire,
+            keyDown: MM => {
+              var rM;
+              switch (MM) {
                 case "recordGame":
-                  return void rG.toggleRecording();
+                  return void lM.toggleRecording();
                 case "recordClip":
-                  return void((0, db.b)() || rG.saveClip())
-              }(0, LZ.c)() || ("replayViewerOpen" !== GG ? GG.startsWith("replay") && ((0, db.b)() || !0 === (null === (bG = yG()) || void 0 === bG ? void 0 : bG.inPlayback)) && zG(GG) : dG("toggle"))
+                  return void((0, dr.b)() || lM.saveClip())
+              }(0, ji.d)() || ("replayViewerOpen" !== MM ? MM.startsWith("replay") && ((0, dr.b)() || !0 === (null === (rM = aM()) || void 0 === rM ? void 0 : rM.inPlayback)) && EM(MM) : dM("toggle"))
             }
           }
         }
       }({
-        runtime: SG.l,
+        runtime: SM.n,
         cameraView: () => {
-          var GG;
-          const bG = null === (GG = (0, yG.f)()) || void 0 === GG ? void 0 : GG.renderFrame;
-          if (!bG) return null;
-          const [ZG, wG, SG] = bG.cameraPosition, [LG, kG, UG] = bG.cameraDirection;
+          var MM;
+          const rM = null === (MM = (0, aM.e)()) || void 0 === MM ? void 0 : MM.renderFrame;
+          if (!rM) return null;
+          const [iM, OM, SM] = rM.cameraPosition, [jM, PM, nM] = rM.cameraDirection;
           return {
-            position: [ZG, wG, SG],
-            direction: [LG, kG, UG]
+            position: [iM, OM, SM],
+            direction: [jM, PM, nM]
           }
         },
         canvas: () => {
-          var GG, bG, ZG;
-          return null !== (GG = null === (bG = (ZG = (0, LG.I)()).canvas) || void 0 === bG ? void 0 : bG.call(ZG)) && void 0 !== GG ? GG : null
+          var MM, rM, iM;
+          return null !== (MM = null === (rM = (iM = (0, jM.I)()).canvas) || void 0 === rM ? void 0 : rM.call(iM)) && void 0 !== MM ? MM : null
         },
-        freecam: SG.k
+        freecam: SM.j
       }),
-      Xw = {
+      bO = {
         states: {
-          ...Yb,
-          ...Qb.l,
-          ...ow.states,
-          ...QZ,
-          ...nG
+          ...Qr,
+          ...Hr.k,
+          ...eO.states,
+          ...Hi,
+          ...AM
         },
         events: {
-          ...Vb,
-          ...dG,
-          ...Qb.g,
-          ...WG.d,
-          ...mZ.g,
-          ...ow.events,
-          ...KZ,
-          ...CG.e
+          ...zr,
+          ...dM,
+          ...Hr.f,
+          ...tM.d,
+          ...ui.e,
+          ...eO.events,
+          ...Ji,
+          ...wM.e
         },
         commands: {
-          ...iG,
-          ...pb,
-          ...JG,
-          ...Qb.d,
-          ...Ob,
-          ...WZ,
-          ...CG.d,
-          ...Mb,
-          ...ow.commands,
-          ...oZ,
-          ...gG,
-          ...jZ,
-          ...Kb
+          ...bM,
+          ...Lr,
+          ...yM,
+          ...Hr.c,
+          ...Tr,
+          ...gi,
+          ...wM.d,
+          ...or,
+          ...eO.commands,
+          ...Ci,
+          ...xM,
+          ...oi,
+          ...hr
         },
         queries: {
-          ...Qb.i,
-          ...Ew
+          ...Hr.g,
+          ...CO
         },
         lookups: {
-          ...fb,
-          ...jG,
-          ...mZ.i,
-          ...ow.lookups,
-          ...uG,
-          ...wZ,
-          ...lZ,
-          ...eG
+          ...mr,
+          ...kM,
+          ...ui.i,
+          ...eO.lookups,
+          ...eM,
+          ...Oi,
+          ...Zi,
+          ...vM
         }
       };
 
-    function uw() {
-      (0, kG.h)(hG.n), (0, SG.m)(ow.feed), (0, WG.f)(), xb || (xb = !0, (0, hG.l)(vG.i, (GG => {
-        const bG = (0, cG.f)(vG.i, GG);
-        "string" === typeof bG && Promise.resolve().then((() => ZG(3647))).then((GG => {
+    function wO() {
+      (0, PM.c)(JM.i), (0, SM.r)(eO.feed), (0, tM.e)(), Vr || (Vr = !0, (0, JM.h)(pM.i, (MM => {
+        const rM = (0, sM.d)(pM.i, MM);
+        "string" === typeof rM && Promise.resolve().then((() => iM(4019))).then((MM => {
           let {
-            onCosmeticPackGranted: ZG
-          } = GG;
-          ZG(bG)
+            onCosmeticPackGranted: iM
+          } = MM;
+          iM(rM)
         }))
-      })), (0, hG.l)(vG.hb, (GG => {
-        const bG = (0, cG.f)(vG.hb, GG);
-        "number" === typeof bG && YG.l.xh("serverUpdating", Date.now() + bG, !0)
-      })), (0, hG.l)(vG.I, (GG => {
-        const bG = (0, cG.f)(vG.I, GG);
-        if ((0, cG.d)(bG)) {
+      })), (0, JM.h)(pM.bb, (MM => {
+        const rM = (0, sM.d)(pM.bb, MM);
+        "number" === typeof rM && QM.i.Tz("serverUpdating", Date.now() + rM, !0)
+      })), (0, JM.h)(pM.F, (MM => {
+        const rM = (0, sM.d)(pM.F, MM);
+        if ((0, sM.c)(rM)) {
           const {
-            AS: GG,
-            sS: ZG
-          } = bG;
-          (0, Db.e)({
-            AS: "string" === typeof GG ? GG : null,
-            sS: "string" === typeof ZG ? ZG : null
+            Wr: MM,
+            sr: iM
+          } = rM;
+          (0, Kr.c)({
+            Wr: "string" === typeof MM ? MM : null,
+            sr: "string" === typeof iM ? iM : null
           })
         }
-      })), (0, hG.l)(VG.jc.NewUiRequest, (GG => {
-        const bG = (0, cG.j)(GG);
-        (0, cG.d)(bG) && "number" === typeof bG.id && (0, cG.d)(bG.clientParameters) && (0, Nb.f)(bG.id, bG.clientParameters)
-      })), (0, hG.l)(vG.Z, (GG => {
-        const bG = (0, cG.f)(vG.Z, GG);
-        "number" === typeof bG && (0, Nb.i)(bG)
-      })), (0, hG.j)(Nb.c), (0, hG.l)(VG.jc.UiRequestPopup, (GG => {
-        const bG = (0, cG.j)(GG);
-        if ((0, cG.d)(bG) && "number" === typeof bG.id && "string" === typeof bG.text) {
-          const GG = bG.id;
-          (0, Nb.l)(GG, bG.text, !0 === bG.destructive, (bG => {
-            Ob.answerUiRequest({
-              id: GG,
-              rV: bG
+      })), (0, JM.h)(zM.hc.NewUiRequest, (MM => {
+        const rM = (0, sM.f)(MM);
+        (0, sM.c)(rM) && "number" === typeof rM.id && (0, sM.c)(rM.clientParameters) && (0, qr.e)(rM.id, rM.clientParameters)
+      })), (0, JM.h)(pM.V, (MM => {
+        const rM = (0, sM.d)(pM.V, MM);
+        "number" === typeof rM && (0, qr.g)(rM)
+      })), (0, JM.e)(qr.b), (0, JM.h)(zM.hc.UiRequestPopup, (MM => {
+        const rM = (0, sM.f)(MM);
+        if ((0, sM.c)(rM) && "number" === typeof rM.id && ("string" === typeof rM.text || (0, sM.c)(rM.text) && "string" === typeof rM.text.translationKey)) {
+          const MM = rM.id;
+          (0, qr.h)(MM, rM.text, !0 === rM.destructive, (rM => {
+            Tr.answerUiRequest({
+              id: MM,
+              IQ: rM
             })
           }))
         }
-      })), (0, hG.l)(VG.jc.TopRightHelper, (GG => {
-        const bG = (0, cG.j)(GG);
-        void 0 !== bG && YG.l.xh("TopRightHelper", bG, !0)
-      })), (0, hG.l)(VG.jc.TaskProgress, (GG => {
-        const bG = (0, cG.j)(GG);
-        (0, cG.d)(bG) && "string" === typeof bG.taskId && "number" === typeof bG.progress && (0, tb.b)({
-          taskId: bG.taskId,
-          progress: bG.progress
+      })), (0, JM.h)(zM.hc.TopRightHelper, (MM => {
+        const rM = (0, sM.f)(MM);
+        void 0 !== rM && QM.i.Tz("TopRightHelper", rM, !0)
+      })), (0, JM.h)(zM.hc.TaskProgress, (MM => {
+        const rM = (0, sM.f)(MM);
+        (0, sM.c)(rM) && "string" === typeof rM.taskId && "number" === typeof rM.progress && (0, Ir.c)({
+          taskId: rM.taskId,
+          progress: rM.progress
         })
-      }))), XZ || (XZ = !0, (0, hG.l)(vG.q, (GG => {
-        const bG = (0, cG.f)(vG.q, GG);
-        (0, cG.d)(bG) && YG.l.xh("showShopFromServer", {
-          toggle: bG.kG,
-          UG: bG.UG
+      }))), ei || (ei = !0, (0, JM.h)(pM.q, (MM => {
+        const rM = (0, sM.d)(pM.q, MM);
+        (0, sM.c)(rM) && QM.i.Tz("showShopFromServer", {
+          toggle: rM.OS,
+          SS: rM.SS
         }, !0)
-      })), (0, hG.l)(VG.jc.OverShopInfo, (GG => {
-        const bG = (0, cG.j)(GG);
-        (0, cG.d)(bG) && YG.l.xh("overShopInfo", bG.info, !0)
-      })), (0, hG.l)(VG.jc.ShowShopTutorial, (() => {
-        YG.l.xh("showShopTutorial", null, !0)
-      }))), zZ || (zZ = !0, (0, hG.f)((() => {
-        var GG;
-        (0, hZ.resetLeaveEvents)(), null === (GG = EZ) || void 0 === GG || GG(), EZ = (0, hG.d)() ? (0, JZ.g)(hG.d) : null, (0, hG.d)() || YG.l.QJ()
-      })), (0, hG.l)(VG.jc.SetCookie, (GG => {
-        const bG = (0, cG.j)(GG),
-          ZG = (0, lb.d)().gameNameWithVariation;
-        (0, cG.d)(bG) && "string" === typeof bG.key && null !== ZG && (0, dZ.setCookie)(ZG, bG.key, bG.value)
-      })), (0, hG.l)(VG.jc.LeaveValues, (GG => {
-        const bG = (0, cG.j)(GG);
-        if ((0, cG.d)(bG) && "string" === typeof bG.leaveEventType) {
+      })), (0, JM.h)(zM.hc.OverShopInfo, (MM => {
+        const rM = (0, sM.f)(MM);
+        (0, sM.c)(rM) && QM.i.Tz("overShopInfo", rM.info, !0)
+      })), (0, JM.h)(zM.hc.ShowShopTutorial, (() => {
+        QM.i.Tz("showShopTutorial", null, !0)
+      }))), Ui || (Ui = !0, (0, JM.c)((() => {
+        var MM;
+        (0, di.resetLeaveEvents)(), null === (MM = Gi) || void 0 === MM || MM(), Gi = (0, JM.b)() ? (0, li.h)(JM.b) : null, (0, JM.b)() || QM.i.OE()
+      })), (0, JM.h)(zM.hc.SetCookie, (MM => {
+        const rM = (0, sM.f)(MM),
+          iM = (0, Dr.e)().gameNameWithVariation;
+        (0, sM.c)(rM) && "string" === typeof rM.key && null !== iM && (0, yi.setCookie)(iM, rM.key, rM.value)
+      })), (0, JM.h)(zM.hc.LeaveValues, (MM => {
+        const rM = (0, sM.f)(MM);
+        if ((0, sM.c)(rM) && "string" === typeof rM.leaveEventType) {
           const {
-            leaveEventType: GG,
-            category: ZG,
-            subCategory: wG,
-            value: SG
-          } = bG;
-          (0, hZ.updateLeaveValue)({
-            leaveEventType: GG,
-            category: ZG,
-            subCategory: wG,
-            value: SG
+            leaveEventType: MM,
+            category: iM,
+            subCategory: OM,
+            value: SM
+          } = rM;
+          (0, di.updateLeaveValue)({
+            leaveEventType: MM,
+            category: iM,
+            subCategory: OM,
+            value: SM
           })
         }
-      })), (0, hG.l)(VG.jc.CustomAnalyticsEvent, (GG => {
-        const bG = (0, cG.j)(GG);
-        if ((0, cG.d)(bG) && "string" === typeof bG.cat1) {
+      })), (0, JM.h)(zM.hc.CustomAnalyticsEvent, (MM => {
+        const rM = (0, sM.f)(MM);
+        if ((0, sM.c)(rM) && "string" === typeof rM.cat1) {
           const {
-            cat1: GG,
-            cat2: ZG,
-            cat3: wG,
-            value: SG
-          } = bG;
-          (0, hZ.logCustomAnalyticsEvent)({
-            cat1: GG,
-            cat2: ZG,
-            cat3: wG,
-            value: SG
+            cat1: MM,
+            cat2: iM,
+            cat3: OM,
+            value: SM
+          } = rM;
+          (0, di.logCustomAnalyticsEvent)({
+            cat1: MM,
+            cat2: iM,
+            cat3: OM,
+            value: SM
           })
         }
-      })), (0, hG.l)(VG.jc.ProgressionEvent, (GG => {
-        const bG = (0, cG.j)(GG);
-        if ((0, cG.d)(bG)) {
+      })), (0, JM.h)(zM.hc.ProgressionEvent, (MM => {
+        const rM = (0, sM.f)(MM);
+        if ((0, sM.c)(rM)) {
           const {
-            type: GG,
-            location1: ZG,
-            location2: wG,
-            location3: SG,
-            score: LG
-          } = bG;
-          (0, hZ.logProgressionEvent)({
-            type: GG,
-            location1: ZG,
-            location2: wG,
-            location3: SG,
-            score: LG
+            type: MM,
+            location1: iM,
+            location2: OM,
+            location3: SM,
+            score: jM
+          } = rM;
+          (0, di.logProgressionEvent)({
+            type: MM,
+            location1: iM,
+            location2: OM,
+            location3: SM,
+            score: jM
           })
         }
-      })), (0, hG.l)(VG.jc.ResourceEvent, (GG => {
-        const bG = (0, cG.j)(GG);
-        if ((0, cG.d)(bG)) {
+      })), (0, JM.h)(zM.hc.ResourceEvent, (MM => {
+        const rM = (0, sM.f)(MM);
+        if ((0, sM.c)(rM)) {
           const {
-            type: GG,
-            resourceType: ZG,
-            amount: wG,
-            category: SG,
-            itemName: LG
-          } = bG;
-          (0, hZ.logResourceEvent)({
-            type: GG,
-            resourceType: ZG,
-            amount: wG,
-            category: SG,
-            itemName: LG
+            type: MM,
+            resourceType: iM,
+            amount: OM,
+            category: SM,
+            itemName: jM
+          } = rM;
+          (0, di.logResourceEvent)({
+            type: MM,
+            resourceType: iM,
+            amount: OM,
+            category: SM,
+            itemName: jM
           })
         }
-      })), (0, hG.l)(VG.jc.LeaderboardResponse, (GG => {
-        const bG = (0, cG.j)(GG);
-        if ((0, cG.d)(bG)) {
+      })), (0, JM.h)(zM.hc.LeaderboardResponse, (MM => {
+        const rM = (0, sM.f)(MM);
+        if ((0, sM.c)(rM)) {
           const {
-            category: GG,
-            timeframe: ZG,
-            data: wG
-          } = bG;
-          YG.l.xh("leaderboardResponse", {
-            category: GG,
-            timeframe: ZG,
-            data: wG
+            category: MM,
+            timeframe: iM,
+            data: OM
+          } = rM;
+          QM.i.Tz("leaderboardResponse", {
+            category: MM,
+            timeframe: iM,
+            data: OM
           })
         }
-      })), (0, hG.l)(vG.z, (GG => {
-        const bG = (0, cG.f)(vG.z, GG);
-        "string" === typeof bG && (0, rZ.c)(GG.conn, bG)
-      })), (0, hG.l)(vG.A, (GG => {
-        const bG = (0, cG.f)(vG.A, GG);
-        "string" === typeof bG && console.error(`[logErrorToConsole]: ${bG}`)
-      }))), MG(), (0, mZ.b)(), Pb || (Pb = !0, (0, hG.l)(vG.f, (GG => {
-        const bG = (0, cG.f)(vG.f, GG);
-        void 0 !== bG && (0, jb.l)(bG)
-      }))), Hb(), Ib(), HG || (HG = !0, (0, LG.r)(tG)), wG.gameBridge.attach(Xw), (0, wG.installPageSources)({
+      })), (0, JM.h)(pM.z, (MM => {
+        const rM = (0, sM.d)(pM.z, MM);
+        "string" === typeof rM && (0, Ei.c)(MM.conn, rM)
+      })), (0, JM.h)(pM.C, (MM => {
+        const rM = (0, sM.d)(pM.C, MM);
+        "string" === typeof rM && console.error(`[logErrorToConsole]: ${rM}`)
+      }))), oM(), (0, ui.b)(), Zr || (Zr = !0, (0, JM.h)(pM.h, (MM => {
+        const rM = (0, sM.d)(pM.h, MM);
+        void 0 !== rM && (0, kr.h)(rM)
+      }))), Xr(), ur(), XM || (XM = !0, (0, jM.x)(IM)), OM.gameBridge.attach(bO), (0, OM.installPageSources)({
         commands: {
-          ...wG.DEFAULT_CLIENT_PAGE_SOURCES.commands,
-          setChunkAddDistance: MZ.k
+          ...OM.DEFAULT_CLIENT_PAGE_SOURCES.commands,
+          setChunkAddDistance: Yi.g
         },
-        queries: hw,
+        queries: yO,
         lookups: {
-          ...wG.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
-          ...dw,
-          Vr: MZ.c,
-          drawCallStats: AZ.j
+          ...OM.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
+          ...lO,
+          jU: Yi.b,
+          drawCallStats: Ni.j
         }
-      }), (0, PZ.d)(), kw()
+      }), (0, fi.c)(), QO()
     }
   },
-  41344: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => VG,
-      g: () => UG,
-      k: () => kG,
-      n: () => YG
+  42053: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => zM,
+      e: () => nM,
+      f: () => PM,
+      j: () => QM
     });
-    var wG = ZG(1910);
-    let SG = null,
-      LG = 0;
-    const yG = new Set;
+    var OM = iM(2050);
+    let SM = null,
+      jM = 0;
+    const aM = new Set;
 
-    function kG() {
-      return SG
+    function PM() {
+      return SM
     }
 
-    function UG() {
-      return LG
+    function nM() {
+      return jM
     }
 
-    function YG(GG) {
-      SG = GG, LG++, (0, wG.d)();
-      for (const bG of yG) bG()
+    function QM(MM) {
+      SM = MM, jM++, (0, OM.c)();
+      for (const rM of aM) rM()
     }
 
-    function VG(GG) {
-      yG.add(GG)
+    function zM(MM) {
+      aM.add(MM)
     }
   },
-  41432: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => yG,
-      g: () => kG
+  42151: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => aM,
+      d: () => PM
     });
-    var wG = ZG(41435);
-    let SG = null,
-      LG = null;
+    var OM = iM(42157);
+    let SM = null,
+      jM = null;
 
-    function yG() {
-      return SG ??= ZG.e(62).then((() => ZG(61162))).catch((GG => {
-        throw SG = null, GG
-      })), SG
+    function aM() {
+      return SM ??= iM.e(73).then((() => iM(63252))).catch((MM => {
+        throw SM = null, MM
+      })), SM
     }
 
-    function kG() {
-      return LG ??= Promise.all([yG(), (0, wG.f)()]).then((GG => {
-        let [bG] = GG;
-        return bG
-      }), (GG => {
-        throw LG = null, GG
-      })), LG
+    function PM() {
+      return jM ??= Promise.all([aM(), (0, OM.g)()]).then((MM => {
+        let [rM] = MM;
+        return rM
+      }), (MM => {
+        throw jM = null, MM
+      })), jM
     }
   },
-  37420: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => wG
+  38005: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM
     });
-    const wG = {
+    const OM = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -2718,21 +2735,21 @@ export const modules = {
       }
     }
   },
-  39435: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => wG,
-      e: () => SG
+  40073: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => OM,
+      e: () => SM
     });
-    const wG = ["description", "label"];
+    const OM = ["description", "label"];
 
-    function SG(GG) {
-      const bG = GG.type;
+    function SM(MM) {
+      const rM = MM.type;
       return {
-        type: bG,
-        params: GG[bG]
+        type: rM,
+        params: MM[rM]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

@@ -1,76 +1,9 @@
 export const id = 307;
 export const ids = [307];
 export const modules = {
-  41972: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      installImageBitmapTextureLoader: () => YG
-    });
-    var wG = ZG(40252),
-      SG = ZG(41979),
-      LG = ZG(3180);
-
-    function yG(GG, bG) {
-      if ("string" === typeof GG) {
-        const ZG = (0, LG.i)(GG);
-        return ZG ? new Blob([(0, LG.d)(ZG.base64)], {
-          type: ZG.mimeType || bG
-        }) : null
-      }
-      return GG instanceof Blob ? GG : new Blob([GG], {
-        type: bG
-      })
-    }
-    const kG = function(GG, bG, ZG, wG) {
-      let LG, kG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-        UG = arguments.length > 5 ? arguments[5] : void 0,
-        YG = arguments.length > 6 ? arguments[6] : void 0;
-      try {
-        LG = yG(GG, kG)
-      } catch {
-        LG = null
-      }
-      return LG ? (createImageBitmap(LG, {
-        premultiplyAlpha: "none",
-        colorSpaceConversion: "none",
-        ...UG
-      }).then((GG => {
-        bG(GG)
-      }), (() => {
-        (0, SG.g)(GG, bG, ZG, wG, kG, UG, YG)
-      })), null) : (0, SG.g)(GG, bG, ZG, wG, kG, UG, YG)
-    };
-    let UG = "idle";
-
-    function YG() {
-      "idle" === UG && "function" === typeof createImageBitmap && (UG = "pending", async function() {
-        const GG = document.createElement("canvas");
-        GG.width = 1, GG.height = 2;
-        const bG = GG.getContext("2d");
-        if (!bG) throw new Error("2d context unavailable");
-        bG.fillStyle = "#f00", bG.fillRect(0, 0, 1, 1), bG.fillStyle = "#0f0", bG.fillRect(0, 1, 1, 1);
-        const ZG = yG(GG.toDataURL(), "");
-        if (!ZG) throw new Error("toDataURL did not produce a base64 data URL");
-        const wG = await createImageBitmap(ZG, {
-          premultiplyAlpha: "none",
-          colorSpaceConversion: "none",
-          imageOrientation: "flipY"
-        });
-        bG.drawImage(wG, 0, 0);
-        const SG = bG.getImageData(0, 0, 1, 1).data;
-        return SG[1] > SG[0]
-      }().catch((() => (UG = "idle", !1))).then((GG => {
-        "pending" === UG && (UG = "concluded"), GG && (wG.d.loadImage = kG)
-      })))
-    }
-  },
-  41979: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => wG.g,
-      g: () => wG.q
-    });
-    var wG = ZG(40430);
-    (0, wG.v)()
+  42318: MM => {
+    MM.exports = JSON.parse('{"texture":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAAEOSURBVHic7dpBDsFAFMbxjnQjqUTcxgHs7DmCvQv0ArbO4AB2DuA2ItHEklXFotR4U9/U/H/LZjrz8nmhXuoyo8NufbPcfzpfTecvVltnuX9gOv0P5KE2KoqR1/qquoQ62oQOCL1h2yfr2yldS74DCEBdgBoBqAtQIwB1AWrBnwNi+51vQweE2iiWZ3tfyXeAs/6f77vkOyC3TmT6LvkO8J6nHfdlp98Z03lpmvH5Sr4DCEBdgBoBqAtQIwB1AWoEoC5AjQDUBag95gHPs7x6utN0rRbL+tlyw/sBFo3zgE+vxbreBx0wGQ+z7MU8/92MP7b130q+AwhAXYAaAagLUCMAdQEAAAAAAAAA8Et35R5Q3XjmR/0AAAAASUVORK5CYII=","alphaCutoff":0.05,"vertices":[0.5,0.47932,0.8655,0.875,0.31076,0.4063,0.5,0.8922,0.4905,0.875,0.72364,0.0313,0.5,0.1422,-0.053,0.125,0.31076,0.4063,0.5,0.55509,-0.428,0.125,0.72364,0.0313,0.5,0.1422,-0.053,0.875,0.31076,0.4063,0.125,0.31076,0.4063,0.5,0.47932,0.8655,0.125,0.72364,0.0313,0.5,0.8922,0.4905,0.5,0.55509,-0.428,0.875,0.72364,0.0313,0.125,0.31076,0.4063,0.5,0.47932,0.8655,0.125,0.72364,0.0313,0.5,0.8922,0.4905,0.875,0.31076,0.4063,0.5,0.1422,-0.053,0.875,0.72364,0.0313,0.5,0.55509,-0.428,0.5,0.46669,1.0811,1,0.24195,0.4688,0.5,0.60432,0.9561,1,0.37958,0.3438,0.5,0.0172,-0.1436,0,0.24195,0.4688,0.5,0.15483,-0.2686,0,0.37958,0.3438,0.5,0.0172,-0.1436,1,0.24195,0.4688,0,0.24195,0.4688,0.5,0.46669,1.0811,0,0.37958,0.3438,0.5,0.60432,0.9561,0.5,0.15483,-0.2686,1,0.37958,0.3438,0,0.24195,0.4688,0.5,0.46669,1.0811,0,0.37958,0.3438,0.5,0.60432,0.9561,1,0.24195,0.4688,0.5,0.0172,-0.1436,1,0.37958,0.3438,0.5,0.15483,-0.2686,0.5,0.84517,0.7374,1,0.62042,0.125,0.5,0.9828,0.6124,1,0.75805,0,0.5,0.39568,-0.4874,0,0.62042,0.125,0.5,0.53331,-0.6124,0,0.75805,0,0.5,0.39568,-0.4874,1,0.62042,0.125,0,0.62042,0.125,0.5,0.84517,0.7374,0,0.75805,0,0.5,0.9828,0.6124,0.5,0.53331,-0.6124,1,0.75805,0,0,0.62042,0.125,0.5,0.84517,0.7374,0,0.75805,0,0.5,0.9828,0.6124,1,0.62042,0.125,0.5,0.39568,-0.4874,1,0.75805,0,0.5,0.53331,-0.6124],"uvs":[0.000244,0.500244,0.187256,0.500244,0.000244,0.687256,0.187256,0.687256,0.375244,0.500244,0.562256,0.500244,0.375244,0.687256,0.562256,0.687256,0.374756,0.499756,0.187744,0.499756,0.374756,0.312744,0.187744,0.312744,0.562256,0.312744,0.375244,0.312744,0.562256,0.499756,0.375244,0.499756,0.562744,0.500244,0.749756,0.500244,0.562744,0.687256,0.749756,0.687256,0.187744,0.500244,0.374756,0.500244,0.187744,0.687256,0.374756,0.687256,0.000244,0.250244,0.249756,0.250244,0.000244,0.312256,0.249756,0.312256,0.500244,0.250244,0.749756,0.250244,0.500244,0.312256,0.749756,0.312256,0.499756,0.249756,0.250244,0.249756,0.499756,0.000244,0.250244,0.000244,0.749756,0.000244,0.500244,0.000244,0.749756,0.249756,0.500244,0.249756,0.750244,0.250244,0.999756,0.250244,0.750244,0.312256,0.999756,0.312256,0.250244,0.250244,0.499756,0.250244,0.250244,0.312256,0.499756,0.312256,0.000244,0.250244,0.249756,0.250244,0.000244,0.312256,0.249756,0.312256,0.500244,0.250244,0.749756,0.250244,0.500244,0.312256,0.749756,0.312256,0.499756,0.249756,0.250244,0.249756,0.499756,0.000244,0.250244,0.000244,0.749756,0.000244,0.500244,0.000244,0.749756,0.249756,0.500244,0.249756,0.750244,0.250244,0.999756,0.250244,0.750244,0.312256,0.999756,0.312256,0.250244,0.250244,0.499756,0.250244,0.250244,0.312256,0.499756,0.312256],"indices":[0,2,1,2,3,1,8,10,9,10,11,9,16,18,17,18,19,17,24,26,25,26,27,25,32,34,33,34,35,33,40,42,41,42,43,41,48,50,49,50,51,49,56,58,57,58,59,57,64,66,65,66,67,65],"shades":[0.7,0.7,1,1,0.85,0.85,0.7,0.7,1,1,0.85,0.85,0.7,0.7,1,1,0.85,0.85]}')
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

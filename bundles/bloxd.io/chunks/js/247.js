@@ -1,649 +1,784 @@
 export const id = 247;
 export const ids = [247];
 export const modules = {
-  38468: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => YG,
-      f: () => wG,
-      j: () => kG,
-      n: () => SG,
-      r: () => yG,
-      s: () => LG
+  37852: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => GM,
+      d: () => UM
     });
-    const wG = 1.001,
-      SG = .501,
-      LG = .025,
-      yG = .75,
-      kG = .08,
-      UG = 4;
+    var OM = iM(4589),
+      SM = iM(1516),
+      jM = iM(44),
+      aM = iM(6944),
+      PM = iM(4581),
+      nM = iM(1313),
+      QM = iM(2039),
+      zM = iM(2006),
+      LM = iM(1520),
+      mM = iM(1188),
+      HM = iM(37855),
+      hM = iM(1116),
+      JM = iM.n(hM),
+      dM = iM(1360),
+      yM = iM(1398),
+      lM = iM(1287),
+      EM = iM(1303);
+    const UM = "SleepingOverlay";
 
-    function YG() {
-      const GG = SG,
-        bG = LG,
-        ZG = GG - bG / 2,
-        wG = (2 * GG - 2 * bG) / (2 * UG - 1),
-        yG = [];
-      for (const SG of [-ZG, ZG])
-        for (const LG of [-ZG, ZG])
-          for (let ZG = 0; ZG < UG; ZG++) {
-            const kG = -GG + bG + wG * (2 * ZG + .5);
-            yG.push([wG, bG, bG, kG, SG, LG]), yG.push([bG, wG, bG, SG, kG, LG]), yG.push([bG, bG, wG, SG, LG, kG])
+    function GM() {
+      const {
+        t: MM
+      } = (0, mM.A)(), [rM, iM] = (0, jM.useState)(!1), [hM, GM] = (0, jM.useState)(null), [eM, bM] = (0, jM.useState)(1), [wM, tM] = (0, jM.useState)(!1), [gM, uM] = (0, jM.useState)(!1), RM = (0, jM.useRef)(0), pM = (0, jM.useRef)(!1), WM = (0, jM.useRef)(!1), sM = (0, jM.useRef)(), DM = (0, jM.useRef)(null);
+
+      function kM() {
+        const MM = null !== hM && void 0 !== hM ? hM : "Rested Speed";
+        QM.gameBridge.send("wakeUp", gM ? MM : null), DM.current = null, iM(!1), GM(null), bM(1), tM(!1), uM(!1)
+      }
+
+      function ZM() {
+        return !wM && (kM(), !0)
+      }
+      return (0, SM.d)("PlayerPhysicsTypeUpdate", (MM => {
+        MM !== DM.current && (DM.current = MM, MM === aM.n.SLEEPING ? (WM.current || (RM.current = QM.gameBridge.lookup("cameraZoom", null), WM.current = !0), pM.current = !0, QM.gameBridge.send("setCameraZoom", 3), iM(!0), bM(function() {
+          for (const MM of QM.gameBridge.lookup("blocksStandingOn", null)) {
+            if (HM.c.leafBeds.includes(MM)) return console.log(`Found leaf bed: ${MM}`), 1;
+            if (HM.c.woolBeds.includes(MM)) return console.log(`Found woold bed: ${MM}`), 2;
+            if (HM.c.strongBeds.includes(MM)) return console.log(`Found strong bed ${MM}`), 3
           }
-      for (const SG of [-ZG, ZG])
-        for (const GG of [-ZG, ZG])
-          for (const wG of [-ZG, ZG]) yG.push([bG, bG, bG, SG, GG, wG]);
-      return yG
+          return 1
+        }())) : (WM.current = !1, iM(!1), GM(null), bM(1)))
+      })), (0, jM.useEffect)((() => () => {
+        (0, nM.v)(UM)
+      }), []), (0, jM.useEffect)((() => {
+        rM ? (0, nM.z)(UM) : ((0, nM.v)(UM), pM.current && (QM.gameBridge.send("setCameraZoom", RM.current), pM.current = !1))
+      }), [rM]), (0, lM.v)("overlay", sM, ZM, rM), (0, EM.jsx)(OM.d, {
+        className: "SleepingOverlay",
+        "data-camera-keeper": "",
+        in: rM,
+        timeout: 300,
+        nodeRef: sM,
+        unmountOnExit: !0,
+        children: (0, EM.jsx)("div", {
+          ref: sM,
+          onClick: MM => {
+            ZM() && MM.stopPropagation()
+          },
+          children: (0, EM.jsxs)("div", {
+            className: "SleepingOverlayBody",
+            children: [(0, EM.jsx)("div", {
+              className: "SleepingOverlayPerkList",
+              children: PM.j.map((rM => (0, EM.jsxs)(CM, {
+                restedEffect: rM,
+                vQ: hM,
+                setChosenRestedEffect: GM,
+                children: [(0, EM.jsxs)("div", {
+                  className: "SleepingOverlayPerkTitle",
+                  children: [(0, EM.jsx)(zM.b, {
+                    text: [{
+                      icon: rM
+                    }]
+                  }), PM.g[rM].shortName]
+                }), (0, EM.jsx)("div", {
+                  className: "SleepingOverlayPerkDescription",
+                  children: MM(PM.g[rM].description, {
+                    time: PM.g[rM].effectLevelDurations[eM] / 6e4
+                  })
+                })]
+              }, rM)))
+            }), (0, EM.jsxs)("div", {
+              className: "SleepingOverlayPerkBottom",
+              children: [(0, EM.jsx)("div", {
+                className: "SleepingOverlayPerkBottomSide"
+              }), (0, EM.jsxs)(LM.e, {
+                className: "SleepingOverlayWakeUpButton",
+                onClick: MM => {
+                  gM ? kM() : (tM(!0), (0, dM.Z)((() => {
+                    tM(!1), uM(!0)
+                  }), !0)), MM.stopPropagation()
+                },
+                loading: wM,
+                children: [!gM && (0, EM.jsxs)(EM.Fragment, {
+                  children: [(0, EM.jsx)(yM.b, {
+                    name: "film"
+                  }), " ", MM("classicGame:watchAdToGetRestedPerk")]
+                }), gM && MM("classicGame:wakeUp")]
+              }), (0, EM.jsxs)("div", {
+                className: "SleepingOverlayPerkBottomSide",
+                children: [(0, EM.jsx)("div", {
+                  className: JM()("SleepingOverlayBedIcon", {
+                    SleepingOverlayBedIconActive: 1 === eM
+                  }),
+                  children: (0, EM.jsx)(zM.b, {
+                    text: [{
+                      icon: "Leaf Bed"
+                    }]
+                  })
+                }), (0, EM.jsx)("div", {
+                  className: JM()("SleepingOverlayBedIcon", {
+                    SleepingOverlayBedIconActive: 2 === eM
+                  }),
+                  children: (0, EM.jsx)(zM.b, {
+                    text: [{
+                      icon: "Red Bed"
+                    }]
+                  })
+                }), (0, EM.jsx)("div", {
+                  className: JM()("SleepingOverlayBedIcon", {
+                    SleepingOverlayBedIconActive: 3 === eM
+                  }),
+                  children: (0, EM.jsx)(zM.b, {
+                    text: [{
+                      icon: "Red Strongbed"
+                    }]
+                  })
+                })]
+              })]
+            })]
+          })
+        })
+      })
     }
+    const CM = (0, jM.memo)((function(MM) {
+      let {
+        children: rM,
+        restedEffect: iM,
+        vQ: OM,
+        setChosenRestedEffect: SM
+      } = MM;
+      return iM === OM ? (0, EM.jsx)(LM.p, {
+        onClick: MM => {
+          MM.stopPropagation()
+        },
+        children: rM
+      }) : (0, EM.jsx)(LM.i, {
+        onClick: MM => {
+          SM(iM), MM.stopPropagation()
+        },
+        children: rM
+      })
+    }))
   },
-  38837: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      D: () => fG,
-      E: () => hG,
-      I: () => JG,
-      K: () => SG,
-      d: () => VG,
-      e: () => UG,
-      f: () => zG,
-      g: () => YG,
-      j: () => kG,
-      k: () => yG,
-      m: () => LG,
-      o: () => uG,
-      p: () => QG,
-      t: () => XG,
-      x: () => iG,
-      y: () => oG,
-      z: () => EG
+  41656: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => qM
     });
-    var wG = ZG(9341);
-
-    function SG(GG) {
-      return Math.floor(GG).toLocaleString("en-US")
-    }
-    const LG = 2e3,
-      yG = .005,
-      kG = .001,
-      UG = 2,
-      YG = "Fluid Tank",
-      VG = "Coolant Mixer",
-      pG = 144;
-
-    function fG(GG) {
-      const bG = GG.split("|")[0];
-      return (0, wG.l)(bG) ? bG === wG.e ? "cryo" : "water" : null
-    }
-    const QG = [
-        [1, 0, 0],
-        [-1, 0, 0],
-        [0, 1, 0],
-        [0, -1, 0],
-        [0, 0, 1],
-        [0, 0, -1]
-      ],
-      KG = 63;
-
-    function hG(GG) {
-      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const ZG = bG ? function(GG, bG, ZG) {
-        const wG = QG.findIndex((wG => {
-          let [SG, LG, yG] = wG;
-          return SG === GG && LG === bG && yG === ZG
-        }));
-        return wG < 0 ? 0 : 1 << wG
-      }(bG[0], bG[1], bG[2]) : 0;
-      return "maker" === GG ? {
-        kind: GG,
-        faces: ZG
-      } : "user" === GG ? {
-        kind: GG,
-        faces: KG & ~ZG
-      } : {
-        kind: GG,
-        faces: KG
+    var OM = iM(19),
+      SM = iM(22),
+      jM = iM(4613),
+      aM = iM(313),
+      PM = iM(1717),
+      nM = iM(8731),
+      QM = iM(4633),
+      zM = iM(9315),
+      LM = iM(8776),
+      mM = iM(8743),
+      HM = iM(8785),
+      hM = iM(1464),
+      JM = iM(1765),
+      dM = iM(8792),
+      yM = iM(9259),
+      lM = iM(9403),
+      EM = iM(9324),
+      UM = iM(9408),
+      GM = iM(2039),
+      CM = iM(8723),
+      eM = iM(9347),
+      bM = iM(9339),
+      wM = iM(9322);
+    class tM {
+      constructor() {
+        this.lostAtMs = null
+      }
+      update(MM, rM) {
+        return MM ? (this.lostAtMs = null, !1) : (this.lostAtMs ??= rM, rM - this.lostAtMs >= 250)
+      }
+      reset() {
+        this.lostAtMs = null
       }
     }
-
-    function dG(GG) {
-      return "pipe" === GG || "tank" === GG || "maker" === GG
+    class gM {
+      constructor(MM, rM) {
+        this.press = MM, this.release = rM, this.downAtMs = null, this.token = null, this.latched = !1
+      }
+      update(MM, rM, iM, OM) {
+        if (MM && null === this.downAtMs) return this.downAtMs = iM, this.latched = OM, void(this.token = this.press(OM));
+        null !== this.downAtMs && (this.latched ? MM && this.end() : !rM && iM - this.downAtMs >= 40 && this.end())
+      }
+      isLatched() {
+        return null !== this.downAtMs && this.latched
+      }
+      unlatch() {
+        this.latched = !1
+      }
+      cancel() {
+        null !== this.downAtMs && this.end()
+      }
+      end() {
+        const MM = this.token;
+        this.downAtMs = null, this.token = null, this.latched = !1, this.release(MM)
+      }
     }
-
-    function JG(GG, bG, ZG) {
-      return 0 !== (GG.faces & 1 << ZG) && 0 !== (bG.faces & 1 << (1 ^ ZG)) && (dG(GG.kind) || dG(bG.kind))
-    }
-    const rG = (GG, bG, ZG, wG) => ({
-        input: GG,
-        inputAmount: wG,
-        output: bG,
-        outputAmount: ZG
-      }),
-      zG = {
-        Condenser: {
-          kind: "Condenser",
-          opMs: 2e3,
-          inputSlot: null,
-          fuelSlot: null,
-          outputSlots: [],
-          recipes: [],
-          powerPerOp: 60,
-          fluidMade: 12,
-          couplable: !0,
-          couplerSlot: 0
-        },
-        Centrifuge: {
-          kind: "Centrifuge",
-          opMs: 12e3,
-          inputSlot: 0,
-          fuelSlot: null,
-          outputSlots: [1, 2, 3],
-          recipes: [rG("Uranium Grit", "Uranium Pellet", 1, 12), rG("Spent Pellet", "Plutonium Pellet", 1, 4)],
-          powerPerOp: 600,
-          waterPerOp: 24
-        },
-        Synthesizer: {
-          kind: "Synthesizer",
-          opMs: 6e3,
-          inputSlot: 0,
-          fuelSlot: null,
-          outputSlots: [1, 2, 3],
-          recipes: [],
-          powerPerOp: 120,
-          waterPerOp: 12,
-          synth: !0
-        },
-        "Coolant Mixer": {
-          kind: "Coolant Mixer",
-          opMs: 12e3,
-          inputSlot: 0,
-          fuelSlot: null,
-          outputSlots: [],
-          recipes: [rG("Biomass", "", 0, 1)],
-          powerPerOp: 720,
-          waterPerOp: 144,
-          cryoMade: pG,
-          couplable: !0,
-          couplerSlot: 1
+    const uM = {
+        kind: "specialAction",
+        action: "SpecialAction2"
+      },
+      RM = MM => {
+        let rM = null;
+        const iM = new wM.c,
+          OM = () => {
+            rM && (((MM, rM, iM) => {
+              switch (iM.kind) {
+                case "reload":
+                  return void rM.specialActionUp("SpecialAction1");
+                case "specialAction":
+                  return void rM.specialActionUp(iM.action);
+                case "customButton":
+                  return void GM.gameBridge.send("pressCustomButton", {
+                    id: iM.id,
+                    down: !1
+                  });
+                case "touchButton":
+                  MM.pressTouchButton(!1)
+              }
+            })(MM, rM.bodies, rM.action), rM = null)
+          },
+          jM = (iM, SM, jM, aM) => {
+            OM(), rM = {
+              action: SM,
+              bodies: iM,
+              heldBy: jM,
+              atMs: aM
+            }, ((MM, rM, iM) => {
+              switch (iM.kind) {
+                case "reload":
+                  return rM.reloadGun(), void rM.specialActionDown("SpecialAction1");
+                case "specialAction":
+                  return void rM.specialActionDown(iM.action);
+                case "customButton":
+                  return void GM.gameBridge.send("pressCustomButton", {
+                    id: iM.id,
+                    down: !0
+                  });
+                case "touchButton":
+                  MM.pressTouchButton(!0)
+              }
+            })(MM, iM, SM)
+          };
+        return {
+          update: (aM, PM, QM, zM) => {
+            var mM;
+            const HM = (0, eM.i)(MM.contextActionInputs()),
+              hM = null !== (mM = HM[0]) && void 0 !== mM ? mM : uM;
+            (0, bM.d)((0, eM.f)(hM) ? hM : null);
+            const JM = (0, eM.c)(HM);
+            (0, bM.g)(JM);
+            const dM = (0, nM.m)("actionButton");
+            if (JM) {
+              const MM = iM.update(PM.wasPressed(dM), PM.isHeld(dM), QM, zM);
+              "tap" === MM ? jM(aM, hM, [dM], QM) : "hold" === MM && (LM.d.consumeButton(dM), SM.i.Tz(UM.l, HM))
+            } else iM.release(), PM.wasPressed(dM) && jM(aM, hM, [dM], QM);
+            rM && QM - rM.atMs >= 40 && !rM.heldBy.some((MM => (0, CM.J)(PM.frame.values, MM))) && OM()
+          },
+          pressPicked: (MM, rM) => {
+            jM(MM, rM, [(0, nM.m)("menuConfirm"), (0, nM.m)("actionButton")], performance.now())
+          },
+          release: () => {
+            iM.release(), OM(), (0, bM.d)(null), (0, bM.g)(!1)
+          }
         }
       };
-
-    function EG(GG, bG) {
-      return 1e3 * (null !== bG && void 0 !== bG ? bG : 0) / GG.opMs
-    }
-
-    function oG(GG) {
-      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const ZG = EG(zG["Coolant Mixer"], pG) * bG;
-      return GG <= 0 ? 0 : Math.ceil(GG / ZG - 1e-9)
-    }
-    const XG = "baf2Water",
-      uG = "baf2waterclose",
-      iG = "baf2wateropen"
-  },
-  38822: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => cG,
-      f: () => lG
-    });
-    var wG = ZG(9249),
-      SG = ZG(9292);
-    const LG = [
-      [1, 0, 0],
-      [-1, 0, 0],
-      [0, 0, 1],
-      [0, 0, -1],
-      [0, 1, 0],
-      [0, -1, 0]
-    ];
-    var yG = ZG(9309),
-      kG = ZG(38641),
-      UG = ZG(9303);
-    const YG = {
-      1: [0, -1],
-      2: [-1, 0],
-      3: [0, 1],
-      4: [1, 0]
-    };
-
-    function VG(GG) {
-      let [bG, ZG] = GG;
-      return [-ZG, bG]
-    }
-
-    function pG(GG, bG) {
-      return GG[0] === bG[0] && GG[1] === bG[1]
-    }
-
-    function fG(GG, bG) {
-      return GG[0] * bG[0] + GG[1] * bG[1] === 0
-    }
-    const QG = [
-      [1, 0, 0],
-      [-1, 0, 0],
-      [0, 0, 1],
-      [0, 0, -1]
-    ];
-    var KG = ZG(9334);
-
-    function hG(GG, bG, ZG, wG, SG) {
-      return bG < KG.n || bG >= KG.n + KG.q || Math.floor(GG / KG.s) === Math.floor(wG / KG.s) && Math.floor(ZG / KG.s) === Math.floor(SG / KG.s)
-    }
-    const dG = "Splitter",
-      JG = "Sorting Gate",
-      rG = new Set(KG.G),
-      zG = new Set([...KG.G, "Belt Loader", "Fast Loader", JG]),
-      EG = new Set(KG.r),
-      oG = [
-        [1, 0, 0],
-        [-1, 0, 0],
-        [0, 0, 1],
-        [0, 0, -1],
-        [0, 1, 0],
-        [0, -1, 0]
-      ];
-
-    function XG(GG) {
-      var bG, ZG;
-      return null !== (bG = null === (ZG = wG.l[GG]) || void 0 === ZG ? void 0 : ZG.meta.rootName) && void 0 !== bG ? bG : ""
-    }
-
-    function uG(GG) {
-      return XG(GG) === KG.g && (0, KG.Q)(wG.l[GG].name)
-    }
-    var iG = ZG(9295),
-      CG = ZG(9320);
-    const WG = [
-      [1, 0, 0],
-      [-1, 0, 0],
-      [0, 0, 1],
-      [0, 0, -1]
-    ];
-
-    function mG(GG) {
-      var bG, ZG;
-      const SG = null === (bG = wG.l[GG]) || void 0 === bG ? void 0 : bG.meta;
-      return (null === SG || void 0 === SG ? void 0 : SG.rootName) !== CG.q ? null : {
-        rot: null !== (ZG = SG.rot) && void 0 !== ZG ? ZG : 1,
-        half: (0, CG.i)(SG.rootName, SG.metaStr)
-      }
-    }
-
-    function IG(GG, bG, ZG, wG) {
-      return mG(GG(bG, ZG, wG))
-    }
-
-    function FG(GG, bG, ZG, wG, SG) {
-      let {
-        rot: LG,
-        half: yG
-      } = SG;
-      const [kG, UG] = (0, CG.m)(LG, yG), YG = IG(GG, bG + kG, ZG, wG + UG);
-      return null !== YG && YG.rot === LG && YG.half === CG.s[yG]
-    }
-    var vG = ZG(38829);
-    const aG = [new class {
-      constructor() {
-        this.reshapeOffsets = QG
-      }
-      handles(GG) {
-        var bG;
-        return "Stairs" === (null === (bG = wG.l[GG]) || void 0 === bG ? void 0 : bG.model)
-      }
-      affects(GG) {
-        return this.handles(GG)
-      }
-      shape(GG, bG, ZG, SG, LG) {
-        const yG = this.stairsOf(LG),
-          kG = this.cornerAt(GG, bG, ZG, SG, yG),
-          YG = yG.half === UG.d.top ? "top" : "bot";
-        return (0, wG.p)(`${wG.l[LG].meta.rootName}|meta|rot${yG.rot}|${YG}${null===kG?"":`|${kG}`}`)
-      }
-      stairsOf(GG) {
-        const {
-          rot: bG,
-          halfblockPlacement: ZG
-        } = wG.l[GG].meta;
+    var pM = iM(8717);
+    var WM = iM(41652),
+      sM = iM(9353),
+      DM = iM(8767),
+      kM = iM(9442);
+    var ZM = iM(41650),
+      oM = iM(9451),
+      fM = iM(41665),
+      YM = iM(9425),
+      NM = iM(9357),
+      AM = iM(9362),
+      xM = iM(9364),
+      vM = iM(9264),
+      FM = iM(9331);
+    const BM = () => vM.c[(0, mM.j)().tapHoldTime].wheelMs,
+      XM = () => ((0, zM.d)(), (0, FM.d)("controllerMenuKey")),
+      IM = (MM, rM, iM) => new gM((iM => {
+        const OM = MM.bodies();
         return {
-          rot: bG,
-          half: ZG
+          bodies: OM,
+          press: rM(OM, iM)
         }
-      }
-      stairsAt(GG, bG, ZG, wG) {
-        const SG = GG(bG, ZG, wG);
-        return this.handles(SG) ? this.stairsOf(SG) : null
-      }
-      cornerAt(GG, bG, ZG, wG, SG) {
+      }), (MM => {
         let {
-          rot: LG,
-          half: yG
-        } = SG;
-        const kG = YG[LG],
-          UG = SG => {
-            let [kG, UG] = SG;
-            const YG = this.stairsAt(GG, bG + kG, ZG, wG + UG);
-            return null !== YG && YG.rot === LG && YG.half === yG
+          bodies: rM,
+          press: OM
+        } = MM;
+        iM(rM, OM)
+      })),
+      KM = {
+        running: !1,
+        latchedAtMs: -1 / 0
+      },
+      qM = MM => {
+        const rM = {
+          x: 0,
+          y: 0,
+          magnitude: 0,
+          headingOffset: 0,
+          jumpHeld: !1,
+          jumpPressed: !1,
+          running: !1,
+          sprintHeld: !1
+        };
+        let iM = KM;
+        const zM = new fM.c,
+          GM = SM.i.subscribe("appManagerUpdated|activeInputDevice", (rM => {
+            MM.deviceChanged(rM)
+          }));
+        let eM = null,
+          bM = 0;
+        const gM = () => {
+          eM = null, (0, NM.g)(null)
+        };
+        let uM = !1;
+        const FM = new tM,
+          qM = MM.look,
+          TM = new wM.c,
+          VM = new wM.c,
+          cM = RM(MM),
+          Mr = SM.i.subscribe(UM.p, (rM => {
+            cM.pressPicked(MM.bodies(), rM)
+          })),
+          rr = IM(MM, ((MM, rM) => MM.primaryFireDown(!rM)), ((MM, rM) => {
+            MM.primaryFireUp(rM)
+          })),
+          ir = IM(MM, (MM => MM.altFireDown()), ((MM, rM) => {
+            MM.altFireUp(rM)
+          }));
+        let Or = !1,
+          Sr = !1,
+          jr = !1;
+        const ar = (0, yM.d)(CM.$),
+          Pr = (0, yM.d)(CM.$),
+          nr = new wM.c;
+        let Qr = !1;
+        const zr = () => {
+            ar.reset(), Pr.reset(), nr.release(), (0, xM.f)(!1), qM.release(), rr.cancel(), (0, AM.g)(!1), ir.cancel(), cM.release(), TM.release(), VM.release(), gM()
           },
-          QG = this.stairsAt(GG, bG + kG[0], ZG, wG + kG[1]);
-        if (null !== QG && QG.half === yG) {
-          const GG = YG[QG.rot];
-          if (fG(kG, GG) && !UG([-GG[0], -GG[1]])) return pG(GG, VG(kG)) ? "outerLeft" : "outerRight"
-        }
-        const KG = this.stairsAt(GG, bG - kG[0], ZG, wG - kG[1]);
-        if (null !== KG && KG.half === yG) {
-          const GG = YG[KG.rot];
-          if (fG(kG, GG) && !UG(GG)) return pG(GG, VG(kG)) ? "innerLeft" : "innerRight"
-        }
-        return null
-      }
-    }, new class {
-      constructor() {
-        this.reshapeOffsets = LG, this.rootIds = new Set(SG.g.map((GG => (0, wG.p)(GG))))
-      }
-      handles(GG) {
-        var bG;
-        const ZG = null === (bG = wG.l[GG]) || void 0 === bG ? void 0 : bG.meta;
-        return void 0 !== ZG && this.rootIds.has(ZG.rootId)
-      }
-      affects(GG) {
-        return this.handles(GG)
-      }
-      placedBy(GG) {
-        return wG.l[GG].meta.rootName === SG.n ? null : SG.n
-      }
-      shape(GG, bG, ZG, LG, yG) {
-        const {
-          rootId: kG,
-          rootName: UG,
-          rot: YG
-        } = wG.l[yG].meta;
-        let VG = 0;
-        return SG.v[YG].forEach(((SG, yG) => {
-          var UG;
-          let [pG, fG, QG] = SG;
-          const KG = null === (UG = wG.l[GG(bG + pG, ZG + fG, LG + QG)]) || void 0 === UG ? void 0 : UG.meta;
-          (null === KG || void 0 === KG ? void 0 : KG.rootId) === kG && KG.rot === YG && (VG |= 1 << yG)
-        })), (0, wG.p)((0, SG.f)(UG, YG, VG))
-      }
-    }, ...yG.d.map((GG => new kG.c(GG))), new class {
-      constructor() {
-        this.reshapeOffsets = oG
-      }
-      handles(GG) {
-        const bG = XG(GG);
-        return rG.has(bG) || bG === KG.g
-      }
-      affects(GG) {
-        const bG = XG(GG);
-        return zG.has(bG) || EG.has(bG) || bG === dG || bG === KG.g || void 0 !== KG.b[bG]
-      }
-      shape(GG, bG, ZG, SG, LG, yG) {
-        const {
-          rootName: kG,
-          rot: UG
-        } = wG.l[LG].meta;
-        return kG === KG.g ? yG ? LG : function(GG, bG, ZG, SG, LG) {
-          const [yG, kG] = KG.e[LG - 1];
-          for (let UG = 1; UG <= KG.C; UG++) {
-            const [YG, VG] = [bG - yG * UG, SG - kG * UG], pG = GG(YG, ZG, VG);
-            if (XG(pG) === KG.g && wG.l[pG].meta.rot === LG && hG(bG, ZG, SG, YG, VG)) return (0, wG.p)((0, KG.V)(LG, !uG(pG)))
-          }
-          return (0, wG.p)((0, KG.V)(LG, !1))
-        }(GG, bG, ZG, SG, UG) : (0, wG.p)((0, KG.K)(kG, UG, function(GG, bG, ZG, SG, LG) {
-          const [yG, kG] = KG.e[LG - 1], UG = (LG, yG) => function(GG, bG, ZG) {
-            var SG;
-            const LG = null === (SG = wG.l[GG]) || void 0 === SG ? void 0 : SG.meta;
-            if (!LG) return !1;
-            const yG = LG.rootName,
-              kG = zG.has(yG) || uG(GG);
-            if (!kG && !EG.has(yG) && yG !== dG) return !1;
-            const [UG, YG] = KG.e[LG.rot - 1];
-            if (kG && UG === -bG && YG === -ZG) return !0;
-            if (EG.has(yG)) return UG === bG && YG === ZG;
-            const VG = wG.l[GG].name;
-            return (yG === dG ? (0, KG.U)(VG, UG, YG) : yG === JG ? [(0, KG.N)(VG, UG, YG)] : []).some((GG => {
-              let [wG, SG] = GG;
-              return wG === -bG && SG === -ZG
-            }))
-          }(GG(bG + LG, ZG, SG + yG), LG, yG), YG = GG(bG - yG, ZG, SG - kG), VG = XG(YG) === dG && wG.l[YG].meta.rot === LG, pG = 1 === KG.b[XG(GG(bG, ZG - 1, SG))] || -1 === KG.b[XG(GG(bG, ZG + 1, SG))];
-          if (pG || VG || UG(-yG, -kG)) return null;
-          const fG = UG(-kG, yG),
-            QG = UG(kG, -yG);
-          if (fG === QG) return null;
-          return fG ? "turnLeft" : "turnRight"
-        }(GG, bG, ZG, SG, UG)))
-      }
-    }, new class {
-      constructor() {
-        this.reshapeOffsets = WG, this.rootId = (0, wG.p)(CG.q)
-      }
-      handles(GG) {
-        var bG;
-        return (null === (bG = wG.l[GG]) || void 0 === bG ? void 0 : bG.meta.rootId) === this.rootId
-      }
-      affects(GG) {
-        return this.handles(GG)
-      }
-      shape(GG, bG, ZG, SG, LG, yG) {
-        const kG = mG(LG);
-        return (0, wG.p)((UG = kG.rot, null !== (YG = yG ? this.reshapedHalf(GG, bG, ZG, SG, kG) : this.placedHalf(GG, bG, ZG, SG, kG.rot)) ? (0, CG.e)(CG.q, UG, YG) : 1 === UG ? CG.q : `${CG.q}|meta|rot${UG}`));
-        var UG, YG
-      }
-      placedHalf(GG, bG, ZG, wG, SG) {
-        const [LG, yG] = iG.c[SG];
-        for (const [kG, UG] of [
-            ["right", 1],
-            ["left", -1]
-          ]) {
-          const YG = bG + UG * LG,
-            VG = wG + UG * yG,
-            pG = IG(GG, YG, ZG, VG);
-          if (null !== pG && pG.rot === SG && (null === pG.half || !FG(GG, YG, ZG, VG, pG))) return kG
-        }
-        return null
-      }
-      reshapedHalf(GG, bG, ZG, wG, SG) {
-        if (null !== SG.half && FG(GG, bG, ZG, wG, SG)) return SG.half;
-        for (const LG of ["right", "left"]) {
-          const [yG, kG] = (0, CG.m)(SG.rot, LG), UG = IG(GG, bG + yG, ZG, wG + kG);
-          if (null !== UG && UG.rot === SG.rot && UG.half === CG.s[LG]) return LG
-        }
-        return null
-      }
-    }, new vG.b];
-
-    function cG(GG, bG, ZG, wG, SG) {
-      let LG = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      for (const yG of aG)
-        if (yG.handles(SG)) return yG.shape(GG, bG, ZG, wG, SG, LG);
-      return SG
-    }
-
-    function lG(GG) {
-      for (const wG of aG) {
-        var bG, ZG;
-        if (wG.handles(GG)) return null !== (bG = null === (ZG = wG.placedBy) || void 0 === ZG ? void 0 : ZG.call(wG, GG)) && void 0 !== bG ? bG : null
-      }
-      return null
-    }
-  },
-  38829: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => CG,
-      c: () => EG,
-      g: () => zG
-    });
-    var wG = ZG(9249),
-      SG = ZG(9280),
-      LG = ZG(9341),
-      yG = ZG(38837),
-      kG = ZG(9334);
-    const UG = (0, yG.E)("pipe"),
-      YG = (0, yG.E)("tank"),
-      VG = (0, yG.E)("port"),
-      pG = "Reactor Port";
-
-    function fG(GG, bG, ZG) {
-      const wG = new Set([LG.f, LG.e, pG, ...bG, ...ZG, ...GG ? [yG.g] : []]);
-      return {
-        makers: new Set(bG),
-        roots: wG
-      }
-    }
-    const QG = {
-        water: fG(!0, ["Condenser"], ["Centrifuge", "Synthesizer", yG.d]),
-        cryo: fG(!1, [yG.d], [])
-      },
-      KG = new Set([...QG.water.roots, ...QG.cryo.roots]),
-      hG = {
-        nx: [-1, 0, 0],
-        ny: [0, -1, 0],
-        nz: [0, 0, -1],
-        px: [1, 0, 0],
-        py: [0, 1, 0],
-        pz: [0, 0, 1]
-      },
-      dG = SG.f.map((GG => hG[GG])),
-      JG = dG.map((GG => {
-        let [bG, ZG, wG] = GG;
-        return yG.p.findIndex((GG => {
-          let [SG, LG, yG] = GG;
-          return SG === bG && LG === ZG && yG === wG
-        }))
-      }));
-
-    function rG(GG) {
-      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const ZG = wG.l[GG],
-        SG = null === ZG || void 0 === ZG ? void 0 : ZG.meta.rootName,
-        fG = QG[bG];
-      if (!SG || !fG.roots.has(SG)) return null;
-      if ((0, LG.l)(SG)) return (0, yG.D)(ZG.name) === bG ? UG : null;
-      if (SG === yG.g) return YG;
-      if (SG === pG) return ZG.name.endsWith("|Water") ? VG : null;
-      const [KG, hG] = kG.e[(ZG.meta.rot || 1) - 1];
-      return (0, yG.E)(fG.makers.has(SG) ? "maker" : "user", [-KG, 0, -hG])
-    }
-
-    function zG(GG, bG, ZG, SG) {
-      let LG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
-      const {
-        makers: kG
-      } = QG[LG];
-      return dG.some(((YG, VG) => {
-        var pG, fG;
-        let [QG, KG, hG] = YG;
-        const dG = GG(bG + QG, ZG + KG, SG + hG),
-          zG = rG(dG, LG);
-        return null !== zG && kG.has(null !== (pG = null === (fG = wG.l[dG]) || void 0 === fG ? void 0 : fG.meta.rootName) && void 0 !== pG ? pG : "") && !(0, yG.I)(UG, zG, JG[VG])
-      }))
-    }
-
-    function EG(GG) {
-      const bG = wG.l[GG];
-      return bG ? (0, yG.D)(bG.name) : null
-    }
-    let oG = null;
-
-    function XG(GG) {
-      if (!oG) {
-        oG = new Map;
-        for (const GG of ["water", "cryo"])
-          for (let bG = 0; bG < 64; bG++)
-            for (const ZG of [!1, !0]) oG.set((0, LG.m)(GG, bG, ZG), {
-              UQ: GG,
-              mask: bG,
-              full: ZG
+          Lr = function() {
+            let OM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            zr(), Sr = !1, OM || (Or = !1, iM = KM, Object.assign(rM, {
+              x: 0,
+              y: 0,
+              magnitude: 0,
+              headingOffset: 0,
+              jumpHeld: !1,
+              jumpPressed: !1,
+              running: !1,
+              sprintHeld: !1
+            }), MM.stopMoving())
+          };
+        let mr = !1;
+        const Hr = function(OM, SM, jM) {
+            let aM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+            if (!(0, hM.h)()) return void(mr || (mr = !0, Or = !1, MM.stopMoving()));
+            mr = !1;
+            const PM = (0, mM.j)(),
+              QM = (0, ZM.f)(SM, PM.moveDeadzone),
+              LM = (0, nM.m)("sprint");
+            iM = (0, ZM.o)(iM, {
+              sprintPressed: OM.wasPressed(LM),
+              magnitude: QM.magnitude,
+              autoSprint: PM.autoSprint,
+              nowMs: jM
+            }), rM.running = iM.running, rM.sprintHeld = OM.isHeld(LM), rM.x = QM.x, rM.y = QM.y, rM.magnitude = QM.speed, rM.headingOffset = QM.headingOffset, Or = QM.magnitude > 0;
+            const HM = (0, nM.m)("jump");
+            if (rM.jumpHeld = OM.isHeld(HM), rM.jumpPressed = OM.wasPressed(HM), rM.jumpPressed && MM.bodies().jumpDown(), aM) return void MM.move(rM, null);
+            const JM = (0, nM.m)("sneak"),
+              dM = zM.filter({
+                sneakHeld: OM.isHeld(JM),
+                sneakPressed: OM.wasPressed(JM),
+                sneakTogglePressed: OM.wasPressed((0, nM.m)("sneakToggle"))
+              }, jM);
+            MM.move(rM, {
+              ...dM,
+              mode: PM.sneakMode
             })
+          },
+          hr = (MM, rM) => {
+            const iM = (0, nM.m)("chat");
+            if ("off" === (0, mM.j)().quickChat) return void(MM.wasPressed(iM) && (LM.d.consumeButton(iM), SM.i.Tz(sM.d)));
+            const OM = TM.update(MM.wasPressed(iM), MM.isHeld(iM), rM, BM());
+            "tap" === OM || "hold" === OM && null === (0, JM.e)() ? SM.i.Tz(sM.d) : "hold" === OM && (LM.d.consumeButton(iM), SM.i.Tz(EM.k))
+          },
+          Jr = (rM, iM) => {
+            ((MM, rM) => {
+              const iM = (0, lM.c)(),
+                OM = (0, nM.m)("emoteWheel");
+              if ("wheel" === (0, mM.j)().emoteButton) return MM.wasPressed(OM) && (LM.d.consumeButton(OM), SM.i.Tz("requestEmoteWheelPadOpen", !0)), (0, lM.c)() !== iM;
+              const jM = VM.update(MM.wasPressed(OM), MM.isHeld(OM), rM, BM());
+              return "tap" === jM ? SM.i.Tz("requestEmoteRepeatLast") : "hold" === jM && (LM.d.consumeButton(OM), SM.i.Tz("requestEmoteWheelPadOpen", !1)), (0, lM.c)() !== iM
+            })(rM, iM) || hr(rM, iM), rM.wasPressed((0, nM.m)("inventory")) && (LM.d.consumeButton((0, nM.m)("inventory")), (0, PM.C)(XM(), "inventory", MM.hasFullInventory())), rM.wasPressed((0, nM.m)("pause")) && (LM.d.consumeButton((0, nM.m)("pause")), (0, QM.d)() === aM.m.SOCIAL ? (0, PM.B)(XM(), aM.m.SOCIAL) : (0, PM.k)(XM())), rM.wasPressed((0, nM.m)("leaderboard")) && !(0, jM.f)() && (LM.d.consumeButton((0, nM.m)("leaderboard")), ((MM, rM) => {
+              if ("shop" === (0, DM.d)()) return SM.i.Tz(kM.n), void(0, PM.B)(MM, aM.m.SHOP, !0);
+              (0, PM.B)(MM, aM.m.LOBBY_LEADERBOARD, rM)
+            })(XM(), MM.hasLobbyTab()))
+          },
+          dr = (rM, iM) => {
+            const OM = MM.bodies();
+            ((rM, iM) => {
+              const OM = (0, nM.m)("attack"),
+                SM = rM.wasPressed(OM);
+              SM && !rr.isLatched() && (uM = MM.targetsBlock()), rr.update(SM, rM.isHeld(OM), iM, "toggle" === (0, mM.j)().attackMode), rr.isLatched() && uM ? FM.update(MM.targetsBlock(), iM) && rr.unlatch() : FM.reset(), (0, AM.g)(rr.isLatched())
+            })(rM, iM), ir.update(rM.wasPressed((0, nM.m)("use")), rM.isHeld((0, nM.m)("use")), iM, !1), ar.update(rM.isHeld((0, nM.m)("hotbarPrevious")), iM) && MM.scrollHotbar(-1), Pr.update(rM.isHeld((0, nM.m)("hotbarNext")), iM) && MM.scrollHotbar(1), ((rM, iM, OM) => {
+              const SM = (0, nM.m)("perspective"),
+                jM = (0, nM.m)("pickBlock"),
+                aM = MM.pickBlockAllowed();
+              (0, xM.f)(aM && !Qr && MM.targetsBlock());
+              const PM = () => {
+                iM.pickBlock() && (Qr = !0, (0, xM.f)(!1))
+              };
+              if (!aM || jM !== SM) return nr.release(), rM.wasPressed(SM) && iM.swapCameraZoom(), void(aM && rM.wasPressed(jM) && PM());
+              const QM = nr.update(rM.wasPressed(jM), rM.isHeld(jM), OM, BM());
+              "tap" === QM ? PM() : "hold" === QM && iM.swapCameraZoom()
+            })(rM, OM, iM), ((rM, iM, OM) => {
+              const SM = (0, nM.m)("drop");
+              if (rM.wasPressed(SM)) {
+                iM.dropItem(!1);
+                const MM = (0, mM.j)();
+                "off" !== MM.buttonRepeat && (eM = OM, bM = vM.c[MM.tapHoldTime].dropStackMs, (0, NM.g)(bM))
+              }
+              null !== eM && (!rM.isHeld(SM) || MM.selectedSlotEmpty() ? gM() : OM - eM >= bM && (gM(), iM.dropItem(!0)))
+            })(rM, OM, iM), cM.update(OM, rM, iM, BM()), Jr(rM, iM)
+          },
+          yr = LM.d.register({
+            name: "gameplay",
+            isActive: () => {
+              const rM = Or && "keyboardMouse" === OM.d.get("activeInputDevice") && !(0, HM.D)(),
+                iM = (0, HM.g)() ? [WM.c] : [];
+              return ((0, HM.g)() || rM) && (0, dM.c)(iM) && MM.hasPlayer()
+            },
+            onFrame: MM => {
+              const rM = performance.now(),
+                iM = (0, mM.j)(),
+                OM = (0, ZM.s)(MM, (0, ZM.i)(iM, (0, nM.m)("pause"), (0, oM.b)().isSupported())),
+                SM = (0, ZM.h)(OM, iM.swapSticks);
+              return (0, HM.g)() ? (Sr = !1, (0, dM.c)() ? (jr = !1, qM.update(SM.look, iM, OM.isHeld((0, nM.m)("use"))), Hr(OM, SM.move, rM), void dr(OM, rM)) : (jr || (jr = !0, zM.lostToPadScreen(), Lr()), void hr(OM, rM))) : (Sr || (zr(), Sr = !0), void Hr(OM, SM.move, rM))
+            },
+            onDeactivate: MM => {
+              (0, HM.g)() && zM.lostToPadScreen(), Lr(MM)
+            },
+            onPeekFrame: rM => {
+              (0, HM.g)() && (0, dM.c)(WM.h) && MM.hasPlayer() ? Hr(rM, (0, ZM.h)(rM, (0, mM.j)().swapSticks).move, performance.now(), !0) : Lr()
+            }
+          }),
+          lr = (0, WM.d)(MM),
+          Er = (() => {
+            const MM = SM.i.subscribe(pM.c, (MM => {
+              !MM && (0, HM.g)() && "inGame" === OM.d.get("gameState") && SM.i.Tz("showBottomMessage", {
+                message: [{
+                  translationKey: "controller:disconnected"
+                }],
+                timeoutLength: 3e3,
+                type: "Warning"
+              })
+            }));
+            return () => {
+              SM.i.unsubscribe(MM)
+            }
+          })();
+        return () => {
+          Lr(), MM.uninstall(), (0, YM.g)(!1), (0, xM.f)(!1), SM.i.unsubscribe(GM), SM.i.unsubscribe(Mr), yr(), lr(), Er(), qM.uninstall()
+        }
       }
-      return oG.get(GG)
-    }
-    const uG = new Map(Array.from({
-      length: LG.j + 1
-    }, ((GG, bG) => [(0, LG.q)(bG), bG])));
-
-    function iG(GG, bG, ZG, SG, LG, yG) {
-      return dG.some(((kG, UG) => {
-        var YG, VG, pG;
-        let [fG, QG, KG] = kG;
-        if (0 === (yG >> UG & 1)) return !1;
-        const hG = null !== (YG = null === (VG = wG.l[GG(bG + fG, ZG + QG, SG + KG)]) || void 0 === VG ? void 0 : VG.name) && void 0 !== YG ? YG : "",
-          dG = XG(hG);
-        return dG ? dG.UQ === LG && dG.full : (null !== (pG = function(GG) {
-          var bG;
-          return null !== (bG = uG.get(GG)) && void 0 !== bG ? bG : null
-        }(hG)) && void 0 !== pG ? pG : 0) > 0
-      }))
-    }
-    class CG {
+  },
+  41652: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => hM,
+      d: () => dM,
+      h: () => HM
+    });
+    var OM = iM(1313),
+      SM = iM(4613),
+      jM = iM(9383),
+      aM = iM(37852),
+      PM = iM(1818),
+      nM = iM(1181),
+      QM = iM(8792),
+      zM = iM(9324),
+      LM = iM(9408);
+    const mM = {
+        emoteWheel: jM.g,
+        quickChatWheel: zM.c,
+        actionWheel: LM.s
+      },
+      HM = Object.keys(mM),
+      hM = "dead",
+      JM = MM => (0, OM.u)().includes(MM),
+      dM = MM => {
+        const rM = [(0, QM.e)(hM, (() => MM.hasPlayer() && MM.isPlayerDead())), (0, QM.e)("sleeping", (() => JM(aM.d))), (0, QM.e)("turnstile", (() => JM(nM.f))), (0, QM.e)("videoAd", PM.e), (0, QM.e)("replay", (() => (0, SM.f)() || MM.isReplayMode())), (0, QM.e)("freeCamera", (() => MM.isFreeCameraOn())), ...Object.entries(mM).map((MM => {
+          let [rM, iM] = MM;
+          return (0, QM.e)(rM, iM)
+        }))];
+        return () => {
+          for (const MM of rM) MM()
+        }
+      }
+  },
+  41650: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => SM,
+      f: () => nM,
+      h: () => PM,
+      i: () => zM,
+      l: () => aM,
+      n: () => jM,
+      o: () => QM,
+      s: () => LM
+    });
+    var OM = iM(8723);
+    class SM {
       constructor() {
-        this.reshapeOffsets = dG
+        this.fullTiltSinceMs = null
       }
-      handles(GG) {
-        return null !== EG(GG)
+      update(MM, rM, iM) {
+        const SM = (0, OM.i)(MM, rM.lookDeadzone);
+        if (Math.hypot(SM.x, SM.y) < .9 || Math.abs(SM.x) < Math.abs(SM.y)) return this.fullTiltSinceMs = null, 1;
+        null === this.fullTiltSinceMs && (this.fullTiltSinceMs = iM);
+        const jM = (aM = rM.lookSensitivityX, Math.min(1, 100 / aM));
+        var aM;
+        return 1 + (1.6 - 1) * Math.max(0, Math.min(1, (iM - this.fullTiltSinceMs - 250 * jM) / (200 * jM)))
       }
-      affects(GG) {
-        var bG, ZG;
-        return KG.has(null !== (bG = null === (ZG = wG.l[GG]) || void 0 === ZG ? void 0 : ZG.meta.rootName) && void 0 !== bG ? bG : "")
+      reset() {
+        this.fullTiltSinceMs = null
       }
-      placedBy(GG) {
-        var bG;
-        return (null === (bG = wG.l[GG]) || void 0 === bG ? void 0 : bG.meta.rootName) === LG.e ? LG.f : null
+    }
+    const jM = (MM, rM, iM, SM, jM) => {
+        let aM = 1;
+        return "boost" === iM.lookCurve ? aM = MM.update(rM, iM, jM) : MM.reset(),
+          function(MM, rM) {
+            let {
+              yawBoost: iM = 1,
+              aiming: SM = !1
+            } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+            const jM = (0, OM.h)((0, OM.i)(MM, rM.lookDeadzone), rM.lookCurve),
+              aM = 220 * Math.PI / 180,
+              PM = SM ? rM.aimLookSensitivity / 100 : 1,
+              nM = rM.lookSensitivityX / 100 * PM,
+              QM = rM.lookSensitivityY / 100 * PM;
+            return {
+              yawRadPerSec: jM.x * aM * nM * iM * (rM.invertLookX ? -1 : 1),
+              pitchRadPerSec: jM.y * aM * .7 * QM * (rM.invertLookY ? -1 : 1)
+            }
+          }(rM, iM, {
+            yawBoost: aM,
+            aiming: SM
+          })
+      },
+      aM = (MM, rM) => {
+        const iM = Math.max(0, Math.min(250, rM)) / 1e3;
+        return {
+          PD: MM.yawRadPerSec * iM,
+          nD: MM.pitchRadPerSec * iM
+        }
+      },
+      PM = (MM, rM) => rM ? {
+        move: MM.rightStick,
+        look: MM.leftStick
+      } : {
+        move: MM.leftStick,
+        look: MM.rightStick
+      },
+      nM = (MM, rM) => {
+        const iM = (0, OM.i)(MM, rM),
+          SM = Math.min(1, Math.hypot(iM.x, iM.y));
+        return {
+          magnitude: SM,
+          speed: Math.min(1, SM / .8),
+          headingOffset: 0 === SM ? 0 : Math.atan2(iM.x, -iM.y),
+          x: iM.x,
+          y: iM.y
+        }
+      },
+      QM = (MM, rM) => {
+        let {
+          sprintPressed: iM,
+          magnitude: OM,
+          autoSprint: SM,
+          nowMs: jM
+        } = rM;
+        const aM = iM ? jM : MM.latchedAtMs,
+          PM = (MM => {
+            let {
+              running: rM,
+              magnitude: iM,
+              sprintPressed: OM,
+              autoSprint: SM
+            } = MM;
+            return !(iM < .5) && (!!OM || !!(SM && iM >= .9) || rM)
+          })({
+            running: MM.running,
+            magnitude: OM,
+            sprintPressed: jM - aM <= 1e3,
+            autoSprint: SM
+          });
+        return {
+          running: PM,
+          latchedAtMs: PM ? -1 / 0 : aM
+        }
+      },
+      zM = (MM, rM, iM) => iM && MM.gyroAiming && "button" === MM.gyroActivation && MM.gyroButton !== rM ? MM.gyroButton : null,
+      LM = (MM, rM) => rM ? {
+        ...MM,
+        isHeld: iM => iM !== rM && MM.isHeld(iM),
+        wasPressed: iM => iM !== rM && MM.wasPressed(iM),
+        wasReleased: iM => iM !== rM && MM.wasReleased(iM),
+        value: iM => iM === rM ? 0 : MM.value(iM)
+      } : MM
+  },
+  41665: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => SM,
+      e: () => OM
+    });
+    const OM = MM => {
+      let {
+        mode: rM,
+        sneakHeld: iM,
+        sneakPressed: OM,
+        sneakTogglePressed: SM,
+        descending: jM,
+        canCrouch: aM,
+        toggled: PM
+      } = MM;
+      return aM ? jM ? {
+        crouchHeld: iM,
+        toggled: !1
+      } : "hold" === rM ? {
+        crouchHeld: iM,
+        toggled: SM ? !PM : PM
+      } : {
+        crouchHeld: !1,
+        toggled: OM || SM ? !PM : PM
+      } : {
+        crouchHeld: !1,
+        toggled: !1
       }
-      shape(GG, bG, ZG, SG, kG, YG) {
-        var VG, pG, fG;
-        const QG = null !== (VG = null === (pG = wG.l[kG]) || void 0 === pG ? void 0 : pG.name) && void 0 !== VG ? VG : "",
-          KG = YG || QG !== LG.f ? null !== (fG = (0, yG.D)(QG)) && void 0 !== fG ? fG : "water" : function(GG, bG, ZG, wG) {
-            return dG.some(((SG, LG) => {
-              let [kG, YG, VG] = SG;
-              const pG = rG(GG(bG + kG, ZG + YG, wG + VG), "cryo");
-              return null !== pG && "port" !== pG.kind && (0, yG.I)(UG, pG, JG[LG])
-            })) ? "cryo" : "water"
-          }(GG, bG, ZG, SG),
-          hG = function(GG, bG, ZG, wG) {
-            let SG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              LG = 0;
-            return dG.forEach(((kG, YG) => {
-              let [VG, pG, fG] = kG;
-              const QG = rG(GG(bG + VG, ZG + pG, wG + fG), SG);
-              QG && (0, yG.I)(UG, QG, JG[YG]) && (LG |= 1 << YG)
-            })), LG
-          }(GG, bG, ZG, SG, KG),
-          zG = YG ? function(GG) {
-            var bG;
-            return !0 === (null === (bG = XG(GG)) || void 0 === bG ? void 0 : bG.full)
-          }(QG) : iG(GG, bG, ZG, SG, KG, hG);
-        return (0, wG.p)((0, LG.m)(KG, hG, zG))
+    };
+    class SM {
+      constructor() {
+        this.regainPending = !1, this.regainedAtMs = -1 / 0, this.graceEndsMs = -1 / 0, this.ignoringHeld = !1
+      }
+      lostToPadScreen() {
+        this.regainPending = !0
+      }
+      filter(MM, rM) {
+        this.regainPending && (this.regainPending = !1, this.regainedAtMs = rM, this.graceEndsMs = rM + 500);
+        const iM = rM < this.graceEndsMs;
+        return iM && (MM.sneakPressed || MM.sneakTogglePressed) && (this.graceEndsMs = Math.min(this.regainedAtMs + 1e3, Math.max(this.graceEndsMs, rM + 300))), MM.sneakHeld ? iM && MM.sneakPressed && (this.ignoringHeld = !0) : this.ignoringHeld = !1, {
+          sneakHeld: MM.sneakHeld && !this.ignoringHeld,
+          sneakPressed: MM.sneakPressed && !this.ignoringHeld,
+          sneakTogglePressed: MM.sneakTogglePressed && !iM
+        }
       }
     }
   },
-  38602: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => wG,
-      f: () => LG
+  41640: (MM, rM, iM) => {
+    iM(9451)
+  },
+  41642: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => EM
     });
-    const wG = ["Chest", "Loot Chest", "Moonstone Chest"],
-      SG = [{
-        name: "Workbench",
-        exactMatch: !0
+    var OM = iM(22),
+      SM = iM(9383),
+      jM = iM(9400),
+      aM = iM(8731),
+      PM = iM(8776),
+      nM = iM(8743),
+      QM = iM(41650),
+      zM = iM(41652),
+      LM = iM(8792),
+      mM = iM(8723),
+      HM = iM(9324),
+      hM = iM(9408);
+    const JM = [{
+        isOpen: SM.i,
+        openButton: () => (0, aM.m)("emoteWheel"),
+        aim: MM => {
+          OM.i.Tz("emoteWheelPadAim", MM)
+        },
+        commit: MM => {
+          OM.i.Tz("requestEmoteWheelPadCommit", MM)
+        },
+        close: () => {
+          OM.i.Tz("requestEmoteWheelClose")
+        }
       }, {
-        name: "Furnace",
-        exactMatch: !0
+        isOpen: HM.c,
+        openButton: () => (0, aM.m)("chat"),
+        aim: MM => {
+          OM.i.Tz(HM.e, MM)
+        },
+        commit: MM => {
+          OM.i.Tz(HM.j, MM)
+        },
+        close: () => {
+          OM.i.Tz(HM.h)
+        },
+        keptOpenBy: [zM.c]
       }, {
-        name: "Artisan Bench",
-        exactMatch: !0
-      }, {
-        name: "Potion Table",
-        exactMatch: !0
-      }, {
-        name: "Salvaging Table",
-        exactMatch: !0
-      }, {
-        name: "Enchanting Table",
-        exactMatch: !1
-      }];
-
-    function LG(GG) {
-      return SG.find((bG => bG.exactMatch ? GG === bG.name : GG.includes(bG.name)))
-    }
+        isOpen: hM.s,
+        openButton: () => (0, aM.m)("actionButton"),
+        aim: MM => {
+          OM.i.Tz(hM.b, MM)
+        },
+        commit: MM => {
+          OM.i.Tz(hM.j, MM)
+        },
+        close: () => {
+          OM.i.Tz(hM.f)
+        }
+      }],
+      dM = () => {
+        var MM;
+        return null !== (MM = JM.find((MM => MM.isOpen()))) && void 0 !== MM ? MM : null
+      },
+      yM = MM => (0, aM.X)(MM.openButton()),
+      lM = (MM, rM) => !(0, mM.J)(MM.frame.values, rM),
+      EM = () => {
+        let MM = null,
+          rM = !1,
+          iM = !1;
+        return PM.d.register({
+          name: "wheel",
+          isActive: () => null !== dM(),
+          peek: () => {
+            const MM = dM();
+            return MM && yM(MM) ? null : {
+              over: "gameplay",
+              stick: (0, nM.j)().swapSticks ? "right" : "left"
+            }
+          },
+          onFrame: OM => {
+            var SM;
+            const mM = dM();
+            if (!mM) return;
+            if (null !== (0, LM.b)([...zM.h, ...null !== (SM = mM.keptOpenBy) && void 0 !== SM ? SM : []])) return void mM.close();
+            const HM = mM.openButton(),
+              hM = (0, QM.h)(OM.frame, (0, nM.j)().swapSticks),
+              JM = yM(mM) ? hM.move : hM.look;
+            MM !== mM ? (MM = mM, rM = !lM(OM, HM) || Math.hypot(JM.x, JM.y) >= jM.E, iM = !1) : iM && (iM = !1, lM(OM, HM) && (rM = !1)), mM.aim(JM);
+            const EM = (0, aM.m)("menuConfirm"),
+              UM = (0, aM.m)("menuBack");
+            return OM.wasPressed(UM) ? (PM.d.consumeButton(UM), void mM.close()) : OM.wasPressed(EM) || OM.wasPressed(HM) ? (PM.d.consumeButton(EM), PM.d.consumeButton(HM), void mM.commit(!1)) : void(rM && lM(OM, HM) && (rM = !1, mM.commit(!0)))
+          },
+          onDeactivate: () => {
+            iM = null !== MM && dM() === MM, iM || (MM = null, rM = !1)
+          }
+        })
+      }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

@@ -1,9 +1,617 @@
 export const id = 280;
 export const ids = [280];
 export const modules = {
-  41581: GG => {
-    GG.exports = JSON.parse('{"texture":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAAKGSURBVHic7Zk9bNNAFMf/MZFIwrUBCVVILF26tXNnKrEwIHViYSxLkNgIHxVCCFGgK6KwdOvClK1LRTuXBaF2i5BYkBBDoOGSGAkcBucF+2zHcXzGMX6/xbnn9y7n5/fu3fkKiMmr7Z2+s93r9Ubql8tlV7vVarna3W4XAFCpVMaSr9++VZhk3IQRx/h/oKiro9mjx/Z1TP320gNXe/7zS7fCtwDDgfzTxZuRx+iH1gg46NRx0Knr7DJxYkcA5bxhWvjRawMA5CkL+7IGAFgRWwAwbJOM7Ci3pWlF+l+yi4u2FIDjYZ04H3wa0eYAUbKziVJgpuyvd+nMJgADnUGbZnWyHxe1GkxK7quAdgfYbzg75D4CtM0B0rQcE17bc58mSGm65WlXgcQiYEVsearCvqxNXVWIHQG0thclA1dLrx13bN/+lRmY+T071LUGdmlXAa3rgDCmcYLU5gBa20fdDRK0to+6G4xL7qtAIe5+XiVr9rmPgKL6RSaMMA9nzZ4j4PzHFy7Bl++/RhpcODu6cGTNniNAXYFRW5XTWj1sxZY1+9xHADsg7QGkDTsg7QGkTVE9Yemes3ddZsBuTJWrZM0+9xGQezxHy+uPnvX9VW2ePLwbeBy9dmPbY3vtymmP3uXV654+GveWXLarT49iHXuPS+5TQMsnMb83T7zZ/QkA2Kgv4kRKVIVA8/3bflUIzC0sF/YaO762ew30ERAtOtHigI364vD3/c3jSLby3XMdQ5iYYljOq6j6QXPCndo8qkLEHV/iaP8sTg9+IqXurhNBS359bR4Oo4LynK5O1HtzC8v/ZKYfhZYI+HDc1NENwzAMwzAMwzAMwzAMwzAMwzAMkyR/AEdcALeTv4f4AAAAAElFTkSuQmCC","alphaCutoff":0.05,"vertices":[0.625,0.53788,-0.3968,0.5,0.59407,-0.2437,0.625,0.6067,-0.4593,0.5,0.66288,-0.3062,0.375,0.53788,-0.3968,0.5,0.4817,-0.5499,0.375,0.6067,-0.4593,0.5,0.55051,-0.6124,0.375,0.53788,-0.3968,0.5,0.59407,-0.2437,0.5,0.4817,-0.5499,0.625,0.53788,-0.3968,0.5,0.55051,-0.6124,0.625,0.6067,-0.4593,0.375,0.6067,-0.4593,0.5,0.66288,-0.3062,0.5,0.4817,-0.5499,0.625,0.53788,-0.3968,0.5,0.55051,-0.6124,0.625,0.6067,-0.4593,0.5,0.59407,-0.2437,0.375,0.53788,-0.3968,0.5,0.66288,-0.3062,0.375,0.6067,-0.4593,1,0.70644,0.0625,0.875,0.76263,0.2156,1,0.77526,0,0.875,0.83144,0.1531,0.75,0.70644,0.0625,0.875,0.65026,-0.0906,0.75,0.77526,0,0.875,0.71907,-0.1531,0.75,0.70644,0.0625,0.875,0.76263,0.2156,0.875,0.65026,-0.0906,1,0.70644,0.0625,0.875,0.71907,-0.1531,1,0.77526,0,0.75,0.77526,0,0.875,0.83144,0.1531,0.875,0.65026,-0.0906,1,0.70644,0.0625,0.875,0.71907,-0.1531,1,0.77526,0,0.875,0.76263,0.2156,0.75,0.70644,0.0625,0.875,0.83144,0.1531,0.75,0.77526,0,0.25,0.70644,0.0625,0.125,0.76263,0.2156,0.25,0.77526,0,0.125,0.83144,0.1531,0,0.70644,0.0625,0.125,0.65026,-0.0906,0,0.77526,0,0.125,0.71907,-0.1531,0,0.70644,0.0625,0.125,0.76263,0.2156,0.125,0.65026,-0.0906,0.25,0.70644,0.0625,0.125,0.71907,-0.1531,0.25,0.77526,0,0,0.77526,0,0.125,0.83144,0.1531,0.125,0.65026,-0.0906,0.25,0.70644,0.0625,0.125,0.71907,-0.1531,0.25,0.77526,0,0.125,0.76263,0.2156,0,0.70644,0.0625,0.125,0.83144,0.1531,0,0.77526,0,0.625,0.875,0.5218,0.5,0.93119,0.6749,0.625,0.94381,0.4593,0.5,1,0.6124,0.375,0.875,0.5218,0.5,0.81881,0.3687,0.375,0.94381,0.4593,0.5,0.88763,0.3062,0.375,0.875,0.5218,0.5,0.93119,0.6749,0.5,0.81881,0.3687,0.625,0.875,0.5218,0.5,0.88763,0.3062,0.625,0.94381,0.4593,0.375,0.94381,0.4593,0.5,1,0.6124,0.5,0.81881,0.3687,0.625,0.875,0.5218,0.5,0.88763,0.3062,0.625,0.94381,0.4593,0.5,0.93119,0.6749,0.375,0.875,0.5218,0.5,1,0.6124,0.375,0.94381,0.4593,1,0.22474,0.5,0.5,0.44949,1.1124,1,0.70644,0.0625,0.5,0.93119,0.6749,0,0.22474,0.5,0.5,0,-0.1124,0,0.70644,0.0625,0.5,0.4817,-0.5499,0,0.22474,0.5,0.5,0.44949,1.1124,0.5,0,-0.1124,1,0.22474,0.5,0.5,0.4817,-0.5499,1,0.70644,0.0625,0,0.70644,0.0625,0.5,0.93119,0.6749,0.5,0,-0.1124,1,0.22474,0.5,0.5,0.4817,-0.5499,1,0.70644,0.0625,0.5,0.44949,1.1124,0,0.22474,0.5,0.5,0.93119,0.6749,0,0.70644,0.0625,0.66919,0.25766,0.5897,0.66919,0.18884,0.6522,0.66919,0.33712,0.8062,0.66919,0.2683,0.8687,0.58081,0.18884,0.6522,0.58081,0.25766,0.5897,0.58081,0.2683,0.8687,0.58081,0.33712,0.8062,0.58081,0.18884,0.6522,0.66919,0.18884,0.6522,0.58081,0.25766,0.5897,0.66919,0.25766,0.5897,0.58081,0.33712,0.8062,0.66919,0.33712,0.8062,0.58081,0.2683,0.8687,0.66919,0.2683,0.8687,0.58081,0.25766,0.5897,0.66919,0.25766,0.5897,0.58081,0.33712,0.8062,0.66919,0.33712,0.8062,0.66919,0.18884,0.6522,0.58081,0.18884,0.6522,0.66919,0.2683,0.8687,0.58081,0.2683,0.8687,0.73549,0.14707,0.2571,0.73549,0.06105,0.3352,0.73549,0.26626,0.5819,0.73549,0.18024,0.66,0.51451,0.06105,0.3352,0.51451,0.14707,0.2571,0.51451,0.18024,0.66,0.51451,0.26626,0.5819,0.51451,0.06105,0.3352,0.73549,0.06105,0.3352,0.51451,0.14707,0.2571,0.73549,0.14707,0.2571,0.51451,0.26626,0.5819,0.73549,0.26626,0.5819,0.51451,0.18024,0.66,0.73549,0.18024,0.66,0.51451,0.14707,0.2571,0.73549,0.14707,0.2571,0.51451,0.26626,0.5819,0.73549,0.26626,0.5819,0.73549,0.06105,0.3352,0.51451,0.06105,0.3352,0.73549,0.18024,0.66,0.51451,0.18024,0.66],"uvs":[0.000244,0.547119,0.062256,0.547119,0.000244,0.577881,0.062256,0.577881,0.125244,0.547119,0.187256,0.547119,0.125244,0.577881,0.187256,0.577881,0.124756,0.546631,0.062744,0.546631,0.124756,0.484619,0.062744,0.484619,0.187256,0.484619,0.125244,0.484619,0.187256,0.546631,0.125244,0.546631,0.187744,0.547119,0.249756,0.547119,0.187744,0.577881,0.249756,0.577881,0.062744,0.547119,0.124756,0.547119,0.062744,0.577881,0.124756,0.577881,0.000244,0.547119,0.062256,0.547119,0.000244,0.577881,0.062256,0.577881,0.125244,0.547119,0.187256,0.547119,0.125244,0.577881,0.187256,0.577881,0.124756,0.546631,0.062744,0.546631,0.124756,0.484619,0.062744,0.484619,0.187256,0.484619,0.125244,0.484619,0.187256,0.546631,0.125244,0.546631,0.187744,0.547119,0.249756,0.547119,0.187744,0.577881,0.249756,0.577881,0.062744,0.547119,0.124756,0.547119,0.062744,0.577881,0.124756,0.577881,0.000244,0.547119,0.062256,0.547119,0.000244,0.577881,0.062256,0.577881,0.125244,0.547119,0.187256,0.547119,0.125244,0.577881,0.187256,0.577881,0.124756,0.546631,0.062744,0.546631,0.124756,0.484619,0.062744,0.484619,0.187256,0.484619,0.125244,0.484619,0.187256,0.546631,0.125244,0.546631,0.187744,0.547119,0.249756,0.547119,0.187744,0.577881,0.249756,0.577881,0.062744,0.547119,0.124756,0.547119,0.062744,0.577881,0.124756,0.577881,0.000244,0.547119,0.062256,0.547119,0.000244,0.577881,0.062256,0.577881,0.125244,0.547119,0.187256,0.547119,0.125244,0.577881,0.187256,0.577881,0.124756,0.546631,0.062744,0.546631,0.124756,0.484619,0.062744,0.484619,0.187256,0.484619,0.125244,0.484619,0.187256,0.546631,0.125244,0.546631,0.187744,0.547119,0.249756,0.547119,0.187744,0.577881,0.249756,0.577881,0.062744,0.547119,0.124756,0.547119,0.062744,0.577881,0.124756,0.577881,0.000244,0.250244,0.249756,0.250244,0.000244,0.468506,0.249756,0.468506,0.500244,0.250244,0.749756,0.250244,0.500244,0.468506,0.749756,0.468506,0.499756,0.249756,0.250244,0.249756,0.499756,0.000244,0.250244,0.000244,0.749756,0.000244,0.500244,0.000244,0.749756,0.249756,0.500244,0.249756,0.750244,0.250244,0.999756,0.250244,0.750244,0.468506,0.999756,0.468506,0.250244,0.250244,0.499756,0.250244,0.250244,0.468506,0.499756,0.468506,0.500244,0.515869,0.531006,0.515869,0.500244,0.577881,0.531006,0.577881,0.562744,0.515869,0.593506,0.515869,0.562744,0.577881,0.593506,0.577881,0.562256,0.515381,0.531494,0.515381,0.562256,0.484619,0.531494,0.484619,0.593506,0.484619,0.562744,0.484619,0.593506,0.515381,0.562744,0.515381,0.593994,0.515869,0.624756,0.515869,0.593994,0.577881,0.624756,0.577881,0.531494,0.515869,0.562256,0.515869,0.531494,0.577881,0.562256,0.577881,0.265869,0.515869,0.296631,0.515869,0.265869,0.609131,0.296631,0.609131,0.375244,0.515869,0.406006,0.515869,0.375244,0.609131,0.406006,0.609131,0.374756,0.515381,0.297119,0.515381,0.374756,0.484619,0.297119,0.484619,0.452881,0.484619,0.375244,0.484619,0.452881,0.515381,0.375244,0.515381,0.406494,0.515869,0.484131,0.515869,0.406494,0.609131,0.484131,0.609131,0.297119,0.515869,0.374756,0.515869,0.297119,0.609131,0.374756,0.609131],"indices":[0,2,1,2,3,1,4,6,5,6,7,5,8,10,9,10,11,9,12,14,13,14,15,13,16,18,17,18,19,17,20,22,21,22,23,21,24,26,25,26,27,25,28,30,29,30,31,29,32,34,33,34,35,33,36,38,37,38,39,37,40,42,41,42,43,41,44,46,45,46,47,45,48,50,49,50,51,49,52,54,53,54,55,53,56,58,57,58,59,57,60,62,61,62,63,61,64,66,65,66,67,65,68,70,69,70,71,69,72,74,73,74,75,73,76,78,77,78,79,77,80,82,81,82,83,81,84,86,85,86,87,85,88,90,89,90,91,89,92,94,93,94,95,93,96,98,97,98,99,97,100,102,101,102,103,101,104,106,105,106,107,105,108,110,109,110,111,109,112,114,113,114,115,113,116,118,117,118,119,117,120,122,121,122,123,121,124,126,125,126,127,125,128,130,129,130,131,129,132,134,133,134,135,133,136,138,137,138,139,137,140,142,141,142,143,141,144,146,145,146,147,145,148,150,149,150,151,149,152,154,153,154,155,153,156,158,157,158,159,157,160,162,161,162,163,161,164,166,165,166,167,165],"shades":[0.7,0.7,0.7,0.7,1,1,0.85,0.85,0.85,0.85,0.85,0.85,0.7,0.7,0.7,0.7,1,1,0.85,0.85,0.85,0.85,0.85,0.85,0.7,0.7,0.7,0.7,1,1,0.85,0.85,0.85,0.85,0.85,0.85,0.7,0.7,0.7,0.7,1,1,0.85,0.85,0.85,0.85,0.85,0.85,0.7,0.7,0.7,0.7,1,1,0.85,0.85,0.85,0.85,0.85,0.85,0.7,0.7,0.7,0.7,0.85,0.85,0.85,0.85,0.85,0.85,1,1,0.7,0.7,0.7,0.7,0.85,0.85,0.85,0.85,0.85,0.85,1,1]}')
+  41210: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => jM
+    });
+    var OM = iM(39711),
+      SM = iM(38085);
+    class jM {
+      static Instantiate(MM) {
+        if (this.RegisteredExternalClasses && this.RegisteredExternalClasses[MM]) return this.RegisteredExternalClasses[MM];
+        const rM = (0, SM.b)(MM);
+        if (rM) return rM;
+        OM.e.Warn(MM + " not found, you may have missed an import.");
+        const iM = MM.split(".");
+        let jM = "undefined" !== typeof window ? window : "undefined" !== typeof globalThis ? globalThis : this;
+        for (let OM = 0, SM = iM.length; OM < SM; OM++) jM = jM[iM[OM]];
+        return "function" !== typeof jM ? null : jM
+      }
+    }
+    jM.RegisteredExternalClasses = {}
+  },
+  41009: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => SM
+    });
+    var OM = iM(40972);
+    class SM {
+      static get Now() {
+        return (0, OM.l)() && window.performance && window.performance.now ? window.performance.now() : Date.now()
+      }
+    }
+  },
+  41034: (MM, rM, iM) => {
+    function OM(MM) {
+      let rM = 1;
+      do {
+        rM *= 2
+      } while (rM < MM);
+      return rM === MM
+    }
+
+    function SM(MM, rM, iM) {
+      return MM * (1 - iM) + rM * iM
+    }
+
+    function jM(MM) {
+      const rM = aM(MM),
+        iM = PM(MM);
+      return rM - MM > MM - iM ? iM : rM
+    }
+
+    function aM(MM) {
+      return MM--, MM |= MM >> 1, MM |= MM >> 2, MM |= MM >> 4, MM |= MM >> 8, MM |= MM >> 16, ++MM
+    }
+
+    function PM(MM) {
+      return MM |= MM >> 1, MM |= MM >> 2, MM |= MM >> 4, MM |= MM >> 8, (MM |= MM >> 16) - (MM >> 1)
+    }
+
+    function nM(MM, rM) {
+      let iM;
+      switch (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2) {
+        case 1:
+          iM = PM(MM);
+          break;
+        case 2:
+          iM = jM(MM);
+          break;
+        default:
+          iM = aM(MM)
+      }
+      return Math.min(iM, rM)
+    }
+    iM.d(rM, {
+      c: () => PM,
+      e: () => nM,
+      g: () => OM,
+      i: () => SM,
+      m: () => jM
+    })
+  },
+  41205: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => EM,
+      d: () => GM,
+      e: () => yM,
+      g: () => lM
+    });
+    var OM, SM = iM(38068),
+      jM = iM(40972),
+      aM = iM(39711),
+      PM = iM(39705),
+      nM = iM(41009),
+      QM = iM(40990),
+      zM = iM(41148),
+      LM = iM(38064),
+      mM = iM(41145),
+      HM = iM(41003),
+      hM = iM(41210),
+      JM = iM(38885),
+      dM = iM(41034);
+    class yM {
+      static get BaseUrl() {
+        return mM.f.BaseUrl
+      }
+      static set BaseUrl(MM) {
+        mM.f.BaseUrl = MM
+      }
+      static get CleanUrl() {
+        return mM.f.CleanUrl
+      }
+      static set CleanUrl(MM) {
+        mM.f.CleanUrl = MM
+      }
+      static IsAbsoluteUrl(MM) {
+        return 0 === MM.indexOf("//") || -1 !== MM.indexOf("://") && (-1 !== MM.indexOf(".") && (-1 !== MM.indexOf("/") && (!(MM.indexOf(":") > MM.indexOf("/")) && (MM.indexOf("://") < MM.indexOf(".") || (0 === MM.indexOf("data:") || 0 === MM.indexOf("blob:"))))))
+      }
+      static set ScriptBaseUrl(MM) {
+        mM.f.ScriptBaseUrl = MM
+      }
+      static get ScriptBaseUrl() {
+        return mM.f.ScriptBaseUrl
+      }
+      static set CDNBaseUrl(MM) {
+        OM.ScriptBaseUrl = MM, OM.AssetBaseUrl = MM
+      }
+      static set ScriptPreprocessUrl(MM) {
+        mM.f.ScriptPreprocessUrl = MM
+      }
+      static get ScriptPreprocessUrl() {
+        return mM.f.ScriptPreprocessUrl
+      }
+      static get DefaultRetryStrategy() {
+        return mM.f.DefaultRetryStrategy
+      }
+      static set DefaultRetryStrategy(MM) {
+        mM.f.DefaultRetryStrategy = MM
+      }
+      static get CorsBehavior() {
+        return mM.f.CorsBehavior
+      }
+      static set CorsBehavior(MM) {
+        mM.f.CorsBehavior = MM
+      }
+      static get UseFallbackTexture() {
+        return LM.c.UseFallbackTexture
+      }
+      static set UseFallbackTexture(MM) {
+        LM.c.UseFallbackTexture = MM
+      }
+      static get RegisteredExternalClasses() {
+        return hM.d.RegisteredExternalClasses
+      }
+      static set RegisteredExternalClasses(MM) {
+        hM.d.RegisteredExternalClasses = MM
+      }
+      static get fallbackTexture() {
+        return LM.c.FallbackTexture
+      }
+      static set fallbackTexture(MM) {
+        LM.c.FallbackTexture = MM
+      }
+      static FetchToRef(MM, rM, iM, OM, SM, jM) {
+        const aM = 4 * ((Math.abs(MM) * iM % iM | 0) + (Math.abs(rM) * OM % OM | 0) * iM);
+        jM.r = SM[aM] / 255, jM.g = SM[aM + 1] / 255, jM.b = SM[aM + 2] / 255, jM.a = SM[aM + 3] / 255
+      }
+      static Mix(MM, rM, iM) {
+        return 0
+      }
+      static Instantiate(MM) {
+        return hM.d.Instantiate(MM)
+      }
+      static SetImmediate(MM) {
+        HM.c.SetImmediate(MM)
+      }
+      static IsExponentOfTwo(MM) {
+        return !0
+      }
+      static FloatRound(MM) {
+        return Math.fround(MM)
+      }
+      static GetFilename(MM) {
+        const rM = MM.lastIndexOf("/");
+        return rM < 0 ? MM : MM.substring(rM + 1)
+      }
+      static GetFolderPath(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const iM = MM.lastIndexOf("/");
+        return iM < 0 ? rM ? MM : "" : MM.substring(0, iM + 1)
+      }
+      static ToDegrees(MM) {
+        return 180 * MM / Math.PI
+      }
+      static ToRadians(MM) {
+        return MM * Math.PI / 180
+      }
+      static SmoothAngleChange(MM, rM) {
+        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .9;
+        const OM = this.ToRadians(MM),
+          SM = this.ToRadians(rM);
+        return this.ToDegrees(Math.atan2((1 - iM) * Math.sin(SM) + iM * Math.sin(OM), (1 - iM) * Math.cos(SM) + iM * Math.cos(OM)))
+      }
+      static MakeArray(MM, rM) {
+        return !0 === rM || void 0 !== MM && null != MM ? Array.isArray(MM) ? MM : [MM] : null
+      }
+      static GetPointerPrefix(MM) {
+        return (0, jM.l)() && !window.PointerEvent ? "mouse" : "pointer"
+      }
+      static SetCorsBehavior(MM, rM) {
+        (0, mM.x)(MM, rM)
+      }
+      static SetReferrerPolicyBehavior(MM, rM) {
+        rM.referrerPolicy = MM
+      }
+      static get PreprocessUrl() {
+        return mM.f.PreprocessUrl
+      }
+      static set PreprocessUrl(MM) {
+        mM.f.PreprocessUrl = MM
+      }
+      static LoadImage(MM, rM, iM, OM, SM, jM) {
+        return (0, mM.p)(MM, rM, iM, OM, SM, jM)
+      }
+      static LoadFile(MM, rM, iM, OM, SM, jM) {
+        return (0, mM.n)(MM, rM, iM, OM, SM, jM)
+      }
+      static async LoadFileAsync(MM) {
+        let rM = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return await new Promise(((iM, OM) => {
+          (0, mM.n)(MM, (MM => {
+            iM(MM)
+          }), void 0, void 0, rM, ((MM, rM) => {
+            OM(rM)
+          }))
+        }))
+      }
+      static GetAssetUrl(MM) {
+        if (!MM) return "";
+        if (OM.AssetBaseUrl && MM.startsWith(OM._DefaultAssetsUrl)) {
+          const rM = OM.AssetBaseUrl.endsWith("/") ? OM.AssetBaseUrl.slice(0, -1) : OM.AssetBaseUrl;
+          return MM.replace(OM._DefaultAssetsUrl, rM)
+        }
+        return MM
+      }
+      static GetBabylonScriptURL(MM, rM) {
+        if (!MM) return "";
+        if (MM.startsWith(OM._DefaultCdnUrl))
+          if (OM.ScriptBaseUrl) {
+            const rM = OM.ScriptBaseUrl.endsWith("/") ? OM.ScriptBaseUrl.slice(0, -1) : OM.ScriptBaseUrl;
+            MM = MM.replace(OM._DefaultCdnUrl, rM)
+          } else if (OM._CdnVersion) {
+          const rM = `${OM._DefaultCdnUrl}/v${OM._CdnVersion}`;
+          MM.startsWith(rM) || (MM = MM.replace(OM._DefaultCdnUrl, rM))
+        }
+        return MM = OM.ScriptPreprocessUrl(MM), rM && !OM.IsAbsoluteUrl(MM) && (MM = OM.GetAbsoluteUrl(MM)), MM
+      }
+      static LoadBabylonScript(MM, rM, iM, SM) {
+        MM = OM.GetBabylonScriptURL(MM), OM.LoadScript(MM, rM, iM)
+      }
+      static async LoadBabylonScriptAsync(MM) {
+        return MM = OM.GetBabylonScriptURL(MM), await OM.LoadScriptAsync(MM)
+      }
+      static _LoadScriptNative(MM, rM, iM, SM) {
+        if (_native) {
+          if (arguments.length > 4 && void 0 !== arguments[4] && arguments[4]) {
+            const MM = "Loading a script as an ES module is not supported in Babylon Native";
+            return void iM?.(MM, new Error(MM))
+          }
+          OM.LoadFile(MM, (MM => {
+            try {
+              Function(MM).apply(null), rM && rM()
+            } catch (OM) {
+              iM && iM("LoadScript Error", OM)
+            }
+          }), void 0, void 0, !1, ((MM, rM) => {
+            iM && iM("LoadScript Error", rM)
+          }))
+        }
+      }
+      static _LoadScriptWeb(MM, rM, iM, OM) {
+        let SM = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if ("function" === typeof importScripts) {
+          try {
+            importScripts(MM), rM && rM()
+          } catch (nM) {
+            iM?.(`Unable to load script '${MM}' in worker`, nM)
+          }
+          return
+        }
+        if (!(0, jM.l)()) return void iM?.(`Cannot load script '${MM}' outside of a window or a worker`);
+        const aM = document.getElementsByTagName("head")[0],
+          PM = document.createElement("script");
+        SM ? (PM.setAttribute("type", "module"), PM.innerText = MM) : (PM.setAttribute("type", "text/javascript"), PM.setAttribute("src", MM)), OM && (PM.id = OM), PM.onload = () => {
+          rM && rM()
+        }, PM.onerror = rM => {
+          iM && iM(`Unable to load script '${MM}'`, rM)
+        }, aM.appendChild(PM)
+      }
+      static async LoadScriptAsync(MM, rM) {
+        return await new Promise(((iM, OM) => {
+          this.LoadScript(MM, (() => {
+            iM()
+          }), ((MM, rM) => {
+            OM(rM || new Error(MM))
+          }), rM)
+        }))
+      }
+      static ReadFileAsDataURL(MM, rM, iM) {
+        const OM = new FileReader,
+          jM = {
+            onCompleteObservable: new SM.d,
+            abort: () => OM.abort()
+          };
+        return OM.onloadend = () => {
+          jM.onCompleteObservable.notifyObservers(jM)
+        }, OM.onload = MM => {
+          rM(MM.target.result)
+        }, OM.onprogress = iM, OM.readAsDataURL(MM), jM
+      }
+      static ReadFile(MM, rM, iM, OM, SM) {
+        return (0, mM.s)(MM, rM, iM, OM, SM)
+      }
+      static FileAsURL(MM) {
+        const rM = new Blob([MM]);
+        return window.URL.createObjectURL(rM)
+      }
+      static Format(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+        return MM.toFixed(rM)
+      }
+      static DeepCopy(MM, rM, iM, OM) {
+        PM.b.DeepCopy(MM, rM, iM, OM)
+      }
+      static IsEmpty(MM) {
+        for (const rM in MM)
+          if (Object.prototype.hasOwnProperty.call(MM, rM)) return !1;
+        return !0
+      }
+      static RegisterTopRootEvents(MM, rM) {
+        for (let OM = 0; OM < rM.length; OM++) {
+          const SM = rM[OM];
+          MM.addEventListener(SM.name, SM.handler, !1);
+          try {
+            window.parent && window.parent.addEventListener(SM.name, SM.handler, !1)
+          } catch (iM) {}
+        }
+      }
+      static UnregisterTopRootEvents(MM, rM) {
+        for (let OM = 0; OM < rM.length; OM++) {
+          const SM = rM[OM];
+          MM.removeEventListener(SM.name, SM.handler);
+          try {
+            MM.parent && MM.parent.removeEventListener(SM.name, SM.handler)
+          } catch (iM) {}
+        }
+      }
+      static async DumpFramebuffer(MM, rM, iM, OM) {
+        throw (0, QM.n)("DumpTools")
+      }
+      static DumpData(MM, rM, iM, OM) {
+        throw (0, QM.n)("DumpTools")
+      }
+      static async DumpDataAsync(MM, rM, iM) {
+        throw (0, QM.n)("DumpTools")
+      }
+      static _IsOffScreenCanvas(MM) {
+        return void 0 !== MM.convertToBlob
+      }
+      static ToBlob(MM, rM) {
+        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          SM = arguments.length > 3 ? arguments[3] : void 0;
+        OM._IsOffScreenCanvas(MM) || MM.toBlob || (MM.toBlob = function(MM, rM, iM) {
+          setTimeout((() => {
+            const OM = atob(this.toDataURL(rM, iM).split(",")[1]),
+              SM = OM.length,
+              jM = new Uint8Array(SM);
+            for (let MM = 0; MM < SM; MM++) jM[MM] = OM.charCodeAt(MM);
+            MM(new Blob([jM]))
+          }))
+        }), OM._IsOffScreenCanvas(MM) ? MM.convertToBlob({
+          type: iM,
+          quality: SM
+        }).then((MM => rM(MM))) : MM.toBlob((function(MM) {
+          rM(MM)
+        }), iM, SM)
+      }
+      static DownloadBlob(MM, rM) {
+        if ("download" in document.createElement("a")) {
+          if (!rM) {
+            const MM = new Date;
+            rM = "screenshot_" + ((MM.getFullYear() + "-" + (MM.getMonth() + 1)).slice(2) + "-" + MM.getDate() + "_" + MM.getHours() + "-" + ("0" + MM.getMinutes()).slice(-2)) + ".png"
+          }
+          OM.Download(MM, rM)
+        } else if (MM && "undefined" !== typeof URL) {
+          const rM = URL.createObjectURL(MM),
+            iM = window.open("");
+          if (!iM) return;
+          const OM = iM.document.createElement("img");
+          OM.onload = function() {
+            URL.revokeObjectURL(rM)
+          }, OM.src = rM, iM.document.body.appendChild(OM)
+        }
+      }
+      static EncodeScreenshotCanvasData(MM, rM) {
+        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          SM = arguments.length > 3 ? arguments[3] : void 0,
+          jM = arguments.length > 4 ? arguments[4] : void 0;
+        if ("string" !== typeof SM && rM) {
+          if (rM) {
+            if (OM._IsOffScreenCanvas(MM)) return void MM.convertToBlob({
+              type: iM,
+              quality: jM
+            }).then((MM => {
+              const iM = new FileReader;
+              iM.readAsDataURL(MM), iM.onloadend = () => {
+                const MM = iM.result;
+                rM(MM)
+              }
+            }));
+            const SM = MM.toDataURL(iM, jM);
+            rM(SM)
+          }
+        } else this.ToBlob(MM, (function(MM) {
+          MM && OM.DownloadBlob(MM, SM), rM && rM("")
+        }), iM, jM)
+      }
+      static Download(MM, rM) {
+        if ("undefined" === typeof URL) return;
+        const iM = window.URL.createObjectURL(MM),
+          OM = document.createElement("a");
+        document.body.appendChild(OM), OM.style.display = "none", OM.href = iM, OM.download = rM, OM.addEventListener("click", (() => {
+          OM.parentElement && OM.parentElement.removeChild(OM)
+        })), OM.click(), window.URL.revokeObjectURL(iM)
+      }
+      static BackCompatCameraNoPreventDefault(MM) {
+        return "boolean" === typeof MM[0] ? MM[0] : "boolean" === typeof MM[1] && MM[1]
+      }
+      static CreateScreenshot(MM, rM, iM, OM) {
+        throw (0, QM.n)("ScreenshotTools")
+      }
+      static async CreateScreenshotAsync(MM, rM, iM) {
+        throw (0, QM.n)("ScreenshotTools")
+      }
+      static CreateScreenshotUsingRenderTarget(MM, rM, iM, OM) {
+        throw (0, QM.n)("ScreenshotTools")
+      }
+      static async CreateScreenshotUsingRenderTargetAsync(MM, rM, iM) {
+        throw (0, QM.n)("ScreenshotTools")
+      }
+      static RandomId() {
+        return (0, JM.d)()
+      }
+      static IsBase64(MM) {
+        return (0, mM.k)(MM)
+      }
+      static DecodeBase64(MM) {
+        return (0, mM.d)(MM)
+      }
+      static get errorsCount() {
+        return aM.e.errorsCount
+      }
+      static Log(MM) {
+        aM.e.Log(MM)
+      }
+      static Warn(MM) {
+        aM.e.Warn(MM)
+      }
+      static Error(MM) {
+        aM.e.Error(MM)
+      }
+      static get LogCache() {
+        return aM.e.LogCache
+      }
+      static ClearLogCache() {
+        aM.e.ClearLogCache()
+      }
+      static set LogLevels(MM) {
+        aM.e.LogLevels = MM
+      }
+      static set PerformanceLogLevel(MM) {
+        (MM & OM.PerformanceUserMarkLogLevel) !== OM.PerformanceUserMarkLogLevel ? (MM & OM.PerformanceConsoleLogLevel) !== OM.PerformanceConsoleLogLevel ? (OM.StartPerformanceCounter = OM._StartPerformanceCounterDisabled, OM.EndPerformanceCounter = OM._EndPerformanceCounterDisabled, _native?.disablePerformanceLogging?.()) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(2), OM.StartPerformanceCounter = OM._StartMarkNative, OM.EndPerformanceCounter = OM._EndMarkNative) : (OM.StartPerformanceCounter = OM._StartPerformanceConsole, OM.EndPerformanceCounter = OM._EndPerformanceConsole) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(1), OM.StartPerformanceCounter = OM._StartMarkNative, OM.EndPerformanceCounter = OM._EndMarkNative) : (OM.StartPerformanceCounter = OM._StartUserMark, OM.EndPerformanceCounter = OM._EndUserMark)
+      }
+      static _StartPerformanceCounterDisabled(MM, rM) {}
+      static _EndPerformanceCounterDisabled(MM, rM) {}
+      static _StartUserMark(MM) {
+        let rM = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!OM._Performance) {
+          if (!(0, jM.l)()) return;
+          OM._Performance = window.performance
+        }
+        rM && OM._Performance.mark && OM._Performance.mark(MM + "-Begin")
+      }
+      static _EndUserMark(MM) {
+        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && OM._Performance.mark && (OM._Performance.mark(MM + "-End"), OM._Performance.measure(MM, MM + "-Begin", MM + "-End"))
+      }
+      static _StartPerformanceConsole(MM) {
+        let rM = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        rM && (OM._StartUserMark(MM, rM), console.time && console.time(MM))
+      }
+      static _EndPerformanceConsole(MM) {
+        let rM = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        rM && (OM._EndUserMark(MM, rM), console.timeEnd(MM))
+      }
+      static _StartMarkNative(MM) {
+        if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.startPerformanceCounter)
+          if (OM._NativePerformanceCounterHandles.has(MM)) OM.Warn(`Performance counter with name ${MM} is already started.`);
+          else {
+            const rM = _native.startPerformanceCounter(MM);
+            OM._NativePerformanceCounterHandles.set(MM, rM)
+          }
+      }
+      static _EndMarkNative(MM) {
+        if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.endPerformanceCounter) {
+          const rM = OM._NativePerformanceCounterHandles.get(MM);
+          rM ? (_native.endPerformanceCounter(rM), OM._NativePerformanceCounterHandles.delete(MM)) : OM.Warn(`Performance counter with name ${MM} was not started.`)
+        }
+      }
+      static get Now() {
+        return nM.b.Now
+      }
+      static GetClassName(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          iM = null;
+        if (!rM && MM.getClassName) iM = MM.getClassName();
+        else {
+          if (MM instanceof Object) {
+            iM = (rM ? MM : Object.getPrototypeOf(MM)).constructor.__bjsclassName__
+          }
+          iM || (iM = typeof MM)
+        }
+        return iM
+      }
+      static First(MM, rM) {
+        for (const iM of MM)
+          if (rM(iM)) return iM;
+        return null
+      }
+      static getFullClassName(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          iM = null,
+          OM = null;
+        if (!rM && MM.getClassName) iM = MM.getClassName();
+        else {
+          if (MM instanceof Object) {
+            const SM = rM ? MM : Object.getPrototypeOf(MM);
+            iM = SM.constructor.__bjsclassName__, OM = SM.constructor.__bjsmoduleName__
+          }
+          iM || (iM = typeof MM)
+        }
+        return iM ? (null != OM ? OM + "." : "") + iM : null
+      }
+      static async DelayAsync(MM) {
+        await new Promise((rM => {
+          setTimeout((() => {
+            rM()
+          }), MM)
+        }))
+      }
+      static IsSafari() {
+        return !!(0, jM.k)() && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+      }
+    }
+
+    function lM(MM, rM) {
+      return iM => {
+        iM.__bjsclassName__ = MM, iM.__bjsmoduleName__ = null != rM ? rM : null
+      }
+    }
+    OM = yM, yM.AssetBaseUrl = "", yM.UseCustomRequestHeaders = !1, yM.CustomRequestHeaders = zM.e.CustomRequestHeaders, yM.GetDOMTextContent = jM.c, yM._DefaultCdnUrl = "https://cdn.babylonjs.com", yM._CdnVersion = "9.28.0", yM._DefaultAssetsUrl = "https://assets.babylonjs.com/core", yM.LoadScript = "undefined" === typeof _native ? OM._LoadScriptWeb : OM._LoadScriptNative, yM.GetAbsoluteUrl = "object" === typeof document ? MM => {
+      const rM = document.createElement("a");
+      return rM.href = MM, rM.href
+    } : "function" === typeof URL && "object" === typeof location ? MM => new URL(MM, location.origin).href : () => {
+      throw new Error("Unable to get absolute URL. Override BABYLON.Tools.GetAbsoluteUrl to a custom implementation for the current context.")
+    }, yM.NoneLogLevel = aM.e.NoneLogLevel, yM.MessageLogLevel = aM.e.MessageLogLevel, yM.WarningLogLevel = aM.e.WarningLogLevel, yM.ErrorLogLevel = aM.e.ErrorLogLevel, yM.AllLogLevel = aM.e.AllLogLevel, yM.IsWindowObjectExist = jM.l, yM.PerformanceNoneLogLevel = 0, yM.PerformanceUserMarkLogLevel = 1, yM.PerformanceConsoleLogLevel = 2, yM._NativePerformanceCounterHandles = new Map, yM.StartPerformanceCounter = OM._StartPerformanceCounterDisabled, yM.EndPerformanceCounter = OM._EndPerformanceCounterDisabled;
+    class EM {
+      constructor(MM, rM, iM) {
+        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.iterations = MM, this.index = OM - 1, this._done = !1, this._fn = rM, this._successCallback = iM
+      }
+      executeNext() {
+        this._done || (this.index + 1 < this.iterations ? (++this.index, this._fn(this)) : this.breakLoop())
+      }
+      breakLoop() {
+        this._done = !0, this._successCallback()
+      }
+      static Run(MM, rM, iM) {
+        const OM = new EM(MM, rM, iM, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
+        return OM.executeNext(), OM
+      }
+      static SyncAsyncForLoop(MM, rM, iM, OM, SM) {
+        let jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        return EM.Run(Math.ceil(MM / rM), (OM => {
+          SM && SM() ? OM.breakLoop() : setTimeout((() => {
+            for (let jM = 0; jM < rM; ++jM) {
+              const aM = OM.index * rM + jM;
+              if (aM >= MM) break;
+              if (iM(aM), SM && SM()) {
+                OM.breakLoop();
+                break
+              }
+            }
+            OM.executeNext()
+          }), jM)
+        }), OM)
+      }
+    }
+    let UM = !1;
+
+    function GM() {
+      UM || (UM = !0, yM.Mix = dM.i, yM.IsExponentOfTwo = dM.g, LM.c.FallbackTexture = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QBmRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAAQAAAATgAAAAAAAABgAAAAAQAAAGAAAAABcGFpbnQubmV0IDQuMC41AP/bAEMABAIDAwMCBAMDAwQEBAQFCQYFBQUFCwgIBgkNCw0NDQsMDA4QFBEODxMPDAwSGBITFRYXFxcOERkbGRYaFBYXFv/bAEMBBAQEBQUFCgYGChYPDA8WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFv/AABEIAQABAAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APH6KKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76P//Z")
+    }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

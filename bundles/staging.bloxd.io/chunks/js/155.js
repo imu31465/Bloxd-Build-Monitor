@@ -1,188 +1,273 @@
 export const id = 155;
 export const ids = [155];
 export const modules = {
-  8178: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => YG
+  44389: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      compilePagePack: () => QM,
+      prefetchCompiler: () => PM,
+      reconcileHint: () => nM
     });
-    var wG = ZG(2897);
-    const SG = [1, 8, 9],
-      LG = 5,
-      yG = 200,
-      kG = 150;
+    var OM = iM(7111),
+      SM = iM(7142),
+      jM = iM(7120),
+      aM = iM(7134);
 
-    function UG(GG, bG) {
-      let ZG = 0;
-      GG("addEventListener", 2, ((GG, yG) => {
-        if (!yG) return void console.warn("TCF CMP couldn't report a consent event, so our consent defaults stand");
-        const kG = function(GG) {
-          const bG = "useractioncomplete" === GG.eventStatus || "tcloaded" === GG.eventStatus && !!GG.tcString;
-          return GG.gdprApplies && bG ? SG.every((bG => !0 === GG.purpose.consents[bG])) : null
-        }(GG);
-        if (null === kG) return;
-        const UG = ++ZG;
-        if (!kG) return void(0, wG.updateAnalyticsConsent)(!1);
-        if ("nitro" === bG) return void(0, wG.updateAnalyticsConsent)(!0);
-        const YG = window.__tcfapi;
-        YG ? YG("getNonIABVendorConsents", 2, ((GG, bG) => {
-          var SG;
-          UG === ZG && (0, wG.updateAnalyticsConsent)(bG && !0 === (null === (SG = GG.nonIabVendorConsents) || void 0 === SG ? void 0 : SG[LG]))
-        })) : console.warn("TCF CMP reported a choice but its __tcfapi is gone, so our consent defaults stand")
+    function PM() {
+      (0, OM.loadPageShaderPackCompiler)()
+    }
+    async function nM() {
+      const MM = await (0, OM.loadPageShaderPackCompiler)();
+      await (MM ? (0, SM.reconcileStoredShaderPackHint)(MM) : (0, SM.forgetShaderPackActiveHint)())
+    }
+    async function QM(MM) {
+      const rM = await (0, OM.loadPageShaderPackCompiler)();
+      if (!rM) return {
+        status: "none"
+      };
+      const iM = await (0, aM.e)(MM, rM),
+        PM = (0, SM.storedPackOutcome)(iM, rM);
+      if ("none" === PM.kind) return {
+        status: "none"
+      };
+      const nM = rM.zMM((0, SM.storedShaderPackFiles)(iM), (0, jM.shaderPackTextures)());
+      if ("blocked" === PM.kind) return {
+        status: "blocked",
+        messageKey: PM.messageKey,
+        variants: 0 === nM.errors.length ? nM.variants : null
+      };
+      if (nM.errors.length > 0) return console.error("Shader pack failed to compile after passing validation", nM.errors), {
+        status: "none"
+      };
+      const {
+        name: QM,
+        keepCircleShadows: zM
+      } = iM.manifest;
+      return {
+        status: "active",
+        pack: {
+          name: QM,
+          variants: nM.variants,
+          keepCircleShadows: !0 === zM
+        }
+      }
+    }
+  },
+  7142: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      forgetShaderPackActiveHint: () => uM,
+      isOtherApiVersion: () => bM,
+      isShaderPackActive: () => UM,
+      isShaderPackChangePending: () => eM,
+      markShaderPackChangePending: () => CM,
+      pageShaderPackValidationVersion: () => wM,
+      reconcileStoredShaderPackHint: () => gM,
+      removeShaderPack: () => EM,
+      replaceShaderPack: () => dM,
+      saveShaderPack: () => JM,
+      shaderPackNeedsCheck: () => tM,
+      storedPackOutcome: () => GM,
+      storedShaderPackFiles: () => mM,
+      toStoredShaderPack: () => LM
+    });
+    var OM = iM(5442),
+      SM = iM(5435),
+      jM = iM(30),
+      aM = iM(3855),
+      PM = iM(7148),
+      nM = iM(7120);
+    const QM = "shaderPackChangePending";
+    let zM = null;
+
+    function LM(MM, rM, iM) {
+      return {
+        manifest: MM.manifest,
+        files: (0, OM.w)(MM.files),
+        validation: rM,
+        ...iM && {
+          listing: iM
+        }
+      }
+    }
+
+    function mM(MM) {
+      return Object.keys(MM.files).map((rM => ({
+        path: rM,
+        source: MM.files[rM]
+      })))
+    }
+    let HM = Promise.resolve();
+
+    function hM(MM) {
+      const rM = HM.then(MM);
+      return HM = rM.catch((() => {})), rM
+    }
+
+    function JM(MM, rM) {
+      return hM((() => yM(MM, rM)))
+    }
+
+    function dM(MM, rM, iM) {
+      return hM((async () => JSON.stringify(await (0, PM.d)()) === JSON.stringify(MM) && (null === rM ? (await lM(), !0) : yM(rM, iM))))
+    }
+    async function yM(MM, rM) {
+      const iM = await jM.f.setItem(PM.b, MM);
+      return iM && RM(MM, rM), iM
+    }
+    async function lM() {
+      await jM.f.removeItem(PM.b), jM.g.removeItem(aM.c)
+    }
+
+    function EM() {
+      return hM(lM)
+    }
+
+    function UM(MM, rM) {
+      return "active" === GM(MM, rM).kind
+    }
+
+    function GM(MM, rM) {
+      var iM;
+      return null === MM ? {
+        kind: "none",
+        reason: "nothingStored"
+      } : bM(MM) ? {
+        kind: "none",
+        reason: "otherApiVersion"
+      } : !1 !== (null === (iM = MM.validation) || void 0 === iM ? void 0 : iM.ok) || MM.validation.fromRecheck ? null === rM ? {
+        kind: "none",
+        reason: "noCompiler"
+      } : tM(MM, rM) ? {
+        kind: "blocked",
+        messageKey: "shaderPack:failedUnchecked"
+      } : MM.validation.ok ? {
+        kind: "active"
+      } : {
+        kind: "blocked",
+        messageKey: "shaderPack:failedValidation"
+      } : {
+        kind: "none",
+        reason: "failedWhenLoaded"
+      }
+    }
+
+    function CM() {
+      jM.k.setItem(QM, performance.timeOrigin)
+    }
+
+    function eM() {
+      return jM.k.getItem(QM) === performance.timeOrigin
+    }
+
+    function bM(MM) {
+      return !(0, SM.k)(MM.manifest.apiVersion)
+    }
+
+    function wM(MM) {
+      return zM ??= MM.KD((0, nM.shaderPackTextures)()), zM
+    }
+
+    function tM(MM, rM) {
+      var iM;
+      return (null === (iM = MM.validation) || void 0 === iM ? void 0 : iM.headerVersion) !== wM(rM)
+    }
+
+    function gM(MM) {
+      return hM((async () => {
+        RM(await (0, PM.d)(!0), MM)
       }))
     }
 
-    function YG(GG) {
-      if (window.__tcfapi) return void UG(window.__tcfapi, GG);
-      let bG = 0;
-      const ZG = window.setInterval((() => {
-        bG++;
-        const wG = window.__tcfapi;
-        wG ? (window.clearInterval(ZG), UG(wG, GG)) : bG >= kG && window.clearInterval(ZG)
-      }), yG)
+    function uM() {
+      return hM((async () => {
+        jM.g.removeItem(aM.c)
+      }))
+    }
+
+    function RM(MM, rM) {
+      UM(MM, rM) ? jM.g.setItem(aM.c, !0) : jM.g.removeItem(aM.c)
     }
   },
-  8196: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      NitroSdkAdaptor: () => UG
+  7134: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => nM,
+      f: () => PM
     });
-    var wG = ZG(1280),
-      SG = ZG(1143),
-      LG = ZG(8178),
-      yG = ZG(2897);
-    const kG = "NitroOutstreamVideo";
-    class UG extends wG.e {
-      constructor() {
-        super(), this.name = "nitro", this.bannerAutoRefresh = "alwaysOn", this.videoInFlight = !1
+    var OM = iM(7142),
+      SM = iM(7120),
+      jM = iM(106);
+    const aM = 100;
+    async function PM(MM, rM) {
+      var iM;
+      let OM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (iM = navigator.gpu) && void 0 !== iM ? iM : null;
+      const aM = MM.zMM(rM, (0, SM.shaderPackTextures)());
+      if (aM.errors.length > 0) return QM(MM, aM.errors, aM.offInStrict);
+      const PM = await async function(MM) {
+        if (!MM) return null;
+        try {
+          const rM = await (0, jM.z)(MM);
+          return rM ? await rM.requestDevice() : null
+        } catch (rM) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", rM), null
+        }
+      }(OM);
+      if (!PM) return null;
+      let nM = !1;
+      PM.lost.then((() => {
+        nM = !0
+      }));
+      try {
+        const rM = await Promise.all(aM.validationModules.map((rM => async function(MM, rM, iM) {
+          rM.pushErrorScope("validation");
+          const OM = rM.createShaderModule({
+              code: iM.code
+            }),
+            SM = rM.popErrorScope(),
+            {
+              messages: jM
+            } = await OM.getCompilationInfo(),
+            aM = jM.filter((MM => "error" === MM.type)).map((rM => MM.mapValidationMessage(iM, rM))),
+            PM = await SM;
+          PM && 0 === aM.length && aM.push({
+            file: null,
+            line: 0,
+            message: PM.message,
+            variants: [iM.key]
+          });
+          return aM
+        }(MM, PM, rM))));
+        return nM ? null : QM(MM, MM.ciM(rM.flat()), aM.offInStrict)
+      } catch (zM) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", zM), null
+      } finally {
+        PM.destroy()
       }
-      static async setup() {
-        return window.nitroAds = window.nitroAds || {
-          createAd: function() {
-            for (var GG = arguments.length, bG = new Array(GG), ZG = 0; ZG < GG; ZG++) bG[ZG] = arguments[ZG];
-            return new Promise((GG => {
-              window.nitroAds.queue.push(["createAd", bG, GG])
-            }))
-          },
-          addUserToken: function() {
-            for (var GG = arguments.length, bG = new Array(GG), ZG = 0; ZG < GG; ZG++) bG[ZG] = arguments[ZG];
-            window.nitroAds.queue.push(["addUserToken", bG])
-          },
-          queue: []
-        }, document.addEventListener("nitroAds.rendered", (GG => {
-          var bG, ZG, wG;
-          const SG = document.getElementById(null !== (bG = null === (ZG = GG.detail) || void 0 === ZG || null === (wG = ZG.adInfo) || void 0 === wG ? void 0 : wG.adUnitCode) && void 0 !== bG ? bG : "");
-          null !== SG && void 0 !== SG && SG.classList.contains("NitroBanner") && SG.classList.toggle("NitroBannerUnfilled", "blank" === GG.detail.type)
-        })), (0, yG.setUpGtag)(), await (0, SG.b)("https://s.nitropay.com/ads-2842.js", {
-          "data-cfasync": "false"
-        }), (0, LG.b)("nitro"), new UG
-      }
-      playVideoAd(GG, bG) {
-        this.showVideoAd(GG, GG)
-      }
-      playRewarded(GG, bG) {
-        this.showVideoAd(GG, bG)
-      }
-      showVideoAd(GG, bG) {
-        if (this.videoInFlight) return console.log("AD: Nitro video already playing"), void bG();
-        const ZG = document.getElementById("GenericVideoWrapper"),
-          wG = document.getElementById("GenericVideoInner");
-        if (null === ZG || null === wG) return void bG();
-        this.videoInFlight = !0;
-        let SG = !1;
-        const LG = document.createElement("div");
-        LG.id = kG, LG.className = "NitroVideoPlacement";
-        const yG = yG => {
-          if (!SG) {
-            SG = !0, clearTimeout(JG), clearInterval(dG), document.removeEventListener("nitroAds.adResult", VG), document.removeEventListener("nitroAds.rendered", pG), document.removeEventListener("nitroAds.complete", fG);
-            try {
-              QG.remove(), LG.querySelectorAll("video").forEach((GG => {
-                GG.pause()
-              })), LG.remove(), wG.classList.remove("NitroVideo"), ZG.style.display = "none"
-            } catch (kG) {
-              console.error("AD: Error tearing down Nitro video", kG)
-            } finally {
-              this.videoInFlight = !1, window.adCompleteSoResume(), yG ? GG() : bG()
-            }
+    }
+    async function nM(MM, rM) {
+      var iM;
+      if (!(0, OM.shaderPackNeedsCheck)(MM, rM) || (0, OM.isOtherApiVersion)(MM)) return MM;
+      const SM = await PM(rM, (0, OM.storedShaderPackFiles)(MM));
+      if (!SM) return MM;
+      const jM = !1 === (null === (iM = MM.validation) || void 0 === iM ? void 0 : iM.ok) && !MM.validation.fromRecheck,
+        aM = {
+          ...MM,
+          validation: jM ? SM : {
+            ...SM,
+            fromRecheck: !0
           }
         };
-        let UG = !1;
-        const YG = (GG, bG) => {
-            if (!UG) {
-              if (!GG) return console.log(`AD: Nitro video not filled: ${bG}`), void yG(!1);
-              UG = !0, clearTimeout(JG), JG = setTimeout((() => {
-                console.log("AD: Nitro video never completed"), yG(!1)
-              }), 12e4)
-            }
-          },
-          VG = GG => {
-            var bG;
-            (null === (bG = GG.detail) || void 0 === bG ? void 0 : bG.id) === kG && YG("filled" === GG.detail.status, GG.detail.status)
-          },
-          pG = GG => {
-            var bG, ZG;
-            (null === (bG = GG.detail) || void 0 === bG || null === (ZG = bG.adInfo) || void 0 === ZG ? void 0 : ZG.adUnitCode) === kG && YG("blank" !== GG.detail.type, GG.detail.type)
-          },
-          fG = GG => {
-            var bG;
-            (null === (bG = GG.detail) || void 0 === bG ? void 0 : bG.adUnitCode) === kG && yG(!0)
-          },
-          QG = document.createElement("button");
-        QG.className = "NitroVideoSkip", QG.disabled = !0, QG.addEventListener("click", (() => {
-          console.log("AD: Nitro video skipped"), yG(!0)
-        }));
-        let KG = Math.ceil(15);
-        const hG = () => {
-          if (KG <= 0) return clearInterval(dG), QG.textContent = "Skip Ad", void(QG.disabled = !1);
-          QG.textContent = `Skip ad in ${KG}s`, KG--
-        };
-        hG();
-        const dG = setInterval(hG, 1e3);
-        let JG = setTimeout((() => {
-          console.log("AD: Nitro video got no result"), yG(!1)
-        }), 1e4);
-        document.addEventListener("nitroAds.adResult", VG), document.addEventListener("nitroAds.rendered", pG), document.addEventListener("nitroAds.complete", fG), wG.appendChild(LG), wG.classList.add("NitroVideo"), ZG.appendChild(QG), ZG.style.display = "flex", window.adStartSoPause(null, {
-          preventMovement: !0
-        }), Promise.resolve(window.nitroAds.createAd(kG, {
-          format: "display",
-          outstream: "only",
-          resultTimeout: 8e3
-        })).catch((GG => {
-          console.error("AD: Nitro failed to create video", GG), yG(!1)
-        })), console.log("AD: Requested Nitro video")
-      }
-      renderBanner(GG) {
-        const {
-          divId: bG,
-          width: ZG,
-          height: wG
-        } = GG, SG = `${bG}-nitro`;
-        let LG = document.getElementById(SG);
-        null === LG && (LG = document.createElement("div"), LG.id = SG, LG.className = "NitroBanner", LG.style.setProperty("--nitro-slot-width", `${ZG}px`), LG.style.setProperty("--nitro-slot-height", `${wG}px`), document.getElementById(bG).appendChild(LG));
-        const yG = [
-          [String(ZG), String(wG)]
-        ];
-        Promise.resolve(window.nitroAds.createAd(SG, {
-          sizes: yG
-        })).catch((GG => {
-          console.error(`AD: Nitro failed to create banner ${SG}:`, GG)
-        })), console.log(`AD: Requested Nitro banner ${SG}`)
-      }
-      displayConsentUI() {
-        var GG, bG;
-        null === (GG = (bG = window).__cmp) || void 0 === GG || GG.call(bG, "showModal")
-      }
-      addPrivacyLinks(GG) {
-        var bG, ZG, wG, SG;
-        const LG = document.createElement("span");
-        LG.dataset.ccpaLink = "1";
-        const yG = document.createElement("div");
-        yG.id = "ncmp-consent-link", GG.replaceChildren(LG, yG), null === (bG = (ZG = window).__uspapi) || void 0 === bG || bG.call(ZG, "addLink", 1), null === (wG = (SG = window).__cmp) || void 0 === wG || wG.call(SG, "addConsentLink")
-      }
-      newPageSession() {
-        var GG, bG;
-        null === (GG = (bG = window.nitroAds).navigate) || void 0 === GG || GG.call(bG)
+      return await (0, OM.replaceShaderPack)(MM, aM, rM) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), aM
+    }
+
+    function QM(MM, rM, iM) {
+      return {
+        headerVersion: (0, OM.pageShaderPackValidationVersion)(MM),
+        ok: 0 === rM.length,
+        errors: rM.slice(0, aM),
+        moreErrors: Math.max(0, rM.length - aM),
+        offInStrict: iM
       }
     }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

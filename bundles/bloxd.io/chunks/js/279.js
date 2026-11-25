@@ -1,632 +1,1512 @@
 export const id = 279;
 export const ids = [279];
 export const modules = {
-  41487: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => zG,
-      f: () => cG,
-      j: () => dG,
-      l: () => JG,
-      o: () => fG,
-      r: () => hG,
-      s: () => KG,
-      u: () => QG
+  41167: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => mM,
+      f: () => LM,
+      h: () => nM,
+      i: () => HM,
+      m: () => QM,
+      n: () => PM,
+      r: () => zM
     });
-    var wG = ZG(37439),
-      SG = ZG(37621),
-      LG = ZG(37471),
-      yG = ZG(41493),
-      kG = ZG(40599),
-      UG = ZG(40407),
-      YG = ZG(40432),
-      VG = ZG(40416),
-      pG = ZG(37484);
-    const fG = Object.freeze(new wG.g(0, 0, 0, 0)),
-      QG = Object.freeze(wG.p.Zero()),
-      KG = Object.freeze(wG.m.Zero()),
-      hG = Object.freeze(UG.c.Zero()),
-      dG = Object.freeze(SG.c.Black()),
-      JG = Object.freeze(new SG.d(0, 0, 0, 0)),
-      rG = {
-        key: 0,
-        repeatCount: 0,
-        Dw: 2
-      };
-    class zG {
-      static _PrepareAnimation(GG, bG, ZG, LG, yG, kG, YG, VG) {
-        let pG;
-        if (!isNaN(parseFloat(yG)) && isFinite(yG) ? pG = zG.ANIMATIONTYPE_FLOAT : yG instanceof wG.g ? pG = zG.ANIMATIONTYPE_QUATERNION : yG instanceof wG.p ? pG = zG.ANIMATIONTYPE_VECTOR3 : yG instanceof wG.m ? pG = zG.ANIMATIONTYPE_VECTOR2 : yG instanceof SG.c ? pG = zG.ANIMATIONTYPE_COLOR3 : yG instanceof SG.d ? pG = zG.ANIMATIONTYPE_COLOR4 : yG instanceof UG.c && (pG = zG.ANIMATIONTYPE_SIZE), void 0 == pG) return null;
-        const fG = new zG(GG, bG, ZG, pG, YG),
-          QG = [{
-            frame: 0,
-            value: yG
-          }, {
-            frame: LG,
-            value: kG
-          }];
-        return fG.setKeys(QG), void 0 !== VG && fG.setEasingFunction(VG), fG
+    var OM = iM(39711),
+      SM = iM(41176);
+
+    function jM(MM, rM, iM, OM) {
+      switch (rM) {
+        case 5120: {
+          let rM = MM.getInt8(iM);
+          return OM && (rM = Math.max(rM / 127, -1)), rM
+        }
+        case 5121: {
+          let rM = MM.getUint8(iM);
+          return OM && (rM /= 255), rM
+        }
+        case 5122: {
+          let rM = MM.getInt16(iM, !0);
+          return OM && (rM = Math.max(rM / 32767, -1)), rM
+        }
+        case 5123: {
+          let rM = MM.getUint16(iM, !0);
+          return OM && (rM /= 65535), rM
+        }
+        case 5131:
+          return (0, SM.c)(MM.getUint16(iM, !0));
+        case 5124:
+          return MM.getInt32(iM, !0);
+        case 5125:
+          return MM.getUint32(iM, !0);
+        case 5126:
+          return MM.getFloat32(iM, !0);
+        default:
+          throw new Error(`Invalid component type ${rM}`)
       }
-      get runtimeAnimations() {
-        return this._runtimeAnimations
+    }
+
+    function aM(MM, rM, iM, OM, jM) {
+      switch (rM) {
+        case 5120:
+          OM && (jM = Math.round(127 * jM)), MM.setInt8(iM, jM);
+          break;
+        case 5121:
+          OM && (jM = Math.round(255 * jM)), MM.setUint8(iM, jM);
+          break;
+        case 5122:
+          OM && (jM = Math.round(32767 * jM)), MM.setInt16(iM, jM, !0);
+          break;
+        case 5123:
+          OM && (jM = Math.round(65535 * jM)), MM.setUint16(iM, jM, !0);
+          break;
+        case 5131:
+          MM.setUint16(iM, (0, SM.g)(jM), !0);
+          break;
+        case 5124:
+          MM.setInt32(iM, jM, !0);
+          break;
+        case 5125:
+          MM.setUint32(iM, jM, !0);
+          break;
+        case 5126:
+          MM.setFloat32(iM, jM, !0);
+          break;
+        default:
+          throw new Error(`Invalid component type ${rM}`)
       }
-      get hasRunningRuntimeAnimations() {
-        for (const GG of this._runtimeAnimations)
-          if (!GG.isStopped()) return !0;
+    }
+
+    function PM(MM) {
+      switch (MM) {
+        case 5120:
+        case 5121:
+          return 1;
+        case 5122:
+        case 5123:
+        case 5131:
+          return 2;
+        case 5124:
+        case 5125:
+        case 5126:
+          return 4;
+        default:
+          throw new Error(`Invalid type '${MM}'`)
+      }
+    }
+
+    function nM(MM, rM, iM, OM, SM, nM, QM, zM) {
+      const LM = new Array(OM),
+        mM = new Array(OM);
+      if (MM instanceof Array) {
+        let SM = rM / 4;
+        const jM = iM / 4;
+        for (let rM = 0; rM < nM; rM += OM) {
+          for (let rM = 0; rM < OM; rM++) LM[rM] = mM[rM] = MM[SM + rM];
+          zM(mM, rM);
+          for (let rM = 0; rM < OM; rM++) LM[rM] !== mM[rM] && (MM[SM + rM] = mM[rM]);
+          SM += jM
+        }
+      } else {
+        const HM = ArrayBuffer.isView(MM) ? new DataView(MM.buffer, MM.byteOffset, MM.byteLength) : new DataView(MM),
+          hM = PM(SM);
+        for (let MM = 0; MM < nM; MM += OM) {
+          for (let MM = 0, iM = rM; MM < OM; MM++, iM += hM) LM[MM] = mM[MM] = jM(HM, SM, iM, QM);
+          zM(mM, MM);
+          for (let MM = 0, iM = rM; MM < OM; MM++, iM += hM) LM[MM] !== mM[MM] && aM(HM, SM, iM, QM, mM[MM]);
+          rM += iM
+        }
+      }
+    }
+
+    function QM(MM, rM, iM, SM, jM, aM, QM, zM) {
+      const LM = rM * PM(iM),
+        mM = QM * rM;
+      if (5126 !== iM || jM !== LM) {
+        const OM = new Float32Array(mM);
+        return nM(MM, SM, jM, rM, iM, mM, aM, ((MM, iM) => {
+          for (let SM = 0; SM < rM; SM++) OM[iM + SM] = MM[SM]
+        })), OM
+      }
+      if (!(MM instanceof Array || MM instanceof Float32Array) || 0 !== SM || MM.length !== mM) {
+        if (MM instanceof Array) {
+          const rM = SM / 4;
+          return MM.slice(rM, rM + mM)
+        }
+        if (ArrayBuffer.isView(MM)) {
+          const rM = MM.byteOffset + SM;
+          return 0 !== (3 & rM) && (OM.e.Warn("Float array must be aligned to 4-bytes border"), zM = !0), zM ? new Float32Array(MM.buffer.slice(rM, rM + mM * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(MM.buffer, rM, mM)
+        }
+        return new Float32Array(MM, SM, mM)
+      }
+      return zM ? MM.slice() : MM
+    }
+
+    function zM(MM, rM, iM, SM, jM, aM, QM) {
+      const zM = PM(iM),
+        LM = function(MM) {
+          switch (MM) {
+            case 5120:
+              return Int8Array;
+            case 5121:
+              return Uint8Array;
+            case 5122:
+              return Int16Array;
+            case 5123:
+            case 5131:
+              return Uint16Array;
+            case 5124:
+              return Int32Array;
+            case 5125:
+              return Uint32Array;
+            case 5126:
+              return Float32Array;
+            default:
+              throw new Error(`Invalid component type '${MM}'`)
+          }
+        }(iM),
+        mM = aM * rM;
+      if (Array.isArray(MM)) {
+        if (0 !== (3 & SM) || 0 !== (3 & jM)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
+        const OM = SM / 4,
+          PM = jM / 4;
+        if (OM + (aM - 1) * PM + rM > MM.length) throw new Error("Last accessed index is out of bounds.");
+        if (PM < rM) throw new Error("Data stride cannot be smaller than the component size.");
+        if (PM !== rM) {
+          const OM = new LM(mM);
+          return nM(MM, SM, jM, rM, iM, mM, !1, ((MM, iM) => {
+            for (let SM = 0; SM < rM; SM++) OM[iM + SM] = MM[SM]
+          })), OM
+        }
+        return new LM(MM.slice(OM, OM + mM))
+      }
+      let HM, hM = SM;
+      ArrayBuffer.isView(MM) ? (HM = MM.buffer, hM += MM.byteOffset) : HM = MM;
+      if (hM + (aM - 1) * jM + rM * zM > HM.byteLength) throw new Error("Last accessed byte is out of bounds.");
+      const JM = rM * zM;
+      if (jM < JM) throw new Error("Byte stride cannot be smaller than the component's byte size.");
+      if (jM !== JM) {
+        const MM = new LM(mM),
+          iM = new Uint8Array(HM, hM),
+          OM = new Uint8Array(MM.buffer),
+          SM = rM * zM;
+        for (let rM = 0, PM = 0, nM = 0; rM < aM; rM++, PM += jM, nM += SM) OM.set(iM.subarray(PM, PM + SM), nM);
+        return MM
+      }
+      return 1 !== zM && 0 !== (hM & zM - 1) && (OM.e.Warn("Array must be aligned to border of element size. Data will be copied."), QM = !0), QM ? new LM(HM.slice(hM, hM + mM * zM)) : new LM(HM, hM, mM)
+    }
+
+    function LM(MM, rM, iM, SM, jM, aM, QM, zM) {
+      const LM = rM * PM(iM),
+        mM = QM * rM;
+      if (zM.length !== mM) throw new Error("Output length is not valid");
+      if (5126 === iM && jM === LM)
+        if (MM instanceof Array) {
+          const rM = SM / 4;
+          zM.set(MM, rM)
+        } else if (ArrayBuffer.isView(MM)) {
+        const rM = MM.byteOffset + SM;
+        if (0 !== (3 & rM)) return OM.e.Warn("Float array must be aligned to 4-bytes border"), void zM.set(new Float32Array(MM.buffer.slice(rM, rM + mM * Float32Array.BYTES_PER_ELEMENT)));
+        const iM = new Float32Array(MM.buffer, rM, mM);
+        zM.set(iM)
+      } else {
+        const rM = new Float32Array(MM, SM, mM);
+        zM.set(rM)
+      } else nM(MM, SM, jM, rM, iM, mM, aM, ((MM, iM) => {
+        for (let OM = 0; OM < rM; OM++) zM[iM + OM] = MM[OM]
+      }))
+    }
+
+    function mM(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      if (Array.isArray(MM)) {
+        for (let SM = 0; SM < rM; SM++)
+          if (MM[iM + SM] - OM > 65535) return !0;
         return !1
       }
-      constructor(GG, bG, ZG, wG, SG, LG) {
-        this.name = GG, this.targetProperty = bG, this.framePerSecond = ZG, this.dataType = wG, this.Dw = SG, this.enableBlending = LG, this._easingFunction = null, this._runtimeAnimations = new Array, this._events = new Array, this.blendingSpeed = .01, this._ranges = {}, this._coreAnimation = null, this.targetPropertyPath = bG.split("."), this.dataType = wG, this.Dw = void 0 === SG ? zG.ANIMATIONLOOPMODE_CYCLE : SG, this.uniqueId = zG._UniqueIdGenerator++
+      return 4 === MM.BYTES_PER_ELEMENT
+    }
+
+    function HM(MM) {
+      const rM = MM.buffer;
+      if (rM instanceof ArrayBuffer) return MM;
+      const iM = new ArrayBuffer(MM.byteLength);
+      return new Uint8Array(iM).set(new Uint8Array(rM, MM.byteOffset, MM.byteLength)), iM
+    }
+  },
+  40998: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => bM,
+      c: () => CM,
+      h: () => eM,
+      e: () => WM,
+      i: () => sM
+    });
+    class OM {
+      constructor() {
+        this.children = []
       }
-      toString(GG) {
-        let bG = "Name: " + this.name + ", property: " + this.targetProperty;
-        if (bG += ", datatype: " + ["Float", "mK", "Quaternion", "Matrix", "Color3", "Vector2"][this.dataType], bG += ", nKeys: " + (this._keys ? this._keys.length : "none"), bG += ", nRanges: " + (this._ranges ? Object.keys(this._ranges).length : "none"), GG) {
-          bG += ", Ranges: {";
-          let GG = !0;
-          for (const ZG in this._ranges) GG || (bG += ", "), GG = !1, bG += ZG;
-          bG += "}"
+      isValid(MM) {
+        return !0
+      }
+      process(MM, rM, iM) {
+        let OM = "";
+        if (this.line) {
+          let iM = this.line;
+          const SM = rM.processor;
+          if (SM) {
+            SM.lineProcessor && (iM = SM.lineProcessor(iM, rM.isFragment, rM.processingContext));
+            const OM = rM.processor?.attributeKeywordName ?? "attribute",
+              jM = rM.isFragment && rM.processor?.varyingFragmentKeywordName ? rM.processor?.varyingFragmentKeywordName : !rM.isFragment && rM.processor?.varyingVertexKeywordName ? rM.processor?.varyingVertexKeywordName : "varying";
+            if (!rM.isFragment && SM.attributeProcessor && this.line.startsWith(OM)) iM = SM.attributeProcessor(this.line, MM, rM.processingContext);
+            else if (SM.varyingProcessor && (SM.varyingCheck?.(this.line, rM.isFragment) || !SM.varyingCheck && this.line.startsWith(jM))) iM = SM.varyingProcessor(this.line, rM.isFragment, MM, rM.processingContext);
+            else if (SM.uniformProcessor && SM.uniformRegexp && SM.uniformRegexp.test(this.line)) rM.lookForClosingBracketForUniformBuffer || (iM = SM.uniformProcessor(this.line, rM.isFragment, MM, rM.processingContext));
+            else if (SM.uniformBufferProcessor && SM.uniformBufferRegexp && SM.uniformBufferRegexp.test(this.line)) rM.lookForClosingBracketForUniformBuffer || (iM = SM.uniformBufferProcessor(this.line, rM.isFragment, rM.processingContext), rM.lookForClosingBracketForUniformBuffer = !0);
+            else if (SM.textureProcessor && SM.textureRegexp && SM.textureRegexp.test(this.line)) iM = SM.textureProcessor(this.line, rM.isFragment, MM, rM.processingContext);
+            else if ((SM.uniformProcessor || SM.uniformBufferProcessor) && this.line.startsWith("uniform") && !rM.lookForClosingBracketForUniformBuffer) {
+              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? SM.uniformProcessor && (iM = SM.uniformProcessor(this.line, rM.isFragment, MM, rM.processingContext)) : SM.uniformBufferProcessor && (iM = SM.uniformBufferProcessor(this.line, rM.isFragment, rM.processingContext), rM.lookForClosingBracketForUniformBuffer = !0)
+            }
+            rM.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (rM.lookForClosingBracketForUniformBuffer = !1, SM.endOfUniformBufferProcessor && (iM = SM.endOfUniformBufferProcessor(this.line, rM.isFragment, rM.processingContext)))
+          }
+          OM += iM + "\n"
         }
-        return bG
+        for (const SM of this.children) OM += SM.process(MM, rM, iM);
+        return this.additionalDefineKey && (MM[this.additionalDefineKey] = this.additionalDefineValue || "true", iM[this.additionalDefineKey] = MM[this.additionalDefineKey]), OM
       }
-      addEvent(GG) {
-        this._events.push(GG), this._events.sort(((GG, bG) => GG.frame - bG.frame))
+    }
+    class SM {
+      constructor() {
+        this._lines = []
       }
-      removeEvents(GG) {
-        for (let bG = 0; bG < this._events.length; bG++) this._events[bG].frame === GG && (this._events.splice(bG, 1), bG--)
+      get currentLine() {
+        return this._lines[this.lineIndex]
       }
-      getEvents() {
-        return this._events
+      get canRead() {
+        return this.lineIndex < this._lines.length - 1
       }
-      createRange(GG, bG, ZG) {
-        this._ranges[GG] || (this._ranges[GG] = new yG.c(GG, bG, ZG))
-      }
-      deleteRange(GG) {
-        let bG = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const ZG = this._ranges[GG];
-        if (ZG) {
-          if (bG) {
-            const GG = ZG.from,
-              bG = ZG.to;
-            for (let ZG = this._keys.length - 1; ZG >= 0; ZG--) this._keys[ZG].frame >= GG && this._keys[ZG].frame <= bG && this._keys.splice(ZG, 1)
+      set lines(MM) {
+        this._lines.length = 0;
+        for (const rM of MM) {
+          if (!rM || "\r" === rM) continue;
+          if ("#" === rM[0]) {
+            this._lines.push(rM);
+            continue
           }
-          this._ranges[GG] = null
+          const MM = rM.trim();
+          if (!MM) continue;
+          if (MM.startsWith("//")) {
+            this._lines.push(rM);
+            continue
+          }
+          const iM = MM.indexOf(";");
+          if (-1 === iM) this._lines.push(MM);
+          else if (iM === MM.length - 1) MM.length > 1 && this._lines.push(MM);
+          else {
+            const MM = rM.split(";");
+            for (let rM = 0; rM < MM.length; rM++) {
+              let iM = MM[rM];
+              iM && (iM = iM.trim(), iM && this._lines.push(iM + (rM !== MM.length - 1 ? ";" : "")))
+            }
+          }
         }
       }
-      getRange(GG) {
-        return this._ranges[GG]
-      }
-      getKeys() {
-        return this._keys
-      }
-      getHighestFrame() {
-        let GG = 0;
-        for (let bG = 0, ZG = this._keys.length; bG < ZG; bG++) GG < this._keys[bG].frame && (GG = this._keys[bG].frame);
-        return GG
-      }
-      getEasingFunction() {
-        return this._easingFunction
-      }
-      setEasingFunction(GG) {
-        this._easingFunction = GG
-      }
-      floatInterpolateFunction(GG, bG, ZG) {
-        return (0, LG.Lerp)(GG, bG, ZG)
-      }
-      floatInterpolateFunctionWithTangents(GG, bG, ZG, wG, SG) {
-        return (0, LG.Hermite)(GG, bG, ZG, wG, SG)
-      }
-      quaternionInterpolateFunction(GG, bG, ZG) {
-        return wG.g.Slerp(GG, bG, ZG)
-      }
-      quaternionInterpolateFunctionWithTangents(GG, bG, ZG, SG, LG) {
-        return wG.g.Hermite(GG, bG, ZG, SG, LG).normalize()
-      }
-      vector3InterpolateFunction(GG, bG, ZG) {
-        return wG.p.Lerp(GG, bG, ZG)
-      }
-      vector3InterpolateFunctionWithTangents(GG, bG, ZG, SG, LG) {
-        return wG.p.Hermite(GG, bG, ZG, SG, LG)
-      }
-      vector2InterpolateFunction(GG, bG, ZG) {
-        return wG.m.Lerp(GG, bG, ZG)
-      }
-      vector2InterpolateFunctionWithTangents(GG, bG, ZG, SG, LG) {
-        return wG.m.Hermite(GG, bG, ZG, SG, LG)
-      }
-      sizeInterpolateFunction(GG, bG, ZG) {
-        return UG.c.Lerp(GG, bG, ZG)
-      }
-      color3InterpolateFunction(GG, bG, ZG) {
-        return SG.c.Lerp(GG, bG, ZG)
-      }
-      color3InterpolateFunctionWithTangents(GG, bG, ZG, wG, LG) {
-        return SG.c.Hermite(GG, bG, ZG, wG, LG)
-      }
-      color4InterpolateFunction(GG, bG, ZG) {
-        return SG.d.Lerp(GG, bG, ZG)
-      }
-      color4InterpolateFunctionWithTangents(GG, bG, ZG, wG, LG) {
-        return SG.d.Hermite(GG, bG, ZG, wG, LG)
-      }
-      _getKeyValue(GG) {
-        return "function" === typeof GG ? GG() : GG
-      }
-      evaluate(GG) {
-        return rG.key = 0, this._interpolate(GG, rG)
-      }
-      _interpolate(GG, bG) {
-        let ZG = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (bG.Dw === zG.ANIMATIONLOOPMODE_CONSTANT && bG.repeatCount > 0) return bG.highLimitValue.clone ? bG.highLimitValue.clone() : bG.highLimitValue;
-        const wG = this._keys;
-        let SG;
-        if (this._coreAnimation) SG = this._coreAnimation._key;
-        else {
-          const LG = wG.length;
-          for (SG = bG.key; SG >= 0 && GG < wG[SG].frame;) --SG;
-          for (; SG + 1 <= LG - 1 && GG >= wG[SG + 1].frame;) ++SG;
-          if (bG.key = SG, SG < 0) return ZG ? void 0 : this._getKeyValue(wG[0].value);
-          if (SG + 1 > LG - 1) return ZG ? void 0 : this._getKeyValue(wG[LG - 1].value);
-          this._key = SG
+    }
+    class jM extends OM {
+      process(MM, rM, iM) {
+        for (let OM = 0; OM < this.children.length; OM++) {
+          const SM = this.children[OM];
+          if (SM.isValid(MM)) return SM.process(MM, rM, iM)
         }
-        const LG = wG[SG],
-          yG = wG[SG + 1];
-        if (ZG && (GG === LG.frame || GG === yG.frame)) return;
-        const kG = this._getKeyValue(LG.value),
-          UG = this._getKeyValue(yG.value);
-        if (1 === LG.interpolation) return yG.frame > GG ? kG : UG;
-        const YG = void 0 !== LG.outTangent && void 0 !== yG.inTangent,
-          VG = yG.frame - LG.frame;
-        let pG = (GG - LG.frame) / VG;
-        const rG = LG.easingFunction || this.getEasingFunction();
-        switch (rG && (pG = rG.ease(pG)), this.dataType) {
-          case zG.ANIMATIONTYPE_FLOAT: {
-            const GG = YG ? this.floatInterpolateFunctionWithTangents(kG, LG.outTangent * VG, UG, yG.inTangent * VG, pG) : this.floatInterpolateFunction(kG, UG, pG);
-            switch (bG.Dw) {
-              case zG.ANIMATIONLOOPMODE_CYCLE:
-              case zG.ANIMATIONLOOPMODE_CONSTANT:
-              case zG.ANIMATIONLOOPMODE_YOYO:
-                return GG;
-              case zG.ANIMATIONLOOPMODE_RELATIVE:
-              case zG.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return (bG.offsetValue ?? 0) * bG.repeatCount + GG
-            }
-            break
-          }
-          case zG.ANIMATIONTYPE_QUATERNION: {
-            const GG = YG ? this.quaternionInterpolateFunctionWithTangents(kG, LG.outTangent.scale(VG), UG, yG.inTangent.scale(VG), pG) : this.quaternionInterpolateFunction(kG, UG, pG);
-            switch (bG.Dw) {
-              case zG.ANIMATIONLOOPMODE_CYCLE:
-              case zG.ANIMATIONLOOPMODE_CONSTANT:
-              case zG.ANIMATIONLOOPMODE_YOYO:
-                return GG;
-              case zG.ANIMATIONLOOPMODE_RELATIVE:
-              case zG.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return GG.addInPlace((bG.offsetValue || fG).scale(bG.repeatCount))
-            }
-            return GG
-          }
-          case zG.ANIMATIONTYPE_VECTOR3: {
-            const GG = YG ? this.vector3InterpolateFunctionWithTangents(kG, LG.outTangent.scale(VG), UG, yG.inTangent.scale(VG), pG) : this.vector3InterpolateFunction(kG, UG, pG);
-            switch (bG.Dw) {
-              case zG.ANIMATIONLOOPMODE_CYCLE:
-              case zG.ANIMATIONLOOPMODE_CONSTANT:
-              case zG.ANIMATIONLOOPMODE_YOYO:
-                return GG;
-              case zG.ANIMATIONLOOPMODE_RELATIVE:
-              case zG.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return GG.add((bG.offsetValue || QG).scale(bG.repeatCount))
-            }
-            break
-          }
-          case zG.ANIMATIONTYPE_VECTOR2: {
-            const GG = YG ? this.vector2InterpolateFunctionWithTangents(kG, LG.outTangent.scale(VG), UG, yG.inTangent.scale(VG), pG) : this.vector2InterpolateFunction(kG, UG, pG);
-            switch (bG.Dw) {
-              case zG.ANIMATIONLOOPMODE_CYCLE:
-              case zG.ANIMATIONLOOPMODE_CONSTANT:
-              case zG.ANIMATIONLOOPMODE_YOYO:
-                return GG;
-              case zG.ANIMATIONLOOPMODE_RELATIVE:
-              case zG.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return GG.add((bG.offsetValue || KG).scale(bG.repeatCount))
-            }
-            break
-          }
-          case zG.ANIMATIONTYPE_SIZE:
-            switch (bG.Dw) {
-              case zG.ANIMATIONLOOPMODE_CYCLE:
-              case zG.ANIMATIONLOOPMODE_CONSTANT:
-              case zG.ANIMATIONLOOPMODE_YOYO:
-                return this.sizeInterpolateFunction(kG, UG, pG);
-              case zG.ANIMATIONLOOPMODE_RELATIVE:
-              case zG.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return this.sizeInterpolateFunction(kG, UG, pG).add((bG.offsetValue || hG).scale(bG.repeatCount))
-            }
+        return ""
+      }
+    }
+    class aM extends OM {
+      isValid(MM) {
+        return this.testExpression.isTrue(MM)
+      }
+    }
+    class PM {
+      isTrue(MM) {
+        return !0
+      }
+      static postfixToInfix(MM) {
+        const rM = [];
+        for (const iM of MM)
+          if (void 0 === PM._OperatorPriority[iM]) rM.push(iM);
+          else {
+            const MM = rM[rM.length - 1],
+              OM = rM[rM.length - 2];
+            rM.length -= 2, rM.push(`(${OM}${iM}${MM})`)
+          } return rM[rM.length - 1]
+      }
+      static infixToPostfix(MM) {
+        const rM = PM._InfixToPostfixCache.get(MM);
+        if (rM) return rM.accessTime = Date.now(), rM.result;
+        if (!MM.includes("&&") && !MM.includes("||") && !MM.includes(")") && !MM.includes("(")) return [MM];
+        const iM = [];
+        let OM = -1;
+        const SM = () => {
+            zM = zM.trim(), "" !== zM && (iM.push(zM), zM = "")
+          },
+          jM = MM => {
+            OM < PM._Stack.length - 1 && (PM._Stack[++OM] = MM)
+          },
+          aM = () => PM._Stack[OM],
+          nM = () => -1 === OM ? "!!INVALID EXPRESSION!!" : PM._Stack[OM--];
+        let QM = 0,
+          zM = "";
+        for (; QM < MM.length;) {
+          const rM = MM.charAt(QM),
+            LM = QM < MM.length - 1 ? MM.substring(QM, 2 + QM) : "";
+          if ("(" === rM) zM = "", jM(rM);
+          else if (")" === rM) {
+            for (SM(); - 1 !== OM && "(" !== aM();) iM.push(nM());
+            nM()
+          } else if (PM._OperatorPriority[LM] > 1) {
+            for (SM(); - 1 !== OM && PM._OperatorPriority[aM()] >= PM._OperatorPriority[LM];) iM.push(nM());
+            jM(LM), QM++
+          } else zM += rM;
+          QM++
+        }
+        for (SM(); - 1 !== OM;) "(" === aM() ? nM() : iM.push(nM());
+        return PM._InfixToPostfixCache.size >= PM.InfixToPostfixCacheLimitSize && PM.ClearCache(), PM._InfixToPostfixCache.set(MM, {
+          result: iM,
+          accessTime: Date.now()
+        }), iM
+      }
+      static ClearCache() {
+        const MM = Array.from(PM._InfixToPostfixCache.entries()).sort(((MM, rM) => MM[1].accessTime - rM[1].accessTime));
+        for (let rM = 0; rM < PM.InfixToPostfixCacheCleanupSize; rM++) PM._InfixToPostfixCache.delete(MM[rM][0])
+      }
+    }
+    PM.InfixToPostfixCacheLimitSize = 5e4, PM.InfixToPostfixCacheCleanupSize = 25e3, PM._InfixToPostfixCache = new Map, PM._OperatorPriority = {
+      ")": 0,
+      "(": 1,
+      "||": 2,
+      "&&": 3
+    }, PM._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    class nM extends PM {
+      constructor(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        super(), this.define = MM, this.not = rM
+      }
+      isTrue(MM) {
+        let rM = void 0 !== MM[this.define];
+        return this.not && (rM = !rM), rM
+      }
+    }
+    class QM extends PM {
+      isTrue(MM) {
+        return this.leftOperand.isTrue(MM) || this.rightOperand.isTrue(MM)
+      }
+    }
+    class zM extends PM {
+      isTrue(MM) {
+        return this.leftOperand.isTrue(MM) && this.rightOperand.isTrue(MM)
+      }
+    }
+    class LM extends PM {
+      constructor(MM, rM, iM) {
+        super(), this.define = MM, this.operand = rM, this.testValue = iM
+      }
+      toString() {
+        return `${this.define} ${this.operand} ${this.testValue}`
+      }
+      isTrue(MM) {
+        let rM = !1;
+        const iM = parseInt(void 0 != MM[this.define] ? MM[this.define] : this.define),
+          OM = parseInt(void 0 != MM[this.testValue] ? MM[this.testValue] : this.testValue);
+        if (isNaN(iM) || isNaN(OM)) return !1;
+        switch (this.operand) {
+          case ">":
+            rM = iM > OM;
             break;
-          case zG.ANIMATIONTYPE_COLOR3: {
-            const GG = YG ? this.color3InterpolateFunctionWithTangents(kG, LG.outTangent.scale(VG), UG, yG.inTangent.scale(VG), pG) : this.color3InterpolateFunction(kG, UG, pG);
-            switch (bG.Dw) {
-              case zG.ANIMATIONLOOPMODE_CYCLE:
-              case zG.ANIMATIONLOOPMODE_CONSTANT:
-              case zG.ANIMATIONLOOPMODE_YOYO:
-                return GG;
-              case zG.ANIMATIONLOOPMODE_RELATIVE:
-              case zG.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return GG.add((bG.offsetValue || dG).scale(bG.repeatCount))
-            }
-            break
-          }
-          case zG.ANIMATIONTYPE_COLOR4: {
-            const GG = YG ? this.color4InterpolateFunctionWithTangents(kG, LG.outTangent.scale(VG), UG, yG.inTangent.scale(VG), pG) : this.color4InterpolateFunction(kG, UG, pG);
-            switch (bG.Dw) {
-              case zG.ANIMATIONLOOPMODE_CYCLE:
-              case zG.ANIMATIONLOOPMODE_CONSTANT:
-              case zG.ANIMATIONLOOPMODE_YOYO:
-                return GG;
-              case zG.ANIMATIONLOOPMODE_RELATIVE:
-              case zG.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return GG.add((bG.offsetValue || JG).scale(bG.repeatCount))
-            }
-            break
-          }
-          case zG.ANIMATIONTYPE_MATRIX:
-            switch (bG.Dw) {
-              case zG.ANIMATIONLOOPMODE_CYCLE:
-              case zG.ANIMATIONLOOPMODE_CONSTANT:
-              case zG.ANIMATIONLOOPMODE_YOYO:
-                return zG.AllowMatricesInterpolation ? this.matrixInterpolateFunction(kG, UG, pG, bG.workValue) : kG;
-              case zG.ANIMATIONLOOPMODE_RELATIVE:
-              case zG.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return kG
-            }
+          case "<":
+            rM = iM < OM;
+            break;
+          case "<=":
+            rM = iM <= OM;
+            break;
+          case ">=":
+            rM = iM >= OM;
+            break;
+          case "==":
+            rM = iM === OM;
+            break;
+          case "!=":
+            rM = iM !== OM
         }
-        return 0
+        return rM
       }
-      matrixInterpolateFunction(GG, bG, ZG, SG) {
-        return zG.AllowMatrixDecomposeForInterpolation ? SG ? (wG.e.DecomposeLerpToRef(GG, bG, ZG, SG), SG) : wG.e.DecomposeLerp(GG, bG, ZG) : SG ? (wG.e.LerpToRef(GG, bG, ZG, SG), SG) : wG.e.Lerp(GG, bG, ZG)
-      }
-      clone() {
-        let GG = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const bG = new zG(this.name, this.targetPropertyPath.join("."), this.framePerSecond, this.dataType, this.Dw);
-        if (bG.enableBlending = this.enableBlending, bG.blendingSpeed = this.blendingSpeed, this._keys && bG.setKeys(this._keys, !1, GG), this._ranges) {
-          bG._ranges = {};
-          for (const GG in this._ranges) {
-            const ZG = this._ranges[GG];
-            ZG && (bG._ranges[GG] = ZG.clone())
-          }
-        }
-        return bG
-      }
-      setKeys(GG) {
-        let bG = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) this._keys = GG;
-        else if (this._keys = GG.slice(0), bG)
-          for (let ZG = 0; ZG < this._keys.length; ZG++) {
-            const GG = this._keys[ZG];
-            this._keys[ZG] = {
-              frame: GG.frame,
-              value: GG.value.clone ? GG.value.clone() : GG.value,
-              inTangent: GG.inTangent && GG.inTangent.clone ? GG.inTangent.clone() : GG.inTangent,
-              outTangent: GG.outTangent && GG.outTangent.clone ? GG.outTangent.clone() : GG.outTangent,
-              interpolation: GG.interpolation,
-              lockedTangent: GG.lockedTangent,
-              easingFunction: GG.easingFunction
-            }
-          }
-      }
-      createKeyForFrame(GG) {
-        rG.key = 0;
-        const bG = this._interpolate(GG, rG, !0);
-        if (!bG) return this._keys[rG.key].frame === GG ? rG.key : rG.key + 1;
-        const ZG = {
-          frame: GG,
-          value: bG.clone ? bG.clone() : bG
-        };
-        return this._keys.splice(rG.key + 1, 0, ZG), rG.key + 1
-      }
-      serialize() {
-        const GG = {};
-        GG.name = this.name, GG.property = this.targetProperty, GG.framePerSecond = this.framePerSecond, GG.dataType = this.dataType, GG.loopBehavior = this.Dw, GG.enableBlending = this.enableBlending, GG.blendingSpeed = this.blendingSpeed;
-        const bG = this.dataType;
-        GG.keys = [];
-        const ZG = this.getKeys();
-        for (let wG = 0; wG < ZG.length; wG++) {
-          const SG = ZG[wG],
-            LG = {};
-          switch (LG.frame = SG.frame, bG) {
-            case zG.ANIMATIONTYPE_FLOAT:
-              LG.values = [SG.value], void 0 !== SG.inTangent && LG.values.push(SG.inTangent), void 0 !== SG.outTangent && (void 0 === SG.inTangent && LG.values.push(void 0), LG.values.push(SG.outTangent)), void 0 !== SG.interpolation && (void 0 === SG.inTangent && LG.values.push(void 0), void 0 === SG.outTangent && LG.values.push(void 0), LG.values.push(SG.interpolation));
-              break;
-            case zG.ANIMATIONTYPE_QUATERNION:
-            case zG.ANIMATIONTYPE_MATRIX:
-            case zG.ANIMATIONTYPE_VECTOR3:
-            case zG.ANIMATIONTYPE_COLOR3:
-            case zG.ANIMATIONTYPE_COLOR4:
-              LG.values = SG.value.mwG(), void 0 != SG.inTangent && LG.values.push(SG.inTangent.mwG()), void 0 != SG.outTangent && (void 0 === SG.inTangent && LG.values.push(void 0), LG.values.push(SG.outTangent.mwG())), void 0 !== SG.interpolation && (void 0 === SG.inTangent && LG.values.push(void 0), void 0 === SG.outTangent && LG.values.push(void 0), LG.values.push(SG.interpolation))
-          }
-          GG.keys.push(LG)
-        }
-        GG.Bh = [];
-        for (const wG in this._ranges) {
-          const bG = this._ranges[wG];
-          if (!bG) continue;
-          const ZG = {};
-          ZG.name = wG, ZG.from = bG.from, ZG.to = bG.to, GG.Bh.push(ZG)
-        }
-        return GG
-      }
-      static _UniversalLerp(GG, bG, ZG) {
-        const wG = GG.constructor;
-        return wG.Lerp ? wG.Lerp(GG, bG, ZG) : wG.Slerp ? wG.Slerp(GG, bG, ZG) : GG.toFixed ? GG * (1 - ZG) + ZG * bG : bG
+    }
+    var mM = iM(40990),
+      HM = iM(40981);
+    const hM = /defined\s*?\((.+?)\)/g,
+      JM = /defined\s*?\[(.+?)\]/g,
+      dM = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
+      yM = /__decl__/,
+      lM = /light\{X\}.(\w*)/g,
+      EM = /\{X\}/g,
+      UM = [],
+      GM = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
+
+    function CM(MM) {
+      MM.processor && MM.processor.initializeShaders && MM.processor.initializeShaders(MM.processingContext)
+    }
+
+    function eM(MM, rM, iM, OM) {
+      rM.processor?.preProcessShaderCode && (MM = rM.processor.preProcessShaderCode(MM, rM.isFragment)), WM(MM, rM, (MM => {
+        rM.processCodeAfterIncludes && (MM = rM.processCodeAfterIncludes(rM.isFragment ? "fragment" : "vertex", MM, rM.defines));
+        const SM = function(MM, rM, iM) {
+          let OM = function(MM, rM) {
+            if (rM.processor?.noPrecision) return MM;
+            const iM = rM.shouldUseHighPrecisionShader; - 1 === MM.indexOf("precision highp float") ? MM = iM ? "precision highp float;\n" + MM : "precision mediump float;\n" + MM : iM || (MM = MM.replace("precision highp float", "precision mediump float"));
+            return MM
+          }(MM, rM);
+          if (!rM.processor) return OM;
+          if (0 === rM.processor.shaderLanguage && -1 !== OM.indexOf("#version 3") && (OM = OM.replace("#version 300 es", ""), !rM.processor.parseGLES3)) return OM;
+          const SM = rM.defines,
+            jM = pM(rM, iM);
+          rM.processor.preProcessor && (OM = rM.processor.preProcessor(OM, SM, jM, rM.isFragment, rM.processingContext));
+          const aM = {};
+          OM = RM(OM, jM, rM, aM), rM.processor.postProcessor && (OM = rM.processor.postProcessor(OM, SM, rM.isFragment, rM.processingContext, iM ? {
+            drawBuffersExtensionDisabled: !iM.getCaps().drawBuffersExtension
+          } : {}, jM, aM));
+          iM?._features.needShaderCodeInlining && (OM = iM.inlineShaderCode(OM));
+          return OM
+        }(MM, rM, OM);
+        iM(SM, MM)
+      }))
+    }
+
+    function bM(MM, rM, iM) {
+      return iM.processor && iM.processor.finalizeShaders ? iM.processor.finalizeShaders(MM, rM, iM.processingContext) : {
+        vertexCode: MM,
+        fragmentCode: rM
       }
     }
 
-    function EG(GG, bG, ZG) {
-      let SG;
-      SG = "object" === typeof bG ? bG : {
-        referenceFrame: bG ?? 0,
-        range: ZG,
-        cloneOriginalAnimation: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        clonedAnimationName: arguments.length > 4 ? arguments[4] : void 0
+    function wM(MM) {
+      const rM = /defined\((.+)\)/.exec(MM);
+      if (rM && rM.length) return new nM(rM[1].trim(), "!" === MM[0]);
+      const iM = ["==", "!=", ">=", "<=", "<", ">"];
+      let OM = "",
+        SM = 0;
+      for (OM of iM)
+        if (SM = MM.indexOf(OM), SM > -1) break;
+      if (-1 === SM) return new nM(MM);
+      const jM = MM.substring(0, SM).trim(),
+        aM = MM.substring(SM + OM.length).trim();
+      return new LM(jM, OM, aM)
+    }
+
+    function tM(MM, rM) {
+      const iM = new aM,
+        OM = MM.substring(0, rM);
+      let SM = MM.substring(rM);
+      return SM = SM.substring(0, (SM.indexOf("//") + 1 || SM.length + 1) - 1).trim(), iM.testExpression = "#ifdef" === OM ? new nM(SM) : "#ifndef" === OM ? new nM(SM, !0) : function(MM) {
+        MM = MM.replace(hM, "defined[$1]");
+        const rM = PM.infixToPostfix(MM),
+          iM = [];
+        for (const SM of rM)
+          if ("||" !== SM && "&&" !== SM) iM.push(SM);
+          else if (iM.length >= 2) {
+          let MM = iM[iM.length - 1],
+            rM = iM[iM.length - 2];
+          iM.length -= 2;
+          const OM = "&&" == SM ? new zM : new QM;
+          "string" === typeof MM && (MM = MM.replace(JM, "defined($1)")), "string" === typeof rM && (rM = rM.replace(JM, "defined($1)")), OM.leftOperand = "string" === typeof rM ? wM(rM) : rM, OM.rightOperand = "string" === typeof MM ? wM(MM) : MM, iM.push(OM)
+        }
+        let OM = iM[iM.length - 1];
+        return "string" === typeof OM && (OM = OM.replace(JM, "defined($1)")), "string" === typeof OM ? wM(OM) : OM
+      }(SM), iM
+    }
+
+    function gM(MM, rM, iM, SM) {
+      let jM;
+      for (; uM(MM, iM, SM);) {
+        jM = MM.currentLine;
+        const aM = jM.substring(0, 5).toLowerCase();
+        if ("#else" === aM) {
+          const iM = new OM;
+          return rM.children.push(iM), void uM(MM, iM, SM)
+        }
+        if ("#elif" === aM) {
+          const MM = tM(jM, 5);
+          rM.children.push(MM), iM = MM
+        }
+      }
+    }
+
+    function uM(MM, rM, iM) {
+      for (; MM.canRead;) {
+        MM.lineIndex++;
+        const SM = MM.currentLine;
+        if (SM.indexOf("#") >= 0) {
+          const OM = GM.exec(SM);
+          if (OM && OM.length) {
+            switch (OM[0]) {
+              case "#ifdef": {
+                const OM = new jM;
+                rM.children.push(OM);
+                const aM = tM(SM, 6);
+                OM.children.push(aM), gM(MM, OM, aM, iM);
+                break
+              }
+              case "#else":
+              case "#elif":
+                return !0;
+              case "#endif":
+                return !1;
+              case "#ifndef": {
+                const OM = new jM;
+                rM.children.push(OM);
+                const aM = tM(SM, 7);
+                OM.children.push(aM), gM(MM, OM, aM, iM);
+                break
+              }
+              case "#if": {
+                const OM = new jM,
+                  aM = tM(SM, 3);
+                rM.children.push(OM), OM.children.push(aM), gM(MM, OM, aM, iM);
+                break
+              }
+            }
+            continue
+          }
+        }
+        const aM = new OM;
+        if (aM.line = SM, rM.children.push(aM), "#" === SM[0] && "d" === SM[1]) {
+          const MM = SM.replace(";", "").split(" ");
+          aM.additionalDefineKey = MM[1], 3 === MM.length && (aM.additionalDefineValue = MM[2])
+        }
+      }
+      return !1
+    }
+
+    function RM(MM, rM, iM, jM) {
+      const aM = new OM,
+        PM = new SM;
+      return PM.lineIndex = -1, PM.lines = MM.split("\n"), uM(PM, aM, jM), aM.process(rM, iM, jM)
+    }
+
+    function pM(MM, rM) {
+      const iM = MM.defines,
+        OM = {};
+      for (const SM of iM) {
+        const MM = SM.replace("#define", "").replace(";", "").trim().split(" ");
+        OM[MM[0]] = MM.length > 1 ? MM[1] : ""
+      }
+      return 0 === MM.processor?.shaderLanguage && (OM.GL_ES = "true"), OM.__VERSION__ = MM.version, OM[MM.platformName] = "true", (0, HM.f)(OM, rM?.isNDCHalfZRange, rM?.LOM, rM?.useExactSrgbConversions), OM
+    }
+
+    function WM(MM, rM, iM) {
+      let OM;
+      for (UM.length = 0; null !== (OM = dM.exec(MM));) UM.push(OM);
+      let SM = [MM],
+        jM = !1;
+      for (const PM of UM) {
+        let MM = PM[1];
+        if (-1 !== MM.indexOf("__decl__") && (MM = MM.replace(yM, ""), rM.supportsUniformBuffers && (MM = MM.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), MM += "Declaration"), !rM.includesShadersStore[MM]) {
+          const OM = rM.shadersRepository + "ShadersInclude/" + MM + ".fx";
+          return void sM.loadFile(OM, (OM => {
+            rM.includesShadersStore[MM] = OM, WM(SM.join(""), rM, iM)
+          }))
+        } {
+          let iM = rM.includesShadersStore[MM];
+          if (PM[2]) {
+            const MM = PM[3].split(",");
+            for (let rM = 0; rM < MM.length; rM += 2) {
+              const OM = new RegExp(MM[rM], "g"),
+                SM = MM[rM + 1];
+              iM = iM.replace(OM, SM)
+            }
+          }
+          if (PM[4]) {
+            const MM = PM[5];
+            if (-1 !== MM.indexOf("..")) {
+              const OM = MM.split(".."),
+                SM = parseInt(OM[0]);
+              let jM = parseInt(OM[1]),
+                aM = iM.slice(0);
+              iM = "", isNaN(jM) && (jM = rM.indexParameters[OM[1]]);
+              for (let MM = SM; MM < jM; MM++) rM.supportsUniformBuffers || (aM = aM.replace(lM, ((MM, rM) => rM + "{X}"))), iM += aM.replace(EM, MM.toString()) + "\n"
+            } else rM.supportsUniformBuffers || (iM = iM.replace(lM, ((MM, rM) => rM + "{X}"))), iM = iM.replace(EM, MM)
+          }
+          const OM = [];
+          for (const MM of SM) {
+            const rM = MM.split(PM[0]);
+            for (let MM = 0; MM < rM.length - 1; MM++) OM.push(rM[MM]), OM.push(iM);
+            OM.push(rM[rM.length - 1])
+          }
+          SM = OM, jM = jM || iM.indexOf("#include<") >= 0 || iM.indexOf("#include <") >= 0
+        }
+      }
+      UM.length = 0;
+      const aM = SM.join("");
+      jM ? WM(aM.toString(), rM, iM) : iM(aM)
+    }
+    const sM = {
+      loadFile: (MM, rM, iM, OM, SM, jM) => {
+        throw (0, mM.n)("FileTools")
+      }
+    }
+  },
+  40981: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => SM,
+      e: () => jM,
+      f: () => PM,
+      i: () => aM,
+      k: () => nM
+    });
+    var OM = iM(40990);
+    const SM = {};
+
+    function jM(MM, rM) {
+      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (rM ? rM + "\n" : "") + MM
+    }
+
+    function aM(MM, rM, iM, jM, aM, PM, nM) {
+      const QM = nM || SM.loadFile;
+      if (!QM) throw (0, OM.n)("FileTools");
+      return QM(MM, rM, iM, jM, aM, PM)
+    }
+
+    function PM(MM, rM, iM, OM) {
+      if (MM) return rM ? MM.IS_NDC_HALF_ZRANGE = "" : delete MM.IS_NDC_HALF_ZRANGE, iM ? MM.USE_REVERSE_DEPTHBUFFER = "" : delete MM.USE_REVERSE_DEPTHBUFFER, void(OM ? MM.USE_EXACT_SRGB_CONVERSIONS = "" : delete MM.USE_EXACT_SRGB_CONVERSIONS);
+      {
+        let MM = "";
+        return rM && (MM += "#define IS_NDC_HALF_ZRANGE"), iM && (MM && (MM += "\n"), MM += "#define USE_REVERSE_DEPTHBUFFER"), OM && (MM && (MM += "\n"), MM += "#define USE_EXACT_SRGB_CONVERSIONS"), MM
+      }
+    }
+
+    function nM(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        OM = arguments.length > 3 ? arguments[3] : void 0;
+      switch (MM) {
+        case 3: {
+          const MM = new Int8Array(rM);
+          return OM && MM.set(new Int8Array(OM)), MM
+        }
+        case 0: {
+          const MM = new Uint8Array(rM);
+          return OM && MM.set(new Uint8Array(OM)), MM
+        }
+        case 4: {
+          const MM = "number" !== typeof rM ? new Int16Array(rM) : new Int16Array(iM ? rM / 2 : rM);
+          return OM && MM.set(new Int16Array(OM)), MM
+        }
+        case 5:
+        case 8:
+        case 9:
+        case 10:
+        case 2: {
+          const MM = "number" !== typeof rM ? new Uint16Array(rM) : new Uint16Array(iM ? rM / 2 : rM);
+          return OM && MM.set(new Uint16Array(OM)), MM
+        }
+        case 6: {
+          const MM = "number" !== typeof rM ? new Int32Array(rM) : new Int32Array(iM ? rM / 4 : rM);
+          return OM && MM.set(new Int32Array(OM)), MM
+        }
+        case 7:
+        case 11:
+        case 12:
+        case 13:
+        case 14:
+        case 15: {
+          const MM = "number" !== typeof rM ? new Uint32Array(rM) : new Uint32Array(iM ? rM / 4 : rM);
+          return OM && MM.set(new Uint32Array(OM)), MM
+        }
+        case 1: {
+          const MM = "number" !== typeof rM ? new Float32Array(rM) : new Float32Array(iM ? rM / 4 : rM);
+          return OM && MM.set(new Float32Array(OM)), MM
+        }
+      }
+      const SM = new Uint8Array(rM);
+      return OM && SM.set(new Uint8Array(OM)), SM
+    }
+  },
+  40990: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => QM,
+      g: () => zM,
+      j: () => nM,
+      n: () => SM
+    });
+    const OM = {};
+
+    function SM(MM) {
+      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !OM[MM]) return OM[MM] = !0, `${MM} needs to be imported before as it contains a side-effect required by your code.`
+    }
+    const jM = {};
+    let aM = !1,
+      PM = 0;
+
+    function nM(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const OM = function() {
+        if ((iM || aM) && 0 === PM) {
+          const iM = `${MM}.${rM}`;
+          jM[iM] || (jM[iM] = !0, console.warn(`[Babylon.js] ${iM}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
+        }
       };
-      let LG = GG;
-      SG.cloneOriginalAnimation && (LG = GG.clone(), LG.name = SG.clonedAnimationName || LG.name);
-      const yG = LG.getKeys();
-      if (!yG.length) return LG;
-      const kG = SG.referenceFrame && SG.referenceFrame >= 0 ? SG.referenceFrame : 0;
-      let UG = 0;
-      const YG = yG[0];
-      let VG = yG.length - 1;
-      const pG = yG[VG],
-        fG = {
-          referenceValue: YG.value,
-          referencePosition: wG.j.mK[0],
-          referenceQuaternion: wG.j.Quaternion[0],
-          referenceScaling: wG.j.mK[1],
-          keyPosition: wG.j.mK[2],
-          keyQuaternion: wG.j.Quaternion[1],
-          keyScaling: wG.j.mK[3]
+      return OM.__isSideEffectStub = !0, OM
+    }
+
+    function QM(MM) {
+      return !!MM && !MM.__isSideEffectStub
+    }
+
+    function zM(MM, rM) {
+      return {
+        get() {},
+        set(MM) {
+          Object.defineProperty(this, rM, {
+            value: MM,
+            writable: !0,
+            configurable: !0,
+            enumerable: !0
+          })
+        },
+        configurable: !0,
+        enumerable: !0
+      }
+    }
+  },
+  40972: (MM, rM, iM) => {
+    function OM() {
+      return "undefined" !== typeof window
+    }
+
+    function SM() {
+      return "undefined" !== typeof navigator
+    }
+
+    function jM() {
+      return "undefined" !== typeof document
+    }
+
+    function aM(MM) {
+      let rM = "",
+        iM = MM.firstChild;
+      for (; iM;) 3 === iM.nodeType && (rM += iM.textContent), iM = iM.nextSibling;
+      return rM
+    }
+    iM.d(rM, {
+      c: () => aM,
+      g: () => jM,
+      k: () => SM,
+      l: () => OM
+    })
+  },
+  41156: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => OM,
+      e: () => SM,
+      i: () => jM
+    });
+    class OM extends Error {}
+    OM._setPrototypeOf = Object.setPrototypeOf || ((MM, rM) => (MM.__proto__ = rM, MM));
+    const SM = {
+      MeshInvalidPositionsError: 0,
+      UnsupportedTextureError: 1e3,
+      GLTFLoaderUnexpectedMagicError: 2e3,
+      SceneLoaderError: 3e3,
+      LoadFileError: 4e3,
+      RequestFileError: 4001,
+      ReadFileError: 4002
+    };
+    class jM extends OM {
+      constructor(MM, rM, iM) {
+        super(MM), this.errorCode = rM, this.innerError = iM, this.name = "RuntimeError", OM._setPrototypeOf(this, jM.prototype)
+      }
+    }
+  },
+  41145: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => pM,
+      f: () => EM,
+      j: () => tM,
+      k: () => uM,
+      n: () => bM,
+      p: () => CM,
+      s: () => eM,
+      u: () => ZM,
+      w: () => wM,
+      x: () => UM
+    });
+    var OM = iM(41148),
+      SM = iM(40972),
+      jM = iM(38068);
+    class aM {}
+    aM.FilesToLoad = {};
+    var PM = iM(41156),
+      nM = iM(41160),
+      QM = iM(38064),
+      zM = iM(40981),
+      LM = iM(40998),
+      mM = iM(39711),
+      HM = iM(41003),
+      hM = iM(41167);
+    const JM = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
+    class dM extends PM.i {
+      constructor(MM, rM) {
+        super(MM, PM.e.LoadFileError), this.name = "LoadFileError", PM.b._setPrototypeOf(this, dM.prototype), rM instanceof OM.e ? this.request = rM : this.file = rM
+      }
+    }
+    class yM extends PM.i {
+      constructor(MM, rM) {
+        super(MM, PM.e.RequestFileError), this.request = rM, this.name = "RequestFileError", PM.b._setPrototypeOf(this, yM.prototype)
+      }
+    }
+    class lM extends PM.i {
+      constructor(MM, rM) {
+        super(MM, PM.e.ReadFileError), this.file = rM, this.name = "ReadFileError", PM.b._setPrototypeOf(this, lM.prototype)
+      }
+    }
+    const EM = {
+        DefaultRetryStrategy: class {
+          static ExponentialBackoff() {
+            let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
+              rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
+            return (iM, OM, SM) => 0 !== OM.status || SM >= MM || -1 !== iM.indexOf("file:") ? -1 : Math.pow(2, SM) * rM
+          }
+        }.ExponentialBackoff(),
+        BaseUrl: "",
+        CorsBehavior: "anonymous",
+        PreprocessUrl: MM => MM,
+        ScriptBaseUrl: "",
+        ScriptPreprocessUrl: MM => MM,
+        CleanUrl: MM => MM = MM.replace(/#/gm, "%23")
+      },
+      UM = (MM, rM) => {
+        if ((!MM || 0 !== MM.indexOf("data:")) && EM.CorsBehavior)
+          if ("string" === typeof EM.CorsBehavior || EM.CorsBehavior instanceof String) rM.crossOrigin = EM.CorsBehavior;
+          else {
+            const iM = EM.CorsBehavior(MM);
+            iM && (rM.crossOrigin = iM)
+          }
+      },
+      GM = {
+        getRequiredSize: null
+      },
+      CM = function(MM, rM, iM, SM) {
+        let jM, PM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
+          zM = arguments.length > 5 ? arguments[5] : void 0,
+          LM = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : QM.c.LastCreatedEngine;
+        if ("undefined" === typeof HTMLImageElement && !LM?._features.forceBitmapOverHTMLImageElement) return iM("LoadImage is only supported in web or BabylonNative environments."), null;
+        if (LM?._features.forceBitmapOverHTMLImageElement && "string" !== typeof MM && "undefined" !== typeof Blob) {
+          let OM;
+          if (MM instanceof Blob) OM = MM;
+          else {
+            const rM = MM instanceof ArrayBuffer ? MM : (0, hM.i)(MM);
+            OM = new Blob([rM], {
+              type: PM
+            })
+          }
+          return LM.createImageBitmap(OM, {
+            premultiplyAlpha: "none",
+            colorSpaceConversion: "none",
+            ...zM
+          }).then(rM).catch((rM => {
+            iM && iM("Error while trying to load image: " + MM, rM)
+          })), null
+        }
+        let mM = !1;
+        if (MM instanceof ArrayBuffer || ArrayBuffer.isView(MM))
+          if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
+            let rM;
+            rM = MM instanceof ArrayBuffer ? MM : (0, hM.i)(MM), jM = URL.createObjectURL(new Blob([rM], {
+              type: PM
+            })), mM = !0
+          } else jM = `data:${PM};base64,` + (0, nM.j)(MM);
+        else MM instanceof Blob ? (jM = URL.createObjectURL(MM), mM = !0) : (jM = EM.CleanUrl(MM), jM = EM.PreprocessUrl(jM));
+        const HM = rM => {
+          if (iM) {
+            const OM = jM || MM.toString();
+            iM(`Error while trying to load image: ${0===OM.indexOf("http")||OM.length<=128?OM:OM.slice(0,128)+"..."}`, rM)
+          }
         };
-      let QG = YG.frame,
-        KG = pG.frame;
-      if (SG.range) {
-        const GG = LG.getRange(SG.range);
-        GG && (QG = GG.from, KG = GG.to)
-      } else QG = SG.fromFrame ?? QG, KG = SG.toFrame ?? KG;
-      QG !== YG.frame && (UG = LG.createKeyForFrame(QG)), KG !== pG.frame && (VG = LG.createKeyForFrame(KG));
-      const hG = LG.getKeys();
-      if (1 === hG.length) {
-        const GG = LG._getKeyValue(hG[0].value);
-        fG.referenceValue = GG.clone ? GG.clone() : GG
-      } else if (kG <= YG.frame) {
-        const GG = LG._getKeyValue(YG.value);
-        fG.referenceValue = GG.clone ? GG.clone() : GG
-      } else if (kG >= pG.frame) {
-        const GG = LG._getKeyValue(pG.value);
-        fG.referenceValue = GG.clone ? GG.clone() : GG
-      } else {
-        rG.key = 0;
-        const GG = LG._interpolate(kG, rG);
-        fG.referenceValue = GG.clone ? GG.clone() : GG
-      }
-      LG.dataType === zG.ANIMATIONTYPE_QUATERNION ? fG.referenceValue.normalize().conjugateInPlace() : LG.dataType === zG.ANIMATIONTYPE_MATRIX && (fG.referenceValue.decompose(fG.referenceScaling, fG.referenceQuaternion, fG.referencePosition), fG.referenceQuaternion.normalize().conjugateInPlace());
-      let dG = Number.MAX_VALUE;
-      const JG = SG.clipKeys ? [] : null;
-      for (let rG = UG; rG <= VG; rG++) {
-        let GG = hG[rG];
-        if ((JG || SG.cloneOriginalAnimation) && (GG = {
-            frame: GG.frame,
-            value: GG.value.clone ? GG.value.clone() : GG.value,
-            inTangent: GG.inTangent,
-            outTangent: GG.outTangent,
-            interpolation: GG.interpolation,
-            lockedTangent: GG.lockedTangent,
-            easingFunction: GG.easingFunction
-          }, JG && (dG === Number.MAX_VALUE && (dG = GG.frame), GG.frame -= dG, JG.push(GG))), !rG || LG.dataType === zG.ANIMATIONTYPE_FLOAT || GG.value !== YG.value) switch (LG.dataType) {
-          case zG.ANIMATIONTYPE_MATRIX:
-            GG.value.decompose(fG.keyScaling, fG.keyQuaternion, fG.keyPosition), fG.keyPosition.twG(fG.referencePosition), fG.keyScaling.divideInPlace(fG.referenceScaling), fG.referenceQuaternion.multiplyToRef(fG.keyQuaternion, fG.keyQuaternion), wG.e.ComposeToRef(fG.keyScaling, fG.keyQuaternion, fG.keyPosition, GG.value);
-            break;
-          case zG.ANIMATIONTYPE_QUATERNION:
-            fG.referenceValue.multiplyToRef(GG.value, GG.value);
-            break;
-          case zG.ANIMATIONTYPE_VECTOR2:
-          case zG.ANIMATIONTYPE_VECTOR3:
-          case zG.ANIMATIONTYPE_COLOR3:
-          case zG.ANIMATIONTYPE_COLOR4:
-            GG.value.subtractToRef(fG.referenceValue, GG.value);
-            break;
-          case zG.ANIMATIONTYPE_SIZE:
-            GG.value.width -= fG.referenceValue.width, GG.value.height -= fG.referenceValue.height;
-            break;
-          default:
-            GG.value -= fG.referenceValue
+        if (LM?._features.forceBitmapOverHTMLImageElement) return bM(jM, (OM => {
+          LM.createImageBitmap(new Blob([OM], {
+            type: PM
+          }), {
+            premultiplyAlpha: "none",
+            colorSpaceConversion: "none",
+            ...zM
+          }).then((MM => {
+            rM(MM), mM && URL.revokeObjectURL(jM)
+          })).catch((rM => {
+            iM && iM("Error while trying to load image: " + MM, rM)
+          }))
+        }), void 0, SM || void 0, !0, ((MM, rM) => {
+          HM(rM)
+        })), null;
+        const JM = new Image;
+        if (GM.getRequiredSize) {
+          const rM = GM.getRequiredSize(MM);
+          rM.width && (JM.width = rM.width), rM.height && (JM.height = rM.height)
         }
-      }
-      return JG && LG.setKeys(JG, !0), LG
-    }
-
-    function oG(GG, bG, ZG, wG) {
-      const SG = new zG(GG + "Animation", GG, ZG, bG, zG.ANIMATIONLOOPMODE_CONSTANT);
-      return SG.setEasingFunction(wG), SG
-    }
-
-    function XG(GG, bG, ZG, wG, SG, LG, yG, kG, UG, YG, VG) {
-      const pG = zG._PrepareAnimation(GG, ZG, wG, SG, LG, yG, kG, UG);
-      return pG ? (bG.Dv && (VG = bG.Dv()), VG ? VG.beginDirectAnimation(bG, [pG], 0, SG, pG.Dw !== zG.ANIMATIONLOOPMODE_CONSTANT, 1, YG) : null) : null
-    }
-
-    function uG(GG, bG, ZG, wG, SG, LG, yG, kG, UG, YG, VG) {
-      const pG = zG._PrepareAnimation(GG, wG, SG, LG, yG, kG, UG, YG);
-      if (!pG) return null;
-      return bG.Dv().beginDirectHierarchyAnimation(bG, ZG, [pG], 0, LG, 1 === pG.Dw, 1, VG)
-    }
-
-    function iG(GG, bG, ZG, wG, SG, LG, yG, kG, UG, YG) {
-      const VG = zG._PrepareAnimation(GG, ZG, wG, SG, LG, yG, kG, UG);
-      return VG ? (bG.animations.push(VG), bG.Dv().beginAnimation(bG, 0, SG, 1 === VG.Dw, 1, YG)) : null
-    }
-
-    function CG(GG, bG, ZG, wG, SG, LG, yG) {
-      let kG = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-        UG = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-        YG = arguments.length > 9 ? arguments[9] : void 0;
-      if (yG <= 0) return ZG[GG] = bG, kG && kG(), null;
-      const VG = SG * (yG / 1e3);
-      LG.setKeys(YG ?? [{
-        frame: 0,
-        value: ZG[GG].clone ? ZG[GG].clone() : ZG[GG]
-      }, {
-        frame: VG,
-        value: bG
-      }]), ZG.animations || (ZG.animations = []), ZG.animations.push(LG);
-      return wG.beginAnimation(ZG, 0, VG, !1, 1, kG ?? void 0, void 0, UG)
-    }
-
-    function WG(GG, bG) {
-      VG.b.AppendSerializedAnimations(GG, bG)
-    }
-
-    function mG(GG) {
-      const bG = new zG(GG.name, GG.property, GG.framePerSecond, GG.dataType, GG.loopBehavior),
-        ZG = GG.dataType,
-        LG = [];
-      let yG, kG;
-      for (GG.enableBlending && (bG.enableBlending = GG.enableBlending), GG.blendingSpeed && (bG.blendingSpeed = GG.blendingSpeed), kG = 0; kG < GG.keys.length; kG++) {
-        const bG = GG.keys[kG];
-        let UG, YG, VG;
-        switch (ZG) {
-          case zG.ANIMATIONTYPE_FLOAT:
-            yG = bG.values[0], bG.values.length >= 2 && (UG = bG.values[1]), bG.values.length >= 3 && (YG = bG.values[2]), bG.values.length >= 4 && (VG = bG.values[3]);
-            break;
-          case zG.ANIMATIONTYPE_QUATERNION:
-            if (yG = wG.g.FromArray(bG.values), bG.values.length >= 8) {
-              const GG = wG.g.FromArray(bG.values.slice(4, 8));
-              GG.equals(wG.g.Zero()) || (UG = GG)
-            }
-            if (bG.values.length >= 12) {
-              const GG = wG.g.FromArray(bG.values.slice(8, 12));
-              GG.equals(wG.g.Zero()) || (YG = GG)
-            }
-            bG.values.length >= 13 && (VG = bG.values[12]);
-            break;
-          case zG.ANIMATIONTYPE_MATRIX:
-            yG = wG.e.FromArray(bG.values), bG.values.length >= 17 && (VG = bG.values[16]);
-            break;
-          case zG.ANIMATIONTYPE_COLOR3:
-            yG = SG.c.FromArray(bG.values), bG.values[3] && (UG = SG.c.FromArray(bG.values[3])), bG.values[4] && (YG = SG.c.FromArray(bG.values[4])), bG.values[5] && (VG = bG.values[5]);
-            break;
-          case zG.ANIMATIONTYPE_COLOR4:
-            yG = SG.d.FromArray(bG.values), bG.values[4] && (UG = SG.d.FromArray(bG.values[4])), bG.values[5] && (YG = SG.d.FromArray(bG.values[5])), bG.values[6] && (VG = bG.values[6]);
-            break;
-          case zG.ANIMATIONTYPE_VECTOR3:
-          default:
-            yG = wG.p.FromArray(bG.values), bG.values[3] && (UG = wG.p.FromArray(bG.values[3])), bG.values[4] && (YG = wG.p.FromArray(bG.values[4])), bG.values[5] && (VG = bG.values[5])
-        }
-        const pG = {};
-        pG.frame = bG.frame, pG.value = yG, void 0 != UG && (pG.inTangent = UG), void 0 != YG && (pG.outTangent = YG), void 0 != VG && (pG.interpolation = VG), LG.push(pG)
-      }
-      if (bG.setKeys(LG), GG.Bh)
-        for (kG = 0; kG < GG.Bh.length; kG++) yG = GG.Bh[kG], bG.createRange(yG.name, yG.from, yG.to);
-      return bG
-    }
-    async function IG(GG, bG) {
-      return await new Promise(((ZG, wG) => {
-        const SG = new YG.b;
-        SG.addEventListener("readystatechange", (() => {
-          if (4 == SG.readyState)
-            if (200 == SG.status) {
-              let bG = JSON.parse(SG.responseText);
-              if (bG.animations && (bG = bG.animations), bG.length) {
-                const GG = [];
-                for (const ZG of bG) GG.push(mG(ZG));
-                ZG(GG)
-              } else {
-                const wG = mG(bG);
-                GG && (wG.name = GG), ZG(wG)
-              }
-            } else wG("Unable to load the animation")
-        })), SG.open("GET", bG), SG.send()
-      }))
-    }
-    async function FG(GG) {
-      const bG = this?.SnippetUrl ?? zG.SnippetUrl;
-      return await new Promise(((ZG, wG) => {
-        const SG = new YG.b;
-        SG.addEventListener("readystatechange", (() => {
-          if (4 == SG.readyState)
-            if (200 == SG.status) {
-              const bG = JSON.parse(JSON.parse(SG.responseText).jsonPayload);
-              if (bG.animations) {
-                const wG = JSON.parse(bG.animations),
-                  SG = [];
-                for (const bG of wG.animations) {
-                  const ZG = mG(bG);
-                  ZG.snippetId = GG, SG.push(ZG)
+        UM(jM, JM);
+        const dM = [],
+          yM = () => {
+            for (const MM of dM) MM.target.removeEventListener(MM.name, MM.handler);
+            dM.length = 0
+          };
+        dM.push({
+          target: JM,
+          name: "load",
+          handler: () => {
+            yM(), rM(JM), mM && JM.src && URL.revokeObjectURL(JM.src)
+          }
+        }), dM.push({
+          target: JM,
+          name: "error",
+          handler: MM => {
+            yM(), HM(MM), mM && JM.src && URL.revokeObjectURL(JM.src)
+          }
+        }), dM.push({
+          target: document,
+          name: "securitypolicyviolation",
+          handler: MM => {
+            if (MM.blockedURI !== JM.src || "aL" === MM.disposition) return;
+            yM();
+            const rM = new Error(`CSP violation of policy ${MM.effectiveDirective} ${MM.blockedURI}. Current policy is ${MM.originalPolicy}`);
+            QM.c.UseFallbackTexture = !1, HM(rM), mM && JM.src && URL.revokeObjectURL(JM.src), JM.src = ""
+          }
+        }), (() => {
+          for (const MM of dM) MM.target.addEventListener(MM.name, MM.handler)
+        })();
+        const lM = "blob:" === jM.substring(0, 5),
+          CM = "data:" === jM.substring(0, 5),
+          eM = () => {
+            lM || CM || !OM.e.IsCustomRequestAvailable ? JM.src = jM : bM(jM, ((MM, rM, iM) => {
+              const OM = new Blob([MM], {
+                  type: !PM && iM ? iM : PM
+                }),
+                SM = URL.createObjectURL(OM);
+              mM = !0, JM.src = SM
+            }), void 0, SM || void 0, !0, ((MM, rM) => {
+              HM(rM)
+            }))
+          },
+          wM = () => {
+            SM && SM.loadImage(jM, JM)
+          };
+        if (!lM && !CM && SM && SM.enableTexturesOffline) SM.open(wM, eM);
+        else {
+          if (-1 !== jM.indexOf("file:")) {
+            const MM = decodeURIComponent(jM.substring(5).toLowerCase());
+            if (aM.FilesToLoad[MM] && "undefined" !== typeof URL) {
+              try {
+                let rM;
+                try {
+                  rM = URL.createObjectURL(aM.FilesToLoad[MM])
+                } catch (tM) {
+                  rM = URL.createObjectURL(aM.FilesToLoad[MM])
                 }
-                ZG(SG)
-              } else {
-                const wG = mG(JSON.parse(bG.animation));
-                wG.snippetId = GG, ZG(wG)
+                JM.src = rM, mM = !0
+              } catch (gM) {
+                JM.src = ""
               }
-            } else wG("Unable to load the snippet " + GG)
-        })), SG.open("GET", bG + "/" + GG.replace(/#/g, "/")), SG.send()
-      }))
-    }
-    zG._UniqueIdGenerator = 0, zG.AllowMatricesInterpolation = !1, zG.AllowMatrixDecomposeForInterpolation = !0, zG.InheritOriginalValueFromActiveAnimations = !1, zG.SnippetUrl = "https://snippet.babylonjs.com", zG.ANIMATIONTYPE_FLOAT = 0, zG.ANIMATIONTYPE_VECTOR3 = 1, zG.ANIMATIONTYPE_QUATERNION = 2, zG.ANIMATIONTYPE_MATRIX = 3, zG.ANIMATIONTYPE_COLOR3 = 4, zG.ANIMATIONTYPE_COLOR4 = 7, zG.ANIMATIONTYPE_VECTOR2 = 5, zG.ANIMATIONTYPE_SIZE = 6, zG.ANIMATIONLOOPMODE_RELATIVE = 0, zG.ANIMATIONLOOPMODE_CYCLE = 1, zG.ANIMATIONLOOPMODE_CONSTANT = 2, zG.ANIMATIONLOOPMODE_YOYO = 4, zG.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT = 5;
-    const vG = FG;
-    let aG = !1;
+              return JM
+            }
+          }
+          eM()
+        }
+        return JM
+      },
+      eM = (MM, rM, iM, OM, SM) => {
+        const aM = new FileReader,
+          PM = {
+            onCompleteObservable: new jM.d,
+            abort: () => aM.abort()
+          };
+        return aM.onloadend = () => PM.onCompleteObservable.notifyObservers(PM), SM && (aM.onerror = () => {
+          SM(new lM(`Unable to read ${MM.name}`, MM))
+        }), aM.onload = MM => {
+          rM(MM.target.result)
+        }, iM && (aM.onprogress = iM), OM ? aM.readAsArrayBuffer(MM) : aM.readAsText(MM), PM
+      },
+      bM = (MM, rM, iM, OM, SM, nM, QM) => {
+        if (MM.name) return eM(MM, rM, iM, SM, nM ? MM => {
+          nM(void 0, MM)
+        } : void 0);
+        const zM = MM;
+        if (-1 !== zM.indexOf("file:")) {
+          let MM = decodeURIComponent(zM.substring(5).toLowerCase());
+          0 === MM.indexOf("./") && (MM = MM.substring(2));
+          const OM = aM.FilesToLoad[MM];
+          if (OM) return eM(OM, rM, iM, SM, nM ? MM => nM(void 0, new dM(MM.message, MM.file)) : void 0)
+        }
+        const {
+          match: LM,
+          type: hM
+        } = RM(zM);
+        if (LM) {
+          const MM = {
+            onCompleteObservable: new jM.d,
+            abort: () => () => {}
+          };
+          try {
+            const MM = SM ? pM(zM) : WM(zM);
+            rM(MM, void 0, hM)
+          } catch (PM) {
+            nM ? nM(void 0, PM) : mM.e.Error(PM.message || "Failed to parse the Data URL")
+          }
+          return HM.c.SetImmediate((() => {
+            MM.onCompleteObservable.notifyObservers(MM)
+          })), MM
+        }
+        return wM(zM, ((MM, iM) => {
+          rM(MM, iM?.responseURL, iM?.getResponseHeader("content-type"))
+        }), iM, OM, SM, nM ? MM => {
+          nM(MM.request, new dM(MM.message, MM.request))
+        } : void 0, QM)
+      },
+      wM = (MM, rM, iM, aM, PM, nM, zM) => {
+        null !== aM && (aM ?? (aM = QM.c.LastCreatedScene?.offlineProvider)), MM = EM.CleanUrl(MM), MM = EM.PreprocessUrl(MM);
+        const LM = EM.BaseUrl + MM;
+        let HM = !1;
+        const hM = {
+            onCompleteObservable: new jM.d,
+            abort: () => HM = !0
+          },
+          JM = () => {
+            let MM, jM = new OM.e,
+              aM = null;
+            const QM = () => {
+              jM && (iM && jM.removeEventListener("progress", iM), MM && jM.removeEventListener("readystatechange", MM), jM.removeEventListener("loadend", JM))
+            };
+            let JM = () => {
+              QM(), hM.onCompleteObservable.notifyObservers(hM), hM.onCompleteObservable.clear(), iM = void 0, MM = null, JM = null, nM = void 0, zM = void 0, rM = void 0
+            };
+            hM.abort = () => {
+              HM = !0, JM && JM(), jM && jM.readyState !== (XMLHttpRequest.DONE || 4) && jM.abort(), null !== aM && (clearTimeout(aM), aM = null), jM = null
+            };
+            const dM = MM => {
+                const rM = MM.message || "Unknown error";
+                nM && jM ? nM(new yM(rM, jM)) : mM.e.Error(rM)
+              },
+              lM = mM => {
+                if (jM) {
+                  if (jM.open("GET", LM), zM) try {
+                    zM(jM)
+                  } catch (hM) {
+                    return void dM(hM)
+                  }
+                  PM && (jM.responseType = "arraybuffer"), iM && jM.addEventListener("progress", iM), JM && jM.addEventListener("loadend", JM), MM = () => {
+                    if (!HM && jM && jM.readyState === (XMLHttpRequest.DONE || 4)) {
+                      if (MM && jM.removeEventListener("readystatechange", MM), jM.status >= 200 && jM.status < 300 || 0 === jM.status && (!(0, SM.l)() || gM())) {
+                        const MM = PM ? jM.response : jM.responseText;
+                        if (null !== MM) {
+                          try {
+                            rM && rM(MM, jM)
+                          } catch (hM) {
+                            dM(hM)
+                          }
+                          return
+                        }
+                      }
+                      const iM = EM.DefaultRetryStrategy;
+                      if (iM) {
+                        const MM = iM(LM, jM, mM);
+                        if (-1 !== MM) return QM(), jM = new OM.e, void(aM = setTimeout((() => lM(mM + 1)), MM))
+                      }
+                      const zM = new yM("Error status: " + jM.status + " " + jM.statusText + " - Unable to load " + LM, jM);
+                      nM && nM(zM)
+                    }
+                  }, jM.addEventListener("readystatechange", MM), jM.send()
+                }
+              };
+            lM(0)
+          };
+        if (aM && aM.enableSceneOffline && !MM.startsWith("blob:")) {
+          const OM = MM => {
+              MM && MM.status > 400 ? nM && nM(MM) : JM()
+            },
+            SM = () => {
+              aM && aM.loadFile(EM.BaseUrl + MM, (MM => {
+                !HM && rM && rM(MM), hM.onCompleteObservable.notifyObservers(hM)
+              }), iM ? MM => {
+                !HM && iM && iM(MM)
+              } : void 0, OM, PM)
+            };
+          aM.open(SM, OM)
+        } else JM();
+        return hM
+      },
+      tM = MM => {
+        const {
+          match: rM,
+          type: iM
+        } = RM(MM);
+        if (rM) return iM || void 0;
+        const OM = MM.lastIndexOf(".");
+        switch (MM.substring(OM + 1).toLowerCase()) {
+          case "glb":
+            return "model/gltf-binary";
+          case "bin":
+            return "application/octet-stream";
+          case "dD":
+            return "model/gltf+json";
+          case "jpg":
+          case "jpeg":
+            return "image/jpeg";
+          case "png":
+            return "image/png";
+          case "webp":
+            return "image/webp";
+          case "ktx":
+            return "image/ktx";
+          case "ktx2":
+            return "image/ktx2";
+          case "avif":
+            return "image/avif";
+          default:
+            return
+        }
+      },
+      gM = () => "undefined" !== typeof location && "file:" === location.protocol,
+      uM = MM => JM.test(MM),
+      RM = MM => {
+        const rM = JM.exec(MM);
+        if (null === rM || 0 === rM.length) return {
+          match: !1,
+          type: ""
+        };
+        return {
+          match: !0,
+          type: rM[0].replace("data:", "").replace(";base64,", "")
+        }
+      };
 
-    function cG() {
-      aG || (aG = !0, zG.Parse = mG, zG.ParseFromFileAsync = IG, zG.ParseFromSnippetAsync = FG, zG.CreateFromSnippetAsync = vG, zG.CreateAnimation = oG, zG.CreateAndStartAnimation = XG, zG.CreateAndStartHierarchyAnimation = uG, zG.CreateMergeAndStartAnimation = iG, zG.MakeAnimationAdditive = EG, zG.TransitionTo = CG, zG.AppendSerializedAnimations = WG, (0, pG.i)("BABYLON.Animation", zG), kG.e._AnimationRangeFactory = (GG, bG, ZG) => new yG.c(GG, bG, ZG))
+    function pM(MM) {
+      return (0, nM.d)(MM.split(",")[1])
+    }
+    const WM = MM => (0, nM.f)(MM.split(",")[1]);
+    let sM;
+    const DM = (MM, rM, iM, OM, SM, jM, aM, PM, nM, QM) => {
+      sM = {
+        DecodeBase64UrlToBinary: MM,
+        DecodeBase64UrlToString: rM,
+        DefaultRetryStrategy: iM.DefaultRetryStrategy,
+        BaseUrl: iM.BaseUrl,
+        CorsBehavior: iM.CorsBehavior,
+        PreprocessUrl: iM.PreprocessUrl,
+        IsBase64DataUrl: OM,
+        IsFileURL: SM,
+        LoadFile: jM,
+        LoadImage: aM,
+        ReadFile: PM,
+        RequestFile: nM,
+        SetCorsBehavior: QM
+      }, Object.defineProperty(sM, "DefaultRetryStrategy", {
+        get: function() {
+          return iM.DefaultRetryStrategy
+        },
+        set: function(MM) {
+          iM.DefaultRetryStrategy = MM
+        }
+      }), Object.defineProperty(sM, "BaseUrl", {
+        get: function() {
+          return iM.BaseUrl
+        },
+        set: function(MM) {
+          iM.BaseUrl = MM
+        }
+      }), Object.defineProperty(sM, "PreprocessUrl", {
+        get: function() {
+          return iM.PreprocessUrl
+        },
+        set: function(MM) {
+          iM.PreprocessUrl = MM
+        }
+      }), Object.defineProperty(sM, "CorsBehavior", {
+        get: function() {
+          return iM.CorsBehavior
+        },
+        set: function(MM) {
+          iM.CorsBehavior = MM
+        }
+      })
+    };
+    let kM = !1;
+
+    function ZM() {
+      kM || (kM = !0, DM(pM, WM, EM, uM, gM, bM, CM, eM, wM, UM), zM.c.loadFile = bM, zM.c.loadImage = CM, LM.i.loadFile = bM)
     }
   },
-  41493: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => wG
+  41176: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => PM,
+      e: () => jM,
+      g: () => aM
     });
-    class wG {
-      constructor(GG, bG, ZG) {
-        this.name = GG, this.from = bG, this.to = ZG
+    let OM = null;
+
+    function SM() {
+      if (OM) return OM;
+      const MM = new ArrayBuffer(4),
+        rM = new Float32Array(MM),
+        iM = new Uint32Array(MM),
+        SM = new Uint32Array(512),
+        jM = new Uint32Array(512);
+      for (let OM = 0; OM < 256; ++OM) {
+        const MM = OM - 127;
+        MM < -24 ? (SM[OM] = 0, SM[256 | OM] = 32768, jM[OM] = 24, jM[256 | OM] = 24) : MM < -14 ? (SM[OM] = 1024 >> -MM - 14, SM[256 | OM] = 1024 >> -MM - 14 | 32768, jM[OM] = -MM - 1, jM[256 | OM] = -MM - 1) : MM <= 15 ? (SM[OM] = MM + 15 << 10, SM[256 | OM] = MM + 15 << 10 | 32768, jM[OM] = 13, jM[256 | OM] = 13) : MM < 128 ? (SM[OM] = 31744, SM[256 | OM] = 64512, jM[OM] = 24, jM[256 | OM] = 24) : (SM[OM] = 31744, SM[256 | OM] = 64512, jM[OM] = 13, jM[256 | OM] = 13)
       }
-      clone() {
-        return new wG(this.name, this.from, this.to)
+      const aM = new Uint32Array(2048),
+        PM = new Uint32Array(64),
+        nM = new Uint32Array(64);
+      for (let OM = 1; OM < 1024; ++OM) {
+        let MM = OM << 13,
+          rM = 0;
+        for (; 0 === (8388608 & MM);) MM <<= 1, rM -= 8388608;
+        MM &= -8388609, rM += 947912704, aM[OM] = MM | rM
       }
+      for (let OM = 1024; OM < 2048; ++OM) aM[OM] = 939524096 + (OM - 1024 << 13);
+      for (let OM = 1; OM < 31; ++OM) PM[OM] = OM << 23;
+      PM[31] = 1199570944, PM[32] = 2147483648;
+      for (let OM = 33; OM < 63; ++OM) PM[OM] = 2147483648 + (OM - 32 << 23);
+      PM[63] = 3347054592;
+      for (let OM = 1; OM < 64; ++OM) 32 !== OM && (nM[OM] = 1024);
+      return OM = {
+        floatView: rM,
+        uint32View: iM,
+        baseTable: SM,
+        shiftTable: jM,
+        mantissaTable: aM,
+        exponentTable: PM,
+        offsetTable: nM
+      }, OM
+    }
+    const jM = 65504;
+
+    function aM(MM) {
+      const rM = SM();
+      rM.floatView[0] = MM;
+      const iM = rM.uint32View[0],
+        OM = iM >> 23 & 511;
+      return rM.baseTable[OM] + ((8388607 & iM) >> rM.shiftTable[OM])
+    }
+
+    function PM(MM) {
+      const rM = SM();
+      return rM.uint32View[0] = rM.mantissaTable[rM.offsetTable[MM >> 10] + (1023 & MM)] + rM.exponentTable[MM >> 10], rM.floatView[0]
     }
   },
-  41552: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => wG.c,
-      c: () => wG.l
+  41160: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => jM,
+      f: () => SM,
+      j: () => OM
     });
-    var wG = ZG(40524);
-    (0, wG.g)()
+    const OM = MM => {
+        const rM = ArrayBuffer.isView(MM) ? new Uint8Array(MM.buffer, MM.byteOffset, MM.byteLength) : new Uint8Array(MM);
+        return "function" === typeof rM.toBase64 ? rM.toBase64() : function(MM) {
+          const rM = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+          let iM, OM, SM, jM, aM, PM, nM, QM = "",
+            zM = 0;
+          for (; zM < MM.length;) iM = MM[zM++], OM = zM < MM.length ? MM[zM++] : Number.NaN, SM = zM < MM.length ? MM[zM++] : Number.NaN, jM = iM >> 2, aM = (3 & iM) << 4 | OM >> 4, PM = (15 & OM) << 2 | SM >> 6, nM = 63 & SM, isNaN(OM) ? PM = nM = 64 : isNaN(SM) && (nM = 64), QM += rM.charAt(jM) + rM.charAt(aM) + rM.charAt(PM) + rM.charAt(nM);
+          return QM
+        }(rM)
+      },
+      SM = MM => atob(MM),
+      jM = MM => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(MM).buffer : function(MM) {
+        const rM = SM(MM),
+          iM = rM.length,
+          OM = new Uint8Array(new ArrayBuffer(iM));
+        for (let SM = 0; SM < iM; SM++) OM[SM] = rM.charCodeAt(SM);
+        return OM.buffer
+      }(MM)
   },
-  41527: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => wG.d
+  41003: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => SM,
+      d: () => aM
     });
-    var wG = ZG(40857);
-    (0, wG.b)()
+    let OM = [];
+    class SM {
+      static SetImmediate(MM) {
+        0 === OM.length && setTimeout((() => {
+          const MM = OM;
+          OM = [];
+          for (const rM of MM) rM()
+        }), 1), OM.push(MM)
+      }
+    }
+
+    function jM(MM, rM, iM) {
+      try {
+        if (MM()) return rM(), !0
+      } catch (OM) {
+        return iM?.(OM), !0
+      }
+      return !1
+    }
+    const aM = function(MM, rM, iM) {
+      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
+        SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
+        aM = arguments.length > 6 ? arguments[6] : void 0;
+      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && jM(MM, rM, iM)) return null;
+      const PM = setInterval((() => {
+        jM(MM, rM, iM) ? clearInterval(PM) : (SM -= OM, SM < 0 && (clearInterval(PM), iM?.(new Error("Operation timed out after maximum retries. " + (aM || "")), !0)))
+      }), OM);
+      return () => clearInterval(PM)
+    }
   },
-  41502: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => wG.e
+  41148: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM
     });
-    var wG = ZG(40844);
-    (0, wG.h)()
-  },
-  41560: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => wG.c
-    });
-    var wG = ZG(40784);
-    (0, wG.g)()
-  },
-  41498: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => wG.d
-    });
-    var wG = ZG(40820);
-    (0, wG.b)()
+    class OM {
+      constructor() {
+        this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
+      }
+      static get IsCustomRequestAvailable() {
+        return Object.keys(OM.CustomRequestHeaders).length > 0 || OM.CustomRequestModifiers.length > 0
+      }
+      static _CleanUrl(MM) {
+        return MM = (MM = MM.replace("file:http:", "http:")).replace("file:https:", "https:")
+      }
+      static _ShouldSkipRequestModifications(MM) {
+        return OM.SkipRequestModificationForBabylonCDN && (MM.includes("preview.babylonjs.com") || MM.includes("cdn.babylonjs.com"))
+      }
+      static _CollectCustomizations(MM) {
+        const rM = {
+          ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
+        };
+        if (OM._ShouldSkipRequestModifications(MM)) return {
+          url: MM,
+          headers: rM
+        };
+        for (const SM in OM.CustomRequestHeaders) {
+          const MM = OM.CustomRequestHeaders[SM];
+          MM && (rM[SM] = MM)
+        }
+        const iM = {
+          setRequestHeader: (MM, iM) => {
+            rM[MM] = iM
+          }
+        };
+        for (const SM of OM.CustomRequestModifiers) {
+          if (OM._ShouldSkipRequestModifications(MM)) break;
+          const rM = SM(iM, MM);
+          "string" === typeof rM && (MM = rM)
+        }
+        return {
+          url: MM,
+          headers: rM
+        }
+      }
+      static async FetchAsync(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const iM = rM.method ?? "GET";
+        if ("undefined" !== typeof fetch) {
+          const {
+            url: SM,
+            headers: jM
+          } = OM._CollectCustomizations(OM._CleanUrl(MM), rM.headers ?? {});
+          return await fetch(SM, {
+            method: iM,
+            headers: jM,
+            body: rM.body ?? void 0
+          })
+        }
+        return await new Promise(((SM, jM) => {
+          const aM = new OM;
+          aM.responseType = "arraybuffer", aM.addEventListener("readystatechange", (() => {
+            if (4 === aM.readyState)
+              if (aM.status >= 200 && aM.status < 300) {
+                const MM = "undefined" !== typeof Headers ? new Headers : void 0,
+                  rM = aM.getResponseHeader("Content-Type");
+                rM && MM && MM.set("Content-Type", rM), "undefined" !== typeof Response ? SM(new Response(aM.response, {
+                  status: aM.status,
+                  statusText: aM.statusText,
+                  headers: MM
+                })) : SM({
+                  ok: !0,
+                  status: aM.status,
+                  statusText: aM.statusText,
+                  headers: {
+                    get: MM => aM.getResponseHeader(MM)
+                  },
+                  arrayBuffer: async () => await Promise.resolve(aM.response)
+                })
+              } else jM(new Error(`HTTP ${aM.status} loading '${aM.requestURL}': ${aM.statusText}`))
+          })), aM.open(iM, MM, rM.headers), aM.send(rM.body ?? null)
+        }))
+      }
+      get requestURL() {
+        return this._requestURL
+      }
+      get onprogress() {
+        return this._xhr.onprogress
+      }
+      set onprogress(MM) {
+        this._xhr.onprogress = MM
+      }
+      get readyState() {
+        return this._xhr.readyState
+      }
+      get status() {
+        return this._xhr.status
+      }
+      get statusText() {
+        return this._xhr.statusText
+      }
+      get response() {
+        return this._xhr.response
+      }
+      get responseURL() {
+        return this._xhr.responseURL
+      }
+      get responseText() {
+        return this._xhr.responseText
+      }
+      get responseType() {
+        return this._xhr.responseType
+      }
+      set responseType(MM) {
+        this._xhr.responseType = MM
+      }
+      get timeout() {
+        return this._xhr.timeout
+      }
+      set timeout(MM) {
+        this._xhr.timeout = MM
+      }
+      addEventListener(MM, rM, iM) {
+        this._xhr.addEventListener(MM, rM, iM)
+      }
+      removeEventListener(MM, rM, iM) {
+        this._xhr.removeEventListener(MM, rM, iM)
+      }
+      abort() {
+        this._xhr.abort()
+      }
+      send(MM) {
+        this._xhr.send(MM)
+      }
+      open(MM, rM, iM) {
+        const {
+          url: SM,
+          headers: jM
+        } = OM._CollectCustomizations(rM, iM);
+        this._requestURL = OM._CleanUrl(SM), this._xhr.open(MM, this._requestURL, !0);
+        for (const OM in jM) this._xhr.setRequestHeader(OM, jM[OM])
+      }
+      setRequestHeader(MM, rM) {
+        this._xhr.setRequestHeader(MM, rM)
+      }
+      getResponseHeader(MM) {
+        return this._xhr.getResponseHeader(MM)
+      }
+    }
+    OM.CustomRequestHeaders = {}, OM.CustomRequestModifiers = new Array, OM.SkipRequestModificationForBabylonCDN = !0
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

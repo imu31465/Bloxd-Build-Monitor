@@ -1,262 +1,263 @@
-export const id = 59;
-export const ids = [59];
+export const id = 70;
+export const ids = [70];
 export const modules = {
-  37137: (GG, bG, ZG) => {
-    async function wG(GG) {
-      const bG = await fetch(GG, {
+  37750: (MM, rM, iM) => {
+    async function OM(MM) {
+      const rM = await fetch(MM, {
         priority: "low"
       });
-      if (!bG.ok) throw new Error(`Fetching ${GG} failed: HTTP ${bG.status}`);
-      const ZG = bG.body.getReader();
-      for (; !(await ZG.read()).done;);
+      if (!rM.ok) throw new Error(`Fetching ${MM} failed: HTTP ${rM.status}`);
+      const iM = rM.body.getReader();
+      for (; !(await iM.read()).done;);
     }
-    ZG.d(bG, {
-      b: () => wG
+    iM.d(rM, {
+      b: () => OM
     })
   },
-  39470: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => UG
+  40094: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => nM
     });
-    var wG = ZG(8957),
-      SG = ZG(36826),
-      LG = ZG(39478);
-    const yG = {
+    var OM = iM(9510),
+      SM = iM(37437),
+      jM = iM(40100);
+    const aM = {
         seat: "seat_timeout",
         socket_unopened: "socket_timeout_unopened",
         socket: "socket_timeout"
       },
-      kG = {
+      PM = {
         seat: "seat_lost",
         socket_unopened: "socket_unopened",
         socket: "socket_closed"
       };
 
-    function UG(GG, bG) {
-      if (GG instanceof SG.g) return {
-        at: yG[bG],
+    function nM(MM, rM) {
+      if (MM instanceof SM.i) return {
+        at: aM[rM],
         code: 0
       };
-      const ZG = (0, wG.h)(GG),
-        UG = "number" === typeof ZG ? ZG : 0;
-      return null !== (0, LG.k)(UG).name ? {
+      const iM = (0, OM.f)(MM),
+        nM = "number" === typeof iM ? iM : 0;
+      return null !== (0, jM.m)(nM).name ? {
         at: "refused",
-        code: UG
+        code: nM
       } : {
-        at: kG[bG],
-        code: UG
+        at: PM[rM],
+        code: nM
       }
     }
   },
-  8957: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => LG,
-      h: () => yG,
-      j: () => kG,
-      n: () => YG,
-      q: () => UG
+  9510: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => jM,
+      f: () => aM,
+      h: () => PM,
+      l: () => QM,
+      p: () => nM
     });
-    var wG = ZG(188),
-      SG = ZG(4655);
+    var OM = iM(181),
+      SM = iM(5003);
 
-    function LG(GG) {
-      return yG(GG) === wG.b.gameOrPluginOnPlayerAuthRejected.code
+    function jM(MM) {
+      return aM(MM) === OM.d.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function yG(GG) {
-      return "object" === typeof GG && null !== GG ? GG.code : void 0
+    function aM(MM) {
+      return "object" === typeof MM && null !== MM ? MM.code : void 0
     }
 
-    function kG(GG) {
-      var bG;
-      return null !== (bG = Object.keys(SG.b).find((bG => SG.b[bG] === GG))) && void 0 !== bG ? bG : null
+    function PM(MM) {
+      var rM;
+      return null !== (rM = Object.keys(SM.e).find((rM => SM.e[rM] === MM))) && void 0 !== rM ? rM : null
     }
 
-    function UG(GG) {
-      return "notWhitelisted" === GG ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function nM(MM) {
+      return "notWhitelisted" === MM ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const YG = {
+    const QM = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  41444: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      prefetchWasmClient: () => XG,
-      startJoinLoad: () => rG,
-      startLoadAheadOfJoin: () => EG
+  42162: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      prefetchWasmClient: () => CM,
+      probeWebgl2AheadOfJoin: () => QM.W,
+      startJoinLoad: () => lM,
+      startLoadAheadOfJoin: () => UM
     });
-    var wG = ZG(2868),
-      SG = ZG(36643),
-      LG = ZG(41248),
-      yG = ZG(1032),
-      kG = ZG(41100),
-      UG = (ZG(41150), ZG(37137)),
-      YG = ZG(41092),
-      VG = ZG(41374),
-      pG = ZG(41235);
-    const fG = "[bloxd-wasm-client]";
-    let QG = null,
-      KG = null,
-      hG = null,
-      dG = null,
-      JG = null;
+    var OM = iM(3185),
+      SM = iM(37257),
+      jM = iM(41961),
+      aM = iM(1329),
+      PM = iM(41798),
+      nM = (iM(41862), iM(37750)),
+      QM = iM(41793),
+      zM = iM(42076),
+      LM = iM(41939);
+    const mM = "[bloxd-wasm-client]";
+    let HM = null,
+      hM = null,
+      JM = null,
+      dM = null,
+      yM = null;
 
-    function rG() {
-      return dG ??= (async () => {
+    function lM() {
+      return dM ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const GG = await (0, YG.N)();
-        if (null === GG) return;
-        if ((0, kG.q)(GG)) return (0, YG.P)("none"), void zG("none");
-        (0, YG.P)(GG.backend);
-        const bG = await GG.load();
-        zG(bG.name);
-        const ZG = "unloaded" === (0, wG.C)();
-        if (ZG && (0, YG.l)(), !await (0, VG.d)(bG)) return void console.warn(`${fG} the join's early wasm load failed: the boot loads the client itself`);
-        if (!ZG) return;
-        const LG = (0, SG.j)(bG.name);
-        void 0 !== LG ? (0, yG.logClientMeasurement)("wasm_join_compile", {
-          ms: Math.round(LG.ms)
+        const MM = await (0, QM.U)();
+        if (null === MM) return;
+        if ((0, PM.l)(MM)) return (0, QM.Y)("none"), void EM("none");
+        (0, QM.Y)(MM.backend);
+        const rM = await MM.load();
+        EM(rM.name);
+        const iM = "unloaded" === (0, OM.B)();
+        if (iM && (0, QM.r)(), !await (0, zM.b)(rM)) return void console.warn(`${mM} the join's early wasm load failed: the boot loads the client itself`);
+        if (!iM) return;
+        const jM = (0, SM.j)(rM.name);
+        void 0 !== jM ? (0, aM.logClientMeasurement)("wasm_join_compile", {
+          ms: Math.round(jM.ms)
         }, {
-          path: LG.path,
-          build: bG.name
-        }) : console.warn(`${fG} the join's wasm load left no record of how it compiled ${bG.name}`)
-      })().catch((GG => {
-        console.warn(`${fG} the join's early wasm load did not start: the boot loads the client itself`, GG)
-      })), dG
+          path: jM.path,
+          build: rM.name
+        }) : console.warn(`${mM} the join's wasm load left no record of how it compiled ${rM.name}`)
+      })().catch((MM => {
+        console.warn(`${mM} the join's early wasm load did not start: the boot loads the client itself`, MM)
+      })), dM
     }
 
-    function zG(GG) {
-      null !== JG && (0, yG.logClientMeasurement)("wasm_compile_ahead", {
-        hit: JG === GG ? 1 : 0
+    function EM(MM) {
+      null !== yM && (0, aM.logClientMeasurement)("wasm_compile_ahead", {
+        hit: yM === MM ? 1 : 0
       }, {
-        guessed: JG,
-        loaded: GG
+        guessed: yM,
+        loaded: MM
       })
     }
 
-    function EG() {
-      let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      if (null === hG) {
-        var bG;
-        const ZG = null !== (bG = GG.joinStarted) && void 0 !== bG ? bG : () => !1;
-        hG = Promise.all([XG(GG), oG(ZG)]).then((() => {}))
+    function UM() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      if (null === JM) {
+        var rM;
+        const iM = null !== (rM = MM.joinStarted) && void 0 !== rM ? rM : () => !1;
+        JM = Promise.all([CM(MM), GM(iM)]).then((() => {}))
       }
-      return hG
+      return JM
     }
 
-    function oG(GG) {
-      return KG ??= (async () => {
+    function GM(MM) {
+      return hM ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const bG = await (0, YG.i)();
-        null === bG || GG() || "unloaded" !== (0, wG.C)() || (JG = bG.name, await (0, SG.d)([bG, LG.c], "low"))
-      })().catch((GG => {
-        console.warn(`${fG} the compile ahead of the join did not start: the join loads the client itself`, GG)
-      })), KG
+        const rM = await (0, QM.k)();
+        null === rM || MM() || "unloaded" !== (0, OM.B)() || (yM = rM.name, await (0, SM.d)([rM, jM.f], "low"))
+      })().catch((MM => {
+        console.warn(`${mM} the compile ahead of the join did not start: the join loads the client itself`, MM)
+      })), hM
     }
 
-    function XG() {
+    function CM() {
       let {
-        joinStarted: GG = () => !1,
-        language: bG = ""
+        joinStarted: MM = () => !1,
+        language: rM = ""
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return QG ??= async function(GG, bG) {
-        if (!await async function(GG) {
-            if (GG()) return !1;
-            let bG;
+      return HM ??= async function(MM, rM) {
+        if (!await async function(MM) {
+            if (MM()) return !1;
+            let rM;
             try {
-              var wG;
-              const GG = await fetch(`${ZG.p}static/js/wp3j0a.wasmJoinFiles.json`, {
+              var OM;
+              const MM = await fetch(`${iM.p}static/js/fo1voe.wasmJoinFiles.json`, {
                 priority: "low",
                 cache: "no-cache"
               });
-              if (!GG.ok) throw new Error(`HTTP ${GG.status}`);
-              if (/\bno-store\b/.test(null !== (wG = GG.headers.get("Cache-Control")) && void 0 !== wG ? wG : "")) return !1;
-              const SG = await GG.json();
-              if (!Array.isArray(SG)) throw new Error("not a list");
-              bG = SG
-            } catch (LG) {
-              return console.warn(`${fG} the join's chunk list did not load: the join downloads its chunks itself`, LG), !GG()
+              if (!MM.ok) throw new Error(`HTTP ${MM.status}`);
+              if (/\bno-store\b/.test(null !== (OM = MM.headers.get("Cache-Control")) && void 0 !== OM ? OM : "")) return !1;
+              const SM = await MM.json();
+              if (!Array.isArray(SM)) throw new Error("not a list");
+              rM = SM
+            } catch (jM) {
+              return console.warn(`${mM} the join's chunk list did not load: the join downloads its chunks itself`, jM), !MM()
             }
-            if (GG()) return !1;
-            const SG = document.createElement("link").relList.supports("prefetch");
-            for (const yG of bG) {
-              const GG = `${ZG.p}${yG}`;
-              SG ? uG(GG) : (0, UG.b)(GG).catch((bG => {
-                console.warn(`${fG} prefetching ${GG} failed`, bG)
+            if (MM()) return !1;
+            const SM = document.createElement("link").relList.supports("prefetch");
+            for (const aM of rM) {
+              const MM = `${iM.p}${aM}`;
+              SM ? eM(MM) : (0, nM.b)(MM).catch((rM => {
+                console.warn(`${mM} prefetching ${MM} failed`, rM)
               }))
             }
             return !0
-          }(GG)) return;
-        const wG = [(0, UG.b)((0, pG.g)())];
-        (0, pG.e)(bG) && wG.push((0, UG.b)((0, pG.j)()));
-        await Promise.all(wG)
-      }(GG, bG).catch((GG => {
-        console.warn(`${fG} the prefetch failed: the join downloads the client itself`, GG)
-      })), QG
+          }(MM)) return;
+        const OM = [(0, nM.b)((0, LM.f)())];
+        (0, LM.d)(rM) && OM.push((0, nM.b)((0, LM.g)()));
+        await Promise.all(OM)
+      }(MM, rM).catch((MM => {
+        console.warn(`${mM} the prefetch failed: the join downloads the client itself`, MM)
+      })), HM
     }
 
-    function uG(GG) {
-      const bG = document.createElement("link");
-      bG.rel = "prefetch", bG.href = GG, GG.endsWith(".js") && (bG.crossOrigin = "anonymous"), document.head.appendChild(bG)
+    function eM(MM) {
+      const rM = document.createElement("link");
+      rM.rel = "prefetch", rM.href = MM, MM.endsWith(".js") && (rM.crossOrigin = "anonymous"), document.head.appendChild(rM)
     }
   },
-  39478: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => SG,
-      g: () => LG,
-      i: () => kG,
-      k: () => VG,
-      o: () => UG,
-      s: () => yG
+  40100: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => SM,
+      f: () => jM,
+      j: () => PM,
+      m: () => zM,
+      p: () => nM,
+      t: () => aM
     });
-    var wG = ZG(188);
-    const SG = 3e3,
-      LG = 15e3;
+    var OM = iM(181);
+    const SM = 3e3,
+      jM = 15e3;
 
-    function yG(GG) {
-      const bG = GG.endsWith(wG.j);
+    function aM(MM) {
+      const rM = MM.endsWith(OM.k);
       return {
-        text: (bG ? GG.slice(0, -wG.j.length) : GG) || null,
-        dropsCache: bG
+        text: (rM ? MM.slice(0, -OM.k.length) : MM) || null,
+        dropsCache: rM
       }
     }
-    const kG = "Either your internet isn't working or this is a bug.";
+    const PM = "Either your internet isn't working or this is a bug.";
 
-    function UG(GG, bG) {
-      const ZG = VG(GG);
-      return null !== ZG.name && "" === wG.b[ZG.name].text && null !== bG ? bG : ZG.reason
+    function nM(MM, rM) {
+      const iM = zM(MM);
+      return null !== iM.name && "" === OM.d[iM.name].text && null !== rM ? rM : iM.reason
     }
-    const YG = "You were removed from the game.";
+    const QM = "You were removed from the game.";
 
-    function VG(GG) {
-      var bG;
-      let ZG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const SG = null !== (bG = Object.keys(wG.b).find((bG => wG.b[bG].code === GG))) && void 0 !== bG ? bG : null;
-      if (null === SG) return {
-        code: GG,
-        name: SG,
-        reason: null !== ZG && void 0 !== ZG ? ZG : `${kG}\nCode: ${GG}`,
+    function zM(MM) {
+      var rM;
+      let iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const SM = null !== (rM = Object.keys(OM.d).find((rM => OM.d[rM].code === MM))) && void 0 !== rM ? rM : null;
+      if (null === SM) return {
+        code: MM,
+        name: SM,
+        reason: null !== iM && void 0 !== iM ? iM : `${PM}\nCode: ${MM}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: LG,
-        canReconnect: yG = !1
-      } = wG.b[SG], UG = GG === wG.b.outdatedVersion.code || GG === wG.b.loadRecaptchaError.code;
+        text: jM,
+        canReconnect: aM = !1
+      } = OM.d[SM], nM = MM === OM.d.outdatedVersion.code || MM === OM.d.loadRecaptchaError.code;
       return {
-        code: GG,
-        name: SG,
-        reason: "" !== LG ? LG : null !== ZG && void 0 !== ZG ? ZG : GG === wG.b.gameOrPluginKick.code ? YG : `Code: ${GG}`,
-        canReconnect: yG,
-        automaticallyReconnect: GG === wG.b.customGameUpdated.code || GG === wG.b.duplicateLobbyNameError.code,
-        requiresRefresh: UG
+        code: MM,
+        name: SM,
+        reason: "" !== jM ? jM : null !== iM && void 0 !== iM ? iM : MM === OM.d.gameOrPluginKick.code ? QM : `Code: ${MM}`,
+        canReconnect: aM,
+        automaticallyReconnect: MM === OM.d.customGameUpdated.code || MM === OM.d.duplicateLobbyNameError.code,
+        requiresRefresh: nM
       }
     }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

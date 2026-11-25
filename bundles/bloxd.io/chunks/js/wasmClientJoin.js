@@ -1,31 +1,31 @@
-export const id = 58;
-export const ids = [58];
+export const id = 69;
+export const ids = [69];
 export const modules = {
-  40999: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => SG,
-      g: () => VG
+  41706: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => SM,
+      f: () => zM
     });
-    const wG = new TextDecoder;
+    const OM = new TextDecoder;
 
-    function SG(GG) {
-      const bG = new LG(GG),
-        ZG = bG.value();
-      if (bG.at !== GG.length) throw new Error(`msgpack: ${GG.length-bG.at} bytes after the value`);
-      return ZG
+    function SM(MM) {
+      const rM = new jM(MM),
+        iM = rM.value();
+      if (rM.at !== MM.length) throw new Error(`msgpack: ${MM.length-rM.at} bytes after the value`);
+      return iM
     }
-    class LG {
-      constructor(GG) {
-        this.bytes = GG, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(GG.buffer, GG.byteOffset, GG.byteLength)
+    class jM {
+      constructor(MM) {
+        this.bytes = MM, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(MM.buffer, MM.byteOffset, MM.byteLength)
       }
       value() {
-        const GG = this.u8();
-        if (GG <= 127) return GG;
-        if (GG >= 224) return GG - 256;
-        if (GG >= 128 && GG <= 143) return this.map(15 & GG);
-        if (GG >= 144 && GG <= 159) return this.array(15 & GG);
-        if (GG >= 160 && GG <= 191) return this.str(31 & GG);
-        switch (GG) {
+        const MM = this.u8();
+        if (MM <= 127) return MM;
+        if (MM >= 224) return MM - 256;
+        if (MM >= 128 && MM <= 143) return this.map(15 & MM);
+        if (MM >= 144 && MM <= 159) return this.array(15 & MM);
+        if (MM >= 160 && MM <= 191) return this.str(31 & MM);
+        switch (MM) {
           case 192:
             return null;
           case 194:
@@ -89,13 +89,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${GG.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${MM.toString(16)} at ${this.at-1}`)
         }
       }
-      take(GG) {
-        const bG = this.at;
-        if (bG + GG > this.bytes.length) throw new Error(`msgpack: ${GG} bytes past the end at ${bG}`);
-        return this.at = bG + GG, bG
+      take(MM) {
+        const rM = this.at;
+        if (rM + MM > this.bytes.length) throw new Error(`msgpack: ${MM} bytes past the end at ${rM}`);
+        return this.at = rM + MM, rM
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -106,323 +106,323 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(GG) {
-        const bG = this.take(8);
-        return GG ? this.view.getBigInt64(bG, !1) : this.view.getBigUint64(bG, !1)
+      int64(MM) {
+        const rM = this.take(8);
+        return MM ? this.view.getBigInt64(rM, !1) : this.view.getBigUint64(rM, !1)
       }
-      str(GG) {
-        const bG = this.take(GG),
-          ZG = this.bytes;
-        if (GG < 16) {
-          let SG = "";
-          for (let LG = bG; LG < bG + GG; LG++) {
-            const yG = ZG[LG];
-            if (yG >= 128) return wG.decode(ZG.subarray(bG, bG + GG));
-            SG += String.fromCharCode(yG)
+      str(MM) {
+        const rM = this.take(MM),
+          iM = this.bytes;
+        if (MM < 16) {
+          let SM = "";
+          for (let jM = rM; jM < rM + MM; jM++) {
+            const aM = iM[jM];
+            if (aM >= 128) return OM.decode(iM.subarray(rM, rM + MM));
+            SM += String.fromCharCode(aM)
           }
-          return SG
+          return SM
         }
-        return wG.decode(ZG.subarray(bG, bG + GG))
+        return OM.decode(iM.subarray(rM, rM + MM))
       }
-      bin(GG) {
-        const bG = this.take(GG);
-        return this.bytes.subarray(bG, bG + GG)
+      bin(MM) {
+        const rM = this.take(MM);
+        return this.bytes.subarray(rM, rM + MM)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(GG) {
+      array(MM) {
         this.enter();
-        const bG = [];
-        for (let ZG = 0; ZG < GG; ZG++) bG.push(this.value());
-        return this.depth--, bG
+        const rM = [];
+        for (let iM = 0; iM < MM; iM++) rM.push(this.value());
+        return this.depth--, rM
       }
-      map(GG) {
+      map(MM) {
         this.enter();
-        const bG = {};
-        for (let ZG = 0; ZG < GG; ZG++) {
-          const GG = this.value(),
-            ZG = this.value();
-          bG["__proto__" === GG ? "__proto_" : String(GG)] = ZG
+        const rM = {};
+        for (let iM = 0; iM < MM; iM++) {
+          const MM = this.value(),
+            iM = this.value();
+          rM["__proto__" === MM ? "__proto_" : String(MM)] = iM
         }
-        return this.depth--, bG
+        return this.depth--, rM
       }
-      ext(GG) {
-        const bG = this.view.getInt8(this.take(1)),
-          ZG = this.take(GG);
-        if (0 !== bG) {
-          if (-1 === bG) {
-            if (1 === GG) return new Date(NaN);
-            if (4 === GG) return new Date(1e3 * this.view.getUint32(ZG, !1));
-            if (8 === GG) {
-              const GG = this.view.getUint32(ZG, !1),
-                bG = GG >>> 2,
-                wG = 4294967296 * (3 & GG) + this.view.getUint32(ZG + 4, !1);
-              return new Date(1e3 * wG + bG / 1e6)
+      ext(MM) {
+        const rM = this.view.getInt8(this.take(1)),
+          iM = this.take(MM);
+        if (0 !== rM) {
+          if (-1 === rM) {
+            if (1 === MM) return new Date(NaN);
+            if (4 === MM) return new Date(1e3 * this.view.getUint32(iM, !1));
+            if (8 === MM) {
+              const MM = this.view.getUint32(iM, !1),
+                rM = MM >>> 2,
+                OM = 4294967296 * (3 & MM) + this.view.getUint32(iM + 4, !1);
+              return new Date(1e3 * OM + rM / 1e6)
             }
-            if (12 === GG) {
-              const GG = this.view.getUint32(ZG, !1),
-                bG = 4294967296 * this.view.getInt32(ZG + 4, !1) + this.view.getUint32(ZG + 8, !1);
-              return new Date(1e3 * bG + GG / 1e6)
+            if (12 === MM) {
+              const MM = this.view.getUint32(iM, !1),
+                rM = 4294967296 * this.view.getInt32(iM + 4, !1) + this.view.getUint32(iM + 8, !1);
+              return new Date(1e3 * rM + MM / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${bG} of ${GG} bytes`)
+          throw new Error(`msgpack: ext type ${rM} of ${MM} bytes`)
         }
       }
     }
-    const yG = new TextEncoder,
-      kG = -(2n ** 63n),
-      UG = 2n ** 63n - 1n,
-      YG = 2n ** 64n - 1n;
+    const aM = new TextEncoder,
+      PM = -(2n ** 63n),
+      nM = 2n ** 63n - 1n,
+      QM = 2n ** 64n - 1n;
 
-    function VG(GG) {
-      const bG = new pG;
-      return bG.value(GG, 0), bG.bytes()
+    function zM(MM) {
+      const rM = new LM;
+      return rM.value(MM, 0), rM.bytes()
     }
-    class pG {
+    class LM {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(GG, bG) {
-        if (bG > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof GG) {
+      value(MM, rM) {
+        if (rM > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof MM) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(GG ? 195 : 194);
+            return void this.u8(MM ? 195 : 194);
           case "number":
-            return void this.number(GG);
+            return void this.number(MM);
           case "bigint":
-            return void this.bigint(GG);
+            return void this.bigint(MM);
           case "string":
-            return void this.string(GG);
+            return void this.string(MM);
           case "object":
-            if (null === GG) this.u8(192);
-            else if (GG instanceof Uint8Array) this.head(GG.length, 196, -1, 197, 198), this.room(GG.length), this.buf.set(GG, this.at), this.at += GG.length;
-            else if (Array.isArray(GG)) {
-              this.head(GG.length, 220, 144, 220, 221);
-              for (const ZG of GG) this.value(ZG, bG + 1)
+            if (null === MM) this.u8(192);
+            else if (MM instanceof Uint8Array) this.head(MM.length, 196, -1, 197, 198), this.room(MM.length), this.buf.set(MM, this.at), this.at += MM.length;
+            else if (Array.isArray(MM)) {
+              this.head(MM.length, 220, 144, 220, 221);
+              for (const iM of MM) this.value(iM, rM + 1)
             } else {
-              var ZG, wG;
-              if (Object.getPrototypeOf(GG) !== Object.prototype && null !== Object.getPrototypeOf(GG)) throw new Error(`msgpack: can't encode a ${null!==(ZG=null===(wG=GG.constructor)||void 0===wG?void 0:wG.name)&&void 0!==ZG?ZG:"object"}`);
+              var iM, OM;
+              if (Object.getPrototypeOf(MM) !== Object.prototype && null !== Object.getPrototypeOf(MM)) throw new Error(`msgpack: can't encode a ${null!==(iM=null===(OM=MM.constructor)||void 0===OM?void 0:OM.name)&&void 0!==iM?iM:"object"}`);
               {
-                const ZG = Object.keys(GG);
-                this.head(ZG.length, 222, 128, 222, 223);
-                for (const wG of ZG) this.string(wG), this.value(GG[wG], bG + 1)
+                const iM = Object.keys(MM);
+                this.head(iM.length, 222, 128, 222, 223);
+                for (const OM of iM) this.string(OM), this.value(MM[OM], rM + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof GG)
+            throw new Error("msgpack: can't encode a " + typeof MM)
         }
       }
-      number(GG) {
-        Number.isInteger(GG) && GG >= -2147483648 && GG <= 4294967295 ? GG >= 0 ? GG < 128 ? this.u8(GG) : GG < 256 ? (this.u8(204), this.u8(GG)) : GG < 65536 ? (this.u8(205), this.u16(GG)) : (this.u8(206), this.u32(GG)) : GG >= -32 ? this.u8(GG + 256) : GG >= -128 ? (this.u8(208), this.u8(GG + 256)) : GG >= -32768 ? (this.u8(209), this.u16(GG + 65536)) : (this.u8(210), this.u32(GG >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, GG, !1), this.at += 8)
+      number(MM) {
+        Number.isInteger(MM) && MM >= -2147483648 && MM <= 4294967295 ? MM >= 0 ? MM < 128 ? this.u8(MM) : MM < 256 ? (this.u8(204), this.u8(MM)) : MM < 65536 ? (this.u8(205), this.u16(MM)) : (this.u8(206), this.u32(MM)) : MM >= -32 ? this.u8(MM + 256) : MM >= -128 ? (this.u8(208), this.u8(MM + 256)) : MM >= -32768 ? (this.u8(209), this.u16(MM + 65536)) : (this.u8(210), this.u32(MM >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, MM, !1), this.at += 8)
       }
-      bigint(GG) {
-        const bG = GG >= kG && GG <= UG;
-        if (!bG && (GG < 0n || GG > YG)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(bG ? 211 : 207), this.room(8), bG ? this.view.setBigInt64(this.at, GG, !1) : this.view.setBigUint64(this.at, GG, !1), this.at += 8
+      bigint(MM) {
+        const rM = MM >= PM && MM <= nM;
+        if (!rM && (MM < 0n || MM > QM)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(rM ? 211 : 207), this.room(8), rM ? this.view.setBigInt64(this.at, MM, !1) : this.view.setBigUint64(this.at, MM, !1), this.at += 8
       }
-      string(GG) {
-        const bG = yG.encode(GG);
-        this.head(bG.length, 217, 160, 218, 219), this.room(bG.length), this.buf.set(bG, this.at), this.at += bG.length
+      string(MM) {
+        const rM = aM.encode(MM);
+        this.head(rM.length, 217, 160, 218, 219), this.room(rM.length), this.buf.set(rM, this.at), this.at += rM.length
       }
-      head(GG, bG, ZG, wG, SG) {
-        ZG >= 0 && GG < (160 === ZG ? 32 : 16) ? this.u8(ZG | GG) : bG !== wG && GG < 256 ? (this.u8(bG), this.u8(GG)) : GG < 65536 ? (this.u8(wG), this.u16(GG)) : (this.u8(SG), this.u32(GG))
+      head(MM, rM, iM, OM, SM) {
+        iM >= 0 && MM < (160 === iM ? 32 : 16) ? this.u8(iM | MM) : rM !== OM && MM < 256 ? (this.u8(rM), this.u8(MM)) : MM < 65536 ? (this.u8(OM), this.u16(MM)) : (this.u8(SM), this.u32(MM))
       }
-      room(GG) {
-        if (this.at + GG <= this.buf.length) return;
-        let bG = 2 * this.buf.length;
-        for (; bG < this.at + GG;) bG *= 2;
-        const ZG = new Uint8Array(bG);
-        ZG.set(this.buf.subarray(0, this.at)), this.buf = ZG, this.view = new DataView(ZG.buffer)
+      room(MM) {
+        if (this.at + MM <= this.buf.length) return;
+        let rM = 2 * this.buf.length;
+        for (; rM < this.at + MM;) rM *= 2;
+        const iM = new Uint8Array(rM);
+        iM.set(this.buf.subarray(0, this.at)), this.buf = iM, this.view = new DataView(iM.buffer)
       }
-      u8(GG) {
-        this.room(1), this.buf[this.at++] = GG
+      u8(MM) {
+        this.room(1), this.buf[this.at++] = MM
       }
-      u16(GG) {
-        this.room(2), this.view.setUint16(this.at, GG, !1), this.at += 2
+      u16(MM) {
+        this.room(2), this.view.setUint16(this.at, MM, !1), this.at += 2
       }
-      u32(GG) {
-        this.room(4), this.view.setUint32(this.at, GG, !1), this.at += 4
+      u32(MM) {
+        this.room(4), this.view.setUint32(this.at, MM, !1), this.at += 4
       }
     }
   },
-  51420: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      joinRoom: () => pG,
-      leaveHeldSeat: () => JG,
-      resumeRoom: () => QG
+  53752: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      joinRoom: () => LM,
+      leaveHeldSeat: () => yM,
+      resumeRoom: () => HM
     });
-    var wG = ZG(140),
-      SG = ZG(1169),
-      LG = ZG(36826),
-      yG = ZG(40999),
-      kG = ZG(4810),
-      UG = ZG(41065),
-      YG = ZG(41299);
-    const VG = Uint8Array.of(13, ...(0, yG.g)(wG.c));
-    async function pG(GG, bG) {
-      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    var OM = iM(143),
+      SM = iM(1215),
+      jM = iM(37437),
+      aM = iM(41706),
+      PM = iM(5198),
+      nM = iM(41764),
+      QM = iM(42012);
+    const zM = Uint8Array.of(13, ...(0, aM.f)(OM.g));
+    async function LM(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
       try {
-        return await fG(GG, bG, ZG)
-      } catch (SG) {
-        var wG;
-        const LG = await (null === (wG = bG.optionsAfterRefusal) || void 0 === wG ? void 0 : wG.call(bG, SG));
-        if (!LG) throw SG;
-        return fG(GG, {
-          ...bG,
-          joinOptions: LG
+        return await mM(MM, rM, iM)
+      } catch (SM) {
+        var OM;
+        const jM = await (null === (OM = rM.optionsAfterRefusal) || void 0 === OM ? void 0 : OM.call(rM, SM));
+        if (!jM) throw SM;
+        return mM(MM, {
+          ...rM,
+          joinOptions: jM
         }, {
-          ...ZG,
+          ...iM,
           early: void 0
         })
       }
     }
-    async function fG(GG, bG, ZG) {
-      var wG;
+    async function mM(MM, rM, iM) {
+      var OM;
       const {
-        signal: LG
-      } = ZG, yG = () => (0, YG.g)(bG.endpoint, bG.roomName, bG.joinOptions, ZG), {
-        early: kG
-      } = ZG, UG = kG ? null !== (wG = await kG.take(LG)) && void 0 !== wG ? wG : await kG.reserveInstead(yG, LG) : await yG();
-      return (0, SG.p)(LG), dG(GG, bG.endpoint, UG, ZG, !1)
+        signal: jM
+      } = iM, aM = () => (0, QM.g)(rM.endpoint, rM.roomName, rM.joinOptions, iM), {
+        early: PM
+      } = iM, nM = PM ? null !== (OM = await PM.take(jM)) && void 0 !== OM ? OM : await PM.reserveInstead(aM, jM) : await aM();
+      return (0, SM.p)(jM), dM(MM, rM.endpoint, nM, iM, !1)
     }
-    async function QG(GG, bG, ZG, wG) {
-      let LG = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      const yG = await (0, YG.d)(bG, ZG, wG, LG);
-      return (0, SG.p)(LG.signal), dG(GG, bG, yG, LG, !0)
-    }
-
-    function KG(GG, bG, ZG) {
-      const wG = (0, YG.i)(GG, bG);
-      return ZG.createSocket ? ZG.createSocket(wG) : new WebSocket(wG)
+    async function HM(MM, rM, iM, OM) {
+      let jM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      const aM = await (0, QM.f)(rM, iM, OM, jM);
+      return (0, SM.p)(jM.signal), dM(MM, rM, aM, jM, !0)
     }
 
-    function hG(GG, bG, ZG) {
-      var wG;
-      let SG = !1;
-      return (null !== (wG = GG.setTimer) && void 0 !== wG ? wG : (GG, bG) => {
-        setTimeout(GG, bG)
+    function hM(MM, rM, iM) {
+      const OM = (0, QM.h)(MM, rM);
+      return iM.createSocket ? iM.createSocket(OM) : new WebSocket(OM)
+    }
+
+    function JM(MM, rM, iM) {
+      var OM;
+      let SM = !1;
+      return (null !== (OM = MM.setTimer) && void 0 !== OM ? OM : (MM, rM) => {
+        setTimeout(MM, rM)
       })((() => {
-        SG || bG()
-      }), ZG), () => {
-        SG = !0
+        SM || rM()
+      }), iM), () => {
+        SM = !0
       }
     }
-    async function dG(GG, bG, ZG, wG, yG) {
+    async function dM(MM, rM, iM, OM, aM) {
       const {
-        signal: YG
-      } = wG, pG = KG(bG, ZG, wG);
-      let fG = !1,
-        QG = null,
-        dG = null;
-      const JG = [];
-      let rG = !1,
-        zG = !1;
-      const EG = GG => {
-        var bG;
-        zG = !0, null === (bG = dG) || void 0 === bG || bG.reject(new UG.c("the room socket closed before the resume", "closed", GG.code))
+        signal: QM
+      } = OM, LM = hM(rM, iM, OM);
+      let mM = !1,
+        HM = null,
+        dM = null;
+      const yM = [];
+      let lM = !1,
+        EM = !1;
+      const UM = MM => {
+        var rM;
+        EM = !0, null === (rM = dM) || void 0 === rM || rM.reject(new nM.d("the room socket closed before the resume", "closed", MM.code))
       };
-      yG && pG.addEventListener("close", EG);
-      const oG = (GG, bG) => {
-          var ZG;
-          if (GG === (yG ? kG.M.Resumed : kG.M.Activated)) rG = !0, null === (ZG = dG) || void 0 === ZG || ZG.resolve();
-          else if (!yG || GG !== kG.M.ResumeRefused && GG !== kG.M.Activated)
-            if (GG === kG.M.Error) {
-              var wG;
-              null === (wG = dG) || void 0 === wG || wG.reject(new UG.c(`the room refused the join (code ${bG})`, "roomError", bG))
+      aM && LM.addEventListener("close", UM);
+      const GM = (MM, rM) => {
+          var iM;
+          if (MM === (aM ? PM.F.Resumed : PM.F.Activated)) lM = !0, null === (iM = dM) || void 0 === iM || iM.resolve();
+          else if (!aM || MM !== PM.F.ResumeRefused && MM !== PM.F.Activated)
+            if (MM === PM.F.Error) {
+              var OM;
+              null === (OM = dM) || void 0 === OM || OM.reject(new nM.d(`the room refused the join (code ${rM})`, "roomError", rM))
             } else {
-              var SG;
-              null === (SG = dG) || void 0 === SG || SG.reject(new UG.c("the room socket closed before the join", "closed", bG, null, fG))
+              var SM;
+              null === (SM = dM) || void 0 === SM || SM.reject(new nM.d("the room socket closed before the join", "closed", rM, null, mM))
             }
           else {
-            var LG;
-            null === (LG = dG) || void 0 === LG || LG.reject(new UG.l("the core refused the resume: it held no game"))
+            var jM;
+            null === (jM = dM) || void 0 === jM || jM.reject(new nM.p("the core refused the resume: it held no game"))
           }
         },
-        XG = GG.onConnection(((GG, bG, ZG) => {
-          null === QG ? JG.push([GG, bG, ZG]) : GG === QG && oG(bG, ZG)
+        CM = MM.onConnection(((MM, rM, iM) => {
+          null === HM ? yM.push([MM, rM, iM]) : MM === HM && GM(rM, iM)
         })),
-        uG = GG.attachSocket(pG);
-      if (null === uG) throw XG(), new UG.c("the core could not take the room socket", "attach");
-      var iG;
-      (QG = uG, yG) && (null === (iG = wG.onAttached) || void 0 === iG || iG.call(wG));
-      const CG = yG ? null : new LG.d((() => {
-        var bG, ZG;
-        null === (bG = GG.flushNet) || void 0 === bG || bG.call(GG), null === (ZG = dG) || void 0 === ZG || ZG.reject(new LG.g(fG ? "socket" : "socket_unopened"))
+        eM = MM.attachSocket(LM);
+      if (null === eM) throw CM(), new nM.d("the core could not take the room socket", "attach");
+      var bM;
+      (HM = eM, aM) && (null === (bM = OM.onAttached) || void 0 === bM || bM.call(OM));
+      const wM = aM ? null : new jM.e((() => {
+        var rM, iM;
+        null === (rM = MM.flushNet) || void 0 === rM || rM.call(MM), null === (iM = dM) || void 0 === iM || iM.reject(new jM.i(mM ? "socket" : "socket_unopened"))
       }));
-      pG.addEventListener("open", (() => {
-        fG = !0, null === CG || void 0 === CG || CG.socketOpened()
+      LM.addEventListener("open", (() => {
+        mM = !0, null === wM || void 0 === wM || wM.socketOpened()
       }), {
         once: !0
       });
-      let WG = !1;
-      const mG = () => {
-        if (WG) return;
-        if (WG = !0, XG(), yG && (pG.removeEventListener("close", EG), !rG && !(null !== YG && void 0 !== YG && YG.aborted && (0, SG.h)(YG) instanceof UG.n))) return void(zG || GG.closeSocket(uG));
-        rG && GG.leaveRoom(uG) || GG.sendRaw(uG, UG.i) ? hG(wG, (() => {
-          GG.closeSocket(uG)
-        }), UG.g) : GG.closeSocket(uG)
+      let tM = !1;
+      const gM = () => {
+        if (tM) return;
+        if (tM = !0, CM(), aM && (LM.removeEventListener("close", UM), !lM && !(null !== QM && void 0 !== QM && QM.aborted && (0, SM.f)(QM) instanceof nM.t))) return void(EM || MM.closeSocket(eM));
+        lM && MM.leaveRoom(eM) || MM.sendRaw(eM, nM.k) ? JM(OM, (() => {
+          MM.closeSocket(eM)
+        }), nM.h) : MM.closeSocket(eM)
       };
       try {
-        await new Promise(((bG, ZG) => {
-          const wG = () => {
-            var bG;
-            yG && (null === (bG = GG.flushNet) || void 0 === bG || bG.call(GG));
-            ZG((0, SG.h)(YG))
+        await new Promise(((rM, iM) => {
+          const OM = () => {
+            var rM;
+            aM && (null === (rM = MM.flushNet) || void 0 === rM || rM.call(MM));
+            iM((0, SM.f)(QM))
           };
-          null === YG || void 0 === YG || YG.addEventListener("abort", wG, {
+          null === QM || void 0 === QM || QM.addEventListener("abort", OM, {
             once: !0
-          }), dG = {
+          }), dM = {
             resolve: () => {
-              null === YG || void 0 === YG || YG.removeEventListener("abort", wG), bG()
+              null === QM || void 0 === QM || QM.removeEventListener("abort", OM), rM()
             },
-            reject: GG => {
-              null === YG || void 0 === YG || YG.removeEventListener("abort", wG), ZG(GG)
+            reject: MM => {
+              null === QM || void 0 === QM || QM.removeEventListener("abort", OM), iM(MM)
             }
           };
-          for (const [GG, SG, LG] of JG.splice(0)) GG === QG && oG(SG, LG)
-        })), null === CG || void 0 === CG || CG.answered()
-      } catch (IG) {
-        throw mG(), IG
+          for (const [MM, SM, jM] of yM.splice(0)) MM === HM && GM(SM, jM)
+        })), null === wM || void 0 === wM || wM.answered()
+      } catch (uM) {
+        throw gM(), uM
       } finally {
-        null === CG || void 0 === CG || CG.stop()
+        null === wM || void 0 === wM || wM.stop()
       }
-      yG && pG.removeEventListener("close", EG);
+      aM && LM.removeEventListener("close", UM);
       return {
-        conn: uG,
-        seat: ZG,
-        leave: mG,
+        conn: eM,
+        seat: iM,
+        leave: gM,
         detach: () => {
-          WG = !0, XG()
+          tM = !0, CM()
         },
-        endJoinAd: () => !WG && GG.sendRaw(uG, VG)
+        endJoinAd: () => !tM && MM.sendRaw(eM, zM)
       }
     }
-    async function JG(GG, bG, ZG) {
-      let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    async function yM(MM, rM, iM) {
+      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       try {
-        const SG = KG(GG, await (0, YG.d)(GG, bG, ZG, wG), wG);
-        SG.binaryType = "arraybuffer", await new Promise((GG => {
-          const bG = hG(wG, (() => {
-            SG.close(), GG()
-          }), UG.g);
-          SG.addEventListener("open", (() => {
-            SG.send(UG.i)
-          })), SG.addEventListener("close", (() => {
-            bG(), GG()
+        const SM = hM(MM, await (0, QM.f)(MM, rM, iM, OM), OM);
+        SM.binaryType = "arraybuffer", await new Promise((MM => {
+          const rM = JM(OM, (() => {
+            SM.close(), MM()
+          }), nM.h);
+          SM.addEventListener("open", (() => {
+            SM.send(nM.k)
+          })), SM.addEventListener("close", (() => {
+            rM(), MM()
           }))
         }))
-      } catch (SG) {
-        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", SG)
+      } catch (SM) {
+        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", SM)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

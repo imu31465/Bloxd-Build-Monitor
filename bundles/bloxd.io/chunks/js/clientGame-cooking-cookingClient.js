@@ -1,26 +1,26 @@
-export const id = 15;
-export const ids = [15];
+export const id = 16;
+export const ids = [16];
 export const modules = {
-  39835: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      default: () => SG
+  40502: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      default: () => SM
     });
-    const wG = [
+    const OM = [
         [25, 8, 56],
         [25, 8, 54]
       ],
-      SG = function(GG, bG, ZG) {
-        let SG;
+      SM = function(MM, rM, iM) {
+        let SM;
         return {
-          onCreate: GG => {
-            SG = GG
+          onCreate: MM => {
+            SM = MM
           },
-          onPlayerAltAction: (GG, bG, ZG, LG, yG, kG) => {
-            wG.some((GG => GG[0] === bG && GG[2] === LG)) && SG.openShop(GG, !1)
+          onPlayerAltAction: (MM, rM, iM, jM, aM, PM) => {
+            OM.some((MM => MM[0] === rM && MM[2] === jM)) && SM.openShop(MM, !1)
           }
         }
       }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

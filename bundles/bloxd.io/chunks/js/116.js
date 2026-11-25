@@ -1,373 +1,489 @@
 export const id = 116;
-export const ids = [116, 118, 138, 139];
+export const ids = [116];
 export const modules = {
-  5055: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => wG.i,
-      f: () => SG,
-      g: () => wG.o
+  5306: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => mM
     });
-    var wG = ZG(5062);
-    const SG = [!1, !0].flatMap((GG => ["terrain", "liquid", "model"].map((bG => ({
-      strict: GG,
-      program: bG
-    })))))
-  },
-  6653: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      forgetShaderPackActiveHint: () => IG,
-      isOtherApiVersion: () => iG,
-      isShaderPackActive: () => EG,
-      isShaderPackChangePending: () => uG,
-      markShaderPackChangePending: () => XG,
-      pageShaderPackValidationVersion: () => CG,
-      reconcileStoredShaderPackHint: () => mG,
-      removeShaderPack: () => zG,
-      replaceShaderPack: () => dG,
-      saveShaderPack: () => hG,
-      shaderPackNeedsCheck: () => WG,
-      storedPackOutcome: () => oG,
-      storedShaderPackFiles: () => fG,
-      toStoredShaderPack: () => pG
-    });
-    var wG = ZG(5062),
-      SG = ZG(5055),
-      LG = ZG(29),
-      yG = ZG(3441),
-      kG = ZG(6661),
-      UG = ZG(6627);
-    const YG = "shaderPackChangePending";
-    let VG = null;
+    var OM = iM(1116),
+      SM = iM.n(OM),
+      jM = iM(1398),
+      aM = iM(1396),
+      PM = iM(3902),
+      nM = iM(119),
+      QM = iM(3945),
+      zM = iM(3934),
+      LM = iM(1303);
 
-    function pG(GG, bG, ZG) {
-      return {
-        manifest: GG.manifest,
-        files: (0, wG.y)(GG.files),
-        validation: bG,
-        ...ZG && {
-          listing: ZG
-        }
-      }
-    }
-
-    function fG(GG) {
-      return Object.keys(GG.files).map((bG => ({
-        path: bG,
-        source: GG.files[bG]
-      })))
-    }
-    let QG = Promise.resolve();
-
-    function KG(GG) {
-      const bG = QG.then(GG);
-      return QG = bG.catch((() => {})), bG
-    }
-
-    function hG(GG, bG) {
-      return KG((() => JG(GG, bG)))
-    }
-
-    function dG(GG, bG, ZG) {
-      return KG((async () => JSON.stringify(await (0, kG.e)()) === JSON.stringify(GG) && (null === bG ? (await rG(), !0) : JG(bG, ZG))))
-    }
-    async function JG(GG, bG) {
-      const ZG = await LG.e.setItem(kG.b, GG);
-      return ZG && FG(GG, bG), ZG
-    }
-    async function rG() {
-      await LG.e.removeItem(kG.b), LG.h.removeItem(yG.d)
-    }
-
-    function zG() {
-      return KG(rG)
-    }
-
-    function EG(GG, bG) {
-      return "active" === oG(GG, bG).kind
-    }
-
-    function oG(GG, bG) {
-      var ZG;
-      return null === GG ? {
-        kind: "none",
-        reason: "nothingStored"
-      } : iG(GG) ? {
-        kind: "none",
-        reason: "otherApiVersion"
-      } : !1 !== (null === (ZG = GG.validation) || void 0 === ZG ? void 0 : ZG.ok) || GG.validation.fromRecheck ? null === bG ? {
-        kind: "none",
-        reason: "noCompiler"
-      } : WG(GG, bG) ? {
-        kind: "blocked",
-        messageKey: "shaderPack:failedUnchecked"
-      } : GG.validation.ok ? {
-        kind: "active"
-      } : {
-        kind: "blocked",
-        messageKey: "shaderPack:failedValidation"
-      } : {
-        kind: "none",
-        reason: "failedWhenLoaded"
-      }
-    }
-
-    function XG() {
-      LG.l.setItem(YG, performance.timeOrigin)
-    }
-
-    function uG() {
-      return LG.l.getItem(YG) === performance.timeOrigin
-    }
-
-    function iG(GG) {
-      return !(0, SG.g)(GG.manifest.apiVersion)
-    }
-
-    function CG(GG) {
-      return VG ??= GG.sF((0, UG.shaderPackTextures)()), VG
-    }
-
-    function WG(GG, bG) {
-      var ZG;
-      return (null === (ZG = GG.validation) || void 0 === ZG ? void 0 : ZG.headerVersion) !== CG(bG)
-    }
-
-    function mG(GG) {
-      return KG((async () => {
-        FG(await (0, kG.e)(!0), GG)
-      }))
-    }
-
-    function IG() {
-      return KG((async () => {
-        LG.h.removeItem(yG.d)
-      }))
-    }
-
-    function FG(GG, bG) {
-      EG(GG, bG) ? LG.h.setItem(yG.d, !0) : LG.h.removeItem(yG.d)
-    }
-  },
-  6661: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => SG,
-      e: () => LG
-    });
-    var wG = ZG(29);
-    const SG = "shaderPack";
-    async function LG() {
-      var GG;
-      let bG = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (GG = await wG.e.getItem(SG, bG)) && void 0 !== GG ? GG : null
-    }
-  },
-  6627: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      loadShaderPackTextures: () => yG,
-      shaderPackTextures: () => kG
-    });
-    var wG = ZG(5062);
-    let SG = null,
-      LG = null;
-
-    function yG() {
-      return LG ??= Promise.all([ZG.e(73), ZG.e(190)]).then((() => ZG(40868))).then((GG => {
-        let {
-          FORMER_BLOCK_IMAGE_NAMES: bG,
-          textureNameToIndex: ZG,
-          textureAnimationData: LG
-        } = GG;
-        return SG ??= (0, wG.j)(ZG, LG, bG), SG
-      })), LG
-    }
-
-    function kG() {
-      if (null === SG) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return SG
-    }
-  },
-  5062: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      A: () => fG,
-      d: () => kG,
-      h: () => yG,
-      i: () => wG,
-      j: () => hG,
-      k: () => pG,
-      o: () => SG,
-      s: () => LG,
-      u: () => YG,
-      y: () => VG
-    });
-    const wG = 5;
-
-    function SG(GG) {
-      return GG === wG
-    }
-
-    function LG(GG) {
-      return [...GG.features]
-    }
-    const yG = 262144,
-      kG = 256,
-      UG = 256;
-
-    function YG(GG) {
-      if ("object" !== typeof GG || null === GG || Array.isArray(GG)) return "The pack has no files.";
-      const bG = [];
-      for (const [ZG, wG] of Object.entries(GG)) {
-        if ("string" !== typeof wG) return `${ZG} isn't text.`;
-        bG.push({
-          path: ZG,
-          source: wG
-        })
-      }
-      return bG.sort(((GG, bG) => pG(GG.path, bG.path))),
-        function(GG) {
-          if (0 === GG.length) return "The pack has no .wgsl files.";
-          if (GG.length > kG) return `The pack has more than ${kG} .wgsl files.`;
-          const bG = new Set;
-          for (const {
-              path: ZG
-            }
-            of GG) {
-            const GG = QG(ZG);
-            if (null !== GG) return GG;
-            if (bG.has(ZG)) return `The pack has two files at ${ZG}.`;
-            bG.add(ZG)
-          }
-          return fG(GG) > yG ? `The pack's .wgsl files are over ${yG/1024} KB in total.` : null
-        }(bG) ?? bG
-    }
-
-    function VG(GG) {
-      const bG = {};
-      for (const ZG of GG) bG[ZG.path] = ZG.source;
-      return bG
-    }
-
-    function pG(GG, bG) {
-      return GG < bG ? -1 : GG > bG ? 1 : 0
-    }
-
-    function fG(GG) {
-      const bG = new TextEncoder;
-      let ZG = 0;
-      for (const {
-          source: wG
-        }
-        of GG) ZG += bG.encode(wG).byteLength;
-      return ZG
-    }
-
-    function QG(GG) {
-      if (!GG.toLowerCase().endsWith(".wgsl")) return `${GG} isn't a .wgsl file.`;
-      if (GG.length > UG) return `A file path is over ${UG} characters.`;
-      if (GG.includes("\\") || /[\u0000-\u001f]/.test(GG)) return `${GG} isn't a valid file path.`;
-      return GG.split("/").some((GG => "" === GG || "." === GG || ".." === GG)) ? `${GG} isn't a valid file path.` : null
-    }
-    const KG = /^(.*)\[rot\[([1-4])$/;
-
-    function hG(GG, bG) {
-      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const wG = new Map;
-      bG.forEach(((GG, bG) => {
-        let {
-          numAnimStates: ZG,
-          animStartIdx: SG
-        } = GG;
-        for (let LG = 1; LG < ZG; LG++) wG.set(SG + LG - 1, bG)
-      }));
-      const SG = Object.entries(GG),
-        LG = new Map;
-      for (const [hG, dG] of SG) {
-        const GG = KG.exec(hG);
-        "1" === GG?.[2] && LG.set(GG[1], dG + 1)
-      }
-      const yG = GG => {
-          const bG = KG.exec(GG);
-          return bG && LG.has(bG[1]) ? {
-            root: bG[1],
-            rotation: Number(bG[2]) - 1
-          } : null
-        },
-        kG = new Set(SG.map((GG => {
-          let [bG] = GG;
-          return yG(bG)?.root ?? bG
-        }))),
-        UG = (GG, ZG) => {
-          const wG = GG.replace(/_?0$/, "");
-          return (bG[ZG]?.numAnimStates ?? 0) > 1 && !kG.has(wG) ? wG : GG
-        },
-        YG = new Map;
-      for (const [KG, hG] of SG) YG.set(hG, UG(yG(KG)?.root ?? KG, hG));
-      const VG = SG.reduce(((GG, bG) => {
-          let [, ZG] = bG;
-          return Math.max(GG, ZG + 1)
-        }), 0),
-        pG = Array.from({
-          length: VG
-        }, ((GG, bG) => ({
-          id: bG + 1,
-          rotation: 0
-        }))),
-        fG = new Map,
-        QG = new Map;
-      for (const [KG, hG] of SG) {
-        const GG = yG(KG),
-          bG = wG.get(hG);
-        if (void 0 !== bG) {
-          const ZG = YG.get(bG);
-          QG.set(KG, {
-            name: KG,
-            texture: ZG,
-            kind: "frame"
-          }), GG && !QG.has(GG.root) && QG.set(GG.root, {
-            name: GG.root,
-            texture: ZG,
-            kind: "frame"
-          });
-          continue
-        }
-        const ZG = YG.get(hG),
-          SG = GG?.root ?? KG;
-        if (ZG !== SG && QG.set(SG, {
-            name: SG,
-            texture: ZG,
-            kind: "frame"
-          }), GG) {
-          const bG = LG.get(GG.root);
-          pG[hG] = {
-            id: bG,
-            rotation: GG.rotation
-          }, fG.set(ZG, bG), QG.set(KG, {
-            name: KG,
-            texture: ZG,
-            kind: "rotation"
+    function mM(MM) {
+      let {
+        game: rM
+      } = MM;
+      const iM = (0, nM.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        OM = (0, QM.g)(rM, iM),
+        mM = (0, PM.c)(OM),
+        HM = void 0 !== mM.blurhash;
+      return (0, LM.jsxs)("div", {
+        className: "SchematicImageContainer",
+        children: [mM.isLoading && !HM && (0, LM.jsx)(aM.d, {
+          loaderType: "Secondary"
+        }), !mM.failed && (null !== mM.src || HM) && (0, LM.jsx)("div", {
+          className: SM()("SchematicImage", zM.k, {
+            SchematicImageFadeIn: mM.fadeIn && !HM
+          }),
+          style: (0, zM.h)(mM),
+          children: (0, LM.jsx)(zM.e, {
+            image: mM
           })
-        } else fG.set(ZG, hG + 1)
-      }
-      for (const KG of fG.keys()) QG.delete(KG);
-      for (const [KG, hG] of ZG) {
-        const GG = fG.get(hG);
-        void 0 === GG || fG.has(KG) || (fG.set(KG, GG), QG.delete(KG))
-      }
-      return {
-        named: [...fG].sort(((GG, bG) => {
-          let [ZG] = GG, [wG] = bG;
-          return ZG < wG ? -1 : ZG > wG ? 1 : 0
-        })).map((GG => {
-          let [bG, ZG] = GG;
-          return {
-            name: bG,
-            id: ZG
-          }
-        })),
-        aliases: [...QG.values()],
-        layers: pG
-      }
+        }), mM.failed && (0, LM.jsx)("div", {
+          className: "SchematicImageError",
+          children: (0, LM.jsx)(jM.b, {
+            name: "face-dizzy"
+          })
+        })]
+      })
     }
+  },
+  7012: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      default: () => fM
+    });
+    iM(5299);
+    var OM = iM(44),
+      SM = iM(1116),
+      jM = iM.n(SM),
+      aM = iM(313),
+      PM = iM(1088),
+      nM = iM(1229),
+      QM = iM(1067),
+      zM = iM(1188),
+      LM = iM(1573),
+      mM = iM(3955),
+      HM = iM(1142),
+      hM = iM(5306),
+      JM = iM(2818),
+      dM = iM(1520),
+      yM = iM(4945),
+      lM = iM(5309),
+      EM = iM(1396),
+      UM = iM(1591),
+      GM = iM(4937),
+      CM = iM(2721),
+      eM = iM(5318),
+      bM = iM(6869),
+      wM = iM(1627),
+      tM = iM(1303);
+    const gM = [{
+        scope: "customGames",
+        title: "studio:leaderboardCustomGames"
+      }, {
+        scope: "allGames",
+        title: "studio:leaderboardAllGames"
+      }, {
+        scope: "dormantGames",
+        title: "studio:leaderboardDormantGames"
+      }],
+      uM = 25,
+      RM = "scope",
+      pM = "category",
+      WM = "customGames";
+    const sM = 7,
+      DM = {
+        playsPerDay: null,
+        avgPlaytimeMinutes: null,
+        retention: null
+      };
+
+    function kM(MM) {
+      let {
+        position: rM
+      } = MM;
+      const iM = bM.e[rM];
+      return (0, tM.jsxs)("td", {
+        className: jM()("StudioLeaderboardPosition", {
+          StudioLeaderboardTopPosition: void 0 !== iM,
+          [`StudioLeaderboardTopPosition${rM}`]: void 0 !== iM
+        }),
+        children: [void 0 !== iM && (0, tM.jsx)("img", {
+          className: "StudioLeaderboardPositionItem",
+          src: iM,
+          alt: ""
+        }), rM]
+      })
+    }
+
+    function ZM(MM) {
+      let {
+        discoverability: rM
+      } = MM;
+      const {
+        playsPerDay: iM,
+        avgPlaytimeMinutes: SM,
+        retention: jM
+      } = null === rM ? DM : (0, mM.i)(rM);
+      return (0, tM.jsxs)(OM.Fragment, {
+        children: [(0, tM.jsx)("td", {
+          children: null !== iM ? (0, mM.b)(iM) : "-"
+        }), (0, tM.jsx)("td", {
+          children: null !== SM ? (0, mM.d)(SM) : "-"
+        }), (0, tM.jsx)("td", {
+          children: null !== jM ? (0, mM.g)(jM) : "-"
+        })]
+      })
+    }
+
+    function oM(MM) {
+      let {
+        discoverability: rM
+      } = MM;
+      return (0, tM.jsx)("td", {
+        className: "StudioLeaderboardEngagementScore",
+        children: void 0 !== (null === rM || void 0 === rM ? void 0 : rM.engagementScore) ? (0, nM.T)(Math.round(rM.engagementScore)) : "-"
+      })
+    }
+
+    function fM() {
+      var MM, rM;
+      const {
+        t: iM
+      } = (0, zM.A)(), SM = (0, UM.useNavigatePreserveSearch)(), {
+        userContext: jM,
+        isUserContextUpdating: bM
+      } = (0, HM.b)(), DM = (0, CM.q)(), [fM, YM] = (0, GM.k)(), NM = (AM = fM.get(RM), gM.some((MM => MM.scope === AM)) ? AM : WM);
+      var AM;
+      const xM = function(MM) {
+          return aM.N.includes(MM) ? MM : null
+        }(fM.get(pM)),
+        vM = (0, GM.d)(fM.get(GM.c)),
+        [FM, BM] = (0, OM.useState)(null),
+        [XM, IM] = (0, OM.useState)(!1);
+
+      function KM(MM) {
+        YM((rM => {
+          (0, GM.f)(rM, RM, MM.scope === WM ? null : MM.scope), (0, GM.f)(rM, pM, MM.category), (0, GM.h)(rM, MM.page)
+        }))
+      }
+      const qM = !bM && jM.playerHasRank("developer"),
+        TM = qM && "allGames" === NM,
+        VM = qM && "dormantGames" === NM;
+      (0, OM.useEffect)((() => {
+        if (bM) return;
+        let MM = !1;
+        return BM(null), IM(!1), LM.c.getPublishedGamePreviews(jM, {
+          searchQuery: null,
+          pageNumber: vM,
+          pageSize: uM,
+          onlyFavouriteGames: !1,
+          onlyOwnedGames: !1,
+          onlyApprovedGames: !1,
+          schematicIdsToExclude: [],
+          gameCategories: null !== xM ? [xM] : [],
+          upAndComing: !1,
+          dormantGames: VM,
+          sortByEngagementScore: !0,
+          firstPartyGameNames: TM ? QM.b : void 0,
+          includeOwners: !0
+        }).then((rM => {
+          MM || BM(rM)
+        })).catch((rM => {
+          console.error("Failed to load the studio leaderboard", rM), MM || IM(!0)
+        })), () => {
+          MM = !0
+        }
+      }), [bM, TM, VM, xM, vM, jM]);
+      const cM = null !== (MM = null === FM || void 0 === FM ? void 0 : FM.results) && void 0 !== MM ? MM : null,
+        Mr = function(MM, rM, iM) {
+          const [SM, jM] = (0, OM.useState)({}), aM = iM ? (null !== MM && void 0 !== MM ? MM : []).flatMap((MM => "firstPartyGame" === MM.type ? [(0, PM.e)(MM.gameNameWithVariation, !0)] : [])).join(",") : "", nM = (0, OM.useMemo)((() => "" === aM ? [] : aM.split(",")), [aM]);
+          return (0, OM.useEffect)((() => {
+            if (0 === nM.length) return void jM({});
+            let MM = !1;
+            return LM.c.getGamesByAnalyticsIds(rM, nM).then((rM => {
+              MM || jM(rM)
+            })).catch((MM => {
+              console.error("Failed to load first party discoverability for the studio leaderboard", MM)
+            })), () => {
+              MM = !0
+            }
+          }), [nM, rM]), SM
+        }(cM, jM, qM),
+        rr = null !== cM ? function(MM, rM, iM, OM, SM) {
+          return MM.map(((MM, jM) => {
+            var aM;
+            const nM = OM + jM + 1;
+            if ("customGame" === MM.type) {
+              const rM = MM.preview;
+              return {
+                key: rM.schematicId,
+                position: nM,
+                thumbnail: (0, tM.jsx)(hM.b, {
+                  game: rM
+                }),
+                name: rM.name,
+                owner: MM.owner,
+                category: rM.gameCategory,
+                ccu: rM.ccu,
+                favourites: rM.favourites,
+                discoverability: (0, mM.k)(rM) ? rM : null,
+                url: (0, wM.p)((0, PM.d)(rM.schematicId))
+              }
+            }
+            const QM = MM.gameNameWithVariation,
+              zM = (0, PM.e)(QM, !0);
+            return {
+              key: QM,
+              position: nM,
+              thumbnail: (0, tM.jsx)(eM.d, {
+                game: QM
+              }),
+              name: (0, wM.n)(QM, SM),
+              owner: null,
+              category: (0, wM.e)(QM),
+              ccu: (0, CM.e)(QM, rM),
+              favourites: null,
+              discoverability: null !== (aM = iM[zM]) && void 0 !== aM ? aM : null,
+              url: (0, wM.p)(zM)
+            }
+          }))
+        }(cM, DM, Mr, (vM - 1) * uM, iM) : [],
+        ir = !XM && null === FM,
+        Or = !ir && !XM && 0 === rr.length,
+        Sr = null !== (rM = null === FM || void 0 === FM ? void 0 : FM.totalPages) && void 0 !== rM ? rM : 1;
+      return (0, tM.jsxs)("div", {
+        className: "StudioPage StudioLeaderboard",
+        children: [(0, tM.jsx)("div", {
+          className: "StudioPageHeader",
+          children: (0, tM.jsx)("h1", {
+            className: "StudioPageTitle",
+            children: iM("studio:leaderboard")
+          })
+        }), (0, tM.jsxs)("div", {
+          className: "StudioLeaderboardBanner",
+          children: [!VM && (0, tM.jsx)("div", {
+            children: iM("studio:leaderboardBanner")
+          }), VM && (0, tM.jsx)("div", {
+            children: iM("studio:leaderboardDormantBanner")
+          }), (0, tM.jsx)("div", {
+            children: iM("studio:leaderboardMetricsBanner", {
+              days: sM
+            })
+          })]
+        }), qM && (0, tM.jsx)("div", {
+          className: "StudioLeaderboardScopes",
+          children: gM.map((MM => (0, tM.jsx)(dM.V, {
+            active: NM === MM.scope,
+            onClick: () => {
+              KM({
+                scope: MM.scope,
+                category: xM,
+                page: 1
+              })
+            },
+            children: iM(MM.title)
+          }, MM.scope)))
+        }), (0, tM.jsxs)("div", {
+          className: "StudioLeaderboardCategories",
+          children: [(0, tM.jsx)(dM.V, {
+            active: null === xM,
+            onClick: () => {
+              KM({
+                scope: NM,
+                category: null,
+                page: 1
+              })
+            },
+            children: iM("studio:leaderboardAllCategories")
+          }), aM.N.map((MM => (0, tM.jsx)(dM.V, {
+            active: xM === MM,
+            onClick: () => {
+              KM({
+                scope: NM,
+                category: MM,
+                page: 1
+              })
+            },
+            children: (0, aM.W)(MM)
+          }, MM)))]
+        }), ir && (0, tM.jsx)("div", {
+          className: "StudioPageLoader AnimFadeIn",
+          children: (0, tM.jsx)(EM.d, {})
+        }), XM && (0, tM.jsx)("div", {
+          className: "StudioPageMessage AnimFadeIn",
+          children: iM("studio:failedToLoadLeaderboard")
+        }), Or && (0, tM.jsx)("div", {
+          className: "StudioPageMessage AnimFadeIn",
+          children: iM("studio:leaderboardEmpty")
+        }), !ir && !XM && !Or && (0, tM.jsx)("div", {
+          className: "StudioLeaderboardTableScroll AnimFadeIn",
+          children: (0, tM.jsx)(lM.c, {
+            className: "StudioTable",
+            columns: [{
+              key: "position",
+              header: "#"
+            }, {
+              key: "game",
+              header: iM("general:game")
+            }, {
+              key: "owner",
+              header: iM("general:owner")
+            }, ...null === xM ? [{
+              key: "category",
+              header: iM("general:category")
+            }] : [], ...qM ? [{
+              key: "engagementScore",
+              header: "engagementScore"
+            }] : [], {
+              key: "playsPerDay",
+              header: iM("studio:leaderboardPlaysPerDay")
+            }, {
+              key: "sessionLength",
+              header: iM("studio:leaderboardSessionLength")
+            }, {
+              key: "retention",
+              header: iM("studio:leaderboardSessionsPerPlayer")
+            }, ...VM ? [] : [{
+              key: "ccu",
+              header: iM("studio:metricCcu")
+            }], {
+              key: "favourites",
+              header: iM("general:favourites")
+            }],
+            rows: rr,
+            getRowKey: MM => MM.key,
+            renderRow: MM => (0, tM.jsxs)("tr", {
+              onClick: () => {
+                SM(MM.url)
+              },
+              children: [(0, tM.jsx)(kM, {
+                position: MM.position
+              }), (0, tM.jsx)("td", {
+                children: (0, tM.jsx)(eM.f, {
+                  thumbnail: MM.thumbnail,
+                  name: MM.name
+                })
+              }), (0, tM.jsxs)("td", {
+                className: "StudioLeaderboardOwner",
+                children: [null === MM.owner && "-", null !== MM.owner && (0, tM.jsx)(JM.f, {
+                  playerSocialPreview: MM.owner,
+                  showLocation: !1,
+                  opensProfileCard: !1
+                })]
+              }), null === xM && (0, tM.jsx)("td", {
+                children: (0, aM.W)(MM.category)
+              }), qM && (0, tM.jsx)(oM, {
+                discoverability: MM.discoverability
+              }), (0, tM.jsx)(ZM, {
+                discoverability: MM.discoverability
+              }), !VM && (0, tM.jsx)("td", {
+                children: null !== MM.ccu ? (0, nM.T)(MM.ccu) : "-"
+              }), (0, tM.jsx)("td", {
+                children: null !== MM.favourites ? (0, nM.T)(MM.favourites) : "-"
+              })]
+            })
+          })
+        }), !XM && (0, tM.jsx)(yM.d, {
+          className: "AnimFadeIn",
+          page: vM,
+          totalPages: Sr,
+          onSetPage: MM => {
+            KM({
+              scope: NM,
+              category: xM,
+              page: MM
+            })
+          }
+        })]
+      })
+    }
+  },
+  5318: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => aM,
+      f: () => jM
+    });
+    var OM = iM(1627),
+      SM = iM(1303);
+
+    function jM(MM) {
+      let {
+        thumbnail: rM,
+        name: iM
+      } = MM;
+      return (0, SM.jsxs)("div", {
+        className: "StudioTableGameCell",
+        children: [(0, SM.jsx)("div", {
+          className: "StudioTableThumbnail",
+          children: rM
+        }), (0, SM.jsx)("span", {
+          className: "StudioTableGameName",
+          children: iM
+        })]
+      })
+    }
+
+    function aM(MM) {
+      let {
+        game: rM
+      } = MM;
+      return (0, SM.jsx)("img", {
+        className: "StudioTableThumbnailImage",
+        src: (0, OM.j)(rM),
+        alt: ""
+      })
+    }
+  },
+  6869: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM
+    });
+    const OM = {
+      1: iM(6874),
+      2: iM(6877),
+      3: iM(6883)
+    }
+  },
+  5309: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => PM
+    });
+    var OM = iM(44),
+      SM = iM(1116),
+      jM = iM.n(SM),
+      aM = iM(1303);
+
+    function PM(MM) {
+      let {
+        columns: rM,
+        rows: iM,
+        getRowKey: SM,
+        renderRow: PM,
+        className: nM
+      } = MM;
+      return (0, aM.jsxs)("table", {
+        className: jM()("Table", nM),
+        children: [(0, aM.jsx)("thead", {
+          children: (0, aM.jsx)("tr", {
+            children: rM.map((MM => (0, aM.jsx)("th", {
+              children: MM.header
+            }, MM.key)))
+          })
+        }), (0, aM.jsx)("tbody", {
+          children: iM.map((MM => (0, aM.jsx)(OM.Fragment, {
+            children: PM(MM)
+          }, SM(MM))))
+        })]
+      })
+    }
+  },
+  5299: () => {},
+  6874: MM => {
+    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
+  },
+  6877: MM => {
+    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
+  },
+  6883: MM => {
+    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

@@ -1,597 +1,370 @@
-export const id = 25;
-export const ids = [25];
+export const id = 30;
+export const ids = [30];
 export const modules = {
-  36946: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => QG,
-      d: () => KG,
-      g: () => fG,
-      j: () => pG
+  5233: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => dM,
+      e: () => yM
     });
-    var wG = ZG(34472),
-      SG = ZG(36951),
-      LG = ZG(36955),
-      yG = ZG(8759),
-      kG = ZG(1389),
-      UG = ZG(51),
-      YG = ZG(59),
-      VG = ZG(1067);
+    var OM = iM(1116),
+      SM = iM.n(OM),
+      jM = iM(44),
+      aM = iM(1188),
+      PM = iM(5242),
+      nM = iM(2006),
+      QM = iM(2640),
+      zM = iM(5248),
+      LM = iM(1303);
+    const mM = new WeakMap;
+    let HM = 0;
 
-    function pG() {
-      var GG;
-      return (0, kG.j)(SG.c, (0, SG.l)()), (0, VG.jsx)(VG.Fragment, {
-        children: null === (GG = (0, SG.l)()) || void 0 === GG ? void 0 : GG.content
-      })
+    function hM(MM) {
+      let rM = mM.get(MM);
+      return void 0 === rM && (rM = HM++, mM.set(MM, rM)), rM
     }
 
-    function fG(GG) {
-      var bG;
+    function JM(MM) {
       let {
-        show: ZG
-      } = GG;
-      (0, kG.j)(SG.c, (0, SG.l)());
-      const YG = null === (bG = (0, SG.l)()) || void 0 === bG ? void 0 : bG.menu;
-      return (0, UG.useEffect)((() => {
-        var GG;
-        ZG || (null === YG || void 0 === YG || null === (GG = YG.onClose) || void 0 === GG || GG.call(YG), (0, LG.m)())
-      }), [ZG, YG]), (0, UG.useEffect)((() => ZG ? (0, yG.g)(LG.t, LG.f) : void 0), [ZG]), (0, VG.jsx)(wG.b, {
-        showing: ZG,
-        globallyUniqueKey: "clientGameMenu",
-        children: null === YG || void 0 === YG ? void 0 : YG.content
-      })
-    }
-
-    function QG(GG) {
-      let {
-        placement: bG = "bottom"
-      } = GG;
-      return (0, VG.jsx)("div", {
-        id: `clientGameHud-${bG}`,
-        style: {
-          display: "contents"
-        }
-      })
-    }
-
-    function KG(GG) {
-      let {
-        children: bG,
-        placement: ZG = "bottom"
-      } = GG;
-      const [wG, SG] = (0, UG.useState)(null);
-      return (0, UG.useEffect)((() => {
-        SG(document.getElementById(`clientGameHud-${ZG}`))
-      }), [ZG]), wG ? (0, YG.createPortal)(bG, wG) : null
-    }
-  },
-  4851: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => dG,
-      e: () => JG
-    });
-    var wG = ZG(1006),
-      SG = ZG.n(wG),
-      LG = ZG(51),
-      yG = ZG(1151),
-      kG = ZG(4858),
-      UG = ZG(1876),
-      YG = ZG(2409),
-      VG = ZG(4864),
-      pG = ZG(1067);
-    const fG = new WeakMap;
-    let QG = 0;
-
-    function KG(GG) {
-      let bG = fG.get(GG);
-      return void 0 === bG && (bG = QG++, fG.set(GG, bG)), bG
-    }
-
-    function hG(GG) {
-      let {
-        piece: bG
-      } = GG;
-      return "space" === bG.kind ? (0, pG.jsx)(pG.Fragment, {
-        children: bG.text
-      }) : (0, pG.jsx)("span", {
+        piece: rM
+      } = MM;
+      return "space" === rM.kind ? (0, LM.jsx)(LM.Fragment, {
+        children: rM.text
+      }) : (0, LM.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${bG.delayMs}ms`
+          "--word-delay": `${rM.delayMs}ms`
         },
-        children: (0, pG.jsx)(kG.b, {
-          text: "icon" === bG.kind ? `[[${bG.icon}]]` : bG.text
+        children: (0, LM.jsx)(PM.c, {
+          text: "icon" === rM.kind ? `[[${rM.icon}]]` : rM.text
         })
       })
     }
 
-    function dG(GG) {
+    function dM(MM) {
       let {
-        display: bG
-      } = GG;
+        display: rM
+      } = MM;
       const {
-        selectedLanguage: ZG
-      } = (0, yG.w)(), wG = (0, LG.useMemo)((() => (0, VG.d)((0, VG.f)(bG).plan.pieces)), [bG, ZG.code]);
-      return (0, pG.jsxs)("div", {
-        className: SG()("Dialogue", {
-          DialogueAnimateIn: !1 !== bG.animateIn
+        selectedLanguage: iM
+      } = (0, aM.A)(), OM = (0, jM.useMemo)((() => (0, zM.e)((0, zM.i)(rM).plan.pieces)), [rM, iM.code]);
+      return (0, LM.jsxs)("div", {
+        className: SM()("Dialogue", {
+          DialogueAnimateIn: !1 !== rM.animateIn
         }),
-        children: [bG.speakerName && (0, pG.jsx)(UG.c, {
-          text: bG.speakerName,
+        children: [rM.speakerName && (0, LM.jsx)(nM.b, {
+          text: rM.speakerName,
           className: "DialogueSpeaker"
-        }), (0, pG.jsx)("p", {
+        }), (0, LM.jsx)("p", {
           className: "DialogueLine",
-          children: wG.map(((GG, bG) => 1 === GG.length && "space" === GG[0].kind ? GG[0].text : (0, pG.jsx)("span", {
+          children: OM.map(((MM, rM) => 1 === MM.length && "space" === MM[0].kind ? MM[0].text : (0, LM.jsx)("span", {
             className: "DialogueGlue",
-            children: GG.map(((GG, bG) => (0, pG.jsx)(hG, {
-              piece: GG
-            }, bG)))
-          }, bG)))
+            children: MM.map(((MM, rM) => (0, LM.jsx)(JM, {
+              piece: MM
+            }, rM)))
+          }, rM)))
         })]
       })
     }
-    const JG = (0, LG.memo)((function() {
-      const GG = (0, YG.i)("dialogue");
-      return (0, pG.jsx)("div", {
+    const yM = (0, jM.memo)((function() {
+      const MM = (0, QM.f)("dialogue");
+      return (0, LM.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: GG && (0, pG.jsx)(dG, {
-          display: GG
-        }, KG(GG))
+        children: MM && (0, LM.jsx)(dM, {
+          display: MM
+        }, hM(MM))
       })
     }))
   },
-  4858: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => kG
+  5242: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => PM
     });
-    var wG = ZG(51),
-      SG = ZG(333),
-      LG = ZG(1889),
-      yG = ZG(1067);
+    var OM = iM(44),
+      SM = iM(313),
+      jM = iM(2026),
+      aM = iM(1303);
 
-    function kG(GG) {
+    function PM(MM) {
       let {
-        text: bG
-      } = GG;
-      const ZG = [];
-      let kG = "";
-      return (0, SG.xc)(bG).forEach(((GG, bG) => {
-        if ("string" === typeof GG || !(0, LG.e)(GG.icon)) return void(kG += "string" === typeof GG ? GG : GG.icon);
-        const SG = Math.max(0, kG.trimEnd().search(/\S{1,12}$/));
-        ZG.push((0, yG.jsxs)(wG.Fragment, {
-          children: [kG.slice(0, SG), (0, yG.jsxs)("span", {
+        text: rM
+      } = MM;
+      const iM = [];
+      let PM = "";
+      return (0, SM.bc)(rM).forEach(((MM, rM) => {
+        if ("string" === typeof MM || !(0, jM.d)(MM.icon)) return void(PM += "string" === typeof MM ? MM : MM.icon);
+        const SM = Math.max(0, PM.trimEnd().search(/\S{1,12}$/));
+        iM.push((0, aM.jsxs)(OM.Fragment, {
+          children: [PM.slice(0, SM), (0, aM.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [kG.slice(SG), (0, yG.jsx)("span", {
+            children: [PM.slice(SM), (0, aM.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": GG.icon,
-              children: (0, yG.jsx)(LG.b, {
-                itemName: GG.icon,
+              "aria-label": MM.icon,
+              children: (0, aM.jsx)(jM.b, {
+                itemName: MM.icon,
                 amount: 0
               })
             })]
           })]
-        }, bG)), kG = ""
-      })), ZG.push(kG), (0, yG.jsx)(yG.Fragment, {
-        children: ZG
+        }, rM)), PM = ""
+      })), iM.push(PM), (0, aM.jsx)(aM.Fragment, {
+        children: iM
       })
     }
   },
-  34472: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => LG
+  35017: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => jM
     });
-    var wG = ZG(4558),
-      SG = ZG(4561);
+    var OM = iM(4919),
+      SM = iM(4923);
 
-    function LG(GG) {
+    function jM(MM) {
       let {
-        children: bG,
-        showing: ZG,
-        globallyUniqueKey: LG,
-        alwaysMountChildren: yG = !1,
-        doGameplayStartStopOnShow: kG = !0,
-        keepsMovement: UG = !1
-      } = GG;
-      return (0, SG.e)(!0, ZG, LG, UG), (0, wG.d)(kG, ZG), ZG || yG ? bG : null
+        children: rM,
+        showing: iM,
+        globallyUniqueKey: jM,
+        alwaysMountChildren: aM = !1,
+        doGameplayStartStopOnShow: PM = !0,
+        keepsMovement: nM = !1
+      } = MM;
+      return (0, SM.c)(!0, iM, jM, nM), (0, OM.c)(PM, iM), iM || aM ? rM : null
     }
   },
-  4864: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => lG,
-      f: () => cG
+  5248: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => DM,
+      i: () => sM
     });
-    var wG = ZG(4871),
-      SG = ZG(333);
-    const LG = 120,
-      yG = 260,
-      kG = 1.15,
-      UG = 1.2,
-      YG = 2,
-      VG = 1.08,
-      pG = .8,
-      fG = .95,
-      QG = 8,
-      KG = "[\"')\\]\u300d\u300f\uff09]*",
-      hG = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${KG}$`),
-      dG = new RegExp(`[?\uff1f]${KG}$`),
-      JG = new RegExp(`[!\uff01]${KG}$`),
-      rG = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      zG = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      EG = new RegExp(`[${zG}]`),
-      oG = new RegExp(`[${zG}]|[^${zG}]+`, "g"),
-      XG = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var OM = iM(5251),
+      SM = iM(313);
+    const jM = 120,
+      aM = 260,
+      PM = 1.15,
+      nM = 1.2,
+      QM = 2,
+      zM = 1.08,
+      LM = .8,
+      mM = .95,
+      HM = 8,
+      hM = "[\"')\\]\u300d\u300f\uff09]*",
+      JM = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${hM}$`),
+      dM = new RegExp(`[?\uff1f]${hM}$`),
+      yM = new RegExp(`[!\uff01]${hM}$`),
+      lM = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      EM = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      UM = new RegExp(`[${EM}]`),
+      GM = new RegExp(`[${EM}]|[^${EM}]+`, "g"),
+      CM = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function uG(GG) {
-      let bG = 2166136261;
-      for (let ZG = 0; ZG < GG.length; ZG++) bG ^= GG.charCodeAt(ZG), bG = Math.imul(bG, 16777619);
-      return (bG >>> 0) / 4294967295 * 2 - 1
+    function eM(MM) {
+      let rM = 2166136261;
+      for (let iM = 0; iM < MM.length; iM++) rM ^= MM.charCodeAt(iM), rM = Math.imul(rM, 16777619);
+      return (rM >>> 0) / 4294967295 * 2 - 1
     }
 
-    function iG(GG) {
-      var bG;
-      if (EG.test(GG)) return 1;
-      const ZG = GG.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        wG = ZG.replace(/[^0-9]/g, "");
-      if (wG.length > 0 && !/\p{L}/u.test(ZG)) return Math.min(wG.length, 4);
-      const SG = null !== (bG = ZG.match(XG)) && void 0 !== bG ? bG : [];
-      if (0 === SG.length) {
-        var LG, yG;
-        const GG = null !== (LG = null === (yG = ZG.match(/\p{L}/gu)) || void 0 === yG ? void 0 : yG.length) && void 0 !== LG ? LG : 0;
-        return 0 === GG ? 0 : Math.min(Math.max(1, Math.round(GG / 2.5)), QG)
+    function bM(MM) {
+      var rM;
+      if (UM.test(MM)) return 1;
+      const iM = MM.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        OM = iM.replace(/[^0-9]/g, "");
+      if (OM.length > 0 && !/\p{L}/u.test(iM)) return Math.min(OM.length, 4);
+      const SM = null !== (rM = iM.match(CM)) && void 0 !== rM ? rM : [];
+      if (0 === SM.length) {
+        var jM, aM;
+        const MM = null !== (jM = null === (aM = iM.match(/\p{L}/gu)) || void 0 === aM ? void 0 : aM.length) && void 0 !== jM ? jM : 0;
+        return 0 === MM ? 0 : Math.min(Math.max(1, Math.round(MM / 2.5)), HM)
       }
-      const kG = ZG.replace(/[^\p{L}]/gu, ""),
-        UG = SG.length > 1 && "e" === SG.at(-1) && kG.endsWith("e") && !kG.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(GG.replace(/[^\p{L}]/gu, ""));
-      return Math.min(SG.length - (UG ? 1 : 0), QG)
+      const PM = iM.replace(/[^\p{L}]/gu, ""),
+        nM = SM.length > 1 && "e" === SM.at(-1) && PM.endsWith("e") && !PM.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(MM.replace(/[^\p{L}]/gu, ""));
+      return Math.min(SM.length - (nM ? 1 : 0), HM)
     }
 
-    function CG(GG) {
-      return GG.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function wM(MM) {
+      return MM.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function WG(GG) {
-      const bG = GG.replace(/[^\p{L}]/gu, "");
-      return bG.length >= 2 && bG === bG.toUpperCase() && bG !== bG.toLowerCase()
+    function tM(MM) {
+      const rM = MM.replace(/[^\p{L}]/gu, "");
+      return rM.length >= 2 && rM === rM.toUpperCase() && rM !== rM.toLowerCase()
     }
 
-    function mG(GG, bG) {
-      var ZG;
-      const QG = bG && (0, wG.i)(bG),
-        KG = null !== (ZG = null === QG || void 0 === QG ? void 0 : QG.syllableMs) && void 0 !== ZG ? ZG : wG.d,
-        zG = function(GG) {
-          const bG = [];
-          for (const wG of (0, SG.xc)(GG))
-            if ("string" === typeof wG)
-              for (const GG of wG.split(/(\s+)/)) {
-                if ("" === GG) continue;
-                if (/^\s+$/.test(GG)) {
-                  bG.push({
+    function gM(MM, rM) {
+      var iM;
+      const HM = rM && (0, OM.p)(rM),
+        hM = null !== (iM = null === HM || void 0 === HM ? void 0 : HM.syllableMs) && void 0 !== iM ? iM : OM.d,
+        EM = function(MM) {
+          const rM = [];
+          for (const OM of (0, SM.bc)(MM))
+            if ("string" === typeof OM)
+              for (const MM of OM.split(/(\s+)/)) {
+                if ("" === MM) continue;
+                if (/^\s+$/.test(MM)) {
+                  rM.push({
                     kind: "space",
-                    text: GG
+                    text: MM
                   });
                   continue
                 }
-                if (!EG.test(GG)) {
-                  bG.push({
+                if (!UM.test(MM)) {
+                  rM.push({
                     kind: "word",
-                    text: GG,
+                    text: MM,
                     delayMs: 0
                   });
                   continue
                 }
-                let wG = !0;
-                for (const SG of null !== (ZG = GG.match(oG)) && void 0 !== ZG ? ZG : []) {
-                  var ZG;
-                  const GG = bG.at(-1);
-                  wG || "word" !== (null === GG || void 0 === GG ? void 0 : GG.kind) || EG.test(SG) || /[\p{L}\p{N}]/u.test(SG) ? (wG || bG.push({
+                let OM = !0;
+                for (const SM of null !== (iM = MM.match(GM)) && void 0 !== iM ? iM : []) {
+                  var iM;
+                  const MM = rM.at(-1);
+                  OM || "word" !== (null === MM || void 0 === MM ? void 0 : MM.kind) || UM.test(SM) || /[\p{L}\p{N}]/u.test(SM) ? (OM || rM.push({
                     kind: "space",
                     text: "\u200b"
-                  }), bG.push({
+                  }), rM.push({
                     kind: "word",
-                    text: SG,
+                    text: SM,
                     delayMs: 0
-                  }), wG = !1) : GG.text += SG
+                  }), OM = !1) : MM.text += SM
                 }
-              } else bG.push({
+              } else rM.push({
                 kind: "icon",
-                text: wG.icon,
+                text: OM.icon,
                 delayMs: 0
               });
-          return bG
-        }(GG),
-        XG = [];
-      let mG = [];
-      for (const wG of zG) "space" !== wG.kind && (mG.push(wG), hG.test(wG.text) && (XG.push(mG), mG = []));
-      XG.push(mG);
-      const IG = [];
-      let FG = 0;
-      for (const wG of XG) {
-        var vG, aG;
-        const GG = null !== (vG = null === (aG = wG.at(-1)) || void 0 === aG ? void 0 : aG.text) && void 0 !== vG ? vG : "",
-          bG = dG.test(GG),
-          ZG = JG.test(GG),
-          SG = wG.map((GG => "word" === GG.kind ? iG(GG.text) : 1)),
-          zG = SG.findLastIndex((GG => GG > 0));
-        for (const [dG, JG] of wG.entries()) {
-          const GG = "word" === JG.kind,
-            wG = SG[dG];
-          JG.delayMs = FG;
-          for (let SG = 0; QG && SG < wG; SG++) {
+          return rM
+        }(MM),
+        CM = [];
+      let gM = [];
+      for (const OM of EM) "space" !== OM.kind && (gM.push(OM), JM.test(OM.text) && (CM.push(gM), gM = []));
+      CM.push(gM);
+      const uM = [];
+      let RM = 0;
+      for (const OM of CM) {
+        var pM, WM;
+        const MM = null !== (pM = null === (WM = OM.at(-1)) || void 0 === WM ? void 0 : WM.text) && void 0 !== pM ? pM : "",
+          rM = dM.test(MM),
+          iM = yM.test(MM),
+          SM = OM.map((MM => "word" === MM.kind ? bM(MM.text) : 1)),
+          EM = SM.findLastIndex((MM => MM > 0));
+        for (const [dM, yM] of OM.entries()) {
+          const MM = "word" === yM.kind,
+            OM = SM[dM];
+          yM.delayMs = RM;
+          for (let SM = 0; HM && SM < OM; SM++) {
             const {
-              intonation: LG
-            } = QG;
-            let yG = zG > 0 ? -LG.declineSemitones * (dG / zG) : 0;
-            yG += uG(`${CG(JG.text)}|${SG}`) * LG.variationSemitones;
-            const hG = Math.min(1, LG.variationSemitones);
-            let rG = QG.glideSemitones,
-              EG = 1;
-            ZG && (yG += LG.exclaimLiftSemitones, EG *= kG), bG && dG === zG && (yG += LG.questionRiseSemitones * (wG > 1 ? .5 + .5 * SG / (wG - 1) : 1), SG === wG - 1 && (rG = Math.abs(rG) + LG.questionRiseSemitones / 2)), GG && WG(JG.text) && (yG += YG * hG, EG *= UG), wG > 1 && 0 === SG && (yG += pG * hG, EG *= VG), IG.push({
-              atMs: FG + SG * KG,
-              semitones: yG,
-              glideSemitones: rG,
-              durationMs: SG < wG - 1 ? Math.min(QG.durationMs, KG * fG) : QG.durationMs,
-              level: EG
+              intonation: jM
+            } = HM;
+            let aM = EM > 0 ? -jM.declineSemitones * (dM / EM) : 0;
+            aM += eM(`${wM(yM.text)}|${SM}`) * jM.variationSemitones;
+            const JM = Math.min(1, jM.variationSemitones);
+            let lM = HM.glideSemitones,
+              UM = 1;
+            iM && (aM += jM.exclaimLiftSemitones, UM *= PM), rM && dM === EM && (aM += jM.questionRiseSemitones * (OM > 1 ? .5 + .5 * SM / (OM - 1) : 1), SM === OM - 1 && (lM = Math.abs(lM) + jM.questionRiseSemitones / 2)), MM && tM(yM.text) && (aM += QM * JM, UM *= nM), OM > 1 && 0 === SM && (aM += LM * JM, UM *= zM), uM.push({
+              atMs: RM + SM * hM,
+              semitones: aM,
+              glideSemitones: lM,
+              durationMs: SM < OM - 1 ? Math.min(HM.durationMs, hM * mM) : HM.durationMs,
+              level: UM
             })
           }
-          FG += wG * KG + (hG.test(JG.text) ? yG : rG.test(JG.text) ? LG : 0)
+          RM += OM * hM + (JM.test(yM.text) ? aM : lM.test(yM.text) ? jM : 0)
         }
       }
       return {
-        pieces: zG.map((GG => "space" === GG.kind ? GG : "icon" === GG.kind ? {
+        pieces: EM.map((MM => "space" === MM.kind ? MM : "icon" === MM.kind ? {
           kind: "icon",
-          icon: GG.text,
-          delayMs: GG.delayMs
+          icon: MM.text,
+          delayMs: MM.delayMs
         } : {
           kind: "word",
-          text: GG.text,
-          delayMs: GG.delayMs
+          text: MM.text,
+          delayMs: MM.delayMs
         })),
-        blips: IG
+        blips: uM
       }
     }
-    var IG = ZG(1151),
-      FG = ZG(1204),
-      vG = ZG(1903);
+    var uM = iM(1188),
+      RM = iM(1258),
+      pM = iM(2045);
 
-    function aG(GG) {
-      if ("string" === typeof GG) return GG;
-      const bG = FG.d.get().getCurrentLanguageCode();
-      return (0, IG.o)(bG, GG.translationKey, (0, IG.k)(GG.params, vG.b.shown))
+    function WM(MM) {
+      if ("string" === typeof MM) return MM;
+      const rM = RM.e.get().getCurrentLanguageCode();
+      return (0, uM.r)(rM, MM.translationKey, (0, uM.o)(MM.params, pM.c.shown))
     }
 
-    function cG(GG) {
-      const bG = void 0 === GG.voice ? null : (0, wG.j)(GG.voice),
-        ZG = bG && (0, wG.i)(bG);
+    function sM(MM) {
+      const rM = void 0 === MM.voice ? null : (0, OM.r)(MM.voice),
+        iM = rM && (0, OM.p)(rM);
       return {
-        plan: mG(aG(GG.line), ZG),
-        synth: ZG
+        plan: gM(WM(MM.line), iM),
+        synth: iM
       }
     }
 
-    function lG(GG) {
-      const bG = [];
-      let ZG = [];
-      for (const [SG, LG] of GG.entries()) {
-        var wG;
-        "space" === LG.kind && (" " !== LG.text || "icon" !== (null === (wG = GG[SG + 1]) || void 0 === wG ? void 0 : wG.kind)) ? (ZG.length > 0 && bG.push(ZG), bG.push([LG]), ZG = []) : ZG.push(LG)
+    function DM(MM) {
+      const rM = [];
+      let iM = [];
+      for (const [SM, jM] of MM.entries()) {
+        var OM;
+        "space" === jM.kind && (" " !== jM.text || "icon" !== (null === (OM = MM[SM + 1]) || void 0 === OM ? void 0 : OM.kind)) ? (iM.length > 0 && rM.push(iM), rM.push([jM]), iM = []) : iM.push(jM)
       }
-      return ZG.length > 0 && bG.push(ZG), bG
+      return iM.length > 0 && rM.push(iM), rM
     }
   },
-  8759: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => LG,
-      g: () => SG
-    });
-    let wG = null;
-    const SG = function(GG) {
-        const bG = {
-          cycle: GG,
-          canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
-        };
-        return wG = bG, () => {
-          wG === bG && (wG = null)
-        }
-      },
-      LG = () => {
-        var GG;
-        return null !== (GG = wG) && void 0 !== GG && GG.canCycle() ? wG.cycle : null
-      }
-  },
-  36955: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => LG,
-      f: () => hG,
-      h: () => dG,
-      j: () => kG,
-      k: () => fG,
-      m: () => JG,
-      p: () => pG,
-      r: () => zG,
-      t: () => KG,
-      x: () => rG
-    });
-    var wG = ZG(17),
-      SG = ZG(19);
-    const LG = "clientGameInventoryButtonsChanged",
-      yG = new Map;
-
-    function kG() {
-      return [...yG.values()].sort(((GG, bG) => {
-        var ZG, wG;
-        return (null !== (ZG = GG.order) && void 0 !== ZG ? ZG : 0) - (null !== (wG = bG.order) && void 0 !== wG ? wG : 0)
-      }))
-    }
-    let UG = null;
-
-    function YG(GG) {
-      UG = GG
-    }
-    let VG = !1;
-
-    function pG(GG) {
-      VG = !0;
-      try {
-        GG.onClick()
-      } finally {
-        VG = !1
-      }
-      GG.panel && "clientGame" === wG.e.get("openInGameMenuName") && YG(GG.id)
-    }
-
-    function fG() {
-      return VG
-    }
-
-    function QG() {
-      return kG().filter((GG => GG.panel && !GG.disabled))
-    }
-
-    function KG(GG) {
-      const bG = QG(),
-        ZG = bG.findIndex((GG => GG.id === UG));
-      return !(ZG < 0 || bG.length < 2) && (pG(bG[(ZG + GG + bG.length) % bG.length]), !0)
-    }
-
-    function hG() {
-      return null !== UG && QG().length > 1
-    }
-
-    function dG() {
-      YG(null)
-    }
-
-    function JG() {
-      "inventory" !== wG.e.get("openInGameMenuName") && YG(null)
-    }
-
-    function rG() {
-      const GG = UG;
-      return YG(null), GG
-    }
-
-    function zG(GG) {
-      return yG.set(GG.id, GG), SG.l.xh(LG, kG(), !0), () => {
-        yG.get(GG.id) === GG && (yG.delete(GG.id), SG.l.xh(LG, kG()))
-      }
-    }
-  },
-  36951: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => kG,
-      f: () => dG,
-      i: () => JG,
-      j: () => fG,
-      l: () => YG,
-      m: () => hG,
-      n: () => QG,
-      q: () => VG
-    });
-    var wG = ZG(17),
-      SG = ZG(19),
-      LG = ZG(1251),
-      yG = ZG(36955);
-    const kG = "clientGameUiChanged";
-    let UG = null;
-
-    function YG() {
-      return UG
-    }
-
-    function VG(GG, bG) {
-      const ZG = {
-        content: GG,
-        menu: bG
-      };
-      return UG = ZG, SG.l.xh(kG, UG, !0), () => {
-        UG === ZG && (UG = null, KG = !1, dG(), SG.l.xh(kG, null))
-      }
-    }
-    let pG = null;
-
-    function fG() {
-      return pG
-    }
-
-    function QG(GG) {
-      return pG = GG, () => {
-        pG === GG && (pG = null)
-      }
-    }
-    let KG = !1;
-
-    function hG() {
-      const GG = wG.e.get("openInGameMenuName");
-      "clientGame" !== GG && (KG = "inventory" === GG), (0, yG.k)() || (0, yG.h)(), (0, LG.z)(LG.e), wG.e.set({
-        openInGameMenuName: "clientGame",
-        openEverythingMenuName: null
-      })
-    }
-
-    function dG() {
-      rG(!1)
-    }
-
-    function JG() {
-      rG(KG)
-    }
-
-    function rG(GG) {
-      "clientGame" === wG.e.get("openInGameMenuName") && wG.e.set({
-        openInGameMenuName: GG ? "inventory" : null
-      }), GG || (0, yG.h)(), KG = !1
-    }
-  },
-  38925: (GG, bG, ZG) => {
-    function wG(GG, bG, ZG) {
-      const wG = new Set,
-        SG = new ResizeObserver(ZG),
-        LG = () => {
-          const bG = new Set(document.querySelectorAll(GG));
-          let LG = !1;
-          for (const GG of wG) bG.has(GG) || (SG.unobserve(GG), wG.delete(GG), LG = !0);
-          for (const GG of bG) wG.has(GG) || (SG.observe(GG), yG.observe(GG, {
+  39509: (MM, rM, iM) => {
+    function OM(MM, rM, iM) {
+      const OM = new Set,
+        SM = new ResizeObserver(iM),
+        jM = () => {
+          const rM = new Set(document.querySelectorAll(MM));
+          let jM = !1;
+          for (const MM of OM) rM.has(MM) || (SM.unobserve(MM), OM.delete(MM), jM = !0);
+          for (const MM of rM) OM.has(MM) || (SM.observe(MM), aM.observe(MM, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), wG.add(GG));
-          LG && ZG()
+          }), OM.add(MM));
+          jM && iM()
         },
-        yG = new MutationObserver((bG => {
-          bG.some((GG => "attributes" === GG.type)) && ZG(), bG.some((bG => function(GG, bG, ZG) {
-            if ("childList" !== GG.type) return !1;
-            for (const wG of GG.addedNodes)
-              if (wG instanceof Element && (wG.matches(bG) || wG.querySelector(bG))) return !0;
-            for (const wG of GG.removedNodes)
-              if (wG instanceof Element)
-                for (const GG of ZG)
-                  if (wG.contains(GG)) return !0;
+        aM = new MutationObserver((rM => {
+          rM.some((MM => "attributes" === MM.type)) && iM(), rM.some((rM => function(MM, rM, iM) {
+            if ("childList" !== MM.type) return !1;
+            for (const OM of MM.addedNodes)
+              if (OM instanceof Element && (OM.matches(rM) || OM.querySelector(rM))) return !0;
+            for (const OM of MM.removedNodes)
+              if (OM instanceof Element)
+                for (const MM of iM)
+                  if (OM.contains(MM)) return !0;
             return !1
-          }(bG, GG, wG))) && LG()
+          }(rM, MM, OM))) && jM()
         }));
-      yG.observe(document.body, {
+      aM.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const kG of bG) SG.observe(kG);
-      return window.addEventListener("resize", ZG), LG(), ZG(), () => {
-        SG.disconnect(), yG.disconnect(), window.removeEventListener("resize", ZG)
+      for (const PM of rM) SM.observe(PM);
+      return window.addEventListener("resize", iM), jM(), iM(), () => {
+        SM.disconnect(), aM.disconnect(), window.removeEventListener("resize", iM)
       }
     }
-    ZG.d(bG, {
-      c: () => wG
+    iM.d(rM, {
+      b: () => OM
     })
   },
-  8926: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => kG,
-      i: () => UG
+  9467: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => PM,
+      e: () => nM
     });
-    var wG = ZG(17),
-      SG = ZG(1287),
-      LG = ZG(80);
-    const yG = {
+    var OM = iM(19),
+      SM = iM(1373),
+      jM = iM(83);
+    const aM = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -634,41 +407,41 @@ export const modules = {
       }
     };
 
-    function kG() {
-      return (0, LG.isMobile)() && "function" === typeof navigator.vibrate
+    function PM() {
+      return (0, jM.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const UG = new class {
-      constructor(GG) {
-        this.deps = GG, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const nM = new class {
+      constructor(MM) {
+        this.deps = MM, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(GG, bG) {
-        var ZG;
+      play(MM, rM) {
+        var iM;
         if (!this.deps.enabled()) return;
-        const wG = yG[GG],
-          SG = null !== bG && void 0 !== bG ? bG : wG.pattern;
-        if (null === SG) return void console.warn("No vibration pattern for", GG);
-        const LG = this.deps.now();
-        LG - this.lastAnyAt < 40 && wG.priority < this.playingPriority || LG - (null !== (ZG = this.lastAt.get(GG)) && void 0 !== ZG ? ZG : -1 / 0) < wG.minGapMs || LG < this.playingUntil && wG.priority < this.playingPriority || (this.lastAt.set(GG, LG), this.lastAnyAt = LG, this.playingUntil = LG + SG.reduce(((GG, bG) => GG + bG), 0), this.playingPriority = wG.priority, this.deps.vibrate(SG))
+        const OM = aM[MM],
+          SM = null !== rM && void 0 !== rM ? rM : OM.pattern;
+        if (null === SM) return void console.warn("No vibration pattern for", MM);
+        const jM = this.deps.now();
+        jM - this.lastAnyAt < 40 && OM.priority < this.playingPriority || jM - (null !== (iM = this.lastAt.get(MM)) && void 0 !== iM ? iM : -1 / 0) < OM.minGapMs || jM < this.playingUntil && OM.priority < this.playingPriority || (this.lastAt.set(MM, jM), this.lastAnyAt = jM, this.playingUntil = jM + SM.reduce(((MM, rM) => MM + rM), 0), this.playingPriority = OM.priority, this.deps.vibrate(SM))
       }
     }({
-      vibrate: GG => {
-        navigator.vibrate([...GG])
+      vibrate: MM => {
+        navigator.vibrate([...MM])
       },
       now: () => performance.now(),
-      enabled: () => kG() && wG.e.get("isTouchScreen") && wG.e.get("clientEscMenuOptions").vibration && !(0, SG.f)()
+      enabled: () => PM() && OM.d.get("isTouchScreen") && OM.d.get("clientEscMenuOptions").vibration && !(0, SM.i)()
     })
   },
-  4871: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => SG,
-      e: () => wG,
-      g: () => LG,
-      i: () => UG,
-      j: () => yG
+  5251: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => SM,
+      h: () => OM,
+      l: () => jM,
+      p: () => nM,
+      r: () => aM
     });
-    const wG = ["sine", "triangle", "square", "sawtooth"],
-      SG = 55,
-      LG = {
+    const OM = ["sine", "triangle", "square", "sawtooth"],
+      SM = 55,
+      jM = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -807,39 +580,39 @@ export const modules = {
         }
       };
 
-    function yG(GG) {
-      return "string" !== typeof GG ? GG : Object.hasOwn(LG, GG) ? LG[GG] : null
+    function aM(MM) {
+      return "string" !== typeof MM ? MM : Object.hasOwn(jM, MM) ? jM[MM] : null
     }
 
-    function kG(GG, bG, ZG) {
-      return Math.min(ZG, Math.max(bG, GG))
+    function PM(MM, rM, iM) {
+      return Math.min(iM, Math.max(rM, MM))
     }
 
-    function UG(GG) {
-      const bG = kG(GG.durationMs, 10, 500),
-        ZG = kG(GG.attackMs, 0, bG),
+    function nM(MM) {
+      const rM = PM(MM.durationMs, 10, 500),
+        iM = PM(MM.attackMs, 0, rM),
         {
-          intonation: SG
-        } = GG;
+          intonation: SM
+        } = MM;
       return {
-        waveform: wG.includes(GG.waveform) ? GG.waveform : "sine",
-        pitchHz: kG(GG.pitchHz, 20, 4e3),
-        glideSemitones: kG(GG.glideSemitones, -24, 24),
-        durationMs: bG,
-        attackMs: ZG,
-        releaseMs: kG(GG.releaseMs, 0, bG - ZG),
-        lowpassHz: null === GG.lowpassHz ? null : kG(GG.lowpassHz, 20, 2e4),
-        volume: kG(GG.volume, 0, 2),
+        waveform: OM.includes(MM.waveform) ? MM.waveform : "sine",
+        pitchHz: PM(MM.pitchHz, 20, 4e3),
+        glideSemitones: PM(MM.glideSemitones, -24, 24),
+        durationMs: rM,
+        attackMs: iM,
+        releaseMs: PM(MM.releaseMs, 0, rM - iM),
+        lowpassHz: null === MM.lowpassHz ? null : PM(MM.lowpassHz, 20, 2e4),
+        volume: PM(MM.volume, 0, 2),
         intonation: {
-          variationSemitones: kG(SG.variationSemitones, 0, 6),
-          declineSemitones: kG(SG.declineSemitones, 0, 12),
-          questionRiseSemitones: kG(SG.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: kG(SG.exclaimLiftSemitones, 0, 12)
+          variationSemitones: PM(SM.variationSemitones, 0, 6),
+          declineSemitones: PM(SM.declineSemitones, 0, 12),
+          questionRiseSemitones: PM(SM.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: PM(SM.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: kG(GG.syllableMs, 25, 200)
+        syllableMs: PM(MM.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

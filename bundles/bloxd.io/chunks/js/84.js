@@ -1,9 +1,16329 @@
 export const id = 84;
 export const ids = [84];
 export const modules = {
-  4772: GG => {
-    GG.exports = "# Item Names (1532 items)\n\nWood Pickaxe\nStone Pickaxe\nIron Pickaxe\nGold Pickaxe\nDiamond Pickaxe\nMoonstone Pickaxe\nGolem Pickaxe\nWood Axe\nStone Axe\nIron Axe\nGold Axe\nDiamond Axe\nMoonstone Axe\nArtisan Axe\nWood Spade\nStone Spade\nIron Spade\nGold Spade\nDiamond Spade\nWood Sword\nStone Sword\nIron Sword\nGold Sword\nDiamond Sword\nKnight Sword\nWood Hoe\nStone Hoe\nIron Hoe\nGold Hoe\nDiamond Hoe\nFlashlight\nMining Helmet\nWood Helmet\nIron Helmet\nGold Helmet\nDiamond Helmet\nWood Chestplate\nIron Chestplate\nGold Chestplate\nDiamond Chestplate\nFur Chestplate\nWood Leggings\nIron Leggings\nGold Leggings\nDiamond Leggings\nWood Boots\nIron Boots\nGold Boots\nDiamond Boots\nSpiked Boots\nWood Gauntlets\nIron Gauntlets\nGold Gauntlets\nDiamond Gauntlets\nMilitary Helmet\nMilitary Chestplate\nMilitary Gauntlets\nMilitary Leggings\nMilitary Boots\nWhite Wood Helmet\nWhite Wood Chestplate\nWhite Wood Leggings\nWhite Wood Boots\nWhite Wood Gauntlets\nOrange Wood Helmet\nOrange Wood Chestplate\nOrange Wood Leggings\nOrange Wood Boots\nOrange Wood Gauntlets\nMagenta Wood Helmet\nMagenta Wood Chestplate\nMagenta Wood Leggings\nMagenta Wood Boots\nMagenta Wood Gauntlets\nLight Blue Wood Helmet\nLight Blue Wood Chestplate\nLight Blue Wood Leggings\nLight Blue Wood Boots\nLight Blue Wood Gauntlets\nYellow Wood Helmet\nYellow Wood Chestplate\nYellow Wood Leggings\nYellow Wood Boots\nYellow Wood Gauntlets\nLime Wood Helmet\nLime Wood Chestplate\nLime Wood Leggings\nLime Wood Boots\nLime Wood Gauntlets\nPink Wood Helmet\nPink Wood Chestplate\nPink Wood Leggings\nPink Wood Boots\nPink Wood Gauntlets\nGray Wood Helmet\nGray Wood Chestplate\nGray Wood Leggings\nGray Wood Boots\nGray Wood Gauntlets\nLight Gray Wood Helmet\nLight Gray Wood Chestplate\nLight Gray Wood Leggings\nLight Gray Wood Boots\nLight Gray Wood Gauntlets\nCyan Wood Helmet\nCyan Wood Chestplate\nCyan Wood Leggings\nCyan Wood Boots\nCyan Wood Gauntlets\nPurple Wood Helmet\nPurple Wood Chestplate\nPurple Wood Leggings\nPurple Wood Boots\nPurple Wood Gauntlets\nBlue Wood Helmet\nBlue Wood Chestplate\nBlue Wood Leggings\nBlue Wood Boots\nBlue Wood Gauntlets\nBrown Wood Helmet\nBrown Wood Chestplate\nBrown Wood Leggings\nBrown Wood Boots\nBrown Wood Gauntlets\nGreen Wood Helmet\nGreen Wood Chestplate\nGreen Wood Leggings\nGreen Wood Boots\nGreen Wood Gauntlets\nRed Wood Helmet\nRed Wood Chestplate\nRed Wood Leggings\nRed Wood Boots\nRed Wood Gauntlets\nBlack Wood Helmet\nBlack Wood Chestplate\nBlack Wood Leggings\nBlack Wood Boots\nBlack Wood Gauntlets\nShears\nArtisan Shears\nStick\nCoal\nRaw Iron\nIron Bar\nIron Fragment\nRaw Gold\nGold Bar\nGold Fragment\nDiamond\nDiamond Fragment\nMoonstone\nLunite\nMoonstone Fragment\nBowl\nPartially Full Bowl of Cranberries\nHalf Full Bowl of Cranberries\nNearly Full Bowl of Cranberries\nBowl of Cranberries\nMushroom Soup\nGlowing Soup\nNight Vision Soup\nCotton\nGold Crop\nBucket\nWater Bucket\nLava Bucket\nBoat\nINTERNAL_MESH_Boat\nObsidian Boat\nINTERNAL_MESH_Obsidian Boat\nSpeedboat\nINTERNAL_MESH_Speedboat\nWood Hang Glider\nINTERNAL_MESH_Wood Hang Glider\nIron Hang Glider\nINTERNAL_MESH_Iron Hang Glider\nGold Hang Glider\nINTERNAL_MESH_Gold Hang Glider\nDiamond Hang Glider\nINTERNAL_MESH_Diamond Hang Glider\nHovercraft\nINTERNAL_MESH_Hovercraft\nYellow Kart\nWhite Kart\nRed Kart\nPurple Kart\nPink Kart\nOrange Kart\nMagenta Kart\nLime Kart\nLight Gray Kart\nLight Blue Kart\nGreen Kart\nGray Kart\nCyan Kart\nBrown Kart\nBlue Kart\nBlack Kart\nINTERNAL_MESH_Yellow Kart\nINTERNAL_MESH_White Kart\nINTERNAL_MESH_Red Kart\nINTERNAL_MESH_Purple Kart\nINTERNAL_MESH_Pink Kart\nINTERNAL_MESH_Orange Kart\nINTERNAL_MESH_Magenta Kart\nINTERNAL_MESH_Lime Kart\nINTERNAL_MESH_Light Gray Kart\nINTERNAL_MESH_Light Blue Kart\nINTERNAL_MESH_Green Kart\nINTERNAL_MESH_Gray Kart\nINTERNAL_MESH_Cyan Kart\nINTERNAL_MESH_Brown Kart\nINTERNAL_MESH_Blue Kart\nINTERNAL_MESH_Black Kart\nOff Roader\nINTERNAL_MESH_Off Roader\nGold Mining Drill\nIron Mining Drill\nDiamond Mining Drill\nMoonstone Mining Drill\nArmored Car\nINTERNAL_MESH_Gold Mining Drill\nINTERNAL_MESH_Iron Mining Drill\nINTERNAL_MESH_Diamond Mining Drill\nINTERNAL_MESH_Moonstone Mining Drill\nINTERNAL_MESH_Armored Car\nLight Blue Car\nINTERNAL_MESH_Car\nSnowball\nSnowball Launcher\nPebble\nReinforced Pebble\nBullet\nBall\nReinforced Ball\nFrag Grenade\nMining Grenade\nSmoke Grenade\nMoonstone Orb\nFireball\nBouncy Bomb\nRPG\nObby RPG\nSuper RPG\nGrenade Launcher\nIceball\n67 Base Projectile\n67 Boosted Projectile\nCapitano Grenade\nScatter Pellet\nWood Bow\nWood Bow|meta|charging2\nWood Bow|meta|charging3\nWood Bow|meta|charging4\nStone Bow\nStone Bow|meta|charging2\nStone Bow|meta|charging3\nStone Bow|meta|charging4\nIron Bow\nIron Bow|meta|charging2\nIron Bow|meta|charging3\nIron Bow|meta|charging4\nGold Bow\nGold Bow|meta|charging2\nGold Bow|meta|charging3\nGold Bow|meta|charging4\nDiamond Bow\nDiamond Bow|meta|charging2\nDiamond Bow|meta|charging3\nDiamond Bow|meta|charging4\nWood Crossbow\nWood Crossbow|meta|charging2\nWood Crossbow|meta|charging3\nWood Crossbow|meta|charging4\nStone Crossbow\nStone Crossbow|meta|charging2\nStone Crossbow|meta|charging3\nStone Crossbow|meta|charging4\nIron Crossbow\nIron Crossbow|meta|charging2\nIron Crossbow|meta|charging3\nIron Crossbow|meta|charging4\nGold Crossbow\nGold Crossbow|meta|charging2\nGold Crossbow|meta|charging3\nGold Crossbow|meta|charging4\nDiamond Crossbow\nDiamond Crossbow|meta|charging2\nDiamond Crossbow|meta|charging3\nDiamond Crossbow|meta|charging4\nWood Crossbow Charged\nStone Crossbow Charged\nIron Crossbow Charged\nGold Crossbow Charged\nDiamond Crossbow Charged\nArrow\nCompass\nCompass|meta|dir2\nCompass|meta|dir3\nCompass|meta|dir4\nCompass|meta|dir5\nCompass|meta|dir6\nCompass|meta|dir7\nCompass|meta|dir8\nCompass|meta|dir9\nCompass|meta|dir10\nCompass|meta|dir11\nCompass|meta|dir12\nChunk Map\nBread\nBowl of Rice\nApple\nPlum\nCoconut\nCracked Coconut\nPear\nCherry\nBanana\nWatermelon Slice\nGold Watermelon Slice\nMelon Slice\nGold Melon Slice\nPumpkin Pie\nCorn\nCornbread\nChili Pepper\nMango\nCarrot\nGold Carrot\nRaw Potato\nBaked Potato\nBeetroot\nRaw Porkchop\nCooked Porkchop\nRaw Beef\nSteak\nRaw Mutton\nCooked Mutton\nRaw Venison\nCooked Venison\nRotten Flesh\nRotten Brain\nBone\nBone Meal\nLeather\nSaddle\nSpirit Saddle\nFur\nGolem Eye\nKnight Heart\nTeleport Heart\nFrost Shard\nMolten Cog\nChoir Bell\nSiege Core\nFlywheel\nRadiant Spark\nBrood Sac\nBandolier\nName Tag\nBook\nEmpty Bottle\nWater Bottle\nSlowness Potion\nSlowness Potion II\nSplash Slowness Potion\nSplash Slowness Potion II\nArrow of Slowness\nPoison Potion\nPoison Potion II\nSplash Poison Potion\nSplash Poison Potion II\nArrow of Poison\nWeakness Potion\nWeakness Potion II\nSplash Weakness Potion\nSplash Weakness Potion II\nArrow of Weakness\nInstant Damage Potion\nInstant Damage Potion II\nSplash Instant Damage Potion\nSplash Instant Damage Potion II\nArrow of Instant Damage\nMilk Potion\nSplash Milk Potion\nArrow of Milk\nSpeed Potion\nSpeed Potion II\nSplash Speed Potion\nSplash Speed Potion II\nArrow of Speed\nDefense Potion\nDefense Potion II\nSplash Defense Potion\nSplash Defense Potion II\nArrow of Defense\nStrength Potion\nStrength Potion II\nSplash Strength Potion\nSplash Strength Potion II\nArrow of Strength\nInvisibility Potion\nSplash Invisibility Potion\nArrow of Invisibility\nJump Potion\nJump Potion II\nSplash Jump Potion\nSplash Jump Potion II\nArrow of Jumping\nKnockback Potion\nSplash Knockback Potion\nSplash Knockback Potion II\nArrow of Knockback\nRegeneration Potion\nRegeneration Potion II\nSplash Regeneration Potion\nSplash Regeneration Potion II\nArrow of Regeneration\nInstant Healing Potion\nInstant Healing Potion II\nSplash Instant Healing Potion\nSplash Instant Healing Potion II\nArrow of Instant Healing\nHaste Potion\nHaste Potion II\nSplash Haste Potion\nSplash Haste Potion II\nArrow of Haste\nShield Potion\nShield Potion II\nSplash Shield Potion\nSplash Shield Potion II\nArrow of Shield\nDouble Jump Potion\nSplash Double Jump Potion\nArrow of Double Jump\nHeat Resistance Potion\nSplash Heat Resistance Potion\nArrow of Heat Resistance\nX-Ray Vision Potion\nSplash X-Ray Vision Potion\nArrow of X-Ray Vision\nMining Yield Potion\nMining Yield Potion II\nSplash Mining Yield Potion\nSplash Mining Yield Potion II\nArrow of Mining Yield\nBrain Rot Potion\nSplash Brain Rot Potion\nArrow of Brain Rot\nChaos Potion\nTeleportation Potion\nAmmo\nAK-47\nAK-47|RequiresAmmo\nM16\nM16|RequiresAmmo\nMP40\nMP40|RequiresAmmo\nTAR-21\nTAR-21|RequiresAmmo\nM1911\nM1911|RequiresAmmo\nOne Shot Pistol\nOne Shot Pistol|RequiresAmmo\nDouble Barrel\nDouble Barrel|RequiresAmmo\nAWP\nAWP|RequiresAmmo\nDeagle\nDeagle|RequiresAmmo\nStriker-12\nStriker-12|RequiresAmmo\nVSR\nVSR|RequiresAmmo\nDMR\nDMR|RequiresAmmo\nMinigun\nMinigun|RequiresAmmo\nFMR\nFMR|RequiresAmmo\nSKAR\nSKAR|RequiresAmmo\nBlock-19\nBlock-19|RequiresAmmo\nMini Izu\nMini Izu|RequiresAmmo\nGPMG\nGPMG|RequiresAmmo\nGold Coin\nUpdraft\nSnowdash\nFloor Creator\nMoonstone Remote Explosive\nMoonstone Remote\nIce Bridge\nMaple Planks Bridge\nMessy Stone Bridge\nYellow Balloon\nWhite Balloon\nRed Balloon\nPurple Balloon\nPink Balloon\nOrange Balloon\nMagenta Balloon\nLime Balloon\nLight Gray Balloon\nLight Blue Balloon\nGreen Balloon\nGray Balloon\nCyan Balloon\nBrown Balloon\nBlue Balloon\nBlack Balloon\nINTERNAL_MESH_Yellow Balloon\nINTERNAL_MESH_White Balloon\nINTERNAL_MESH_Red Balloon\nINTERNAL_MESH_Purple Balloon\nINTERNAL_MESH_Pink Balloon\nINTERNAL_MESH_Orange Balloon\nINTERNAL_MESH_Magenta Balloon\nINTERNAL_MESH_Lime Balloon\nINTERNAL_MESH_Light Gray Balloon\nINTERNAL_MESH_Light Blue Balloon\nINTERNAL_MESH_Green Balloon\nINTERNAL_MESH_Gray Balloon\nINTERNAL_MESH_Cyan Balloon\nINTERNAL_MESH_Brown Balloon\nINTERNAL_MESH_Blue Balloon\nINTERNAL_MESH_Black Balloon\nYellow Popup Tower\nWhite Popup Tower\nRed Popup Tower\nPurple Popup Tower\nPink Popup Tower\nOrange Popup Tower\nMagenta Popup Tower\nLime Popup Tower\nLight Gray Popup Tower\nLight Blue Popup Tower\nGreen Popup Tower\nGray Popup Tower\nCyan Popup Tower\nBrown Popup Tower\nBlue Popup Tower\nBlack Popup Tower\nYellow Paintball Gun\nWhite Paintball Gun\nRed Paintball Gun\nPurple Paintball Gun\nPink Paintball Gun\nOrange Paintball Gun\nMagenta Paintball Gun\nLime Paintball Gun\nLight Gray Paintball Gun\nLight Blue Paintball Gun\nGreen Paintball Gun\nGray Paintball Gun\nCyan Paintball Gun\nBrown Paintball Gun\nBlue Paintball Gun\nBlack Paintball Gun\nYellow Paintball\nWhite Paintball\nRed Paintball\nPurple Paintball\nPink Paintball\nOrange Paintball\nMagenta Paintball\nLime Paintball\nLight Gray Paintball\nLight Blue Paintball\nGreen Paintball\nGray Paintball\nCyan Paintball\nBrown Paintball\nBlue Paintball\nBlack Paintball\nYellow Heavy Paintball Gun\nWhite Heavy Paintball Gun\nRed Heavy Paintball Gun\nPurple Heavy Paintball Gun\nPink Heavy Paintball Gun\nOrange Heavy Paintball Gun\nMagenta Heavy Paintball Gun\nLime Heavy Paintball Gun\nLight Gray Heavy Paintball Gun\nLight Blue Heavy Paintball Gun\nGreen Heavy Paintball Gun\nGray Heavy Paintball Gun\nCyan Heavy Paintball Gun\nBrown Heavy Paintball Gun\nBlue Heavy Paintball Gun\nBlack Heavy Paintball Gun\nYellow Paintball Explosive Item\nWhite Paintball Explosive Item\nRed Paintball Explosive Item\nPurple Paintball Explosive Item\nPink Paintball Explosive Item\nOrange Paintball Explosive Item\nMagenta Paintball Explosive Item\nLime Paintball Explosive Item\nLight Gray Paintball Explosive Item\nLight Blue Paintball Explosive Item\nGreen Paintball Explosive Item\nGray Paintball Explosive Item\nCyan Paintball Explosive Item\nBrown Paintball Explosive Item\nBlue Paintball Explosive Item\nBlack Paintball Explosive Item\nYellow Sticky Paintball Explosive Item\nWhite Sticky Paintball Explosive Item\nRed Sticky Paintball Explosive Item\nPurple Sticky Paintball Explosive Item\nPink Sticky Paintball Explosive Item\nOrange Sticky Paintball Explosive Item\nMagenta Sticky Paintball Explosive Item\nLime Sticky Paintball Explosive Item\nLight Gray Sticky Paintball Explosive Item\nLight Blue Sticky Paintball Explosive Item\nGreen Sticky Paintball Explosive Item\nGray Sticky Paintball Explosive Item\nCyan Sticky Paintball Explosive Item\nBrown Sticky Paintball Explosive Item\nBlue Sticky Paintball Explosive Item\nBlack Sticky Paintball Explosive Item\nYellow Seeking Paintball Explosive Item\nWhite Seeking Paintball Explosive Item\nRed Seeking Paintball Explosive Item\nPurple Seeking Paintball Explosive Item\nPink Seeking Paintball Explosive Item\nOrange Seeking Paintball Explosive Item\nMagenta Seeking Paintball Explosive Item\nLime Seeking Paintball Explosive Item\nLight Gray Seeking Paintball Explosive Item\nLight Blue Seeking Paintball Explosive Item\nGreen Seeking Paintball Explosive Item\nGray Seeking Paintball Explosive Item\nCyan Seeking Paintball Explosive Item\nBrown Seeking Paintball Explosive Item\nBlue Seeking Paintball Explosive Item\nBlack Seeking Paintball Explosive Item\nYellow Quick Paintball Explosive Item\nWhite Quick Paintball Explosive Item\nRed Quick Paintball Explosive Item\nPurple Quick Paintball Explosive Item\nPink Quick Paintball Explosive Item\nOrange Quick Paintball Explosive Item\nMagenta Quick Paintball Explosive Item\nLime Quick Paintball Explosive Item\nLight Gray Quick Paintball Explosive Item\nLight Blue Quick Paintball Explosive Item\nGreen Quick Paintball Explosive Item\nGray Quick Paintball Explosive Item\nCyan Quick Paintball Explosive Item\nBrown Quick Paintball Explosive Item\nBlue Quick Paintball Explosive Item\nBlack Quick Paintball Explosive Item\nYellow Paint Bow\nYellow Paint Bow|meta|charging2\nYellow Paint Bow|meta|charging3\nYellow Paint Bow|meta|charging4\nWhite Paint Bow\nWhite Paint Bow|meta|charging2\nWhite Paint Bow|meta|charging3\nWhite Paint Bow|meta|charging4\nRed Paint Bow\nRed Paint Bow|meta|charging2\nRed Paint Bow|meta|charging3\nRed Paint Bow|meta|charging4\nPurple Paint Bow\nPurple Paint Bow|meta|charging2\nPurple Paint Bow|meta|charging3\nPurple Paint Bow|meta|charging4\nPink Paint Bow\nPink Paint Bow|meta|charging2\nPink Paint Bow|meta|charging3\nPink Paint Bow|meta|charging4\nOrange Paint Bow\nOrange Paint Bow|meta|charging2\nOrange Paint Bow|meta|charging3\nOrange Paint Bow|meta|charging4\nMagenta Paint Bow\nMagenta Paint Bow|meta|charging2\nMagenta Paint Bow|meta|charging3\nMagenta Paint Bow|meta|charging4\nLime Paint Bow\nLime Paint Bow|meta|charging2\nLime Paint Bow|meta|charging3\nLime Paint Bow|meta|charging4\nLight Gray Paint Bow\nLight Gray Paint Bow|meta|charging2\nLight Gray Paint Bow|meta|charging3\nLight Gray Paint Bow|meta|charging4\nLight Blue Paint Bow\nLight Blue Paint Bow|meta|charging2\nLight Blue Paint Bow|meta|charging3\nLight Blue Paint Bow|meta|charging4\nGreen Paint Bow\nGreen Paint Bow|meta|charging2\nGreen Paint Bow|meta|charging3\nGreen Paint Bow|meta|charging4\nGray Paint Bow\nGray Paint Bow|meta|charging2\nGray Paint Bow|meta|charging3\nGray Paint Bow|meta|charging4\nCyan Paint Bow\nCyan Paint Bow|meta|charging2\nCyan Paint Bow|meta|charging3\nCyan Paint Bow|meta|charging4\nBrown Paint Bow\nBrown Paint Bow|meta|charging2\nBrown Paint Bow|meta|charging3\nBrown Paint Bow|meta|charging4\nBlue Paint Bow\nBlue Paint Bow|meta|charging2\nBlue Paint Bow|meta|charging3\nBlue Paint Bow|meta|charging4\nBlack Paint Bow\nBlack Paint Bow|meta|charging2\nBlack Paint Bow|meta|charging3\nBlack Paint Bow|meta|charging4\nPig Spawn Orb\nCow Spawn Orb\nSheep Spawn Orb\nHorse Spawn Orb\nCamel Spawn Orb\nIron Goofy Golem Spawn Orb\nGold Goofy Golem Spawn Orb\nDiamond Goofy Golem Spawn Orb\nMoonstone Goofy Golem Spawn Orb\nDeer Spawn Orb\nSlime Spawn Orb\nWolf Spawn Orb\nWildcat Spawn Orb\nSpirit Golem Spawn Orb\nSpirit Wolf Spawn Orb\nSpirit Bear Spawn Orb\nSpirit Stag Spawn Orb\nSpirit Gorilla Spawn Orb\nBear Spawn Orb\nStag Spawn Orb\nGold Watermelon Stag Spawn Orb\nGorilla Spawn Orb\nCave Golem Spawn Orb\nDraugr Zombie Spawn Orb\nDraugr Skeleton Spawn Orb\nFrost Golem Spawn Orb\nFrost Zombie Spawn Orb\nFrost Skeleton Spawn Orb\nDraugr Knight Spawn Orb\nDraugr Huntress Spawn Orb\nMagma Golem Spawn Orb\nDraugr Warper Spawn Orb\nFrost Wraith Spawn Orb\nDraugr Reaver Spawn Orb\nStalker Spawn Orb\nCrone Spawn Orb\nIron Guardian Spawn Orb\nGold Guardian Spawn Orb\nDiamond Guardian Spawn Orb\nMoonstone Guardian Spawn Orb\nTiki Terror Spawn Orb\nMob Catcher\nCaught Mob Pig Default\nCaught Mob Cow Default\nCaught Mob Cow Cream\nCaught Mob Sheep Default\nCaught Mob Sheep Black\nCaught Mob Sheep Red\nCaught Mob Sheep Orange\nCaught Mob Sheep Pink\nCaught Mob Sheep Purple\nCaught Mob Sheep Yellow\nCaught Mob Sheep Blue\nCaught Mob Sheep Brown\nCaught Mob Sheep Cyan\nCaught Mob Sheep Gray\nCaught Mob Sheep Green\nCaught Mob Sheep Lightblue\nCaught Mob Sheep Lightgray\nCaught Mob Sheep Lime\nCaught Mob Sheep Magenta\nCaught Mob Horse Default\nCaught Mob Horse Black\nCaught Mob Horse Brown\nCaught Mob Horse Cream\nCaught Mob Camel Default\nCaught Mob Camel Brown\nCaught Mob Iron_Goofy_Golem Default\nCaught Mob Iron_Goofy_Golem Flaking\nCaught Mob Iron_Goofy_Golem Patchy\nCaught Mob Iron_Goofy_Golem Shedding\nCaught Mob Iron_Goofy_Golem Bare\nCaught Mob Iron_Goofy_Golem Stone\nCaught Mob Gold_Goofy_Golem Default\nCaught Mob Gold_Goofy_Golem Flaking\nCaught Mob Gold_Goofy_Golem Patchy\nCaught Mob Gold_Goofy_Golem Shedding\nCaught Mob Gold_Goofy_Golem Bare\nCaught Mob Gold_Goofy_Golem Stone\nCaught Mob Diamond_Goofy_Golem Default\nCaught Mob Diamond_Goofy_Golem Flaking\nCaught Mob Diamond_Goofy_Golem Patchy\nCaught Mob Diamond_Goofy_Golem Shedding\nCaught Mob Diamond_Goofy_Golem Bare\nCaught Mob Diamond_Goofy_Golem Stone\nCaught Mob Moonstone_Goofy_Golem Default\nCaught Mob Moonstone_Goofy_Golem Flaking\nCaught Mob Moonstone_Goofy_Golem Patchy\nCaught Mob Moonstone_Goofy_Golem Shedding\nCaught Mob Moonstone_Goofy_Golem Bare\nCaught Mob Moonstone_Goofy_Golem Stone\nCaught Mob Deer Default\nCaught Mob Slime Default\nCaught Mob Wolf Default\nCaught Mob Wolf White\nCaught Mob Wolf Brown\nCaught Mob Wolf Grey\nCaught Mob Wolf Spectral\nCaught Mob Wildcat Default\nCaught Mob Wildcat Tabby\nCaught Mob Wildcat Grey\nCaught Mob Wildcat Black\nCaught Mob Wildcat Calico\nCaught Mob Wildcat Siamese\nCaught Mob Wildcat Leopard\nCaught Mob Spirit_Golem Default\nCaught Mob Spirit_Wolf Default\nCaught Mob Spirit_Bear Default\nCaught Mob Spirit_Stag Default\nCaught Mob Spirit_Gorilla Default\nCaught Mob Bear Default\nCaught Mob Stag Default\nCaught Mob Gold_Watermelon_Stag Default\nCaught Mob Gorilla Default\nCaught Mob Cave_Golem Default\nCaught Mob Cave_Golem Iron\nCaught Mob Cave_Golem Corrupted\nCaught Mob Draugr_Zombie Default\nCaught Mob Draugr_Zombie Longhairchestplate\nCaught Mob Draugr_Zombie Longhairclothed\nCaught Mob Draugr_Zombie Shorthairclothed\nCaught Mob Draugr_Zombie Flower\nCaught Mob Draugr_Zombie Flower2\nCaught Mob Draugr_Zombie Mushroom\nCaught Mob Draugr_Zombie Vine\nCaught Mob Draugr_Zombie Vine2\nCaught Mob Draugr_Zombie Corrupted\nCaught Mob Draugr_Zombie Corrupted2\nCaught Mob Draugr_Skeleton Default\nCaught Mob Frost_Golem Default\nCaught Mob Frost_Zombie Default\nCaught Mob Frost_Zombie Longhairchestplate\nCaught Mob Frost_Zombie Shorthairclothed\nCaught Mob Frost_Skeleton Default\nCaught Mob Draugr_Knight Default\nCaught Mob Draugr_Huntress Default\nCaught Mob Draugr_Huntress Chainmail\nCaught Mob Magma_Golem Default\nCaught Mob Draugr_Warper Default\nCaught Mob Frost_Wraith Default\nCaught Mob Frost_Wraith Tattered\nCaught Mob Frost_Wraith Frostking\nCaught Mob Frost_Wraith Accursed\nCaught Mob Draugr_Reaver Default\nCaught Mob Stalker Default\nCaught Mob Stalker Crimson\nCaught Mob Stalker Frost\nCaught Mob Stalker Void\nCaught Mob Crone Default\nCaught Mob Iron_Guardian Default\nCaught Mob Gold_Guardian Default\nCaught Mob Diamond_Guardian Default\nCaught Mob Moonstone_Guardian Default\nCaught Mob Tiki_Terror Default\nCaught Mob Tiki_Terror Titan\nCaught Mob Tiki_Terror Tormentor\nCaught Mob Tiki_Terror Tyrant\nCaught Mob NPC Default\nCaught Mob NPC Emma\nCaught Mob NPC Leo\nCaught Mob NPC Isabel\nCaught Mob NPC Sanjay\nCaught Mob NPC Imara\nCaught Mob NPC Enoch\nCaught Mob NPC Sara\nCaught Mob NPC Carmen\nCaught Mob NPC Chef\nCaught Mob 67 Default\nCaught Mob Bobino_Musculino Default\nCaught Mob Capitano_Explovissimo Default\nCaught Mob Desert_Fennec Default\nCaught Mob Armour_Collector Default\nCaught Mob Furnace_Knight Default\nCaught Mob Lil_Knight Default\nCaught Mob Glass_Gremlin Default\nCaught Mob Glass_Bro Default\nCaught Mob Lord_Vulcan Default\nCaught Mob Zombie Default\nCaught Mob Skeleton Default\nCaught Mob Mummy Default\nCaught Mob Scorpion Default\nCaught Mob Vulcanite Default\nCaught Mob Evil_Tome Default\nCaught Mob Magma_Toad Default\nTimed Spike Bomb\nTimed Spike Bomb|meta|charging2\nTimed Spike Bomb|meta|charging3\nTimed Spike Bomb|meta|charging4\nToxin Ball\nAura XP Fragment\nAura XP Orb\nAura XP Potion\nAura XP Potion II\nSplash Aura XP Potion\nSplash Aura XP Potion II\nArrow of Aura XP\nFirecracker\nRainbow Firecracker\nYellow Firecracker\nWhite Firecracker\nRed Firecracker\nPurple Firecracker\nPink Firecracker\nOrange Firecracker\nMagenta Firecracker\nLime Firecracker\nLight Gray Firecracker\nLight Blue Firecracker\nGreen Firecracker\nGray Firecracker\nCyan Firecracker\nBrown Firecracker\nBlue Firecracker\nBlack Firecracker\nFirecracker Pebble\nRainbow Firecracker Pebble\nYellow Firecracker Pebble\nWhite Firecracker Pebble\nRed Firecracker Pebble\nPurple Firecracker Pebble\nPink Firecracker Pebble\nOrange Firecracker Pebble\nMagenta Firecracker Pebble\nLime Firecracker Pebble\nLight Gray Firecracker Pebble\nLight Blue Firecracker Pebble\nGreen Firecracker Pebble\nGray Firecracker Pebble\nCyan Firecracker Pebble\nBrown Firecracker Pebble\nBlue Firecracker Pebble\nBlack Firecracker Pebble\nWorldBuilder Wand\nRed Strongfish\nGreen Strongfish\nMoon Strongfish\nWheatfish\nMoonfish\nBombfish\nBoomerang Fish\nRoot Flounder\nAbyss Carp\nBoulder Bass\nBarnaclejaw\nCrystalized Wheatfish\nDarter\nShadow Darter\nElectric Eel\nGrass Snapper\nJungle Spinefish\nMangler Catfish\nMossback Arapaima\nSandbelly Piranha\nShadeback Ray\nMudbelly Tilapia\nMireback Carp\nRotslab Eel\nAether Minnow\nMurkborne Ray\nEldertide Leviathan\nOarfish\nAlpha Moon Strongfish\nBamboo Catfish\nBlackwater Bream\nBlackwater Leviathan\nBoned Sturgeon\nBull Shark\nChannel Sawfish\nCoastal Mullet\nCoelacanth\nDriftwood Catfish\nEagle Ray\nGiant Grouper\nGiant Moray\nGiant Stingray\nGolden Mahseer\nGreenfin Loach\nMangrove Herring\nMoonlit Boomerang Fish\nMoonstone Pupfish\nMudline Perch\nMurk Stingray\nNeedlefish\nNomai Moray\nPearlescent Moonfish\nRainbow Guppy\nRed Snapper\nReedglass Minnow\nReef Sardine\nRoot Perch\nRust Scad\nSeahorse\nSnakehead\nSpined Stickleback\nStone Grouper\nSumpback Carp\nSunset Minnow\nTarpon\nThreadfin Bream\nTri-Pointed Needlefish\nGame Dev Fish\nArmoured Searobin\nAsh Lionfish\nBarefrost Toothfish\nBlackfin Icefish\nBasalt Pipefish\nBrimstone Spikefish\nCinder Leviathan\nCrowned Flame Angelfish\nDeepwater Lanternfish\nDriftice Capelin\nEmber Chub\nEmbermark Wrasse\nEviota Vader\nFrost Herring\nFrost Wolf Eel\nFrostpaint Notie\nFrozen Grenadier\nGiant Trevally\nGlacial Lanternfish\nGlacial Silverfish\nHeatwarp Flounder\nHatchetfish\nIce Spined Notothenia\nIceshelf Skate\nIcy Sculpin\nLavaflow Trout\nLavawake Slopefish\nMagma Sardinella\nMagma Trout\nMarbled Moray Cod\nMolten Lotella Cod\nNorthern Wolffish\nPaleice Rockcod\nPermafrost Halibut\nPithead\nPolarflash Electron\nPyroclast Eel\nPyroscale Grouper\nRed Pyreside\nRimesnouted Lancetfish\nScorched Sunfish\nScored Dace\nSilver Dragonfish\nSnow Haddock\nVolcanic Catfish\nVolcanic Semperi\nRusty Rod\nLucky Rod\nSturdy Rod\nJungle Rod\nDraugr Rod\nCursed Rod\nTangle Resistant Rod\nSpeed Rod\nCarbon Rod\nDeep Sea Rod\nMaster Rod\nObsidian Rod\nMolten Magma Rod\nFrost Rod\nBlack Ice Rod\nMythic Rod\nAcorn\nAcorn Jelly\nCow's Milk\nCheese\nCaught Fish\nFish Fillet\nMeaty Bone\nBlinding Pebble\nSheep's Milk\nYoghurt Pot\nTruffle\nTruffle Oil\nOats\nPorridge\nDates\nDate Pudding\nPoop\nFertiliser\nMedkit\nWood Spear\nStone Spear\nIron Spear\nGold Spear\nDiamond Spear\nMoonstone Spear\nWood Dagger\nStone Dagger\nIron Dagger\nGold Dagger\nDiamond Dagger\nMoonstone Dagger\nWood Boomerang\nStone Boomerang\nIron Boomerang\nGold Boomerang\nDiamond Boomerang\nMoonstone Boomerang\nWood Club\nStone Club\nIron Club\nGold Club\nDiamond Club\nMoonstone Club\nWood Mace\nStone Mace\nIron Mace\nGold Mace\nDiamond Mace\nMoonstone Mace\nWood Whip\nStone Whip\nIron Whip\nGold Whip\nDiamond Whip\nMoonstone Whip\nBeef Stew\nChicken\nColeslaw\nEgg\nFish N Chips\nFried Rice\nLettuce\nOmelette\nOnion\nRed Cabbage\nRoast Dinner\nSalad\nStuffed Pepper\nSushi\nTomato\nVegetable Soup\nCommon Lottery Ticket\nUncommon Lottery Ticket\nRare Lottery Ticket\nEpic Lottery Ticket\nLegendary Lottery Ticket\nWood Clock\nWood Clock|meta|midnight\nWood Clock|meta|late_night\nWood Clock|meta|sunrise\nWood Clock|meta|early_day\nWood Clock|meta|late_day\nWood Clock|meta|sunset\nWood Clock|meta|early_night\nGold Clock\nGold Clock|meta|midnight\nGold Clock|meta|late_night\nGold Clock|meta|sunrise\nGold Clock|meta|early_day\nGold Clock|meta|late_day\nGold Clock|meta|sunset\nGold Clock|meta|early_night\nLucky Sword Upgrade\nLucky Armour Upgrade\nLucky Tools Upgrade\nLucky Clover\nVoid Net\nLucky Bomb\nUnlucky Bomb\nSwap Orb\nGolden Lucky Clover\nAmethite\nAmethite Fragment\nAmethite Pickaxe\nAmethite Axe\nAmethite Spade\nAmethite Sword\nAmethite Hoe\nAmethite Helmet\nAmethite Chestplate\nAmethite Leggings\nAmethite Boots\nAmethite Gauntlets\nAmethite Bow\nAmethite Bow|meta|charging2\nAmethite Bow|meta|charging3\nAmethite Bow|meta|charging4\nAmethite Crossbow\nAmethite Crossbow|meta|charging2\nAmethite Crossbow|meta|charging3\nAmethite Crossbow|meta|charging4\nAmethite Crossbow Charged\nAmethite Spear\nAmethite Dagger\nAmethite Boomerang\nAmethite Club\nAmethite Mace\nAmethite Whip\nMagmasteel\nMagmasteel Fragment\nMagmasteel Pickaxe\nMagmasteel Axe\nMagmasteel Spade\nMagmasteel Sword\nMagmasteel Hoe\nMagmasteel Helmet\nMagmasteel Chestplate\nMagmasteel Leggings\nMagmasteel Boots\nMagmasteel Gauntlets\nMagmasteel Bow\nMagmasteel Bow|meta|charging2\nMagmasteel Bow|meta|charging3\nMagmasteel Bow|meta|charging4\nMagmasteel Crossbow\nMagmasteel Crossbow|meta|charging2\nMagmasteel Crossbow|meta|charging3\nMagmasteel Crossbow|meta|charging4\nMagmasteel Crossbow Charged\nMagmasteel Spear\nMagmasteel Dagger\nMagmasteel Boomerang\nMagmasteel Club\nMagmasteel Mace\nMagmasteel Whip\nRubellite\nRubellite Fragment\nRubellite Pickaxe\nRubellite Axe\nRubellite Spade\nRubellite Sword\nRubellite Hoe\nRubellite Helmet\nRubellite Chestplate\nRubellite Leggings\nRubellite Boots\nRubellite Gauntlets\nRubellite Bow\nRubellite Bow|meta|charging2\nRubellite Bow|meta|charging3\nRubellite Bow|meta|charging4\nRubellite Crossbow\nRubellite Crossbow|meta|charging2\nRubellite Crossbow|meta|charging3\nRubellite Crossbow|meta|charging4\nRubellite Crossbow Charged\nRubellite Spear\nRubellite Dagger\nRubellite Boomerang\nRubellite Club\nRubellite Mace\nRubellite Whip\nSerpentite\nSerpentite Fragment\nSerpentite Pickaxe\nSerpentite Axe\nSerpentite Spade\nSerpentite Sword\nSerpentite Hoe\nSerpentite Helmet\nSerpentite Chestplate\nSerpentite Leggings\nSerpentite Boots\nSerpentite Gauntlets\nSerpentite Bow\nSerpentite Bow|meta|charging2\nSerpentite Bow|meta|charging3\nSerpentite Bow|meta|charging4\nSerpentite Crossbow\nSerpentite Crossbow|meta|charging2\nSerpentite Crossbow|meta|charging3\nSerpentite Crossbow|meta|charging4\nSerpentite Crossbow Charged\nSerpentite Spear\nSerpentite Dagger\nSerpentite Boomerang\nSerpentite Club\nSerpentite Mace\nSerpentite Whip\nCursemetal Helmet\nCursemetal Chestplate\nCursemetal Gauntlets\nCursemetal Leggings\nCursemetal Boots\nKingly Amethite Helmet\nKingly Amethite Chestplate\nKingly Amethite Gauntlets\nKingly Amethite Leggings\nKingly Amethite Boots\nKingly Diamond Helmet\nKingly Diamond Chestplate\nKingly Diamond Gauntlets\nKingly Diamond Leggings\nKingly Diamond Boots\nSanguine Shard\nSanguine Sword\nSanguine Bow\nSanguine Bow|meta|charging2\nSanguine Bow|meta|charging3\nSanguine Bow|meta|charging4\nSanguine Crossbow\nSanguine Crossbow|meta|charging2\nSanguine Crossbow|meta|charging3\nSanguine Crossbow|meta|charging4\nSanguine Crossbow Charged\nSanguine Spear\nSanguine Dagger\nSanguine Club\nSanguine Mace\nSanguine Whip\nSanguine Staff\nSanguine Helmet\nSanguine Chestplate\nSanguine Gauntlets\nSanguine Leggings\nSanguine Boots\nSpectral Shard\nSpectral Sword\nSpectral Bow\nSpectral Bow|meta|charging2\nSpectral Bow|meta|charging3\nSpectral Bow|meta|charging4\nSpectral Crossbow\nSpectral Crossbow|meta|charging2\nSpectral Crossbow|meta|charging3\nSpectral Crossbow|meta|charging4\nSpectral Crossbow Charged\nSpectral Spear\nSpectral Dagger\nSpectral Club\nSpectral Mace\nSpectral Whip\nSpectral Staff\nSpectral Helmet\nSpectral Chestplate\nSpectral Gauntlets\nSpectral Leggings\nSpectral Boots\nGeo Shard\nGeo Sword\nGeo Bow\nGeo Bow|meta|charging2\nGeo Bow|meta|charging3\nGeo Bow|meta|charging4\nGeo Crossbow\nGeo Crossbow|meta|charging2\nGeo Crossbow|meta|charging3\nGeo Crossbow|meta|charging4\nGeo Crossbow Charged\nGeo Spear\nGeo Dagger\nGeo Club\nGeo Mace\nGeo Whip\nGeo Staff\nGeo Helmet\nGeo Chestplate\nGeo Gauntlets\nGeo Leggings\nGeo Boots\nAstral Shard\nAstral Sword\nAstral Bow\nAstral Bow|meta|charging2\nAstral Bow|meta|charging3\nAstral Bow|meta|charging4\nAstral Crossbow\nAstral Crossbow|meta|charging2\nAstral Crossbow|meta|charging3\nAstral Crossbow|meta|charging4\nAstral Crossbow Charged\nAstral Spear\nAstral Dagger\nAstral Club\nAstral Mace\nAstral Whip\nAstral Staff\nAstral Helmet\nAstral Chestplate\nAstral Gauntlets\nAstral Leggings\nAstral Boots\nWooden Key\nStone Key\nIron Key\nGold Key\nDiamond Key\nCracked Rubellite Pickaxe\nGoldheart Engine\nDeepbite Drill Tip\nEmpty Fuel Cell\nBlackfire Fuel Cell\nDoom Rivet\nDoom Crest\nRaw Copper\nCopper Bar\nIron Grit\nGold Grit\nCopper Grit\nCharcoal\nRecall Beacon\nIron Hammer\nIron Plate\nCopper Wire\nMotor\nMachine Parts\nRelay Coil\nDeposit Seed (Copper)\nDeposit Seed (Gold)\nDeposit Seed (Voltite)\nDeposit Seed (Coal)\nDeposit Seed (Iron)\nDeposit Seed (Stone)\nSteel Bar\nGold Plate\nLogic Board\nMachine Hull\nRaw Voltite\nPower Coupler\nOre Lens\nHoming Beacon\nPull Charm\nVein Breaker\nVoltite Dust\nVoltite Cell\nSky Pack\nDusk Moss\nStar Alloy\nMoonstone Dust\nComet Shard\nComet Core\nStarbore Drill\nCore Tier 2\nCore Tier 3\nCore Tier 4\nCore Tier 5\nCore Tier 6\nCore Tier 7\nCore Tier 8\nCore Tier 9\nCore Tier 10\nArc Caster\nVoltplate Helmet\nVoltplate Chestplate\nVoltplate Gauntlets\nVoltplate Leggings\nVoltplate Boots\nWood Blade\nWood Guard\nWood Handle\nStone Blade\nStone Guard\nStone Handle\nIron Blade\nIron Guard\nIron Handle\nGold Blade\nGold Guard\nGold Handle\nDiamond Blade\nDiamond Guard\nDiamond Handle\nMoonstone Blade\nMoonstone Guard\nMoonstone Handle\nMagmasteel Blade\nMagmasteel Guard\nMagmasteel Handle\nSanguine Blade\nSanguine Guard\nSanguine Handle\nAstral Blade\nAstral Guard\nAstral Handle\nMoonstone Sword\nMagmaward Fuel\nRaw Uranium\nUranium Grit\nUranium Pellet\nPlutonium Pellet\nSpent Pellet\nGlow Dust\nBiomass\nGraphite\nContainment Plate\nHeat Exchanger\nFocus Lens\nNova Matter\nDeposit Seed (Uranium)\nReactor Blueprint\nWrench\nAdvanced Coupler\nNova Coupler\nCore Tier 11\nCore Tier 12\nCore Tier 13\nCore Tier 14\nCore Tier 15\nJet Chestplate\nNova Jet Chestplate\nNova Helmet\nNova Chestplate\nNova Gauntlets\nNova Leggings\nNova Boots\nNova Blade\nMob Cage\nCaged Pig\nCaged Cow\nCaged Sheep\nCaged Deer\nCaged Stag\nNova Multitool\nPocket Terminal\nComet Beacon\nNova Wrench\n"
+  9825: (MM, rM) => {
+    rM.e = 8, rM.m = function(MM, rM, iM, OM) {
+      if (!Array.isArray(MM)) return !!MM;
+      rM -= Math.floor(rM), iM -= Math.floor(iM), OM -= Math.floor(OM);
+      for (var SM = 0; SM < MM.length; SM += 6)
+        if (rM >= MM[SM] && rM < MM[SM + 3] && iM >= MM[SM + 1] && iM < MM[SM + 4] && OM >= MM[SM + 2] && OM < MM[SM + 5]) return !0;
+      return !1
+    }, rM.i = function(MM) {
+      for (var rM = [], iM = 0; iM < MM.length; iM++) {
+        var OM = MM[iM];
+        if (2 !== OM.length || 3 !== OM[0].length || 3 !== OM[1].length) throw new Error("Subvoxel boxes must contain two three-dimensional bounds");
+        for (var SM = 0; SM < 3; SM++) {
+          var jM = OM[0][SM],
+            aM = OM[1][SM];
+          if (!Number.isInteger(jM) || !Number.isInteger(aM) || jM < 0 || aM > 8 || jM >= aM) throw new Error("Subvoxel bounds must be integers satisfying 0 <= start < end <= 8");
+          rM[6 * iM + SM] = jM / 8, rM[6 * iM + SM + 3] = aM / 8
+        }
+      }
+      return rM
+    }
+  },
+  9890: (MM, rM, iM) => {
+    iM.d(rM, {
+      C: () => hM,
+      E: () => QM,
+      I: () => mM,
+      b: () => OM,
+      e: () => SM,
+      g: () => dM,
+      i: () => nM,
+      k: () => yM,
+      l: () => PM,
+      o: () => aM,
+      q: () => jM,
+      u: () => HM,
+      y: () => JM
+    });
+    const OM = 45 == iM.j ? ["Conveyor Belt", "Splitter", "Sorting Gate", "Belt Loader", "Fast Belt", "Belt Lift", "Belt Drop", "Belt Tunnel", "Express Belt", "Fast Loader"] : null,
+      SM = .002,
+      jM = 2,
+      aM = 3,
+      PM = .5,
+      nM = 200;
+
+    function QM(MM, rM, iM) {
+      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : SM;
+      return Math.max(0, Math.min((iM - MM) * OM, rM))
+    }
+
+    function zM(MM, rM, iM) {
+      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : SM;
+      const jM = [];
+      let aM = rM;
+      for (const SM of MM) {
+        const MM = QM(SM.at, aM, iM, OM);
+        jM.push(MM), aM = MM - PM
+      }
+      return jM
+    }
+
+    function LM(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : SM;
+      return 0 === MM.length ? 1 / 0 : MM[0].at + rM / iM
+    }
+
+    function mM(MM, rM, iM) {
+      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : SM,
+        jM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+      const aM = zM(MM, rM, iM, OM),
+        [PM] = MM.splice(jM, 1);
+      return aM.splice(jM, 1), MM.forEach(((MM, rM) => {
+        MM.at = iM - aM[rM] / OM
+      })), PM
+    }
+
+    function HM(MM, rM, iM) {
+      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : SM;
+      for (let SM = LM(MM, rM, OM); SM <= iM; SM = LM(MM, rM, OM)) {
+        const iM = mM(MM, rM, SM, OM);
+        iM.at = SM, MM.push(iM)
+      }
+    }
+
+    function hM(MM, rM, iM) {
+      return {
+        name: MM,
+        at: iM - rM / (arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : SM)
+      }
+    }
+
+    function JM(MM, rM, iM, OM, jM) {
+      let aM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : SM;
+      const PM = zM(MM, rM, jM, aM);
+      let nM = 0;
+      MM.forEach(((MM, rM) => {
+        MM.at = jM - PM[rM] / aM, PM[rM] > OM && (nM = rM + 1)
+      })), iM.at = jM - OM / aM, MM.splice(nM, 0, iM)
+    }
+    const dM = "baf2BeltLines",
+      yM = "baf2BeltMoves"
+  },
+  9895: (MM, rM, iM) => {
+    iM.d(rM, {
+      C: () => mM,
+      F: () => LM,
+      H: () => HM,
+      J: () => aM,
+      M: () => UM,
+      O: () => CM,
+      P: () => EM,
+      T: () => lM,
+      V: () => QM,
+      Z: () => dM,
+      ab: () => yM,
+      bb: () => nM,
+      e: () => SM,
+      i: () => zM,
+      j: () => jM,
+      k: () => GM,
+      m: () => JM,
+      q: () => wM,
+      t: () => tM,
+      x: () => eM,
+      y: () => bM
+    });
+    var OM = iM(625);
+    const SM = {
+        "Belt Lift": 1,
+        "Belt Drop": -1
+      },
+      jM = "Belt Tunnel",
+      aM = 5,
+      PM = "|exit";
+
+    function nM(MM, rM) {
+      return rM ? `${jM}|meta|rot${MM}${PM}` : 1 === MM ? jM : `${jM}|meta|rot${MM}`
+    }
+
+    function QM(MM) {
+      return MM.endsWith(PM) && MM.startsWith(`${jM}|`)
+    }
+    const zM = [
+        [0, -1],
+        [-1, 0],
+        [0, 1],
+        [1, 0]
+      ],
+      LM = "Splitter",
+      mM = "Sorting Gate",
+      HM = {
+        leftRight: "",
+        leftFront: "|leftFront",
+        frontRight: "|frontRight"
+      },
+      hM = {
+        leftRight: ["right", "left"],
+        leftFront: ["left", "front"],
+        frontRight: ["front", "right"]
+      },
+      JM = "|right";
+
+    function dM(MM) {
+      return MM.split("|")[0] !== LM ? null : MM.endsWith(HM.leftFront) ? "leftFront" : MM.endsWith(HM.frontRight) ? "frontRight" : "leftRight"
+    }
+
+    function yM(MM, rM, iM) {
+      return function(MM) {
+        const rM = dM(MM);
+        return null === rM ? [] : hM[rM]
+      }(MM).map((MM => "right" === MM ? [iM, -rM] : "left" === MM ? [-iM, rM] : [rM, iM]))
+    }
+
+    function lM(MM) {
+      return MM.split("|")[0] === mM && MM.endsWith(JM)
+    }
+
+    function EM(MM, rM, iM) {
+      return lM(MM) ? [iM, -rM] : [-iM, rM]
+    }
+    const UM = 45 == iM.j ? ["Conveyor Belt", "Fast Belt", "Express Belt"] : null,
+      GM = ["turnLeft", "turnRight"];
+
+    function CM(MM, rM, iM) {
+      return null !== iM ? `${MM}|meta|rot${rM}|${iM}` : 1 === rM ? MM : `${MM}|meta|rot${rM}`
+    }
+    const eM = 45 == iM.j ? ["Burner Drill", "Crusher", "Smelter", "Press", "Wire Mill", "Alloy Kiln", "Electric Drill", "Assembler", "Tree Cutter", "Deep Drill", "Shatter Mill", "Sky Tap", "Crystal Vat", "Recycler", "Crop Harvester", "Centrifuge", "Synthesizer", "Mob Farm"] : null,
+      bM = 192,
+      wM = 7 * OM.y,
+      tM = 4 * OM.y
+  },
+  9855: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => OM
+    });
+    const OM = {
+      1: [1, 0],
+      2: [0, -1],
+      3: [-1, 0],
+      4: [0, 1]
+    }
+  },
+  9816: (MM, rM, iM) => {
+    iM.d(rM, {
+      D: () => pM,
+      d: () => BM,
+      g: () => vM,
+      k: () => oM,
+      l: () => xM,
+      p: () => YM,
+      t: () => FM,
+      w: () => NM,
+      z: () => WM
+    });
+    var OM = iM(9825);
+    if (45 == iM.j) var SM = iM(187);
+    var jM = iM(9832),
+      aM = iM(9904),
+      PM = iM(9913),
+      nM = iM(9845),
+      QM = iM(3593),
+      zM = iM(332),
+      LM = iM(4843),
+      mM = iM(9863),
+      HM = iM(620),
+      hM = iM(4573),
+      JM = iM(9839),
+      dM = iM(9877);
+    if (45 == iM.j) var yM = iM(9918);
+    var lM = iM(9925),
+      EM = iM(9932);
+    const UM = {
+      ttb: 200,
+      harvestType: "cuttable",
+      soundType: {
+        break: "cloth",
+        place: "cloth"
+      },
+      itemTexture: "slime_trail",
+      solid: !1,
+      model: "rotatable",
+      modelScale: 8,
+      customModelInfo: {
+        yOffset: -.5,
+        unlit: !0,
+        yRotOffset: -Math.PI / 2
+      },
+      blockModel: "slime_trail",
+      heldItemGlb: "Slime Trail",
+      unlitStandaloneMesh: !0,
+      Ch: [14, 8, 11],
+      drops: null,
+      specialToolDrop: {
+        tool: [...zM.ce],
+        drops: "Slime Trail"
+      }
+    };
+
+    function GM(MM, rM) {
+      let {
+        textureAnimation: iM,
+        rotatable: OM = !0
+      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      return {
+        model: OM ? "rotatable" : "CustomModel",
+        modelScale: 8,
+        blockModel: MM,
+        blockModelItem: !0,
+        heldItemScale: 4,
+        itemTexture: rM,
+        customModelInfo: {
+          yOffset: -.5,
+          yRotOffset: OM ? Math.PI : void 0,
+          textureAnimation: iM
+        }
+      }
+    }
+    const CM = (0, OM.i)([
+        [
+          [0, 0, 0],
+          [8, 1, 8]
+        ]
+      ]),
+      eM = [(0, JM.hc)("Maple Stairs", {
+        displayName: {
+          translationKey: "item:mapleStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_maple",
+        harvestType: "wood"
+      }), (0, JM.hc)("Pine Stairs", {
+        displayName: {
+          translationKey: "item:pineStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_pine",
+        harvestType: "wood"
+      }), (0, JM.hc)("Plum Stairs", {
+        displayName: {
+          translationKey: "item:plumStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_plum",
+        harvestType: "wood"
+      }), (0, JM.hc)("Cedar Stairs", {
+        displayName: {
+          translationKey: "item:cedarStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_cedar",
+        harvestType: "wood"
+      }), (0, JM.hc)("Aspen Stairs", {
+        displayName: {
+          translationKey: "item:aspenStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_aspen",
+        harvestType: "wood"
+      }), (0, JM.hc)("Jungle Stairs", {
+        displayName: {
+          translationKey: "item:jungleStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_jungle",
+        harvestType: "wood"
+      }), (0, JM.hc)("Palm Stairs", {
+        displayName: {
+          translationKey: "item:palmStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_palm",
+        harvestType: "wood"
+      }), (0, JM.hc)("Pear Stairs", {
+        displayName: {
+          translationKey: "item:pearStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_pear",
+        harvestType: "wood"
+      }), (0, JM.hc)("Cherry Stairs", {
+        displayName: {
+          translationKey: "item:cherryStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_cherry",
+        harvestType: "wood"
+      }), (0, JM.hc)("Spectral Stairs", {
+        displayName: {
+          translationKey: "item:spectralStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_spectral",
+        harvestType: "wood"
+      }), (0, JM.hc)("Mango Stairs", {
+        displayName: {
+          translationKey: "item:mangoStairs"
+        },
+        ttb: 1800,
+        textureInfo: "planks_mango",
+        harvestType: "wood"
+      }), (0, JM.hc)("Messy Stone Stairs", {
+        displayName: {
+          translationKey: "item:messyStoneStairs"
+        },
+        ttb: 1800,
+        textureInfo: "messy_stone",
+        harvestType: "rock"
+      }), (0, JM.hc)("Stone Stairs", {
+        displayName: {
+          translationKey: "item:stoneStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stone",
+        harvestType: "rock"
+      }), (0, JM.hc)("Smooth Stone Stairs", {
+        displayName: {
+          translationKey: "item:smoothStoneStairs"
+        },
+        ttb: 1800,
+        textureInfo: "smooth_stone",
+        harvestType: "rock"
+      }), (0, JM.hc)("Engraved Stone Stairs", {
+        displayName: {
+          translationKey: "item:engravedStoneStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stonebrick_carved",
+        harvestType: "rock"
+      }), (0, JM.hc)("Stone Bricks Stairs", {
+        displayName: {
+          translationKey: "item:stoneBricksStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stonebrick",
+        harvestType: "rock"
+      }), (0, JM.hc)("Mossy Stone Stairs", {
+        displayName: {
+          translationKey: "item:mossyStoneStairs"
+        },
+        ttb: 1800,
+        textureInfo: "mossy_cobblestone",
+        harvestType: "rock"
+      }), (0, JM.hc)("Mossy Stone Bricks Stairs", {
+        displayName: {
+          translationKey: "item:mossyStoneBricksStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stonebrick_mossy",
+        harvestType: "rock"
+      }), (0, JM.hc)("Andesite Stairs", {
+        displayName: {
+          translationKey: "item:andesiteStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stone_andesite",
+        harvestType: "rock"
+      }), (0, JM.hc)("Smooth Andesite Stairs", {
+        displayName: {
+          translationKey: "item:smoothAndesiteStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stone_andesite_smooth",
+        harvestType: "rock"
+      }), (0, JM.hc)("Engraved Andesite Stairs", {
+        displayName: {
+          translationKey: "item:engravedAndesiteStairs"
+        },
+        ttb: 1800,
+        textureInfo: "engraved_andesite",
+        harvestType: "rock"
+      }), (0, JM.hc)("Andesite Bricks Stairs", {
+        displayName: {
+          translationKey: "item:andesiteBricksStairs"
+        },
+        ttb: 1800,
+        textureInfo: "andesite_brick",
+        harvestType: "rock"
+      }), (0, JM.hc)("Diorite Stairs", {
+        displayName: {
+          translationKey: "item:dioriteStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stone_diorite",
+        harvestType: "rock"
+      }), (0, JM.hc)("Smooth Diorite Stairs", {
+        displayName: {
+          translationKey: "item:smoothDioriteStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stone_diorite_smooth",
+        harvestType: "rock"
+      }), (0, JM.hc)("Engraved Diorite Stairs", {
+        displayName: {
+          translationKey: "item:engravedDioriteStairs"
+        },
+        ttb: 1800,
+        textureInfo: "engraved_diorite",
+        harvestType: "rock"
+      }), (0, JM.hc)("Diorite Bricks Stairs", {
+        displayName: {
+          translationKey: "item:dioriteBricksStairs"
+        },
+        ttb: 1800,
+        textureInfo: "diorite_brick",
+        harvestType: "rock"
+      }), (0, JM.hc)("Granite Stairs", {
+        displayName: {
+          translationKey: "item:graniteStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stone_granite",
+        harvestType: "rock"
+      }), (0, JM.hc)("Smooth Granite Stairs", {
+        displayName: {
+          translationKey: "item:smoothGraniteStairs"
+        },
+        ttb: 1800,
+        textureInfo: "stone_granite_smooth",
+        harvestType: "rock"
+      }), (0, JM.hc)("Engraved Granite Stairs", {
+        displayName: {
+          translationKey: "item:engravedGraniteStairs"
+        },
+        ttb: 1800,
+        textureInfo: "engraved_granite",
+        harvestType: "rock"
+      }), (0, JM.hc)("Granite Bricks Stairs", {
+        displayName: {
+          translationKey: "item:graniteBricksStairs"
+        },
+        ttb: 1800,
+        textureInfo: "granite_brick",
+        harvestType: "rock"
+      }), (0, JM.hc)("Sandstone Stairs", {
+        displayName: {
+          translationKey: "item:sandstoneStairs"
+        },
+        ttb: 960,
+        textureInfo: "sandstone_normal",
+        harvestType: "rock"
+      }), (0, JM.hc)("Smooth Sandstone Stairs", {
+        displayName: {
+          translationKey: "item:smoothSandstoneStairs"
+        },
+        ttb: 960,
+        textureInfo: "sandstone_top",
+        harvestType: "rock"
+      }), (0, JM.hc)("Engraved Sandstone Stairs", {
+        displayName: {
+          translationKey: "item:engravedSandstoneStairs"
+        },
+        ttb: 960,
+        textureInfo: "chiseled_sandstone",
+        harvestType: "rock"
+      }), (0, JM.hc)("Marked Sandstone Stairs", {
+        displayName: {
+          translationKey: "item:markedSandstoneStairs"
+        },
+        ttb: 960,
+        textureInfo: "cut_sandstone",
+        harvestType: "rock"
+      }), (0, JM.hc)("Sandstone Bricks Stairs", {
+        displayName: {
+          translationKey: "item:sandstoneBricksStairs"
+        },
+        ttb: 960,
+        textureInfo: "sandstone_brick",
+        harvestType: "rock"
+      }), (0, JM.hc)("Red Sandstone Stairs", {
+        displayName: {
+          translationKey: "item:redSandstoneStairs"
+        },
+        ttb: 960,
+        textureInfo: "red_sandstone",
+        harvestType: "rock"
+      }), (0, JM.hc)("Smooth Red Sandstone Stairs", {
+        displayName: {
+          translationKey: "item:smoothRedSandstoneStairs"
+        },
+        ttb: 960,
+        textureInfo: "red_sandstone_top",
+        harvestType: "rock"
+      }), (0, JM.hc)("Engraved Red Sandstone Stairs", {
+        displayName: {
+          translationKey: "item:engravedRedSandstoneStairs"
+        },
+        ttb: 960,
+        textureInfo: "chiseled_red_sandstone",
+        harvestType: "rock"
+      }), (0, JM.hc)("Marked Red Sandstone Stairs", {
+        displayName: {
+          translationKey: "item:markedRedSandstoneStairs"
+        },
+        ttb: 960,
+        textureInfo: "cut_red_sandstone",
+        harvestType: "rock"
+      }), (0, JM.hc)("Red Sandstone Bricks Stairs", {
+        displayName: {
+          translationKey: "item:redSandstoneBricksStairs"
+        },
+        ttb: 960,
+        textureInfo: "red_sandstone_brick",
+        harvestType: "rock"
+      }), (0, JM.hc)("Bricks Stairs", {
+        displayName: {
+          translationKey: "item:bricksStairs"
+        },
+        ttb: 2400,
+        textureInfo: "brick",
+        harvestType: "rock"
+      }), (0, JM.hc)("Ice Bricks Stairs", {
+        displayName: {
+          translationKey: "item:iceBricksStairs"
+        },
+        ttb: 1800,
+        textureInfo: "ice_brick",
+        harvestType: "rock",
+        harvestLevel: 0,
+        stoodOnSpeedMultiplier: 1.4
+      }), ...(0, JM.z)("Concrete", (MM => ({
+        displayName: {
+          translationKey: `item:${(0,zM.me)(MM)}ConcreteStairs`
+        },
+        ttb: 2160,
+        textureInfo: `${(0,zM.oe)(MM)}_concrete`,
+        harvestType: "rock"
+      }))), ...(0, JM.z)("Chalk", (MM => {
+        const rM = {
+          colour: `$t(colour:${(0,zM.oe)(MM)})`
+        };
+        return {
+          displayName: {
+            translationKey: "item:colouredChalkStairs",
+            params: rM
+          },
+          description: {
+            translationKey: "item:colouredChalkStairsDescription",
+            params: rM
+          },
+          ttb: 850,
+          textureInfo: `chalk_${(0,zM.oe)(MM)}`,
+          harvestType: "rock"
+        }
+      })), ...(0, JM.z)("Chalk Bricks", (MM => {
+        const rM = {
+          colour: `$t(colour:${(0,zM.oe)(MM)})`
+        };
+        return {
+          displayName: {
+            translationKey: "item:colouredChalkBricksStairs",
+            params: rM
+          },
+          description: {
+            translationKey: "item:colouredChalkBricksStairsDescription",
+            params: rM
+          },
+          ttb: 850,
+          textureInfo: `chalk_bricks_${(0,zM.oe)(MM)}`,
+          harvestType: "rock"
+        }
+      }))],
+      bM = {
+        displayName: {
+          translationKey: "item:chest"
+        },
+        ttb: 3e3,
+        harvestType: "wood"
+      },
+      wM = {
+        Unloaded: {
+          ttb: 100,
+          textureInfo: "unloaded",
+          harvestType: "granule"
+        },
+        Dirt: {
+          displayName: {
+            translationKey: "item:dirt"
+          },
+          ttb: 600,
+          textureInfo: "dirt",
+          harvestType: "granule"
+        },
+        "Messy Dirt": {
+          displayName: {
+            translationKey: "item:messyDirt"
+          },
+          ttb: 600,
+          textureInfo: "coarse_dirt",
+          harvestType: "granule"
+        },
+        "Grass Block": {
+          displayName: {
+            translationKey: "item:grassBlock"
+          },
+          ttb: 720,
+          textureInfo: ["grass_block_side", "grass_top", "dirt"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "granule",
+          soundType: {
+            break: "grass",
+            place: "grass"
+          }
+        },
+        Sand: {
+          displayName: {
+            translationKey: "item:sand"
+          },
+          ttb: 600,
+          textureInfo: "sand",
+          harvestType: "granule",
+          soundType: {
+            break: "sand",
+            place: "sand"
+          }
+        },
+        Clay: {
+          displayName: {
+            translationKey: "item:clay"
+          },
+          ttb: 720,
+          textureInfo: "clay",
+          harvestType: "granule"
+        },
+        Gravel: {
+          displayName: {
+            translationKey: "item:gravel"
+          },
+          ttb: 720,
+          textureInfo: "gravel",
+          harvestType: "granule"
+        },
+        Snow: {
+          displayName: {
+            translationKey: "item:snow"
+          },
+          ttb: 600,
+          textureInfo: "snow",
+          harvestType: "granule",
+          soundType: {
+            break: "snow",
+            place: "snow"
+          }
+        },
+        "Maple Log": {
+          displayName: {
+            translationKey: "item:mapleLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_maple",
+          harvestType: "wood"
+        },
+        "Pine Log": {
+          displayName: {
+            translationKey: "item:pineLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_pine",
+          harvestType: "wood"
+        },
+        "Plum Log": {
+          displayName: {
+            translationKey: "item:plumLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_plum",
+          harvestType: "wood"
+        },
+        "Cedar Log": {
+          displayName: {
+            translationKey: "item:cedarLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_cedar",
+          harvestType: "wood"
+        },
+        "Aspen Log": {
+          displayName: {
+            translationKey: "item:aspenLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_aspen",
+          harvestType: "wood"
+        },
+        "Jungle Log": {
+          displayName: {
+            translationKey: "item:jungleLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_jungle",
+          harvestType: "wood"
+        },
+        "Maple Wood Planks": {
+          displayName: {
+            translationKey: "item:mapleWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_maple",
+          harvestType: "wood"
+        },
+        "Aspen Wood Planks": {
+          displayName: {
+            translationKey: "item:aspenWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_aspen",
+          harvestType: "wood"
+        },
+        "Plum Wood Planks": {
+          displayName: {
+            translationKey: "item:plumWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_plum",
+          harvestType: "wood"
+        },
+        "Jungle Wood Planks": {
+          displayName: {
+            translationKey: "item:jungleWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_jungle",
+          harvestType: "wood"
+        },
+        "Pine Wood Planks": {
+          displayName: {
+            translationKey: "item:pineWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_pine",
+          harvestType: "wood"
+        },
+        "Cedar Wood Planks": {
+          displayName: {
+            translationKey: "item:cedarWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_cedar",
+          harvestType: "wood"
+        },
+        "Barkless Maple Log": {
+          displayName: {
+            translationKey: "item:barklessMapleLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_maple_log",
+          harvestType: "wood"
+        },
+        "Barkless Aspen Log": {
+          displayName: {
+            translationKey: "item:barklessAspenLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_aspen_log",
+          harvestType: "wood"
+        },
+        "Barkless Plum Log": {
+          displayName: {
+            translationKey: "item:barklessPlumLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_plum_log",
+          harvestType: "wood"
+        },
+        "Barkless Jungle Log": {
+          displayName: {
+            translationKey: "item:barklessJungleLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_jungle_log",
+          harvestType: "wood"
+        },
+        "Barkless Pine Log": {
+          displayName: {
+            translationKey: "item:barklessPineLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_pine_log",
+          harvestType: "wood"
+        },
+        "Barkless Cedar Log": {
+          displayName: {
+            translationKey: "item:barklessCedarLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_cedar_log",
+          harvestType: "wood"
+        },
+        free_placeholder2: {
+          ttb: 1800,
+          textureInfo: "messy_stone",
+          harvestType: "rock"
+        },
+        Stone: {
+          displayName: {
+            translationKey: "item:stone"
+          },
+          ttb: 1800,
+          textureInfo: "stone",
+          harvestType: "rock",
+          drops: "Messy Stone",
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Stone"
+          }
+        },
+        "Messy Stone": {
+          displayName: {
+            translationKey: "item:messyStone"
+          },
+          ttb: 1800,
+          textureInfo: "messy_stone",
+          harvestType: "rock"
+        },
+        free_placeholder: {
+          ttb: 1800,
+          textureInfo: "messy_stone",
+          harvestType: "rock"
+        },
+        "Smooth Stone": {
+          displayName: {
+            translationKey: "item:smoothStone"
+          },
+          ttb: 1800,
+          textureInfo: "smooth_stone",
+          harvestType: "rock"
+        },
+        Diorite: {
+          displayName: {
+            translationKey: "item:diorite"
+          },
+          ttb: 1800,
+          textureInfo: "stone_diorite",
+          harvestType: "rock"
+        },
+        "Smooth Diorite": {
+          displayName: {
+            translationKey: "item:smoothDiorite"
+          },
+          ttb: 1800,
+          textureInfo: "stone_diorite_smooth",
+          harvestType: "rock"
+        },
+        Andesite: {
+          displayName: {
+            translationKey: "item:andesite"
+          },
+          ttb: 1800,
+          textureInfo: "stone_andesite",
+          harvestType: "rock"
+        },
+        "Smooth Andesite": {
+          displayName: {
+            translationKey: "item:smoothAndesite"
+          },
+          ttb: 1800,
+          textureInfo: "stone_andesite_smooth",
+          harvestType: "rock"
+        },
+        Granite: {
+          displayName: {
+            translationKey: "item:granite"
+          },
+          ttb: 1800,
+          textureInfo: "stone_granite",
+          harvestType: "rock"
+        },
+        "Smooth Granite": {
+          displayName: {
+            translationKey: "item:smoothGranite"
+          },
+          ttb: 1800,
+          textureInfo: "stone_granite_smooth",
+          harvestType: "rock"
+        },
+        Sandstone: {
+          displayName: {
+            translationKey: "item:sandstone"
+          },
+          ttb: 960,
+          textureInfo: "sandstone_normal",
+          harvestType: "rock"
+        },
+        Yellowstone: {
+          displayName: {
+            translationKey: "item:yellowstone"
+          },
+          ttb: 3600,
+          textureInfo: "end_stone",
+          harvestType: "rock"
+        },
+        "Coal Ore": {
+          displayName: {
+            translationKey: "item:coalOre"
+          },
+          ttb: 3e3,
+          textureInfo: "coal_ore",
+          harvestType: "rock",
+          drops: "Coal",
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Coal Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": LM.o
+          },
+          description: {
+            translationKey: "item:coalOreDescription"
+          },
+          onMinedAura: 5
+        },
+        "Iron Ore": {
+          displayName: {
+            translationKey: "item:ironOre"
+          },
+          ttb: 3600,
+          textureInfo: "iron_ore",
+          harvestType: "rock",
+          drops: "Raw Iron",
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Iron Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": LM.o
+          },
+          harvestLevel: 2,
+          onMinedAura: 15
+        },
+        "Gold Ore": {
+          displayName: {
+            translationKey: "item:goldOre"
+          },
+          ttb: 4200,
+          textureInfo: "gold_ore",
+          harvestType: "rock",
+          drops: "Raw Gold",
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Gold Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": LM.o
+          },
+          harvestLevel: 3,
+          onMinedAura: 30,
+          Ch: [4, 4, 0]
+        },
+        "Lapis Lazuli Ore": {
+          displayName: {
+            translationKey: "item:lapisLazuliOre"
+          },
+          ttb: 4200,
+          textureInfo: "lapis_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          Ch: [0, 0, 2]
+        },
+        "Emerald Ore": {
+          displayName: {
+            translationKey: "item:emeraldOre"
+          },
+          ttb: 4500,
+          textureInfo: "emerald_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          Ch: [1, 3, 1]
+        },
+        "Diamond Ore": {
+          displayName: {
+            translationKey: "item:diamondOre"
+          },
+          ttb: 5e3,
+          textureInfo: "diamond_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: "Diamond",
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Diamond Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": LM.o
+          },
+          description: {
+            translationKey: "item:diamondOreDescription"
+          },
+          onMinedAura: 40,
+          Ch: [2, 5, 5]
+        },
+        "Block of Coal": {
+          displayName: {
+            translationKey: "item:blockOfCoal"
+          },
+          ttb: 4500,
+          textureInfo: "coal_block",
+          harvestType: "rock"
+        },
+        "Block of Iron": {
+          displayName: {
+            translationKey: "item:blockOfIron"
+          },
+          ttb: 5400,
+          textureInfo: "iron_block",
+          harvestType: "rock"
+        },
+        "Block of Gold": {
+          displayName: {
+            translationKey: "item:blockOfGold"
+          },
+          ttb: 6300,
+          textureInfo: "gold_block",
+          harvestType: "rock"
+        },
+        "Block of Lapis Lazuli": {
+          displayName: {
+            translationKey: "item:blockOfLapisLazuli"
+          },
+          ttb: 6300,
+          textureInfo: "lapis_block",
+          harvestType: "rock"
+        },
+        "Block of Emerald": {
+          displayName: {
+            translationKey: "item:blockOfEmerald"
+          },
+          ttb: 6750,
+          textureInfo: "emerald_block",
+          harvestType: "rock"
+        },
+        "White Wool": {
+          displayName: {
+            translationKey: "item:whiteWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_white",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Orange Wool": {
+          displayName: {
+            translationKey: "item:orangeWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_orange",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Magenta Wool": {
+          displayName: {
+            translationKey: "item:magentaWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_magenta",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Light Blue Wool": {
+          displayName: {
+            translationKey: "item:lightBlueWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_light_blue",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Yellow Wool": {
+          displayName: {
+            translationKey: "item:yellowWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_yellow",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Lime Wool": {
+          displayName: {
+            translationKey: "item:limeWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_lime",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Pink Wool": {
+          displayName: {
+            translationKey: "item:pinkWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_pink",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Gray Wool": {
+          displayName: {
+            translationKey: "item:grayWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_gray",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Light Gray Wool": {
+          displayName: {
+            translationKey: "item:lightGrayWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_light_grey",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Cyan Wool": {
+          displayName: {
+            translationKey: "item:cyanWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_cyan",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Purple Wool": {
+          displayName: {
+            translationKey: "item:purpleWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_purple",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Blue Wool": {
+          displayName: {
+            translationKey: "item:blueWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_blue",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Brown Wool": {
+          displayName: {
+            translationKey: "item:brownWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_brown",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Green Wool": {
+          displayName: {
+            translationKey: "item:greenWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_green",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Red Wool": {
+          displayName: {
+            translationKey: "item:redWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_red",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Black Wool": {
+          displayName: {
+            translationKey: "item:blackWool"
+          },
+          ttb: 960,
+          textureInfo: "wool_colored_black",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "Baked Clay": {
+          displayName: {
+            translationKey: "item:bakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay",
+          harvestType: "rock"
+        },
+        "White Baked Clay": {
+          displayName: {
+            translationKey: "item:whiteBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_white",
+          harvestType: "rock"
+        },
+        "Orange Baked Clay": {
+          displayName: {
+            translationKey: "item:orangeBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_orange",
+          harvestType: "rock"
+        },
+        "Magenta Baked Clay": {
+          displayName: {
+            translationKey: "item:magentaBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_magenta",
+          harvestType: "rock"
+        },
+        "Light Blue Baked Clay": {
+          displayName: {
+            translationKey: "item:lightBlueBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_light_blue",
+          harvestType: "rock"
+        },
+        "Yellow Baked Clay": {
+          displayName: {
+            translationKey: "item:yellowBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_yellow",
+          harvestType: "rock"
+        },
+        "Lime Baked Clay": {
+          displayName: {
+            translationKey: "item:limeBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_lime",
+          harvestType: "rock"
+        },
+        "Pink Baked Clay": {
+          displayName: {
+            translationKey: "item:pinkBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_pink",
+          harvestType: "rock"
+        },
+        "Gray Baked Clay": {
+          displayName: {
+            translationKey: "item:grayBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_gray",
+          harvestType: "rock"
+        },
+        "Light Gray Baked Clay": {
+          displayName: {
+            translationKey: "item:lightGrayBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_silver",
+          harvestType: "rock"
+        },
+        "Cyan Baked Clay": {
+          displayName: {
+            translationKey: "item:cyanBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_cyan",
+          harvestType: "rock"
+        },
+        "Purple Baked Clay": {
+          displayName: {
+            translationKey: "item:purpleBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_purple",
+          harvestType: "rock"
+        },
+        "Blue Baked Clay": {
+          displayName: {
+            translationKey: "item:blueBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_blue",
+          harvestType: "rock"
+        },
+        "Brown Baked Clay": {
+          displayName: {
+            translationKey: "item:brownBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_brown",
+          harvestType: "rock"
+        },
+        "Green Baked Clay": {
+          displayName: {
+            translationKey: "item:greenBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_green",
+          harvestType: "rock"
+        },
+        "Red Baked Clay": {
+          displayName: {
+            translationKey: "item:redBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_red",
+          harvestType: "rock"
+        },
+        "Black Baked Clay": {
+          displayName: {
+            translationKey: "item:blackBakedClay"
+          },
+          ttb: 1500,
+          textureInfo: "hardened_clay_stained_black",
+          harvestType: "rock"
+        },
+        "Gray Concrete": {
+          displayName: {
+            translationKey: "item:grayConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "gray_concrete",
+          harvestType: "rock"
+        },
+        "Light Gray Concrete": {
+          displayName: {
+            translationKey: "item:lightGrayConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "light_gray_concrete",
+          harvestType: "rock"
+        },
+        "Black Concrete": {
+          displayName: {
+            translationKey: "item:blackConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "black_concrete",
+          harvestType: "rock"
+        },
+        "Blue Concrete": {
+          displayName: {
+            translationKey: "item:blueConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "blue_concrete",
+          harvestType: "rock"
+        },
+        "Brown Concrete": {
+          displayName: {
+            translationKey: "item:brownConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "brown_concrete",
+          harvestType: "rock"
+        },
+        "Cyan Concrete": {
+          displayName: {
+            translationKey: "item:cyanConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "cyan_concrete",
+          harvestType: "rock"
+        },
+        "Light Blue Concrete": {
+          displayName: {
+            translationKey: "item:lightBlueConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "light_blue_concrete",
+          harvestType: "rock"
+        },
+        "Lime Concrete": {
+          displayName: {
+            translationKey: "item:limeConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "lime_concrete",
+          harvestType: "rock"
+        },
+        "Magenta Concrete": {
+          displayName: {
+            translationKey: "item:magentaConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "magenta_concrete",
+          harvestType: "rock"
+        },
+        "Orange Concrete": {
+          displayName: {
+            translationKey: "item:orangeConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "orange_concrete",
+          harvestType: "rock"
+        },
+        "Pink Concrete": {
+          displayName: {
+            translationKey: "item:pinkConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "pink_concrete",
+          harvestType: "rock"
+        },
+        "Purple Concrete": {
+          displayName: {
+            translationKey: "item:purpleConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "purple_concrete",
+          harvestType: "rock"
+        },
+        "Red Concrete": {
+          displayName: {
+            translationKey: "item:redConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "red_concrete",
+          harvestType: "rock"
+        },
+        "White Concrete": {
+          displayName: {
+            translationKey: "item:whiteConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "white_concrete",
+          harvestType: "rock"
+        },
+        "Green Concrete": {
+          displayName: {
+            translationKey: "item:greenConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "green_concrete",
+          harvestType: "rock"
+        },
+        "Yellow Concrete": {
+          displayName: {
+            translationKey: "item:yellowConcrete"
+          },
+          ttb: 2160,
+          textureInfo: "yellow_concrete",
+          harvestType: "rock"
+        },
+        "Pine Leaves": {
+          displayName: {
+            translationKey: "item:pineLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_pine",
+          harvestType: "cuttable"
+        },
+        "Aspen Leaves": {
+          displayName: {
+            translationKey: "item:aspenLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_aspen",
+          harvestType: "cuttable"
+        },
+        "Maple Leaves": {
+          displayName: {
+            translationKey: "item:mapleLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_maple",
+          harvestType: "cuttable"
+        },
+        "Jungle Leaves": {
+          displayName: {
+            translationKey: "item:jungleLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_jungle",
+          harvestType: "cuttable"
+        },
+        Pumpkin_placeholder: {
+          ttb: 1200,
+          textureInfo: "pumpkin_face_on",
+          harvestType: "wood",
+          Ch: [14, 10, 4]
+        },
+        Watermelon: {
+          displayName: {
+            translationKey: "item:watermelon"
+          },
+          ttb: 1200,
+          textureInfo: ["watermelon_side", "watermelon_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "wood"
+        },
+        Glass: {
+          displayName: {
+            translationKey: "item:glass"
+          },
+          ttb: 450,
+          textureInfo: "glass",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Black Glass": {
+          displayName: {
+            translationKey: "item:blackGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_black",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Blue Glass": {
+          displayName: {
+            translationKey: "item:blueGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_blue",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Brown Glass": {
+          displayName: {
+            translationKey: "item:brownGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_brown",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Cyan Glass": {
+          displayName: {
+            translationKey: "item:cyanGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_cyan",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Gray Glass": {
+          displayName: {
+            translationKey: "item:grayGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_gray",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Light Gray Glass": {
+          displayName: {
+            translationKey: "item:lightGrayGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_light_gray",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Green Glass": {
+          displayName: {
+            translationKey: "item:greenGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_green",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Light Blue Glass": {
+          displayName: {
+            translationKey: "item:lightBlueGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_light_blue",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Lime Glass": {
+          displayName: {
+            translationKey: "item:limeGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_lime",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Magenta Glass": {
+          displayName: {
+            translationKey: "item:magentaGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_magenta",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Orange Glass": {
+          displayName: {
+            translationKey: "item:orangeGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_orange",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Pink Glass": {
+          displayName: {
+            translationKey: "item:pinkGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_pink",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Purple Glass": {
+          displayName: {
+            translationKey: "item:purpleGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_purple",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Red Glass": {
+          displayName: {
+            translationKey: "item:redGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_red",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "White Glass": {
+          displayName: {
+            translationKey: "item:whiteGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_white",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Yellow Glass": {
+          displayName: {
+            translationKey: "item:yellowGlass"
+          },
+          ttb: 450,
+          textureInfo: "glass_yellow",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "UNUSED BLOCK TYPE": {
+          ttb: 450,
+          textureInfo: "glass_silver",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Dim Lamp On": {
+          ttb: 450,
+          textureInfo: "redstone_lamp_on",
+          harvestType: "rock",
+          Ch: [14, 14, 14]
+        },
+        "Dim Lamp Off": {
+          ttb: 450,
+          textureInfo: "redstone_lamp_off",
+          harvestType: "rock"
+        },
+        Water: {
+          displayName: {
+            translationKey: "item:water"
+          },
+          textureInfo: [.5, .5, .8, .9],
+          CH: !0,
+          drops: null,
+          harvestType: "rock"
+        },
+        "Invisible Solid": {
+          ttb: 3e3,
+          textureInfo: "invisible_solid",
+          transTex: !0,
+          harvestType: "rock"
+        },
+        Bricks: {
+          displayName: {
+            translationKey: "item:bricks"
+          },
+          ttb: 2400,
+          textureInfo: "brick",
+          harvestType: "rock"
+        },
+        "Stone Bricks": {
+          displayName: {
+            translationKey: "item:stoneBricks"
+          },
+          ttb: 1800,
+          textureInfo: "stonebrick",
+          harvestType: "rock"
+        },
+        "Dark Red Brick": {
+          displayName: {
+            translationKey: "item:darkRedBrick"
+          },
+          ttb: 2400,
+          textureInfo: "nether_brick",
+          harvestType: "rock"
+        },
+        "Dark Red Stone": {
+          displayName: {
+            translationKey: "item:darkRedStone"
+          },
+          ttb: 1200,
+          textureInfo: "netherrack",
+          harvestType: "rock"
+        },
+        "Block of Quartz": {
+          displayName: {
+            translationKey: "item:blockOfQuartz"
+          },
+          ttb: 960,
+          textureInfo: "quartz_block_side",
+          harvestType: "rock"
+        },
+        "Chiseled Block of Quartz": {
+          displayName: {
+            translationKey: "item:chiseledBlockOfQuartz"
+          },
+          ttb: 960,
+          textureInfo: "quartz_block_chiseled",
+          harvestType: "rock"
+        },
+        "Engraved Stone": {
+          displayName: {
+            translationKey: "item:engravedStone"
+          },
+          ttb: 1800,
+          textureInfo: "stonebrick_carved",
+          harvestType: "rock"
+        },
+        "Mossy Stone Bricks": {
+          displayName: {
+            translationKey: "item:mossyStoneBricks"
+          },
+          ttb: 1800,
+          textureInfo: "stonebrick_mossy",
+          harvestType: "rock"
+        },
+        "Cracked Stone Bricks": {
+          displayName: {
+            translationKey: "item:crackedStoneBricks"
+          },
+          ttb: 1800,
+          textureInfo: "stonebrick_cracked",
+          harvestType: "rock"
+        },
+        "Smooth Sandstone": {
+          displayName: {
+            translationKey: "item:smoothSandstone"
+          },
+          ttb: 960,
+          textureInfo: "sandstone_top",
+          harvestType: "rock"
+        },
+        "Engraved Sandstone": {
+          displayName: {
+            translationKey: "item:engravedSandstone"
+          },
+          ttb: 960,
+          textureInfo: "chiseled_sandstone",
+          harvestType: "rock"
+        },
+        Ice: {
+          displayName: {
+            translationKey: "item:ice"
+          },
+          ttb: 1200,
+          textureInfo: "ice",
+          harvestType: "rock",
+          harvestLevel: 0,
+          stoodOnSpeedMultiplier: 1.4
+        },
+        Obsidian: {
+          displayName: {
+            translationKey: "item:obsidian"
+          },
+          ttb: 4e4,
+          textureInfo: "obsidian",
+          harvestType: "rock",
+          harvestLevel: 5
+        },
+        "Hay Bale": {
+          displayName: {
+            translationKey: "item:hayBale"
+          },
+          ttb: 600,
+          textureInfo: "hay_block_side",
+          harvestType: "cuttable"
+        },
+        Sponge: {
+          displayName: {
+            translationKey: "item:sponge"
+          },
+          ttb: 720,
+          textureInfo: "sponge",
+          harvestType: "granule"
+        },
+        Beacon: {
+          displayName: {
+            translationKey: "item:beacon"
+          },
+          ttb: 3600,
+          textureInfo: "beacon",
+          harvestType: "rock",
+          Ch: [5, 14, 14]
+        },
+        temp: {
+          ttb: 1e3,
+          harvestType: "rock"
+        },
+        "Golden Decoration": {
+          displayName: {
+            translationKey: "item:goldenDecoration"
+          },
+          ttb: 1e3,
+          textureInfo: "glowstone",
+          harvestType: "rock",
+          Ch: [15, 15, 13]
+        },
+        "Moonstone Explosive": {
+          displayName: {
+            translationKey: "item:moonstoneExplosive"
+          },
+          ttb: 50,
+          textureInfo: ["moonstone_explosive_side", "moonstone_explosive_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "cuttable",
+          description: {
+            translationKey: "item:moonstoneExplosiveDescription"
+          }
+        },
+        Bedrock: {
+          displayName: {
+            translationKey: "item:bedrock"
+          },
+          ttb: 5e11,
+          textureInfo: "bedrock",
+          soundType: {
+            break: "stone",
+            place: "stone"
+          }
+        },
+        "Smooth Double Stone Slab": {
+          displayName: {
+            translationKey: "item:smoothDoubleStoneSlab"
+          },
+          ttb: 2400,
+          textureInfo: "smooth_stone",
+          harvestType: "rock"
+        },
+        Cactus: {
+          displayName: {
+            translationKey: "item:cactus"
+          },
+          ttb: 300,
+          textureInfo: "small_cactus",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        Grass: {
+          displayName: {
+            translationKey: "item:grass"
+          },
+          ttb: 1,
+          textureInfo: "tallgrass",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          drops: null,
+          harvestType: "cuttable",
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Grass"
+          },
+          canBePlacedOver: !0
+        },
+        Dandelion: {
+          displayName: {
+            translationKey: "item:dandelion"
+          },
+          ttb: 300,
+          textureInfo: "dandelion",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "dandelion"
+        },
+        Poppy: {
+          displayName: {
+            translationKey: "item:poppy"
+          },
+          ttb: 300,
+          textureInfo: "poppy",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "poppy"
+        },
+        "Red Tulip": {
+          displayName: {
+            translationKey: "item:redTulip"
+          },
+          ttb: 300,
+          textureInfo: "red_tulip",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "red_tulip"
+        },
+        "Pink Tulip": {
+          displayName: {
+            translationKey: "item:pinkTulip"
+          },
+          ttb: 300,
+          textureInfo: "pink_tulip",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "pink_tulip"
+        },
+        "White Tulip": {
+          displayName: {
+            translationKey: "item:whiteTulip"
+          },
+          ttb: 300,
+          textureInfo: "white_tulip",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "white_tulip"
+        },
+        "Orange Tulip": {
+          displayName: {
+            translationKey: "item:orangeTulip"
+          },
+          ttb: 300,
+          textureInfo: "orange_tulip",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "orange_tulip"
+        },
+        Daisy: {
+          displayName: {
+            translationKey: "item:daisy"
+          },
+          ttb: 300,
+          textureInfo: "oxeye_daisy",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "oxeye_daisy"
+        },
+        Bluebell: {
+          displayName: {
+            translationKey: "item:bluebell"
+          },
+          ttb: 300,
+          textureInfo: "blue_orchid",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "blue_orchid"
+        },
+        "Forget-me-not": {
+          displayName: {
+            translationKey: "item:forget-Me-Not"
+          },
+          ttb: 300,
+          textureInfo: "cornflower",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "cornflower"
+        },
+        Allium: {
+          displayName: {
+            translationKey: "item:allium"
+          },
+          ttb: 300,
+          textureInfo: "allium",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "allium"
+        },
+        "Azure Bluet": {
+          displayName: {
+            translationKey: "item:azureBluet"
+          },
+          ttb: 300,
+          textureInfo: "azure_bluet",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "azure_bluet"
+        },
+        "Lily of the Valley": {
+          displayName: {
+            translationKey: "item:lilyOfTheValley"
+          },
+          ttb: 300,
+          textureInfo: "lily_of_the_valley",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "lily_of_the_valley"
+        },
+        "Shadow Rose": {
+          displayName: {
+            translationKey: "item:shadowRose"
+          },
+          ttb: 300,
+          textureInfo: "shadow_rose",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "shadow_rose"
+        },
+        ...(0, JM.Jb)("Furnace", {
+          displayName: {
+            translationKey: "item:furnace"
+          },
+          ttb: 4200,
+          harvestType: "rock",
+          rootMetaDesc: "Furnace|meta|rot1",
+          description: {
+            translationKey: "item:furnaceDescription"
+          },
+          Ch: [8, 5, 2],
+          ...GM("Furnace", "furnace")
+        }),
+        ...(0, JM.Jb)("Workbench", {
+          displayName: {
+            translationKey: "item:workbench"
+          },
+          ttb: 3e3,
+          harvestType: "wood",
+          rootMetaDesc: "Workbench|meta|rot1",
+          description: {
+            translationKey: "item:workbenchDescription"
+          },
+          ...GM("Workbench", "workbench")
+        }),
+        "Block of Diamond": {
+          displayName: {
+            translationKey: "item:blockOfDiamond"
+          },
+          ttb: 6750,
+          textureInfo: "diamond_block",
+          harvestType: "rock"
+        },
+        "Maple Door": {
+          displayName: {
+            translationKey: "item:mapleDoor"
+          },
+          ttb: 3600,
+          itemTexture: "maple_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Maple Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Maple Door"
+        },
+        "Maple Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Maple Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Maple Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Maple Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Maple Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Maple Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Maple Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Maple Door Top": {
+          ttb: 3600,
+          itemTexture: "maple_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Maple Door",
+          rootMetaDesc: "_Maple Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Maple Door Top"
+        },
+        "_Maple Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Maple Door"
+        },
+        "_Maple Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Maple Door"
+        },
+        "_Maple Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Maple Door"
+        },
+        "_Maple Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Maple Door"
+        },
+        "_Maple Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Maple Door"
+        },
+        "_Maple Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Maple Door"
+        },
+        "_Maple Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Maple Door"
+        },
+        "Maple Trapdoor": {
+          displayName: {
+            translationKey: "item:mapleTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "maple_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Maple Trapdoor|meta|rot1|closed",
+          blockModel: "Maple Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Maple Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Maple Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Maple Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Maple Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Maple Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Maple Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Maple Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Aspen Sapling": {
+          displayName: {
+            translationKey: "item:aspenSapling"
+          },
+          ttb: 1,
+          textureInfo: "aspen_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "aspen_sapling"
+        },
+        "Maple Sapling": {
+          displayName: {
+            translationKey: "item:mapleSapling"
+          },
+          ttb: 1,
+          textureInfo: "maple_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "maple_sapling"
+        },
+        "Jungle Sapling": {
+          displayName: {
+            translationKey: "item:jungleSapling"
+          },
+          ttb: 1,
+          textureInfo: "jungle_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "jungle_sapling"
+        },
+        "Plum Sapling": {
+          displayName: {
+            translationKey: "item:plumSapling"
+          },
+          ttb: 1,
+          textureInfo: "plum_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "plum_sapling"
+        },
+        "Pine Sapling": {
+          displayName: {
+            translationKey: "item:pineSapling"
+          },
+          ttb: 1,
+          textureInfo: "pine_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "pine_sapling"
+        },
+        "Cedar Sapling": {
+          displayName: {
+            translationKey: "item:cedarSapling"
+          },
+          ttb: 1,
+          textureInfo: "cedar_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "cedar_sapling"
+        },
+        "Maple Log|TreeBase|Maple": {
+          ttb: 2400,
+          textureInfo: "log_maple",
+          harvestType: "wood",
+          drops: "Maple Log"
+        },
+        ...(0, JM.Lb)("Chest", {
+          ...bM,
+          textureInfo: ["chest_front", "chest_side", "chest_top[rot[1", "chest_top[rot[2", "chest_top[rot[3", "chest_top[rot[4", "chest_back"],
+          rootMetaDesc: "Chest|meta|rot1"
+        }, [
+          [1, 1, 2, 2, 0, 6],
+          [0, 6, 3, 3, 1, 1],
+          [1, 1, 4, 4, 6, 0],
+          [6, 0, 5, 5, 1, 1]
+        ]),
+        "Pine Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_pine",
+          harvestType: "cuttable",
+          drops: "Pine Leaves"
+        },
+        "Aspen Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_aspen",
+          harvestType: "cuttable",
+          drops: "Aspen Leaves"
+        },
+        "Maple Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_maple",
+          harvestType: "cuttable",
+          drops: "Maple Leaves"
+        },
+        "Jungle Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_jungle",
+          harvestType: "cuttable",
+          drops: "Jungle Leaves"
+        },
+        Protector: {
+          displayName: {
+            translationKey: "item:protector"
+          },
+          ttb: 5e3,
+          textureInfo: "protector",
+          harvestType: "rock",
+          description: {
+            translationKey: "item:protectorDescription"
+          },
+          altActionable: !0
+        },
+        "Fat Cactus": {
+          displayName: {
+            translationKey: "item:fatCactus"
+          },
+          ttb: 400,
+          textureInfo: "cactus_top",
+          harvestType: "cuttable",
+          damage: 22
+        },
+        "Dry Fat Cactus": {
+          displayName: {
+            translationKey: "item:dryFatCactus"
+          },
+          ttb: 400,
+          textureInfo: "cactus_dry",
+          harvestType: "cuttable",
+          damage: 27
+        },
+        ...(0, JM.Jb)("Maple Ladder", {
+          displayName: {
+            translationKey: "item:ladder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_maple",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Maple Ladder|meta|rot1",
+          solid: !1,
+          blockModel: "Maple Ladder",
+          blockModelItem: !0
+        }),
+        ...(0, JM.Jb)("Vines", {
+          displayName: {
+            translationKey: "item:vines"
+          },
+          ttb: 225,
+          itemTexture: "vine_coloured",
+          harvestType: "cuttable",
+          model: "rotatableOffset",
+          solid: !1,
+          rootMetaDesc: "Vines|meta|rot1",
+          blockModel: "Vines",
+          modelScale: 10,
+          heldItemScale: 10,
+          blockModelItem: !0,
+          particlesIgnoreBlack: !0
+        }),
+        "Dirt|GrassRoots": {
+          ttb: 600,
+          textureInfo: "dirt",
+          harvestType: "granule"
+        },
+        ...(0, JM.Jb)("Iron Ladder", {
+          displayName: {
+            translationKey: "item:ironLadder"
+          },
+          ttb: 1800,
+          itemTexture: "iron_ladder",
+          model: "rotatableOffset",
+          harvestType: "rock",
+          rootMetaDesc: "Iron Ladder|meta|rot1",
+          solid: !1,
+          blockModel: "Iron Ladder",
+          blockModelItem: !0,
+          particlesIgnoreBlack: !0
+        }),
+        "White Planks": {
+          displayName: {
+            translationKey: "item:whitePlanks"
+          },
+          ttb: 1800,
+          textureInfo: "white_planks",
+          harvestType: "wood"
+        },
+        "Orange Planks": {
+          displayName: {
+            translationKey: "item:orangePlanks"
+          },
+          ttb: 1800,
+          textureInfo: "orange_planks",
+          harvestType: "wood"
+        },
+        "Magenta Planks": {
+          displayName: {
+            translationKey: "item:magentaPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "magenta_planks",
+          harvestType: "wood"
+        },
+        "Light Blue Planks": {
+          displayName: {
+            translationKey: "item:lightBluePlanks"
+          },
+          ttb: 1800,
+          textureInfo: "light_blue_planks",
+          harvestType: "wood"
+        },
+        "Yellow Planks": {
+          displayName: {
+            translationKey: "item:yellowPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "yellow_planks",
+          harvestType: "wood"
+        },
+        "Lime Planks": {
+          displayName: {
+            translationKey: "item:limePlanks"
+          },
+          ttb: 1800,
+          textureInfo: "lime_planks",
+          harvestType: "wood"
+        },
+        "Pink Planks": {
+          displayName: {
+            translationKey: "item:pinkPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "pink_planks",
+          harvestType: "wood"
+        },
+        "Gray Planks": {
+          displayName: {
+            translationKey: "item:grayPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "gray_planks",
+          harvestType: "wood"
+        },
+        "Light Gray Planks": {
+          displayName: {
+            translationKey: "item:lightGrayPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "light_gray_planks",
+          harvestType: "wood"
+        },
+        "Cyan Planks": {
+          displayName: {
+            translationKey: "item:cyanPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "cyan_planks",
+          harvestType: "wood"
+        },
+        "Purple Planks": {
+          displayName: {
+            translationKey: "item:purplePlanks"
+          },
+          ttb: 1800,
+          textureInfo: "purple_planks",
+          harvestType: "wood"
+        },
+        "Blue Planks": {
+          displayName: {
+            translationKey: "item:bluePlanks"
+          },
+          ttb: 1800,
+          textureInfo: "blue_planks",
+          harvestType: "wood"
+        },
+        "Brown Planks": {
+          displayName: {
+            translationKey: "item:brownPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "brown_planks",
+          harvestType: "wood"
+        },
+        "Green Planks": {
+          displayName: {
+            translationKey: "item:greenPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "green_planks",
+          harvestType: "wood"
+        },
+        "Red Planks": {
+          displayName: {
+            translationKey: "item:redPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "red_planks",
+          harvestType: "wood"
+        },
+        "Black Planks": {
+          displayName: {
+            translationKey: "item:blackPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "black_planks",
+          harvestType: "wood"
+        },
+        "Artisan Bench": {
+          displayName: {
+            translationKey: "item:artisanBench"
+          },
+          ttb: 3e3,
+          harvestType: "wood",
+          description: {
+            translationKey: "item:artisanBenchDescription"
+          },
+          ...GM("Artisan Bench", "artisan_bench", {
+            rotatable: !1
+          })
+        },
+        "White Ceramic": {
+          displayName: {
+            translationKey: "item:whiteCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["white_glazed_terracotta[rot[1", "white_glazed_terracotta[rot[2", "white_glazed_terracotta[rot[3", "white_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "White Ceramic|meta|rot1"
+        },
+        "White Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["white_glazed_terracotta[rot[1", "white_glazed_terracotta[rot[2", "white_glazed_terracotta[rot[3", "white_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "White Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["white_glazed_terracotta[rot[1", "white_glazed_terracotta[rot[2", "white_glazed_terracotta[rot[3", "white_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "White Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["white_glazed_terracotta[rot[1", "white_glazed_terracotta[rot[2", "white_glazed_terracotta[rot[3", "white_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Orange Ceramic": {
+          displayName: {
+            translationKey: "item:orangeCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["orange_glazed_terracotta[rot[1", "orange_glazed_terracotta[rot[2", "orange_glazed_terracotta[rot[3", "orange_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Orange Ceramic|meta|rot1"
+        },
+        "Orange Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["orange_glazed_terracotta[rot[1", "orange_glazed_terracotta[rot[2", "orange_glazed_terracotta[rot[3", "orange_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Orange Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["orange_glazed_terracotta[rot[1", "orange_glazed_terracotta[rot[2", "orange_glazed_terracotta[rot[3", "orange_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Orange Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["orange_glazed_terracotta[rot[1", "orange_glazed_terracotta[rot[2", "orange_glazed_terracotta[rot[3", "orange_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Magenta Ceramic": {
+          displayName: {
+            translationKey: "item:magentaCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["magenta_glazed_terracotta[rot[1", "magenta_glazed_terracotta[rot[2", "magenta_glazed_terracotta[rot[3", "magenta_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Magenta Ceramic|meta|rot1"
+        },
+        "Magenta Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["magenta_glazed_terracotta[rot[1", "magenta_glazed_terracotta[rot[2", "magenta_glazed_terracotta[rot[3", "magenta_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Magenta Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["magenta_glazed_terracotta[rot[1", "magenta_glazed_terracotta[rot[2", "magenta_glazed_terracotta[rot[3", "magenta_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Magenta Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["magenta_glazed_terracotta[rot[1", "magenta_glazed_terracotta[rot[2", "magenta_glazed_terracotta[rot[3", "magenta_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Light Blue Ceramic": {
+          displayName: {
+            translationKey: "item:lightBlueCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["light_blue_glazed_terracotta[rot[1", "light_blue_glazed_terracotta[rot[2", "light_blue_glazed_terracotta[rot[3", "light_blue_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Light Blue Ceramic|meta|rot1"
+        },
+        "Light Blue Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["light_blue_glazed_terracotta[rot[1", "light_blue_glazed_terracotta[rot[2", "light_blue_glazed_terracotta[rot[3", "light_blue_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Light Blue Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["light_blue_glazed_terracotta[rot[1", "light_blue_glazed_terracotta[rot[2", "light_blue_glazed_terracotta[rot[3", "light_blue_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Light Blue Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["light_blue_glazed_terracotta[rot[1", "light_blue_glazed_terracotta[rot[2", "light_blue_glazed_terracotta[rot[3", "light_blue_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Yellow Ceramic": {
+          displayName: {
+            translationKey: "item:yellowCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["yellow_glazed_terracotta[rot[1", "yellow_glazed_terracotta[rot[2", "yellow_glazed_terracotta[rot[3", "yellow_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Yellow Ceramic|meta|rot1"
+        },
+        "Yellow Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["yellow_glazed_terracotta[rot[1", "yellow_glazed_terracotta[rot[2", "yellow_glazed_terracotta[rot[3", "yellow_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Yellow Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["yellow_glazed_terracotta[rot[1", "yellow_glazed_terracotta[rot[2", "yellow_glazed_terracotta[rot[3", "yellow_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Yellow Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["yellow_glazed_terracotta[rot[1", "yellow_glazed_terracotta[rot[2", "yellow_glazed_terracotta[rot[3", "yellow_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Lime Ceramic": {
+          displayName: {
+            translationKey: "item:limeCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["lime_glazed_terracotta[rot[1", "lime_glazed_terracotta[rot[2", "lime_glazed_terracotta[rot[3", "lime_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Lime Ceramic|meta|rot1"
+        },
+        "Lime Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["lime_glazed_terracotta[rot[1", "lime_glazed_terracotta[rot[2", "lime_glazed_terracotta[rot[3", "lime_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Lime Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["lime_glazed_terracotta[rot[1", "lime_glazed_terracotta[rot[2", "lime_glazed_terracotta[rot[3", "lime_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Lime Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["lime_glazed_terracotta[rot[1", "lime_glazed_terracotta[rot[2", "lime_glazed_terracotta[rot[3", "lime_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Pink Ceramic": {
+          displayName: {
+            translationKey: "item:pinkCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["pink_glazed_terracotta[rot[1", "pink_glazed_terracotta[rot[2", "pink_glazed_terracotta[rot[3", "pink_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Pink Ceramic|meta|rot1"
+        },
+        "Pink Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["pink_glazed_terracotta[rot[1", "pink_glazed_terracotta[rot[2", "pink_glazed_terracotta[rot[3", "pink_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Pink Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["pink_glazed_terracotta[rot[1", "pink_glazed_terracotta[rot[2", "pink_glazed_terracotta[rot[3", "pink_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Pink Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["pink_glazed_terracotta[rot[1", "pink_glazed_terracotta[rot[2", "pink_glazed_terracotta[rot[3", "pink_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Gray Ceramic": {
+          displayName: {
+            translationKey: "item:grayCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["gray_glazed_terracotta[rot[1", "gray_glazed_terracotta[rot[2", "gray_glazed_terracotta[rot[3", "gray_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Gray Ceramic|meta|rot1"
+        },
+        "Gray Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["gray_glazed_terracotta[rot[1", "gray_glazed_terracotta[rot[2", "gray_glazed_terracotta[rot[3", "gray_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Gray Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["gray_glazed_terracotta[rot[1", "gray_glazed_terracotta[rot[2", "gray_glazed_terracotta[rot[3", "gray_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Gray Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["gray_glazed_terracotta[rot[1", "gray_glazed_terracotta[rot[2", "gray_glazed_terracotta[rot[3", "gray_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Light Gray Ceramic": {
+          displayName: {
+            translationKey: "item:lightGrayCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["light_gray_glazed_terracotta[rot[1", "light_gray_glazed_terracotta[rot[2", "light_gray_glazed_terracotta[rot[3", "light_gray_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Light Gray Ceramic|meta|rot1"
+        },
+        "Light Gray Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["light_gray_glazed_terracotta[rot[1", "light_gray_glazed_terracotta[rot[2", "light_gray_glazed_terracotta[rot[3", "light_gray_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Light Gray Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["light_gray_glazed_terracotta[rot[1", "light_gray_glazed_terracotta[rot[2", "light_gray_glazed_terracotta[rot[3", "light_gray_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Light Gray Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["light_gray_glazed_terracotta[rot[1", "light_gray_glazed_terracotta[rot[2", "light_gray_glazed_terracotta[rot[3", "light_gray_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Cyan Ceramic": {
+          displayName: {
+            translationKey: "item:cyanCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["cyan_glazed_terracotta[rot[1", "cyan_glazed_terracotta[rot[2", "cyan_glazed_terracotta[rot[3", "cyan_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Cyan Ceramic|meta|rot1"
+        },
+        "Cyan Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["cyan_glazed_terracotta[rot[1", "cyan_glazed_terracotta[rot[2", "cyan_glazed_terracotta[rot[3", "cyan_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Cyan Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["cyan_glazed_terracotta[rot[1", "cyan_glazed_terracotta[rot[2", "cyan_glazed_terracotta[rot[3", "cyan_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Cyan Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["cyan_glazed_terracotta[rot[1", "cyan_glazed_terracotta[rot[2", "cyan_glazed_terracotta[rot[3", "cyan_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Purple Ceramic": {
+          displayName: {
+            translationKey: "item:purpleCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["purple_glazed_terracotta[rot[1", "purple_glazed_terracotta[rot[2", "purple_glazed_terracotta[rot[3", "purple_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Purple Ceramic|meta|rot1"
+        },
+        "Purple Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["purple_glazed_terracotta[rot[1", "purple_glazed_terracotta[rot[2", "purple_glazed_terracotta[rot[3", "purple_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Purple Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["purple_glazed_terracotta[rot[1", "purple_glazed_terracotta[rot[2", "purple_glazed_terracotta[rot[3", "purple_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Purple Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["purple_glazed_terracotta[rot[1", "purple_glazed_terracotta[rot[2", "purple_glazed_terracotta[rot[3", "purple_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Blue Ceramic": {
+          displayName: {
+            translationKey: "item:blueCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["blue_glazed_terracotta[rot[1", "blue_glazed_terracotta[rot[2", "blue_glazed_terracotta[rot[3", "blue_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Blue Ceramic|meta|rot1"
+        },
+        "Blue Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["blue_glazed_terracotta[rot[1", "blue_glazed_terracotta[rot[2", "blue_glazed_terracotta[rot[3", "blue_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Blue Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["blue_glazed_terracotta[rot[1", "blue_glazed_terracotta[rot[2", "blue_glazed_terracotta[rot[3", "blue_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Blue Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["blue_glazed_terracotta[rot[1", "blue_glazed_terracotta[rot[2", "blue_glazed_terracotta[rot[3", "blue_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Brown Ceramic": {
+          displayName: {
+            translationKey: "item:brownCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["brown_glazed_terracotta[rot[1", "brown_glazed_terracotta[rot[2", "brown_glazed_terracotta[rot[3", "brown_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Brown Ceramic|meta|rot1"
+        },
+        "Brown Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["brown_glazed_terracotta[rot[1", "brown_glazed_terracotta[rot[2", "brown_glazed_terracotta[rot[3", "brown_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Brown Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["brown_glazed_terracotta[rot[1", "brown_glazed_terracotta[rot[2", "brown_glazed_terracotta[rot[3", "brown_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Brown Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["brown_glazed_terracotta[rot[1", "brown_glazed_terracotta[rot[2", "brown_glazed_terracotta[rot[3", "brown_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Green Ceramic": {
+          displayName: {
+            translationKey: "item:greenCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["green_glazed_terracotta[rot[1", "green_glazed_terracotta[rot[2", "green_glazed_terracotta[rot[3", "green_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Green Ceramic|meta|rot1"
+        },
+        "Green Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["green_glazed_terracotta[rot[1", "green_glazed_terracotta[rot[2", "green_glazed_terracotta[rot[3", "green_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Green Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["green_glazed_terracotta[rot[1", "green_glazed_terracotta[rot[2", "green_glazed_terracotta[rot[3", "green_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Green Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["green_glazed_terracotta[rot[1", "green_glazed_terracotta[rot[2", "green_glazed_terracotta[rot[3", "green_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Red Ceramic": {
+          displayName: {
+            translationKey: "item:redCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["red_glazed_terracotta[rot[1", "red_glazed_terracotta[rot[2", "red_glazed_terracotta[rot[3", "red_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Red Ceramic|meta|rot1"
+        },
+        "Red Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["red_glazed_terracotta[rot[1", "red_glazed_terracotta[rot[2", "red_glazed_terracotta[rot[3", "red_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Red Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["red_glazed_terracotta[rot[1", "red_glazed_terracotta[rot[2", "red_glazed_terracotta[rot[3", "red_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Red Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["red_glazed_terracotta[rot[1", "red_glazed_terracotta[rot[2", "red_glazed_terracotta[rot[3", "red_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Black Ceramic": {
+          displayName: {
+            translationKey: "item:blackCeramic"
+          },
+          ttb: 1500,
+          textureInfo: ["black_glazed_terracotta[rot[1", "black_glazed_terracotta[rot[2", "black_glazed_terracotta[rot[3", "black_glazed_terracotta[rot[4"],
+          texturePerSide: [0, 2, 2, 2, 3, 1],
+          harvestType: "rock",
+          rootMetaDesc: "Black Ceramic|meta|rot1"
+        },
+        "Black Ceramic|meta|rot2": {
+          ttb: 1500,
+          textureInfo: ["black_glazed_terracotta[rot[1", "black_glazed_terracotta[rot[2", "black_glazed_terracotta[rot[3", "black_glazed_terracotta[rot[4"],
+          texturePerSide: [3, 1, 3, 3, 2, 0],
+          harvestType: "rock"
+        },
+        "Black Ceramic|meta|rot3": {
+          ttb: 1500,
+          textureInfo: ["black_glazed_terracotta[rot[1", "black_glazed_terracotta[rot[2", "black_glazed_terracotta[rot[3", "black_glazed_terracotta[rot[4"],
+          texturePerSide: [2, 0, 0, 0, 1, 3],
+          harvestType: "rock"
+        },
+        "Black Ceramic|meta|rot4": {
+          ttb: 1500,
+          textureInfo: ["black_glazed_terracotta[rot[1", "black_glazed_terracotta[rot[2", "black_glazed_terracotta[rot[3", "black_glazed_terracotta[rot[4"],
+          texturePerSide: [1, 3, 1, 1, 0, 2],
+          harvestType: "rock"
+        },
+        "Wheat Seeds": {
+          displayName: {
+            translationKey: "item:wheatSeeds"
+          },
+          ttb: 400,
+          textureInfo: "wheat_stage0",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "wheat_seeds",
+          description: {
+            translationKey: "item:wheatSeedsDescription"
+          }
+        },
+        ...(0, JM.yb)("Wheat", {
+          displayName: {
+            translationKey: "item:wheat"
+          },
+          ttb: 400,
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Wheat Seeds"
+        }, ["wheat_stage2", "wheat_stage3", "wheat_stage4", "wheat_stage5", "wheat_stage6"]),
+        Wheat: {
+          displayName: {
+            translationKey: "item:wheat"
+          },
+          ttb: 400,
+          textureInfo: "wheat_stage7",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "wheat"
+        },
+        "Wheat|FreshlyGrown": {
+          ttb: 400,
+          textureInfo: "wheat_stage7",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Tilled Soil": {
+          displayName: {
+            translationKey: "item:tilledSoil"
+          },
+          ttb: 600,
+          textureInfo: "farmland",
+          harvestType: "granule"
+        },
+        "Bread Block": {
+          displayName: {
+            translationKey: "item:breadBlock"
+          },
+          ttb: 600,
+          textureInfo: ["bread_block_front", "bread_block_back", "bread_block_side", "bread_block_top"],
+          texturePerSide: [2, 2, 3, 3, 0, 1],
+          harvestType: "cuttable"
+        },
+        "ReservedBread BlockRotation1": {
+          ttb: 600,
+          textureInfo: ["bread_block_front", "bread_block_back", "bread_block_side", "bread_block_top"],
+          texturePerSide: [2, 2, 3, 3, 0, 1],
+          harvestType: "cuttable"
+        },
+        "ReservedBread BlockRotation2": {
+          ttb: 600,
+          textureInfo: ["bread_block_front", "bread_block_back", "bread_block_side", "bread_block_top"],
+          texturePerSide: [2, 2, 3, 3, 0, 1],
+          harvestType: "cuttable"
+        },
+        "ReservedBread BlockRotation3": {
+          ttb: 600,
+          textureInfo: ["bread_block_front", "bread_block_back", "bread_block_side", "bread_block_top"],
+          texturePerSide: [2, 2, 3, 3, 0, 1],
+          harvestType: "cuttable"
+        },
+        "Mossy Messy Stone": {
+          displayName: {
+            translationKey: "item:mossyMessyStone"
+          },
+          ttb: 1800,
+          textureInfo: "mossy_cobblestone",
+          harvestType: "rock"
+        },
+        "Dandelion|Roots": {
+          ttb: 300,
+          textureInfo: "dandelion",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "dandelion"
+        },
+        "Poppy|Roots": {
+          ttb: 300,
+          textureInfo: "poppy",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "poppy"
+        },
+        "Red Tulip|Roots": {
+          ttb: 300,
+          textureInfo: "red_tulip",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "red_tulip"
+        },
+        "Pink Tulip|Roots": {
+          ttb: 300,
+          textureInfo: "pink_tulip",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "pink_tulip"
+        },
+        "White Tulip|Roots": {
+          ttb: 300,
+          textureInfo: "white_tulip",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "white_tulip"
+        },
+        "Orange Tulip|Roots": {
+          ttb: 300,
+          textureInfo: "orange_tulip",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "orange_tulip"
+        },
+        "Daisy|Roots": {
+          ttb: 300,
+          textureInfo: "oxeye_daisy",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "oxeye_daisy"
+        },
+        "Bluebell|Roots": {
+          ttb: 300,
+          textureInfo: "blue_orchid",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "blue_orchid"
+        },
+        "Forget-me-not|Roots": {
+          ttb: 300,
+          textureInfo: "cornflower",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "cornflower"
+        },
+        "Allium|Roots": {
+          ttb: 300,
+          textureInfo: "allium",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "allium"
+        },
+        "Azure Bluet|Roots": {
+          ttb: 300,
+          textureInfo: "azure_bluet",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "azure_bluet"
+        },
+        "Lily of the Valley|Roots": {
+          ttb: 300,
+          textureInfo: "lily_of_the_valley",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "lily_of_the_valley"
+        },
+        "Shadow Rose|Roots": {
+          ttb: 300,
+          textureInfo: "shadow_rose",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "shadow_rose"
+        },
+        ...(0, JM.Jb)("White Bed", {
+          displayName: {
+            translationKey: "item:whiteBed"
+          },
+          ttb: 240,
+          itemTexture: "white_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "White Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "White Bed"
+        }),
+        ...(0, JM.Jb)("_White Bed Head", {
+          ttb: 240,
+          itemTexture: "white_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "White Bed",
+          rootMetaDesc: "_White Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_White Bed Head"
+        }),
+        ...(0, JM.Jb)("Orange Bed", {
+          displayName: {
+            translationKey: "item:orangeBed"
+          },
+          ttb: 240,
+          itemTexture: "orange_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Orange Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Orange Bed"
+        }),
+        ...(0, JM.Jb)("_Orange Bed Head", {
+          ttb: 240,
+          itemTexture: "orange_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Orange Bed",
+          rootMetaDesc: "_Orange Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Orange Bed Head"
+        }),
+        ...(0, JM.Jb)("Magenta Bed", {
+          displayName: {
+            translationKey: "item:magentaBed"
+          },
+          ttb: 240,
+          itemTexture: "magenta_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Magenta Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Magenta Bed"
+        }),
+        ...(0, JM.Jb)("_Magenta Bed Head", {
+          ttb: 240,
+          itemTexture: "magenta_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Magenta Bed",
+          rootMetaDesc: "_Magenta Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Magenta Bed Head"
+        }),
+        ...(0, JM.Jb)("Light Blue Bed", {
+          displayName: {
+            translationKey: "item:lightBlueBed"
+          },
+          ttb: 240,
+          itemTexture: "light_blue_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Light Blue Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Light Blue Bed"
+        }),
+        ...(0, JM.Jb)("_Light Blue Bed Head", {
+          ttb: 240,
+          itemTexture: "light_blue_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Light Blue Bed",
+          rootMetaDesc: "_Light Blue Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Light Blue Bed Head"
+        }),
+        ...(0, JM.Jb)("Yellow Bed", {
+          displayName: {
+            translationKey: "item:yellowBed"
+          },
+          ttb: 240,
+          itemTexture: "yellow_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Yellow Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Yellow Bed"
+        }),
+        ...(0, JM.Jb)("_Yellow Bed Head", {
+          ttb: 240,
+          itemTexture: "yellow_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Yellow Bed",
+          rootMetaDesc: "_Yellow Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Yellow Bed Head"
+        }),
+        ...(0, JM.Jb)("Lime Bed", {
+          displayName: {
+            translationKey: "item:limeBed"
+          },
+          ttb: 240,
+          itemTexture: "lime_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Lime Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Lime Bed"
+        }),
+        ...(0, JM.Jb)("_Lime Bed Head", {
+          ttb: 240,
+          itemTexture: "lime_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Lime Bed",
+          rootMetaDesc: "_Lime Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Lime Bed Head"
+        }),
+        ...(0, JM.Jb)("Pink Bed", {
+          displayName: {
+            translationKey: "item:pinkBed"
+          },
+          ttb: 240,
+          itemTexture: "pink_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Pink Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Pink Bed"
+        }),
+        ...(0, JM.Jb)("_Pink Bed Head", {
+          ttb: 240,
+          itemTexture: "pink_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Pink Bed",
+          rootMetaDesc: "_Pink Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Pink Bed Head"
+        }),
+        ...(0, JM.Jb)("Gray Bed", {
+          displayName: {
+            translationKey: "item:grayBed"
+          },
+          ttb: 240,
+          itemTexture: "gray_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Gray Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Gray Bed"
+        }),
+        ...(0, JM.Jb)("_Gray Bed Head", {
+          ttb: 240,
+          itemTexture: "gray_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Gray Bed",
+          rootMetaDesc: "_Gray Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Gray Bed Head"
+        }),
+        ...(0, JM.Jb)("Light Gray Bed", {
+          displayName: {
+            translationKey: "item:lightGrayBed"
+          },
+          ttb: 240,
+          itemTexture: "light_gray_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Light Gray Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Light Gray Bed"
+        }),
+        ...(0, JM.Jb)("_Light Gray Bed Head", {
+          ttb: 240,
+          itemTexture: "light_gray_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Light Gray Bed",
+          rootMetaDesc: "_Light Gray Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Light Gray Bed Head"
+        }),
+        ...(0, JM.Jb)("Cyan Bed", {
+          displayName: {
+            translationKey: "item:cyanBed"
+          },
+          ttb: 240,
+          itemTexture: "cyan_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Cyan Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Cyan Bed"
+        }),
+        ...(0, JM.Jb)("_Cyan Bed Head", {
+          ttb: 240,
+          itemTexture: "cyan_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Cyan Bed",
+          rootMetaDesc: "_Cyan Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Cyan Bed Head"
+        }),
+        ...(0, JM.Jb)("Purple Bed", {
+          displayName: {
+            translationKey: "item:purpleBed"
+          },
+          ttb: 240,
+          itemTexture: "purple_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Purple Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Purple Bed"
+        }),
+        ...(0, JM.Jb)("_Purple Bed Head", {
+          ttb: 240,
+          itemTexture: "purple_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Purple Bed",
+          rootMetaDesc: "_Purple Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Purple Bed Head"
+        }),
+        ...(0, JM.Jb)("Blue Bed", {
+          displayName: {
+            translationKey: "item:blueBed"
+          },
+          ttb: 240,
+          itemTexture: "blue_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Blue Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Blue Bed"
+        }),
+        ...(0, JM.Jb)("_Blue Bed Head", {
+          ttb: 240,
+          itemTexture: "blue_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Blue Bed",
+          rootMetaDesc: "_Blue Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Blue Bed Head"
+        }),
+        ...(0, JM.Jb)("Brown Bed", {
+          displayName: {
+            translationKey: "item:brownBed"
+          },
+          ttb: 240,
+          itemTexture: "brown_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Brown Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Brown Bed"
+        }),
+        ...(0, JM.Jb)("_Brown Bed Head", {
+          ttb: 240,
+          itemTexture: "brown_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Brown Bed",
+          rootMetaDesc: "_Brown Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Brown Bed Head"
+        }),
+        ...(0, JM.Jb)("Green Bed", {
+          displayName: {
+            translationKey: "item:greenBed"
+          },
+          ttb: 240,
+          itemTexture: "green_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Green Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Green Bed"
+        }),
+        ...(0, JM.Jb)("_Green Bed Head", {
+          ttb: 240,
+          itemTexture: "green_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Green Bed",
+          rootMetaDesc: "_Green Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Green Bed Head"
+        }),
+        ...(0, JM.Jb)("Red Bed", {
+          displayName: {
+            translationKey: "item:redBed"
+          },
+          ttb: 240,
+          itemTexture: "red_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Red Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Red Bed"
+        }),
+        ...(0, JM.Jb)("_Red Bed Head", {
+          ttb: 240,
+          itemTexture: "red_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Red Bed",
+          rootMetaDesc: "_Red Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Red Bed Head"
+        }),
+        ...(0, JM.Jb)("Black Bed", {
+          displayName: {
+            translationKey: "item:blackBed"
+          },
+          ttb: 240,
+          itemTexture: "black_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Black Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Black Bed"
+        }),
+        ...(0, JM.Jb)("_Black Bed Head", {
+          ttb: 240,
+          itemTexture: "black_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Black Bed",
+          rootMetaDesc: "_Black Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Black Bed Head"
+        }),
+        "Apple Block": {
+          displayName: {
+            translationKey: "item:appleBlock"
+          },
+          ttb: 600,
+          textureInfo: ["apple_block_side", "apple_block_top", "apple_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Moonstone Ore": {
+          displayName: {
+            translationKey: "item:moonstoneOre"
+          },
+          ttb: 5e3,
+          textureInfo: "moonstone_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: "Moonstone",
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Moonstone Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": LM.o
+          },
+          description: {
+            translationKey: "item:moonstoneOreDescription"
+          },
+          onMinedAura: 50,
+          Ch: [6, 6, 6]
+        },
+        ...(0, JM.Lb)("Moonstone Chest", {
+          displayName: {
+            translationKey: "item:moonstoneChest"
+          },
+          ttb: 3e3,
+          textureInfo: ["moonstone_chest_front", "moonstone_chest_side", "moonstone_chest_top[rot[1", "moonstone_chest_top[rot[2", "moonstone_chest_top[rot[3", "moonstone_chest_top[rot[4", "moonstone_chest_back"],
+          harvestType: "rock",
+          rootMetaDesc: "Moonstone Chest|meta|rot1",
+          description: {
+            translationKey: "item:moonstoneChestDescription"
+          }
+        }, [
+          [1, 1, 2, 2, 0, 6],
+          [0, 6, 3, 3, 1, 1],
+          [1, 1, 4, 4, 6, 0],
+          [6, 0, 5, 5, 1, 1]
+        ]),
+        "Block of Moonstone": {
+          displayName: {
+            translationKey: "item:blockOfMoonstone"
+          },
+          ttb: 6750,
+          textureInfo: "moonstone_block",
+          harvestType: "rock"
+        },
+        Magma: {
+          displayName: {
+            translationKey: "item:magma"
+          },
+          ttb: 600,
+          textureInfo: "magma",
+          harvestType: "rock",
+          Ch: [9, 3, 1]
+        },
+        "Useless Soil": {
+          displayName: {
+            translationKey: "item:uselessSoil"
+          },
+          ttb: 600,
+          textureInfo: "podzol_top",
+          harvestType: "granule"
+        },
+        "Marked Sandstone": {
+          displayName: {
+            translationKey: "item:markedSandstone"
+          },
+          ttb: 960,
+          textureInfo: "cut_sandstone",
+          harvestType: "rock"
+        },
+        "Red Sandstone": {
+          displayName: {
+            translationKey: "item:redSandstone"
+          },
+          ttb: 960,
+          textureInfo: "red_sandstone",
+          harvestType: "rock"
+        },
+        "Smooth Red Sandstone": {
+          displayName: {
+            translationKey: "item:smoothRedSandstone"
+          },
+          ttb: 960,
+          textureInfo: "red_sandstone_top",
+          harvestType: "rock"
+        },
+        "Engraved Red Sandstone": {
+          displayName: {
+            translationKey: "item:engravedRedSandstone"
+          },
+          ttb: 960,
+          textureInfo: "chiseled_red_sandstone",
+          harvestType: "rock"
+        },
+        "Marked Red Sandstone": {
+          displayName: {
+            translationKey: "item:markedRedSandstone"
+          },
+          ttb: 960,
+          textureInfo: "cut_red_sandstone",
+          harvestType: "rock"
+        },
+        "Green Stone": {
+          displayName: {
+            translationKey: "item:greenStone"
+          },
+          ttb: 1800,
+          textureInfo: "green_stone",
+          harvestType: "rock"
+        },
+        "Green Bricks": {
+          displayName: {
+            translationKey: "item:greenBricks"
+          },
+          ttb: 1800,
+          textureInfo: "green_bricks",
+          harvestType: "rock"
+        },
+        "Dark Green Bricks": {
+          displayName: {
+            translationKey: "item:darkGreenBricks"
+          },
+          ttb: 1800,
+          textureInfo: "dark_green_bricks",
+          harvestType: "rock"
+        },
+        "Sandstone Bricks": {
+          displayName: {
+            translationKey: "item:sandstoneBricks"
+          },
+          ttb: 960,
+          textureInfo: "sandstone_brick",
+          harvestType: "rock"
+        },
+        "Engraved Diorite": {
+          displayName: {
+            translationKey: "item:engravedDiorite"
+          },
+          ttb: 1800,
+          textureInfo: "engraved_diorite",
+          harvestType: "rock"
+        },
+        "Diorite Bricks": {
+          displayName: {
+            translationKey: "item:dioriteBricks"
+          },
+          ttb: 1800,
+          textureInfo: "diorite_brick",
+          harvestType: "rock"
+        },
+        "Engraved Andesite": {
+          displayName: {
+            translationKey: "item:engravedAndesite"
+          },
+          ttb: 1800,
+          textureInfo: "engraved_andesite",
+          harvestType: "rock"
+        },
+        "Andesite Bricks": {
+          displayName: {
+            translationKey: "item:andesiteBricks"
+          },
+          ttb: 1800,
+          textureInfo: "andesite_brick",
+          harvestType: "rock"
+        },
+        "Engraved Granite": {
+          displayName: {
+            translationKey: "item:engravedGranite"
+          },
+          ttb: 1800,
+          textureInfo: "engraved_granite",
+          harvestType: "rock"
+        },
+        "Granite Bricks": {
+          displayName: {
+            translationKey: "item:graniteBricks"
+          },
+          ttb: 1800,
+          textureInfo: "granite_brick",
+          harvestType: "rock"
+        },
+        "Ice Bricks": {
+          displayName: {
+            translationKey: "item:iceBricks"
+          },
+          ttb: 1800,
+          textureInfo: "ice_brick",
+          harvestType: "rock",
+          harvestLevel: 0,
+          stoodOnSpeedMultiplier: 1.4
+        },
+        "Placeholder Packed Ice": {
+          ttb: 1800,
+          textureInfo: "ice_brick",
+          harvestType: "rock",
+          harvestLevel: 0,
+          stoodOnSpeedMultiplier: 1.4
+        },
+        "Placeholder Blue Ice": {
+          ttb: 1800,
+          textureInfo: "ice_brick",
+          harvestType: "rock",
+          harvestLevel: 0,
+          stoodOnSpeedMultiplier: 1.4
+        },
+        "Plum Leaves": {
+          displayName: {
+            translationKey: "item:plumLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_plum",
+          harvestType: "cuttable"
+        },
+        "Cedar Leaves": {
+          displayName: {
+            translationKey: "item:cedarLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_cedar",
+          harvestType: "cuttable"
+        },
+        "Palm Leaves": {
+          displayName: {
+            translationKey: "item:palmLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_palm",
+          harvestType: "cuttable"
+        },
+        "Plum Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_plum",
+          harvestType: "cuttable",
+          drops: "Plum Leaves"
+        },
+        "Cedar Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_cedar",
+          harvestType: "cuttable",
+          drops: "Cedar Leaves"
+        },
+        "Palm Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_palm",
+          harvestType: "cuttable",
+          drops: "Palm Leaves"
+        },
+        "Pine Log|TreeBase|Pine": {
+          ttb: 2400,
+          textureInfo: "log_pine",
+          harvestType: "wood",
+          drops: "Pine Log"
+        },
+        "Plum Log|TreeBase|Plum": {
+          ttb: 2400,
+          textureInfo: "log_plum",
+          harvestType: "wood",
+          drops: "Plum Log"
+        },
+        "Cedar Log|TreeBase|Cedar": {
+          ttb: 2400,
+          textureInfo: "log_cedar",
+          harvestType: "wood",
+          drops: "Cedar Log"
+        },
+        "Aspen Log|TreeBase|Aspen": {
+          ttb: 2400,
+          textureInfo: "log_aspen",
+          harvestType: "wood",
+          drops: "Aspen Log"
+        },
+        "Jungle Log|TreeBase|Jungle": {
+          ttb: 2400,
+          textureInfo: "log_jungle",
+          harvestType: "wood",
+          drops: "Jungle Log"
+        },
+        "Palm Log": {
+          displayName: {
+            translationKey: "item:palmLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_palm",
+          harvestType: "wood"
+        },
+        "Palm Log|TreeBase|Palm": {
+          ttb: 2400,
+          textureInfo: "log_palm",
+          harvestType: "wood",
+          drops: "Palm Log"
+        },
+        "Palm Wood Planks": {
+          displayName: {
+            translationKey: "item:palmWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_palm",
+          harvestType: "wood"
+        },
+        "Palm Sapling": {
+          displayName: {
+            translationKey: "item:palmSapling"
+          },
+          ttb: 1,
+          textureInfo: "palm_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "palm_sapling"
+        },
+        "Pine Door": {
+          displayName: {
+            translationKey: "item:pineDoor"
+          },
+          ttb: 3600,
+          itemTexture: "pine_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Pine Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Pine Door"
+        },
+        "Pine Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pine Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pine Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pine Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pine Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pine Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pine Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Pine Door Top": {
+          ttb: 3600,
+          itemTexture: "pine_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Pine Door",
+          rootMetaDesc: "_Pine Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Pine Door Top"
+        },
+        "_Pine Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pine Door"
+        },
+        "_Pine Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pine Door"
+        },
+        "_Pine Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pine Door"
+        },
+        "_Pine Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pine Door"
+        },
+        "_Pine Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pine Door"
+        },
+        "_Pine Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pine Door"
+        },
+        "_Pine Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pine Door"
+        },
+        "Plum Door": {
+          displayName: {
+            translationKey: "item:plumDoor"
+          },
+          ttb: 3600,
+          itemTexture: "plum_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Plum Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Plum Door"
+        },
+        "Plum Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Plum Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Plum Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Plum Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Plum Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Plum Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Plum Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Plum Door Top": {
+          ttb: 3600,
+          itemTexture: "plum_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Plum Door",
+          rootMetaDesc: "_Plum Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Plum Door Top"
+        },
+        "_Plum Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Plum Door"
+        },
+        "_Plum Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Plum Door"
+        },
+        "_Plum Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Plum Door"
+        },
+        "_Plum Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Plum Door"
+        },
+        "_Plum Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Plum Door"
+        },
+        "_Plum Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Plum Door"
+        },
+        "_Plum Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Plum Door"
+        },
+        "Cedar Door": {
+          displayName: {
+            translationKey: "item:cedarDoor"
+          },
+          ttb: 3600,
+          itemTexture: "cedar_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Cedar Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Cedar Door"
+        },
+        "Cedar Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cedar Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cedar Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cedar Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cedar Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cedar Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cedar Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Cedar Door Top": {
+          ttb: 3600,
+          itemTexture: "cedar_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Cedar Door",
+          rootMetaDesc: "_Cedar Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Cedar Door Top"
+        },
+        "_Cedar Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cedar Door"
+        },
+        "_Cedar Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cedar Door"
+        },
+        "_Cedar Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cedar Door"
+        },
+        "_Cedar Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cedar Door"
+        },
+        "_Cedar Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cedar Door"
+        },
+        "_Cedar Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cedar Door"
+        },
+        "_Cedar Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cedar Door"
+        },
+        "Aspen Door": {
+          displayName: {
+            translationKey: "item:aspenDoor"
+          },
+          ttb: 3600,
+          itemTexture: "aspen_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Aspen Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Aspen Door"
+        },
+        "Aspen Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Aspen Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Aspen Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Aspen Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Aspen Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Aspen Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Aspen Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Aspen Door Top": {
+          ttb: 3600,
+          itemTexture: "aspen_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Aspen Door",
+          rootMetaDesc: "_Aspen Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Aspen Door Top"
+        },
+        "_Aspen Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Aspen Door"
+        },
+        "_Aspen Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Aspen Door"
+        },
+        "_Aspen Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Aspen Door"
+        },
+        "_Aspen Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Aspen Door"
+        },
+        "_Aspen Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Aspen Door"
+        },
+        "_Aspen Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Aspen Door"
+        },
+        "_Aspen Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Aspen Door"
+        },
+        "Jungle Door": {
+          displayName: {
+            translationKey: "item:jungleDoor"
+          },
+          ttb: 3600,
+          itemTexture: "jungle_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Jungle Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Jungle Door"
+        },
+        "Jungle Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Jungle Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Jungle Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Jungle Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Jungle Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Jungle Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Jungle Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Jungle Door Top": {
+          ttb: 3600,
+          itemTexture: "jungle_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Jungle Door",
+          rootMetaDesc: "_Jungle Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Jungle Door Top"
+        },
+        "_Jungle Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Jungle Door"
+        },
+        "_Jungle Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Jungle Door"
+        },
+        "_Jungle Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Jungle Door"
+        },
+        "_Jungle Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Jungle Door"
+        },
+        "_Jungle Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Jungle Door"
+        },
+        "_Jungle Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Jungle Door"
+        },
+        "_Jungle Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Jungle Door"
+        },
+        "Palm Door": {
+          displayName: {
+            translationKey: "item:palmDoor"
+          },
+          ttb: 3600,
+          itemTexture: "palm_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Palm Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Palm Door"
+        },
+        "Palm Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Palm Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Palm Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Palm Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Palm Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Palm Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Palm Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Palm Door Top": {
+          ttb: 3600,
+          itemTexture: "palm_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Palm Door",
+          rootMetaDesc: "_Palm Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Palm Door Top"
+        },
+        "_Palm Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Palm Door"
+        },
+        "_Palm Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Palm Door"
+        },
+        "_Palm Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Palm Door"
+        },
+        "_Palm Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Palm Door"
+        },
+        "_Palm Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Palm Door"
+        },
+        "_Palm Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Palm Door"
+        },
+        "_Palm Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Palm Door"
+        },
+        "Pine Trapdoor": {
+          displayName: {
+            translationKey: "item:pineTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "pine_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Pine Trapdoor|meta|rot1|closed",
+          blockModel: "Pine Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Pine Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Pine Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Pine Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Pine Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Pine Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Pine Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Pine Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Plum Trapdoor": {
+          displayName: {
+            translationKey: "item:plumTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "plum_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Plum Trapdoor|meta|rot1|closed",
+          blockModel: "Plum Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Plum Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Plum Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Plum Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Plum Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Plum Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Plum Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Plum Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Cedar Trapdoor": {
+          displayName: {
+            translationKey: "item:cedarTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "cedar_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Cedar Trapdoor|meta|rot1|closed",
+          blockModel: "Cedar Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Cedar Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Cedar Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Cedar Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Cedar Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Cedar Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Cedar Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Cedar Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Aspen Trapdoor": {
+          displayName: {
+            translationKey: "item:aspenTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "aspen_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Aspen Trapdoor|meta|rot1|closed",
+          blockModel: "Aspen Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Aspen Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Aspen Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Aspen Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Aspen Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Aspen Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Aspen Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Aspen Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Jungle Trapdoor": {
+          displayName: {
+            translationKey: "item:jungleTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "jungle_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Jungle Trapdoor|meta|rot1|closed",
+          blockModel: "Jungle Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Jungle Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Jungle Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Jungle Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Jungle Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Jungle Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Jungle Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Jungle Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Palm Trapdoor": {
+          displayName: {
+            translationKey: "item:palmTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "palm_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Palm Trapdoor|meta|rot1|closed",
+          blockModel: "Palm Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Palm Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Palm Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Palm Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Palm Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Palm Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Palm Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Palm Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Red Sand": {
+          displayName: {
+            translationKey: "item:redSand"
+          },
+          ttb: 600,
+          textureInfo: "red_sand",
+          harvestType: "granule",
+          soundType: {
+            break: "sand",
+            place: "sand"
+          }
+        },
+        "Red Sandstone Bricks": {
+          displayName: {
+            translationKey: "item:redSandstoneBricks"
+          },
+          ttb: 960,
+          textureInfo: "red_sandstone_brick",
+          harvestType: "rock"
+        },
+        "Rocky Dirt": {
+          displayName: {
+            translationKey: "item:rockyDirt"
+          },
+          ttb: 600,
+          textureInfo: "rocky_dirt",
+          harvestType: "granule"
+        },
+        "Autumn Maple Leaves": {
+          displayName: {
+            translationKey: "item:autumnMapleLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_maple_autumn",
+          harvestType: "cuttable"
+        },
+        "Autumn Maple Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_maple_autumn",
+          harvestType: "cuttable",
+          drops: "Autumn Maple Leaves"
+        },
+        ...(0, JM.Pb)("Fallen Maple Leaves", {
+          displayName: {
+            translationKey: "item:fallenMapleLeaves"
+          },
+          ttb: 350,
+          textureInfo: ["fallen_maple_leaves_side", "leaves_maple_autumn"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          solid: !1,
+          harvestType: "cuttable",
+          rootMetaDesc: "Fallen Maple Leaves|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Maple Slab", {
+          displayName: {
+            translationKey: "item:mapleSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_maple_side", "planks_maple"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Maple Wood Planks",
+          rootMetaDesc: "Maple Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Pine Slab", {
+          displayName: {
+            translationKey: "item:pineSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_pine_side", "planks_pine"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Pine Wood Planks",
+          rootMetaDesc: "Pine Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Plum Slab", {
+          displayName: {
+            translationKey: "item:plumSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_plum_side", "planks_plum"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Plum Wood Planks",
+          rootMetaDesc: "Plum Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Cedar Slab", {
+          displayName: {
+            translationKey: "item:cedarSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_cedar_side", "planks_cedar"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Cedar Wood Planks",
+          rootMetaDesc: "Cedar Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Aspen Slab", {
+          displayName: {
+            translationKey: "item:aspenSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_aspen_side", "planks_aspen"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Aspen Wood Planks",
+          rootMetaDesc: "Aspen Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Jungle Slab", {
+          displayName: {
+            translationKey: "item:jungleSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_jungle_side", "planks_jungle"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Jungle Wood Planks",
+          rootMetaDesc: "Jungle Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Palm Slab", {
+          displayName: {
+            translationKey: "item:palmSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_palm_side", "planks_palm"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Palm Wood Planks",
+          rootMetaDesc: "Palm Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Dirt Slab", {
+          displayName: {
+            translationKey: "item:dirtSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_dirt_side", "dirt"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "granule",
+          slabFullBlock: "Dirt",
+          rootMetaDesc: "Dirt Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Grass Slab", {
+          displayName: {
+            translationKey: "item:grassSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_grass_top_side", "grass_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "granule",
+          slabFullBlock: "Grass Block",
+          rootMetaDesc: "Grass Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Messy Stone Slab", {
+          displayName: {
+            translationKey: "item:messyStoneSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_cobblestone_side", "messy_stone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Messy Stone",
+          rootMetaDesc: "Messy Stone Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Stone Slab", {
+          displayName: {
+            translationKey: "item:stoneSlab"
+          },
+          ttb: 800,
+          textureInfo: ["slab_stone_side", "stone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Stone",
+          rootMetaDesc: "Stone Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Smooth Stone Slab", {
+          displayName: {
+            translationKey: "item:smoothStoneSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_smooth_stone_side", "smooth_stone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Smooth Stone",
+          rootMetaDesc: "Smooth Stone Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Engraved Stone Slab", {
+          displayName: {
+            translationKey: "item:engravedStoneSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_stonebrick_carved_side", "stonebrick_carved"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Engraved Stone",
+          rootMetaDesc: "Engraved Stone Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Stone Bricks Slab", {
+          displayName: {
+            translationKey: "item:stoneBricksSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_stonebrick_side", "stonebrick"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Stone Bricks",
+          rootMetaDesc: "Stone Bricks Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Mossy Stone Slab", {
+          displayName: {
+            translationKey: "item:mossyStoneSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_mossy_cobblestone_side", "mossy_cobblestone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Mossy Messy Stone",
+          rootMetaDesc: "Mossy Stone Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Mossy Stone Bricks Slab", {
+          displayName: {
+            translationKey: "item:mossyStoneBricksSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_stonebrick_mossy_side", "stonebrick_mossy"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Mossy Stone Bricks",
+          rootMetaDesc: "Mossy Stone Bricks Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Andesite Slab", {
+          displayName: {
+            translationKey: "item:andesiteSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_stone_andesite_side", "stone_andesite"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Andesite",
+          rootMetaDesc: "Andesite Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Smooth Andesite Slab", {
+          displayName: {
+            translationKey: "item:smoothAndesiteSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_stone_andesite_smooth_side", "stone_andesite_smooth"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Smooth Andesite",
+          rootMetaDesc: "Smooth Andesite Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Engraved Andesite Slab", {
+          displayName: {
+            translationKey: "item:engravedAndesiteSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_engraved_andesite_side", "engraved_andesite"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Engraved Andesite",
+          rootMetaDesc: "Engraved Andesite Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Andesite Bricks Slab", {
+          displayName: {
+            translationKey: "item:andesiteBricksSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_andesite_brick_side", "andesite_brick"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Andesite Bricks",
+          rootMetaDesc: "Andesite Bricks Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Diorite Slab", {
+          displayName: {
+            translationKey: "item:dioriteSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_stone_diorite_side", "stone_diorite"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Diorite",
+          rootMetaDesc: "Diorite Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Smooth Diorite Slab", {
+          displayName: {
+            translationKey: "item:smoothDioriteSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_stone_diorite_smooth_side", "stone_diorite_smooth"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Smooth Diorite",
+          rootMetaDesc: "Smooth Diorite Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Engraved Diorite Slab", {
+          displayName: {
+            translationKey: "item:engravedDioriteSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_engraved_diorite_side", "engraved_diorite"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Engraved Diorite",
+          rootMetaDesc: "Engraved Diorite Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Diorite Bricks Slab", {
+          displayName: {
+            translationKey: "item:dioriteBricksSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_diorite_brick_side", "diorite_brick"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Diorite Bricks",
+          rootMetaDesc: "Diorite Bricks Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Granite Slab", {
+          displayName: {
+            translationKey: "item:graniteSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_stone_granite_side", "stone_granite"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Granite",
+          rootMetaDesc: "Granite Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Smooth Granite Slab", {
+          displayName: {
+            translationKey: "item:smoothGraniteSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_stone_granite_smooth_side", "stone_granite_smooth"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Smooth Granite",
+          rootMetaDesc: "Smooth Granite Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Engraved Granite Slab", {
+          displayName: {
+            translationKey: "item:engravedGraniteSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_engraved_granite_side", "engraved_granite"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Engraved Granite",
+          rootMetaDesc: "Engraved Granite Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Granite Bricks Slab", {
+          displayName: {
+            translationKey: "item:graniteBricksSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_granite_brick_side", "granite_brick"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Granite Bricks",
+          rootMetaDesc: "Granite Bricks Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Sandstone Slab", {
+          displayName: {
+            translationKey: "item:sandstoneSlab"
+          },
+          ttb: 640,
+          textureInfo: ["slab_sandstone_normal_side", "sandstone_normal"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Sandstone",
+          rootMetaDesc: "Sandstone Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Smooth Sandstone Slab", {
+          displayName: {
+            translationKey: "item:smoothSandstoneSlab"
+          },
+          ttb: 640,
+          textureInfo: "sandstone_top",
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Smooth Sandstone",
+          rootMetaDesc: "Smooth Sandstone Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Engraved Sandstone Slab", {
+          displayName: {
+            translationKey: "item:engravedSandstoneSlab"
+          },
+          ttb: 640,
+          textureInfo: ["slab_chiseled_sandstone_side", "chiseled_sandstone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Engraved Sandstone",
+          rootMetaDesc: "Engraved Sandstone Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Marked Sandstone Slab", {
+          displayName: {
+            translationKey: "item:markedSandstoneSlab"
+          },
+          ttb: 640,
+          textureInfo: ["slab_cut_sandstone_side", "cut_sandstone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Marked Sandstone",
+          rootMetaDesc: "Marked Sandstone Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Sandstone Bricks Slab", {
+          displayName: {
+            translationKey: "item:sandstoneBricksSlab"
+          },
+          ttb: 640,
+          textureInfo: ["slab_sandstone_brick_side", "sandstone_brick"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Sandstone Bricks",
+          rootMetaDesc: "Sandstone Bricks Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Red Sandstone Slab", {
+          displayName: {
+            translationKey: "item:redSandstoneSlab"
+          },
+          ttb: 640,
+          textureInfo: ["slab_red_sandstone_side", "red_sandstone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Red Sandstone",
+          rootMetaDesc: "Red Sandstone Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Smooth Red Sandstone Slab", {
+          displayName: {
+            translationKey: "item:smoothRedSandstoneSlab"
+          },
+          ttb: 640,
+          textureInfo: "red_sandstone_top",
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Smooth Red Sandstone",
+          rootMetaDesc: "Smooth Red Sandstone Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Engraved Red Sandstone Slab", {
+          displayName: {
+            translationKey: "item:engravedRedSandstoneSlab"
+          },
+          ttb: 640,
+          textureInfo: ["slab_chiseled_red_sandstone_side", "chiseled_red_sandstone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Engraved Red Sandstone",
+          rootMetaDesc: "Engraved Red Sandstone Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Marked Red Sandstone Slab", {
+          displayName: {
+            translationKey: "item:markedRedSandstoneSlab"
+          },
+          ttb: 640,
+          textureInfo: ["slab_cut_red_sandstone_side", "cut_red_sandstone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Marked Red Sandstone",
+          rootMetaDesc: "Marked Red Sandstone Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Red Sandstone Bricks Slab", {
+          displayName: {
+            translationKey: "item:redSandstoneBricksSlab"
+          },
+          ttb: 640,
+          textureInfo: ["slab_red_sandstone_brick_side", "red_sandstone_brick"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Red Sandstone Bricks",
+          rootMetaDesc: "Red Sandstone Bricks Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Bricks Slab", {
+          displayName: {
+            translationKey: "item:bricksSlab"
+          },
+          ttb: 1600,
+          textureInfo: ["slab_brick_side", "brick"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Bricks",
+          rootMetaDesc: "Bricks Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Pb)("Ice Bricks Slab", {
+          displayName: {
+            translationKey: "item:iceBricksSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_ice_brick_side", "ice_brick"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Ice Bricks",
+          rootMetaDesc: "Ice Bricks Slab|meta|rot1|bot",
+          harvestLevel: 0,
+          stoodOnSpeedMultiplier: 1.4
+        }),
+        "Vines|meta|rot1|Growing": {
+          ttb: 225,
+          itemTexture: "vine_coloured",
+          harvestType: "cuttable",
+          model: "rotatableOffset",
+          solid: !1,
+          rootMetaDesc: "Vines|meta|rot1|Growing",
+          blockModel: "Vines",
+          modelScale: 10,
+          heldItemScale: 10,
+          blockModelItem: !0
+        },
+        "Vines|meta|rot2|Growing": {
+          ttb: 225,
+          itemTexture: "vine_coloured",
+          harvestType: "cuttable",
+          model: "rotatableOffset",
+          solid: !1,
+          modelScale: 10,
+          heldItemScale: 10
+        },
+        "Vines|meta|rot3|Growing": {
+          ttb: 225,
+          itemTexture: "vine_coloured",
+          harvestType: "cuttable",
+          model: "rotatableOffset",
+          solid: !1,
+          modelScale: 10,
+          heldItemScale: 10
+        },
+        "Vines|meta|rot4|Growing": {
+          ttb: 225,
+          itemTexture: "vine_coloured",
+          harvestType: "cuttable",
+          model: "rotatableOffset",
+          solid: !1,
+          modelScale: 10,
+          heldItemScale: 10
+        },
+        "Cactus|Growing": {
+          ttb: 300,
+          textureInfo: "small_cactus",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "small_cactus"
+        },
+        "Fat Cactus|Growing": {
+          ttb: 400,
+          textureInfo: "cactus_top",
+          harvestType: "cuttable",
+          damage: 22
+        },
+        "Plum Block": {
+          displayName: {
+            translationKey: "item:plumBlock"
+          },
+          ttb: 600,
+          textureInfo: ["plum_block_side", "plum_block_top", "plum_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Coconut Block": {
+          displayName: {
+            translationKey: "item:coconutBlock"
+          },
+          ttb: 600,
+          textureInfo: ["coconut_block_side", "coconut_block_top", "coconut_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Pear Log": {
+          displayName: {
+            translationKey: "item:pearLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_pear",
+          harvestType: "wood"
+        },
+        "Pear Wood Planks": {
+          displayName: {
+            translationKey: "item:pearWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_pear",
+          harvestType: "wood"
+        },
+        "Pear Leaves": {
+          displayName: {
+            translationKey: "item:pearLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_pear",
+          harvestType: "cuttable"
+        },
+        "Pear Door": {
+          displayName: {
+            translationKey: "item:pearDoor"
+          },
+          ttb: 3600,
+          itemTexture: "pear_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Pear Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Pear Door"
+        },
+        "Pear Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pear Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pear Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pear Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pear Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pear Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Pear Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Pear Door Top": {
+          ttb: 3600,
+          itemTexture: "pear_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Pear Door",
+          rootMetaDesc: "_Pear Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Pear Door Top"
+        },
+        "_Pear Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pear Door"
+        },
+        "_Pear Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pear Door"
+        },
+        "_Pear Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pear Door"
+        },
+        "_Pear Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pear Door"
+        },
+        "_Pear Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pear Door"
+        },
+        "_Pear Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pear Door"
+        },
+        "_Pear Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Pear Door"
+        },
+        "Pear Trapdoor": {
+          displayName: {
+            translationKey: "item:pearTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "pear_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Pear Trapdoor|meta|rot1|closed",
+          blockModel: "Pear Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Pear Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Pear Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Pear Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Pear Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Pear Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Pear Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Pear Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Pear Sapling": {
+          displayName: {
+            translationKey: "item:pearSapling"
+          },
+          ttb: 1,
+          textureInfo: "pear_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "pear_sapling"
+        },
+        "Pear Log|TreeBase|Pear": {
+          ttb: 2400,
+          textureInfo: "log_pear",
+          harvestType: "wood",
+          drops: "Pear Log"
+        },
+        "Pear Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_pear",
+          harvestType: "cuttable",
+          drops: "Pear Leaves"
+        },
+        ...(0, JM.Pb)("Pear Slab", {
+          displayName: {
+            translationKey: "item:pearSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_pear_side", "planks_pear"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Pear Wood Planks",
+          rootMetaDesc: "Pear Slab|meta|rot1|bot"
+        }),
+        "Pear Block": {
+          displayName: {
+            translationKey: "item:pearBlock"
+          },
+          ttb: 600,
+          textureInfo: ["pear_block_side", "pear_block_top", "pear_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Compressed Messy Stone": {
+          displayName: {
+            translationKey: "item:compressedMessyStone"
+          },
+          ttb: 12e3,
+          textureInfo: "compressed_messy_stone",
+          harvestType: "rock"
+        },
+        "Extra Compressed Messy Stone": {
+          displayName: {
+            translationKey: "item:extraCompressedMessyStone"
+          },
+          ttb: 24e3,
+          textureInfo: "extra_compressed_messy_stone",
+          harvestType: "rock"
+        },
+        "Super Compressed Messy Stone": {
+          displayName: {
+            translationKey: "item:superCompressedMessyStone"
+          },
+          ttb: 36e3,
+          textureInfo: "super_compressed_messy_stone",
+          harvestType: "rock"
+        },
+        "Hyper Compressed Messy Stone": {
+          displayName: {
+            translationKey: "item:hyperCompressedMessyStone"
+          },
+          ttb: 48e3,
+          textureInfo: "hyper_compressed_messy_stone",
+          harvestType: "rock"
+        },
+        "Ultra Compressed Messy Stone": {
+          displayName: {
+            translationKey: "item:ultraCompressedMessyStone"
+          },
+          ttb: 6e4,
+          textureInfo: "ultra_compressed_messy_stone",
+          harvestType: "rock"
+        },
+        "Mega Compressed Messy Stone": {
+          displayName: {
+            translationKey: "item:megaCompressedMessyStone"
+          },
+          ttb: 72e3,
+          textureInfo: "mega_compressed_messy_stone",
+          harvestType: "rock"
+        },
+        ...(0, JM.Jb)("Board", {
+          displayName: {
+            translationKey: "item:board"
+          },
+          ttb: 1200,
+          itemTexture: "board",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          solid: !1,
+          rootMetaDesc: "Board|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: .8,
+          blockModel: "Board"
+        }),
+        Net: {
+          displayName: {
+            translationKey: "item:net"
+          },
+          ttb: 400,
+          textureInfo: "net",
+          model: "CentreCross",
+          heldItemScale: 1,
+          solid: !1,
+          harvestType: "wood",
+          description: {
+            translationKey: "item:netDescription"
+          },
+          itemTexture: "net"
+        },
+        Cobweb: {
+          displayName: {
+            translationKey: "item:cobweb"
+          },
+          ttb: 300,
+          textureInfo: "cobweb",
+          model: "CentreCross",
+          heldItemScale: 1,
+          solid: !1,
+          harvestType: "cuttable",
+          description: {
+            translationKey: "item:cobwebDescription"
+          },
+          itemTexture: "cobweb"
+        },
+        "Brown Mushroom Block": {
+          displayName: {
+            translationKey: "item:brownMushroomBlock"
+          },
+          ttb: 1200,
+          textureInfo: "brown_mushroom_block",
+          harvestType: "cuttable"
+        },
+        "Red Mushroom Block": {
+          displayName: {
+            translationKey: "item:redMushroomBlock"
+          },
+          ttb: 1200,
+          textureInfo: "red_mushroom_block",
+          harvestType: "cuttable"
+        },
+        "Mushroom Stem": {
+          displayName: {
+            translationKey: "item:mushroomStem"
+          },
+          ttb: 1200,
+          textureInfo: "mushroom_stem",
+          harvestType: "cuttable"
+        },
+        "Fireball Block": {
+          displayName: {
+            translationKey: "item:fireballBlock"
+          },
+          ttb: 1,
+          textureInfo: "fireball_block",
+          harvestType: "rock",
+          unlitStandaloneMesh: !0
+        },
+        "Iceball Block": {
+          displayName: {
+            translationKey: "item:iceballBlock"
+          },
+          ttb: 1,
+          textureInfo: "iceball_block",
+          harvestType: "rock",
+          unlitStandaloneMesh: !0
+        },
+        "Watermelon Seeds": {
+          displayName: {
+            translationKey: "item:watermelonSeeds"
+          },
+          ttb: 400,
+          textureInfo: "melon_stem",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "watermelon_seeds",
+          description: {
+            translationKey: "item:watermelonSeedsDescription"
+          }
+        },
+        "Watermelon Seeds|Growing": {
+          ttb: 400,
+          textureInfo: "melon_stem",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Watermelon Seeds"
+        },
+        ...(0, JM.Jb)("Attached Watermelon Stem", {
+          displayName: {
+            translationKey: "item:attachedWatermelonStem"
+          },
+          ttb: 400,
+          textureInfo: ["attached_melon_stem_wrapper", "attached_melon_stem"],
+          model: "CustomPlanes|rotatable",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Watermelon Seeds",
+          rootMetaDesc: "Attached Watermelon Stem|meta|rot1",
+          customPlanesInfo: [{
+            textureIdx: 0,
+            yRot: Math.PI / 4
+          }, {
+            textureIdx: 0,
+            yRot: 3 * Math.PI / 4
+          }, {
+            textureIdx: 1,
+            yRot: 3 * Math.PI / 2
+          }]
+        }),
+        "Pumpkin Seeds": {
+          displayName: {
+            translationKey: "item:pumpkinSeeds"
+          },
+          ttb: 400,
+          textureInfo: "melon_stem",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "pumpkin_seeds",
+          description: {
+            translationKey: "item:pumpkinSeedsDescription"
+          }
+        },
+        "Pumpkin Seeds|Growing": {
+          ttb: 400,
+          textureInfo: "melon_stem",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Pumpkin Seeds"
+        },
+        ...(0, JM.Jb)("Attached Pumpkin Stem", {
+          displayName: {
+            translationKey: "item:attachedPumpkinStem"
+          },
+          ttb: 400,
+          textureInfo: ["attached_melon_stem_wrapper", "attached_melon_stem"],
+          model: "CustomPlanes|rotatable",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Pumpkin Seeds",
+          rootMetaDesc: "Attached Pumpkin Stem|meta|rot1",
+          customPlanesInfo: [{
+            textureIdx: 0,
+            yRot: Math.PI / 4
+          }, {
+            textureIdx: 0,
+            yRot: 3 * Math.PI / 4
+          }, {
+            textureIdx: 1,
+            yRot: 3 * Math.PI / 2
+          }]
+        }),
+        Pumpkin: {
+          displayName: {
+            translationKey: "item:pumpkin"
+          },
+          ttb: 1200,
+          textureInfo: ["pumpkin_side", "pumpkin_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "wood"
+        },
+        ...(0, JM.Lb)("Carved Pumpkin", {
+          displayName: {
+            translationKey: "item:carvedPumpkin"
+          },
+          ttb: 1200,
+          textureInfo: ["carved_pumpkin", "pumpkin_side", "pumpkin_top"],
+          harvestType: "wood",
+          rootMetaDesc: "Carved Pumpkin|meta|rot1"
+        }),
+        ...(0, JM.Lb)("Jack o'Lantern", {
+          displayName: {
+            translationKey: "item:jackO'Lantern"
+          },
+          ttb: 1200,
+          textureInfo: ["pumpkin_face_on", "pumpkin_side", "pumpkin_top"],
+          harvestType: "wood",
+          rootMetaDesc: "Jack o'Lantern|meta|rot1",
+          Ch: [14, 10, 4]
+        }),
+        "Melon Seeds": {
+          displayName: {
+            translationKey: "item:melonSeeds"
+          },
+          ttb: 400,
+          textureInfo: "melon_stem",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "melon_seeds",
+          description: {
+            translationKey: "item:melonSeedsDescription"
+          }
+        },
+        "Melon Seeds|Growing": {
+          ttb: 400,
+          textureInfo: "melon_stem",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Melon Seeds"
+        },
+        ...(0, JM.Jb)("Attached Melon Stem", {
+          displayName: {
+            translationKey: "item:attachedMelonStem"
+          },
+          ttb: 400,
+          textureInfo: ["attached_melon_stem_wrapper", "attached_melon_stem"],
+          model: "CustomPlanes|rotatable",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Melon Seeds",
+          rootMetaDesc: "Attached Melon Stem|meta|rot1",
+          customPlanesInfo: [{
+            textureIdx: 0,
+            yRot: Math.PI / 4
+          }, {
+            textureIdx: 0,
+            yRot: 3 * Math.PI / 4
+          }, {
+            textureIdx: 1,
+            yRot: 3 * Math.PI / 2
+          }]
+        }),
+        Melon: {
+          displayName: {
+            translationKey: "item:melon"
+          },
+          ttb: 1200,
+          textureInfo: ["melon_side", "melon_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "wood"
+        },
+        "Iron Watermelon": {
+          displayName: {
+            translationKey: "item:ironWatermelon"
+          },
+          ttb: 1200,
+          textureInfo: ["iron_watermelon_side", "iron_watermelon_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "rock"
+        },
+        "Patterned Black Glass": {
+          displayName: {
+            translationKey: "item:patternedBlackGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_black",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Blue Glass": {
+          displayName: {
+            translationKey: "item:patternedBlueGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_blue",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Brown Glass": {
+          displayName: {
+            translationKey: "item:patternedBrownGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_brown",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Cyan Glass": {
+          displayName: {
+            translationKey: "item:patternedCyanGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_cyan",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Gray Glass": {
+          displayName: {
+            translationKey: "item:patternedGrayGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_gray",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Light Gray Glass": {
+          displayName: {
+            translationKey: "item:patternedLightGrayGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_light_gray",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Green Glass": {
+          displayName: {
+            translationKey: "item:patternedGreenGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_green",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Light Blue Glass": {
+          displayName: {
+            translationKey: "item:patternedLightBlueGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_light_blue",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Lime Glass": {
+          displayName: {
+            translationKey: "item:patternedLimeGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_lime",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Magenta Glass": {
+          displayName: {
+            translationKey: "item:patternedMagentaGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_magenta",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Orange Glass": {
+          displayName: {
+            translationKey: "item:patternedOrangeGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_orange",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Pink Glass": {
+          displayName: {
+            translationKey: "item:patternedPinkGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_pink",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Purple Glass": {
+          displayName: {
+            translationKey: "item:patternedPurpleGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_purple",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Red Glass": {
+          displayName: {
+            translationKey: "item:patternedRedGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_red",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned White Glass": {
+          displayName: {
+            translationKey: "item:patternedWhiteGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_white",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        "Patterned Yellow Glass": {
+          displayName: {
+            translationKey: "item:patternedYellowGlass"
+          },
+          ttb: 450,
+          textureInfo: "patterned_glass_yellow",
+          transTex: !0,
+          harvestType: "wood",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          }
+        },
+        ...(0, JM.Jb)("Potion Table", {
+          displayName: {
+            translationKey: "item:potionTable"
+          },
+          ttb: 1200,
+          harvestType: "wood",
+          rootMetaDesc: "Potion Table|meta|rot1",
+          description: {
+            translationKey: "item:potionTableDescription"
+          },
+          ...GM("Potion Table", "potion_table", {
+            textureAnimation: {
+              frames: 4,
+              animationInterval: 200
+            }
+          })
+        }),
+        ...(0, JM.Jb)("Pine Ladder", {
+          displayName: {
+            translationKey: "item:pineLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_pine",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Pine Ladder|meta|rot1",
+          modelScale: 10,
+          solid: !1,
+          blockModel: "Pine Ladder",
+          heldItemScale: 10,
+          blockModelItem: !0,
+          rotatableOffsetAmt: .375
+        }),
+        ...(0, JM.Jb)("Plum Ladder", {
+          displayName: {
+            translationKey: "item:plumLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_plum",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Plum Ladder|meta|rot1",
+          modelScale: 10,
+          solid: !1,
+          blockModel: "Plum Ladder",
+          heldItemScale: 10,
+          blockModelItem: !0,
+          rotatableOffsetAmt: .375
+        }),
+        ...(0, JM.Jb)("Cedar Ladder", {
+          displayName: {
+            translationKey: "item:cedarLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_cedar",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Cedar Ladder|meta|rot1",
+          modelScale: 10,
+          solid: !1,
+          blockModel: "Cedar Ladder",
+          heldItemScale: 10,
+          blockModelItem: !0
+        }),
+        ...(0, JM.Jb)("Aspen Ladder", {
+          displayName: {
+            translationKey: "item:aspenLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_aspen",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Aspen Ladder|meta|rot1",
+          modelScale: 10,
+          solid: !1,
+          blockModel: "Aspen Ladder",
+          heldItemScale: 10,
+          blockModelItem: !0
+        }),
+        ...(0, JM.Jb)("Jungle Ladder", {
+          displayName: {
+            translationKey: "item:jungleLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_jungle",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Jungle Ladder|meta|rot1",
+          modelScale: 10,
+          solid: !1,
+          blockModel: "Jungle Ladder",
+          heldItemScale: 10,
+          blockModelItem: !0,
+          rotatableOffsetAmt: .375
+        }),
+        ...(0, JM.Jb)("Palm Ladder", {
+          displayName: {
+            translationKey: "item:palmLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_palm",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Palm Ladder|meta|rot1",
+          modelScale: 10,
+          solid: !1,
+          blockModel: "Palm Ladder",
+          heldItemScale: 10,
+          blockModelItem: !0
+        }),
+        ...(0, JM.Jb)("Pear Ladder", {
+          displayName: {
+            translationKey: "item:pearLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_pear",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Pear Ladder|meta|rot1",
+          modelScale: 10,
+          solid: !1,
+          blockModel: "Pear Ladder",
+          heldItemScale: 10,
+          blockModelItem: !0
+        }),
+        "Black Carpet": {
+          displayName: {
+            translationKey: "item:blackCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_black_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          Hd: CM,
+          blockModel: "carpet_black_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Blue Carpet": {
+          displayName: {
+            translationKey: "item:blueCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_blue_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          Hd: CM,
+          blockModel: "carpet_blue_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Brown Carpet": {
+          displayName: {
+            translationKey: "item:brownCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_brown_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          Hd: CM,
+          blockModel: "carpet_brown_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Cyan Carpet": {
+          displayName: {
+            translationKey: "item:cyanCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_cyan_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          Hd: CM,
+          blockModel: "carpet_cyan_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Gray Carpet": {
+          displayName: {
+            translationKey: "item:grayCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_gray_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          Hd: CM,
+          blockModel: "carpet_gray_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Light Gray Carpet": {
+          displayName: {
+            translationKey: "item:lightGrayCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_light_gray_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          Hd: CM,
+          blockModel: "carpet_light_gray_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Green Carpet": {
+          displayName: {
+            translationKey: "item:greenCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_green_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          Hd: CM,
+          blockModel: "carpet_green_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Light Blue Carpet": {
+          displayName: {
+            translationKey: "item:lightBlueCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_light_blue_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          Hd: CM,
+          blockModel: "carpet_light_blue_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Lime Carpet": {
+          displayName: {
+            translationKey: "item:limeCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_lime_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          Hd: CM,
+          blockModel: "carpet_lime_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Magenta Carpet": {
+          displayName: {
+            translationKey: "item:magentaCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_magenta_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          Hd: CM,
+          blockModel: "carpet_magenta_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Orange Carpet": {
+          displayName: {
+            translationKey: "item:orangeCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_orange_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          Hd: CM,
+          blockModel: "carpet_orange_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Pink Carpet": {
+          displayName: {
+            translationKey: "item:pinkCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_pink_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          Hd: CM,
+          blockModel: "carpet_pink_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Purple Carpet": {
+          displayName: {
+            translationKey: "item:purpleCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_purple_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          Hd: CM,
+          blockModel: "carpet_purple_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Red Carpet": {
+          displayName: {
+            translationKey: "item:redCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_red_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          Hd: CM,
+          blockModel: "carpet_red_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "White Carpet": {
+          displayName: {
+            translationKey: "item:whiteCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_white_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          Hd: CM,
+          blockModel: "carpet_white_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        "Yellow Carpet": {
+          displayName: {
+            translationKey: "item:yellowCarpet"
+          },
+          ttb: 300,
+          itemTexture: "carpet_yellow_icon",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          Hd: CM,
+          blockModel: "carpet_yellow_model",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        },
+        ...(0, JM.I)("Bookshelf", {
+          displayName: {
+            translationKey: "item:bookshelf"
+          },
+          ttb: 1800,
+          textureInfo: ["bookshelf", "planks_maple"],
+          texturePerSide: [1, 1, 1, 1, 0, 0],
+          harvestType: "wood",
+          drops: null,
+          rootMetaDesc: "Bookshelf|meta|rot1|books6"
+        }),
+        ...(0, JM.kb)("Mailbox", {
+          displayName: {
+            translationKey: "item:mailbox"
+          },
+          ttb: 4200,
+          textureInfo: ["mailbox_front", "mailbox_side"],
+          texturePerSide: [1, 1, 1, 1, 0, 1],
+          harvestType: "wood",
+          rootMetaDesc: "Mailbox|meta|rot1|empty",
+          description: {
+            translationKey: "item:mailboxDescription"
+          }
+        }),
+        Rice: {
+          displayName: {
+            translationKey: "item:rice"
+          },
+          ttb: 400,
+          textureInfo: "rice_stage0",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "rice",
+          description: {
+            translationKey: "item:riceDescription"
+          }
+        },
+        ...(0, JM.yb)("Rice", {
+          displayName: {
+            translationKey: "item:rice"
+          },
+          ttb: 400,
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Rice"
+        }, ["rice_stage2", "rice_stage3", "rice_stage4", "rice_stage5", "rice_stage6"]),
+        "Rice|FreshlyGrown": {
+          ttb: 400,
+          textureInfo: "rice_stage7",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        Cranberries: {
+          displayName: {
+            translationKey: "item:cranberries"
+          },
+          ttb: 400,
+          textureInfo: "berry_bush_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "cranberries",
+          description: {
+            translationKey: "item:cranberriesDescription"
+          }
+        },
+        ...(0, JM.yb)("Cranberries", {
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Cranberries"
+        }, ["berry_bush_stage1", "berry_bush_stage2"], {
+          2: {
+            onMinedAura: 5
+          }
+        }),
+        "Red Mushroom": {
+          displayName: {
+            translationKey: "item:redMushroom"
+          },
+          ttb: 400,
+          textureInfo: "red_mushroom",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "red_mushroom"
+        },
+        "Brown Mushroom": {
+          displayName: {
+            translationKey: "item:brownMushroom"
+          },
+          ttb: 400,
+          textureInfo: "brown_mushroom",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "brown_mushroom"
+        },
+        "Cotton Seeds": {
+          displayName: {
+            translationKey: "item:cottonSeeds"
+          },
+          ttb: 400,
+          textureInfo: "cotton_plant_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "cotton_seeds",
+          description: {
+            translationKey: "item:cottonSeedsDescription"
+          }
+        },
+        ...(0, JM.yb)("Cotton", {
+          displayName: {
+            translationKey: "item:cotton"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Cotton Seeds"
+        }, ["cotton_plant_stage1", "cotton_plant_stage2", "cotton_plant_stage3"], {
+          3: {
+            onMinedAura: 5
+          }
+        }),
+        "Tribe Protector": {
+          displayName: {
+            translationKey: "item:tribeProtector"
+          },
+          ttb: 5e3,
+          textureInfo: "protector_tribe",
+          harvestType: "rock",
+          description: {
+            translationKey: "item:tribeProtectorDescription"
+          }
+        },
+        "Tall Grass": {
+          displayName: {
+            translationKey: "item:tallGrass"
+          },
+          ttb: 1,
+          textureInfo: "tall_grass_bottom",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Tall Grass"
+          },
+          itemTexture: "tall_grass_bottom",
+          canBePlacedOver: !0
+        },
+        "Tall Grass|Top": {
+          ttb: 1,
+          textureInfo: "tall_grass_top",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Tall Grass"
+          },
+          itemTexture: "tall_grass_top",
+          canBePlacedOver: !0
+        },
+        "Faction Protector": {
+          ttb: 5e3,
+          textureInfo: "protector_faction",
+          harvestType: "rock",
+          description: "Prevents other factions from changing blocks and\nopening chests in the placed chunk"
+        },
+        "Barkless Palm Log": {
+          displayName: {
+            translationKey: "item:barklessPalmLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_palm_log",
+          harvestType: "wood"
+        },
+        "Barkless Pear Log": {
+          displayName: {
+            translationKey: "item:barklessPearLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_pear_log",
+          harvestType: "wood"
+        },
+        "Barkless Maple Log|TreeBase|Maple": {
+          ttb: 2e3,
+          textureInfo: "stripped_maple_log",
+          harvestType: "wood",
+          drops: "Barkless Maple Log"
+        },
+        "Barkless Plum Log|TreeBase|Plum": {
+          ttb: 2e3,
+          textureInfo: "stripped_plum_log",
+          harvestType: "wood",
+          drops: "Barkless Plum Log"
+        },
+        "Barkless Cedar Log|TreeBase|Cedar": {
+          ttb: 2e3,
+          textureInfo: "stripped_cedar_log",
+          harvestType: "wood",
+          drops: "Barkless Cedar Log"
+        },
+        "Barkless Aspen Log|TreeBase|Aspen": {
+          ttb: 2e3,
+          textureInfo: "stripped_aspen_log",
+          harvestType: "wood",
+          drops: "Barkless Aspen Log"
+        },
+        "Barkless Jungle Log|TreeBase|Jungle": {
+          ttb: 2e3,
+          textureInfo: "stripped_jungle_log",
+          harvestType: "wood",
+          drops: "Barkless Jungle Log"
+        },
+        "Barkless Pine Log|TreeBase|Pine": {
+          ttb: 2e3,
+          textureInfo: "stripped_pine_log",
+          harvestType: "wood",
+          drops: "Barkless Pine Log"
+        },
+        "Barkless Palm Log|TreeBase|Palm": {
+          ttb: 2e3,
+          textureInfo: "stripped_palm_log",
+          harvestType: "wood",
+          drops: "Barkless Palm Log"
+        },
+        "Barkless Pear Log|TreeBase|Pear": {
+          ttb: 2e3,
+          textureInfo: "stripped_pear_log",
+          harvestType: "wood",
+          drops: "Barkless Pear Log"
+        },
+        "Mystery Block": {
+          displayName: {
+            translationKey: "item:mysteryBlock"
+          },
+          ttb: 1200,
+          textureInfo: "mystery_block",
+          harvestType: "rock"
+        },
+        Rocket: {
+          displayName: {
+            translationKey: "item:rocket"
+          },
+          ttb: 1,
+          textureInfo: "rocket_block",
+          harvestType: "rock",
+          unlitStandaloneMesh: !0
+        },
+        "Super Rocket": {
+          displayName: {
+            translationKey: "item:superRocket"
+          },
+          ttb: 1,
+          textureInfo: "super_rocket_block",
+          harvestType: "rock",
+          unlitStandaloneMesh: !0
+        },
+        ...(0, JM.S)(),
+        Grenade: {
+          displayName: {
+            translationKey: "item:grenade"
+          },
+          ttb: 1,
+          textureInfo: "grenade_block",
+          harvestType: "rock",
+          unlitStandaloneMesh: !0
+        },
+        "Cherry Log": {
+          displayName: {
+            translationKey: "item:cherryLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_cherry",
+          harvestType: "wood"
+        },
+        "Barkless Cherry Log": {
+          displayName: {
+            translationKey: "item:barklessCherryLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_cherry_log",
+          harvestType: "wood"
+        },
+        "Barkless Cherry Log|TreeBase|Cherry": {
+          ttb: 2e3,
+          textureInfo: "stripped_cherry_log",
+          harvestType: "wood",
+          drops: "Barkless Cherry Log"
+        },
+        "Cherry Wood Planks": {
+          displayName: {
+            translationKey: "item:cherryWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_cherry",
+          harvestType: "wood"
+        },
+        "Cherry Leaves": {
+          displayName: {
+            translationKey: "item:cherryLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_cherry",
+          harvestType: "cuttable"
+        },
+        ...(0, JM.Pb)("Fallen Cherry Leaves", {
+          displayName: {
+            translationKey: "item:fallenCherryLeaves"
+          },
+          ttb: 350,
+          textureInfo: ["fallen_cherry_leaves_side", "leaves_cherry"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          solid: !1,
+          harvestType: "cuttable",
+          rootMetaDesc: "Fallen Cherry Leaves|meta|rot1|bot"
+        }),
+        "Cherry Door": {
+          displayName: {
+            translationKey: "item:cherryDoor"
+          },
+          ttb: 3600,
+          itemTexture: "cherry_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Cherry Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Cherry Door"
+        },
+        "Cherry Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cherry Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cherry Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cherry Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cherry Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cherry Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Cherry Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Cherry Door Top": {
+          ttb: 3600,
+          itemTexture: "cherry_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Cherry Door",
+          rootMetaDesc: "_Cherry Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Cherry Door Top"
+        },
+        "_Cherry Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cherry Door"
+        },
+        "_Cherry Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cherry Door"
+        },
+        "_Cherry Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cherry Door"
+        },
+        "_Cherry Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cherry Door"
+        },
+        "_Cherry Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cherry Door"
+        },
+        "_Cherry Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cherry Door"
+        },
+        "_Cherry Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Cherry Door"
+        },
+        "Cherry Trapdoor": {
+          displayName: {
+            translationKey: "item:cherryTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "cherry_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Cherry Trapdoor|meta|rot1|closed",
+          blockModel: "Cherry Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Cherry Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Cherry Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Cherry Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Cherry Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Cherry Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Cherry Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Cherry Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Cherry Sapling": {
+          displayName: {
+            translationKey: "item:cherrySapling"
+          },
+          ttb: 1,
+          textureInfo: "cherry_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "cherry_sapling"
+        },
+        "Cherry Log|TreeBase|Cherry": {
+          ttb: 2400,
+          textureInfo: "log_cherry",
+          harvestType: "wood",
+          drops: "Cherry Log"
+        },
+        "Cherry Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_cherry",
+          harvestType: "cuttable",
+          drops: "Cherry Leaves"
+        },
+        ...(0, JM.Pb)("Cherry Slab", {
+          displayName: {
+            translationKey: "item:cherrySlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_cherry_side", "planks_cherry"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Cherry Wood Planks",
+          rootMetaDesc: "Cherry Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Jb)("Cherry Ladder", {
+          displayName: {
+            translationKey: "item:cherryLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_cherry",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Cherry Ladder|meta|rot1",
+          modelScale: 1,
+          solid: !1,
+          blockModel: "Cherry Ladder",
+          heldItemScale: 1,
+          blockModelItem: !0
+        }),
+        "Cherry Block": {
+          displayName: {
+            translationKey: "item:cherryBlock"
+          },
+          ttb: 600,
+          textureInfo: ["cherry_block_side", "cherry_block_top", "cherry_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Bouncy Bomb Block": {
+          displayName: {
+            translationKey: "item:bouncyBombBlock"
+          },
+          ttb: 1,
+          textureInfo: "bouncy_bomb_block",
+          harvestType: "rock",
+          unlitStandaloneMesh: !0
+        },
+        "Obby Rocket": {
+          displayName: {
+            translationKey: "item:rocket"
+          },
+          ttb: 1,
+          textureInfo: "rocket_block",
+          harvestType: "rock",
+          unlitStandaloneMesh: !0
+        },
+        "Wood Spikes": {
+          displayName: {
+            translationKey: "item:woodSpikes"
+          },
+          ttb: 1200,
+          harvestType: "wood",
+          model: "CustomModel",
+          customModelInfo: {
+            yOffset: -2 / 16
+          },
+          itemTexture: "spikes_wood",
+          solid: !1,
+          modelScale: 10,
+          blockModel: "Spikes_Wood",
+          description: {
+            translationKey: "item:spikesDescription"
+          }
+        },
+        "Stone Spikes": {
+          displayName: {
+            translationKey: "item:stoneSpikes"
+          },
+          ttb: 1200,
+          harvestType: "rock",
+          model: "CustomModel",
+          customModelInfo: {
+            yOffset: -2 / 16
+          },
+          itemTexture: "spikes_stone",
+          solid: !1,
+          modelScale: 10,
+          blockModel: "Spikes_Stone",
+          description: {
+            translationKey: "item:spikesDescription"
+          }
+        },
+        "Iron Spikes": {
+          displayName: {
+            translationKey: "item:ironSpikes"
+          },
+          ttb: 1200,
+          harvestType: "rock",
+          model: "CustomModel",
+          customModelInfo: {
+            yOffset: -2 / 16
+          },
+          itemTexture: "spikes_iron",
+          solid: !1,
+          modelScale: 10,
+          blockModel: "Spikes_Iron",
+          description: {
+            translationKey: "item:spikesDescription"
+          }
+        },
+        "Gold Spikes": {
+          displayName: {
+            translationKey: "item:goldSpikes"
+          },
+          ttb: 1200,
+          harvestType: "rock",
+          model: "CustomModel",
+          customModelInfo: {
+            yOffset: -2 / 16
+          },
+          itemTexture: "spikes_gold",
+          solid: !1,
+          modelScale: 10,
+          blockModel: "Spikes_Gold",
+          description: {
+            translationKey: "item:spikesDescription"
+          }
+        },
+        "Diamond Spikes": {
+          displayName: {
+            translationKey: "item:diamondSpikes"
+          },
+          ttb: 1200,
+          harvestType: "rock",
+          model: "CustomModel",
+          customModelInfo: {
+            yOffset: -2 / 16
+          },
+          itemTexture: "spikes_diamond",
+          solid: !1,
+          modelScale: 10,
+          blockModel: "Spikes_Diamond",
+          description: {
+            translationKey: "item:spikesDescription"
+          }
+        },
+        "Kill Spikes": {
+          displayName: {
+            translationKey: "item:killSpikes"
+          },
+          ttb: 1200,
+          harvestType: "rock",
+          model: "CustomModel",
+          customModelInfo: {
+            yOffset: -2 / 16
+          },
+          itemTexture: "spikes_kill",
+          solid: !1,
+          modelScale: 10,
+          blockModel: "Spikes_Kill",
+          description: {
+            translationKey: "item:killSpikesDescription"
+          }
+        },
+        "Corn Block": {
+          displayName: {
+            translationKey: "item:cornBlock"
+          },
+          ttb: 600,
+          textureInfo: ["corn_block_side", "corn_block_top", "corn_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Corn Seeds": {
+          displayName: {
+            translationKey: "item:cornSeeds"
+          },
+          ttb: 400,
+          textureInfo: "corn_stage0",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "corn_seeds",
+          description: {
+            translationKey: "item:cornSeedsDescription"
+          }
+        },
+        ...(0, JM.yb)("Corn Seeds", {
+          displayName: {
+            translationKey: "item:cornSeeds"
+          },
+          ttb: 400,
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Corn Seeds"
+        }, ["corn_stage1"]),
+        "Corn Seeds|FreshlyGrown": {
+          ttb: 400,
+          textureInfo: "corn_stage2",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Corn Seeds"
+        },
+        "Corn Seeds|Growing": {
+          ttb: 400,
+          textureInfo: "corn_stage2",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Corn Seeds"
+        },
+        ...(0, JM.yb)("Corn Plant", {
+          displayName: {
+            translationKey: "item:corn"
+          },
+          ttb: 400,
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Corn Seeds"
+        }, ["corn_stage0", "corn_stage1", "corn_stage2", "corn_stage3", "corn_stage4"]),
+        "Corn Plant": {
+          displayName: {
+            translationKey: "item:corn"
+          },
+          ttb: 400,
+          textureInfo: "corn_stage5",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Corn Seeds"
+        },
+        "Corn Plant|FreshlyGrown": {
+          ttb: 400,
+          textureInfo: "corn_stage5",
+          model: "SquareSided",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Corn Seeds",
+          onMinedAura: 10
+        },
+        ...(0, JM.Lb)("Loot Chest", {
+          displayName: {
+            translationKey: "item:chest"
+          },
+          ttb: 3e3,
+          textureInfo: ["chest_front", "chest_side", "chest_top[rot[1", "chest_top[rot[2", "chest_top[rot[3", "chest_top[rot[4", "chest_back"],
+          harvestType: "wood",
+          rootMetaDesc: "Loot Chest|meta|rot1",
+          drops: "Chest"
+        }, [
+          [1, 1, 2, 2, 0, 6],
+          [0, 6, 3, 3, 1, 1],
+          [1, 1, 4, 4, 6, 0],
+          [6, 0, 5, 5, 1, 1]
+        ]),
+        "Melting Ice": {
+          displayName: {
+            translationKey: "item:ice"
+          },
+          ttb: 1200,
+          textureInfo: "ice",
+          harvestType: "rock",
+          harvestLevel: 0,
+          stoodOnSpeedMultiplier: 1.4,
+          drops: "Ice"
+        },
+        "Melting Ice|Breaking": {
+          ttb: 200,
+          textureInfo: "melting_ice",
+          harvestType: "rock",
+          harvestLevel: 0,
+          stoodOnSpeedMultiplier: 1.4,
+          drops: null
+        },
+        ...(0, JM.L)((MM => `${MM} Paintball Explosive`), {
+          textureInfo: MM => [`explosive_paint_${(0,zM.oe)(MM)}_side`, `explosive_paint_${(0,zM.oe)(MM)}_top`],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "cuttable",
+          ttb: 50
+        }),
+        ...(0, JM.L)((MM => `${MM} Quick Paintball Explosive`), {
+          textureInfo: MM => `explosive_paint_quick_${(0,zM.oe)(MM)}`,
+          harvestType: "cuttable",
+          ttb: 50
+        }),
+        ...(0, JM.L)((MM => `${MM} Seeking Paintball Explosive`), {
+          textureInfo: MM => `explosive_paint_seeking_${(0,zM.oe)(MM)}`,
+          harvestType: "cuttable",
+          ttb: 50
+        }),
+        ...(0, JM.L)((MM => `${MM} Sticky Paintball Explosive`), {
+          textureInfo: MM => `explosive_paint_sticky_${(0,zM.oe)(MM)}`,
+          harvestType: "cuttable",
+          ttb: 50
+        }),
+        ...(0, JM.Jb)("White Strongbed", {
+          displayName: {
+            translationKey: "item:whiteStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "white_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "White Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "White Strongbed"
+        }),
+        ...(0, JM.Jb)("_White Strongbed Head", {
+          ttb: 480,
+          itemTexture: "white_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "White Strongbed",
+          rootMetaDesc: "_White Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_White Strongbed Head"
+        }),
+        ...(0, JM.Jb)("Orange Strongbed", {
+          displayName: {
+            translationKey: "item:orangeStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "orange_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Orange Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Orange Strongbed"
+        }),
+        ...(0, JM.Jb)("_Orange Strongbed Head", {
+          ttb: 480,
+          itemTexture: "orange_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Orange Strongbed",
+          rootMetaDesc: "_Orange Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Orange Strongbed Head"
+        }),
+        ...(0, JM.Jb)("Magenta Strongbed", {
+          displayName: {
+            translationKey: "item:magentaStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "magenta_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Magenta Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Magenta Strongbed"
+        }),
+        ...(0, JM.Jb)("_Magenta Strongbed Head", {
+          ttb: 480,
+          itemTexture: "magenta_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Magenta Strongbed",
+          rootMetaDesc: "_Magenta Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Magenta Strongbed Head"
+        }),
+        ...(0, JM.Jb)("Light Blue Strongbed", {
+          displayName: {
+            translationKey: "item:lightBlueStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "light_blue_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Light Blue Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Light Blue Strongbed"
+        }),
+        ...(0, JM.Jb)("_Light Blue Strongbed Head", {
+          ttb: 480,
+          itemTexture: "light_blue_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Light Blue Strongbed",
+          rootMetaDesc: "_Light Blue Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Light Blue Strongbed Head"
+        }),
+        ...(0, JM.Jb)("Yellow Strongbed", {
+          displayName: {
+            translationKey: "item:yellowStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "yellow_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Yellow Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Yellow Strongbed"
+        }),
+        ...(0, JM.Jb)("_Yellow Strongbed Head", {
+          ttb: 480,
+          itemTexture: "yellow_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Yellow Strongbed",
+          rootMetaDesc: "_Yellow Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Yellow Strongbed Head"
+        }),
+        ...(0, JM.Jb)("Lime Strongbed", {
+          displayName: {
+            translationKey: "item:limeStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "lime_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Lime Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Lime Strongbed"
+        }),
+        ...(0, JM.Jb)("_Lime Strongbed Head", {
+          ttb: 480,
+          itemTexture: "lime_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Lime Strongbed",
+          rootMetaDesc: "_Lime Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Lime Strongbed Head"
+        }),
+        ...(0, JM.Jb)("Pink Strongbed", {
+          displayName: {
+            translationKey: "item:pinkStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "pink_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Pink Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Pink Strongbed"
+        }),
+        ...(0, JM.Jb)("_Pink Strongbed Head", {
+          ttb: 480,
+          itemTexture: "pink_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Pink Strongbed",
+          rootMetaDesc: "_Pink Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Pink Strongbed Head"
+        }),
+        ...(0, JM.Jb)("Gray Strongbed", {
+          displayName: {
+            translationKey: "item:grayStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "gray_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Gray Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Gray Strongbed"
+        }),
+        ...(0, JM.Jb)("_Gray Strongbed Head", {
+          ttb: 480,
+          itemTexture: "gray_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Gray Strongbed",
+          rootMetaDesc: "_Gray Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Gray Strongbed Head"
+        }),
+        ...(0, JM.Jb)("Light Gray Strongbed", {
+          displayName: {
+            translationKey: "item:lightGrayStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "light_gray_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Light Gray Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Light Gray Strongbed"
+        }),
+        ...(0, JM.Jb)("_Light Gray Strongbed Head", {
+          ttb: 480,
+          itemTexture: "light_gray_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Light Gray Strongbed",
+          rootMetaDesc: "_Light Gray Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Light Gray Strongbed Head"
+        }),
+        ...(0, JM.Jb)("Cyan Strongbed", {
+          displayName: {
+            translationKey: "item:cyanStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "cyan_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Cyan Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Cyan Strongbed"
+        }),
+        ...(0, JM.Jb)("_Cyan Strongbed Head", {
+          ttb: 480,
+          itemTexture: "cyan_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Cyan Strongbed",
+          rootMetaDesc: "_Cyan Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Cyan Strongbed Head"
+        }),
+        ...(0, JM.Jb)("Purple Strongbed", {
+          displayName: {
+            translationKey: "item:purpleStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "purple_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Purple Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Purple Strongbed"
+        }),
+        ...(0, JM.Jb)("_Purple Strongbed Head", {
+          ttb: 480,
+          itemTexture: "purple_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Purple Strongbed",
+          rootMetaDesc: "_Purple Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Purple Strongbed Head"
+        }),
+        ...(0, JM.Jb)("Blue Strongbed", {
+          displayName: {
+            translationKey: "item:blueStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "blue_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Blue Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Blue Strongbed"
+        }),
+        ...(0, JM.Jb)("_Blue Strongbed Head", {
+          ttb: 480,
+          itemTexture: "blue_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Blue Strongbed",
+          rootMetaDesc: "_Blue Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Blue Strongbed Head"
+        }),
+        ...(0, JM.Jb)("Brown Strongbed", {
+          displayName: {
+            translationKey: "item:brownStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "brown_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Brown Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Brown Strongbed"
+        }),
+        ...(0, JM.Jb)("_Brown Strongbed Head", {
+          ttb: 480,
+          itemTexture: "brown_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Brown Strongbed",
+          rootMetaDesc: "_Brown Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Brown Strongbed Head"
+        }),
+        ...(0, JM.Jb)("Green Strongbed", {
+          displayName: {
+            translationKey: "item:greenStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "green_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Green Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Green Strongbed"
+        }),
+        ...(0, JM.Jb)("_Green Strongbed Head", {
+          ttb: 480,
+          itemTexture: "green_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Green Strongbed",
+          rootMetaDesc: "_Green Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Green Strongbed Head"
+        }),
+        ...(0, JM.Jb)("Red Strongbed", {
+          displayName: {
+            translationKey: "item:redStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "red_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Red Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Red Strongbed"
+        }),
+        ...(0, JM.Jb)("_Red Strongbed Head", {
+          ttb: 480,
+          itemTexture: "red_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Red Strongbed",
+          rootMetaDesc: "_Red Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Red Strongbed Head"
+        }),
+        ...(0, JM.Jb)("Black Strongbed", {
+          displayName: {
+            translationKey: "item:blackStrongbed"
+          },
+          ttb: 480,
+          itemTexture: "black_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          rootMetaDesc: "Black Strongbed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Black Strongbed"
+        }),
+        ...(0, JM.Jb)("_Black Strongbed Head", {
+          ttb: 480,
+          itemTexture: "black_strongbed",
+          model: "rotatable",
+          harvestType: "rock",
+          drops: "Black Strongbed",
+          rootMetaDesc: "_Black Strongbed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "_Black Strongbed Head"
+        }),
+        "Timed Spike Bomb Block": {
+          ttb: 3e4,
+          itemTexture: "timed_spike_bomb",
+          harvestType: "rock",
+          drops: null,
+          modelScale: 10,
+          model: "CustomModel",
+          blockModel: "Timed Spike Bomb Block",
+          solid: !1
+        },
+        "Timed Spike Bomb Block|Flashing": {
+          ttb: 3e4,
+          itemTexture: "timed_spike_bomb",
+          harvestType: "rock",
+          drops: null,
+          modelScale: 10,
+          model: "CustomModel",
+          blockModel: "Timed Spike Bomb Block",
+          solid: !1,
+          customModelInfo: {
+            emissiveColor: [255, 255, 255]
+          }
+        },
+        Lava: {
+          displayName: {
+            translationKey: "item:lava"
+          },
+          textureInfo: {
+            colour: [.95, .4, .05, .95],
+            animTextures: ["lava0", "lava1", "lava2", "lava3", "lava4", "lava5", "lava6", "lava7"],
+            animationInterval: 800
+          },
+          CH: !0,
+          drops: null,
+          harvestType: "rock",
+          Ch: [14, 8, 2]
+        },
+        "Fat Brown Mushroom": {
+          displayName: {
+            translationKey: "item:fatBrownMushroom"
+          },
+          ttb: 1200,
+          itemTexture: "fatBrownMushroom",
+          harvestType: "cuttable",
+          blockModel: "Fat Brown Mushroom",
+          blockModelItem: !0,
+          model: "CustomModel",
+          modelScale: 10,
+          heldItemScale: 10,
+          description: {
+            translationKey: "item:fatMushroomDescription"
+          }
+        },
+        "Fat Red Mushroom": {
+          displayName: {
+            translationKey: "item:fatRedMushroom"
+          },
+          ttb: 1200,
+          itemTexture: "fatRedMushroom",
+          harvestType: "cuttable",
+          blockModel: "Fat Red Mushroom",
+          blockModelItem: !0,
+          model: "CustomModel",
+          modelScale: 10,
+          heldItemScale: 10,
+          description: {
+            translationKey: "item:fatMushroomDescription"
+          }
+        },
+        "Chili Pepper Block": {
+          displayName: {
+            translationKey: "item:chiliPepperBlock"
+          },
+          ttb: 600,
+          textureInfo: ["chili_pepper_block_side", "chili_pepper_block_top", "chili_pepper_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Chili Pepper Seeds": {
+          displayName: {
+            translationKey: "item:chiliPepperSeeds"
+          },
+          ttb: 400,
+          itemTexture: "chili_pepper_seeds",
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage0_model",
+          description: {
+            translationKey: "item:chiliPepperSeedsDescription"
+          }
+        },
+        "Chili Pepper Plant_stage1": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage1_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant_stage2": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage2_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant_stage3": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage3_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant_stage4": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage4_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage5_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant|FreshlyGrown": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage5_model",
+          drops: "Chili Pepper Seeds",
+          onMinedAura: 10
+        },
+        "Chili Pepper Seeds|Lava": {
+          displayName: {
+            translationKey: "item:chiliPepperSeeds"
+          },
+          ttb: 400,
+          itemTexture: "chili_pepper_seeds",
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage0_lava_model",
+          description: {
+            translationKey: "item:chiliPepperSeedsDescription"
+          },
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant_stage1|Lava": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage1_lava_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant_stage2|Lava": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage2_lava_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant_stage3|Lava": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage3_lava_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant_stage4|Lava": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage4_lava_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant_stage5": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage5_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant_stage5|Lava": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage5_lava_model",
+          drops: "Chili Pepper Seeds"
+        },
+        "Chili Pepper Plant|Lava|FreshlyGrown": {
+          ttb: 400,
+          model: "CustomModel",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "chili_pepper_stage6_lava_model",
+          drops: "Chili Pepper Seeds",
+          onMinedAura: 20
+        },
+        "Code Block": {
+          displayName: {
+            translationKey: "item:codeBlock"
+          },
+          ttb: 5e11,
+          textureInfo: "code_block",
+          soundType: {
+            break: "stone",
+            place: "stone"
+          }
+        },
+        "Toxin Ball Block": {
+          displayName: {
+            translationKey: "item:toxinBallBlock"
+          },
+          ttb: 1,
+          textureInfo: "toxin_ball_block",
+          harvestType: "rock",
+          unlitStandaloneMesh: !0
+        },
+        ...(0, JM.L)((MM => `Spawn Block (${MM})`), {
+          displayName: MM => ({
+            translationKey: `item:${(0,zM.me)(MM)}SpawnBlock`
+          }),
+          ttb: 1500,
+          textureInfo: MM => [`${(0,zM.oe)(MM)}_spawn_block_top[rot[1`, `${(0,zM.oe)(MM)}_spawn_block_top[rot[2`, `${(0,zM.oe)(MM)}_spawn_block_top[rot[3`, `${(0,zM.oe)(MM)}_spawn_block_top[rot[4`, `${(0,zM.oe)(MM)}_spawn_block_side`],
+          texturePerSide: [4, 4, 2, 4, 4, 4],
+          harvestType: "rock",
+          rootMetaDesc: MM => `Spawn Block (${MM})|meta|rot1`,
+          description: {
+            translationKey: "item:spawnBlockDescription"
+          }
+        }),
+        ...(0, JM.L)((MM => `Spawn Block (${MM})|meta|rot2`), {
+          ttb: 1500,
+          textureInfo: MM => [`${(0,zM.oe)(MM)}_spawn_block_top[rot[1`, `${(0,zM.oe)(MM)}_spawn_block_top[rot[2`, `${(0,zM.oe)(MM)}_spawn_block_top[rot[3`, `${(0,zM.oe)(MM)}_spawn_block_top[rot[4`, `${(0,zM.oe)(MM)}_spawn_block_side`],
+          texturePerSide: [4, 4, 3, 4, 4, 4],
+          harvestType: "rock"
+        }),
+        ...(0, JM.L)((MM => `Spawn Block (${MM})|meta|rot3`), {
+          ttb: 1500,
+          textureInfo: MM => [`${(0,zM.oe)(MM)}_spawn_block_top[rot[1`, `${(0,zM.oe)(MM)}_spawn_block_top[rot[2`, `${(0,zM.oe)(MM)}_spawn_block_top[rot[3`, `${(0,zM.oe)(MM)}_spawn_block_top[rot[4`, `${(0,zM.oe)(MM)}_spawn_block_side`],
+          texturePerSide: [4, 4, 0, 4, 4, 4],
+          harvestType: "rock"
+        }),
+        ...(0, JM.L)((MM => `Spawn Block (${MM})|meta|rot4`), {
+          ttb: 1500,
+          textureInfo: MM => [`${(0,zM.oe)(MM)}_spawn_block_top[rot[1`, `${(0,zM.oe)(MM)}_spawn_block_top[rot[2`, `${(0,zM.oe)(MM)}_spawn_block_top[rot[3`, `${(0,zM.oe)(MM)}_spawn_block_top[rot[4`, `${(0,zM.oe)(MM)}_spawn_block_side`],
+          texturePerSide: [4, 4, 1, 4, 4, 4],
+          harvestType: "rock"
+        }),
+        ...(0, JM.Lb)("Checkpoint Block", {
+          displayName: {
+            translationKey: "item:checkpointBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["checkpoint_block[rot[1", "checkpoint_block[rot[2", "checkpoint_block[rot[3", "checkpoint_block[rot[4"],
+          harvestType: "rock",
+          rootMetaDesc: "Checkpoint Block|meta|rot1",
+          description: {
+            translationKey: "item:checkpointBlockDescription"
+          }
+        }, [
+          [0, 0, 2, 0, 0, 0],
+          [0, 0, 3, 0, 0, 0],
+          [0, 0, 0, 0, 0, 0],
+          [0, 0, 1, 0, 0, 0]
+        ]),
+        ...(0, JM.Lb)("Custom Lobby Block", {
+          displayName: {
+            translationKey: "item:customLobbyBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["custom_lobby_block_top[rot[1", "custom_lobby_block_top[rot[2", "custom_lobby_block_top[rot[3", "custom_lobby_block_top[rot[4", "custom_lobby_block_side"],
+          harvestType: "rock",
+          rootMetaDesc: "Custom Lobby Block|meta|rot1",
+          description: {
+            translationKey: "item:customLobbyBlockDescription"
+          }
+        }, [
+          [4, 4, 2, 4, 4, 4],
+          [4, 4, 3, 4, 4, 4],
+          [4, 4, 0, 4, 4, 4],
+          [4, 4, 1, 4, 4, 4]
+        ]),
+        ...(0, JM.L)((MM => `Generator Spawn Block (${MM})`), {
+          displayName: MM => ({
+            translationKey: `item:${(0,zM.me)(MM)}GeneratorSpawnBlock`
+          }),
+          ttb: 1500,
+          textureInfo: MM => [`${(0,zM.oe)(MM)}_gen_spawn_top`, `${(0,zM.oe)(MM)}_gen_spawn_coal`, `${(0,zM.oe)(MM)}_gen_spawn_iron`],
+          texturePerSide: [2, 2, 0, 0, 1, 1],
+          harvestType: "rock",
+          description: {
+            translationKey: "item:teamGeneratorSpawnBlockDescription"
+          }
+        }, ["Red", "Blue", "Lime", "Yellow", "Cyan", "White", "Pink", "Gray"]),
+        ...(0, JM.Lb)("Trader Shop Spawn Block", {
+          displayName: {
+            translationKey: "item:traderShopSpawnBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["shop_trader_spawn_top[rot[1", "shop_trader_spawn_top[rot[2", "shop_trader_spawn_top[rot[3", "shop_trader_spawn_top[rot[4", "shop_trader_spawn_side", "shop_trader_spawn_face"],
+          harvestType: "rock",
+          rootMetaDesc: "Trader Shop Spawn Block|meta|rot1",
+          description: {
+            translationKey: "item:traderShopSpawnBlockDescription"
+          }
+        }, [
+          [5, 5, 2, 4, 4, 4],
+          [5, 5, 3, 4, 4, 4],
+          [5, 5, 0, 4, 4, 4],
+          [5, 5, 1, 4, 4, 4]
+        ]),
+        ...(0, JM.Lb)("Wizard Shop Spawn Block", {
+          displayName: {
+            translationKey: "item:wizardShopSpawnBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["shop_wizard_spawn_top[rot[1", "shop_wizard_spawn_top[rot[2", "shop_wizard_spawn_top[rot[3", "shop_wizard_spawn_top[rot[4", "shop_wizard_spawn_side", "shop_wizard_spawn_face"],
+          harvestType: "rock",
+          rootMetaDesc: "Wizard Shop Spawn Block|meta|rot1",
+          description: {
+            translationKey: "item:wizardShopSpawnBlockDescription"
+          }
+        }, [
+          [5, 5, 2, 4, 4, 4],
+          [5, 5, 3, 4, 4, 4],
+          [5, 5, 0, 4, 4, 4],
+          [5, 5, 1, 4, 4, 4]
+        ]),
+        "Generator Spawn Block (Diamond)": {
+          displayName: {
+            translationKey: "item:diamondGeneratorSpawnBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["diamond_gen_spawn_top", "diamond_gen_spawn_side"],
+          texturePerSide: [1, 1, 0, 0, 1, 1],
+          harvestType: "rock",
+          description: {
+            translationKey: "item:diamondGeneratorSpawnBlockDescription"
+          }
+        },
+        "Generator Spawn Block (Moonstone)": {
+          displayName: {
+            translationKey: "item:moonstoneGeneratorSpawnBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["moonstone_gen_spawn_top", "moonstone_gen_spawn_side"],
+          texturePerSide: [1, 1, 0, 0, 1, 1],
+          harvestType: "rock",
+          description: {
+            translationKey: "item:moonstoneGeneratorSpawnBlockDescription"
+          }
+        },
+        "Generator Spawn Block (Ore)": {
+          displayName: {
+            translationKey: "item:oreGeneratorSpawnBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["ore_gen_spawn_top", "ore_gen_spawn_side"],
+          texturePerSide: [1, 1, 0, 0, 1, 1],
+          harvestType: "rock",
+          description: {
+            translationKey: "item:oreGeneratorSpawnBlockDescription"
+          }
+        },
+        "Goal Block (Red)": {
+          displayName: {
+            translationKey: "item:redGoalBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["explosive_paint_red_top", "red_spawn_block_top[rot[3"],
+          texturePerSide: [1, 1, 0, 0, 1, 1],
+          harvestType: "rock",
+          description: {
+            translationKey: "item:goalBlockDescription"
+          }
+        },
+        "Goal Block (Blue)": {
+          displayName: {
+            translationKey: "item:blueGoalBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["explosive_paint_blue_top", "blue_spawn_block_top[rot[3"],
+          texturePerSide: [1, 1, 0, 0, 1, 1],
+          harvestType: "rock",
+          description: {
+            translationKey: "item:goalBlockDescription"
+          }
+        },
+        "Finish Block": {
+          displayName: {
+            translationKey: "item:finishBlock"
+          },
+          ttb: 1500,
+          textureInfo: "finish_block",
+          harvestType: "rock",
+          description: {
+            translationKey: "item:finishBlockDescription"
+          }
+        },
+        "Drop Location Block": {
+          displayName: {
+            translationKey: "item:dropLocationBlock"
+          },
+          ttb: 1500,
+          textureInfo: ["drop_location_block_top", "drop_location_block_side"],
+          texturePerSide: [1, 1, 0, 0, 1, 1],
+          harvestType: "rock",
+          description: {
+            translationKey: "item:dropLocationBlockDescription"
+          }
+        },
+        "Obby Death Block": {
+          displayName: {
+            translationKey: "item:obbyDeathBlock"
+          },
+          ttb: 1500,
+          textureInfo: "obby_death_block",
+          harvestType: "rock",
+          description: {
+            translationKey: "item:obbyDeathBlockDescription"
+          }
+        },
+        "Obby Absorb Block": {
+          displayName: {
+            translationKey: "item:obbyAbsorbBlock"
+          },
+          ttb: 1500,
+          textureInfo: "obby_absorb_block",
+          harvestType: "rock",
+          description: {
+            translationKey: "item:obbyAbsorbBlockDescription"
+          }
+        },
+        "Obby Absorb Death Block": {
+          displayName: {
+            translationKey: "item:obbyAbsorbDeathBlock"
+          },
+          ttb: 1500,
+          textureInfo: "obby_absorb_death_block",
+          harvestType: "rock",
+          description: {
+            translationKey: "item:obbyAbsorbDeathBlockDescription"
+          }
+        },
+        "Bone Block": {
+          displayName: {
+            translationKey: "item:boneBlock"
+          },
+          ttb: 960,
+          textureInfo: ["bone_block_side", "bone_block_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "rock"
+        },
+        ...(0, JM.rb)("Pig"),
+        ...(0, JM.rb)("Cow"),
+        ...(0, JM.rb)("Sheep"),
+        ...(0, JM.rb)("Cave Golem"),
+        ...(0, JM.rb)("Draugr Zombie"),
+        ...(0, JM.rb)("Draugr Skeleton"),
+        "Empty Spawner Block": {
+          displayName: {
+            translationKey: "item:emptyMobSpawnerBlock"
+          },
+          description: {
+            translationKey: "item:emptyMobSpawnerBlockDescription"
+          },
+          itemTexture: "empty_spawner_block_icon",
+          ttb: 5e3,
+          textureInfo: ["mob_spawner_block_empty_side", "mob_spawner_block_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          transTex: !0,
+          harvestType: "rock",
+          drops: null,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Empty Spawner Block"
+          },
+          particlesIgnoreBlack: !0,
+          twoDBlockItem: !0
+        },
+        ...(0, JM.rb)("Frost Golem"),
+        ...(0, JM.rb)("Frost Zombie"),
+        ...(0, JM.rb)("Frost Skeleton"),
+        "Snowy Messy Stone": {
+          displayName: {
+            translationKey: "item:snowyMessyStone"
+          },
+          ttb: 1800,
+          textureInfo: "snowy_messy_stone",
+          harvestType: "rock"
+        },
+        ...(0, JM.Pb)("Snowy Stone Slab", {
+          displayName: {
+            translationKey: "item:snowyStoneSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["snowy_messy_stone_side", "snowy_messy_stone"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: "Snowy Messy Stone",
+          rootMetaDesc: "Snowy Stone Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.rb)("Draugr Knight"),
+        "Packed Snow": {
+          displayName: {
+            translationKey: "item:packedSnow"
+          },
+          ttb: 1800,
+          textureInfo: "packed_snow",
+          harvestType: "granule",
+          soundType: {
+            break: "snow",
+            place: "snow"
+          }
+        },
+        "Carved Messy Stone": {
+          displayName: {
+            translationKey: "item:carvedMessyStone"
+          },
+          ttb: 1800,
+          textureInfo: "carved_messy_stone",
+          harvestType: "rock"
+        },
+        "Spectral Grass": {
+          displayName: {
+            translationKey: "item:spectralGrass"
+          },
+          ttb: 1,
+          textureInfo: "spectral_grass",
+          model: "CentreCross",
+          solid: !1,
+          drops: null,
+          harvestType: "cuttable",
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Spectral Grass"
+          },
+          canBePlacedOver: !0
+        },
+        "Spectral Log": {
+          displayName: {
+            translationKey: "item:spectralLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_spectral",
+          harvestType: "wood"
+        },
+        "Barkless Spectral Log": {
+          displayName: {
+            translationKey: "item:barklessSpectralLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_spectral_log",
+          harvestType: "wood"
+        },
+        "Barkless Spectral Log|TreeBase|Spectral": {
+          ttb: 2e3,
+          textureInfo: "stripped_spectral_log",
+          harvestType: "wood",
+          drops: "Barkless Spectral Log"
+        },
+        "Spectral Wood Planks": {
+          displayName: {
+            translationKey: "item:spectralWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_spectral",
+          harvestType: "wood"
+        },
+        "Spectral Leaves": {
+          displayName: {
+            translationKey: "item:spectralLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_spectral",
+          harvestType: "cuttable"
+        },
+        "Spectral Door": {
+          displayName: {
+            translationKey: "item:spectralDoor"
+          },
+          ttb: 3600,
+          itemTexture: "spectral_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Spectral Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Spectral Door"
+        },
+        "Spectral Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Spectral Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Spectral Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Spectral Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Spectral Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Spectral Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Spectral Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Spectral Door Top": {
+          ttb: 3600,
+          itemTexture: "spectral_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Spectral Door",
+          rootMetaDesc: "_Spectral Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Spectral Door Top"
+        },
+        "_Spectral Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Spectral Door"
+        },
+        "_Spectral Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Spectral Door"
+        },
+        "_Spectral Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Spectral Door"
+        },
+        "_Spectral Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Spectral Door"
+        },
+        "_Spectral Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Spectral Door"
+        },
+        "_Spectral Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Spectral Door"
+        },
+        "_Spectral Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Spectral Door"
+        },
+        "Spectral Trapdoor": {
+          displayName: {
+            translationKey: "item:spectralTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "spectral_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Spectral Trapdoor|meta|rot1|closed",
+          blockModel: "Spectral Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Spectral Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Spectral Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Spectral Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Spectral Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Spectral Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Spectral Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Spectral Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Spectral Sapling": {
+          displayName: {
+            translationKey: "item:spectralSapling"
+          },
+          ttb: 1,
+          textureInfo: "spectral_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "spectral_sapling"
+        },
+        "Spectral Log|TreeBase|Spectral": {
+          ttb: 2400,
+          textureInfo: "log_spectral",
+          harvestType: "wood",
+          drops: "Spectral Log"
+        },
+        "Spectral Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_spectral",
+          harvestType: "cuttable",
+          drops: "Spectral Leaves"
+        },
+        ...(0, JM.Pb)("Spectral Slab", {
+          displayName: {
+            translationKey: "item:spectralSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_spectral_side", "planks_spectral"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Spectral Wood Planks",
+          rootMetaDesc: "Spectral Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Jb)("Spectral Ladder", {
+          displayName: {
+            translationKey: "item:spectralLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_spectral",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Spectral Ladder|meta|rot1",
+          modelScale: 1,
+          solid: !1,
+          blockModel: "Spectral Ladder",
+          heldItemScale: 1,
+          blockModelItem: !0
+        }),
+        ...(0, JM.Jb)("Wood Enchanting Table", {
+          displayName: {
+            translationKey: "item:woodEnchantingTable"
+          },
+          ttb: 800,
+          harvestType: "wood",
+          model: "rotatable",
+          itemTexture: "wood_enchanting_table",
+          rootMetaDesc: "Wood Enchanting Table|meta|rot1",
+          modelScale: 10,
+          blockModel: "Wood Enchanting Table",
+          description: {
+            translationKey: "item:enchantingTableDescription"
+          },
+          Ch: [2, 0, 2]
+        }),
+        ...(0, JM.Jb)("Stone Enchanting Table", {
+          displayName: {
+            translationKey: "item:stoneEnchantingTable"
+          },
+          ttb: 1e3,
+          harvestType: "wood",
+          model: "rotatable",
+          itemTexture: "stone_enchanting_table",
+          rootMetaDesc: "Stone Enchanting Table|meta|rot1",
+          modelScale: 10,
+          blockModel: "Stone Enchanting Table",
+          description: {
+            translationKey: "item:enchantingTableDescription"
+          },
+          Ch: [4, 0, 4]
+        }),
+        ...(0, JM.Jb)("Iron Enchanting Table", {
+          displayName: {
+            translationKey: "item:ironEnchantingTable"
+          },
+          ttb: 1200,
+          harvestType: "wood",
+          model: "rotatable",
+          itemTexture: "iron_enchanting_table",
+          rootMetaDesc: "Iron Enchanting Table|meta|rot1",
+          modelScale: 10,
+          blockModel: "Iron Enchanting Table",
+          description: {
+            translationKey: "item:enchantingTableDescription"
+          },
+          Ch: [6, 0, 6]
+        }),
+        ...(0, JM.Jb)("Gold Enchanting Table", {
+          displayName: {
+            translationKey: "item:goldEnchantingTable"
+          },
+          ttb: 1500,
+          harvestType: "wood",
+          model: "rotatable",
+          itemTexture: "gold_enchanting_table",
+          rootMetaDesc: "Gold Enchanting Table|meta|rot1",
+          modelScale: 10,
+          blockModel: "Gold Enchanting Table",
+          description: {
+            translationKey: "item:enchantingTableDescription"
+          },
+          Ch: [8, 0, 8]
+        }),
+        ...(0, JM.Jb)("Diamond Enchanting Table", {
+          displayName: {
+            translationKey: "item:diamondEnchantingTable"
+          },
+          ttb: 2e3,
+          harvestType: "wood",
+          model: "rotatable",
+          itemTexture: "diamond_enchanting_table",
+          rootMetaDesc: "Diamond Enchanting Table|meta|rot1",
+          modelScale: 10,
+          blockModel: "Diamond Enchanting Table",
+          description: {
+            translationKey: "item:enchantingTableDescription"
+          },
+          Ch: [10, 0, 10]
+        }),
+        "Pine Grass Block": {
+          displayName: {
+            translationKey: "item:pineGrassBlock"
+          },
+          ttb: 720,
+          textureInfo: ["pine_grass_block_side", "pine_grass_block", "dirt"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "granule",
+          soundType: {
+            break: "grass",
+            place: "grass"
+          }
+        },
+        ...(0, JM.Pb)("Pine Grass Slab", {
+          displayName: {
+            translationKey: "item:pineGrassSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_pine_grass_top_side", "pine_grass_block"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "granule",
+          slabFullBlock: "Pine Grass Block",
+          rootMetaDesc: "Pine Grass Slab|meta|rot1|bot"
+        }),
+        "Pine Grass": {
+          displayName: {
+            translationKey: "item:pineGrass"
+          },
+          ttb: 1,
+          textureInfo: "pine_grass",
+          model: "CentreCross",
+          solid: !1,
+          drops: null,
+          harvestType: "cuttable",
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Pine Grass"
+          },
+          canBePlacedOver: !0
+        },
+        "Pine Fern": {
+          displayName: {
+            translationKey: "item:pineFern"
+          },
+          ttb: 1,
+          textureInfo: "pine_fern",
+          model: "CentreCross",
+          solid: !1,
+          drops: null,
+          harvestType: "cuttable",
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Pine Fern"
+          },
+          canBePlacedOver: !0
+        },
+        "Fallen Pine Cone": {
+          displayName: {
+            translationKey: "item:fallenPineCone"
+          },
+          ttb: 1,
+          textureInfo: "fallen_pine_cone",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        "Pine Cone Block": {
+          displayName: {
+            translationKey: "item:pineConeBlock"
+          },
+          ttb: 600,
+          textureInfo: ["pine_cone_block_side", "pine_cone_block_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "wood"
+        },
+        ...(0, JM.rb)("Wolf"),
+        ...(0, JM.rb)("Bear"),
+        ...(0, JM.rb)("Deer"),
+        ...(0, JM.rb)("Stag"),
+        ...(0, JM.Jb)("Bone Antlers", {
+          displayName: {
+            translationKey: "item:boneAntlers"
+          },
+          description: {
+            translationKey: "item:antlersDescription"
+          },
+          ttb: 1500,
+          itemTexture: "bone_antlers_icon",
+          model: "rotatableOffset",
+          harvestType: "rock",
+          rootMetaDesc: "Bone Antlers|meta|rot1",
+          solid: !1,
+          blockModel: "bone_antlers_model",
+          modelScale: 10,
+          particlesIgnoreBlack: !0
+        }),
+        ...(0, JM.Jb)("Gold Antlers", {
+          displayName: {
+            translationKey: "item:goldAntlers"
+          },
+          description: {
+            translationKey: "item:antlersDescription"
+          },
+          ttb: 1500,
+          itemTexture: "gold_antlers_icon",
+          model: "rotatableOffset",
+          harvestType: "rock",
+          rootMetaDesc: "Gold Antlers|meta|rot1",
+          solid: !1,
+          blockModel: "gold_antlers_model",
+          modelScale: 10,
+          particlesIgnoreBlack: !0,
+          Ch: [7, 7, 2]
+        }),
+        ...(0, JM.rb)("Gold Watermelon Stag"),
+        ...(0, JM.Jb)("Salvaging Table", {
+          displayName: {
+            translationKey: "item:salvagingTable"
+          },
+          ttb: 1200,
+          harvestType: "wood",
+          rootMetaDesc: "Salvaging Table|meta|rot1",
+          description: {
+            translationKey: "item:salvagingTableDescription"
+          },
+          ...GM("Salvaging Table", "salvaging_table")
+        }),
+        Chalk: {
+          displayName: {
+            translationKey: "item:chalk"
+          },
+          description: {
+            translationKey: "item:chalkDescription"
+          },
+          ttb: 850,
+          textureInfo: "chalk",
+          harvestType: "rock"
+        },
+        ...(0, JM.L)((MM => `${MM} Chalk`), {
+          displayName: MM => ({
+            translationKey: "item:colouredChalk",
+            params: {
+              colour: `$t(colour:${(0,zM.oe)(MM)})`
+            }
+          }),
+          description: MM => ({
+            translationKey: "item:colouredChalkDescription",
+            params: {
+              colour: `$t(colour:${(0,zM.oe)(MM)})`
+            }
+          }),
+          ttb: 850,
+          textureInfo: MM => `chalk_${(0,zM.oe)(MM)}`,
+          harvestType: "rock"
+        }),
+        ...(0, JM.L)((MM => `${MM} Chalk Bricks`), {
+          displayName: MM => ({
+            translationKey: "item:colouredChalkBricks",
+            params: {
+              colour: `$t(colour:${(0,zM.oe)(MM)})`
+            }
+          }),
+          description: MM => ({
+            translationKey: "item:colouredChalkBricksDescription",
+            params: {
+              colour: `$t(colour:${(0,zM.oe)(MM)})`
+            }
+          }),
+          ttb: 850,
+          textureInfo: MM => `chalk_bricks_${(0,zM.oe)(MM)}`,
+          harvestType: "rock"
+        }),
+        ...(0, JM.Q)("$colour$ Chalk Slab", "$colour$ Chalk", "chalk_$colour$", "item:colouredChalkSlab", "item:colouredChalkSlabDescription", {
+          ttb: 550,
+          harvestType: "rock"
+        }),
+        ...(0, JM.Q)("$colour$ Chalk Bricks Slab", "$colour$ Chalk Bricks", ["chalk_bricks_slab_side_$colour$", "chalk_bricks_$colour$"], "item:colouredChalkBricksSlab", "item:colouredChalkBricksSlabDescription", {
+          ttb: 550,
+          harvestType: "rock"
+        }),
+        ...(0, JM.Jb)("Leaf Bed", {
+          displayName: {
+            translationKey: "item:leafBed"
+          },
+          ttb: 240,
+          itemTexture: "leaf_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: "Leaf Bed|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Leaf Bed"
+        }),
+        ...(0, JM.Jb)("_Leaf Bed Head", {
+          ttb: 240,
+          itemTexture: "leaf_bed",
+          model: "rotatable",
+          harvestType: "wood",
+          drops: "Leaf Bed",
+          rootMetaDesc: "_Leaf Bed Head|meta|rot1",
+          particlesIgnoreBlack: !0,
+          modelScale: 5,
+          blockModel: "Leaf Bed"
+        }),
+        "Jungle Grass Block": {
+          displayName: {
+            translationKey: "item:jungleGrassBlock"
+          },
+          ttb: 720,
+          textureInfo: ["jungle_grass_block_side", "jungle_grass_block", "dirt"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "granule",
+          soundType: {
+            break: "grass",
+            place: "grass"
+          }
+        },
+        ...(0, JM.Pb)("Jungle Grass Slab", {
+          displayName: {
+            translationKey: "item:jungleGrassSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_jungle_grass_top_side", "jungle_grass_block"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "granule",
+          slabFullBlock: "Jungle Grass Block",
+          rootMetaDesc: "Jungle Grass Slab|meta|rot1|bot"
+        }),
+        "Jungle Tall Grass": {
+          displayName: {
+            translationKey: "item:jungleTallGrass"
+          },
+          ttb: 1,
+          textureInfo: "jungle_tall_grass_bottom",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Jungle Tall Grass"
+          },
+          itemTexture: "jungle_tall_grass_bottom",
+          canBePlacedOver: !0
+        },
+        "Jungle Tall Grass|Top": {
+          ttb: 1,
+          textureInfo: "jungle_tall_grass_top",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Jungle Tall Grass"
+          },
+          itemTexture: "jungle_tall_grass_top",
+          canBePlacedOver: !0
+        },
+        Catnip: {
+          displayName: {
+            translationKey: "item:catnip"
+          },
+          ttb: 1,
+          textureInfo: "catnip",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          drops: null,
+          harvestType: "cuttable",
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Catnip"
+          },
+          canBePlacedOver: !0
+        },
+        "Mango Log": {
+          displayName: {
+            translationKey: "item:mangoLog"
+          },
+          ttb: 2400,
+          textureInfo: "log_mango",
+          harvestType: "wood"
+        },
+        "Barkless Mango Log": {
+          displayName: {
+            translationKey: "item:barklessMangoLog"
+          },
+          ttb: 2e3,
+          textureInfo: "stripped_mango_log",
+          harvestType: "wood"
+        },
+        "Barkless Mango Log|TreeBase|Mango": {
+          ttb: 2e3,
+          textureInfo: "stripped_mango_log",
+          harvestType: "wood",
+          drops: "Barkless Mango Log"
+        },
+        "Mango Wood Planks": {
+          displayName: {
+            translationKey: "item:mangoWoodPlanks"
+          },
+          ttb: 1800,
+          textureInfo: "planks_mango",
+          harvestType: "wood"
+        },
+        "Mango Leaves": {
+          displayName: {
+            translationKey: "item:mangoLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_mango",
+          harvestType: "cuttable"
+        },
+        "Mango Door": {
+          displayName: {
+            translationKey: "item:mangoDoor"
+          },
+          ttb: 3600,
+          itemTexture: "mango_door",
+          model: "door",
+          harvestType: "wood",
+          rootMetaDesc: "Mango Door|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "Mango Door"
+        },
+        "Mango Door|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Mango Door|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Mango Door|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Mango Door|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Mango Door|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Mango Door|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "Mango Door|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood"
+        },
+        "_Mango Door Top": {
+          ttb: 3600,
+          itemTexture: "mango_door",
+          harvestType: "wood",
+          model: "door",
+          drops: "Mango Door",
+          rootMetaDesc: "_Mango Door Top|meta|rot1|closed",
+          particlesIgnoreBlack: !0,
+          blockModel: "_Mango Door Top"
+        },
+        "_Mango Door Top|meta|rot1|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Mango Door"
+        },
+        "_Mango Door Top|meta|rot2|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Mango Door"
+        },
+        "_Mango Door Top|meta|rot2|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Mango Door"
+        },
+        "_Mango Door Top|meta|rot3|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Mango Door"
+        },
+        "_Mango Door Top|meta|rot3|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Mango Door"
+        },
+        "_Mango Door Top|meta|rot4|closed": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Mango Door"
+        },
+        "_Mango Door Top|meta|rot4|open": {
+          ttb: 3600,
+          harvestType: "wood",
+          drops: "Mango Door"
+        },
+        "Mango Trapdoor": {
+          displayName: {
+            translationKey: "item:mangoTrapdoor"
+          },
+          ttb: 2800,
+          itemTexture: "mango_trapdoor",
+          model: "trapdoor",
+          harvestType: "wood",
+          rootMetaDesc: "Mango Trapdoor|meta|rot1|closed",
+          blockModel: "Mango Trapdoor",
+          heldItemScale: .5,
+          blockModelItem: !0
+        },
+        "Mango Trapdoor|meta|rot1|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Mango Trapdoor|meta|rot2|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Mango Trapdoor|meta|rot2|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Mango Trapdoor|meta|rot3|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Mango Trapdoor|meta|rot3|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Mango Trapdoor|meta|rot4|closed": {
+          ttb: 2800,
+          harvestType: "wood"
+        },
+        "Mango Trapdoor|meta|rot4|open": {
+          ttb: 2800,
+          harvestType: "wood",
+          solid: !1
+        },
+        "Mango Sapling": {
+          displayName: {
+            translationKey: "item:mangoSapling"
+          },
+          ttb: 1,
+          textureInfo: "mango_sapling",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "mango_sapling"
+        },
+        "Mango Log|TreeBase|Mango": {
+          ttb: 2400,
+          textureInfo: "log_mango",
+          harvestType: "wood",
+          drops: "Mango Log"
+        },
+        "Mango Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_mango",
+          harvestType: "cuttable",
+          drops: "Mango Leaves"
+        },
+        ...(0, JM.Pb)("Mango Slab", {
+          displayName: {
+            translationKey: "item:mangoSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_mango_side", "planks_mango"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "wood",
+          slabFullBlock: "Mango Wood Planks",
+          rootMetaDesc: "Mango Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.Jb)("Mango Ladder", {
+          displayName: {
+            translationKey: "item:mangoLadder"
+          },
+          ttb: 1e3,
+          itemTexture: "ladder_mango",
+          model: "rotatableOffset",
+          harvestType: "wood",
+          rootMetaDesc: "Mango Ladder|meta|rot1",
+          modelScale: 1,
+          solid: !1,
+          blockModel: "Mango Ladder",
+          heldItemScale: 1,
+          blockModelItem: !0
+        }),
+        "Mango Block": {
+          displayName: {
+            translationKey: "item:mangoBlock"
+          },
+          ttb: 600,
+          textureInfo: ["mango_block_side", "mango_block_top", "mango_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Banana Block": {
+          displayName: {
+            translationKey: "item:bananaBlock"
+          },
+          ttb: 1200,
+          textureInfo: ["banana_block_side", "banana_block_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "wood"
+        },
+        "Banana Seeds": {
+          displayName: {
+            translationKey: "item:bananaSeeds"
+          },
+          ttb: 400,
+          textureInfo: "banana_stem",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "banana_seeds",
+          description: {
+            translationKey: "item:bananaSeedsDescription"
+          }
+        },
+        "Banana Seeds|Growing": {
+          ttb: 400,
+          textureInfo: "banana_stem",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Banana Seeds"
+        },
+        ...(0, JM.Jb)("Attached Banana Stem", {
+          displayName: {
+            translationKey: "item:attachedBananaStem"
+          },
+          ttb: 400,
+          textureInfo: ["attached_banana_stem_wrapper", "attached_banana_stem"],
+          model: "CustomPlanes|rotatable",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Banana Seeds",
+          rootMetaDesc: "Attached Banana Stem|meta|rot1",
+          customPlanesInfo: [{
+            textureIdx: 0,
+            yRot: Math.PI / 4
+          }, {
+            textureIdx: 0,
+            yRot: 3 * Math.PI / 4
+          }, {
+            textureIdx: 1,
+            yRot: 3 * Math.PI / 2
+          }]
+        }),
+        "Dangling Rope": {
+          displayName: {
+            translationKey: "item:danglingRope"
+          },
+          ttb: 225,
+          itemTexture: "dangling_rope",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "Dangling Rope",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375,
+            backFaceCulling: !0
+          },
+          description: {
+            translationKey: "item:ceilingClimbableDescription"
+          },
+          climbableInside: {
+            upForceScalar: .95
+          }
+        },
+        "Dangling Vine": {
+          displayName: {
+            translationKey: "item:danglingVine"
+          },
+          ttb: 225,
+          itemTexture: "dangling_vine",
+          model: "CustomModel",
+          harvestType: "cuttable",
+          solid: !1,
+          blockModel: "Dangling Vine",
+          modelScale: 10,
+          customModelInfo: {
+            yOffset: -.4375,
+            backFaceCulling: !0
+          },
+          description: {
+            translationKey: "item:ceilingClimbableDescription"
+          },
+          climbableInside: {
+            upForceScalar: .95
+          }
+        },
+        ...(0, JM.rb)("Gorilla"),
+        ...(0, JM.rb)("Wildcat"),
+        "Fruity Maple Leaves": {
+          displayName: {
+            translationKey: "item:fruityMapleLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_maple_fruity",
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Fruity Maple Leaves"
+          }
+        },
+        "Pine Cone Leaves": {
+          displayName: {
+            translationKey: "item:pineConeLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_pine_cone",
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Pine Cone Leaves"
+          }
+        },
+        "Fruity Plum Leaves": {
+          displayName: {
+            translationKey: "item:fruityPlumLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_plum_fruity",
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Fruity Plum Leaves"
+          }
+        },
+        "Fruity Palm Leaves": {
+          displayName: {
+            translationKey: "item:fruityPalmLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_palm_fruity",
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Fruity Palm Leaves"
+          }
+        },
+        "Fruity Pear Leaves": {
+          displayName: {
+            translationKey: "item:fruityPearLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_pear_fruity",
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Fruity Pear Leaves"
+          }
+        },
+        "Fruity Cherry Leaves": {
+          displayName: {
+            translationKey: "item:fruityCherryLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_cherry_fruity",
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Fruity Cherry Leaves"
+          }
+        },
+        "Fruity Mango Leaves": {
+          displayName: {
+            translationKey: "item:fruityMangoLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_mango_fruity",
+          harvestType: "cuttable",
+          drops: null,
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Fruity Mango Leaves"
+          }
+        },
+        ...(0, JM.rb)("Draugr Huntress"),
+        ...(0, JM.rb)("Magma Golem"),
+        "Black Portal": {
+          displayName: {
+            translationKey: "item:blackPortal"
+          },
+          textureInfo: {
+            animTextures: ["black_portal0", "black_portal1", "black_portal2", "black_portal3"],
+            animationInterval: 500,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          Ch: (0, JM.Bb)("Black")
+        },
+        "Blue Portal": {
+          displayName: {
+            translationKey: "item:bluePortal"
+          },
+          textureInfo: {
+            animTextures: ["blue_portal0", "blue_portal1", "blue_portal2", "blue_portal3"],
+            animationInterval: 500,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          Ch: (0, JM.Bb)("Blue")
+        },
+        "Brown Portal": {
+          displayName: {
+            translationKey: "item:brownPortal"
+          },
+          textureInfo: {
+            animTextures: ["brown_portal0", "brown_portal1", "brown_portal2", "brown_portal3"],
+            animationInterval: 500,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          Ch: (0, JM.Bb)("Brown")
+        },
+        "Cyan Portal": {
+          displayName: {
+            translationKey: "item:cyanPortal"
+          },
+          textureInfo: {
+            animTextures: ["cyan_portal0", "cyan_portal1", "cyan_portal2", "cyan_portal3"],
+            animationInterval: 500,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          Ch: (0, JM.Bb)("Cyan")
+        },
+        "Gray Portal": {
+          displayName: {
+            translationKey: "item:grayPortal"
+          },
+          textureInfo: {
+            animTextures: ["gray_portal0", "gray_portal1", "gray_portal2", "gray_portal3"],
+            animationInterval: 500,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          Ch: (0, JM.Bb)("Gray")
+        },
+        "Green Portal": {
+          displayName: {
+            translationKey: "item:greenPortal"
+          },
+          textureInfo: {
+            animTextures: ["green_portal0", "green_portal1", "green_portal2", "green_portal3"],
+            animationInterval: 500,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          Ch: (0, JM.Bb)("Green")
+        },
+        "Grey Portal": {
+          displayName: {
+            translationKey: "item:greyPortal"
+          },
+          textureInfo: {
+            animTextures: ["grey_portal0", "grey_portal1", "grey_portal2", "grey_portal3"],
+            animationInterval: 500,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          Ch: (0, JM.Bb)("Grey")
+        },
+        "Light Blue Portal": {
+          displayName: {
+            translationKey: "item:lightbluePortal"
+          },
+          textureInfo: {
+            animTextures: ["lightblue_portal0", "lightblue_portal1", "lightblue_portal2", "lightblue_portal3"],
+            animationInterval: 500,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          Ch: (0, JM.Bb)("Light Blue")
+        },
+        "Light Gray Portal": {
+          displayName: {
+            translationKey: "item:lightgrayPortal"
+          },
+          textureInfo: {
+            animTextures: ["lightgray_portal0", "lightgray_portal1", "lightgray_portal2", "lightgray_portal3"],
+            animationInterval: 500,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          Ch: (0, JM.Bb)("Light Gray")
+        },
+        "Lime Portal": {
+          displayName: {
+            translationKey: "item:limePortal"
+          },
+          textureInfo: {
+            animTextures: ["lime_portal0", "lime_portal1", "lime_portal2", "lime_portal3"],
+            animationInterval: 500,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          Ch: (0, JM.Bb)("Lime")
+        },
+        "Magenta Portal": {
+          displayName: {
+            translationKey: "item:magentaPortal"
+          },
+          textureInfo: {
+            animTextures: ["magenta_portal0", "magenta_portal1", "magenta_portal2", "magenta_portal3"],
+            animationInterval: 500,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          Ch: (0, JM.Bb)("Magenta")
+        },
+        "Orange Portal": {
+          displayName: {
+            translationKey: "item:orangePortal"
+          },
+          textureInfo: {
+            animTextures: ["orange_portal0", "orange_portal1", "orange_portal2", "orange_portal3"],
+            animationInterval: 500,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          Ch: (0, JM.Bb)("Orange")
+        },
+        "Pink Portal": {
+          displayName: {
+            translationKey: "item:pinkPortal"
+          },
+          textureInfo: {
+            animTextures: ["pink_portal0", "pink_portal1", "pink_portal2", "pink_portal3"],
+            animationInterval: 500,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          Ch: (0, JM.Bb)("Pink")
+        },
+        "Purple Portal": {
+          displayName: {
+            translationKey: "item:purplePortal"
+          },
+          textureInfo: {
+            animTextures: ["purple_portal0", "purple_portal1", "purple_portal2", "purple_portal3"],
+            animationInterval: 500,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          Ch: (0, JM.Bb)("Purple")
+        },
+        "Red Portal": {
+          displayName: {
+            translationKey: "item:redPortal"
+          },
+          textureInfo: {
+            animTextures: ["red_portal0", "red_portal1", "red_portal2", "red_portal3"],
+            animationInterval: 500,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          Ch: (0, JM.Bb)("Red")
+        },
+        "White Portal": {
+          displayName: {
+            translationKey: "item:whitePortal"
+          },
+          textureInfo: {
+            animTextures: ["white_portal0", "white_portal1", "white_portal2", "white_portal3"],
+            animationInterval: 500,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          Ch: (0, JM.Bb)("White")
+        },
+        "Yellow Portal": {
+          displayName: {
+            translationKey: "item:yellowPortal"
+          },
+          textureInfo: {
+            animTextures: ["yellow_portal0", "yellow_portal1", "yellow_portal2", "yellow_portal3"],
+            animationInterval: 500,
+            interpolateFrames: !1
+          },
+          drops: null,
+          harvestType: "rock",
+          solid: !0,
+          Ch: (0, JM.Bb)("Yellow")
+        },
+        "Leather Block": {
+          displayName: {
+            translationKey: "item:leatherBlock"
+          },
+          ttb: 960,
+          textureInfo: ["leather_block_side", "leather_block_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        ...(0, JM.rb)("Horse"),
+        "Tomato Plant": {
+          displayName: {
+            translationKey: "item:tomato"
+          },
+          ttb: 400,
+          textureInfo: "tomato_plant_stage0",
+          itemTexture: "tomato_plant_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        ...(0, JM.yb)("Tomato Plant", {
+          displayName: {
+            translationKey: "item:tomato"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null
+        }, ["tomato_plant_stage1"], {
+          1: {
+            itemTexture: "tomato_plant_stage1"
+          }
+        }),
+        "Tomato Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:tomato"
+          },
+          ttb: 400,
+          textureInfo: "tomato_plant_stage2",
+          itemTexture: "tomato_plant_stage2",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Tomato Plant|Top|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:tomato"
+          },
+          ttb: 400,
+          textureInfo: "tomato_plant_stage2_top",
+          itemTexture: "tomato_plant_stage2_top",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Carrot Plant": {
+          displayName: {
+            translationKey: "item:carrotSeeds"
+          },
+          ttb: 400,
+          textureInfo: "carrot_plant_stage0",
+          itemTexture: "carrot_seeds",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Carrot Seeds",
+          description: {
+            translationKey: "item:carrotSeedsDescription"
+          }
+        },
+        ...(0, JM.yb)("Carrot Plant", {
+          displayName: {
+            translationKey: "item:carrotSeeds"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "carrot_seeds",
+          drops: "Carrot Seeds",
+          description: {
+            translationKey: "item:carrotSeedsDescription"
+          }
+        }, ["carrot_plant_stage1"]),
+        "Carrot Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:carrotSeeds"
+          },
+          ttb: 400,
+          textureInfo: "carrot_plant_stage2",
+          itemTexture: "carrot_seeds",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          description: {
+            translationKey: "item:carrotSeedsDescription"
+          },
+          onMinedAura: 5
+        },
+        "Potato Plant": {
+          displayName: {
+            translationKey: "item:potatoSeeds"
+          },
+          ttb: 400,
+          textureInfo: "potato_plant_stage0",
+          itemTexture: "potato_seeds",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Potato Seeds",
+          description: {
+            translationKey: "item:potatoSeedsDescription"
+          }
+        },
+        ...(0, JM.yb)("Potato Plant", {
+          displayName: {
+            translationKey: "item:potatoSeeds"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "potato_seeds",
+          drops: "Potato Seeds",
+          description: {
+            translationKey: "item:potatoSeedsDescription"
+          }
+        }, ["potato_plant_stage1"]),
+        "Potato Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:potatoSeeds"
+          },
+          ttb: 400,
+          textureInfo: "potato_plant_stage2",
+          itemTexture: "potato_seeds",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5,
+          description: {
+            translationKey: "item:potatoSeedsDescription"
+          }
+        },
+        "Strawberry Bush": {
+          displayName: {
+            translationKey: "item:strawberries"
+          },
+          ttb: 400,
+          textureInfo: "strawberry_bush_stage0",
+          itemTexture: "strawberry_bush_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        ...(0, JM.yb)("Strawberry Bush", {
+          displayName: {
+            translationKey: "item:strawberries"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null
+        }, ["strawberry_bush_stage1", "strawberry_bush_stage2"], {
+          1: {
+            itemTexture: "strawberry_bush_stage1"
+          },
+          2: {
+            itemTexture: "strawberry_bush_stage2",
+            onMinedAura: 5
+          }
+        }),
+        "Sugar Cane Plant": {
+          displayName: {
+            translationKey: "item:sugarCane"
+          },
+          ttb: 400,
+          textureInfo: "sugar_cane_plant_stage0",
+          itemTexture: "sugar_cane_plant_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        ...(0, JM.yb)("Sugar Cane Plant", {
+          displayName: {
+            translationKey: "item:sugarCane"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null
+        }, ["sugar_cane_plant_stage1"], {
+          1: {
+            itemTexture: "sugar_cane_plant_stage1"
+          }
+        }),
+        "Sugar Cane Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:sugarCane"
+          },
+          ttb: 400,
+          textureInfo: "sugar_cane_plant_stage2",
+          itemTexture: "sugar_cane_plant_stage2",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Sugar Cane Plant|Top|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:sugarCane"
+          },
+          ttb: 400,
+          textureInfo: "sugar_cane_plant_stage2_top",
+          itemTexture: "sugar_cane_plant_stage2_top",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Lettuce Plant": {
+          displayName: {
+            translationKey: "item:lettuce"
+          },
+          ttb: 400,
+          textureInfo: "lettuce_plant_stage0",
+          itemTexture: "lettuce_plant_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        ...(0, JM.yb)("Lettuce Plant", {
+          displayName: {
+            translationKey: "item:lettuce"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null
+        }, ["lettuce_plant_stage1"], {
+          1: {
+            itemTexture: "lettuce_plant_stage1"
+          }
+        }),
+        "Lettuce Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:lettuce"
+          },
+          ttb: 400,
+          textureInfo: "lettuce_plant_stage2",
+          itemTexture: "lettuce_plant_stage2",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Coffee Plant": {
+          displayName: {
+            translationKey: "item:coffeeBean"
+          },
+          ttb: 400,
+          textureInfo: "coffee_plant_stage0",
+          itemTexture: "coffee_plant_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        ...(0, JM.yb)("Coffee Plant", {
+          displayName: {
+            translationKey: "item:coffeeBean"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null
+        }, ["coffee_plant_stage1"], {
+          1: {
+            itemTexture: "coffee_plant_stage1"
+          }
+        }),
+        "Coffee Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:coffeeBean"
+          },
+          ttb: 400,
+          textureInfo: "coffee_plant_stage2",
+          itemTexture: "coffee_plant_stage2",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Cauliflower Plant": {
+          displayName: {
+            translationKey: "item:cauliflower"
+          },
+          ttb: 400,
+          textureInfo: "cauliflower_plant_stage0",
+          itemTexture: "cauliflower_plant_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        ...(0, JM.yb)("Cauliflower Plant", {
+          displayName: {
+            translationKey: "item:cauliflower"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null
+        }, ["cauliflower_plant_stage1"], {
+          1: {
+            itemTexture: "cauliflower_plant_stage1"
+          }
+        }),
+        "Cauliflower Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:cauliflower"
+          },
+          ttb: 400,
+          textureInfo: "cauliflower_plant_stage2",
+          itemTexture: "cauliflower_plant_stage2",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Parsnip Plant": {
+          displayName: {
+            translationKey: "item:parsnip"
+          },
+          ttb: 400,
+          textureInfo: "parsnip_plant_stage0",
+          itemTexture: "parsnip_plant_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        ...(0, JM.yb)("Parsnip Plant", {
+          displayName: {
+            translationKey: "item:parsnip"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null
+        }, ["parsnip_plant_stage1"], {
+          1: {
+            itemTexture: "parsnip_plant_stage1"
+          }
+        }),
+        "Parsnip Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:parsnip"
+          },
+          ttb: 400,
+          textureInfo: "parsnip_plant_stage2",
+          itemTexture: "parsnip_plant_stage2",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Blueberry Bush": {
+          displayName: {
+            translationKey: "item:blueberries"
+          },
+          ttb: 400,
+          textureInfo: "blueberry_bush_stage0",
+          itemTexture: "blueberry_bush_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        ...(0, JM.yb)("Blueberry Bush", {
+          displayName: {
+            translationKey: "item:blueberries"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null
+        }, ["blueberry_bush_stage1", "blueberry_bush_stage2"], {
+          1: {
+            itemTexture: "blueberry_bush_stage1"
+          },
+          2: {
+            itemTexture: "blueberry_bush_stage2",
+            onMinedAura: 5
+          }
+        }),
+        "Red Cabbage Plant": {
+          displayName: {
+            translationKey: "item:redCabbage"
+          },
+          ttb: 400,
+          textureInfo: "red_cabbage_stage0",
+          itemTexture: "red_cabbage_stage0",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable"
+        },
+        ...(0, JM.yb)("Red Cabbage Plant", {
+          displayName: {
+            translationKey: "item:redCabbage"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: null
+        }, ["red_cabbage_stage1"], {
+          1: {
+            itemTexture: "red_cabbage_stage1"
+          }
+        }),
+        "Red Cabbage Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:redCabbage"
+          },
+          ttb: 400,
+          textureInfo: "red_cabbage_stage2",
+          itemTexture: "red_cabbage_stage2",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5
+        },
+        "Beetroot Plant": {
+          displayName: {
+            translationKey: "item:beetrootSeeds"
+          },
+          ttb: 400,
+          textureInfo: "beetroot_plant_stage0",
+          itemTexture: "beetroot_seeds",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          drops: "Beetroot Seeds",
+          description: {
+            translationKey: "item:beetrootSeedsDescription"
+          }
+        },
+        ...(0, JM.yb)("Beetroot Plant", {
+          displayName: {
+            translationKey: "item:beetrootSeeds"
+          },
+          ttb: 400,
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          itemTexture: "beetroot_seeds",
+          drops: "Beetroot Seeds",
+          description: {
+            translationKey: "item:beetrootSeedsDescription"
+          }
+        }, ["beetroot_plant_stage1"]),
+        "Beetroot Plant|FreshlyGrown": {
+          displayName: {
+            translationKey: "item:beetrootSeeds"
+          },
+          ttb: 400,
+          textureInfo: "beetroot_plant_stage2",
+          itemTexture: "beetroot_seeds",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          onMinedAura: 5,
+          description: {
+            translationKey: "item:beetrootSeedsDescription"
+          }
+        },
+        "Autumn Aspen Leaves": {
+          displayName: {
+            translationKey: "item:autumnAspenLeaves"
+          },
+          ttb: 350,
+          textureInfo: "leaves_aspen_autumn",
+          harvestType: "cuttable"
+        },
+        "Autumn Aspen Leaves|TreeCanopy": {
+          ttb: 350,
+          textureInfo: "leaves_aspen_autumn",
+          harvestType: "cuttable",
+          drops: "Autumn Aspen Leaves"
+        },
+        "Autumn Fern": {
+          displayName: {
+            translationKey: "item:autumnFern"
+          },
+          ttb: 1,
+          textureInfo: "autumn_fern",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          drops: null,
+          harvestType: "cuttable",
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Autumn Fern"
+          },
+          canBePlacedOver: !0
+        },
+        ...(0, JM.Lb)("Iron Chest", {
+          displayName: {
+            translationKey: "item:ironChest"
+          },
+          ttb: 7200,
+          textureInfo: ["iron_chest_front", "iron_chest_side", "iron_chest_top[rot[1", "iron_chest_top[rot[2", "iron_chest_top[rot[3", "iron_chest_top[rot[4", "iron_chest_back"],
+          harvestType: "rock",
+          rootMetaDesc: "Iron Chest|meta|rot1",
+          description: {
+            translationKey: "item:ironChestDescription"
+          }
+        }, [
+          [1, 1, 2, 2, 0, 6],
+          [0, 6, 3, 3, 1, 1],
+          [1, 1, 4, 4, 6, 0],
+          [6, 0, 5, 5, 1, 1]
+        ]),
+        Crate: {
+          displayName: {
+            translationKey: "item:crate"
+          },
+          ttb: 600,
+          textureInfo: "crate",
+          harvestType: "wood"
+        },
+        "Carrot Block": {
+          displayName: {
+            translationKey: "item:carrotBlock"
+          },
+          ttb: 600,
+          textureInfo: ["carrot_block_side", "carrot_block_top", "carrot_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Carrot Seeds": {
+          displayName: {
+            translationKey: "item:carrotSeeds"
+          },
+          ttb: 400,
+          textureInfo: "carrot_plant_stage0",
+          itemTexture: "carrot_seeds",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          description: {
+            translationKey: "item:carrotSeedsDescription"
+          }
+        },
+        "Potato Block": {
+          displayName: {
+            translationKey: "item:potatoBlock"
+          },
+          ttb: 600,
+          textureInfo: "potato_block",
+          harvestType: "wood"
+        },
+        "Potato Seeds": {
+          displayName: {
+            translationKey: "item:potatoSeeds"
+          },
+          ttb: 400,
+          textureInfo: "potato_plant_stage0",
+          itemTexture: "potato_seeds",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          description: {
+            translationKey: "item:potatoSeedsDescription"
+          }
+        },
+        "Beetroot Block": {
+          displayName: {
+            translationKey: "item:beetrootBlock"
+          },
+          ttb: 600,
+          textureInfo: ["beetroot_block_side", "beetroot_block_top", "beetroot_block_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "wood"
+        },
+        "Beetroot Seeds": {
+          displayName: {
+            translationKey: "item:beetrootSeeds"
+          },
+          ttb: 400,
+          textureInfo: "beetroot_plant_stage0",
+          itemTexture: "beetroot_seeds",
+          model: "CentreCross",
+          solid: !1,
+          harvestType: "cuttable",
+          description: {
+            translationKey: "item:beetrootSeedsDescription"
+          }
+        },
+        ...(0, JM.F)("White Banner", {
+          displayName: {
+            translationKey: "item:whiteBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_white",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "White Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "White Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, JM.F)("Orange Banner", {
+          displayName: {
+            translationKey: "item:orangeBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_orange",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Orange Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Orange Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, JM.F)("Magenta Banner", {
+          displayName: {
+            translationKey: "item:magentaBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_magenta",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Magenta Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Magenta Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, JM.F)("Light Blue Banner", {
+          displayName: {
+            translationKey: "item:lightBlueBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_light_blue",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Light Blue Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Light Blue Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, JM.F)("Yellow Banner", {
+          displayName: {
+            translationKey: "item:yellowBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_yellow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Yellow Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Yellow Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, JM.F)("Lime Banner", {
+          displayName: {
+            translationKey: "item:limeBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_lime",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Lime Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Lime Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, JM.F)("Pink Banner", {
+          displayName: {
+            translationKey: "item:pinkBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_pink",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Pink Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Pink Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, JM.F)("Gray Banner", {
+          displayName: {
+            translationKey: "item:grayBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_gray",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Gray Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Gray Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, JM.F)("Light Gray Banner", {
+          displayName: {
+            translationKey: "item:lightGrayBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_light_gray",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Light Gray Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Light Gray Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, JM.F)("Cyan Banner", {
+          displayName: {
+            translationKey: "item:cyanBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_cyan",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Cyan Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Cyan Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, JM.F)("Purple Banner", {
+          displayName: {
+            translationKey: "item:purpleBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_purple",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Purple Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Purple Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, JM.F)("Blue Banner", {
+          displayName: {
+            translationKey: "item:blueBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_blue",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Blue Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Blue Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, JM.F)("Brown Banner", {
+          displayName: {
+            translationKey: "item:brownBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_brown",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Brown Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Brown Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, JM.F)("Green Banner", {
+          displayName: {
+            translationKey: "item:greenBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_green",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Green Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Green Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, JM.F)("Red Banner", {
+          displayName: {
+            translationKey: "item:redBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_red",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Red Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Red Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, JM.F)("Black Banner", {
+          displayName: {
+            translationKey: "item:blackBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_black",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Black Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Black Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, JM.F)("Draugr Banner", {
+          displayName: {
+            translationKey: "item:draugrBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_draugr",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Draugr Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Draugr Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, JM.rb)("Spirit Golem"),
+        ...(0, JM.rb)("Spirit Wolf"),
+        ...(0, JM.rb)("Spirit Bear"),
+        ...(0, JM.rb)("Spirit Stag"),
+        ...(0, JM.rb)("Spirit Gorilla"),
+        "Fertilised Soil": {
+          displayName: {
+            translationKey: "item:fertilisedSoil"
+          },
+          ttb: 600,
+          textureInfo: "fertilised_soil",
+          harvestType: "granule",
+          drops: "Tilled Soil"
+        },
+        ...(0, JM.qb)("Sheep"),
+        ...(0, JM.qb)("Cow"),
+        ...(0, JM.qb)("Pig"),
+        ...(0, JM.qb)("Horse"),
+        ...(0, JM.qb)("Wolf"),
+        ...(0, JM.qb)("Deer"),
+        ...(0, JM.qb)("Wildcat"),
+        "Hollow Crate": {
+          displayName: {
+            translationKey: "item:hollowCrate"
+          },
+          ttb: 600,
+          textureInfo: "crate",
+          harvestType: "wood",
+          solid: !1
+        },
+        ...(0, JM.rb)("Draugr Warper"),
+        ...(0, JM.Db)("Radar", "_Radar Dish Up", "active_radar", "radar_side_active", "radar_top_active"),
+        ...(0, JM.Db)("Inactive Radar", "_Radar Dish Down", "inactive_radar", "radar_side_inactive", "radar_top_inactive"),
+        ...(0, JM.Db)("Active Radar", "_Radar Dish Up", "active_radar", "radar_side_active", {
+          textureInfo: ["radar_side_active", "radar_bottom", {
+            animTextures: ["radar_screen0[rot[1", "radar_screen1[rot[1", "radar_screen2[rot[1", "radar_screen3[rot[1"],
+            animationInterval: 275
+          }, {
+            animTextures: ["radar_screen0[rot[2", "radar_screen1[rot[2", "radar_screen2[rot[2", "radar_screen3[rot[2"],
+            animationInterval: 275
+          }, {
+            animTextures: ["radar_screen0[rot[3", "radar_screen1[rot[3", "radar_screen2[rot[3", "radar_screen3[rot[3"],
+            animationInterval: 275
+          }, {
+            animTextures: ["radar_screen0[rot[4", "radar_screen1[rot[4", "radar_screen2[rot[4", "radar_screen3[rot[4"],
+            animationInterval: 275
+          }],
+          texturesPerSide: [
+            [0, 0, 2, 1, 0, 0],
+            [0, 0, 3, 1, 0, 0],
+            [0, 0, 4, 1, 0, 0],
+            [0, 0, 5, 1, 0, 0]
+          ]
+        }),
+        "Lucky Block": {
+          displayName: {
+            translationKey: "item:luckyBlock"
+          },
+          ttb: 1200,
+          textureInfo: "yellow_lucky_block",
+          harvestType: "rock"
+        },
+        "Ultra Lucky Block": {
+          displayName: {
+            translationKey: "item:ultraLuckyBlock"
+          },
+          ttb: 1200,
+          textureInfo: "light_blue_lucky_block",
+          harvestType: "rock"
+        },
+        ...(0, JM.Jb)("Gold Trophy", {
+          displayName: {
+            translationKey: "item:goldTrophy"
+          },
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "rotatable",
+          itemTexture: "gold_trophy",
+          rootMetaDesc: "Gold Trophy|meta|rot1",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          blockModel: "Gold Trophy"
+        }),
+        ...(0, JM.Rb)("Magenta"),
+        ...(0, JM.Rb)("Light Gray"),
+        ...(0, JM.Rb)("Red"),
+        "INTERNAL_MESH_Gold Trophy": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "Gold Trophy",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1
+        },
+        ...(0, JM.rb)("Frost Wraith"),
+        ...(0, JM.rb)("Draugr Reaver"),
+        ...(0, JM.Rb)("White"),
+        ...(0, JM.Rb)("Orange"),
+        ...(0, JM.Rb)("Light Blue"),
+        ...(0, JM.Rb)("Yellow"),
+        ...(0, JM.Rb)("Lime"),
+        ...(0, JM.Rb)("Pink"),
+        ...(0, JM.Rb)("Gray"),
+        ...(0, JM.Rb)("Cyan"),
+        ...(0, JM.Rb)("Purple"),
+        ...(0, JM.Rb)("Blue"),
+        ...(0, JM.Rb)("Brown"),
+        ...(0, JM.Rb)("Green"),
+        ...(0, JM.Rb)("Black"),
+        ...(0, JM.F)("Skull Banner", {
+          displayName: {
+            translationKey: "item:skullBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_skull",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Skull Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Skull Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        ...(0, JM.F)("Rainbow Banner", {
+          displayName: {
+            translationKey: "item:rainbowBanner"
+          },
+          ttb: 240,
+          itemTexture: "banner_rainbow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Rainbow Banner|meta|rot1|bot",
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: "Rainbow Banner",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        }),
+        "Duo Blocchino Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "2_block",
+          blockModel: "2_block",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Bebek Bebek Bebek Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "bebek_bebek_bebek",
+          blockModel: "bebek_bebek_bebek",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Bobino Musculino Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "bobino_musculino",
+          blockModel: "bobino_musculino",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Bobzilla Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "bobzilla",
+          blockModel: "bobzilla",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Brra Brra Pachim Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "brra_brra_pachim",
+          blockModel: "brra_brra_pachim",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 2.5,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Capitano Explovissimo Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "capitano_explovissimo",
+          blockModel: "capitano_explovissimo",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Cappuccino Ninjino Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "cappuccino_ninjino",
+          blockModel: "cappuccino_ninjino",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Chimpanzano Bananano Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "chimpanzano_bananano",
+          blockModel: "chimpanzano_bananano",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Il Wizardini Del Porko Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "il_wizardini_del_porko",
+          blockModel: "il_wizardini_del_porko",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Lucchia Blocchi Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "lucchia_blocchi",
+          blockModel: "lucchia_blocchi",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Monsieur Bedwar Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "monsieur_bedwar",
+          blockModel: "monsieur_bedwar",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Twirlina Cappucina Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "twirlina_cappucina",
+          blockModel: "twirlina_cappucina",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Weapon Lucky Block": {
+          displayName: {
+            translationKey: "item:weaponLuckyBlock"
+          },
+          ttb: 1200,
+          textureInfo: ["red_lucky_block", "weapon_lucky_block"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Boiling Pot": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "boiling_pot",
+          blockModel: "boiling_pot",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Chopping Board": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "chopping_board",
+          blockModel: "chopping_board",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Frying Pan": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "frying_pan",
+          blockModel: "frying_pan",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Hob Boiling": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "hob_boiling",
+          blockModel: "hob_boiling",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Hob Frying": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "hob_frying",
+          blockModel: "hob_frying",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Kitchen Worktop": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "kitchen_worktop",
+          blockModel: "kitchen_worktop",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Slicing Board": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "slicing_board",
+          blockModel: "slicing_board",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        ...(0, JM.Jb)("Wood Trophy", {
+          displayName: {
+            translationKey: "item:woodTrophy"
+          },
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "rotatable",
+          itemTexture: "wood_trophy",
+          rootMetaDesc: "Wood Trophy|meta|rot1",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          blockModel: "Wood Trophy"
+        }),
+        "INTERNAL_MESH_Wood Trophy": {
+          ttb: 2e3,
+          harvestType: "wood",
+          blockModel: "Wood Trophy",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1
+        },
+        ...(0, JM.Jb)("Stone Trophy", {
+          displayName: {
+            translationKey: "item:stoneTrophy"
+          },
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "rotatable",
+          itemTexture: "stone_trophy",
+          rootMetaDesc: "Stone Trophy|meta|rot1",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          blockModel: "Stone Trophy"
+        }),
+        "INTERNAL_MESH_Stone Trophy": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "Stone Trophy",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1
+        },
+        ...(0, JM.Jb)("Iron Trophy", {
+          displayName: {
+            translationKey: "item:ironTrophy"
+          },
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "rotatable",
+          itemTexture: "iron_trophy",
+          rootMetaDesc: "Iron Trophy|meta|rot1",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          blockModel: "Iron Trophy"
+        }),
+        "INTERNAL_MESH_Iron Trophy": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "Iron Trophy",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1
+        },
+        ...(0, JM.Jb)("Diamond Trophy", {
+          displayName: {
+            translationKey: "item:diamondTrophy"
+          },
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "rotatable",
+          itemTexture: "diamond_trophy",
+          rootMetaDesc: "Diamond Trophy|meta|rot1",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          blockModel: "Diamond Trophy"
+        }),
+        "INTERNAL_MESH_Diamond Trophy": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "Diamond Trophy",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1
+        },
+        ...(0, JM.Jb)("Moonstone Trophy", {
+          displayName: {
+            translationKey: "item:moonstoneTrophy"
+          },
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "rotatable",
+          itemTexture: "moonstone_trophy",
+          rootMetaDesc: "Moonstone Trophy|meta|rot1",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          blockModel: "Moonstone Trophy",
+          Ch: [5, 6, 8]
+        }),
+        "INTERNAL_MESH_Moonstone Trophy": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "Moonstone Trophy",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1
+        },
+        "Black Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_black",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Blue Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_blue",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Brown Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_brown",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Cyan Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_cyan",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Green Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_green",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Grey Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_grey",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Light Blue Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_light_blue",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Light Grey Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_light_grey",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Lime Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_lime",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Magenta Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_magenta",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Orange Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_orange",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Pink Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_pink",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Purple Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_purple",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Red Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_red",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "White Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_white",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Yellow Wave": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "wave_yellow",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        ...(0, JM.Jb)("White Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:white)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "white_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "White Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "White Directional Arrow",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, JM.Jb)("Orange Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:orange)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "orange_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Orange Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Orange Directional Arrow",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, JM.Jb)("Magenta Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:magenta)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "magenta_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Magenta Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Magenta Directional Arrow",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, JM.Jb)("Light Blue Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:light_blue)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "light_blue_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Light Blue Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Light Blue Directional Arrow",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, JM.Jb)("Yellow Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:yellow)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "yellow_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Yellow Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Yellow Directional Arrow",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, JM.Jb)("Lime Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:lime)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "lime_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Lime Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Lime Directional Arrow",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, JM.Jb)("Pink Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:pink)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "pink_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Pink Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Pink Directional Arrow",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, JM.Jb)("Grey Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:gray)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "grey_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Grey Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Grey Directional Arrow",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, JM.Jb)("Light Grey Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:light_gray)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "light_grey_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Light Grey Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Light Grey Directional Arrow",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, JM.Jb)("Cyan Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:cyan)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "cyan_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Cyan Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Cyan Directional Arrow",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, JM.Jb)("Purple Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:purple)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "purple_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Purple Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Purple Directional Arrow",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, JM.Jb)("Blue Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:blue)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "blue_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Blue Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Blue Directional Arrow",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, JM.Jb)("Brown Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:brown)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "brown_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Brown Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Brown Directional Arrow",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, JM.Jb)("Green Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:green)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "green_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Green Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Green Directional Arrow",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, JM.Jb)("Red Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:red)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "red_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Red Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Red Directional Arrow",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        ...(0, JM.Jb)("Black Directional Arrow", {
+          displayName: {
+            translationKey: "item:directionalArrow",
+            params: {
+              colour: "$t(colour:black)"
+            }
+          },
+          ttb: 400,
+          itemTexture: "black_directional_arrow",
+          model: "rotatable",
+          harvestType: "cuttable",
+          rootMetaDesc: "Black Directional Arrow|meta|rot1",
+          solid: !1,
+          blockModel: "Black Directional Arrow",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        }),
+        Bin: {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "bin",
+          blockModel: "bin",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          heldItemScale: 4
+        },
+        ...(0, JM.Jb)("Vending Machine", {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "rotatable",
+          itemTexture: "vending_machine",
+          blockModel: "vending_machine_bottom",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          rootMetaDesc: "Vending Machine|meta|rot1"
+        }),
+        ...(0, JM.Jb)("_Vending Machine Top", {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "rotatable",
+          blockModel: "vending_machine_top",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          drops: "Vending Machine",
+          rootMetaDesc: "_Vending Machine Top|meta|rot1"
+        }),
+        "Job Application Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "job_application",
+          blockModel: "job_application",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "John Beef Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "john_beef",
+          blockModel: "john_beef",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "67 Statue": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "67",
+          blockModel: "67",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 3,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        "Coloured Wheel": {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          itemTexture: "wheel",
+          blockModel: "wheel",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 4,
+          customModelInfo: {
+            yOffset: 0
+          }
+        },
+        UFO: {
+          ttb: 2e3,
+          harvestType: "rock",
+          model: "CustomModel",
+          blockModel: "ufo",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1
+        },
+        ...(0, JM.sb)("Torch", {
+          ttb: 300,
+          harvestType: "cuttable",
+          itemTexture: "torch",
+          solid: !1,
+          model: "CustomModel",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5,
+            unlit: !0
+          },
+          blockModel: "torch",
+          blockModelItem: !0,
+          heldItemScale: 8,
+          unlitStandaloneMesh: !0,
+          rootMetaDesc: "Torch|meta|rot1|bot",
+          Ch: [14, 14, 12]
+        }, {
+          wallBlockModel: "torch_wall"
+        }),
+        ...(0, JM.N)((MM => `${MM} Torch`), {
+          ttb: 300,
+          harvestType: "cuttable",
+          itemTexture: MM => `torch_${(0,zM.oe)(MM)}`,
+          solid: !1,
+          model: "CustomModel",
+          modelScale: 8,
+          customModelInfo: () => ({
+            yOffset: -.5,
+            unlit: !0
+          }),
+          blockModel: MM => `torch_${(0,zM.oe)(MM)}`,
+          blockModelItem: !0,
+          heldItemScale: 8,
+          unlitStandaloneMesh: !0,
+          rootMetaDesc: MM => `${MM} Torch|meta|rot1|bot`,
+          Ch: MM => zM.P[MM]
+        }, (MM => `torch_wall_${(0,zM.oe)(MM)}`)),
+        ...(0, JM.L)((MM => `${MM} Neon`), {
+          ttb: 200,
+          harvestType: "granule",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          },
+          textureInfo: MM => `neon_${(0,zM.oe)(MM)}`,
+          unlitStandaloneMesh: !0,
+          Ch: MM => zM.P[MM]
+        }),
+        ...(0, JM.eb)(),
+        ...(0, JM.L)((MM => `Invisible ${MM} Light`), {
+          ttb: 3e3,
+          harvestType: "rock",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          },
+          textureInfo: "invisible_solid",
+          transTex: !0,
+          solid: !1,
+          Ch: MM => zM.P[MM],
+          drops: null
+        }),
+        "Invisible Sky Light": {
+          ttb: 3e3,
+          harvestType: "rock",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          },
+          textureInfo: "invisible_solid",
+          transTex: !0,
+          solid: !1,
+          hd: 15,
+          drops: null
+        },
+        "Dirt|PineGrassRoots": {
+          ttb: 600,
+          textureInfo: "dirt",
+          harvestType: "granule"
+        },
+        "Dirt|JungleGrassRoots": {
+          ttb: 600,
+          textureInfo: "dirt",
+          harvestType: "granule"
+        },
+        "Gun Lucky Block": {
+          displayName: {
+            translationKey: "item:gunLuckyBlock"
+          },
+          ttb: 1200,
+          textureInfo: ["red_lucky_block", "gun_lucky_block"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Ghost Chest": {
+          ttb: 1,
+          textureInfo: ["ghost_chest_front", "ghost_chest_side", "ghost_chest_top", "ghost_chest_back"],
+          texturePerSide: [1, 1, 2, 2, 0, 3],
+          harvestType: "wood",
+          transTex: !0,
+          solid: !1,
+          drops: null
+        },
+        "Ghost Lucky Block": {
+          ttb: 1,
+          textureInfo: "ghost_lucky_block",
+          harvestType: "rock",
+          transTex: !0,
+          solid: !1,
+          drops: null
+        },
+        "Ghost Mystery Block": {
+          ttb: 1,
+          textureInfo: "ghost_mystery_block",
+          harvestType: "rock",
+          transTex: !0,
+          solid: !1,
+          drops: null
+        },
+        Football: {
+          textureInfo: "football_block",
+          harvestType: "rock",
+          ttb: 600,
+          model: "CustomModel",
+          itemTexture: "football",
+          blockModel: "football",
+          blockModelItem: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          heldItemScale: 7
+        },
+        "Pet Lucky Block": {
+          displayName: {
+            translationKey: "item:petLuckyBlock"
+          },
+          ttb: 1200,
+          textureInfo: ["lucky_block_pink_question", "pet_lucky_block"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        ...(0, JM.sb)("Glowing Mushroom", {
+          ttb: 240,
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          },
+          itemTexture: "glowing_mushroom",
+          model: "CustomModel",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5,
+            unlit: !0
+          },
+          blockModel: "glowing_mushroom",
+          blockModelItem: !0,
+          heldItemScale: 6,
+          unlitStandaloneMesh: !0,
+          rootMetaDesc: "Glowing Mushroom|meta|rot1|bot",
+          Ch: [8, 15, 15]
+        }, {
+          wallBlockModel: "glowing_mushroom_wall",
+          yRotOffset: Math.PI / 2
+        }),
+        ...(0, JM.sb)("Crystal", {
+          ttb: 600,
+          harvestType: "rock",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          },
+          itemTexture: "crystal",
+          model: "CustomModel",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5,
+            unlit: !0
+          },
+          blockModel: "crystal",
+          blockModelItem: !0,
+          heldItemScale: 6,
+          unlitStandaloneMesh: !0,
+          rootMetaDesc: "Crystal|meta|rot1|bot",
+          Ch: [8, 15, 7],
+          drops: null,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Crystal"
+          },
+          onMinedAura: 50
+        }, {
+          xRotOffset: -Math.PI / 2
+        }),
+        ...(0, JM.Jb)("Slime Trail", {
+          ...UM,
+          rootMetaDesc: "Slime Trail|meta|rot1"
+        }),
+        "Overgrown Grass Block": {
+          displayName: {
+            translationKey: "item:overgrownGrassBlock"
+          },
+          ttb: 720,
+          textureInfo: "grass_top",
+          harvestType: "granule",
+          soundType: {
+            break: "grass",
+            place: "grass"
+          }
+        },
+        "Overgrown Pine Grass Block": {
+          displayName: {
+            translationKey: "item:overgrownPineGrassBlock"
+          },
+          ttb: 720,
+          textureInfo: "pine_grass_block",
+          harvestType: "granule",
+          soundType: {
+            break: "grass",
+            place: "grass"
+          }
+        },
+        "Overgrown Jungle Grass Block": {
+          displayName: {
+            translationKey: "item:overgrownJungleGrassBlock"
+          },
+          ttb: 720,
+          textureInfo: "jungle_grass_block",
+          harvestType: "granule",
+          soundType: {
+            break: "grass",
+            place: "grass"
+          }
+        },
+        "Smoke Block": {
+          displayName: "Smoke Block",
+          ttb: 100,
+          textureInfo: {
+            animTextures: ["smoke0", "smoke1", "smoke2", "smoke3"],
+            animationInterval: 400
+          },
+          transTex: !0,
+          solid: !1,
+          drops: null,
+          harvestType: "cuttable"
+        },
+        ...(0, JM.xb)("Pipe", "pipe", {
+          displayName: {
+            translationKey: "item:pipe"
+          },
+          description: {
+            translationKey: "item:pipeDescription"
+          },
+          ttb: 600,
+          itemTexture: "pipe",
+          model: "CustomModel",
+          harvestType: "rock",
+          solid: !1,
+          blockModelItem: !0,
+          modelScale: 8,
+          heldItemScale: 6,
+          particlesIgnoreBlack: !0,
+          rootMetaDesc: "Pipe|meta|conn|none"
+        }),
+        ...(0, JM.D)(),
+        "Auto Crafter": {
+          displayName: {
+            translationKey: "item:autoCrafter"
+          },
+          description: {
+            translationKey: "item:autoCrafterDescription"
+          },
+          ttb: 3600,
+          textureInfo: ["autocrafter_side", "crafting_table_top", "autocrafter_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "rock",
+          particlesIgnoreBlack: !0,
+          altActionable: !0
+        },
+        ...(0, JM.Hb)(),
+        ...(0, JM.xb)("Extractor Pipe", "extractor_pipe", {
+          displayName: {
+            translationKey: "item:extractorPipe"
+          },
+          description: {
+            translationKey: "item:extractorPipeDescription"
+          },
+          ttb: 600,
+          itemTexture: "extractor_pipe",
+          model: "CustomModel",
+          harvestType: "rock",
+          solid: !1,
+          modelScale: 8,
+          heldItemScale: 6,
+          blockModelItem: !0,
+          particlesIgnoreBlack: !0,
+          rootMetaDesc: "Extractor Pipe|meta|conn|none"
+        }),
+        "Splitter Pipe": {
+          displayName: {
+            translationKey: "item:splitterPipe"
+          },
+          description: {
+            translationKey: "item:splitterPipeDescription"
+          },
+          ttb: 600,
+          itemTexture: "splitter_pipe",
+          model: "CustomModel",
+          blockModel: "splitter_pipe",
+          blockModelItem: !0,
+          harvestType: "rock",
+          solid: !1,
+          modelScale: 8,
+          heldItemScale: 6,
+          particlesIgnoreBlack: !0
+        },
+        ...(0, JM.Vb)(),
+        ...(0, JM.xb)("Wire", "wire", {
+          displayName: {
+            translationKey: "item:wire"
+          },
+          description: {
+            translationKey: "item:wireDescription"
+          },
+          ttb: 400,
+          itemTexture: "wire",
+          model: "CustomModel",
+          harvestType: "rock",
+          solid: !1,
+          modelScale: 8,
+          heldItemScale: 6,
+          blockModelItem: !0,
+          particlesIgnoreBlack: !0,
+          rootMetaDesc: "Wire|meta|conn|none"
+        }),
+        ...(0, JM.ab)("Filter Pipe", "filter_pipe", "pz", {
+          displayName: {
+            translationKey: "item:filterPipe"
+          },
+          description: {
+            translationKey: "item:filterPipeDescription"
+          },
+          ttb: 600,
+          itemTexture: "filter_pipe",
+          model: "CustomModel",
+          harvestType: "rock",
+          solid: !1,
+          modelScale: 8,
+          heldItemScale: 6,
+          blockModelItem: !0,
+          particlesIgnoreBlack: !0,
+          altActionable: !0,
+          rootMetaDesc: "Filter Pipe|meta|input|none"
+        }),
+        ...(0, JM.nb)("Merger Pipe", "merger_pipe", "pz", {
+          displayName: {
+            translationKey: "item:mergerPipe"
+          },
+          description: {
+            translationKey: "item:mergerPipeDescription"
+          },
+          ttb: 600,
+          itemTexture: "merger_pipe",
+          model: "CustomModel",
+          harvestType: "rock",
+          solid: !1,
+          modelScale: 8,
+          heldItemScale: 6,
+          blockModelItem: !0,
+          particlesIgnoreBlack: !0,
+          altActionable: !0,
+          rootMetaDesc: "Merger Pipe|meta|output|none"
+        }),
+        "Auto Harvester": {
+          displayName: {
+            translationKey: "item:autoHarvester"
+          },
+          description: {
+            translationKey: "item:autoHarvesterDescription"
+          },
+          ttb: 3600,
+          textureInfo: ["harvester_side0", "harvester_side1", "harvester_top", "harvester_bottom"],
+          texturePerSide: [0, 1, 2, 3, 0, 1],
+          harvestType: "rock",
+          particlesIgnoreBlack: !0,
+          altActionable: !0
+        },
+        ...(0, JM.rb)("Stalker"),
+        "Lunite Ore": {
+          displayName: {
+            translationKey: "item:luniteOre"
+          },
+          ttb: 5e3,
+          textureInfo: "lunite_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: "Lunite",
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Lunite Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": LM.o
+          },
+          description: {
+            translationKey: "item:luniteOreDescription"
+          },
+          onMinedAura: 40,
+          Ch: [10, 3, 12]
+        },
+        "Block of Lunite": {
+          displayName: {
+            translationKey: "item:blockOfLunite"
+          },
+          description: {
+            translationKey: "item:blockOfLuniteDescription"
+          },
+          ttb: 6750,
+          textureInfo: "lunite_block",
+          harvestType: "rock"
+        },
+        ...(0, JM.hb)(),
+        "Lunite Auto Crafter": {
+          displayName: {
+            translationKey: "item:luniteAutoCrafter"
+          },
+          description: {
+            translationKey: "item:luniteAutoCrafterDescription"
+          },
+          ttb: 3600,
+          textureInfo: ["autocrafter_lunite_side", "crafting_table_top", "autocrafter_lunite_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "rock",
+          particlesIgnoreBlack: !0,
+          altActionable: !0
+        },
+        "Lunite Auto Harvester": {
+          displayName: {
+            translationKey: "item:luniteAutoHarvester"
+          },
+          description: {
+            translationKey: "item:luniteAutoHarvesterDescription"
+          },
+          ttb: 3600,
+          textureInfo: ["harvester_lunite_side_0", "harvester_lunite_side_1", "harvester_lunite_top", "harvester_lunite_bottom"],
+          texturePerSide: [0, 1, 2, 3, 0, 1],
+          harvestType: "rock",
+          particlesIgnoreBlack: !0,
+          altActionable: !0
+        },
+        "Bowling Alley Floor": {
+          displayName: {
+            translationKey: "item:bowlingAlleyFloor"
+          },
+          ttb: 960,
+          textureInfo: "bowling_alley_floor",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        ...(0, JM.rb)("Crone"),
+        ...(0, JM.rb)("Slime"),
+        "Slime Trail|meta|rot1|Decaying": {
+          ...UM
+        },
+        "Slime Trail|meta|rot2|Decaying": {
+          ...UM
+        },
+        "Slime Trail|meta|rot3|Decaying": {
+          ...UM
+        },
+        "Slime Trail|meta|rot4|Decaying": {
+          ...UM
+        },
+        ...(0, JM.rb)("Iron Guardian"),
+        ...(0, JM.rb)("Gold Guardian"),
+        ...(0, JM.rb)("Diamond Guardian"),
+        ...(0, JM.rb)("Moonstone Guardian"),
+        "Dry Grass Block": {
+          displayName: {
+            translationKey: "item:dryGrassBlock"
+          },
+          ttb: 720,
+          textureInfo: ["dry_grass_block_side", "dry_grass_block", "dirt"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "granule",
+          soundType: {
+            break: "grass",
+            place: "grass"
+          }
+        },
+        "Overgrown Dry Grass Block": {
+          displayName: {
+            translationKey: "item:overgrownDryGrassBlock"
+          },
+          ttb: 720,
+          textureInfo: "dry_grass_block",
+          harvestType: "granule",
+          soundType: {
+            break: "grass",
+            place: "grass"
+          }
+        },
+        "Dead Bush": {
+          displayName: {
+            translationKey: "item:deadBush"
+          },
+          ttb: 1,
+          textureInfo: "dead_bush",
+          model: "CentreCross",
+          heldItemScale: .5,
+          solid: !1,
+          drops: null,
+          harvestType: "cuttable",
+          specialToolDrop: {
+            tool: "Shears",
+            drops: "Dead Bush"
+          },
+          canBePlacedOver: !0
+        },
+        "Dirt|DryGrassRoots": {
+          ttb: 600,
+          textureInfo: "dirt",
+          harvestType: "granule"
+        },
+        ...(0, JM.Pb)("Dry Grass Slab", {
+          displayName: {
+            translationKey: "item:dryGrassSlab"
+          },
+          ttb: 1200,
+          textureInfo: ["slab_dry_grass_top_side", "dry_grass_block"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          model: "Slab",
+          harvestType: "granule",
+          slabFullBlock: "Dry Grass Block",
+          rootMetaDesc: "Dry Grass Slab|meta|rot1|bot"
+        }),
+        ...(0, JM.sb)("Lantern", {
+          displayName: {
+            translationKey: "item:lantern"
+          },
+          ttb: 2500,
+          harvestType: "rock",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          },
+          itemTexture: "lantern",
+          model: "CustomModel",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5,
+            unlit: !0
+          },
+          blockModel: "lantern",
+          blockModelItem: !0,
+          heldItemScale: 8,
+          unlitStandaloneMesh: !0,
+          rootMetaDesc: "Lantern|meta|rot1|bot",
+          Ch: [15, 15, 13]
+        }, {
+          wallBlockModel: "lantern_wall",
+          yRotOffset: -Math.PI,
+          noCeilingVariant: !0
+        }),
+        ...(0, JM.Jb)("Lily Pad", {
+          rootMetaDesc: "Lily Pad|meta|rot1",
+          displayName: {
+            translationKey: "item:lilyPad"
+          },
+          ttb: 300,
+          itemTexture: "lily_pad",
+          model: "rotatable",
+          harvestType: "cuttable",
+          solid: !0,
+          Hd: (0, OM.i)([
+            [
+              [0, 0, 0],
+              [8, 1, 8]
+            ]
+          ]),
+          blockModel: "lily_pad_model",
+          modelScale: 7.5,
+          customModelInfo: {
+            yOffset: -.4375
+          },
+          particlesIgnoreBlack: !0
+        }),
+        ...(0, JM.rb)("Camel"),
+        ...(0, JM.qb)("Camel", 8),
+        "Rare Lucky Block": {
+          displayName: "Rare Lucky Block",
+          ttb: 1200,
+          textureInfo: "yellow_lucky_block_rare",
+          harvestType: "rock"
+        },
+        "Super Lucky Block": {
+          displayName: "Super Lucky Block",
+          ttb: 1200,
+          textureInfo: "yellow_lucky_block_super",
+          harvestType: "rock"
+        },
+        "Rare Weapon Lucky Block": {
+          displayName: "Rare Weapon Lucky Block",
+          ttb: 1200,
+          textureInfo: ["red_lucky_block_rare", "weapon_lucky_block_rare"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Super Weapon Lucky Block": {
+          displayName: "Super Weapon Lucky Block",
+          ttb: 1200,
+          textureInfo: ["red_lucky_block_super", "weapon_lucky_block_super"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Building Lucky Block": {
+          displayName: "Building Lucky Block",
+          ttb: 1200,
+          textureInfo: ["purple_lucky_block", "building_lucky_block"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Rare Building Lucky Block": {
+          displayName: "Rare Building Lucky Block",
+          ttb: 1200,
+          textureInfo: ["purple_lucky_block_rare", "building_lucky_block_rare"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Super Building Lucky Block": {
+          displayName: "Super Building Lucky Block",
+          ttb: 1200,
+          textureInfo: ["purple_lucky_block_super", "building_lucky_block_super"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Armour Lucky Block": {
+          displayName: "Armour Lucky Block",
+          ttb: 1200,
+          textureInfo: ["blue_lucky_block", "armour_lucky_block"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Rare Armour Lucky Block": {
+          displayName: "Rare Armour Lucky Block",
+          ttb: 1200,
+          textureInfo: ["blue_lucky_block_rare", "armour_lucky_block_rare"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Super Armour Lucky Block": {
+          displayName: "Super Armour Lucky Block",
+          ttb: 1200,
+          textureInfo: ["blue_lucky_block_super", "armour_lucky_block_super"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Tools Lucky Block": {
+          displayName: "Tools Lucky Block",
+          ttb: 1200,
+          textureInfo: ["orange_lucky_block", "tools_lucky_block"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Rare Tools Lucky Block": {
+          displayName: "Rare Tools Lucky Block",
+          ttb: 1200,
+          textureInfo: ["orange_lucky_block_rare", "tools_lucky_block_rare"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Super Tools Lucky Block": {
+          displayName: "Super Tools Lucky Block",
+          ttb: 1200,
+          textureInfo: ["orange_lucky_block_super", "tools_lucky_block_super"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Food Lucky Block": {
+          displayName: "Food Lucky Block",
+          ttb: 1200,
+          textureInfo: ["green_lucky_block", "food_lucky_block"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Rare Food Lucky Block": {
+          displayName: "Rare Food Lucky Block",
+          ttb: 1200,
+          textureInfo: ["green_lucky_block_rare", "food_lucky_block_rare"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Super Food Lucky Block": {
+          displayName: "Super Food Lucky Block",
+          ttb: 1200,
+          textureInfo: ["green_lucky_block_super", "food_lucky_block_super"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Potion Lucky Block": {
+          displayName: "Potion Lucky Block",
+          ttb: 1200,
+          textureInfo: ["lucky_block_pink_question", "potion_lucky_block"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Rare Potion Lucky Block": {
+          displayName: "Rare Potion Lucky Block",
+          ttb: 1200,
+          textureInfo: ["lucky_block_pink_question_rare", "potion_lucky_block_rare"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Super Potion Lucky Block": {
+          displayName: "Super Potion Lucky Block",
+          ttb: 1200,
+          textureInfo: ["lucky_block_pink_question_super", "potion_lucky_block_super"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock"
+        },
+        "Block Destroyer TNT": {
+          displayName: "Block Destroyer TNT",
+          ttb: 50,
+          textureInfo: ["block_destroyer_tnt_side", "block_destroyer_tnt_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: "cuttable",
+          description: "Place it to start a 30 second fuse. When it goes off, every placed block on the map is removed. Lucky blocks survive."
+        },
+        ...(0, JM.C)(eM),
+        "Toxic Waste Barrel": {
+          displayName: {
+            translationKey: "item:toxicWasteBarrel"
+          },
+          ttb: 4e4,
+          textureInfo: ["toxic_waste_barrel_side", "toxic_waste_barrel_bottom", {
+            animTextures: ["toxic_waste_barrel_top0", "toxic_waste_barrel_top1", "toxic_waste_barrel_top2", "toxic_waste_barrel_top3"],
+            animationInterval: 300
+          }],
+          texturePerSide: [0, 0, 2, 1, 0, 0],
+          harvestType: "rock",
+          harvestLevel: 5
+        },
+        "Toxic Waste": {
+          displayName: {
+            translationKey: "item:toxicWaste"
+          },
+          textureInfo: {
+            colour: [.36, .93, .3, .95],
+            animTextures: ["toxic_waste0", "toxic_waste1", "toxic_waste2", "toxic_waste3", "toxic_waste4", "toxic_waste5", "toxic_waste6", "toxic_waste7"],
+            animationInterval: 800
+          },
+          CH: !0,
+          drops: null,
+          harvestType: "rock",
+          Ch: [6, 14, 4]
+        },
+        "Ancient Maple Log": {
+          displayName: {
+            translationKey: "item:ancientMapleLog"
+          },
+          description: {
+            translationKey: "item:ancientMapleLogDescription"
+          },
+          ttb: 2400,
+          textureInfo: "log_ancient_maple",
+          harvestType: "wood"
+        },
+        "Evil Lucky Block": {
+          displayName: {
+            translationKey: "item:evilLuckyBlock"
+          },
+          ttb: 1200,
+          textureInfo: ["evil_lucky_block", "evil_lucky_block_face"],
+          texturePerSide: [1, 1, 0, 0, 0, 0],
+          harvestType: "rock",
+          description: {
+            translationKey: "item:evilLuckyBlockDescription"
+          }
+        },
+        ...(0, JM.Yb)(eM),
+        "INTERNAL_MESH_Small Twin Icicle": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "Small Twin Icicle",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          drops: null
+        },
+        "INTERNAL_MESH_Medium Icicle": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "Medium Icicle",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          drops: null
+        },
+        "INTERNAL_MESH_Large Icicle": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "Large Icicle",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          drops: null
+        },
+        "INTERNAL_MESH_Large Twin Icicle": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "Large Twin Icicle",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          drops: null
+        },
+        ...(0, JM.wb)(),
+        ...(0, JM.rb)("Tiki Terror"),
+        ...(0, JM.bc)(EM.e),
+        ...(0, JM.V)(),
+        "Pure Coal Ore": {
+          displayName: {
+            translationKey: "item:pureCoalOre"
+          },
+          ttb: 27e3,
+          textureInfo: "pure_coal_ore",
+          harvestType: "rock",
+          drops: "Coal",
+          Da: 9,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Pure Coal Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": LM.o
+          },
+          onMinedAura: 45,
+          Ch: [6, 6, 6]
+        },
+        "Pure Iron Ore": {
+          displayName: {
+            translationKey: "item:pureIronOre"
+          },
+          ttb: 32400,
+          textureInfo: "pure_iron_ore",
+          harvestType: "rock",
+          harvestLevel: 2,
+          drops: "Raw Iron",
+          Da: 9,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Pure Iron Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": LM.o
+          },
+          onMinedAura: 135,
+          Ch: [6, 6, 6]
+        },
+        "Pure Gold Ore": {
+          displayName: {
+            translationKey: "item:pureGoldOre"
+          },
+          ttb: 37800,
+          textureInfo: "pure_gold_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: "Raw Gold",
+          Da: 9,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Pure Gold Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": LM.o
+          },
+          onMinedAura: 270,
+          Ch: [6, 6, 0]
+        },
+        "Pure Diamond Ore": {
+          displayName: {
+            translationKey: "item:pureDiamondOre"
+          },
+          ttb: 45e3,
+          textureInfo: "pure_diamond_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: "Diamond",
+          Da: 9,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Pure Diamond Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": LM.o
+          },
+          onMinedAura: 360,
+          Ch: [2, 6, 6]
+        },
+        "Pure Moonstone Ore": {
+          displayName: {
+            translationKey: "item:pureMoonstoneOre"
+          },
+          ttb: 45e3,
+          textureInfo: "pure_moonstone_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: "Moonstone",
+          Da: 9,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Pure Moonstone Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": LM.o
+          },
+          onMinedAura: 450,
+          Ch: [6, 6, 6]
+        },
+        ...(0, JM.$b)(EM.e),
+        ...(0, JM.rb)("Iron Goofy Golem"),
+        ...(0, JM.rb)("Gold Goofy Golem"),
+        ...(0, JM.rb)("Diamond Goofy Golem"),
+        ...(0, JM.rb)("Moonstone Goofy Golem"),
+        ...(0, JM.J)(),
+        "Crystal Block": {
+          displayName: {
+            translationKey: "item:crystalBlock"
+          },
+          ttb: 1500,
+          textureInfo: "crystal_block",
+          harvestType: "rock",
+          soundType: {
+            break: "glass",
+            place: "stone"
+          },
+          Ch: [9, 15, 5]
+        },
+        "Rope Block": {
+          displayName: {
+            translationKey: "item:ropeBlock"
+          },
+          ttb: 960,
+          textureInfo: "rope_block",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        Ash: {
+          displayName: {
+            translationKey: "item:ash"
+          },
+          ttb: 600,
+          textureInfo: "ash",
+          harvestType: "granule",
+          soundType: {
+            break: "sand",
+            place: "sand"
+          }
+        },
+        ...(0, jM.j)(),
+        Darkstone: {
+          displayName: {
+            translationKey: "item:darkstone"
+          },
+          ttb: 1800,
+          textureInfo: "darkstone",
+          harvestType: "rock"
+        },
+        "Darkstone Bricks": {
+          displayName: {
+            translationKey: "item:darkstoneBricks"
+          },
+          ttb: 1800,
+          textureInfo: "darkstone_bricks",
+          harvestType: "rock"
+        },
+        "Cracked Darkstone Bricks": {
+          displayName: {
+            translationKey: "item:crackedDarkstoneBricks"
+          },
+          ttb: 1800,
+          textureInfo: "darkstone_bricks_cracked",
+          harvestType: "rock"
+        },
+        "Molten Darkstone Bricks": {
+          displayName: {
+            translationKey: "item:moltenDarkstoneBricks"
+          },
+          ttb: 1800,
+          textureInfo: "darkstone_bricks_lava",
+          harvestType: "rock",
+          Ch: [9, 3, 1]
+        },
+        "Engraved Darkstone": {
+          displayName: {
+            translationKey: "item:engravedDarkstone"
+          },
+          ttb: 1800,
+          textureInfo: "darkstone_engraved",
+          harvestType: "rock"
+        },
+        "Smooth Darkstone": {
+          displayName: {
+            translationKey: "item:smoothDarkstone"
+          },
+          ttb: 1800,
+          textureInfo: "darkstone_smooth",
+          harvestType: "rock"
+        },
+        ...(0, JM._)(dM.g, bM),
+        "INTERNAL_MESH_Floor Quarters": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "floor_quarters",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          unlitStandaloneMesh: !0,
+          drops: null
+        },
+        "Scorpion Eggs Block": {
+          displayName: {
+            translationKey: "item:scorpionEggsBlock"
+          },
+          ttb: 600,
+          textureInfo: "scorpion_eggs",
+          harvestType: "cuttable",
+          soundType: {
+            break: "cloth",
+            place: "cloth"
+          }
+        },
+        "INTERNAL_MESH_Boss Target": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "boss_target",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          unlitStandaloneMesh: !0,
+          drops: null
+        },
+        "INTERNAL_MESH_Rune Sigil": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "rune_sigil",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          unlitStandaloneMesh: !0,
+          drops: null
+        },
+        "INTERNAL_MESH_Eclipse Dial": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "eclipse_dial",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          unlitStandaloneMesh: !0,
+          drops: null
+        },
+        "INTERNAL_MESH_Beam Arm": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "beam_arm",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          unlitStandaloneMesh: !0,
+          drops: null
+        },
+        "INTERNAL_MESH_Beam Arm Mirrored": {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "beam_arm_mirrored",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          unlitStandaloneMesh: !0,
+          drops: null
+        },
+        INTERNAL_MESH_Mortar: {
+          ttb: 2e3,
+          harvestType: "rock",
+          blockModel: "mortar_goblin",
+          blockModelItem: !0,
+          twoDBlockItem: !0,
+          modelScale: 1,
+          meshEntityBones: ["Cannon", "LeftArm", "RightArm"],
+          drops: null
+        },
+        ...(0, JM.Lb)("Trading Terminal", {
+          displayName: {
+            translationKey: "item:tradingTerminal"
+          },
+          description: {
+            translationKey: "item:tradingTerminalDescription"
+          },
+          ttb: 3e3,
+          textureInfo: [{
+            animTextures: [0, 1, 2, 3, 4, 5, 6, 7].map((MM => `trading_terminal_front${MM}`)),
+            animationInterval: 400,
+            interpolateFrames: !1
+          }, "trading_terminal_side", "trading_terminal_top"],
+          harvestType: "rock",
+          harvestLevel: 0,
+          altActionable: !0,
+          rootMetaDesc: "Trading Terminal|meta|rot1"
+        }),
+        "Stone Generator": {
+          displayName: {
+            translationKey: "item:stoneGenerator"
+          },
+          description: {
+            translationKey: "item:stoneGeneratorDescription"
+          },
+          ttb: 3e3,
+          textureInfo: ["stone_generator_side", "stone_generator_top", "messy_stone"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "rock",
+          harvestLevel: 0
+        },
+        "Wheat Helper": {
+          displayName: {
+            translationKey: "item:wheatHelper"
+          },
+          description: {
+            translationKey: "item:wheatHelperDescription"
+          },
+          ttb: 1500,
+          textureInfo: ["crate", "hay_block_top"],
+          texturePerSide: [0, 0, 1, 0, 0, 0],
+          harvestType: "wood",
+          harvestLevel: 0,
+          altActionable: !0
+        },
+        "Carrot Helper": {
+          displayName: {
+            translationKey: "item:carrotHelper"
+          },
+          description: {
+            translationKey: "item:carrotHelperDescription"
+          },
+          ttb: 1500,
+          textureInfo: ["crate", "carrot_block_top"],
+          texturePerSide: [0, 0, 1, 0, 0, 0],
+          harvestType: "wood",
+          harvestLevel: 0,
+          altActionable: !0
+        },
+        "Melon Helper": {
+          displayName: {
+            translationKey: "item:melonHelper"
+          },
+          description: {
+            translationKey: "item:melonHelperDescription"
+          },
+          ttb: 1500,
+          textureInfo: ["crate", "melon_top"],
+          texturePerSide: [0, 0, 1, 0, 0, 0],
+          harvestType: "wood",
+          harvestLevel: 0,
+          altActionable: !0
+        },
+        ... function() {
+          const MM = {};
+          for (const {
+              wood: rM,
+              block: iM
+            }
+            of lM.b) MM[iM] = {
+            displayName: {
+              translationKey: `item:${(0,zM.me)(iM)}`
+            },
+            ttb: 960,
+            harvestType: "wood",
+            ..."Maple" === rM ? {
+              showInCreativeInven: !1
+            } : {},
+            ...GM(iM, (0, zM.oe)(iM), {
+              rotatable: !1
+            })
+          };
+          return MM
+        }(),
+        ...(0, aM.y)(),
+        ...(0, PM.e)()
+      };
+    for (const TM of Object.values(wM))
+      for (const MM of Array.isArray(TM.textureInfo) ? TM.textureInfo : [TM.textureInfo]) "object" === typeof MM && null !== MM && "animTextures" in MM && (0, QM.e)(MM);
+    let tM = 1,
+      gM = 0;
+    const uM = [],
+      RM = [],
+      pM = {},
+      WM = [];
+    for (const TM in wM) {
+      if (tM > 65535) throw new Error(`block ID was ${tM}, which is over 65535 - there is a limit of 65535 block types!`);
+      const MM = wM[TM];
+      if (MM.id = tM, wM[tM] = MM, MM.name = TM, MM.stackable = !0, (0, mM.f)(wM, MM), "door" === wM[MM.meta.rootName].model) MM.Hd = (0, JM.W)(MM.meta.rot, MM.meta.open);
+      else if ("trapdoor" === wM[MM.meta.rootName].model) MM.Hd = (0, JM.Zb)(MM.meta.rot, MM.meta.open);
+      else {
+        const rM = (0, nM.d)(MM, wM[MM.meta.rootName]);
+        rM && (MM.Hd = rM)
+      }
+      if ("object" === typeof MM.textureInfo && "animTextures" in MM.textureInfo) {
+        var sM;
+        const rM = [];
+        MM.atlasIdx = rM, uM.push({
+          blockName: TM,
+          animTextures: MM.textureInfo.animTextures,
+          atlasIndices: rM,
+          animationInterval: null !== (sM = MM.textureInfo.animationInterval) && void 0 !== sM ? sM : 200
+        })
+      } else if (Array.isArray(MM.textureInfo)) {
+        for (const rM of MM.textureInfo) {
+          var DM;
+          if ("object" !== typeof rM || !("animTextures" in rM)) continue;
+          const MM = [];
+          uM.push({
+            blockName: TM,
+            animTextures: rM.animTextures,
+            atlasIndices: MM,
+            animationInterval: null !== (DM = rM.animationInterval) && void 0 !== DM ? DM : 200
+          })
+        }
+        RM.push(TM)
+      } else RM.push(TM);
+      tM++
+    }
+    for (const {
+        blockName: TM,
+        animTextures: VM,
+        atlasIndices: cM
+      }
+      of uM) {
+      const MM = VM.length;
+      if (Math.log(MM) / Math.log(2) % 1 !== 0) throw new Error(`${TM} has ${MM} animation states, which is not a power of 2`);
+      pM[VM[0]] ??= gM++, cM.push(pM[VM[0]])
+    }
+    for (const {
+        animTextures: TM,
+        atlasIndices: VM,
+        animationInterval: cM
+      }
+      of uM) {
+      WM[VM[0]] ??= {
+        numAnimStates: TM.length,
+        animStartIdx: gM,
+        animationInterval: cM
+      };
+      for (let MM = 1; MM < TM.length; MM++) {
+        var kM;
+        const rM = TM[MM],
+          iM = null !== (kM = pM[rM]) && void 0 !== kM ? kM : gM++;
+        pM[rM] = iM, VM.push(iM)
+      }
+    }
+    for (const TM of RM) {
+      var ZM;
+      const MM = wM[TM];
+      MM.stackable = !0;
+      const rM = wM[MM.meta.rootName],
+        iM = null === (ZM = rM.model) || void 0 === ZM ? void 0 : ZM.split("|")[0];
+      if (MM.textureInfo && !rM.blockModel && (!iM || "Slab" === iM || "Stairs" === iM || "fence" === iM || "fenceGate" === iM))
+        if ("string" === typeof MM.textureInfo) {
+          const rM = MM.textureInfo;
+          let iM = pM[rM];
+          void 0 === iM && (iM = gM++, pM[rM] = iM), MM.atlasIdx = iM
+        } else if (!Array.isArray(MM.textureInfo) || "number" !== typeof MM.textureInfo[0]) {
+        const rM = MM.textureInfo;
+        MM.atlasIdx = [];
+        for (let iM = 0; iM < rM.length; iM++) {
+          const OM = rM[iM],
+            SM = "string" === typeof OM ? OM : OM.animTextures[0];
+          let jM = pM[SM];
+          void 0 === jM && (jM = gM++, pM[SM] = jM), MM.atlasIdx.push(jM)
+        }
+      }
+    }
+    const oM = {};
+    for (const TM in wM) {
+      var fM;
+      const MM = wM[TM];
+      oM[TM] = null !== (fM = oM[MM.id]) && void 0 !== fM ? fM : new LM.d(MM)
+    }
+    const YM = 45 == iM.j ? oM : null,
+      NM = {};
+    for (const TM in oM) {
+      const MM = TM.split("|");
+      if ("meta" === MM[1]) {
+        var AM;
+        const rM = null !== (AM = NM[MM[0]]) && void 0 !== AM ? AM : [];
+        rM.push(TM), NM[MM[0]] = rM
+      }
+    }
+    const xM = function(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (MM === yM.c) return 0;
+        const iM = (0, SM.d)(oM, MM);
+        if (iM) return iM.id;
+        const OM = (0, SM.d)(oM, MM.split("|")[0]);
+        if (OM && MM === OM.rootMetaDesc) return OM.id;
+        if (!rM) throw new Error(`Invalid block name. You sent ${MM}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`);
+        return null
+      },
+      vM = MM => 0 === MM ? yM.c : oM[MM].name;
+
+    function FM(MM) {
+      return null !== oM[MM].meta.open
+    }
+    const BM = oM.Unloaded.id,
+      XM = {
+        "Patterned Yellow Glass": 1007,
+        "Black Concrete Slab|meta|rot4|side": 1220,
+        Grenade: 1221,
+        "Cherry Block": 1270,
+        "Bouncy Bomb Block": 1271,
+        "Obby Rocket": 1272,
+        "Kill Spikes": 1278,
+        "Corn Plant|FreshlyGrown": 1290,
+        "Loot Chest|meta|rot4": 1294,
+        "Melting Ice|Breaking": 1296,
+        "Black Sticky Paintball Explosive": 1360,
+        "_Black Strongbed Head|meta|rot4": 1488,
+        "Timed Spike Bomb Block|Flashing": 1490,
+        Lava: 1491,
+        "Fat Red Mushroom": 1493,
+        "Chili Pepper Block": 1494,
+        "Chili Pepper Plant|FreshlyGrown": 1501,
+        "Chili Pepper Plant|Lava|FreshlyGrown": 1509,
+        "Code Block": 1510,
+        "Toxin Ball Block": 1511,
+        "Checkpoint Block|meta|rot4": 1579,
+        "Generator Spawn Block (Ore)": 1602,
+        "Obby Absorb Death Block": 1609,
+        "Bone Block": 1610,
+        "Draugr Skeleton Spawner Block": 1616,
+        "Empty Spawner Block": 1617,
+        "Frost Skeleton Spawner Block": 1620,
+        "Snowy Stone Slab|meta|rot4|side": 1627,
+        "Draugr Knight Spawner Block": 1628,
+        "Packed Snow": 1629,
+        "Carved Messy Stone": 1630,
+        "Spectral Grass": 1631,
+        "Spectral Ladder|meta|rot4": 1673,
+        "Diamond Enchanting Table|meta|rot4": 1693,
+        "Gold Watermelon Stag Spawner Block": 1717,
+        "Salvaging Table|meta|rot4": 1721,
+        "Black Chalk Bricks Slab|meta|rot4|side": 1946,
+        "_Leaf Bed Head|meta|rot4": 1954,
+        "Jungle Tall Grass|Top": 1963,
+        Catnip: 1964,
+        "Mango Block": 2007,
+        "Attached Banana Stem|meta|rot4": 2014,
+        "Dangling Vine": 2016,
+        "Gorilla Spawner Block": 2017,
+        "Wildcat Spawner Block": 2018,
+        "Fruity Mango Leaves": 2025,
+        "Draugr Huntress Spawner Block": 2026,
+        "Magma Golem Spawner Block": 2027,
+        "Yellow Portal": 2044,
+        "Leather Block": 2045,
+        "Horse Spawner Block": 2046,
+        "Beetroot Plant|FreshlyGrown": 2084,
+        "Autumn Aspen Leaves|TreeCanopy": 2086,
+        "Autumn Fern": 2087,
+        "Iron Chest|meta|rot4": 2091,
+        Crate: 2092,
+        "Carrot Seeds": 2094,
+        "Potato Seeds": 2096,
+        "Beetroot Seeds": 2098,
+        "Black Banner|meta|rot4|side": 2482,
+        "Draugr Banner|meta|rot4|side": 2506,
+        "Spirit Gorilla Spawner Block": 2511,
+        "Fertilised Soil": 2512,
+        "_Whiskers Bottom Right|meta|rot4": 2624,
+        "Hollow Crate": 2625,
+        "Draugr Warper Spawner Block": 2626,
+        "_Active Radar Dish|meta|rot4": 2662,
+        "Lucky Block": 2663,
+        "Ultra Lucky Block": 2664,
+        "Gold Trophy|meta|rot4": 2668,
+        "_Small Red Pod Top": 2677,
+        "INTERNAL_MESH_Gold Trophy": 2678,
+        "Draugr Reaver Spawner Block": 2680,
+        "_Small Black Pod Top": 2719,
+        "Rainbow Banner|meta|rot4|side": 2767,
+        "Twirlina Cappucina Statue": 2779,
+        "Weapon Lucky Block": 2780,
+        "Slicing Board": 2787,
+        "INTERNAL_MESH_Moonstone Trophy": 2812,
+        "Yellow Wave": 2828,
+        "Black Directional Arrow|meta|rot4": 2892,
+        "_Vending Machine Top|meta|rot4": 2901,
+        "Coloured Wheel": 2905,
+        UFO: 2906,
+        "Black Neon": 3024,
+        "Super Jump Pad": 3029,
+        "Invisible Sky Light": 3046,
+        "Dirt|JungleGrassRoots": 3048,
+        "Gun Lucky Block": 3049,
+        "Ghost Mystery Block": 3052,
+        Football: 3053,
+        "Pet Lucky Block": 3054,
+        "Slime Trail|meta|rot4": 3070,
+        "Overgrown Jungle Grass Block": 3073,
+        "Smoke Block": 3074,
+        "Pipe|meta|conn|py_pz": 3096,
+        "_Auto Miner Body|meta|rot4": 3116,
+        "Auto Crafter": 3117,
+        "_Rocket Ship Northeast L5": 3137,
+        "Rocket Ship S2": 3138,
+        "Rocket Ship S3": 3139,
+        "Rocket Ship S4": 3140,
+        "Rocket Ship S5": 3141,
+        "INTERNAL_MESH_Rocket Ship Full": 3142,
+        "Extractor Pipe|meta|conn|py_pz": 3164,
+        "_Solar Panel NE|meta|rot4": 3181,
+        "Wire|meta|conn|py_pz": 3203,
+        "Filter Pipe|meta|input|py": 3209,
+        "Merger Pipe|meta|output|py": 3215,
+        "Auto Harvester": 3216,
+        "Stalker Spawner Block": 3217,
+        "Lunite Auto Harvester": 3241,
+        "Bowling Alley Floor": 3242,
+        "Crone Spawner Block": 3243,
+        "Slime Spawner Block": 3244,
+        "Slime Trail|meta|rot1|Decaying": 3245,
+        "Slime Trail|meta|rot2|Decaying": 3246,
+        "Slime Trail|meta|rot3|Decaying": 3247,
+        "Slime Trail|meta|rot4|Decaying": 3248,
+        "Iron Guardian Spawner Block": 3249,
+        "Gold Guardian Spawner Block": 3250,
+        "Diamond Guardian Spawner Block": 3251,
+        "Moonstone Guardian Spawner Block": 3252,
+        "Dry Grass Block": 3253,
+        "Overgrown Dry Grass Block": 3254,
+        "Dead Bush": 3255,
+        "Dirt|DryGrassRoots": 3256,
+        "Dry Grass Slab|meta|rot4|side": 3262,
+        "Lantern|meta|rot4|side": 3267,
+        "Lily Pad": 3268,
+        "Camel Spawner Block": 3272,
+        "_Hump Day Bottom Right|meta|rot4": 3288,
+        "Super Potion Lucky Block": 3307,
+        "Block Destroyer TNT": 3308,
+        "Black Chalk Bricks Stairs|meta|rot4|top": 4028,
+        "Toxic Waste Barrel": 4029,
+        "Toxic Waste": 4030,
+        "Ancient Maple Log": 4031,
+        "Evil Lucky Block": 4032,
+        "Maple Stairs|meta|rot1|bot|innerLeft": 4033,
+        "Black Chalk Bricks Stairs|meta|rot4|top|outerRight": 6912,
+        "INTERNAL_MESH_Small Twin Icicle": 6913,
+        "INTERNAL_MESH_Medium Icicle": 6914,
+        "INTERNAL_MESH_Large Icicle": 6915,
+        "INTERNAL_MESH_Large Twin Icicle": 6916,
+        "Noticeboard Wall Bottom Right|meta|rot4": 6992,
+        "Tiki Terror Spawner Block": 6993,
+        "Maple Fence": 6994,
+        "_Mango Fence Top|meta|nesw": 7521,
+        "Standing Noticeboard|meta|rot4|lrud": 7649,
+        "Pure Moonstone Ore": 7654,
+        "Maple Fence Gate": 7655,
+        "_Mango Fence Gate Top|meta|rot4|open": 7830,
+        "Iron Goofy Golem Spawner Block": 7831,
+        "Gold Goofy Golem Spawner Block": 7832,
+        "Diamond Goofy Golem Spawner Block": 7833,
+        "Moonstone Goofy Golem Spawner Block": 7834,
+        Cannon: 7835,
+        "_Cannon Top Front|meta|rot4": 7858,
+        "Crystal Block": 7859,
+        "Rope Block": 7860,
+        Ash: 7861,
+        "Smelter|meta|rot4": 7881,
+        "Wire Mill|meta|rot4": 7893,
+        "Conveyor Belt|meta|rot4": 7897,
+        "Splitter|meta|rot4": 7901,
+        "Voltite Ore": 7902,
+        "Belt Loader|meta|rot4": 7922,
+        "Charge Vault": 7924,
+        "Tool Bench": 7927,
+        "_Homestead Core Top": 7929,
+        "Assembler|meta|rot4|Running": 7965,
+        "Tree Cutter|meta|rot4|Running": 7973,
+        "Charging Pad": 8011,
+        "Crystal Vat|meta|rot4|Running": 8019,
+        "Comet Heart": 8023,
+        "_Starframe Spire": 8024,
+        "Fast Belt|meta|rot4|turnRight": 8040,
+        "Recycler|meta|rot4|Running": 8048,
+        "Belt Drop": 8050,
+        "Crop Harvester|meta|rot4|Running": 8058,
+        "Belt Tunnel|meta|rot4|exit": 8066,
+        "Pure Copper Ore": 8067,
+        "Pure Voltite Ore": 8068,
+        Darkstone: 8069,
+        "Darkstone Bricks": 8070,
+        "Cracked Darkstone Bricks": 8071,
+        "Molten Darkstone Bricks": 8072,
+        "Engraved Darkstone": 8073,
+        "Smooth Darkstone": 8074,
+        "Chest|meta|rot4|right": 8082,
+        "INTERNAL_MESH_Floor Quarters": 8083,
+        "Scorpion Eggs Block": 8084,
+        "INTERNAL_MESH_Boss Target": 8085,
+        "INTERNAL_MESH_Rune Sigil": 8086,
+        "INTERNAL_MESH_Eclipse Dial": 8087,
+        "INTERNAL_MESH_Beam Arm": 8088,
+        "INTERNAL_MESH_Beam Arm Mirrored": 8089,
+        INTERNAL_MESH_Mortar: 8090,
+        "Trading Terminal": 8091,
+        "Trading Terminal|meta|rot4": 8094,
+        "Stone Generator": 8095,
+        "Wheat Helper": 8096,
+        "Carrot Helper": 8097,
+        "Melon Helper": 8098,
+        Showcase: 8099,
+        "Pine Item Pedestal": 8100,
+        "Plum Item Pedestal": 8101,
+        "Cedar Item Pedestal": 8102,
+        "Aspen Item Pedestal": 8103,
+        "Jungle Item Pedestal": 8104,
+        "Palm Item Pedestal": 8105,
+        "Pear Item Pedestal": 8106,
+        "Cherry Item Pedestal": 8107,
+        "Spectral Item Pedestal": 8108,
+        "Mango Item Pedestal": 8109,
+        "Reactor Controller|meta|rot4|Alarm": 8174,
+        "Express Belt|meta|rot4|turnRight": 8231,
+        "Isotope Comet Heart": 8253,
+        "Fluid Pipe|meta|conn|nx_ny_nz_px_py_pz": 8325,
+        "Coolant Pipe|meta|conn|nx_ny_nz_px_py_pz": 8397,
+        "Fluid Tank|meta|rot1|Fill4": 8401,
+        "Fluid Pipe|meta|conn|nx_ny_nz_px_py_pz|Full": 8465,
+        "Coolant Pipe|meta|conn|nx_ny_nz_px_py_pz|Full": 8529,
+        "Reactor Port|meta|rot1|Formed|Waste": 8534,
+        "Collider|meta|rot4|Running": 8538,
+        Scaffolding: 8539,
+        "Nova Trophy|meta|rot4": 8543,
+        "Pure Uranium Ore": 8545,
+        "Nova Bomb": 8548,
+        "INTERNAL_MESH_Red Directional Arrow": 8558
+      },
+      [IM, KM] = Object.entries(oM).at(-1);
+    if (IM !== Object.keys(XM).at(-1)) throw new Error(`You have added new blocks. Please add the following to knownMetadataIds:\n"${IM}": ${KM.id},\nRemember that new blocks must come after existing blocks in blockInitInfo.`);
+    Object.entries(XM).forEach((MM => {
+      let [rM, iM] = MM;
+      if (oM[rM].id !== iM) throw new Error(`${rM} id is not ${iM}. This means you added a block _before_ other blocks. Blocks can only be added at the end of blockMetadata.ts`)
+    }));
+    for (const TM of HM.w) {
+      const MM = (0, zM.Yb)(TM);
+      if (!oM[MM]) throw new Error(`Missing Mob Spawner Block for mob type ${TM}: please add '...getMobSpawnerBlock("${TM}"),' to the end of blockInitInfo.ts`)
+    }
+    for (const TM of hM.g) {
+      var qM;
+      if (null === (qM = hM.d[TM]) || void 0 === qM || !qM.supportsFriendship) continue;
+      const MM = (0, zM.Sb)(TM);
+      if (!oM[MM]) throw new Error(`Missing Mob Painting Block for mob type ${TM}: please add '...getMobPaintingBlock("${TM}"),' to the end of blockInitInfo`)
+    }
+  },
+  9839: (MM, rM, iM) => {
+    iM.d(rM, {
+      $b: () => pM,
+      Bb: () => Ur,
+      C: () => tM,
+      D: () => cM,
+      Db: () => qM,
+      F: () => WM,
+      Hb: () => mr,
+      I: () => hM,
+      J: () => Or,
+      Jb: () => AM,
+      L: () => Jr,
+      Lb: () => BM,
+      N: () => yr,
+      Pb: () => CM,
+      Q: () => dM,
+      Rb: () => Hr,
+      S: () => JM,
+      V: () => FM,
+      Vb: () => TM,
+      W: () => EM,
+      Yb: () => gM,
+      Zb: () => GM,
+      _: () => XM,
+      ab: () => fM,
+      bc: () => RM,
+      cc: () => lr,
+      dc: () => zr,
+      e: () => ir,
+      eb: () => Er,
+      fc: () => Lr,
+      h: () => sM,
+      hb: () => Mr,
+      hc: () => bM,
+      k: () => jr,
+      kb: () => HM,
+      nb: () => YM,
+      o: () => Qr,
+      qb: () => KM,
+      rb: () => IM,
+      s: () => Pr,
+      sb: () => dr,
+      v: () => nr,
+      wb: () => vM,
+      xb: () => NM,
+      yb: () => mM,
+      z: () => wM
+    });
+    var OM = iM(9825),
+      SM = iM(9845),
+      jM = iM(9852),
+      aM = iM(9866),
+      PM = iM(9868),
+      nM = iM(9877),
+      QM = iM(332),
+      zM = iM(9863),
+      LM = iM(620);
+
+    function mM(MM, rM, iM, OM) {
+      const SM = {
+          ...rM
+        },
+        jM = {};
+      for (let PM = 0; PM < iM.length; PM++) {
+        var aM;
+        Object.assign(jM, {
+          [`${MM}_stage${PM+1}`]: Object.assign({
+            ...SM
+          }, {
+            textureInfo: iM[PM]
+          }, null !== (aM = null === OM || void 0 === OM ? void 0 : OM[PM + 1]) && void 0 !== aM ? aM : {})
+        })
+      }
+      return jM
+    }
+
+    function HM(MM, rM) {
+      console.assert("meta|rot1|empty" === rM.rootMetaDesc.split("|").slice(1).join("|"), "mailbox root block .rootMetaDesc must be |meta|rot1|empty");
+      const iM = {
+        ...rM
+      };
+      delete iM.rootMetaDesc;
+      const OM = {
+          ...iM
+        },
+        SM = {
+          ...iM
+        },
+        jM = {
+          ...iM
+        };
+      Object.assign(OM, {
+        texturePerSide: [0, 1, 1, 1, 1, 1]
+      }), Object.assign(SM, {
+        texturePerSide: [1, 1, 1, 1, 1, 0]
+      }), Object.assign(jM, {
+        texturePerSide: [1, 0, 1, 1, 1, 1]
+      });
+      const aM = ["mailbox_front_full", "mailbox_side"];
+      return {
+        [MM]: rM,
+        [`${MM}|meta|rot2|empty`]: {
+          ...OM
+        },
+        [`${MM}|meta|rot3|empty`]: {
+          ...SM
+        },
+        [`${MM}|meta|rot4|empty`]: {
+          ...jM
+        },
+        [`${MM}|meta|rot1|full`]: Object.assign({
+          ...iM
+        }, {
+          textureInfo: aM
+        }),
+        [`${MM}|meta|rot2|full`]: Object.assign({
+          ...OM
+        }, {
+          textureInfo: aM
+        }),
+        [`${MM}|meta|rot3|full`]: Object.assign({
+          ...SM
+        }, {
+          textureInfo: aM
+        }),
+        [`${MM}|meta|rot4|full`]: Object.assign({
+          ...jM
+        }, {
+          textureInfo: aM
+        })
+      }
+    }
+
+    function hM(MM, rM) {
+      console.assert("meta|rot1|books6" === rM.rootMetaDesc.split("|").slice(1).join("|"), "bookshelf root block .rootMetaDesc must be |meta|rot1|books6");
+      const iM = {
+        ...rM
+      };
+      delete iM.rootMetaDesc;
+      const OM = {
+          ...iM
+        },
+        SM = {
+          ...iM
+        },
+        jM = {
+          ...iM
+        },
+        aM = {
+          0: ["bookshelf_empty", "planks_maple"],
+          1: ["bookshelf_1", "planks_maple"],
+          2: ["bookshelf_2", "planks_maple"],
+          3: ["bookshelf_3", "planks_maple"],
+          4: ["bookshelf_4", "planks_maple"],
+          5: ["bookshelf_5", "planks_maple"]
+        };
+      Object.assign(OM, {
+        texturePerSide: [0, 0, 1, 1, 1, 1]
+      }), Object.assign(SM, {
+        texturePerSide: [1, 1, 1, 1, 0, 0]
+      }), Object.assign(jM, {
+        texturePerSide: [0, 0, 1, 1, 1, 1]
+      });
+      const PM = {
+        [MM]: rM,
+        [`${MM}|meta|rot2|books6`]: {
+          ...OM
+        },
+        [`${MM}|meta|rot3|books6`]: {
+          ...SM
+        },
+        [`${MM}|meta|rot4|books6`]: {
+          ...jM
+        },
+        [`Empty ${MM}`]: Object.assign({
+          ...iM
+        }, {
+          textureInfo: aM[0],
+          description: {
+            translationKey: "item:emptyBookshelfDescription"
+          },
+          rootMetaDesc: `Empty ${MM}|meta|rot1|books0`
+        }),
+        [`Empty ${MM}|meta|rot2|books0`]: Object.assign({
+          ...OM
+        }, {
+          textureInfo: aM[0]
+        }),
+        [`Empty ${MM}|meta|rot3|books0`]: Object.assign({
+          ...SM
+        }, {
+          textureInfo: aM[0]
+        }),
+        [`Empty ${MM}|meta|rot4|books0`]: Object.assign({
+          ...jM
+        }, {
+          textureInfo: aM[0]
+        })
+      };
+      for (let nM = 1; nM <= 5; nM++) Object.assign(PM, {
+        [`${MM}|meta|rot1|books${nM}`]: Object.assign({
+          ...iM
+        }, {
+          textureInfo: aM[nM]
+        })
+      }), Object.assign(PM, {
+        [`${MM}|meta|rot2|books${nM}`]: Object.assign({
+          ...OM
+        }, {
+          textureInfo: aM[nM]
+        })
+      }), Object.assign(PM, {
+        [`${MM}|meta|rot3|books${nM}`]: Object.assign({
+          ...SM
+        }, {
+          textureInfo: aM[nM]
+        })
+      }), Object.assign(PM, {
+        [`${MM}|meta|rot4|books${nM}`]: Object.assign({
+          ...jM
+        }, {
+          textureInfo: aM[nM]
+        })
+      });
+      return PM
+    }
+
+    function JM() {
+      const MM = {};
+      for (const rM of QM.Ec) {
+        const iM = `${rM.toLowerCase().split(" ").join("_")}_concrete`;
+        Object.assign(MM, CM(`${rM} Concrete Slab`, {
+          displayName: {
+            translationKey: `item:${(0,QM.me)(rM)}ConcreteSlab`
+          },
+          ttb: 1080,
+          textureInfo: iM,
+          model: "Slab",
+          harvestType: "rock",
+          slabFullBlock: `${rM} Concrete`,
+          rootMetaDesc: `${rM} Concrete Slab|meta|rot1|bot`
+        }))
+      }
+      return MM
+    }
+
+    function dM(MM, rM, iM, OM, SM, jM) {
+      const aM = {};
+      for (const PM of QM.Ec) {
+        const nM = MM.replace("$colour$", PM);
+        let zM;
+        zM = Array.isArray(iM) ? {
+          textureInfo: iM.map((MM => MM.replace("$colour$", (0, QM.oe)(PM)))),
+          texturePerSide: [0, 0, 1, 1, 0, 0]
+        } : {
+          textureInfo: iM.replace("$colour$", (0, QM.oe)(PM))
+        }, Object.assign(aM, CM(nM, {
+          displayName: {
+            translationKey: OM,
+            params: {
+              colour: `$t(colour:${(0,QM.oe)(PM)})`
+            }
+          },
+          description: {
+            translationKey: SM,
+            params: {
+              colour: `$t(colour:${(0,QM.oe)(PM)})`
+            }
+          },
+          model: "Slab",
+          slabFullBlock: rM.replace("$colour$", PM),
+          ...zM,
+          rootMetaDesc: `${nM}|meta|rot1|bot`,
+          ...jM
+        }))
+      }
+      return aM
+    }
+    const yM = {
+        bot: (0, OM.i)([
+          [
+            [0, 0, 0],
+            [8, 4, 8]
+          ]
+        ]),
+        top: (0, OM.i)([
+          [
+            [0, 4, 0],
+            [8, 8, 8]
+          ]
+        ]),
+        side1: (0, OM.i)([
+          [
+            [0, 0, 0],
+            [8, 8, 4]
+          ]
+        ]),
+        side2: (0, OM.i)([
+          [
+            [0, 0, 0],
+            [4, 8, 8]
+          ]
+        ]),
+        side3: (0, OM.i)([
+          [
+            [0, 0, 4],
+            [8, 8, 8]
+          ]
+        ]),
+        side4: (0, OM.i)([
+          [
+            [4, 0, 0],
+            [8, 8, 8]
+          ]
+        ])
+      },
+      lM = [(0, OM.i)([
+        [
+          [0, 0, 7],
+          [8, 8, 8]
+        ]
+      ]), (0, OM.i)([
+        [
+          [7, 0, 0],
+          [8, 8, 8]
+        ]
+      ]), (0, OM.i)([
+        [
+          [0, 0, 0],
+          [8, 8, 1]
+        ]
+      ]), (0, OM.i)([
+        [
+          [0, 0, 0],
+          [1, 8, 8]
+        ]
+      ])];
+
+    function EM(MM, rM) {
+      return lM[(MM - 1 + Number(rM)) % 4]
+    }
+    const UM = (0, OM.i)([
+      [
+        [0, 7, 0],
+        [8, 8, 8]
+      ]
+    ]);
+
+    function GM(MM, rM) {
+      return rM ? lM[(MM + 1) % 4] : UM
+    }
+
+    function CM(MM, rM) {
+      console.assert("meta|rot1|bot" === rM.rootMetaDesc.split("|").slice(1).join("|"), "slab root block .rootMetaDesc must be |meta|rot1|bot");
+      const iM = {
+        ...rM
+      };
+      return delete iM.rootMetaDesc, {
+        [MM]: {
+          ...rM,
+          Hd: yM.bot
+        },
+        [`${MM}|meta|rot1|top`]: {
+          ...iM,
+          Hd: yM.top
+        },
+        [`${MM}|meta|rot1|side`]: {
+          ...iM,
+          Hd: yM.side1
+        },
+        [`${MM}|meta|rot2|side`]: {
+          ...iM,
+          Hd: yM.side2
+        },
+        [`${MM}|meta|rot3|side`]: {
+          ...iM,
+          Hd: yM.side3
+        },
+        [`${MM}|meta|rot4|side`]: {
+          ...iM,
+          Hd: yM.side4
+        }
+      }
+    }
+
+    function eM(MM, rM) {
+      const iM = {
+          ...rM,
+          model: "Stairs"
+        },
+        OM = {};
+      for (const jM of ["bot", "top"])
+        for (let rM = 1; rM <= 4; rM++) {
+          const aM = SM.f[jM][rM - 1];
+          1 === rM && "bot" === jM ? OM[MM] = {
+            ...iM,
+            rootMetaDesc: `${MM}|meta|rot1|bot`,
+            Hd: aM
+          } : OM[`${MM}|meta|rot${rM}|${jM}`] = {
+            ...iM,
+            Hd: aM
+          }
+        }
+      return OM
+    }
+
+    function bM(MM, rM) {
+      return {
+        name: MM,
+        data: rM
+      }
+    }
+
+    function wM(MM, rM) {
+      return QM.Ec.map((iM => bM(`${iM} ${MM} Stairs`, rM(iM))))
+    }
+
+    function tM(MM) {
+      const rM = {};
+      for (const {
+          name: iM,
+          data: OM
+        }
+        of MM) Object.assign(rM, eM(iM, OM));
+      return rM
+    }
+
+    function gM(MM) {
+      const rM = {};
+      for (const {
+          name: iM,
+          data: OM
+        }
+        of MM) {
+        const MM = {
+          ...OM,
+          model: "Stairs"
+        };
+        for (const OM of ["bot", "top"])
+          for (const jM of zM.m)
+            for (let aM = 1; aM <= 4; aM++) rM[`${iM}|meta|rot${aM}|${OM}|${jM}`] = {
+              ...MM,
+              Hd: SM.h[OM][jM][aM - 1]
+            }
+      }
+      return rM
+    }
+
+    function uM(MM, rM) {
+      const iM = `_${MM} Top`,
+        OM = {};
+      for (const SM of [0, aM.g])
+        for (const jM of aM.f) OM[(0, aM.j)(MM, jM | SM)] = {
+          ...rM,
+          model: "fence",
+          Hd: aM.t[jM],
+          attachedTop: (0, aM.j)(iM, jM)
+        };
+      for (const SM of aM.f) OM[(0, aM.j)(iM, SM)] = {
+        ...rM,
+        model: "fence",
+        Hd: aM.x[SM],
+        canBePlacedOver: !0,
+        drops: null
+      };
+      return OM
+    }
+
+    function RM(MM) {
+      const rM = {};
+      for (const iM of MM) {
+        const MM = `${iM} Fence`;
+        Object.assign(rM, uM(MM, {
+          displayName: {
+            translationKey: `item:${(0,QM.me)(MM)}`
+          },
+          ttb: 1800,
+          textureInfo: `planks_${iM.toLowerCase()}`,
+          itemTexture: `${iM.toLowerCase()}_fence`,
+          harvestType: "wood"
+        }))
+      }
+      return rM
+    }
+
+    function pM(MM) {
+      const rM = {};
+      for (const iM of MM) {
+        const MM = `${iM} Fence Gate`,
+          OM = `_${MM} Top`,
+          SM = {
+            displayName: {
+              translationKey: `item:${(0,QM.me)(MM)}`
+            },
+            ttb: 1800,
+            textureInfo: `planks_${iM.toLowerCase()}`,
+            itemTexture: `${iM.toLowerCase()}_fence_gate`,
+            harvestType: "wood",
+            model: PM.e
+          };
+        for (const {
+            rot: iM,
+            open: jM
+          }
+          of PM.i) rM[(0, PM.k)(MM, iM, jM)] = {
+          ...SM,
+          ...1 !== iM || jM ? {} : {
+            rootMetaDesc: `${MM}|meta|rot1|closed`
+          },
+          Hd: (0, PM.w)(!1, iM, jM),
+          attachedTop: (0, PM.k)(OM, iM, jM)
+        };
+        for (const {
+            rot: iM,
+            open: jM
+          }
+          of PM.i) rM[(0, PM.k)(OM, iM, jM)] = {
+          ...SM,
+          ...1 !== iM || jM ? {} : {
+            rootMetaDesc: `${OM}|meta|rot1|closed`
+          },
+          Hd: (0, PM.w)(!0, iM, jM),
+          canBePlacedOver: !0,
+          drops: null
+        }
+      }
+      return rM
+    }
+
+    function WM(MM, rM) {
+      console.assert("meta|rot1|bot" === rM.rootMetaDesc.split("|").slice(1).join("|"), "banner root block .rootMetaDesc must be |meta|rot1|bot");
+      const iM = {
+        ...rM
+      };
+      delete iM.rootMetaDesc;
+      const OM = {
+          ...iM,
+          blockModel: `_${MM} Hanging`
+        },
+        SM = `_${MM} Flag`,
+        jM = {
+          ...rM,
+          drops: MM,
+          rootMetaDesc: `${SM}|meta|rot1|top`,
+          blockModel: `${SM} Hanging`
+        },
+        aM = {
+          ...jM
+        };
+      delete aM.rootMetaDesc;
+      const PM = {
+        ...aM,
+        blockModel: SM
+      };
+      return {
+        [MM]: rM,
+        [`${MM}|meta|rot2|bot`]: {
+          ...iM
+        },
+        [`${MM}|meta|rot3|bot`]: {
+          ...iM
+        },
+        [`${MM}|meta|rot4|bot`]: {
+          ...iM
+        },
+        [SM]: jM,
+        [`${SM}|meta|rot2|top`]: {
+          ...aM
+        },
+        [`${SM}|meta|rot3|top`]: {
+          ...aM
+        },
+        [`${SM}|meta|rot4|top`]: {
+          ...aM
+        },
+        [`${SM}|meta|rot1|side`]: {
+          ...aM
+        },
+        [`${SM}|meta|rot2|side`]: {
+          ...aM
+        },
+        [`${SM}|meta|rot3|side`]: {
+          ...aM
+        },
+        [`${SM}|meta|rot4|side`]: {
+          ...aM
+        },
+        [`${SM}|meta|rot1|bot`]: {
+          ...PM
+        },
+        [`${SM}|meta|rot2|bot`]: {
+          ...PM
+        },
+        [`${SM}|meta|rot3|bot`]: {
+          ...PM
+        },
+        [`${SM}|meta|rot4|bot`]: {
+          ...PM
+        },
+        [`${MM}|meta|rot1|top`]: {
+          ...OM
+        },
+        [`${MM}|meta|rot2|top`]: {
+          ...OM
+        },
+        [`${MM}|meta|rot3|top`]: {
+          ...OM
+        },
+        [`${MM}|meta|rot4|top`]: {
+          ...OM
+        },
+        [`${MM}|meta|rot1|side`]: {
+          ...OM
+        },
+        [`${MM}|meta|rot2|side`]: {
+          ...OM
+        },
+        [`${MM}|meta|rot3|side`]: {
+          ...OM
+        },
+        [`${MM}|meta|rot4|side`]: {
+          ...OM
+        }
+      }
+    }
+    const sM = ["nx", "ny", "nz", "px", "py", "pz"];
+
+    function DM(MM, rM) {
+      const [iM, OM] = MM < rM ? [MM, rM] : [rM, MM];
+      return `${iM}_${OM}`
+    }
+
+    function kM(MM) {
+      return MM[1]
+    }
+
+    function ZM(MM, rM, iM) {
+      return kM(rM) === kM(iM) ? `${MM}_straight_${kM(rM)}` : `${MM}_elbow_${DM(rM,iM)}`
+    }
+
+    function oM(MM, rM, iM, OM, SM) {
+      const jM = `meta|${OM}|none`;
+      if (SM.rootMetaDesc.split("|").slice(1).join("|") !== jM) throw new Error(`${MM} root hub pipe .rootMetaDesc must be |${jM}, got "${SM.rootMetaDesc}"`);
+      if (void 0 !== SM.blockModel) throw new Error(`${MM} root hub pipe data must NOT set blockModel - the builder fills it per-variant`);
+      const aM = MM => {
+          const rM = {
+            ...SM,
+            blockModel: MM
+          };
+          return delete rM.rootMetaDesc, rM
+        },
+        PM = {
+          [MM]: {
+            ...SM,
+            blockModel: `${rM}_${OM}_${iM}`
+          }
+        };
+      for (const nM of sM) nM !== iM && (PM[`${MM}|meta|${OM}|${nM}`] = aM(`${rM}_${OM}_${nM}`));
+      return PM
+    }
+
+    function fM(MM, rM, iM, OM) {
+      return oM(MM, rM, iM, "input", OM)
+    }
+
+    function YM(MM, rM, iM, OM) {
+      return oM(MM, rM, iM, "output", OM)
+    }
+
+    function NM(MM, rM, iM) {
+      console.assert("meta|conn|none" === iM.rootMetaDesc.split("|").slice(1).join("|"), `${MM} root pipe .rootMetaDesc must be |meta|conn|none`), console.assert(void 0 === iM.blockModel, `${MM} root pipe data must NOT set blockModel - the builder fills it per-variant`);
+      const OM = MM => {
+          const rM = {
+            ...iM,
+            blockModel: MM
+          };
+          return delete rM.rootMetaDesc, rM
+        },
+        SM = {
+          [MM]: {
+            ...iM,
+            blockModel: `${rM}_isolated`
+          }
+        };
+      for (const jM of sM) SM[`${MM}|meta|conn|${jM}`] = OM(`${rM}_end_${jM}`);
+      for (let jM = 0; jM < sM.length; jM++)
+        for (let iM = jM + 1; iM < sM.length; iM++) {
+          const [aM, PM] = [sM[jM], sM[iM]];
+          SM[`${MM}|meta|conn|${DM(aM,PM)}`] = OM(ZM(rM, aM, PM))
+        }
+      return SM
+    }
+
+    function AM(MM, rM) {
+      console.assert("meta|rot1" === rM.rootMetaDesc.split("|").slice(1).join("|"), `${MM} root block .rootMetaDesc must be |meta|rot1`);
+      const iM = {
+        ...rM
+      };
+      return delete iM.rootMetaDesc, {
+        [MM]: rM,
+        [`${MM}|meta|rot2`]: {
+          ...iM
+        },
+        [`${MM}|meta|rot3`]: {
+          ...iM
+        },
+        [`${MM}|meta|rot4`]: {
+          ...iM
+        }
+      }
+    }
+    const xM = {
+      ttb: 1800,
+      harvestType: "wood",
+      solid: !0,
+      model: "rotatable",
+      blockModelItem: !0,
+      modelScale: 8,
+      heldItemScale: 4,
+      customModelInfo: {
+        yOffset: -.5
+      }
+    };
+
+    function vM() {
+      const MM = {},
+        rM = ["", "Top", "Bottom", "Left", "Right", "Top Left", "Top Right", "Bottom Left", "Bottom Right"];
+      for (const iM of ["Standing", "Wall"])
+        for (const OM of "Standing" === iM ? [...rM, "Leg"] : rM) {
+          const rM = `Noticeboard ${iM}${OM?` ${OM}`:""}`;
+          Object.assign(MM, AM(rM, {
+            ...xM,
+            displayName: {
+              translationKey: `item:${(0,QM.me)(rM)}`
+            },
+            rootMetaDesc: `${rM}|meta|rot1`,
+            blockModel: (0, QM.oe)(rM),
+            itemTexture: (0, QM.oe)(rM)
+          }))
+        }
+      return MM
+    }
+
+    function FM() {
+      const MM = {};
+      for (const {
+          root: rM,
+          blockModelPrefix: iM
+        }
+        of jM.l) {
+        const OM = {
+          ...xM,
+          displayName: {
+            translationKey: `item:${(0,QM.me)(jM.t)}`
+          },
+          drops: jM.t,
+          itemTexture: "noticeboard",
+          customModelInfo: {
+            yOffset: -.5,
+            yRotOffset: Math.PI
+          }
+        };
+        for (let SM = 1; SM <= 4; SM++)
+          for (const aM of jM.b) {
+            const PM = (0, jM.e)(rM, SM, aM),
+              nM = `${iM}${jM.z[aM]}`;
+            MM[PM] = PM === rM ? {
+              ...OM,
+              rootMetaDesc: `${rM}|meta|rot1`,
+              blockModel: nM
+            } : {
+              ...OM,
+              blockModel: nM
+            }
+          }
+      }
+      return MM
+    }
+
+    function BM(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [
+        [1, 1, 2, 2, 0, 1],
+        [0, 1, 2, 2, 1, 1],
+        [1, 1, 2, 2, 1, 0],
+        [1, 0, 2, 2, 1, 1]
+      ];
+      console.assert("meta|rot1" === rM.rootMetaDesc.split("|").slice(1).join("|"), "threeTexRotBlock root block .rootMetaDesc must be |meta|rot1");
+      const OM = {
+        ...rM
+      };
+      return delete OM.rootMetaDesc, {
+        [MM]: {
+          ...rM,
+          texturePerSide: iM[0]
+        },
+        [`${MM}|meta|rot2`]: {
+          ...OM,
+          texturePerSide: iM[1]
+        },
+        [`${MM}|meta|rot3`]: {
+          ...OM,
+          texturePerSide: iM[2]
+        },
+        [`${MM}|meta|rot4`]: {
+          ...OM,
+          texturePerSide: iM[3]
+        }
+      }
+    }
+
+    function XM(MM, rM) {
+      const iM = ["chest_double_front_lo", "chest_double_front_hi", "chest_side", "chest_double_top_1_lo", "chest_double_top_1_hi", "chest_double_top_2_lo", "chest_double_top_2_hi", "chest_double_back_lo", "chest_double_back_hi"],
+        OM = {
+          left: [
+            [2, 2, 6, 5, 0, 8],
+            [0, 8, 4, 4, 2, 2],
+            [2, 2, 5, 6, 8, 0],
+            [8, 0, 3, 3, 2, 2]
+          ],
+          right: [
+            [2, 2, 5, 6, 1, 7],
+            [1, 7, 3, 3, 2, 2],
+            [2, 2, 6, 5, 7, 1],
+            [7, 1, 4, 4, 2, 2]
+          ]
+        },
+        SM = {};
+      for (const jM of nM.d)
+        for (let aM = 1; aM <= 4; aM++) SM[(0, nM.b)(MM, aM, jM)] = {
+          ...rM,
+          textureInfo: iM,
+          texturePerSide: OM[jM][aM - 1]
+        };
+      return SM
+    }
+
+    function IM(MM) {
+      const rM = (0, QM.Yb)(MM),
+        iM = LM.y.includes(MM) || LM.g.includes(MM) ? "passive" : LM.B.has(MM) ? "hostile" : "neutral";
+      return {
+        [rM]: {
+          displayName: {
+            translationKey: `item:${(0,QM.me)(MM)}MobSpawnerBlock`
+          },
+          description: {
+            translationKey: `item:${(0,QM.me)(MM)}MobSpawnerBlockDescription`
+          },
+          itemTexture: `${(0,QM.oe)(MM)}_spawner_block_icon`,
+          ttb: 5e3,
+          textureInfo: [`mob_spawner_${iM}_block_side`, "mob_spawner_block_top"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          transTex: !0,
+          harvestType: "rock",
+          drops: null,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: rM
+          },
+          particlesIgnoreBlack: !0,
+          onMinedAura: 75,
+          twoDBlockItem: !0
+        }
+      }
+    }
+
+    function KM(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+      const iM = (0, QM.Sb)(MM),
+        OM = `${(0,QM.oe)(MM)}_painting`,
+        SM = MM.replaceAll(" ", "_") + " Painting";
+      return {
+        ...AM(`_${iM} Top Left`, {
+          ttb: 240,
+          itemTexture: OM,
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: `_${iM} Top Left|meta|rot1`,
+          particlesIgnoreBlack: !0,
+          solid: !1,
+          modelScale: rM,
+          blockModel: `_${SM} Top Left`,
+          heldItemGlb: SM,
+          drops: iM
+        }),
+        ...AM(`_${iM} Top Right`, {
+          ttb: 240,
+          itemTexture: OM,
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: `_${iM} Top Right|meta|rot1`,
+          particlesIgnoreBlack: !0,
+          solid: !1,
+          modelScale: rM,
+          blockModel: `_${SM} Top Right`,
+          heldItemGlb: SM,
+          drops: iM
+        }),
+        ...AM(`${iM}`, {
+          ttb: 240,
+          itemTexture: OM,
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: `${iM}|meta|rot1`,
+          particlesIgnoreBlack: !0,
+          solid: !1,
+          modelScale: rM,
+          blockModel: `_${SM} Bottom Left`,
+          heldItemGlb: SM,
+          drops: iM
+        }),
+        ...AM(`_${iM} Bottom Right`, {
+          ttb: 240,
+          itemTexture: OM,
+          model: "rotatable",
+          harvestType: "wood",
+          rootMetaDesc: `_${iM} Bottom Right|meta|rot1`,
+          particlesIgnoreBlack: !0,
+          solid: !1,
+          modelScale: rM,
+          blockModel: `_${SM} Bottom Right`,
+          heldItemGlb: SM,
+          drops: iM
+        })
+      }
+    }
+
+    function qM(MM, rM, iM, OM, SM) {
+      const jM = `_${MM} Back`,
+        aM = `_${MM} Dish`,
+        PM = 3e3,
+        nM = "rock",
+        zM = "Radar";
+      return {
+        ...BM(MM, {
+          displayName: {
+            translationKey: `item:${(0,QM.me)(MM)}`
+          },
+          ttb: PM,
+          itemTexture: iM,
+          textureInfo: "string" === typeof SM ? [OM, SM, "radar_bottom"] : SM.textureInfo,
+          harvestType: nM,
+          drops: zM,
+          twoDBlockItem: !0,
+          rootMetaDesc: `${MM}|meta|rot1`
+        }, "object" === typeof SM ? SM.texturesPerSide : [
+          [0, 0, 1, 2, 0, 0],
+          [0, 0, 1, 2, 0, 0],
+          [0, 0, 1, 2, 0, 0],
+          [0, 0, 1, 2, 0, 0]
+        ]),
+        ...AM(jM, {
+          ttb: PM,
+          textureInfo: [OM, "radar_bottom"],
+          texturePerSide: [0, 0, 1, 1, 0, 0],
+          harvestType: nM,
+          drops: zM,
+          rootMetaDesc: `${jM}|meta|rot1`
+        }),
+        ...AM(aM, {
+          ttb: PM,
+          model: "rotatable",
+          harvestType: nM,
+          drops: zM,
+          rootMetaDesc: `${aM}|meta|rot1`,
+          particlesIgnoreBlack: !0,
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          solid: !1,
+          blockModel: rM
+        })
+      }
+    }
+
+    function TM() {
+      const MM = "Solar Panel",
+        rM = [MM, "_Solar Panel SE", "_Solar Panel NW", "_Solar Panel NE"],
+        iM = {
+          ttb: 2400,
+          textureInfo: ["solar_panel_side", "solar_panel_top", "solar_panel_bottom"],
+          texturePerSide: [0, 0, 1, 2, 0, 0],
+          harvestType: "rock"
+        },
+        OM = {};
+      for (const SM of rM) {
+        const rM = SM === MM ? {
+          displayName: {
+            translationKey: "item:solarPanel"
+          },
+          description: {
+            translationKey: "item:solarPanelDescription"
+          },
+          itemTexture: "solar_panel"
+        } : {
+          drops: MM
+        };
+        Object.assign(OM, AM(SM, {
+          ...iM,
+          rootMetaDesc: `${SM}|meta|rot1`,
+          ...rM
+        }))
+      }
+      return OM
+    }
+
+    function VM(MM) {
+      const {
+        root: rM,
+        cells: iM,
+        displayNameKey: OM,
+        descriptionKey: SM,
+        itemTexture: jM
+      } = MM, aM = {
+        ttb: 3600,
+        model: "rotatable",
+        modelScale: 8,
+        harvestType: "rock",
+        particlesIgnoreBlack: !0,
+        altActionable: !0
+      }, PM = {};
+      for (const [nM, QM] of iM) {
+        const MM = nM === rM ? {
+          displayName: {
+            translationKey: OM
+          },
+          description: {
+            translationKey: SM
+          },
+          itemTexture: jM
+        } : {
+          drops: rM
+        };
+        Object.assign(PM, AM(nM, {
+          ...aM,
+          blockModel: QM,
+          rootMetaDesc: `${nM}|meta|rot1`,
+          ...MM
+        }))
+      }
+      return PM
+    }
+
+    function cM() {
+      return VM({
+        root: "Auto Miner",
+        cells: [
+          ["Auto Miner", "auto_miner_foot_back"],
+          ["_Auto Miner Drill Front", "auto_miner_drill_front"],
+          ["_Auto Miner Drill Back", "auto_miner_drill_back"],
+          ["_Auto Miner Foot Front", "auto_miner_foot_front"],
+          ["_Auto Miner Body", "auto_miner_body"]
+        ],
+        displayNameKey: "item:autoMiner",
+        descriptionKey: "item:autoMinerDescription",
+        itemTexture: "auto_miner"
+      })
+    }
+
+    function Mr() {
+      return VM({
+        root: "Lunite Auto Miner",
+        cells: [
+          ["Lunite Auto Miner", "auto_miner_lunite_foot_back"],
+          ["_Lunite Auto Miner Drill Front", "auto_miner_lunite_drill_front"],
+          ["_Lunite Auto Miner Drill Back", "auto_miner_lunite_drill_back"],
+          ["_Lunite Auto Miner Foot Front", "auto_miner_lunite_foot_front"],
+          ["_Lunite Auto Miner Body", "auto_miner_lunite_body"]
+        ],
+        displayNameKey: "item:luniteAutoMiner",
+        descriptionKey: "item:luniteAutoMinerDescription",
+        itemTexture: "autominer_lunite"
+      })
+    }
+    const rr = "Cannon",
+      ir = [{
+        block: rr,
+        blockModel: "cannon_bottom_back",
+        x: 0,
+        y: 0,
+        z: 0
+      }, {
+        block: "_Cannon Bottom Front",
+        blockModel: "cannon_bottom_front",
+        x: 0,
+        y: 0,
+        z: -1
+      }, {
+        block: "_Cannon Barrel Back",
+        blockModel: "cannon_barrel_back",
+        x: 0,
+        y: 1,
+        z: -2
+      }, {
+        block: "_Cannon Barrel Front",
+        blockModel: "cannon_barrel_front",
+        x: 0,
+        y: 1,
+        z: -3
+      }, {
+        block: "_Cannon Top Back",
+        blockModel: "cannon_top_back",
+        x: 0,
+        y: 1,
+        z: 0
+      }, {
+        block: "_Cannon Top Front",
+        blockModel: "cannon_top_front",
+        x: 0,
+        y: 1,
+        z: -1
+      }];
+
+    function Or() {
+      const MM = {
+          ttb: 3600,
+          model: "rotatable",
+          modelScale: 8,
+          harvestType: "rock",
+          particlesIgnoreBlack: !0,
+          customModelInfo: {
+            yOffset: -.5
+          }
+        },
+        rM = {};
+      for (const {
+          block: iM,
+          blockModel: OM
+        }
+        of ir) {
+        const SM = iM === rr ? {
+          displayName: {
+            translationKey: "item:cannon"
+          },
+          blockModelItem: !0,
+          heldItemScale: 4
+        } : {
+          drops: rr
+        };
+        Object.assign(rM, AM(iM, {
+          ...MM,
+          blockModel: OM,
+          rootMetaDesc: `${iM}|meta|rot1`,
+          ...SM
+        }))
+      }
+      return rM
+    }
+    const Sr = "Rocket Ship",
+      jr = ["southwest", "southeast", "northwest", "northeast"],
+      ar = 5,
+      Pr = ar,
+      nr = Array.from({
+        length: ar
+      }, ((MM, rM) => rM + 1)),
+      Qr = {
+        southwest: {
+          x: 0,
+          z: 0
+        },
+        southeast: {
+          x: 1,
+          z: 0
+        },
+        northwest: {
+          x: 0,
+          z: -1
+        },
+        northeast: {
+          x: 1,
+          z: -1
+        }
+      };
+
+    function zr(MM, rM) {
+      const iM = MM[0].toUpperCase() + MM.slice(1);
+      return `_${Sr} ${iM} L${rM}`
+    }
+
+    function Lr(MM) {
+      return 1 === MM ? Sr : `${Sr} S${MM}`
+    }
+
+    function mr() {
+      const MM = {
+          ttb: 3600,
+          model: "CustomModel",
+          modelScale: 8,
+          harvestType: "rock",
+          particlesIgnoreBlack: !0,
+          altActionable: !0
+        },
+        rM = rM => ({
+          ...MM,
+          blockModel: "rocket_southwest_1",
+          displayName: {
+            translationKey: 1 === rM ? "item:rocketShip" : `item:rocketShipS${rM}`
+          },
+          description: {
+            translationKey: "item:rocketShipDescription"
+          },
+          itemTexture: "rocket",
+          drops: null
+        }),
+        iM = {
+          [Sr]: rM(1)
+        };
+      for (const OM of jr)
+        for (let rM = 1; rM <= ar; rM++) "southwest" === OM && 1 === rM || (iM[zr(OM, rM)] = {
+          ...MM,
+          blockModel: `rocket_${OM}_${rM}`,
+          drops: null
+        });
+      for (let OM = 2; OM <= Pr; OM++) iM[Lr(OM)] = {
+        ...rM(OM),
+        heldItemGlb: Sr
+      };
+      return iM["INTERNAL_MESH_Rocket Ship Full"] = {
+        ttb: 3600,
+        harvestType: "rock",
+        blockModel: "rocket_full",
+        blockModelItem: !0,
+        twoDBlockItem: !0,
+        modelScale: 8,
+        drops: null
+      }, iM
+    }
+
+    function Hr(MM) {
+      const rM = {
+        displayName: {
+          translationKey: `item:small${MM.replaceAll(" ","")}Pod`
+        },
+        ttb: 300,
+        itemTexture: `small_pod_${(0,QM.oe)(MM)}_icon`,
+        model: "CustomModel",
+        harvestType: "rock",
+        solid: !1,
+        modelScale: 8,
+        customModelInfo: {
+          yOffset: -.5
+        },
+        particlesIgnoreBlack: !0
+      };
+      return {
+        [`Small ${MM} Pod`]: {
+          ...rM,
+          blockModel: `Small ${MM} Pod`
+        },
+        [`_Small ${MM} Pod Mid`]: {
+          ...rM,
+          blockModel: `_Small ${MM} Pod Mid`
+        },
+        [`_Small ${MM} Pod Top`]: {
+          ...rM,
+          blockModel: `_Small ${MM} Pod Top`
+        }
+      }
+    }
+
+    function hr(MM, rM) {
+      const iM = {};
+      for (const OM in MM) {
+        const SM = MM[OM];
+        iM[OM] = "function" === typeof SM ? SM(rM) : SM
+      }
+      return iM
+    }
+
+    function Jr(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : QM.Ec;
+      const OM = {};
+      for (const SM of iM) OM[MM(SM)] = hr(rM, SM);
+      return OM
+    }
+
+    function dr(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      console.assert("meta|rot1|bot" === rM.rootMetaDesc.split("|").slice(1).join("|"), `${MM} root block .rootMetaDesc must be |meta|rot1|bot`), console.assert("string" === typeof rM.blockModel, `${MM} root block .blockModel must be a string`);
+      const OM = {
+        ...rM
+      };
+      delete OM.rootMetaDesc;
+      const {
+        wallBlockModel: SM,
+        yRotOffset: jM,
+        xRotOffset: aM,
+        noCeilingVariant: PM
+      } = iM, nM = {
+        ...OM,
+        ...SM ? {
+          blockModel: SM
+        } : {},
+        model: "rotatable",
+        customModelInfo: {
+          ...OM.customModelInfo,
+          yRotOffset: Math.PI + (null !== jM && void 0 !== jM ? jM : 0),
+          ...void 0 !== aM ? {
+            xRotOffset: aM
+          } : {}
+        }
+      };
+      return {
+        [MM]: rM,
+        ...PM ? {} : {
+          [`${MM}|meta|rot1|top`]: {
+            ...OM
+          }
+        },
+        [`${MM}|meta|rot1|side`]: {
+          ...nM
+        },
+        [`${MM}|meta|rot2|side`]: {
+          ...nM
+        },
+        [`${MM}|meta|rot3|side`]: {
+          ...nM
+        },
+        [`${MM}|meta|rot4|side`]: {
+          ...nM
+        }
+      }
+    }
+
+    function yr(MM, rM, iM) {
+      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : QM.Ec;
+      const SM = {};
+      for (const jM of OM) Object.assign(SM, dr(MM(jM), hr(rM, jM), {
+        wallBlockModel: iM(jM)
+      }));
+      return SM
+    }
+    const lr = {
+      "Landing Pad": 0,
+      "Weak Jump Pad": 13,
+      "Jump Pad": 20,
+      "Strong Jump Pad": 25,
+      "Super Jump Pad": 31
+    };
+
+    function Er() {
+      const MM = {
+        ttb: 300,
+        model: "CustomModel",
+        harvestType: "cuttable",
+        solid: !1,
+        modelScale: 8,
+        customModelInfo: {
+          yOffset: -.5
+        },
+        particlesIgnoreBlack: !0,
+        canBePlacedOver: !1
+      };
+      return {
+        "Landing Pad": {
+          ...MM,
+          displayName: {
+            translationKey: "item:landingPad"
+          },
+          description: {
+            translationKey: "item:landingPadDescription"
+          },
+          itemTexture: "landing_pad",
+          blockModel: "landing_pad"
+        },
+        "Weak Jump Pad": {
+          ...MM,
+          displayName: {
+            translationKey: "item:weakJumpPad"
+          },
+          description: {
+            translationKey: "item:jumpPadDescription"
+          },
+          itemTexture: "jump_pad_weak",
+          blockModel: "jump_pad_weak"
+        },
+        "Jump Pad": {
+          ...MM,
+          displayName: {
+            translationKey: "item:jumpPad"
+          },
+          description: {
+            translationKey: "item:jumpPadDescription"
+          },
+          itemTexture: "jump_pad",
+          blockModel: "jump_pad"
+        },
+        "Strong Jump Pad": {
+          ...MM,
+          displayName: {
+            translationKey: "item:strongJumpPad"
+          },
+          description: {
+            translationKey: "item:jumpPadDescription"
+          },
+          itemTexture: "jump_pad_strong",
+          blockModel: "jump_pad_strong"
+        },
+        "Super Jump Pad": {
+          ...MM,
+          displayName: {
+            translationKey: "item:superJumpPad"
+          },
+          description: {
+            translationKey: "item:jumpPadDescription"
+          },
+          itemTexture: "jump_pad_super",
+          blockModel: "jump_pad_super"
+        }
+      }
+    }
+
+    function Ur(MM) {
+      const rM = "Grey" === MM ? "Gray" : MM;
+      return QM.P[rM].map((MM => Math.floor(MM / 2) + 2))
+    }
+  },
+  9835: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => nM,
+      f: () => zM,
+      h: () => LM,
+      i: () => HM,
+      l: () => yM,
+      p: () => hM,
+      r: () => mM
+    });
+    var OM = iM(9825),
+      SM = iM(9839),
+      jM = iM(9884),
+      aM = iM(9890),
+      PM = iM(9895);
+    const nM = [1, 1, 0, 2, 1, 1],
+      QM = (0, OM.i)([
+        [
+          [0, 0, 0],
+          [8, 4, 8]
+        ]
+      ]),
+      zM = 1e3 * aM.e;
+
+    function LM(MM, rM) {
+      return {
+        displayName: {
+          translationKey: `item:${MM}`
+        },
+        description: {
+          translationKey: `item:${MM}Description`
+        },
+        ttb: 600,
+        textureInfo: rM,
+        model: "Slab|rotatable",
+        customModelInfo: {
+          yOffset: -.25
+        },
+        Hd: QM,
+        harvestType: "rock",
+        harvestLevel: 0,
+        showInCreativeInven: !1
+      }
+    }
+
+    function mM(MM, rM) {
+      const [iM, OM] = PM.i[MM - 1];
+      return [iM * rM, 0, OM * rM]
+    }
+
+    function HM(MM, rM, iM, OM) {
+      let jM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : zM;
+      const aM = (0, SM.Lb)(MM, {
+        ...LM(rM, iM),
+        rootMetaDesc: `${MM}|meta|rot1`
+      }, [OM, OM, OM, OM]);
+      for (let SM = 1; SM <= 4; SM++) aM[1 === SM ? MM : `${MM}|meta|rot${SM}`].surfaceVelocity = mM(SM, jM);
+      return aM
+    }
+
+    function hM(MM, rM, iM, OM) {
+      let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : zM;
+      const jM = {};
+      for (const aM of PM.k) {
+        const QM = `${iM}_${"turnLeft"===aM?"turn_left":"turn_right"}`;
+        for (let iM = 1; iM <= 4; iM++) jM[(0, PM.O)(MM, iM, aM)] = {
+          ...LM(rM, [QM, ...OM]),
+          texturePerSide: nM,
+          surfaceVelocity: mM(iM, SM)
+        }
+      }
+      return jM
+    }
+    const JM = jM.r,
+      dM = JM.map((MM => MM.map((MM => 0 === MM ? 7 : 7 === MM ? 0 : MM))));
+
+    function yM(MM, rM) {
+      const iM = MM => ({
+          displayName: {
+            translationKey: `item:${rM}`
+          },
+          description: {
+            translationKey: `item:${rM}Description`
+          },
+          ttb: 600,
+          textureInfo: ["belt_tunnel_mouth", "belt_tunnel_side", ...[1, 2, 3, 4].map((rM => `${MM}[rot[${rM}`)), "conveyor_belt_bottom", "belt_tunnel_back"],
+          harvestType: "rock",
+          harvestLevel: 0,
+          showInCreativeInven: !1
+        }),
+        OM = (0, SM.Lb)(MM, {
+          ...iM("belt_tunnel_top"),
+          rootMetaDesc: `${MM}|meta|rot1`
+        }, JM);
+      return dM.forEach(((rM, SM) => {
+        OM[`${MM}|meta|rot${SM+1}|exit`] = {
+          ...iM("belt_tunnel_exit_top"),
+          texturePerSide: rM
+        }
+      })), OM
+    }
+  },
+  9832: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => mM,
+      f: () => LM,
+      j: () => PM,
+      n: () => zM
+    });
+    var OM = iM(4843),
+      SM = iM(9835),
+      jM = iM(9884),
+      aM = iM(9890);
+
+    function PM() {
+      return {
+        ...mM("Coal Deposit", "coalDeposit", "coal_deposit"),
+        ...mM("Iron Deposit", "ironDeposit", "iron_deposit"),
+        ...mM("Stone Deposit", "stoneDeposit", "stone_deposit"),
+        ...mM("Copper Deposit", "copperDeposit", "copper_deposit"),
+        ...mM("Gold Deposit", "goldDeposit", "gold_deposit"),
+        "Homestead Core": {
+          displayName: {
+            translationKey: "item:homesteadCore"
+          },
+          description: {
+            translationKey: "item:homesteadCoreDescription"
+          },
+          ttb: 5e11,
+          textureInfo: "homestead_core",
+          harvestType: "rock",
+          drops: null,
+          altActionable: !0,
+          Ch: [4, 12, 14],
+          showInCreativeInven: !1
+        },
+        "Drop Pad": {
+          displayName: {
+            translationKey: "item:dropPad"
+          },
+          description: {
+            translationKey: "item:dropPadDescription"
+          },
+          ttb: 5e11,
+          textureInfo: ["drop_pad", "machine_side"],
+          texturePerSide: [1, 1, 0, 1, 1, 1],
+          harvestType: "rock",
+          drops: null,
+          showInCreativeInven: !1
+        },
+        "Copper Ore": {
+          displayName: {
+            translationKey: "item:copperOre"
+          },
+          description: {
+            translationKey: "item:copperOreDescription"
+          },
+          ttb: 3300,
+          textureInfo: "copper_ore",
+          harvestType: "rock",
+          drops: "Raw Copper",
+          showInCreativeInven: !1
+        },
+        ...(0, jM.D)("Burner Drill", "burnerDrill", "burner_drill", jM.e),
+        ...(0, jM.D)("Crusher", "crusher", "crusher"),
+        ...(0, jM.D)("Smelter", "smelter", "smelter"),
+        ...(0, jM.D)("Generator", "generator", "generator", jM.u),
+        ...(0, jM.D)("Press", "press", "press"),
+        ...(0, jM.D)("Wire Mill", "wireMill", "wire_mill"),
+        ...(0, SM.i)("Conveyor Belt", "conveyorBelt", ["conveyor_belt_top", "conveyor_belt_slab_side", "conveyor_belt_bottom"], SM.d),
+        ...(0, SM.i)("Splitter", "splitter", ["splitter_top", "splitter_slab_side", "conveyor_belt_bottom"], SM.d),
+        "Voltite Ore": {
+          displayName: {
+            translationKey: "item:voltiteOre"
+          },
+          description: {
+            translationKey: "item:voltiteOreDescription"
+          },
+          ttb: 4200,
+          textureInfo: "voltite_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: "Raw Voltite",
+          Ch: [2, 6, 6],
+          showInCreativeInven: !1
+        },
+        ...(0, jM.D)("Alloy Kiln", "alloyKiln", "alloy_kiln"),
+        ...(0, jM.D)("Electric Drill", "electricDrill", "electric_drill", jM.p),
+        ...(0, jM.D)("Assembler", "autoBench", "auto_bench"),
+        ...(0, SM.i)("Sorting Gate", "sortingGate", ["sorting_gate_top", "sorting_gate_slab_side", "conveyor_belt_bottom"], SM.d),
+        ...(0, SM.i)("Belt Loader", "beltLoader", ["belt_loader_top", "conveyor_belt_slab_side", "conveyor_belt_bottom", "belt_loader_slab_front"], [1, 1, 0, 2, 3, 1]),
+        ...LM("Storage Silo", "storageSilo", "storage_silo"),
+        ...LM("Charge Vault", "chargeVault", "charge_vault"),
+        ...zM("Machine Bench", "machineBench", "machine_bench"),
+        ...zM("Parts Bench", "partsBench", "parts_bench"),
+        ...zM("Tool Bench", "toolBench", "tool_bench"),
+        "_Homestead Core Mid": QM([{
+          animTextures: ["homestead_core_mid0", "homestead_core_mid1", "homestead_core_mid2", "homestead_core_mid3"],
+          animationInterval: 250
+        }], [0, 0, 0, 0, 0, 0], [3, 10, 12]),
+        "_Homestead Core Top": QM(["homestead_core_crown", "homestead_core_cap"], [0, 0, 1, 0, 0, 0], [4, 12, 14]),
+        ...(0, jM.H)("Burner Drill", "burnerDrill", "burner_drill", jM.z, jM.e),
+        ...(0, jM.H)("Crusher", "crusher", "crusher", jM.z),
+        ...(0, jM.H)("Smelter", "smelter", "smelter", jM.z),
+        ...(0, jM.H)("Generator", "generator", "generator", jM.z, jM.u),
+        ...(0, jM.H)("Press", "press", "press", jM.h),
+        ...(0, jM.H)("Wire Mill", "wireMill", "wire_mill", jM.h),
+        ...(0, jM.H)("Alloy Kiln", "alloyKiln", "alloy_kiln", jM.z),
+        ...(0, jM.H)("Electric Drill", "electricDrill", "electric_drill", jM.h, jM.p),
+        ...(0, jM.H)("Assembler", "autoBench", "auto_bench", jM.h),
+        ...(0, jM.D)("Tree Cutter", "treeCutter", "tree_cutter", jM.x),
+        ...(0, jM.H)("Tree Cutter", "treeCutter", "tree_cutter", jM.z, jM.x),
+        ...mM("Voltite Deposit", "voltiteDeposit", "voltite_deposit", [2, 6, 6]),
+        ...(0, jM.D)("Volt Engine", "voltEngine", "volt_engine", jM.u),
+        ...(0, jM.H)("Volt Engine", "voltEngine", "volt_engine", [2, 6, 8], jM.u),
+        ...(0, jM.D)("Deep Drill", "deepDrill", "deep_drill", jM.o),
+        ...(0, jM.H)("Deep Drill", "deepDrill", "deep_drill", [6, 4, 2], jM.o),
+        ...(0, jM.D)("Shatter Mill", "shatterMill", "shatter_mill"),
+        ...(0, jM.H)("Shatter Mill", "shatterMill", "shatter_mill", [6, 4, 2]),
+        ...(0, jM.D)("Sky Tap", "skyTap", "sky_tap", jM.w),
+        ...(0, jM.H)("Sky Tap", "skyTap", "sky_tap", [4, 6, 8], jM.w),
+        ...(0, SM.i)("Fast Belt", "fastBelt", ["fast_belt_top", "fast_belt_slab_side", "conveyor_belt_bottom"], SM.d, 1e3 * aM.e * aM.q),
+        ...LM("Charging Pad", "chargingPad", "charging_pad"),
+        ...(0, jM.D)("Crystal Vat", "crystalVat", "crystal_vat"),
+        ...(0, jM.H)("Crystal Vat", "crystalVat", "crystal_vat", [6, 3, 9]),
+        Starframe: {
+          displayName: {
+            translationKey: "item:starframe"
+          },
+          description: {
+            translationKey: "item:starframeDescription"
+          },
+          ttb: 1500,
+          textureInfo: "starframe",
+          harvestType: "rock",
+          harvestLevel: 0,
+          Ch: [6, 6, 10],
+          showInCreativeInven: !1
+        },
+        ...LM("Forge Hopper", "forgeHopper", "forge_hopper", "machine_side"),
+        "Comet Ore": {
+          displayName: {
+            translationKey: "item:cometOre"
+          },
+          description: {
+            translationKey: "item:cometOreDescription"
+          },
+          ttb: 5e3,
+          textureInfo: "comet_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: null,
+          Ch: [8, 6, 10],
+          showInCreativeInven: !1
+        },
+        "Comet Heart": {
+          displayName: {
+            translationKey: "item:cometHeart"
+          },
+          description: {
+            translationKey: "item:cometHeartDescription"
+          },
+          ttb: 18e3,
+          textureInfo: "comet_heart",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: null,
+          Ch: [12, 10, 14],
+          showInCreativeInven: !1
+        },
+        "_Starframe Spire": {
+          displayName: {
+            translationKey: "item:starframe"
+          },
+          description: {
+            translationKey: "item:starframeDescription"
+          },
+          ttb: 5e11,
+          textureInfo: "starframe",
+          harvestType: "rock",
+          drops: null,
+          Ch: [6, 6, 10],
+          showInCreativeInven: !1
+        },
+        ...(0, SM.p)("Conveyor Belt", "conveyorBelt", "conveyor_belt", ["conveyor_belt_slab_side", "conveyor_belt_bottom"]),
+        ...(0, SM.p)("Fast Belt", "fastBelt", "fast_belt", ["fast_belt_slab_side", "conveyor_belt_bottom"], 1e3 * aM.e * aM.q),
+        ...(0, jM.D)("Recycler", "recycler", "recycler"),
+        ...(0, jM.H)("Recycler", "recycler", "recycler", [3, 8, 4]),
+        ...nM("Belt Lift", "beltLift", "belt_lift"),
+        ...nM("Belt Drop", "beltDrop", "belt_drop"),
+        ...(0, jM.D)("Crop Harvester", "cropHarvester", "crop_harvester", jM.k),
+        ...(0, jM.H)("Crop Harvester", "cropHarvester", "crop_harvester", jM.h, jM.k),
+        ...(0, SM.l)("Belt Tunnel", "beltTunnel"),
+        "Pure Copper Ore": {
+          displayName: {
+            translationKey: "item:pureCopperOre"
+          },
+          ttb: 29700,
+          textureInfo: "pure_copper_ore",
+          harvestType: "rock",
+          drops: "Raw Copper",
+          Da: 9,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Pure Copper Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": OM.o
+          },
+          Ch: [6, 6, 6],
+          showInCreativeInven: !1
+        },
+        "Pure Voltite Ore": {
+          displayName: {
+            translationKey: "item:pureVoltiteOre"
+          },
+          ttb: 37800,
+          textureInfo: "pure_voltite_ore",
+          harvestType: "rock",
+          harvestLevel: 3,
+          drops: "Raw Voltite",
+          Da: 9,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Pure Voltite Ore"
+          },
+          specialToolBonusDrops: {
+            "Golem Pickaxe": OM.o
+          },
+          Ch: [2, 6, 6],
+          showInCreativeInven: !1
+        }
+      }
+    }
+
+    function nM(MM, rM, iM) {
+      const OM = {
+        displayName: {
+          translationKey: `item:${rM}`
+        },
+        description: {
+          translationKey: `item:${rM}Description`
+        },
+        ttb: 600,
+        textureInfo: [`${iM}_top`, `${iM}_side`, "conveyor_belt_bottom"],
+        texturePerSide: [1, 1, 0, 2, 1, 1],
+        harvestType: "rock",
+        harvestLevel: 0,
+        showInCreativeInven: !1
+      };
+      return {
+        [MM]: OM
+      }
+    }
+
+    function QM(MM, rM, iM) {
+      return {
+        displayName: {
+          translationKey: "item:homesteadCore"
+        },
+        description: {
+          translationKey: "item:homesteadCoreDescription"
+        },
+        ttb: 5e11,
+        textureInfo: MM,
+        texturePerSide: rM,
+        harvestType: "rock",
+        drops: null,
+        altActionable: !0,
+        Ch: iM,
+        showInCreativeInven: !1
+      }
+    }
+
+    function zM(MM, rM, iM) {
+      const OM = {
+        displayName: {
+          translationKey: `item:${rM}`
+        },
+        description: {
+          translationKey: `item:${rM}Description`
+        },
+        ttb: 3e3,
+        textureInfo: [`${iM}_side`, `${iM}_top`],
+        texturePerSide: [0, 0, 1, 1, 0, 0],
+        harvestType: "wood",
+        altActionable: !0,
+        showInCreativeInven: !1
+      };
+      return {
+        [MM]: OM
+      }
+    }
+
+    function LM(MM, rM, iM) {
+      const OM = {
+        displayName: {
+          translationKey: `item:${rM}`
+        },
+        description: {
+          translationKey: `item:${rM}Description`
+        },
+        ttb: 1500,
+        textureInfo: [`${iM}_top`, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : `${iM}_side`],
+        texturePerSide: [1, 1, 0, 0, 1, 1],
+        harvestType: "rock",
+        harvestLevel: 0,
+        altActionable: !0,
+        showInCreativeInven: !1
+      };
+      return {
+        [MM]: OM
+      }
+    }
+
+    function mM(MM, rM, iM, OM) {
+      const SM = {
+        displayName: {
+          translationKey: `item:${rM}`
+        },
+        description: {
+          translationKey: `item:${rM}Description`
+        },
+        ttb: arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 6e3,
+        textureInfo: iM,
+        harvestType: "rock",
+        harvestLevel: 0,
+        drops: null,
+        showInCreativeInven: !1,
+        ...OM ? {
+          Ch: OM
+        } : {}
+      };
+      return {
+        [MM]: SM
+      }
+    }
+  },
+  9884: (MM, rM, iM) => {
+    iM.d(rM, {
+      D: () => UM,
+      H: () => GM,
+      e: () => QM,
+      h: () => nM,
+      k: () => HM,
+      o: () => LM,
+      p: () => zM,
+      r: () => SM,
+      u: () => JM,
+      w: () => hM,
+      x: () => mM,
+      z: () => PM
+    });
+    var OM = iM(9839);
+    const SM = [
+        [1, 1, 2, 6, 0, 7],
+        [0, 7, 3, 6, 1, 1],
+        [1, 1, 4, 6, 7, 0],
+        [7, 0, 5, 6, 1, 1]
+      ],
+      jM = [
+        [1, 8, 2, 6, 0, 7],
+        [0, 7, 3, 6, 8, 1],
+        [8, 1, 4, 6, 7, 0],
+        [7, 0, 5, 6, 1, 8]
+      ],
+      aM = [0, 0, 1, 2, 0, 0],
+      PM = [9, 6, 3],
+      nM = [3, 7, 9],
+      QM = {
+        underside: "burner_drill_bottom"
+      },
+      zM = {
+        underside: "electric_drill_bottom"
+      },
+      LM = {
+        underside: "deep_drill_bottom"
+      },
+      mM = {
+        backRuns: !0
+      },
+      HM = {
+        backRuns: !0
+      },
+      hM = {
+        underside: "sky_tap_bottom"
+      },
+      JM = {
+        uniform: !0
+      },
+      dM = {
+        burner_drill_side: {
+          animationInterval: 200
+        },
+        crusher_side: {
+          animationInterval: 400,
+          interpolateFrames: !1
+        },
+        smelter_side: {
+          animationInterval: 650
+        },
+        press_side: {
+          animationInterval: 400,
+          interpolateFrames: !1
+        },
+        wire_mill_side: {
+          animationInterval: 325
+        },
+        tree_cutter_back: {
+          animationInterval: 325,
+          interpolateFrames: !1
+        },
+        shatter_mill_side: {
+          animationInterval: 400,
+          interpolateFrames: !1
+        },
+        crop_harvester_side: {
+          animationInterval: 400,
+          interpolateFrames: !1
+        },
+        crop_harvester_back: {
+          animationInterval: 400,
+          interpolateFrames: !1
+        },
+        centrifuge_side: {
+          animationInterval: 200
+        },
+        centrifuge_side_flip: {
+          animationInterval: 200
+        },
+        synthesizer_side: {
+          animationInterval: 400,
+          interpolateFrames: !1
+        },
+        synthesizer_side_flip: {
+          animationInterval: 400,
+          interpolateFrames: !1
+        },
+        mob_farm_side: {
+          animationInterval: 200
+        },
+        coolant_mixer_side: {
+          animationInterval: 200
+        },
+        coolant_mixer_side_flip: {
+          animationInterval: 200
+        }
+      };
+
+    function yM(MM) {
+      return {
+        animTextures: [0, 1, 2, 3].map((rM => `${MM}_running${rM}`)),
+        animationInterval: 250,
+        ...dM[MM]
+      }
+    }
+
+    function lM(MM, rM, iM) {
+      var OM, PM;
+      const nM = iM ? yM(`${MM}_side`) : `${MM}_side`,
+        QM = null !== (OM = rM.underside) && void 0 !== OM ? OM : "machine_side";
+      if (rM.uniform) return {
+        textureInfo: [nM, `${MM}_top`, QM],
+        faces: [aM, aM, aM, aM]
+      };
+      const zM = iM && rM.backRuns ? yM(`${MM}_back`) : `${MM}_back`,
+        LM = [1, 2, 3, 4].map((rM => `${MM}_top[rot[${rM}`)),
+        mM = [null !== (PM = rM.front) && void 0 !== PM ? PM : `${MM}_front`, nM, ...LM, QM, zM];
+      if (rM.mirroredSides) {
+        const rM = iM ? yM(`${MM}_side_flip`) : `${MM}_side_flip`;
+        return {
+          textureInfo: [...mM, rM],
+          faces: jM
+        }
+      }
+      return {
+        textureInfo: mM,
+        faces: SM
+      }
+    }
+
+    function EM(MM, rM) {
+      return {
+        displayName: {
+          translationKey: `item:${MM}`
+        },
+        description: {
+          translationKey: `item:${MM}Description`
+        },
+        ttb: 1500,
+        textureInfo: rM,
+        harvestType: "rock",
+        harvestLevel: 0,
+        altActionable: !0,
+        showInCreativeInven: !1
+      }
+    }
+
+    function UM(MM, rM, iM) {
+      let SM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const {
+        textureInfo: jM,
+        faces: aM
+      } = lM(iM, SM, !1);
+      return (0, OM.Lb)(MM, {
+        ...EM(rM, jM),
+        rootMetaDesc: `${MM}|meta|rot1`
+      }, aM)
+    }
+
+    function GM(MM, rM, iM, OM) {
+      let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      const {
+        textureInfo: jM,
+        faces: aM
+      } = lM(iM, SM, !0), PM = {};
+      return aM.forEach(((iM, SM) => {
+        PM[`${MM}|meta|rot${SM+1}|Running`] = {
+          ...EM(rM, jM),
+          texturePerSide: iM,
+          Ch: OM
+        }
+      })), PM
+    }
+  },
+  9904: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => LM,
+      h: () => zM,
+      l: () => lM,
+      p: () => mM,
+      t: () => dM,
+      u: () => EM,
+      y: () => Qr
+    });
+    var OM = iM(9839),
+      SM = iM(9832),
+      jM = iM(9835),
+      aM = iM(9884),
+      PM = iM(9890);
+    const nM = {
+      uniform: !0,
+      underside: "pump_bottom"
+    };
+
+    function QM(MM) {
+      return {
+        front: "output",
+        underside: `${MM}_bottom`,
+        mirroredSides: !0,
+        backRuns: !0
+      }
+    }
+    const zM = "Fluid Pipe",
+      LM = "Coolant Pipe";
+
+    function mM(MM) {
+      return MM === zM || MM === LM
+    }
+    const HM = "Full",
+      hM = 2,
+      JM = 350;
+
+    function dM(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const OM = "cryo" === MM ? LM : zM;
+      return iM || 0 !== rM ? `${OM}|meta|conn|${UM(rM)}${iM?`|${HM}`:""}` : OM
+    }
+    const yM = "Fluid Tank",
+      lM = 4;
+
+    function EM(MM) {
+      return 0 === MM ? yM : `${yM}|meta|rot1|Fill${MM}`
+    }
+
+    function UM(MM) {
+      const rM = OM.h.filter(((rM, iM) => MM >> iM & 1));
+      return rM.length ? rM.join("_") : "none"
+    }
+
+    function GM(MM, rM, iM, OM) {
+      const SM = {
+          displayName: {
+            translationKey: `item:${iM}`
+          },
+          description: {
+            translationKey: "item:fluidPipeDescription"
+          },
+          ttb: 600,
+          harvestType: "rock",
+          harvestLevel: 0,
+          showInCreativeInven: !1,
+          itemTexture: "fluid_pipe",
+          model: "CustomModel",
+          solid: !1,
+          modelScale: 8,
+          particlesIgnoreBlack: !0
+        },
+        jM = {};
+      for (let aM = 0; aM < 64; aM++) {
+        const iM = dM(MM, aM, rM);
+        jM[iM] = {
+          ...SM,
+          blockModel: `${OM}_${UM(aM)}`,
+          ...mM(iM) ? {
+            rootMetaDesc: `${iM}|meta|conn|none`
+          } : {},
+          ..."cryo" === MM ? {
+            drops: zM
+          } : {},
+          ...rM ? {
+            customModelInfo: {
+              textureAnimation: {
+                frames: hM,
+                animationInterval: JM
+              }
+            }
+          } : {}
+        }
+      }
+      return jM
+    }
+    const CM = 300;
+
+    function eM() {
+      const MM = {};
+      for (let rM = 1; rM <= lM; rM++) {
+        const iM = kM(`fluid_tank_fill${rM}`, 4, "_", CM),
+          OM = rM === lM;
+        MM[EM(rM)] = fM("fluidTank", [iM.animTextures[0], iM, ...OM ? [] : ["fluid_tank"]], {
+          ...NM,
+          texturePerSide: OM ? [1, 1, 1, 1, 1, 1] : [1, 1, 2, 1, 1, 1]
+        })
+      }
+      return MM
+    }
+    const bM = aM.r.map((MM => MM.map((MM => 0 === MM ? 0 : 1))));
+    const wM = [0, 0, 0, 0, 0, 0],
+      tM = [1, 1, 1, 1, 1, 1],
+      gM = ["reactor_base", "reactor_base_top"],
+      uM = [0, 0, 1, 1, 0, 0],
+      RM = {
+        Calm: {
+          texture: "reactor_controller_green",
+          ms: 800,
+          light: [2, 11, 3]
+        },
+        Warm: {
+          texture: "reactor_controller_yellow",
+          ms: 800,
+          light: [10, 10, 1]
+        },
+        Hot: {
+          texture: "reactor_controller_orange",
+          ms: 800,
+          light: [12, 6, 1]
+        },
+        Alarm: {
+          texture: "reactor_controller_red",
+          ms: 400,
+          light: [13, 1, 1]
+        }
+      },
+      pM = "reactor_frame",
+      WM = 4,
+      sM = 4,
+      DM = 400;
+
+    function kM(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4,
+        iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "_running",
+        OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 250;
+      return {
+        animTextures: Array.from({
+          length: rM
+        }, ((rM, OM) => `${MM}${iM}${OM}`)),
+        animationInterval: OM
+      }
+    }
+
+    function ZM(MM, rM) {
+      return [`${MM}0`, kM(MM, rM, "")]
+    }
+
+    function oM(MM) {
+      return [1, 2, 3, 4].map((rM => `${MM}[rot[${rM}`))
+    }
+
+    function fM(MM, rM) {
+      return {
+        displayName: {
+          translationKey: `item:${MM}`
+        },
+        description: {
+          translationKey: `item:${MM}Description`
+        },
+        ttb: 1500,
+        textureInfo: rM,
+        harvestType: "rock",
+        harvestLevel: 0,
+        showInCreativeInven: !1,
+        ...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}
+      }
+    }
+    const YM = {
+        transTex: !0,
+        soundType: {
+          break: "glass",
+          place: "stone"
+        }
+      },
+      NM = {
+        ...YM,
+        altActionable: !0
+      },
+      AM = {
+        ttb: 5e11,
+        drops: null
+      };
+
+    function xM(MM, rM, iM, OM) {
+      return {
+        [MM]: rM,
+        [`${MM}|meta|rot1|${iM}`]: {
+          ...rM,
+          ...OM
+        }
+      }
+    }
+
+    function vM(MM, rM, iM) {
+      return (0, OM.Lb)(MM, {
+        ...rM,
+        rootMetaDesc: `${MM}|meta|rot1`
+      }, iM)
+    }
+
+    function FM(MM, rM, iM, OM) {
+      const SM = {};
+      return OM.forEach(((OM, jM) => {
+        SM[`${MM}|meta|rot${jM+1}|${rM}`] = {
+          ...iM,
+          texturePerSide: OM
+        }
+      })), SM
+    }
+
+    function BM(MM, rM, iM, OM) {
+      const SM = {};
+      for (let aM = 1; aM <= 4; aM++) SM[`${MM}|meta|rot${aM}|${iM}`] = {
+        ...(0, jM.h)(rM, OM),
+        texturePerSide: jM.d,
+        surfaceVelocity: (0, jM.r)(aM, jM.f),
+        drops: MM
+      };
+      return SM
+    }
+
+    function XM() {
+      const MM = "Reactor Controller",
+        rM = [wM, wM, wM, wM],
+        iM = (MM, rM) => fM("reactorFrame", [MM], {
+          drops: "Reactor Frame",
+          ...rM ? {
+            Ch: rM
+          } : {}
+        });
+      let OM = vM(MM, iM(pM), rM);
+      for (const [SM, jM] of Object.entries(RM)) {
+        const aM = {
+          animTextures: [`${jM.texture}0`, `${jM.texture}1`],
+          animationInterval: jM.ms
+        };
+        OM = {
+          ...OM,
+          ...FM(MM, SM, iM(aM, jM.light), rM)
+        }
+      }
+      return OM
+    }
+
+    function IM() {
+      const MM = "Battery Controller",
+        rM = fM("batteryController", ["battery_controller_front", "battery_casing"], {
+          altActionable: !0
+        }),
+        iM = fM("batteryController", [kM("battery_controller_front"), "battery_casing"], {
+          altActionable: !0,
+          Ch: aM.h
+        });
+      return {
+        ...vM(MM, rM, bM),
+        ...FM(MM, "Running", iM, bM)
+      }
+    }
+    const KM = "collider_side_off",
+      qM = 16,
+      TM = 200,
+      VM = [...oM("collider_top"), "collider_bottom"],
+      cM = "collider_top[rot[1",
+      Mr = [0, 0, 1, 2, 0, 0];
+
+    function rr(MM) {
+      return MM ? kM("collider_side", qM, "_running", TM) : KM
+    }
+
+    function ir(MM) {
+      const rM = rr(MM);
+      return ["output", rM, ...VM, rM]
+    }
+
+    function Or(MM) {
+      return MM ? {
+        textureInfo: [KM, rr(!0), cM, "collider_bottom"],
+        texturePerSide: [1, 1, 2, 3, 1, 1]
+      } : {
+        textureInfo: [KM, cM, "collider_bottom"],
+        texturePerSide: Mr
+      }
+    }
+
+    function Sr() {
+      const MM = Or(!1),
+        rM = [MM.texturePerSide, MM.texturePerSide, MM.texturePerSide, MM.texturePerSide];
+      return {
+        ...vM("Collider", fM("collider", ir(!1), {
+          altActionable: !0,
+          drops: null
+        }), aM.r),
+        ...vM("_Collider Focus", fM("collider", MM.textureInfo, {
+          altActionable: !0,
+          drops: null
+        }), rM),
+        ...vM("_Collider Output", fM("collider", MM.textureInfo, {
+          altActionable: !0,
+          drops: null
+        }), rM)
+      }
+    }
+    const jr = ["laser_front", "laser_side", ...Array(4).fill("laser_side"), "laser_side", "laser_back"];
+
+    function ar() {
+      const {
+        textureInfo: MM,
+        texturePerSide: rM
+      } = Or(!0);
+      return FM("_Collider Focus", "Running", fM("collider", MM, {
+        altActionable: !0,
+        drops: null,
+        Ch: [8, 3, 8]
+      }), [rM, rM, rM, rM])
+    }
+
+    function Pr() {
+      const MM = "wireless_terminal_top[rot[1";
+      return vM("Wireless Terminal", fM("wirelessTerminal", ["wireless_terminal_front", MM, ...oM("wireless_terminal_top"), "wireless_terminal_bottom", MM], {
+        altActionable: !0,
+        Ch: [2, 6, 3]
+      }), aM.r)
+    }
+
+    function nr(MM, rM, iM) {
+      return fM(MM, rM, {
+        ttb: iM,
+        harvestLevel: 3,
+        drops: null,
+        Ch: [6, 10, 2]
+      })
+    }
+
+    function Qr() {
+      return {
+        "Uranium Ore": fM("uraniumOre", "uranium_ore", {
+          ttb: 5400,
+          harvestLevel: 3,
+          drops: "Raw Uranium",
+          Ch: [5, 8, 1]
+        }),
+        ...(0, SM.d)("Uranium Deposit", "uraniumDeposit", "uranium_deposit", [5, 8, 1], 36e3),
+        "Sky Spring": {
+          ...(0, SM.d)("Sky Spring", "skySpring", "stone")["Sky Spring"],
+          textureInfo: [{
+            animTextures: ["sky_spring0", "sky_spring1", "sky_spring2", "sky_spring3"],
+            animationInterval: 800
+          }, "stone"],
+          texturePerSide: [1, 1, 0, 1, 1, 1]
+        },
+        ...(0, SM.n)("Atomic Bench", "atomicBench", "atomic_bench"),
+        ...Lr((0, aM.D)("Pump", "pump", "pump", nM)),
+        ...Lr((0, aM.H)("Pump", "pump", "pump", aM.h, nM)),
+        ...(0, aM.D)("Condenser", "condenser", "condenser", QM("condenser")),
+        ...(0, aM.H)("Condenser", "condenser", "condenser", aM.h, QM("condenser")),
+        ...(0, aM.D)("Centrifuge", "centrifuge", "centrifuge", QM("centrifuge")),
+        ...(0, aM.H)("Centrifuge", "centrifuge", "centrifuge", [6, 9, 2], QM("centrifuge")),
+        ...(0, aM.D)("Synthesizer", "synthesizer", "synthesizer", QM("synthesizer")),
+        ...(0, aM.H)("Synthesizer", "synthesizer", "synthesizer", [3, 8, 3], QM("synthesizer")),
+        ...(0, aM.D)("Mob Farm", "mobFarm", "mob_farm"),
+        ...(0, aM.H)("Mob Farm", "mobFarm", "mob_farm", aM.z),
+        "Fluid Tank": fM("fluidTank", "fluid_tank", NM),
+        ...XM(),
+        "Reactor Frame": fM("reactorFrame", "reactor_frame"),
+        "Reactor Casing": fM("reactorCasing", "reactor_casing"),
+        "Reactor Glass": fM("reactorGlass", "reactor_glass", YM),
+        ...xM("Reactor Port", fM("reactorPort", "fuel_port"), "Water", {
+          textureInfo: "water_port"
+        }),
+        "Reactor Port|meta|rot1|Waste": fM("reactorPort", "output"),
+        ...xM("Fuel Rod", fM("fuelRod", "fuel_rod0"), "Running", {
+          textureInfo: ZM("fuel_rod", WM),
+          texturePerSide: tM,
+          Ch: [5, 9, 2]
+        }),
+        "Graphite Block": fM("graphiteBlock", "graphite_block"),
+        ...xM("Coolant Channel", fM("coolantChannel", "coolant_channel0"), "Running", {
+          textureInfo: ZM("coolant_channel", sM),
+          texturePerSide: tM
+        }),
+        "Reactor Slag": fM("reactorSlag", "reactor_slag", {
+          drops: null,
+          Ch: [3, 5, 1]
+        }),
+        "Atomic Bomb": zr("atomicBomb", "atomic_bomb"),
+        ...IM(),
+        "Battery Casing": fM("batteryCasing", "battery_casing"),
+        ...xM("Battery Cell", fM("batteryCell", ["battery_cell", "battery_cell_top", "battery_cell_bottom"], {
+          texturePerSide: [0, 0, 1, 2, 0, 0]
+        }), "Running", {
+          textureInfo: ["battery_cell", kM("battery_cell", 4, "_running", DM), "battery_cell_top", "battery_cell_bottom"],
+          texturePerSide: [1, 1, 2, 3, 1, 1],
+          Ch: aM.h
+        }),
+        ...Sr(),
+        ...vM("Laser", fM("laser", jr, {
+          altActionable: !0
+        }), aM.r),
+        ...Pr(),
+        ...(0, SM.f)("Dense Silo", "denseSilo", "dense_silo"),
+        ...(0, jM.i)("Express Belt", "expressBelt", ["express_belt_top", "express_belt_slab_side", "conveyor_belt_bottom"], jM.d, 1e3 * PM.e * PM.o),
+        ...(0, jM.p)("Express Belt", "expressBelt", "express_belt", ["express_belt_slab_side", "conveyor_belt_bottom"], 1e3 * PM.e * PM.o),
+        ...(0, jM.i)("Fast Loader", "fastLoader", ["fast_loader_top", "fast_belt_slab_side", "conveyor_belt_bottom", "fast_loader_slab_front"], [1, 1, 0, 2, 3, 1]),
+        ...BM("Splitter", "splitter", "leftFront", ["splitter_top_left_front", "splitter_slab_side", "conveyor_belt_bottom"]),
+        ...BM("Splitter", "splitter", "frontRight", ["splitter_top_front_right", "splitter_slab_side", "conveyor_belt_bottom"]),
+        ...BM("Sorting Gate", "sortingGate", "right", ["sorting_gate_top_right", "sorting_gate_slab_side", "conveyor_belt_bottom"]),
+        "Uranium Glass": fM("uraniumGlass", "uranium_glass", {
+          ...YM,
+          harvestType: "wood",
+          ttb: 450,
+          Ch: [4, 7, 1]
+        }),
+        "Glow Lamp": fM("glowLamp", "glow_lamp", {
+          harvestType: "wood",
+          ttb: 450,
+          Ch: [8, 12, 13]
+        }),
+        "_Jetpack Back": fM("jetChestplate", "jetpack_back", AM),
+        "_Atomic Spire": fM("atomicSpire", "atomic_spire", {
+          ...AM,
+          Ch: [5, 9, 2]
+        }),
+        "Isotope Comet Ore": nr("isotopeCometOre", "isotope_comet_ore", 5e3),
+        "Isotope Comet Heart": nr("isotopeCometHeart", "isotope_comet_heart", 18e3),
+        ...FM("Laser", "Running", fM("laser", jr, {
+          altActionable: !0,
+          Ch: [9, 3, 9]
+        }), aM.r),
+        ...ar(),
+        ...GM("water", !1, "fluidPipe", "baf2_fluid_pipe"),
+        ...(0, aM.D)("Coolant Mixer", "coolantMixer", "coolant_mixer", QM("coolant_mixer")),
+        ...(0, aM.H)("Coolant Mixer", "coolantMixer", "coolant_mixer", aM.h, QM("coolant_mixer")),
+        ...GM("cryo", !1, "fluidPipe", "baf2_fluid_pipe"),
+        ...eM(),
+        ...GM("water", !0, "waterPipe", "baf2_water_pipe"),
+        ...GM("cryo", !0, "coolantPipe", "baf2_coolant_pipe"),
+        "Reactor Frame|meta|rot1|Formed": fM("reactorFrame", gM, {
+          texturePerSide: uM
+        }),
+        "Reactor Glass|meta|rot1|Formed": fM("reactorGlass", gM, {
+          texturePerSide: uM,
+          soundType: YM.soundType
+        }),
+        "Reactor Port|meta|rot1|Formed": fM("reactorPort", "fuel_port"),
+        "Reactor Port|meta|rot1|Formed|Water": fM("reactorPort", "water_port"),
+        "Reactor Port|meta|rot1|Formed|Waste": fM("reactorPort", "output"),
+        ...FM("Collider", "Running", fM("collider", ir(!0), {
+          altActionable: !0,
+          drops: null,
+          Ch: [8, 3, 8]
+        }), aM.r),
+        Scaffolding: fM("scaffolding", "scaffolding", {
+          transTex: !0,
+          ttb: 300,
+          solid: !1,
+          climbableInside: {
+            upForceScalar: 1.05
+          }
+        }),
+        ...(0, OM.Jb)("Nova Trophy", {
+          displayName: {
+            translationKey: "item:novaTrophy"
+          },
+          description: {
+            translationKey: "item:novaTrophyDescription"
+          },
+          ttb: 2e3,
+          harvestType: "rock",
+          showInCreativeInven: !1,
+          model: "rotatable",
+          itemTexture: "nova_trophy",
+          rootMetaDesc: "Nova Trophy|meta|rot1",
+          modelScale: 8,
+          customModelInfo: {
+            yOffset: -.5
+          },
+          blockModel: "Nova Trophy",
+          Ch: [4, 10, 5]
+        }),
+        "Uranium Block": fM("uraniumBlock", "uranium_block", {
+          ttb: 3e3,
+          Ch: [5, 9, 2]
+        }),
+        "Pure Uranium Ore": fM("pureUraniumOre", "pure_uranium_ore", {
+          ttb: 48600,
+          harvestLevel: 3,
+          drops: "Raw Uranium",
+          Da: 9,
+          specialToolDrop: {
+            tool: "Moonstone Pickaxe",
+            drops: "Pure Uranium Ore"
+          },
+          Ch: [6, 10, 2]
+        }),
+        "Copper Block": fM("copperBlock", "copper_block", {
+          ttb: 3e3
+        }),
+        "Voltite Block": fM("voltiteBlock", "voltite_block", {
+          ttb: 3e3,
+          Ch: [2, 6, 6]
+        }),
+        "Nova Bomb": zr("novaBomb", "nova_bomb")
+      }
+    }
+
+    function zr(MM, rM) {
+      return fM(MM, [`${rM}_side`, `${rM}_top`], {
+        ttb: 50,
+        texturePerSide: [0, 0, 1, 0, 0, 0],
+        harvestType: "cuttable"
+      })
+    }
+
+    function Lr(MM) {
+      for (const rM of Object.values(MM)) rM.drops = "Condenser";
+      return MM
+    }
+  },
+  9852: (MM, rM, iM) => {
+    iM.d(rM, {
+      C: () => EM,
+      G: () => QM,
+      I: () => nM,
+      b: () => dM,
+      e: () => UM,
+      h: () => PM,
+      l: () => aM,
+      p: () => lM,
+      t: () => zM,
+      w: () => GM,
+      z: () => yM
+    });
+    var OM = iM(9855);
+    const SM = {
+        root: "Noticeboard",
+        blockModelPrefix: "noticeboard_wall",
+        faceOffset: -.25
+      },
+      jM = {
+        root: "Standing Noticeboard",
+        blockModelPrefix: "noticeboard_standing",
+        faceOffset: .125
+      },
+      aM = [SM, jM],
+      PM = aM.map((MM => {
+        let {
+          root: rM
+        } = MM;
+        return rM
+      })),
+      nM = SM.root,
+      QM = jM.root,
+      zM = nM,
+      LM = ["l", "r", "u", "d"],
+      [mM, HM, hM, JM] = LM.map(((MM, rM) => 1 << rM)),
+      dM = Array.from({
+        length: 1 << LM.length
+      }, ((MM, rM) => rM)),
+      yM = {
+        0: "_single",
+        [mM]: "_horizontal_right",
+        [HM]: "_horizontal_left",
+        [mM | HM]: "_horizontal",
+        [hM]: "_vertical_bottom",
+        [JM]: "_vertical_top",
+        [hM | JM]: "_vertical",
+        [HM | JM]: "_top_left",
+        [mM | JM]: "_top_right",
+        [HM | hM]: "_bottom_left",
+        [mM | hM]: "_bottom_right",
+        [mM | HM | JM]: "_top",
+        [mM | HM | hM]: "_bottom",
+        [HM | hM | JM]: "_left",
+        [mM | hM | JM]: "_right",
+        [mM | HM | hM | JM]: ""
+      },
+      lM = Object.fromEntries(Object.entries(OM.c).map((MM => {
+        let [rM, [iM, OM]] = MM;
+        return [rM, [-OM, iM]]
+      }))),
+      EM = Object.fromEntries(Object.entries(OM.c).map((MM => {
+        let [rM, [iM, OM]] = MM;
+        return [rM, [
+          [iM, 0, OM],
+          [-iM, 0, -OM],
+          [0, 1, 0],
+          [0, -1, 0]
+        ]]
+      })));
+
+    function UM(MM, rM, iM) {
+      const OM = LM.filter(((MM, rM) => iM & 1 << rM)).join("");
+      return "" === OM ? 1 === rM ? MM : `${MM}|meta|rot${rM}` : `${MM}|meta|rot${rM}|${OM}`
+    }
+
+    function GM(MM) {
+      var rM;
+      const iM = null !== (rM = MM.split("|")[2]) && void 0 !== rM ? rM : "";
+      let OM = 0;
+      return LM.forEach(((MM, rM) => {
+        iM.includes(MM) && (OM |= 1 << rM)
+      })), OM
+    }
+  },
+  9866: (MM, rM, iM) => {
+    iM.d(rM, {
+      B: () => aM,
+      b: () => jM,
+      f: () => PM,
+      g: () => nM,
+      j: () => LM,
+      n: () => yM,
+      p: () => mM,
+      q: () => SM,
+      r: () => dM,
+      t: () => hM,
+      x: () => JM
+    });
+    var OM = iM(9825);
+    const SM = [{
+        letter: "n",
+        name: "North",
+        dx: 0,
+        dz: -1
+      }, {
+        letter: "e",
+        name: "East",
+        dx: 1,
+        dz: 0
+      }, {
+        letter: "s",
+        name: "South",
+        dx: 0,
+        dz: 1
+      }, {
+        letter: "w",
+        name: "West",
+        dx: -1,
+        dz: 0
+      }],
+      jM = 45 == iM.j ? ["fence"] : null;
+
+    function aM(MM) {
+      return jM.includes(MM.model)
+    }
+    const PM = Array.from({
+        length: 1 << SM.length
+      }, ((MM, rM) => rM)),
+      nM = 1 << SM.length,
+      QM = "Stacked";
+
+    function zM(MM) {
+      return SM.filter(((rM, iM) => MM & 1 << iM)).map((MM => {
+        let {
+          letter: rM
+        } = MM;
+        return rM
+      })).join("")
+    }
+
+    function LM(MM, rM) {
+      const iM = [zM(rM), rM & nM ? QM : ""].filter(Boolean);
+      return iM.length ? `${MM}|meta|${iM.join("|")}` : MM
+    }
+
+    function mM(MM) {
+      var rM;
+      const iM = MM.split("|").slice(1),
+        OM = null !== (rM = iM.find((MM => MM !== QM))) && void 0 !== rM ? rM : "";
+      let jM = iM.includes(QM) ? nM : 0;
+      return SM.forEach(((MM, rM) => {
+        let {
+          letter: iM
+        } = MM;
+        OM.includes(iM) && (jM |= 1 << rM)
+      })), jM
+    }
+
+    function HM(MM) {
+      return PM.map((rM => (0, OM.i)(function(MM, rM) {
+        let {
+          post: iM,
+          northArm: OM
+        } = MM;
+        const jM = [iM];
+        let aM = OM;
+        return SM.forEach(((MM, iM) => {
+          rM & 1 << iM && jM.push(aM), aM = function(MM) {
+            let [rM, iM, OM, SM, jM, aM] = MM;
+            return [8 - aM, iM, rM, 8 - OM, jM, SM]
+          }(aM)
+        })), jM
+      }(MM, rM).map((MM => {
+        let [rM, iM, OM, SM, jM, aM] = MM;
+        return [
+          [rM, iM, OM],
+          [SM, jM, aM]
+        ]
+      })))))
+    }
+    const hM = HM({
+        post: [3, 0, 3, 5, 8, 5],
+        northArm: [3, 0, 0, 5, 8, 3]
+      }),
+      JM = HM({
+        post: [3, 0, 3, 5, 4, 5],
+        northArm: [3, 0, 0, 5, 4, 3]
+      }),
+      dM = {
+        glb: "Fence",
+        postPiece: "Bottom",
+        topPiece: "Top"
+      };
+    dM.glb;
+
+    function yM(MM, rM) {
+      return `${MM}${null===rM?"Post":SM[rM].name}`
+    }
+  },
+  9877: (MM, rM, iM) => {
+    if (iM.d(rM, {
+        b: () => aM,
+        c: () => PM,
+        d: () => jM,
+        e: () => QM,
+        g: () => SM,
+        i: () => nM
+      }), 45 == iM.j) var OM = iM(9855);
+    const SM = "Chest",
+      jM = ["left", "right"];
+
+    function aM(MM, rM, iM) {
+      return `${MM}|meta|rot${rM}|${iM}`
+    }
+
+    function PM(MM, rM) {
+      var iM;
+      return MM !== SM ? null : null !== (iM = jM.find((MM => rM.endsWith(`|${MM}`)))) && void 0 !== iM ? iM : null
+    }
+    const nM = {
+      left: "right",
+      right: "left"
+    };
+
+    function QM(MM, rM) {
+      const [iM, SM] = OM.c[MM];
+      return "left" === rM ? [-iM, -SM] : [iM, SM]
+    }
+  },
+  9868: (MM, rM, iM) => {
+    iM.d(rM, {
+      B: () => jM,
+      b: () => hM,
+      e: () => SM,
+      i: () => mM,
+      k: () => HM,
+      o: () => JM,
+      p: () => QM,
+      t: () => nM,
+      w: () => LM,
+      z: () => aM
+    });
+    var OM = iM(9845);
+    const SM = "fenceGate";
+
+    function jM(MM) {
+      return (null === MM || void 0 === MM ? void 0 : MM.model) === SM
+    }
+
+    function aM(MM) {
+      return jM(MM) && void 0 !== MM.attachedTop
+    }
+    const PM = [{
+      dx: 0,
+      dz: -1
+    }, {
+      dx: -1,
+      dz: 0
+    }, {
+      dx: 0,
+      dz: 1
+    }, {
+      dx: 1,
+      dz: 0
+    }];
+
+    function nM(MM) {
+      return MM % 2 === 1
+    }
+
+    function QM(MM, rM, iM) {
+      const OM = function(MM) {
+        return PM[(MM - 1) % 4]
+      }(MM);
+      return OM.dx * rM + OM.dz * iM > 0 ? (MM + 1) % 4 + 1 : MM
+    }
+    const zM = new Map;
+
+    function LM(MM, rM, iM) {
+      const SM = `${MM}|${rM}|${iM}`;
+      return zM.has(SM) || zM.set(SM, (0, OM.c)(function(MM, rM, iM) {
+        return (0, OM.k)(function(MM, rM) {
+          return rM ? [
+            [0, 0, 0, 1, MM, 5],
+            [7, 0, 0, 8, MM, 5]
+          ] : [
+            [0, 0, 3, 8, MM, 5]
+          ]
+        }(MM ? 4 : 8, iM), rM - 1)
+      }(MM, rM, iM))), zM.get(SM)
+    }
+    const mM = [1, 2, 3, 4].flatMap((MM => [!1, !0].map((rM => ({
+      rot: MM,
+      open: rM
+    })))));
+
+    function HM(MM, rM, iM) {
+      return 1 !== rM || iM ? `${MM}|meta|rot${rM}|${iM?"open":"closed"}` : MM
+    }
+    const hM = "FenceGate",
+      JM = {
+        bottom: ["BottomLeft", "BottomRight"],
+        top: ["TopLeft", "TopRight"]
+      }
+  },
+  9913: (MM, rM, iM) => {
+    function OM() {
+      const MM = {};
+      for (const rM of ["White", "Light Grey", "Light Blue", "Cyan", "Green", "Lime", "Yellow", "Orange", "Magenta", "Red"]) MM[`INTERNAL_MESH_${rM} Directional Arrow`] = {
+        ttb: 400,
+        harvestType: "cuttable",
+        model: "rotatable",
+        solid: !1,
+        blockModel: `${rM} Directional Arrow`,
+        blockModelItem: !0,
+        twoDBlockItem: !0,
+        modelScale: 8,
+        customModelInfo: {
+          yOffset: -.5
+        },
+        drops: null
+      };
+      return MM
+    }
+    iM.d(rM, {
+      e: () => OM
+    })
+  },
+  9925: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => OM,
+      e: () => jM
+    });
+    const OM = iM(9932).e.map((MM => ({
+        wood: MM,
+        block: "Maple" === MM ? "Showcase" : `${MM} Item Pedestal`
+      }))),
+      SM = new Set(OM.map((MM => {
+        let {
+          block: rM
+        } = MM;
+        return rM
+      })));
+
+    function jM(MM) {
+      return SM.has(MM)
+    }
+  },
+  9845: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => PM,
+      d: () => oM,
+      f: () => hM,
+      h: () => lM,
+      k: () => aM,
+      o: () => mM,
+      r: () => dM,
+      u: () => HM,
+      x: () => yM
+    });
+    var OM = iM(9825),
+      SM = iM(9863),
+      jM = iM(9852);
+
+    function aM(MM, rM) {
+      let iM = [...MM];
+      for (let OM = 0; OM < rM; OM++) iM = iM.map((MM => {
+        let [rM, iM, OM, SM, jM, aM] = MM;
+        return [OM, iM, 8 - SM, aM, jM, 8 - rM]
+      }));
+      return iM
+    }
+
+    function PM(MM) {
+      return (0, OM.i)(MM.map((MM => {
+        let [rM, iM, OM, SM, jM, aM] = MM;
+        return [
+          [rM, iM, OM],
+          [SM, jM, aM]
+        ]
+      })))
+    }
+
+    function nM() {
+      for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
+      return [0, 1, 2, 3].map((MM => PM(aM(rM, MM))))
+    }
+
+    function QM(MM) {
+      return MM.map((MM => {
+        let [rM, iM, OM, SM, jM, aM] = MM;
+        return [rM, 8 - jM, OM, SM, 8 - iM, aM]
+      }))
+    }
+    const zM = [0, 0, 0, 8, 4, 8],
+      LM = [0, 4, 0, 8, 8, 4],
+      mM = [zM, LM],
+      HM = QM(mM),
+      hM = {
+        bot: nM(...mM),
+        top: nM(...HM)
+      };
+
+    function JM(MM) {
+      return Object.fromEntries(SM.m.map((rM => [rM, MM(rM)])))
+    }
+    const dM = {
+        innerLeft: [zM, LM, [4, 4, 4, 8, 8, 8]],
+        innerRight: [zM, LM, [0, 4, 4, 4, 8, 8]],
+        outerLeft: [zM, [4, 4, 0, 8, 8, 4]],
+        outerRight: [zM, [0, 4, 0, 4, 8, 4]]
+      },
+      yM = JM((MM => QM(dM[MM]))),
+      lM = {
+        bot: JM((MM => nM(...dM[MM]))),
+        top: JM((MM => nM(...yM[MM])))
+      },
+      EM = nM([0, 0, 0, 8, 8, 1]),
+      UM = nM([0, 0, 0, 8, 1, 8]),
+      GM = nM([0, 0, 0, 8, 6, 8]),
+      CM = nM([0, 0, 0, 8, 3, 8]),
+      eM = nM([0, 0, 3, 8, 8, 6]),
+      bM = nM([0, 0, 0, 8, 8, 2]),
+      wM = nM([0, 0, 2, 8, 8, 3]),
+      tM = nM([1, 0, 0, 7, 8, 6]),
+      gM = nM([0, 0, 0, 8, 8, 2]),
+      uM = nM([0, 0, 3, 8, 8, 5]),
+      RM = nM([0, 0, 6, 8, 8, 8]),
+      pM = nM([3, 0, 3, 5, 8, 5]),
+      WM = [0, 0, 0, 8, 6, 8],
+      sM = nM(WM),
+      DM = nM(WM, [0, 6, 7, 8, 7, 8]),
+      kM = nM(WM, [0, 6, 0, 8, 8, 1]),
+      ZM = {
+        "Dangling Rope": nM([3, 0, 3, 5, 8, 5]),
+        "Dangling Vine": nM([2, 0, 2, 6, 8, 6]),
+        Vines: EM,
+        Board: EM,
+        "Slime Trail": UM,
+        "Wood Spikes": GM,
+        "Stone Spikes": GM,
+        "Iron Spikes": GM,
+        "Gold Spikes": GM,
+        "Diamond Spikes": GM,
+        "Kill Spikes": GM,
+        "Landing Pad": CM,
+        "Weak Jump Pad": CM,
+        "Jump Pad": CM,
+        "Strong Jump Pad": CM,
+        "Super Jump Pad": CM,
+        "Slicing Board": nM([1, 0, 1, 7, 2, 7]),
+        Football: nM([2, 0, 2, 6, 4, 6]),
+        "Coloured Wheel": nM([0, 0, 3, 8, 8, 5]),
+        Lantern: nM([1, 0, 1, 7, 8, 7])
+      };
+
+    function oM(MM, rM) {
+      var iM, OM, SM, aM;
+      let PM = ZM[MM.meta.rootName];
+      const nM = null !== (iM = null !== (OM = MM.blockModel) && void 0 !== OM ? OM : rM.blockModel) && void 0 !== iM ? iM : "";
+      "noticeboard_standing_leg" === nM ? PM = pM : nM.startsWith("noticeboard_standing") ? PM = uM : nM.startsWith("noticeboard_wall") ? PM = RM : MM.meta.rootName.endsWith(" Directional Arrow") ? PM = UM : MM.meta.rootName.endsWith(" Ladder") ? PM = gM : MM.meta.rootName.endsWith(" Strongbed Head") ? PM = kM : MM.meta.rootName.endsWith(" Strongbed") ? PM = DM : / Bed(?: Head)?$/.test(MM.meta.rootName) ? PM = sM : /^_(Sheep|Cow|Pig|Horse|Wolf|Deer|Wildcat|Camel) Painting /.test(nM) ? PM = EM : / Banner(?: Flag)?(?: Hanging)?$/.test(nM) ? PM = nM.endsWith(" Flag Hanging") ? wM : nM.endsWith(" Hanging") ? bM : eM : "lantern_wall" === nM && (PM = tM);
+      const QM = jM.h.includes(MM.meta.rootName) ? 2 : 0;
+      return null === (SM = PM) || void 0 === SM ? void 0 : SM[((null !== (aM = MM.meta.rot) && void 0 !== aM ? aM : 1) - 1 + QM) % 4]
+    }
+  },
+  9932: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM
+    });
+    const OM = ["Maple", "Pine", "Plum", "Cedar", "Aspen", "Jungle", "Palm", "Pear", "Cherry", "Spectral", "Mango"]
+  },
+  9863: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => OM,
+      c: () => jM,
+      f: () => aM,
+      i: () => PM,
+      m: () => SM
+    });
+    let OM = function(MM) {
+      return MM[MM.bot = 0] = "bot", MM[MM.top = 1] = "top", MM[MM.side = 2] = "side", MM
+    }({});
+    const SM = ["innerLeft", "innerRight", "outerLeft", "outerRight"];
+    class jM {
+      constructor(MM, rM, iM, OM, SM, jM, aM, PM, nM, QM, zM, LM, mM, HM, hM, JM, dM, yM, lM, EM, UM, GM, CM) {
+        this.rootName = MM, this.rootId = rM, this.metaStr = iM, this.rot = OM, this.open = SM, this.halfblockPlacement = jM, this.ra = aM, this.treeBase = PM, this.treeCanopy = nM, this.books = QM, this.freshlyGrown = zM, this.roots = LM, this.lava = mM, this.top = HM, this.grassRoots = hM, this.breaking = JM, this.flashing = dM, this.stairsCorner = yM, this.charging = lM, this.direction = EM, this.requiresAmmo = UM, this.woodType = GM, this.caughtMobType = CM
+      }
+    }
+    new Set(["metaStr", "rot", "halfblockPlacement", "stairsCorner"]);
+
+    function aM(MM, rM) {
+      rM.meta = PM(rM.name, rM.id, (rM => MM[rM].id), rM.rootMetaDesc)
+    }
+
+    function PM(MM, rM, iM, aM) {
+      const PM = null !== aM && void 0 !== aM ? aM : MM;
+      if (PM.split("|").length > 1 || PM.startsWith("Caught Mob")) {
+        var nM;
+        const MM = PM.split("|")[0],
+          rM = PM.split("|").slice(1).join("|"),
+          aM = rM.includes("rot") ? parseInt(rM.split("rot")[1][0]) : null;
+        let QM = !!rM.includes("open") || null;
+        rM.includes("closed") && (QM = !1);
+        let zM = rM.includes("bot") ? OM.bot : null;
+        rM.includes("top") ? zM = OM.top : rM.includes("side") && (zM = OM.side);
+        const LM = !!rM.includes("Growing") || null,
+          mM = !!rM.includes("TreeBase") || null,
+          HM = !!rM.includes("TreeCanopy") || null,
+          hM = rM.includes("books") ? parseInt(rM.split("books")[1][0]) : null,
+          JM = !!rM.includes("FreshlyGrown") || null,
+          dM = !(!rM.includes("Roots") || rM.includes("GrassRoots")) || null,
+          yM = !!rM.includes("Lava") || null,
+          lM = !("Top" !== rM && !rM.includes("|Top") && !rM.startsWith("Top|")) || null,
+          EM = !!rM.includes("GrassRoots") || null,
+          UM = !!rM.includes("Breaking") || null,
+          GM = !!rM.includes("Flashing") || null,
+          CM = null !== (nM = SM.find((MM => rM.endsWith(`|${MM}`)))) && void 0 !== nM ? nM : null,
+          eM = rM.includes("charging") ? parseInt(rM.split("charging")[1][0]) : null,
+          bM = rM.includes("dir") ? parseInt(rM.split("dir")[1][0]) : null,
+          wM = !!rM.includes("RequiresAmmo") || null,
+          tM = mM ? rM.split("|")[1] : null,
+          gM = PM.startsWith("Caught Mob") ? PM.split(" ")[2].replaceAll("_", " ") : null;
+        return Object.freeze(new jM(MM, iM(MM), rM, aM, QM, zM, LM, mM, HM, hM, JM, dM, yM, lM, EM, UM, GM, CM, eM, bM, wM, tM, gM))
+      }
+      return Object.freeze(new jM(MM, rM, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

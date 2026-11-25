@@ -1,19 +1,9 @@
 export const id = 369;
 export const ids = [369];
 export const modules = {
-  61967: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      lod3DPixelShader: () => yG
-    });
-    var wG = ZG(40237);
-    const SG = "lod3DPixelShader",
-      LG = "precision highp float;precision highp sampler3D;const float GammaEncodePowerApprox=1.0/2.2;varying vec2 vUV;uniform sampler3D textureSampler;uniform float lod;uniform float slice;uniform int gamma;void main(void)\n{ivec3 textureCoordinates=ivec3(vUV*vec2(textureSize(textureSampler,0).xy),int(slice));gl_FragColor=texelFetch(textureSampler,textureCoordinates,int(lod));if (gamma==0) {gl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(GammaEncodePowerApprox));}}\n";
-    wG.e.ShadersStore[SG] || (wG.e.ShadersStore[SG] = LG);
-    const yG = {
-      name: SG,
-      shader: LG
-    }
+  42661: MM => {
+    MM.exports = JSON.parse('{"texture":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAJCAYAAAD+WDajAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAABMSURBVBiVY3QIZf/f6pvDgA6s43oZmTBEkQDLgdU/GT/YffqPLOidO5uRgYGBgYWBgYFBgJ8Pq068xuK3k4GBgeHDx0+4JXHZiRcAADlyDh3q8hR1AAAAAElFTkSuQmCC","alphaCutoff":0.05000000074505806,"vertices":[0.39698,0.04631,0.5,0.39698,0.04631,0.5,0.39698,0.04631,0.5,0.5,0.09261,0.5765,0.5,0.09261,0.5765,0.5,0.09261,0.5765,0.60302,0.04631,0.5,0.60302,0.04631,0.5,0.60302,0.04631,0.5,0.5,1,0.0765,0.5,1,0.0765,0.5,1,0.0765,0.39698,0.95369,0,0.39698,0.95369,0,0.39698,0.95369,0,0.5,0.90739,-0.0765,0.5,0.90739,-0.0765,0.5,0.90739,-0.0765,0.5,0,0.4235,0.5,0,0.4235,0.5,0,0.4235,0.60302,0.95369,0,0.60302,0.95369,0,0.60302,0.95369,0],"uvs":[0.433639,0.004542,0.423603,0.004542,0.721933,0.102595,0.147889,0.004542,0.566375,0.004542,0.849376,0.102595,0.849376,0.003472,0.576411,0.004542,0.280625,0.004542,0.147889,0.879374,0.849376,0.114517,0.566375,0.879374,0.433639,0.879374,0.721933,0.114517,0.423603,0.879374,0.721933,0.21364,0.709147,0.879374,0.290661,0.879374,0.721933,0.003472,0.290661,0.004542,0.709147,0.004542,0.280625,0.879374,0.576411,0.879374,0.849376,0.21364],"indices":[2,5,6,8,3,9,4,0,11,11,0,12,2,6,18,8,9,21],"shades":[1,0.7,0.85,0.85,1,0.7]}')
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

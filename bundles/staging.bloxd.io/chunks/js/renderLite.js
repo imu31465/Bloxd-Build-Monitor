@@ -1,75 +1,75 @@
-export const id = 50;
-export const ids = [50];
+export const id = 56;
+export const ids = [56];
 export const modules = {
-  51430: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      startRenderLite: () => CG
+  53760: (MM, rM, iM) => {
+    iM.d(rM, {
+      startRenderLite: () => wM
     });
-    var wG = ZG(2868),
-      SG = ZG(631),
-      LG = ZG(111),
-      yG = ZG(4818),
-      kG = ZG(41423),
-      UG = ZG(4810),
-      YG = ZG(41100),
-      VG = ZG(40971),
-      pG = ZG(41133),
-      fG = ZG(2801),
-      QG = ZG(4527),
-      KG = ZG(34345);
-    const hG = new Map([
+    var OM = iM(3185),
+      SM = iM(656),
+      jM = iM(114),
+      aM = iM(5200),
+      PM = iM(42135),
+      nM = iM(5198),
+      QM = iM(41798),
+      zM = iM(41677),
+      LM = iM(41846),
+      mM = iM(3122),
+      HM = iM(4895),
+      hM = iM(34904);
+    const JM = new Map([
       ["r", " retry"],
       ["f", " fallback"]
     ]);
-    class dG {
-      constructor(GG) {
-        this.label = void 0, this.noted = void 0, this.lines = 0, this.atMs = -1 / 0, this.label = GG
+    class dM {
+      constructor(MM) {
+        this.label = void 0, this.noted = void 0, this.lines = 0, this.atMs = -1 / 0, this.label = MM
       }
-      line(GG, bG) {
-        const ZG = this.lines < 10 ? 6e4 : 6e5;
-        return void 0 === GG || GG === this.noted || bG - this.atMs < ZG ? null : (this.noted = GG, this.lines++, this.atMs = bG, `${this.label}: ${GG}`)
+      line(MM, rM) {
+        const iM = this.lines < 10 ? 6e4 : 6e5;
+        return void 0 === MM || MM === this.noted || rM - this.atMs < iM ? null : (this.noted = MM, this.lines++, this.atMs = rM, `${this.label}: ${MM}`)
       }
     }
-    class JG {
+    class yM {
       constructor() {
-        this.failuresLogged = 0, this.heldLogged = !1, this.links = new dG("gl links"), this.programUse = new dG("gl programs")
+        this.failuresLogged = 0, this.heldLogged = !1, this.links = new dM("gl links"), this.programUse = new dM("gl programs")
       }
-      failures(GG) {
-        const bG = GG ? GG.split(" ") : [],
-          ZG = bG.slice(this.failuresLogged).map((GG => {
-            var bG;
-            const [ZG, wG] = GG.split(":"), SG = null !== (bG = hG.get(ZG.slice(-1))) && void 0 !== bG ? bG : "";
-            return `gl link failed: program row ${parseInt(ZG)}${SG}, read ${wG} ms after issue`
+      failures(MM) {
+        const rM = MM ? MM.split(" ") : [],
+          iM = rM.slice(this.failuresLogged).map((MM => {
+            var rM;
+            const [iM, OM] = MM.split(":"), SM = null !== (rM = JM.get(iM.slice(-1))) && void 0 !== rM ? rM : "";
+            return `gl link failed: program row ${parseInt(iM)}${SM}, read ${OM} ms after issue`
           }));
-        return this.failuresLogged = bG.length, ZG
+        return this.failuresLogged = rM.length, iM
       }
-      heldAtBackstop(GG) {
-        return this.heldLogged || void 0 === GG ? null : (this.heldLogged = !0, `first view by the backstop, draws held for programs ${GG}`)
+      heldAtBackstop(MM) {
+        return this.heldLogged || void 0 === MM ? null : (this.heldLogged = !0, `first view by the backstop, draws held for programs ${MM}`)
       }
-      summaryLines(GG, bG, ZG, wG) {
-        const SG = this.links.line(GG, ZG);
-        return [SG && `${SG}; tab ${(0,KG.f)(wG)}`, this.programUse.line(bG, ZG)].filter((GG => null !== GG))
+      summaryLines(MM, rM, iM, OM) {
+        const SM = this.links.line(MM, iM);
+        return [SM && `${SM}; tab ${(0,hM.c)(OM)}`, this.programUse.line(rM, iM)].filter((MM => null !== MM))
       }
     }
-    var rG = ZG(4712);
-    class zG {
+    var lM = iM(5076);
+    class EM {
       constructor() {
         this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, this.lastDrawnMs = null
       }
-      frame(GG, bG, ZG) {
-        if ("none" !== bG && (this.frames++, "paced" === bG && this.paced++, "drawn" === bG)) {
-          if (this.drawn++, this.renderUs += ZG, this.renderUsMax = Math.max(this.renderUsMax, ZG), null !== this.lastDrawnMs) {
-            const bG = GG - this.lastDrawnMs;
-            this.gapMaxMs = Math.max(this.gapMaxMs, bG), bG >= 50 && this.longGaps++
+      frame(MM, rM, iM) {
+        if ("none" !== rM && (this.frames++, "paced" === rM && this.paced++, "drawn" === rM)) {
+          if (this.drawn++, this.renderUs += iM, this.renderUsMax = Math.max(this.renderUsMax, iM), null !== this.lastDrawnMs) {
+            const rM = MM - this.lastDrawnMs;
+            this.gapMaxMs = Math.max(this.gapMaxMs, rM), rM >= 50 && this.longGaps++
           }
-          this.lastDrawnMs = GG
+          this.lastDrawnMs = MM
         }
       }
       restart() {
         this.take(), this.lastDrawnMs = null
       }
       take() {
-        const GG = {
+        const MM = {
           frames: this.frames,
           drawn: this.drawn,
           paced: this.paced,
@@ -78,253 +78,253 @@ export const modules = {
           renderUs: this.renderUs,
           renderUsMax: this.renderUsMax
         };
-        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, GG
+        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, MM
       }
     }
 
-    function EG(GG) {
-      return (GG / 1048576).toFixed(1)
+    function UM(MM) {
+      return (MM / 1048576).toFixed(1)
     }
-    class oG {
+    class GM {
       constructor() {
         this.logged = 0, this.seen = new Set, this.unlogged = 0
       }
-      admit(GG) {
-        return this.logged >= 20 || this.seen.has(GG) ? (this.unlogged++, null) : (this.seen.add(GG), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${GG}` : GG)
+      admit(MM) {
+        return this.logged >= 20 || this.seen.has(MM) ? (this.unlogged++, null) : (this.seen.add(MM), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${MM}` : MM)
       }
       takeUnlogged() {
-        const GG = this.unlogged;
-        return this.unlogged = 0, GG
+        const MM = this.unlogged;
+        return this.unlogged = 0, MM
       }
     }
 
-    function XG(GG) {
-      (0, fG.j)("renderlite", GG)
+    function CM(MM) {
+      (0, mM.k)("renderlite", MM)
     }
-    class uG {
-      constructor(GG) {
-        this.frames = new zG, this.events = new oG, this.programLines = new JG, this.compileSummary = new dG("webgpu compiles"), this.hidden = new KG.c, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.gridLogged = !1, this.visibilityChanged = () => {
-          const GG = performance.now();
-          this.hidden.changed(GG), this.restartWindow(GG)
-        }, this.Tp = () => {
-          var GG, bG;
-          const ZG = this.session,
-            SG = (0, VG.f)(),
-            LG = performance.now();
-          if (this.logLinks(LG), this.logGrid(), null === ZG || ZG.isStopped || !0 !== (null === SG || void 0 === SG ? void 0 : SG.isCoreRunning)) return void this.restartWindow(LG);
+    class eM {
+      constructor(MM) {
+        this.frames = new EM, this.events = new GM, this.programLines = new yM, this.compileSummary = new dM("webgpu compiles"), this.hidden = new hM.b, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.gridLogged = !1, this.visibilityChanged = () => {
+          const MM = performance.now();
+          this.hidden.changed(MM), this.restartWindow(MM)
+        }, this.bL = () => {
+          var MM, rM;
+          const iM = this.session,
+            SM = (0, zM.e)(),
+            jM = performance.now();
+          if (this.logLinks(jM), this.logGrid(), null === iM || iM.isStopped || !0 !== (null === SM || void 0 === SM ? void 0 : SM.isCoreRunning)) return void this.restartWindow(jM);
           if (document.hidden) return;
-          if (LG - this.windowStart < 2500) return;
-          if (! function(GG) {
-              return GG < 12 || (GG - 12) % 3 === 2
+          if (jM - this.windowStart < 2500) return;
+          if (! function(MM) {
+              return MM < 12 || (MM - 12) % 3 === 2
             }(this.windows++)) return;
           this.logRenderer();
-          const UG = ZG.headerWord(yG.K.GpuTimed),
-            pG = ZG.headerWord(yG.K.GpuFrameUs),
-            fG = this.sampled === ZG ? {
-              timed: UG - this.gpuTimed >>> 0,
-              us: pG - this.gpuUs >>> 0
+          const nM = iM.headerWord(aM.K.GpuTimed),
+            LM = iM.headerWord(aM.K.GpuFrameUs),
+            mM = this.sampled === iM ? {
+              timed: nM - this.gpuTimed >>> 0,
+              us: LM - this.gpuUs >>> 0
             } : null;
-          this.sampled = ZG, this.gpuTimed = UG, this.gpuUs = pG;
-          const QG = null !== (GG = null === (bG = (0, YG.P)((0, wG.G)())) || void 0 === bG ? void 0 : bG.uwG()) && void 0 !== GG ? GG : 0;
-          XG(function(GG, bG) {
-            const ZG = bG.windowMs / 1e3,
-              wG = [`${Math.round(ZG)}s: ${GG.drawn} drawn (${(GG.drawn/ZG).toFixed(1)}/s), ${GG.paced} paced, ${GG.frames-GG.drawn-GG.paced} skipped`, `gap max ${Math.round(GG.gapMaxMs)} ms, ${GG.longGaps} over 50 ms`, `render cpu ${GG.drawn?(GG.renderUs/GG.drawn/1e3).toFixed(2):"-"} ms mean, ${(GG.renderUsMax/1e3).toFixed(1)} max`];
-            null !== bG.gpu && wG.push(`gpu ${bG.gpu.timed?(bG.gpu.us/bG.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${bG.gpu.timed} timed`);
-            const SG = bG.census;
-            wG.push(null === SG ? "draws none yet" : `draws ${(0,kG.e)(SG)} (terrain ${SG.terrainOpaque}+${SG.terrainTransparent}, pack ${SG.terrainPack}, meshes ${SG.regular+SG.thin+SG.line+SG.text}, sky ${SG.earthSky+SG.skyMeshes}, particles ${SG.particles})`), null !== SG && SG.ringCopiesMax > 0 && wG.push(`frame rings ${SG.ringCopiesMax} copies max, ${SG.ringBusyWrites} busy writes so far`);
-            const LG = null === bG.gpuBytesBefore ? "" : ` (${bG.gpuBytes>=bG.gpuBytesBefore?"+":"-"}${EG(Math.abs(bG.gpuBytes-bG.gpuBytesBefore))})`;
-            return wG.push(`gpu mem ${EG(bG.gpuBytes)} MiB${LG}`), wG.push(`pending ${bG.pending}`, "terrain " + (bG.terrainDrawn ? "drawn" : "not drawn yet")), bG.eventsUnlogged > 0 && wG.push(`${bG.eventsUnlogged} events unlogged`), wG.join("; ")
+          this.sampled = iM, this.gpuTimed = nM, this.gpuUs = LM;
+          const HM = null !== (MM = null === (rM = (0, QM.P)((0, OM.E)())) || void 0 === rM ? void 0 : rM.zOM()) && void 0 !== MM ? MM : 0;
+          CM(function(MM, rM) {
+            const iM = rM.windowMs / 1e3,
+              OM = [`${Math.round(iM)}s: ${MM.drawn} drawn (${(MM.drawn/iM).toFixed(1)}/s), ${MM.paced} paced, ${MM.frames-MM.drawn-MM.paced} skipped`, `gap max ${Math.round(MM.gapMaxMs)} ms, ${MM.longGaps} over 50 ms`, `render cpu ${MM.drawn?(MM.renderUs/MM.drawn/1e3).toFixed(2):"-"} ms mean, ${(MM.renderUsMax/1e3).toFixed(1)} max`];
+            null !== rM.gpu && OM.push(`gpu ${rM.gpu.timed?(rM.gpu.us/rM.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${rM.gpu.timed} timed`);
+            const SM = rM.census;
+            OM.push(null === SM ? "draws none yet" : `draws ${(0,PM.c)(SM)} (terrain ${SM.terrainOpaque}+${SM.terrainTransparent}, pack ${SM.terrainPack}, meshes ${SM.regular+SM.thin+SM.line+SM.text}, sky ${SM.earthSky+SM.skyMeshes}, particles ${SM.particles})`), null !== SM && SM.ringCopiesMax > 0 && OM.push(`frame rings ${SM.ringCopiesMax} copies max, ${SM.ringBusyWrites} busy writes so far`);
+            const jM = null === rM.gpuBytesBefore ? "" : ` (${rM.gpuBytes>=rM.gpuBytesBefore?"+":"-"}${UM(Math.abs(rM.gpuBytes-rM.gpuBytesBefore))})`;
+            return OM.push(`gpu mem ${UM(rM.gpuBytes)} MiB${jM}`), OM.push(`pending ${rM.pending}`, "terrain " + (rM.terrainDrawn ? "drawn" : "not drawn yet")), rM.eventsUnlogged > 0 && OM.push(`${rM.eventsUnlogged} events unlogged`), OM.join("; ")
           }(this.frames.take(), {
-            windowMs: LG - this.windowStart,
-            gpu: fG,
-            census: (0, kG.f)(SG.api),
-            gpuBytes: QG,
+            windowMs: jM - this.windowStart,
+            gpu: mM,
+            census: (0, PM.f)(SM.api),
+            gpuBytes: HM,
             gpuBytesBefore: this.gpuBytes,
-            pending: ZG.headerWord(yG.K.RenderPending),
-            terrainDrawn: 0 !== (ZG.headerWord(yG.K.LoadSteps) & yG.X.TerrainDrawn),
+            pending: iM.headerWord(aM.K.RenderPending),
+            terrainDrawn: 0 !== (iM.headerWord(aM.K.LoadSteps) & aM.T.TerrainDrawn),
             eventsUnlogged: this.events.takeUnlogged()
-          })), this.gpuBytes = QG, this.windowStart = LG
-        }, XG(`${(0,rG.b)(GG)}; client ${SG.s.client} (${SG.s.reason})`), setInterval(this.Tp, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
+          })), this.gpuBytes = HM, this.windowStart = jM
+        }, CM(`${(0,lM.d)(MM)}; client ${SM.x.client} (${SM.x.reason})`), setInterval(this.bL, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
       }
-      frame(GG, bG, ZG) {
-        this.session = GG, this.frames.frame(bG, ZG, "drawn" === ZG ? GG.headerWord(yG.K.RenderUs) : 0)
+      frame(MM, rM, iM) {
+        this.session = MM, this.frames.frame(rM, iM, "drawn" === iM ? MM.headerWord(aM.K.RenderUs) : 0)
       }
-      coreErrors(GG) {
+      coreErrors(MM) {
         for (const {
-            code: wG,
-            detail: SG
+            code: OM,
+            detail: SM
           }
-          of GG) {
-          var bG, ZG;
-          if (wG >= yG.m.RenderDeviceLost && wG <= yG.m.RenderSerialLinks) this.event(`render error ${(0,UG.de)(wG)}${null!==(bG=null===(ZG=(0,pG.c)(wG,SG))||void 0===ZG?void 0:ZG.words)&&void 0!==bG?bG:""} (detail ${SG})`)
+          of MM) {
+          var rM, iM;
+          if (OM >= aM.n.RenderDeviceLost && OM <= aM.n.RenderSerialLinks) this.event(`render error ${(0,nM.Yd)(OM)}${null!==(rM=null===(iM=(0,LM.e)(OM,SM))||void 0===iM?void 0:iM.words)&&void 0!==rM?rM:""} (detail ${SM})`)
         }
       }
-      reload(GG, bG, ZG, wG) {
-        this.event(`render reload: ${GG?"webgpu":"gl"} ${ZG}, losses ${bG}${void 0===wG?"":`: ${wG}`}`)
+      reload(MM, rM, iM, OM) {
+        this.event(`render reload: ${MM?"webgpu":"gl"} ${iM}, losses ${rM}${void 0===OM?"":`: ${OM}`}`)
       }
-      crashed(GG) {
+      crashed(MM) {
         let {
-          site: bG,
-          error: ZG,
-          header: wG
-        } = GG;
-        const SG = null !== wG && 0 !== wG.lastError ? `, last error ${(0,UG.de)(wG.lastError)} (detail ${wG.lastErrorDetail})` : "",
-          LG = ZG instanceof Error ? `${ZG.name}: ${ZG.message}` : null === ZG || void 0 === ZG ? "" : String(ZG);
-        this.event(`core stopped at ${bG}${SG}${LG&&`: ${LG}`}`)
+          site: rM,
+          error: iM,
+          header: OM
+        } = MM;
+        const SM = null !== OM && 0 !== OM.lastError ? `, last error ${(0,nM.Yd)(OM.lastError)} (detail ${OM.lastErrorDetail})` : "",
+          jM = iM instanceof Error ? `${iM.name}: ${iM.message}` : null === iM || void 0 === iM ? "" : String(iM);
+        this.event(`core stopped at ${rM}${SM}${jM&&`: ${jM}`}`)
       }
-      event(GG) {
-        const bG = this.events.admit(GG);
-        null !== bG && XG(bG)
+      event(MM) {
+        const rM = this.events.admit(MM);
+        null !== rM && CM(rM)
       }
-      restartWindow(GG) {
-        this.frames.restart(), this.windowStart = GG;
-        const bG = this.session;
-        null === bG || bG.isStopped ? this.sampled = null : (this.sampled = bG, this.gpuTimed = bG.headerWord(yG.K.GpuTimed), this.gpuUs = bG.headerWord(yG.K.GpuFrameUs))
+      restartWindow(MM) {
+        this.frames.restart(), this.windowStart = MM;
+        const rM = this.session;
+        null === rM || rM.isStopped ? this.sampled = null : (this.sampled = rM, this.gpuTimed = rM.headerWord(aM.K.GpuTimed), this.gpuUs = rM.headerWord(aM.K.GpuFrameUs))
       }
-      logLinks(GG) {
-        const bG = window.bloxdRenderDebug;
-        for (const SG of this.programLines.failures(null === bG || void 0 === bG ? void 0 : bG.linkFailures)) this.event(SG);
-        const ZG = this.programLines.heldAtBackstop(null === bG || void 0 === bG ? void 0 : bG.heldAtBackstop);
-        null !== ZG && XG(ZG);
-        for (const SG of this.programLines.summaryLines(null === bG || void 0 === bG ? void 0 : bG.links, null === bG || void 0 === bG ? void 0 : bG.programUse, GG, this.hidden.totals(GG))) XG(SG);
-        const wG = this.compileSummary.line(null === bG || void 0 === bG ? void 0 : bG.compiles, GG);
-        null !== wG && XG(wG)
+      logLinks(MM) {
+        const rM = window.bloxdRenderDebug;
+        for (const SM of this.programLines.failures(null === rM || void 0 === rM ? void 0 : rM.linkFailures)) this.event(SM);
+        const iM = this.programLines.heldAtBackstop(null === rM || void 0 === rM ? void 0 : rM.heldAtBackstop);
+        null !== iM && CM(iM);
+        for (const SM of this.programLines.summaryLines(null === rM || void 0 === rM ? void 0 : rM.links, null === rM || void 0 === rM ? void 0 : rM.programUse, MM, this.hidden.totals(MM))) CM(SM);
+        const OM = this.compileSummary.line(null === rM || void 0 === rM ? void 0 : rM.compiles, MM);
+        null !== OM && CM(OM)
       }
       logGrid() {
-        var GG;
-        const bG = null === (GG = window.bloxdRenderDebug) || void 0 === GG ? void 0 : GG.gridFaces;
-        this.gridLogged || void 0 === bG || (this.gridLogged = !0, XG(`gl1 grid ${bG}`))
+        var MM;
+        const rM = null === (MM = window.bloxdRenderDebug) || void 0 === MM ? void 0 : MM.gridFaces;
+        this.gridLogged || void 0 === rM || (this.gridLogged = !0, CM(`gl1 grid ${rM}`))
       }
       logRenderer() {
-        var GG, bG;
+        var MM, rM;
         if (this.rendererLogged) return;
         this.rendererLogged = !0;
-        const ZG = window.bloxdRenderDebug,
-          wG = (0, LG.q)(),
-          SG = void 0 === (null === ZG || void 0 === ZG ? void 0 : ZG.parallelCompile) ? "" : `; parallel compile ${ZG.parallelCompile}`;
-        XG(`renderer gl ${wG?`${wG.vendor} / ${wG.renderer}`:"(not read)"}; terrain fetch ${null!==(GG=null===ZG||void 0===ZG?void 0:ZG.fetch)&&void 0!==GG?GG:"(not noted)"}${SG}`), XG(`renderer caps ${null!==(bG=null===ZG||void 0===ZG?void 0:ZG.caps)&&void 0!==bG?bG:"(not noted)"}`)
+        const iM = window.bloxdRenderDebug,
+          OM = (0, jM.y)(),
+          SM = void 0 === (null === iM || void 0 === iM ? void 0 : iM.parallelCompile) ? "" : `; parallel compile ${iM.parallelCompile}`;
+        CM(`renderer gl ${OM?`${OM.vendor} / ${OM.renderer}`:"(not read)"}; terrain fetch ${null!==(MM=null===iM||void 0===iM?void 0:iM.fetch)&&void 0!==MM?MM:"(not noted)"}${SM}`), CM(`renderer caps ${null!==(rM=null===iM||void 0===iM?void 0:iM.caps)&&void 0!==rM?rM:"(not noted)"}`)
       }
     }
-    let iG = null;
+    let bM = null;
 
-    function CG(GG) {
-      return (0, QG.e)(), iG ??= new uG(GG), iG
+    function wM(MM) {
+      return (0, HM.d)(), bM ??= new eM(MM), bM
     }
   },
-  4712: (GG, bG, ZG) => {
-    function wG(GG) {
-      if (null === GG) return "backend: none picked (no renderer build)";
-      const bG = GG.adapter ? `${GG.adapter.vendor}/${GG.adapter.architecture}` : "none";
-      return `backend ${GG.backend}: reason ${GG.reason}, source ${GG.source}, adapter ${bG}`
+  5076: (MM, rM, iM) => {
+    function OM(MM) {
+      if (null === MM) return "backend: none picked (no renderer build)";
+      const rM = MM.adapter ? `${MM.adapter.vendor}/${MM.adapter.architecture}` : "none";
+      return `backend ${MM.backend}: reason ${MM.reason}, source ${MM.source}, adapter ${rM}`
     }
-    ZG.d(bG, {
-      b: () => wG
+    iM.d(rM, {
+      d: () => OM
     })
   },
-  34345: (GG, bG, ZG) => {
-    function wG(GG) {
-      return `hidden ${GG.changes} changes, ${Math.round(GG.hiddenMs)} ms`
+  34904: (MM, rM, iM) => {
+    function OM(MM) {
+      return `hidden ${MM.changes} changes, ${Math.round(MM.hiddenMs)} ms`
     }
-    ZG.d(bG, {
-      c: () => SG,
-      f: () => wG
+    iM.d(rM, {
+      b: () => SM,
+      c: () => OM
     });
-    class SG {
+    class SM {
       constructor() {
         this.changes = 0, this.hiddenMs = 0, this.hiddenSinceMs = document.hidden ? performance.now() : -1
       }
-      changed(GG) {
-        this.changes++, document.hidden ? this.hiddenSinceMs = GG : this.hiddenSinceMs >= 0 && (this.hiddenMs += GG - this.hiddenSinceMs, this.hiddenSinceMs = -1)
+      changed(MM) {
+        this.changes++, document.hidden ? this.hiddenSinceMs = MM : this.hiddenSinceMs >= 0 && (this.hiddenMs += MM - this.hiddenSinceMs, this.hiddenSinceMs = -1)
       }
-      totals(GG) {
+      totals(MM) {
         return {
           changes: this.changes,
-          hiddenMs: this.hiddenMs + (this.hiddenSinceMs >= 0 ? GG - this.hiddenSinceMs : 0)
+          hiddenMs: this.hiddenMs + (this.hiddenSinceMs >= 0 ? MM - this.hiddenSinceMs : 0)
         }
       }
     }
   },
-  41423: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => yG,
-      f: () => LG,
-      j: () => kG
+  42135: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => aM,
+      f: () => jM,
+      j: () => PM
     });
-    var wG = ZG(40954),
-      SG = ZG(40971);
+    var OM = iM(41669),
+      SM = iM(41677);
 
-    function LG(GG) {
-      if (GG.queries.drawCensus() < wG.Bb.BYTES) return null;
-      const bG = GG.memoryData(GG.scratch(), wG.Bb.BYTES, 4, "the draw census");
-      return null === bG ? null : {
-        terrainOpaque: wG.Bb.terrainOpaque(bG, 0),
-        terrainTransparent: wG.Bb.terrainTransparent(bG, 0),
-        terrainPack: wG.Bb.terrainPack(bG, 0),
-        earthSky: wG.Bb.earthSky(bG, 0),
-        skyMeshes: wG.Bb.skyMeshes(bG, 0),
-        regular: wG.Bb.regular(bG, 0),
-        thin: wG.Bb.thin(bG, 0),
-        line: wG.Bb.line(bG, 0),
-        text: wG.Bb.text(bG, 0),
-        particles: wG.Bb.particles(bG, 0),
-        terrainParts: wG.Bb.terrainParts(bG, 0),
-        terrainCompiling: wG.Bb.terrainCompiling(bG, 0),
-        ringCopiesMax: wG.Bb.ringCopiesMax(bG, 0),
-        ringBusyWrites: wG.Bb.ringBusyWrites(bG, 0)
+    function jM(MM) {
+      if (MM.queries.drawCensus() < OM.wb.BYTES) return null;
+      const rM = MM.memoryData(MM.scratch(), OM.wb.BYTES, 4, "the draw census");
+      return null === rM ? null : {
+        terrainOpaque: OM.wb.terrainOpaque(rM, 0),
+        terrainTransparent: OM.wb.terrainTransparent(rM, 0),
+        terrainPack: OM.wb.terrainPack(rM, 0),
+        earthSky: OM.wb.earthSky(rM, 0),
+        skyMeshes: OM.wb.skyMeshes(rM, 0),
+        regular: OM.wb.regular(rM, 0),
+        thin: OM.wb.thin(rM, 0),
+        line: OM.wb.line(rM, 0),
+        text: OM.wb.text(rM, 0),
+        particles: OM.wb.particles(rM, 0),
+        terrainParts: OM.wb.terrainParts(rM, 0),
+        terrainCompiling: OM.wb.terrainCompiling(rM, 0),
+        ringCopiesMax: OM.wb.ringCopiesMax(rM, 0),
+        ringBusyWrites: OM.wb.ringBusyWrites(rM, 0)
       }
     }
 
-    function yG(GG) {
+    function aM(MM) {
       const {
-        terrainOpaque: bG,
-        terrainTransparent: ZG,
-        earthSky: wG,
-        skyMeshes: SG,
-        regular: LG,
-        thin: yG,
-        line: kG,
-        text: UG,
-        particles: YG
-      } = GG;
-      return bG + ZG + wG + SG + LG + yG + kG + UG + YG
+        terrainOpaque: rM,
+        terrainTransparent: iM,
+        earthSky: OM,
+        skyMeshes: SM,
+        regular: jM,
+        thin: aM,
+        line: PM,
+        text: nM,
+        particles: QM
+      } = MM;
+      return rM + iM + OM + SM + jM + aM + PM + nM + QM
     }
 
-    function kG() {
-      const GG = (0, SG.f)();
-      return !0 === (null === GG || void 0 === GG ? void 0 : GG.isCoreRunning) ? function(GG) {
-        const bG = LG(GG);
-        if (null === bG) return [];
+    function PM() {
+      const MM = (0, SM.e)();
+      return !0 === (null === MM || void 0 === MM ? void 0 : MM.isCoreRunning) ? function(MM) {
+        const rM = jM(MM);
+        if (null === rM) return [];
         const {
-          terrainOpaque: ZG,
-          terrainTransparent: wG,
-          terrainPack: SG,
-          earthSky: kG,
-          skyMeshes: UG,
-          regular: YG,
-          thin: VG,
-          line: pG,
-          text: fG,
-          particles: QG
-        } = bG;
+          terrainOpaque: iM,
+          terrainTransparent: OM,
+          terrainPack: SM,
+          earthSky: PM,
+          skyMeshes: nM,
+          regular: QM,
+          thin: zM,
+          line: LM,
+          text: mM,
+          particles: HM
+        } = rM;
         return [{
           label: "Drawn",
-          value: `${yG(bG)}`
+          value: `${aM(rM)}`
         }, {
           label: "Terrain",
-          value: `${ZG} opaque / ${wG} transparent (${SG} shader pack)`
+          value: `${iM} opaque / ${OM} transparent (${SM} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${YG} / ${VG}`
+          value: `${QM} / ${zM}`
         }, {
           label: "Text / Lines",
-          value: `${fG} / ${pG}`
+          value: `${mM} / ${LM}`
         }, {
           label: "Sky / Particles",
-          value: `${kG+UG} / ${QG}`
+          value: `${PM+nM} / ${HM}`
         }]
-      }(GG.api) : []
+      }(MM.api) : []
     }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

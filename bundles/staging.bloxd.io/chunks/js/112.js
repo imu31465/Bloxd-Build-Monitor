@@ -1,786 +1,547 @@
 export const id = 112;
 export const ids = [112];
 export const modules = {
-  8955: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      default: () => zb
+  5278: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      default: () => vM
     });
-    var wG = ZG(1457),
-      SG = ZG(17),
-      LG = ZG(4678),
-      yG = ZG(51),
-      kG = ZG(1389);
-    var UG = ZG(1895),
-      YG = ZG(1444),
-      VG = ZG(1311),
-      pG = ZG(1151),
-      fG = ZG(140),
-      QG = ZG(188),
-      KG = ZG(982),
-      hG = ZG(988),
-      dG = ZG(1177),
-      JG = ZG(2351),
-      rG = ZG(1431),
-      zG = ZG(1096),
-      EG = ZG(8957),
-      oG = ZG(1481);
-
-    function XG(GG, bG) {
-      const ZG = !0 === bG.debugResult.gameRefused,
-        wG = ZG || bG.code === fG.h.REQUEST_TO_MATCHMAKING ? (0, EG.j)(bG.message) : null;
-      if (null !== wG) return uG(GG, GG((0, EG.q)(wG)), GG(EG.n[wG])), !0;
-      if (ZG) return async function(GG) {
-        const {
-          gameNameWithVariation: bG,
-          lobbyName: ZG,
-          shownLobbyName: wG
-        } = UG.gameBridge.latest("connectedGame"), SG = "classic" === bG && (0, dG.F)(ZG) ? wG : await (0, JG.h)(GG, bG, ZG);
-        return "" !== SG ? GG("general:cantJoinGame", {
-          game: SG
-        }) : GG("general:cantJoinThisGame")
-      }(GG).then((ZG => {
-        uG(GG, ZG, bG.message)
-      })), !0;
-      const {
-        joinFailure: SG
-      } = bG.debugResult, LG = "refused" === (null === SG || void 0 === SG ? void 0 : SG.at) ? SG.code : null;
-      return LG === QG.b.schematicNotPublished.code ? (async function(GG, bG) {
-        const ZG = (0, KG.j)(UG.gameBridge.latest("connectedGame").gameNameWithVariation),
-          wG = await async function(GG) {
-            try {
-              const bG = await rG.d.getGame(await zG.userContextManager.getCurrentUserContext(), GG, !0);
-              return bG.gamePublished ? null : bG.name
-            } catch (bG) {
-              return bG instanceof fG.b && 435 === bG.httpCode || console.error(`Failed to get unpublished game ${GG}`, bG), null
-            }
-          }(ZG);
-        if (null === wG) return void uG(GG, GG("general:cantJoinThisGame"), bG);
-        const SG = await VG.NotificationProvider.showPromptPopup({
-          icon: "rocket-launch",
-          title: GG("studio:gameNotPublishedTitle", {
-            game: wG
-          }),
-          confirmText: GG("studio:publishInStudio"),
-          cancelText: GG("general:cancel")
-        }).getResult();
-        !0 === SG && (0, YG.navigatePreserveSearch)((0, oG.p)((0, hG.b)(ZG), "manage"))
-      }(GG, bG.message), !0) : LG === QG.b.schematicBanned.code && (uG(GG, GG("general:cantJoinThisGame"), bG.message), !0)
-    }
-
-    function uG(GG, bG, ZG) {
-      VG.NotificationProvider.showPromptPopup({
-        icon: "lock",
-        title: bG,
-        subtitle: ZG,
-        confirmText: GG("general:ok"),
-        cancelText: ""
-      })
-    }
-    var iG = ZG(4611),
-      CG = ZG(19),
-      WG = ZG(1202),
-      mG = ZG(1702),
-      IG = ZG(80),
-      FG = ZG(1275),
-      vG = ZG(1385),
-      aG = ZG(4541),
-      cG = ZG(4380),
-      lG = ZG(4327),
-      jG = ZG(3216),
-      PG = ZG(1290),
-      MG = ZG(751),
-      AG = ZG(1185),
-      sG = ZG(3278),
-      qG = ZG(3135),
-      nG = ZG(1315),
-      gG = ZG(1302),
-      eG = ZG(5008),
-      RG = ZG(8960),
-      TG = ZG(2952),
-      HG = ZG(1067);
-
-    function tG(GG) {
-      let {
-        onApply: bG,
-        onSkip: ZG
-      } = GG;
-      const {
-        t: wG
-      } = (0, pG.w)();
-      return (0, yG.useEffect)((() => {
-        TG.f.skipPlayWait()
-      }), []), (0, HG.jsx)(nG.j, {
-        icon: "download",
-        title: "customTexturePack:downloadTitle",
-        subtitle: (0, HG.jsxs)("div", {
-          className: "CustomTexturePackDownloaderSubtitleText",
-          children: [wG("customTexturePack:downloadPrompt"), (0, HG.jsx)("div", {
-            className: "CustomTexturePackDownloaderWarningText",
-            children: wG("customTexturePack:authorWarning")
-          }), (0, HG.jsx)("div", {
-            className: "CustomTexturePackDownloaderSecondaryText",
-            children: wG("customTexturePack:existingPackSaved")
-          })]
-        }),
-        confirm: {
-          text: "general:apply",
-          onClick: bG
-        },
-        cancel: {
-          text: "customTexturePack:skip",
-          onClick: ZG
-        }
-      })
-    }
-    async function DG() {
-      let GG = !1;
-      const bG = VG.NotificationProvider.showCustomPopup({
-        body: bG => (0, HG.jsx)(tG, {
-          onApply: () => {
-            GG = !0, bG()
-          },
-          onSkip: bG
-        }),
-        disableExitButton: !0,
-        disablePressBackgroundToClose: !0
-      });
-      return await bG.getResult(), GG
-    }
-    let NG = {
-      wanted: !1
+    var OM = iM(44),
+      SM = iM(1608),
+      jM = iM(332),
+      aM = iM(1240),
+      PM = iM(1694),
+      nM = iM(1279),
+      QM = iM(1630),
+      zM = iM(1573),
+      LM = iM(2896);
+    const mM = {
+      retries: 2,
+      minTimeout: 2e3
     };
-    let OG = null;
+    var HM = iM(1130),
+      hM = iM(1685),
+      JM = iM(1142),
+      dM = iM(2006),
+      yM = iM(1188),
+      lM = iM(1229),
+      EM = iM(3875),
+      UM = iM(1396),
+      GM = iM(1520),
+      CM = iM(1591),
+      eM = iM(2834),
+      bM = iM(2847),
+      wM = iM(5280),
+      tM = iM(2280),
+      gM = iM(1116),
+      uM = iM.n(gM),
+      RM = iM(1398),
+      pM = iM(5282),
+      WM = iM(19),
+      sM = iM(2039),
+      DM = iM(4004),
+      kM = iM(2137),
+      ZM = iM(3981),
+      oM = iM(83),
+      fM = iM(4934),
+      YM = iM(1303);
+    const NM = [wM];
 
-    function xG(GG) {
-      GG.setGamePackConfirm(DG), OG = GG
-    }
-    var BG = ZG(3465);
-
-    function Gb(GG) {
+    function AM(MM) {
       let {
-        schematicId: bG,
-        texturePackKey: ZG,
-        onClose: wG
-      } = GG;
-      const [SG, LG] = (0, yG.useState)("prompt"), [kG, UG] = (0, yG.useState)(null), YG = (0, BG.c)();
-
-      function VG() {
-        wG()
-      }
-      return "prompt" === SG ? (0, HG.jsx)(tG, {
-        onApply: async function() {
-          LG("downloading");
-          try {
-            const GG = await async function(GG, bG) {
-              const ZG = await (0, eG.e)(bG);
-              if (ZG) return {
-                pack: ZG,
-                key: bG
-              };
-              const wG = await zG.userContextManager.getCurrentUserContext(),
-                SG = (await rG.d.getGame(wG, GG, !0)).customTexturePackKey;
-              if (!SG) return null;
-              const LG = await (0, eG.e)(SG);
-              if (!LG) throw new Error("The texture pack could not be found");
-              return {
-                pack: LG,
-                key: SG
-              }
-            }(bG, ZG);
-            if (!YG.current) return;
-            if (!GG) return void wG();
-            if ((0, sG.i)(GG.pack)) return void LG("refused");
-            qG.e.setFromJson(GG.pack, "customGame"), await qG.e.saveTemporaryTexturePack(GG.key), YG.current && (0, mG.reloadBloxd)()
-          } catch (GG) {
-            UG(GG instanceof Error ? GG.message : String(GG)), LG("error")
-          }
-        },
-        onSkip: VG
-      }) : "downloading" === SG ? (0, HG.jsx)(nG.j, {
-        icon: "download",
-        title: "customTexturePack:downloading",
-        subtitle: (0, HG.jsx)("div", {
-          className: "CustomTexturePackDownloaderLogoLoaderContainer",
-          children: (0, HG.jsx)(gG.b, {
-            showFace: !0
-          })
-        })
-      }) : "error" === SG ? (0, HG.jsx)(nG.j, {
-        icon: "face-worried",
-        title: "customTexturePack:errorTitle",
-        subtitle: kG,
-        confirm: {
-          text: "customTexturePack:refreshPage",
-          onClick: () => {
-            window.location.reload()
-          }
-        },
-        cancel: {
-          text: "customTexturePack:skip",
-          onClick: VG
-        }
-      }) : "refused" === SG ? (0, HG.jsx)(nG.j, {
-        icon: "face-worried",
-        title: "customTexturePack:cantApplyTitle",
-        subtitle: "customTexturePack:gamePackHasExternalUrls",
-        confirm: {
-          text: "general:continue",
-          onClick: VG
-        }
-      }) : null
+        icon: rM,
+        label: iM,
+        value: OM
+      } = MM;
+      return (0, YM.jsxs)("div", {
+        className: "PlayerProfileStat",
+        children: [(0, YM.jsx)(RM.b, {
+          name: rM,
+          className: "PlayerProfileStatIcon"
+        }), (0, YM.jsxs)("div", {
+          className: "PlayerProfileStatText",
+          children: [(0, YM.jsx)("div", {
+            className: "PlayerProfileStatLabel SmallTextLight",
+            children: iM
+          }), (0, YM.jsx)("div", {
+            className: "PlayerProfileStatValue",
+            children: OM
+          })]
+        })]
+      })
     }
-    var bb = ZG(8975),
-      Zb = ZG(4313),
-      wb = ZG(1749),
-      Sb = ZG(2920),
-      Lb = ZG(4318),
-      yb = ZG(2126),
-      kb = ZG(8981);
-    var Ub = ZG(4695),
-      Yb = ZG(1260),
-      Vb = ZG(1694),
-      pb = ZG(631),
-      fb = ZG(717),
-      Qb = ZG(1775);
 
-    function Kb() {
-      const GG = SG.e.get("clientEscMenuOptions");
-      UG.gameBridge.send("setLookSensitivity", SG.e.get("isTouchScreen") ? (0, fb.m)(GG) : GG.mouseSensitivity)
-    }
-    const hb = 45e3;
-
-    function db(GG) {
-      const bG = GG.asError();
-      if (bG.debugResult.RZ || (0, Vb.d)(bG.debugResult.error)) return;
-      console.log("Failed to join lobby:", bG.message);
-      const ZG = "timedOut" === bG.debugResult.gameServerUnreachable;
-      (0, Sb.reportClientError)("matchmake_failed", bG.message, ZG ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : fG.h[bG.code]);
+    function xM(MM) {
+      let {
+        profile: rM
+      } = MM;
       const {
-        error: wG
-      } = bG.debugResult;
-      if (wG instanceof jG.h && "default" !== wG.packSource) {
-        const GG = (0, Lb.f)("js", "game" === wG.packSource ? "game" : "page", (0, Lb.h)(wG));
-        (0, Sb.reportClientError)("texture_pack", wG, GG)
+        t: iM,
+        selectedLanguage: OM
+      } = (0, yM.A)();
+      let SM = iM("homePage:profileUnknown");
+      if (rM.lastOnline) {
+        const MM = (0, yM.n)(OM.code, "homePage:profileTimeAgo");
+        SM = iM("homePage:profileTimeAgo", {
+          time: (0, jM.db)(MM, rM.lastOnline, Date.now())
+        })
       }
+      let aM = iM("homePage:profileUnknown");
+      return rM.accountCreatedAt && (aM = new Date(rM.accountCreatedAt).toLocaleDateString(void 0, {
+        year: "numeric",
+        month: "short",
+        day: "numeric"
+      })), (0, YM.jsxs)("div", {
+        className: "PlayerProfileStats",
+        children: [(0, YM.jsx)(AM, {
+          icon: "hourglass",
+          label: iM("homePage:profileTimePlayed"),
+          value: (0, DM.b)(rM.totalPlayMinutes)
+        }), (0, YM.jsx)(AM, {
+          icon: "wifi",
+          label: iM("homePage:profileLastOnline"),
+          value: SM
+        }), (0, YM.jsx)(AM, {
+          icon: "calendar",
+          label: iM("homePage:profileJoined"),
+          value: aM
+        })]
+      })
     }
 
-    function Jb(GG) {
-      if (null === GG || void 0 === GG || !GG.isError()) return !1;
-      const bG = GG.asError();
-      return bG.code === fG.h.REQUEST_TO_MATCHMAKING && !(0, Vb.d)(bG.debugResult.error)
-    }
-    async function rb(GG, bG, ZG) {
-      const wG = (0, Ub.G)(bG);
-      async function yG(GG, bG, ZG, wG) {
-        var yG;
-        if (wG.aborted) return null;
-        null === SG.e.get("gameEntrySource") && (0, SG.n)("directPlayUrl"), pb.B && (0, RG.e)().catch((() => {})), SG.e.set({
-          gameState: "findingLobby"
-        }), CG.l.xh("loadingScreenState", "loadingPage:findingLobby");
-        const kG = await zG.userContextManager.getCurrentUserContext();
-        UG.gameBridge.send("setRequestedGame", {
-          gameNameWithVariation: bG,
-          discordContext: GG instanceof AG.e ? GG.getSerialisableParams() : null
-        }), (0, wb.d)(null !== (yG = TG.f.playInputAt()) && void 0 !== yG ? yG : performance.now());
-        const YG = await async function(GG, bG, ZG, wG, SG) {
-          try {
-            await (0, Qb.n)(LG.reqLibsLoadedPromise, hb, "Required libraries timed out")
-          } catch (yG) {
-            const GG = yG instanceof Qb.h ? `Required libraries still loading after ${hb/1e3} s: ${(0,LG.requiredLibsPending)().join(", ")}` : yG.toString();
-            return WG.d.errorWithCode(GG, fG.h.LOAD_REQUIRED_LIBS, {
-              error: yG,
-              severity: "medium"
-            })
-          }
-          return CG.l.xh("matchmakeAndPlayStepCompleted", {
-            step: fG.h.LOAD_REQUIRED_LIBS,
-            totalSubSteps: 1
-          }), (0, LG.matchmakeAndPlayMaybeUnloaded)(GG, bG, ZG, wG, SG)
-        }(GG, bG, ZG, kG, wG), VG = YG.isError() ? YG.asError() : null;
-        if (wG.aborted) return VG && db(YG), UG.gameBridge.send("leaveGame", {
+    function vM() {
+      const {
+        t: MM
+      } = (0, yM.A)(), rM = (0, CM.useNavigatePreserveSearch)(), iM = (0, HM.i)(), {
+        playerName: wM,
+        playerUrlName: gM
+      } = (0, SM.D)(), DM = (0, SM.u)(), AM = (0, aM.c)(DM.pathname), vM = AM && ("urlId" in AM ? `urlId:${AM.urlId}` : `name:${AM.lowerCaseName}`), FM = (0, OM.useRef)(vM);
+      FM.current = vM;
+      const {
+        userContext: BM,
+        isUserContextUpdating: XM
+      } = (0, JM.b)(), IM = (0, OM.useRef)(null), KM = (0, OM.useRef)(null), qM = (0, OM.useRef)(null), TM = (0, OM.useRef)(!1), VM = (0, OM.useRef)((0, jM.ac)(NM)), [cM, Mr] = (0, OM.useState)((() => {
+        const MM = AM && bM.e.peek(BM, AM);
+        return MM ? {
+          status: "loaded",
+          profile: MM,
+          playerKey: vM
+        } : {
+          status: "loading"
+        }
+      })), [rr, ir] = (0, OM.useState)(0);
+      (0, OM.useEffect)(eM.e, []), (0, OM.useEffect)((() => {
+        sM.gameBridge.send("leaveGame", {
           reloadPath: null
-        }), null;
-        if (null !== VG && void 0 !== VG && VG.debugResult.RZ) return console.log("Join cancelled:", VG.message), null;
-        if (VG) return YG;
-        const {
-          gameNameWithVariation: pG,
-          lobbyName: QG
-        } = YG.getValue();
-        return Kb(), (0, Yb.D)().setGameViewShown(!0), kG.recordJoin(pG, QG), (0, FG.P)(), YG
-      }
-      return wG && (0, SG.n)("updateRejoin"), (0, yb.n)((async SG => {
-        try {
-          var LG;
-          let kG = GG,
-            UG = await yG(kG, bG, ZG, SG);
-          for (let GG = 0; wG && GG < Ub.j && (Jb(UG) && await (0, Ub.H)((0, Ub.r)(GG), SG)); GG++) kG = (0, Ub.v)(kG, GG + 1, "string" === typeof kG && (0, dG.K)(kG)), UG = await yG(kG, bG, ZG, SG);
-          return null !== (LG = UG) && void 0 !== LG && LG.isError() && db(UG), UG
-        } catch (kG) {
-          if ((0, Sb.reportClientError)("matchmake_failed", kG, "unexpected"), UG.gameBridge.send("leaveGame", {
-              reloadPath: SG.aborted ? null : "/"
-            }), SG.aborted) return null;
-          throw kG
-        }
-      }), (async GG => {
-        var ZG;
-        if (wG) return;
-        const SG = (0, FG.H)();
-        null !== SG && (await SG, GG.aborted) || (null !== (ZG = MG.d[bG]) && void 0 !== ZG && ZG.playAdBeforeMatchmaking ? (TG.f.skipPlayWait(), await new Promise((GG => {
-          (0, FG.cb)((() => {
-            GG(!0)
-          }), "video_start")
-        }))) : (0, FG.cb)((() => {}), "video_start"))
-      }))
-    }
-
-    function zb() {
-      const {
-        t: GG
-      } = (0, pG.w)(), bG = (0, YG.useNavigatePreserveSearch)(), ZG = (0, wG.n)(), QG = (0, wG.v)(), hG = (0, yG.useRef)({
-        t: GG,
-        navigate: bG
-      });
-      hG.current = {
-        t: GG,
-        navigate: bG
-      };
-      const EG = (0, yG.useRef)("");
-      EG.current = ZG.pathname + ZG.search;
-      const {
-        gameState: oG,
-        clientEscMenuOptions: uG
-      } = (0, SG.o)(["gameState", "clientEscMenuOptions"]), CG = (0, yG.useRef)(null), AG = (0, yG.useRef)(!1);
-      var sG;
-      (0, yb.r)(), (0, yb.t)(), sG = pb.B, (0, yG.useEffect)((() => {
-        if (!sG) return;
-        let GG = !0;
-        return (0, RG.e)().then((bG => {
-          GG && xG(bG)
-        })).catch((() => {})), () => {
-          var bG;
-          GG = !1, NG.wanted = !1, null === (bG = OG) || void 0 === bG || bG.setGamePackConfirm(null), OG = null
-        }
-      }), [sG]), (0, yG.useEffect)((() => {
-        var GG, bG, wG;
-        (0, LG.needGameClientNow)();
-        const {
-          t: yG,
-          navigate: kG
-        } = hG.current, pG = (0, bb.b)(QG, ZG.search);
-        if (QG.lobbyName && !new URLSearchParams(ZG.search).has("lobby")) return void kG((0, PG.d)(pG.gameNameWithVariation, pG.lobbyName), {
-          replace: !0
-        });
-        let oG = Promise.resolve({
-          shouldMatchmake: !0
-        });
-        if ("/play/discord-custom-lobby" === ZG.pathname) {
-          const GG = SG.e.get("discordContext");
-          if (!GG) return void kG("/");
-          oG = iG.d.setupDiscordLobby(GG, "classic").then((() => ({
-            shouldMatchmake: !0,
-            discordContext: GG
-          }))).catch((bG => (console.error("Failed to setup discord lobby", bG), {
-            shouldMatchmake: !1,
-            discordContext: GG
-          })))
-        } else if (!pG.gameNameWithVariation || !(0, dG.J)(pG.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${pG.gameNameWithVariation}`), void kG(-1);
-        const uG = CG.current;
-        if (null !== uG && pG.gameNameWithVariation === uG.gameNameWithVariation && pG.lobbyName === uG.lobbyName) return;
-        if (UG.gameBridge.latest("connectedGame").replay) return void(0, yb.j)(null);
-        if ("releaseCountdown" === (null === (GG = (0, JG.j)(pG.gameNameWithVariation)) || void 0 === GG ? void 0 : GG.type)) return console.error(`Game hasn't been released yet: ${pG.gameNameWithVariation}`), void kG(-1);
-        const vG = AG.current;
-        AG.current = !1, (0, FG.K)(), SG.e.set({
-          gameState: "loadingScreen"
-        });
-        const sG = function() {
-            NG.wanted = !1;
-            const GG = {
-              wanted: !0
-            };
-            return NG = GG, () => GG.wanted
-          }(),
-          nG = pG.gameNameWithVariation;
-        if (nG && (pb.B || (0, KG.h)(nG))) {
-          const GG = pb.B ? Promise.all([(0, RG.e)(), zG.userContextManager.getCurrentUserContext()]).then((GG => {
-            let [bG, ZG] = GG;
-            if (sG()) return xG(bG), bG.packForGame(nG, ZG, sG)
-          })) : async function(GG) {
-            await qG.e.indexedDbValuesAreLoaded();
-            const bG = await zG.userContextManager.getCurrentUserContext(),
-              ZG = (0, KG.j)(GG);
-            let wG;
-            try {
-              wG = await rG.d.getGame(bG, ZG, !0)
-            } catch (yG) {
-              return void console.error("Failed to get game", yG)
-            }
-            const SG = wG.customTexturePackKey;
-            if (!SG) return void(qG.e.isUsingTemporaryTexturePack() && ((0, mG.reloadBloxd)(), await new Promise((() => {}))));
-            if (qG.e.isUsingTemporaryTexturePack() && qG.e.getTemporaryTexturePackSource() === SG) return;
-            const LG = VG.NotificationProvider.showCustomPopup({
-              body: GG => (0, HG.jsx)(Gb, {
-                schematicId: ZG,
-                texturePackKey: SG,
-                onClose: GG
-              }),
-              disableExitButton: !0,
-              disablePressBackgroundToClose: !0
-            });
-            await LG.getResult()
-          }(nG), bG = oG;
-          oG = GG.catch((GG => {
-            console.error("Failed to check for custom texture pack", GG)
-          })).then((() => bG))
-        }
-        const gG = {
-          wasm: pb.B,
-          game: pG.gameNameWithVariation,
-          custom: void 0 !== nG && (0, KG.h)(nG),
-          lobbyName: null !== (bG = pG.lobbyName) && void 0 !== bG ? bG : null,
-          direct: null !== pG.directJoinVmUrl && void 0 !== pG.directJoinVmUrl,
-          discord: "/play/discord-custom-lobby" === ZG.pathname,
-          adBeforeMatchmaking: void 0 !== nG && !0 === (null === (wG = MG.d[nG]) || void 0 === wG ? void 0 : wG.playAdBeforeMatchmaking),
-          afterAnother: null !== CG.current || (0, yb.e)()
-        };
-        (0, kb.f)(null);
-        const eG = !(TG = gG).wasm || void 0 === TG.game || TG.custom || TG.direct || TG.discord || TG.adBeforeMatchmaking || TG.afterAnother ? null : () => {
-          ! function(GG, bG) {
-            (0, kb.f)({
-              key: (0, kb.d)(GG, bG),
-              settled: Promise.all([LG.matchmakingLibrariesPromise, zG.userContextManager.getCurrentUserContext()]).then((ZG => {
-                let [wG, SG] = ZG;
-                if (void 0 === wG.matchmakeForAhead) throw new Error("the matchmaking chunk has no matchmaking ahead");
-                return wG.matchmakeForAhead(GG, bG, SG)
-              })).catch((GG => ({
-                result: WG.d.errorWithCode(String(GG), fG.h.REQUEST_TO_MATCHMAKING, {
-                  error: GG,
-                  severity: "medium"
-                }),
-                at: performance.now()
-              })))
-            })
-          }(gG.lobbyName, gG.game)
-        };
-        var TG;
-        const tG = null !== CG.current;
-        CG.current = null, (0, yb.j)(null);
-        const DG = () => {
-          vG ? (0, YG.navigateToHomePage)() : (AG.current = tG, kG(-1))
-        };
-        let OG = !1;
-        const BG = ZG.pathname + ZG.search,
-          wb = () => !OG && EG.current === BG;
-        return (0, kb.b)(oG, eG, (GG => {
-          let {
-            shouldMatchmake: bG,
-            discordContext: ZG
-          } = GG;
-          wb() && (bG ? rb(null !== ZG && void 0 !== ZG ? ZG : pG.lobbyName, ZG ? "classic" : pG.gameNameWithVariation, pG.directJoinVmUrl).then((GG => {
-            if (null !== GG && wb())
-              if (GG.isError()) {
-                var bG;
-                const ZG = GG.asError(),
-                  wG = null !== (bG = ZG.debugResult.severity) && void 0 !== bG ? bG : "high";
-                if ((0, Vb.d)(ZG.debugResult.error)) return void Vb.g.reload();
-                if (ZG.code === fG.h.SHADER_PACK) return void(0, Zb.b)(ZG.message, kG);
-                const LG = SG.e.get("gameEntrySource"),
-                  YG = ZG.code === fG.h.INITIALISE_WEBGL ? (0, cG.b)() : null,
-                  {
-                    error: QG
-                  } = ZG.debugResult;
-                let KG;
-                if (XG(yG, ZG)) KG = Promise.resolve(!1);
-                else if (null !== YG) KG = (0, cG.i)(YG);
-                else if (QG instanceof jG.h) KG = (0, lG.g)(QG);
-                else {
-                  let GG;
-                  switch (wG) {
-                    case "low":
-                      GG = "face-diagonal-mouth";
-                      break;
-                    case "medium":
-                      GG = "face-worried";
-                      break;
-                    case "high":
-                      GG = "face-dizzy"
-                  }
-                  const bG = QG instanceof Qb.h;
-                  let SG = ZG.message;
-                  bG ? SG = yG("general:gameFilesStalled") : ZG.debugResult.gameServerUnreachable && (SG = yG((0, IG.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable"));
-                  KG = VG.NotificationProvider.showPromptPopup({
-                    icon: GG,
-                    title: fG.u[ZG.code],
-                    subtitle: (0, HG.jsxs)(HG.Fragment, {
-                      children: [SG, QG instanceof Error && !bG && (0, HG.jsx)("div", {
-                        style: {
-                          fontSize: "0.9rem",
-                          paddingTop: "1rem"
-                        },
-                        children: (0, HG.jsx)(aG.c, {
-                          errorString: QG.stack
-                        })
-                      })]
-                    }),
-                    confirmText: yG("general:tryAgain"),
-                    cancelText: yG("general:cancel")
-                  }).getResult().then((GG => !0 === GG))
-                }
-                KG.then((GG => {
-                  if (GG) {
-                    (0, SG.n)(LG);
-                    const GG = (0, PG.d)(pG.gameNameWithVariation, pG.lobbyName);
-                    "low" === wG ? kG(GG) : (0, mG.reloadBloxd)(GG)
-                  }
-                })), UG.gameBridge.send("leaveGame", {
-                  reloadPath: "/"
-                }), DG()
-              } else {
-                const {
-                  gameNameWithVariation: bG,
-                  lobbyName: ZG
-                } = GG.getValue();
-                CG.current = {
-                  gameNameWithVariation: bG,
-                  lobbyName: ZG
-                };
-                const wG = (0, PG.d)(bG, ZG);
-                kG(wG, {
-                  replace: !0
-                })
-              }
-          })).catch((GG => {
-            if (!wb()) return;
-            VG.NotificationProvider.showPromptPopup({
-              icon: "face-dizzy",
-              title: "Unexpected Error",
-              subtitle: (0, HG.jsxs)(HG.Fragment, {
-                children: [yG("homePage:pleaseCopyError"), (0, HG.jsx)("div", {
-                  style: {
-                    fontSize: "0.9rem",
-                    paddingTop: "1rem"
-                  },
-                  children: (0, HG.jsx)(aG.c, {
-                    errorString: GG.stack
-                  })
-                })]
-              }),
-              confirmText: yG("general:tryAgain"),
-              cancelText: yG("general:cancel")
-            }).getResult().then((GG => {
-              !0 === GG && (0, mG.reloadBloxd)((0, PG.d)(pG.gameNameWithVariation, pG.lobbyName))
-            })), DG()
-          })) : kG(-1))
-        }), wb), () => {
-          OG = !0
-        }
-      }), [QG, ZG.search, ZG.pathname]), (0, yG.useEffect)((() => {
-        uG.disableFullscreen && (0, vG.h)() ? (0, vG.l)() : !uG.disableFullscreen && (0, vG.j)() && (0, vG.q)({
-          automatic: !0
-        })
-      }), [oG, uG]), (0, yG.useEffect)((() => {
-        "inGame" === oG && Kb()
-      }), [oG, uG]), (0, yG.useEffect)((() => {
-        "inGame" !== oG && SG.e.set({
+        }), WM.d.set({
+          gameState: "landingPage",
+          openEverythingMenuName: null,
           openInGameMenuName: null
         })
-      }), [oG]);
-      const nG = function(GG) {
-        const bG = (0, SG.l)(GG),
-          [ZG, wG] = (0, yG.useState)(0),
-          [LG, UG] = (0, yG.useState)(!1);
-        (0, kG.g)("gameJoined", (() => {
-          (0, SG.l)(SG.e.get("gameState")) && (wG((GG => GG + 1)), UG(!0))
-        })), (0, yG.useEffect)((() => {
-          bG || UG(!1)
-        }), [bG]);
-        const YG = "inGame" === GG;
-        return {
-          mounted: YG || bG && LG,
-          shown: YG,
-          key: ZG
+      }), [DM.key]);
+      const Or = () => {
+        const MM = (0, CM.getPreviousLocation)();
+        null === MM || MM.startsWith("/play") ? (0, CM.navigateToHomePage)() : rM(-1)
+      };
+      (0, fM.e)(Or), (0, OM.useEffect)((() => {
+        var MM;
+        if (XM) return;
+        if (!AM) return void Mr({
+          status: "notFound",
+          playerKey: vM
+        });
+        const rM = "urlId" in AM && (null === (MM = KM.current) || void 0 === MM ? void 0 : MM.urlId) === AM.urlId && qM.current === BM;
+        if (rM && TM.current) return;
+        const iM = rM ? null : bM.e.peek(BM, AM);
+        let OM = !1;
+        const SM = MM => "loaded" === MM.status && (MM.playerKey === vM || "urlId" in AM && MM.profile.urlId === AM.urlId);
+        return iM ? (qM.current = BM, TM.current = !1, Mr({
+          status: "loaded",
+          profile: iM,
+          playerKey: vM
+        }), bM.e.invalidate(AM)) : Mr((MM => SM(MM) ? MM : {
+          status: "loading"
+        })), async function(MM, rM) {
+          if ("lowerCaseName" in rM && rM.lowerCaseName.length > nM.g) return {
+            status: "notFound"
+          };
+          try {
+            return {
+              status: "loaded",
+              profile: await zM.c.getPlayerProfile(MM, rM, mM)
+            }
+          } catch (iM) {
+            return (0, LM.c)(iM) ? {
+              status: "notFound"
+            } : (console.error("Failed to load user profile", iM), {
+              status: "failed"
+            })
+          }
+        }(BM, AM).then((MM => {
+          OM || ("loaded" === MM.status && (qM.current = BM, TM.current = !0), Mr((rM => "failed" === MM.status && SM(rM) ? rM : {
+            ...MM,
+            playerKey: vM
+          })))
+        })), () => {
+          OM = !0
         }
-      }(oG);
-      return (0, HG.jsx)(HG.Fragment, {
-        children: nG.mounted && (0, HG.jsx)(LG.InGameUi, {
-          shown: nG.shown
-        }, nG.key)
+      }), [XM, vM, BM, rr]);
+      const Sr = "loading" === cM.status || cM.playerKey === vM || "loaded" === cM.status && !!AM && "urlId" in AM && cM.profile.urlId === AM.urlId ? cM : {
+          status: "loading"
+        },
+        jr = "loaded" === Sr.status ? Sr.profile : null,
+        ar = "loading" === Sr.status ? null : function(MM) {
+          if ("loaded" === MM.status) {
+            const {
+              profile: rM
+            } = MM;
+            return (0, QM.S)({
+              urlId: rM.urlId,
+              name: rM.player.name,
+              ranks: rM.player.ranks,
+              socialLinks: rM.socialLinks
+            })
+          }
+          return "notFound" === MM.status ? (0, QM.ab)() : null
+        }(Sr),
+        Pr = null !== jr && void 0 !== jr && jr.urlId ? (0, aM.f)({
+          urlId: jr.urlId,
+          name: jr.player.name
+        }) : null;
+      (0, hM.g)(Pr);
+      const nr = null !== jr && void 0 !== jr && jr.player.cosmetics.profileEffect ? tM.f[jr.player.cosmetics.profileEffect] : void 0,
+        Qr = null !== jr && !XM && BM.getPlayerName().toLowerCase() === jr.player.name.toLowerCase(),
+        zr = (0, kM.c)(null === jr || void 0 === jr ? void 0 : jr.player.name),
+        Lr = Qr && BM.playerHasRank("youtuber");
+      KM.current = jr;
+      const mr = (0, OM.useCallback)((() => {
+          AM && (bM.e.invalidate(AM), bM.e.get(BM, AM).then((MM => {
+            FM.current === vM && (TM.current = !0, Mr({
+              status: "loaded",
+              profile: MM,
+              playerKey: vM
+            }))
+          })).catch((MM => {
+            console.error("Failed to refresh user profile", MM)
+          })))
+        }), [vM, BM]),
+        Hr = (0, OM.useCallback)((() => {
+          var MM;
+          const rM = KM.current;
+          return !(!rM || null === (MM = IM.current) || void 0 === MM || !MM.isReady()) && (IM.current.setAllCosmetics(rM.player.cosmetics), !0)
+        }), []);
+      return (0, OM.useEffect)((() => {
+        if (!jr) return;
+        let MM, rM = !1;
+        const iM = () => {
+          rM || Hr() || (MM = setTimeout(iM, 100))
+        };
+        return iM(), () => {
+          rM = !0, clearTimeout(MM)
+        }
+      }), [jr, Hr]), (0, YM.jsxs)("div", {
+        className: uM()("PlayerProfile", {
+          PlayerProfilePortrait: iM
+        }),
+        children: [ar && (0, YM.jsx)(PM.c, {
+          meta: ar
+        }), (0, YM.jsxs)("div", {
+          className: "PlayerProfileBackgroundContainer",
+          children: [nr && (0, YM.jsx)(nr, {}), !nr && (0, YM.jsx)("div", {
+            className: "PlayerProfileBackground",
+            style: {
+              backgroundImage: `url(${VM.current})`
+            }
+          })]
+        }), (0, YM.jsxs)("div", {
+          className: "PlayerProfileHeader",
+          children: [(0, YM.jsx)(GM.c, {
+            onClick: Or,
+            children: MM("general:back")
+          }), jr && !XM && !Qr && oM.featureFlags.useSocialFeatures && (0, YM.jsx)("div", {
+            className: "PlayerProfileExclusionActions",
+            children: (0, YM.jsx)(ZM.d, {
+              playerName: jr.player.name,
+              className: "SmallTextLight"
+            })
+          })]
+        }), "loading" === Sr.status && (0, YM.jsx)("div", {
+          className: "PlayerProfileCentredMessage",
+          children: (0, YM.jsx)(UM.d, {})
+        }), ("notFound" === Sr.status || "failed" === Sr.status) && (0, YM.jsxs)("div", {
+          className: "PlayerProfileCentredMessage PlayerProfileError",
+          children: [(0, YM.jsx)(RM.b, {
+            name: "face-dizzy"
+          }), (0, YM.jsx)("div", {
+            className: "PlayerProfileErrorText",
+            children: "notFound" === Sr.status ? MM("socialBar:playerNotFound", {
+              playerName: null !== gM && void 0 !== gM ? gM : wM
+            }) : MM("playerProfile:loadFailed")
+          }), "failed" === Sr.status && (0, YM.jsx)(GM.e, {
+            onClick: () => {
+              ir((MM => MM + 1))
+            },
+            children: MM("general:tryAgain")
+          })]
+        }), jr && (0, YM.jsxs)("div", {
+          className: "PlayerProfileContent",
+          children: [(0, YM.jsxs)("div", {
+            className: "PlayerProfileLeft",
+            children: [(0, YM.jsx)("div", {
+              className: "PlayerProfileName FullyFancyText",
+              children: (0, YM.jsx)(dM.b, {
+                text: (0, lM.y)(jr.player.ranks, jr.player.name, jr.player.nameColour),
+                friendBadgeFor: zr ? jr.player.name : void 0
+              })
+            }), (0, YM.jsx)("div", {
+              className: "PlayerProfileModel",
+              children: (0, YM.jsx)(OM.Suspense, {
+                fallback: (0, YM.jsx)("div", {
+                  className: "PlayerProfileModelLoading",
+                  children: (0, YM.jsx)(UM.d, {})
+                }),
+                children: (0, YM.jsx)(eM.c, {
+                  ref: IM,
+                  onReady: () => {
+                    Hr()
+                  }
+                })
+              })
+            })]
+          }), (0, YM.jsxs)("div", {
+            className: "PlayerProfileRight",
+            children: [(0, YM.jsx)(xM, {
+              profile: jr
+            }), (jr.socialLinks.length > 0 || Lr) && (0, YM.jsx)(pM.b, {
+              socialLinks: jr.socialLinks,
+              editable: Lr,
+              userContext: BM,
+              onLinksUpdated: mr
+            }), (0, YM.jsxs)("div", {
+              className: "PlayerProfileGames",
+              children: [(0, YM.jsx)("div", {
+                className: "PlayerProfileGamesTitle SmallTextBold",
+                children: MM("homePage:profileReleasedGames")
+              }), 0 === jr.releasedGames.length && (0, YM.jsx)("div", {
+                className: "PlayerProfileNoGames",
+                children: MM("homePage:profileNoReleasedGames")
+              }), jr.releasedGames.length > 0 && (0, YM.jsx)("div", {
+                className: "PlayerProfileGamesGrid",
+                children: jr.releasedGames.map((MM => (0, YM.jsx)(EM.h, {
+                  source: {
+                    type: "preview",
+                    preview: MM
+                  },
+                  gameWidth: "100%",
+                  useLongRatio: !0,
+                  hideFavourites: !0,
+                  entrySource: "other"
+                }, MM.schematicId)))
+              })]
+            })]
+          })]
+        })]
       })
     }
   },
-  5008: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => SG
+  5282: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => dM
     });
-    var wG = ZG(1163);
-    async function SG(GG) {
-      const bG = await fetch(`${wG.clientSideServerUrls.s3Url}/${GG}`, {
-        headers: {
-          Accept: "application/json"
-        }
-      });
-      if (404 === bG.status || 403 === bG.status) return null;
-      if (!bG.ok) throw new Error(`Failed to download the texture pack (${bG.status})`);
-      return await bG.json()
+    var OM = iM(1116),
+      SM = iM.n(OM),
+      jM = iM(5011),
+      aM = iM(1188),
+      PM = iM(1398),
+      nM = iM(1520),
+      QM = iM(1573),
+      zM = iM(1429),
+      LM = iM(2709),
+      mM = iM(1303);
+    const HM = {
+      youtube: {
+        icon: "youtube",
+        color: "#FF0033",
+        name: "YouTube"
+      },
+      tiktok: {
+        icon: "tiktok",
+        color: "#0F0F0F",
+        name: "TikTok"
+      },
+      instagram: {
+        icon: "instagram",
+        color: "#E1306C",
+        name: "Instagram"
+      },
+      twitter: {
+        icon: "x-twitter",
+        color: "#0F0F0F",
+        name: "X"
+      },
+      twitch: {
+        icon: "twitch",
+        color: "#9146FF",
+        name: "Twitch"
+      }
+    };
+
+    function hM(MM) {
+      let {
+        platform: rM
+      } = MM;
+      const iM = "youtube" === rM;
+      return (0, mM.jsxs)("span", {
+        className: SM()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: iM
+        }),
+        children: [iM && (0, mM.jsx)(LM.d, {
+          variant: "white"
+        }), !iM && (0, mM.jsx)(PM.b, {
+          name: HM[rM].icon,
+          kit: "brands"
+        })]
+      })
+    }
+
+    function JM(MM) {
+      let {
+        platform: rM,
+        link: iM,
+        editable: OM,
+        userContext: SM,
+        onLinksUpdated: LM
+      } = MM;
+      const {
+        t: JM
+      } = (0, aM.A)(), dM = HM[rM];
+      if (!iM && !OM) return null;
+
+      function yM() {
+        var MM;
+        if (!SM || !LM) return;
+        zM.NotificationProvider.showInputPopup({
+          title: "homePage:profileSocialLinkEditTitle",
+          textOpts: {
+            title: {
+              platform: dM.name
+            }
+          },
+          prefixText: jM.t[rM],
+          placeholderText: "playBloxd",
+          initialValue: null !== (MM = null === iM || void 0 === iM ? void 0 : iM.handle) && void 0 !== MM ? MM : "",
+          maxLength: 30,
+          submitText: "general:save",
+          secondaryButtonText: iM ? "general:remove" : void 0
+        }).getResult().then((async MM => {
+          if ("notificationTornDown" !== MM && null !== MM) try {
+            "submit" === MM.type ? await QM.c.setSocialLink(SM, rM, MM.value) : await QM.c.clearSocialLink(SM, rM), LM()
+          } catch (iM) {
+            console.error("Failed to update social link", iM), zM.NotificationProvider.showAlertPopup({
+              title: iM.errorMessageForUser,
+              confirmText: "general:ok"
+            })
+          }
+        }))
+      }
+      if (iM) {
+        const MM = `@${iM.handle}`;
+        return (0, mM.jsxs)("a", {
+          className: "PlayerProfileSocialLink",
+          style: {
+            background: dM.color
+          },
+          href: iM.profileUrl,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          children: [(0, mM.jsxs)("div", {
+            className: "PlayerProfileSocialLinkMain",
+            children: [(0, mM.jsx)(hM, {
+              platform: rM
+            }), (0, mM.jsx)("span", {
+              className: "PlayerProfileSocialLinkText",
+              children: (0, mM.jsx)("span", {
+                className: "PlayerProfileSocialLinkName SmallTextBold",
+                children: MM
+              })
+            })]
+          }), OM && (0, mM.jsx)("button", {
+            type: "button",
+            className: "PlayerProfileSocialLinkEditButton",
+            ...(0, nM.fb)({
+              stopPropagation: !0
+            }),
+            onClick: MM => {
+              MM.stopPropagation(), MM.preventDefault(), yM()
+            },
+            children: (0, mM.jsx)(PM.b, {
+              name: "pen-to-square"
+            })
+          }), !OM && (0, mM.jsx)("span", {
+            className: "PlayerProfileSocialLinkArrow",
+            children: (0, mM.jsx)(PM.b, {
+              name: "arrow-up-right-from-square"
+            })
+          })]
+        })
+      }
+      return (0, mM.jsxs)("button", {
+        type: "button",
+        className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
+        style: {
+          background: dM.color
+        },
+        ...(0, nM.fb)(),
+        onClick: () => {
+          yM()
+        },
+        children: [(0, mM.jsx)(hM, {
+          platform: rM
+        }), (0, mM.jsxs)("span", {
+          className: "PlayerProfileSocialLinkText",
+          children: [(0, mM.jsx)("span", {
+            className: "PlayerProfileSocialLinkName SmallTextBold",
+            children: dM.name
+          }), (0, mM.jsx)("span", {
+            className: "PlayerProfileSocialLinkCount SmallTextLight",
+            children: JM("homePage:profileSocialLinkAdd")
+          })]
+        }), (0, mM.jsx)("span", {
+          className: "PlayerProfileSocialLinkEditButton",
+          children: (0, mM.jsx)(PM.b, {
+            name: "pen-to-square"
+          })
+        })]
+      })
+    }
+
+    function dM(MM) {
+      let {
+        socialLinks: rM,
+        editable: iM = !1,
+        userContext: OM,
+        onLinksUpdated: SM
+      } = MM;
+      if (!iM && 0 === rM.length) return null;
+      const aM = new Map(rM.map((MM => [MM.platform, MM]))),
+        PM = iM ? jM.s : rM.map((MM => MM.platform));
+      return (0, mM.jsx)("div", {
+        className: "PlayerProfileSocialLinks",
+        children: (0, mM.jsx)("div", {
+          className: "PlayerProfileSocialLinksList",
+          children: PM.map((MM => (0, mM.jsx)(JM, {
+            platform: MM,
+            link: aM.get(MM),
+            editable: iM,
+            userContext: OM,
+            onLinksUpdated: SM
+          }, MM)))
+        })
+      })
     }
   },
-  8975: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => yG
-    });
-    var wG = ZG(1290),
-      SG = ZG(1177),
-      LG = ZG(604);
-
-    function yG(GG) {
-      return GG = function(GG, bG) {
-        var ZG;
-        const wG = new URLSearchParams(bG),
-          SG = wG.get("lobby"),
-          LG = wG.get("vm"),
-          yG = null !== (ZG = SG) && void 0 !== ZG ? ZG : GG.lobbyName,
-          kG = null !== LG && void 0 !== LG ? LG : GG.directJoinVmUrl;
-        if (yG === GG.lobbyName && kG === GG.directJoinVmUrl) return GG;
-        return {
-          ...GG,
-          lobbyName: yG,
-          directJoinVmUrl: kG
-        }
-      }(GG, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), GG = function(GG) {
-        if ((0, LG.L)(GG.directJoinVmUrl)) return GG;
-        const bG = (0, SG.Z)(GG.directJoinVmUrl);
-        null === bG && (GG.directJoinVmUrl = void 0);
-        return GG
-      }(GG = function(GG) {
-        if ((0, LG.L)(GG.gameNameWithVariation)) return GG;
-        return GG.gameNameWithVariation = (0, wG.k)(GG.gameNameWithVariation), GG
-      }(GG))
-    }
-  },
-  8967: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => LG,
-      g: () => SG
-    });
-    let wG = !1;
-
-    function SG() {
-      wG = !0
-    }
-
-    function LG() {
-      return wG
-    }
-  },
-  8981: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => kG,
-      d: () => SG,
-      f: () => LG,
-      h: () => yG
-    });
-    let wG = null;
-
-    function SG(GG, bG) {
-      return `${bG}\n${null!==GG&&void 0!==GG?GG:""}`
-    }
-
-    function LG(GG) {
-      wG = GG
-    }
-
-    function yG(GG) {
-      const bG = wG;
-      return wG = null, null !== bG && bG.key === GG ? bG.settled : null
-    }
-
-    function kG(GG, bG, ZG, wG) {
-      let SG = !1;
-      null !== bG && setTimeout((() => {
-        wG() && !SG && bG()
-      }), 0), GG.then((GG => {
-        SG = !0, ZG(GG)
-      }))
-    }
-  },
-  8960: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => QG,
-      e: () => fG,
-      i: () => KG
-    });
-    var wG = ZG(3135),
-      SG = ZG(2290),
-      LG = ZG(2128),
-      yG = ZG(4670),
-      kG = ZG(3481),
-      UG = ZG(8967);
-    let YG = null;
-
-    function VG() {
-      return Promise.all([ZG.e(75), ZG.e(78), ZG.e(90), ZG.e(215), ZG.e(214), ZG.e(160), ZG.e(137), ZG.e(198), ZG.e(140), ZG.e(88), ZG.e(275), ZG.e(64)]).then((() => ZG(41048)))
-    }
-
-    function pG() {
-      Promise.all([ZG.e(73), ZG.e(76), ZG.e(75), ZG.e(74), ZG.e(90), ZG.e(87), ZG.e(273), ZG.e(191), ZG.e(228), ZG.e(252), ZG.e(275), ZG.e(47)]).then((() => ZG(41395))).catch((() => {}))
-    }
-
-    function fG() {
-      return yG.d.cancelDownloadForJoin(), (0, kG.e)(), (0, SG.g)(), (0, UG.g)(), (0, LG.j)(), pG(), Promise.all([ZG.e(78), ZG.e(90), ZG.e(215), ZG.e(214), ZG.e(137), ZG.e(140), ZG.e(59)]).then((() => ZG(41444))).then((GG => {
-        let {
-          startJoinLoad: bG
-        } = GG;
-        bG()
-      }), (() => {})), YG ??= VG().then((GG => (GG.startWasmPlay(), GG.followPageUiPack((GG => {
-        wG.e.showGamePack(GG)
-      })), GG)), (GG => {
-        throw YG = null, GG
-      })), YG
-    }
-
-    function QG() {
-      return pG(), ZG.e(276).then((() => ZG(41447))).catch((() => {})), VG().then((() => {}))
-    }
-
-    function KG() {
-      return VG().then((GG => {
-        GG.startWasmPreviews(), GG.prefetchWasmPreviews()
-      }))
-    }
-  },
-  8957: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => LG,
-      h: () => yG,
-      j: () => kG,
-      n: () => YG,
-      q: () => UG
-    });
-    var wG = ZG(188),
-      SG = ZG(4655);
-
-    function LG(GG) {
-      return yG(GG) === wG.b.gameOrPluginOnPlayerAuthRejected.code
-    }
-
-    function yG(GG) {
-      return "object" === typeof GG && null !== GG ? GG.code : void 0
-    }
-
-    function kG(GG) {
-      var bG;
-      return null !== (bG = Object.keys(SG.b).find((bG => SG.b[bG] === GG))) && void 0 !== bG ? bG : null
-    }
-
-    function UG(GG) {
-      return "notWhitelisted" === GG ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
-    }
-    const YG = {
-      private: "customLobby:cantJoinPrivate",
-      notWhitelisted: "customLobby:cantJoinNotWhitelisted",
-      banned: "customLobby:cantJoinBanned",
-      adminLocked: "customLobby:cantJoinAdminLocked"
-    }
+  5280: MM => {
+    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

@@ -1,40 +1,115 @@
 export const id = 165;
 export const ids = [165];
 export const modules = {
-  9008: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      pageBody: () => wG
+  7221: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => QM
     });
-    const wG = {
-      whatIs: ["Smash Lucky Blocks for random loot, funny surprises and some genuinely wild outcomes, then take on everyone else in a chaotic multiplayer PvP arena. In Bloxd Lucky Blocks Battlegrounds, whoever has the most kills when the arena resets wins the round. Lucky Bedwars is all about beds and Lucky Towers is about surviving on a pillar. This one's just a big arena where the Lucky Blocks never stop coming."],
-      howToPlay: ["You start in your own safe base, and nobody else can get in. Step out into the arena and a free Lucky Block lands with you every 15 seconds. Crack them open for weapons, armour, pets and surprises, then go and fight.", "Lucky Blocks, Weapon Lucky Blocks and Pet Lucky Blocks spawn on pads around the arena and come back every minute. Every 90 seconds an Ultra Lucky Block appears in the centre, and whoever grabs it first keeps it. You also get your own Ultra Lucky Block in your base every 5 minutes, and only you can see it. The arena resets every 15 minutes, and the player with the most kills wins the round. You keep your items through a reset, so you're ready to go straight away."],
-      features: ["Multiplayer Lucky Block PvP Arena", "A Free Lucky Block Every 15 Seconds", "Weapon and Pet Lucky Blocks on Pads Around the Map", "Ultra Lucky Block in the Centre Every 90 Seconds", "Your Own Ultra Lucky Block Every 5 Minutes", "Safe Personal Base Nobody Else Can Enter", "Kills Leaderboard and a New Round Every 15 Minutes"],
-      tips: ["Stay out in the arena. You don't get free Lucky Blocks while you're in your base", "The second the Ultra Lucky Block appears, head for the centre", "Open Pet Lucky Blocks for a pet that'll defend you from anyone who attacks you", "Need a breather? Go back to your base, because nobody can follow you in", "Inventory getting messy? Press F to clear it. You'll keep your armour, hotbar, arrows and firecrackers", "Pop home every 5 minutes to grab your own Ultra Lucky Block", "Watch the leaderboard on the right so you know who you need to beat"],
-      similarGames: ["luckyBedwars", "luckyTowers", "skywars", "bedwars"],
-      faq: [{
-        question: "What is Lucky Blocks Battlegrounds?",
-        answer: "A multiplayer lucky block PvP arena. You open Lucky Blocks for random loot, fight other players and try to end each 15-minute round with the most kills."
-      }, {
-        question: "How do you win Lucky Blocks Battlegrounds?",
-        answer: "Get the most kills before the arena resets. That happens every 15 minutes, and the top player wins the round."
-      }, {
-        question: "How do I get Lucky Blocks?",
-        answer: "You get a free one every 15 seconds while you're out in the arena. More spawn on pads around the map, and there's an Ultra Lucky Block in the centre every 90 seconds."
-      }, {
-        question: "What is the Ultra Lucky Block?",
-        answer: "An extra-special Lucky Block. One shows up in the middle of the arena every 90 seconds for everyone to race for, and you get your own in your base every 5 minutes as well."
-      }, {
-        question: "What's inside Bloxd lucky blocks?",
-        answer: "Pretty much anything, from weapons and armour to pets and funny surprises. Weapon Lucky Blocks and Pet Lucky Blocks give you a better chance of a weapon or a pet."
-      }, {
-        question: "Can other players attack me in my base?",
-        answer: "Nope. Other players can't get into your base, break its blocks or open its chests."
-      }, {
-        question: "Do I lose my items when the Lucky Block Battlegrounds arena resets?",
-        answer: "No, your inventory stays with you. Everyone's kills go back to zero for the new round, though."
-      }]
+    var OM = iM(3241);
+    const SM = [1, 8, 9],
+      jM = 5,
+      aM = 200,
+      PM = 150;
+
+    function nM(MM, rM) {
+      let iM = 0;
+      MM("addEventListener", 2, ((MM, aM) => {
+        if (!aM) return void console.warn("TCF CMP couldn't report a consent event, so our consent defaults stand");
+        const PM = function(MM) {
+          const rM = "useractioncomplete" === MM.eventStatus || "tcloaded" === MM.eventStatus && !!MM.tcString;
+          return MM.gdprApplies && rM ? SM.every((rM => !0 === MM.purpose.consents[rM])) : null
+        }(MM);
+        if (null === PM) return;
+        const nM = ++iM;
+        if (!PM) return void(0, OM.updateAnalyticsConsent)(!1);
+        if ("nitro" === rM) return void(0, OM.updateAnalyticsConsent)(!0);
+        const QM = window.__tcfapi;
+        QM ? QM("getNonIABVendorConsents", 2, ((MM, rM) => {
+          var SM;
+          nM === iM && (0, OM.updateAnalyticsConsent)(rM && !0 === (null === (SM = MM.nonIabVendorConsents) || void 0 === SM ? void 0 : SM[jM]))
+        })) : console.warn("TCF CMP reported a choice but its __tcfapi is gone, so our consent defaults stand")
+      }))
+    }
+
+    function QM(MM) {
+      if (window.__tcfapi) return void nM(window.__tcfapi, MM);
+      let rM = 0;
+      const iM = window.setInterval((() => {
+        rM++;
+        const OM = window.__tcfapi;
+        OM ? (window.clearInterval(iM), nM(OM, MM)) : rM >= PM && window.clearInterval(iM)
+      }), aM)
+    }
+  },
+  7215: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      AdinPlaySdkAdaptor: () => QM
+    });
+    var OM = iM(1367),
+      SM = iM(1177),
+      jM = iM(212),
+      aM = iM(7221),
+      PM = iM(3241);
+    const nM = ["CN", "VN", "IN", "PK", "ID", "EG", "BD", "SV", "DZ", "EC", "VE", "UA", "MA", "LK", "NG", "BO", "KE", "TN", "RU", "NP", "IQ", "MM", "HN", "UY", "JO", "PY", "PS", "ET", "GH", "JM", "CM", "AS", "SY", "BY", "AO", "MN", "GY", "LB", "MV", "BW", "UG"];
+    class QM extends OM.d {
+      constructor() {
+        super(), this.name = "adinplay", this.bannerAutoRefresh = "disableable", this.noAdCountries = nM
+      }
+      static async setup() {
+        return (0, jM.canonicaliseZonesWhenIdle)(nM), (0, PM.setUpGtag)(), await (0, SM.d)("https://api.adinplay.com/libs/aiptag/pub/RBN/bloxd.io/tag.min.js"), (0, aM.e)("inMobi"), new QM
+      }
+      playRewarded(MM, rM) {
+        if ("undefined" !== typeof window.aiptag.adplayer) {
+          console.log("AD: Requesting AdInPlay preroll ad for rewarded placement");
+          const iM = "video_reward";
+          window.aiptag.cmd.player.push((function() {
+            window.aiptag.adplayer.startPreRoll({
+              alias: iM
+            })
+          })), window.adStartSoPause(MM, {
+            onFailCb: rM
+          })
+        } else console.log("AD: AIP ad lib not loaded, no rewarded ad playing"), rM()
+      }
+      playVideoAd(MM, rM) {
+        "undefined" !== typeof window.aiptag.adplayer ? (console.log("AD: Requesting AdInPlay video ad" + (rM ? ` (alias: ${rM})` : "")), window.aiptag.cmd.player.push((function() {
+          window.aiptag.adplayer.startPreRoll({
+            alias: rM
+          })
+        })), window.adStartSoPause(MM)) : (MM(), console.error("AIP ad lib not loaded, no ad playing"))
+      }
+      renderBanner(MM) {
+        if ("undefined" === typeof window.aiptag.adplayer) return void console.log("AD: User has adblock, not requesting new banners");
+        const {
+          divId: rM,
+          alias: iM
+        } = MM;
+        window.aiptag.cmd.display.push((function() {
+          window.aipDisplayTag.display({
+            adUnitName: rM,
+            alias: iM
+          })
+        })), console.log("AD: Requested aip banner", document.getElementById(MM.divId), iM ? `(alias: ${iM})` : "")
+      }
+      clearBanner(MM) {
+        "undefined" !== typeof window.aiptag.adplayer ? (window.aiptag.cmd.display.push((function() {
+          window.aipDisplayTag.destroy(MM.divId)
+        })), console.log(`AD: Clearing aip banner ad ${MM.divId}`)) : console.log("AD: User has adblock, not requesting new banners")
+      }
+      setBannerAutoRefreshEnabled(MM, rM) {
+        window.aiptag.cmd.display.push((function() {
+          window.aipDisplayTag.setAutoRefresh(MM.divId, rM)
+        }))
+      }
+      newPageSession() {
+        console.log("AD: Requesting new page session"), window.aiptag.cmd.display.push((function() {
+          window.__VM.push((function(MM, rM) {
+            rM.Instances.pageManager.newPageSession(!1)
+          }))
+        }))
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

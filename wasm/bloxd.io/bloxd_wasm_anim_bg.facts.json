@@ -2,10 +2,10 @@
  "context": {
   "module": "bloxd_wasm_anim_bg",
   "environment": "bloxd.io",
-  "build": "wp3j0a.a13381cf",
-  "url": "https://bloxd.io/static/media/bloxd_wasm_anim_bg.ee427ae85608d3954ac4.wasm",
-  "sha256": "4aa0ad1549e0d5c6e1e816ef89f5c6c760fcacd619ca992ecbfbe1cf2f199e59",
-  "analyzed_at": "2026-11-25T16:44:13+09:00",
+  "build": "fo1voe.f743fbcf",
+  "url": "https://bloxd.io/static/media/bloxd_wasm_anim_bg.649ef08b4f54c949019a.wasm",
+  "sha256": "9b12a80af4e0001e472a77f851e64ef000ea347ea6f87cc37b924c310c6e0847",
+  "analyzed_at": "2026-11-26T01:33:45+09:00",
   "referenced_by": "bloxd-wasm-anim.js"
  },
  "facts": {
@@ -139,36 +139,36 @@
   },
   "imports": [
    {
-    "module": "s11N",
-    "name": "n9In",
+    "module": "oBW3",
+    "name": "aDnB",
     "kind": "func",
     "index": 0,
     "type": "(i32 i32) -> ()"
    },
    {
-    "module": "s11N",
-    "name": "rm7o",
+    "module": "oBW3",
+    "name": "r2FP",
     "kind": "func",
     "index": 1,
     "type": "(i32) -> ()"
    },
    {
-    "module": "s11N",
-    "name": "ZnEp",
+    "module": "oBW3",
+    "name": "KIxe",
     "kind": "func",
     "index": 2,
     "type": "(i32 i32) -> ()"
    },
    {
-    "module": "s11N",
-    "name": "eN3c",
+    "module": "oBW3",
+    "name": "zaJa",
     "kind": "func",
     "index": 3,
     "type": "(i32 i32) -> (i32)"
    },
    {
-    "module": "s11N",
-    "name": "hq3D",
+    "module": "oBW3",
+    "name": "MbuI",
     "kind": "func",
     "index": 4,
     "type": "(i32 i32) -> ()"
@@ -176,16 +176,16 @@
   ],
   "exports": [
    {
-    "name": "gMm3",
+    "name": "JbGx",
     "kind": "func",
-    "index": 261,
-    "type": "() -> ()"
+    "index": 223,
+    "type": "(i32 i32 i32 i32) -> (i32)"
    },
    {
-    "name": "HQKJ",
-    "kind": "func",
-    "index": 261,
-    "type": "() -> ()"
+    "name": "Nk6z",
+    "kind": "global",
+    "index": 2,
+    "type": ""
    },
    {
     "name": "memory",
@@ -194,43 +194,43 @@
     "type": ""
    },
    {
-    "name": "sIgm",
-    "kind": "global",
-    "index": 1,
-    "type": ""
-   },
-   {
-    "name": "jTfZ",
-    "kind": "global",
-    "index": 2,
-    "type": ""
-   },
-   {
-    "name": "x7sh",
+    "name": "HxNI",
     "kind": "func",
-    "index": 223,
-    "type": "(i32 i32 i32 i32) -> (i32)"
+    "index": 261,
+    "type": "() -> ()"
    },
    {
-    "name": "YpXY",
-    "kind": "func",
-    "index": 222,
-    "type": "(i32 i32) -> (i32)"
-   },
-   {
-    "name": "adFy",
+    "name": "LPfT",
     "kind": "func",
     "index": 213,
     "type": "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32 i32)"
    },
    {
-    "name": "tlWo",
+    "name": "HuKV",
+    "kind": "func",
+    "index": 222,
+    "type": "(i32 i32) -> (i32)"
+   },
+   {
+    "name": "QSri",
+    "kind": "global",
+    "index": 1,
+    "type": ""
+   },
+   {
+    "name": "t5mD",
     "kind": "func",
     "index": 237,
     "type": "(i32 i32 i32) -> ()"
    },
    {
-    "name": "pMoE",
+    "name": "I4BH",
+    "kind": "func",
+    "index": 261,
+    "type": "() -> ()"
+   },
+   {
+    "name": "F9n2",
     "kind": "func",
     "index": 228,
     "type": "(i32 i32 i32) -> (i32 i32)"
@@ -1223,7 +1223,7 @@
      "bytes": 23
     }
    ],
-   "module_name": "d2757b8276008e7d.821",
+   "module_name": "6102c4eac72582d0.821",
    "producers": {}
   },
   "strings": [
@@ -1473,15 +1473,6 @@
  },
  "history": [
   {
-   "build": "31kiid.1299b0d6",
-   "at": "2026-11-24T12:43:08+09:00",
-   "size": 415630,
-   "sha256": "125adb66f5cee367",
-   "functions": 258,
-   "exports": 10,
-   "imports": 5
-  },
-  {
    "build": "mpd96o.85ad4551",
    "at": "2026-11-24T14:21:10+09:00",
    "size": 415630,
@@ -1576,6 +1567,15 @@
    "at": "2026-11-25T16:44:13+09:00",
    "size": 415630,
    "sha256": "4aa0ad1549e0d5c6",
+   "functions": 258,
+   "exports": 10,
+   "imports": 5
+  },
+  {
+   "build": "fo1voe.f743fbcf",
+   "at": "2026-11-26T01:33:45+09:00",
+   "size": 415630,
+   "sha256": "9b12a80af4e0001e",
    "functions": 258,
    "exports": 10,
    "imports": 5

@@ -1,477 +1,477 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var GG = __webpack_require__.u,
-        bG = __webpack_require__.e,
-        ZG = {},
-        wG = {};
-      __webpack_require__.u = function(bG) {
-        return GG(bG) + (ZG.hasOwnProperty(bG) ? "?" + ZG[bG] : "")
-      }, __webpack_require__.e = function(SG) {
-        return bG(SG).catch((function(bG) {
-          var LG = wG.hasOwnProperty(SG) ? wG[SG] : 4;
-          if (LG < 1) {
-            var yG = GG(SG);
-            if (bG.message = "Loading chunk " + SG + " failed after 4 retries.\n(" + yG + ")", bG.request = yG, ZG[SG] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete wG[SG]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === bG.code) {
-              var kG = __webpack_require__.miniCssF(SG);
-              bG.message = bG.message.replace("Loading chunk", "Loading CSS chunk").replace(yG, kG), bG.request = kG
+      var MM = __webpack_require__.u,
+        rM = __webpack_require__.e,
+        iM = {},
+        OM = {};
+      __webpack_require__.u = function(rM) {
+        return MM(rM) + (iM.hasOwnProperty(rM) ? "?" + iM[rM] : "")
+      }, __webpack_require__.e = function(SM) {
+        return rM(SM).catch((function(rM) {
+          var jM = OM.hasOwnProperty(SM) ? OM[SM] : 4;
+          if (jM < 1) {
+            var aM = MM(SM);
+            if (rM.message = "Loading chunk " + SM + " failed after 4 retries.\n(" + aM + ")", rM.request = aM, iM[SM] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete OM[SM]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === rM.code) {
+              var PM = __webpack_require__.miniCssF(SM);
+              rM.message = rM.message.replace("Loading chunk", "Loading CSS chunk").replace(aM, PM), rM.request = PM
             }
-            throw bG
+            throw rM
           }
-          return new Promise((function(GG) {
-            var bG = 4 - LG + 1;
+          return new Promise((function(MM) {
+            var rM = 4 - jM + 1;
             setTimeout((function() {
-              var bG = "cache-bust=" + Date.now();
-              ZG[SG] = bG, wG[SG] = LG - 1, GG(__webpack_require__.e(SG))
-            }), function(GG) {
-              return 500 * Math.pow(2, GG)
-            }(bG))
+              var rM = "cache-bust=" + Date.now();
+              iM[SM] = rM, OM[SM] = jM - 1, MM(__webpack_require__.e(SM))
+            }), function(MM) {
+              return 500 * Math.pow(2, MM)
+            }(rM))
           }))
         }))
       }
     }
   })();
 
-  function GG(GG) {
-    return GG instanceof Error ? GG.message : String(GG)
+  function MM(MM) {
+    return MM instanceof Error ? MM.message : String(MM)
   }
-  const bG = ArrayBuffer,
-    ZG = Uint8Array,
-    wG = Uint16Array,
-    SG = Int16Array,
-    LG = Int32Array,
-    yG = (GG, bG, wG) => {
-      if (ZG.prototype.slice) return ZG.prototype.slice.call(GG, bG, wG);
-      (null == bG || bG < 0) && (bG = 0), (null == wG || wG > GG.length) && (wG = GG.length);
-      const SG = new ZG(wG - bG);
-      return SG.set(GG.subarray(bG, wG)), SG
+  const rM = ArrayBuffer,
+    iM = Uint8Array,
+    OM = Uint16Array,
+    SM = Int16Array,
+    jM = Int32Array,
+    aM = (MM, rM, OM) => {
+      if (iM.prototype.slice) return iM.prototype.slice.call(MM, rM, OM);
+      (null == rM || rM < 0) && (rM = 0), (null == OM || OM > MM.length) && (OM = MM.length);
+      const SM = new iM(OM - rM);
+      return SM.set(MM.subarray(rM, OM)), SM
     },
-    kG = (GG, bG, wG, SG) => {
-      if (ZG.prototype.fill) return ZG.prototype.fill.call(GG, bG, wG, SG);
-      for ((null == wG || wG < 0) && (wG = 0), (null == SG || SG > GG.length) && (SG = GG.length); wG < SG; ++wG) GG[wG] = bG;
-      return GG
+    PM = (MM, rM, OM, SM) => {
+      if (iM.prototype.fill) return iM.prototype.fill.call(MM, rM, OM, SM);
+      for ((null == OM || OM < 0) && (OM = 0), (null == SM || SM > MM.length) && (SM = MM.length); OM < SM; ++OM) MM[OM] = rM;
+      return MM
     },
-    UG = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-    YG = (GG, bG, ZG) => {
-      const wG = new Error(bG || UG[GG]);
-      if (wG.code = GG, Error.captureStackTrace && Error.captureStackTrace(wG, YG), !ZG) throw wG;
-      return wG
+    nM = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+    QM = (MM, rM, iM) => {
+      const OM = new Error(rM || nM[MM]);
+      if (OM.code = MM, Error.captureStackTrace && Error.captureStackTrace(OM, QM), !iM) throw OM;
+      return OM
     },
-    VG = (GG, bG, ZG) => {
-      let wG = 0,
-        SG = 0;
-      for (; wG < ZG; ++wG) SG |= GG[bG++] << (wG << 3);
-      return SG
+    zM = (MM, rM, iM) => {
+      let OM = 0,
+        SM = 0;
+      for (; OM < iM; ++OM) SM |= MM[rM++] << (OM << 3);
+      return SM
     },
-    pG = (GG, bG) => {
-      const wG = GG[0] | GG[1] << 8 | GG[2] << 16;
-      if (3126568 == wG && 253 == GG[3]) {
-        const wG = GG[4],
-          SG = wG >> 5 & 1,
-          yG = wG >> 2 & 1,
-          kG = 3 & wG,
-          UG = wG >> 6;
-        8 & wG && YG(0);
-        let pG = 6 - SG;
-        const fG = 3 == kG ? 4 : kG,
-          QG = VG(GG, pG, fG);
-        pG += fG;
-        const KG = UG ? 1 << UG : SG,
-          hG = VG(GG, pG, KG) + (1 == UG && 256);
-        let dG = hG;
-        if (!SG) {
-          const bG = 1 << 10 + (GG[5] >> 3);
-          dG = bG + (bG >> 3) * (7 & GG[5])
+    LM = (MM, rM) => {
+      const OM = MM[0] | MM[1] << 8 | MM[2] << 16;
+      if (3126568 == OM && 253 == MM[3]) {
+        const OM = MM[4],
+          SM = OM >> 5 & 1,
+          aM = OM >> 2 & 1,
+          PM = 3 & OM,
+          nM = OM >> 6;
+        8 & OM && QM(0);
+        let LM = 6 - SM;
+        const mM = 3 == PM ? 4 : PM,
+          HM = zM(MM, LM, mM);
+        LM += mM;
+        const hM = nM ? 1 << nM : SM,
+          JM = zM(MM, LM, hM) + (1 == nM && 256);
+        let dM = JM;
+        if (!SM) {
+          const rM = 1 << 10 + (MM[5] >> 3);
+          dM = rM + (rM >> 3) * (7 & MM[5])
         }
-        dG > 2145386496 && YG(1);
-        const JG = new ZG((1 == bG ? hG || dG : bG ? 0 : dG) + 12);
-        return JG[0] = 1, JG[4] = 4, JG[8] = 8, {
-          b: pG + KG,
+        dM > 2145386496 && QM(1);
+        const yM = new iM((1 == rM ? JM || dM : rM ? 0 : dM) + 12);
+        return yM[0] = 1, yM[4] = 4, yM[8] = 8, {
+          b: LM + hM,
           y: 0,
           l: 0,
-          d: QG,
-          w: bG && 1 != bG ? bG : JG.subarray(12),
-          e: dG,
-          o: new LG(JG.buffer, 0, 3),
-          u: hG,
-          c: yG,
-          m: Math.min(131072, dG)
+          d: HM,
+          w: rM && 1 != rM ? rM : yM.subarray(12),
+          e: dM,
+          o: new jM(yM.buffer, 0, 3),
+          u: JM,
+          c: aM,
+          m: Math.min(131072, dM)
         }
       }
-      if (25481893 == (wG >> 4 | GG[3] << 20)) return 8 + (((SG = GG)[yG = 4] | SG[yG + 1] << 8 | SG[yG + 2] << 16 | SG[yG + 3] << 24) >>> 0);
-      var SG, yG;
-      YG(0)
+      if (25481893 == (OM >> 4 | MM[3] << 20)) return 8 + (((SM = MM)[aM = 4] | SM[aM + 1] << 8 | SM[aM + 2] << 16 | SM[aM + 3] << 24) >>> 0);
+      var SM, aM;
+      QM(0)
     },
-    fG = GG => {
-      let bG = 0;
-      for (; 1 << bG <= GG; ++bG);
-      return bG - 1
+    mM = MM => {
+      let rM = 0;
+      for (; 1 << rM <= MM; ++rM);
+      return rM - 1
     },
-    QG = (GG, LG, yG) => {
-      let kG = 4 + (LG << 3);
-      const UG = 5 + (15 & GG[LG]);
-      UG > yG && YG(3);
-      const VG = 1 << UG;
-      let pG = VG,
-        QG = -1,
-        KG = -1,
-        hG = -1,
-        dG = VG;
-      const JG = new bG(512 + (VG << 2)),
-        rG = new SG(JG, 0, 256),
-        zG = new wG(JG, 0, 256),
-        EG = new wG(JG, 512, VG),
-        oG = 512 + (VG << 1),
-        XG = new ZG(JG, oG, VG),
-        uG = new ZG(JG, oG + VG);
-      for (; QG < 255 && pG > 0;) {
-        const bG = fG(pG + 1),
-          ZG = kG >> 3,
-          wG = (1 << bG + 1) - 1;
-        let SG = (GG[ZG] | GG[ZG + 1] << 8 | GG[ZG + 2] << 16) >> (7 & kG) & wG;
-        const LG = (1 << bG) - 1,
-          yG = wG - pG - 1,
-          UG = SG & LG;
-        if (UG < yG ? (kG += bG, SG = UG) : (kG += bG + 1, SG > LG && (SG -= yG)), rG[++QG] = --SG, -1 == SG ? (pG += SG, XG[--dG] = QG) : pG -= SG, !SG)
+    HM = (MM, jM, aM) => {
+      let PM = 4 + (jM << 3);
+      const nM = 5 + (15 & MM[jM]);
+      nM > aM && QM(3);
+      const zM = 1 << nM;
+      let LM = zM,
+        HM = -1,
+        hM = -1,
+        JM = -1,
+        dM = zM;
+      const yM = new rM(512 + (zM << 2)),
+        lM = new SM(yM, 0, 256),
+        EM = new OM(yM, 0, 256),
+        UM = new OM(yM, 512, zM),
+        GM = 512 + (zM << 1),
+        CM = new iM(yM, GM, zM),
+        eM = new iM(yM, GM + zM);
+      for (; HM < 255 && LM > 0;) {
+        const rM = mM(LM + 1),
+          iM = PM >> 3,
+          OM = (1 << rM + 1) - 1;
+        let SM = (MM[iM] | MM[iM + 1] << 8 | MM[iM + 2] << 16) >> (7 & PM) & OM;
+        const jM = (1 << rM) - 1,
+          aM = OM - LM - 1,
+          nM = SM & jM;
+        if (nM < aM ? (PM += rM, SM = nM) : (PM += rM + 1, SM > jM && (SM -= aM)), lM[++HM] = --SM, -1 == SM ? (LM += SM, CM[--dM] = HM) : LM -= SM, !SM)
           do {
-            const bG = kG >> 3;
-            KG = (GG[bG] | GG[bG + 1] << 8) >> (7 & kG) & 3, kG += 2, QG += KG
-          } while (3 == KG)
-      }(QG > 255 || pG) && YG(0);
-      let iG = 0;
-      const CG = (VG >> 1) + (VG >> 3) + 3,
-        WG = VG - 1;
-      for (let bG = 0; bG <= QG; ++bG) {
-        const GG = rG[bG];
-        if (GG < 1) zG[bG] = -GG;
+            const rM = PM >> 3;
+            hM = (MM[rM] | MM[rM + 1] << 8) >> (7 & PM) & 3, PM += 2, HM += hM
+          } while (3 == hM)
+      }(HM > 255 || LM) && QM(0);
+      let bM = 0;
+      const wM = (zM >> 1) + (zM >> 3) + 3,
+        tM = zM - 1;
+      for (let rM = 0; rM <= HM; ++rM) {
+        const MM = lM[rM];
+        if (MM < 1) EM[rM] = -MM;
         else
-          for (hG = 0; hG < GG; ++hG) {
-            XG[iG] = bG;
+          for (JM = 0; JM < MM; ++JM) {
+            CM[bM] = rM;
             do {
-              iG = iG + CG & WG
-            } while (iG >= dG)
+              bM = bM + wM & tM
+            } while (bM >= dM)
           }
       }
-      for (iG && YG(0), hG = 0; hG < VG; ++hG) {
-        const GG = zG[XG[hG]]++,
-          bG = uG[hG] = UG - fG(GG);
-        EG[hG] = (GG << bG) - VG
+      for (bM && QM(0), JM = 0; JM < zM; ++JM) {
+        const MM = EM[CM[JM]]++,
+          rM = eM[JM] = nM - mM(MM);
+        UM[JM] = (MM << rM) - zM
       }
-      return [kG + 7 >> 3, {
-        b: UG,
-        s: XG,
-        n: uG,
-        t: EG
+      return [PM + 7 >> 3, {
+        b: nM,
+        s: CM,
+        n: eM,
+        t: UM
       }]
     },
-    KG = QG(new ZG([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-    hG = QG(new ZG([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-    dG = QG(new ZG([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-    JG = (GG, bG) => {
-      const ZG = GG.length,
-        wG = new LG(ZG);
-      for (let SG = 0; SG < ZG; ++SG) wG[SG] = bG, bG += 1 << GG[SG];
-      return wG
+    hM = HM(new iM([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+    JM = HM(new iM([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+    dM = HM(new iM([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+    yM = (MM, rM) => {
+      const iM = MM.length,
+        OM = new jM(iM);
+      for (let SM = 0; SM < iM; ++SM) OM[SM] = rM, rM += 1 << MM[SM];
+      return OM
     },
-    rG = new ZG(new LG([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-    zG = JG(rG, 0),
-    EG = new ZG(new LG([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-    oG = JG(EG, 3),
-    XG = (GG, bG, ZG) => {
-      const wG = GG.length,
-        SG = bG.length,
-        LG = GG[wG - 1],
-        yG = (1 << ZG.b) - 1,
-        kG = -ZG.b;
-      LG || YG(0);
-      let UG = 0,
-        VG = ZG.b,
-        pG = (wG << 3) - 8 + fG(LG) - VG,
-        QG = -1;
-      for (; pG > kG && QG < SG;) {
-        const wG = pG >> 3;
-        UG = (UG << VG | (GG[wG] | GG[wG + 1] << 8 | GG[wG + 2] << 16) >> (7 & pG)) & yG, bG[++QG] = ZG.s[UG], pG -= VG = ZG.n[UG]
+    lM = new iM(new jM([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+    EM = yM(lM, 0),
+    UM = new iM(new jM([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+    GM = yM(UM, 3),
+    CM = (MM, rM, iM) => {
+      const OM = MM.length,
+        SM = rM.length,
+        jM = MM[OM - 1],
+        aM = (1 << iM.b) - 1,
+        PM = -iM.b;
+      jM || QM(0);
+      let nM = 0,
+        zM = iM.b,
+        LM = (OM << 3) - 8 + mM(jM) - zM,
+        HM = -1;
+      for (; LM > PM && HM < SM;) {
+        const OM = LM >> 3;
+        nM = (nM << zM | (MM[OM] | MM[OM + 1] << 8 | MM[OM + 2] << 16) >> (7 & LM)) & aM, rM[++HM] = iM.s[nM], LM -= zM = iM.n[nM]
       }
-      pG == kG && QG + 1 == SG || YG(0)
+      LM == PM && HM + 1 == SM || QM(0)
     },
-    uG = (GG, bG, ZG) => {
-      let wG = 6;
-      const SG = bG.length + 3 >> 2,
-        LG = SG << 1,
-        yG = SG + LG;
-      XG(GG.subarray(wG, wG += GG[0] | GG[1] << 8), bG.subarray(0, SG), ZG), XG(GG.subarray(wG, wG += GG[2] | GG[3] << 8), bG.subarray(SG, LG), ZG), XG(GG.subarray(wG, wG += GG[4] | GG[5] << 8), bG.subarray(LG, yG), ZG), XG(GG.subarray(wG), bG.subarray(yG), ZG)
+    eM = (MM, rM, iM) => {
+      let OM = 6;
+      const SM = rM.length + 3 >> 2,
+        jM = SM << 1,
+        aM = SM + jM;
+      CM(MM.subarray(OM, OM += MM[0] | MM[1] << 8), rM.subarray(0, SM), iM), CM(MM.subarray(OM, OM += MM[2] | MM[3] << 8), rM.subarray(SM, jM), iM), CM(MM.subarray(OM, OM += MM[4] | MM[5] << 8), rM.subarray(jM, aM), iM), CM(MM.subarray(OM), rM.subarray(aM), iM)
     },
-    iG = (GG, bG, SG) => {
-      let LG = bG.b;
-      const UG = GG[LG],
-        VG = UG >> 1 & 3;
-      bG.l = 1 & UG;
-      const pG = UG >> 3 | GG[LG + 1] << 5 | GG[LG + 2] << 13,
-        JG = (LG += 3) + pG;
-      if (1 == VG) {
-        if (LG >= GG.length) return;
-        return bG.b = LG + 1, SG ? (kG(SG, GG[LG], bG.y, bG.y += pG), SG) : kG(new ZG(pG), GG[LG])
+    bM = (MM, rM, SM) => {
+      let jM = rM.b;
+      const nM = MM[jM],
+        zM = nM >> 1 & 3;
+      rM.l = 1 & nM;
+      const LM = nM >> 3 | MM[jM + 1] << 5 | MM[jM + 2] << 13,
+        yM = (jM += 3) + LM;
+      if (1 == zM) {
+        if (jM >= MM.length) return;
+        return rM.b = jM + 1, SM ? (PM(SM, MM[jM], rM.y, rM.y += LM), SM) : PM(new iM(LM), MM[jM])
       }
-      if (!(JG > GG.length)) {
-        if (0 == VG) return bG.b = JG, SG ? (SG.set(GG.subarray(LG, JG), bG.y), bG.y += pG, SG) : yG(GG, LG, JG);
-        if (2 == VG) {
-          const UG = GG[LG],
-            VG = 3 & UG,
-            pG = UG >> 2 & 3;
-          let iG = UG >> 4,
-            CG = 0,
-            WG = 0;
-          VG < 2 ? 1 & pG ? iG |= GG[++LG] << 4 | (2 & pG && GG[++LG] << 12) : iG = UG >> 3 : (WG = pG, pG < 2 ? (iG |= (63 & GG[++LG]) << 4, CG = GG[LG] >> 6 | GG[++LG] << 2) : 2 == pG ? (iG |= GG[++LG] << 4 | (3 & GG[++LG]) << 12, CG = GG[LG] >> 2 | GG[++LG] << 6) : (iG |= GG[++LG] << 4 | (63 & GG[++LG]) << 12, CG = GG[LG] >> 6 | GG[++LG] << 2 | GG[++LG] << 10)), ++LG;
-          let mG = SG ? SG.subarray(bG.y, bG.y + bG.m) : new ZG(bG.m),
-            IG = mG.length - iG;
-          if (IG < 0 && YG(0), 0 == VG) mG.set(GG.subarray(LG, LG += iG), IG);
-          else if (1 == VG) kG(mG, GG[LG++], IG);
+      if (!(yM > MM.length)) {
+        if (0 == zM) return rM.b = yM, SM ? (SM.set(MM.subarray(jM, yM), rM.y), rM.y += LM, SM) : aM(MM, jM, yM);
+        if (2 == zM) {
+          const nM = MM[jM],
+            zM = 3 & nM,
+            LM = nM >> 2 & 3;
+          let bM = nM >> 4,
+            wM = 0,
+            tM = 0;
+          zM < 2 ? 1 & LM ? bM |= MM[++jM] << 4 | (2 & LM && MM[++jM] << 12) : bM = nM >> 3 : (tM = LM, LM < 2 ? (bM |= (63 & MM[++jM]) << 4, wM = MM[jM] >> 6 | MM[++jM] << 2) : 2 == LM ? (bM |= MM[++jM] << 4 | (3 & MM[++jM]) << 12, wM = MM[jM] >> 2 | MM[++jM] << 6) : (bM |= MM[++jM] << 4 | (63 & MM[++jM]) << 12, wM = MM[jM] >> 6 | MM[++jM] << 2 | MM[++jM] << 10)), ++jM;
+          let gM = SM ? SM.subarray(rM.y, rM.y + rM.m) : new iM(rM.m),
+            uM = gM.length - bM;
+          if (uM < 0 && QM(0), 0 == zM) gM.set(MM.subarray(jM, jM += bM), uM);
+          else if (1 == zM) PM(gM, MM[jM++], uM);
           else {
-            let SG = bG.h;
-            if (2 == VG) {
-              const yG = ((GG, bG) => {
-                let SG = 0,
-                  LG = -1;
-                const yG = new ZG(292),
-                  UG = GG[bG],
-                  VG = yG.subarray(0, 256),
-                  pG = yG.subarray(256, 268),
-                  KG = new wG(yG.buffer, 268);
-                if (UG < 128) {
-                  const [ZG, wG] = QG(GG, bG + 1, 6), SG = ZG << 3, yG = GG[bG += UG];
-                  yG || YG(0);
-                  let kG = 0,
-                    pG = 0,
-                    KG = wG.b,
-                    hG = KG,
-                    dG = (++bG << 3) - 8 + fG(yG);
-                  for (; LG > 254 && YG(0), dG -= KG, !(dG < SG);) {
-                    let bG = dG >> 3;
-                    if (kG += (GG[bG] | GG[bG + 1] << 8) >> (7 & dG) & (1 << KG) - 1, VG[++LG] = wG.s[kG], dG -= hG, dG < SG) break;
-                    bG = dG >> 3, pG += (GG[bG] | GG[bG + 1] << 8) >> (7 & dG) & (1 << hG) - 1, VG[++LG] = wG.s[pG], KG = wG.n[kG], kG = wG.t[kG], hG = wG.n[pG], pG = wG.t[pG]
-                  }++LG > 255 && YG(0)
+            let SM = rM.h;
+            if (2 == zM) {
+              const aM = ((MM, rM) => {
+                let SM = 0,
+                  jM = -1;
+                const aM = new iM(292),
+                  nM = MM[rM],
+                  zM = aM.subarray(0, 256),
+                  LM = aM.subarray(256, 268),
+                  hM = new OM(aM.buffer, 268);
+                if (nM < 128) {
+                  const [iM, OM] = HM(MM, rM + 1, 6), SM = iM << 3, aM = MM[rM += nM];
+                  aM || QM(0);
+                  let PM = 0,
+                    LM = 0,
+                    hM = OM.b,
+                    JM = hM,
+                    dM = (++rM << 3) - 8 + mM(aM);
+                  for (; jM > 254 && QM(0), dM -= hM, !(dM < SM);) {
+                    let rM = dM >> 3;
+                    if (PM += (MM[rM] | MM[rM + 1] << 8) >> (7 & dM) & (1 << hM) - 1, zM[++jM] = OM.s[PM], dM -= JM, dM < SM) break;
+                    rM = dM >> 3, LM += (MM[rM] | MM[rM + 1] << 8) >> (7 & dM) & (1 << JM) - 1, zM[++jM] = OM.s[LM], hM = OM.n[PM], PM = OM.t[PM], JM = OM.n[LM], LM = OM.t[LM]
+                  }++jM > 255 && QM(0)
                 } else {
-                  for (LG = UG - 127; SG < LG; SG += 2) {
-                    const ZG = GG[++bG];
-                    VG[SG] = ZG >> 4, VG[SG + 1] = 15 & ZG
-                  }++bG
+                  for (jM = nM - 127; SM < jM; SM += 2) {
+                    const iM = MM[++rM];
+                    zM[SM] = iM >> 4, zM[SM + 1] = 15 & iM
+                  }++rM
                 }
-                let hG = 0;
-                for (SG = 0; SG < LG; ++SG) {
-                  const GG = VG[SG];
-                  GG > 11 && YG(0), hG += GG && 1 << GG - 1
+                let JM = 0;
+                for (SM = 0; SM < jM; ++SM) {
+                  const MM = zM[SM];
+                  MM > 11 && QM(0), JM += MM && 1 << MM - 1
                 }
-                const dG = fG(hG) + 1,
-                  JG = 1 << dG,
-                  rG = JG - hG;
-                for (rG & rG - 1 && YG(0), VG[LG++] = fG(rG) + 1, SG = 0; SG < LG; ++SG) {
-                  const GG = VG[SG];
-                  ++pG[VG[SG] = GG && dG + 1 - GG]
+                const dM = mM(JM) + 1,
+                  yM = 1 << dM,
+                  lM = yM - JM;
+                for (lM & lM - 1 && QM(0), zM[jM++] = mM(lM) + 1, SM = 0; SM < jM; ++SM) {
+                  const MM = zM[SM];
+                  ++LM[zM[SM] = MM && dM + 1 - MM]
                 }
-                const zG = new ZG(JG << 1),
-                  EG = zG.subarray(0, JG),
-                  oG = zG.subarray(JG);
-                for (KG[dG] = 0, SG = dG; SG > 0; --SG) {
-                  const GG = KG[SG];
-                  kG(oG, SG, GG, KG[SG - 1] = GG + pG[SG] * (1 << dG - SG))
+                const EM = new iM(yM << 1),
+                  UM = EM.subarray(0, yM),
+                  GM = EM.subarray(yM);
+                for (hM[dM] = 0, SM = dM; SM > 0; --SM) {
+                  const MM = hM[SM];
+                  PM(GM, SM, MM, hM[SM - 1] = MM + LM[SM] * (1 << dM - SM))
                 }
-                for (KG[0] != JG && YG(0), SG = 0; SG < LG; ++SG) {
-                  const GG = VG[SG];
-                  if (GG) {
-                    const bG = KG[GG];
-                    kG(EG, SG, bG, KG[GG] = bG + (1 << dG - GG))
+                for (hM[0] != yM && QM(0), SM = 0; SM < jM; ++SM) {
+                  const MM = zM[SM];
+                  if (MM) {
+                    const rM = hM[MM];
+                    PM(UM, SM, rM, hM[MM] = rM + (1 << dM - MM))
                   }
                 }
-                return [bG, {
-                  n: oG,
-                  b: dG,
-                  s: EG
+                return [rM, {
+                  n: GM,
+                  b: dM,
+                  s: UM
                 }]
-              })(GG, LG);
-              CG += LG - (LG = yG[0]), bG.h = SG = yG[1]
-            } else SG || YG(0);
-            (WG ? uG : XG)(GG.subarray(LG, LG += CG), mG.subarray(IG), SG)
+              })(MM, jM);
+              wM += jM - (jM = aM[0]), rM.h = SM = aM[1]
+            } else SM || QM(0);
+            (tM ? eM : CM)(MM.subarray(jM, jM += wM), gM.subarray(uM), SM)
           }
-          let FG = GG[LG++];
-          if (FG) {
-            255 == FG ? FG = 32512 + (GG[LG++] | GG[LG++] << 8) : FG > 127 && (FG = FG - 128 << 8 | GG[LG++]);
-            const kG = GG[LG++];
-            3 & kG && YG(0);
-            const UG = [hG, dG, KG];
-            for (let SG = 2; SG > -1; --SG) {
-              const yG = kG >> 2 + (SG << 1) & 3;
-              if (1 == yG) {
-                const bG = new ZG([0, 0, GG[LG++]]);
-                UG[SG] = {
-                  s: bG.subarray(2, 3),
-                  n: bG.subarray(0, 1),
-                  t: new wG(bG.buffer, 0, 1),
+          let RM = MM[jM++];
+          if (RM) {
+            255 == RM ? RM = 32512 + (MM[jM++] | MM[jM++] << 8) : RM > 127 && (RM = RM - 128 << 8 | MM[jM++]);
+            const PM = MM[jM++];
+            3 & PM && QM(0);
+            const nM = [JM, dM, hM];
+            for (let SM = 2; SM > -1; --SM) {
+              const aM = PM >> 2 + (SM << 1) & 3;
+              if (1 == aM) {
+                const rM = new iM([0, 0, MM[jM++]]);
+                nM[SM] = {
+                  s: rM.subarray(2, 3),
+                  n: rM.subarray(0, 1),
+                  t: new OM(rM.buffer, 0, 1),
                   b: 0
                 }
-              } else 2 == yG ? [LG, UG[SG]] = QG(GG, LG, 9 - (1 & SG)) : 3 == yG && (bG.t || YG(0), UG[SG] = bG.t[SG])
+              } else 2 == aM ? [jM, nM[SM]] = HM(MM, jM, 9 - (1 & SM)) : 3 == aM && (rM.t || QM(0), nM[SM] = rM.t[SM])
             }
-            const [VG, pG, XG] = bG.t = UG, uG = GG[JG - 1];
-            uG || YG(0);
-            let iG = (JG << 3) - 8 + fG(uG) - XG.b,
-              CG = iG >> 3,
-              WG = 0,
-              vG = (GG[CG] | GG[CG + 1] << 8) >> (7 & iG) & (1 << XG.b) - 1;
-            CG = (iG -= pG.b) >> 3;
-            let aG = (GG[CG] | GG[CG + 1] << 8) >> (7 & iG) & (1 << pG.b) - 1;
-            CG = (iG -= VG.b) >> 3;
-            let cG = (GG[CG] | GG[CG + 1] << 8) >> (7 & iG) & (1 << VG.b) - 1;
-            for (++FG; --FG;) {
-              const ZG = XG.s[vG],
-                wG = XG.n[vG],
-                SG = VG.s[cG],
-                LG = VG.n[cG],
-                yG = pG.s[aG],
-                kG = pG.n[aG];
-              CG = (iG -= yG) >> 3;
-              const UG = 1 << yG;
-              let fG = UG + ((GG[CG] | GG[CG + 1] << 8 | GG[CG + 2] << 16 | GG[CG + 3] << 24) >>> (7 & iG) & UG - 1);
-              CG = (iG -= EG[SG]) >> 3;
-              let QG = oG[SG] + ((GG[CG] | GG[CG + 1] << 8 | GG[CG + 2] << 16) >> (7 & iG) & (1 << EG[SG]) - 1);
-              CG = (iG -= rG[ZG]) >> 3;
-              const KG = zG[ZG] + ((GG[CG] | GG[CG + 1] << 8 | GG[CG + 2] << 16) >> (7 & iG) & (1 << rG[ZG]) - 1);
-              if ((iG < 0 || IG + KG > mG.length || WG + KG + QG > mG.length) && YG(0), CG = (iG -= wG) >> 3, vG = XG.t[vG] + ((GG[CG] | GG[CG + 1] << 8) >> (7 & iG) & (1 << wG) - 1), CG = (iG -= LG) >> 3, cG = VG.t[cG] + ((GG[CG] | GG[CG + 1] << 8) >> (7 & iG) & (1 << LG) - 1), CG = (iG -= kG) >> 3, aG = pG.t[aG] + ((GG[CG] | GG[CG + 1] << 8) >> (7 & iG) & (1 << kG) - 1), fG > 3) bG.o[2] = bG.o[1], bG.o[1] = bG.o[0], bG.o[0] = fG -= 3;
+            const [zM, LM, CM] = rM.t = nM, eM = MM[yM - 1];
+            eM || QM(0);
+            let bM = (yM << 3) - 8 + mM(eM) - CM.b,
+              wM = bM >> 3,
+              tM = 0,
+              pM = (MM[wM] | MM[wM + 1] << 8) >> (7 & bM) & (1 << CM.b) - 1;
+            wM = (bM -= LM.b) >> 3;
+            let WM = (MM[wM] | MM[wM + 1] << 8) >> (7 & bM) & (1 << LM.b) - 1;
+            wM = (bM -= zM.b) >> 3;
+            let sM = (MM[wM] | MM[wM + 1] << 8) >> (7 & bM) & (1 << zM.b) - 1;
+            for (++RM; --RM;) {
+              const iM = CM.s[pM],
+                OM = CM.n[pM],
+                SM = zM.s[sM],
+                jM = zM.n[sM],
+                aM = LM.s[WM],
+                PM = LM.n[WM];
+              wM = (bM -= aM) >> 3;
+              const nM = 1 << aM;
+              let mM = nM + ((MM[wM] | MM[wM + 1] << 8 | MM[wM + 2] << 16 | MM[wM + 3] << 24) >>> (7 & bM) & nM - 1);
+              wM = (bM -= UM[SM]) >> 3;
+              let HM = GM[SM] + ((MM[wM] | MM[wM + 1] << 8 | MM[wM + 2] << 16) >> (7 & bM) & (1 << UM[SM]) - 1);
+              wM = (bM -= lM[iM]) >> 3;
+              const hM = EM[iM] + ((MM[wM] | MM[wM + 1] << 8 | MM[wM + 2] << 16) >> (7 & bM) & (1 << lM[iM]) - 1);
+              if ((bM < 0 || uM + hM > gM.length || tM + hM + HM > gM.length) && QM(0), wM = (bM -= OM) >> 3, pM = CM.t[pM] + ((MM[wM] | MM[wM + 1] << 8) >> (7 & bM) & (1 << OM) - 1), wM = (bM -= jM) >> 3, sM = zM.t[sM] + ((MM[wM] | MM[wM + 1] << 8) >> (7 & bM) & (1 << jM) - 1), wM = (bM -= PM) >> 3, WM = LM.t[WM] + ((MM[wM] | MM[wM + 1] << 8) >> (7 & bM) & (1 << PM) - 1), mM > 3) rM.o[2] = rM.o[1], rM.o[1] = rM.o[0], rM.o[0] = mM -= 3;
               else {
-                const GG = fG - (0 != KG);
-                GG ? (fG = 3 == GG ? bG.o[0] - 1 : bG.o[GG], GG > 1 && (bG.o[2] = bG.o[1]), bG.o[1] = bG.o[0], bG.o[0] = fG) : fG = bG.o[0]
+                const MM = mM - (0 != hM);
+                MM ? (mM = 3 == MM ? rM.o[0] - 1 : rM.o[MM], MM > 1 && (rM.o[2] = rM.o[1]), rM.o[1] = rM.o[0], rM.o[0] = mM) : mM = rM.o[0]
               }
-              for (let GG = 0; GG < KG; ++GG) mG[WG + GG] = mG[IG + GG];
-              WG += KG, IG += KG;
-              let hG = WG - fG;
-              if (hG < 0) {
-                let GG = -hG;
-                const ZG = bG.e + hG;
-                ZG < 0 && YG(4), GG > QG && (GG = QG);
-                for (let wG = 0; wG < GG; ++wG) mG[WG + wG] = bG.w[ZG + wG];
-                WG += GG, QG -= GG, hG = 0
+              for (let MM = 0; MM < hM; ++MM) gM[tM + MM] = gM[uM + MM];
+              tM += hM, uM += hM;
+              let JM = tM - mM;
+              if (JM < 0) {
+                let MM = -JM;
+                const iM = rM.e + JM;
+                iM < 0 && QM(4), MM > HM && (MM = HM);
+                for (let OM = 0; OM < MM; ++OM) gM[tM + OM] = rM.w[iM + OM];
+                tM += MM, HM -= MM, JM = 0
               }
-              for (let GG = 0; GG < QG; ++GG) mG[WG + GG] = mG[hG + GG];
-              WG += QG
+              for (let MM = 0; MM < HM; ++MM) gM[tM + MM] = gM[JM + MM];
+              tM += HM
             }
-            if (WG != IG)
-              for (; IG < mG.length;) mG[WG++] = mG[IG++];
-            else WG = mG.length;
-            SG ? bG.y += WG : mG = yG(mG, 0, WG)
-          } else if (SG) {
-            if (bG.y += iG, IG)
-              for (let GG = 0; GG < iG; ++GG) mG[GG] = mG[IG + GG]
-          } else IG && (mG = yG(mG, IG));
-          return bG.b = JG, mG
+            if (tM != uM)
+              for (; uM < gM.length;) gM[tM++] = gM[uM++];
+            else tM = gM.length;
+            SM ? rM.y += tM : gM = aM(gM, 0, tM)
+          } else if (SM) {
+            if (rM.y += bM, uM)
+              for (let MM = 0; MM < bM; ++MM) gM[MM] = gM[uM + MM]
+          } else uM && (gM = aM(gM, uM));
+          return rM.b = yM, gM
         }
-        YG(2)
+        QM(2)
       }
     };
-  class CG {
+  class wM {
     output = null;
     decoded = 0;
     done = !1;
     st = null;
     parts = [];
-    Ik = 0;
+    sQ = 0;
     needed = 18;
     size;
-    constructor(GG) {
-      this.size = GG
+    constructor(MM) {
+      this.size = MM
     }
-    push(GG) {
+    push(MM) {
       if (this.done) return;
-      if (this.parts.push(GG), this.Ik += GG.length, this.Ik < this.needed) return;
-      const bG = ((GG, bG) => {
-        if (1 == GG.length) return GG[0];
-        const wG = new ZG(bG);
-        for (let ZG = 0, SG = 0; ZG < GG.length; ++ZG) {
-          const bG = GG[ZG];
-          wG.set(bG, SG), SG += bG.length
+      if (this.parts.push(MM), this.sQ += MM.length, this.sQ < this.needed) return;
+      const rM = ((MM, rM) => {
+        if (1 == MM.length) return MM[0];
+        const OM = new iM(rM);
+        for (let iM = 0, SM = 0; iM < MM.length; ++iM) {
+          const rM = MM[iM];
+          OM.set(rM, SM), SM += rM.length
         }
-        return wG
-      })(this.parts, this.Ik);
-      let wG = this.st;
-      if (!wG) {
-        const GG = pG(bG, new ZG(0));
-        "number" != typeof GG && GG.u === this.size || YG(0, `not a zstd frame of ${this.size} bytes`), wG = this.st = pG(bG, 1), wG.e = 0, this.output = wG.w
+        return OM
+      })(this.parts, this.sQ);
+      let OM = this.st;
+      if (!OM) {
+        const MM = LM(rM, new iM(0));
+        "number" != typeof MM && MM.u === this.size || QM(0, `not a zstd frame of ${this.size} bytes`), OM = this.st = LM(rM, 1), OM.e = 0, this.output = OM.w
       }
       for (;;) {
-        const GG = bG.length - wG.b;
-        if (GG < 3) {
+        const MM = rM.length - OM.b;
+        if (MM < 3) {
           this.needed = 3;
           break
         }
-        const ZG = bG[wG.b],
-          SG = ZG >> 1 & 3;
-        3 == SG && YG(2);
-        const LG = ZG >> 3 | bG[wG.b + 1] << 5 | bG[wG.b + 2] << 13;
-        LG > wG.m && YG(0), 0 == SG && wG.y + LG > wG.u && YG(0);
-        const yG = 1 == SG ? 4 : 3 + LG;
-        if (GG < yG) {
-          this.needed = yG;
+        const iM = rM[OM.b],
+          SM = iM >> 1 & 3;
+        3 == SM && QM(2);
+        const jM = iM >> 3 | rM[OM.b + 1] << 5 | rM[OM.b + 2] << 13;
+        jM > OM.m && QM(0), 0 == SM && OM.y + jM > OM.u && QM(0);
+        const aM = 1 == SM ? 4 : 3 + jM;
+        if (MM < aM) {
+          this.needed = aM;
           break
         }
-        if (iG(bG, wG, wG.w) || YG(5), wG.e = wG.y, (wG.y > wG.u || wG.l && wG.y != wG.u) && YG(0), wG.l) {
+        if (bM(rM, OM, OM.w) || QM(5), OM.e = OM.y, (OM.y > OM.u || OM.l && OM.y != OM.u) && QM(0), OM.l) {
           this.done = !0;
           break
         }
       }
-      this.decoded = wG.y;
-      const SG = bG.subarray(wG.b);
-      this.parts = SG.length ? [SG] : [], this.Ik = SG.length, wG.b = 0
+      this.decoded = OM.y;
+      const SM = rM.subarray(OM.b);
+      this.parts = SM.length ? [SM] : [], this.sQ = SM.length, OM.b = 0
     }
   }
-  class WG {
+  class tM {
     post;
     href = "";
-    GK = null;
+    PL = null;
     given = 0;
     stopped = !1;
-    constructor(GG) {
-      this.post = GG
+    constructor(MM) {
+      this.post = MM
     }
-    take(bG) {
+    take(rM) {
       if (!this.stopped) try {
-        this.answer(bG)
-      } catch (ZG) {
-        this.stop(ZG instanceof RangeError ? `out of memory decoding ${this.href}: ${GG(ZG)}` : `${this.href} did not decode: ${GG(ZG)}`)
+        this.answer(rM)
+      } catch (iM) {
+        this.stop(iM instanceof RangeError ? `out of memory decoding ${this.href}: ${MM(iM)}` : `${this.href} did not decode: ${MM(iM)}`)
       }
     }
-    answer(GG) {
-      if (null === this.GK) {
-        const [bG, ZG] = GG;
-        return this.href = bG, void(this.GK = new CG(ZG))
+    answer(MM) {
+      if (null === this.PL) {
+        const [rM, iM] = MM;
+        return this.href = rM, void(this.PL = new wM(iM))
       }
-      if (null === GG) return void this.stop(`${this.href} ended before its module did`);
-      const bG = this.GK;
-      bG.push(GG);
+      if (null === MM) return void this.stop(`${this.href} ended before its module did`);
+      const rM = this.PL;
+      rM.push(MM);
       const {
-        output: ZG,
-        decoded: wG
-      } = bG;
-      if (null !== ZG && wG > this.given) {
-        const GG = ZG.slice(this.given, wG).buffer;
-        this.given = wG, this.post(GG, [GG])
+        output: iM,
+        decoded: OM
+      } = rM;
+      if (null !== iM && OM > this.given) {
+        const MM = iM.slice(this.given, OM).buffer;
+        this.given = OM, this.post(MM, [MM])
       }
-      bG.done && this.stop(!0)
+      rM.done && this.stop(!0)
     }
-    stop(GG) {
-      this.stopped = !0, this.post(GG)
+    stop(MM) {
+      this.stopped = !0, this.post(MM)
     }
   }
-  const mG = globalThis.WorkerGlobalScope;
-  if (void 0 !== mG && globalThis instanceof mG) {
-    const GG = globalThis,
-      bG = new WG((function(bG) {
-        let ZG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        GG.postMessage(bG, ZG)
+  const gM = globalThis.WorkerGlobalScope;
+  if (void 0 !== gM && globalThis instanceof gM) {
+    const MM = globalThis,
+      rM = new tM((function(rM) {
+        let iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        MM.postMessage(rM, iM)
       }));
-    GG.addEventListener("message", (GG => {
+    MM.addEventListener("message", (MM => {
       let {
-        data: ZG
-      } = GG;
-      bG.take(ZG)
+        data: iM
+      } = MM;
+      rM.take(iM)
     }))
   }
 })();

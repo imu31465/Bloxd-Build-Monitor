@@ -131,63 +131,769 @@
   background-size: auto, 4rem 4rem
 }
 
-@keyframes SnowflakeFall {
-  0% {
-    top: -10rem
-  }
-
-  to {
-    top: calc(100% + 10rem)
-  }
+.HomeHeader {
+  display: flex;
+  flex-direction: row;
+  z-index: 12
 }
 
-@keyframes SnowflakeSway {
-  0% {
-    transform: translateX(-2em) translateY(0)
-  }
-
-  50% {
-    transform: translateX(2em) translateY(-.5em)
-  }
-
-  to {
-    transform: translateX(-2em) translateY(0)
-  }
+.HomeHeader.HomeHeaderHidden {
+  opacity: 0;
+  pointer-events: none
 }
 
-.IconShower {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
+.HomeHeader.HomeHeaderVisible {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity .6s
+}
+
+.HomeHeader .HomeHeaderInner {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  position: relative;
   width: 100%
 }
 
-.IconShower .Icon {
+.HomeHeader .HomeHeaderInner .HomeHeaderTop {
+  --logo-size: 10rem;
+  align-items: flex-start;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 4
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopPortrait {
+  gap: .5rem
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopPortrait .HomeHeaderAccount,
+.HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopPortrait .HomeHeaderRightContainer {
+  flex: 1 1;
+  width: auto
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopPortrait .TitleContainer {
+  font-size: min(3.4rem, 10vw)
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopPortrait.HomeHeaderTopWithStore .TitleContainer {
+  font-size: min(3.4rem, (100vw - 17.75rem)/5.3)
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopPortrait.HomeHeaderTopWithStore .HomeHeaderRightContainer .HomeHeaderRight {
+  padding: 0 .25rem
+}
+
+@media(pointer:coarse)and (min-width:667px) {
+  .HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopWithStore:not(.HomeHeaderTopPortrait) .HomeHeaderAccount {
+    --home-button-gap: max(0.5rem, 44px - 3.5rem);
+    gap: var(--home-button-gap)
+  }
+
+  .HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopWithStore:not(.HomeHeaderTopPortrait) .HomeHeaderRightContainer {
+    --home-button-gap: max(var(--home-link-gap, 0.5rem), max(0.5rem, 44px - 3.5rem));
+    gap: var(--home-button-gap)
+  }
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton {
+  align-items: center;
+  background: none;
+  background-color: rgba(57, 73, 128, .45);
+  border: none;
+  border-radius: 0;
+  box-sizing: content-box;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  font: inherit;
+  font-size: 1.8rem;
+  height: 3.5rem;
+  justify-content: center;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit;
+  transition: transform .2s;
+  width: 3.5rem
+}
+
+@media(pointer:coarse) {
+  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) max(var(--home-button-gap, .5rem)/-2, min(0px, (100% - 44px)/2));
+    position: absolute
+  }
+}
+
+@media(hover:hover) {
+  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton:hover {
+    transform: scale(1.05)
+  }
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton.pad-focused {
+  transform: scale(1.05)
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton[data-pressing] {
+  box-shadow: inset 0 0 0 2px #ffb914;
+  color: #ffb914;
+  transform: none;
+  transition: none
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton .SocialCountBadge {
   position: absolute;
-  top: -10rem
+  right: -.4rem;
+  top: -.4rem
 }
 
-.IconShower .Icon.IconGroup0 {
-  font-size: 1rem
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton .SocialCountBadge.SocialCountBadgeRequests {
+  bottom: -.4rem;
+  top: auto
 }
 
-.IconShower .Icon.IconGroup1 {
-  font-size: .7rem;
-  opacity: .8
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton .HomeHeaderStoreDot {
+  background-color: #e34f4f;
+  height: .6rem;
+  pointer-events: none;
+  position: absolute;
+  right: .3rem;
+  top: .3rem;
+  width: .6rem
 }
 
-.IconShower .Icon.IconGroup2 {
-  font-size: .5rem;
-  opacity: .6
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton:after {
+  border: max(min(4px, .15em), 2px) solid;
+  border-image: linear-gradient(90deg, #ff6b9d, #ffa64d, gold, #7dd87d, #6bb5ff, #c084fc, #ff6b9d) 1;
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute
 }
 
-.IconShower.IconShowerAnimationSnowflakeFall .Icon {
-  animation: SnowflakeFall 20s linear infinite, SnowflakeSway 4s ease-in-out infinite
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton .svg-inline--fa path {
+  fill: url(#RainbowGradient)
 }
 
-.IconShower.IconShowerAnimationFall .Icon {
-  animation: SnowflakeFall 5s linear infinite
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton {
+  --daily-drop-anchor-width: 3.5rem
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton .HomeHeaderStoreOutline {
+  inset: -.3rem
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton .HomeHeaderStoreDealChip {
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: calc(100% + .25rem);
+  transform: translateX(-50%)
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton[data-pressing] {
+  box-shadow: none;
+  filter: brightness(75%);
+  transition: none
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .DiscordMobileHeaderRightContainer {
+  padding-bottom: 1rem;
+  padding-right: 3rem;
+  padding-top: 3rem
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount {
+  align-items: stretch;
+  display: flex;
+  gap: .5rem;
+  height: 3.5rem;
+  justify-content: flex-start;
+  width: calc(50% - var(--logo-size)/2)
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount.HomeHeaderAccountLandscape {
+  box-sizing: border-box;
+  min-width: 0;
+  padding-right: 1.5rem
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .MinimalAccountButton {
+  background-color: transparent
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .MinimalAccountButton .ProfilePicture {
+  font-size: 1.92rem
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .MinimalAccountButton .HomeHeaderLoginBadge {
+  background-color: #ffb914;
+  right: -.25rem
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .LoginButtonContainer .LoginButton {
+  height: 3.5rem;
+  overflow: visible
+}
+
+@media(pointer:coarse) {
+  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .LoginButtonContainer .LoginButton:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) max(.5rem/-2, min(0px, (100% - 44px)/2));
+    position: absolute
+  }
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .HomeHeaderAccountIdentity {
+  align-items: stretch;
+  display: flex;
+  flex: 1 1;
+  gap: .5rem;
+  min-width: 0
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .HomeHeaderAccountIdentity>:not(.PlayerNamePreview) {
+  flex-shrink: 0
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .HomeHeaderAccountIdentity:has(>.LogoLoader:first-child) .PlayerNamePreview {
+  animation: PlayerNamePreviewShowAnyway 0s 1s forwards;
+  visibility: hidden
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreviewLoader {
+  align-items: center;
+  background: none;
+  background-color: rgba(57, 73, 128, .45);
+  border: none;
+  border-radius: 0;
+  box-sizing: content-box;
+  color: inherit;
+  color: #cef3ff;
+  cursor: pointer;
+  display: flex;
+  flex: none;
+  font: inherit;
+  font-size: 1.6rem;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0 .3em;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreviewLoader[data-pressing] {
+  box-shadow: inset 0 0 0 2px #ffb914;
+  transition: none
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview {
+  align-items: center;
+  background: none;
+  background-color: rgba(57, 73, 128, .45);
+  border: none;
+  border-radius: 0;
+  box-sizing: content-box;
+  color: inherit;
+  color: #cef3ff;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  font-size: 1.6rem;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+  position: relative;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit
+}
+
+@media(pointer:coarse) {
+  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) max(.5rem/-2, min(0px, (100% - 44px)/2));
+    position: absolute
+  }
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview>.TextFromServer {
+  overflow: hidden
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview.PlayerNamePreviewLoading {
+  background-color: transparent;
+  pointer-events: none
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview.PlayerNamePreviewWithRanks {
+  padding-right: .3em
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview.PlayerNamePreviewNoRanks {
+  padding: 0 .3em
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview[data-pressing] {
+  box-shadow: inset 0 0 0 2px #ffb914;
+  transition: none
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags {
+  gap: 0;
+  height: 3.5rem
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  font-size: 2.5rem;
+  justify-content: center;
+  line-height: 2.5rem;
+  padding: 0 .4rem;
+  vertical-align: center
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag .TextFromServer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  line-height: 2.5rem
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag .TextFromServer .svg-inline--fa {
+  color: #fff !important
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag-developer {
+  background-color: #a4a4a4
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag-admin {
+  background-color: #cfcfcf
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag-super {
+  background-color: #ffb914
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag-youtuber {
+  background-color: #f03
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag-creatorLevel1 {
+  background-color: #ff7a30
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag-creatorLevel2 {
+  background-color: #ff307a
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag-creatorLevel3 {
+  background-color: #ce63ff
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityName {
+  margin-left: .4rem
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer {
+  align-items: stretch;
+  display: flex;
+  gap: .5rem;
+  height: 3.5rem;
+  justify-content: flex-end;
+  width: calc(50% - var(--logo-size)/2)
+}
+
+@media(pointer:coarse)and (orientation:landscape)and (min-width:800px) {
+  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer {
+    --home-link-gap: max(0.5rem, 44px - 3rem);
+    gap: var(--home-link-gap)
+  }
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeLinkButtons {
+  flex-shrink: 0;
+  gap: var(--home-link-gap, .5rem)
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeLinkButtons .HomeLinkButton {
+  flex: 0 0 3rem;
+  position: relative
+}
+
+@media(pointer:coarse) {
+  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeLinkButtons .HomeLinkButton:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) max(var(--home-link-gap, .5rem)/-2, min(0px, (100% - 44px)/2));
+    position: absolute
+  }
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeHeaderRight {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: .5rem;
+  padding-right: .75rem;
+  position: relative
+}
+
+@media(pointer:coarse)and (orientation:landscape)and (min-width:800px) {
+  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeHeaderRight {
+    padding-right: max(.75rem, (44px - 2.6rem)/2 - var(--home-inner-padding-right, 0px))
+  }
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeHeaderRight.LinkIconList {
+  gap: 1rem
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeHeaderRight.LinkIconList img {
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: optimizeSpeed;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast
+}
+
+@keyframes PlayerNamePreviewShowAnyway {
+  to {
+    visibility: visible
+  }
+}
+
+.tooltip-container {
+  --tooltipBackground: #fff;
+  --tooltipBorder: silver;
+  --tooltipColor: #000;
+  background-color: var(--tooltipBackground);
+  border: 1px solid var(--tooltipBorder);
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .18);
+  color: var(--tooltipColor);
+  display: flex;
+  flex-direction: column;
+  padding: .4rem;
+  transition: opacity .3s;
+  z-index: 9999
+}
+
+.tooltip-arrow,
+.tooltip-container[data-popper-interactive=false] {
+  pointer-events: none
+}
+
+.tooltip-arrow {
+  height: 1rem;
+  position: absolute;
+  width: 1rem
+}
+
+.tooltip-arrow:after,
+.tooltip-arrow:before {
+  border-style: solid;
+  content: "";
+  display: block;
+  height: 0;
+  margin: auto;
+  width: 0
+}
+
+.tooltip-arrow:after {
+  position: absolute
+}
+
+.tooltip-container[data-popper-placement*=bottom] .tooltip-arrow {
+  left: 0;
+  margin-top: -.4rem;
+  top: 0
+}
+
+.tooltip-container[data-popper-placement*=bottom] .tooltip-arrow:before {
+  border-color: transparent transparent var(--tooltipBorder) transparent;
+  border-width: 0 .5rem .4rem;
+  position: absolute;
+  top: -1px
+}
+
+.tooltip-container[data-popper-placement*=bottom] .tooltip-arrow:after {
+  border-color: transparent transparent var(--tooltipBackground) transparent;
+  border-width: 0 .5rem .4rem
+}
+
+.tooltip-container[data-popper-placement*=top] .tooltip-arrow {
+  bottom: 0;
+  left: 0;
+  margin-bottom: -1rem
+}
+
+.tooltip-container[data-popper-placement*=top] .tooltip-arrow:before {
+  border-color: var(--tooltipBorder) transparent transparent transparent;
+  border-width: .4rem .5rem 0;
+  position: absolute;
+  top: 1px
+}
+
+.tooltip-container[data-popper-placement*=top] .tooltip-arrow:after {
+  border-color: var(--tooltipBackground) transparent transparent transparent;
+  border-width: .4rem .5rem 0
+}
+
+.tooltip-container[data-popper-placement*=right] .tooltip-arrow {
+  left: 0;
+  margin-left: -.7rem
+}
+
+.tooltip-container[data-popper-placement*=right] .tooltip-arrow:before {
+  border-color: transparent var(--tooltipBorder) transparent transparent;
+  border-width: .5rem .4rem .5rem 0
+}
+
+.tooltip-container[data-popper-placement*=right] .tooltip-arrow:after {
+  border-color: transparent var(--tooltipBackground) transparent transparent;
+  border-width: .5rem .4rem .5rem 0;
+  left: 6px;
+  top: 0
+}
+
+.tooltip-container[data-popper-placement*=left] .tooltip-arrow {
+  margin-right: -.7rem;
+  right: 0
+}
+
+.tooltip-container[data-popper-placement*=left] .tooltip-arrow:before {
+  border-color: transparent transparent transparent var(--tooltipBorder);
+  border-width: .5rem 0 .5rem .4em
+}
+
+.tooltip-container[data-popper-placement*=left] .tooltip-arrow:after {
+  border-color: transparent transparent transparent var(--tooltipBackground);
+  border-width: .5rem 0 .5rem .4em;
+  left: 3px;
+  top: 0
+}
+
+.TurnstileWidgetHeader {
+  font-size: 1.5rem;
+  margin-bottom: 1rem
+}
+
+.TurnstileWidgetBody {
+  position: relative;
+  z-index: 23
+}
+
+.TurnstileWidgetFooter {
+  align-content: center;
+  display: flex;
+  font-size: 1.25rem;
+  justify-content: center;
+  padding-top: 1rem
+}
+
+.MiddleScreenPopupBackground {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  height: 100dvh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  touch-action: pinch-zoom;
+  width: 100vw;
+  z-index: 1
+}
+
+.MiddleScreenPopupBackground.ShowBackground {
+  background-color: rgba(26, 31, 46, .6)
+}
+
+.MiddleScreenPopupBackground.AboveKeyboard {
+  height: var(--visible-height);
+  top: var(--visible-top)
+}
+
+.MiddleScreenPopupBackground.AboveKeyboard .MiddleScreenPopup {
+  box-sizing: border-box;
+  max-height: 100%;
+  overflow-y: auto
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup {
+  background-color: #303a59;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #fff;
+  max-width: 80vw;
+  padding: 1.5rem;
+  text-align: center;
+  z-index: 1
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(1turn)
+  }
+}
+
+.LogoLoader {
+  --border-size: min(0.8rem, 0.15em);
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  height: 1em;
+  position: relative;
+  width: 1em
+}
+
+.LogoLoader.LogoLoaderPrimary {
+  --border-color-1: #4f94f1;
+  --border-color-2: #f2f2f2
+}
+
+.LogoLoader.LogoLoaderSecondary {
+  --border-color-1: #f2f2f2;
+  --border-color-2: #a4a4a4
+}
+
+.LogoLoader.LogoLoaderSuccess {
+  --border-color-1: #4f94f1;
+  --border-color-2: #4f94f1
+}
+
+.LogoLoader .LoaderSantaHat {
+  --fa-primary-color: #e73131;
+  --fa-secondary-color: #fff;
+  --fa-secondary-opacity: 1;
+  font-size: .7em;
+  position: absolute;
+  right: -.36em;
+  rotate: 20deg;
+  top: -.51em;
+  z-index: 2
+}
+
+.InGameHeaderLogo .LogoLoader .LoaderSantaHat,
+.TitleContainer .LogoLoader .LoaderSantaHat {
+  top: -.25em
+}
+
+.LogoLoader .LogoLoaderInner {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - var(--border-size)*2 - var(--border-size));
+  left: calc(var(--border-size) + var(--border-size)/2);
+  overflow: hidden;
+  position: absolute;
+  top: calc(var(--border-size) + var(--border-size)/2);
+  width: calc(100% - var(--border-size)*2 - var(--border-size))
+}
+
+.LogoLoader .LogoLoaderLoadingBar {
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  transition: border .2s, border-top .2s
+}
+
+.LogoLoader .LogoLoaderLoadingBar,
+.LogoLoader .LogoLoaderProgressBar {
+  height: 100%;
+  position: absolute;
+  width: 100%
+}
+
+.LogoLoader .LogoLoaderProgressBar .LogoLoaderProgressBarText {
+  align-items: center;
+  background-color: rgba(0, 0, 0, .6);
+  box-sizing: border-box;
+  display: flex;
+  height: calc(70% - var(--border-size)*3*.7);
+  inset: 0;
+  justify-content: center;
+  margin: auto;
+  position: absolute;
+  width: calc(70% - var(--border-size)*3*.7)
+}
+
+.LogoLoader .LogoLoaderProgressBar .LogoLoaderProgressBarText .LogoLoaderProgressBarPercent {
+  color: var(--border-color-2);
+  font-size: .25em;
+  font-weight: 800
+}
+
+.LogoLoader .LogoLoaderProgressBar svg {
+  color: var(--border-color-1);
+  height: 100%;
+  position: absolute;
+  transform: rotate(-90deg);
+  width: 100%
+}
+
+.LogoLoader.LogoLoaderIsLoading .LogoLoaderInner,
+.LogoLoader.LogoLoaderIsProgressBar .LogoLoaderInner {
+  height: calc(70% - var(--border-size)*3*.7);
+  inset: 0;
+  margin: auto;
+  width: calc(70% - var(--border-size)*3*.7)
+}
+
+.LogoLoader.LogoLoaderIsProgressBar .LogoLoaderLoadingBar {
+  border: var(--border-size) solid var(--border-color-2);
+  border-radius: 50%
+}
+
+.LogoLoader.LogoLoaderIsProgressBar .LogoLoaderInner {
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: optimizeSpeed;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast
+}
+
+.LogoLoader:not(.LogoLoaderIsProgressBar).LogoLoaderIsLoading .LogoLoaderLoadingBar {
+  animation: rotate 1.5s linear infinite;
+  border: var(--border-size) solid var(--border-color-2);
+  border-radius: 50%;
+  border-top: var(--border-size) solid var(--border-color-1);
+  transition: border-color 1s
+}
+
+.LogoLoader:not(.LogoLoaderIsProgressBar).LogoLoaderIsLoading[data-off-screen] .LogoLoaderLoadingBar,
+html[data-app-covered] .WholeAppWrapper .LogoLoader:not(.LogoLoaderIsProgressBar).LogoLoaderIsLoading .LogoLoaderLoadingBar {
+  animation-play-state: paused
+}
+
+.LogoLoader:not(.LogoLoaderIsProgressBar):not(.LogoLoaderIsLoading) {
+  --border-size: 0.2rem
+}
+
+.LogoLoader:not(.LogoLoaderIsProgressBar):not(.LogoLoaderIsLoading) .LogoLoaderLoadingBar {
+  border: var(--border-size) solid #2e80ee
 }
 
 :host,
@@ -783,767 +1489,6 @@
   z-index: var(--fa-stack-z-index, auto)
 }
 
-.HomeHeader {
-  display: flex;
-  flex-direction: row;
-  z-index: 12
-}
-
-.HomeHeader.HomeHeaderHidden {
-  opacity: 0;
-  pointer-events: none
-}
-
-.HomeHeader.HomeHeaderVisible {
-  opacity: 1;
-  pointer-events: auto;
-  transition: opacity .6s
-}
-
-.HomeHeader .HomeHeaderInner {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  position: relative;
-  width: 100%
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop {
-  --logo-size: 10rem;
-  align-items: flex-start;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  z-index: 4
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopPortrait {
-  gap: .5rem
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopPortrait .HomeHeaderAccount,
-.HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopPortrait .HomeHeaderRightContainer {
-  flex: 1 1;
-  width: auto
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopPortrait .TitleContainer {
-  font-size: min(3.4rem, 10vw)
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopPortrait.HomeHeaderTopWithStore .TitleContainer {
-  font-size: min(3.4rem, (100vw - 17.75rem)/5.3)
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopPortrait.HomeHeaderTopWithStore .HomeHeaderRightContainer .HomeHeaderRight {
-  padding: 0 .25rem
-}
-
-@media(pointer:coarse)and (min-width:667px) {
-  .HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopWithStore:not(.HomeHeaderTopPortrait) .HomeHeaderAccount {
-    --home-button-gap: max(0.5rem, 44px - 3.5rem);
-    gap: var(--home-button-gap)
-  }
-
-  .HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopWithStore:not(.HomeHeaderTopPortrait) .HomeHeaderRightContainer {
-    --home-button-gap: max(var(--home-link-gap, 0.5rem), max(0.5rem, 44px - 3.5rem));
-    gap: var(--home-button-gap)
-  }
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton {
-  align-items: center;
-  background: none;
-  background-color: rgba(57, 73, 128, .45);
-  border: none;
-  border-radius: 0;
-  box-sizing: content-box;
-  color: inherit;
-  cursor: pointer;
-  display: flex;
-  flex-shrink: 0;
-  font: inherit;
-  font-size: 1.8rem;
-  height: 3.5rem;
-  justify-content: center;
-  letter-spacing: inherit;
-  line-height: inherit;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  text-align: inherit;
-  text-shadow: inherit;
-  text-transform: inherit;
-  transition: transform .2s;
-  width: 3.5rem
-}
-
-@media(pointer:coarse) {
-  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton:before {
-    content: "";
-    inset: min(0px, (100% - 44px)/2) max(var(--home-button-gap, .5rem)/-2, min(0px, (100% - 44px)/2));
-    position: absolute
-  }
-}
-
-@media(hover:hover) {
-  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton:hover {
-    transform: scale(1.05)
-  }
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton.pad-focused {
-  transform: scale(1.05)
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton[data-pressing] {
-  box-shadow: inset 0 0 0 2px #ffb914;
-  color: #ffb914;
-  transform: none;
-  transition: none
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton .SocialCountBadge {
-  position: absolute;
-  right: -.4rem;
-  top: -.4rem
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton .SocialCountBadge.SocialCountBadgeRequests {
-  bottom: -.4rem;
-  top: auto
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton .HomeHeaderStoreDot {
-  background-color: #e34f4f;
-  height: .6rem;
-  pointer-events: none;
-  position: absolute;
-  right: .3rem;
-  top: .3rem;
-  width: .6rem
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton:after {
-  border: max(min(4px, .15em), 2px) solid;
-  border-image: linear-gradient(90deg, #ff6b9d, #ffa64d, gold, #7dd87d, #6bb5ff, #c084fc, #ff6b9d) 1;
-  content: "";
-  inset: 0;
-  pointer-events: none;
-  position: absolute
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton .svg-inline--fa path {
-  fill: url(#RainbowGradient)
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton {
-  --daily-drop-anchor-width: 3.5rem
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton .HomeHeaderStoreOutline {
-  inset: -.3rem
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton[data-pressing] {
-  box-shadow: none;
-  filter: brightness(75%);
-  transition: none
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .DiscordMobileHeaderRightContainer {
-  padding-bottom: 1rem;
-  padding-right: 3rem;
-  padding-top: 3rem
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount {
-  align-items: stretch;
-  display: flex;
-  gap: .5rem;
-  height: 3.5rem;
-  justify-content: flex-start;
-  width: calc(50% - var(--logo-size)/2)
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount.HomeHeaderAccountLandscape {
-  box-sizing: border-box;
-  min-width: 0;
-  padding-right: 1.5rem
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .MinimalAccountButton {
-  background-color: transparent
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .MinimalAccountButton .ProfilePicture {
-  font-size: 1.92rem
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .MinimalAccountButton .HomeHeaderLoginBadge {
-  background-color: #ffb914;
-  right: -.25rem
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .LoginButtonContainer .LoginButton {
-  height: 3.5rem;
-  overflow: visible
-}
-
-@media(pointer:coarse) {
-  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .LoginButtonContainer .LoginButton:before {
-    content: "";
-    inset: min(0px, (100% - 44px)/2) max(.5rem/-2, min(0px, (100% - 44px)/2));
-    position: absolute
-  }
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .HomeHeaderAccountIdentity {
-  align-items: stretch;
-  display: flex;
-  flex: 1 1;
-  gap: .5rem;
-  min-width: 0
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .HomeHeaderAccountIdentity>:not(.PlayerNamePreview) {
-  flex-shrink: 0
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .HomeHeaderAccountIdentity:has(>.LogoLoader:first-child) .PlayerNamePreview {
-  animation: PlayerNamePreviewShowAnyway 0s 1s forwards;
-  visibility: hidden
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreviewLoader {
-  align-items: center;
-  background: none;
-  background-color: rgba(57, 73, 128, .45);
-  border: none;
-  border-radius: 0;
-  box-sizing: content-box;
-  color: inherit;
-  color: #cef3ff;
-  cursor: pointer;
-  display: flex;
-  flex: none;
-  font: inherit;
-  font-size: 1.6rem;
-  letter-spacing: inherit;
-  line-height: inherit;
-  margin: 0;
-  padding: 0 .3em;
-  text-align: inherit;
-  text-shadow: inherit;
-  text-transform: inherit
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreviewLoader[data-pressing] {
-  box-shadow: inset 0 0 0 2px #ffb914;
-  transition: none
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview {
-  align-items: center;
-  background: none;
-  background-color: rgba(57, 73, 128, .45);
-  border: none;
-  border-radius: 0;
-  box-sizing: content-box;
-  color: inherit;
-  color: #cef3ff;
-  cursor: pointer;
-  display: flex;
-  font: inherit;
-  font-size: 1.6rem;
-  letter-spacing: inherit;
-  line-height: inherit;
-  margin: 0;
-  min-width: 0;
-  padding: 0;
-  position: relative;
-  text-align: inherit;
-  text-shadow: inherit;
-  text-transform: inherit
-}
-
-@media(pointer:coarse) {
-  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview:before {
-    content: "";
-    inset: min(0px, (100% - 44px)/2) max(.5rem/-2, min(0px, (100% - 44px)/2));
-    position: absolute
-  }
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview>.TextFromServer {
-  overflow: hidden
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview.PlayerNamePreviewLoading {
-  background-color: transparent;
-  pointer-events: none
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview.PlayerNamePreviewWithRanks {
-  padding-right: .3em
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview.PlayerNamePreviewNoRanks {
-  padding: 0 .3em
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview[data-pressing] {
-  box-shadow: inset 0 0 0 2px #ffb914;
-  transition: none
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags {
-  gap: 0;
-  height: 3.5rem
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag {
-  align-items: center;
-  align-self: stretch;
-  display: flex;
-  font-size: 2.5rem;
-  justify-content: center;
-  line-height: 2.5rem;
-  padding: 0 .4rem;
-  vertical-align: center
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag .TextFromServer {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  line-height: 2.5rem
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag .TextFromServer .svg-inline--fa {
-  color: #fff !important
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag-developer {
-  background-color: #a4a4a4
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag-admin {
-  background-color: #cfcfcf
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag-super {
-  background-color: #ffb914
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag-youtuber {
-  background-color: #f03
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag-creatorLevel1 {
-  background-color: #ff7a30
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag-creatorLevel2 {
-  background-color: #ff307a
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityNameTag-creatorLevel3 {
-  background-color: #ce63ff
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .PlayerNamePreview .TextFromServerEntityNameWithTags .TextFromServerEntityName {
-  margin-left: .4rem
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer {
-  align-items: stretch;
-  display: flex;
-  gap: .5rem;
-  height: 3.5rem;
-  justify-content: flex-end;
-  width: calc(50% - var(--logo-size)/2)
-}
-
-@media(pointer:coarse)and (orientation:landscape)and (min-width:800px) {
-  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer {
-    --home-link-gap: max(0.5rem, 44px - 3rem);
-    gap: var(--home-link-gap)
-  }
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeLinkButtons {
-  flex-shrink: 0;
-  gap: var(--home-link-gap, .5rem)
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeLinkButtons .HomeLinkButton {
-  flex: 0 0 3rem;
-  position: relative
-}
-
-@media(pointer:coarse) {
-  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeLinkButtons .HomeLinkButton:before {
-    content: "";
-    inset: min(0px, (100% - 44px)/2) max(var(--home-link-gap, .5rem)/-2, min(0px, (100% - 44px)/2));
-    position: absolute
-  }
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeHeaderRight {
-  align-items: center;
-  display: flex;
-  justify-content: flex-end;
-  padding-left: .5rem;
-  padding-right: .75rem;
-  position: relative
-}
-
-@media(pointer:coarse)and (orientation:landscape)and (min-width:800px) {
-  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeHeaderRight {
-    padding-right: max(.75rem, (44px - 2.6rem)/2 - var(--home-inner-padding-right, 0px))
-  }
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeHeaderRight.LinkIconList {
-  gap: 1rem
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeHeaderRight.LinkIconList img {
-  -ms-interpolation-mode: nearest-neighbor;
-  image-rendering: optimizeSpeed;
-  image-rendering: -o-crisp-edges;
-  image-rendering: pixelated;
-  image-rendering: optimize-contrast
-}
-
-@keyframes PlayerNamePreviewShowAnyway {
-  to {
-    visibility: visible
-  }
-}
-
-.tooltip-container {
-  --tooltipBackground: #fff;
-  --tooltipBorder: silver;
-  --tooltipColor: #000;
-  background-color: var(--tooltipBackground);
-  border: 1px solid var(--tooltipBorder);
-  border-radius: 3px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .18);
-  color: var(--tooltipColor);
-  display: flex;
-  flex-direction: column;
-  padding: .4rem;
-  transition: opacity .3s;
-  z-index: 9999
-}
-
-.tooltip-arrow,
-.tooltip-container[data-popper-interactive=false] {
-  pointer-events: none
-}
-
-.tooltip-arrow {
-  height: 1rem;
-  position: absolute;
-  width: 1rem
-}
-
-.tooltip-arrow:after,
-.tooltip-arrow:before {
-  border-style: solid;
-  content: "";
-  display: block;
-  height: 0;
-  margin: auto;
-  width: 0
-}
-
-.tooltip-arrow:after {
-  position: absolute
-}
-
-.tooltip-container[data-popper-placement*=bottom] .tooltip-arrow {
-  left: 0;
-  margin-top: -.4rem;
-  top: 0
-}
-
-.tooltip-container[data-popper-placement*=bottom] .tooltip-arrow:before {
-  border-color: transparent transparent var(--tooltipBorder) transparent;
-  border-width: 0 .5rem .4rem;
-  position: absolute;
-  top: -1px
-}
-
-.tooltip-container[data-popper-placement*=bottom] .tooltip-arrow:after {
-  border-color: transparent transparent var(--tooltipBackground) transparent;
-  border-width: 0 .5rem .4rem
-}
-
-.tooltip-container[data-popper-placement*=top] .tooltip-arrow {
-  bottom: 0;
-  left: 0;
-  margin-bottom: -1rem
-}
-
-.tooltip-container[data-popper-placement*=top] .tooltip-arrow:before {
-  border-color: var(--tooltipBorder) transparent transparent transparent;
-  border-width: .4rem .5rem 0;
-  position: absolute;
-  top: 1px
-}
-
-.tooltip-container[data-popper-placement*=top] .tooltip-arrow:after {
-  border-color: var(--tooltipBackground) transparent transparent transparent;
-  border-width: .4rem .5rem 0
-}
-
-.tooltip-container[data-popper-placement*=right] .tooltip-arrow {
-  left: 0;
-  margin-left: -.7rem
-}
-
-.tooltip-container[data-popper-placement*=right] .tooltip-arrow:before {
-  border-color: transparent var(--tooltipBorder) transparent transparent;
-  border-width: .5rem .4rem .5rem 0
-}
-
-.tooltip-container[data-popper-placement*=right] .tooltip-arrow:after {
-  border-color: transparent var(--tooltipBackground) transparent transparent;
-  border-width: .5rem .4rem .5rem 0;
-  left: 6px;
-  top: 0
-}
-
-.tooltip-container[data-popper-placement*=left] .tooltip-arrow {
-  margin-right: -.7rem;
-  right: 0
-}
-
-.tooltip-container[data-popper-placement*=left] .tooltip-arrow:before {
-  border-color: transparent transparent transparent var(--tooltipBorder);
-  border-width: .5rem 0 .5rem .4em
-}
-
-.tooltip-container[data-popper-placement*=left] .tooltip-arrow:after {
-  border-color: transparent transparent transparent var(--tooltipBackground);
-  border-width: .5rem 0 .5rem .4em;
-  left: 3px;
-  top: 0
-}
-
-.TurnstileWidgetHeader {
-  font-size: 1.5rem;
-  margin-bottom: 1rem
-}
-
-.TurnstileWidgetBody {
-  position: relative;
-  z-index: 23
-}
-
-.TurnstileWidgetFooter {
-  align-content: center;
-  display: flex;
-  font-size: 1.25rem;
-  justify-content: center;
-  padding-top: 1rem
-}
-
-.MiddleScreenPopupBackground {
-  align-items: center;
-  display: flex;
-  height: 100vh;
-  height: 100dvh;
-  justify-content: center;
-  left: 0;
-  position: fixed;
-  top: 0;
-  touch-action: pinch-zoom;
-  width: 100vw;
-  z-index: 1
-}
-
-.MiddleScreenPopupBackground.ShowBackground {
-  background-color: rgba(26, 31, 46, .6)
-}
-
-.MiddleScreenPopupBackground.AboveKeyboard {
-  height: var(--visible-height);
-  top: var(--visible-top)
-}
-
-.MiddleScreenPopupBackground.AboveKeyboard .MiddleScreenPopup {
-  box-sizing: border-box;
-  max-height: 100%;
-  overflow-y: auto
-}
-
-.MiddleScreenPopupBackground .MiddleScreenPopup {
-  background-color: #303a59;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  color: #fff;
-  max-width: 80vw;
-  padding: 1.5rem;
-  text-align: center;
-  z-index: 1
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg)
-  }
-
-  to {
-    transform: rotate(1turn)
-  }
-}
-
-.LogoLoader {
-  --border-size: min(0.8rem, 0.15em);
-  aspect-ratio: 1;
-  box-sizing: border-box;
-  height: 1em;
-  position: relative;
-  width: 1em
-}
-
-.LogoLoader.LogoLoaderPrimary {
-  --border-color-1: #4f94f1;
-  --border-color-2: #f2f2f2
-}
-
-.LogoLoader.LogoLoaderSecondary {
-  --border-color-1: #f2f2f2;
-  --border-color-2: #a4a4a4
-}
-
-.LogoLoader.LogoLoaderSuccess {
-  --border-color-1: #4f94f1;
-  --border-color-2: #4f94f1
-}
-
-.LogoLoader .LoaderSantaHat {
-  font-size: .7em;
-  position: absolute;
-  right: -3.5rem;
-  rotate: 20deg;
-  top: -5rem;
-  z-index: 2
-}
-
-.LogoLoader .LoaderSantaHat:before {
-  color: red;
-  z-index: 2
-}
-
-.LogoLoader .LoaderSantaHat:after {
-  color: #fff;
-  opacity: 1;
-  position: relative;
-  z-index: 3
-}
-
-.LogoLoader .LogoLoaderInner {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  height: calc(100% - var(--border-size)*2 - var(--border-size));
-  left: calc(var(--border-size) + var(--border-size)/2);
-  overflow: hidden;
-  position: absolute;
-  top: calc(var(--border-size) + var(--border-size)/2);
-  width: calc(100% - var(--border-size)*2 - var(--border-size))
-}
-
-.LogoLoader .LogoLoaderLoadingBar {
-  box-sizing: border-box;
-  left: 0;
-  top: 0;
-  transition: border .2s, border-top .2s
-}
-
-.LogoLoader .LogoLoaderLoadingBar,
-.LogoLoader .LogoLoaderProgressBar {
-  height: 100%;
-  position: absolute;
-  width: 100%
-}
-
-.LogoLoader .LogoLoaderProgressBar .LogoLoaderProgressBarText {
-  align-items: center;
-  background-color: rgba(0, 0, 0, .6);
-  box-sizing: border-box;
-  display: flex;
-  height: calc(70% - var(--border-size)*3*.7);
-  inset: 0;
-  justify-content: center;
-  margin: auto;
-  position: absolute;
-  width: calc(70% - var(--border-size)*3*.7)
-}
-
-.LogoLoader .LogoLoaderProgressBar .LogoLoaderProgressBarText .LogoLoaderProgressBarPercent {
-  color: var(--border-color-2);
-  font-size: .25em;
-  font-weight: 800
-}
-
-.LogoLoader .LogoLoaderProgressBar svg {
-  color: var(--border-color-1);
-  height: 100%;
-  position: absolute;
-  transform: rotate(-90deg);
-  width: 100%
-}
-
-.LogoLoader.LogoLoaderIsLoading .LogoLoaderInner,
-.LogoLoader.LogoLoaderIsProgressBar .LogoLoaderInner {
-  height: calc(70% - var(--border-size)*3*.7);
-  inset: 0;
-  margin: auto;
-  width: calc(70% - var(--border-size)*3*.7)
-}
-
-.LogoLoader.LogoLoaderIsProgressBar .LogoLoaderLoadingBar {
-  border: var(--border-size) solid var(--border-color-2);
-  border-radius: 50%
-}
-
-.LogoLoader.LogoLoaderIsProgressBar .LogoLoaderInner {
-  -ms-interpolation-mode: nearest-neighbor;
-  image-rendering: optimizeSpeed;
-  image-rendering: -o-crisp-edges;
-  image-rendering: pixelated;
-  image-rendering: optimize-contrast
-}
-
-.LogoLoader:not(.LogoLoaderIsProgressBar).LogoLoaderIsLoading .LogoLoaderLoadingBar {
-  animation: rotate 1.5s linear infinite;
-  border: var(--border-size) solid var(--border-color-2);
-  border-radius: 50%;
-  border-top: var(--border-size) solid var(--border-color-1);
-  transition: border-color 1s
-}
-
-.LogoLoader:not(.LogoLoaderIsProgressBar).LogoLoaderIsLoading[data-off-screen] .LogoLoaderLoadingBar,
-html[data-app-covered] .WholeAppWrapper .LogoLoader:not(.LogoLoaderIsProgressBar).LogoLoaderIsLoading .LogoLoaderLoadingBar {
-  animation-play-state: paused
-}
-
-.LogoLoader:not(.LogoLoaderIsProgressBar):not(.LogoLoaderIsLoading) {
-  --border-size: 0.2rem
-}
-
-.LogoLoader:not(.LogoLoaderIsProgressBar):not(.LogoLoaderIsLoading) .LogoLoaderLoadingBar {
-  border: var(--border-size) solid #2e80ee
-}
-
 .GenericVideoWrapper {
   align-items: center;
   background-color: #000;
@@ -1744,6 +1689,10 @@ html[data-app-covered] .WholeAppWrapper .LogoLoader:not(.LogoLoaderIsProgressBar
   gap: 1rem;
   max-width: max(50vw, 40rem);
   min-width: min(80vw, 26rem)
+}
+
+.InputGenericPopup:not(.PromptGenericPopup) .PromptGenericPopupTitle {
+  padding-inline: 3rem
 }
 
 .InputGenericPopup .InputGenericPopupInputRow {
@@ -3018,24 +2967,39 @@ a {
   color: #e73131
 }
 
-.LoadableButton.ReportButton {
+.LoadableButton.ReportButton,
+.LoadableButton.StopRecordingButton {
   background-color: #3c4b68
 }
 
 @media(hover:hover) {
-  .LoadableButton.ReportButton:hover {
+
+  .LoadableButton.ReportButton:hover,
+  .LoadableButton.StopRecordingButton:hover {
     background-color: #394980
   }
 }
 
-.LoadableButton.ReportButton.pad-focused {
+.LoadableButton.ReportButton.pad-focused,
+.LoadableButton.StopRecordingButton.pad-focused {
   background-color: #394980
 }
 
 @media(hover:none) {
-  .LoadableButton.ReportButton:active {
+
+  .LoadableButton.ReportButton:active,
+  .LoadableButton.StopRecordingButton:active {
     background-color: #394980
   }
+}
+
+.LoadableButton.StopRecordingButton {
+  color: #e34f4f
+}
+
+.LoadableButton.StopRecordingButton .StopRecordingButtonLabel {
+  color: #fff;
+  white-space: nowrap
 }
 
 .LoadableButton.DisabledLoadableButton {
@@ -3546,6 +3510,7 @@ a {
 @media(pointer:coarse) {
 
   .HomeHeader .TopRightIconsContainer .TopRightIcons .NotificationBell:before,
+  .HomeHeader .TopRightIconsContainer .TopRightIcons .StopRecordingButton:before,
   .HomeHeader .TopRightIconsContainer .TopRightIcons .TopRightIcon>.UiItemIcon:before {
     content: "";
     inset: min(0px, (100% - 44px)/2) max(var(--header-icon-gap, 1.25rem)/-2, min(0px, (100% - 44px)/2));
@@ -3565,6 +3530,15 @@ a {
     justify-content: center;
     min-width: 1em
   }
+}
+
+.HomeHeader .TopRightIconsContainer .TopRightIcons .TopRightStopRecording {
+  align-self: center
+}
+
+.HomeHeader .TopRightIconsContainer .TopRightIcons .TopRightStopRecording .StopRecordingButton {
+  font-size: 1.6rem;
+  padding: .4rem
 }
 
 .TopRightIconsContainer .TopRightIcons.TouchInGame {
@@ -4641,6 +4615,7 @@ a {
 }
 
 .NotificationTray .NotificationTrayRows::-webkit-scrollbar {
+  height: 6px;
   width: 6px
 }
 
@@ -6065,6 +6040,659 @@ a {
   }
 }
 
+.CandyCanePackBackground {
+  container-type: size;
+  background: repeating-linear-gradient(135deg, rgba(224, 40, 60, .07) 0 1.2em, transparent 1.2em 2.4em), radial-gradient(ellipse at 50% 40%, #fff1f3 0, #f9cdd6 100%);
+  inset: 0;
+  overflow: hidden;
+  position: absolute
+}
+
+.CandyCanePackBackground.PackBackgroundSimple .CandyCanePackBackgroundInner .CandyCaneWrap .CandyCane {
+  animation: none
+}
+
+.CandyCanePackBackground .CandyCanePackBackgroundInner {
+  inset: 0;
+  pointer-events: none;
+  position: absolute
+}
+
+.CandyCanePackBackground .CandyCanePackBackgroundInner:before {
+  background-image: radial-gradient(circle at 8% 18%, hsla(0, 0%, 100%, .7) 0 1.5px, transparent 2px), radial-gradient(circle at 26% 64%, hsla(0, 0%, 100%, .7) 0 1.5px, transparent 2px), radial-gradient(circle at 41% 12%, hsla(0, 0%, 100%, .7) 0 1px, transparent 1.5px), radial-gradient(circle at 57% 86%, hsla(0, 0%, 100%, .7) 0 1.5px, transparent 2px), radial-gradient(circle at 70% 34%, hsla(0, 0%, 100%, .7) 0 1px, transparent 1.5px), radial-gradient(circle at 86% 80%, hsla(0, 0%, 100%, .7) 0 1.5px, transparent 2px), radial-gradient(circle at 96% 22%, hsla(0, 0%, 100%, .7) 0 1px, transparent 1.5px);
+  content: "";
+  inset: 0;
+  position: absolute
+}
+
+.CandyCanePackBackground .CandyCanePackBackgroundInner .CandyCanePeppermint {
+  background: radial-gradient(circle, snow 0 18%, transparent 19%), repeating-conic-gradient(#e0283c 0 30deg, snow 30deg 60deg);
+  border-radius: 50%;
+  box-shadow: 0 0 0 .08em #a3152a, inset -.12em -.12em 0 rgba(0, 0, 0, .12);
+  opacity: .9;
+  position: absolute
+}
+
+.CandyCanePackBackground .CandyCanePackBackgroundInner .CandyCaneWrap {
+  position: absolute
+}
+
+.CandyCanePackBackground .CandyCanePackBackgroundInner .CandyCaneWrap .CandyCane {
+  animation: candyCaneSway 3.5s ease-in-out infinite alternate;
+  aspect-ratio: 30/80;
+  background: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 80%27><defs><pattern id=%27s%27 patternUnits=%27userSpaceOnUse%27 width=%277%27 height=%277%27 patternTransform=%27rotate%2840%29%27><rect width=%273.2%27 height=%277%27 fill=%27%23e0283c%27/></pattern></defs><g fill=%27none%27 stroke-linecap=%27round%27><path stroke=%27%23a3152a%27 stroke-width=%279.5%27 d=%27M9 76V25a8 8 0 0 1 16 0v5%27/><path stroke=%27%23fffafa%27 stroke-width=%277.5%27 d=%27M9 76V25a8 8 0 0 1 16 0v5%27/><path stroke=%27url%28%23s%29%27 stroke-width=%277.5%27 d=%27M9 76V25a8 8 0 0 1 16 0v5%27/><path stroke=%27%23ffffff%27 stroke-opacity=%270.55%27 stroke-width=%271.4%27 d=%27M7.2 72V26%27/></g></svg>") 50%/contain no-repeat;
+  filter: drop-shadow(.06em .1em 0 rgba(120, 20, 35, .25));
+  transform-origin: 50% 100%
+}
+
+@keyframes candyCaneSway {
+  0% {
+    transform: rotate(-5deg)
+  }
+
+  to {
+    transform: rotate(5deg)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .CandyCanePackBackground .CandyCanePackBackgroundInner .CandyCaneWrap .CandyCane {
+    animation: none
+  }
+}
+
+.JingleBellsPackBackground {
+  container-type: size;
+  background: radial-gradient(ellipse at 45% 35%, #1f6b3e 0, #0d3a22 75%);
+  inset: 0;
+  overflow: hidden;
+  position: absolute
+}
+
+.JingleBellsPackBackground.PackBackgroundSimple .JingleBellsPackBackgroundInner .JingleBell {
+  animation: none
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner {
+  inset: 0;
+  pointer-events: none;
+  position: absolute
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner:before {
+  background-image: radial-gradient(circle at 18% 72%, rgba(242, 193, 78, .5) 0 1.5px, transparent 2px), radial-gradient(circle at 30% 30%, rgba(242, 193, 78, .35) 0 1px, transparent 1.5px), radial-gradient(circle at 46% 84%, rgba(242, 193, 78, .4) 0 1.5px, transparent 2px), radial-gradient(circle at 50% 42%, rgba(242, 193, 78, .35) 0 1px, transparent 1.5px), radial-gradient(circle at 68% 90%, rgba(242, 193, 78, .45) 0 1.5px, transparent 2px), radial-gradient(circle at 90% 40%, rgba(242, 193, 78, .4) 0 1px, transparent 1.5px), radial-gradient(circle at 8% 94%, rgba(242, 193, 78, .35) 0 1.5px, transparent 2px);
+  content: "";
+  inset: 0;
+  position: absolute
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarlands {
+  --jingleSwag: max(7.5em, min(15cqw, 30cqh));
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--jingleSwag)*.08);
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarlandsIcon {
+  --jingleSwag: 80cqw;
+  left: 10%;
+  top: 22%;
+  transform: none
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarlandsIcon .JingleGarland .JingleSwag .JingleBow.JingleBowEnd {
+  left: 100%
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarlandsIcon .JingleGarland .JingleSwag .JingleSwagHang.JingleBellPair {
+  width: 60%
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland {
+  display: flex;
+  padding-bottom: calc(var(--jingleSwag)*.1)
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland.JingleGarlandShifted {
+  margin-left: calc(var(--jingleSwag)/-2)
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland.JingleGarlandExtra {
+  display: none
+}
+
+@container (min-height: 400px) {
+  .JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland.JingleGarlandExtra {
+    display: flex
+  }
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland .JingleSwag {
+  aspect-ratio: 100/44;
+  flex: none;
+  position: relative;
+  width: var(--jingleSwag)
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland .JingleSwag .JingleSwagGarland {
+  background: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 44%27><g fill=%27none%27 stroke-linecap=%27round%27><path stroke=%27%230f4d2a%27 stroke-width=%2710%27 d=%27M-6 -1Q50 58 106 -1%27/><path stroke=%27%231d6e3c%27 stroke-width=%2711.5%27 stroke-dasharray=%270.8 3.2%27 d=%27M-6 -1Q50 58 106 -1%27/><path stroke=%27%232f8f4e%27 stroke-width=%277.5%27 stroke-dasharray=%272.2 1.6%27 d=%27M-6 -1Q50 58 106 -1%27/><path stroke=%27%234fb06a%27 stroke-width=%273%27 stroke-dasharray=%271 5%27 d=%27M-6 -1Q50 58 106 -1%27/></g><g fill=%27%23d42a35%27 stroke=%27%238c1420%27 stroke-width=%270.5%27><circle cx=%2722%27 cy=%2721%27 r=%272%27/><circle cx=%2725%27 cy=%2723.5%27 r=%271.7%27/><circle cx=%2775%27 cy=%2722.6%27 r=%272%27/><circle cx=%2778%27 cy=%2720%27 r=%271.7%27/></g></svg>") 50%/100% 100% no-repeat;
+  filter: drop-shadow(0 .1em .06em rgba(0, 0, 0, .35));
+  inset: 0;
+  position: absolute
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland .JingleSwag .JingleBow {
+  aspect-ratio: 30/22;
+  background: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 22%27><g fill=%27%23d42a35%27 stroke=%27%238c1420%27 stroke-width=%270.8%27 stroke-linejoin=%27round%27><path d=%27M13 9L8 21L11 19L13 22L15 10Z%27/><path d=%27M17 9L22 21L19 19L17 22L15 10Z%27/><path d=%27M15 8C9 0 2 2 3 8C4 13 11 12 15 8Z%27/><path d=%27M15 8C21 0 28 2 27 8C26 13 19 12 15 8Z%27/><circle cx=%2715%27 cy=%278.5%27 r=%273%27/></g></svg>") 50%/contain no-repeat;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -30%);
+  width: 30%;
+  z-index: 1
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland .JingleSwag .JingleSwagHang {
+  display: flex;
+  gap: 4%;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  top: 70%;
+  transform: translateX(-50%)
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland .JingleSwag .JingleSwagHang.JingleBellPair {
+  width: 32%
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland .JingleSwag .JingleSwagHang.JingleBellPair .JingleBell {
+  width: 48%
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland .JingleSwag .JingleSwagHang.JingleMistletoe {
+  aspect-ratio: 40/34;
+  background: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 34%27><g fill=%27%237fae4a%27 stroke=%27%234f7a2a%27 stroke-width=%270.8%27><ellipse cx=%2711%27 cy=%2716%27 rx=%2710%27 ry=%274%27 transform=%27rotate%28-28 11 16%29%27/><ellipse cx=%2729%27 cy=%2716%27 rx=%2710%27 ry=%274%27 transform=%27rotate%2828 29 16%29%27/><ellipse cx=%2714%27 cy=%2724%27 rx=%278%27 ry=%273.4%27 transform=%27rotate%28-55 14 24%29%27/><ellipse cx=%2726%27 cy=%2724%27 rx=%278%27 ry=%273.4%27 transform=%27rotate%2855 26 24%29%27/></g><g fill=%27%23f4f7ee%27 stroke=%27%23b9c4a6%27 stroke-width=%270.6%27><circle cx=%2717%27 cy=%2719%27 r=%272.4%27/><circle cx=%2723%27 cy=%2719%27 r=%272.4%27/><circle cx=%2720%27 cy=%2722.5%27 r=%272.4%27/></g><g fill=%27%23c21f30%27 stroke=%27%23801420%27 stroke-width=%270.6%27><path d=%27M20 8C14 2 9 5 11 9C13 12 17 11 20 8Z%27/><path d=%27M20 8C26 2 31 5 29 9C27 12 23 11 20 8Z%27/><circle cx=%2720%27 cy=%278.5%27 r=%272.4%27/></g></svg>") 50%/contain no-repeat;
+  filter: drop-shadow(0 .1em .08em rgba(0, 0, 0, .3));
+  top: 64%;
+  width: 30%
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland .JingleSwag .JingleBell {
+  animation: jingleBellSwing 1.4s ease-in-out infinite alternate;
+  aspect-ratio: 20/24;
+  background: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 24%27><defs><linearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%270%27><stop offset=%270%27 stop-color=%27%23b8860b%27/><stop offset=%270.35%27 stop-color=%27%23fff1a8%27/><stop offset=%270.6%27 stop-color=%27%23f2c14e%27/><stop offset=%271%27 stop-color=%27%23b8860b%27/></linearGradient></defs><circle cx=%2710%27 cy=%272.6%27 r=%271.8%27 fill=%27none%27 stroke=%27%238a5a00%27 stroke-width=%271%27/><path fill=%27url%28%23g%29%27 stroke=%27%238a5a00%27 stroke-width=%270.8%27 d=%27M10 4C5 4 4.2 9 4.2 13C4.2 16 2 17 2 19H18C18 17 15.8 16 15.8 13C15.8 9 15 4 10 4Z%27/><rect x=%271.6%27 y=%2718.6%27 width=%2716.8%27 height=%272%27 rx=%271%27 fill=%27%23f2c14e%27 stroke=%27%238a5a00%27 stroke-width=%270.6%27/><circle cx=%2710%27 cy=%2721.8%27 r=%271.8%27 fill=%27%238a5a00%27/></svg>") 50%/contain no-repeat;
+  filter: drop-shadow(0 .08em .05em rgba(0, 0, 0, .35));
+  transform-origin: 50% 0
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland .JingleSwag .JingleBell.JingleBellReverse {
+  animation-direction: alternate-reverse
+}
+
+@keyframes jingleBellSwing {
+  0% {
+    transform: rotate(-14deg)
+  }
+
+  to {
+    transform: rotate(14deg)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleBell {
+    animation: none
+  }
+}
+
+.SnowflakesPackBackground {
+  container-type: size;
+  background: radial-gradient(ellipse at 70% 10%, rgba(191, 227, 255, .25) 0, transparent 55%), linear-gradient(180deg, #0a1a3f, #163a78 45%, #4f86c6 82%, #9cc8ec);
+  inset: 0;
+  overflow: hidden;
+  position: absolute
+}
+
+.SnowflakesPackBackground.PackBackgroundSimple .SnowflakesPackBackgroundInner .SnowflakesCrystal:before,
+.SnowflakesPackBackground.PackBackgroundSimple .SnowflakesPackBackgroundInner .SnowflakesCrystalSpin,
+.SnowflakesPackBackground.PackBackgroundSimple .SnowflakesPackBackgroundInner .SnowflakesGlint,
+.SnowflakesPackBackground.PackBackgroundSimple .SnowflakesPackBackgroundInner .SnowflakesSheen,
+.SnowflakesPackBackground.PackBackgroundSimple .SnowflakesPackBackgroundInner .SnowflakesSnowLayer {
+  animation: none
+}
+
+.SnowflakesPackBackground.PackBackgroundSimple .SnowflakesPackBackgroundInner .SnowflakesSheen {
+  display: none
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner {
+  inset: 0;
+  pointer-events: none;
+  position: absolute
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesSnowLayer {
+  animation: snowflakesFall linear infinite, snowflakesSway ease-in-out infinite alternate;
+  height: 200%;
+  left: -10%;
+  position: absolute;
+  top: 0;
+  width: 120%
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesSnowFar {
+  animation-duration: 22s, 9s;
+  background-image: radial-gradient(circle at 8% 12%, hsla(0, 0%, 100%, .95) 0 1px, transparent 2px), radial-gradient(circle at 24% 58%, hsla(0, 0%, 100%, .95) 0 1px, transparent 2px), radial-gradient(circle at 40% 30%, hsla(0, 0%, 100%, .95) 0 1px, transparent 2px), radial-gradient(circle at 57% 82%, hsla(0, 0%, 100%, .95) 0 1px, transparent 2px), radial-gradient(circle at 72% 18%, hsla(0, 0%, 100%, .95) 0 1px, transparent 2px), radial-gradient(circle at 88% 64%, hsla(0, 0%, 100%, .95) 0 1px, transparent 2px), radial-gradient(circle at 15% 90%, hsla(0, 0%, 100%, .95) 0 1px, transparent 2px), radial-gradient(circle at 64% 46%, hsla(0, 0%, 100%, .95) 0 1px, transparent 2px);
+  background-size: 50% 25%;
+  opacity: .55
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesSnowMid {
+  animation-duration: 14s, 7s;
+  background-image: radial-gradient(circle at 12% 20%, hsla(0, 0%, 100%, .95) 0 1.6px, transparent 2.6px), radial-gradient(circle at 38% 70%, hsla(0, 0%, 100%, .95) 0 1.6px, transparent 2.6px), radial-gradient(circle at 62% 34%, hsla(0, 0%, 100%, .95) 0 1.6px, transparent 2.6px), radial-gradient(circle at 84% 86%, hsla(0, 0%, 100%, .95) 0 1.6px, transparent 2.6px), radial-gradient(circle at 30% 8%, hsla(0, 0%, 100%, .95) 0 1.6px, transparent 2.6px);
+  background-size: 50% 25%;
+  opacity: .8
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesSnowNear {
+  animation-duration: 8s, 5s;
+  background-image: radial-gradient(circle at 20% 30%, hsla(0, 0%, 100%, .95) 0 2.6px, transparent 3.6px), radial-gradient(circle at 70% 75%, hsla(0, 0%, 100%, .95) 0 2.6px, transparent 3.6px), radial-gradient(circle at 52% 10%, hsla(0, 0%, 100%, .95) 0 2.6px, transparent 3.6px);
+  background-size: 33.333% 25%;
+  filter: blur(.5px)
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesCrystal {
+  aspect-ratio: 1;
+  position: absolute
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesCrystal:before {
+  animation: snowflakesPulse 4s ease-in-out infinite alternate;
+  background: radial-gradient(circle, rgba(191, 227, 255, .45) 0, rgba(191, 227, 255, .12) 45%, transparent 70%);
+  border-radius: 50%;
+  content: "";
+  inset: -25%;
+  position: absolute
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesCrystal .SnowflakesCrystalSpin {
+  animation: snowflakesSpin linear infinite;
+  background: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-50 -50 100 100%27><defs><path id=%27a%27 d=%27M0 0V-44M0-16L-9-25M0-16L9-25M0-28L-7-35M0-28L7-35M0-38L-4-42M0-38L4-42%27/><g id=%27h%27><use href=%27%23a%27/><use href=%27%23a%27 transform=%27rotate%2860%29%27/><use href=%27%23a%27 transform=%27rotate%28120%29%27/><use href=%27%23a%27 transform=%27rotate%28180%29%27/><use href=%27%23a%27 transform=%27rotate%28240%29%27/><use href=%27%23a%27 transform=%27rotate%28300%29%27/></g></defs><g fill=%27none%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><g stroke=%27%2398ccf5%27 stroke-width=%276%27><use href=%27%23h%27/></g><g stroke=%27%23ffffff%27 stroke-width=%272.6%27><use href=%27%23h%27/></g></g><polygon fill=%27%23ffffff%27 stroke=%27%2398ccf5%27 stroke-width=%271.5%27 points=%270,-7 6,-3.5 6,3.5 0,7 -6,3.5 -6,-3.5%27/></svg>") 50%/contain no-repeat;
+  filter: drop-shadow(0 0 .2em rgba(191, 227, 255, .9));
+  inset: 0;
+  position: absolute
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesTumbler {
+  animation: snowflakesTumble linear infinite;
+  aspect-ratio: 1;
+  background: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-10 -10 20 20%27><defs><path id=%27a%27 d=%27M0 0V-9M0-5L-2.5-7.5M0-5L2.5-7.5%27/></defs><g fill=%27none%27 stroke=%27%23ffffff%27 stroke-width=%271.6%27 stroke-linecap=%27round%27><use href=%27%23a%27/><use href=%27%23a%27 transform=%27rotate%2860%29%27/><use href=%27%23a%27 transform=%27rotate%28120%29%27/><use href=%27%23a%27 transform=%27rotate%28180%29%27/><use href=%27%23a%27 transform=%27rotate%28240%29%27/><use href=%27%23a%27 transform=%27rotate%28300%29%27/></g></svg>") 50%/contain no-repeat;
+  filter: drop-shadow(0 0 .15em rgba(191, 227, 255, .8));
+  position: absolute;
+  top: 0
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesGlint {
+  animation: snowflakesGlint 2.8s ease-in-out infinite;
+  background: #fff;
+  clip-path: polygon(50% 0, 58% 42%, 100% 50%, 58% 58%, 50% 100%, 42% 58%, 0 50%, 42% 42%);
+  position: absolute
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesSheen {
+  animation: snowflakesSheen 7s ease-in-out infinite;
+  background: linear-gradient(105deg, transparent 38%, hsla(0, 0%, 100%, .22) 50%, transparent 62%);
+  inset: 0;
+  position: absolute;
+  transform: translateX(-100%)
+}
+
+@keyframes snowflakesFall {
+  0% {
+    transform: translateY(-50%)
+  }
+
+  to {
+    transform: translateY(0)
+  }
+}
+
+@keyframes snowflakesSway {
+  0% {
+    translate: -2% 0
+  }
+
+  to {
+    translate: 2% 0
+  }
+}
+
+@keyframes snowflakesSpin {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(1turn)
+  }
+}
+
+@keyframes snowflakesPulse {
+  0% {
+    opacity: .45;
+    transform: scale(.9)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+}
+
+@keyframes snowflakesTumble {
+  0% {
+    transform: translateY(-15cqh) rotate(0deg)
+  }
+
+  50% {
+    transform: translate(var(--drift), 50cqh) rotate(180deg)
+  }
+
+  to {
+    transform: translateY(115cqh) rotate(1turn)
+  }
+}
+
+@keyframes snowflakesGlint {
+
+  0%,
+  60%,
+  to {
+    opacity: 0;
+    transform: scale(.3) rotate(0deg)
+  }
+
+  75% {
+    opacity: 1;
+    transform: scale(1) rotate(45deg)
+  }
+}
+
+@keyframes snowflakesSheen {
+  0% {
+    transform: translateX(-100%)
+  }
+
+  45%,
+  to {
+    transform: translateX(100%)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesCrystal:before,
+  .SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesCrystalSpin,
+  .SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesGlint,
+  .SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesSheen,
+  .SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesSnowLayer,
+  .SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesTumbler {
+    animation: none
+  }
+
+  .SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesSheen,
+  .SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesTumbler {
+    display: none
+  }
+}
+
+.AuroraPackBackground {
+  container-type: size;
+  background: linear-gradient(180deg, #040817, #0a1934 55%, #123a4a);
+  inset: 0;
+  overflow: hidden;
+  position: absolute
+}
+
+.AuroraPackBackground.PackBackgroundSimple .AuroraPackBackgroundInner .AuroraCurtain,
+.AuroraPackBackground.PackBackgroundSimple .AuroraPackBackgroundInner .AuroraSparkle,
+.AuroraPackBackground.PackBackgroundSimple .AuroraPackBackgroundInner .AuroraStar,
+.AuroraPackBackground.PackBackgroundSimple .AuroraPackBackgroundInner:before {
+  animation: none
+}
+
+.AuroraPackBackground.PackBackgroundSimple .AuroraPackBackgroundInner .AuroraSparkle {
+  opacity: .6
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner {
+  inset: 0;
+  pointer-events: none;
+  position: absolute
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner:before {
+  animation: auroraStarfieldShimmer 6s ease-in-out infinite alternate;
+  background-image: radial-gradient(1px 1px at 4% 22%, hsla(0, 0%, 100%, .5) 50%, transparent 100%), radial-gradient(1px 1px at 12% 6%, hsla(0, 0%, 100%, .35) 50%, transparent 100%), radial-gradient(1px 1px at 26% 16%, hsla(0, 0%, 100%, .45) 50%, transparent 100%), radial-gradient(1px 1px at 38% 40%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 44% 4%, hsla(0, 0%, 100%, .5) 50%, transparent 100%), radial-gradient(1px 1px at 58% 32%, hsla(0, 0%, 100%, .35) 50%, transparent 100%), radial-gradient(1px 1px at 64% 12%, hsla(0, 0%, 100%, .45) 50%, transparent 100%), radial-gradient(1px 1px at 78% 36%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 82% 4%, hsla(0, 0%, 100%, .5) 50%, transparent 100%), radial-gradient(1px 1px at 92% 18%, hsla(0, 0%, 100%, .35) 50%, transparent 100%), radial-gradient(1px 1px at 8% 46%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 17% 12%, hsla(0, 0%, 100%, .45) 50%, transparent 100%), radial-gradient(1px 1px at 31% 28%, hsla(0, 0%, 100%, .35) 50%, transparent 100%), radial-gradient(1px 1px at 49% 50%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 53% 22%, hsla(0, 0%, 100%, .45) 50%, transparent 100%), radial-gradient(1px 1px at 70% 44%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 74% 26%, hsla(0, 0%, 100%, .4) 50%, transparent 100%), radial-gradient(1px 1px at 87% 52%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 97% 30%, hsla(0, 0%, 100%, .45) 50%, transparent 100%), radial-gradient(1px 1px at 3% 64%, hsla(0, 0%, 100%, .4) 50%, transparent 100%), radial-gradient(1px 1px at 9% 76%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 15% 60%, hsla(0, 0%, 100%, .45) 50%, transparent 100%), radial-gradient(1px 1px at 21% 70%, hsla(0, 0%, 100%, .35) 50%, transparent 100%), radial-gradient(1px 1px at 27% 56%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 34% 66%, hsla(0, 0%, 100%, .45) 50%, transparent 100%), radial-gradient(1px 1px at 40% 74%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 46% 62%, hsla(0, 0%, 100%, .4) 50%, transparent 100%), radial-gradient(1px 1px at 52% 72%, hsla(0, 0%, 100%, .35) 50%, transparent 100%), radial-gradient(1px 1px at 57% 58%, hsla(0, 0%, 100%, .45) 50%, transparent 100%), radial-gradient(1px 1px at 63% 68%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 69% 76%, hsla(0, 0%, 100%, .4) 50%, transparent 100%), radial-gradient(1px 1px at 75% 62%, hsla(0, 0%, 100%, .35) 50%, transparent 100%), radial-gradient(1px 1px at 81% 72%, hsla(0, 0%, 100%, .45) 50%, transparent 100%), radial-gradient(1px 1px at 88% 64%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 94% 74%, hsla(0, 0%, 100%, .4) 50%, transparent 100%), radial-gradient(1px 1px at 98% 60%, hsla(0, 0%, 100%, .35) 50%, transparent 100%);
+  content: "";
+  inset: 0;
+  position: absolute
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraStar {
+  animation: auroraStarSparkle ease-in-out infinite;
+  position: absolute
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraStar:after {
+  background: radial-gradient(circle, rgba(244, 251, 255, .55) 0, rgba(244, 251, 255, .15) 35%, transparent 65%);
+  border-radius: 50%;
+  content: "";
+  inset: -70%;
+  position: absolute
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraStar:before {
+  background: radial-gradient(circle, #fff 0, #f4fbff 40%, #c9f2ff 100%);
+  clip-path: polygon(50% 0, 57% 43%, 100% 50%, 57% 57%, 50% 100%, 43% 57%, 0 50%, 43% 43%);
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: 1
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraSparkle {
+  animation: auroraSparkle 5.6s ease-in-out infinite;
+  background: radial-gradient(circle, #fff 0, #f4fbff 35%, rgba(43, 255, 160, .9) 100%);
+  clip-path: polygon(50% 0, 56% 44%, 100% 50%, 56% 56%, 50% 100%, 44% 56%, 0 50%, 44% 44%);
+  filter: drop-shadow(0 0 .25em rgba(43, 255, 160, .9));
+  opacity: 0;
+  position: absolute;
+  z-index: 1
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraShootingStar {
+  animation: auroraShootingStar ease-in infinite;
+  background: linear-gradient(90deg, rgba(244, 251, 255, .95), rgba(244, 251, 255, 0));
+  height: .12em;
+  opacity: 0;
+  position: absolute;
+  transform-origin: 0 50%;
+  width: 6em
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraShootingStar.AuroraShootingStar1 {
+  animation-delay: 2s;
+  animation-duration: 9s;
+  left: 70cqw;
+  top: 6cqh
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraShootingStar.AuroraShootingStar2 {
+  animation-delay: 6s;
+  animation-duration: 11s;
+  left: 42cqw;
+  top: 18cqh
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraShootingStar.AuroraShootingStar3 {
+  animation-delay: 9.5s;
+  animation-duration: 13s;
+  left: 96cqw;
+  top: 2cqh
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraCurtain {
+  animation: auroraDrift linear infinite, auroraBreathe ease-in-out infinite alternate;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  background-size: 50% 100%;
+  filter: blur(.3em) saturate(1.35);
+  left: 0;
+  mix-blend-mode: screen;
+  opacity: var(--auroraPeak);
+  position: absolute;
+  width: 200%
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraCurtain.AuroraCurtainViolet {
+  --auroraPeak: 0.9;
+  animation-delay: -12s, -2s;
+  animation-duration: 32s, 9s;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 120%27 preserveAspectRatio=%27none%27><defs><linearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%270%27 y2=%271%27><stop offset=%270%27 stop-color=%27%23ff4fd8%27 stop-opacity=%270%27/><stop offset=%271%27 stop-color=%27%23c45cff%27 stop-opacity=%270.75%27/></linearGradient><path id=%27e%27 d=%27M0 56C60 40 120 44 180 58S340 72 400 56%27/><g id=%27w%27><path fill=%27url%28%23g%29%27 d=%27M0 56C60 40 120 44 180 58S340 72 400 56V0H0Z%27/><use href=%27%23e%27 fill=%27none%27 stroke=%27%23c45cff%27 stroke-opacity=%270.9%27 stroke-width=%2712%27/></g></defs><use href=%27%23w%27 x=%27-400%27/><use href=%27%23w%27/><use href=%27%23w%27 x=%27400%27/></svg>");
+  height: 40%;
+  top: 0
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraCurtain.AuroraCurtainGreen {
+  --auroraPeak: 1;
+  animation-duration: 60s, 6.5s;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 120%27 preserveAspectRatio=%27none%27><defs><linearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%270%27 y2=%271%27><stop offset=%270%27 stop-color=%27%232bffa0%27 stop-opacity=%270%27/><stop offset=%271%27 stop-color=%27%232bffa0%27 stop-opacity=%270.7%27/></linearGradient><path id=%27e%27 d=%27M0 80C40 60 100 56 150 74S230 104 280 86S360 100 400 80%27/><g id=%27w%27><path fill=%27url%28%23g%29%27 d=%27M0 80C40 60 100 56 150 74S230 104 280 86S360 100 400 80V0H0Z%27/><use href=%27%23e%27 fill=%27none%27 stroke=%27%232bffa0%27 stroke-opacity=%270.8%27 stroke-width=%2714%27/><use href=%27%23e%27 fill=%27none%27 stroke=%27%23e4fff2%27 stroke-width=%274.5%27/></g></defs><use href=%27%23w%27 x=%27-400%27/><use href=%27%23w%27/><use href=%27%23w%27 x=%27400%27/></svg>");
+  height: 44%;
+  top: 8%
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraCurtain.AuroraCurtainCyan {
+  --auroraPeak: 1;
+  animation-delay: -7s, -1s;
+  animation-duration: 20s, 8s;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 120%27 preserveAspectRatio=%27none%27><defs><linearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%270%27 y2=%271%27><stop offset=%270%27 stop-color=%27%231fd8ff%27 stop-opacity=%270%27/><stop offset=%271%27 stop-color=%27%231fd8ff%27 stop-opacity=%270.6%27/></linearGradient><path id=%27e%27 d=%27M0 72C60 92 140 92 200 72S340 52 400 72%27/><g id=%27w%27><path fill=%27url%28%23g%29%27 d=%27M0 72C60 92 140 92 200 72S340 52 400 72V0H0Z%27/><use href=%27%23e%27 fill=%27none%27 stroke=%27%231fd8ff%27 stroke-opacity=%270.75%27 stroke-width=%2713%27/><use href=%27%23e%27 fill=%27none%27 stroke=%27%23e6fbff%27 stroke-width=%274%27/></g></defs><use href=%27%23w%27 x=%27-400%27/><use href=%27%23w%27/><use href=%27%23w%27 x=%27400%27/></svg>");
+  height: 36%;
+  top: 34%
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraRidge {
+  background: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 60%27 preserveAspectRatio=%27none%27><path fill=%27%230b1c33%27 d=%27M0 40L40 22L70 34L110 10L150 30L190 18L230 34L270 6L310 28L350 16L400 32V60H0Z%27/></svg>") bottom/100% 100% no-repeat;
+  bottom: 0;
+  height: 24%;
+  left: 0;
+  position: absolute;
+  right: 0
+}
+
+@keyframes auroraStarfieldShimmer {
+  0% {
+    opacity: .6
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes auroraStarSparkle {
+
+  0%,
+  to {
+    opacity: .35;
+    transform: scale(.55) rotate(0deg)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(45deg)
+  }
+}
+
+@keyframes auroraSparkle {
+
+  0%,
+  30%,
+  to {
+    opacity: 0;
+    transform: scale(.2) rotate(0deg)
+  }
+
+  15% {
+    opacity: 1;
+    transform: scale(1) rotate(45deg)
+  }
+}
+
+@keyframes auroraBreathe {
+  0% {
+    opacity: calc(var(--auroraPeak)*.75)
+  }
+
+  to {
+    opacity: var(--auroraPeak)
+  }
+}
+
+@keyframes auroraDrift {
+  0% {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(-50%)
+  }
+}
+
+@keyframes auroraShootingStar {
+  0% {
+    opacity: 0;
+    transform: translate(0) rotate(-20deg)
+  }
+
+  2% {
+    opacity: 1
+  }
+
+  9% {
+    opacity: 0;
+    transform: translate(-45cqw, 18cqh) rotate(-20deg)
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-45cqw, 18cqh) rotate(-20deg)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .AuroraPackBackground .AuroraPackBackgroundInner .AuroraCurtain,
+  .AuroraPackBackground .AuroraPackBackgroundInner .AuroraSparkle,
+  .AuroraPackBackground .AuroraPackBackgroundInner .AuroraStar,
+  .AuroraPackBackground .AuroraPackBackgroundInner:before {
+    animation: none
+  }
+
+  .AuroraPackBackground .AuroraPackBackgroundInner .AuroraSparkle {
+    opacity: .6
+  }
+
+  .AuroraPackBackground .AuroraPackBackgroundInner .AuroraShootingStar {
+    display: none
+  }
+}
+
 .PaymentEntryIcon {
   align-items: center;
   color: #ffb914;
@@ -6555,29 +7183,24 @@ a {
 }
 
 .TitleContainer .TitleContainerTop .Title .TitleSantaHat {
-  font-size: 2.2rem;
+  --fa-primary-color: #e73131;
+  --fa-secondary-color: #fff;
+  --fa-secondary-opacity: 1;
+  font-size: .55em;
   position: absolute;
-  right: -1rem;
+  right: -.2em;
   rotate: 20deg;
-  top: .5rem
-}
-
-.TitleContainer .TitleContainerTop .Title .TitleSantaHat:before {
-  color: red;
-  z-index: 2
-}
-
-.TitleContainer .TitleContainerTop .Title .TitleSantaHat:after {
-  color: #fff;
-  opacity: 1;
-  position: relative;
-  z-index: 3
+  top: -1.25em
 }
 
 .TitleContainer .TitleContainerTop .Title.TitleNinetyNineNightsBundle {
   font-size: .65em;
   line-height: 1.1;
   white-space: pre-line
+}
+
+.TitleContainer .TitleContainerTop .Title.TitleNinetyNineNightsBundle .TitleSantaHat {
+  display: none
 }
 
 .TitleContainer .TitleContainerTop .LogoContainer {
@@ -6942,6 +7565,41 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
   }
 }
 
+.NewPlayerDealChip {
+  align-items: center;
+  background-color: #1a1f2e;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  color: #fcd373;
+  display: inline-flex;
+  font-size: max(.8rem, 11px);
+  font-weight: 900;
+  gap: .25rem;
+  padding: .1rem .45rem;
+  white-space: nowrap
+}
+
+.NewPlayerDealChip svg {
+  height: .85em;
+  width: .85em
+}
+
+.CountdownTime {
+  display: inline-flex;
+  justify-content: flex-start
+}
+
+.CountdownTime .CountdownTimePart {
+  background-color: rgba(0, 0, 0, .2);
+  padding: 0 .1rem
+}
+
+.DaysClockCountdown {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap
+}
+
 .SocialBarContainer {
   --collapsed-width: 5rem;
   --docked-width: 19rem;
@@ -7071,6 +7729,7 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
 }
 
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner::-webkit-scrollbar {
+  height: 6px;
   width: 6px
 }
 
@@ -7126,6 +7785,7 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
 }
 
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarPeople::-webkit-scrollbar {
+  height: 6px;
   width: 6px
 }
 
@@ -7188,6 +7848,13 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
 
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarIdentityTop .NotificationBellContainer {
   padding: calc(1.3rem + var(--notchTop)) .5rem 0 0
+}
+
+.SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarIdentityTop .SocialBarIdentityActions {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem
 }
 
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialSectionTitle {
@@ -7526,6 +8193,27 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
   right: .3rem;
   top: .3rem;
   width: .6rem
+}
+
+.SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarDealChipRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: .3rem
+}
+
+.SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarDealChipRow .SocialBarDealChipButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0
+}
+
+@media(pointer:coarse) {
+  .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarDealChipRow .SocialBarDealChipButton {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
 }
 
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .HomeLinkButtons {
@@ -8628,6 +9316,139 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
 .LeftGamePromptCard.LeftGamePromptCardInFlow .PlayerRows {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr))
+}
+
+.GameBackgroundScreen.ReportBackgroundScreen {
+  background-color: rgba(26, 31, 46, .6);
+  z-index: 17
+}
+
+.GameBackgroundScreen.ReportBackgroundScreen .ReportPanel {
+  background-color: #303a59;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #fff;
+  max-width: 80vw;
+  padding: 1.5rem;
+  text-align: center
+}
+
+.PromptGenericPopup.ReportCard {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  max-height: calc(100vh - 5rem);
+  max-height: calc(100dvh - 5rem);
+  max-width: none;
+  width: min(50rem, 80vw)
+}
+
+.PromptGenericPopup.ReportCard>* {
+  flex-shrink: 0
+}
+
+.PromptGenericPopup.ReportCard .PromptGenericPopupSubtitle {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  padding-bottom: 0
+}
+
+.PromptGenericPopup.ReportCard .ReportCardReasons {
+  flex-shrink: 1;
+  min-height: 0;
+  overflow-y: auto
+}
+
+.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReasonColumns {
+  column-count: 2;
+  column-gap: 1.5rem;
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: left;
+  width: -moz-fit-content;
+  width: fit-content
+}
+
+.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReasonColumns.OneColumn {
+  columns: auto
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReasonColumns {
+    columns: auto
+  }
+}
+
+.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReason {
+  align-items: flex-start;
+  break-inside: avoid;
+  cursor: pointer;
+  display: flex;
+  gap: .75rem;
+  line-height: 1.3;
+  padding: .375rem 0;
+  page-break-inside: avoid
+}
+
+.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReason input {
+  accent-color: #ffb914;
+  flex-shrink: 0;
+  font-size: inherit;
+  height: 1em;
+  margin: .15em 0 0;
+  width: 1em
+}
+
+.PromptGenericPopup.ReportCard .ReportCardDetails {
+  box-sizing: border-box;
+  font-size: inherit;
+  height: calc(4.5em + 1rem + 2px);
+  line-height: 1.5;
+  margin-top: 1rem;
+  padding: .5rem;
+  resize: none;
+  text-align: left;
+  width: 100%
+}
+
+@media(orientation:landscape)and (max-height:500px) {
+  .PromptGenericPopup.ReportCard .ReportCardDetails {
+    height: calc(3em + 1rem + 2px)
+  }
+}
+
+.PromptGenericPopup.ReportCard .ReportCardNote,
+.PromptGenericPopup.ReportKeyBox .ReportCardNote {
+  color: #fcd373;
+  padding-top: 1rem
+}
+
+.PromptGenericPopup.ReportKeyBox .ReportKeyRow {
+  align-items: center;
+  display: flex;
+  font-size: 1.25rem;
+  gap: 1.5rem;
+  justify-content: center
+}
+
+.PromptGenericPopup.ReportKeyBox .ReportKeyRow .ReportKeyInner {
+  background-color: #303a59;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  overflow-x: auto;
+  padding: .5rem;
+  -webkit-user-select: all;
+  user-select: all;
+  white-space: nowrap
+}
+
+.PromptGenericPopup.ReportKeyBox .ReportKeyRow .ReportKeyCopyButton .ButtonBody {
+  padding: .75rem 1.5rem
 }
 
 .LiveStreamPromotion {
@@ -10083,19 +10904,8 @@ html[data-app-covered] .WholeAppWrapper .AdBannerContainer .AdBanner.CosmeticPac
 }
 
 .CosmeticShopDetail .CosmeticShopDetailBody .CosmeticShopDetailCosmeticsArea .CharCustomPartWrapper .CharCustomPart.CharCustomProfileEffect {
-  align-items: center;
-  display: flex;
   height: 100%;
   width: 100%
-}
-
-.CosmeticShopDetail .CosmeticShopDetailBody .CosmeticShopDetailCosmeticsArea .CharCustomPartWrapper .CharCustomPart.CharCustomProfileEffect .ProfilePreview {
-  height: 100%;
-  width: 100%
-}
-
-.CosmeticShopDetail .CosmeticShopDetailBody .CosmeticShopDetailCosmeticsArea .CharCustomPartWrapper .CharCustomPart.CharCustomProfileEffect .ProfilePreview .ProfilePreviewBackground {
-  opacity: 1
 }
 
 .CosmeticShopDetail .CosmeticShopDetailBody .CosmeticShopDetailPreviewArea {
@@ -10469,6 +11279,12 @@ html[data-app-covered] .WholeAppWrapper .CosmeticShopDetail .CosmeticShopPurchas
   }
 }
 
+.MiddleScreenPopupBackground .MiddleScreenPopup.PremiumCurrencyPurchasePopup {
+  box-sizing: border-box;
+  max-height: 100%;
+  overflow-y: auto
+}
+
 @media(orientation:portrait)and (max-width:600px) {
   .MiddleScreenPopupBackground .MiddleScreenPopup.PremiumCurrencyPurchasePopup {
     box-sizing: border-box;
@@ -10487,7 +11303,12 @@ html[data-app-covered] .WholeAppWrapper .CosmeticShopDetail .CosmeticShopPurchas
 
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseTitle {
   font-size: 2rem;
+  overflow-wrap: anywhere;
   text-align: center
+}
+
+.PremiumCurrencyPurchase .PremiumCurrencyPurchaseTitle.PremiumCurrencyPurchaseTitleGift {
+  color: #85baff
 }
 
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseCard {
@@ -10561,17 +11382,15 @@ html[data-app-covered] .WholeAppWrapper .CosmeticShopDetail .CosmeticShopPurchas
   white-space: nowrap
 }
 
+.PremiumCurrencyPurchase .PremiumCurrencyPurchasePerks {
+  justify-content: flex-start
+}
+
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseBanner {
   font-size: 1.5rem;
   font-weight: 800;
   padding: .6rem 1rem;
   text-align: left
-}
-
-.PremiumCurrencyPurchase .PremiumCurrencyPurchaseBanner.PremiumCurrencyPurchaseBannerGift {
-  background: rgba(79, 148, 241, .15);
-  border: .1rem solid #4f94f1;
-  color: #85baff
 }
 
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseBanner.PremiumCurrencyPurchaseBannerWarning {
@@ -10651,6 +11470,7 @@ html[data-app-covered] .WholeAppWrapper .CosmeticShopDetail .CosmeticShopPurchas
 
 .PremiumCurrencyBundles .PremiumCurrencyBundleGrid {
   grid-gap: 1rem;
+  container: bundleGrid/inline-size;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
@@ -10659,6 +11479,18 @@ html[data-app-covered] .WholeAppWrapper .CosmeticShopDetail .CosmeticShopPurchas
 
 .PremiumCurrencyBundles .PremiumCurrencyBundleGrid.PremiumCurrencyBundleGridTileOnly {
   grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr))
+}
+
+.PremiumCurrencyBundles .PremiumCurrencyBundleGrid .PremiumCurrencyBundleGridAfterTile {
+  container: dealBannerSlot/inline-size;
+  grid-column: 1/-1;
+  min-width: 0
+}
+
+@container bundleGrid (min-width: 42rem) {
+  .PremiumCurrencyBundles .PremiumCurrencyBundleGrid .PremiumCurrencyBundleGridAfterTile {
+    grid-column: 2/-1
+  }
 }
 
 .PremiumCurrencyBundles .PremiumCurrencyBundleGrid[data-off-screen] .PremiumCurrencyBundle:before,
@@ -10878,6 +11710,139 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   gap: 1rem
 }
 
+.PackPerkChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: center
+}
+
+.PackPerkChips .PackPerkChip {
+  align-items: center;
+  background-color: #394980;
+  border: .2rem solid #0f0f0f;
+  color: #f2f2f2;
+  display: inline-flex;
+  font-size: 1.3rem;
+  font-weight: 800;
+  gap: .4rem;
+  padding: .3rem .7rem;
+  white-space: nowrap
+}
+
+.PackPerkChips .PackPerkChipTop {
+  color: #fff
+}
+
+.PackPerkChips.PackPerkChips-rare .PackPerkChipTop {
+  background-color: rgba(133, 186, 255, .15);
+  border-color: #85baff
+}
+
+.PackPerkChips.PackPerkChips-epic .PackPerkChipTop {
+  background-color: rgba(212, 156, 249, .15);
+  border-color: #d49cf9
+}
+
+.PackPerkChips.PackPerkChips-legendary .PackPerkChipTop {
+  background-color: hsla(42, 96%, 72%, .15);
+  border-color: #fcd373
+}
+
+.PackPerkChips.PackPerkChips-mythic .PackPerkChipTop {
+  background-color: rgba(243, 138, 182, .15);
+  border-color: #f38ab6
+}
+
+.PackPerkChips.CosmeticShopDetailPerks {
+  background-color: rgba(57, 73, 128, .4);
+  flex-shrink: 0;
+  padding: .5rem 1rem;
+  position: relative
+}
+
+@media(orientation:landscape)and (max-height:500px) {
+  .PackPerkChips.CosmeticShopDetailPerks {
+    gap: .3rem;
+    padding: .3rem 1rem
+  }
+
+  .PackPerkChips.CosmeticShopDetailPerks .PackPerkChip {
+    font-size: 1.1rem;
+    padding: .1rem .5rem
+  }
+}
+
+.PackAnimatedBadge {
+  align-items: center;
+  background-color: #b6830e;
+  border: .15rem solid #0f0f0f;
+  color: #fff;
+  display: inline-flex;
+  font-size: 1rem;
+  font-weight: 900;
+  gap: .3rem;
+  line-height: 1;
+  padding: .2rem .4rem;
+  pointer-events: none;
+  position: absolute;
+  right: .4rem;
+  text-shadow: -1px -1px 0 #0f0f0f, -1px 0 0 #0f0f0f, -1px 1px 0 #0f0f0f, 0 -1px 0 #0f0f0f, 0 0 0 #0f0f0f, 0 1px 0 #0f0f0f, 1px -1px 0 #0f0f0f, 1px 0 0 #0f0f0f, 1px 1px 0 #0f0f0f;
+  text-transform: uppercase;
+  top: .4rem;
+  z-index: 3
+}
+
+.PackAnimatedBadge .svg-inline--fa,
+.PackAnimatedBadge.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.PackAnimatedBadge .svg-inline--fa path:only-of-type,
+.PackAnimatedBadge.svg-inline--fa path:only-of-type {
+  stroke: #0f0f0f;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+.PackAnimatedBadge.PackAnimatedBadgeBesideRibbon {
+  right: 4.8rem
+}
+
+.PackAnimatedBadge.PackAnimatedBadgeIcon {
+  box-sizing: border-box;
+  font-size: 1.3rem;
+  height: 2.4rem;
+  justify-content: center;
+  padding: 0;
+  width: 2.4rem
+}
+
+@media(hover:hover) {
+  .PackAnimatedBadge.PackAnimatedBadgeIcon {
+    pointer-events: auto
+  }
+}
+
+.PackAnimatedBadge.PackAnimatedBadgeBelowOwned {
+  top: 3.2rem
+}
+
+.CharCustomProfileEffect {
+  align-items: center;
+  display: flex
+}
+
+.CharCustomProfileEffect .ProfilePreview {
+  height: 100%;
+  width: 100%
+}
+
+.CharCustomProfileEffect .ProfilePreview .ProfilePreviewBackground {
+  opacity: 1
+}
+
 .StoreTierLabel {
   color: #cfcfcf;
   font-size: 1.1rem;
@@ -10916,6 +11881,18 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
 
 .StoreTierLabel.StoreTierLabelMythic {
   color: #f38ab6
+}
+
+.CharCustomPart.CharCustomPartWithPlaceholder {
+  align-items: center;
+  display: flex;
+  justify-content: center
+}
+
+.CharCustomPart.CharCustomPartWithPlaceholder .CharCustomPartPlaceholder {
+  color: #cfcfcf;
+  height: 50%;
+  width: 50%
 }
 
 .SuperRankPerksTable {
@@ -12404,16 +13381,6 @@ html[data-app-covered] .WholeAppWrapper .GameThumbnailPlaceholderContainer .Game
   background-image: none
 }
 
-.CountdownTime {
-  display: inline-flex;
-  justify-content: flex-start
-}
-
-.CountdownTime .CountdownTimePart {
-  background-color: rgba(0, 0, 0, .2);
-  padding: 0 .1rem
-}
-
 .GameBadgeLiveDot {
   animation: GameBadgeLivePulse 1.6s ease-in-out infinite;
   background-color: #fff;
@@ -12725,6 +13692,7 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 }
 
 .ProfileCardHost .ProfileCard .ProfileCardInfo::-webkit-scrollbar {
+  height: 6px;
   width: 6px
 }
 
@@ -13086,139 +14054,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   }
 }
 
-.GameBackgroundScreen.ReportBackgroundScreen {
-  background-color: rgba(26, 31, 46, .6);
-  z-index: 17
-}
-
-.GameBackgroundScreen.ReportBackgroundScreen .ReportPanel {
-  background-color: #303a59;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  color: #fff;
-  max-width: 80vw;
-  padding: 1.5rem;
-  text-align: center
-}
-
-.PromptGenericPopup.ReportCard {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.25rem;
-  max-height: calc(100vh - 5rem);
-  max-height: calc(100dvh - 5rem);
-  max-width: none;
-  width: min(50rem, 80vw)
-}
-
-.PromptGenericPopup.ReportCard>* {
-  flex-shrink: 0
-}
-
-.PromptGenericPopup.ReportCard .PromptGenericPopupSubtitle {
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  display: -webkit-box;
-  margin-bottom: 1rem;
-  overflow: hidden;
-  overflow-wrap: anywhere;
-  padding-bottom: 0
-}
-
-.PromptGenericPopup.ReportCard .ReportCardReasons {
-  flex-shrink: 1;
-  min-height: 0;
-  overflow-y: auto
-}
-
-.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReasonColumns {
-  column-count: 2;
-  column-gap: 1.5rem;
-  margin: 0 auto;
-  max-width: 100%;
-  text-align: left;
-  width: -moz-fit-content;
-  width: fit-content
-}
-
-.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReasonColumns.OneColumn {
-  columns: auto
-}
-
-@media(orientation:portrait)and (max-width:600px) {
-  .PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReasonColumns {
-    columns: auto
-  }
-}
-
-.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReason {
-  align-items: flex-start;
-  break-inside: avoid;
-  cursor: pointer;
-  display: flex;
-  gap: .75rem;
-  line-height: 1.3;
-  padding: .375rem 0;
-  page-break-inside: avoid
-}
-
-.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReason input {
-  accent-color: #ffb914;
-  flex-shrink: 0;
-  font-size: inherit;
-  height: 1em;
-  margin: .15em 0 0;
-  width: 1em
-}
-
-.PromptGenericPopup.ReportCard .ReportCardDetails {
-  box-sizing: border-box;
-  font-size: inherit;
-  height: calc(4.5em + 1rem + 2px);
-  line-height: 1.5;
-  margin-top: 1rem;
-  padding: .5rem;
-  resize: none;
-  text-align: left;
-  width: 100%
-}
-
-@media(orientation:landscape)and (max-height:500px) {
-  .PromptGenericPopup.ReportCard .ReportCardDetails {
-    height: calc(3em + 1rem + 2px)
-  }
-}
-
-.PromptGenericPopup.ReportCard .ReportCardNote,
-.PromptGenericPopup.ReportKeyBox .ReportCardNote {
-  color: #fcd373;
-  padding-top: 1rem
-}
-
-.PromptGenericPopup.ReportKeyBox .ReportKeyRow {
-  align-items: center;
-  display: flex;
-  font-size: 1.25rem;
-  gap: 1.5rem;
-  justify-content: center
-}
-
-.PromptGenericPopup.ReportKeyBox .ReportKeyRow .ReportKeyInner {
-  background-color: #303a59;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  overflow-x: auto;
-  padding: .5rem;
-  -webkit-user-select: all;
-  user-select: all;
-  white-space: nowrap
-}
-
-.PromptGenericPopup.ReportKeyBox .ReportKeyRow .ReportKeyCopyButton .ButtonBody {
-  padding: .75rem 1.5rem
-}
-
 .DebugOverlay {
   background: rgba(26, 31, 46, .9);
   bottom: 0;
@@ -13258,15 +14093,27 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 
 .DebugOverlay .DebugOverlaySection .DebugOverlaySectionTitle {
   align-items: center;
+  background: none;
+  border: none;
+  box-sizing: content-box;
+  color: inherit;
   color: #4f94f1;
   cursor: pointer;
   display: flex;
+  font: inherit;
   font-weight: 700;
   gap: .3rem;
-  margin-bottom: .125rem;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0 0 .125rem;
+  padding: 0;
   pointer-events: auto;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit;
   -webkit-user-select: none;
-  user-select: none
+  user-select: none;
+  width: 100%
 }
 
 @media(hover:hover) {
@@ -13925,6 +14772,265 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   transition-delay: .2s
 }
 
+.SeasonPassRewardTile {
+  align-items: center;
+  background-color: #3c4b68;
+  border: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  justify-content: center;
+  margin: 0;
+  position: relative
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-super {
+  background-color: #604c20
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-small {
+  gap: 0;
+  height: 2.5rem;
+  width: 2.75rem
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-small .SeasonPassRewardIcon {
+  font-size: 1.1rem
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-small .SeasonPassRewardTileStateMark,
+.SeasonPassRewardTile.SeasonPassRewardTile-small .SeasonPassRewardTileSuperMark {
+  font-size: .55rem
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large {
+  gap: .5rem;
+  min-width: 0;
+  padding: .6rem
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardIcon {
+  font-size: 3.75rem
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTileName {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  font-size: .9rem;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  white-space: normal
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTilePreview {
+  background: none;
+  border: none;
+  box-sizing: content-box;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  inset: 0;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit;
+  z-index: 1
+}
+
+@media(hover:hover) {
+  .SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTilePreview:hover {
+    background-color: rgba(57, 73, 128, .4)
+  }
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTilePreview.pad-focused {
+  background-color: rgba(57, 73, 128, .4)
+}
+
+@media(hover:none) {
+  .SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTilePreview:active {
+    background-color: rgba(57, 73, 128, .4)
+  }
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTileClaim {
+  bottom: -1rem;
+  font-size: .95rem;
+  left: 0;
+  margin: 0 auto;
+  padding: .35rem 1.1rem;
+  position: absolute;
+  right: 0;
+  width: max-content;
+  z-index: 1
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTileSuperMark {
+  font-size: .9rem;
+  right: .4rem;
+  top: .3rem
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTileStateMark {
+  align-items: center;
+  background-color: #1dd06d;
+  border: 1px solid #0f0f0f;
+  color: #fff;
+  display: flex;
+  font-size: 1rem;
+  height: 1.85rem;
+  justify-content: center;
+  left: auto;
+  right: -.6rem;
+  top: -.6rem;
+  width: 1.85rem;
+  z-index: 1
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large.SeasonPassRewardTile-claimed>:not(.SeasonPassRewardTileStateMark) {
+  opacity: .55
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTilePadlock {
+  background-color: #1a1f2e;
+  color: #ffb914;
+  font-size: .95rem;
+  height: 1.85rem;
+  right: -.6rem;
+  top: -.75rem;
+  width: 1.85rem
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large.SeasonPassRewardTile-claimable {
+  background-color: #394980
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large.SeasonPassRewardTile-needsSuper {
+  border: 1px solid #0f0f0f;
+  outline: 3px solid #ffb914;
+  outline-offset: 1px
+}
+
+.SeasonPassRewardTile .SeasonPassRewardIcon {
+  align-items: center;
+  display: flex;
+  justify-content: center
+}
+
+.SeasonPassRewardTile .SeasonPassRewardIcon.SeasonPassRewardIcon-xpBoost {
+  color: #85baff
+}
+
+.SeasonPassRewardTile .SeasonPassRewardIcon.SeasonPassRewardIcon-cosmetic {
+  color: #fcd373
+}
+
+.SeasonPassRewardTile .SeasonPassRewardIcon .SeasonPassRewardIconPreview {
+  height: 1.8em;
+  object-fit: contain;
+  width: 1.8em
+}
+
+.SeasonPassRewardTile .SeasonPassRewardTileSuperMark {
+  color: #ffb914;
+  font-size: .65rem;
+  position: absolute;
+  right: .2rem;
+  top: .15rem
+}
+
+.SeasonPassRewardTile .SeasonPassRewardTileStateMark {
+  color: #cfcfcf;
+  font-size: .65rem;
+  left: .2rem;
+  position: absolute;
+  top: .15rem
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-claimed .SeasonPassRewardIcon,
+.SeasonPassRewardTile.SeasonPassRewardTile-empty .SeasonPassRewardIcon {
+  filter: grayscale(.6) brightness(.6)
+}
+
+.SeasonPassRewardTile .SeasonPassRewardTilePadlock {
+  align-items: center;
+  background-color: #ffb914;
+  border: 1px solid #0f0f0f;
+  color: #1a1f2e;
+  display: flex;
+  font-size: .7rem;
+  height: 1.4rem;
+  justify-content: center;
+  position: absolute;
+  right: -.5rem;
+  top: -.5rem;
+  width: 1.4rem;
+  z-index: 1
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-small .SeasonPassRewardTilePadlock {
+  font-size: .55rem;
+  height: 1.1rem;
+  right: -.4rem;
+  top: -.4rem;
+  width: 1.1rem
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-needsSuper {
+  border: 2px solid #fcd373
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-claimable {
+  outline: 3px solid #ffb914;
+  outline-offset: 1px
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-pressable {
+  cursor: pointer
+}
+
+@media(hover:hover) {
+  .SeasonPassRewardTile.SeasonPassRewardTile-pressable:hover {
+    background-color: #394980
+  }
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-pressable.pad-focused {
+  background-color: #394980
+}
+
+@media(hover:none) {
+  .SeasonPassRewardTile.SeasonPassRewardTile-pressable:active {
+    background-color: #394980
+  }
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-pressable:disabled {
+  cursor: default
+}
+
+.SeasonPassRewardIcon .SeasonPassRewardIconEffect {
+  border-radius: 0;
+  display: block;
+  overflow: hidden;
+  position: relative
+}
+
+.SeasonPassRewardIcon .SeasonPassRewardIconEffect .PackBackground {
+  font-size: .25em
+}
+
 .PromptGenericPopup.BrowserTipPopup {
   align-items: center;
   display: flex;
@@ -14396,6 +15502,25 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 
 .CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .GameListRow {
   justify-content: flex-start
+}
+
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead10>:nth-child(-n+10),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead11>:nth-child(-n+11),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead12>:nth-child(-n+12),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead13>:nth-child(-n+13),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead14>:nth-child(-n+14),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead15>:nth-child(-n+15),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead16>:nth-child(-n+16),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead1>:nth-child(-n+1),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead2>:nth-child(-n+2),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead3>:nth-child(-n+3),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead4>:nth-child(-n+4),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead5>:nth-child(-n+5),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead6>:nth-child(-n+6),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead7>:nth-child(-n+7),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead8>:nth-child(-n+8),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead9>:nth-child(-n+9) {
+  --home-card-columns: var(--home-lead-columns)
 }
 
 .CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage.GameListCarouselPagePortrait {
@@ -15535,7 +16660,7 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   aspect-ratio: 1/1;
   box-sizing: border-box;
   padding: .35rem;
-  width: calc(100%/var(--homeRowSize))
+  width: calc(100%/var(--home-card-columns, var(--homeRowSize)))
 }
 
 .MyWorldButton.MyWorldButtonPad:not(.pad-focused) .MyWorldButtonInner {
@@ -16261,6 +17386,498 @@ html[data-app-covered] .WholeAppWrapper .YoutubeHomepageSection .YoutubeTile.You
 .YoutubeHomepageSection.Portrait .YoutubeShortsColumn,
 .YoutubeHomepageSection.Portrait .YoutubeVideosColumn {
   flex: none
+}
+
+@property --ring-progress {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0
+}
+
+.SeasonPassStrip {
+  align-items: center;
+  background: none;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-sizing: content-box;
+  box-sizing: border-box;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  gap: .75rem;
+  isolation: isolate;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0 0 .75rem;
+  min-height: calc(6.6rem + 2px);
+  padding: .5rem .75rem;
+  position: relative;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit;
+  width: 100%
+}
+
+@media(hover:hover) {
+  .SeasonPassStrip:not(.SeasonPassStripLoading):hover {
+    filter: brightness(1.15)
+  }
+}
+
+.SeasonPassStrip:not(.SeasonPassStripLoading).pad-focused {
+  filter: brightness(1.15)
+}
+
+@media(hover:none) {
+  .SeasonPassStrip:not(.SeasonPassStripLoading):active {
+    filter: brightness(1.15)
+  }
+}
+
+.SeasonPassStrip:not(.SeasonPassStripLoading)[data-pressing] {
+  border-color: #ffb914;
+  filter: brightness(.8);
+  transition: none
+}
+
+.SeasonPassStrip.SeasonPassStripLoading {
+  background-color: #303a59;
+  cursor: default
+}
+
+.SeasonPassStrip .SeasonPassStripSeason {
+  background: conic-gradient(#ffb914 calc(var(--season-progress)*1turn), #1a1f2e 0);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex: none;
+  height: 4.4rem;
+  padding: 3px;
+  position: relative;
+  width: 7.5rem
+}
+
+.SeasonPassStrip .SeasonPassStripSeason .SeasonPassStripSeasonInner {
+  background-color: #394980;
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: 0 .5rem
+}
+
+.SeasonPassStrip .SeasonPassStripSeason .SeasonPassStripSeasonName {
+  font-size: .95rem;
+  line-height: 1.2;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.SeasonPassStrip .SeasonPassStripSeason .SeasonPassStripSeasonTime {
+  color: #cfcfcf;
+  font-size: .75rem;
+  line-height: 1.2;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.SeasonPassStrip .SeasonPassStripSeason .SeasonPassStripBadge {
+  align-items: center;
+  background-color: #e34f4f;
+  border: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  font-size: .75rem;
+  font-weight: 900;
+  height: 1.3rem;
+  justify-content: center;
+  min-width: 1.3rem;
+  padding: 0 .2rem;
+  position: absolute;
+  right: -.5rem;
+  top: -.5rem
+}
+
+.SeasonPassStrip .SeasonPassStripTrack {
+  container: seasonPassTrack/inline-size;
+  align-items: center;
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  gap: .2rem;
+  min-width: 0
+}
+
+.SeasonPassStrip .SeasonPassStripRewards {
+  --fits: 3;
+  --shown: min(var(--fits), var(--tier-count));
+  --first: clamp(1, var(--target) - (var(--shown) - 1)/2, var(--tier-count) - var(--shown) + 1);
+  --chip-room: 0rem;
+  --step: calc((100cqw - 6.4rem - var(--chip-room))/(var(--shown) - 1));
+  box-sizing: border-box;
+  padding: 0 1rem;
+  position: relative;
+  width: 100%
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripMore {
+  color: #cfcfcf;
+  font-weight: 900;
+  line-height: 1;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripMore.SeasonPassStripMoreBefore {
+  left: 0;
+  opacity: clamp(0, var(--first) - 1, 1)
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripMore.SeasonPassStripMoreAfter {
+  opacity: clamp(0, var(--tier-count) - var(--first) - var(--shown) + 1, 1);
+  right: 0
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripWindow {
+  display: block;
+  height: 5.6rem;
+  overflow: hidden
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripRow {
+  display: block;
+  height: 100%;
+  position: relative;
+  transform: translateX(calc((1 - var(--first))*var(--step)))
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripLine {
+  background-color: #1a1f2e;
+  height: .3rem;
+  left: calc((var(--tier) - 2)*var(--step) + 2.2rem + var(--past-target)*var(--chip-room));
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(var(--step) + var(--into-target)*var(--chip-room))
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripLine.SeasonPassStripLineFilled {
+  background-color: #ffb914
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward {
+  --reward-fill: #3c4b68;
+  align-items: center;
+  background: linear-gradient(var(--reward-fill), var(--reward-fill)), #3c4b68;
+  border: 2px solid #0f0f0f;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 1.5rem;
+  height: 3.4rem;
+  justify-content: center;
+  left: calc((var(--tier) - 1)*var(--step) + 2.2rem + var(--past-target)*var(--chip-room));
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 3.4rem
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward.SeasonPassStripRewardSuper {
+  --reward-fill: #604c20
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward.SeasonPassStripRewardReached {
+  border-color: #ffb914
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward.SeasonPassStripReward-claimable {
+  --reward-fill: rgba(255, 185, 20, .15)
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward.SeasonPassStripRewardTarget {
+  background-image: conic-gradient(#ffb914 calc(var(--ring-progress)*1turn), #2b3249 0);
+  font-size: 1.7rem;
+  height: 4.4rem;
+  width: 4.4rem
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward.SeasonPassStripRewardTarget:before {
+  background: linear-gradient(var(--reward-fill), var(--reward-fill)), #3c4b68;
+  border-radius: 50%;
+  content: "";
+  inset: .5rem;
+  position: absolute
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward.SeasonPassStripRewardTarget .SeasonPassRewardIcon {
+  position: relative
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward.SeasonPassStripRewardTarget .SeasonPassRewardIcon.SeasonPassRewardIconWithEffect {
+  inset: .5rem
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward.SeasonPassStripReward-claimed .SeasonPassRewardIcon {
+  filter: brightness(.6)
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward .SeasonPassRewardIcon.SeasonPassRewardIcon-xpBoost {
+  color: #85baff
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward .SeasonPassRewardIcon.SeasonPassRewardIcon-cosmetic {
+  color: #fcd373
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward .SeasonPassRewardIcon .SeasonPassRewardIconPreview {
+  height: 1.6em;
+  object-fit: contain;
+  width: 1.6em
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward .SeasonPassRewardIcon.SeasonPassRewardIconWithEffect {
+  border-radius: 50%;
+  inset: 0;
+  overflow: hidden;
+  position: absolute
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward .SeasonPassRewardIcon.SeasonPassRewardIconWithEffect .SeasonPassRewardIconEffect {
+  height: 100%;
+  width: 100%
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripXp {
+  background-color: #1a1f2e;
+  border: 1px solid #0f0f0f;
+  color: #ffb914;
+  font-size: .75rem;
+  font-weight: 900;
+  left: calc((var(--tier) - 1)*var(--step) + 2.2rem);
+  line-height: 1.2;
+  padding: .05rem .4rem;
+  position: absolute;
+  top: calc(50% + 2.2rem);
+  transform: translate(-50%, -50%);
+  white-space: nowrap
+}
+
+@container seasonPassTrack (min-width: 19.8rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --chip-room: 5rem
+  }
+
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp .SeasonPassStripXp {
+    left: calc((var(--tier) - 1)*var(--step) + var(--chip-room) - .3rem);
+    top: 50%;
+    transform: translate(-100%, -50%)
+  }
+}
+
+@container seasonPassTrack (min-width: 23.2rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 5
+  }
+}
+
+@container seasonPassTrack (min-width: 28.2rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 5
+  }
+}
+
+@container seasonPassTrack (min-width: 31.6rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 7
+  }
+}
+
+@container seasonPassTrack (min-width: 36.6rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 7
+  }
+}
+
+@container seasonPassTrack (min-width: 40rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 9
+  }
+}
+
+@container seasonPassTrack (min-width: 45rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 9
+  }
+}
+
+@container seasonPassTrack (min-width: 48.4rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 11
+  }
+}
+
+@container seasonPassTrack (min-width: 53.4rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 11
+  }
+}
+
+@container seasonPassTrack (min-width: 56.8rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 13
+  }
+}
+
+@container seasonPassTrack (min-width: 61.8rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 13
+  }
+}
+
+@container seasonPassTrack (min-width: 65.2rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 15
+  }
+}
+
+@container seasonPassTrack (min-width: 70.2rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 15
+  }
+}
+
+@container seasonPassTrack (min-width: 73.6rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 17
+  }
+}
+
+@container seasonPassTrack (min-width: 78.6rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 17
+  }
+}
+
+@container seasonPassTrack (min-width: 82rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 19
+  }
+}
+
+@container seasonPassTrack (min-width: 87rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 19
+  }
+}
+
+@container seasonPassTrack (min-width: 90.4rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 21
+  }
+}
+
+@container seasonPassTrack (min-width: 95.4rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 21
+  }
+}
+
+@container seasonPassTrack (min-width: 98.8rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 23
+  }
+}
+
+@container seasonPassTrack (min-width: 103.8rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 23
+  }
+}
+
+@container seasonPassTrack (min-width: 107.2rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 25
+  }
+}
+
+@container seasonPassTrack (min-width: 112.2rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 25
+  }
+}
+
+.SeasonPassStrip .SeasonPassStripClaimWindow {
+  color: #fcd373;
+  font-size: .8rem;
+  line-height: 1.2;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+@media(prefers-reduced-motion:no-preference) {
+  .SeasonPassStrip.SeasonPassStripMoving .SeasonPassStripRewards .SeasonPassStripMore {
+    transition: opacity .9s ease-in-out
+  }
+
+  .SeasonPassStrip.SeasonPassStripMoving .SeasonPassStripRewards .SeasonPassStripRow {
+    transition: transform .9s ease-in-out
+  }
+
+  .SeasonPassStrip.SeasonPassStripMoving .SeasonPassStripRewards .SeasonPassStripLine {
+    transition: left .9s ease-in-out, width .9s ease-in-out, background-color .9s ease-in-out
+  }
+
+  .SeasonPassStrip.SeasonPassStripMoving .SeasonPassStripRewards .SeasonPassStripReward {
+    transition: left .9s ease-in-out, width .9s ease-in-out, height .9s ease-in-out, font-size .9s ease-in-out, border-color .9s ease-in-out, --ring-progress .9s ease-in-out
+  }
+
+  .SeasonPassStrip.SeasonPassStripMoving .SeasonPassStripRewards .SeasonPassStripXp {
+    transition: left .9s ease-in-out, top .9s ease-in-out, transform .9s ease-in-out
+  }
+}
+
+@media(max-width:480px) {
+  .SeasonPassStrip {
+    gap: .5rem;
+    padding: .5rem
+  }
+
+  .SeasonPassStrip .SeasonPassStripSeason {
+    width: 6.25rem
+  }
+}
+
+.SeasonPassBackdrop {
+  background-color: #22283b;
+  background-position: 50%;
+  background-size: cover;
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: -1
+}
+
+.SeasonPassBackdrop:after {
+  background-color: rgba(26, 31, 46, .6);
+  content: "";
+  inset: 0;
+  position: absolute
 }
 
 .LegalPage {

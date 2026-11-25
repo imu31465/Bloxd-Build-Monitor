@@ -1,224 +1,225 @@
-export const id = 22;
-export const ids = [22];
+export const id = 26;
+export const ids = [26];
 export const modules = {
-  36946: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => QG,
-      d: () => KG,
-      g: () => fG,
-      j: () => pG
+  37538: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => HM,
+      i: () => hM,
+      m: () => mM,
+      p: () => LM
     });
-    var wG = ZG(34472),
-      SG = ZG(36951),
-      LG = ZG(36955),
-      yG = ZG(8759),
-      kG = ZG(1389),
-      UG = ZG(51),
-      YG = ZG(59),
-      VG = ZG(1067);
+    var OM = iM(35017),
+      SM = iM(37542),
+      jM = iM(37544),
+      aM = iM(9328),
+      PM = iM(1516),
+      nM = iM(44),
+      QM = iM(65),
+      zM = iM(1303);
 
-    function pG() {
-      var GG;
-      return (0, kG.j)(SG.c, (0, SG.l)()), (0, VG.jsx)(VG.Fragment, {
-        children: null === (GG = (0, SG.l)()) || void 0 === GG ? void 0 : GG.content
+    function LM() {
+      var MM;
+      return (0, PM.e)(SM.e, (0, SM.t)()), (0, zM.jsx)(zM.Fragment, {
+        children: null === (MM = (0, SM.t)()) || void 0 === MM ? void 0 : MM.content
       })
     }
 
-    function fG(GG) {
-      var bG;
+    function mM(MM) {
+      var rM;
       let {
-        show: ZG
-      } = GG;
-      (0, kG.j)(SG.c, (0, SG.l)());
-      const YG = null === (bG = (0, SG.l)()) || void 0 === bG ? void 0 : bG.menu;
-      return (0, UG.useEffect)((() => {
-        var GG;
-        ZG || (null === YG || void 0 === YG || null === (GG = YG.onClose) || void 0 === GG || GG.call(YG), (0, LG.m)())
-      }), [ZG, YG]), (0, UG.useEffect)((() => ZG ? (0, yG.g)(LG.t, LG.f) : void 0), [ZG]), (0, VG.jsx)(wG.b, {
-        showing: ZG,
+        show: iM
+      } = MM;
+      (0, PM.e)(SM.e, (0, SM.t)());
+      const QM = null === (rM = (0, SM.t)()) || void 0 === rM ? void 0 : rM.menu;
+      return (0, nM.useEffect)((() => {
+        var MM;
+        iM || (null === QM || void 0 === QM || null === (MM = QM.onClose) || void 0 === MM || MM.call(QM), (0, jM.q)())
+      }), [iM, QM]), (0, nM.useEffect)((() => iM ? (0, aM.e)(jM.y, jM.f) : void 0), [iM]), (0, zM.jsx)(OM.e, {
+        showing: iM,
         globallyUniqueKey: "clientGameMenu",
-        children: null === YG || void 0 === YG ? void 0 : YG.content
+        children: null === QM || void 0 === QM ? void 0 : QM.content
       })
     }
 
-    function QG(GG) {
+    function HM(MM) {
       let {
-        placement: bG = "bottom"
-      } = GG;
-      return (0, VG.jsx)("div", {
-        id: `clientGameHud-${bG}`,
+        placement: rM = "bottom"
+      } = MM;
+      return (0, zM.jsx)("div", {
+        id: `clientGameHud-${rM}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function KG(GG) {
+    function hM(MM) {
       let {
-        children: bG,
-        placement: ZG = "bottom"
-      } = GG;
-      const [wG, SG] = (0, UG.useState)(null);
-      return (0, UG.useEffect)((() => {
-        SG(document.getElementById(`clientGameHud-${ZG}`))
-      }), [ZG]), wG ? (0, YG.createPortal)(bG, wG) : null
+        children: rM,
+        placement: iM = "bottom"
+      } = MM;
+      const [OM, SM] = (0, nM.useState)(null);
+      return (0, nM.useEffect)((() => {
+        SM(document.getElementById(`clientGameHud-${iM}`))
+      }), [iM]), OM ? (0, QM.createPortal)(rM, OM) : null
     }
   },
-  34472: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => LG
+  35017: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => jM
     });
-    var wG = ZG(4558),
-      SG = ZG(4561);
+    var OM = iM(4919),
+      SM = iM(4923);
 
-    function LG(GG) {
+    function jM(MM) {
       let {
-        children: bG,
-        showing: ZG,
-        globallyUniqueKey: LG,
-        alwaysMountChildren: yG = !1,
-        doGameplayStartStopOnShow: kG = !0,
-        keepsMovement: UG = !1
-      } = GG;
-      return (0, SG.e)(!0, ZG, LG, UG), (0, wG.d)(kG, ZG), ZG || yG ? bG : null
+        children: rM,
+        showing: iM,
+        globallyUniqueKey: jM,
+        alwaysMountChildren: aM = !1,
+        doGameplayStartStopOnShow: PM = !0,
+        keepsMovement: nM = !1
+      } = MM;
+      return (0, SM.c)(!0, iM, jM, nM), (0, OM.c)(PM, iM), iM || aM ? rM : null
     }
   },
-  37039: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => LG,
-      e: () => yG,
-      f: () => kG,
-      i: () => UG
+  37629: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => jM,
+      e: () => aM,
+      g: () => PM,
+      h: () => nM
     });
-    var wG = ZG(51),
-      SG = ZG(3100);
-    const LG = 8,
-      yG = "InGameHeaderContainer",
-      kG = "TopRightElements";
+    var OM = iM(44),
+      SM = iM(3508);
+    const jM = 8,
+      aM = "InGameHeaderContainer",
+      PM = "TopRightElements";
 
-    function UG(GG) {
-      const [bG] = (0, SG.b)(), [ZG, UG] = (0, wG.useState)(!1);
-      return (0, wG.useLayoutEffect)((() => {
-        if (!GG) return;
-        const bG = document.querySelector(`.${yG}`),
-          ZG = document.querySelector(`.${kG}`),
-          wG = () => {
-            const wG = GG.getBoundingClientRect(),
-              SG = bG ? bG.getBoundingClientRect().right : 0,
-              yG = ZG ? ZG.getBoundingClientRect().left : window.innerWidth,
-              kG = wG.left < SG + LG,
-              YG = wG.right > yG - LG;
-            UG(kG || YG)
+    function nM(MM) {
+      const [rM] = (0, SM.d)(), [iM, nM] = (0, OM.useState)(!1);
+      return (0, OM.useLayoutEffect)((() => {
+        if (!MM) return;
+        const rM = document.querySelector(`.${aM}`),
+          iM = document.querySelector(`.${PM}`),
+          OM = () => {
+            const OM = MM.getBoundingClientRect(),
+              SM = rM ? rM.getBoundingClientRect().right : 0,
+              aM = iM ? iM.getBoundingClientRect().left : window.innerWidth,
+              PM = OM.left < SM + jM,
+              QM = OM.right > aM - jM;
+            nM(PM || QM)
           };
-        wG();
-        const SG = new ResizeObserver(wG);
-        return SG.observe(GG), bG && SG.observe(bG), ZG && SG.observe(ZG), () => {
-          SG.disconnect()
+        OM();
+        const SM = new ResizeObserver(OM);
+        return SM.observe(MM), rM && SM.observe(rM), iM && SM.observe(iM), () => {
+          SM.disconnect()
         }
-      }), [GG, bG]), ZG
+      }), [MM, rM]), iM
     }
   },
-  8759: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => LG,
-      g: () => SG
+  9328: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => jM,
+      e: () => SM
     });
-    let wG = null;
-    const SG = function(GG) {
-        const bG = {
-          cycle: GG,
+    let OM = null;
+    const SM = function(MM) {
+        const rM = {
+          cycle: MM,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return wG = bG, () => {
-          wG === bG && (wG = null)
+        return OM = rM, () => {
+          OM === rM && (OM = null)
         }
       },
-      LG = () => {
-        var GG;
-        return null !== (GG = wG) && void 0 !== GG && GG.canCycle() ? wG.cycle : null
+      jM = () => {
+        var MM;
+        return null !== (MM = OM) && void 0 !== MM && MM.canCycle() ? OM.cycle : null
       }
   },
-  38933: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => yG,
-      g: () => kG,
-      i: () => UG
+  39511: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => aM,
+      d: () => PM,
+      h: () => nM
     });
-    const wG = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
-      SG = [0, 1, 2, 0, 2, 3],
-      LG = [4, 5];
+    const OM = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
+      SM = [0, 1, 2, 0, 2, 3],
+      jM = [4, 5];
 
-    function yG(GG, bG, ZG, wG, SG) {
-      for (let yG = 0; yG < 6; yG++) LG.includes(yG) === SG && YG(GG, bG, ZG, wG, yG)
+    function aM(MM, rM, iM, OM, SM) {
+      for (let aM = 0; aM < 6; aM++) jM.includes(aM) === SM && QM(MM, rM, iM, OM, aM)
     }
 
-    function kG(GG, bG, ZG, wG) {
-      for (let SG = 0; SG < 6; SG++) YG(GG, bG, ZG, wG, SG)
+    function PM(MM, rM, iM, OM) {
+      for (let SM = 0; SM < 6; SM++) QM(MM, rM, iM, OM, SM)
     }
 
-    function UG(GG, bG, ZG, LG, yG) {
-      for (let kG = 0; kG < 6; kG++)
-        for (const UG of [0, 1]) {
-          const [YG, VG, pG] = [UG + 2, UG + 1, (UG + 3) % 4], fG = GG.length / 3;
-          for (const [bG, SG] of [
-              [UG, VG],
-              [YG, VG],
-              [YG, pG],
-              [UG, pG]
+    function nM(MM, rM, iM, jM, aM) {
+      for (let PM = 0; PM < 6; PM++)
+        for (const nM of [0, 1]) {
+          const [QM, zM, LM] = [nM + 2, nM + 1, (nM + 3) % 4], mM = MM.length / 3;
+          for (const [rM, SM] of [
+              [nM, zM],
+              [QM, zM],
+              [QM, LM],
+              [nM, LM]
             ])
-            for (let UG = 0; UG < 3; UG++) {
-              const YG = wG[3 * (4 * kG + bG) + UG],
-                VG = wG[3 * (4 * kG + SG) + UG];
-              GG.push((YG + (VG - YG) * yG) * LG / 2 + ZG[UG])
+            for (let nM = 0; nM < 3; nM++) {
+              const QM = OM[3 * (4 * PM + rM) + nM],
+                zM = OM[3 * (4 * PM + SM) + nM];
+              MM.push((QM + (zM - QM) * aM) * jM / 2 + iM[nM])
             }
-          for (const GG of SG) bG.push(fG + GG)
+          for (const MM of SM) rM.push(mM + MM)
         }
     }
 
-    function YG(GG, bG, ZG, LG, yG) {
-      let [kG, UG, YG] = ZG, [VG, pG, fG] = LG;
-      const QG = GG.length / 3;
-      for (let SG = 4 * yG; SG < 4 * yG + 4; SG++) GG.push(wG[3 * SG] * VG / 2 + kG, wG[3 * SG + 1] * pG / 2 + UG, wG[3 * SG + 2] * fG / 2 + YG);
-      for (const wG of SG) bG.push(QG + wG)
+    function QM(MM, rM, iM, jM, aM) {
+      let [PM, nM, QM] = iM, [zM, LM, mM] = jM;
+      const HM = MM.length / 3;
+      for (let SM = 4 * aM; SM < 4 * aM + 4; SM++) MM.push(OM[3 * SM] * zM / 2 + PM, OM[3 * SM + 1] * LM / 2 + nM, OM[3 * SM + 2] * mM / 2 + QM);
+      for (const OM of SM) rM.push(HM + OM)
     }
   },
-  39868: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      default: () => Cw
+  40588: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      default: () => uO
     });
-    const wG = [0, 90, 180, 270],
-      SG = "plotsblueprint";
-    var LG = ZG(51),
-      yG = ZG(36951),
-      kG = ZG(17),
-      UG = ZG(1389),
-      YG = ZG(1956),
-      VG = ZG(1151),
-      pG = ZG(1006),
-      fG = ZG.n(pG),
-      QG = ZG(1579),
-      KG = ZG(36946),
-      hG = ZG(1016),
-      dG = ZG(1889),
-      JG = ZG(1953),
-      rG = ZG(3400),
-      zG = ZG(1702);
+    const OM = [0, 90, 180, 270],
+      SM = "plotsblueprint";
+    var jM = iM(44),
+      aM = iM(37542),
+      PM = iM(19),
+      nM = iM(1516),
+      QM = iM(2093),
+      zM = iM(1188),
+      LM = iM(1116),
+      mM = iM.n(LM),
+      HM = iM(1717),
+      hM = iM(34831),
+      JM = iM(37538),
+      dM = iM(1398),
+      yM = iM(2026),
+      lM = iM(2088),
+      EM = iM(3821),
+      UM = iM(1830);
 
-    function EG() {}
-    const oG = (0, LG.createContext)({
+    function GM() {}
+    const CM = (0, jM.createContext)({
       hint: null,
-      journalRef: EG,
-      placementCardRef: EG,
-      buildRef: EG
+      journalRef: GM,
+      placementCardRef: GM,
+      buildRef: GM
     });
-    var XG = ZG(19);
-    const uG = [
+    var eM = iM(22);
+    const bM = [
         ["farm_hut", "farm_house", "farm_barn"],
         ["rusticHome_tent", "rusticHome_cabin", "rusticHome_house"],
         ["market_stand", "market_stall", "market_shop"],
         ["castle_wall", "castle_gate", "castle_tower"]
       ],
-      iG = {
+      wM = {
         farm_hut: {
           displayName: {
             translationKey: "plotsGame:blueprintFarmHut"
@@ -292,18 +293,18 @@ export const modules = {
           tier: "large"
         }
       },
-      CG = ["small", "medium", "large"].flatMap((GG => uG.flat().filter((bG => iG[bG].tier === GG))));
+      tM = ["small", "medium", "large"].flatMap((MM => bM.flat().filter((rM => wM[rM].tier === MM))));
 
-    function WG(GG) {
-      return iG[GG]
+    function gM(MM) {
+      return wM[MM]
     }
-    const mG = new Map(uG.flatMap((GG => GG.slice(1).map(((bG, ZG) => [bG, GG[ZG]])))));
+    const uM = new Map(bM.flatMap((MM => MM.slice(1).map(((rM, iM) => [rM, MM[iM]])))));
 
-    function IG(GG) {
-      var bG;
-      return null !== (bG = mG.get(GG)) && void 0 !== bG ? bG : null
+    function RM(MM) {
+      var rM;
+      return null !== (rM = uM.get(MM)) && void 0 !== rM ? rM : null
     }
-    const FG = {
+    const pM = {
       farm_hut: {
         key: "plotsGame:journalNoteFarmHut",
         firstBuild: !0
@@ -326,109 +327,110 @@ export const modules = {
       }
     };
 
-    function vG(GG, bG) {
-      const ZG = new Set(GG),
-        wG = function(GG) {
-          const bG = new Set(GG);
-          return new Set(CG.filter((GG => {
-            const ZG = IG(GG);
-            return null === ZG || bG.has(ZG)
+    function WM(MM, rM) {
+      const iM = new Set(MM),
+        OM = function(MM) {
+          const rM = new Set(MM);
+          return new Set(tM.filter((MM => {
+            const iM = RM(MM);
+            return null === iM || rM.has(iM)
           })))
-        }(ZG);
-      return CG.map((GG => {
-        const SG = GG === bG;
-        if (ZG.has(GG)) return {
-          id: GG,
-          active: SG,
+        }(iM);
+      return tM.map((MM => {
+        const SM = MM === rM;
+        if (iM.has(MM)) return {
+          id: MM,
+          active: SM,
           note: null,
           state: "completed",
           unlockedBy: null
         };
-        const LG = FG[GG],
-          yG = void 0 === LG || LG.firstBuild && ZG.size > 0 ? null : LG.key;
-        return wG.has(GG) ? {
-          id: GG,
-          active: SG,
-          note: yG,
+        const jM = pM[MM],
+          aM = void 0 === jM || jM.firstBuild && iM.size > 0 ? null : jM.key;
+        return OM.has(MM) ? {
+          id: MM,
+          active: SM,
+          note: aM,
           state: "open",
           unlockedBy: null
         } : {
-          id: GG,
-          active: SG,
-          note: yG,
+          id: MM,
+          active: SM,
+          note: aM,
           state: "locked",
-          unlockedBy: IG(GG)
+          unlockedBy: RM(MM)
         }
       }))
     }
-    const aG = "plotsJournalChanged";
-    class cG {
-      constructor(GG, bG) {
-        this.api = GG, this.placement = bG, this.pages = null, this.openRequested = null, this.openedOffered = !1, this.reported = new Set, this.onOpened = () => {
-          this.placement.stop(), this.NQ(this.openedOffered ? "journal_offered" : "journal_opened"), this.openedOffered = !1
-        }, this.build = GG => {
-          this.placement.start(GG), (0, yG.f)()
+    const sM = "plotsJournalChanged";
+    class DM {
+      constructor(MM, rM) {
+        this.api = MM, this.placement = rM, this.pages = null, this.openRequested = null, this.openedOffered = !1, this.reported = new Set, this.onOpened = () => {
+          this.placement.stop(), this.aL(this.openedOffered ? "journal_offered" : "journal_opened"), this.openedOffered = !1
+        }, this.build = MM => {
+          this.placement.start(MM), (0, aM.k)()
         }, this.putAway = () => {
-          this.api.sendCommand(`${SG} cancel`)
+          this.api.sendCommand(`${SM} cancel`)
         }
       }
       getPages() {
         return this.pages
       }
-      hK(GG) {
-        let [, bG, ZG] = GG;
-        this.pages = vG(bG, ZG), XG.l.xh(aG, this.pages, !0)
+      GL(MM) {
+        let [, rM, iM] = MM;
+        this.pages = WM(rM, iM), eM.i.Tz(sM, this.pages, !0)
       }
-      openFromServer(GG) {
-        let [, bG] = GG;
-        this.openRequested = bG, this.Tp()
+      openFromServer(MM) {
+        let [, rM] = MM;
+        this.openRequested = rM, this.bL()
       }
-      Tp() {
-        const GG = this.openRequested;
-        null === GG || kG.e.get("loadingOverlayVisible") || (this.openRequested = null, null === this.pages || (0, QG.t)() || (0, zG.isTypingInInput)() || null !== this.placement.getView() || (this.openedOffered = GG, (0, yG.m)()))
+      bL() {
+        const MM = this.openRequested;
+        null === MM || PM.d.get("loadingOverlayVisible") || (this.openRequested = null, null === this.pages || (0, HM.r)() || (0, UM.isTypingInInput)() || null !== this.placement.getView() || (this.openedOffered = MM, (0, aM.w)()))
       }
-      NQ(GG) {
-        this.reported.has(GG) || (this.reported.add(GG), this.api.sendCommand(`${SG} report ${GG}`))
+      aL(MM) {
+        this.reported.has(MM) || (this.reported.add(MM), this.api.sendCommand(`${SM} report ${MM}`))
       }
     }
-    var lG = ZG(1067);
-    const jG = "KeyJ";
+    var kM = iM(1303);
+    const ZM = "KeyJ";
 
-    function PG(GG) {
+    function oM(MM) {
       let {
-        journal: bG
-      } = GG;
-      const ZG = (0, UG.j)(aG, bG.getPages()),
+        journal: rM
+      } = MM;
+      const iM = (0, nM.e)(sM, rM.getPages()),
         {
-          isTouchScreen: wG
-        } = (0, kG.o)(["isTouchScreen"]),
+          isTouchScreen: OM
+        } = (0, PM.m)(["isTouchScreen"]),
         {
-          t: SG
-        } = (0, VG.w)(),
-        YG = (0, LG.useContext)(oG);
-      return (0, rG.c)((GG => null !== ZG && GG.code === jG && !GG.repeat && !(0, zG.isTypingInInput)()), (GG => {
-        (0, QG.C)(GG, !0, yG.m)
-      })), null === ZG ? null : (0, lG.jsx)(KG.d, {
+          t: SM
+        } = (0, zM.A)(),
+        QM = (0, jM.useContext)(CM),
+        LM = null !== iM;
+      return (0, jM.useEffect)((() => LM ? (0, hM.c)(ZM) : void 0), [LM]), (0, EM.d)((MM => LM && MM.code === ZM && !MM.repeat && !(0, UM.isTypingInInput)()), (MM => {
+        (0, HM.E)(MM, !0, aM.w)
+      })), null === iM ? null : (0, kM.jsx)(JM.i, {
         placement: "topRight",
-        children: (0, lG.jsx)("div", {
+        children: (0, kM.jsx)("div", {
           className: "PlotsJournalButtonContainer",
-          children: (0, lG.jsxs)("button", {
-            ref: YG.journalRef,
+          children: (0, kM.jsxs)("button", {
+            ref: QM.journalRef,
             type: "button",
-            className: fG()("PlotsJournalButton SmallTextBold", {
-              Touch: wG
+            className: mM()("PlotsJournalButton SmallTextBold", {
+              Touch: OM
             }),
-            onClick: yG.m,
-            children: [(0, lG.jsx)("span", {
+            onClick: aM.w,
+            children: [(0, kM.jsx)("span", {
               className: "PlotsJournalButtonIcon",
-              children: (0, lG.jsx)(dG.b, {
+              children: (0, kM.jsx)(yM.b, {
                 itemName: "Book",
                 amount: 0
               })
-            }), SG("plotsGame:journalButton"), !wG && (0, lG.jsx)(JG.e, {
+            }), SM("plotsGame:journalButton"), !OM && (0, kM.jsx)(lM.d, {
               className: "PlotsJournalButtonKey",
-              keyCode: jG
-            }), "openJournal" === YG.hint && (0, lG.jsx)(hG.c, {
+              keyCode: ZM
+            }), "openJournal" === QM.hint && (0, kM.jsx)(dM.b, {
               name: "hand-point-left",
               className: "SmallTextBold TouchTutorialIcon HandLeftAnim PlotsJournalButtonHand"
             })]
@@ -436,114 +438,114 @@ export const modules = {
         })
       })
     }
-    var MG = ZG(9249);
-    const AG = [0, 90, 180, 270],
-      sG = /^(meta\|rot\d)\|([lrud]+)$/,
-      qG = "nesw",
-      nG = /^meta\|([nesw]*)\|?(Stacked)?$/,
-      gG = function(GG) {
-        const bG = new WeakMap;
-        return (ZG, wG) => {
-          let SG = bG.get(ZG);
-          return void 0 === SG && (SG = GG(ZG, wG), bG.set(ZG, SG)), SG
+    var fM = iM(9816);
+    const YM = [0, 90, 180, 270],
+      NM = /^(meta\|rot\d)\|([lrud]+)$/,
+      AM = "nesw",
+      xM = /^meta\|([nesw]*)\|?(Stacked)?$/,
+      vM = function(MM) {
+        const rM = new WeakMap;
+        return (iM, OM) => {
+          let SM = rM.get(iM);
+          return void 0 === SM && (SM = MM(iM, OM), rM.set(iM, SM)), SM
         }
-      }((GG => new eG(GG)));
-    class eG {
-      constructor(GG) {
-        this.blockMetadata = GG, this.blockIdMappings = new Map, this.maxBlockId = void 0;
-        const bG = new Set(Object.keys(GG).map((bG => GG[bG].id)));
-        bG.add(0), this.maxBlockId = Math.max(...bG)
+      }((MM => new FM(MM)));
+    class FM {
+      constructor(MM) {
+        this.blockMetadata = MM, this.blockIdMappings = new Map, this.maxBlockId = void 0;
+        const rM = new Set(Object.keys(MM).map((rM => MM[rM].id)));
+        rM.add(0), this.maxBlockId = Math.max(...rM)
       }
       static
-      for (GG) {
-        return gG(GG)
+      for (MM) {
+        return vM(MM)
       }
-      getBlockIdMapping(GG, bG) {
-        const ZG = this.getBlockIdMappingKey(GG, bG);
-        let wG = this.blockIdMappings.get(ZG);
-        return void 0 === wG && AG.includes(GG) && (wG = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, GG, bG), this.blockIdMappings.set(ZG, wG)), wG
+      getBlockIdMapping(MM, rM) {
+        const iM = this.getBlockIdMappingKey(MM, rM);
+        let OM = this.blockIdMappings.get(iM);
+        return void 0 === OM && YM.includes(MM) && (OM = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, MM, rM), this.blockIdMappings.set(iM, OM)), OM
       }
-      turnBlockId(GG, bG, ZG) {
-        return this.mapBlockId(this.blockMetadata[GG], bG, this.getRotationMapping(bG, ZG), ZG)
+      turnBlockId(MM, rM, iM) {
+        return this.mapBlockId(this.blockMetadata[MM], rM, this.getRotationMapping(rM, iM), iM)
       }
-      getBlockIdMappingKey(GG, bG) {
-        return `r${GG}|m${Number(bG)}`
+      getBlockIdMappingKey(MM, rM) {
+        return `r${MM}|m${Number(rM)}`
       }
-      createBlockIdMapping(GG, bG, ZG, wG) {
-        const SG = new Uint16Array(bG + 1),
-          LG = this.getRotationMapping(ZG, wG);
-        for (const yG in GG) {
-          const bG = GG[yG];
-          SG[bG.id] = this.mapBlockId(bG, ZG, LG, wG)
+      createBlockIdMapping(MM, rM, iM, OM) {
+        const SM = new Uint16Array(rM + 1),
+          jM = this.getRotationMapping(iM, OM);
+        for (const aM in MM) {
+          const rM = MM[aM];
+          SM[rM.id] = this.mapBlockId(rM, iM, jM, OM)
         }
-        return SG
+        return SM
       }
-      getRotationMapping(GG, bG) {
-        const ZG = Math.round(GG / 90),
-          wG = new Uint8Array(4);
-        for (let SG = 0; SG < 4; SG++) wG[SG] = (4 + SG - ZG) % 4;
-        if (bG) {
-          let GG = wG[0];
-          wG[0] = wG[1], wG[1] = GG, GG = wG[2], wG[2] = wG[3], wG[3] = GG
+      getRotationMapping(MM, rM) {
+        const iM = Math.round(MM / 90),
+          OM = new Uint8Array(4);
+        for (let SM = 0; SM < 4; SM++) OM[SM] = (4 + SM - iM) % 4;
+        if (rM) {
+          let MM = OM[0];
+          OM[0] = OM[1], OM[1] = MM, MM = OM[2], OM[2] = OM[3], OM[3] = MM
         }
-        return wG
+        return OM
       }
-      mapBlockId(GG, bG, ZG, wG) {
-        var SG;
+      mapBlockId(MM, rM, iM, OM) {
+        var SM;
         const {
-          blockMetadata: LG
-        } = this, yG = Math.round(bG / 90), {
-          id: kG,
-          meta: UG
-        } = GG, {
-          rot: YG,
-          rootName: VG,
-          metaStr: pG
-        } = UG;
-        let fG;
-        const [, QG, KG] = null !== (SG = nG.exec(pG)) && void 0 !== SG ? SG : [];
-        if (void 0 !== QG) {
-          var hG, dG;
-          fG = null !== (hG = null === (dG = LG[`${VG}|meta|${[qG.split("").filter(((GG,bG)=>QG.split("").some((GG=>{const ZG=qG.indexOf(GG);return((wG?3-ZG:ZG)+yG)%4===bG})))).join(""),KG].filter(Boolean).join("|")}`]) || void 0 === dG ? void 0 : dG.id) && void 0 !== hG ? hG : kG
-        } else if (null === YG) fG = kG;
+          blockMetadata: jM
+        } = this, aM = Math.round(rM / 90), {
+          id: PM,
+          meta: nM
+        } = MM, {
+          rot: QM,
+          rootName: zM,
+          metaStr: LM
+        } = nM;
+        let mM;
+        const [, HM, hM] = null !== (SM = xM.exec(LM)) && void 0 !== SM ? SM : [];
+        if (void 0 !== HM) {
+          var JM, dM;
+          mM = null !== (JM = null === (dM = jM[`${zM}|meta|${[AM.split("").filter(((MM,rM)=>HM.split("").some((MM=>{const iM=AM.indexOf(MM);return((OM?3-iM:iM)+aM)%4===rM})))).join(""),hM].filter(Boolean).join("|")}`]) || void 0 === dM ? void 0 : dM.id) && void 0 !== JM ? JM : PM
+        } else if (null === QM) mM = PM;
         else {
-          var JG, rG;
-          const GG = ZG[YG - 1] + 1;
-          let bG = pG.replace(`rot${YG}`, `rot${GG}`);
-          wG && UG.stairsCorner && (bG = bG.replace(/(Left|Right)$/, (GG => "Left" === GG ? "Right" : "Left"))), wG && "Chest" === VG && (bG = bG.replace(/\|(left|right)$/, ((GG, bG) => "left" === bG ? "|right" : "|left")));
-          const SG = sG.exec(bG);
-          if (wG && null !== SG) {
-            const GG = "lrud".split("").filter((GG => SG[2].includes("l" === GG ? "r" : "r" === GG ? "l" : GG)));
-            bG = `${SG[1]}|${GG.join("")}`
+          var yM, lM;
+          const MM = iM[QM - 1] + 1;
+          let rM = LM.replace(`rot${QM}`, `rot${MM}`);
+          OM && nM.stairsCorner && (rM = rM.replace(/(Left|Right)$/, (MM => "Left" === MM ? "Right" : "Left"))), OM && "Chest" === zM && (rM = rM.replace(/\|(left|right)$/, ((MM, rM) => "left" === rM ? "|right" : "|left")));
+          const SM = NM.exec(rM);
+          if (OM && null !== SM) {
+            const MM = "lrud".split("").filter((MM => SM[2].includes("l" === MM ? "r" : "r" === MM ? "l" : MM)));
+            rM = `${SM[1]}|${MM.join("")}`
           }
-          const yG = `${VG}|${bG}`;
-          if (fG = null !== (JG = null === (rG = LG[yG]) || void 0 === rG ? void 0 : rG.id) && void 0 !== JG ? JG : null, null === fG) {
-            const GG = LG[VG];
-            fG = GG.rootMetaDesc === yG ? GG.id : kG
+          const aM = `${zM}|${rM}`;
+          if (mM = null !== (yM = null === (lM = jM[aM]) || void 0 === lM ? void 0 : lM.id) && void 0 !== yM ? yM : null, null === mM) {
+            const MM = jM[zM];
+            mM = MM.rootMetaDesc === aM ? MM.id : PM
           }
         }
-        return fG
+        return mM
       }
     }
 
-    function RG(GG, bG, ZG) {
+    function BM(MM, rM, iM) {
       let {
-        xRotationMappedOrigin: wG,
-        shouldSwapXZ: SG
-      } = ZG;
-      const LG = SG ? bG : GG;
-      return null === wG ? LG : wG - LG
+        xRotationMappedOrigin: OM,
+        shouldSwapXZ: SM
+      } = iM;
+      const jM = SM ? rM : MM;
+      return null === OM ? jM : OM - jM
     }
 
-    function TG(GG, bG, ZG) {
+    function XM(MM, rM, iM) {
       let {
-        zRotationMappedOrigin: wG,
-        shouldSwapXZ: SG
-      } = ZG;
-      const LG = SG ? GG : bG;
-      return null === wG ? LG : wG - LG
+        zRotationMappedOrigin: OM,
+        shouldSwapXZ: SM
+      } = iM;
+      const jM = SM ? MM : rM;
+      return null === OM ? jM : OM - jM
     }
-    const HG = {
+    const IM = {
         farm_hut: {
           size: [7, 7, 7],
           palette: ["Aspen Wood Planks", "Messy Stone", "Barkless Aspen Log", "Red Planks", "Glass", "Barkless Pine Log", "Maple Wood Planks", "Smooth Stone"],
@@ -605,304 +607,304 @@ export const modules = {
           layers: ["aaaaaaaaa accccccca accccccca accccccca accccccca accccccca accccccca accccccca aaaaaaaaa", "bbbb.bbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbb.bbba b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b abbbbbbba", "bbbbabbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbbbbbb b.......b b.......b b.......b b...d...b b.......b b.......b b.......b bbbbbbbbb", "ab.bbb.ba b.......b ......... b.......b b...d...b b.......b ......... b.......b ab.bbb.ba", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....a.... ......... ......... ......... ........."]
         }
       },
-      tG = new Map;
+      KM = new Map;
 
-    function DG(GG, bG) {
-      const ZG = `${GG}|${bG}`;
-      let wG = tG.get(ZG);
-      if (void 0 === wG) {
+    function qM(MM, rM) {
+      const iM = `${MM}|${rM}`;
+      let OM = KM.get(iM);
+      if (void 0 === OM) {
         const {
-          size: SG,
-          palette: LG,
-          layers: yG
-        } = HG[GG], kG = 90 === bG || 270 === bG, [UG, YG] = kG ? [SG[2], SG[0]] : [SG[0], SG[2]], VG = function(GG, bG, ZG) {
-          let wG = null,
-            SG = null,
-            LG = !1;
-          switch (GG) {
+          size: SM,
+          palette: jM,
+          layers: aM
+        } = IM[MM], PM = 90 === rM || 270 === rM, [nM, QM] = PM ? [SM[2], SM[0]] : [SM[0], SM[2]], zM = function(MM, rM, iM) {
+          let OM = null,
+            SM = null,
+            jM = !1;
+          switch (MM) {
             case 0:
               break;
             case 90:
-              wG = bG - 1, LG = !0;
+              OM = rM - 1, jM = !0;
               break;
             case 180:
-              wG = bG - 1, SG = ZG - 1;
+              OM = rM - 1, SM = iM - 1;
               break;
             case 270:
-              SG = ZG - 1, LG = !0;
+              SM = iM - 1, jM = !0;
               break;
             default:
-              throw new Error(`Invalid rotation: ${GG}`)
+              throw new Error(`Invalid rotation: ${MM}`)
           }
           return {
-            xRotationMappedOrigin: wG,
-            zRotationMappedOrigin: SG,
-            shouldSwapXZ: LG
+            xRotationMappedOrigin: OM,
+            zRotationMappedOrigin: SM,
+            shouldSwapXZ: jM
           }
-        }(bG, UG, YG), pG = eG.for(MG.l), fG = LG.map((GG => (0, MG.i)(pG.turnBlockId((0, MG.p)(GG), bG, !1)))), QG = [];
-        yG.forEach(((GG, bG) => {
-          GG.split(" ").forEach(((GG, ZG) => {
-            for (let wG = 0; wG < GG.length; wG++)
-              if ("." !== GG[wG]) {
-                const SG = [RG(wG, ZG, VG), bG, TG(wG, ZG, VG)];
-                QG.push({
-                  offset: SG,
-                  block: fG[GG.charCodeAt(wG) - "a".charCodeAt(0)]
+        }(rM, nM, QM), LM = FM.for(fM.k), mM = jM.map((MM => (0, fM.g)(LM.turnBlockId((0, fM.l)(MM), rM, !1)))), HM = [];
+        aM.forEach(((MM, rM) => {
+          MM.split(" ").forEach(((MM, iM) => {
+            for (let OM = 0; OM < MM.length; OM++)
+              if ("." !== MM[OM]) {
+                const SM = [BM(OM, iM, zM), rM, XM(OM, iM, zM)];
+                HM.push({
+                  offset: SM,
+                  block: mM[MM.charCodeAt(OM) - "a".charCodeAt(0)]
                 })
               }
           }))
-        })), wG = {
-          size: [UG, SG[1], YG],
-          cells: QG
-        }, tG.set(ZG, wG)
+        })), OM = {
+          size: [nM, SM[1], QM],
+          cells: HM
+        }, KM.set(iM, OM)
       }
-      return wG
+      return OM
     }
-    const NG = "plotsBuildProgressChanged",
-      OG = new Map;
+    const TM = "plotsBuildProgressChanged",
+      VM = new Map;
 
-    function xG(GG, bG, ZG) {
-      let wG = 0,
-        SG = 0;
-      return function(GG) {
-        let bG = OG.get(GG);
-        if (void 0 === bG) {
-          const wG = [];
+    function cM(MM, rM, iM) {
+      let OM = 0,
+        SM = 0;
+      return function(MM) {
+        let rM = VM.get(MM);
+        if (void 0 === rM) {
+          const OM = [];
           for (const {
-              offset: bG
+              offset: rM
             }
-            of DG(GG, 0).cells) {
-            var ZG;
-            wG[bG[1]] = (null !== (ZG = wG[bG[1]]) && void 0 !== ZG ? ZG : 0) + 1
+            of qM(MM, 0).cells) {
+            var iM;
+            OM[rM[1]] = (null !== (iM = OM[rM[1]]) && void 0 !== iM ? iM : 0) + 1
           }
-          bG = wG, OG.set(GG, bG)
+          rM = OM, VM.set(MM, rM)
         }
-        return bG
-      }(GG).forEach(((GG, ZG) => {
-        wG += GG, ZG > bG && (SG += GG)
+        return rM
+      }(MM).forEach(((MM, iM) => {
+        OM += MM, iM > rM && (SM += MM)
       })), {
-        id: GG,
-        filled: wG - SG - ZG,
-        total: wG
+        id: MM,
+        filled: OM - SM - iM,
+        total: OM
       }
     }
-    class BG {
+    class Mr {
       constructor() {
         this.shown = null, this.topOpen = 0, this.progress = null
       }
       get() {
         return this.progress
       }
-      show(GG) {
-        this.shown = GG, this.topOpen = 0, null === GG && this.xh(null)
+      show(MM) {
+        this.shown = MM, this.topOpen = 0, null === MM && this.Tz(null)
       }
-      update(GG, bG, ZG) {
-        const wG = this.shown;
-        null !== wG && (GG >= bG && (this.topOpen = ZG), this.xh(xG(wG.id, bG - wG.y, GG >= bG ? ZG : this.topOpen + ZG)))
+      update(MM, rM, iM) {
+        const OM = this.shown;
+        null !== OM && (MM >= rM && (this.topOpen = iM), this.Tz(cM(OM.id, rM - OM.y, MM >= rM ? iM : this.topOpen + iM)))
       }
-      xh(GG) {
-        const bG = this.progress;
-        (null === GG || void 0 === GG ? void 0 : GG.id) === (null === bG || void 0 === bG ? void 0 : bG.id) && (null === GG || void 0 === GG ? void 0 : GG.filled) === (null === bG || void 0 === bG ? void 0 : bG.filled) && (null === GG || void 0 === GG ? void 0 : GG.total) === (null === bG || void 0 === bG ? void 0 : bG.total) || (this.progress = GG, XG.l.xh(NG, GG, !0))
+      Tz(MM) {
+        const rM = this.progress;
+        (null === MM || void 0 === MM ? void 0 : MM.id) === (null === rM || void 0 === rM ? void 0 : rM.id) && (null === MM || void 0 === MM ? void 0 : MM.filled) === (null === rM || void 0 === rM ? void 0 : rM.filled) && (null === MM || void 0 === MM ? void 0 : MM.total) === (null === rM || void 0 === rM ? void 0 : rM.total) || (this.progress = MM, eM.i.Tz(TM, MM, !0))
       }
     }
-    const Gb = "plotsPlotChanged",
-      bb = "plotsGuideChanged",
-      Zb = "plotsGuideDone";
-    class wb {
+    const rr = "plotsPlotChanged",
+      ir = "plotsGuideChanged",
+      Or = "plotsGuideDone";
+    class Sr {
       constructor() {
         this.plot = ["none"], this.guide = ["none"]
       }
       getPlot() {
         return this.plot
       }
-      receivePlot(GG) {
-        this.plot = GG, XG.l.xh(Gb, GG, !0)
+      receivePlot(MM) {
+        this.plot = MM, eM.i.Tz(rr, MM, !0)
       }
       getGuide() {
         return this.guide
       }
-      receiveGuide(GG) {
-        this.guide = GG, XG.l.xh(bb, GG, !0)
+      receiveGuide(MM) {
+        this.guide = MM, eM.i.Tz(ir, MM, !0)
       }
       receiveGuideDone() {
-        XG.l.xh(Zb, void 0, !0)
+        eM.i.Tz(Or, void 0, !0)
       }
     }
-    var Sb = ZG(1239),
-      Lb = ZG(38966),
-      yb = ZG(37224),
-      kb = ZG(1409);
+    var jr = iM(1287),
+      ar = iM(39558),
+      Pr = iM(37821),
+      nr = iM(1541);
 
-    function Ub(GG) {
+    function Qr(MM) {
       let {
-        onSkip: bG,
-        className: ZG
-      } = GG;
+        onSkip: rM,
+        className: iM
+      } = MM;
       const {
-        t: wG
-      } = (0, VG.w)();
-      return (0, lG.jsx)("button", {
+        t: OM
+      } = (0, zM.A)();
+      return (0, kM.jsx)("button", {
         type: "button",
-        className: fG()("PlotsGuideSkipButton", ZG),
-        ...(0, kb.h)(bG, "pointerup"),
-        children: wG("tutorial:skip")
+        className: mM()("PlotsGuideSkipButton", iM),
+        ...(0, nr.g)(rM, "pointerup"),
+        children: OM("tutorial:skip")
       })
     }
 
-    function Yb(GG) {
+    function zr(MM) {
       let {
-        target: bG,
-        placement: ZG,
-        spotlight: wG = null,
-        children: SG
-      } = GG;
+        target: rM,
+        placement: iM,
+        spotlight: OM = null,
+        children: SM
+      } = MM;
       const {
-        t: yG
-      } = (0, VG.w)(), kG = (0, LG.useRef)(bG);
-      return kG.current = bG, (0, Sb.w)("popup", kG, null === wG ? null : wG.onSkip, null !== wG, null, "controller:menusSkipTutorial"), (0, lG.jsxs)(yb.e, {
-        target: bG,
-        placement: ZG,
-        className: fG()("PlotsGuideBubble", {
-          Passive: null === wG
+        t: aM
+      } = (0, zM.A)(), PM = (0, jM.useRef)(rM);
+      return PM.current = rM, (0, jr.v)("popup", PM, null === OM ? null : OM.onSkip, null !== OM, null, "controller:menusSkipTutorial"), (0, kM.jsxs)(Pr.e, {
+        target: rM,
+        placement: iM,
+        className: mM()("PlotsGuideBubble", {
+          Passive: null === OM
         }),
-        spotlight: null !== wG,
+        spotlight: null !== OM,
         spotlightMargin: 30,
-        children: [(0, lG.jsxs)("div", {
+        children: [(0, kM.jsxs)("div", {
           className: "PlotsGuideBubbleHeader",
-          children: [(0, lG.jsx)("img", {
+          children: [(0, kM.jsx)("img", {
             className: "PlotsGuideBubblePortrait",
-            src: Lb,
+            src: ar,
             alt: "",
             draggable: !1
-          }), (0, lG.jsx)("span", {
+          }), (0, kM.jsx)("span", {
             className: "PlotsGuideBubbleSpeaker",
-            children: yG("plotsGame:maverickName")
-          }), null !== wG && (0, lG.jsx)(Ub, {
-            onSkip: wG.onSkip
+            children: aM("plotsGame:maverickName")
+          }), null !== OM && (0, kM.jsx)(Qr, {
+            onSkip: OM.onSkip
           })]
-        }), (0, lG.jsx)("p", {
+        }), (0, kM.jsx)("p", {
           className: "PlotsGuideBubbleText",
-          children: SG
+          children: SM
         })]
       })
     }
 
-    function Vb(GG) {
+    function Lr(MM) {
       let {
-        className: bG,
-        icon: ZG,
-        title: wG,
-        children: SG
-      } = GG;
-      return (0, lG.jsxs)("div", {
-        className: fG()("PlotsCard", bG),
+        className: rM,
+        icon: iM,
+        title: OM,
+        children: SM
+      } = MM;
+      return (0, kM.jsxs)("div", {
+        className: mM()("PlotsCard", rM),
         role: "status",
-        children: [(0, lG.jsx)("span", {
+        children: [(0, kM.jsx)("span", {
           className: "PlotsCardIcon",
-          children: (0, lG.jsx)(hG.c, {
-            name: ZG
+          children: (0, kM.jsx)(dM.b, {
+            name: iM
           })
-        }), (0, lG.jsxs)("div", {
+        }), (0, kM.jsxs)("div", {
           className: "PlotsCardBody",
-          children: [(0, lG.jsx)("div", {
+          children: [(0, kM.jsx)("div", {
             className: "PlotsCardTitle SmallTextBold",
-            children: wG
-          }), SG]
+            children: OM
+          }), SM]
         })]
       })
     }
 
-    function pb(GG) {
+    function mr(MM) {
       let {
-        progress: bG,
-        goal: ZG
-      } = GG;
-      const wG = Math.min(bG, ZG);
-      return (0, lG.jsxs)("div", {
+        progress: rM,
+        goal: iM
+      } = MM;
+      const OM = Math.min(rM, iM);
+      return (0, kM.jsxs)("div", {
         className: "PlotsProgress",
-        children: [(0, lG.jsx)("div", {
+        children: [(0, kM.jsx)("div", {
           className: "PlotsProgressBar",
           role: "progressbar",
           "aria-valuemin": 0,
-          "aria-valuemax": ZG,
-          "aria-valuenow": wG,
-          children: (0, lG.jsx)("div", {
+          "aria-valuemax": iM,
+          "aria-valuenow": OM,
+          children: (0, kM.jsx)("div", {
             className: "PlotsProgressBarFill",
             style: {
-              transform: `scaleX(${wG/ZG})`
+              transform: `scaleX(${OM/iM})`
             }
           })
-        }), (0, lG.jsxs)("span", {
+        }), (0, kM.jsxs)("span", {
           className: "PlotsProgressCount",
-          children: [wG, "/", ZG]
+          children: [OM, "/", iM]
         })]
       })
     }
 
-    function fb(GG) {
+    function Hr(MM) {
       let {
-        progress: bG,
-        guide: ZG
-      } = GG;
+        progress: rM,
+        guide: iM
+      } = MM;
       const {
-        t: wG
-      } = (0, VG.w)(), {
-        isTouchScreen: SG
-      } = (0, kG.o)(["isTouchScreen"]), LG = bG.filled < 5;
-      return (0, lG.jsxs)(lG.Fragment, {
-        children: [(LG || bG.total - bG.filled <= 5) && (0, lG.jsx)("div", {
+        t: OM
+      } = (0, zM.A)(), {
+        isTouchScreen: SM
+      } = (0, PM.m)(["isTouchScreen"]), jM = rM.filled < 5;
+      return (0, kM.jsxs)(kM.Fragment, {
+        children: [(jM || rM.total - rM.filled <= 5) && (0, kM.jsx)("div", {
           className: "PlotsGuideHandLayer",
-          children: (0, lG.jsx)("div", {
-            ref: ZG.bindHand,
+          children: (0, kM.jsx)("div", {
+            ref: iM.bindHand,
             className: "PlotsGuideHand",
-            children: (0, lG.jsx)(hG.c, {
+            children: (0, kM.jsx)(dM.b, {
               name: "hand-point-left",
               className: "SmallTextBold TouchTutorialIcon"
             })
           })
-        }), (0, lG.jsx)(KG.d, {
+        }), (0, kM.jsx)(JM.i, {
           placement: "bottom",
-          children: (0, lG.jsxs)(Vb, {
+          children: (0, kM.jsxs)(Lr, {
             icon: "hammer",
-            title: wG(WG(bG.id).displayName.translationKey),
-            children: [LG && (0, lG.jsx)("div", {
+            title: OM(gM(rM.id).displayName.translationKey),
+            children: [jM && (0, kM.jsx)("div", {
               className: "PlotsCardHint SmallTextLight",
-              children: SG ? wG("plotsGame:guideBuildTouch") : Qb(wG)
-            }), (0, lG.jsx)(pb, {
-              progress: bG.filled,
-              goal: bG.total
+              children: SM ? OM("plotsGame:guideBuildTouch") : hr(OM)
+            }), (0, kM.jsx)(mr, {
+              progress: rM.filled,
+              goal: rM.total
             })]
           })
         })]
       })
     }
 
-    function Qb(GG) {
-      const bG = YG.B["alt-fire"][0];
-      return "Mouse3" === bG ? GG("plotsGame:guideBuildRightClick") : GG("plotsGame:guideBuildKeys", {
-        key: (0, YG.t)(bG)
+    function hr(MM) {
+      const rM = QM.v["alt-fire"][0];
+      return "Mouse3" === rM ? MM("plotsGame:guideBuildRightClick") : MM("plotsGame:guideBuildKeys", {
+        key: (0, QM.m)(rM)
       })
     }
 
-    function Kb() {
-      return (0, lG.jsx)("div", {
+    function Jr() {
+      return (0, kM.jsx)("div", {
         className: "PlotsGuideDragHand",
-        children: (0, lG.jsx)(hG.c, {
+        children: (0, kM.jsx)(dM.b, {
           name: "hand-back-point-up",
           className: "SmallTextBold TouchTutorialIcon"
         })
       })
     }
-    var hb = ZG(1251),
-      db = ZG(2549),
-      Jb = ZG(38822),
-      rb = ZG(38602),
-      zb = ZG(37283),
-      Eb = ZG(9292),
-      ob = ZG(9309),
-      Xb = ZG(352),
-      ub = ZG(38207);
-    const ib = new Map([
+    var dr = iM(1313),
+      yr = iM(2811),
+      lr = iM(39414),
+      Er = iM(39168),
+      Ur = iM(37855),
+      Gr = iM(9852),
+      Cr = iM(9866),
+      er = iM(332),
+      br = iM(38784);
+    const wr = new Map([
         ["Aspen Wood Planks", [.78, .706, .502]],
         ["Barkless Aspen Log", [.792, .718, .518]],
         ["Barkless Pine Log", [.49, .353, .275]],
@@ -922,450 +924,450 @@ export const modules = {
         ["Stone Bricks", [.522, .545, .573]],
         ["White Wool", [.98, .98, .98]]
       ]),
-      Cb = [...zb.c.blockRemoveActionRoots, ...rb.c, ...Eb.g, "Board", "Code Block", "Custom Lobby Block"],
-      Wb = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
-    let mb = null;
+      tr = [...Ur.c.blockRemoveActionRoots, ...Er.c, ...Gr.h, "Board", "Code Block", "Custom Lobby Block"],
+      gr = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
+    let ur = null;
 
-    function Ib() {
-      return mb ??= function() {
-        const GG = Fb(),
-          bG = Math.max(...GG.map((GG => MG.l[GG].id))) + 1,
-          ZG = new Int32Array(bG),
-          wG = new Int32Array(bG),
-          SG = new Uint8Array(bG).fill(1),
-          LG = new Uint8Array(bG),
-          yG = new Uint8Array(bG),
-          kG = new Array(bG).fill("Air"),
-          UG = new Map,
-          YG = GG => {
-            let bG = UG.get(GG);
-            return void 0 === bG && (bG = UG.size + 1, UG.set(GG, bG)), bG
+    function Rr() {
+      return ur ??= function() {
+        const MM = pr(),
+          rM = Math.max(...MM.map((MM => fM.k[MM].id))) + 1,
+          iM = new Int32Array(rM),
+          OM = new Int32Array(rM),
+          SM = new Uint8Array(rM).fill(1),
+          jM = new Uint8Array(rM),
+          aM = new Uint8Array(rM),
+          PM = new Array(rM).fill("Air"),
+          nM = new Map,
+          QM = MM => {
+            let rM = nM.get(MM);
+            return void 0 === rM && (rM = nM.size + 1, nM.set(MM, rM)), rM
           },
-          VG = new Set(Cb);
-        for (const fG of GG) {
-          var pG;
+          zM = new Set(tr);
+        for (const mM of MM) {
+          var LM;
           const {
-            id: GG,
-            meta: bG,
-            altActionable: UG,
-            canBePlacedOver: QG
-          } = MG.l[fG];
-          ZG[GG] = YG(vb(fG));
-          const KG = bG.stairsCorner;
-          if (null === KG) wG[GG] = ZG[GG];
+            id: MM,
+            meta: rM,
+            altActionable: nM,
+            canBePlacedOver: HM
+          } = fM.k[mM];
+          iM[MM] = QM(Wr(mM));
+          const hM = rM.stairsCorner;
+          if (null === hM) OM[MM] = iM[MM];
           else {
-            const ZG = KG.endsWith("Right");
-            wG[GG] = YG(`${bG.rootName}|rot${ZG?bG.rot%4+1:bG.rot}|${bG.halfblockPlacement}|${KG.replace("Right","Left")}`)
+            const iM = hM.endsWith("Right");
+            OM[MM] = QM(`${rM.rootName}|rot${iM?rM.rot%4+1:rM.rot}|${rM.halfblockPlacement}|${hM.replace("Right","Left")}`)
           }
-          SG[GG] = QG ? 1 : 0, LG[GG] = UG || null !== bG.open || fG in ub.e || VG.has(bG.rootName) || void 0 !== (0, rb.f)(bG.rootName) ? 1 : 0;
+          SM[MM] = HM ? 1 : 0, jM[MM] = nM || null !== rM.open || mM in br.e || zM.has(rM.rootName) || void 0 !== (0, Er.f)(rM.rootName) ? 1 : 0;
           const {
-            rootName: hG
-          } = bG;
-          yG[GG] = null !== bG.open || rb.c.includes(hG) || hG.includes("Bookshelf") || hG.includes("Mailbox") ? 1 : 0, kG[GG] = null !== (pG = (0, Jb.f)(GG)) && void 0 !== pG ? pG : hG
+            rootName: JM
+          } = rM;
+          aM[MM] = null !== rM.open || Er.c.includes(JM) || JM.includes("Bookshelf") || JM.includes("Mailbox") ? 1 : 0, PM[MM] = null !== (LM = (0, lr.h)(MM)) && void 0 !== LM ? LM : JM
         }
         return {
-          kinds: ZG,
-          shapes: wG,
-          empty: SG,
-          inUse: LG,
-          ownAltActionMessage: yG,
-          placingItems: kG
+          kinds: iM,
+          shapes: OM,
+          empty: SM,
+          inUse: jM,
+          ownAltActionMessage: aM,
+          placingItems: PM
         }
-      }(), mb
+      }(), ur
     }
 
-    function Fb() {
-      return Object.keys(MG.l).filter((GG => MG.l[GG].name === GG))
+    function pr() {
+      return Object.keys(fM.k).filter((MM => fM.k[MM].name === MM))
     }
 
-    function vb(GG) {
-      var bG;
-      const ZG = MG.l[GG],
+    function Wr(MM) {
+      var rM;
+      const iM = fM.k[MM],
         {
-          rootName: wG,
-          rot: SG
-        } = ZG.meta,
-        [, ...LG] = (null !== (bG = ZG.rootMetaDesc) && void 0 !== bG ? bG : GG).split("|"),
-        yG = LG.filter((GG => !("meta" === GG || Wb.test(GG) || (0, ob.C)(ZG) && /^[nesw]+$/.test(GG) || Eb.g.includes(wG) && /^[lrud]+$/.test(GG) || Xb.M.includes(wG) && /^(left|right)$/.test(GG))));
-      return [wG, ...yG].map((GG => "fenceGate" === ZG.model && GG === `rot${SG}` ? "rot" + ((SG - 1) % 2 + 1) : GG)).join("|")
+          rootName: OM,
+          rot: SM
+        } = iM.meta,
+        [, ...jM] = (null !== (rM = iM.rootMetaDesc) && void 0 !== rM ? rM : MM).split("|"),
+        aM = jM.filter((MM => !("meta" === MM || gr.test(MM) || (0, Cr.B)(iM) && /^[nesw]+$/.test(MM) || Gr.h.includes(OM) && /^[lrud]+$/.test(MM) || er.H.includes(OM) && /^(left|right)$/.test(MM))));
+      return [OM, ...aM].map((MM => "fenceGate" === iM.model && MM === `rot${SM}` ? "rot" + ((SM - 1) % 2 + 1) : MM)).join("|")
     }
 
-    function ab(GG, bG) {
+    function sr(MM, rM) {
       const {
-        kinds: ZG,
-        shapes: wG
-      } = Ib();
-      return ZG[GG] === ZG[bG] || wG[GG] === wG[bG]
+        kinds: iM,
+        shapes: OM
+      } = Rr();
+      return iM[MM] === iM[rM] || OM[MM] === OM[rM]
     }
 
-    function cb(GG) {
-      return 1 === Ib().empty[GG]
+    function Dr(MM) {
+      return 1 === Rr().empty[MM]
     }
 
-    function lb(GG) {
-      return Ib().placingItems[GG]
+    function kr(MM) {
+      return Rr().placingItems[MM]
     }
 
-    function jb(GG) {
-      return ib.get(MG.l[GG].meta.rootName)
+    function Zr(MM) {
+      return wr.get(fM.k[MM].meta.rootName)
     }
-    var Pb = ZG(9284),
-      Mb = ZG(9303);
-    const Ab = [0, 0, 0, 1, 1, 1],
-      sb = (0, Pb.c)([
+    var or = iM(9845),
+      fr = iM(9863);
+    const Yr = [0, 0, 0, 1, 1, 1],
+      Nr = (0, or.c)([
         [2, 0, 2, 6, 6, 6]
       ]),
-      qb = (0, Pb.c)([
+      Ar = (0, or.c)([
         [3, 0, 3, 5, 5, 5]
       ]),
-      nb = (0, Pb.c)([
+      xr = (0, or.c)([
         [3, 3, 3, 5, 8, 5]
       ]),
-      gb = [0, 1, 2, 3].map((GG => (0, Pb.c)((0, Pb.o)([
+      vr = [0, 1, 2, 3].map((MM => (0, or.c)((0, or.k)([
         [3, 2, 0, 5, 7, 3]
-      ], GG))));
+      ], MM))));
 
-    function eb(GG) {
+    function Fr(MM) {
       const {
-        bd: bG,
-        model: ZG,
-        blockModel: wG,
-        meta: SG
-      } = MG.l[GG];
-      return void 0 !== bG ? bG : "CentreCross" === ZG ? sb : null !== wG && void 0 !== wG && wG.startsWith("torch") ? SG.halfblockPlacement === Mb.d.side ? gb[SG.rot - 1] : SG.halfblockPlacement === Mb.d.top ? nb : qb : Ab
+        Hd: rM,
+        model: iM,
+        blockModel: OM,
+        meta: SM
+      } = fM.k[MM];
+      return void 0 !== rM ? rM : "CentreCross" === iM ? Nr : null !== OM && void 0 !== OM && OM.startsWith("torch") ? SM.halfblockPlacement === fr.b.side ? vr[SM.rot - 1] : SM.halfblockPlacement === fr.b.top ? xr : Ar : Yr
     }
-    var Rb = ZG(188);
-    class Tb {
-      constructor(GG) {
-        this.api = GG, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
+    var Br = iM(181);
+    class Xr {
+      constructor(MM) {
+        this.api = MM, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
       }
-      watch(GG) {
-        const bG = Rb.d.rK;
+      watch(MM) {
+        const rM = Br.f.HL;
         this.chunks = [];
-        for (let ZG = 0; ZG < GG.length; ZG += 3) {
-          const wG = Math.floor(GG[ZG] / bG),
-            SG = Math.floor(GG[ZG + 1] / bG),
-            LG = Math.floor(GG[ZG + 2] / bG);
-          this.watches(wG, SG, LG) || this.chunks.push(wG, SG, LG)
+        for (let iM = 0; iM < MM.length; iM += 3) {
+          const OM = Math.floor(MM[iM] / rM),
+            SM = Math.floor(MM[iM + 1] / rM),
+            jM = Math.floor(MM[iM + 2] / rM);
+          this.watches(OM, SM, jM) || this.chunks.push(OM, SM, jM)
         }
         this.versions = [], this.lastCheckMs = -1 / 0, this.changed()
       }
       changed() {
-        const GG = performance.now();
-        if (GG - this.lastCheckMs < 100) return !1;
-        this.lastCheckMs = GG;
-        let bG = !1;
-        for (let ZG = 0; ZG < this.chunks.length; ZG += 3) {
-          const GG = this.api.getChunkVersion(this.chunks[ZG], this.chunks[ZG + 1], this.chunks[ZG + 2]);
-          this.versions[ZG / 3] !== GG && (this.versions[ZG / 3] = GG, bG = !0)
+        const MM = performance.now();
+        if (MM - this.lastCheckMs < 100) return !1;
+        this.lastCheckMs = MM;
+        let rM = !1;
+        for (let iM = 0; iM < this.chunks.length; iM += 3) {
+          const MM = this.api.getChunkVersion(this.chunks[iM], this.chunks[iM + 1], this.chunks[iM + 2]);
+          this.versions[iM / 3] !== MM && (this.versions[iM / 3] = MM, rM = !0)
         }
-        return bG
+        return rM
       }
-      watches(GG, bG, ZG) {
-        for (let wG = 0; wG < this.chunks.length; wG += 3)
-          if (this.chunks[wG] === GG && this.chunks[wG + 1] === bG && this.chunks[wG + 2] === ZG) return !0;
+      watches(MM, rM, iM) {
+        for (let OM = 0; OM < this.chunks.length; OM += 3)
+          if (this.chunks[OM] === MM && this.chunks[OM + 1] === rM && this.chunks[OM + 2] === iM) return !0;
         return !1
       }
     }
-    var Hb = ZG(38933);
-    const tb = .35,
-      Db = {
+    var Ir = iM(39511);
+    const Kr = .35,
+      qr = {
         size: .9,
         alpha: .35,
         crossed: !1
       },
-      Nb = {
+      Tr = {
         size: 1.04,
         alpha: .45,
         crossed: !0
       },
-      Ob = [.95, .2, .15];
-    class xb {
+      Vr = [.95, .2, .15];
+    class cr {
       constructor() {
         this.groups = []
       }
-      add(GG, bG, ZG, wG, SG) {
-        let LG = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Ab;
-        for (const yG of this.groups)
-          if (bZ(yG, wG, SG)) return yG.cells.push(GG, bG, ZG), void yG.boxes.push(LG);
+      add(MM, rM, iM, OM, SM) {
+        let jM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Yr;
+        for (const aM of this.groups)
+          if (ii(aM, OM, SM)) return aM.cells.push(MM, rM, iM), void aM.boxes.push(jM);
         this.groups.push({
-          rgb: wG,
-          look: SG,
-          cells: [GG, bG, ZG],
-          boxes: [LG]
+          rgb: OM,
+          look: SM,
+          cells: [MM, rM, iM],
+          boxes: [jM]
         })
       }
       toArray() {
         return this.groups
       }
     }
-    class Bb {
-      constructor(GG) {
-        this.api = GG, this.shown = []
+    class Mi {
+      constructor(MM) {
+        this.api = MM, this.shown = []
       }
-      show(GG) {
-        const bG = [];
-        for (const ZG of GG) {
-          const GG = this.shown.findIndex((GG => {
+      show(MM) {
+        const rM = [];
+        for (const iM of MM) {
+          const MM = this.shown.findIndex((MM => {
             let {
-              group: bG
-            } = GG;
-            return bZ(bG, ZG.rgb, ZG.look) && ZZ(bG, ZG)
-          })); - 1 === GG ? bG.push(this.build(ZG)) : (bG.push(this.shown[GG]), this.shown.splice(GG, 1))
+              group: rM
+            } = MM;
+            return ii(rM, iM.rgb, iM.look) && Oi(rM, iM)
+          })); - 1 === MM ? rM.push(this.build(iM)) : (rM.push(this.shown[MM]), this.shown.splice(MM, 1))
         }
-        this.dispose(), this.shown = bG
+        this.dispose(), this.shown = rM
       }
       dispose() {
         for (const {
-            meshes: GG
+            meshes: MM
           }
           of this.shown)
-          for (const bG of GG) this.api.disposeGameMesh(bG);
+          for (const rM of MM) this.api.disposeGameMesh(rM);
         this.shown = []
       }
-      build(GG) {
+      build(MM) {
         const {
-          rgb: bG,
-          look: ZG,
-          boxes: wG
-        } = GG, SG = [bG[0] + (1 - bG[0]) * tb, bG[1] + (1 - bG[1]) * tb, bG[2] + (1 - bG[2]) * tb], LG = [this.buildMesh(GG.cells, bG, ZG.alpha, ((GG, bG, SG, LG) => {
-          GZ(GG, bG, SG, wG[LG], ZG.size, !1)
-        })), this.buildMesh(GG.cells, SG, ZG.alpha, ((GG, bG, SG, LG) => {
-          GZ(GG, bG, SG, wG[LG], ZG.size, !0)
+          rgb: rM,
+          look: iM,
+          boxes: OM
+        } = MM, SM = [rM[0] + (1 - rM[0]) * Kr, rM[1] + (1 - rM[1]) * Kr, rM[2] + (1 - rM[2]) * Kr], jM = [this.buildMesh(MM.cells, rM, iM.alpha, ((MM, rM, SM, jM) => {
+          ri(MM, rM, SM, OM[jM], iM.size, !1)
+        })), this.buildMesh(MM.cells, SM, iM.alpha, ((MM, rM, SM, jM) => {
+          ri(MM, rM, SM, OM[jM], iM.size, !0)
         }))];
-        return ZG.crossed && LG.push(this.buildMesh(GG.cells, bG, .9, ((GG, bG, wG) => {
-          (0, Hb.i)(GG, bG, wG, ZG.size + .01, .12)
+        return iM.crossed && jM.push(this.buildMesh(MM.cells, rM, .9, ((MM, rM, OM) => {
+          (0, Ir.h)(MM, rM, OM, iM.size + .01, .12)
         }))), {
-          group: GG,
-          meshes: LG
+          group: MM,
+          meshes: jM
         }
       }
-      buildMesh(GG, bG, ZG, wG) {
-        const SG = [GG[0], GG[1], GG[2]],
-          LG = [],
-          yG = [];
-        for (let kG = 0; kG < GG.length; kG += 3) wG(LG, yG, [GG[kG] - SG[0] + .5, GG[kG + 1] - SG[1] + .5, GG[kG + 2] - SG[2] + .5], kG / 3);
+      buildMesh(MM, rM, iM, OM) {
+        const SM = [MM[0], MM[1], MM[2]],
+          jM = [],
+          aM = [];
+        for (let PM = 0; PM < MM.length; PM += 3) OM(jM, aM, [MM[PM] - SM[0] + .5, MM[PM + 1] - SM[1] + .5, MM[PM + 2] - SM[2] + .5], PM / 3);
         return this.api.createGameMesh({
-          positions: LG,
-          indices: yG
+          positions: jM,
+          indices: aM
         }, {
-          rgb: [bG[0], bG[1], bG[2]],
-          alpha: ZG
-        }, SG)
+          rgb: [rM[0], rM[1], rM[2]],
+          alpha: iM
+        }, SM)
       }
     }
 
-    function GZ(GG, bG, ZG, wG, SG, LG) {
-      for (let yG = 0; yG < wG.length; yG += 6) {
-        const kG = [0, 0, 0],
-          UG = [0, 0, 0];
-        for (let GG = 0; GG < 3; GG++) kG[GG] = ZG[GG] + ((wG[yG + GG] + wG[yG + GG + 3]) / 2 - .5) * SG, UG[GG] = (wG[yG + GG + 3] - wG[yG + GG]) * SG;
-        (0, Hb.d)(GG, bG, kG, UG, LG)
+    function ri(MM, rM, iM, OM, SM, jM) {
+      for (let aM = 0; aM < OM.length; aM += 6) {
+        const PM = [0, 0, 0],
+          nM = [0, 0, 0];
+        for (let MM = 0; MM < 3; MM++) PM[MM] = iM[MM] + ((OM[aM + MM] + OM[aM + MM + 3]) / 2 - .5) * SM, nM[MM] = (OM[aM + MM + 3] - OM[aM + MM]) * SM;
+        (0, Ir.c)(MM, rM, PM, nM, jM)
       }
     }
 
-    function bZ(GG, bG, ZG) {
-      return GG.rgb[0] === bG[0] && GG.rgb[1] === bG[1] && GG.rgb[2] === bG[2] && GG.look === ZG
+    function ii(MM, rM, iM) {
+      return MM.rgb[0] === rM[0] && MM.rgb[1] === rM[1] && MM.rgb[2] === rM[2] && MM.look === iM
     }
 
-    function ZZ(GG, bG) {
-      if (GG.cells.length !== bG.cells.length) return !1;
-      for (let ZG = 0; ZG < GG.cells.length; ZG++)
-        if (GG.cells[ZG] !== bG.cells[ZG]) return !1;
-      return GG.boxes.every(((GG, ZG) => GG === bG.boxes[ZG]))
+    function Oi(MM, rM) {
+      if (MM.cells.length !== rM.cells.length) return !1;
+      for (let iM = 0; iM < MM.cells.length; iM++)
+        if (MM.cells[iM] !== rM.cells[iM]) return !1;
+      return MM.boxes.every(((MM, iM) => MM === rM.boxes[iM]))
     }
 
-    function wZ(GG, bG, ZG, wG, SG) {
-      if (!GG.isBlockInLoadedChunk(bG, wG - 6, ZG) || !GG.isBlockInLoadedChunk(bG, wG + 6 + SG, ZG) || !GG.canModifyBlockAt(bG, wG, ZG)) return NaN;
-      let LG = wG - 1;
-      if (0 !== GG.getBlockId(bG, LG, ZG)) {
-        for (; LG < wG + 6 && 0 !== GG.getBlockId(bG, LG + 1, ZG);) LG++;
-        return LG
+    function Si(MM, rM, iM, OM, SM) {
+      if (!MM.isBlockInLoadedChunk(rM, OM - 6, iM) || !MM.isBlockInLoadedChunk(rM, OM + 6 + SM, iM) || !MM.canModifyBlockAt(rM, OM, iM)) return NaN;
+      let jM = OM - 1;
+      if (0 !== MM.getBlockId(rM, jM, iM)) {
+        for (; jM < OM + 6 && 0 !== MM.getBlockId(rM, jM + 1, iM);) jM++;
+        return jM
       }
-      for (; LG > wG - 6;)
-        if (LG--, 0 !== GG.getBlockId(bG, LG, ZG)) return LG;
+      for (; jM > OM - 6;)
+        if (jM--, 0 !== MM.getBlockId(rM, jM, iM)) return jM;
       return NaN
     }
 
-    function SZ(GG, bG, ZG, wG, SG) {
-      let LG = 0;
-      for (let yG = wG + 1; yG <= wG + SG; yG++) 0 !== GG.getBlockId(bG, yG, ZG) && LG++;
-      return LG
+    function ji(MM, rM, iM, OM, SM) {
+      let jM = 0;
+      for (let aM = OM + 1; aM <= OM + SM; aM++) 0 !== MM.getBlockId(rM, aM, iM) && jM++;
+      return jM
     }
 
-    function LZ(GG) {
-      const bG = new Map;
-      for (const yG of GG) {
-        var ZG;
-        if (Number.isNaN(yG)) return null;
-        bG.set(yG, (null !== (ZG = bG.get(yG)) && void 0 !== ZG ? ZG : 0) + 1)
+    function ai(MM) {
+      const rM = new Map;
+      for (const aM of MM) {
+        var iM;
+        if (Number.isNaN(aM)) return null;
+        rM.set(aM, (null !== (iM = rM.get(aM)) && void 0 !== iM ? iM : 0) + 1)
       }
-      let wG = NaN,
-        SG = 0;
-      for (const [yG, kG] of bG)(kG > SG || kG === SG && yG < wG) && (wG = yG, SG = kG);
-      let LG = 0;
-      for (const yG of GG) LG += Math.abs(yG - wG);
-      return LG
+      let OM = NaN,
+        SM = 0;
+      for (const [aM, PM] of rM)(PM > SM || PM === SM && aM < OM) && (OM = aM, SM = PM);
+      let jM = 0;
+      for (const aM of MM) jM += Math.abs(aM - OM);
+      return jM
     }
 
-    function yZ(GG, bG, ZG, wG) {
+    function Pi(MM, rM, iM, OM) {
       const {
-        eye: SG,
-        forward: LG,
-        tanHalfFovX: yG,
-        tanHalfFovY: kG
-      } = GG, [UG, YG] = function(GG) {
-        let [bG, ZG, wG] = GG;
-        const SG = Math.hypot(bG, wG),
-          [LG, yG] = [wG / SG, -bG / SG];
+        eye: SM,
+        forward: jM,
+        tanHalfFovX: aM,
+        tanHalfFovY: PM
+      } = MM, [nM, QM] = function(MM) {
+        let [rM, iM, OM] = MM;
+        const SM = Math.hypot(rM, OM),
+          [jM, aM] = [OM / SM, -rM / SM];
         return [
-          [LG, 0, yG],
-          [ZG * yG, wG * LG - bG * yG, -ZG * LG]
+          [jM, 0, aM],
+          [iM * aM, OM * jM - rM * aM, -iM * jM]
         ]
-      }(LG), [VG, pG] = [bG * yG, ZG * kG], fG = LG[0] + VG * UG[0] + pG * YG[0], QG = LG[1] + pG * YG[1], KG = LG[2] + VG * UG[2] + pG * YG[2], hG = (wG - SG[1]) / QG;
-      return hG > 0 && hG < 1 / 0 ? [SG[0] + hG * fG, SG[2] + hG * KG] : null
+      }(jM), [zM, LM] = [rM * aM, iM * PM], mM = jM[0] + zM * nM[0] + LM * QM[0], HM = jM[1] + LM * QM[1], hM = jM[2] + zM * nM[2] + LM * QM[2], JM = (OM - SM[1]) / HM;
+      return JM > 0 && JM < 1 / 0 ? [SM[0] + JM * mM, SM[2] + JM * hM] : null
     }
-    const kZ = "plotsBlueprintPlacementChanged",
-      UZ = {
+    const ni = "plotsBlueprintPlacementChanged",
+      Qi = {
         size: .9,
         alpha: .2,
         crossed: !1
       };
-    class YZ {
-      constructor(GG, bG) {
-        this.api = GG, this.localPlayerId = bG, this.placing = null, this.view = null, this.camera = {
+    class zi {
+      constructor(MM, rM) {
+        this.api = MM, this.localPlayerId = rM, this.placing = null, this.view = null, this.camera = {
           eye: [0, 0, 0],
           forward: [0, 0, 1],
           tanHalfFovX: 1,
           tanHalfFovY: 1
-        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = GG => {
-          var bG, ZG, wG, LG;
-          const yG = null !== (bG = null === (ZG = this.placing) || void 0 === ZG ? void 0 : ZG.rotation) && void 0 !== bG ? bG : 0,
+        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = MM => {
+          var rM, iM, OM, jM;
+          const aM = null !== (rM = null === (iM = this.placing) || void 0 === iM ? void 0 : iM.rotation) && void 0 !== rM ? rM : 0,
             {
-              size: kG
-            } = DG(GG, yG),
-            UG = this.api.HJ(this.localPlayerId),
-            [YG, VG] = null !== (wG = null !== (LG = function(GG, bG, ZG, wG) {
-              const [SG, LG, yG] = bG, [kG, UG, YG] = [Math.floor(ZG[0]), Math.floor(ZG[1]), Math.floor(ZG[2])], VG = 6 + Math.max(SG, yG) / 2, [pG, fG] = [Math.ceil(VG + SG / 2), Math.ceil(VG + yG / 2)], [QG, KG] = [kG - pG, YG - fG], [hG, dG] = [2 * pG + 1, 2 * fG + 1], JG = new Float64Array(hG * dG), rG = new Uint16Array(hG * dG);
-              for (let uG = 0; uG < hG; uG++)
-                for (let bG = 0; bG < dG; bG++) {
-                  const ZG = wZ(GG, QG + uG, KG + bG, UG, LG);
-                  JG[uG * dG + bG] = ZG, Number.isNaN(ZG) || (rG[uG * dG + bG] = SZ(GG, QG + uG, KG + bG, ZG, LG))
+              size: PM
+            } = qM(MM, aM),
+            nM = this.api.XE(this.localPlayerId),
+            [QM, zM] = null !== (OM = null !== (jM = function(MM, rM, iM, OM) {
+              const [SM, jM, aM] = rM, [PM, nM, QM] = [Math.floor(iM[0]), Math.floor(iM[1]), Math.floor(iM[2])], zM = 6 + Math.max(SM, aM) / 2, [LM, mM] = [Math.ceil(zM + SM / 2), Math.ceil(zM + aM / 2)], [HM, hM] = [PM - LM, QM - mM], [JM, dM] = [2 * LM + 1, 2 * mM + 1], yM = new Float64Array(JM * dM), lM = new Uint16Array(JM * dM);
+              for (let eM = 0; eM < JM; eM++)
+                for (let rM = 0; rM < dM; rM++) {
+                  const iM = Si(MM, HM + eM, hM + rM, nM, jM);
+                  yM[eM * dM + rM] = iM, Number.isNaN(iM) || (lM[eM * dM + rM] = ji(MM, HM + eM, hM + rM, iM, jM))
                 }
-              const zG = Math.hypot(wG[0], wG[2]),
-                EG = [];
-              let oG = null,
-                XG = 1 / 0;
-              for (let uG = 0; uG + SG <= hG; uG++)
-                for (let GG = 0; GG + yG <= dG; GG++) {
-                  const [bG, LG] = [QG + uG, KG + GG], [UG, pG] = [bG + SG / 2 - ZG[0], LG + yG / 2 - ZG[2]], fG = Math.hypot(UG, pG);
-                  if (fG > VG || kG >= bG - 2 && kG < bG + SG + 2 && YG >= LG - 2 && YG < LG + yG + 2) continue;
-                  EG.length = 0;
-                  let hG = 0;
-                  for (let ZG = 0; ZG < SG; ZG++)
-                    for (let bG = 0; bG < yG; bG++) EG.push(JG[(uG + ZG) * dG + GG + bG]), hG += rG[(uG + ZG) * dG + GG + bG];
-                  const iG = LZ(EG);
-                  if (null === iG) continue;
-                  const CG = fG + 3 * (iG + hG) + (1 - (0 === zG ? 1 : (UG * wG[0] + pG * wG[2]) / (fG * zG))) / 2 * 6;
-                  CG < XG && (XG = CG, oG = [bG, LG])
+              const EM = Math.hypot(OM[0], OM[2]),
+                UM = [];
+              let GM = null,
+                CM = 1 / 0;
+              for (let eM = 0; eM + SM <= JM; eM++)
+                for (let MM = 0; MM + aM <= dM; MM++) {
+                  const [rM, jM] = [HM + eM, hM + MM], [nM, LM] = [rM + SM / 2 - iM[0], jM + aM / 2 - iM[2]], mM = Math.hypot(nM, LM);
+                  if (mM > zM || PM >= rM - 2 && PM < rM + SM + 2 && QM >= jM - 2 && QM < jM + aM + 2) continue;
+                  UM.length = 0;
+                  let JM = 0;
+                  for (let iM = 0; iM < SM; iM++)
+                    for (let rM = 0; rM < aM; rM++) UM.push(yM[(eM + iM) * dM + MM + rM]), JM += lM[(eM + iM) * dM + MM + rM];
+                  const bM = ai(UM);
+                  if (null === bM) continue;
+                  const wM = mM + 3 * (bM + JM) + (1 - (0 === EM ? 1 : (nM * OM[0] + LM * OM[2]) / (mM * EM))) / 2 * 6;
+                  wM < CM && (CM = wM, GM = [rM, jM])
                 }
-              return oG
-            }(this.api, kG, UG, this.camera.forward)) && void 0 !== LG ? LG : this.cornerOnTarget(kG)) && void 0 !== wG ? wG : [Math.floor(UG[0]) + 2, Math.floor(UG[2])];
+              return GM
+            }(this.api, PM, nM, this.camera.forward)) && void 0 !== jM ? jM : this.cornerOnTarget(PM)) && void 0 !== OM ? OM : [Math.floor(nM[0]) + 2, Math.floor(nM[2])];
           this.placing = {
-            id: GG,
-            rotation: yG,
-            corner: [YG, this.playerLevel(), VG],
+            id: MM,
+            rotation: aM,
+            corner: [QM, this.playerLevel(), zM],
             sent: null,
             refusals: 0,
             hover: null,
             drag: null,
             moved: !1,
             stillSinceMs: performance.now()
-          }, this.update(), this.api.sendCommand(`${SG} preview`)
+          }, this.update(), this.api.sendCommand(`${SM} preview`)
         }, this.rotate = () => {
           const {
-            id: GG,
-            rotation: bG,
-            corner: ZG
-          } = this.placing, SG = wG[(wG.indexOf(bG) + 1) % wG.length], [LG, , yG] = DG(GG, bG).size, [kG, , UG] = DG(GG, SG).size;
-          this.moveTo(ZG[0] + Math.floor(LG / 2) - Math.floor(kG / 2), ZG[2] + Math.floor(yG / 2) - Math.floor(UG / 2), SG)
-        }, this.hoverAt = (GG, bG) => {
-          this.placing.hover = [GG, bG], this.moveCentreTo(this.camera, GG, bG)
+            id: MM,
+            rotation: rM,
+            corner: iM
+          } = this.placing, SM = OM[(OM.indexOf(rM) + 1) % OM.length], [jM, , aM] = qM(MM, rM).size, [PM, , nM] = qM(MM, SM).size;
+          this.moveTo(iM[0] + Math.floor(jM / 2) - Math.floor(PM / 2), iM[2] + Math.floor(aM / 2) - Math.floor(nM / 2), SM)
+        }, this.hoverAt = (MM, rM) => {
+          this.placing.hover = [MM, rM], this.moveCentreTo(this.camera, MM, rM)
         }, this.endHover = () => {
           this.placing.hover = null
-        }, this.beginDrag = (GG, bG) => {
-          const ZG = this.placing,
+        }, this.beginDrag = (MM, rM) => {
+          const iM = this.placing,
             {
-              eye: wG,
-              forward: SG,
-              tanHalfFovX: LG,
-              tanHalfFovY: yG
+              eye: OM,
+              forward: SM,
+              tanHalfFovX: jM,
+              tanHalfFovY: aM
             } = this.camera,
-            kG = {
-              eye: [wG[0], wG[1], wG[2]],
-              forward: [SG[0], SG[1], SG[2]],
-              tanHalfFovX: LG,
-              tanHalfFovY: yG
+            PM = {
+              eye: [OM[0], OM[1], OM[2]],
+              forward: [SM[0], SM[1], SM[2]],
+              tanHalfFovX: jM,
+              tanHalfFovY: aM
             },
-            UG = ZG.corner[1],
-            YG = yZ(kG, GG, bG, UG);
-          ZG.hover = null, ZG.drag = YG && {
-            view: kG,
-            ground: YG,
-            corner: [ZG.corner[0], ZG.corner[2]],
-            level: UG
+            nM = iM.corner[1],
+            QM = Pi(PM, MM, rM, nM);
+          iM.hover = null, iM.drag = QM && {
+            view: PM,
+            ground: QM,
+            corner: [iM.corner[0], iM.corner[2]],
+            level: nM
           }
-        }, this.dragTo = (GG, bG) => {
-          const ZG = this.placing.drag,
-            wG = ZG && yZ(ZG.view, GG, bG, ZG.level);
-          null !== ZG && null !== wG && this.moveTo(ZG.corner[0] + Math.round(wG[0] - ZG.ground[0]), ZG.corner[1] + Math.round(wG[1] - ZG.ground[1]))
+        }, this.dragTo = (MM, rM) => {
+          const iM = this.placing.drag,
+            OM = iM && Pi(iM.view, MM, rM, iM.level);
+          null !== iM && null !== OM && this.moveTo(iM.corner[0] + Math.round(OM[0] - iM.ground[0]), iM.corner[1] + Math.round(OM[1] - iM.ground[1]))
         }, this.endDrag = () => {
           this.placing.drag = null
         }, this.tap = () => {
-          const GG = this.view;
-          GG.waiting || (GG.blocked ? this.xh({
-            ...GG,
+          const MM = this.view;
+          MM.waiting || (MM.blocked ? this.Tz({
+            ...MM,
             refusals: ++this.placing.refusals
           }) : this.build())
         }, this.build = () => {
-          const GG = this.placing,
+          const MM = this.placing,
             {
-              id: bG,
-              rotation: ZG,
-              corner: wG
-            } = GG;
-          this.api.sendCommand(`${SG} place ${bG} ${wG.join(" ")} ${ZG}`), GG.sent = {
+              id: rM,
+              rotation: iM,
+              corner: OM
+            } = MM;
+          this.api.sendCommand(`${SM} place ${rM} ${OM.join(" ")} ${iM}`), MM.sent = {
             atMs: performance.now(),
-            corner: [...wG],
-            rotation: ZG,
+            corner: [...OM],
+            rotation: iM,
             timedOut: !1
           }, this.update()
         }, this.stop = () => {
-          null !== this.placing && (this.close(), this.api.sendCommand(`${SG} preview off`))
-        }, this.chunkWatch = new Tb(GG), this.meshes = new Bb(GG)
+          null !== this.placing && (this.close(), this.api.sendCommand(`${SM} preview off`))
+        }, this.chunkWatch = new Xr(MM), this.meshes = new Mi(MM)
       }
       getView() {
         return this.view
       }
-      Tp() {
-        const GG = this.placing;
-        null !== GG && (null !== GG.sent && !GG.sent.timedOut && performance.now() - GG.sent.atMs > 3e3 ? (GG.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(GG) || this.chunkWatch.changed() || this.view.settled !== VZ(GG, this.view.blocked)) && this.update())
+      bL() {
+        const MM = this.placing;
+        null !== MM && (null !== MM.sent && !MM.sent.timedOut && performance.now() - MM.sent.atMs > 3e3 ? (MM.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(MM) || this.chunkWatch.changed() || this.view.settled !== Li(MM, this.view.blocked)) && this.update())
       }
-      afterRender(GG) {
-        ! function(GG, bG) {
-          for (let ZG = 0; ZG < 3; ZG++) bG.eye[ZG] = GG.cameraPosition[ZG], bG.forward[ZG] = GG.cameraDirection[ZG];
-          bG.tanHalfFovX = GG.tanHalfFovX, bG.tanHalfFovY = GG.tanHalfFovY
-        }(GG, this.camera);
-        const bG = this.placing;
-        null !== bG && null !== bG.hover && this.moveCentreTo(this.camera, bG.hover[0], bG.hover[1])
+      afterRender(MM) {
+        ! function(MM, rM) {
+          for (let iM = 0; iM < 3; iM++) rM.eye[iM] = MM.cameraPosition[iM], rM.forward[iM] = MM.cameraDirection[iM];
+          rM.tanHalfFovX = MM.tanHalfFovX, rM.tanHalfFovY = MM.tanHalfFovY
+        }(MM, this.camera);
+        const rM = this.placing;
+        null !== rM && null !== rM.hover && this.moveCentreTo(this.camera, rM.hover[0], rM.hover[1])
       }
-      hK(GG) {
-        const bG = this.placing;
-        if (null === bG || null === bG.sent || "active" !== GG[0]) return;
+      GL(MM) {
+        const rM = this.placing;
+        if (null === rM || null === rM.sent || "active" !== MM[0]) return;
         const {
-          sent: ZG
-        } = bG, [, wG, SG, LG, yG, kG, UG] = GG;
-        SG && wG === bG.id && UG === ZG.rotation && LG === ZG.corner[0] && yG === ZG.corner[1] && kG === ZG.corner[2] && this.close()
+          sent: iM
+        } = rM, [, OM, SM, jM, aM, PM, nM] = MM;
+        SM && OM === rM.id && nM === iM.rotation && jM === iM.corner[0] && aM === iM.corner[1] && PM === iM.corner[2] && this.close()
       }
       endFromServer() {
         null !== this.placing && this.close()
@@ -1373,1237 +1375,1237 @@ export const modules = {
       dispose() {
         this.meshes.dispose()
       }
-      cornerOnTarget(GG) {
-        let [bG, , ZG] = GG;
-        const wG = this.api.getTargetedBlock();
-        if (null === wG) return null;
-        const [SG, , LG] = wG.position;
-        return [SG - Math.floor(bG / 2), LG - Math.floor(ZG / 2)]
+      cornerOnTarget(MM) {
+        let [rM, , iM] = MM;
+        const OM = this.api.getTargetedBlock();
+        if (null === OM) return null;
+        const [SM, , jM] = OM.position;
+        return [SM - Math.floor(rM / 2), jM - Math.floor(iM / 2)]
       }
       playerLevel() {
-        var GG;
-        const [bG, ZG, wG] = this.api.HJ(this.localPlayerId);
-        if (null !== (GG = this.api.getLocalPlayerMovement()) && void 0 !== GG && GG.onGround) return Math.ceil(ZG - .01);
-        const [SG, LG, yG] = [Math.floor(bG), Math.floor(ZG), Math.floor(wG)];
-        for (let kG = LG; kG >= LG - 2; kG--)
-          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(SG, kG, yG))) return kG + 1;
-        return LG
+        var MM;
+        const [rM, iM, OM] = this.api.XE(this.localPlayerId);
+        if (null !== (MM = this.api.getLocalPlayerMovement()) && void 0 !== MM && MM.onGround) return Math.ceil(iM - .01);
+        const [SM, jM, aM] = [Math.floor(rM), Math.floor(iM), Math.floor(OM)];
+        for (let PM = jM; PM >= jM - 2; PM--)
+          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(SM, PM, aM))) return PM + 1;
+        return jM
       }
-      followPlayerLevel(GG) {
-        if (pZ(GG)) return !1;
-        const bG = this.playerLevel();
-        return bG !== GG.corner[1] && (GG.corner[1] = bG, !0)
+      followPlayerLevel(MM) {
+        if (mi(MM)) return !1;
+        const rM = this.playerLevel();
+        return rM !== MM.corner[1] && (MM.corner[1] = rM, !0)
       }
-      moveCentreTo(GG, bG, ZG) {
-        const wG = this.placing,
-          SG = yZ(GG, bG, ZG, wG.corner[1]);
-        if (null !== SG) {
-          const [GG, , bG] = DG(wG.id, wG.rotation).size;
-          this.moveTo(Math.round(SG[0] - GG / 2), Math.round(SG[1] - bG / 2))
+      moveCentreTo(MM, rM, iM) {
+        const OM = this.placing,
+          SM = Pi(MM, rM, iM, OM.corner[1]);
+        if (null !== SM) {
+          const [MM, , rM] = qM(OM.id, OM.rotation).size;
+          this.moveTo(Math.round(SM[0] - MM / 2), Math.round(SM[1] - rM / 2))
         }
       }
-      moveTo(GG, bG) {
-        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
-        const wG = this.placing;
-        if (pZ(wG)) return;
-        const [SG, LG, yG] = wG.corner;
-        if (this.centreOnPlot(SG, yG) && !this.centreOnPlot(GG, bG, ZG))
-          if (this.centreOnPlot(GG, yG, ZG)) bG = yG;
+      moveTo(MM, rM) {
+        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+        const OM = this.placing;
+        if (mi(OM)) return;
+        const [SM, jM, aM] = OM.corner;
+        if (this.centreOnPlot(SM, aM) && !this.centreOnPlot(MM, rM, iM))
+          if (this.centreOnPlot(MM, aM, iM)) rM = aM;
           else {
-            if (!this.centreOnPlot(SG, bG, ZG)) return;
-            GG = SG
-          } GG === SG && bG === yG && ZG === wG.rotation || (wG.rotation = ZG, wG.corner = [GG, LG, bG], wG.moved = !0, wG.stillSinceMs = performance.now(), this.update())
+            if (!this.centreOnPlot(SM, rM, iM)) return;
+            MM = SM
+          } MM === SM && rM === aM && iM === OM.rotation || (OM.rotation = iM, OM.corner = [MM, jM, rM], OM.moved = !0, OM.stillSinceMs = performance.now(), this.update())
       }
-      centreOnPlot(GG, bG) {
-        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+      centreOnPlot(MM, rM) {
+        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
         const {
-          id: wG,
-          corner: SG
-        } = this.placing, [LG, , yG] = DG(wG, ZG).size;
-        return this.api.canModifyBlockAt(GG + Math.floor(LG / 2), SG[1], bG + Math.floor(yG / 2))
+          id: OM,
+          corner: SM
+        } = this.placing, [jM, , aM] = qM(OM, iM).size;
+        return this.api.canModifyBlockAt(MM + Math.floor(jM / 2), SM[1], rM + Math.floor(aM / 2))
       }
       close() {
-        this.placing = null, this.meshes.dispose(), this.xh(null)
+        this.placing = null, this.meshes.dispose(), this.Tz(null)
       }
       update() {
         const {
-          id: GG,
-          rotation: bG,
-          corner: ZG,
-          refusals: wG
-        } = this.placing, SG = new xb, LG = [];
-        let yG = !1,
-          kG = 0;
+          id: MM,
+          rotation: rM,
+          corner: iM,
+          refusals: OM
+        } = this.placing, SM = new cr, jM = [];
+        let aM = !1,
+          PM = 0;
         for (const {
-            offset: pG,
-            block: fG
+            offset: LM,
+            block: mM
           }
-          of DG(GG, bG).cells) {
-          const [GG, bG, wG] = [ZG[0] + pG[0], ZG[1] + pG[1], ZG[2] + pG[2]];
-          LG.push(GG, bG, wG);
-          const UG = !this.api.canModifyBlockAt(GG, bG, wG),
-            YG = this.api.getBlockId(GG, bG, wG),
-            VG = !cb(YG) && !ab(this.api.blockNameToBlockId(fG), YG);
-          yG ||= UG, kG += VG ? 1 : 0, UG || VG ? SG.add(GG, bG, wG, Ob, Nb) : SG.add(GG, bG, wG, jb(fG), UZ, eb(fG))
+          of qM(MM, rM).cells) {
+          const [MM, rM, OM] = [iM[0] + LM[0], iM[1] + LM[1], iM[2] + LM[2]];
+          jM.push(MM, rM, OM);
+          const nM = !this.api.canModifyBlockAt(MM, rM, OM),
+            QM = this.api.getBlockId(MM, rM, OM),
+            zM = !Dr(QM) && !sr(this.api.blockNameToBlockId(mM), QM);
+          aM ||= nM, PM += zM ? 1 : 0, nM || zM ? SM.add(MM, rM, OM, Vr, Tr) : SM.add(MM, rM, OM, Zr(mM), Qi, Fr(mM))
         }
-        this.chunkWatch.watch(LG), this.meshes.show(SG.toArray());
-        const UG = this.view,
-          YG = pZ(this.placing),
-          VG = VZ(this.placing, yG);
-        (null === UG || void 0 === UG ? void 0 : UG.id) === GG && UG.blocked === yG && UG.toClear === kG && UG.waiting === YG && UG.refusals === wG && UG.settled === VG || this.xh({
-          id: GG,
-          blocked: yG,
-          toClear: kG,
-          waiting: YG,
-          refusals: wG,
-          settled: VG
+        this.chunkWatch.watch(jM), this.meshes.show(SM.toArray());
+        const nM = this.view,
+          QM = mi(this.placing),
+          zM = Li(this.placing, aM);
+        (null === nM || void 0 === nM ? void 0 : nM.id) === MM && nM.blocked === aM && nM.toClear === PM && nM.waiting === QM && nM.refusals === OM && nM.settled === zM || this.Tz({
+          id: MM,
+          blocked: aM,
+          toClear: PM,
+          waiting: QM,
+          refusals: OM,
+          settled: zM
         })
       }
-      xh(GG) {
-        this.view = GG, XG.l.xh(kZ, GG, !0)
+      Tz(MM) {
+        this.view = MM, eM.i.Tz(ni, MM, !0)
       }
     }
 
-    function VZ(GG, bG) {
+    function Li(MM, rM) {
       let {
-        moved: ZG,
-        stillSinceMs: wG
-      } = GG;
-      return !bG && performance.now() - wG >= (ZG ? 1500 : 6e3)
+        moved: iM,
+        stillSinceMs: OM
+      } = MM;
+      return !rM && performance.now() - OM >= (iM ? 1500 : 6e3)
     }
 
-    function pZ(GG) {
+    function mi(MM) {
       let {
-        sent: bG
-      } = GG;
-      return null !== bG && !bG.timedOut
+        sent: rM
+      } = MM;
+      return null !== rM && !rM.timedOut
     }
-    var fZ = ZG(4561);
-    class QZ {
-      constructor(GG) {
-        this.placement = GG, this.press = null
+    var Hi = iM(4923);
+    class Ji {
+      constructor(MM) {
+        this.placement = MM, this.press = null
       }
-      down(GG) {
+      down(MM) {
         if (null !== this.press) return !1;
         const {
-          id: bG,
-          mouse: ZG,
-          x: wG,
-          y: SG,
-          atMs: LG
-        } = GG;
+          id: rM,
+          mouse: iM,
+          x: OM,
+          y: SM,
+          atMs: jM
+        } = MM;
         return this.press = {
-          id: bG,
-          mouse: ZG,
-          x: wG,
-          y: SG,
-          atMs: LG,
+          id: rM,
+          mouse: iM,
+          x: OM,
+          y: SM,
+          atMs: jM,
           moved: !1
-        }, ZG || this.placement.beginDrag(GG.ndcX, GG.ndcY), !0
+        }, iM || this.placement.beginDrag(MM.ndcX, MM.ndcY), !0
       }
-      move(GG) {
-        const bG = this.press;
-        null !== bG && bG.id === GG.id && (bG.moved ||= Math.hypot(GG.x - bG.x, GG.y - bG.y) > 8), GG.mouse ? this.placement.hoverAt(GG.ndcX, GG.ndcY) : (null === bG || void 0 === bG ? void 0 : bG.id) === GG.id && this.placement.dragTo(GG.ndcX, GG.ndcY)
+      move(MM) {
+        const rM = this.press;
+        null !== rM && rM.id === MM.id && (rM.moved ||= Math.hypot(MM.x - rM.x, MM.y - rM.y) > 8), MM.mouse ? this.placement.hoverAt(MM.ndcX, MM.ndcY) : (null === rM || void 0 === rM ? void 0 : rM.id) === MM.id && this.placement.dragTo(MM.ndcX, MM.ndcY)
       }
-      up(GG) {
-        const bG = this.press;
-        (null === bG || void 0 === bG ? void 0 : bG.id) === GG.id && (this.move(GG), this.end(), !bG.moved && (bG.mouse || GG.atMs - bG.atMs <= 250) && this.placement.tap())
+      up(MM) {
+        const rM = this.press;
+        (null === rM || void 0 === rM ? void 0 : rM.id) === MM.id && (this.move(MM), this.end(), !rM.moved && (rM.mouse || MM.atMs - rM.atMs <= 250) && this.placement.tap())
       }
-      cancel(GG) {
-        var bG;
-        (null === (bG = this.press) || void 0 === bG ? void 0 : bG.id) === GG && this.end()
+      cancel(MM) {
+        var rM;
+        (null === (rM = this.press) || void 0 === rM ? void 0 : rM.id) === MM && this.end()
       }
-      leave(GG) {
+      leave(MM) {
         let {
-          id: bG,
-          mouse: ZG
-        } = GG;
-        ZG && this.placement.endHover(), this.cancel(bG)
+          id: rM,
+          mouse: iM
+        } = MM;
+        iM && this.placement.endHover(), this.cancel(rM)
       }
       end() {
         this.press.mouse || this.placement.endDrag(), this.press = null
       }
     }
-    const KZ = "PlotsPlacementLayer";
+    const di = "PlotsPlacementLayer";
 
-    function hZ(GG) {
+    function yi(MM) {
       let {
-        placement: bG
-      } = GG;
-      return null === (0, UG.j)(kZ, bG.getView()) ? null : (0, lG.jsx)(dZ, {
-        placement: bG
+        placement: rM
+      } = MM;
+      return null === (0, nM.e)(ni, rM.getView()) ? null : (0, kM.jsx)(li, {
+        placement: rM
       })
     }
 
-    function dZ(GG) {
+    function li(MM) {
       let {
-        placement: bG
-      } = GG;
-      (0, fZ.e)(!0, !0, KZ);
-      const ZG = (0, LG.useMemo)((() => new QZ(bG)), [bG]);
-      return (0, lG.jsx)("div", {
+        placement: rM
+      } = MM;
+      (0, Hi.c)(!0, !0, di);
+      const iM = (0, jM.useMemo)((() => new Ji(rM)), [rM]);
+      return (0, kM.jsx)("div", {
         className: "PlotsPlacementLayer",
-        onPointerDown: GG => {
-          "mouse" === GG.pointerType && 0 !== GG.button || !ZG.down(JZ(GG)) || GG.currentTarget.setPointerCapture(GG.pointerId)
+        onPointerDown: MM => {
+          "mouse" === MM.pointerType && 0 !== MM.button || !iM.down(Ei(MM)) || MM.currentTarget.setPointerCapture(MM.pointerId)
         },
-        onPointerMove: GG => {
-          ZG.move(JZ(GG))
+        onPointerMove: MM => {
+          iM.move(Ei(MM))
         },
-        onPointerUp: GG => {
-          ZG.up(JZ(GG))
+        onPointerUp: MM => {
+          iM.up(Ei(MM))
         },
-        onPointerCancel: GG => {
-          ZG.cancel(GG.pointerId)
+        onPointerCancel: MM => {
+          iM.cancel(MM.pointerId)
         },
-        onLostPointerCapture: GG => {
-          ZG.cancel(GG.pointerId)
+        onLostPointerCapture: MM => {
+          iM.cancel(MM.pointerId)
         },
-        onPointerLeave: GG => {
-          ZG.leave(JZ(GG))
+        onPointerLeave: MM => {
+          iM.leave(Ei(MM))
         },
         "aria-hidden": !0
       })
     }
 
-    function JZ(GG) {
+    function Ei(MM) {
       const {
-        left: bG,
-        top: ZG,
-        width: wG,
-        height: SG
-      } = GG.currentTarget.getBoundingClientRect();
+        left: rM,
+        top: iM,
+        width: OM,
+        height: SM
+      } = MM.currentTarget.getBoundingClientRect();
       return {
-        id: GG.pointerId,
-        mouse: "mouse" === GG.pointerType,
-        x: GG.clientX,
-        y: GG.clientY,
-        ndcX: (GG.clientX - bG) / wG * 2 - 1,
-        ndcY: 1 - (GG.clientY - ZG) / SG * 2,
-        atMs: GG.timeStamp
+        id: MM.pointerId,
+        mouse: "mouse" === MM.pointerType,
+        x: MM.clientX,
+        y: MM.clientY,
+        ndcX: (MM.clientX - rM) / OM * 2 - 1,
+        ndcY: 1 - (MM.clientY - iM) / SM * 2,
+        atMs: MM.timeStamp
       }
     }
 
-    function rZ() {
-      return (0, hb.t)().some((GG => GG !== hb.e && GG !== KZ))
+    function Ui() {
+      return (0, dr.u)().some((MM => MM !== dr.e && MM !== di))
     }
-    const zZ = 2500;
+    const Gi = 2500;
 
-    function EZ(GG) {
+    function Ci(MM) {
       let {
-        hud: bG,
-        guide: ZG,
-        tracker: wG,
-        placement: SG,
-        children: yG
-      } = GG;
+        hud: rM,
+        guide: iM,
+        tracker: OM,
+        placement: SM,
+        children: aM
+      } = MM;
       const {
-        t: pG
-      } = (0, VG.w)(), {
-        isTouchScreen: fG
-      } = (0, kG.o)(["isTouchScreen"]), QG = (0, UG.j)(bb, bG.getGuide()), KG = (0, UG.j)(Gb, bG.getPlot()), hG = (0, UG.j)(NG, wG.get()), dG = function(GG) {
+        t: LM
+      } = (0, zM.A)(), {
+        isTouchScreen: mM
+      } = (0, PM.m)(["isTouchScreen"]), HM = (0, nM.e)(ir, rM.getGuide()), hM = (0, nM.e)(rr, rM.getPlot()), JM = (0, nM.e)(TM, OM.get()), dM = function(MM) {
         const {
-          openInGameMenuName: bG,
-          openEverythingMenuName: ZG,
-          loadingOverlayVisible: wG
-        } = (0, kG.o)(["openInGameMenuName", "openEverythingMenuName", "loadingOverlayVisible"]), SG = (0, db.e)(), [yG, YG] = (0, LG.useState)(rZ);
-        (0, LG.useEffect)((() => {
-          const GG = () => {
-            YG(rZ())
+          openInGameMenuName: rM,
+          openEverythingMenuName: iM,
+          loadingOverlayVisible: OM
+        } = (0, PM.m)(["openInGameMenuName", "openEverythingMenuName", "loadingOverlayVisible"]), SM = (0, yr.b)(), [aM, QM] = (0, jM.useState)(Ui);
+        (0, jM.useEffect)((() => {
+          const MM = () => {
+            QM(Ui())
           };
-          GG();
-          const bG = (0, hb.p)(GG),
-            ZG = (0, hb.m)(GG);
+          MM();
+          const rM = (0, dr.r)(MM),
+            iM = (0, dr.o)(MM);
           return () => {
-            bG(), ZG()
+            rM(), iM()
           }
         }), []);
-        const VG = (0, UG.j)(kZ, GG.getView()),
-          pG = "clientGame" === bG;
+        const zM = (0, nM.e)(ni, MM.getView()),
+          LM = "clientGame" === rM;
         return {
-          hudHidden: SG || wG,
-          journalOpen: pG,
-          covered: yG || null !== ZG || null !== bG && !pG,
-          placing: null === VG ? null : VG.settled ? "placeBuild" : "placeSpot"
+          hudHidden: SM || OM,
+          journalOpen: LM,
+          covered: aM || null !== iM || null !== rM && !LM,
+          placing: null === zM ? null : zM.settled ? "placeBuild" : "placeSpot"
         }
-      }(SG), JG = function(GG, bG, ZG) {
-        return "none" === GG[0] || ZG.hudHidden || ZG.journalOpen || ZG.covered ? null : null !== ZG.placing ? ZG.placing : null !== bG ? "build" : "choose" === GG[1] ? "openJournal" : null
-      }(QG, null === hG ? null : hG.id, dG), rG = function() {
-        const [GG, bG] = (0, LG.useState)(null), [ZG, wG] = (0, LG.useState)(!1);
-        return (0, UG.g)(Zb, (() => {
-          bG(performance.now())
-        })), (0, LG.useEffect)((() => {
-          if (null === GG) return;
-          const bG = window.setTimeout((() => {
-              wG(!0)
-            }), zZ),
-            ZG = window.setTimeout((() => {
-              wG(!1)
+      }(SM), yM = function(MM, rM, iM) {
+        return "none" === MM[0] || iM.hudHidden || iM.journalOpen || iM.covered ? null : null !== iM.placing ? iM.placing : null !== rM ? "build" : "choose" === MM[1] ? "openJournal" : null
+      }(HM, null === JM ? null : JM.id, dM), lM = function() {
+        const [MM, rM] = (0, jM.useState)(null), [iM, OM] = (0, jM.useState)(!1);
+        return (0, nM.d)(Or, (() => {
+          rM(performance.now())
+        })), (0, jM.useEffect)((() => {
+          if (null === MM) return;
+          const rM = window.setTimeout((() => {
+              OM(!0)
+            }), Gi),
+            iM = window.setTimeout((() => {
+              OM(!1)
             }), 7500);
           return () => {
-            window.clearTimeout(bG), window.clearTimeout(ZG)
+            window.clearTimeout(rM), window.clearTimeout(iM)
           }
-        }), [GG]), ZG
-      }() && !dG.hudHidden && !dG.covered && !dG.journalOpen && null === dG.placing, [zG, EG] = (0, LG.useState)(!1);
-      (0, LG.useEffect)((() => {
-        dG.journalOpen && EG(!0)
-      }), [dG.journalOpen]);
-      const [XG, uG] = (0, LG.useState)(null), [iG, CG] = (0, LG.useState)(null), [WG, mG] = (0, LG.useState)(null), IG = (0, LG.useMemo)((() => ({
-        hint: JG,
-        journalRef: uG,
-        placementCardRef: CG,
-        buildRef: mG
-      })), [JG]), FG = "plot" === KG[0] && "own" === KG[5], vG = fG && !zG && FG ? {
-        onSkip: ZG.skip
+        }), [MM]), iM
+      }() && !dM.hudHidden && !dM.covered && !dM.journalOpen && null === dM.placing, [EM, UM] = (0, jM.useState)(!1);
+      (0, jM.useEffect)((() => {
+        dM.journalOpen && UM(!0)
+      }), [dM.journalOpen]);
+      const [GM, eM] = (0, jM.useState)(null), [bM, wM] = (0, jM.useState)(null), [tM, gM] = (0, jM.useState)(null), uM = (0, jM.useMemo)((() => ({
+        hint: yM,
+        journalRef: eM,
+        placementCardRef: wM,
+        buildRef: gM
+      })), [yM]), RM = "plot" === hM[0] && "own" === hM[5], pM = mM && !EM && RM ? {
+        onSkip: iM.skip
       } : null;
-      return (0, lG.jsxs)(oG.Provider, {
-        value: IG,
-        children: [yG, "openJournal" === JG && null !== XG && (0, lG.jsx)(Yb, {
-          target: XG,
+      return (0, kM.jsxs)(CM.Provider, {
+        value: uM,
+        children: [aM, "openJournal" === yM && null !== GM && (0, kM.jsx)(zr, {
+          target: GM,
           placement: "left",
-          spotlight: vG,
-          children: fG ? pG("plotsGame:guideOpenJournal") : pG("plotsGame:guideOpenJournalKeys", {
-            key: (0, YG.t)(jG)
+          spotlight: pM,
+          children: mM ? LM("plotsGame:guideOpenJournal") : LM("plotsGame:guideOpenJournalKeys", {
+            key: (0, QM.m)(ZM)
           })
-        }), "placeSpot" === JG && null !== iG && (0, lG.jsxs)(lG.Fragment, {
-          children: [fG && (0, lG.jsx)(Kb, {}), (0, lG.jsx)(Yb, {
-            target: iG,
+        }), "placeSpot" === yM && null !== bM && (0, kM.jsxs)(kM.Fragment, {
+          children: [mM && (0, kM.jsx)(Jr, {}), (0, kM.jsx)(zr, {
+            target: bM,
             placement: "top",
-            children: pG(fG ? "plotsGame:guidePlaceSpotTouch" : "plotsGame:guidePlaceSpotMouse")
+            children: LM(mM ? "plotsGame:guidePlaceSpotTouch" : "plotsGame:guidePlaceSpotMouse")
           })]
-        }), "placeBuild" === JG && null !== WG && null !== iG && (0, lG.jsx)(Yb, {
-          target: fG ? WG : iG,
+        }), "placeBuild" === yM && null !== tM && null !== bM && (0, kM.jsx)(zr, {
+          target: mM ? tM : bM,
           placement: "top",
-          children: pG(fG ? "plotsGame:guidePlaceBuildTouch" : "plotsGame:guidePlaceBuildMouse")
-        }), "build" === JG && null !== hG && (0, lG.jsx)(fb, {
-          progress: hG,
-          guide: ZG
-        }), rG && null !== XG && (0, lG.jsx)(Yb, {
-          target: XG,
+          children: LM(mM ? "plotsGame:guidePlaceBuildTouch" : "plotsGame:guidePlaceBuildMouse")
+        }), "build" === yM && null !== JM && (0, kM.jsx)(Hr, {
+          progress: JM,
+          guide: iM
+        }), lM && null !== GM && (0, kM.jsx)(zr, {
+          target: GM,
           placement: "left",
-          children: pG("plotsGame:guideMoreBuilds")
+          children: LM("plotsGame:guideMoreBuilds")
         })]
       })
     }
-    var oZ = ZG(38901),
-      XZ = ZG(38909);
-    class uZ {
-      constructor(GG, bG, ZG) {
-        this.api = GG, this.localPlayerId = bG, this.nextCell = ZG, this.hand = null, this.skip = () => {
+    var ei = iM(39491),
+      bi = iM(39499);
+    class wi {
+      constructor(MM, rM, iM) {
+        this.api = MM, this.localPlayerId = rM, this.nextCell = iM, this.hand = null, this.skip = () => {
           this.api.sendCommand("plotsguide skip")
-        }, this.bindHand = GG => {
-          this.hand = GG
+        }, this.bindHand = MM => {
+          this.hand = MM
         }
       }
-      afterRender(GG) {
-        const bG = this.hand;
-        if (null === bG) return;
-        const ZG = this.nextCell.get();
-        if (null === ZG) return void(0, oZ.g)(bG, !0);
-        const wG = (0, XZ.e)(bG, GG, this.api.getPositionView(this.localPlayerId), ZG, 1, 40);
-        null !== wG && (0, oZ.d)(bG, Math.round(100 * wG.x) / 100, Math.round(100 * wG.y) / 100)
+      afterRender(MM) {
+        const rM = this.hand;
+        if (null === rM) return;
+        const iM = this.nextCell.get();
+        if (null === iM) return void(0, ei.e)(rM, !0);
+        const OM = (0, bi.e)(rM, MM, this.api.getPositionView(this.localPlayerId), iM, 1, 40);
+        null !== OM && (0, ei.b)(rM, Math.round(100 * OM.x) / 100, Math.round(100 * OM.y) / 100)
       }
     }
-    var iZ = ZG(1393),
-      CZ = ZG(4549),
-      WZ = ZG(1088);
-    const mZ = {
-        farm_hut: ZG.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
-        farm_house: ZG.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
-        farm_barn: ZG.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
-        rusticHome_tent: ZG.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
-        rusticHome_cabin: ZG.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
-        rusticHome_house: ZG.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
-        market_stand: ZG.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
-        market_stall: ZG.p + "static/media/market_stall.9a562807f9dff591618a.webp",
-        market_shop: ZG.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
-        castle_wall: ZG.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
-        castle_gate: ZG.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
-        castle_tower: ZG.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
+    var ti = iM(1520),
+      gi = iM(4917),
+      ui = iM(1135);
+    const Ri = {
+        farm_hut: iM.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
+        farm_house: iM.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
+        farm_barn: iM.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
+        rusticHome_tent: iM.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
+        rusticHome_cabin: iM.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
+        rusticHome_house: iM.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
+        market_stand: iM.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
+        market_stall: iM.p + "static/media/market_stall.9a562807f9dff591618a.webp",
+        market_shop: iM.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
+        castle_wall: iM.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
+        castle_gate: iM.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
+        castle_tower: iM.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
       },
-      IZ = ["plotsGame:guideEffortQuick", "plotsGame:guideEffortMedium", "plotsGame:guideEffortBigger"],
-      FZ = ["market_stand", "rusticHome_tent", "farm_hut"].map((GG => ({
-        id: GG,
-        blocks: DG(GG, 0).cells.length
-      }))).sort(((GG, bG) => GG.blocks - bG.blocks)).map(((GG, bG) => ({
-        ...GG,
-        effortKey: IZ[bG]
+      Wi = ["plotsGame:guideEffortQuick", "plotsGame:guideEffortMedium", "plotsGame:guideEffortBigger"],
+      si = ["market_stand", "rusticHome_tent", "farm_hut"].map((MM => ({
+        id: MM,
+        blocks: qM(MM, 0).cells.length
+      }))).sort(((MM, rM) => MM.blocks - rM.blocks)).map(((MM, rM) => ({
+        ...MM,
+        effortKey: Wi[rM]
       })));
 
-    function vZ(GG) {
+    function Di(MM) {
       let {
-        onBuild: bG
-      } = GG;
+        onBuild: rM
+      } = MM;
       const {
-        t: ZG
-      } = (0, VG.w)();
-      return (0, lG.jsx)("div", {
+        t: iM
+      } = (0, zM.A)();
+      return (0, kM.jsx)("div", {
         className: "PlotsJournalBookPages PlotsGuideChooserCover",
-        children: (0, lG.jsxs)("div", {
+        children: (0, kM.jsxs)("div", {
           className: "PlotsGuideChooser",
-          children: [(0, lG.jsx)("h3", {
+          children: [(0, kM.jsx)("h3", {
             className: "PlotsGuideChooserTitle",
-            children: ZG("plotsGame:guidePickTitle")
-          }), (0, lG.jsxs)("p", {
+            children: iM("plotsGame:guidePickTitle")
+          }), (0, kM.jsxs)("p", {
             className: "PlotsGuideChooserNote",
-            children: [(0, lG.jsx)("img", {
-              src: Lb,
+            children: [(0, kM.jsx)("img", {
+              src: ar,
               alt: "",
               draggable: !1
-            }), ZG("plotsGame:guidePickNote")]
-          }), (0, lG.jsx)("div", {
+            }), iM("plotsGame:guidePickNote")]
+          }), (0, kM.jsx)("div", {
             className: "PlotsGuideChooserStarters",
-            children: FZ.map((GG => {
+            children: si.map((MM => {
               let {
-                id: wG,
-                blocks: SG,
-                effortKey: LG
-              } = GG;
-              return (0, lG.jsxs)("article", {
+                id: OM,
+                blocks: SM,
+                effortKey: jM
+              } = MM;
+              return (0, kM.jsxs)("article", {
                 className: "PlotsGuideStarter",
-                children: [(0, lG.jsx)("button", {
+                children: [(0, kM.jsx)("button", {
                   type: "button",
                   className: "PlotsGuideStarterSketch",
                   tabIndex: -1,
                   "aria-hidden": !0,
                   "data-pad-ignore": !0,
                   onClick: () => {
-                    bG(wG)
+                    rM(OM)
                   },
-                  children: (0, lG.jsx)("img", {
-                    src: mZ[wG],
+                  children: (0, kM.jsx)("img", {
+                    src: Ri[OM],
                     alt: "",
                     draggable: !1
                   })
-                }), (0, lG.jsxs)("div", {
+                }), (0, kM.jsxs)("div", {
                   className: "PlotsGuideStarterInfo",
-                  children: [(0, lG.jsxs)("span", {
+                  children: [(0, kM.jsxs)("span", {
                     className: "PlotsGuideStarterText",
-                    children: [(0, lG.jsx)("span", {
+                    children: [(0, kM.jsx)("span", {
                       className: "PlotsGuideStarterName",
-                      children: ZG(WG(wG).displayName.translationKey)
-                    }), (0, lG.jsx)("span", {
+                      children: iM(gM(OM).displayName.translationKey)
+                    }), (0, kM.jsx)("span", {
                       className: "PlotsGuideStarterEffort",
-                      children: ZG(LG)
-                    }), (0, lG.jsx)("span", {
+                      children: iM(jM)
+                    }), (0, kM.jsx)("span", {
                       className: "PlotsGuideStarterBlocks",
-                      children: ZG("plotsGame:journalBlocks", {
-                        blocks: String(SG)
+                      children: iM("plotsGame:journalBlocks", {
+                        blocks: String(SM)
                       })
                     })]
-                  }), (0, lG.jsx)(iZ.k, {
+                  }), (0, kM.jsx)(ti.p, {
                     onClick: () => {
-                      bG(wG)
+                      rM(OM)
                     },
-                    children: ZG("plotsGame:placementBuild")
+                    children: iM("plotsGame:placementBuild")
                   })]
                 })]
-              }, wG)
+              }, OM)
             }))
           })]
         })
       })
     }
 
-    function aZ(GG) {
+    function ki(MM) {
       let {
-        direction: bG,
-        disabled: ZG,
-        onTurn: wG
-      } = GG;
+        direction: rM,
+        disabled: iM,
+        onTurn: OM
+      } = MM;
       const {
-        t: SG
-      } = (0, VG.w)();
-      return (0, lG.jsx)("div", {
-        className: fG()("PlotsJournalArrow", bG),
-        children: (0, lG.jsx)(iZ.d, {
-          disabled: ZG,
-          ariaLabel: SG("Forward" === bG ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
+        t: SM
+      } = (0, zM.A)();
+      return (0, kM.jsx)("div", {
+        className: mM()("PlotsJournalArrow", rM),
+        children: (0, kM.jsx)(ti.e, {
+          disabled: iM,
+          ariaLabel: SM("Forward" === rM ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
           onClick: () => {
-            wG(bG)
+            OM(rM)
           },
-          children: (0, lG.jsx)(hG.c, {
+          children: (0, kM.jsx)(dM.b, {
             name: "angle-up"
           })
         })
       })
     }
-    const cZ = {
+    const Zi = {
       small: "plotsGame:journalTierSmall",
       medium: "plotsGame:journalTierMedium",
       large: "plotsGame:journalTierLarge"
     };
 
-    function lZ(GG) {
+    function oi(MM) {
       let {
-        page: bG,
-        building: ZG,
-        onBuild: wG,
-        onPutAway: SG
-      } = GG;
+        page: rM,
+        building: iM,
+        onBuild: OM,
+        onPutAway: SM
+      } = MM;
       const {
-        t: LG
-      } = (0, VG.w)(), {
-        displayName: yG,
-        tier: kG
-      } = WG(bG.id), UG = DG(bG.id, 0).cells.length, YG = "locked" === bG.state, pG = ZG ? iZ.d : iZ.k;
-      return (0, lG.jsxs)("article", {
-        className: fG()("PlotsJournalPage", {
-          Locked: YG
+        t: jM
+      } = (0, zM.A)(), {
+        displayName: aM,
+        tier: PM
+      } = gM(rM.id), nM = qM(rM.id, 0).cells.length, QM = "locked" === rM.state, LM = iM ? ti.e : ti.p;
+      return (0, kM.jsxs)("article", {
+        className: mM()("PlotsJournalPage", {
+          Locked: QM
         }),
-        children: [(0, lG.jsx)("h3", {
+        children: [(0, kM.jsx)("h3", {
           className: "PlotsJournalPageName",
-          children: LG(yG.translationKey)
-        }), (0, lG.jsxs)("div", {
+          children: jM(aM.translationKey)
+        }), (0, kM.jsxs)("div", {
           className: "PlotsJournalPageMeta",
-          children: [LG(cZ[kG]), " \xb7 ", LG("plotsGame:journalBlocks", {
-            blocks: String(UG)
+          children: [jM(Zi[PM]), " \xb7 ", jM("plotsGame:journalBlocks", {
+            blocks: String(nM)
           })]
-        }), (0, lG.jsxs)("div", {
+        }), (0, kM.jsxs)("div", {
           className: "PlotsJournalSketch",
-          children: [CG.map((GG => (0, lG.jsx)("img", {
-            className: fG()({
-              Shown: GG === bG.id
+          children: [tM.map((MM => (0, kM.jsx)("img", {
+            className: mM()({
+              Shown: MM === rM.id
             }),
-            src: mZ[GG],
+            src: Ri[MM],
             alt: "",
             draggable: !1
-          }, GG))), "completed" === bG.state && (0, lG.jsx)("span", {
+          }, MM))), "completed" === rM.state && (0, kM.jsx)("span", {
             className: "PlotsJournalStamp",
-            children: LG("plotsGame:journalBuilt")
-          }), YG && (0, lG.jsx)("span", {
+            children: jM("plotsGame:journalBuilt")
+          }), QM && (0, kM.jsx)("span", {
             className: "PlotsJournalLock",
-            children: (0, lG.jsx)(hG.c, {
+            children: (0, kM.jsx)(dM.b, {
               name: "lock"
             })
           })]
-        }), null !== bG.note && (0, lG.jsx)("p", {
+        }), null !== rM.note && (0, kM.jsx)("p", {
           className: "PlotsJournalNote",
-          children: LG(bG.note)
-        }), (0, lG.jsxs)("div", {
+          children: jM(rM.note)
+        }), (0, kM.jsxs)("div", {
           className: "PlotsJournalPageAction",
-          children: ["locked" === bG.state && (0, lG.jsx)("p", {
+          children: ["locked" === rM.state && (0, kM.jsx)("p", {
             className: "PlotsJournalHint",
-            children: LG("plotsGame:journalLocked", {
-              name: LG(WG(bG.unlockedBy).displayName.translationKey)
+            children: jM("plotsGame:journalLocked", {
+              name: jM(gM(rM.unlockedBy).displayName.translationKey)
             })
-          }), bG.active && (0, lG.jsxs)(lG.Fragment, {
-            children: [(0, lG.jsx)("p", {
+          }), rM.active && (0, kM.jsxs)(kM.Fragment, {
+            children: [(0, kM.jsx)("p", {
               className: "PlotsJournalHint Building",
-              children: LG("plotsGame:journalBuilding")
-            }), (0, lG.jsx)(iZ.h, {
-              onClick: SG,
-              children: LG("plotsGame:journalPutAway")
+              children: jM("plotsGame:journalBuilding")
+            }), (0, kM.jsx)(ti.i, {
+              onClick: SM,
+              children: jM("plotsGame:journalPutAway")
             })]
-          }), !YG && !bG.active && (0, lG.jsx)(pG, {
+          }), !QM && !rM.active && (0, kM.jsx)(LM, {
             onClick: () => {
-              wG(bG.id)
+              OM(rM.id)
             },
-            children: LG("plotsGame:placementBuild")
+            children: jM("plotsGame:placementBuild")
           })]
         })]
       })
     }
 
-    function jZ(GG) {
+    function fi(MM) {
       let {
-        className: bG,
-        page: ZG,
-        hidden: wG,
-        building: SG,
-        journal: LG
-      } = GG;
-      return (0, lG.jsxs)("div", {
-        ref: GG => {
-          null !== GG && (GG.inert = wG)
+        className: rM,
+        page: iM,
+        hidden: OM,
+        building: SM,
+        journal: jM
+      } = MM;
+      return (0, kM.jsxs)("div", {
+        ref: MM => {
+          null !== MM && (MM.inert = OM)
         },
-        className: fG()("PlotsJournalSide", bG),
-        children: [void 0 !== ZG && (0, lG.jsx)(lZ, {
-          page: ZG,
-          building: SG,
-          onBuild: LG.build,
-          onPutAway: LG.putAway
-        }), void 0 === ZG && (0, lG.jsx)("div", {
+        className: mM()("PlotsJournalSide", rM),
+        children: [void 0 !== iM && (0, kM.jsx)(oi, {
+          page: iM,
+          building: SM,
+          onBuild: jM.build,
+          onPutAway: jM.putAway
+        }), void 0 === iM && (0, kM.jsx)("div", {
           className: "PlotsJournalPage"
         })]
       })
     }
-    var PZ = ZG(1873);
+    var Yi = iM(2e3);
 
-    function MZ(GG) {
-      return Math.cos((0, PZ.j)(GG))
+    function Ni(MM) {
+      return Math.cos((0, Yi.l)(MM))
     }
 
-    function AZ(GG) {
-      return (0, PZ.C)(Math.acos(Xb.c.clamp(GG, -1, 1)))
+    function Ai(MM) {
+      return (0, Yi.J)(Math.acos(er.d.clamp(MM, -1, 1)))
     }
 
-    function sZ(GG, bG, ZG, wG, SG) {
-      const LG = Math.abs(bG - GG),
-        yG = (0, PZ.C)(SG / (ZG * Math.abs(Math.sin((0, PZ.j)(GG))))),
-        kG = 450 * Math.min(1, LG / wG),
-        UG = yG > 0 ? 3 * LG / yG : 1 / 0;
-      return Math.round(Math.max(120, Math.min(kG, UG)))
+    function xi(MM, rM, iM, OM, SM) {
+      const jM = Math.abs(rM - MM),
+        aM = (0, Yi.J)(SM / (iM * Math.abs(Math.sin((0, Yi.l)(MM))))),
+        PM = 450 * Math.min(1, jM / OM),
+        nM = aM > 0 ? 3 * jM / aM : 1 / 0;
+      return Math.round(Math.max(120, Math.min(PM, nM)))
     }
-    class qZ {
+    class vi {
       constructor() {
         this.samples = []
       }
-      add(GG, bG) {
+      add(MM, rM) {
         for (this.samples.push({
-            x: GG,
-            at: bG
-          }); bG - this.samples[0].at > 100;) this.samples.shift()
+            x: MM,
+            at: rM
+          }); rM - this.samples[0].at > 100;) this.samples.shift()
       }
       get() {
-        const GG = this.samples[0],
-          bG = this.samples[this.samples.length - 1];
-        return bG.at > GG.at ? (bG.x - GG.x) / (bG.at - GG.at) : 0
+        const MM = this.samples[0],
+          rM = this.samples[this.samples.length - 1];
+        return rM.at > MM.at ? (rM.x - MM.x) / (rM.at - MM.at) : 0
       }
     }
 
-    function nZ(GG) {
-      return AZ(new DOMMatrixReadOnly(getComputedStyle(GG).transform).m11)
+    function Fi(MM) {
+      return Ai(new DOMMatrixReadOnly(getComputedStyle(MM).transform).m11)
     }
 
-    function gZ(GG, bG) {
-      GG.style.transform = `rotateY(${-bG}deg)`, GG.classList.add("Turning")
+    function Bi(MM, rM) {
+      MM.style.transform = `rotateY(${-rM}deg)`, MM.classList.add("Turning")
     }
 
-    function eZ(GG, bG, ZG) {
-      const [wG, SG] = (0, LG.useState)(ZG), yG = (0, LG.useRef)(null), kG = (0, LG.useRef)(null), UG = (0, LG.useRef)({
+    function Xi(MM, rM, iM) {
+      const [OM, SM] = (0, jM.useState)(iM), aM = (0, jM.useRef)(null), PM = (0, jM.useRef)(null), nM = (0, jM.useRef)({
         Forward: null,
         Back: null
-      }), YG = bG ? 2 : 1, VG = bG ? 180 : 90, pG = wG - wG % YG, fG = pG > 0, QG = pG + YG < GG, KG = (0, LG.useCallback)((() => {
-        const GG = kG.current;
-        return null === GG ? pG : (kG.current = null, GG.animation.cancel(), (bG = UG.current[GG.direction]).style.transform = "", bG.classList.remove("Turning"), null === GG.next ? pG : (SG(GG.next), GG.next));
-        var bG
-      }), [pG]), hG = (0, LG.useCallback)(((GG, bG, ZG, wG) => {
-        const SG = UG.current[GG],
-          LG = nZ(SG),
-          yG = bG === ("Forward" === GG) ? VG : 0;
-        gZ(SG, yG);
-        const pG = SG.animate([{
-          transform: `rotateY(${-LG}deg)`
+      }), QM = rM ? 2 : 1, zM = rM ? 180 : 90, LM = OM - OM % QM, mM = LM > 0, HM = LM + QM < MM, hM = (0, jM.useCallback)((() => {
+        const MM = PM.current;
+        return null === MM ? LM : (PM.current = null, MM.animation.cancel(), (rM = nM.current[MM.direction]).style.transform = "", rM.classList.remove("Turning"), null === MM.next ? LM : (SM(MM.next), MM.next));
+        var rM
+      }), [LM]), JM = (0, jM.useCallback)(((MM, rM, iM, OM) => {
+        const SM = nM.current[MM],
+          jM = Fi(SM),
+          aM = rM === ("Forward" === MM) ? zM : 0;
+        Bi(SM, aM);
+        const LM = SM.animate([{
+          transform: `rotateY(${-jM}deg)`
         }, {
-          transform: `rotateY(${-yG}deg)`
+          transform: `rotateY(${-aM}deg)`
         }], {
-          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : sZ(LG, yG, SG.offsetWidth, VG, yG > LG ? -ZG : ZG),
+          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : xi(jM, aM, SM.offsetWidth, zM, aM > jM ? -iM : iM),
           easing: "cubic-bezier(0.25, 0.75, 0.5, 1)"
         });
-        kG.current = {
-          direction: GG,
-          animation: pG,
-          next: bG ? wG + ("Forward" === GG ? YG : -YG) : null
-        }, pG.onfinish = () => {
-          var GG;
-          (null === (GG = kG.current) || void 0 === GG ? void 0 : GG.animation) === pG && KG()
+        PM.current = {
+          direction: MM,
+          animation: LM,
+          next: rM ? OM + ("Forward" === MM ? QM : -QM) : null
+        }, LM.onfinish = () => {
+          var MM;
+          (null === (MM = PM.current) || void 0 === MM ? void 0 : MM.animation) === LM && hM()
         }
-      }), [YG, VG, KG]), dG = (0, LG.useCallback)((bG => {
-        if (null !== yG.current) return;
-        const ZG = KG();
-        ("Forward" === bG ? ZG + YG < GG : ZG > 0) && hG(bG, !0, 0, ZG)
-      }), [KG, hG, YG, GG]);
-      (0, LG.useEffect)((() => () => {
-        var GG;
-        null === (GG = kG.current) || void 0 === GG || GG.animation.cancel()
-      }), []), (0, LG.useEffect)((() => {
-        const GG = GG => {
-          var bG;
-          GG.pointerId !== (null === (bG = yG.current) || void 0 === bG ? void 0 : bG.pointerId) || yG.current.following || (yG.current = null)
+      }), [QM, zM, hM]), dM = (0, jM.useCallback)((rM => {
+        if (null !== aM.current) return;
+        const iM = hM();
+        ("Forward" === rM ? iM + QM < MM : iM > 0) && JM(rM, !0, 0, iM)
+      }), [hM, JM, QM, MM]);
+      (0, jM.useEffect)((() => () => {
+        var MM;
+        null === (MM = PM.current) || void 0 === MM || MM.animation.cancel()
+      }), []), (0, jM.useEffect)((() => {
+        const MM = MM => {
+          var rM;
+          MM.pointerId !== (null === (rM = aM.current) || void 0 === rM ? void 0 : rM.pointerId) || aM.current.following || (aM.current = null)
         };
-        return window.addEventListener("pointerup", GG), () => {
-          window.removeEventListener("pointerup", GG)
+        return window.addEventListener("pointerup", MM), () => {
+          window.removeEventListener("pointerup", MM)
         }
       }), []);
-      const JG = (GG, bG, ZG) => {
-          const wG = function(GG, bG, ZG, wG) {
-            return (GG < 0 ? ZG : wG) ? Xb.c.clampAbs(GG, bG) : Math.sign(GG) * bG * (1 - 1 / (.55 * Math.abs(GG) / bG + 1))
-          }(GG.base + ZG, YG * GG.width, QG, fG);
-          return "Forward" === bG ? Math.min(wG, 0) : Math.max(wG, 0)
+      const yM = (MM, rM, iM) => {
+          const OM = function(MM, rM, iM, OM) {
+            return (MM < 0 ? iM : OM) ? er.d.clampAbs(MM, rM) : Math.sign(MM) * rM * (1 - 1 / (.55 * Math.abs(MM) / rM + 1))
+          }(MM.base + iM, QM * MM.width, HM, mM);
+          return "Forward" === rM ? Math.min(OM, 0) : Math.max(OM, 0)
         },
-        rG = (GG, bG) => {
-          const ZG = yG.current;
-          if (yG.current = null, null === ZG.direction) return;
-          ZG.speed.add(GG, bG);
-          const wG = ZG.speed.get(),
-            SG = JG(ZG, ZG.direction, GG - ZG.x);
-          hG(ZG.direction, null !== function(GG, bG, ZG, wG, SG) {
-            if (Math.abs(bG) >= .3 ? Math.sign(bG) !== Math.sign(GG) : Math.abs(GG) < .5 * ZG) return null;
-            const LG = GG < 0 ? "Forward" : "Back";
-            return ("Forward" === LG ? wG : SG) ? LG : null
-          }(SG, wG, YG * ZG.width, QG, fG), wG, pG)
+        lM = (MM, rM) => {
+          const iM = aM.current;
+          if (aM.current = null, null === iM.direction) return;
+          iM.speed.add(MM, rM);
+          const OM = iM.speed.get(),
+            SM = yM(iM, iM.direction, MM - iM.x);
+          JM(iM.direction, null !== function(MM, rM, iM, OM, SM) {
+            if (Math.abs(rM) >= .3 ? Math.sign(rM) !== Math.sign(MM) : Math.abs(MM) < .5 * iM) return null;
+            const jM = MM < 0 ? "Forward" : "Back";
+            return ("Forward" === jM ? OM : SM) ? jM : null
+          }(SM, OM, QM * iM.width, HM, mM), OM, LM)
         },
-        zG = {
-          onPointerDown: GG => {
-            var bG;
-            if (!GG.isPrimary || 0 !== GG.button || null !== kG.current && null !== GG.target.closest("button")) return;
-            const ZG = new qZ;
-            ZG.add(GG.clientX, GG.timeStamp);
-            const wG = UG.current.Forward.offsetWidth,
-              SG = kG.current;
-            kG.current = null;
-            let LG = 0;
-            if (null !== SG) {
-              const bG = UG.current[SG.direction],
-                ZG = nZ(bG);
-              SG.animation.cancel(), gZ(bG, ZG), LG = function(GG, bG, ZG, wG) {
-                return (GG < 0 ? ZG : wG) ? GG : Math.sign(GG) * bG * (1 / (1 - Math.min(Math.abs(GG) / bG, .99)) - 1) / .55
-              }(function(GG, bG, ZG, wG) {
-                return ZG * (MZ(bG) - MZ("Forward" === GG ? 0 : wG))
-              }(SG.direction, ZG, wG, VG), YG * wG, QG, fG), GG.currentTarget.setPointerCapture(GG.pointerId)
+        EM = {
+          onPointerDown: MM => {
+            var rM;
+            if (!MM.isPrimary || 0 !== MM.button || null !== PM.current && null !== MM.target.closest("button")) return;
+            const iM = new vi;
+            iM.add(MM.clientX, MM.timeStamp);
+            const OM = nM.current.Forward.offsetWidth,
+              SM = PM.current;
+            PM.current = null;
+            let jM = 0;
+            if (null !== SM) {
+              const rM = nM.current[SM.direction],
+                iM = Fi(rM);
+              SM.animation.cancel(), Bi(rM, iM), jM = function(MM, rM, iM, OM) {
+                return (MM < 0 ? iM : OM) ? MM : Math.sign(MM) * rM * (1 / (1 - Math.min(Math.abs(MM) / rM, .99)) - 1) / .55
+              }(function(MM, rM, iM, OM) {
+                return iM * (Ni(rM) - Ni("Forward" === MM ? 0 : OM))
+              }(SM.direction, iM, OM, zM), QM * OM, HM, mM), MM.currentTarget.setPointerCapture(MM.pointerId)
             }
-            yG.current = {
-              pointerId: GG.pointerId,
-              x: GG.clientX,
-              y: GG.clientY,
-              base: LG,
-              width: wG,
-              following: null !== SG,
-              direction: null !== (bG = null === SG || void 0 === SG ? void 0 : SG.direction) && void 0 !== bG ? bG : null,
-              speed: ZG
+            aM.current = {
+              pointerId: MM.pointerId,
+              x: MM.clientX,
+              y: MM.clientY,
+              base: jM,
+              width: OM,
+              following: null !== SM,
+              direction: null !== (rM = null === SM || void 0 === SM ? void 0 : SM.direction) && void 0 !== rM ? rM : null,
+              speed: iM
             }
           },
-          onPointerMove: GG => {
-            const bG = yG.current;
-            if (null === bG || GG.pointerId !== bG.pointerId) return;
-            if (0 === GG.buttons) return void rG(GG.clientX, GG.timeStamp);
-            const ZG = GG.clientX - bG.x;
-            !bG.following && function(GG, bG) {
-              return Math.abs(GG) > 8 && Math.abs(GG) > Math.abs(bG)
-            }(ZG, GG.clientY - bG.y) && (bG.following = !0, bG.direction = ZG < 0 ? "Forward" : "Back", GG.currentTarget.setPointerCapture(GG.pointerId)), null !== bG.direction && (bG.speed.add(GG.clientX, GG.timeStamp), gZ(UG.current[bG.direction], function(GG, bG, ZG, wG) {
-              const SG = ZG * MZ("Forward" === GG ? 0 : wG) + bG;
-              return Xb.c.clamp(AZ(SG / ZG), 0, wG)
-            }(bG.direction, JG(bG, bG.direction, ZG), bG.width, VG)))
+          onPointerMove: MM => {
+            const rM = aM.current;
+            if (null === rM || MM.pointerId !== rM.pointerId) return;
+            if (0 === MM.buttons) return void lM(MM.clientX, MM.timeStamp);
+            const iM = MM.clientX - rM.x;
+            !rM.following && function(MM, rM) {
+              return Math.abs(MM) > 8 && Math.abs(MM) > Math.abs(rM)
+            }(iM, MM.clientY - rM.y) && (rM.following = !0, rM.direction = iM < 0 ? "Forward" : "Back", MM.currentTarget.setPointerCapture(MM.pointerId)), null !== rM.direction && (rM.speed.add(MM.clientX, MM.timeStamp), Bi(nM.current[rM.direction], function(MM, rM, iM, OM) {
+              const SM = iM * Ni("Forward" === MM ? 0 : OM) + rM;
+              return er.d.clamp(Ai(SM / iM), 0, OM)
+            }(rM.direction, yM(rM, rM.direction, iM), rM.width, zM)))
           },
-          onPointerUp: GG => {
-            var bG;
-            GG.pointerId === (null === (bG = yG.current) || void 0 === bG ? void 0 : bG.pointerId) && rG(GG.clientX, GG.timeStamp)
+          onPointerUp: MM => {
+            var rM;
+            MM.pointerId === (null === (rM = aM.current) || void 0 === rM ? void 0 : rM.pointerId) && lM(MM.clientX, MM.timeStamp)
           },
-          onPointerCancel: GG => {
-            const bG = yG.current;
-            GG.pointerId === (null === bG || void 0 === bG ? void 0 : bG.pointerId) && (yG.current = null, null !== bG.direction && hG(bG.direction, !1, 0, pG))
+          onPointerCancel: MM => {
+            const rM = aM.current;
+            MM.pointerId === (null === rM || void 0 === rM ? void 0 : rM.pointerId) && (aM.current = null, null !== rM.direction && JM(rM.direction, !1, 0, LM))
           }
         };
       return {
-        first: pG,
-        step: YG,
-        canGoBack: fG,
-        canGoForward: QG,
-        turnPage: dG,
-        leaves: UG,
-        pagesHandlers: zG
+        first: LM,
+        step: QM,
+        canGoBack: mM,
+        canGoForward: HM,
+        turnPage: dM,
+        leaves: nM,
+        pagesHandlers: EM
       }
     }
 
-    function RZ(GG, bG) {
-      return GG > bG && GG >= 600
+    function Ii(MM, rM) {
+      return MM > rM && MM >= 600
     }
 
-    function TZ(GG) {
+    function Ki(MM) {
       let {
-        journal: bG,
-        hud: ZG,
-        guide: wG
-      } = GG;
+        journal: rM,
+        hud: iM,
+        guide: OM
+      } = MM;
       const {
-        t: SG
-      } = (0, VG.w)(), kG = (0, UG.j)(aG, bG.getPages()), YG = (0, UG.j)(bb, ZG.getGuide()), pG = kG.find((GG => GG.active)), QG = (KG = YG, hG = void 0 === pG ? null : pG.id, "active" === KG[0] && null === hG);
-      var KG, hG;
-      const dG = (0, WZ.k)(RZ),
+        t: SM
+      } = (0, zM.A)(), PM = (0, nM.e)(sM, rM.getPages()), QM = (0, nM.e)(ir, iM.getGuide()), LM = PM.find((MM => MM.active)), HM = (hM = QM, JM = void 0 === LM ? null : LM.id, "active" === hM[0] && null === JM);
+      var hM, JM;
+      const dM = (0, ui.k)(Ii),
         {
-          first: JG,
-          step: EG,
-          canGoBack: oG,
-          canGoForward: XG,
-          turnPage: uG,
-          leaves: iG,
-          pagesHandlers: CG
-        } = eZ(kG.length, dG, (() => function(GG) {
-          const bG = GG.findIndex((GG => GG.active));
-          return -1 !== bG ? bG : Math.max(0, GG.findIndex((GG => "open" === GG.state)))
-        }(kG)));
-      (0, LG.useEffect)((() => {
-        bG.onOpened()
-      }), [bG]), (0, rG.c)((GG => !QG && ("ArrowLeft" === GG.code || "ArrowRight" === GG.code) && !(0, zG.isTypingInInput)()), (GG => {
-        GG.stopPropagation(), uG("ArrowLeft" === GG.code ? "Back" : "Forward")
+          first: yM,
+          step: lM,
+          canGoBack: GM,
+          canGoForward: CM,
+          turnPage: eM,
+          leaves: bM,
+          pagesHandlers: wM
+        } = Xi(PM.length, dM, (() => function(MM) {
+          const rM = MM.findIndex((MM => MM.active));
+          return -1 !== rM ? rM : Math.max(0, MM.findIndex((MM => "open" === MM.state)))
+        }(PM)));
+      (0, jM.useEffect)((() => {
+        rM.onOpened()
+      }), [rM]), (0, EM.d)((MM => !HM && ("ArrowLeft" === MM.code || "ArrowRight" === MM.code) && !(0, UM.isTypingInInput)()), (MM => {
+        MM.stopPropagation(), eM("ArrowLeft" === MM.code ? "Back" : "Forward")
       }));
-      const WG = void 0 !== pG,
-        mG = (GG, ZG, wG) => (0, lG.jsx)(jZ, {
-          className: GG,
-          page: ZG >= 0 && ZG < kG.length ? kG[ZG] : void 0,
-          hidden: wG,
-          building: WG,
-          journal: bG
+      const tM = void 0 !== LM,
+        gM = (MM, iM, OM) => (0, kM.jsx)(fi, {
+          className: MM,
+          page: iM >= 0 && iM < PM.length ? PM[iM] : void 0,
+          hidden: OM,
+          building: tM,
+          journal: rM
         });
-      return (0, lG.jsx)(CZ.b, {
-        close: yG.i,
+      return (0, kM.jsx)(gi.e, {
+        close: aM.n,
         togglePointerLock: !1,
         className: "PlotsJournalOverlay",
-        children: (0, lG.jsxs)("section", {
-          className: fG()("PlotsJournal", {
-            Spread: dG
+        children: (0, kM.jsxs)("section", {
+          className: mM()("PlotsJournal", {
+            Spread: dM
           }),
           role: "dialog",
           "aria-modal": "true",
-          "aria-label": SG("plotsGame:journalTitle"),
-          children: [(0, lG.jsx)(iZ.j, {
+          "aria-label": SM("plotsGame:journalTitle"),
+          children: [(0, kM.jsx)(ti.l, {
             className: "PlotsJournalClose",
-            onClick: yG.i
-          }), "active" === YG[0] && (0, lG.jsx)(Ub, {
+            onClick: aM.n
+          }), "active" === QM[0] && (0, kM.jsx)(Qr, {
             className: "PlotsJournalGuideSkip",
-            onSkip: wG.skip
-          }), QG && (0, lG.jsx)(vZ, {
-            onBuild: bG.build
-          }), !QG && (0, lG.jsx)(aZ, {
+            onSkip: OM.skip
+          }), HM && (0, kM.jsx)(Di, {
+            onBuild: rM.build
+          }), !HM && (0, kM.jsx)(ki, {
             direction: "Back",
-            disabled: !oG,
-            onTurn: uG
-          }), (0, lG.jsx)("div", {
-            hidden: QG,
+            disabled: !GM,
+            onTurn: eM
+          }), (0, kM.jsx)("div", {
+            hidden: HM,
             className: "PlotsJournalBookPages",
-            ...CG,
-            children: (0, lG.jsxs)("div", {
+            ...wM,
+            children: (0, kM.jsxs)("div", {
               className: "PlotsJournalSheet",
-              children: [dG && mG("Left", JG - 2, !0), mG("Right", JG + 2 * EG - 1, !0), (0, lG.jsxs)("div", {
-                ref: GG => {
-                  iG.current.Back = GG
+              children: [dM && gM("Left", yM - 2, !0), gM("Right", yM + 2 * lM - 1, !0), (0, kM.jsxs)("div", {
+                ref: MM => {
+                  bM.current.Back = MM
                 },
                 className: "PlotsJournalLeaf Back",
-                children: [mG("Recto", JG - 1, !0), dG && mG("Verso", JG, !1)]
-              }), (0, lG.jsxs)("div", {
-                ref: GG => {
-                  iG.current.Forward = GG
+                children: [gM("Recto", yM - 1, !0), dM && gM("Verso", yM, !1)]
+              }), (0, kM.jsxs)("div", {
+                ref: MM => {
+                  bM.current.Forward = MM
                 },
                 className: "PlotsJournalLeaf Forward",
-                children: [mG("Recto", JG + EG - 1, !1), dG && mG("Verso", JG + EG, !0)]
+                children: [gM("Recto", yM + lM - 1, !1), dM && gM("Verso", yM + lM, !0)]
               })]
             })
-          }), !QG && (0, lG.jsx)(aZ, {
+          }), !HM && (0, kM.jsx)(ki, {
             direction: "Forward",
-            disabled: !XG,
-            onTurn: uG
+            disabled: !CM,
+            onTurn: eM
           })]
         })
       })
     }
 
-    function HZ(GG, bG, ZG, wG, SG) {
-      const LG = Math.hypot(...bG.dir);
-      if (!Number.isFinite(LG) || 0 === LG) return -1;
+    function qi(MM, rM, iM, OM, SM) {
+      const jM = Math.hypot(...rM.dir);
+      if (!Number.isFinite(jM) || 0 === jM) return -1;
       const {
-        from: yG,
-        reach: kG,
-        solid: UG
-      } = bG, YG = [bG.dir[0] / LG, bG.dir[1] / LG, bG.dir[2] / LG], VG = null === UG ? kG : Math.min(kG, function(GG, bG, ZG) {
-        const wG = tZ(GG, bG, ZG);
-        if (wG !== 1 / 0) return wG;
-        return (ZG[0] + .5 - GG[0]) * bG[0] + (ZG[1] + .5 - GG[1]) * bG[1] + (ZG[2] + .5 - GG[2]) * bG[2]
-      }(yG, YG, UG) + .75);
-      let pG = -1,
-        fG = 1 / 0,
-        QG = 1 / 0;
-      for (let KG = 0; KG < GG.length; KG += 4) {
-        const bG = [GG[KG], GG[KG + 1], GG[KG + 2]],
-          LG = SG(KG) ? kG : VG;
-        let UG = -1,
-          hG = tZ(yG, YG, bG);
-        if (hG > LG) {
-          const GG = [bG[0] + .5 - yG[0], bG[1] + .5 - yG[1], bG[2] + .5 - yG[2]];
-          if (hG = GG[0] * YG[0] + GG[1] * YG[1] + GG[2] * YG[2], hG <= 0 || hG > LG) continue;
-          if (UG = Math.hypot(GG[0] - hG * YG[0], GG[1] - hG * YG[1], GG[2] - hG * YG[2]), UG > .7 || !wG(KG)) continue
-        }(UG < fG || UG === fG && hG < QG) && ZG(KG) && (pG = KG, fG = UG, QG = hG)
+        from: aM,
+        reach: PM,
+        solid: nM
+      } = rM, QM = [rM.dir[0] / jM, rM.dir[1] / jM, rM.dir[2] / jM], zM = null === nM ? PM : Math.min(PM, function(MM, rM, iM) {
+        const OM = Ti(MM, rM, iM);
+        if (OM !== 1 / 0) return OM;
+        return (iM[0] + .5 - MM[0]) * rM[0] + (iM[1] + .5 - MM[1]) * rM[1] + (iM[2] + .5 - MM[2]) * rM[2]
+      }(aM, QM, nM) + .75);
+      let LM = -1,
+        mM = 1 / 0,
+        HM = 1 / 0;
+      for (let hM = 0; hM < MM.length; hM += 4) {
+        const rM = [MM[hM], MM[hM + 1], MM[hM + 2]],
+          jM = SM(hM) ? PM : zM;
+        let nM = -1,
+          JM = Ti(aM, QM, rM);
+        if (JM > jM) {
+          const MM = [rM[0] + .5 - aM[0], rM[1] + .5 - aM[1], rM[2] + .5 - aM[2]];
+          if (JM = MM[0] * QM[0] + MM[1] * QM[1] + MM[2] * QM[2], JM <= 0 || JM > jM) continue;
+          if (nM = Math.hypot(MM[0] - JM * QM[0], MM[1] - JM * QM[1], MM[2] - JM * QM[2]), nM > .7 || !OM(hM)) continue
+        }(nM < mM || nM === mM && JM < HM) && iM(hM) && (LM = hM, mM = nM, HM = JM)
       }
-      return pG
+      return LM
     }
 
-    function tZ(GG, bG, ZG) {
-      let wG = 0,
-        SG = 1 / 0;
-      for (let LG = 0; LG < 3; LG++) {
-        const yG = ZG[LG] - GG[LG];
-        if (0 === bG[LG]) {
-          if (yG > 0 || yG + 1 < 0) return 1 / 0;
+    function Ti(MM, rM, iM) {
+      let OM = 0,
+        SM = 1 / 0;
+      for (let jM = 0; jM < 3; jM++) {
+        const aM = iM[jM] - MM[jM];
+        if (0 === rM[jM]) {
+          if (aM > 0 || aM + 1 < 0) return 1 / 0;
           continue
         }
-        const kG = yG / bG[LG],
-          UG = (yG + 1) / bG[LG];
-        wG = Math.max(wG, Math.min(kG, UG)), SG = Math.min(SG, Math.max(kG, UG))
+        const PM = aM / rM[jM],
+          nM = (aM + 1) / rM[jM];
+        OM = Math.max(OM, Math.min(PM, nM)), SM = Math.min(SM, Math.max(PM, nM))
       }
-      return wG <= SG ? wG : 1 / 0
+      return OM <= SM ? OM : 1 / 0
     }
-    var DZ = ZG(37245),
-      NZ = ZG(38468);
-    const OZ = [1, 1, 1];
-    class xZ {
-      constructor(GG) {
-        this.api = GG, this.meshes = null, this.shown = null
+    var Vi = iM(37833),
+      ci = iM(39040);
+    const MO = [1, 1, 1];
+    class rO {
+      constructor(MM) {
+        this.api = MM, this.meshes = null, this.shown = null
       }
-      show(GG) {
-        if (!(0, DZ.f)(GG, this.shown))
-          if (this.shown = null === GG ? null : [GG[0], GG[1], GG[2]], null !== this.meshes)
-            for (const bG of this.meshes) this.api.setGameMesh(bG, null === GG ? {
+      show(MM) {
+        if (!(0, Vi.d)(MM, this.shown))
+          if (this.shown = null === MM ? null : [MM[0], MM[1], MM[2]], null !== this.meshes)
+            for (const rM of this.meshes) this.api.setGameMesh(rM, null === MM ? {
               visible: !1
             } : {
-              anchor: GG,
+              anchor: MM,
               visible: !0
             });
-          else if (null !== GG) {
-          const bG = [NZ.f, NZ.f, NZ.f, 0, 0, 0];
-          this.meshes = [this.build([bG], NZ.j, GG), this.build((0, NZ.d)(), NZ.r, GG)]
+          else if (null !== MM) {
+          const rM = [ci.g, ci.g, ci.g, 0, 0, 0];
+          this.meshes = [this.build([rM], ci.i, MM), this.build((0, ci.d)(), ci.l, MM)]
         }
       }
       dispose() {
-        for (const bG of null !== (GG = this.meshes) && void 0 !== GG ? GG : []) {
-          var GG;
-          this.api.disposeGameMesh(bG)
+        for (const rM of null !== (MM = this.meshes) && void 0 !== MM ? MM : []) {
+          var MM;
+          this.api.disposeGameMesh(rM)
         }
         this.meshes = null, this.shown = null
       }
-      build(GG, bG, ZG) {
-        const wG = [],
-          SG = [];
-        for (const [LG, yG, kG, UG, YG, VG] of GG)(0, Hb.g)(wG, SG, [UG + .5, YG + .5, VG + .5], [LG, yG, kG]);
+      build(MM, rM, iM) {
+        const OM = [],
+          SM = [];
+        for (const [jM, aM, PM, nM, QM, zM] of MM)(0, Ir.d)(OM, SM, [nM + .5, QM + .5, zM + .5], [jM, aM, PM]);
         return this.api.createGameMesh({
-          positions: wG,
-          indices: SG
+          positions: OM,
+          indices: SM
         }, {
-          rgb: OZ,
-          alpha: bG,
+          rgb: MO,
+          alpha: rM,
           onTop: !0
-        }, ZG)
+        }, iM)
       }
     }
 
-    function BZ(GG, bG) {
-      const ZG = Rb.d.Hd / 2;
-      return GG[0] < bG[0] + ZG && GG[0] + 1 > bG[0] - ZG && GG[1] < bG[1] + Rb.d.td && GG[1] + 1 > bG[1] && GG[2] < bG[2] + ZG && GG[2] + 1 > bG[2] - ZG
+    function iO(MM, rM) {
+      const iM = Br.f.Sy / 2;
+      return MM[0] < rM[0] + iM && MM[0] + 1 > rM[0] - iM && MM[1] < rM[1] + Br.f.jy && MM[1] + 1 > rM[1] && MM[2] < rM[2] + iM && MM[2] + 1 > rM[2] - iM
     }
 
-    function Gw(GG, bG) {
-      return GG.getClientOption(bG, "blockReach") + 1
+    function OO(MM, rM) {
+      return MM.getClientOption(rM, "blockReach") + 1
     }
-    class bw {
-      constructor(GG, bG, ZG) {
-        this.api = GG, this.localPlayerId = bG, this.foreseen = ZG, this.cells = [], this.playerCells = [], this.next = null
+    class SO {
+      constructor(MM, rM, iM) {
+        this.api = MM, this.localPlayerId = rM, this.foreseen = iM, this.cells = [], this.playerCells = [], this.next = null
       }
       get() {
         return this.next
       }
-      setCells(GG) {
-        this.cells = GG
+      setCells(MM) {
+        this.cells = MM
       }
       playerMoved() {
-        return Zw(this.api.getPositionView(this.localPlayerId)).some(((GG, bG) => GG !== this.playerCells[bG]))
+        return jO(this.api.getPositionView(this.localPlayerId)).some(((MM, rM) => MM !== this.playerCells[rM]))
       }
-      Df(GG) {
-        const bG = this.api.getPositionView(this.localPlayerId);
-        return this.playerCells.splice(0, 1 / 0, ...Zw(bG)), this.next = this.pickFrom(null === GG ? [bG[0], bG[1] + 1, bG[2]] : (0, DZ.b)(GG), (() => !1)), this.next
+      LH(MM) {
+        const rM = this.api.getPositionView(this.localPlayerId);
+        return this.playerCells.splice(0, 1 / 0, ...jO(rM)), this.next = this.pickFrom(null === MM ? [rM[0], rM[1] + 1, rM[2]] : (0, Vi.c)(MM), (() => !1)), this.next
       }
-      pickFrom(GG, bG) {
-        const ZG = this.api.getPositionView(this.localPlayerId),
-          wG = [ZG[0], ZG[1] + Rb.d.td * Rb.d.playerEyeToHeightRatio, ZG[2]],
-          SG = Gw(this.api, this.localPlayerId),
+      pickFrom(MM, rM) {
+        const iM = this.api.getPositionView(this.localPlayerId),
+          OM = [iM[0], iM[1] + Br.f.jy * Br.f.playerEyeToHeightRatio, iM[2]],
+          SM = OO(this.api, this.localPlayerId),
           {
-            cells: LG
+            cells: jM
           } = this,
-          yG = GG => [LG[GG], LG[GG + 1], LG[GG + 2]],
-          kG = function(GG, bG, ZG, wG, SG, LG) {
-            let yG = -1,
-              kG = -1,
-              UG = 1 / 0;
-            for (let YG = 0; YG < GG.length; YG += bG) {
-              const bG = (LG(YG) ? 2 : 0) + (wG(YG) ? 1 : 0);
-              if (bG < kG || SG(YG)) continue;
-              const VG = (GG[YG] + .5 - ZG[0]) ** 2 + (GG[YG + 1] + .5 - ZG[1]) ** 2 + (GG[YG + 2] + .5 - ZG[2]) ** 2;
-              (bG > kG || VG < UG) && (yG = YG, kG = bG, UG = VG)
+          aM = MM => [jM[MM], jM[MM + 1], jM[MM + 2]],
+          PM = function(MM, rM, iM, OM, SM, jM) {
+            let aM = -1,
+              PM = -1,
+              nM = 1 / 0;
+            for (let QM = 0; QM < MM.length; QM += rM) {
+              const rM = (jM(QM) ? 2 : 0) + (OM(QM) ? 1 : 0);
+              if (rM < PM || SM(QM)) continue;
+              const zM = (MM[QM] + .5 - iM[0]) ** 2 + (MM[QM + 1] + .5 - iM[1]) ** 2 + (MM[QM + 2] + .5 - iM[2]) ** 2;
+              (rM > PM || zM < nM) && (aM = QM, PM = rM, nM = zM)
             }
-            return yG
-          }(LG, 4, GG, (GG => 1 === LG[GG + 3]), (GG => {
-            const wG = yG(GG);
-            return BZ(wG, ZG) || this.foreseen.has(wG.join()) || bG(wG)
-          }), (GG => function(GG, bG, ZG) {
-            return (bG[0] + .5 - GG[0]) ** 2 + (bG[1] + .5 - GG[1]) ** 2 + (bG[2] + .5 - GG[2]) ** 2 <= ZG ** 2
-          }(wG, yG(GG), SG)));
-        return -1 === kG ? null : yG(kG)
+            return aM
+          }(jM, 4, MM, (MM => 1 === jM[MM + 3]), (MM => {
+            const OM = aM(MM);
+            return iO(OM, iM) || this.foreseen.has(OM.join()) || rM(OM)
+          }), (MM => function(MM, rM, iM) {
+            return (rM[0] + .5 - MM[0]) ** 2 + (rM[1] + .5 - MM[1]) ** 2 + (rM[2] + .5 - MM[2]) ** 2 <= iM ** 2
+          }(OM, aM(MM), SM)));
+        return -1 === PM ? null : aM(PM)
       }
     }
 
-    function Zw(GG) {
-      let [bG, ZG, wG] = GG;
-      const SG = Rb.d.Hd / 2;
-      return [Math.floor(bG), Math.floor(ZG), Math.floor(wG), Math.floor(bG - SG), Math.floor(bG + SG), Math.floor(ZG + Rb.d.td), Math.floor(wG - SG), Math.floor(wG + SG)]
+    function jO(MM) {
+      let [rM, iM, OM] = MM;
+      const SM = Br.f.Sy / 2;
+      return [Math.floor(rM), Math.floor(iM), Math.floor(OM), Math.floor(rM - SM), Math.floor(rM + SM), Math.floor(iM + Br.f.jy), Math.floor(OM - SM), Math.floor(OM + SM)]
     }
-    class ww {
-      constructor(GG, bG, ZG) {
-        this.api = GG, this.localPlayerId = bG, this.pickNext = ZG, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
+    class aO {
+      constructor(MM, rM, iM) {
+        this.api = MM, this.localPlayerId = rM, this.pickNext = iM, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
       }
-      look(GG) {
-        const [bG, , ZG] = GG.cameraDirection, wG = Math.hypot(bG, ZG);
-        wG > .001 && (this.heading = [bG / wG, ZG / wG])
+      look(MM) {
+        const [rM, , iM] = MM.cameraDirection, OM = Math.hypot(rM, iM);
+        OM > .001 && (this.heading = [rM / OM, iM / OM])
       }
-      tapped(GG, bG, ZG) {
-        const wG = Gw(this.api, this.localPlayerId),
+      tapped(MM, rM, iM) {
+        const OM = OO(this.api, this.localPlayerId),
           {
-            origin: SG,
-            direction: LG
+            origin: SM,
+            direction: jM
           } = this.api.getActionRay(),
-          yG = [...SG],
-          kG = [
-            [yG, [yG[0] + LG[0] * wG, yG[1] + LG[1] * wG, yG[2] + LG[2] * wG]]
+          aM = [...SM],
+          PM = [
+            [aM, [aM[0] + jM[0] * OM, aM[1] + jM[1] * OM, aM[2] + jM[2] * OM]]
           ];
-        null !== GG && kG.push([yG, (0, DZ.b)(GG)]), this.tap = {
-          lines: kG,
-          next: bG,
-          ms: ZG
+        null !== MM && PM.push([aM, (0, Vi.c)(MM)]), this.tap = {
+          lines: PM,
+          next: rM,
+          ms: iM
         }
       }
-      filled(GG, bG) {
-        this.tap = null, this.turnFrom(GG, bG), this.retry(bG)
+      filled(MM, rM) {
+        this.tap = null, this.turnFrom(MM, rM), this.retry(rM)
       }
-      arrived(GG, bG) {
+      arrived(MM, rM) {
         const {
-          tap: ZG
+          tap: iM
         } = this;
-        if (null === ZG || bG - ZG.ms > 1500) return null;
-        const wG = (0, DZ.b)(GG);
-        return (0, DZ.f)(ZG.next, GG) || ZG.lines.some((GG => {
-          let [bG, ZG] = GG;
-          return function(GG, bG, ZG) {
-            const wG = [ZG[0] - bG[0], ZG[1] - bG[1], ZG[2] - bG[2]],
-              SG = [GG[0] - bG[0], GG[1] - bG[1], GG[2] - bG[2]],
-              LG = wG[0] ** 2 + wG[1] ** 2 + wG[2] ** 2,
-              yG = 0 === LG ? 0 : Math.min(1, Math.max(0, (SG[0] * wG[0] + SG[1] * wG[1] + SG[2] * wG[2]) / LG));
-            return Math.hypot(SG[0] - wG[0] * yG, SG[1] - wG[1] * yG, SG[2] - wG[2] * yG)
-          }(wG, bG, ZG) <= .9
-        })) ? (this.tap = null, this.turnFrom(GG, bG), ZG.ms) : null
+        if (null === iM || rM - iM.ms > 1500) return null;
+        const OM = (0, Vi.c)(MM);
+        return (0, Vi.d)(iM.next, MM) || iM.lines.some((MM => {
+          let [rM, iM] = MM;
+          return function(MM, rM, iM) {
+            const OM = [iM[0] - rM[0], iM[1] - rM[1], iM[2] - rM[2]],
+              SM = [MM[0] - rM[0], MM[1] - rM[1], MM[2] - rM[2]],
+              jM = OM[0] ** 2 + OM[1] ** 2 + OM[2] ** 2,
+              aM = 0 === jM ? 0 : Math.min(1, Math.max(0, (SM[0] * OM[0] + SM[1] * OM[1] + SM[2] * OM[2]) / jM));
+            return Math.hypot(SM[0] - OM[0] * aM, SM[1] - OM[1] * aM, SM[2] - OM[2] * aM)
+          }(OM, rM, iM) <= .9
+        })) ? (this.tap = null, this.turnFrom(MM, rM), iM.ms) : null
       }
-      turnFrom(GG, bG) {
+      turnFrom(MM, rM) {
         this.pending = {
-          from: GG,
-          ms: bG,
-          turnMs: Math.max(50, Math.min(250, bG - this.lastFillMs))
-        }, this.lastFillMs = bG
+          from: MM,
+          ms: rM,
+          turnMs: Math.max(50, Math.min(250, rM - this.lastFillMs))
+        }, this.lastFillMs = rM
       }
-      retry(GG) {
+      retry(MM) {
         const {
-          pending: bG
+          pending: rM
         } = this;
-        if (null === bG) return;
-        if (GG - bG.ms > 1500) return void(this.pending = null);
-        const ZG = this.pickNext((0, DZ.b)(bG.from), (GG => (0, DZ.f)(GG, bG.from)));
-        if (null === ZG) return;
+        if (null === rM) return;
+        if (MM - rM.ms > 1500) return void(this.pending = null);
+        const iM = this.pickNext((0, Vi.c)(rM.from), (MM => (0, Vi.d)(MM, rM.from)));
+        if (null === iM) return;
         this.pending = null;
         const {
-          turning: wG
+          turning: OM
         } = this;
-        if (null !== wG && GG < wG.endMs && (0, DZ.f)(wG.to, ZG)) return;
-        const SG = this.api.getActionRay().origin,
-          LG = [ZG[0] + .5 - SG[0], ZG[1] + .5 - SG[1], ZG[2] + .5 - SG[2]],
-          yG = Math.hypot(LG[0], LG[2]);
-        if (yG < .3) {
-          const GG = Math.max(yG, .001);
-          LG[0] = this.heading[0] * GG, LG[2] = this.heading[1] * GG
+        if (null !== OM && MM < OM.endMs && (0, Vi.d)(OM.to, iM)) return;
+        const SM = this.api.getActionRay().origin,
+          jM = [iM[0] + .5 - SM[0], iM[1] + .5 - SM[1], iM[2] + .5 - SM[2]],
+          aM = Math.hypot(jM[0], jM[2]);
+        if (aM < .3) {
+          const MM = Math.max(aM, .001);
+          jM[0] = this.heading[0] * MM, jM[2] = this.heading[1] * MM
         }
-        this.api.turnCamera(LG, bG.turnMs), this.turning = {
-          to: ZG,
-          endMs: GG + bG.turnMs
+        this.api.turnCamera(jM, rM.turnMs), this.turning = {
+          to: iM,
+          endMs: MM + rM.turnMs
         }
       }
     }
-    class Sw {
-      constructor(GG, bG, ZG, wG) {
-        this.api = GG, this.localPlayerId = bG, this.juice = ZG, this.tracker = wG, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.lastFilled = null, this.lastSeenFilled = null, this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = void 0, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new Tb(GG), this.meshes = new Bb(GG), this.outline = new xZ(GG), this.nextCell = new bw(GG, bG, this.foreseen), this.turn = new ww(GG, bG, ((GG, bG) => this.nextCell.pickFrom(GG, bG)))
+    class PO {
+      constructor(MM, rM, iM, OM) {
+        this.api = MM, this.localPlayerId = rM, this.juice = iM, this.tracker = OM, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.lastFilled = null, this.lastSeenFilled = null, this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = void 0, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new Xr(MM), this.meshes = new Mi(MM), this.outline = new rO(MM), this.nextCell = new SO(MM, rM, this.foreseen), this.turn = new aO(MM, rM, ((MM, rM) => this.nextCell.pickFrom(MM, rM)))
       }
-      hK(GG) {
-        const bG = "active" === GG[0] ? `${GG[1]}|${GG[3]}|${GG[4]}|${GG[5]}|${GG[6]}` : "";
-        if ("active" !== GG[0]) "built" === GG[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
+      GL(MM) {
+        const rM = "active" === MM[0] ? `${MM[1]}|${MM[3]}|${MM[4]}|${MM[5]}|${MM[6]}` : "";
+        if ("active" !== MM[0]) "built" === MM[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
         else {
-          const [, , , , , , , ZG, wG, SG, LG] = GG;
-          bG !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = ZG) : ZG === this.layerY ? this.burstUnlisted(wG) : ZG > this.layerY && this.finishLayer(ZG), this.layerY = ZG, this.layerCells.has(ZG) || this.layerCells.set(ZG, wG.filter(Lw)), this.ghostCells = wG, this.palette = SG, this.occupiedCells = LG
+          const [, , , , , , , iM, OM, SM, jM] = MM;
+          rM !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = iM) : iM === this.layerY ? this.burstUnlisted(OM) : iM > this.layerY && this.finishLayer(iM), this.layerY = iM, this.layerCells.has(iM) || this.layerCells.set(iM, OM.filter(nO)), this.ghostCells = OM, this.palette = SM, this.occupiedCells = jM
         }
-        bG !== this.blueprint && (this.tracker.show("active" === GG[0] && GG[2] ? {
-          id: GG[1],
-          y: GG[4]
-        } : null), this.blueprint = bG, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((GG => this.api.blockNameToBlockId(GG))), this.chunkWatch.watch([...this.ghostCells.filter(Lw), ...this.occupiedCells]), this.refresh()
+        rM !== this.blueprint && (this.tracker.show("active" === MM[0] && MM[2] ? {
+          id: MM[1],
+          y: MM[4]
+        } : null), this.blueprint = rM, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((MM => this.api.blockNameToBlockId(MM))), this.chunkWatch.watch([...this.ghostCells.filter(nO), ...this.occupiedCells]), this.refresh()
       }
-      finishLayer(GG) {
-        this.burstUnlisted([]), GG > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = GG)
+      finishLayer(MM) {
+        this.burstUnlisted([]), MM > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = MM)
       }
-      Tp() {
+      bL() {
         if (this.chunkWatch.changed()) return void this.refresh();
-        const GG = performance.now();
-        let bG = !1;
-        for (const [wG, SG] of this.foreseen) {
-          var ZG;
-          if (GG - SG > 1e3) this.foreseen.delete(wG), bG = !0, (null === (ZG = this.lastFilled) || void 0 === ZG ? void 0 : ZG.join()) === wG && (this.lastFilled = this.lastSeenFilled)
-        }(bG || this.nextCell.playerMoved()) && this.showNext()
+        const MM = performance.now();
+        let rM = !1;
+        for (const [OM, SM] of this.foreseen) {
+          var iM;
+          if (MM - SM > 1e3) this.foreseen.delete(OM), rM = !0, (null === (iM = this.lastFilled) || void 0 === iM ? void 0 : iM.join()) === OM && (this.lastFilled = this.lastSeenFilled)
+        }(rM || this.nextCell.playerMoved()) && this.showNext()
       }
       dispose() {
         this.meshes.dispose(), this.outline.dispose()
       }
-      burstUnlisted(GG) {
-        const bG = new Set;
-        for (let SG = 0; SG < GG.length; SG += 4) bG.add(`${GG[SG]},${GG[SG+1]},${GG[SG+2]}`);
-        const ZG = [],
+      burstUnlisted(MM) {
+        const rM = new Set;
+        for (let SM = 0; SM < MM.length; SM += 4) rM.add(`${MM[SM]},${MM[SM+1]},${MM[SM+2]}`);
+        const iM = [],
           {
-            ghostCells: wG
+            ghostCells: OM
           } = this;
-        for (let SG = 0; SG < wG.length; SG += 4) {
-          const GG = `${wG[SG]},${wG[SG+1]},${wG[SG+2]}`;
-          !bG.has(GG) && this.open.delete(GG) && ZG.push(this.filledCell(SG))
+        for (let SM = 0; SM < OM.length; SM += 4) {
+          const MM = `${OM[SM]},${OM[SM+1]},${OM[SM+2]}`;
+          !rM.has(MM) && this.open.delete(MM) && iM.push(this.filledCell(SM))
         }
-        this.burst(ZG)
+        this.burst(iM)
       }
       refresh() {
         const {
-          ghostCells: GG,
-          palette: bG,
-          occupiedCells: ZG
-        } = this, wG = new xb, SG = new Set, LG = [], yG = [];
-        let kG = 0;
-        for (let UG = 0; UG < GG.length; UG += 4) {
-          const [ZG, YG, VG, pG] = [GG[UG], GG[UG + 1], GG[UG + 2], GG[UG + 3]], fG = this.api.getBlockId(ZG, YG, VG), QG = `${ZG},${YG},${VG}`, KG = ab(this.blockIds[pG], fG);
-          !KG && cb(fG) ? wG.add(ZG, YG, VG, jb(bG[pG]), Db, eb(bG[pG])) : KG ? this.open.has(QG) && LG.push(this.filledCell(UG)) : wG.add(ZG, YG, VG, Ob, Nb), KG || kG++, !KG && this.api.isBlockInLoadedChunk(ZG, YG, VG) && (SG.add(QG), yG.push(ZG, YG, VG, cb(fG) ? 0 : 1))
+          ghostCells: MM,
+          palette: rM,
+          occupiedCells: iM
+        } = this, OM = new cr, SM = new Set, jM = [], aM = [];
+        let PM = 0;
+        for (let nM = 0; nM < MM.length; nM += 4) {
+          const [iM, QM, zM, LM] = [MM[nM], MM[nM + 1], MM[nM + 2], MM[nM + 3]], mM = this.api.getBlockId(iM, QM, zM), HM = `${iM},${QM},${zM}`, hM = sr(this.blockIds[LM], mM);
+          !hM && Dr(mM) ? OM.add(iM, QM, zM, Zr(rM[LM]), qr, Fr(rM[LM])) : hM ? this.open.has(HM) && jM.push(this.filledCell(nM)) : OM.add(iM, QM, zM, Vr, Tr), hM || PM++, !hM && this.api.isBlockInLoadedChunk(iM, QM, zM) && (SM.add(HM), aM.push(iM, QM, zM, Dr(mM) ? 0 : 1))
         }
-        this.open = SG, this.nextCell.setCells(yG), this.tracker.update(this.layerY, this.topLayerY, kG);
-        for (let UG = 0; UG < ZG.length; UG += 3) {
-          const [GG, bG, SG] = [ZG[UG], ZG[UG + 1], ZG[UG + 2]];
-          cb(this.api.getBlockId(GG, bG, SG)) || wG.add(GG, bG, SG, Ob, Nb)
+        this.open = SM, this.nextCell.setCells(aM), this.tracker.update(this.layerY, this.topLayerY, PM);
+        for (let nM = 0; nM < iM.length; nM += 3) {
+          const [MM, rM, SM] = [iM[nM], iM[nM + 1], iM[nM + 2]];
+          Dr(this.api.getBlockId(MM, rM, SM)) || OM.add(MM, rM, SM, Vr, Tr)
         }
-        this.meshes.show(wG.toArray()), this.burst(LG), this.showNext(), this.turn.retry(performance.now())
+        this.meshes.show(OM.toArray()), this.burst(jM), this.showNext(), this.turn.retry(performance.now())
       }
-      burst(GG) {
-        const bG = performance.now(),
-          ZG = [];
-        for (const [SG, LG, yG] of GG) {
-          const GG = [SG, LG, yG];
-          this.lastSeenFilled = GG, this.foreseen.delete(GG.join()) || ZG.push(GG)
+      burst(MM) {
+        const rM = performance.now(),
+          iM = [];
+        for (const [SM, jM, aM] of MM) {
+          const MM = [SM, jM, aM];
+          this.lastSeenFilled = MM, this.foreseen.delete(MM.join()) || iM.push(MM)
         }
-        const wG = this.isHolding(bG);
-        for (const SG of ZG) {
-          if (this.lastFilled = SG, wG && this.pressFilled) {
-            this.turn.filled(SG, bG);
+        const OM = this.isHolding(rM);
+        for (const SM of iM) {
+          if (this.lastFilled = SM, OM && this.pressFilled) {
+            this.turn.filled(SM, rM);
             continue
           }
-          const GG = this.turn.arrived(SG, bG);
-          if (null !== GG) {
-            this.pressFilled = wG;
-            for (const [bG, ZG] of this.foreseen) ZG <= GG && this.foreseen.delete(bG)
+          const MM = this.turn.arrived(SM, rM);
+          if (null !== MM) {
+            this.pressFilled = OM;
+            for (const [rM, iM] of this.foreseen) iM <= MM && this.foreseen.delete(rM)
           }
         }
-        this.juice.filled(GG)
+        this.juice.filled(MM)
       }
       showNext() {
-        var GG;
-        this.outline.show(null !== (GG = this.aimed) && void 0 !== GG ? GG : this.nextCell.Df(this.lastFilled))
+        var MM;
+        this.outline.show(null !== (MM = this.aimed) && void 0 !== MM ? MM : this.nextCell.LH(this.lastFilled))
       }
-      afterRender(GG) {
-        var bG;
-        this.turn.look(GG);
-        const ZG = this.api.getTargetedBlock();
-        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === ZG ? null : ZG.position), this.outline.show(null !== (bG = this.aimed) && void 0 !== bG ? bG : this.nextCell.get())
+      afterRender(MM) {
+        var rM;
+        this.turn.look(MM);
+        const iM = this.api.getTargetedBlock();
+        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === iM ? null : iM.position), this.outline.show(null !== (rM = this.aimed) && void 0 !== rM ? rM : this.nextCell.get())
       }
-      isHolding(GG) {
-        return null !== this.altMs && GG - this.altMs <= 500
+      isHolding(MM) {
+        return null !== this.altMs && MM - this.altMs <= 500
       }
-      attemptAltAction(GG) {
-        const bG = performance.now();
-        if (this.isHolding(bG) || (this.pressFilled = !1), this.altMs = bG, this.pressFilled) return "preventPlacement";
-        const ZG = this.findAimed(GG);
-        if (null !== ZG) return this.foreseen.set(ZG.join(), bG), this.lastFilled = ZG, this.aimed = null, this.showNext(), this.turn.filled(ZG, bG), this.pressFilled = !0, "preventPlacement";
+      attemptAltAction(MM) {
+        const rM = performance.now();
+        if (this.isHolding(rM) || (this.pressFilled = !1), this.altMs = rM, this.pressFilled) return "preventPlacement";
+        const iM = this.findAimed(MM);
+        if (null !== iM) return this.foreseen.set(iM.join(), rM), this.lastFilled = iM, this.aimed = null, this.showNext(), this.turn.filled(iM, rM), this.pressFilled = !0, "preventPlacement";
         {
-          const ZG = this.nextCell.get();
-          null !== ZG && this.turn.tapped(GG, ZG, bG)
+          const iM = this.nextCell.get();
+          null !== iM && this.turn.tapped(MM, iM, rM)
         }
       }
       holdPressOnEntity() {
-        const GG = performance.now();
-        this.pressFilled && this.isHolding(GG) && (this.altMs = GG)
+        const MM = performance.now();
+        this.pressFilled && this.isHolding(MM) && (this.altMs = MM)
       }
-      findAimed(GG) {
-        return function(GG, bG, ZG, wG, SG, LG, yG) {
-          const kG = GG.YZG(bG),
-            UG = null === kG || null === GG.blockNameToBlockId(kG.name, !0) ? null : kG.name,
-            YG = GG.getPositionView(bG),
+      findAimed(MM) {
+        return function(MM, rM, iM, OM, SM, jM, aM) {
+          const PM = MM.TrM(rM),
+            nM = null === PM || null === MM.blockNameToBlockId(PM.name, !0) ? null : PM.name,
+            QM = MM.getPositionView(rM),
             {
-              origin: VG,
-              direction: pG
-            } = GG.getActionRay(),
-            fG = HZ(wG, {
-              from: VG,
-              dir: pG,
-              reach: Gw(GG, bG),
-              solid: ZG
-            }, (bG => {
-              const ZG = [wG[bG], wG[bG + 1], wG[bG + 2]];
-              return !ab(SG[wG[bG + 3]], GG.getBlockId(...ZG)) && !yG.has(ZG.join()) && GG.isBlockInLoadedChunk(...ZG) && !BZ(ZG, YG)
-            }), (GG => null === UG || UG === lb(SG[wG[GG + 3]])), (GG => null !== LG && wG[GG] === LG[0] && wG[GG + 1] === LG[1] && wG[GG + 2] === LG[2]));
-          return -1 === fG ? null : [wG[fG], wG[fG + 1], wG[fG + 2]]
-        }(this.api, this.localPlayerId, GG, this.ghostCells, this.blockIds, this.nextCell.get(), this.foreseen)
+              origin: zM,
+              direction: LM
+            } = MM.getActionRay(),
+            mM = qi(OM, {
+              from: zM,
+              dir: LM,
+              reach: OO(MM, rM),
+              solid: iM
+            }, (rM => {
+              const iM = [OM[rM], OM[rM + 1], OM[rM + 2]];
+              return !sr(SM[OM[rM + 3]], MM.getBlockId(...iM)) && !aM.has(iM.join()) && MM.isBlockInLoadedChunk(...iM) && !iO(iM, QM)
+            }), (MM => null === nM || nM === kr(SM[OM[MM + 3]])), (MM => null !== jM && OM[MM] === jM[0] && OM[MM + 1] === jM[1] && OM[MM + 2] === jM[2]));
+          return -1 === mM ? null : [OM[mM], OM[mM + 1], OM[mM + 2]]
+        }(this.api, this.localPlayerId, MM, this.ghostCells, this.blockIds, this.nextCell.get(), this.foreseen)
       }
       endPress() {
         this.altMs = null, this.pressFilled = !1
       }
-      filledCell(GG) {
+      filledCell(MM) {
         const {
-          ghostCells: bG
-        } = this, [ZG, wG, SG] = jb(this.palette[bG[GG + 3]]);
-        return [bG[GG], bG[GG + 1], bG[GG + 2], ZG, wG, SG]
+          ghostCells: rM
+        } = this, [iM, OM, SM] = Zr(this.palette[rM[MM + 3]]);
+        return [rM[MM], rM[MM + 1], rM[MM + 2], iM, OM, SM]
       }
     }
 
-    function Lw(GG, bG) {
-      return bG % 4 !== 3
+    function nO(MM, rM) {
+      return rM % 4 !== 3
     }
-    class yw {
-      constructor(GG) {
-        this.api = GG, this.sent = !1
+    class QO {
+      constructor(MM) {
+        this.api = MM, this.sent = !1
       }
-      Tp() {
-        this.sent || kG.e.get("loadingOverlayVisible") || (this.sent = !0, this.api.sendCommand("plotsentered"))
+      bL() {
+        this.sent || PM.d.get("loadingOverlayVisible") || (this.sent = !0, this.api.sendCommand("plotsentered"))
       }
     }
-    var kw = ZG(4255),
-      Uw = ZG(39565);
+    var zO = iM(4577),
+      LO = iM(40215);
 
-    function Yw(GG, bG, ZG) {
-      const wG = [255 * GG, 255 * bG, 255 * ZG],
-        [SG, LG, yG] = wG.map((GG => GG + .4 * (255 - GG)));
+    function mO(MM, rM, iM) {
+      const OM = [255 * MM, 255 * rM, 255 * iM],
+        [SM, jM, aM] = OM.map((MM => MM + .4 * (255 - MM)));
       return {
         texture: "square_particle",
-        rp: 48,
-        minLifeTime: .3 / Uw.d,
-        maxLifeTime: .55 / Uw.d,
+        vL: 48,
+        minLifeTime: .3 / LO.e,
+        maxLifeTime: .55 / LO.e,
         minSize: .07,
         maxSize: .14,
         minEmitPower: 1,
         maxEmitPower: 1,
         emitRate: 0,
-        gravity: [0, -14 * Uw.d * Uw.d, 0],
+        gravity: [0, -14 * LO.e * LO.e, 0],
         colorGradients: [{
           timeFraction: 0,
-          minColor: [...wG, 1],
-          maxColor: [SG, LG, yG, 1]
+          minColor: [...OM, 1],
+          maxColor: [SM, jM, aM, 1]
         }, {
           timeFraction: 1,
-          minColor: [...wG, 0],
-          maxColor: [SG, LG, yG, 0]
+          minColor: [...OM, 0],
+          maxColor: [SM, jM, aM, 0]
         }],
-        blendMode: kw.c.Standard
+        blendMode: zO.d.Standard
       }
     }
-    const Vw = {
+    const HO = {
       texture: "glint",
       mipmaps: !1,
-      rp: 96,
-      minLifeTime: .5 / Uw.d,
-      maxLifeTime: .9 / Uw.d,
+      vL: 96,
+      minLifeTime: .5 / LO.e,
+      maxLifeTime: .9 / LO.e,
       minSize: .15,
       maxSize: .3,
       minEmitPower: 1,
       maxEmitPower: 1,
       emitRate: 0,
-      gravity: [0, 2 * Uw.d * Uw.d, 0],
+      gravity: [0, 2 * LO.e * LO.e, 0],
       colorGradients: [{
         timeFraction: 0,
         minColor: [255, 224, 97, 1],
@@ -2612,112 +2614,112 @@ export const modules = {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }],
-      blendMode: kw.c.OneOne
+      blendMode: zO.d.OneOne
     };
-    class pw {
-      constructor(GG, bG) {
-        this.api = GG, this.localPlayerId = bG, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
+    class hO {
+      constructor(MM, rM) {
+        this.api = MM, this.localPlayerId = rM, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
       }
-      filled(GG) {
+      filled(MM) {
         if (this.api.particlesEnabled())
-          for (const [bG, ZG, wG, SG, LG, yG] of GG.slice(0, 3)) {
-            const GG = `${SG},${LG},${yG}`;
-            let kG = this.chips.get(GG);
-            void 0 === kG && (kG = this.api.createParticles(Yw(SG, LG, yG), {
-              pos: [bG + .5, ZG + .5, wG + .5]
-            }), this.chips.set(GG, kG));
-            for (let bG = 0; bG < 8; bG++) this.setPoint(bG, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
-            kG.emitPoints([bG + .5, ZG + .5, wG + .5], this.points, 8)
+          for (const [rM, iM, OM, SM, jM, aM] of MM.slice(0, 3)) {
+            const MM = `${SM},${jM},${aM}`;
+            let PM = this.chips.get(MM);
+            void 0 === PM && (PM = this.api.createParticles(mO(SM, jM, aM), {
+              pos: [rM + .5, iM + .5, OM + .5]
+            }), this.chips.set(MM, PM));
+            for (let rM = 0; rM < 8; rM++) this.setPoint(rM, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
+            PM.emitPoints([rM + .5, iM + .5, OM + .5], this.points, 8)
           }
       }
-      layerDone(GG) {
+      layerDone(MM) {
         this.api.playSound(this.localPlayerId, "magicAccent2", .7, 1.1);
-        const bG = GG.length / 3;
-        if (0 === bG || !this.api.particlesEnabled()) return;
-        const ZG = Math.min(bG, 48),
-          [wG, SG, LG] = [GG[0] + .5, GG[1] + 1, GG[2] + .5];
-        let yG = 0;
-        for (let kG = 0; kG < ZG; kG++) {
-          const UG = 3 * Math.floor(kG * bG / ZG);
-          for (let bG = 0; bG < 2; bG++) this.setPoint(yG++, GG[UG] + Math.random() - wG, GG[UG + 1] + 1 - SG, GG[UG + 2] + Math.random() - LG, .6 + .8 * Math.random())
+        const rM = MM.length / 3;
+        if (0 === rM || !this.api.particlesEnabled()) return;
+        const iM = Math.min(rM, 48),
+          [OM, SM, jM] = [MM[0] + .5, MM[1] + 1, MM[2] + .5];
+        let aM = 0;
+        for (let PM = 0; PM < iM; PM++) {
+          const nM = 3 * Math.floor(PM * rM / iM);
+          for (let rM = 0; rM < 2; rM++) this.setPoint(aM++, MM[nM] + Math.random() - OM, MM[nM + 1] + 1 - SM, MM[nM + 2] + Math.random() - jM, .6 + .8 * Math.random())
         }
-        this.sparkles ??= this.api.createParticles(Vw, {
-          pos: [wG, SG, LG]
-        }), this.sparkles.emitPoints([wG, SG, LG], this.points, yG)
+        this.sparkles ??= this.api.createParticles(HO, {
+          pos: [OM, SM, jM]
+        }), this.sparkles.emitPoints([OM, SM, jM], this.points, aM)
       }
       dispose() {
-        var GG;
-        for (const bG of this.chips.values()) bG.stop();
-        this.chips.clear(), null === (GG = this.sparkles) || void 0 === GG || GG.stop(), this.sparkles = null
+        var MM;
+        for (const rM of this.chips.values()) rM.stop();
+        this.chips.clear(), null === (MM = this.sparkles) || void 0 === MM || MM.stop(), this.sparkles = null
       }
-      setPoint(GG, bG, ZG, wG, SG) {
-        const LG = 4 * GG;
-        this.points[LG] = bG, this.points[LG + 1] = ZG, this.points[LG + 2] = wG, this.points[LG + 3] = SG
+      setPoint(MM, rM, iM, OM, SM) {
+        const jM = 4 * MM;
+        this.points[jM] = rM, this.points[jM + 1] = iM, this.points[jM + 2] = OM, this.points[jM + 3] = SM
       }
     }
-    const fw = "SpecialAction1",
-      Qw = "KeyY",
-      Kw = "KeyX";
+    const JO = "SpecialAction1",
+      dO = "KeyY",
+      yO = "KeyX";
 
-    function hw(GG) {
+    function lO(MM) {
       let {
-        placement: bG
-      } = GG;
-      const ZG = (0, UG.j)(kZ, bG.getView()),
+        placement: rM
+      } = MM;
+      const iM = (0, nM.e)(ni, rM.getView()),
         {
-          t: wG
-        } = (0, VG.w)(),
+          t: OM
+        } = (0, zM.A)(),
         {
-          isTouchScreen: SG
-        } = (0, kG.o)(["isTouchScreen"]),
-        yG = (0, LG.useContext)(oG),
-        pG = null !== ZG,
-        hG = pG && !ZG.blocked && !ZG.waiting;
-      if ((0, rG.c)((GG => pG && !GG.repeat && !(0, zG.isTypingInInput)() && !(0, QG.t)() && !SG), (GG => {
-          const ZG = function(GG, bG, ZG) {
-            if (GG === Kw) return bG.stop;
-            if (GG === Qw) return ZG ? bG.build : Jw;
-            return YG.B[fw].includes(GG) ? bG.rotate : null
-          }(GG.code, bG, hG);
-          null !== ZG && (GG.stopPropagation(), ZG())
-        })), !pG) return null;
-      let dG = SG ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
-      return ZG.blocked ? dG = "plotsGame:placementOffPlot" : ZG.toClear > 0 ? dG = "plotsGame:placementClear" : "placeSpot" !== yG.hint && "placeBuild" !== yG.hint || (dG = null), (0, lG.jsx)(KG.d, {
+          isTouchScreen: SM
+        } = (0, PM.m)(["isTouchScreen"]),
+        aM = (0, jM.useContext)(CM),
+        LM = null !== iM,
+        hM = LM && !iM.blocked && !iM.waiting;
+      if ((0, EM.d)((MM => LM && !MM.repeat && !(0, UM.isTypingInInput)() && !(0, HM.r)() && !SM), (MM => {
+          const iM = function(MM, rM, iM) {
+            if (MM === yO) return rM.stop;
+            if (MM === dO) return iM ? rM.build : UO;
+            return QM.v[JO].includes(MM) ? rM.rotate : null
+          }(MM.code, rM, hM);
+          null !== iM && (MM.stopPropagation(), iM())
+        })), !LM) return null;
+      let dM = SM ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
+      return iM.blocked ? dM = "plotsGame:placementOffPlot" : iM.toClear > 0 ? dM = "plotsGame:placementClear" : "placeSpot" !== aM.hint && "placeBuild" !== aM.hint || (dM = null), (0, kM.jsx)(JM.i, {
         placement: "bottom",
-        children: (0, lG.jsxs)("div", {
-          ref: yG.placementCardRef,
+        children: (0, kM.jsxs)("div", {
+          ref: aM.placementCardRef,
           className: "PlotsPlacementCard",
-          children: [(0, lG.jsx)("div", {
+          children: [(0, kM.jsx)("div", {
             className: "PlotsPlacementCardTitle SmallTextBold",
-            children: wG(WG(ZG.id).displayName.translationKey)
-          }), null !== dG && (0, lG.jsx)("div", {
-            className: fG()("PlotsPlacementCardHint SmallTextLight", {
-              Nudge: ZG.refusals > 0
+            children: OM(gM(iM.id).displayName.translationKey)
+          }), null !== dM && (0, kM.jsx)("div", {
+            className: mM()("PlotsPlacementCardHint SmallTextLight", {
+              Nudge: iM.refusals > 0
             }),
-            children: wG(dG)
-          }, ZG.refusals), (0, lG.jsxs)("div", {
+            children: OM(dM)
+          }, iM.refusals), (0, kM.jsxs)("div", {
             className: "PlotsPlacementCardButtons",
-            children: [(0, lG.jsxs)(iZ.d, {
-              onClick: bG.rotate,
-              children: [(0, lG.jsx)(dw, {
-                noaAction: fw
-              }), wG("plotsGame:placementRotate")]
-            }), (0, lG.jsxs)(iZ.C, {
-              onClick: bG.stop,
-              children: [(0, lG.jsx)(dw, {
-                keyCode: Kw
-              }), wG("general:cancel")]
-            }), (0, lG.jsx)("span", {
-              ref: yG.buildRef,
-              className: fG()("PlotsPlacementBuild", {
-                Pulse: "placeBuild" === yG.hint && hG && SG
+            children: [(0, kM.jsxs)(ti.e, {
+              onClick: rM.rotate,
+              children: [(0, kM.jsx)(EO, {
+                noaAction: JO
+              }), OM("plotsGame:placementRotate")]
+            }), (0, kM.jsxs)(ti.J, {
+              onClick: rM.stop,
+              children: [(0, kM.jsx)(EO, {
+                keyCode: yO
+              }), OM("general:cancel")]
+            }), (0, kM.jsx)("span", {
+              ref: aM.buildRef,
+              className: mM()("PlotsPlacementBuild", {
+                Pulse: "placeBuild" === aM.hint && hM && SM
               }),
-              children: (0, lG.jsxs)(iZ.k, {
-                disabled: !hG,
-                onClick: bG.build,
-                children: [(0, lG.jsx)(dw, {
-                  keyCode: Qw
-                }), wG("plotsGame:placementBuild")]
+              children: (0, kM.jsxs)(ti.p, {
+                disabled: !hM,
+                onClick: rM.build,
+                children: [(0, kM.jsx)(EO, {
+                  keyCode: dO
+                }), OM("plotsGame:placementBuild")]
               })
             })]
           })]
@@ -2725,324 +2727,353 @@ export const modules = {
       })
     }
 
-    function dw(GG) {
-      return (0, lG.jsx)(JG.e, {
+    function EO(MM) {
+      return (0, kM.jsx)(lM.d, {
         className: "PlotsPlacementKey",
-        ...GG
+        ...MM
       })
     }
 
-    function Jw() {}
-    var rw = ZG(2359),
-      zw = ZG(37039),
-      Ew = ZG(1945),
-      ow = ZG(1222);
-    const Xw = {
+    function UO() {}
+    var GO = iM(2488),
+      CO = iM(37629),
+      eO = iM(2084),
+      bO = iM(1270);
+    const wO = {
       own: "crown",
       shared: "user-group",
       other: "house"
     };
 
-    function uw(GG) {
+    function tO(MM) {
       let {
-        hud: bG
-      } = GG;
-      const ZG = (0, UG.j)(Gb, bG.getPlot()),
-        [wG, SG] = (0, LG.useState)(null),
-        yG = (0, zw.i)(wG);
-      if ("none" === ZG[0]) return null;
-      const [, kG, YG, VG, pG, QG] = ZG;
-      return (0, lG.jsx)("div", {
-        className: fG()("PlotsPlotBannerContainer", {
-          Below: yG
+        hud: rM
+      } = MM;
+      const iM = (0, nM.e)(rr, rM.getPlot()),
+        [OM, SM] = (0, jM.useState)(null),
+        aM = (0, CO.h)(OM);
+      if ("none" === iM[0]) return null;
+      const [, PM, QM, zM, LM, HM] = iM;
+      return (0, kM.jsx)("div", {
+        className: mM()("PlotsPlotBannerContainer", {
+          Below: aM
         }),
-        children: (0, lG.jsx)(iw, {
-          plotX: kG,
-          plotZ: YG,
-          ownerName: VG,
-          ownerId: pG,
-          relation: QG,
-          plaqueRef: SG
-        }, `${kG},${YG}`)
+        children: (0, kM.jsx)(gO, {
+          plotX: PM,
+          plotZ: QM,
+          ownerName: zM,
+          ownerId: LM,
+          relation: HM,
+          plaqueRef: SM
+        }, `${PM},${QM}`)
       })
     }
 
-    function iw(GG) {
-      var bG, ZG;
+    function gO(MM) {
+      var rM, iM;
       let {
-        plotX: wG,
-        plotZ: SG,
-        ownerName: LG,
-        ownerId: yG,
-        relation: kG,
-        plaqueRef: UG
-      } = GG;
+        plotX: OM,
+        plotZ: SM,
+        ownerName: jM,
+        ownerId: aM,
+        relation: PM,
+        plaqueRef: nM
+      } = MM;
       const {
-        t: YG
-      } = (0, VG.w)(), pG = (0, Ew.f)("hiddenPlayerNames"), QG = (0, Ew.f)("players"), KG = null === yG ? null : null !== (bG = null === (ZG = QG.byId[yG]) || void 0 === ZG ? void 0 : ZG.cosmetics) && void 0 !== bG ? bG : null, dG = YG("plotsGame:plotBannerCoords", {
-        x: wG,
-        z: SG
-      }), JG = "own" === kG || null !== LG;
-      return (0, lG.jsxs)("div", {
-        ref: UG,
-        className: fG()("PlotsPlotBanner", {
-          Own: "own" === kG,
-          Shared: "shared" === kG
+        t: QM
+      } = (0, zM.A)(), LM = (0, eO.j)("hiddenPlayerNames"), HM = (0, eO.j)("players"), hM = null === aM ? null : null !== (rM = null === (iM = HM.byId[aM]) || void 0 === iM ? void 0 : iM.cosmetics) && void 0 !== rM ? rM : null, JM = QM("plotsGame:plotBannerCoords", {
+        x: OM,
+        z: SM
+      }), yM = "own" === PM || null !== jM;
+      return (0, kM.jsxs)("div", {
+        ref: nM,
+        className: mM()("PlotsPlotBanner", {
+          Own: "own" === PM,
+          Shared: "shared" === PM
         }),
         role: "status",
-        children: [(0, lG.jsxs)("span", {
-          className: fG()("PlotsPlotBannerSeal", {
-            Face: null !== KG
+        children: [(0, kM.jsxs)("span", {
+          className: mM()("PlotsPlotBannerSeal", {
+            Face: null !== hM
           }),
-          children: [null !== KG && (0, lG.jsx)(rw.c, {
-            cosmetics: KG
-          }), null === KG && (0, lG.jsx)(hG.c, {
-            name: Xw[kG]
+          children: [null !== hM && (0, kM.jsx)(GO.c, {
+            cosmetics: hM
+          }), null === hM && (0, kM.jsx)(dM.b, {
+            name: wO[PM]
           })]
-        }), (0, lG.jsxs)("div", {
+        }), (0, kM.jsxs)("div", {
           className: "PlotsPlotBannerText",
-          children: [(0, lG.jsxs)("div", {
+          children: [(0, kM.jsxs)("div", {
             className: "PlotsPlotBannerTitle SmallTextBold",
-            children: ["own" === kG && YG("plotsGame:plotBannerYours"), "own" !== kG && null !== LG && YG("plotsGame:plotBannerOwner", {
-              name: (0, ow.g)(LG, pG)
-            }), !JG && dG]
-          }), JG && (0, lG.jsxs)("div", {
+            children: ["own" === PM && QM("plotsGame:plotBannerYours"), "own" !== PM && null !== jM && QM("plotsGame:plotBannerOwner", {
+              name: (0, bO.d)(jM, LM)
+            }), !yM && JM]
+          }), yM && (0, kM.jsxs)("div", {
             className: "PlotsPlotBannerCoords SmallTextLight",
-            children: [dG, "shared" === kG && (0, lG.jsx)("span", {
+            children: [JM, "shared" === PM && (0, kM.jsx)("span", {
               className: "PlotsPlotBannerBadge",
-              children: YG("plotsGame:plotBannerShared")
+              children: QM("plotsGame:plotBannerShared")
             })]
           })]
         })]
       })
     }
-    const Cw = function(GG, bG, ZG, wG) {
+    const uO = function(MM, rM, iM, OM) {
       let {
-        localPlayerId: SG
-      } = wG;
-      const kG = new wb;
-      let UG = null,
-        YG = null,
-        VG = null,
-        pG = null,
-        fG = null,
-        QG = null;
-      const KG = [];
+        localPlayerId: SM
+      } = OM;
+      const PM = new Sr;
+      let nM = null,
+        QM = null,
+        zM = null,
+        LM = null,
+        mM = null,
+        HM = null;
+      const hM = [];
       return {
-        onCreate: GG => {
-          UG = new pw(GG, SG);
-          const bG = new BG;
-          YG = new Sw(GG, SG, UG, bG), VG = new YZ(GG, SG), pG = new cG(GG, VG), fG = new uZ(GG, SG, YG.nextCell), QG = new yw(GG), KG.push((0, yG.q)((0, LG.createElement)(EZ, {
-            hud: kG,
-            guide: fG,
-            tracker: bG,
-            placement: VG
-          }, (0, LG.createElement)(uw, {
-            hud: kG
-          }), (0, LG.createElement)(PG, {
-            journal: pG
-          }), (0, LG.createElement)(hZ, {
-            placement: VG
-          }), (0, LG.createElement)(hw, {
-            placement: VG
+        onCreate: MM => {
+          nM = new hO(MM, SM);
+          const rM = new Mr;
+          QM = new PO(MM, SM, nM, rM), zM = new zi(MM, SM), LM = new DM(MM, zM), mM = new wi(MM, SM, QM.nextCell), HM = new QO(MM), hM.push((0, aM.C)((0, jM.createElement)(Ci, {
+            hud: PM,
+            guide: mM,
+            tracker: rM,
+            placement: zM
+          }, (0, jM.createElement)(tO, {
+            hud: PM
+          }), (0, jM.createElement)(oM, {
+            journal: LM
+          }), (0, jM.createElement)(yi, {
+            placement: zM
+          }), (0, jM.createElement)(lO, {
+            placement: zM
           })), {
-            content: (0, LG.createElement)(TZ, {
-              journal: pG,
-              hud: kG,
-              guide: fG
+            content: (0, jM.createElement)(Ki, {
+              journal: LM,
+              hud: PM,
+              guide: mM
             })
           }))
         },
-        Tp: () => {
-          QG.Tp(), YG.Tp(), VG.Tp(), pG.Tp()
+        bL: () => {
+          HM.bL(), QM.bL(), zM.bL(), LM.bL()
         },
-        onPlayerAttemptAltAction: (GG, bG, ZG, wG, SG, LG) => {
-          if (null !== LG) return void YG.holdPressOnEntity();
-          const yG = void 0 === bG ? null : [bG, ZG, wG];
-          return YG.attemptAltAction(yG)
+        onPlayerAttemptAltAction: (MM, rM, iM, OM, SM, jM) => {
+          if (null !== jM) return void QM.holdPressOnEntity();
+          const aM = void 0 === rM ? null : [rM, iM, OM];
+          return QM.attemptAltAction(aM)
         },
         onPlayerClickUp: () => {
-          YG.endPress()
+          QM.endPress()
         },
-        onAfterRender: (GG, bG) => {
-          VG.afterRender(bG), YG.afterRender(bG), fG.afterRender(bG)
+        onAfterRender: (MM, rM) => {
+          zM.afterRender(rM), QM.afterRender(rM), mM.afterRender(rM)
         },
         onClose: () => {
-          for (const GG of KG) GG();
-          UG.dispose(), YG.dispose(), VG.dispose(), UG = null, YG = null, VG = null, pG = null, fG = null, QG = null
+          for (const MM of hM) MM();
+          nM.dispose(), QM.dispose(), zM.dispose(), nM = null, QM = null, zM = null, LM = null, mM = null, HM = null
         },
-        onReceivedMessageFromServer: (GG, bG) => {
-          if ("plotsPlot" === GG) kG.receivePlot(bG);
-          else if ("plotsBlueprint" === GG) {
-            const GG = bG;
-            YG.hK(GG), VG.hK(GG)
-          } else "plotsJournal" === GG ? pG.hK(bG) : "plotsJournalOpen" === GG ? pG.openFromServer(bG) : "plotsPreviewEnd" === GG ? VG.endFromServer() : "plotsGuide" === GG ? kG.receiveGuide(bG) : "plotsGuideDone" === GG && kG.receiveGuideDone()
+        onReceivedMessageFromServer: (MM, rM) => {
+          if ("plotsPlot" === MM) PM.receivePlot(rM);
+          else if ("plotsBlueprint" === MM) {
+            const MM = rM;
+            QM.GL(MM), zM.GL(MM)
+          } else "plotsJournal" === MM ? LM.GL(rM) : "plotsJournalOpen" === MM ? LM.openFromServer(rM) : "plotsPreviewEnd" === MM ? zM.endFromServer() : "plotsGuide" === MM ? PM.receiveGuide(rM) : "plotsGuideDone" === MM && PM.receiveGuideDone()
         }
       }
     }
   },
-  38909: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => kG
+  39499: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => PM
     });
-    var wG = ZG(38901);
-    const SG = 5,
-      LG = [0, 0, 0],
-      yG = {
+    var OM = iM(39491);
+    const SM = 5,
+      jM = [0, 0, 0],
+      aM = {
         x: 0,
         y: 0,
         distSq: 0
       };
 
-    function kG(GG, bG, ZG, kG, UG, YG) {
-      let [VG, pG, fG] = kG;
-      const QG = (VG + .5 - ZG[0]) ** 2 + (pG - ZG[1]) ** 2 + (fG + .5 - ZG[2]) ** 2;
-      let KG = null;
-      QG <= YG ** 2 && (LG[0] = VG + .5, LG[1] = pG + UG, LG[2] = fG + .5, KG = bG.projectWorldPosToViewport(LG));
-      const hG = null !== KG && KG.x > -SG && KG.x < 100 + SG && KG.y > -SG && KG.y < 100 + SG;
-      return (0, wG.g)(GG, !hG), hG ? (yG.x = KG.x, yG.y = KG.y, yG.distSq = QG, yG) : null
+    function PM(MM, rM, iM, PM, nM, QM) {
+      let [zM, LM, mM] = PM;
+      const HM = (zM + .5 - iM[0]) ** 2 + (LM - iM[1]) ** 2 + (mM + .5 - iM[2]) ** 2;
+      let hM = null;
+      HM <= QM ** 2 && (jM[0] = zM + .5, jM[1] = LM + nM, jM[2] = mM + .5, hM = rM.projectWorldPosToViewport(jM));
+      const JM = null !== hM && hM.x > -SM && hM.x < 100 + SM && hM.y > -SM && hM.y < 100 + SM;
+      return (0, OM.e)(MM, !JM), JM ? (aM.x = hM.x, aM.y = hM.y, aM.distSq = HM, aM) : null
     }
   },
-  39565: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => wG,
-      f: () => LG
+  40215: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM,
+      i: () => jM
     });
-    const wG = 1 / .6,
-      SG = {
+    const OM = 1 / .6,
+      SM = {
         kind: "smokePuff"
       };
-    class LG {
-      constructor(GG, bG, ZG) {
-        this.style = GG, this.rp = bG, this.half = ZG, this.particles = null, this.lastFrame = -1
+    class jM {
+      constructor(MM, rM, iM) {
+        this.style = MM, this.vL = rM, this.half = iM, this.particles = null, this.lastFrame = -1
       }
-      emit(GG, bG, ZG) {
-        let LG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return ZG !== this.lastFrame && (this.lastFrame = ZG, this.particles || (this.particles = GG.createParticles(function(GG, bG) {
+      emit(MM, rM, iM) {
+        let jM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return iM !== this.lastFrame && (this.lastFrame = iM, this.particles || (this.particles = MM.createParticles(function(MM, rM) {
           const [
-            [ZG, LG, yG],
-            [kG, UG, YG]
-          ] = GG.colours;
+            [iM, jM, aM],
+            [PM, nM, QM]
+          ] = MM.colours;
           return {
-            texture: GG.soft ? SG : "square_particle",
-            rp: bG,
-            minLifeTime: GG.life[0] / wG,
-            maxLifeTime: GG.life[1] / wG,
-            minEmitPower: GG.power[0] * wG,
-            maxEmitPower: GG.power[1] * wG,
-            minSize: GG.size[0],
-            maxSize: GG.size[1],
+            texture: MM.soft ? SM : "square_particle",
+            vL: rM,
+            minLifeTime: MM.life[0] / OM,
+            maxLifeTime: MM.life[1] / OM,
+            minEmitPower: MM.power[0] * OM,
+            maxEmitPower: MM.power[1] * OM,
+            minSize: MM.size[0],
+            maxSize: MM.size[1],
             emitRate: 0,
-            gravity: [0, GG.lift * wG * wG, 0],
-            dir1: [-GG.spread, 1, -GG.spread],
-            dir2: [GG.spread, 1, GG.spread],
+            gravity: [0, MM.lift * OM * OM, 0],
+            dir1: [-MM.spread, 1, -MM.spread],
+            dir2: [MM.spread, 1, MM.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [ZG, LG, yG, GG.alpha],
-              maxColor: [kG, UG, YG, GG.alpha]
+              minColor: [iM, jM, aM, MM.alpha],
+              maxColor: [PM, nM, QM, MM.alpha]
             }, {
               timeFraction: 1,
-              minColor: [ZG, LG, yG, 0],
-              maxColor: [kG, UG, YG, 0]
+              minColor: [iM, jM, aM, 0],
+              maxColor: [PM, nM, QM, 0]
             }],
-            blendMode: GG.blendMode
+            blendMode: MM.blendMode
           }
-        }(this.style, this.rp), {
-          pos: bG,
+        }(this.style, this.vL), {
+          pos: rM,
           half: this.half
-        })), this.particles.moveTo(bG, this.half), this.particles.emit(LG), !0)
+        })), this.particles.moveTo(rM, this.half), this.particles.emit(jM), !0)
       }
       dispose() {
-        var GG;
-        null === (GG = this.particles) || void 0 === GG || GG.stop(), this.particles = null
+        var MM;
+        null === (MM = this.particles) || void 0 === MM || MM.stop(), this.particles = null
       }
     }
   },
-  38901: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => yG,
-      g: () => LG
+  34831: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => aM,
+      e: () => PM,
+      f: () => nM
     });
-    const wG = new WeakMap;
+    const OM = new Map,
+      SM = [];
 
-    function SG(GG) {
-      let bG = wG.get(GG);
-      return bG || (bG = {
-        hidden: GG.hidden,
+    function jM() {
+      for (const MM of SM) MM()
+    }
+
+    function aM(MM) {
+      var rM;
+      return OM.set(MM, (null !== (rM = OM.get(MM)) && void 0 !== rM ? rM : 0) + 1), jM(), () => {
+        const rM = OM.get(MM) - 1;
+        0 === rM ? OM.delete(MM) : OM.set(MM, rM), jM()
+      }
+    }
+
+    function PM() {
+      return [...OM.keys()]
+    }
+
+    function nM(MM) {
+      SM.push(MM)
+    }
+  },
+  39491: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => aM,
+      e: () => jM
+    });
+    const OM = new WeakMap;
+
+    function SM(MM) {
+      let rM = OM.get(MM);
+      return rM || (rM = {
+        hidden: MM.hidden,
         x: NaN,
         y: NaN
-      }, wG.set(GG, bG)), bG
+      }, OM.set(MM, rM)), rM
     }
 
-    function LG(GG, bG) {
-      const ZG = SG(GG);
-      ZG.hidden !== bG && (ZG.hidden = bG, GG.hidden = bG)
+    function jM(MM, rM) {
+      const iM = SM(MM);
+      iM.hidden !== rM && (iM.hidden = rM, MM.hidden = rM)
     }
 
-    function yG(GG, bG, ZG) {
-      const wG = SG(GG);
-      wG.x === bG && wG.y === ZG || (wG.x = bG, wG.y = ZG, GG.style.translate = `${bG}vw ${ZG}vh`)
+    function aM(MM, rM, iM) {
+      const OM = SM(MM);
+      OM.x === rM && OM.y === iM || (OM.x = rM, OM.y = iM, MM.style.translate = `${rM}vw ${iM}vh`)
     }
   },
-  37245: (GG, bG, ZG) => {
-    function wG(GG, bG) {
-      return null === GG || null === bG ? GG === bG : GG[0] === bG[0] && GG[1] === bG[1] && GG[2] === bG[2]
+  37833: (MM, rM, iM) => {
+    function OM(MM, rM) {
+      return null === MM || null === rM ? MM === rM : MM[0] === rM[0] && MM[1] === rM[1] && MM[2] === rM[2]
     }
 
-    function SG(GG) {
-      return [GG[0] + .5, GG[1] + .5, GG[2] + .5]
+    function SM(MM) {
+      return [MM[0] + .5, MM[1] + .5, MM[2] + .5]
     }
-    ZG.d(bG, {
-      b: () => SG,
-      f: () => wG
+    iM.d(rM, {
+      c: () => SM,
+      d: () => OM
     })
   },
-  37287: (GG, bG, ZG) => {
-    function wG(GG) {
-      return GG.includes("Leaf Bed")
+  37858: (MM, rM, iM) => {
+    function OM(MM) {
+      return MM.includes("Leaf Bed")
     }
 
-    function SG(GG) {
-      return / Bed(?: Head)?(?:\||$)/.test(GG) && !wG(GG)
+    function SM(MM) {
+      return / Bed(?: Head)?(?:\||$)/.test(MM) && !OM(MM)
     }
 
-    function LG(GG) {
-      return GG.includes(" Strongbed")
+    function jM(MM) {
+      return MM.includes(" Strongbed")
     }
 
-    function yG(GG) {
-      return wG(GG) || SG(GG) || LG(GG)
+    function aM(MM) {
+      return OM(MM) || SM(MM) || jM(MM)
     }
-    ZG.d(bG, {
-      d: () => yG,
-      f: () => wG,
-      j: () => LG,
-      n: () => SG
+    iM.d(rM, {
+      e: () => aM,
+      g: () => OM,
+      h: () => jM,
+      l: () => SM
     })
   },
-  37283: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => YG
+  37855: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => QM
     });
-    var wG = ZG(37287),
-      SG = ZG(9249);
-    const LG = [],
-      yG = [],
-      kG = [],
-      UG = [];
-    for (const VG of Object.keys(SG.t))(0, wG.f)(VG) ? LG.push(VG) : (0, wG.n)(VG) && yG.push(VG), (0, wG.j)(VG) && kG.push(VG), (VG.includes(" Bed Head") || VG.includes(" Strongbed Head")) && UG.push(VG);
-    const YG = {
-      leafBeds: LG,
-      woolBeds: yG,
-      strongBeds: kG,
-      beds: [...LG, ...yG, ...kG],
-      bedHeads: UG,
+    var OM = iM(37858),
+      SM = iM(9816);
+    const jM = [],
+      aM = [],
+      PM = [],
+      nM = [];
+    for (const zM of Object.keys(SM.p))(0, OM.g)(zM) ? jM.push(zM) : (0, OM.l)(zM) && aM.push(zM), (0, OM.h)(zM) && PM.push(zM), (zM.includes(" Bed Head") || zM.includes(" Strongbed Head")) && nM.push(zM);
+    const QM = {
+      leafBeds: jM,
+      woolBeds: aM,
+      strongBeds: PM,
+      beds: [...jM, ...aM, ...PM],
+      bedHeads: nM,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  38966: GG => {
-    GG.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYUlEQVR4nGNgIBP8R8NYwX+GDVNRMQOm4v8MC9qxYwZUxf//b+T4//8A+///51khGMTeyIGp8Nz0gv8MDoFgGsbeUB2BXeHESHcUjFNhR4Dj/zp3OzAGsbEphHgIOyYNAACzzGY5JF2GbAAAAABJRU5ErkJggg=="
+  39558: MM => {
+    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYUlEQVR4nGNgIBP8R8NYwX+GDVNRMQOm4v8MC9qxYwZUxf//b+T4//8A+///51khGMTeyIGp8Nz0gv8MDoFgGsbeUB2BXeHESHcUjFNhR4Dj/zp3OzAGsbEphHgIOyYNAACzzGY5JF2GbAAAAABJRU5ErkJggg=="
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

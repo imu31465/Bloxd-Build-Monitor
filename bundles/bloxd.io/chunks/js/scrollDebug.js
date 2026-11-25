@@ -1,25 +1,25 @@
-export const id = 53;
-export const ids = [53];
+export const id = 59;
+export const ids = [59];
 export const modules = {
-  4717: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      MAX_LINES: () => kG,
-      MAX_SETTLE_MS: () => yG,
-      SETTLE_MS: () => LG,
-      ScrollDebugLog: () => EG,
-      changeText: () => dG,
-      elementText: () => rG,
-      fullStateText: () => hG,
-      startScrollDebug: () => oG,
-      touchedText: () => zG
+  5083: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      MAX_LINES: () => PM,
+      MAX_SETTLE_MS: () => aM,
+      SETTLE_MS: () => jM,
+      ScrollDebugLog: () => UM,
+      changeText: () => dM,
+      elementText: () => lM,
+      fullStateText: () => JM,
+      startScrollDebug: () => GM,
+      touchedText: () => EM
     });
-    var wG = ZG(17),
-      SG = ZG(2801);
-    const LG = 300,
-      yG = 2e3,
-      kG = 40,
-      UG = 2,
-      YG = {
+    var OM = iM(19),
+      SM = iM(3122);
+    const jM = 300,
+      aM = 2e3,
+      PM = 40,
+      nM = 2,
+      QM = {
         vvOffsetTop: "vv offsetTop",
         vvOffsetLeft: "vv offsetLeft",
         vvPageTop: "vv pageTop",
@@ -31,142 +31,142 @@ export const modules = {
         scrollHeight: "scrollHeight",
         innerHeight: "innerHeight"
       },
-      VG = Object.keys(YG),
-      pG = new Set(["scrollHeight", "innerHeight"]);
+      zM = Object.keys(QM),
+      LM = new Set(["scrollHeight", "innerHeight"]);
 
-    function fG(GG, bG) {
-      const ZG = 10 ** bG;
-      return Math.round(GG * ZG) / ZG
+    function mM(MM, rM) {
+      const iM = 10 ** rM;
+      return Math.round(MM * iM) / iM
     }
 
-    function QG() {
-      const GG = window.visualViewport;
+    function HM() {
+      const MM = window.visualViewport;
       return {
-        vvOffsetTop: fG(GG.offsetTop, 1),
-        vvOffsetLeft: fG(GG.offsetLeft, 1),
-        vvPageTop: fG(GG.pageTop, 1),
-        vvPageLeft: fG(GG.pageLeft, 1),
-        vvHeight: fG(GG.height, 1),
-        vvScale: fG(GG.scale, 3),
-        scrollX: fG(window.scrollX, 1),
-        scrollY: fG(window.scrollY, 1),
+        vvOffsetTop: mM(MM.offsetTop, 1),
+        vvOffsetLeft: mM(MM.offsetLeft, 1),
+        vvPageTop: mM(MM.pageTop, 1),
+        vvPageLeft: mM(MM.pageLeft, 1),
+        vvHeight: mM(MM.height, 1),
+        vvScale: mM(MM.scale, 3),
+        scrollX: mM(window.scrollX, 1),
+        scrollY: mM(window.scrollY, 1),
         scrollHeight: document.documentElement.scrollHeight,
         innerHeight: window.innerHeight
       }
     }
 
-    function KG(GG, bG) {
-      return `${YG[GG]} ${bG}`
+    function hM(MM, rM) {
+      return `${QM[MM]} ${rM}`
     }
 
-    function hG(GG) {
-      return VG.map((bG => KG(bG, String(GG[bG])))).join(", ")
+    function JM(MM) {
+      return zM.map((rM => hM(rM, String(MM[rM])))).join(", ")
     }
 
-    function dG(GG, bG, ZG, wG) {
-      return VG.flatMap((SG => {
-        const LG = GG[SG] !== bG[SG],
-          yG = ZG[SG] < Math.min(GG[SG], bG[SG]) || wG[SG] > Math.max(GG[SG], bG[SG]);
-        if (!LG && !yG && !pG.has(SG)) return [];
-        return [KG(SG, `${LG?`${GG[SG]} -> ${bG[SG]}`:String(bG[SG])}${yG?` (via ${ZG[SG]}..${wG[SG]})`:""}`)]
+    function dM(MM, rM, iM, OM) {
+      return zM.flatMap((SM => {
+        const jM = MM[SM] !== rM[SM],
+          aM = iM[SM] < Math.min(MM[SM], rM[SM]) || OM[SM] > Math.max(MM[SM], rM[SM]);
+        if (!jM && !aM && !LM.has(SM)) return [];
+        return [hM(SM, `${jM?`${MM[SM]} -> ${rM[SM]}`:String(rM[SM])}${aM?` (via ${iM[SM]}..${OM[SM]})`:""}`)]
       })).join(", ")
     }
 
-    function JG(GG, bG, ZG) {
-      return Object.fromEntries(VG.map((wG => [wG, ZG(GG[wG], bG[wG])])))
+    function yM(MM, rM, iM) {
+      return Object.fromEntries(zM.map((OM => [OM, iM(MM[OM], rM[OM])])))
     }
 
-    function rG(GG) {
-      var bG;
-      const ZG = (null !== (bG = GG.getAttribute("class")) && void 0 !== bG ? bG : "").trim().replace(/\s+/g, ".").slice(0, 40);
-      return `${GG.tagName.toLowerCase()}${ZG?`.${ZG}`:""}`
+    function lM(MM) {
+      var rM;
+      const iM = (null !== (rM = MM.getAttribute("class")) && void 0 !== rM ? rM : "").trim().replace(/\s+/g, ".").slice(0, 40);
+      return `${MM.tagName.toLowerCase()}${iM?`.${iM}`:""}`
     }
 
-    function zG(GG, bG) {
-      const ZG = [];
-      for (let wG = GG.parentElement; null !== wG && ZG.length < UG; wG = wG.parentElement) {
-        const GG = bG(wG);
-        "auto" !== GG && ZG.push(`${GG} on ${rG(wG)}`)
+    function EM(MM, rM) {
+      const iM = [];
+      for (let OM = MM.parentElement; null !== OM && iM.length < nM; OM = OM.parentElement) {
+        const MM = rM(OM);
+        "auto" !== MM && iM.push(`${MM} on ${lM(OM)}`)
       }
-      return `${rG(GG)} touch-action ${bG(GG)}${ZG.length>0?` (${ZG.join(", ")})`:""}`
+      return `${lM(MM)} touch-action ${rM(MM)}${iM.length>0?` (${iM.join(", ")})`:""}`
     }
-    class EG {
-      constructor(GG) {
-        this.deps = GG, this.last = void 0, this.low = void 0, this.high = void 0, this.innerScrolled = null, this.burstInGame = !1, this.burstTouch = null, this.lines = 0, this.capped = !1, this.burstStartMs = 0, this.lastEventMs = 0, this.timer = null, this.settle = () => {
-          const GG = this.deps.now(),
-            bG = GG - this.lastEventMs;
-          if (bG < LG && GG - this.burstStartMs < yG) return void(this.timer = setTimeout(this.settle, LG - bG));
+    class UM {
+      constructor(MM) {
+        this.deps = MM, this.last = void 0, this.low = void 0, this.high = void 0, this.innerScrolled = null, this.burstInGame = !1, this.burstTouch = null, this.lines = 0, this.capped = !1, this.burstStartMs = 0, this.lastEventMs = 0, this.timer = null, this.settle = () => {
+          const MM = this.deps.now(),
+            rM = MM - this.lastEventMs;
+          if (rM < jM && MM - this.burstStartMs < aM) return void(this.timer = setTimeout(this.settle, jM - rM));
           this.timer = null;
-          const ZG = this.deps.read(),
+          const iM = this.deps.read(),
             {
-              last: wG,
-              innerScrolled: SG,
-              burstTouch: UG
+              last: OM,
+              innerScrolled: SM,
+              burstTouch: nM
             } = this,
-            YG = JG(this.low, ZG, Math.min),
-            pG = JG(this.high, ZG, Math.max);
-          if (this.last = ZG, this.low = ZG, this.high = ZG, this.innerScrolled = null, QG = YG, KG = pG, VG.every((GG => QG[GG] === KG[GG])) || !this.burstInGame || !this.deps.inGame()) return;
-          var QG, KG;
-          if (this.lines === kG) return this.capped = !0, void this.deps.log(`further changes unlogged: ${kG} lines logged`);
+            QM = yM(this.low, iM, Math.min),
+            LM = yM(this.high, iM, Math.max);
+          if (this.last = iM, this.low = iM, this.high = iM, this.innerScrolled = null, HM = QM, hM = LM, zM.every((MM => HM[MM] === hM[MM])) || !this.burstInGame || !this.deps.inGame()) return;
+          var HM, hM;
+          if (this.lines === PM) return this.capped = !0, void this.deps.log(`further changes unlogged: ${PM} lines logged`);
           this.lines++;
-          const hG = null === UG ? "no touch yet" : `touch on ${UG.text}, ${Math.round(this.burstStartMs-UG.atMs)} ms before`,
-            zG = null === SG ? "" : `; inner scroll ${rG(SG)} scrollTop ${fG(SG.scrollTop,1)}`;
-          this.deps.log(`moved over ${Math.round(GG-this.burstStartMs)} ms; ${hG}${zG}: ${dG(wG,ZG,YG,pG)}`)
-        }, this.last = GG.read(), this.low = this.last, this.high = this.last, GG.log(`start: ${hG(this.last)}`)
+          const JM = null === nM ? "no touch yet" : `touch on ${nM.text}, ${Math.round(this.burstStartMs-nM.atMs)} ms before`,
+            EM = null === SM ? "" : `; inner scroll ${lM(SM)} scrollTop ${mM(SM.scrollTop,1)}`;
+          this.deps.log(`moved over ${Math.round(MM-this.burstStartMs)} ms; ${JM}${EM}: ${dM(OM,iM,QM,LM)}`)
+        }, this.last = MM.read(), this.low = this.last, this.high = this.last, MM.log(`start: ${JM(this.last)}`)
       }
       moved() {
-        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         if (this.capped) return;
-        const bG = null === this.timer ? this.deps.lastTouch() : this.burstTouch;
-        if (null !== GG && (null === bG || !GG.contains(bG.target))) return;
-        const ZG = this.deps.now();
-        this.lastEventMs = ZG, null === this.timer && (this.burstStartMs = ZG, this.burstInGame = this.deps.inGame(), this.burstTouch = bG, this.timer = setTimeout(this.settle, LG));
-        const wG = this.deps.read();
-        this.low = JG(this.low, wG, Math.min), this.high = JG(this.high, wG, Math.max), this.innerScrolled = null !== GG && void 0 !== GG ? GG : this.innerScrolled
+        const rM = null === this.timer ? this.deps.lastTouch() : this.burstTouch;
+        if (null !== MM && (null === rM || !MM.contains(rM.target))) return;
+        const iM = this.deps.now();
+        this.lastEventMs = iM, null === this.timer && (this.burstStartMs = iM, this.burstInGame = this.deps.inGame(), this.burstTouch = rM, this.timer = setTimeout(this.settle, jM));
+        const OM = this.deps.read();
+        this.low = yM(this.low, OM, Math.min), this.high = yM(this.high, OM, Math.max), this.innerScrolled = null !== MM && void 0 !== MM ? MM : this.innerScrolled
       }
     }
 
-    function oG() {
-      let GG = null;
-      const bG = new EG({
-        read: QG,
-        inGame: () => "inGame" === wG.e.get("gameState"),
-        lastTouch: () => GG,
-        log: GG => {
-          (0, SG.j)("scroll", GG)
+    function GM() {
+      let MM = null;
+      const rM = new UM({
+        read: HM,
+        inGame: () => "inGame" === OM.d.get("gameState"),
+        lastTouch: () => MM,
+        log: MM => {
+          (0, SM.k)("scroll", MM)
         },
         now: () => performance.now()
       });
-      document.addEventListener("touchstart", (bG => {
-        if (bG.target instanceof Element) {
-          const ZG = zG(bG.target, (GG => getComputedStyle(GG).touchAction));
-          GG = {
-            target: bG.target,
-            text: ZG,
+      document.addEventListener("touchstart", (rM => {
+        if (rM.target instanceof Element) {
+          const iM = EM(rM.target, (MM => getComputedStyle(MM).touchAction));
+          MM = {
+            target: rM.target,
+            text: iM,
             atMs: performance.now()
           }
         }
       }), {
         capture: !0,
         passive: !0
-      }), document.addEventListener("scroll", (GG => {
-        bG.moved(GG.target instanceof Element ? GG.target : null)
+      }), document.addEventListener("scroll", (MM => {
+        rM.moved(MM.target instanceof Element ? MM.target : null)
       }), {
         capture: !0,
         passive: !0
       });
-      const ZG = () => {
-        bG.moved()
+      const iM = () => {
+        rM.moved()
       };
-      window.addEventListener("resize", ZG, {
+      window.addEventListener("resize", iM, {
         passive: !0
-      }), window.visualViewport.addEventListener("scroll", ZG, {
+      }), window.visualViewport.addEventListener("scroll", iM, {
         passive: !0
-      }), window.visualViewport.addEventListener("resize", ZG, {
+      }), window.visualViewport.addEventListener("resize", iM, {
         passive: !0
       })
     }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

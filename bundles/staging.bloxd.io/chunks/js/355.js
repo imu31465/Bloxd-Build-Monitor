@@ -1,77 +1,9 @@
 export const id = 355;
 export const ids = [355];
 export const modules = {
-  42954: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => yG
-    });
-    var wG = ZG(40237);
-    const SG = "clipPlaneFragment",
-      LG = "#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6)\nif (false) {}\n#endif\n#ifdef CLIPPLANE\nelse if (fragmentInputs.fClipDistance>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE2\nelse if (fragmentInputs.fClipDistance2>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE3\nelse if (fragmentInputs.fClipDistance3>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE4\nelse if (fragmentInputs.fClipDistance4>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE5\nelse if (fragmentInputs.fClipDistance5>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE6\nelse if (fragmentInputs.fClipDistance6>0.0)\n{discard;}\n#endif\n";
-    wG.e.IncludesShadersStoreWGSL[SG] || (wG.e.IncludesShadersStoreWGSL[SG] = LG);
-    const yG = {
-      name: SG,
-      shader: LG
-    }
-  },
-  42940: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => yG
-    });
-    var wG = ZG(40237);
-    const SG = "clipPlaneFragmentDeclaration",
-      LG = "#ifdef CLIPPLANE\nvarying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nvarying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nvarying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nvarying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nvarying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nvarying fClipDistance6: f32;\n#endif\n";
-    wG.e.IncludesShadersStoreWGSL[SG] || (wG.e.IncludesShadersStoreWGSL[SG] = LG);
-    const yG = {
-      name: SG,
-      shader: LG
-    }
-  },
-  42987: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => yG
-    });
-    var wG = ZG(40237);
-    const SG = "fogFragment",
-      LG = "#ifdef FOG\nvar fog: f32=CalcFogFactor();\n#ifdef PBR\nfog=toLinearSpace(fog);\n#endif\ncolor= vec4f(mix(uniforms.vFogColor,color.rgb,fog),color.a);\n#endif\n";
-    wG.e.IncludesShadersStoreWGSL[SG] || (wG.e.IncludesShadersStoreWGSL[SG] = LG);
-    const yG = {
-      name: SG,
-      shader: LG
-    }
-  },
-  42949: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => yG
-    });
-    var wG = ZG(40237);
-    const SG = "fogFragmentDeclaration",
-      LG = "#ifdef FOG\n#define FOGMODE_NONE 0.\n#define FOGMODE_EXP 1.\n#define FOGMODE_EXP2 2.\n#define FOGMODE_LINEAR 3.\nconst E=2.71828;uniform vFogInfos: vec4f;uniform vFogColor: vec3f;varying vFogDistance: vec3f;fn CalcFogFactor()->f32\n{var fogCoeff: f32=1.0;var fogStart: f32=uniforms.vFogInfos.y;var fogEnd: f32=uniforms.vFogInfos.z;var fogDensity: f32=uniforms.vFogInfos.w;var fogDistance: f32=length(fragmentInputs.vFogDistance);if (FOGMODE_LINEAR==uniforms.vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);}\nelse if (FOGMODE_EXP==uniforms.vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDensity);}\nelse if (FOGMODE_EXP2==uniforms.vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDistance*fogDensity*fogDensity);}\nreturn clamp(fogCoeff,0.0,1.0);}\n#endif\n";
-    wG.e.IncludesShadersStoreWGSL[SG] || (wG.e.IncludesShadersStoreWGSL[SG] = LG);
-    const yG = {
-      name: SG,
-      shader: LG
-    }
-  },
-  43013: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      colorPixelShaderWGSL: () => pG
-    });
-    var wG = ZG(40237),
-      SG = ZG(42940),
-      LG = ZG(42949),
-      yG = ZG(42954),
-      kG = ZG(42987);
-    const UG = "colorPixelShader",
-      YG = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\n#define VERTEXCOLOR\nvarying vColor: vec4f;\n#else\nuniform color: vec4f;\n#endif\n#include<clipPlaneFragmentDeclaration>\n#include<fogFragmentDeclaration>\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\n#include<clipPlaneFragment>\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nfragmentOutputs.color=input.vColor;\n#else\nfragmentOutputs.color=uniforms.color;\n#endif\n#include<fogFragment>(color,fragmentOutputs.color)\n#define CUSTOM_FRAGMENT_MAIN_END\n}";
-    wG.e.ShadersStoreWGSL[UG] || (wG.e.ShadersStoreWGSL[UG] = YG);
-    const VG = [SG.d, LG.c, yG.b, kG.c];
-    for (const fG of VG) wG.e.IncludesShadersStoreWGSL[fG.name] || (wG.e.IncludesShadersStoreWGSL[fG.name] = fG.shader);
-    const pG = {
-      name: UG,
-      shader: YG
-    }
+  42577: MM => {
+    MM.exports = JSON.parse('{"texture":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAQCAYAAADwMZRfAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAAC1SURBVDiNzZOxCoMwEIZ/D8GCg4uLbyHBJ3N36t4nC5K36NLFIVCXuw5tQmLFJqVDvyUQuO/yHxcgATUNoqZBPt0d0o9Kjs4i2fTqzpZBNWE+66xaLwi7Z0XZ4iQh9LXtLyVJ/GRPHNv9cGTFoZrQj0qojsuSFsYVsuVIyJZhLvPT0erOP09wessZZg+jRDNpdSdOZKpG9kR7EkcJALfh6mP161KYqhFZIQXuSXHL3W7rkvW5HjQxU8c6cuw0AAAAAElFTkSuQmCC","alphaCutoff":0.05000000074505806,"vertices":[0.45817,0.35065,0.7085,0.2909,0.27546,0.5555,0.45817,0.53486,0.5835,0.2909,0.45968,0.4305,0.41634,0.31197,-0.1327,0.24904,0.38717,0.0204,0.41634,0.49619,-0.2577,0.24904,0.57139,-0.1046,0.58365,0.68566,0.6343,0.75092,0.61047,0.4812,0.58365,0.86987,0.5093,0.75092,0.79469,0.3562,0.54183,0.08747,0.1728,0.7091,0.16266,0.3258,0.54183,0.27169,0.0477,0.7091,0.34688,0.2008,0.20724,0.2632,0.7679,0.79279,0,0.2321,0.20724,1,0.2679,0.79279,0.7368,-0.2679,0.79276,0.2632,0.7679,0.20721,0,0.2321,0.79276,1,0.2679,0.20721,0.7368,-0.2679],"uvs":[0.172685,0.755123,0.065441,0.755123,0.172685,0.873191,0.065441,0.873191,0.172685,0.755123,0.065441,0.755123,0.172685,0.873191,0.065441,0.873191,0.172685,0.755123,0.065441,0.755123,0.172685,0.873191,0.065441,0.873191,0.172685,0.755123,0.065441,0.755123,0.172685,0.873191,0.065441,0.873191,0.937422,0.005078,0.536058,0.005078,0.937422,0.494865,0.536058,0.494865,0.937422,0.505108,0.536058,0.505108,0.937422,0.998047,0.536058,0.998047],"indices":[0,1,2,1,3,2,4,5,6,5,7,6,8,9,10,9,11,10,12,13,14,13,15,14,16,17,18,17,19,18,20,21,22,21,23,22],"shades":[0.85,0.85,0.7,0.7,0.7,0.7,0.85,0.85,0.7,0.7,0.85,0.85]}')
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

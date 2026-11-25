@@ -1,38 +1,38 @@
-export const id = 64;
-export const ids = [64, 117, 118, 138];
+export const id = 75;
+export const ids = [75, 129, 130, 151];
 export const modules = {
-  40021: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => wG,
-      i: () => SG
+  40765: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => OM,
+      f: () => SM
     });
-    const wG = "The world isn't loaded, so no blocks can be seen.",
-      SG = "The world isn't loaded, so nothing in it can be seen."
+    const OM = "The world isn't loaded, so no blocks can be seen.",
+      SM = "The world isn't loaded, so nothing in it can be seen."
   },
-  4706: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => VG
+  5062: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => zM
     });
-    var wG = ZG(17),
-      SG = ZG(19),
-      LG = ZG(1251),
-      yG = ZG(2801);
-    const kG = 3e4,
-      UG = 1e3;
+    var OM = iM(19),
+      SM = iM(22),
+      jM = iM(1313),
+      aM = iM(3122);
+    const PM = 3e4,
+      nM = 1e3;
 
-    function YG() {
-      return "visible" === document.visibilityState && "inGame" === wG.e.get("gameState") && (0, LG.A)()
+    function QM() {
+      return "visible" === document.visibilityState && "inGame" === OM.d.get("gameState") && (0, jM.B)()
     }
 
-    function VG(GG, bG) {
-      (0, yG.n)() || function(GG, bG, ZG) {
-        let wG = 0;
-        const SG = setInterval((() => {
-          bG() && (wG += UG, wG >= GG && (clearInterval(SG), ZG()))
-        }), UG)
-      }(kG, YG, (() => {
-        bG().then((() => {
-          GG(`saved for the player after ${kG/1e3} s of play`), (0, yG.z)(), SG.l.xh("chat", {
+    function zM(MM, rM) {
+      (0, aM.q)() || function(MM, rM, iM) {
+        let OM = 0;
+        const SM = setInterval((() => {
+          rM() && (OM += nM, OM >= MM && (clearInterval(SM), iM()))
+        }), nM)
+      }(PM, QM, (() => {
+        rM().then((() => {
+          MM(`saved for the player after ${PM/1e3} s of play`), (0, aM.F)(), SM.i.Tz("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -44,320 +44,320 @@ export const modules = {
       }))
     }
   },
-  34341: (GG, bG, ZG) => {
-    function wG(GG, bG) {
-      return 0 === GG.length ? 0 : GG[Math.min(GG.length - 1, Math.floor(bG * GG.length))]
+  34896: (MM, rM, iM) => {
+    function OM(MM, rM) {
+      return 0 === MM.length ? 0 : MM[Math.min(MM.length - 1, Math.floor(rM * MM.length))]
     }
 
-    function SG(GG) {
-      return GG.toFixed(1)
+    function SM(MM) {
+      return MM.toFixed(1)
     }
-    ZG.d(bG, {
-      e: () => SG,
-      i: () => wG
+    iM.d(rM, {
+      e: () => SM,
+      f: () => OM
     })
   },
-  38347: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => YG,
-      c: () => VG,
-      f: () => EG,
-      i: () => zG,
-      k: () => rG
+  38922: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => QM,
+      e: () => zM,
+      i: () => UM,
+      l: () => EM,
+      n: () => lM
     });
-    var wG = ZG(4706),
-      SG = ZG(34341),
-      LG = ZG(2801);
-    const yG = 20,
-      kG = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "rp", "jobMs"];
+    var OM = iM(5062),
+      SM = iM(34896),
+      jM = iM(3122);
+    const aM = 20,
+      PM = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "vL", "jobMs"];
 
-    function UG(GG) {
-      return [...GG].sort(((GG, bG) => GG - bG))
+    function nM(MM) {
+      return [...MM].sort(((MM, rM) => MM - rM))
     }
-    const YG = [];
+    const QM = [];
 
-    function VG(GG, bG, ZG) {
-      return `${GG},${bG},${ZG}`
+    function zM(MM, rM, iM) {
+      return `${MM},${rM},${iM}`
     }
-    class pG {
+    class LM {
       constructor() {
         this.pending = new Map, this.jobs = new Map, this.edits = [], this.nextEdit = 0, this.reported = 0, this.windowStart = performance.now(), this.frames = 0, this.lastFrameAt = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
-      edit(GG, bG) {
-        var ZG;
-        const wG = null !== (ZG = this.pending.get(GG)) && void 0 !== ZG ? ZG : [];
-        wG.push({
-          editAt: bG,
+      edit(MM, rM) {
+        var iM;
+        const OM = null !== (iM = this.pending.get(MM)) && void 0 !== iM ? iM : [];
+        OM.push({
+          editAt: rM,
           meshJobId: 0
-        }), this.pending.set(GG, wG)
+        }), this.pending.set(MM, OM)
       }
-      frame(GG) {
-        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, GG - this.lastFrameAt)), this.lastFrameAt = GG, this.frames++, GG - this.windowStart >= 1e3 && this.summarise(GG)
+      frame(MM) {
+        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, MM - this.lastFrameAt)), this.lastFrameAt = MM, this.frames++, MM - this.windowStart >= 1e3 && this.summarise(MM)
       }
-      sent(GG, bG, ZG, wG, SG, LG, yG) {
-        this.jobs.set(bG, {
-          sentAt: yG,
+      sent(MM, rM, iM, OM, SM, jM, aM) {
+        this.jobs.set(rM, {
+          sentAt: aM,
           receivedAt: 0,
-          ahead: ZG,
-          inFlight: wG,
-          rp: SG,
+          ahead: iM,
+          inFlight: OM,
+          vL: SM,
           jobMs: 0
-        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, ZG), this.maxCapacity = Math.max(this.maxCapacity, SG);
-        for (const UG of null !== (kG = this.pending.get(GG)) && void 0 !== kG ? kG : []) {
-          var kG;
-          LG.includes(UG.meshJobId) || (UG.meshJobId = bG)
+        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, iM), this.maxCapacity = Math.max(this.maxCapacity, SM);
+        for (const nM of null !== (PM = this.pending.get(MM)) && void 0 !== PM ? PM : []) {
+          var PM;
+          jM.includes(nM.meshJobId) || (nM.meshJobId = rM)
         }
       }
-      received(GG, bG, ZG) {
-        const wG = this.jobs.get(GG);
-        void 0 !== wG && (this.roundTrips.push(ZG - wG.sentAt), wG.receivedAt = ZG, wG.jobMs = bG)
+      received(MM, rM, iM) {
+        const OM = this.jobs.get(MM);
+        void 0 !== OM && (this.roundTrips.push(iM - OM.sentAt), OM.receivedAt = iM, OM.jobMs = rM)
       }
-      failed(GG) {
-        this.jobs.delete(GG)
+      failed(MM) {
+        this.jobs.delete(MM)
       }
-      reassign(GG, bG, ZG) {
-        this.jobs.delete(bG);
-        for (const SG of null !== (wG = this.pending.get(GG)) && void 0 !== wG ? wG : []) {
-          var wG;
-          SG.meshJobId === bG && (SG.meshJobId = ZG)
+      reassign(MM, rM, iM) {
+        this.jobs.delete(rM);
+        for (const SM of null !== (OM = this.pending.get(MM)) && void 0 !== OM ? OM : []) {
+          var OM;
+          SM.meshJobId === rM && (SM.meshJobId = iM)
         }
       }
-      applied(GG, bG, ZG) {
-        const wG = this.jobs.get(bG);
-        this.jobs.delete(bG), void 0 !== wG && this.show(GG, wG, ZG, (GG => GG.meshJobId === bG))
+      applied(MM, rM, iM) {
+        const OM = this.jobs.get(rM);
+        this.jobs.delete(rM), void 0 !== OM && this.show(MM, OM, iM, (MM => MM.meshJobId === rM))
       }
-      emptied(GG, bG) {
-        const ZG = {
-          sentAt: bG,
-          receivedAt: bG,
+      emptied(MM, rM) {
+        const iM = {
+          sentAt: rM,
+          receivedAt: rM,
           ahead: 0,
           inFlight: 0,
-          rp: 0,
+          vL: 0,
           jobMs: 0
         };
-        this.show(GG, ZG, bG, (() => !0))
+        this.show(MM, iM, rM, (() => !0))
       }
-      show(GG, bG, ZG, wG) {
-        const SG = this.pending.get(GG);
-        if (!SG) return;
-        const LG = SG.filter((SG => !wG(SG) || (this.record(GG, SG.editAt, bG, ZG), !1)));
-        LG.length > 0 ? this.pending.set(GG, LG) : this.pending.delete(GG)
+      show(MM, rM, iM, OM) {
+        const SM = this.pending.get(MM);
+        if (!SM) return;
+        const jM = SM.filter((SM => !OM(SM) || (this.record(MM, SM.editAt, rM, iM), !1)));
+        jM.length > 0 ? this.pending.set(MM, jM) : this.pending.delete(MM)
       }
-      NQ(GG) {
-        this.reported += GG, this === QG && this.reported >= yG && null !== KG && (KG(), KG = null)
+      aL(MM) {
+        this.reported += MM, this === HM && this.reported >= aM && null !== hM && (hM(), hM = null)
       }
-      record(GG, bG, ZG, wG) {
-        const SG = {
-          totalMs: wG - bG,
-          slotMs: ZG.sentAt - bG,
-          workerMs: ZG.receivedAt - ZG.sentAt,
-          applyMs: wG - ZG.receivedAt,
-          ahead: ZG.ahead,
-          inFlight: ZG.inFlight,
-          rp: ZG.rp,
-          jobMs: ZG.jobMs
+      record(MM, rM, iM, OM) {
+        const SM = {
+          totalMs: OM - rM,
+          slotMs: iM.sentAt - rM,
+          workerMs: iM.receivedAt - iM.sentAt,
+          applyMs: OM - iM.receivedAt,
+          ahead: iM.ahead,
+          inFlight: iM.inFlight,
+          vL: iM.vL,
+          jobMs: iM.jobMs
         };
-        if (this.edits[this.nextEdit] = SG, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(SG.totalMs), this.NQ(1), SG.totalMs < 100 || ++this.outliers > 5) return;
-        const yG = GG => Math.round(GG);
-        (0, LG.j)("remesh", `slow edit (${GG}) shown in ${yG(SG.totalMs)} ms: slot ${yG(SG.slotMs)}, worker ${yG(SG.workerMs)} (${SG.ahead} ahead, ${SG.inFlight}/${SG.rp} in flight; job ${yG(SG.jobMs)}), apply ${yG(SG.applyMs)}`)
+        if (this.edits[this.nextEdit] = SM, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(SM.totalMs), this.aL(1), SM.totalMs < 100 || ++this.outliers > 5) return;
+        const aM = MM => Math.round(MM);
+        (0, jM.k)("remesh", `slow edit (${MM}) shown in ${aM(SM.totalMs)} ms: slot ${aM(SM.slotMs)}, worker ${aM(SM.workerMs)} (${SM.ahead} ahead, ${SM.inFlight}/${SM.vL} in flight; job ${aM(SM.jobMs)}), apply ${aM(SM.applyMs)}`)
       }
-      summarise(GG) {
-        const bG = (GG - this.windowStart) / 1e3;
-        for (const [ZG, wG] of this.pending) {
-          const bG = wG.filter((bG => GG - bG.editAt <= 1e4));
-          this.gaveUp += wG.length - bG.length, this.NQ(wG.length - bG.length), bG.length > 0 ? this.pending.set(ZG, bG) : this.pending.delete(ZG)
+      summarise(MM) {
+        const rM = (MM - this.windowStart) / 1e3;
+        for (const [iM, OM] of this.pending) {
+          const rM = OM.filter((rM => MM - rM.editAt <= 1e4));
+          this.gaveUp += OM.length - rM.length, this.aL(OM.length - rM.length), rM.length > 0 ? this.pending.set(iM, rM) : this.pending.delete(iM)
         }
-        for (const [ZG, wG] of this.jobs) GG - wG.sentAt > (wG.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(ZG);
+        for (const [iM, OM] of this.jobs) MM - OM.sentAt > (OM.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(iM);
         if (this.jobsSent > 0 || this.roundTrips.length > 0 || this.windowEdits.length > 0 || this.gaveUp > 0) {
-          const GG = UG(this.roundTrips),
-            ZG = UG(this.windowEdits),
-            wG = Math.max(0, this.outliers - 5);
-          (0, LG.j)("remesh", `${Math.round(this.frames/bG)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,SG.i)(GG,.5))} max ${Math.round((0,SG.i)(GG,1))} ms | ${ZG.length} edits shown, p50 ${Math.round((0,SG.i)(ZG,.5))} max ${Math.round((0,SG.i)(ZG,1))} ms${wG>0?`, ${wG} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
+          const MM = nM(this.roundTrips),
+            iM = nM(this.windowEdits),
+            OM = Math.max(0, this.outliers - 5);
+          (0, jM.k)("remesh", `${Math.round(this.frames/rM)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,SM.f)(MM,.5))} max ${Math.round((0,SM.f)(MM,1))} ms | ${iM.length} edits shown, p50 ${Math.round((0,SM.f)(iM,.5))} max ${Math.round((0,SM.f)(iM,1))} ms${OM>0?`, ${OM} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
         }
-        this.windowStart = GG, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
+        this.windowStart = MM, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
       stats() {
-        const GG = kG.map((GG => {
-          const bG = UG(this.edits.map((bG => bG[GG])));
-          return `${GG}: p50 ${Math.round((0,SG.i)(bG,.5))} p90 ${Math.round((0,SG.i)(bG,.9))} max ${Math.round((0,SG.i)(bG,1))}`
+        const MM = PM.map((MM => {
+          const rM = nM(this.edits.map((rM => rM[MM])));
+          return `${MM}: p50 ${Math.round((0,SM.f)(rM,.5))} p90 ${Math.round((0,SM.f)(rM,.9))} max ${Math.round((0,SM.f)(rM,1))}`
         }));
-        return [`${this.edits.length} edits`, ...GG].join("\n")
+        return [`${this.edits.length} edits`, ...MM].join("\n")
       }
       dump() {
-        const GG = this.edits.map((GG => kG.map((bG => Math.round(10 * GG[bG]) / 10)).join(",")));
-        return [this.stats(), kG.join(","), ...GG].join("\n")
+        const MM = this.edits.map((MM => PM.map((rM => Math.round(10 * MM[rM]) / 10)).join(",")));
+        return [this.stats(), PM.join(","), ...MM].join("\n")
       }
     }
-    class fG {
-      constructor(GG, bG) {
-        this.log = GG, this.wf = bG
+    class mM {
+      constructor(MM, rM) {
+        this.log = MM, this.Cm = rM
       }
-      edit(GG, bG, ZG) {
-        const [wG, SG, LG] = this.wf.Op.hwG(GG, bG, ZG), yG = this.wf.Op.Qh.Kh(wG, SG, LG);
-        yG && yG.ph && this.log.edit(VG(wG, SG, LG), performance.now())
+      edit(MM, rM, iM) {
+        const [OM, SM, jM] = this.Cm.uL.rOM(MM, rM, iM), aM = this.Cm.uL.yJ.lJ(OM, SM, jM);
+        aM && aM.JJ && this.log.edit(zM(OM, SM, jM), performance.now())
       }
-      sent(GG, bG, ZG, wG, SG) {
-        this.log.sent(VG(GG.i, GG.j, GG.k), bG, ZG, wG, SG, YG, performance.now())
+      sent(MM, rM, iM, OM, SM) {
+        this.log.sent(zM(MM.i, MM.j, MM.k), rM, iM, OM, SM, QM, performance.now())
       }
-      received(GG) {
-        this.log.received(GG.meshJobId, GG.jobMs, performance.now())
+      received(MM) {
+        this.log.received(MM.meshJobId, MM.jobMs, performance.now())
       }
-      failed(GG) {
-        this.log.failed(GG)
+      failed(MM) {
+        this.log.failed(MM)
       }
-      applied(GG, bG) {
-        this.log.applied(VG(GG.i, GG.j, GG.k), bG, performance.now())
+      applied(MM, rM) {
+        this.log.applied(zM(MM.i, MM.j, MM.k), rM, performance.now())
       }
     }
-    let QG = null,
-      KG = null,
-      hG = !1,
-      dG = null;
+    let HM = null,
+      hM = null,
+      JM = !1,
+      dM = null;
 
-    function JG() {
-      return new Promise((GG => {
-        null !== QG && QG.reported >= yG ? GG() : KG = GG
+    function yM() {
+      return new Promise((MM => {
+        null !== HM && HM.reported >= aM ? MM() : hM = MM
       }))
     }
 
-    function rG() {
-      const GG = new pG;
-      return QG = GG, (0, LG.i)("remesh", (() => GG.dump())), (0, LG.c)("remeshStats", (() => {
-        console.log(GG.stats())
-      })), hG || (hG = !0, (0, wG.e)((GG => {
-        (0, LG.j)("remesh", GG)
-      }), JG)), GG
+    function lM() {
+      const MM = new LM;
+      return HM = MM, (0, jM.i)("remesh", (() => MM.dump())), (0, jM.b)("remeshStats", (() => {
+        console.log(MM.stats())
+      })), JM || (JM = !0, (0, OM.c)((MM => {
+        (0, jM.k)("remesh", MM)
+      }), yM)), MM
     }
 
-    function zG(GG) {
-      const bG = rG();
-      dG = new fG(bG, GG), GG.QE.meshProbe = dG, GG.on("beforeRender", (() => {
-        bG.frame(performance.now())
+    function EM(MM) {
+      const rM = lM();
+      dM = new mM(rM, MM), MM.kU.meshProbe = dM, MM.on("beforeRender", (() => {
+        rM.frame(performance.now())
       }))
     }
 
-    function EG(GG, bG, ZG) {
-      var wG;
-      null === (wG = dG) || void 0 === wG || wG.edit(GG, bG, ZG)
+    function UM(MM, rM, iM) {
+      var OM;
+      null === (OM = dM) || void 0 === OM || OM.edit(MM, rM, iM)
     }
   },
-  34368: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => wG
+  34926: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM
     });
-    const wG = new Set(["chunkBorders"])
+    const OM = new Set(["chunkBorders"])
   },
-  34519: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => yG,
-      e: () => SG,
-      f: () => VG
+  35055: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => aM,
+      e: () => SM,
+      i: () => zM
     });
-    var wG = ZG(1509);
+    var OM = iM(1645);
 
-    function SG(GG) {
-      var bG;
+    function SM(MM) {
+      var rM;
       return {
-        ...yG.store,
-        yaw: yG.store.yaw + (null !== (bG = wG.d[GG].previewYaw) && void 0 !== bG ? bG : 0)
+        ...aM.store,
+        yaw: aM.store.yaw + (null !== (rM = OM.d[MM].previewYaw) && void 0 !== rM ? rM : 0)
       }
     }
-    const LG = {
+    const jM = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      yG = {
-        player: LG,
+      aM = {
+        player: jM,
         store: {
-          ...LG,
+          ...jM,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function kG(GG, bG) {
-      GG instanceof Promise ? GG.then(bG).catch((GG => {
-        console.error("Couldn't open the preview", GG)
-      })) : bG(GG)
+    function PM(MM, rM) {
+      MM instanceof Promise ? MM.then(rM).catch((MM => {
+        console.error("Couldn't open the preview", MM)
+      })) : rM(MM)
     }
-    class UG {
-      constructor(GG) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, kG(GG, (GG => {
-          this.closed ? GG.close() : (this.opened = GG, null !== this.size && GG.resize(this.size.width, this.size.height), null !== this.view && GG.show(this.view))
+    class nM {
+      constructor(MM) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, PM(MM, (MM => {
+          this.closed ? MM.close() : (this.opened = MM, null !== this.size && MM.resize(this.size.width, this.size.height), null !== this.view && MM.show(this.view))
         }))
       }
-      show(GG) {
-        var bG;
-        this.view = GG, null === (bG = this.opened) || void 0 === bG || bG.show(GG)
+      show(MM) {
+        var rM;
+        this.view = MM, null === (rM = this.opened) || void 0 === rM || rM.show(MM)
       }
-      resize(GG, bG) {
-        var ZG;
+      resize(MM, rM) {
+        var iM;
         this.size = {
-          width: GG,
-          height: bG
-        }, null === (ZG = this.opened) || void 0 === ZG || ZG.resize(GG, bG)
+          width: MM,
+          height: rM
+        }, null === (iM = this.opened) || void 0 === iM || iM.resize(MM, rM)
       }
       close() {
-        var GG;
-        this.closed = !0, null === (GG = this.opened) || void 0 === GG || GG.close(), this.opened = null
+        var MM;
+        this.closed = !0, null === (MM = this.opened) || void 0 === MM || MM.close(), this.opened = null
       }
     }
-    class YG {
-      constructor(GG) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(GG).then((GG => GG.ready)), kG(GG, (GG => {
-          this.closed ? GG.close() : (this.opened = GG, null !== this.size && GG.resize(this.size.width, this.size.height))
+    class QM {
+      constructor(MM) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(MM).then((MM => MM.ready)), PM(MM, (MM => {
+          this.closed ? MM.close() : (this.opened = MM, null !== this.size && MM.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var GG, bG;
-        return null !== (GG = null === (bG = this.opened) || void 0 === bG ? void 0 : bG.isReady()) && void 0 !== GG && GG
+        var MM, rM;
+        return null !== (MM = null === (rM = this.opened) || void 0 === rM ? void 0 : rM.isReady()) && void 0 !== MM && MM
       }
-      setCosmetic(GG, bG) {
-        var ZG;
-        null === (ZG = this.opened) || void 0 === ZG || ZG.setCosmetic(GG, bG)
+      setCosmetic(MM, rM) {
+        var iM;
+        null === (iM = this.opened) || void 0 === iM || iM.setCosmetic(MM, rM)
       }
-      playEmote(GG) {
-        var bG;
-        null === (bG = this.opened) || void 0 === bG || bG.playEmote(GG)
+      playEmote(MM) {
+        var rM;
+        null === (rM = this.opened) || void 0 === rM || rM.playEmote(MM)
       }
-      setOrbit(GG) {
-        var bG;
-        null === (bG = this.opened) || void 0 === bG || bG.setOrbit(GG)
+      setOrbit(MM) {
+        var rM;
+        null === (rM = this.opened) || void 0 === rM || rM.setOrbit(MM)
       }
       resetCamera() {
-        var GG;
-        null === (GG = this.opened) || void 0 === GG || GG.resetCamera()
+        var MM;
+        null === (MM = this.opened) || void 0 === MM || MM.resetCamera()
       }
-      async untilDrawn(GG) {
-        var bG;
-        await this.ready, await (null === (bG = this.opened) || void 0 === bG ? void 0 : bG.untilDrawn(GG))
+      async untilDrawn(MM) {
+        var rM;
+        await this.ready, await (null === (rM = this.opened) || void 0 === rM ? void 0 : rM.untilDrawn(MM))
       }
-      resize(GG, bG) {
-        var ZG;
+      resize(MM, rM) {
+        var iM;
         this.size = {
-          width: GG,
-          height: bG
-        }, null === (ZG = this.opened) || void 0 === ZG || ZG.resize(GG, bG)
+          width: MM,
+          height: rM
+        }, null === (iM = this.opened) || void 0 === iM || iM.resize(MM, rM)
       }
       close() {
-        var GG;
-        this.closed = !0, null === (GG = this.opened) || void 0 === GG || GG.close(), this.opened = null
+        var MM;
+        this.closed = !0, null === (MM = this.opened) || void 0 === MM || MM.close(), this.opened = null
       }
     }
-    const VG = new class {
+    const zM = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(GG) {
-        this.host = GG
+      setHost(MM) {
+        this.host = MM
       }
-      setDefaultHost(GG) {
-        this.makeDefault = GG
+      setDefaultHost(MM) {
+        this.makeDefault = MM
       }
       current() {
         if (null === this.host) {
@@ -366,202 +366,202 @@ export const modules = {
         }
         return this.host
       }
-      openMob(GG) {
-        return new UG(this.current().openMob(GG))
+      openMob(MM) {
+        return new nM(this.current().openMob(MM))
       }
-      openPet(GG) {
-        return new UG(this.current().openPet(GG))
+      openPet(MM) {
+        return new nM(this.current().openPet(MM))
       }
-      openMobLineup(GG) {
-        return new UG(this.current().openMobLineup(GG))
+      openMobLineup(MM) {
+        return new nM(this.current().openMobLineup(MM))
       }
-      openCharacter(GG, bG) {
-        return new YG(this.current().openCharacter(GG, bG))
+      openCharacter(MM, rM) {
+        return new QM(this.current().openCharacter(MM, rM))
       }
     }
   },
-  5055: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => wG.i,
-      f: () => SG,
-      g: () => wG.o
+  5435: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM.g,
+      g: () => SM,
+      k: () => OM.o
     });
-    var wG = ZG(5062);
-    const SG = [!1, !0].flatMap((GG => ["terrain", "liquid", "model"].map((bG => ({
-      strict: GG,
-      program: bG
+    var OM = iM(5442);
+    const SM = [!1, !0].flatMap((MM => ["terrain", "liquid", "model"].map((rM => ({
+      strict: MM,
+      program: rM
     })))))
   },
-  39633: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      ShaderPackPage: () => UG,
-      harnessShaderPackMode: () => fG,
-      setHarnessUrlShaderPack: () => pG,
-      shaderPackPage: () => VG
+  40300: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      ShaderPackPage: () => nM,
+      harnessShaderPackMode: () => mM,
+      setHarnessUrlShaderPack: () => LM,
+      shaderPackPage: () => zM
     });
-    var wG = ZG(80),
-      SG = ZG(29),
-      LG = (ZG(3444), ZG(5055), ZG(3441)),
-      yG = ZG(6661);
-    ZG(6627);
-    const kG = {
+    var OM = iM(83),
+      SM = iM(30),
+      jM = (iM(3860), iM(5435), iM(3855)),
+      aM = iM(7148);
+    iM(7120);
+    const PM = {
       status: "none"
     };
-    class UG {
+    class nM {
       constructor() {
         this.stored = null, this.compiling = null, this.pagePack = null, this.resolved = null
       }
       preload() {
         if (null === this.stored) {
-          if ((0, LG.g)(wG.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), YG().then((GG => {
-            GG && SG.h.removeItem(LG.d)
+          if ((0, jM.f)(OM.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), QM().then((MM => {
+            MM && SM.g.removeItem(jM.c)
           })), this.stored;
           this.prefetchHint() && this.compiler().catch((() => {})), this.stored = this.readStored()
         }
         return this.stored
       }
       prefetchHint() {
-        return (0, LG.e)(wG.featureFlags.settings.canUseShaderPacks)
+        return (0, jM.d)(OM.featureFlags.settings.canUseShaderPacks)
       }
       async loadActive() {
-        const GG = await this.load();
-        return "active" === GG.status ? GG.pack : null
+        const MM = await this.load();
+        return "active" === MM.status ? MM.pack : null
       }
       load() {
-        return this.pagePack ??= this.read().catch((GG => (console.error("Failed to load the shader pack", GG), kG))).then((GG => (this.resolved ??= GG, GG))), this.pagePack
+        return this.pagePack ??= this.read().catch((MM => (console.error("Failed to load the shader pack", MM), PM))).then((MM => (this.resolved ??= MM, MM))), this.pagePack
       }
       hasNone() {
-        var GG;
-        return "none" === (null === (GG = this.resolved) || void 0 === GG ? void 0 : GG.status)
+        var MM;
+        return "none" === (null === (MM = this.resolved) || void 0 === MM ? void 0 : MM.status)
       }
-      block(GG) {
+      block(MM) {
         this.resolved = {
           status: "blocked",
-          messageKey: GG,
+          messageKey: MM,
           variants: null
         }, this.pagePack = Promise.resolve(this.resolved)
       }
       compiler() {
-        return this.compiling ??= Promise.all([ZG.e(78), ZG.e(136), ZG.e(142)]).then((() => ZG(42184))).then((GG => (GG.prefetchCompiler(), GG))), this.compiling
+        return this.compiling ??= Promise.all([iM.e(89), iM.e(149), iM.e(155)]).then((() => iM(44389))).then((MM => (MM.prefetchCompiler(), MM))), this.compiling
       }
       async readStored() {
-        const GG = await YG();
-        return GG && this.compiler().then((GG => GG.reconcileHint())).catch((GG => {
-          console.error("Failed to correct the shader pack hint", GG)
-        })), GG
+        const MM = await QM();
+        return MM && this.compiler().then((MM => MM.reconcileHint())).catch((MM => {
+          console.error("Failed to correct the shader pack hint", MM)
+        })), MM
       }
       async read() {
-        const GG = await this.preload();
-        return GG ? (await this.compiler()).compilePagePack(GG) : kG
+        const MM = await this.preload();
+        return MM ? (await this.compiler()).compilePagePack(MM) : PM
       }
     }
-    async function YG() {
-      if (!(0, LG.j)(wG.featureFlags.settings.canUseShaderPacks)) return null;
+    async function QM() {
+      if (!(0, jM.i)(OM.featureFlags.settings.canUseShaderPacks)) return null;
       try {
-        const GG = await (0, yG.e)(!0);
-        return GG || SG.h.setItem(LG.d, !1), GG
-      } catch (GG) {
-        return console.error("Failed to read the stored shader pack", GG), SG.h.removeItem(LG.d), null
+        const MM = await (0, aM.d)(!0);
+        return MM || SM.g.setItem(jM.c, !1), MM
+      } catch (MM) {
+        return console.error("Failed to read the stored shader pack", MM), SM.g.removeItem(jM.c), null
       }
     }
-    const VG = new UG;
+    const zM = new nM;
 
-    function pG(GG, bG) {}
+    function LM(MM, rM) {}
 
-    function fG() {
+    function mM() {
       return null
     }
   },
-  39678: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => pG,
-      d: () => fG
+  40342: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => LM,
+      e: () => mM
     });
-    var wG = ZG(140),
-      SG = ZG(171),
-      LG = ZG(1423),
-      yG = ZG(2920),
-      kG = ZG(1431),
-      UG = ZG(36808),
-      YG = ZG(647),
-      VG = ZG(39633);
+    var OM = iM(143),
+      SM = iM(170),
+      jM = iM(1562),
+      aM = iM(3258),
+      PM = iM(1573),
+      nM = iM(37416),
+      QM = iM(673),
+      zM = iM(40300);
 
-    function pG(GG) {
-      (0, yG.reportClientError)("matchmake_failed", GG, wG.h[wG.h.SHADER_PACK])
+    function LM(MM) {
+      (0, aM.reportClientError)("matchmake_failed", MM, OM.n[OM.n.SHADER_PACK])
     }
-    async function fG(GG, bG) {
-      var ZG;
-      const wG = null === (ZG = await VG.shaderPackPage.preload()) || void 0 === ZG ? void 0 : ZG.listing,
-        yG = (0, UG.d)();
-      wG && null !== yG && await kG.d.reportShaderPackSession(GG, {
-        packId: wG.packId,
-        sourceHash: wG.sourceHash,
-        game: (0, LG.g)(bG, SG.s, "other"),
-        playSessionId: yG,
-        visitSessionId: (0, YG.f)()
+    async function mM(MM, rM) {
+      var iM;
+      const OM = null === (iM = await zM.shaderPackPage.preload()) || void 0 === iM ? void 0 : iM.listing,
+        aM = (0, nM.d)();
+      OM && null !== aM && await PM.c.reportShaderPackSession(MM, {
+        packId: OM.packId,
+        sourceHash: OM.sourceHash,
+        game: (0, jM.d)(rM, SM.v, "other"),
+        playSessionId: aM,
+        visitSessionId: (0, QM.e)()
       })
     }
   },
-  6661: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => SG,
-      e: () => LG
+  7148: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => SM,
+      d: () => jM
     });
-    var wG = ZG(29);
-    const SG = "shaderPack";
-    async function LG() {
-      var GG;
-      let bG = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (GG = await wG.e.getItem(SG, bG)) && void 0 !== GG ? GG : null
+    var OM = iM(30);
+    const SM = "shaderPack";
+    async function jM() {
+      var MM;
+      let rM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (MM = await OM.f.getItem(SM, rM)) && void 0 !== MM ? MM : null
     }
   },
-  6627: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      loadShaderPackTextures: () => yG,
-      shaderPackTextures: () => kG
+  7120: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      loadShaderPackTextures: () => aM,
+      shaderPackTextures: () => PM
     });
-    var wG = ZG(5062);
-    let SG = null,
-      LG = null;
+    var OM = iM(5442);
+    let SM = null,
+      jM = null;
 
-    function yG() {
-      return LG ??= Promise.all([ZG.e(73), ZG.e(190)]).then((() => ZG(40868))).then((GG => {
+    function aM() {
+      return jM ??= Promise.all([iM.e(84), iM.e(204)]).then((() => iM(41585))).then((MM => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: bG,
-          textureNameToIndex: ZG,
-          textureAnimationData: LG
-        } = GG;
-        return SG ??= (0, wG.j)(ZG, LG, bG), SG
-      })), LG
+          FORMER_BLOCK_IMAGE_NAMES: rM,
+          textureNameToIndex: iM,
+          textureAnimationData: jM
+        } = MM;
+        return SM ??= (0, OM.j)(iM, jM, rM), SM
+      })), jM
     }
 
-    function kG() {
-      if (null === SG) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return SG
+    function PM() {
+      if (null === SM) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return SM
     }
   },
-  34425: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => LG
+  34971: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => jM
     });
-    var wG = ZG(1032);
+    var OM = iM(1329);
 
-    function SG() {
-      var GG, bG;
-      return null !== (GG = null === (bG = screen.orientation) || void 0 === bG ? void 0 : bG.type) && void 0 !== GG ? GG : innerWidth > innerHeight ? "landscape" : "portrait"
+    function SM() {
+      var MM, rM;
+      return null !== (MM = null === (rM = screen.orientation) || void 0 === rM ? void 0 : rM.type) && void 0 !== MM ? MM : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const LG = new class {
+    const jM = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && SG() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && SM() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = SG(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, wG.rh)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = SM(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, OM.CJ)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -569,171 +569,179 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const GG of this.resizers) GG()
+            for (const MM of this.resizers) MM()
           }
         }), 1e3)
       }
-      heldSizer(GG) {
-        let bG = !1;
+      heldSizer(MM) {
+        let rM = !1;
         return () => {
-          if (bG && this.isHeld()) return null;
-          const ZG = GG();
-          return bG ||= null !== ZG, ZG
+          if (rM && this.isHeld()) return null;
+          const iM = MM();
+          return rM ||= null !== iM, iM
         }
       }
-      onRelease(GG) {
-        return this.resizers.add(GG), () => {
-          this.resizers.delete(GG)
+      onRelease(MM) {
+        return this.resizers.add(MM), () => {
+          this.resizers.delete(MM)
         }
       }
     }
   },
-  39663: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => SG
+  40331: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => SM
     });
-    let wG = !1;
-    async function SG(GG, bG) {
-      if (!wG) {
-        wG = !0;
+    let OM = !1;
+    async function SM(MM, rM) {
+      if (!OM) {
+        OM = !0;
         try {
           const [{
-            reloadBloxd: wG
+            reloadBloxd: OM
           }, {
-            NotificationProvider: SG
-          }] = await Promise.all([Promise.resolve().then((() => ZG(1702))), Promise.resolve().then((() => ZG(1311)))]);
-          if (!GG || !0 === await SG.showPromptPopup({
+            NotificationProvider: SM
+          }] = await Promise.all([Promise.resolve().then((() => iM(1830))), Promise.resolve().then((() => iM(1429)))]);
+          if (!MM || !0 === await SM.showPromptPopup({
               title: "Unsaved changes",
               subtitle: "Exit and lose your unsaved changes?",
               confirmText: "Exit",
               destructive: !0,
               cancelText: "Cancel",
               unlockPointerKey: "replayExitUnsavedChanges"
-            }).getResult()) return void wG(bG)
-        } catch (SG) {
-          console.error("Leaving the replay failed", SG)
+            }).getResult()) return void OM(rM)
+        } catch (SM) {
+          console.error("Leaving the replay failed", SM)
         }
-        wG = !1
+        OM = !1
       }
     }
   },
-  41367: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => kG,
-      g: () => UG
+  42067: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => PM,
+      h: () => nM
     });
-    var wG = ZG(1721);
-    const SG = 33177600,
-      LG = 3e4;
-    let yG = !1;
+    var OM = iM(1845);
+    const SM = 33177600,
+      jM = 3e4;
+    let aM = !1;
 
-    function kG(GG, bG, ZG) {
-      let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    function PM(MM, rM, iM) {
+      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        scale: kG = 1,
-        type: UG = "image/png",
-        quality: YG
-      } = wG;
-      if (!GG.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (yG) return Promise.reject(new Error("A screenshot is already being taken"));
-      yG = !0;
-      const VG = function(GG, bG, ZG) {
-        const wG = Math.max(1, GG),
-          LG = Math.max(1, bG),
-          yG = Math.min(1, ZG / Math.max(wG, LG), Math.sqrt(SG / (wG * LG)));
-        return {
-          width: Math.max(1, Math.floor(wG * yG)),
-          height: Math.max(1, Math.floor(LG * yG))
-        }
-      }(bG, ZG, GG.maxTextureSize);
-      return GG.resize(VG.width, VG.height, kG * VG.width / Math.max(1, bG)), new Promise(((bG, ZG) => {
-        let wG, SG = 2,
-          kG = null;
-        const VG = () => {
-          var bG;
-          yG = !1, null === (bG = kG) || void 0 === bG || bG(), clearTimeout(wG), GG.restoreSize()
+        scale: PM = 1,
+        type: nM = "image/png",
+        quality: QM
+      } = OM;
+      return MM.lL() ? aM ? Promise.reject(new Error("A screenshot is already being taken")) : (aM = !0, new Promise(((OM, zM) => {
+        let LM, mM = 2,
+          HM = null;
+        const hM = () => {
+          var rM;
+          aM = !1, null === (rM = HM) || void 0 === rM || rM(), clearTimeout(LM);
+          try {
+            MM.restoreSize()
+          } catch (iM) {
+            console.error("A screenshot couldn't size the canvas back", iM)
+          }
         };
-        wG = setTimeout((() => {
-          VG(), ZG(new Error("No frame was drawn to capture"))
-        }), LG), kG = GG.onFrameDrawn((() => {
-          if (SG--, SG > 0) return;
+        LM = setTimeout((() => {
+          hM(), zM(new Error("No frame was drawn to capture"))
+        }), jM);
+        try {
+          const OM = function(MM, rM, iM) {
+            const OM = Math.max(1, MM),
+              jM = Math.max(1, rM),
+              aM = Math.min(1, iM / Math.max(OM, jM), Math.sqrt(SM / (OM * jM)));
+            return {
+              width: Math.max(1, Math.floor(OM * aM)),
+              height: Math.max(1, Math.floor(jM * aM))
+            }
+          }(rM, iM, MM.maxTextureSize);
+          MM.resize(OM.width, OM.height, PM * OM.width / Math.max(1, rM))
+        } catch (JM) {
+          return hM(), void zM(JM)
+        }
+        HM = MM.onFrameDrawn((() => {
+          if (mM--, mM > 0) return;
           const {
-            canvas: wG
-          } = GG, LG = {
-            width: wG.width,
-            height: wG.height
+            canvas: rM
+          } = MM, iM = {
+            width: rM.width,
+            height: rM.height
           };
           try {
-            wG.toBlob((GG => {
-              GG ? bG({
-                blob: GG,
-                ...LG
-              }) : ZG(new Error("The canvas gave no image"))
-            }), UG, YG)
-          } catch (yG) {
-            ZG(yG)
+            rM.toBlob((MM => {
+              MM ? OM({
+                blob: MM,
+                ...iM
+              }) : zM(new Error("The canvas gave no image"))
+            }), nM, QM)
+          } catch (JM) {
+            zM(JM)
           } finally {
-            VG()
+            hM()
           }
         }))
-      }))
+      }))) : Promise.reject(new Error("Screenshots need a game to be running"))
     }
-    async function UG(GG, bG, ZG) {
+    async function nM(MM, rM, iM) {
       try {
-        const SG = await kG(GG, bG, ZG);
-        (0, wG.b)(SG.blob, `bloxd-screenshot-${SG.width}x${SG.height}-${Date.now()}.png`)
-      } catch (SG) {
-        console.error("Error taking screenshot:", SG)
+        const SM = await PM(MM, rM, iM);
+        (0, OM.c)(SM.blob, `bloxd-screenshot-${SM.width}x${SM.height}-${Date.now()}.png`)
+      } catch (SM) {
+        console.error("Error taking screenshot:", SM)
       }
     }
   },
-  38094: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => wG
+  38675: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM
     });
-    const wG = {
+    const OM = {
       noaReady: null,
       chunkRequested: null,
       beforeServerListeners: null,
       wasmNetReady: null
     }
   },
-  39578: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => yG
+  40249: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => aM
     });
-    var wG = ZG(333),
-      SG = ZG(116),
-      LG = ZG(29);
+    var OM = iM(313),
+      SM = iM(119),
+      jM = iM(30);
 
-    function yG() {
-      LG.h.setItem(wG.cc, LG.h.getItem(wG.cc) + 1), (0, SG.is99NightsCrazyGamesBundle)() && LG.h.setItem(wG._b, LG.h.getItem(wG._b) + 1)
+    function aM() {
+      jM.g.setItem(OM.Cb, jM.g.getItem(OM.Cb) + 1), (0, SM.is99NightsCrazyGamesBundle)() && jM.g.setItem(OM.Ab, jM.g.getItem(OM.Ab) + 1)
     }
   },
-  41031: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => kG
+  41734: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => PM
     });
-    var wG = ZG(40021);
+    var OM = iM(40765);
 
-    function SG(GG) {
+    function SM(MM) {
       return {
-        current: () => GG,
+        current: () => MM,
         watch: () => () => {}
       }
     }
 
-    function LG() {}
-    const yG = Object.freeze([0, 0, 0]),
-      kG = {
+    function jM() {}
+    const aM = Object.freeze([0, 0, 0]),
+      PM = {
         states: {
-          health: SG({
+          health: SM({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: SG({
+          inventory: SM({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -741,63 +749,63 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: SG({
+          hotbar: SM({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: SG({
+          stationItems: SM({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: SG({}),
-          creativeVisibility: SG({
+          itemInfo: SM({}),
+          creativeVisibility: SM({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: SG(null),
-          heldItemAim: SG({
+          aura: SM(null),
+          heldItemAim: SM({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: SG(!1),
-          gliderBoostFuel: SG(0),
-          flight: SG({
+          crouching: SM(!1),
+          gliderBoostFuel: SM(0),
+          flight: SM({
             canFly: !1,
             flying: !1
           }),
-          crafting: SG({
+          crafting: SM({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: SG({
+          players: SM({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: SG({}),
-          fullInventory: SG(!1),
-          crosshairTarget: SG({
+          lobbyLeaderboardRows: SM({}),
+          fullInventory: SM(!1),
+          crosshairTarget: SM({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: SG(!0),
-          freeCamera: SG({
+          localPlayerAlive: SM(!0),
+          freeCamera: SM({
             allowed: !1,
             movesFly: !1
           }),
-          replay: SG(null),
-          replayEdits: SG(null),
-          replayRecorder: SG({
+          replay: SM(null),
+          replayEdits: SM(null),
+          replayRecorder: SM({
             recording: !1,
             clipping: !1,
             hasClipBuffer: !1,
             seconds: 0
           }),
-          replayVideoExporting: SG(!1)
+          replayVideoExporting: SM(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -859,87 +867,87 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: LG,
+          selectHotbarSlot: jM,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: LG,
-          setInventoryOpen: LG,
-          changeIronChestPasskey: LG,
-          dragReplayCamera: LG,
-          applyTemporaryThirdPerson: LG,
-          holdEmoteWheel: LG,
-          recordFlyingMiddleText: LG,
-          focusCrafting: LG,
+          closeChest: jM,
+          setInventoryOpen: jM,
+          changeIronChestPasskey: jM,
+          dragReplayCamera: jM,
+          applyTemporaryThirdPerson: jM,
+          holdEmoteWheel: jM,
+          recordFlyingMiddleText: jM,
+          focusCrafting: jM,
           craftRecipe: () => ({
-            uV: 0,
-            ZU: null,
+            Ha: 0,
+            Pz: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: LG,
-          setShopOpen: LG,
-          buyShopItem: LG,
-          lobbyManage: LG,
-          sendChatMessage: LG,
-          ignorePlayer: LG,
-          reportPlayer: LG,
-          reportWorldCodeChat: LG,
-          requestDiscordReportKey: LG,
-          reportLobbyOrGame: LG,
-          playEmote: LG,
-          updateMyCosmetic: LG,
-          writeOnBoard: LG,
-          writeBook: LG,
-          writeNameTag: LG,
-          setCustomLobbyBlock: LG,
-          openIronChest: LG,
-          sendCodeCollab: LG,
-          clickCodeBlock: LG,
-          bindCustomButtonKeys: LG,
-          pressCustomButton: LG,
-          moveReplayFreecam: LG,
-          holdReplayFreecamVertical: LG,
-          respawn: LG,
-          wakeUp: LG,
-          requestLeaderboard: LG,
-          completeTask: LG,
-          setServerCookie: LG,
-          answerUiRequest: LG,
-          chooseRewardedAd: LG,
-          setCameraZoom: LG,
-          setFreeCameraMovesFly: LG,
-          setBlockHighlight: LG,
-          setCrosshairInteractPrompt: LG,
-          setLookSensitivity: LG,
-          replayAction: LG,
-          setReplayPlaying: LG,
-          seekReplay: LG,
-          setReplayCameraMode: LG,
-          syncReplayCameraMode: LG,
-          setReplayCameraKeyframe: LG,
-          moveReplayCameraKeyframe: LG,
-          deleteReplayCameraKeyframes: LG,
-          setReplayPlaybackMark: LG,
+          enchantItem: jM,
+          setShopOpen: jM,
+          buyShopItem: jM,
+          lobbyManage: jM,
+          sendChatMessage: jM,
+          ignorePlayer: jM,
+          reportPlayer: jM,
+          reportWorldCodeChat: jM,
+          requestDiscordReportKey: jM,
+          reportLobbyOrGame: jM,
+          playEmote: jM,
+          updateMyCosmetic: jM,
+          writeOnBoard: jM,
+          writeBook: jM,
+          writeNameTag: jM,
+          setCustomLobbyBlock: jM,
+          openIronChest: jM,
+          sendCodeCollab: jM,
+          clickCodeBlock: jM,
+          bindCustomButtonKeys: jM,
+          pressCustomButton: jM,
+          moveReplayFreecam: jM,
+          holdReplayFreecamVertical: jM,
+          respawn: jM,
+          wakeUp: jM,
+          requestLeaderboard: jM,
+          completeTask: jM,
+          setServerCookie: jM,
+          answerUiRequest: jM,
+          chooseRewardedAd: jM,
+          setCameraZoom: jM,
+          setFreeCameraMovesFly: jM,
+          setBlockHighlight: jM,
+          setCrosshairInteractPrompt: jM,
+          setLookSensitivity: jM,
+          replayAction: jM,
+          setReplayPlaying: jM,
+          seekReplay: jM,
+          setReplayCameraMode: jM,
+          syncReplayCameraMode: jM,
+          setReplayCameraKeyframe: jM,
+          moveReplayCameraKeyframe: jM,
+          deleteReplayCameraKeyframes: jM,
+          setReplayPlaybackMark: jM,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: LG,
-          exportReplayVideo: LG,
-          toggleRecording: LG,
-          saveClip: LG,
-          setRecorderPrefs: LG,
-          setReplayViewerOpen: LG
+          holdReplayForShaderPackFailure: jM,
+          exportReplayVideo: jM,
+          toggleRecording: jM,
+          saveClip: jM,
+          setRecorderPrefs: jM,
+          setReplayViewerOpen: jM
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => wG.e,
-          worldCodeAiGameState: () => wG.i
+          worldCodeAiChunk: () => OM.c,
+          worldCodeAiGameState: () => OM.f
         },
         lookups: {
-          localPos: () => yG,
+          localPos: () => aM,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -957,113 +965,113 @@ export const modules = {
         }
       }
   },
-  41365: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => yG,
-      d: () => LG
+  42065: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => aM,
+      c: () => jM
     });
-    var wG = ZG(2138),
-      SG = ZG(982);
+    var OM = iM(2263),
+      SM = iM(1073);
 
-    function LG(GG, bG) {
-      return null !== GG.gameSource && (0, wG.p)(bG, GG.gameSource)
+    function jM(MM, rM) {
+      return null !== MM.gameSource && (0, OM.m)(rM, MM.gameSource)
     }
 
-    function yG(GG, bG) {
-      if (null === GG.gameSource || "" === GG.gameSource || null === bG) return !0;
-      const ZG = (0, SG.h)(bG) ? (0, SG.j)(bG) : null;
-      return null !== ZG && LG(GG, ZG)
+    function aM(MM, rM) {
+      if (null === MM.gameSource || "" === MM.gameSource || null === rM) return !0;
+      const iM = (0, SM.m)(rM) ? (0, SM.p)(rM) : null;
+      return null !== iM && jM(MM, iM)
     }
   },
-  41336: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => kG
+  42041: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => PM
     });
-    var wG = ZG(589),
-      SG = ZG(41340),
-      LG = ZG(41195);
-    async function yG(GG) {
-      const bG = await (0, SG.j)({
-        Helmet: ZG(38369),
-        Chestplate: ZG(38375),
-        Gauntlets: ZG(38392),
-        Leggings: ZG(38379),
-        Boots: ZG(38388)
-      } [wG.c[GG]]);
+    var OM = iM(613),
+      SM = iM(42045),
+      jM = iM(41900);
+    async function aM(MM) {
+      const rM = await (0, SM.g)({
+        Helmet: iM(38935),
+        Chestplate: iM(38941),
+        Gauntlets: iM(38961),
+        Leggings: iM(38950),
+        Boots: iM(38954)
+      } [OM.b[MM]]);
       try {
-        return (0, LG.n)(bG)
+        return (0, jM.p)(rM)
       } finally {
-        bG.close()
+        rM.close()
       }
     }
-    const kG = new class {
+    const PM = new class {
       constructor() {
-        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yG,
-          bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SG.o;
-        this.decode = GG, this.register = bG, this.decoded = new Map
+        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM,
+          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SM.n;
+        this.decode = MM, this.register = rM, this.decoded = new Map
       }
       warm() {
-        for (let GG = 0; GG < wG.c.length; GG++) this.part(GG).catch((bG => {
-          console.warn(`The grayscale armour ${wG.c[GG]} image didn't decode ahead of use`, bG)
+        for (let MM = 0; MM < OM.b.length; MM++) this.part(MM).catch((rM => {
+          console.warn(`The grayscale armour ${OM.b[MM]} image didn't decode ahead of use`, rM)
         }))
       }
-      async load(GG, bG) {
+      async load(MM, rM) {
         const {
-          width: ZG,
-          height: LG,
-          pixels: yG
-        } = await this.part(GG), kG = new ImageData(function(GG, bG) {
-          const ZG = new Uint8ClampedArray(GG.length);
-          for (let wG = 0; wG < GG.length; wG += 4) ZG[wG] = Math.round(GG[wG] * bG[0] / 255), ZG[wG + 1] = Math.round(GG[wG + 1] * bG[1] / 255), ZG[wG + 2] = Math.round(GG[wG + 2] * bG[2] / 255), ZG[wG + 3] = GG[wG + 3];
-          return ZG
-        }(yG, function(GG) {
-          return [GG >>> 16 & 255, GG >>> 8 & 255, 255 & GG]
-        }(bG)), ZG, LG);
-        let UG;
+          width: iM,
+          height: jM,
+          pixels: aM
+        } = await this.part(MM), PM = new ImageData(function(MM, rM) {
+          const iM = new Uint8ClampedArray(MM.length);
+          for (let OM = 0; OM < MM.length; OM += 4) iM[OM] = Math.round(MM[OM] * rM[0] / 255), iM[OM + 1] = Math.round(MM[OM + 1] * rM[1] / 255), iM[OM + 2] = Math.round(MM[OM + 2] * rM[2] / 255), iM[OM + 3] = MM[OM + 3];
+          return iM
+        }(aM, function(MM) {
+          return [MM >>> 16 & 255, MM >>> 8 & 255, 255 & MM]
+        }(rM)), iM, jM);
+        let nM;
         try {
-          UG = await createImageBitmap(kG, {
+          nM = await createImageBitmap(PM, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none"
           })
-        } catch (YG) {
-          throw new SG.b("decode", `grayscale armour ${wG.c[GG]}`, {
-            cause: YG
+        } catch (QM) {
+          throw new SM.d("decode", `grayscale armour ${OM.b[MM]}`, {
+            cause: QM
           })
         }
         return {
-          id: this.register(UG),
-          width: ZG,
-          height: LG
+          id: this.register(nM),
+          width: iM,
+          height: jM
         }
       }
-      part(GG) {
-        const bG = this.decoded.get(GG);
-        if (void 0 !== bG) return bG;
-        const ZG = this.decode(GG).catch((bG => {
-          throw this.decoded.delete(GG), bG instanceof SG.b ? bG : new SG.b("decode", `grayscale armour ${wG.c[GG]}`, {
-            cause: bG
+      part(MM) {
+        const rM = this.decoded.get(MM);
+        if (void 0 !== rM) return rM;
+        const iM = this.decode(MM).catch((rM => {
+          throw this.decoded.delete(MM), rM instanceof SM.d ? rM : new SM.d("decode", `grayscale armour ${OM.b[MM]}`, {
+            cause: rM
           })
         }));
-        return this.decoded.set(GG, ZG), ZG
+        return this.decoded.set(MM, iM), iM
       }
     }
   },
-  41333: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => yG,
-      e: () => dG,
-      f: () => VG,
-      j: () => pG,
-      k: () => hG
+  42039: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => aM,
+      d: () => dM,
+      f: () => zM,
+      i: () => LM,
+      m: () => JM
     });
-    var wG = ZG(41175),
-      SG = ZG(41336),
-      LG = ZG(41340);
-    const yG = 396,
-      kG = 1,
-      UG = 2,
-      YG = 3,
-      VG = {
+    var OM = iM(41884),
+      SM = iM(42041),
+      jM = iM(42045);
+    const aM = 396,
+      PM = 1,
+      nM = 2,
+      QM = 3,
+      zM = {
         Glb: 1,
         LifeformAtlas: 2,
         ArmourAtlas: 3,
@@ -1074,37 +1082,37 @@ export const modules = {
         BlockImage: 8,
         GreyscaleArmour: 9
       },
-      pG = {
+      LM = {
         File: 0,
         Item: 1
       },
-      fG = 0,
-      QG = 1,
-      KG = 2;
+      mM = 0,
+      HM = 1,
+      hM = 2;
 
-    function hG(GG) {
-      const bG = (0, wG.o)();
-      bG.catch((() => {}));
-      let SG = null;
+    function JM(MM) {
+      const rM = (0, OM.o)();
+      rM.catch((() => {}));
+      let SM = null;
       return {
-        glbUrl: GG,
-        lifeformAtlasUrl: async GG => (await bG).lifeformAtlasUrl(GG),
-        armourAtlasUrl: async () => (await ZG.e(207).then((() => ZG(34575)))).armourAtlasUrl,
-        capeUrl: async GG => (await bG).capeUrl(GG),
-        attachmentImageUrl: async GG => (await bG).attachmentImageUrl(GG),
-        blockImageUrl: async GG => (await bG).blockImageUrl(GG),
-        groupAtlasUrl: async GG => (await bG).groupAtlasUrl(GG),
-        particleTextureUrl: async GG => (await bG).particleTextureUrl(GG),
-        particleItemUrl: async GG => (SG ??= ZG.e(38).then((() => ZG(51483))).catch((GG => {
-          throw SG = null, GG
-        })), (await SG).particleItemUrl(GG))
+        glbUrl: MM,
+        lifeformAtlasUrl: async MM => (await rM).lifeformAtlasUrl(MM),
+        armourAtlasUrl: async () => (await iM.e(231).then((() => iM(35131)))).armourAtlasUrl,
+        capeUrl: async MM => (await rM).capeUrl(MM),
+        attachmentImageUrl: async MM => (await rM).attachmentImageUrl(MM),
+        blockImageUrl: async MM => (await rM).blockImageUrl(MM),
+        groupAtlasUrl: async MM => (await rM).groupAtlasUrl(MM),
+        particleTextureUrl: async MM => (await rM).particleTextureUrl(MM),
+        particleItemUrl: async MM => (SM ??= iM.e(43).then((() => iM(53811))).catch((MM => {
+          throw SM = null, MM
+        })), (await SM).particleItemUrl(MM))
       }
     }
-    class dG {
-      constructor(GG, bG) {
-        var ZG, yG, kG, UG;
-        let YG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.sources = GG, this.onFailure = bG, this.loading = new Map, this.glbImages = new Map, this.glbWrittenImages = new Map, this.glbTakenCount = new Map, this.answered = new Map, this.ready = [], this.load = void 0, this.release = void 0, this.fetchFile = void 0, this.greyscaleArmour = void 0, this.pK = !1, this.load = null !== (ZG = YG.load) && void 0 !== ZG ? ZG : (GG, bG) => (0, LG.n)(GG, YG.fetchImage, bG), this.release = null !== (yG = YG.release) && void 0 !== yG ? yG : LG.p, this.fetchFile = null !== (kG = YG.fetchFile) && void 0 !== kG ? kG : GG => (0, wG.g)(GG), this.greyscaleArmour = null !== (UG = YG.greyscaleArmour) && void 0 !== UG ? UG : SG.b
+    class dM {
+      constructor(MM, rM) {
+        var iM, aM, PM, nM;
+        let QM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        this.sources = MM, this.onFailure = rM, this.loading = new Map, this.glbImages = new Map, this.glbWrittenImages = new Map, this.glbTakenCount = new Map, this.answered = new Map, this.ready = [], this.load = void 0, this.release = void 0, this.fetchFile = void 0, this.greyscaleArmour = void 0, this.dh = !1, this.load = null !== (iM = QM.load) && void 0 !== iM ? iM : (MM, rM) => (0, jM.j)(MM, QM.fetchImage, rM), this.release = null !== (aM = QM.release) && void 0 !== aM ? aM : jM.o, this.fetchFile = null !== (PM = QM.fetchFile) && void 0 !== PM ? PM : MM => (0, OM.j)(MM), this.greyscaleArmour = null !== (nM = QM.greyscaleArmour) && void 0 !== nM ? nM : SM.c
       }
       get waiting() {
         return this.ready.length
@@ -1112,238 +1120,238 @@ export const modules = {
       get inFlight() {
         return this.loading.size
       }
-      glbWritten(GG, bG) {
-        this.glbWrittenImages.set(GG, uG(bG))
+      glbWritten(MM, rM) {
+        this.glbWrittenImages.set(MM, eM(rM))
       }
-      glbTaken(GG, bG) {
-        const ZG = this.glbWrittenImages.get(GG);
-        this.glbWrittenImages.delete(GG), bG && this.setGlbImages(GG, void 0 !== ZG && ZG.length > 0 ? ZG : void 0)
+      glbTaken(MM, rM) {
+        const iM = this.glbWrittenImages.get(MM);
+        this.glbWrittenImages.delete(MM), rM && this.setGlbImages(MM, void 0 !== iM && iM.length > 0 ? iM : void 0)
       }
-      setGlbImages(GG, bG) {
-        var ZG;
-        this.glbTakenCount.set(GG, (null !== (ZG = this.glbTakenCount.get(GG)) && void 0 !== ZG ? ZG : 0) + 1), void 0 === bG ? this.glbImages.delete(GG) : this.glbImages.set(GG, bG);
-        const wG = [];
+      setGlbImages(MM, rM) {
+        var iM;
+        this.glbTakenCount.set(MM, (null !== (iM = this.glbTakenCount.get(MM)) && void 0 !== iM ? iM : 0) + 1), void 0 === rM ? this.glbImages.delete(MM) : this.glbImages.set(MM, rM);
+        const OM = [];
         for (const {
-            key: SG
+            key: SM
           }
-          of this.loading.values()) SG.kind === VG.Glb && SG.word === GG && wG.push(SG);
-        for (let SG = this.ready.length - 1; SG >= 0; SG--) {
+          of this.loading.values()) SM.kind === zM.Glb && SM.word === MM && OM.push(SM);
+        for (let SM = this.ready.length - 1; SM >= 0; SM--) {
           const {
-            key: bG,
-            id: ZG
-          } = this.ready[SG];
-          bG.kind === VG.Glb && bG.word === GG && (this.ready.splice(SG, 1), null !== ZG && (this.answered.delete(ZG), this.release(ZG)), wG.push(bG))
+            key: rM,
+            id: iM
+          } = this.ready[SM];
+          rM.kind === zM.Glb && rM.word === MM && (this.ready.splice(SM, 1), null !== iM && (this.answered.delete(iM), this.release(iM)), OM.push(rM))
         }
-        this.loadAgain(wG)
+        this.loadAgain(OM)
       }
-      onEvent(GG) {
-        if (this.pK) return;
-        const bG = new DataView(GG.buffer, GG.byteOffset, GG.byteLength);
-        for (let ZG = 0; ZG + 8 <= GG.byteLength; ZG += 8) {
-          const GG = bG.getUint8(ZG),
-            wG = bG.getUint32(ZG + 4, !0);
-          if (GG === YG) {
-            this.answered.delete(wG), this.release(wG);
+      onEvent(MM) {
+        if (this.dh) return;
+        const rM = new DataView(MM.buffer, MM.byteOffset, MM.byteLength);
+        for (let iM = 0; iM + 8 <= MM.byteLength; iM += 8) {
+          const MM = rM.getUint8(iM),
+            OM = rM.getUint32(iM + 4, !0);
+          if (MM === QM) {
+            this.answered.delete(OM), this.release(OM);
             continue
           }
-          const SG = {
-            kind: bG.getUint8(ZG + 1),
-            index: bG.getUint8(ZG + 2),
-            word: wG
+          const SM = {
+            kind: rM.getUint8(iM + 1),
+            index: rM.getUint8(iM + 2),
+            word: OM
           };
-          GG === kG ? this.want(SG) : GG === UG && this.loading.delete(JG(SG))
+          MM === PM ? this.want(SM) : MM === nM && this.loading.delete(yM(SM))
         }
       }
-      reload(GG, bG) {
-        const ZG = ZG => GG.includes(ZG.kind) && (void 0 === bG || bG(ZG)),
-          wG = new Map;
-        for (const SG of this.answered.values()) ZG(SG) && wG.set(JG(SG), SG);
-        for (const [SG, {
-            key: LG
-          }] of this.loading) ZG(LG) && wG.set(SG, LG);
-        this.loadAgain(wG.values())
+      reload(MM, rM) {
+        const iM = iM => MM.includes(iM.kind) && (void 0 === rM || rM(iM)),
+          OM = new Map;
+        for (const SM of this.answered.values()) iM(SM) && OM.set(yM(SM), SM);
+        for (const [SM, {
+            key: jM
+          }] of this.loading) iM(jM) && OM.set(SM, jM);
+        this.loadAgain(OM.values())
       }
-      loadAgain(GG) {
-        for (const bG of GG) this.loading.delete(JG(bG)), this.want(bG)
+      loadAgain(MM) {
+        for (const rM of MM) this.loading.delete(yM(rM)), this.want(rM)
       }
-      drain(GG) {
-        if (null !== GG)
+      drain(MM) {
+        if (null !== MM)
           for (; this.ready.length > 0;) {
-            if (!GG(yG, 0, this.ready[0].record)) return;
+            if (!MM(aM, 0, this.ready[0].record)) return;
             this.ready.shift()
           }
       }
       dispose() {
-        this.pK = !0, this.loading.clear(), this.ready.length = 0;
-        for (const GG of this.answered.keys()) this.release(GG);
+        this.dh = !0, this.loading.clear(), this.ready.length = 0;
+        for (const MM of this.answered.keys()) this.release(MM);
         this.answered.clear()
       }
-      want(GG) {
-        const bG = JG(GG);
-        if (this.loading.has(bG)) return;
-        const ZG = {
-          key: GG
+      want(MM) {
+        const rM = yM(MM);
+        if (this.loading.has(rM)) return;
+        const iM = {
+          key: MM
         };
-        this.loading.set(bG, ZG), this.loadKey(GG).then((wG => {
-          this.pK || this.loading.get(bG) !== ZG ? this.release(wG.id) : (this.loading.delete(bG), this.answered.set(wG.id, GG), this.ready.push({
-            record: zG(GG, fG, wG),
-            key: GG,
-            id: wG.id
+        this.loading.set(rM, iM), this.loadKey(MM).then((OM => {
+          this.dh || this.loading.get(rM) !== iM ? this.release(OM.id) : (this.loading.delete(rM), this.answered.set(OM.id, MM), this.ready.push({
+            record: EM(MM, mM, OM),
+            key: MM,
+            id: OM.id
           }))
-        }), (wG => {
-          if (this.pK || this.loading.get(bG) !== ZG) return;
-          this.loading.delete(bG), this.onFailure({
-            key: GG,
-            error: wG
+        }), (OM => {
+          if (this.dh || this.loading.get(rM) !== iM) return;
+          this.loading.delete(rM), this.onFailure({
+            key: MM,
+            error: OM
           });
-          const SG = wG instanceof LG.b && "decode" === wG.stage ? QG : KG;
+          const SM = OM instanceof jM.d && "decode" === OM.stage ? HM : hM;
           this.ready.push({
-            record: zG(GG, SG, null),
-            key: GG,
+            record: EM(MM, SM, null),
+            key: MM,
             id: null
           })
         }))
       }
-      async loadKey(GG) {
-        switch (GG.kind) {
-          case VG.Glb:
-            return this.load(await this.glbImage(GG), "none");
-          case VG.LifeformAtlas:
-            return this.load(rG(await this.sources.lifeformAtlasUrl(GG.word), GG), "none");
-          case VG.ArmourAtlas:
-            return this.load(rG(await this.sources.armourAtlasUrl(), GG), "none");
-          case VG.Cape:
-            return this.load(rG(await this.sources.capeUrl(GG.word), GG), "none");
-          case VG.AttachmentImage:
-            return this.load(rG(await this.sources.attachmentImageUrl(GG.word), GG), "none");
-          case VG.GroupAtlas:
-            return this.load(rG(await this.sources.groupAtlasUrl(GG.word), GG), "none");
-          case VG.BlockImage:
-            return this.load(rG(await this.sources.blockImageUrl(GG.word), GG), "none");
-          case VG.Particle: {
-            const bG = await (GG.index === pG.Item ? this.sources.particleItemUrl(GG.word) : this.sources.particleTextureUrl(GG.word));
-            return this.load(rG(bG, GG), "flipY")
+      async loadKey(MM) {
+        switch (MM.kind) {
+          case zM.Glb:
+            return this.load(await this.glbImage(MM), "none");
+          case zM.LifeformAtlas:
+            return this.load(lM(await this.sources.lifeformAtlasUrl(MM.word), MM), "none");
+          case zM.ArmourAtlas:
+            return this.load(lM(await this.sources.armourAtlasUrl(), MM), "none");
+          case zM.Cape:
+            return this.load(lM(await this.sources.capeUrl(MM.word), MM), "none");
+          case zM.AttachmentImage:
+            return this.load(lM(await this.sources.attachmentImageUrl(MM.word), MM), "none");
+          case zM.GroupAtlas:
+            return this.load(lM(await this.sources.groupAtlasUrl(MM.word), MM), "none");
+          case zM.BlockImage:
+            return this.load(lM(await this.sources.blockImageUrl(MM.word), MM), "none");
+          case zM.Particle: {
+            const rM = await (MM.index === LM.Item ? this.sources.particleItemUrl(MM.word) : this.sources.particleTextureUrl(MM.word));
+            return this.load(lM(rM, MM), "flipY")
           }
-          case VG.GreyscaleArmour:
-            return this.greyscaleArmour.load(GG.index, GG.word);
+          case zM.GreyscaleArmour:
+            return this.greyscaleArmour.load(MM.index, MM.word);
           default:
-            throw new LG.b("fetch", `image kind ${GG.kind}`, {
+            throw new jM.d("fetch", `image kind ${MM.kind}`, {
               cause: null
             })
         }
       }
-      async glbImage(GG) {
-        var bG;
-        let ZG = this.glbImages.get(GG.word);
-        if (void 0 === ZG) {
-          const bG = this.glbTakenCount.get(GG.word),
-            wG = rG(await this.sources.glbUrl(GG.word), GG);
+      async glbImage(MM) {
+        var rM;
+        let iM = this.glbImages.get(MM.word);
+        if (void 0 === iM) {
+          const rM = this.glbTakenCount.get(MM.word),
+            OM = lM(await this.sources.glbUrl(MM.word), MM);
           try {
-            ZG = uG(await this.fetchFile(wG))
-          } catch (SG) {
-            throw new LG.b("fetch", wG, {
-              cause: SG
+            iM = eM(await this.fetchFile(OM))
+          } catch (SM) {
+            throw new jM.d("fetch", OM, {
+              cause: SM
             })
           }
-          this.glbTakenCount.get(GG.word) === bG && this.glbImages.set(GG.word, ZG)
+          this.glbTakenCount.get(MM.word) === rM && this.glbImages.set(MM.word, iM)
         }
-        const wG = null === (bG = ZG) || void 0 === bG ? void 0 : bG[GG.index];
-        if (!wG) throw new LG.b("decode", `image ${GG.index} of file ${2147483647&GG.word}`, {
+        const OM = null === (rM = iM) || void 0 === rM ? void 0 : rM[MM.index];
+        if (!OM) throw new jM.d("decode", `image ${MM.index} of file ${2147483647&MM.word}`, {
           cause: null
         });
-        return wG
+        return OM
       }
     }
 
-    function JG(GG) {
+    function yM(MM) {
       let {
-        kind: bG,
-        index: ZG,
-        word: wG
-      } = GG;
-      return `${bG}:${ZG}:${wG}`
+        kind: rM,
+        index: iM,
+        word: OM
+      } = MM;
+      return `${rM}:${iM}:${OM}`
     }
 
-    function rG(GG, bG) {
-      if (null === GG) throw new LG.b("fetch", `no URL for image ${JG(bG)}`, {
+    function lM(MM, rM) {
+      if (null === MM) throw new jM.d("fetch", `no URL for image ${yM(rM)}`, {
         cause: null
       });
-      return GG
+      return MM
     }
 
-    function zG(GG, bG, ZG) {
-      var wG, SG, LG;
-      const yG = new Uint8Array(16),
-        kG = new DataView(yG.buffer);
-      return kG.setUint8(0, GG.kind), kG.setUint8(1, GG.index), kG.setUint8(2, bG), kG.setUint32(4, GG.word, !0), kG.setUint32(8, null !== (wG = null === ZG || void 0 === ZG ? void 0 : ZG.id) && void 0 !== wG ? wG : 0, !0), kG.setUint16(12, Math.min(null !== (SG = null === ZG || void 0 === ZG ? void 0 : ZG.width) && void 0 !== SG ? SG : 0, 65535), !0), kG.setUint16(14, Math.min(null !== (LG = null === ZG || void 0 === ZG ? void 0 : ZG.height) && void 0 !== LG ? LG : 0, 65535), !0), yG
+    function EM(MM, rM, iM) {
+      var OM, SM, jM;
+      const aM = new Uint8Array(16),
+        PM = new DataView(aM.buffer);
+      return PM.setUint8(0, MM.kind), PM.setUint8(1, MM.index), PM.setUint8(2, rM), PM.setUint32(4, MM.word, !0), PM.setUint32(8, null !== (OM = null === iM || void 0 === iM ? void 0 : iM.id) && void 0 !== OM ? OM : 0, !0), PM.setUint16(12, Math.min(null !== (SM = null === iM || void 0 === iM ? void 0 : iM.width) && void 0 !== SM ? SM : 0, 65535), !0), PM.setUint16(14, Math.min(null !== (jM = null === iM || void 0 === iM ? void 0 : iM.height) && void 0 !== jM ? jM : 0, 65535), !0), aM
     }
-    const EG = 1179937895,
-      oG = 1313821514,
-      XG = 5130562;
+    const UM = 1179937895,
+      GM = 1313821514,
+      CM = 5130562;
 
-    function uG(GG) {
-      var bG;
-      const ZG = new DataView(GG.buffer, GG.byteOffset, GG.byteLength);
-      if (GG.byteLength < 20 || ZG.getUint32(0, !0) !== EG || ZG.getUint32(16, !0) !== oG) return [];
-      let wG, SG = 20 + ZG.getUint32(12, !0);
+    function eM(MM) {
+      var rM;
+      const iM = new DataView(MM.buffer, MM.byteOffset, MM.byteLength);
+      if (MM.byteLength < 20 || iM.getUint32(0, !0) !== UM || iM.getUint32(16, !0) !== GM) return [];
+      let OM, SM = 20 + iM.getUint32(12, !0);
       try {
-        wG = JSON.parse((new TextDecoder).decode(GG.subarray(20, SG)))
+        OM = JSON.parse((new TextDecoder).decode(MM.subarray(20, SM)))
       } catch {
         return []
       }
-      for (; SG + 8 <= GG.byteLength && ZG.getUint32(SG + 4, !0) !== XG;) SG += 8 + ZG.getUint32(SG, !0);
-      const LG = null !== (bG = wG.images) && void 0 !== bG ? bG : [];
-      if (0 === LG.length || SG + 8 > GG.byteLength) return LG.map((() => null));
-      const yG = GG.subarray(SG + 8, Math.min(GG.byteLength, SG + 8 + ZG.getUint32(SG, !0)));
-      return LG.map((GG => {
-        var bG, ZG, SG;
-        const LG = void 0 === GG.bufferView || null === (bG = wG.bufferViews) || void 0 === bG ? void 0 : bG[GG.bufferView];
-        if (!LG || 0 !== (null !== (ZG = LG.buffer) && void 0 !== ZG ? ZG : 0) || void 0 === LG.byteLength) return null;
-        const kG = null !== (SG = LG.byteOffset) && void 0 !== SG ? SG : 0,
-          UG = kG + LG.byteLength;
-        return UG <= yG.byteLength ? yG.slice(kG, UG) : null
+      for (; SM + 8 <= MM.byteLength && iM.getUint32(SM + 4, !0) !== CM;) SM += 8 + iM.getUint32(SM, !0);
+      const jM = null !== (rM = OM.images) && void 0 !== rM ? rM : [];
+      if (0 === jM.length || SM + 8 > MM.byteLength) return jM.map((() => null));
+      const aM = MM.subarray(SM + 8, Math.min(MM.byteLength, SM + 8 + iM.getUint32(SM, !0)));
+      return jM.map((MM => {
+        var rM, iM, SM;
+        const jM = void 0 === MM.bufferView || null === (rM = OM.bufferViews) || void 0 === rM ? void 0 : rM[MM.bufferView];
+        if (!jM || 0 !== (null !== (iM = jM.buffer) && void 0 !== iM ? iM : 0) || void 0 === jM.byteLength) return null;
+        const PM = null !== (SM = jM.byteOffset) && void 0 !== SM ? SM : 0,
+          nM = PM + jM.byteLength;
+        return nM <= aM.byteLength ? aM.slice(PM, nM) : null
       }))
     }
   },
-  41034: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => yG,
-      e: () => LG,
-      f: () => SG
+  41739: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => aM,
+      c: () => jM,
+      e: () => SM
     });
-    let wG = null;
+    let OM = null;
 
-    function SG(GG) {
-      wG = GG
+    function SM(MM) {
+      OM = MM
     }
 
-    function LG(GG) {
-      wG === GG && (wG = null)
+    function jM(MM) {
+      OM === MM && (OM = null)
     }
 
-    function yG() {
-      var GG;
-      null === (GG = wG) || void 0 === GG || GG()
+    function aM() {
+      var MM;
+      null === (MM = OM) || void 0 === MM || MM()
     }
   },
-  36936: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => VG,
-      g: () => fG,
-      i: () => JG,
-      l: () => YG
+  37524: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => zM,
+      g: () => mM,
+      k: () => yM,
+      m: () => QM
     });
-    var wG = ZG(17),
-      SG = ZG(2380),
-      LG = ZG(2388),
-      yG = ZG(2391),
-      kG = ZG(2465),
-      UG = ZG(19);
+    var OM = iM(19),
+      SM = iM(2619),
+      jM = iM(2622),
+      aM = iM(2624),
+      PM = iM(2690),
+      nM = iM(22);
 
-    function YG(GG, bG) {
-      return (!(0, yG.e)() || 0 === GG && 0 === bG) && (0, LG.y)(SG.g.Joystick, 0, GG, bG, 0)
+    function QM(MM, rM) {
+      return (!(0, aM.c)() || 0 === MM && 0 === rM) && (0, jM.z)(SM.l.Joystick, 0, MM, rM, 0)
     }
-    const VG = {
+    const zM = {
       Action1: 1,
       Action2: 2,
       Action3: 3,
@@ -1353,571 +1361,571 @@ export const modules = {
       Boost: 7
     };
 
-    function pG(GG) {
-      return GG.classList.contains("TouchKeyHit") && QG() ? null : GG.firstElementChild
+    function LM(MM) {
+      return MM.classList.contains("TouchKeyHit") && HM() ? null : MM.firstElementChild
     }
 
-    function fG(GG) {
-      return GG.classList.contains("TouchKeyHit") && !GG.classList.contains("CanvasZone") ? {
-        whole: !QG(),
+    function mM(MM) {
+      return MM.classList.contains("TouchKeyHit") && !MM.classList.contains("CanvasZone") ? {
+        whole: !HM(),
         keyBox: null
       } : {
         whole: !1,
-        keyBox: KG(pG(GG))
+        keyBox: hM(LM(MM))
       }
     }
 
-    function QG() {
-      return document.documentElement.classList.contains(kG.m)
+    function HM() {
+      return document.documentElement.classList.contains(PM.k)
     }
 
-    function KG(GG) {
-      return !(GG instanceof HTMLElement) || GG.offsetWidth <= 0 || GG.offsetHeight <= 0 ? null : {
-        width: GG.offsetWidth,
-        height: GG.offsetHeight
+    function hM(MM) {
+      return !(MM instanceof HTMLElement) || MM.offsetWidth <= 0 || MM.offsetHeight <= 0 ? null : {
+        width: MM.offsetWidth,
+        height: MM.offsetHeight
       }
     }
 
-    function hG(GG, bG) {
-      const ZG = GG => Math.min(65535, Math.round(4 * GG));
-      return (ZG(GG) | ZG(bG) << 16) >>> 0
+    function JM(MM, rM) {
+      const iM = MM => Math.min(65535, Math.round(4 * MM));
+      return (iM(MM) | iM(rM) << 16) >>> 0
     }
 
-    function dG(GG) {
+    function dM(MM) {
       return {
-        x: GG.left + GG.width / 2,
-        y: GG.top + GG.height / 2,
-        radius: Math.min(GG.width, GG.height) / 2
+        x: MM.left + MM.width / 2,
+        y: MM.top + MM.height / 2,
+        radius: Math.min(MM.width, MM.height) / 2
       }
     }
-    const JG = new class {
-      constructor(GG) {
-        this.write = GG, this.elements = new Map, this.canvasLeft = 0, this.canvasTop = 0
+    const yM = new class {
+      constructor(MM) {
+        this.write = MM, this.elements = new Map, this.canvasLeft = 0, this.canvasTop = 0
       }
-      set(GG, bG) {
-        let ZG = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        bG ? this.elements.set(GG, {
-          element: bG,
-          hidden: ZG
-        }) : this.elements.delete(GG), this.measureOne(GG)
+      set(MM, rM) {
+        let iM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        rM ? this.elements.set(MM, {
+          element: rM,
+          hidden: iM
+        }) : this.elements.delete(MM), this.measureOne(MM)
       }
       measure() {
-        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
           left: this.canvasLeft,
           top: this.canvasTop
         };
-        this.canvasLeft = GG.left, this.canvasTop = GG.top;
-        for (const bG of this.elements.keys()) this.measureOne(bG)
+        this.canvasLeft = MM.left, this.canvasTop = MM.top;
+        for (const rM of this.elements.keys()) this.measureOne(rM)
       }
-      hitZone(GG, bG) {
-        let ZG = null,
-          wG = 1;
-        for (const SG of this.elements.keys()) {
-          const LG = this.shown(SG);
-          if (!LG) continue;
+      hitZone(MM, rM) {
+        let iM = null,
+          OM = 1;
+        for (const SM of this.elements.keys()) {
+          const jM = this.shown(SM);
+          if (!jM) continue;
           const {
-            rect: yG,
-            element: kG
-          } = LG, UG = dG(yG), YG = Math.max(0, yG.width / 2 - UG.radius), VG = Math.max(0, yG.height / 2 - UG.radius), fG = Math.max(0, Math.abs(GG - UG.x) - YG), QG = Math.max(0, Math.abs(bG - UG.y) - VG), hG = kG.firstElementChild;
-          let JG = Math.hypot(fG, QG) / UG.radius;
-          const rG = KG(pG(kG));
-          rG && (JG = Math.min(JG, Math.max(2 * Math.abs(GG - UG.x) / rG.width, 2 * Math.abs(bG - UG.y) / rG.height))), JG < wG && (ZG = {
-            code: SG,
-            element: kG,
-            key: hG,
-            ...UG
-          }, wG = JG)
+            rect: aM,
+            element: PM
+          } = jM, nM = dM(aM), QM = Math.max(0, aM.width / 2 - nM.radius), zM = Math.max(0, aM.height / 2 - nM.radius), mM = Math.max(0, Math.abs(MM - nM.x) - QM), HM = Math.max(0, Math.abs(rM - nM.y) - zM), JM = PM.firstElementChild;
+          let yM = Math.hypot(mM, HM) / nM.radius;
+          const lM = hM(LM(PM));
+          lM && (yM = Math.min(yM, Math.max(2 * Math.abs(MM - nM.x) / lM.width, 2 * Math.abs(rM - nM.y) / lM.height))), yM < OM && (iM = {
+            code: SM,
+            element: PM,
+            key: JM,
+            ...nM
+          }, OM = yM)
         }
-        return ZG
+        return iM
       }
-      measureOne(GG) {
-        const bG = this.shown(GG);
-        if (!bG) return void this.write(SG.g.TouchZone, GG, 0, 0, 0);
+      measureOne(MM) {
+        const rM = this.shown(MM);
+        if (!rM) return void this.write(SM.l.TouchZone, MM, 0, 0, 0);
         const {
-          rect: ZG,
-          element: wG
-        } = bG, LG = dG(ZG);
-        this.write(SG.g.TouchZone, GG, LG.x - this.canvasLeft, LG.y - this.canvasTop, hG(ZG.width, ZG.height));
-        const yG = KG(pG(wG));
-        this.write(SG.g.TouchZone, 256 | GG, 0, 0, yG ? hG(yG.width, yG.height) : 0)
+          rect: iM,
+          element: OM
+        } = rM, jM = dM(iM);
+        this.write(SM.l.TouchZone, MM, jM.x - this.canvasLeft, jM.y - this.canvasTop, JM(iM.width, iM.height));
+        const aM = hM(LM(OM));
+        this.write(SM.l.TouchZone, 256 | MM, 0, 0, aM ? JM(aM.width, aM.height) : 0)
       }
-      shown(GG) {
-        const bG = this.elements.get(GG),
-          ZG = wG.e.get("worldPanelHud");
-        if (!bG || bG.hidden || "none" === ZG) return null;
-        const SG = bG.element.getBoundingClientRect();
-        return SG.width <= 0 || SG.height <= 0 ? null : {
-          rect: SG,
-          element: bG.element
+      shown(MM) {
+        const rM = this.elements.get(MM),
+          iM = OM.d.get("worldPanelHud");
+        if (!rM || rM.hidden || "none" === iM) return null;
+        const SM = rM.element.getBoundingClientRect();
+        return SM.width <= 0 || SM.height <= 0 ? null : {
+          rect: SM,
+          element: rM.element
         }
       }
-    }(LG.y);
-    (0, UG.p)(kG.e, (() => {
-      JG.measure()
+    }(jM.z);
+    (0, nM.j)(PM.f, (() => {
+      yM.measure()
     }))
   },
-  41088: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => UG,
-      e: () => YG
+  41787: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => nM,
+      d: () => QM
     });
-    var wG = ZG(41217),
-      SG = ZG(39461),
-      LG = ZG(36801),
-      yG = ZG(41092),
-      kG = ZG(41065);
-    const UG = wG.d.timeForPlayerToConnect - 1e4;
-    async function YG(GG, bG, ZG, wG) {
-      let UG;
+    var OM = iM(41930),
+      SM = iM(40089),
+      jM = iM(37414),
+      aM = iM(41793),
+      PM = iM(41764);
+    const nM = OM.b.timeForPlayerToConnect - 1e4;
+    async function QM(MM, rM, iM, OM) {
+      let nM;
       try {
-        UG = await GG.getTrafficCode()
-      } catch (KG) {
-        throw console.error("[bloxd-wasm-client] could not get a traffic code", KG), new kG.r(KG)
+        nM = await MM.getTrafficCode()
+      } catch (hM) {
+        throw console.error("[bloxd-wasm-client] could not get a traffic code", hM), new PM.w(hM)
       }
       const {
-        gameNameWithVariation: YG,
-        lobbyName: VG
-      } = bG, pG = () => {
-        const bG = (0, LG.g)(GG, YG, VG, UG, (GG => {
-          var bG;
-          return null !== (bG = null === ZG || void 0 === ZG ? void 0 : ZG.isUsingCustomGameTexturePack(GG)) && void 0 !== bG && bG
+        gameNameWithVariation: QM,
+        lobbyName: zM
+      } = rM, LM = () => {
+        const rM = (0, jM.f)(MM, QM, zM, nM, (MM => {
+          var rM;
+          return null !== (rM = null === iM || void 0 === iM ? void 0 : iM.isUsingCustomGameTexturePack(MM)) && void 0 !== rM && rM
         }));
-        bG.joinOptions.wasmClient = !0;
-        const SG = (0, yG.E)();
-        return null !== SG && (bG.joinOptions.renderBackend = SG), bG.joinOptions.joinAdHold = wG, bG
+        rM.joinOptions.wasmClient = !0;
+        const SM = (0, aM.G)();
+        return null !== SM && (rM.joinOptions.renderBackend = SM), rM.joinOptions.joinAdHold = OM, rM
       }, {
-        roomName: fG,
-        joinOptions: QG
-      } = pG();
+        roomName: mM,
+        joinOptions: HM
+      } = LM();
       return {
-        endpoint: bG.endpoint,
-        roomName: fG,
-        joinOptions: QG,
+        endpoint: rM.endpoint,
+        roomName: mM,
+        joinOptions: HM,
         session: {
-          gameNameWithVariation: YG,
-          lobbyName: VG,
-          playerDbId: GG.whamm
+          gameNameWithVariation: QM,
+          lobbyName: zM,
+          playerDbId: MM.whamm
         },
-        optionsAfterRefusal: async bG => await (0, SG.b)(GG, bG) ? pG().joinOptions : null
+        optionsAfterRefusal: async rM => await (0, SM.e)(MM, rM) ? LM().joinOptions : null
       }
     }
   },
-  41352: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => VG,
-      e: () => LG,
-      i: () => pG,
-      l: () => yG
+  42055: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => zM,
+      g: () => jM,
+      j: () => LM,
+      n: () => aM
     });
-    var wG = ZG(41333),
-      SG = ZG(41175);
-    const LG = new class {
+    var OM = iM(42039),
+      SM = iM(41884);
+    const jM = new class {
       constructor() {
         this.page = null, this.session = void 0, this.follower = null, this.isWanted = !1, this.listeners = new Set, this.pageListeners = new Set, this.wantedListeners = new Set
       }
       get current() {
         return void 0 === this.session ? this.page : this.session
       }
-      setPageFiles(GG) {
+      setPageFiles(MM) {
         this.change((() => {
-          this.page = GG
+          this.page = MM
         }))
       }
-      setSessionFiles(GG) {
-        const bG = void 0 !== this.session && void 0 === GG;
+      setSessionFiles(MM) {
+        const rM = void 0 !== this.session && void 0 === MM;
         if (this.change((() => {
-            this.session = GG
-          })), bG)
-          for (const ZG of [...this.pageListeners]) ZG()
+            this.session = MM
+          })), rM)
+          for (const iM of [...this.pageListeners]) iM()
       }
       showsPage() {
         return void 0 === this.session
       }
-      onPageShown(GG) {
-        return this.pageListeners.add(GG), () => {
-          this.pageListeners.delete(GG)
+      onPageShown(MM) {
+        return this.pageListeners.add(MM), () => {
+          this.pageListeners.delete(MM)
         }
       }
-      setFollower(GG) {
-        this.follower = GG, this.startFollower()
+      setFollower(MM) {
+        this.follower = MM, this.startFollower()
       }
       wanted() {
         this.isWanted = !0;
-        for (const GG of [...this.wantedListeners]) GG();
+        for (const MM of [...this.wantedListeners]) MM();
         this.startFollower()
       }
-      onWanted(GG) {
-        return this.wantedListeners.add(GG), () => {
-          this.wantedListeners.delete(GG)
+      onWanted(MM) {
+        return this.wantedListeners.add(MM), () => {
+          this.wantedListeners.delete(MM)
         }
       }
-      onChange(GG) {
-        return this.listeners.add(GG), () => {
-          this.listeners.delete(GG)
+      onChange(MM) {
+        return this.listeners.add(MM), () => {
+          this.listeners.delete(MM)
         }
       }
       startFollower() {
-        const GG = this.follower;
-        this.isWanted && null !== GG && (this.follower = null, GG((() => {
-          this.follower = GG
+        const MM = this.follower;
+        this.isWanted && null !== MM && (this.follower = null, MM((() => {
+          this.follower = MM
         })))
       }
-      change(GG) {
-        const bG = this.current;
-        if (GG(), this.current !== bG)
-          for (const ZG of this.listeners) ZG()
+      change(MM) {
+        const rM = this.current;
+        if (MM(), this.current !== rM)
+          for (const iM of this.listeners) iM()
       }
     };
 
-    function yG(GG, bG) {
+    function aM(MM, rM) {
       return {
-        ...GG,
+        ...MM,
         armourAtlasUrl: () => {
-          var ZG, wG;
-          return null !== (ZG = null === (wG = bG()) || void 0 === wG ? void 0 : wG.armourAtlasUrl()) && void 0 !== ZG ? ZG : GG.armourAtlasUrl()
+          var iM, OM;
+          return null !== (iM = null === (OM = rM()) || void 0 === OM ? void 0 : OM.armourAtlasUrl()) && void 0 !== iM ? iM : MM.armourAtlasUrl()
         },
-        lifeformAtlasUrl: ZG => UG(bG(), (GG => GG.LIFEFORM_ATLAS_PATHS[ZG]), (() => GG.lifeformAtlasUrl(ZG))),
-        groupAtlasUrl: ZG => UG(bG(), (GG => GG.GROUP_ATLAS_PATHS[ZG]), (() => GG.groupAtlasUrl(ZG))),
-        particleItemUrl: wG => YG(bG(), (async () => {
-          const GG = await ZG.e(38).then((() => ZG(51483))).catch((() => null));
-          return (null === GG || void 0 === GG ? void 0 : GG.particleItemSprite(wG)) || null
-        }), (() => GG.particleItemUrl(wG))),
-        blockImageUrl: ZG => YG(bG(), (async () => {
-          var GG, bG;
-          return null !== (GG = null === (bG = await kG()) || void 0 === bG ? void 0 : bG.blockImageName(ZG)) && void 0 !== GG ? GG : null
-        }), (() => GG.blockImageUrl(ZG)))
+        lifeformAtlasUrl: iM => nM(rM(), (MM => MM.LIFEFORM_ATLAS_PATHS[iM]), (() => MM.lifeformAtlasUrl(iM))),
+        groupAtlasUrl: iM => nM(rM(), (MM => MM.GROUP_ATLAS_PATHS[iM]), (() => MM.groupAtlasUrl(iM))),
+        particleItemUrl: OM => QM(rM(), (async () => {
+          const MM = await iM.e(43).then((() => iM(53811))).catch((() => null));
+          return (null === MM || void 0 === MM ? void 0 : MM.particleItemSprite(OM)) || null
+        }), (() => MM.particleItemUrl(OM))),
+        blockImageUrl: iM => QM(rM(), (async () => {
+          var MM, rM;
+          return null !== (MM = null === (rM = await PM()) || void 0 === rM ? void 0 : rM.blockImageName(iM)) && void 0 !== MM ? MM : null
+        }), (() => MM.blockImageUrl(iM)))
       }
     }
 
-    function kG() {
-      return (0, SG.o)().catch((() => null))
+    function PM() {
+      return (0, SM.o)().catch((() => null))
     }
 
-    function UG(GG, bG, ZG) {
-      return YG(GG, (async () => {
-        var GG;
-        const ZG = await kG(),
-          wG = null === ZG ? null : bG(ZG),
-          SG = null !== (GG = null === wG || void 0 === wG ? void 0 : wG.slice(wG.lastIndexOf("/") + 1)) && void 0 !== GG ? GG : null;
-        return "Player_Atlas" === SG ? null : SG
-      }), ZG)
+    function nM(MM, rM, iM) {
+      return QM(MM, (async () => {
+        var MM;
+        const iM = await PM(),
+          OM = null === iM ? null : rM(iM),
+          SM = null !== (MM = null === OM || void 0 === OM ? void 0 : OM.slice(OM.lastIndexOf("/") + 1)) && void 0 !== MM ? MM : null;
+        return "Player_Atlas" === SM ? null : SM
+      }), iM)
     }
-    async function YG(GG, bG, ZG) {
-      if (null !== GG) {
-        const ZG = await bG(),
-          wG = null === ZG ? null : GG.textureUrl(ZG);
-        if (null !== wG) return wG
+    async function QM(MM, rM, iM) {
+      if (null !== MM) {
+        const iM = await rM(),
+          OM = null === iM ? null : MM.textureUrl(iM);
+        if (null !== OM) return OM
       }
-      return ZG()
+      return iM()
     }
-    const VG = 0;
+    const zM = 0;
 
-    function pG(GG) {
-      const bG = [wG.f.ArmourAtlas, wG.f.LifeformAtlas, wG.f.GroupAtlas, wG.f.BlockImage, wG.f.Particle];
-      GG.reload(bG, (GG => {
-        switch (GG.kind) {
-          case wG.f.Particle:
-            return GG.index === wG.j.Item;
-          case wG.f.LifeformAtlas:
-            return GG.word !== VG;
+    function LM(MM) {
+      const rM = [OM.f.ArmourAtlas, OM.f.LifeformAtlas, OM.f.GroupAtlas, OM.f.BlockImage, OM.f.Particle];
+      MM.reload(rM, (MM => {
+        switch (MM.kind) {
+          case OM.f.Particle:
+            return MM.index === OM.i.Item;
+          case OM.f.LifeformAtlas:
+            return MM.word !== zM;
           default:
             return !0
         }
       }))
     }
   },
-  41226: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => wG,
-      g: () => kG,
-      h: () => yG,
-      i: () => SG,
-      m: () => LG
+  41932: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => OM,
+      f: () => PM,
+      j: () => aM,
+      k: () => SM,
+      o: () => jM
     });
-    const wG = 1e3;
+    const OM = 1e3;
 
-    function SG() {
-      UG((() => {
+    function SM() {
+      nM((() => {
         window.location.reload()
       }))
     }
 
-    function LG() {
+    function jM() {
       return new Promise((() => {}))
     }
 
-    function yG(GG) {
-      UG((() => {
-        window.location.replace(GG(window.location.href))
+    function aM(MM) {
+      nM((() => {
+        window.location.replace(MM(window.location.href))
       }))
     }
 
-    function kG(GG) {
-      Promise.resolve().then((() => ZG(86))).then((bG => {
+    function PM(MM) {
+      Promise.resolve().then((() => iM(94))).then((rM => {
         let {
-          currentUrl: ZG
-        } = bG;
-        yG((() => ZG.mergeSearchParamsInto(GG)))
+          currentUrl: iM
+        } = rM;
+        aM((() => iM.mergeSearchParamsInto(MM)))
       }), (() => {
-        yG((() => GG))
+        aM((() => MM))
       }))
     }
 
-    function UG(GG) {
-      null !== window.onbeforeunload ? Promise.resolve().then((() => ZG(1702))).then((bG => {
+    function nM(MM) {
+      null !== window.onbeforeunload ? Promise.resolve().then((() => iM(1830))).then((rM => {
         let {
-          prepareForUnloadWithoutConfirmation: ZG
-        } = bG;
+          prepareForUnloadWithoutConfirmation: iM
+        } = rM;
         try {
-          ZG()
-        } catch (wG) {
-          console.warn("[bloxd-wasm-client] prepareForUnloadWithoutConfirmation threw: leaving plainly", wG), window.onbeforeunload = null
+          iM()
+        } catch (OM) {
+          console.warn("[bloxd-wasm-client] prepareForUnloadWithoutConfirmation threw: leaving plainly", OM), window.onbeforeunload = null
         }
-        GG()
+        MM()
       }), (() => {
-        window.onbeforeunload = null, GG()
-      })) : GG()
+        window.onbeforeunload = null, MM()
+      })) : MM()
     }
   },
-  5074: (GG, bG, ZG) => {
-    function wG(GG, bG) {
-      return SG(GG, bG)
+  5463: (MM, rM, iM) => {
+    function OM(MM, rM) {
+      return SM(MM, rM)
     }
 
-    function SG(GG, bG) {
-      if (GG === bG) return !0;
-      if ("object" !== typeof GG || "object" !== typeof bG || null === GG || null === bG || Array.isArray(GG) !== Array.isArray(bG)) return !1;
-      const ZG = GG,
-        wG = bG,
-        LG = Object.keys(ZG);
-      return LG.length === Object.keys(wG).length && LG.every((GG => Object.prototype.hasOwnProperty.call(wG, GG) && SG(ZG[GG], wG[GG])))
+    function SM(MM, rM) {
+      if (MM === rM) return !0;
+      if ("object" !== typeof MM || "object" !== typeof rM || null === MM || null === rM || Array.isArray(MM) !== Array.isArray(rM)) return !1;
+      const iM = MM,
+        OM = rM,
+        jM = Object.keys(iM);
+      return jM.length === Object.keys(OM).length && jM.every((MM => Object.prototype.hasOwnProperty.call(OM, MM) && SM(iM[MM], OM[MM])))
     }
-    ZG.d(bG, {
-      c: () => wG
+    iM.d(rM, {
+      d: () => OM
     })
   },
-  41299: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => XG,
-      d: () => EG,
-      g: () => hG,
-      i: () => KG
+  42012: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => CM,
+      f: () => UM,
+      g: () => JM,
+      h: () => hM
     });
-    var wG = ZG(1786),
-      SG = ZG(1169),
-      LG = ZG(39456),
-      yG = ZG(36826),
-      kG = ZG(39478),
-      UG = ZG(41065);
-    const YG = {
+    var OM = iM(1919),
+      SM = iM(1215),
+      jM = iM(40087),
+      aM = iM(37437),
+      PM = iM(40100),
+      nM = iM(41764);
+    const QM = {
         "X-Requested-With": "XMLHtttpRequest"
       },
-      VG = 3,
-      pG = [500, 1500];
+      zM = 3,
+      LM = [500, 1500];
 
-    function fG(GG) {
-      const bG = new URL(GG);
+    function mM(MM) {
+      const rM = new URL(MM);
       return {
-        secure: "https:" === bG.protocol || "wss:" === bG.protocol,
-        host: bG.host,
-        pathname: bG.pathname.replace(/\/+$/, ""),
-        search: bG.searchParams.toString()
+        secure: "https:" === rM.protocol || "wss:" === rM.protocol,
+        host: rM.host,
+        pathname: rM.pathname.replace(/\/+$/, ""),
+        search: rM.searchParams.toString()
       }
     }
 
-    function QG(GG, bG, ZG) {
+    function HM(MM, rM, iM) {
       const {
-        secure: wG,
-        host: SG,
-        pathname: LG,
-        search: yG
-      } = fG(GG);
-      return `${wG?"https":"http"}://${SG}${LG}/matchmake/${bG}/${encodeURIComponent(ZG)}${yG?`?${yG}`:""}`
+        secure: OM,
+        host: SM,
+        pathname: jM,
+        search: aM
+      } = mM(MM);
+      return `${OM?"https":"http"}://${SM}${jM}/matchmake/${rM}/${encodeURIComponent(iM)}${aM?`?${aM}`:""}`
     }
 
-    function KG(GG, bG) {
-      var ZG;
-      const wG = null !== (ZG = bG.protocol) && void 0 !== ZG ? ZG : "ws";
-      if ("ws" !== wG) throw new Error(`seat reservation asks for the ${wG} transport`);
+    function hM(MM, rM) {
+      var iM;
+      const OM = null !== (iM = rM.protocol) && void 0 !== iM ? iM : "ws";
+      if ("ws" !== OM) throw new Error(`seat reservation asks for the ${OM} transport`);
       const {
-        secure: SG,
-        host: LG,
-        pathname: yG,
-        search: kG
-      } = fG(GG), UG = new URLSearchParams(kG);
-      UG.append("sessionId", bG.sessionId), bG.reconnectionToken && UG.append("reconnectionToken", bG.reconnectionToken);
-      return `${SG?"wss":"ws"}://${bG.room.publicAddress||`${LG}${yG}`}/${bG.room.processId}/${bG.room.roomId}?${UG.toString()}`
+        secure: SM,
+        host: jM,
+        pathname: aM,
+        search: PM
+      } = mM(MM), nM = new URLSearchParams(PM);
+      nM.append("sessionId", rM.sessionId), rM.reconnectionToken && nM.append("reconnectionToken", rM.reconnectionToken);
+      return `${SM?"wss":"ws"}://${rM.room.publicAddress||`${jM}${aM}`}/${rM.room.processId}/${rM.room.roomId}?${nM.toString()}`
     }
-    async function hG(GG, bG, ZG) {
-      var kG;
-      let YG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const fG = null !== (kG = YG.sleep) && void 0 !== kG ? kG : wG.e,
-        KG = new SG.d(YG.signal),
-        hG = new yG.d((() => {
-          (0, SG.j)(KG.controller, new yG.g("seat"))
+    async function JM(MM, rM, iM) {
+      var PM;
+      let QM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const mM = null !== (PM = QM.sleep) && void 0 !== PM ? PM : OM.c,
+        hM = new SM.e(QM.signal),
+        JM = new aM.e((() => {
+          (0, SM.j)(hM.controller, new aM.i("seat"))
         })),
         {
-          signal: zG
-        } = KG;
+          signal: EM
+        } = hM;
       try {
-        const wG = await (0, LG.g)((() => async function(GG, bG, ZG, wG) {
-          var LG;
+        const OM = await (0, jM.g)((() => async function(MM, rM, iM, OM) {
+          var jM;
           const {
-            signal: yG,
-            sleep: kG
-          } = wG, YG = QG(GG, "joinOrCreate", bG), fG = JSON.stringify(ZG);
-          let KG = null;
-          for (let QG = 0; QG < VG; QG++) {
-            var hG;
-            if (QG > 0) await kG(null !== (hG = pG[QG - 1]) && void 0 !== hG ? hG : 1500, yG);
-            let GG;
-            (0, SG.p)(yG);
+            signal: aM,
+            sleep: PM
+          } = OM, QM = HM(MM, "joinOrCreate", rM), mM = JSON.stringify(iM);
+          let hM = null;
+          for (let HM = 0; HM < zM; HM++) {
+            var JM;
+            if (HM > 0) await PM(null !== (JM = LM[HM - 1]) && void 0 !== JM ? JM : 1500, aM);
+            let MM;
+            (0, SM.p)(aM);
             try {
-              GG = await JG(YG, fG, wG)
-            } catch (zG) {
-              (0, SG.p)(yG), KG = dG(zG);
+              MM = await yM(QM, mM, OM)
+            } catch (EM) {
+              (0, SM.p)(aM), hM = dM(EM);
               continue
             }
             const {
-              response: bG,
-              answer: ZG,
-              refusal: LG,
-              lost: VG
-            } = GG;
-            if (null === VG) {
-              if (null !== LG) throw rG(LG, ZG);
-              if (bG.ok && null !== ZG && uG(ZG)) return ZG;
-              KG = new UG.q(`seat request answered HTTP ${bG.status}${null===ZG?" without JSON":" without a seat"}`, !1, void 0, bG.status)
-            } else KG = dG(VG.error)
+              response: rM,
+              answer: iM,
+              refusal: jM,
+              lost: zM
+            } = MM;
+            if (null === zM) {
+              if (null !== jM) throw lM(jM, iM);
+              if (rM.ok && null !== iM && eM(iM)) return iM;
+              hM = new nM.v(`seat request answered HTTP ${rM.status}${null===iM?" without JSON":" without a seat"}`, !1, void 0, rM.status)
+            } else hM = dM(zM.error)
           }
-          throw null !== (LG = KG) && void 0 !== LG ? LG : new UG.q("seat request made no attempt", !1)
-        }(GG, bG, ZG, {
-          ...YG,
-          signal: zG,
-          sleep: fG
-        })), zG, fG);
-        return hG.answered(), wG
+          throw null !== (jM = hM) && void 0 !== jM ? jM : new nM.v("seat request made no attempt", !1)
+        }(MM, rM, iM, {
+          ...QM,
+          signal: EM,
+          sleep: mM
+        })), EM, mM);
+        return JM.answered(), OM
       } finally {
-        hG.stop(), KG.unfollow()
+        JM.stop(), hM.unfollow()
       }
     }
 
-    function dG(GG) {
-      return new UG.q(GG instanceof Error ? GG.message : String(GG), !0, GG)
+    function dM(MM) {
+      return new nM.v(MM instanceof Error ? MM.message : String(MM), !0, MM)
     }
-    async function JG(GG, bG, ZG) {
-      var wG;
+    async function yM(MM, rM, iM) {
+      var OM;
       const {
-        signal: LG
-      } = ZG, yG = null !== (wG = ZG.fetch) && void 0 !== wG ? wG : fetch, kG = await yG(GG, {
+        signal: jM
+      } = iM, aM = null !== (OM = iM.fetch) && void 0 !== OM ? OM : fetch, PM = await aM(MM, {
         method: "POST",
         headers: {
-          ...YG,
+          ...QM,
           Accept: "application/json",
           "Content-Type": "application/json"
         },
-        body: bG,
+        body: rM,
         credentials: "include",
-        signal: LG
+        signal: jM
       }), {
-        answer: UG,
-        lost: VG
-      } = await async function(GG) {
+        answer: nM,
+        lost: zM
+      } = await async function(MM) {
         try {
-          const bG = await GG.json();
+          const rM = await MM.json();
           return {
-            answer: "object" === typeof bG && null !== bG ? bG : null,
+            answer: "object" === typeof rM && null !== rM ? rM : null,
             lost: null
           }
-        } catch (bG) {
+        } catch (rM) {
           return {
             answer: null,
-            lost: bG instanceof SyntaxError ? null : {
-              error: bG
+            lost: rM instanceof SyntaxError ? null : {
+              error: rM
             }
           }
         }
-      }(kG), pG = null !== UG && "string" === typeof UG.error ? UG.error : null;
-      var fG;
-      null !== pG && (null === (fG = ZG.onRefusal) || void 0 === fG || fG.call(ZG));
-      return (0, SG.p)(LG), {
-        response: kG,
-        answer: UG,
-        refusal: pG,
-        lost: VG
+      }(PM), LM = null !== nM && "string" === typeof nM.error ? nM.error : null;
+      var mM;
+      null !== LM && (null === (mM = iM.onRefusal) || void 0 === mM || mM.call(iM));
+      return (0, SM.p)(jM), {
+        response: PM,
+        answer: nM,
+        refusal: LM,
+        lost: zM
       }
     }
 
-    function rG(GG, bG) {
-      return new UG.k(GG, "number" === typeof(null === bG || void 0 === bG ? void 0 : bG.code) ? bG.code : 0, (0, kG.s)(GG).text)
+    function lM(MM, rM) {
+      return new nM.n(MM, "number" === typeof(null === rM || void 0 === rM ? void 0 : rM.code) ? rM.code : 0, (0, PM.t)(MM).text)
     }
-    class zG extends Error {
-      constructor(GG, bG) {
-        super(GG), this.code = bG, this.name = "SeatHttpError"
+    class EM extends Error {
+      constructor(MM, rM) {
+        super(MM), this.code = rM, this.name = "SeatHttpError"
       }
     }
-    async function EG(GG, bG, ZG) {
-      let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    async function UM(MM, rM, iM) {
+      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        response: SG,
-        answer: LG,
-        refusal: yG,
-        lost: kG
-      } = await JG(QG(GG, "reconnect", bG), JSON.stringify({
-        reconnectionToken: ZG
-      }), wG);
-      if (null !== kG) throw kG.error;
-      if (!SG.ok) {
-        const GG = null !== LG && "number" === typeof LG.code && 0 !== LG.code ? LG.code : SG.status;
-        throw new zG(`the seat's reconnect was refused: ${null!==yG&&void 0!==yG?yG:`HTTP ${SG.status}`}`, GG)
+        response: SM,
+        answer: jM,
+        refusal: aM,
+        lost: PM
+      } = await yM(HM(MM, "reconnect", rM), JSON.stringify({
+        reconnectionToken: iM
+      }), OM);
+      if (null !== PM) throw PM.error;
+      if (!SM.ok) {
+        const MM = null !== jM && "number" === typeof jM.code && 0 !== jM.code ? jM.code : SM.status;
+        throw new EM(`the seat's reconnect was refused: ${null!==aM&&void 0!==aM?aM:`HTTP ${SM.status}`}`, MM)
       }
-      if (null !== yG) throw rG(yG, LG);
-      if (null === LG || !uG(LG)) throw new Error("the seat's reconnect answered " + (null === LG ? "without JSON" : "without a seat"));
+      if (null !== aM) throw lM(aM, jM);
+      if (null === jM || !eM(jM)) throw new Error("the seat's reconnect answered " + (null === jM ? "without JSON" : "without a seat"));
       return {
-        ...LG,
-        reconnectionToken: ZG
+        ...jM,
+        reconnectionToken: iM
       }
     }
-    const oG = 10;
+    const GM = 10;
 
-    function XG(GG) {
-      if (GG.byteLength < 2 || GG[0] !== oG) return null;
-      const bG = 2 + GG[1];
-      return bG > GG.byteLength ? null : (new TextDecoder).decode(GG.subarray(2, bG))
+    function CM(MM) {
+      if (MM.byteLength < 2 || MM[0] !== GM) return null;
+      const rM = 2 + MM[1];
+      return rM > MM.byteLength ? null : (new TextDecoder).decode(MM.subarray(2, rM))
     }
 
-    function uG(GG) {
-      const bG = GG.room;
-      return "string" === typeof GG.sessionId && "object" === typeof bG && null !== bG && "string" === typeof bG.roomId && "string" === typeof bG.processId && "string" === typeof bG.name
+    function eM(MM) {
+      const rM = MM.room;
+      return "string" === typeof MM.sessionId && "object" === typeof rM && null !== rM && "string" === typeof rM.roomId && "string" === typeof rM.processId && "string" === typeof rM.name
     }
   },
-  40976: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      $: () => lG,
-      A: () => uG,
-      E: () => FG,
-      I: () => EG,
-      L: () => oG,
-      P: () => dG,
-      T: () => WG,
-      W: () => aG,
-      Z: () => KG,
-      b: () => SG,
-      cb: () => rG,
-      db: () => JG,
-      e: () => cG,
-      gb: () => zG,
-      i: () => vG,
-      jb: () => XG,
-      m: () => QG,
-      p: () => hG,
-      t: () => IG,
-      v: () => iG,
-      x: () => mG,
-      y: () => CG
+  41682: (MM, rM, iM) => {
+    iM.d(rM, {
+      A: () => eM,
+      B: () => RM,
+      D: () => UM,
+      H: () => GM,
+      K: () => dM,
+      N: () => tM,
+      O: () => WM,
+      P: () => hM,
+      S: () => DM,
+      U: () => lM,
+      X: () => yM,
+      _: () => EM,
+      ab: () => CM,
+      d: () => SM,
+      h: () => sM,
+      j: () => pM,
+      k: () => HM,
+      l: () => JM,
+      n: () => uM,
+      p: () => bM,
+      s: () => gM,
+      w: () => wM
     });
-    var wG = ZG(2984);
-    const SG = {
+    var OM = iM(3349);
+    const SM = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -1946,259 +1954,259 @@ export const modules = {
       LobbyManage: 96
     };
 
-    function LG(GG, bG) {
-      return !ArrayBuffer.isView(GG) || GG instanceof DataView ? Array.isArray(GG) ? GG.map((GG => bG(GG))) : GG : Array.from(GG, (GG => bG(GG)))
+    function jM(MM, rM) {
+      return !ArrayBuffer.isView(MM) || MM instanceof DataView ? Array.isArray(MM) ? MM.map((MM => rM(MM))) : MM : Array.from(MM, (MM => rM(MM)))
     }
 
-    function yG(GG) {
-      if ("string" !== typeof GG) return GG;
-      for (let bG = 0; bG < GG.length; bG++) {
-        const ZG = GG.charCodeAt(bG);
-        if (ZG >= 55296 && ZG <= 57343) return UG.decode(kG.encode(GG))
+    function aM(MM) {
+      if ("string" !== typeof MM) return MM;
+      for (let rM = 0; rM < MM.length; rM++) {
+        const iM = MM.charCodeAt(rM);
+        if (iM >= 55296 && iM <= 57343) return nM.decode(PM.encode(MM))
       }
-      return GG
+      return MM
     }
-    const kG = new TextEncoder,
-      UG = new TextDecoder;
+    const PM = new TextEncoder,
+      nM = new TextDecoder;
 
-    function YG(GG) {
-      return GG
+    function QM(MM) {
+      return MM
     }
-    let VG;
+    let zM;
 
-    function pG(GG) {
-      return null === GG || "object" !== typeof GG ? GG : [yG(GG.Uk), yG(GG.Yk)]
-    }
-
-    function fG(GG) {
-      return null === GG || "object" !== typeof GG ? GG : [LG(GG.eS, YG), LG(GG.Wk, YG)]
+    function LM(MM) {
+      return null === MM || "object" !== typeof MM ? MM : [aM(MM.lQ), aM(MM.EQ)]
     }
 
-    function QG(GG) {
-      return null === (bG = GG) || "object" !== typeof bG ? bG : [yG(bG.vV), yG(bG.aV)];
-      var bG
+    function mM(MM) {
+      return null === MM || "object" !== typeof MM ? MM : [jM(MM.ti, QM), jM(MM.oa, QM)]
     }
 
-    function KG(GG) {
-      return null === (bG = GG) || "object" !== typeof bG ? bG : [bG.id, bG.rV];
-      var bG
+    function HM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.Kz), aM(rM.qz)];
+      var rM
     }
 
-    function hG(GG) {
-      return null === (bG = GG) || "object" !== typeof bG ? bG : [bG.BS, yG(bG.bL), bG.ZL, yG(bG.LL), bG.YL, bG.VL, bG.mV, yG(bG.IV), yG(bG.FV)];
-      var bG
+    function hM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [rM.id, rM.IQ];
+      var rM
     }
 
-    function dG(GG) {
-      return null === (bG = GG) || "object" !== typeof bG ? bG : [LG(bG.xy, YG), bG.Gk];
-      var bG
+    function JM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [rM.hM, aM(rM.JM), rM.dM, aM(rM.EM), rM.eM, rM.bM, rM.cn, aM(rM.MQ), aM(rM.rQ)];
+      var rM
     }
 
-    function JG(GG) {
-      return null === (bG = GG) || "object" !== typeof bG ? bG : [LG(bG.Dy, (GG => yG(GG))), yG(bG.Ny), bG.Oy];
-      var bG
+    function dM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [jM(rM.SP, QM), rM.jP];
+      var rM
     }
 
-    function rG(GG) {
-      return null === (bG = GG) || "object" !== typeof bG ? bG : [LG(bG.uU, YG), yG(bG.iU), bG.CU];
-      var bG
+    function yM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [jM(rM.aQ, (MM => aM(MM))), aM(rM.nQ), rM.QQ];
+      var rM
     }
 
-    function zG(GG) {
-      return null === (bG = GG) || "object" !== typeof bG ? bG : [yG(bG.FL), yG(bG.vL)];
-      var bG
+    function lM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [jM(rM.mQ, QM), aM(rM.hQ), rM.JQ];
+      var rM
     }
 
-    function EG(GG) {
-      return null === (bG = GG) || "object" !== typeof bG ? bG : [yG(bG.Ak)];
-      var bG
+    function EM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.Ii), aM(rM.Ki)];
+      var rM
     }
 
-    function oG(GG) {
-      return yG(GG)
+    function UM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.Ua)];
+      var rM
     }
 
-    function XG(GG) {
-      return null === (bG = GG) || "object" !== typeof bG ? bG : [yG(bG.hV), yG(bG.dV), yG(bG.Uk), yG(bG.Yk)];
-      var bG
+    function GM(MM) {
+      return aM(MM)
     }
 
-    function uG(GG) {
-      return pG(GG)
+    function CM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.dQ), aM(rM.yQ), aM(rM.lQ), aM(rM.EQ)];
+      var rM
     }
 
-    function iG(GG) {
-      return pG(GG)
+    function eM(MM) {
+      return LM(MM)
     }
 
-    function CG(GG) {
-      return null === (bG = GG) || "object" !== typeof bG ? bG : [yG(bG.hU)];
-      var bG
+    function bM(MM) {
+      return LM(MM)
     }
 
-    function WG(GG) {
-      return GG
+    function wM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.KQ)];
+      var rM
     }
 
-    function mG(GG) {
-      return null === (bG = GG) || "object" !== typeof bG ? bG : [yG(bG.yk), yG(bG.kk)];
-      var bG
+    function tM(MM) {
+      return MM
     }
 
-    function IG(GG) {
-      return yG(GG)
+    function gM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.Ja), aM(rM.da)];
+      var rM
     }
 
-    function FG(GG) {
-      return fG(GG)
+    function uM(MM) {
+      return aM(MM)
     }
 
-    function vG(GG) {
-      return fG(GG)
+    function RM(MM) {
+      return mM(MM)
     }
 
-    function aG(GG) {
-      return null === (bG = GG) || "object" !== typeof bG ? bG : [yG(bG.WU)];
-      var bG
+    function pM(MM) {
+      return mM(MM)
     }
 
-    function cG(GG) {
-      return (VG ??= (0, wG.c)().map((GG => GG.name)), VG).map((bG => {
-        return "string" === typeof(ZG = GG[bG]) ? yG(ZG) : LG(ZG, YG);
-        var ZG
+    function WM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.vQ)];
+      var rM
+    }
+
+    function sM(MM) {
+      return (zM ??= (0, OM.f)().map((MM => MM.name)), zM).map((rM => {
+        return "string" === typeof(iM = MM[rM]) ? aM(iM) : jM(iM, QM);
+        var iM
       }))
     }
 
-    function lG(GG) {
-      return null === (bG = GG) || "object" !== typeof bG ? bG : [bG.fU, bG.QU, bG.KU];
-      var bG
+    function DM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [rM.fa, rM.Ya, rM.Na];
+      var rM
     }
   },
-  41359: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => LG
+  42061: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => jM
     });
-    var wG = ZG(41365),
-      SG = ZG(41352);
-    const LG = new class {
-      constructor(GG) {
-        this.pack = GG, this.game = void 0, this.settle = null, this.hold = null, this.endedWhileHeld = !1, this.gameListeners = new Set, GG.onWanted((() => {
+    var OM = iM(42065),
+      SM = iM(42055);
+    const jM = new class {
+      constructor(MM) {
+        this.pack = MM, this.game = void 0, this.settle = null, this.hold = null, this.endedWhileHeld = !1, this.gameListeners = new Set, MM.onWanted((() => {
           this.release()
         }))
       }
-      setGame(GG) {
-        if (void 0 === GG && null !== this.hold) return void(this.endedWhileHeld = !0);
+      setGame(MM) {
+        if (void 0 === MM && null !== this.hold) return void(this.endedWhileHeld = !0);
         this.hold = null, this.endedWhileHeld = !1;
-        const bG = this.inGame();
-        if (this.game = GG, this.update(), this.inGame() !== bG)
-          for (const ZG of this.gameListeners) ZG()
+        const rM = this.inGame();
+        if (this.game = MM, this.update(), this.inGame() !== rM)
+          for (const iM of this.gameListeners) iM()
       }
       inGame() {
         return void 0 !== this.game
       }
-      onGameChange(GG) {
-        return this.gameListeners.add(GG), () => {
-          this.gameListeners.delete(GG)
+      onGameChange(MM) {
+        return this.gameListeners.add(MM), () => {
+          this.gameListeners.delete(MM)
         }
       }
-      unwantedLeave(GG) {
-        GG && void 0 !== this.game ? this.hold = {
+      unwantedLeave(MM) {
+        MM && void 0 !== this.game ? this.hold = {
           game: this.game
         } : this.release()
       }
       rejoinHold() {
         return this.hold
       }
-      releaseHold(GG) {
-        null !== GG && GG === this.hold && this.release()
+      releaseHold(MM) {
+        null !== MM && MM === this.hold && this.release()
       }
       release() {
         if (null === this.hold) return;
-        const GG = this.endedWhileHeld;
-        this.hold = null, this.endedWhileHeld = !1, GG && this.setGame(void 0)
+        const MM = this.endedWhileHeld;
+        this.hold = null, this.endedWhileHeld = !1, MM && this.setGame(void 0)
       }
-      setSettled(GG) {
-        this.settle = GG, this.update()
+      setSettled(MM) {
+        this.settle = MM, this.update()
       }
       update() {
-        void 0 === this.game ? this.pack.setSessionFiles(void 0) : null !== this.settle && (0, wG.b)(this.settle.state, this.game) && this.pack.setSessionFiles(this.settle.files)
+        void 0 === this.game ? this.pack.setSessionFiles(void 0) : null !== this.settle && (0, OM.b)(this.settle.state, this.game) && this.pack.setSessionFiles(this.settle.files)
       }
-    }(SG.e)
+    }(SM.g)
   },
-  5071: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => yG,
-      d: () => kG
+  5456: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => aM,
+      g: () => PM
     });
-    var wG = ZG(2138),
-      SG = ZG(5074);
-    let LG = null;
+    var OM = iM(2263),
+      SM = iM(5463);
+    let jM = null;
 
-    function yG(GG) {
-      LG = {
-        pack: GG.metaData.id === wG.e ? null : GG
+    function aM(MM) {
+      jM = {
+        pack: MM.metaData.id === OM.b ? null : MM
       }
     }
 
-    function kG(GG) {
-      return !(null === LG || !(0, SG.c)(LG.pack, GG)) && (LG = null, !0)
+    function PM(MM) {
+      return !(null === jM || !(0, SM.d)(jM.pack, MM)) && (jM = null, !0)
     }
   },
-  41048: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      followPageUiPack: () => vV,
-      packForGame: () => FV,
-      playWasmGame: () => eV,
-      prefetchWasmPreviews: () => FU,
-      setGamePackConfirm: () => nY,
-      startWasmPlay: () => PV,
-      startWasmPreviews: () => IU
+  41755: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      followPageUiPack: () => Fz,
+      packForGame: () => vz,
+      playWasmGame: () => OL,
+      prefetchWasmPreviews: () => xn,
+      setGamePackConfirm: () => Mz,
+      startWasmPlay: () => qz,
+      startWasmPreviews: () => An
     });
-    var wG = ZG(188),
-      SG = ZG(1202),
-      LG = ZG(140),
-      yG = ZG(39487),
-      kG = ZG(1895),
-      UG = ZG(19),
-      YG = ZG(4695),
-      VG = ZG(1275),
-      pG = ZG(1682),
-      fG = ZG(1287),
-      QG = ZG(39663),
-      KG = ZG(1260),
-      hG = ZG(1781),
-      dG = ZG(2910);
-    let JG = null,
-      rG = null,
-      zG = null,
-      EG = !1;
+    var OM = iM(181),
+      SM = iM(1251),
+      jM = iM(143),
+      aM = iM(40118),
+      PM = iM(2039),
+      nM = iM(22),
+      QM = iM(5052),
+      zM = iM(1360),
+      LM = iM(1818),
+      mM = iM(1373),
+      HM = iM(40331),
+      hM = iM(1327),
+      JM = iM(1911),
+      dM = iM(3248);
+    let yM = null,
+      lM = null,
+      EM = null,
+      UM = !1;
 
-    function oG() {
-      JG ??= performance.now()
+    function GM() {
+      yM ??= performance.now()
     }
-    const XG = {
+    const CM = {
       ready: () => {
-        hG.d.markAdmissionAwaited()
+        JM.b.markAdmissionAwaited()
       },
       adEnded: () => {
-        hG.d.markJoinAdEnded()
+        JM.b.markJoinAdEnded()
       },
       admitted: () => {
-        hG.d.markAdmitted()
+        JM.b.markAdmitted()
       }
     };
-    var uG = ZG(39678),
-      iG = ZG(39578),
-      CG = ZG(36808),
-      WG = ZG(39456),
-      mG = ZG(8957),
-      IG = ZG(36826),
-      FG = ZG(41056),
-      vG = ZG(4800),
-      aG = ZG(40971),
-      cG = ZG(41031),
-      lG = ZG(40976);
-    const jG = {
+    var eM = iM(40342),
+      bM = iM(40249),
+      wM = iM(37416),
+      tM = iM(40087),
+      gM = iM(9510),
+      uM = iM(37437),
+      RM = iM(41761),
+      pM = iM(5188),
+      WM = iM(41677),
+      sM = iM(41734),
+      DM = iM(41682);
+    const kM = {
       states: {
         health: !0,
         aura: !0,
@@ -2321,355 +2329,367 @@ export const modules = {
       }
     };
 
-    function PG(GG) {
-      const bG = {
-        ...cG.d[GG]
+    function ZM(MM) {
+      const rM = {
+        ...sM.c[MM]
       };
-      for (const ZG of Object.keys(jG[GG])) delete bG[ZG];
-      return bG
+      for (const iM of Object.keys(kM[MM])) delete rM[iM];
+      return rM
     }
 
-    function MG() {
-      var GG, bG;
-      return null === (GG = null === (bG = (0, aG.f)()) || void 0 === bG ? void 0 : bG.localPlayerAlive()) || void 0 === GG || GG
+    function oM() {
+      var MM, rM;
+      return null === (MM = null === (rM = (0, WM.e)()) || void 0 === rM ? void 0 : rM.localPlayerAlive()) || void 0 === MM || MM
     }
 
-    function AG() {
-      var GG, bG;
-      return null !== (GG = null === (bG = (0, aG.f)()) || void 0 === bG ? void 0 : bG.localDeaths()) && void 0 !== GG ? GG : null
+    function fM() {
+      var MM, rM;
+      return null !== (MM = null === (rM = (0, WM.e)()) || void 0 === rM ? void 0 : rM.localDeaths()) && void 0 !== MM ? MM : null
     }
-    const sG = {
-        current: MG,
-        watch: GG => {
-          let bG = MG(),
-            ZG = AG();
-          return (0, vG.t)((() => {
-            const wG = MG(),
-              SG = AG(),
-              LG = null !== SG && null !== ZG && SG !== ZG;
-            ZG = SG, LG ? (bG || GG(!0), GG(!1), wG && GG(!0), bG = wG) : wG !== bG && (bG = wG, GG(wG))
+    const YM = {
+        current: oM,
+        watch: MM => {
+          let rM = oM(),
+            iM = fM();
+          return (0, pM.y)((() => {
+            const OM = oM(),
+              SM = fM(),
+              jM = null !== SM && null !== iM && SM !== iM;
+            iM = SM, jM ? (rM || MM(!0), MM(!1), OM && MM(!0), rM = OM) : OM !== rM && (rM = OM, MM(OM))
           }))
         }
       },
-      qG = {
+      NM = {
         states: {
-          ...PG("states"),
-          localPlayerAlive: sG
+          ...ZM("states"),
+          localPlayerAlive: YM
         },
         events: {
-          ...PG("events"),
+          ...ZM("events"),
           localPlayerAliveSet: {
-            watch: sG.watch
+            watch: YM.watch
           }
         },
         commands: {
-          ...PG("commands"),
+          ...ZM("commands"),
           respawn: () => {
-            var GG;
-            null === (GG = (0, aG.f)()) || void 0 === GG || GG.respawn()
+            var MM;
+            null === (MM = (0, WM.e)()) || void 0 === MM || MM.respawn()
           },
-          playEmote: GG => {
-            var bG;
-            null === (bG = (0, aG.f)()) || void 0 === bG || bG.send(lG.b.PlayEmote, (0, lG.I)({
-              Ak: GG
+          playEmote: MM => {
+            var rM;
+            null === (rM = (0, WM.e)()) || void 0 === rM || rM.send(DM.d.PlayEmote, (0, DM.D)({
+              Ua: MM
             }))
           },
-          applyTemporaryThirdPerson: GG => {
-            var bG;
+          applyTemporaryThirdPerson: MM => {
+            var rM;
             let {
-              durationMs: ZG
-            } = GG;
-            null === (bG = (0, aG.f)()) || void 0 === bG || bG.thirdPersonFor(ZG)
+              durationMs: iM
+            } = MM;
+            null === (rM = (0, WM.e)()) || void 0 === rM || rM.thirdPersonFor(iM)
           },
-          bindCustomButtonKeys: GG => {
-            var bG;
-            null === (bG = (0, aG.f)()) || void 0 === bG || bG.bindCustomButtonKeys(GG)
+          bindCustomButtonKeys: MM => {
+            var rM;
+            null === (rM = (0, WM.e)()) || void 0 === rM || rM.bindCustomButtonKeys(MM)
           },
-          pressCustomButton: GG => {
-            var bG;
+          pressCustomButton: MM => {
+            var rM;
             let {
-              id: ZG,
-              down: wG
-            } = GG;
-            null === (bG = (0, aG.f)()) || void 0 === bG || bG.pressCustomButton(ZG, wG)
+              id: iM,
+              down: OM
+            } = MM;
+            null === (rM = (0, WM.e)()) || void 0 === rM || rM.pressCustomButton(iM, OM)
           },
           setLookSensitivity: () => {},
-          wakeUp: GG => {
-            const bG = (0, lG.W)({
-                WU: GG
+          wakeUp: MM => {
+            const rM = (0, DM.O)({
+                vQ: MM
               }),
-              ZG = () => {
-                const GG = (0, aG.f)();
-                return !(null !== GG && void 0 !== GG && GG.isSessionLive) || GG.send(lG.b.StopSleeping, bG)
+              iM = () => {
+                const MM = (0, WM.e)();
+                return !(null !== MM && void 0 !== MM && MM.isSessionLive) || MM.send(DM.d.StopSleeping, rM)
               };
-            if (!ZG()) {
-              const GG = (0, vG.t)((() => {
-                ZG() && GG()
+            if (!iM()) {
+              const MM = (0, pM.y)((() => {
+                iM() && MM()
               }))
             }
           },
-          setCameraZoom: GG => {
-            var bG;
-            null === (bG = (0, aG.f)()) || void 0 === bG || bG.setCameraZoom(GG)
+          setCameraZoom: MM => {
+            var rM;
+            null === (rM = (0, WM.e)()) || void 0 === rM || rM.setCameraZoom(MM)
           }
         },
-        queries: PG("queries"),
+        queries: ZM("queries"),
         lookups: {
-          ...PG("lookups"),
+          ...ZM("lookups"),
           cameraZoom: () => {
-            var GG, bG;
-            return null !== (GG = null === (bG = (0, aG.f)()) || void 0 === bG ? void 0 : bG.cameraZoom()) && void 0 !== GG ? GG : 0
+            var MM, rM;
+            return null !== (MM = null === (rM = (0, WM.e)()) || void 0 === rM ? void 0 : rM.cameraZoom()) && void 0 !== MM ? MM : 0
           }
         }
       };
-    var nG = ZG(39478),
-      gG = ZG(41065),
-      eG = ZG(41072),
-      RG = ZG(41088),
-      TG = ZG(1213),
-      HG = ZG(86),
-      tG = ZG(4537),
-      DG = ZG(3728),
-      NG = ZG(1131);
-    const OG = {
-      my: () => (0, TG.h)(),
-      inbuiltOverwritten: () => tG.e,
-      reflectApplyHit: () => NG.b,
-      definerHit: () => HG.currentUrl.c,
-      emitReplaced: () => (0, UG.b)(),
-      confirmMesh: () => (0, DG.b)(),
-      confirmMeshHitStack: () => (0, DG.e)()
+    var AM = iM(40100),
+      xM = iM(41764),
+      vM = iM(41767),
+      FM = iM(41787),
+      BM = iM(1265),
+      XM = iM(94),
+      IM = iM(4906),
+      KM = iM(4101),
+      qM = iM(1171);
+    const TM = {
+      tz: () => (0, BM.f)(),
+      inbuiltOverwritten: () => IM.e,
+      reflectApplyHit: () => qM.b,
+      definerHit: () => XM.currentUrl.c,
+      emitReplaced: () => (0, nM.b)(),
+      confirmMesh: () => (0, KM.c)(),
+      confirmMeshHitStack: () => (0, KM.f)()
     };
-    var xG = ZG(41077),
-      BG = ZG(41226);
-    var Gb = ZG(17),
-      bb = ZG(1903),
-      Zb = ZG(1956),
-      wb = ZG(1583),
-      Sb = ZG(2009),
-      Lb = ZG(1151),
-      yb = ZG(1204),
-      kb = ZG(41235);
+    var VM = iM(41776),
+      cM = iM(41932);
+    var Mr = iM(19),
+      rr = iM(2045),
+      ir = iM(2093),
+      Or = iM(1722),
+      Sr = iM(2141),
+      jr = iM(1188),
+      ar = iM(1258),
+      Pr = iM(41939);
 
-    function Ub() {
-      return yb.d.get().getCurrentLanguageCode()
+    function nr() {
+      return ar.e.get().getCurrentLanguageCode()
     }
 
-    function Yb(GG) {
-      const bG = () => {
-        GG({
-          translate: (GG, bG) => (0, Lb.q)(Ub(), GG, bG),
-          keyBindingText: GG => {
-            const bG = (0, Zb.y)(GG, Gb.e.get("isTouchScreen"));
-            return null !== bG ? (0, Lb.r)(Ub(), bG.translationKey, bG.params) : (0, Zb.t)((0, Zb.x)(GG))
+    function Qr(MM) {
+      const rM = () => {
+        MM({
+          translate: (MM, rM) => (0, jr.t)(nr(), MM, rM),
+          keyBindingText: MM => {
+            const rM = (0, ir.r)(MM, Mr.d.get("isTouchScreen"));
+            return null !== rM ? (0, jr.x)(nr(), rM.translationKey, rM.params) : (0, ir.m)((0, ir.p)(MM))
           },
-          isFriend: Sb.f,
-          hiddenNames: bb.b.shown,
-          loadsFontRest: (0, kb.e)(Ub())
+          isFriend: Sr.f,
+          hiddenNames: rr.c.shown,
+          loadsFontRest: (0, Pr.d)(nr())
         })
       };
-      let ZG = !1;
-      const wG = () => {
-          const GG = Ub();
-          (0, Lb.i)(GG).then((() => {
-            ZG || GG !== Ub() || bG()
+      let iM = !1;
+      const OM = () => {
+          const MM = nr();
+          (0, jr.k)(MM).then((() => {
+            iM || MM !== nr() || rM()
           }))
         },
-        SG = () => wb.b.getSocialState().friends.map((GG => GG.name.toLowerCase())).sort().join(" ");
-      let LG = SG();
-      bG(), wG();
-      const yG = [(0, yb.h)((() => {
-        bG(), wG()
-      })), (0, UG.p)("customBindingsChanged", bG), (0, UG.p)("appManagerUpdated|isTouchScreen", bG), (0, Sb.e)((() => {
-        const GG = SG();
-        GG !== LG && (LG = GG, bG())
-      })), bb.b.subscribe(bG)];
+        SM = () => Or.e.getSocialState().friends.map((MM => MM.name.toLowerCase())).sort().join(" ");
+      let jM = SM();
+      rM(), OM();
+      const aM = [(0, ar.i)((() => {
+        rM(), OM()
+      })), (0, nM.j)("customBindingsChanged", rM), (0, nM.j)("appManagerUpdated|isTouchScreen", rM), (0, Sr.d)((() => {
+        const MM = SM();
+        MM !== jM && (jM = MM, rM())
+      })), rr.c.subscribe(rM)];
       return () => {
-        ZG = !0;
-        for (const GG of yG) GG()
+        iM = !0;
+        for (const MM of aM) MM()
       }
     }
-    var Vb = ZG(612),
-      pb = ZG(982),
-      fb = ZG(1931),
-      Qb = ZG(333),
-      Kb = ZG(171),
-      hb = ZG(2868),
-      db = ZG(2872),
-      Jb = ZG(39136),
-      rb = ZG(4708),
-      zb = ZG(41248),
-      Eb = ZG(666),
-      ob = ZG(631),
-      Xb = ZG(2947),
-      ub = ZG(1923),
-      ib = ZG(3737),
-      Cb = ZG(3265);
-    let Wb = null;
-    var mb = ZG(1163),
-      Ib = ZG(1169),
-      Fb = ZG(4442),
-      vb = ZG(3437),
-      ab = ZG(47),
-      cb = ZG(326),
-      lb = ZG(318),
-      jb = ZG(41263),
-      Pb = ZG(4804),
-      Mb = ZG(39165);
-    var Ab = ZG(38094),
-      sb = ZG(41271);
-    class qb {
-      constructor(GG, bG) {
-        this.showView = GG, this.holdForAd = bG
+    var zr = iM(632),
+      Lr = iM(1073),
+      mr = iM(2074),
+      Hr = iM(313),
+      hr = iM(170),
+      Jr = iM(3185),
+      dr = iM(3188),
+      yr = iM(39771),
+      lr = iM(5069),
+      Er = iM(41961),
+      Ur = iM(694),
+      Gr = iM(656),
+      Cr = iM(3284),
+      er = iM(2067),
+      br = iM(4110),
+      wr = iM(3690);
+    let tr = null;
+    var gr = iM(1202),
+      ur = iM(1215),
+      Rr = iM(4815),
+      pr = iM(3849),
+      Wr = iM(41),
+      sr = iM(310),
+      Dr = iM(308),
+      kr = iM(41975),
+      Zr = iM(5196),
+      or = iM(39814);
+    var fr = iM(4782),
+      Yr = iM(30);
+    var Nr = iM(38675),
+      Ar = iM(41984);
+    class xr {
+      constructor(MM, rM, iM) {
+        this.showView = MM, this.holdForAd = rM, this.render = iM
       }
       pointerUnlockRequestsChanged() {
-        (0, jb.C)()
+        (0, kr.A)()
       }
       pointerLockDebugEntries() {
         return [{
           label: "Locked to the canvas",
-          value: String((0, jb.s)())
+          value: String((0, kr.q)())
         }]
       }
-      setGameViewShown(GG) {
-        this.showView(GG)
+      setGameViewShown(MM) {
+        this.showView(MM)
       }
-      setGameView(GG) {
-        (0, sb.h)(GG)
+      setGameView(MM) {
+        (0, Ar.o)(MM)
       }
-      videoAdHold(GG, bG) {
-        this.holdForAd(GG, bG)
+      videoAdHold(MM, rM) {
+        this.holdForAd(MM, rM)
+      }
+      gameRender() {
+        return this.render()
       }
     }
-    class nb {
-      leave(GG) {
-        ! function(GG) {
-          if (null !== (0, fG.d)().websocketUrl) try {
-            (0, vG.I)().leaveGame(GG)
+    class vr {
+      leave(MM) {
+        ! function(MM) {
+          if (null !== (0, mM.e)().websocketUrl) try {
+            (0, pM.I)().leaveGame(MM)
           } finally {
-            (0, fG.q)({
+            (0, mM.p)({
               websocketUrl: null
             })
           }
-        }(GG)
+        }(MM)
       }
       isReplay() {
         return !1
       }
     }
-    class gb {
-      watchFrameStarts(GG) {
-        return (0, vG.p)(GG)
+    class Fr {
+      constructor(MM) {
+        this.workMs = MM
       }
-      watchFrames(GG) {
-        return (0, vG.n)(GG)
+      watchFrameStarts(MM) {
+        return (0, pM.v)(MM)
       }
-      watchTicks(GG) {
-        return (0, vG.t)(GG)
+      watchFrames(MM) {
+        return (0, pM.r)(MM)
+      }
+      watchTicks(MM) {
+        return (0, pM.y)(MM)
+      }
+      frameWorkMs() {
+        return this.workMs()
       }
     }
-    var eb = ZG(41278);
+    var Br = iM(41922),
+      Xr = iM(41993);
 
-    function Rb(GG) {
-      return GG >= 0 ? Math.min(1, GG) : 0
+    function Ir(MM) {
+      return MM >= 0 ? Math.min(1, MM) : 0
     }
 
-    function Tb(GG, bG) {
+    function Kr(MM, rM) {
       const {
-        fade: ZG
-      } = GG;
-      return null === ZG || bG - ZG.at >= ZG.ms ? GG.volume : ZG.from + (GG.volume - ZG.from) * Math.max(0, (bG - ZG.at) / ZG.ms)
+        fade: iM
+      } = MM;
+      return null === iM || rM - iM.at >= iM.ms ? MM.volume : iM.from + (MM.volume - iM.from) * Math.max(0, (rM - iM.at) / iM.ms)
     }
 
-    function Hb(GG) {
-      const bG = Object.entries(GG),
-        ZG = new Uint32Array(bG.length);
-      let wG = 0;
-      for (const [yG, [, kG]] of bG.entries()) ZG[yG] = kG.length, wG += kG.length;
-      const SG = new Float64Array(3 * wG);
-      let LG = 0;
-      for (const [, yG] of bG)
-        for (const GG of yG) SG.set(GG, LG), LG += 3;
+    function qr(MM) {
+      const rM = Object.entries(MM),
+        iM = new Uint32Array(rM.length);
+      let OM = 0;
+      for (const [aM, [, PM]] of rM.entries()) iM[aM] = PM.length, OM += PM.length;
+      const SM = new Float64Array(3 * OM);
+      let jM = 0;
+      for (const [, aM] of rM)
+        for (const MM of aM) SM.set(MM, jM), jM += 3;
       return {
-        blocks: bG.map((GG => {
-          let [bG] = GG;
-          return bG
+        blocks: rM.map((MM => {
+          let [rM] = MM;
+          return rM
         })).join("\0"),
-        counts: ZG,
-        values: SG
+        counts: iM,
+        values: SM
       }
     }
-    class tb {
-      constructor(GG, bG) {
-        this.core = GG, this.warn = bG, this.latest = 0
+    class Tr {
+      constructor(MM, rM) {
+        this.core = MM, this.warn = rM, this.latest = 0
       }
       async feed() {
-        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Db;
-        const bG = ++this.latest;
-        let ZG;
+        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Vr;
+        const rM = ++this.latest;
+        let iM;
         try {
-          ZG = await GG()
-        } catch (wG) {
-          return void(this.core.isStopped || bG !== this.latest || this.warn("the block colours didn't load, so block particles draw grey", wG))
+          iM = await MM()
+        } catch (OM) {
+          return void(this.core.isStopped || rM !== this.latest || this.warn("the block colours didn't load, so block particles draw grey", OM))
         }
-        bG === this.latest && (this.core.setBlockColours(ZG) || this.core.isStopped || this.warn("the core refused the block colours: block particles draw grey"))
+        rM === this.latest && (this.core.setBlockColours(iM) || this.core.isStopped || this.warn("the core refused the block colours: block particles draw grey"))
       }
     }
-    async function Db() {
-      return Hb((await ZG.e(207).then((() => ZG(34575)))).averageColors)
+    async function Vr() {
+      return qr((await iM.e(231).then((() => iM(35131)))).averageColors)
     }
-    var Nb = ZG(4810),
-      Ob = ZG(4818),
-      xb = ZG(41018),
-      Bb = ZG(3209),
-      GZ = ZG(36594),
-      bZ = ZG(41119),
-      ZZ = ZG(595),
-      wZ = ZG(37413),
-      SZ = ZG(589),
-      LZ = ZG(352),
-      yZ = ZG(41112);
-    const kZ = [3e4, 12e4, 3e5];
-    class UZ extends Error {}
-    const YZ = {
-      mobTypes: ZZ.o,
-      vehicleTypes: wZ.e,
-      mobAiStates: ZZ.k,
-      playerPoses: SZ.q
+    var cr = iM(5198),
+      Mi = iM(5200),
+      ri = iM(41714),
+      ii = iM(3640),
+      Oi = iM(37218),
+      Si = iM(41826),
+      ji = iM(620),
+      ai = iM(37988),
+      Pi = iM(613),
+      ni = iM(332),
+      Qi = iM(41809);
+    const zi = [3e4, 12e4, 3e5];
+    class Li extends Error {}
+    const mi = {
+      mobTypes: ji.p,
+      vehicleTypes: ai.e,
+      mobAiStates: ji.m,
+      playerPoses: Pi.o
     };
-    var VZ = ZG(41100),
-      pZ = ZG(41115),
-      fZ = ZG(41143),
-      QZ = ZG(1032),
-      KZ = ZG(41284),
-      hZ = ZG(41292),
-      dZ = ZG(2968),
-      JZ = ZG(39444),
-      rZ = ZG(4842),
-      zZ = ZG(2380);
-    const EZ = zZ.t.KeysDisabled | zZ.t.LookFrozen | zZ.t.ClicksSuppressed,
-      oZ = dZ.i;
-    var XZ = (0, hZ.c)("resumingConn");
-    class uZ {
-      constructor(GG) {
-        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.shell = GG, this.now = bG, this.session = void 0, this.attempt = null, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, Object.defineProperty(this, XZ, {
+    var Hi = iM(41798),
+      Ji = iM(41819),
+      di = iM(41858),
+      yi = iM(1329),
+      li = iM(41998),
+      Ei = iM(42006),
+      Ui = iM(3324),
+      Gi = iM(40077),
+      Ci = iM(5214),
+      ei = iM(2619);
+    const bi = ei.C.KeysDisabled | ei.C.LookFrozen | ei.C.ClicksSuppressed,
+      wi = Ui.e;
+    var ti = (0, Ei.e)("resumingConn");
+    class gi {
+      constructor(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.shell = MM, this.now = rM, this.session = void 0, this.attempt = null, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, Object.defineProperty(this, ti, {
           writable: !0,
           value: 0
-        }), this.drops = 0, this.session = new JZ.d({
-          reconnect: GG => this.reconnect(GG),
-          isLive: () => GG.isLive(),
-          onReconnected: bG => {
-            this.landed = bG, GG.onReconnected(bG), this.landIfResumed()
+        }), this.drops = 0, this.session = new Gi.e({
+          reconnect: MM => this.reconnect(MM),
+          isLive: () => MM.isLive(),
+          onReconnected: rM => {
+            this.landed = rM, MM.onReconnected(rM), this.landIfResumed()
           },
-          onGaveUp: (bG, ZG) => {
-            this.abortAttempt(), GG.onGaveUp(bG, ZG)
+          onGaveUp: (rM, iM) => {
+            this.abortAttempt(), MM.onGaveUp(rM, iM)
           },
-          freeze: bG => {
-            GG.Tm(bG), (0, rZ.j)(EZ, bG ? EZ : 0, "reconnectFreeze")
+          freeze: rM => {
+            MM.OW(rM), (0, Ci.k)(bi, rM ? bi : 0, "reconnectFreeze")
           },
-          releaseSeat: GG => {
-            this.releaseSeat(GG)
+          releaseSeat: MM => {
+            this.releaseSeat(MM)
           }
         })
       }
@@ -2677,154 +2697,155 @@ export const modules = {
         return this.session.isResuming()
       }
       get resumingConn() {
-        return (0, KZ.b)(this, XZ)[XZ]
+        return (0, li.d)(this, ti)[ti]
       }
       canHoldSeat() {
         return this.session.canHoldSeat()
       }
-      onInitialInfo(GG) {
+      onInitialInfo(MM) {
         let {
-          conn: bG,
-          graceMs: ZG,
-          sessionBased: wG,
-          replayOffer: SG
-        } = GG;
-        this.session.onInitialInfo(ZG, wG), this.isResuming() && (this.initialInfoConn = bG, this.initialInfoOffer = SG, this.landIfResumed())
+          conn: rM,
+          graceMs: iM,
+          sessionBased: OM,
+          replayOffer: SM
+        } = MM;
+        this.session.onInitialInfo(iM, OM), this.isResuming() && (this.initialInfoConn = rM, this.initialInfoOffer = SM, this.landIfResumed())
       }
-      onResumeComplete(GG) {
-        0 !== GG && (GG === (0, KZ.b)(this, XZ)[XZ] ? ((0, KZ.b)(this, XZ)[XZ] = 0, this.session.onResumed()) : this.isResuming() && (this.completedEarlyConn = GG))
+      onResumeComplete(MM) {
+        0 !== MM && (MM === (0, li.d)(this, ti)[ti] ? ((0, li.d)(this, ti)[ti] = 0, this.session.onResumed()) : this.isResuming() && (this.completedEarlyConn = MM))
       }
-      onDropped(GG) {
-        this.drops++, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, (0, KZ.b)(this, XZ)[XZ] = 0, this.session.onConnectionLost(GG)
+      onDropped(MM) {
+        this.drops++, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, (0, li.d)(this, ti)[ti] = 0, this.session.onConnectionLost(MM)
       }
       leave() {
         this.session.leave(), this.dispose()
       }
       dispose() {
-        this.abortAttempt(), this.landed = null, this.completedEarlyConn = 0, (0, KZ.b)(this, XZ)[XZ] = 0, this.session.end()
+        this.abortAttempt(), this.landed = null, this.completedEarlyConn = 0, (0, li.d)(this, ti)[ti] = 0, this.session.end()
       }
-      reconnect(GG) {
-        const bG = this.attempt;
-        if (null !== bG && this.awaitingJoinRoom(bG)) return bG.result;
+      reconnect(MM) {
+        const rM = this.attempt;
+        if (null !== rM && this.awaitingJoinRoom(rM)) return rM.result;
         this.abortAttempt();
-        const ZG = new AbortController,
-          wG = this.drops,
-          SG = {
+        const iM = new AbortController,
+          OM = this.drops,
+          SM = {
             attachedAt: null
           },
-          LG = this.shell.reconnect(GG, ZG.signal, (() => {
-            SG.attachedAt = this.now()
-          })).then((GG => {
-            if (this.clearAttempt(yG), this.drops !== wG) throw new Error("the resumed room dropped before its attempt settled");
-            return GG
-          }), (GG => {
-            throw this.clearAttempt(yG), GG
+          jM = this.shell.reconnect(MM, iM.signal, (() => {
+            SM.attachedAt = this.now()
+          })).then((MM => {
+            if (this.clearAttempt(aM), this.drops !== OM) throw new Error("the resumed room dropped before its attempt settled");
+            return MM
+          }), (MM => {
+            throw this.clearAttempt(aM), MM
           })),
-          yG = {
-            abort: ZG,
-            socket: SG,
-            result: LG
+          aM = {
+            abort: iM,
+            socket: SM,
+            result: jM
           };
-        return this.attempt = yG, LG
+        return this.attempt = aM, jM
       }
-      clearAttempt(GG) {
-        this.attempt === GG && (this.attempt = null)
+      clearAttempt(MM) {
+        this.attempt === MM && (this.attempt = null)
       }
       abortAttempt() {
-        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new DOMException("the reconnect attempt was given up", "AbortError");
-        const bG = this.attempt;
-        this.attempt = null, null === bG || void 0 === bG || bG.abort.abort(GG)
+        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new DOMException("the reconnect attempt was given up", "AbortError");
+        const rM = this.attempt;
+        this.attempt = null, null === rM || void 0 === rM || rM.abort.abort(MM)
       }
-      awaitingJoinRoom(GG) {
-        const bG = GG.socket.attachedAt;
-        return null !== bG && this.now() - bG < oZ
+      awaitingJoinRoom(MM) {
+        const rM = MM.socket.attachedAt;
+        return null !== rM && this.now() - rM < wi
       }
-      releaseSeat(GG) {
-        const bG = this.attempt,
-          ZG = null !== bG && this.awaitingJoinRoom(bG);
-        this.abortAttempt(new gG.n), ZG || this.shell.releaseSeat(GG)
+      releaseSeat(MM) {
+        const rM = this.attempt,
+          iM = null !== rM && this.awaitingJoinRoom(rM);
+        this.abortAttempt(new xM.t), iM || this.shell.releaseSeat(MM)
       }
       landIfResumed() {
-        const GG = this.landed;
-        if (null !== GG && GG.conn === this.initialInfoConn) {
-          const bG = this.initialInfoOffer && this.completedEarlyConn !== GG.conn;
-          if (this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, this.abortAttempt(), !bG) return void this.session.onResumed();
-          (0, KZ.b)(this, XZ)[XZ] = GG.conn, this.session.onResuming()
+        const MM = this.landed;
+        if (null !== MM && MM.conn === this.initialInfoConn) {
+          const rM = this.initialInfoOffer && this.completedEarlyConn !== MM.conn;
+          if (this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, this.abortAttempt(), !rM) return void this.session.onResumed();
+          (0, li.d)(this, ti)[ti] = MM.conn, this.session.onResuming()
         }
       }
     }
-    var iZ = ZG(39453),
-      CZ = ZG(41299),
-      WZ = ZG(36816),
-      mZ = ZG(36810),
-      IZ = ZG(2138),
-      FZ = ZG(1873),
-      vZ = ZG(4318),
-      aZ = ZG(41122),
-      cZ = ZG(5071);
+    var ui = iM(40079),
+      Ri = iM(42012),
+      Wi = iM(37426),
+      si = iM(37422),
+      Di = iM(2263),
+      ki = iM(2e3),
+      Zi = iM(4654),
+      oi = iM(41833),
+      fi = iM(5456);
 
-    function lZ(GG) {
+    function Yi(MM) {
       let {
-        pack: bG,
-        gameSource: ZG
-      } = GG;
-      if (null !== ZG && "" !== ZG) return `game:${ZG}`;
-      if (null === bG) return "default";
+        pack: rM,
+        gameSource: iM
+      } = MM;
+      if (null !== iM && "" !== iM) return `game:${iM}`;
+      if (null === rM) return "default";
       const {
-        id: wG,
-        version: SG
-      } = bG.metaData;
-      if (wG !== IZ.q.CUSTOM) return `${wG}@${SG}`;
-      const LG = [];
-      for (const yG of [bG.textureOverrides, bG.modelOverrides, bG.animations])
-        for (const [GG, bG] of Object.entries(null !== yG && void 0 !== yG ? yG : {})) LG.push(`${GG}:${bG.length}`);
-      return `${wG}:${(0,FZ.v)(LG.join())}`
+        id: OM,
+        version: SM
+      } = rM.metaData;
+      if (OM !== Di.o.CUSTOM) return `${OM}@${SM}`;
+      const jM = [];
+      for (const aM of [rM.textureOverrides, rM.modelOverrides, rM.animations])
+        for (const [MM, rM] of Object.entries(null !== aM && void 0 !== aM ? aM : {})) jM.push(`${MM}:${rM.length}`);
+      return `${OM}:${(0,ki.x)(jM.join())}`
     }
-    var jZ = ZG(4434),
-      PZ = ZG(3230),
-      MZ = ZG(41305),
-      AZ = ZG(636),
-      sZ = ZG(3236),
-      qZ = ZG(80),
-      nZ = ZG(4514),
-      gZ = ZG(29),
-      eZ = ZG(4336),
-      RZ = ZG(41190),
-      TZ = ZG(4458),
-      HZ = ZG(2388),
-      tZ = ZG(1579),
-      DZ = ZG(1606),
-      NZ = ZG(1251),
-      OZ = ZG(95),
-      xZ = ZG(304),
-      BZ = ZG(39484),
-      Gw = ZG(2391),
-      bw = ZG(4836);
-    const Zw = new Set([Nb.yb.KeyDown, Nb.yb.MouseMove, Nb.yb.MouseDown, Nb.yb.Wheel, Nb.yb.TouchStart, Nb.yb.TouchMove]);
+    var Ni = iM(4801),
+      Ai = iM(3657),
+      xi = iM(42017),
+      vi = iM(665),
+      Fi = iM(3666),
+      Bi = iM(83),
+      Xi = iM(3293),
+      Ii = iM(3288),
+      Ki = iM(4882),
+      qi = iM(4670),
+      Ti = iM(41895),
+      Vi = iM(4830),
+      ci = iM(2622),
+      MO = iM(1717),
+      rO = iM(1750),
+      iO = iM(1313),
+      OO = iM(103),
+      SO = iM(286),
+      jO = iM(40110),
+      aO = iM(2624),
+      PO = iM(5207);
+    const nO = new Set([cr.tb.KeyDown, cr.tb.MouseMove, cr.tb.MouseDown, cr.tb.Wheel, cr.tb.TouchStart, cr.tb.TouchMove]);
 
-    function ww(GG) {
-      return (GG.shiftKey ? Nb.Mb.Shift : 0) | (GG.ctrlKey ? Nb.Mb.Ctrl : 0) | (GG.altKey ? Nb.Mb.Alt : 0) | (GG.metaKey ? Nb.Mb.Meta : 0) | ("repeat" in GG && GG.repeat ? Nb.Mb.Repeat : 0) | (GG.isTrusted ? 0 : Nb.Mb.Untrusted | function(GG) {
+    function QO(MM) {
+      return (MM.shiftKey ? cr.Mb.Shift : 0) | (MM.ctrlKey ? cr.Mb.Ctrl : 0) | (MM.altKey ? cr.Mb.Alt : 0) | (MM.metaKey ? cr.Mb.Meta : 0) | ("repeat" in MM && MM.repeat ? cr.Mb.Repeat : 0) | (MM.isTrusted ? 0 : cr.Mb.Untrusted | function(MM) {
         try {
           const {
-            editable: bG,
-            outsideView: ZG
-          } = (0, BZ.h)(GG.target);
-          return (bG ? Nb.Mb.UntrustedEditable : 0) | (ZG ? Nb.Mb.UntrustedOutsideView : 0)
+            editable: rM,
+            outsideView: iM
+          } = (0, jO.g)(MM.target);
+          return (rM ? cr.Mb.UntrustedEditable : 0) | (iM ? cr.Mb.UntrustedOutsideView : 0)
         } catch {
           return 0
         }
-      }(GG))
+      }(MM))
     }
 
-    function Sw(GG) {
-      return "touchOnly" !== (0, OZ.d)() && "function" === typeof GG.requestPointerLock
+    function zO(MM) {
+      return "touchOnly" !== (0, OO.c)() && "function" === typeof MM.requestPointerLock
     }
 
-    function Lw(GG) {
-      return 0 === GG.button ? GG.altKey ? bw.k["Alt+Left Click"] : bw.k.Mouse1 : 1 === GG.button ? bw.k.Mouse2 : bw.k.Mouse3
+    function LO(MM) {
+      return 0 === MM.button ? MM.altKey ? PO.n["Alt+Left Click"] : PO.n.Mouse1 : 1 === MM.button ? PO.n.Mouse2 : PO.n.Mouse3
     }
-    const yw = new Set(["AltLeft", "AltRight", "ArrowUp", "ArrowDown"]),
-      kw = new Map([
+    const mO = new Set(["AltLeft", "AltRight", "ArrowUp", "ArrowDown"]),
+      HO = new Map([
         ["AltLeft", "altKey"],
         ["AltRight", "altKey"],
         ["ControlLeft", "ctrlKey"],
@@ -2834,370 +2855,370 @@ export const modules = {
         ["MetaLeft", "metaKey"],
         ["MetaRight", "metaKey"]
       ]),
-      Uw = 32768,
-      Yw = 1;
+      hO = 32768,
+      JO = 1;
 
-    function Vw(GG) {
-      return Math.min(Math.max(Math.round(GG), 0), 65535)
+    function dO(MM) {
+      return Math.min(Math.max(Math.round(MM), 0), 65535)
     }
 
-    function pw(GG, bG, ZG) {
-      const wG = [],
-        SG = (GG, bG, ZG, SG) => {
-          const LG = GG => {
-            (0, DZ.u)(GG) || ZG(GG)
+    function yO(MM, rM, iM) {
+      const OM = [],
+        SM = (MM, rM, iM, SM) => {
+          const jM = MM => {
+            (0, rO.t)(MM) || iM(MM)
           };
-          GG.addEventListener(bG, LG, SG), wG.push((() => {
-            GG.removeEventListener(bG, LG, SG)
+          MM.addEventListener(rM, jM, SM), OM.push((() => {
+            MM.removeEventListener(rM, jM, SM)
           }))
         },
-        LG = {
+        jM = {
           capture: !0,
           passive: !0
         },
-        yG = (GG, ZG, wG, SG, LG) => (!(0, Gw.e)() || !Zw.has(GG)) && (bG(GG, ZG, wG, SG, LG), !0),
-        kG = () => document.pointerLockElement === GG,
-        UG = (0, xZ.f)(),
-        YG = GG => {
-          GG.ctrlKey && ZG.ctrlCombosAreGames() && !(0, rZ.f)(GG.target) && GG.preventDefault()
+        aM = (MM, iM, OM, SM, jM) => (!(0, aO.c)() || !nO.has(MM)) && (rM(MM, iM, OM, SM, jM), !0),
+        PM = () => document.pointerLockElement === MM,
+        nM = (0, SO.d)(),
+        QM = MM => {
+          MM.ctrlKey && iM.ctrlCombosAreGames() && !(0, Ci.h)(MM.target) && MM.preventDefault()
         },
-        VG = (GG, wG, SG) => {
-          ZG.inspect(GG, wG, !1), bG(Nb.yb.KeyUp, wG, 0, 0, (0, HZ.v)(SG, GG.timeStamp)), ZG.keyReleased(wG)
+        zM = (MM, OM, SM) => {
+          iM.inspect(MM, OM, !1), rM(cr.tb.KeyUp, OM, 0, 0, (0, ci.u)(SM, MM.timeStamp)), iM.keyReleased(OM)
         },
-        pG = new Map,
-        fG = (GG, bG, ZG) => GG[ZG] || ("AltRight" === bG || "ControlLeft" === bG) && GG.getModifierState("AltGraph"),
-        QG = new Map,
-        KG = () => {
-          pG.clear(), QG.clear()
+        LM = new Map,
+        mM = (MM, rM, iM) => MM[iM] || ("AltRight" === rM || "ControlLeft" === rM) && MM.getModifierState("AltGraph"),
+        HM = new Map,
+        hM = () => {
+          LM.clear(), HM.clear()
         },
-        hG = GG => {
-          if (GG.isTrusted && document.hasFocus())
-            for (const [bG, ZG] of QG) QG.delete(bG), fG(GG, bG, ZG) || (pG.delete(bG), VG(GG, bw.k[bG], ww(GG)))
+        JM = MM => {
+          if (MM.isTrusted && document.hasFocus())
+            for (const [rM, iM] of HM) HM.delete(rM), mM(MM, rM, iM) || (LM.delete(rM), zM(MM, PO.n[rM], QO(MM)))
         };
-      GG.tabIndex = -1;
-      let dG = 0,
-        JG = 0;
-      const rG = () => {
-        const bG = GG.getBoundingClientRect();
-        dG = bG.left, JG = bG.top
+      MM.tabIndex = -1;
+      let dM = 0,
+        yM = 0;
+      const lM = () => {
+        const rM = MM.getBoundingClientRect();
+        dM = rM.left, yM = rM.top
       };
-      let zG = "mouse";
-      const EG = () => !kG() && ("mouse" === zG || !ZG.touchUiShown()),
-        oG = (GG, bG, ZG) => {
-          const wG = (Vw(GG.clientX - dG) | Vw(GG.clientY - JG) << 16) >>> 0;
-          yG(Nb.yb.MouseMove, Nb.Nb.Point, bG, ZG, wG)
+      let EM = "mouse";
+      const UM = () => !PM() && ("mouse" === EM || !iM.touchUiShown()),
+        GM = (MM, rM, iM) => {
+          const OM = (dO(MM.clientX - dM) | dO(MM.clientY - yM) << 16) >>> 0;
+          aM(cr.tb.MouseMove, cr.Ob.Point, rM, iM, OM)
         };
-      let XG = !1,
-        uG = 0;
-      const iG = () => {
-        XG && (XG = !1, ZG.viewShown() && (0, jb.U)())
+      let CM = !1,
+        eM = 0;
+      const bM = () => {
+        CM && (CM = !1, iM.viewShown() && (0, kr.M)())
       };
-      wG.push((() => {
-        clearTimeout(uG)
-      })), SG(window, "keydown", (GG => {
-        "Escape" === GG.key ? (0, jb.G)(!0) : GG.repeat || (0, rZ.f)(GG.target) || (XG = !0, clearTimeout(uG), uG = window.setTimeout(iG, 0))
-      }), LG), SG(window, "keydown", (GG => {
-        iG(), YG(GG), hG(GG);
-        const bG = bw.k[GG.code];
-        if ("number" !== typeof bG || !ZG.viewShown()) return;
-        const wG = (0, rZ.f)(GG.target);
-        wG || !ZG.prevents(bG) && !yw.has(GG.code) || GG.preventDefault(), GG.repeat || ZG.inspect(GG, bG, !0), yG(Nb.yb.KeyDown, bG, 0, 0, (0, HZ.v)(ww(GG), GG.timeStamp)) && pG.set(GG.code, bG), wG || ZG.keyPressed(bG)
+      OM.push((() => {
+        clearTimeout(eM)
+      })), SM(window, "keydown", (MM => {
+        "Escape" === MM.key ? (0, kr.E)(!0) : MM.repeat || (0, Ci.h)(MM.target) || (CM = !0, clearTimeout(eM), eM = window.setTimeout(bM, 0))
+      }), jM), SM(window, "keydown", (MM => {
+        bM(), QM(MM), JM(MM);
+        const rM = PO.n[MM.code];
+        if ("number" !== typeof rM || !iM.viewShown()) return;
+        const OM = (0, Ci.h)(MM.target);
+        OM || !iM.prevents(rM) && !mO.has(MM.code) || MM.preventDefault(), MM.repeat || iM.inspect(MM, rM, !0), aM(cr.tb.KeyDown, rM, 0, 0, (0, ci.u)(QO(MM), MM.timeStamp)) && LM.set(MM.code, rM), OM || iM.keyPressed(rM)
       }), {
         capture: !1,
         passive: !1
-      }), SG(window, "keyup", (GG => {
-        "Escape" === GG.key && (0, jb.G)(!1), YG(GG), pG.delete(GG.code), QG.delete(GG.code), hG(GG);
-        const bG = bw.k[GG.code];
-        "number" === typeof bG && VG(GG, bG, ww(GG))
+      }), SM(window, "keyup", (MM => {
+        "Escape" === MM.key && (0, kr.E)(!1), QM(MM), LM.delete(MM.code), HM.delete(MM.code), JM(MM);
+        const rM = PO.n[MM.code];
+        "number" === typeof rM && zM(MM, rM, QO(MM))
       }), {
         capture: !0,
         passive: !1
-      }), SG(window, "mousemove", (GG => {
-        "mouse" === zG && EG() ? oG(GG, GG.movementX, GG.movementY) : kG() ? yG(Nb.yb.MouseMove, Nb.Nb.Stamped, GG.movementX, GG.movementY, (0, HZ.v)(0, GG.timeStamp)) : yG(Nb.yb.MouseMove, 0, GG.movementX, GG.movementY, 0)
-      }), LG);
-      let CG = 0,
-        WG = 0;
-      const mG = [];
-      let IG = !1,
-        FG = !1;
-      SG(GG, "mousedown", (GG => {
-        if ((0, Gw.e)()) return;
-        hG(GG);
-        const wG = 1 << GG.button;
-        if (!kG() && (0, jb.R)() && (0, jb.i)() && (FG = !0, !IG)) return void(CG |= wG);
-        CG &= ~wG;
-        const SG = GG.button <= 2 ? Lw(GG) : void 0;
-        void 0 !== SG && (mG[GG.button] = SG, ZG.inspect(GG, SG, !0)), EG() && oG(GG, 0, 0), bG(Nb.yb.MouseDown, GG.button, GG.clientX, GG.clientY, (0, HZ.v)(ww(GG), GG.timeStamp)), WG |= wG, void 0 !== SG && ZG.keyPressed(SG)
-      }), LG), SG(window, "mouseup", (GG => {
-        var wG;
-        hG(GG);
-        const SG = 1 << GG.button,
-          LG = 0 !== (CG & ~WG & SG);
-        if (CG &= ~SG, WG &= ~SG, LG) return;
-        const yG = GG.button <= 2 ? null !== (wG = mG[GG.button]) && void 0 !== wG ? wG : Lw(GG) : void 0;
-        void 0 !== yG && ZG.inspect(GG, yG, !1), bG(Nb.yb.MouseUp, GG.button, GG.clientX, GG.clientY, (0, HZ.v)(ww(GG), GG.timeStamp)), void 0 !== yG && ZG.keyReleased(yG)
-      }), LG), SG(GG, "contextmenu", (GG => {
-        GG.preventDefault()
+      }), SM(window, "mousemove", (MM => {
+        "mouse" === EM && UM() ? GM(MM, MM.movementX, MM.movementY) : PM() ? aM(cr.tb.MouseMove, cr.Ob.Stamped, MM.movementX, MM.movementY, (0, ci.u)(0, MM.timeStamp)) : aM(cr.tb.MouseMove, 0, MM.movementX, MM.movementY, 0)
+      }), jM);
+      let wM = 0,
+        tM = 0;
+      const gM = [];
+      let uM = !1,
+        RM = !1;
+      SM(MM, "mousedown", (MM => {
+        if ((0, aO.c)()) return;
+        JM(MM);
+        const OM = 1 << MM.button;
+        if (!PM() && (0, kr.J)() && (0, kr.f)() && (RM = !0, !uM)) return void(wM |= OM);
+        wM &= ~OM;
+        const SM = MM.button <= 2 ? LO(MM) : void 0;
+        void 0 !== SM && (gM[MM.button] = SM, iM.inspect(MM, SM, !0)), UM() && GM(MM, 0, 0), rM(cr.tb.MouseDown, MM.button, MM.clientX, MM.clientY, (0, ci.u)(QO(MM), MM.timeStamp)), tM |= OM, void 0 !== SM && iM.keyPressed(SM)
+      }), jM), SM(window, "mouseup", (MM => {
+        var OM;
+        JM(MM);
+        const SM = 1 << MM.button,
+          jM = 0 !== (wM & ~tM & SM);
+        if (wM &= ~SM, tM &= ~SM, jM) return;
+        const aM = MM.button <= 2 ? null !== (OM = gM[MM.button]) && void 0 !== OM ? OM : LO(MM) : void 0;
+        void 0 !== aM && iM.inspect(MM, aM, !1), rM(cr.tb.MouseUp, MM.button, MM.clientX, MM.clientY, (0, ci.u)(QO(MM), MM.timeStamp)), void 0 !== aM && iM.keyReleased(aM)
+      }), jM), SM(MM, "contextmenu", (MM => {
+        MM.preventDefault()
       }), {
         passive: !1
       });
-      const vG = GG => {
-        (kG() || (0, jb.q)() && (0, NZ.A)()) && (GG.ctrlKey || UG && !document.fullscreenElement) && GG.preventDefault()
+      const pM = MM => {
+        (PM() || (0, kr.n)() && (0, iO.B)()) && (MM.ctrlKey || nM && !document.fullscreenElement) && MM.preventDefault()
       };
-      SG(GG, "wheel", (GG => {
-        vG(GG), hG(GG), yG(Nb.yb.Wheel, GG.deltaMode, GG.deltaX, GG.deltaY, 0)
+      SM(MM, "wheel", (MM => {
+        pM(MM), JM(MM), aM(cr.tb.Wheel, MM.deltaMode, MM.deltaX, MM.deltaY, 0)
       }), {
         capture: !0,
         passive: !1
       });
-      const aG = {
+      const WM = {
           capture: !0,
           passive: !1
         },
-        cG = GG => {
-          GG ? window.addEventListener("wheel", vG, aG) : window.removeEventListener("wheel", vG, aG)
+        sM = MM => {
+          MM ? window.addEventListener("wheel", pM, WM) : window.removeEventListener("wheel", pM, WM)
         };
-      cG((0, jb.q)()), wG.push((0, jb.y)(cG)), wG.push((() => {
-        cG(!1)
+      sM((0, kr.n)()), OM.push((0, kr.v)(sM)), OM.push((() => {
+        sM(!1)
       }));
-      const lG = new Map,
-        jG = new Set,
-        PG = GG => {
-          const bG = "stylus" === GG.touchType;
-          for (const ZG of lG.values())
-            if (!ZG.touched && (bG || Math.abs(GG.clientX - ZG.x) <= Yw && Math.abs(GG.clientY - ZG.y) <= Yw)) return ZG.touched = !0, !0;
+      const DM = new Map,
+        kM = new Set,
+        ZM = MM => {
+          const rM = "stylus" === MM.touchType;
+          for (const iM of DM.values())
+            if (!iM.touched && (rM || Math.abs(MM.clientX - iM.x) <= JO && Math.abs(MM.clientY - iM.y) <= JO)) return iM.touched = !0, !0;
           return !1
         },
-        MG = GG => 32767 & GG,
-        AG = new Set,
-        sG = GG => ZG => {
-          const wG = (0, HZ.v)(ww(ZG), ZG.timeStamp);
-          GG !== Nb.yb.TouchStart && GG !== Nb.yb.TouchMove || ((GG, ZG) => {
-            const wG = GG.touches;
-            if (wG)
-              for (const SG of AG) {
-                let GG = !1;
-                for (let bG = 0; bG < wG.length && !GG; bG++) GG = MG(wG[bG].identifier) === SG;
-                GG || (AG.delete(SG), bG(Nb.yb.TouchCancel, SG, 0, 0, ZG))
+        oM = MM => 32767 & MM,
+        fM = new Set,
+        YM = MM => iM => {
+          const OM = (0, ci.u)(QO(iM), iM.timeStamp);
+          MM !== cr.tb.TouchStart && MM !== cr.tb.TouchMove || ((MM, iM) => {
+            const OM = MM.touches;
+            if (OM)
+              for (const SM of fM) {
+                let MM = !1;
+                for (let rM = 0; rM < OM.length && !MM; rM++) MM = oM(OM[rM].identifier) === SM;
+                MM || (fM.delete(SM), rM(cr.tb.TouchCancel, SM, 0, 0, iM))
               }
-          })(ZG, wG);
-          const SG = ZG.changedTouches;
-          for (let bG = 0; bG < SG.length; bG++) {
-            const ZG = SG[bG];
-            if (GG === Nb.yb.TouchStart && PG(ZG) && jG.add(ZG.identifier), jG.has(ZG.identifier)) {
-              GG !== Nb.yb.TouchEnd && GG !== Nb.yb.TouchCancel || jG.delete(ZG.identifier);
+          })(iM, OM);
+          const SM = iM.changedTouches;
+          for (let rM = 0; rM < SM.length; rM++) {
+            const iM = SM[rM];
+            if (MM === cr.tb.TouchStart && ZM(iM) && kM.add(iM.identifier), kM.has(iM.identifier)) {
+              MM !== cr.tb.TouchEnd && MM !== cr.tb.TouchCancel || kM.delete(iM.identifier);
               continue
             }
-            const LG = MG(ZG.identifier),
-              kG = yG(GG, LG, ZG.clientX - dG, ZG.clientY - JG, wG);
-            GG === Nb.yb.TouchStart ? kG && AG.add(LG) : GG !== Nb.yb.TouchMove && AG.delete(LG)
+            const jM = oM(iM.identifier),
+              PM = aM(MM, jM, iM.clientX - dM, iM.clientY - yM, OM);
+            MM === cr.tb.TouchStart ? PM && fM.add(jM) : MM !== cr.tb.TouchMove && fM.delete(jM)
           }
         },
-        qG = sG(Nb.yb.TouchStart);
-      SG(GG, "touchstart", (GG => {
-        GG.preventDefault(), (0, Gw.e)() || (ZG.touchStarting(), qG(GG))
+        NM = YM(cr.tb.TouchStart);
+      SM(MM, "touchstart", (MM => {
+        MM.preventDefault(), (0, aO.c)() || (iM.touchStarting(), NM(MM))
       }), {
         passive: !1
-      }), SG(GG, "touchmove", sG(Nb.yb.TouchMove), LG), SG(GG, "touchend", sG(Nb.yb.TouchEnd), LG), SG(GG, "touchcancel", sG(Nb.yb.TouchCancel), LG);
-      const nG = GG => Uw | 32767 & GG,
-        gG = (GG, bG) => {
-          yG(GG, nG(bG.pointerId), bG.clientX - dG, bG.clientY - JG, (0, HZ.v)(ww(bG), bG.timeStamp))
+      }), SM(MM, "touchmove", YM(cr.tb.TouchMove), jM), SM(MM, "touchend", YM(cr.tb.TouchEnd), jM), SM(MM, "touchcancel", YM(cr.tb.TouchCancel), jM);
+      const AM = MM => hO | 32767 & MM,
+        xM = (MM, rM) => {
+          aM(MM, AM(rM.pointerId), rM.clientX - dM, rM.clientY - yM, (0, ci.u)(QO(rM), rM.timeStamp))
         };
-      SG(window, "pointerdown", (bG => {
-        zG = bG.pointerType, "mouse" === bG.pointerType && bG.target !== GG && ZG.viewShown() && (0, jb.W)()
-      }), LG), SG(GG, "pointerdown", (GG => {
-        "pen" === GG.pointerType && 0 === GG.button && (0, jb.q)() && (0, NZ.A)() && (GG.preventDefault(), (0, Gw.e)() || (lG.set(GG.pointerId, {
-          x: GG.clientX,
-          y: GG.clientY,
+      SM(window, "pointerdown", (rM => {
+        EM = rM.pointerType, "mouse" === rM.pointerType && rM.target !== MM && iM.viewShown() && (0, kr.N)()
+      }), jM), SM(MM, "pointerdown", (MM => {
+        "pen" === MM.pointerType && 0 === MM.button && (0, kr.n)() && (0, iO.B)() && (MM.preventDefault(), (0, aO.c)() || (DM.set(MM.pointerId, {
+          x: MM.clientX,
+          y: MM.clientY,
           touched: !1
-        }), ZG.touchStarting(), gG(Nb.yb.TouchStart, GG)))
+        }), iM.touchStarting(), xM(cr.tb.TouchStart, MM)))
       }), {
         passive: !1
-      }), SG(window, "pointermove", (GG => {
-        zG = GG.pointerType, lG.has(GG.pointerId) && gG(Nb.yb.TouchMove, GG), "mouse" !== GG.pointerType && EG() && oG(GG, 0, 0)
-      }), LG);
-      const eG = GG => bG => {
-        lG.delete(bG.pointerId) && gG(GG, bG)
+      }), SM(window, "pointermove", (MM => {
+        EM = MM.pointerType, DM.has(MM.pointerId) && xM(cr.tb.TouchMove, MM), "mouse" !== MM.pointerType && UM() && GM(MM, 0, 0)
+      }), jM);
+      const vM = MM => rM => {
+        DM.delete(rM.pointerId) && xM(MM, rM)
       };
-      SG(window, "pointerup", eG(Nb.yb.TouchEnd), LG), SG(window, "pointercancel", eG(Nb.yb.TouchCancel), LG);
-      let RG = 0;
-      const TG = () => {
-          RG = 0, rG(), ZG.resized()
+      SM(window, "pointerup", vM(cr.tb.TouchEnd), jM), SM(window, "pointercancel", vM(cr.tb.TouchCancel), jM);
+      let FM = 0;
+      const BM = () => {
+          FM = 0, lM(), iM.resized()
         },
-        HG = () => {
-          const GG = ZG.sizeCanvas();
-          null !== GG && bG(Nb.yb.Resize, 0, GG.cssWidth, GG.cssHeight, (0, HZ.n)(GG.renderScale)), rG(), ZG.resized(), 0 === RG && (RG = requestAnimationFrame(TG))
+        XM = () => {
+          const MM = iM.sizeCanvas();
+          null !== MM && rM(cr.tb.Resize, 0, MM.cssWidth, MM.cssHeight, (0, ci.l)(MM.renderScale)), lM(), iM.resized(), 0 === FM && (FM = requestAnimationFrame(BM))
         };
-      SG(window, "resize", HG, LG), wG.push(ZG.watchRenderScale(HG)), wG.push((() => {
-        cancelAnimationFrame(RG)
-      })), SG(window, "focus", (GG => {
-        GG.isTrusted && (bG(Nb.yb.Focus, 0, 0, 0, 0), ZG.viewShown() && (0, jb.W)())
+      SM(window, "resize", XM, jM), OM.push(iM.watchRenderScale(XM)), OM.push((() => {
+        cancelAnimationFrame(FM)
+      })), SM(window, "focus", (MM => {
+        MM.isTrusted && (rM(cr.tb.Focus, 0, 0, 0, 0), iM.viewShown() && (0, kr.N)())
       }), {
         passive: !0
       });
-      const tG = () => {
-          (0, jb.G)(!1), CG = 0
+      const IM = () => {
+          (0, kr.E)(!1), wM = 0
         },
-        DG = () => {
-          AG.clear(), lG.clear(), jG.clear()
+        KM = () => {
+          fM.clear(), DM.clear(), kM.clear()
         };
-      let NG = 0,
-        OG = 0;
-      SG(window, "blur", (wG => {
-        tG(), (0, jb.o)();
-        for (const GG of pG.keys()) {
-          const bG = kw.get(GG);
-          void 0 !== bG && QG.set(GG, bG)
+      let qM = 0,
+        TM = 0;
+      SM(window, "blur", (OM => {
+        IM(), (0, kr.j)();
+        for (const MM of LM.keys()) {
+          const rM = HO.get(MM);
+          void 0 !== rM && HM.set(MM, rM)
         }
-        wG.isTrusted && ((GG => {
-          for (const [ZG, wG] of lG) bG(Nb.yb.TouchCancel, nG(ZG), wG.x, wG.y, (0, HZ.v)(0, GG));
-          lG.clear()
-        })(wG.timeStamp), bG(Nb.yb.Blur, Nb.s.KeepTouches, 0, 0, 0)), UG && wG.isTrusted && (clearTimeout(OG), OG = window.setTimeout((() => {
+        OM.isTrusted && ((MM => {
+          for (const [iM, OM] of DM) rM(cr.tb.TouchCancel, AM(iM), OM.x, OM.y, (0, ci.u)(0, MM));
+          DM.clear()
+        })(OM.timeStamp), rM(cr.tb.Blur, cr.q.KeepTouches, 0, 0, 0)), nM && OM.isTrusted && (clearTimeout(TM), TM = window.setTimeout((() => {
           if (!document.hasFocus()) {
-            for (const GG of pG.values()) VG(wG, GG, 0);
-            KG()
+            for (const MM of LM.values()) zM(OM, MM, 0);
+            hM()
           }
-        }), 0)), clearTimeout(NG), NG = window.setTimeout((() => {
-          document.activeElement instanceof HTMLIFrameElement && (0, NZ.A)() && ZG.viewShown() && GG.focus({
+        }), 0)), clearTimeout(qM), qM = window.setTimeout((() => {
+          document.activeElement instanceof HTMLIFrameElement && (0, iO.B)() && iM.viewShown() && MM.focus({
             preventScroll: !0
           })
         }), 0)
       }), {
         passive: !0
-      }), wG.push((() => {
-        clearTimeout(NG), clearTimeout(OG)
-      })), SG(window, "mousedown", (bG => {
-        UG && bG.isTrusted && !document.hasFocus() && (0, NZ.A)() && ZG.viewShown() && (window.focus(), GG.focus({
+      }), OM.push((() => {
+        clearTimeout(qM), clearTimeout(TM)
+      })), SM(window, "mousedown", (rM => {
+        nM && rM.isTrusted && !document.hasFocus() && (0, iO.B)() && iM.viewShown() && (window.focus(), MM.focus({
           preventScroll: !0
         }))
-      }), LG), SG(document, "visibilitychange", (() => {
-        document.hidden ? (bG(Nb.yb.Blur, 0, 0, 0, 0), DG()) : document.hasFocus() && bG(Nb.yb.Focus, 0, 0, 0, 0)
+      }), jM), SM(document, "visibilitychange", (() => {
+        document.hidden ? (rM(cr.tb.Blur, 0, 0, 0, 0), KM()) : document.hasFocus() && rM(cr.tb.Focus, 0, 0, 0, 0)
       }), {
         passive: !0
-      }), wG.push((0, Gw.j)((() => {
-        tG(), bG(Nb.yb.Blur, Nb.s.Release, 0, 0, 0), ZG.keysReleased(), KG(), WG = 0, DG(), bG(Nb.yb.Joystick, 0, 0, 0, 0), document.hasFocus() && bG(Nb.yb.Focus, 0, 0, 0, 0)
+      }), OM.push((0, aO.g)((() => {
+        IM(), rM(cr.tb.Blur, cr.q.Release, 0, 0, 0), iM.keysReleased(), hM(), tM = 0, KM(), rM(cr.tb.Joystick, 0, 0, 0, 0), document.hasFocus() && rM(cr.tb.Focus, 0, 0, 0, 0)
       })));
-      const xG = !ZG.canLock(),
-        BG = () => xG && !(0, jb.q)() ? Nb.nc.Lockless : Nb.nc.Released,
-        Gb = () => {
-          kG() && (IG = !1, FG = !1), bG(Nb.yb.PointerLock, kG() ? Nb.nc.Locked : BG(), 0, 0, 0), (0, jb.O)(kG())
+      const VM = !iM.canLock(),
+        cM = () => VM && !(0, kr.n)() ? cr.lc.Lockless : cr.lc.Released,
+        Mr = () => {
+          PM() && (uM = !1, RM = !1), rM(cr.tb.PointerLock, PM() ? cr.lc.Locked : cM(), 0, 0, 0), (0, kr.H)(PM())
         };
-      return SG(document, "pointerlockchange", Gb, {
+      return SM(document, "pointerlockchange", Mr, {
         passive: !0
-      }), SG(document, "pointerlockerror", (() => {
-        IG ||= FG, FG = !1, (0, jb.v)()
+      }), SM(document, "pointerlockerror", (() => {
+        uM ||= RM, RM = !1, (0, kr.s)()
       }), {
         passive: !0
-      }), xG && wG.push((0, jb.y)((() => {
-        bG(Nb.yb.PointerLock, BG(), 0, 0, 0)
-      }))), HG(), bG(document.hasFocus() ? Nb.yb.Focus : Nb.yb.Blur, 0, 0, 0, 0), Gb(), () => {
-        for (const GG of wG.splice(0)) GG()
+      }), VM && OM.push((0, kr.v)((() => {
+        rM(cr.tb.PointerLock, cM(), 0, 0, 0)
+      }))), XM(), rM(document.hasFocus() ? cr.tb.Focus : cr.tb.Blur, 0, 0, 0, 0), Mr(), () => {
+        for (const MM of OM.splice(0)) MM()
       }
     }
-    var fw = ZG(34425),
-      Qw = ZG(34414),
-      Kw = ZG(1963);
-    const hw = new Map(bw.e.map(((GG, bG) => [GG, bG]))),
-      dw = ["jump", "primary-fire", "alt-fire"],
-      Jw = ["primary-fire", "alt-fire"];
+    var lO = iM(34971),
+      EO = iM(34959),
+      UO = iM(2096);
+    const GO = new Map(PO.c.map(((MM, rM) => [MM, rM]))),
+      CO = ["jump", "primary-fire", "alt-fire"],
+      eO = ["primary-fire", "alt-fire"];
 
-    function rw(GG) {
-      return `${Kw.b}${GG}`
+    function bO(MM) {
+      return `${UO.c}${MM}`
     }
-    const zw = ["forward", "backward", "left", "right", "sprint", "jump"];
+    const wO = ["forward", "backward", "left", "right", "sprint", "jump"];
 
-    function Ew(GG) {
-      const bG = [];
-      for (const ZG of GG) {
-        const GG = "string" === typeof ZG ? bw.k[ZG] : void 0;
-        "number" === typeof GG && bG.push(GG)
+    function tO(MM) {
+      const rM = [];
+      for (const iM of MM) {
+        const MM = "string" === typeof iM ? PO.n[iM] : void 0;
+        "number" === typeof MM && rM.push(MM)
       }
-      return bG
+      return rM
     }
-    class ow {
+    class gO {
       constructor() {
         this.keys = new Map, this.preventKeys = new Set, this.movementKeys = new Set, this.checkedDown = new Set, this.checkedUp = new Set;
-        for (const [GG, bG] of Object.entries(bw.h)) this.keys.set(GG, bG);
+        for (const [MM, rM] of Object.entries(PO.g)) this.keys.set(MM, rM);
         this.updateKeySets()
       }
-      prevents(GG) {
-        return this.preventKeys.has(GG)
+      prevents(MM) {
+        return this.preventKeys.has(MM)
       }
-      moves(GG) {
-        return this.movementKeys.has(GG)
+      moves(MM) {
+        return this.movementKeys.has(MM)
       }
-      checks(GG, bG) {
-        return (bG ? this.checkedDown : this.checkedUp).has(GG)
+      checks(MM, rM) {
+        return (rM ? this.checkedDown : this.checkedUp).has(MM)
       }
-      sync(GG, bG) {
-        for (const [ZG, wG] of this.keys) {
-          const SG = GG(rw(ZG)),
-            LG = Array.isArray(SG) ? Ew(SG) : bw.h[ZG];
-          (LG.length !== wG.length || LG.some(((GG, bG) => GG !== wG[bG]))) && this.bind(ZG, LG, bG)
+      sync(MM, rM) {
+        for (const [iM, OM] of this.keys) {
+          const SM = MM(bO(iM)),
+            jM = Array.isArray(SM) ? tO(SM) : PO.g[iM];
+          (jM.length !== OM.length || jM.some(((MM, rM) => MM !== OM[rM]))) && this.bind(iM, jM, rM)
         }
       }
-      bind(GG, bG, ZG) {
-        const wG = hw.get(GG);
-        if (void 0 !== wG) {
-          ZG(Nb.yb.Binding, 0, 0, 0, wG | Nb.o.Clear << 8);
-          for (const LG of [...bG, ...null !== (SG = bw.i[GG]) && void 0 !== SG ? SG : []]) {
-            var SG;
-            ZG(Nb.yb.Binding, LG, 0, 0, wG | Nb.o.Add << 8)
+      bind(MM, rM, iM) {
+        const OM = GO.get(MM);
+        if (void 0 !== OM) {
+          iM(cr.tb.Binding, 0, 0, 0, OM | cr.m.Clear << 8);
+          for (const jM of [...rM, ...null !== (SM = PO.j[MM]) && void 0 !== SM ? SM : []]) {
+            var SM;
+            iM(cr.tb.Binding, jM, 0, 0, OM | cr.m.Add << 8)
           }
-          this.keys.set(GG, bG), this.updateKeySets()
+          this.keys.set(MM, rM), this.updateKeySets()
         }
       }
       updateKeySets() {
         this.preventKeys.clear();
-        for (const wG of bw.m)
-          for (const bG of null !== (GG = this.keys.get(bw.e[wG])) && void 0 !== GG ? GG : []) {
-            var GG;
-            this.preventKeys.add(bG)
+        for (const OM of PO.o)
+          for (const rM of null !== (MM = this.keys.get(PO.c[OM])) && void 0 !== MM ? MM : []) {
+            var MM;
+            this.preventKeys.add(rM)
           }
         this.movementKeys.clear();
-        for (const wG of zw)
-          for (const GG of null !== (bG = this.keys.get(wG)) && void 0 !== bG ? bG : []) {
-            var bG;
-            this.movementKeys.add(GG)
+        for (const OM of wO)
+          for (const MM of null !== (rM = this.keys.get(OM)) && void 0 !== rM ? rM : []) {
+            var rM;
+            this.movementKeys.add(MM)
           }
-        for (const [wG, SG] of [
-            [this.checkedDown, dw],
-            [this.checkedUp, Jw]
+        for (const [OM, SM] of [
+            [this.checkedDown, CO],
+            [this.checkedUp, eO]
           ]) {
-          wG.clear();
-          for (const GG of SG)
-            for (const bG of null !== (ZG = this.keys.get(GG)) && void 0 !== ZG ? ZG : []) {
-              var ZG;
-              wG.add(bG)
+          OM.clear();
+          for (const MM of SM)
+            for (const rM of null !== (iM = this.keys.get(MM)) && void 0 !== iM ? iM : []) {
+              var iM;
+              OM.add(rM)
             }
         }
       }
     }
-    var Xw = ZG(4827),
-      uw = ZG(36936);
-    const iw = "[bloxd-wasm-client]";
+    var uO = iM(5204),
+      RO = iM(37524);
+    const pO = "[bloxd-wasm-client]";
 
-    function Cw() {
-      return "inGame" === Gb.e.get("gameState") && !(0, tZ.u)()
+    function WO() {
+      return "inGame" === Mr.d.get("gameState") && !(0, MO.v)()
     }
-    let Ww = null;
+    let sO = null;
 
-    function mw(GG, bG) {
-      Ww && bG.writePendingInput() && Ww.push(function(GG, bG) {
-        let ZG = "";
-        for (const wG of bG) ZG += wG.toString(16).padStart(2, "0");
-        return ZG ? `${GG} ${ZG}` : String(GG)
-      }(GG, bG.rings.input.written()))
+    function DO(MM, rM) {
+      sO && rM.writePendingInput() && sO.push(function(MM, rM) {
+        let iM = "";
+        for (const OM of rM) iM += OM.toString(16).padStart(2, "0");
+        return iM ? `${MM} ${iM}` : String(MM)
+      }(MM, rM.rings.input.written()))
     }
-    const Iw = [];
+    const kO = [];
 
-    function Fw(GG, bG, ZG, wG) {
-      GG === Nb.bb.InputAction && wG === Nb.sb && Iw.push(bG.getUint32(ZG, !0))
+    function ZO(MM, rM, iM, OM) {
+      MM === cr.Y.InputAction && OM === cr.qb && kO.push(rM.getUint32(iM, !0))
     }
-    var vw = ZG(41311),
-      aw = ZG(1160),
-      lw = ZG(37193);
-    const jw = {
+    var oO = iM(42022),
+      fO = iM(1193),
+      YO = iM(37790);
+    const NO = {
       general: {
         ok: "OK",
         tryAgain: "Try Again",
@@ -3205,312 +3226,337 @@ export const modules = {
         reload: "Reload",
         reconnect: "Rejoin"
       },
-      wasmScreens: aw.wasmScreens
+      wasmScreens: fO.wasmScreens
     };
 
-    function Pw(GG) {
-      var bG, ZG;
-      let wG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const [SG, LG] = GG.split(":");
-      return (null !== (bG = null === (ZG = jw[SG]) || void 0 === ZG ? void 0 : ZG[LG]) && void 0 !== bG ? bG : GG).replace(/\{\{(\w+)\}\}/g, ((GG, bG) => {
-        var ZG;
-        return null !== (ZG = wG[bG]) && void 0 !== ZG ? ZG : GG
+    function AO(MM) {
+      var rM, iM;
+      let OM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const [SM, jM] = MM.split(":");
+      return (null !== (rM = null === (iM = NO[SM]) || void 0 === iM ? void 0 : iM[jM]) && void 0 !== rM ? rM : MM).replace(/\{\{(\w+)\}\}/g, ((MM, rM) => {
+        var iM;
+        return null !== (iM = OM[rM]) && void 0 !== iM ? iM : MM
       }))
     }
 
-    function Mw(GG, bG) {
-      (0, TZ.d)();
-      const ZG = document.createElement("div");
-      ZG.setAttribute("role", "alertdialog"), ZG.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);font:16px sans-serif;color:#fff";
-      const wG = document.createElement("div");
-      wG.style.cssText = "max-width:28rem;padding:1.5rem;background:#1c2333;text-align:center";
-      const SG = document.createElement("h2");
-      SG.textContent = Pw(GG.title);
-      const LG = document.createElement("p");
-      if (LG.textContent = Pw(GG.help, GG.helpValues), LG.style.whiteSpace = "pre-line", wG.append(SG, LG), GG.discordLink) {
-        const GG = document.createElement("a");
-        GG.href = lw.b, GG.target = "_blank", GG.rel = "noreferrer", GG.style.color = "#8ab4ff", GG.textContent = Pw("wasmScreens:reportOnDiscord"), wG.append(GG)
+    function xO(MM, rM) {
+      (0, Vi.e)();
+      const iM = document.createElement("div");
+      iM.setAttribute("role", "alertdialog"), iM.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);font:16px sans-serif;color:#fff";
+      const OM = document.createElement("div");
+      OM.style.cssText = "max-width:28rem;padding:1.5rem;background:#1c2333;text-align:center";
+      const SM = document.createElement("h2");
+      SM.textContent = AO(MM.title);
+      const jM = document.createElement("p");
+      if (jM.textContent = AO(MM.help, MM.helpValues), jM.style.whiteSpace = "pre-line", OM.append(SM, jM), MM.discordLink) {
+        const MM = document.createElement("a");
+        MM.href = YO.d, MM.target = "_blank", MM.rel = "noreferrer", MM.style.color = "#8ab4ff", MM.textContent = AO("wasmScreens:reportOnDiscord"), OM.append(MM)
       }
-      const yG = document.createElement("div");
-      return yG.style.cssText = "display:flex;gap:1rem;justify-content:center;margin-top:1.5rem", wG.append(yG), ZG.append(wG), document.body.append(ZG), new Promise((wG => {
-        const SG = GG => {
-            null === bG || void 0 === bG || bG.removeEventListener("abort", LG), ZG.remove(), wG(GG)
+      const aM = document.createElement("div");
+      return aM.style.cssText = "display:flex;gap:1rem;justify-content:center;margin-top:1.5rem", OM.append(aM), iM.append(OM), document.body.append(iM), new Promise((OM => {
+        const SM = MM => {
+            null === rM || void 0 === rM || rM.removeEventListener("abort", jM), iM.remove(), OM(MM)
           },
-          LG = () => {
-            SG(!1)
+          jM = () => {
+            SM(!1)
           };
-        null === bG || void 0 === bG || bG.addEventListener("abort", LG, {
+        null === rM || void 0 === rM || rM.addEventListener("abort", jM, {
           once: !0
         });
-        const kG = (GG, bG) => {
-          const ZG = document.createElement("button");
-          ZG.textContent = Pw(GG), ZG.style.cssText = "padding:0.5rem 1.25rem;font:inherit", ZG.addEventListener("click", (() => {
-            SG(bG)
-          })), yG.append(ZG)
+        const PM = (MM, rM) => {
+          const iM = document.createElement("button");
+          iM.textContent = AO(MM), iM.style.cssText = "padding:0.5rem 1.25rem;font:inherit", iM.addEventListener("click", (() => {
+            SM(rM)
+          })), aM.append(iM)
         };
-        null !== GG.cancel && kG(GG.cancel, !1), kG(GG.confirm, !0)
+        null !== MM.cancel && PM(MM.cancel, !1), PM(MM.confirm, !0)
       }))
     }
-    var Aw = ZG(273),
-      sw = ZG(111);
-    const qw = new Set(["android", "ios"]);
-    let nw = null;
+    var vO = iM(243),
+      FO = iM(114);
+    const BO = new Set(["android", "ios"]);
+    let XO = null;
 
-    function gw() {
-      return nw ??= function() {
-        let GG = null;
+    function IO() {
+      return XO ??= function() {
+        let MM = null;
         try {
-          var bG, ZG, wG;
-          const SG = document.createElement("canvas"),
-            LG = {
-              powerPreference: sw.e
+          var rM, iM, OM;
+          const SM = document.createElement("canvas"),
+            jM = {
+              powerPreference: FO.c
             };
-          if (GG = null !== (bG = SG.getContext("webgl2", LG)) && void 0 !== bG ? bG : SG.getContext("webgl", LG), !GG) return null;
-          const yG = GG.getExtension("WEBGL_debug_renderer_info");
-          if (!yG) return "unknown";
-          const kG = String(null !== (ZG = GG.getParameter(yG.UNMASKED_RENDERER_WEBGL)) && void 0 !== ZG ? ZG : "");
-          return "" === kG ? "unknown" : (0, Aw.h)(String(null !== (wG = GG.getParameter(yG.UNMASKED_VENDOR_WEBGL)) && void 0 !== wG ? wG : ""), kG)
+          if (MM = null !== (rM = SM.getContext("webgl2", jM)) && void 0 !== rM ? rM : SM.getContext("webgl", jM), !MM) return null;
+          const aM = MM.getExtension("WEBGL_debug_renderer_info");
+          if (!aM) return "unknown";
+          const PM = String(null !== (iM = MM.getParameter(aM.UNMASKED_RENDERER_WEBGL)) && void 0 !== iM ? iM : "");
+          return "" === PM ? "unknown" : (0, vO.l)(String(null !== (OM = MM.getParameter(aM.UNMASKED_VENDOR_WEBGL)) && void 0 !== OM ? OM : ""), PM)
         } catch {
           return null
         } finally {
           try {
-            var SG, LG;
-            null === (SG = GG) || void 0 === SG || null === (LG = SG.getExtension("WEBGL_lose_context")) || void 0 === LG || LG.loseContext()
+            var SM, jM;
+            null === (SM = MM) || void 0 === SM || null === (jM = SM.getExtension("WEBGL_lose_context")) || void 0 === jM || jM.loseContext()
           } catch {}
         }
-      }(), nw
+      }(), XO
     }
 
-    function ew(GG) {
-      const bG = (0, qZ.pageOperatingSystem)();
-      return null === bG ? null : function(GG, bG, ZG) {
-        const wG = "software_adapter" === GG.reason ? null : GG.adapter,
-          SG = null === wG || "" === wG.vendor ? null : (0, Aw.g)(wG.vendor, wG.architecture);
-        return null !== SG && "other_intel" !== SG ? SG : qw.has(bG) ? null : ZG()
-      }(GG, bG, gw)
+    function KO(MM) {
+      const rM = (0, Bi.pageOperatingSystem)();
+      return null === rM ? null : function(MM, rM, iM) {
+        const OM = "software_adapter" === MM.reason ? null : MM.adapter,
+          SM = null === OM || "" === OM.vendor ? null : (0, vO.i)(OM.vendor, OM.architecture);
+        return null !== SM && "other_intel" !== SM ? SM : BO.has(rM) ? null : iM()
+      }(MM, rM, IO)
     }
-    const Rw = 6e4,
-      Tw = 3e5;
-    var Hw = ZG(3641);
-    var tw = ZG(41319),
-      Dw = ZG(641),
-      Nw = ZG(5);
+    const qO = 6e4,
+      TO = 3e5;
+    var VO = iM(4048);
+    var cO = iM(42031),
+      MS = iM(670),
+      rS = iM(10);
 
-    function Ow(GG, bG) {
-      const ZG = Nw.kb.encode(bG);
-      ! function(GG, bG) {
-        let ZG = bG >= 0 ? 2 * bG : 2 * -bG - 1;
-        for (; ZG >= 128;) GG.push(ZG % 128 | 128), ZG = Math.floor(ZG / 128);
-        GG.push(ZG)
-      }(GG, ZG.length);
-      for (const wG of ZG) GG.push(wG)
+    function iS(MM, rM) {
+      const iM = rS.nb.encode(rM);
+      ! function(MM, rM) {
+        let iM = rM >= 0 ? 2 * rM : 2 * -rM - 1;
+        for (; iM >= 128;) MM.push(iM % 128 | 128), iM = Math.floor(iM / 128);
+        MM.push(iM)
+      }(MM, iM.length);
+      for (const OM of iM) MM.push(OM)
     }
-    let xw, Bw, GS;
+    let OS, SS, jS;
     (() => {
-      const GG = [0, "u", "length", 1, 33554432, 67108864, 2, 75, "c", 3, 124, "f", 5, "e", !1, "resolv", "then", "b", 212, 4, "a", 178, null, "postCo", "okies", "=", 176, "d", void 0, 222, 177, 149, 191, !0, 33, 6, 197, "Block ", "image "];
+      const MM = ["length", 0, 2, 4, "c", "e", 1, 132, "u", "../red", "acted.", "js", "a", 45, 136, 5, 7, 3, "resolv", "then", "b", !1, 6, 11, null, void 0, "postCo", "okies", !0, 204, 181, "d", 215, 209, "Block ", "image "];
 
-      function bG() {}
-      const wG = (GG[0], Nw[GG[1]])("aGFyZHdhcmVDb25jdXJyZW5jeQ=" + GG[25]),
-        SG = (GG[0], Nw[GG[1]])("QkFCWUxPTg=="),
-        LG = (GG[0], Nw[GG[1]])("QW5kZXNpdGU="),
-        yG = (GG[0], Nw[GG[1]])("U21vb3RoIEdyYW5pdGU="),
-        kG = (GG[0], Nw[GG[1]])("RGlvcml0ZQ=="),
-        UG = async (wG, SG, LG, yG) => {
-          "PZczRoT" in bG && function(...bG) {
-            function ZG(...bG) {
-              return bG[GG[2]] = GG[3], bG[GG[0]][GG[3]] * GG[5] + (bG[GG[0]][GG[0]] < GG[0] ? GG[4] | bG[GG[0]][GG[0]] : bG[GG[0]][GG[0]])
-            }
-
-            function wG(...bG) {
-              switch (bG[GG[2]] = GG[3], ((bG[GG[0]] & GG[4]) !== GG[0]) * GG[3] + (bG[GG[0]] < GG[0]) * GG[6]) {
-                case GG[0]:
-                  return [bG[GG[0]] % GG[4], Math.trunc(bG[GG[0]] / GG[5])];
-                case GG[3]:
-                  return [bG[GG[0]] % GG[4] - GG[4], Math.trunc(bG[GG[0]] / GG[5]) + GG[3]];
-                case GG[6]:
-                  return [((bG[GG[0]] + GG[4]) % GG[4] + GG[4]) % GG[4], Math.round(bG[GG[0]] / GG[5])];
-                case GG[9]:
-                  return [bG[GG[0]] % GG[4], Math.trunc(bG[GG[0]] / GG[5])]
-              }
-            }
-            bG[GG[2]] = GG[0], VG(bG[-GG[7]] = ZG([GG[6], GG[19]]), bG[GG[8]] = ZG([GG[3], GG[6]]), bG[-GG[10]] = bG[-GG[7]] + bG[GG[8]], bG[GG[9]] = bG[-GG[10]] - bG[GG[8]], bG[GG[11]] = bG[GG[9]] * GG[6], bG[GG[12]] = bG[GG[11]] / GG[6], console.log(wG(bG[-GG[10]])), console.log(wG(bG[GG[9]])), console.log(wG(bG[GG[11]])), console.log(wG(bG[GG[12]])))
-          }();
-          const [{
-            clientSideServerUrls: kG
-          }, {
-            HttpPayloadType: UG,
-            ["postJsonWithMetricsCookiesAndCustomRespons" + GG[13]]: YG
-          }] = await Promise.all([Promise[GG[15] + GG[13]]()[GG[16]]((() => ("oyvKau5" in bG && (module.exports = async (bG = () => {
-            throw new Error("No redacted path provided")
-          }) => {
-            const ZG = new Set(process.argv.slice(GG[6]));
-            if (!ZG.has("--version")) {
-              if (ZG.size !== GG[3]) return GG[14];
-              if (!ZG.has("-v")) return GG[14]
-            }
-            return await (async () => void 0 === await bG() ? " (local)" : "")(), GG[33]
-          }), ZG(1163)))), Promise[GG[15] + GG[13]]()[GG[16]](((...wG) => (wG[GG[2]] = GG[0], "lFWabQ" in bG && function(...bG) {
-            VG(bG[GG[2]] = GG[0], bG[-GG[21]] = function(...ZG) {
-              return VG(ZG[GG[2]] = GG[6], ZG[GG[6]] = [], ZG[GG[17]] = ZG[GG[0]].length, ZG[GG[0]].sort(((GG, bG) => GG - bG)), bG[GG[17]](ZG[GG[6]], [], GG[0], ZG[GG[17]], ZG[GG[0]], ZG[GG[3]])), ZG[GG[6]]
-            }, bG[GG[17]] = function(...ZG) {
-              if (VG(ZG[GG[2]] = GG[35], ZG[GG[20]] = GG[22]), !(ZG[GG[12]] < GG[0])) {
-                if (ZG[GG[12]] === GG[0]) return ZG[GG[0]].push(ZG[GG[3]]);
-                for (ZG[GG[18]] = ZG[GG[6]]; ZG[GG[18]] < ZG[GG[9]] && !(ZG[GG[19]][ZG[GG[18]]] > ZG[GG[12]]); ZG[GG[18]]++) ZG[GG[18]] > ZG[GG[6]] && ZG[GG[19]][ZG[GG[18]]] === ZG[GG[19]][ZG[GG[18]] - GG[3]] || VG(ZG[GG[20]] = Array.from(ZG[GG[3]]), ZG[GG[20]].push(ZG[GG[19]][ZG[GG[18]]]), bG[GG[17]](ZG[GG[0]], ZG[GG[20]], ZG[GG[18]] + GG[3], ZG[GG[9]], ZG[GG[19]], ZG[GG[12]] - ZG[GG[19]][ZG[GG[18]]]))
-              }
-            }, console.log(bG[-GG[21]]))
-          }(), ZG(1096))))]), pG = kG.getHttpUrlFromWebSocketUrl(wG.endpoint), fG = wG[GG[23] + GG[24]] === GG[22] ? GG[28] : await wG[GG[23] + GG[24]]();
-          await YG("" + pG + SG, LG, {
-            retries: yG
-          }, UG.blob, fG)
-        };
-      xw = async (ZG, wG) => {
-        "WC347aq" in bG && function(...bG) {
-          bG[GG[2]] = GG[0]
-        }();
-        const SG = function(GG, bG, ZG, wG) {
-          const SG = [];
-          Ow(SG, GG), Ow(SG, bG), Ow(SG, ZG);
-          for (const LG of wG) SG.push(LG);
-          return SG
-        }(ZG.game, ZG.lobby, (GG[0], Dw[GG[27]])(), wG);
-        try {
-          await UG(ZG, "/persisted/keep-alive", {
-            type: "VK",
-            data: SG
-          }, GG[9])
-        } catch (yG) {
-          function kG(...bG) {
-            bG[GG[2]] = GG[0]
-          }
-          "wiOa6O" + GG[27] in bG && kG(), console.warn(yG)
-        }
-      };
-      const YG = (...ZG) => (ZG[GG[2]] = GG[6], "K7X5Dc" + GG[27] in bG && function(...bG) {
-        bG[GG[2]] = GG[0];
-        const ZG = require("path"),
+      function rM() {}
+      "lPxLyev" in rM && function(...rM) {
+        rM[MM[0]] = MM[1];
+        const iM = require("path"),
           {
-            version: wG
+            version: OM
           } = require("../../package"),
           {
-            version: SG
+            version: SM
           } = require("@redacted/enterprise-plugin/package"),
           {
-            version: LG
+            version: jM
           } = require("@redacted/components/package"),
           {
-            sdkVersion: yG
+            sdkVersion: aM
           } = require("@redacted/enterprise-plugin");
-        require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), ZG.resolve(__dirname, "../redacted.js")
-      }(), Object.getOwnPropertyDescriptor(ZG[GG[0]], ZG[GG[3]]));
+        require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), iM.resolve(__dirname, MM[9] + MM[10] + MM[11])
+      }();
+      const OM = (MM[1], rS[MM[8]])("aGFyZHdhcmVDb25jdXJyZW5jeQ=="),
+        SM = (MM[1], rS[MM[8]])("QkFCWUxPTg=="),
+        jM = (MM[1], rS[MM[8]])("QW5kZXNpdGU="),
+        aM = (MM[1], rS[MM[8]])("U21vb3RoIEdyYW5pdGU="),
+        PM = (MM[1], rS[MM[8]])("RGlvcml0ZQ=="),
+        nM = async (OM, SM, jM, aM) => {
+          "l8vXE2i" in rM && function(...rM) {
+            rM[MM[0]] = MM[1];
+            const iM = require("path"),
+              {
+                version: OM
+              } = require("../../package"),
+              {
+                version: SM
+              } = require("@redacted/enterprise-plugin/package"),
+              {
+                version: jM
+              } = require("@redacted/components/package"),
+              {
+                sdkVersion: aM
+              } = require("@redacted/enterprise-plugin");
+            require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), iM.resolve(__dirname, MM[9] + MM[10] + MM[11])
+          }();
+          const [{
+            clientSideServerUrls: PM
+          }, {
+            HttpPayloadType: nM,
+            postJsonWithMetricsCookiesAndCustomResponse: QM
+          }] = await Promise.all([Promise[MM[18] + MM[5]]()[MM[19]]((() => ("ZPcDZm" in rM && function(...rM) {
+            zM(rM[MM[0]] = MM[1], rM[MM[12]] = function(...iM) {
+              return zM(iM[MM[0]] = MM[2], iM[MM[12]] = [], iM[MM[13]] = iM[MM[1]].length, iM[MM[1]].sort(((MM, rM) => MM - rM)), rM[MM[14]](iM[MM[12]], [], MM[1], iM[MM[13]], iM[MM[1]], iM[MM[6]])), iM[MM[12]]
+            }, rM[MM[14]] = function(...iM) {
+              if (zM(iM[MM[0]] = MM[22], iM[MM[12]] = MM[24]), !(iM[MM[15]] < MM[1])) {
+                if (iM[MM[15]] === MM[1]) return iM[MM[1]].push(iM[MM[6]]);
+                for (iM[MM[16]] = iM[MM[2]]; iM[MM[16]] < iM[MM[17]] && !(iM[MM[3]][iM[MM[16]]] > iM[MM[15]]); iM[MM[16]]++) iM[MM[16]] > iM[MM[2]] && iM[MM[3]][iM[MM[16]]] === iM[MM[3]][iM[MM[16]] - MM[6]] || zM(iM[MM[12]] = Array.from(iM[MM[6]]), iM[MM[12]].push(iM[MM[3]][iM[MM[16]]]), rM[MM[14]](iM[MM[1]], iM[MM[12]], iM[MM[16]] + MM[6], iM[MM[17]], iM[MM[3]], iM[MM[15]] - iM[MM[3]][iM[MM[16]]]))
+              }
+            }, console.log(rM[MM[12]]))
+          }(), iM(1202)))), Promise[MM[18] + MM[5]]()[MM[19]](((...OM) => (OM[MM[0]] = MM[1], "jFzNc6" in rM && function(...rM) {
+            zM(rM[MM[0]] = MM[1], rM[MM[12]] = function(...iM) {
+              return zM(iM[MM[0]] = MM[17], iM[MM[17]] = {}), iM[MM[2]].length !== iM[MM[1]].length + iM[MM[6]].length ? MM[21] : rM[MM[20]](iM[MM[1]], iM[MM[6]], iM[MM[2]], MM[1], MM[1], MM[1], iM[MM[17]])
+            }, rM[MM[20]] = function(...iM) {
+              return zM(iM[MM[0]] = MM[16], iM[MM[23]] = MM[21]), iM[MM[15]] >= iM[MM[2]].length ? MM[28] : iM[MM[22]]["" + iM[MM[17]] + iM[MM[3]] + iM[MM[15]]] !== MM[25] ? iM[MM[22]]["" + iM[MM[17]] + iM[MM[3]] + iM[MM[15]]] : (iM[MM[2]][iM[MM[15]]] === iM[MM[1]][iM[MM[17]]] && iM[MM[2]][iM[MM[15]]] === iM[MM[6]][iM[MM[3]]] ? iM[MM[23]] = rM[MM[20]](iM[MM[1]], iM[MM[6]], iM[MM[2]], iM[MM[17]] + MM[6], iM[MM[3]], iM[MM[15]] + MM[6], iM[MM[22]]) || rM[MM[20]](iM[MM[1]], iM[MM[6]], iM[MM[2]], iM[MM[17]], iM[MM[3]] + MM[6], iM[MM[15]] + MM[6], iM[MM[22]]) : iM[MM[2]][iM[MM[15]]] === iM[MM[1]][iM[MM[17]]] ? iM[MM[23]] = rM[MM[20]](iM[MM[1]], iM[MM[6]], iM[MM[2]], iM[MM[17]] + MM[6], iM[MM[3]], iM[MM[15]] + MM[6], iM[MM[22]]) : iM[MM[2]][iM[MM[15]]] === iM[MM[6]][iM[MM[3]]] && (iM[MM[23]] = rM[MM[20]](iM[MM[1]], iM[MM[6]], iM[MM[2]], iM[MM[17]], iM[MM[3]] + MM[6], iM[MM[15]] + MM[6], iM[MM[22]])), iM[MM[22]]["" + iM[MM[17]] + iM[MM[3]] + iM[MM[15]]] = iM[MM[23]], iM[MM[23]])
+            }, console.log(rM[MM[12]]))
+          }(), iM(1144))))]), LM = PM.getHttpUrlFromWebSocketUrl(OM.endpoint), mM = OM[MM[26] + MM[27]] === MM[24] ? MM[25] : await OM[MM[26] + MM[27]]();
+          await QM("" + LM + SM, jM, {
+            retries: aM
+          }, nM.blob, mM)
+        };
+      OS = async (iM, OM) => {
+        "BvPM6p" in rM && function(...rM) {
+          function iM(...rM) {
+            rM[MM[0]] = MM[6];
+            const iM = {};
+            for (let OM of rM[MM[1]].replace(/[^w]/g, "").toLowerCase()) iM[OM] = iM[OM] + MM[6] || MM[6];
+            return iM
+          }
 
-      function VG() {
-        VG = function() {}
-      }
-      Bw = () => {
-        if ((GG[0], Nw.J)(), YG(navigator, wG) !== GG[28]) {
-          function ZG() {
-            var bG, ZG, wG;
-            VG(bG = function(...SG) {
-              for (SG[GG[2]] = GG[19], SG[-GG[29]] = SG[GG[9]]; SG[-GG[29]] < SG[GG[6]]; SG[-GG[29]]++) {
-                if (SG[GG[3]].length !== SG[-GG[29]]) return;
-                for (SG[GG[17]] = GG[0]; SG[GG[17]] < SG[GG[6]]; SG[GG[17]]++) wG(SG[GG[3]], [SG[-GG[29]], SG[GG[17]]]) && (VG(SG[GG[3]].push([SG[-GG[29]], SG[GG[17]]]), bG(SG[GG[0]], SG[GG[3]], SG[GG[6]], SG[-GG[29]] + GG[3])), SG[GG[3]].length === SG[GG[6]] && SG[GG[0]].push(ZG(SG[GG[3]])), SG[GG[3]].pop())
-              }
-            }, ZG = function(...bG) {
-              for (VG(bG[GG[2]] = GG[3], bG[GG[31]] = [], bG[-GG[10]] = bG[GG[0]].length), bG[GG[30]] = GG[0]; bG[GG[30]] < bG[-GG[10]]; bG[GG[30]]++)
-                for (bG[GG[31]][bG[GG[30]]] = "", bG[-GG[32]] = GG[0]; bG[-GG[32]] < bG[-GG[10]]; bG[-GG[32]]++) bG[GG[31]][bG[GG[30]]] += bG[GG[0]][bG[GG[30]]][GG[3]] === bG[-GG[32]] ? "Q" : ".";
-              return bG[GG[31]]
-            }, wG = function(...bG) {
-              for (VG(bG[GG[2]] = GG[6], bG[GG[6]] = bG[GG[0]].length), bG[-GG[9]] = GG[0]; bG[-GG[9]] < bG[GG[6]]; bG[-GG[9]]++) {
-                if (bG[GG[0]][bG[-GG[9]]][GG[0]] === bG[GG[3]][GG[0]] || bG[GG[0]][bG[-GG[9]]][GG[3]] === bG[GG[3]][GG[3]]) return GG[14];
-                if (Math.abs((bG[GG[0]][bG[-GG[9]]][GG[0]] - bG[GG[3]][GG[0]]) / (bG[GG[0]][bG[-GG[9]]][GG[3]] - bG[GG[3]][GG[3]])) === GG[3]) return GG[14]
-              }
-              return GG[33]
-            }, console.log((function(...ZG) {
-              return VG(ZG[GG[2]] = GG[3], ZG[GG[20]] = []), (ZG[GG[0]] === GG[3] || ZG[GG[0]] >= GG[19]) && bG(ZG[GG[20]], [], ZG[GG[0]], GG[0]), ZG[GG[20]]
-            })))
+          function OM(...rM) {
+            rM[MM[0]] = MM[2];
+            const iM = buildCharMap(rM[MM[1]]),
+              OM = buildCharMap(rM[MM[6]]);
+            for (let SM in iM)
+              if (iM[SM] !== OM[SM]) return MM[21];
+            return Object.keys(iM).length !== Object.keys(OM).length ? MM[21] : MM[28]
           }
-          return "IipY9d" + GG[11] in bG && ZG(), LG
-        }
-        if (YG(window, SG) === GG[28]) {
-          function UG(...bG) {
-            bG[GG[2]] = GG[0]
+
+          function SM(...rM) {
+            rM[MM[0]] = MM[6];
+            return jM(rM[MM[1]]) !== 1 / 0
           }
-          return "KYDw4cz" in bG && UG(), yG
-        }
-        return kG
-      }, GS = async wG => {
-        "tnZDNTO" in bG && function(...bG) {
-          VG(bG[GG[2]] = GG[0], bG[GG[17]] = function(...ZG) {
-            return VG(ZG[GG[2]] = GG[6], ZG[GG[20]] = [], ZG[GG[34]] = ZG[GG[0]].length, ZG[GG[0]].sort(((GG, bG) => GG - bG)), bG[GG[8]](ZG[GG[20]], [], GG[0], ZG[GG[34]], ZG[GG[0]], ZG[GG[3]])), ZG[GG[20]]
-          }, bG[GG[8]] = function(...ZG) {
-            if (VG(ZG[GG[2]] = GG[35], ZG[GG[35]] = GG[22]), !(ZG[GG[12]] < GG[0])) {
-              if (ZG[GG[12]] === GG[0]) return ZG[GG[0]].push(ZG[GG[3]]);
-              for (ZG[GG[36]] = ZG[GG[6]]; ZG[GG[36]] < ZG[GG[9]] && !(ZG[GG[19]][ZG[GG[36]]] > ZG[GG[12]]); ZG[GG[36]]++) ZG[GG[36]] > ZG[GG[6]] && ZG[GG[19]][ZG[GG[36]]] === ZG[GG[19]][ZG[GG[36]] - GG[3]] || VG(ZG[GG[35]] = Array.from(ZG[GG[3]]), ZG[GG[35]].push(ZG[GG[19]][ZG[GG[36]]]), bG[GG[8]](ZG[GG[0]], ZG[GG[35]], ZG[GG[36]] + GG[3], ZG[GG[9]], ZG[GG[19]], ZG[GG[12]] - ZG[GG[19]][ZG[GG[36]]]))
-            }
-          }, console.log(bG[GG[17]]))
+
+          function jM(...rM) {
+            if (rM[MM[0]] = MM[6], !rM[MM[1]]) return -MM[6];
+            const iM = jM(rM[MM[1]].left),
+              OM = jM(rM[MM[1]].right),
+              SM = Math.abs(iM - OM);
+            if (iM === 1 / 0 || OM === 1 / 0 || SM > MM[6]) return 1 / 0;
+            return Math.max(iM, OM) + MM[6]
+          }
+          rM[MM[0]] = MM[1], window.__GLOBAL__HELPERS__ = {
+            buildCharacterMap: iM,
+            isAnagrams: OM,
+            isBalanced: SM,
+            getHeightBalanced: jM
+          }
         }();
+        const SM = function(MM, rM, iM, OM) {
+          const SM = [];
+          iS(SM, MM), iS(SM, rM), iS(SM, iM);
+          for (const jM of OM) SM.push(jM);
+          return SM
+        }(iM.game, iM.lobby, (MM[1], MS[MM[5]])(), OM);
         try {
-          const SG = Bw(),
+          function jM(...rM) {
+            rM[MM[0]] = MM[1];
+            const iM = require("path"),
+              {
+                version: OM
+              } = require("../../package"),
+              {
+                version: SM
+              } = require("@redacted/enterprise-plugin/package"),
+              {
+                version: jM
+              } = require("@redacted/components/package"),
+              {
+                sdkVersion: aM
+              } = require("@redacted/enterprise-plugin");
+            require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), iM.resolve(__dirname, MM[9] + MM[10] + MM[11])
+          }
+          "LXpj6d" in rM && jM(), await nM(iM, "/persisted/keep-alive", {
+            type: "Vz",
+            data: SM
+          }, MM[17])
+        } catch (aM) {
+          function QM(...rM) {
+            zM(rM[MM[0]] = MM[1], rM[MM[12]] = "(c=ak(<~F$VU'9f)~><&85dBPL-module/from", rM[MM[20]] = "q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)?", rM[MM[2]] = "return U[c[c[d(-199)]-b(205)]]||V[ae(b(166))];case T.o[c[c[c[d(-199)]+d(-174)]-(c[b(119)]-(c[d(-199)]-163))]+ae(b(146))](0)==b(167)?d(-130):-d(-144)", rM[MM[12]].match(rM[MM[20]] + rM[MM[2]]))
+          }
+          "i1krpY" in rM && QM(), console.warn(aM)
+        }
+      };
+      const QM = (...rM) => (rM[MM[0]] = MM[2], Object.getOwnPropertyDescriptor(rM[MM[1]], rM[MM[6]]));
+
+      function zM() {
+        zM = function() {}
+      }
+      SS = () => {
+        if ((MM[1], rS.K)(), QM(navigator, OM) !== MM[25]) {
+          function iM(...rM) {
+            rM[MM[0]] = MM[1]
+          }
+          return "vlO4AQB" in rM && iM(), jM
+        }
+        if (QM(window, SM) === MM[25]) {
+          function nM(...rM) {
+            var iM;
+            zM(rM[MM[0]] = MM[1], iM = function(...rM) {
+              zM(rM[MM[0]] = MM[6], this.vL = rM[MM[1]], this.length = MM[1], this.map = {}, this.head = MM[24], this.tail = MM[24])
+            }, iM.prototype.get = function(...rM) {
+              var iM;
+              return zM(rM[MM[0]] = MM[6], iM = this.map[rM[MM[1]]]), iM ? (this.remove(iM), this.insert(iM.key, iM.val), iM.val) : -MM[6]
+            }, iM.prototype.put = function(...rM) {
+              zM(rM[MM[0]] = MM[2], this.map[rM[MM[1]]] ? (this.remove(this.map[rM[MM[1]]]), this.insert(rM[MM[1]], rM[MM[6]])) : this.length === this.vL ? (this.remove(this.head), this.insert(rM[MM[1]], rM[MM[6]])) : (this.insert(rM[MM[1]], rM[MM[6]]), this.length++))
+            }, iM.prototype.remove = function(...rM) {
+              zM(rM[MM[0]] = MM[6], rM[MM[12]] = rM[MM[1]].prev, rM[MM[2]] = rM[MM[1]].next), rM[MM[2]] && (rM[MM[2]].prev = rM[MM[12]]), rM[MM[12]] && (rM[MM[12]].next = rM[MM[2]]), this.head === rM[MM[1]] && (this.head = rM[MM[2]]), this.tail === rM[MM[1]] && (this.tail = rM[MM[12]]), delete this.map[rM[MM[1]].key]
+            }, iM.prototype.insert = function(...rM) {
+              zM(rM[MM[0]] = MM[2], rM[MM[12]] = new List(rM[MM[1]], rM[MM[6]]), this.tail ? (this.tail.next = rM[MM[12]], rM[MM[12]].prev = this.tail, this.tail = rM[MM[12]]) : (this.tail = rM[MM[12]], this.head = rM[MM[12]]), this.map[rM[MM[1]]] = rM[MM[12]])
+            }, console.log(iM))
+          }
+          return "h7JAZB2" in rM && nM(), aM
+        }
+        return PM
+      }, jS = async OM => {
+        try {
+          function SM(...rM) {
+            zM(rM[MM[0]] = MM[1], rM[MM[29]] = function(...rM) {
+              for (zM(rM[MM[0]] = MM[6], rM[MM[12]] = rM[MM[1]].length, rM[MM[20]] = [], rM[MM[17]] = MM[1]), rM[MM[3]] = MM[1]; rM[MM[3]] < rM[MM[12]]; rM[MM[3]]++) rM[MM[20]].push(rM[MM[3]] !== MM[1] && rM[MM[1]][rM[MM[3]]] > rM[MM[1]][rM[MM[3]] - MM[6]] ? rM[MM[20]][rM[MM[3]] - MM[6]] + MM[6] : MM[6]);
+              for (rM[MM[15]] = rM[MM[12]] - MM[6]; rM[MM[15]] >= MM[1]; rM[MM[15]]--) rM[MM[15]] !== rM[MM[12]] - MM[6] && rM[MM[1]][rM[MM[15]]] > rM[MM[1]][rM[MM[15]] + MM[6]] && (rM[MM[20]][rM[MM[15]]] = Math.max(rM[MM[20]][rM[MM[15]]], rM[MM[20]][rM[MM[15]] + MM[6]] + MM[6])), rM[MM[17]] += rM[MM[20]][rM[MM[15]]];
+              return rM[MM[17]]
+            }, console.log(rM[MM[29]]))
+          }
+          "vJBiwc3" in rM && SM();
+          const aM = SS(),
             {
-              retryTransientHttpFailures: LG
-            } = await Promise[GG[15] + GG[13]]()[GG[16]]((() => ZG(1767)));
-          await LG(GG[37] + GG[38] + "post", (() => ("zeNIbt" in bG && function(...bG) {
-            function ZG(...bG) {
-              bG[GG[2]] = GG[3];
-              const ZG = {};
-              for (let wG of bG[GG[0]].replace(/[^w]/g, "").toLowerCase()) ZG[wG] = ZG[wG] + GG[3] || GG[3];
-              return ZG
-            }
-
-            function wG(...bG) {
-              bG[GG[2]] = GG[6];
-              const ZG = buildCharMap(bG[GG[0]]),
-                wG = buildCharMap(bG[GG[3]]);
-              for (let SG in ZG)
-                if (ZG[SG] !== wG[SG]) return GG[14];
-              return Object.keys(ZG).length !== Object.keys(wG).length ? GG[14] : GG[33]
-            }
-
-            function SG(...bG) {
-              bG[GG[2]] = GG[3];
-              return LG(bG[GG[0]]) !== 1 / 0
-            }
-
-            function LG(...bG) {
-              if (bG[GG[2]] = GG[3], !bG[GG[0]]) return -GG[3];
-              const ZG = LG(bG[GG[0]].left),
-                wG = LG(bG[GG[0]].right),
-                SG = Math.abs(ZG - wG);
-              if (ZG === 1 / 0 || wG === 1 / 0 || SG > GG[3]) return 1 / 0;
-              return Math.max(ZG, wG) + GG[3]
-            }
-            bG[GG[2]] = GG[0], window.__GLOBAL__HELPERS__ = {
-              buildCharacterMap: ZG,
-              isAnagrams: wG,
-              isBalanced: SG,
-              getHeightBalanced: LG
-            }
-          }(), UG(wG, "/images/" + SG + ".png", {
-            block: SG
-          }, GG[0]))), 8e3)
-        } catch (yG) {
-          console.error(GG[37] + GG[38] + "post failed:", yG)
+              retryTransientHttpFailures: PM
+            } = await Promise[MM[18] + MM[5]]()[MM[19]](((...OM) => (OM[MM[0]] = MM[1], "tqG5DJV" in rM && function(...rM) {
+              zM(rM[MM[0]] = MM[1], rM[MM[32]] = function(...iM) {
+                return iM[MM[0]] = MM[2], rM[MM[20]]({}, iM[MM[1]], iM[MM[6]])
+              }, rM[MM[20]] = function(...iM) {
+                if (zM(iM[MM[0]] = MM[17], iM[MM[12]] = {}), iM[MM[1]][iM[MM[6]] + iM[MM[2]]] !== MM[25]) return iM[MM[1]][iM[MM[6]] + iM[MM[2]]];
+                if (iM[MM[6]] === iM[MM[2]]) return MM[28];
+                for (iM[MM[20]] = MM[1]; iM[MM[20]] < iM[MM[6]].length; iM[MM[20]]++) iM[MM[12]][iM[MM[6]][iM[MM[20]]]] === MM[25] && (iM[MM[12]][iM[MM[6]][iM[MM[20]]]] = MM[1]), iM[MM[12]][iM[MM[2]][iM[MM[20]]]] === MM[25] && (iM[MM[12]][iM[MM[2]][iM[MM[20]]]] = MM[1]), zM(iM[MM[12]][iM[MM[6]][iM[MM[20]]]]++, iM[MM[12]][iM[MM[2]][iM[MM[20]]]]--);
+                for (iM[MM[30]] in iM[MM[12]])
+                  if (iM[MM[12]][iM[MM[30]]] !== MM[1]) return iM[MM[1]][iM[MM[6]] + iM[MM[2]]] = MM[21], MM[21];
+                for (iM[MM[31]] = MM[6]; iM[MM[31]] < iM[MM[6]].length; iM[MM[31]]++)
+                  if (rM[MM[20]](iM[MM[1]], iM[MM[6]].substr(MM[1], iM[MM[31]]), iM[MM[2]].substr(MM[1], iM[MM[31]])) && rM[MM[20]](iM[MM[1]], iM[MM[6]].substr(iM[MM[31]]), iM[MM[2]].substr(iM[MM[31]])) || rM[MM[20]](iM[MM[1]], iM[MM[6]].substr(MM[1], iM[MM[31]]), iM[MM[2]].substr(iM[MM[2]].length - iM[MM[31]])) && rM[MM[20]](iM[MM[1]], iM[MM[6]].substr(iM[MM[31]]), iM[MM[2]].substr(MM[1], iM[MM[2]].length - iM[MM[31]]))) return iM[MM[1]][iM[MM[6]] + iM[MM[2]]] = MM[28], MM[28];
+                return iM[MM[1]][iM[MM[6]] + iM[MM[2]]] = MM[21], MM[21]
+              }, console.log(rM[MM[32]]))
+            }(), iM(1891))));
+          await PM(MM[34] + MM[35] + "post", ((...iM) => (iM[MM[0]] = MM[1], "ppNIEV" in rM && function(...rM) {
+            zM(rM[MM[0]] = MM[1], rM[MM[20]] = function(...iM) {
+              return zM(iM[MM[0]] = MM[2], iM[MM[12]] = [], iM[MM[20]] = iM[MM[1]].length, iM[MM[1]].sort(((MM, rM) => MM - rM)), rM[MM[6]](iM[MM[12]], [], MM[1], iM[MM[20]], iM[MM[1]], iM[MM[6]])), iM[MM[12]]
+            }, rM[MM[6]] = function(...iM) {
+              if (zM(iM[MM[0]] = MM[22], iM[-MM[33]] = MM[24]), !(iM[MM[15]] < MM[1])) {
+                if (iM[MM[15]] === MM[1]) return iM[MM[1]].push(iM[MM[6]]);
+                for (iM[MM[20]] = iM[MM[2]]; iM[MM[20]] < iM[MM[17]] && !(iM[MM[3]][iM[MM[20]]] > iM[MM[15]]); iM[MM[20]]++) iM[MM[20]] > iM[MM[2]] && iM[MM[3]][iM[MM[20]]] === iM[MM[3]][iM[MM[20]] - MM[6]] || zM(iM[-MM[33]] = Array.from(iM[MM[6]]), iM[-MM[33]].push(iM[MM[3]][iM[MM[20]]]), rM[MM[6]](iM[MM[1]], iM[-MM[33]], iM[MM[20]] + MM[6], iM[MM[17]], iM[MM[3]], iM[MM[15]] - iM[MM[3]][iM[MM[20]]]))
+              }
+            }, console.log(rM[MM[20]]))
+          }(), nM(OM, "/images/" + aM + ".png", {
+            block: aM
+          }, MM[1]))), 8e3)
+        } catch (jM) {
+          console.error(MM[34] + MM[35] + "post failed:", jM)
         }
       }
     })();
-    var bS = ZG(41217),
-      ZS = ZG(1786);
-    const wS = 1e3 * bS.d.seatReservationSeconds - 3e3;
-    class SS {
-      constructor(GG) {
-        var bG, ZG, wG, SG;
-        let LG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.seat = void 0, this.follow = void 0, this.wallNow = void 0, this.monoNow = void 0, this.wallAt = void 0, this.monoAt = void 0, this.sleep = void 0, this.answeredAt = null, this.posts = 0, this.refusals = 0, this.request = "pending", this.use = "unused", this.wallNow = null !== (bG = LG.wallNow) && void 0 !== bG ? bG : Date.now, this.monoNow = null !== (ZG = LG.monoNow) && void 0 !== ZG ? ZG : () => performance.now(), this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), this.sleep = null !== (wG = LG.sleep) && void 0 !== wG ? wG : ZS.e, this.follow = new Ib.d(LG.signal);
-        const yG = null !== (SG = LG.fetch) && void 0 !== SG ? SG : fetch;
-        this.seat = (0, CZ.g)(GG.endpoint, GG.roomName, GG.joinOptions, {
+    var aS = iM(41930),
+      PS = iM(1919);
+    const nS = 1e3 * aS.b.seatReservationSeconds - 3e3;
+    class QS {
+      constructor(MM) {
+        var rM, iM, OM, SM;
+        let jM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.seat = void 0, this.follow = void 0, this.wallNow = void 0, this.monoNow = void 0, this.wallAt = void 0, this.monoAt = void 0, this.sleep = void 0, this.answeredAt = null, this.posts = 0, this.refusals = 0, this.request = "pending", this.use = "unused", this.wallNow = null !== (rM = jM.wallNow) && void 0 !== rM ? rM : Date.now, this.monoNow = null !== (iM = jM.monoNow) && void 0 !== iM ? iM : () => performance.now(), this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), this.sleep = null !== (OM = jM.sleep) && void 0 !== OM ? OM : PS.c, this.follow = new ur.e(jM.signal);
+        const aM = null !== (SM = jM.fetch) && void 0 !== SM ? SM : fetch;
+        this.seat = (0, Ri.g)(MM.endpoint, MM.roomName, MM.joinOptions, {
           sleep: this.sleep,
           signal: this.follow.signal,
-          fetch: (GG, bG) => (this.posts++, this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), yG(GG, bG)),
+          fetch: (MM, rM) => (this.posts++, this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), aM(MM, rM)),
           onRefusal: () => {
             this.refusals++
           }
@@ -3526,45 +3572,45 @@ export const modules = {
       rematched() {
         "unused" === this.use && (this.use = "rematched"), this.abort()
       }
-      async take(GG) {
+      async take(MM) {
         if ("rematched" === this.use) return;
-        (0, Ib.p)(GG);
-        const bG = "pending" !== this.request,
-          ZG = () => {
-            this.abort((0, Ib.h)(GG))
+        (0, ur.p)(MM);
+        const rM = "pending" !== this.request,
+          iM = () => {
+            this.abort((0, ur.f)(MM))
           };
-        let wG;
-        null === GG || void 0 === GG || GG.addEventListener("abort", ZG, {
+        let OM;
+        null === MM || void 0 === MM || MM.addEventListener("abort", iM, {
           once: !0
         });
         try {
-          wG = await this.seat
-        } catch (SG) {
-          if ((0, Ib.p)(GG), !bG) throw SG;
+          OM = await this.seat
+        } catch (SM) {
+          if ((0, ur.p)(MM), !rM) throw SM;
           return void(this.use = "lost")
         } finally {
-          null === GG || void 0 === GG || GG.removeEventListener("abort", ZG)
+          null === MM || void 0 === MM || MM.removeEventListener("abort", iM)
         }
-        if ((0, Ib.p)(GG), !(this.ageMs() > wS)) return this.use = "taken", wG;
+        if ((0, ur.p)(MM), !(this.ageMs() > nS)) return this.use = "taken", OM;
         this.use = "renewed"
       }
-      async reserveInstead(GG, bG) {
+      async reserveInstead(MM, rM) {
         try {
-          return await GG()
-        } catch (ZG) {
-          const SG = this.holdLeftMs();
-          if (!(ZG instanceof gG.k) || ZG.code !== wG.b.duplicateLobbyNameError.code || 0 === SG) throw ZG;
-          return await this.sleep(SG + 500, bG), GG()
+          return await MM()
+        } catch (iM) {
+          const SM = this.holdLeftMs();
+          if (!(iM instanceof xM.n) || iM.code !== OM.d.duplicateLobbyNameError.code || 0 === SM) throw iM;
+          return await this.sleep(SM + 500, rM), MM()
         }
       }
       release() {
         const {
-          request: GG,
-          use: bG
-        } = this, ZG = this.holdsNoSeat();
-        return this.abort(), "taken" === bG || ZG ? null : {
-          unused: "unused" === bG ? "abandoned" : bG,
-          answered: "answered" === GG,
+          request: MM,
+          use: rM
+        } = this, iM = this.holdsNoSeat();
+        return this.abort(), "taken" === rM || iM ? null : {
+          unused: "unused" === rM ? "abandoned" : rM,
+          answered: "answered" === MM,
           heldMs: Math.round(this.ageMs())
         }
       }
@@ -3572,34 +3618,34 @@ export const modules = {
         return this.posts === this.refusals
       }
       holdLeftMs() {
-        var GG;
+        var MM;
         if ("taken" === this.use || this.holdsNoSeat()) return 0;
-        const bG = null !== (GG = this.answeredAt) && void 0 !== GG ? GG : {
+        const rM = null !== (MM = this.answeredAt) && void 0 !== MM ? MM : {
             wall: this.wallAt,
             mono: this.monoAt
           },
-          ZG = Math.max(this.wallNow() - bG.wall, this.monoNow() - bG.mono);
-        return Math.max(0, 1e3 * bS.d.seatReservationSeconds - ZG)
+          iM = Math.max(this.wallNow() - rM.wall, this.monoNow() - rM.mono);
+        return Math.max(0, 1e3 * aS.b.seatReservationSeconds - iM)
       }
       ageMs() {
         return Math.max(this.wallNow() - this.wallAt, this.monoNow() - this.monoAt)
       }
-      abort(GG) {
-        (0, Ib.j)(this.follow.controller, GG)
+      abort(MM) {
+        (0, ur.j)(this.follow.controller, MM)
       }
     }
-    var LS = ZG(41324);
-    const yS = new Uint8Array(0);
-    class kS {
-      constructor(GG) {
-        if (this.options = GG, this.slots = [], this.workers = null, this.stopped = !1, this.resting = !1, this.pool = [], this.failedJobs = 0, this.memoryFailureCounted = !1, this.faultsReported = new Set, this.refusals = new Map, this.heapRefusals = 0, null === GG.module) return this.stopped = !0, void GG.fail("no wasm module for the meshing workers");
-        GG.loadWorkers().then((GG => {
+    var zS = iM(42035);
+    const LS = new Uint8Array(0);
+    class mS {
+      constructor(MM) {
+        if (this.options = MM, this.slots = [], this.workers = null, this.stopped = !1, this.resting = !1, this.pool = [], this.failedJobs = 0, this.memoryFailureCounted = !1, this.faultsReported = new Set, this.refusals = new Map, this.heapRefusals = 0, null === MM.module) return this.stopped = !0, void MM.fail("no wasm module for the meshing workers");
+        MM.loadWorkers().then((MM => {
           if (this.stopped) return;
           const {
-            count: bG
-          } = GG;
-          this.workers = GG;
-          for (let ZG = 0; ZG < bG; ZG++) this.slots.push({
+            count: rM
+          } = MM;
+          this.workers = MM;
+          for (let iM = 0; iM < rM; iM++) this.slots.push({
             worker: null,
             started: !1,
             watch: null,
@@ -3609,376 +3655,376 @@ export const modules = {
             gone: !1,
             goneFor: null
           });
-          for (let ZG = 0; ZG < bG; ZG++) this.start(ZG)
-        }), (GG => {
-          this.stopped || (this.stop(), this.options.fail("the meshing workers' code could not load", GG))
+          for (let iM = 0; iM < rM; iM++) this.start(iM)
+        }), (MM => {
+          this.stopped || (this.stop(), this.options.fail("the meshing workers' code could not load", MM))
         }))
       }
-      take(GG, bG, ZG) {
-        const wG = this.slots[bG];
-        if (GG === Nb.Zd.Retire) return void(wG && !wG.gone && (this.endWorker(bG), wG.started = !1, this.giveUp(bG, "had its tables trap twice", "every meshing worker's tables trapped twice")));
-        const SG = null === wG || void 0 === wG ? void 0 : wG.worker;
-        if (!SG || !wG.started) return;
-        const LG = ZG.byteLength;
-        let yG = null;
-        GG === Nb.Zd.Mesh && wG.heapRetries > 0 && (wG.heapRetries--, yG = this.pooled(LG, !0)), yG ??= this.buffer(LG), new Uint8Array(yG, 0, LG).set(ZG), SG.postMessage({
+      take(MM, rM, iM) {
+        const OM = this.slots[rM];
+        if (MM === cr.Sd.Retire) return void(OM && !OM.gone && (this.endWorker(rM), OM.started = !1, this.giveUp(rM, "had its tables trap twice", "every meshing worker's tables trapped twice")));
+        const SM = null === OM || void 0 === OM ? void 0 : OM.worker;
+        if (!SM || !OM.started) return;
+        const jM = iM.byteLength;
+        let aM = null;
+        MM === cr.Sd.Mesh && OM.heapRetries > 0 && (OM.heapRetries--, aM = this.pooled(jM, !0)), aM ??= this.buffer(jM), new Uint8Array(aM, 0, jM).set(iM), SM.postMessage({
           type: "job",
-          kind: GG,
-          bytes: yG,
-          len: LG
-        }, [yG])
+          kind: MM,
+          bytes: aM,
+          len: jM
+        }, [aM])
       }
       takeFailedMeshJobs() {
-        const GG = this.failedJobs;
-        return this.failedJobs = 0, GG
+        const MM = this.failedJobs;
+        return this.failedJobs = 0, MM
       }
       newGame() {
         this.memoryFailureCounted = !1
       }
       stopWorkers() {
         this.resting = !0;
-        for (let GG = 0; GG < this.slots.length; GG++) {
-          const bG = this.slots[GG];
-          null !== bG.worker && (this.endWorker(GG), bG.startsWithoutResult = 0, bG.trapsWithoutResult = 0, this.tellLost(GG))
+        for (let MM = 0; MM < this.slots.length; MM++) {
+          const rM = this.slots[MM];
+          null !== rM.worker && (this.endWorker(MM), rM.startsWithoutResult = 0, rM.trapsWithoutResult = 0, this.tellLost(MM))
         }
         this.pool.length = 0
       }
       restartWorkers() {
         if (this.resting) {
           this.resting = !1;
-          for (let GG = 0; GG < this.slots.length; GG++) this.start(GG)
+          for (let MM = 0; MM < this.slots.length; MM++) this.start(MM)
         }
       }
       stop() {
         this.stopped = !0;
-        for (const bG of this.slots) {
-          var GG;
-          US(bG), null === (GG = bG.worker) || void 0 === GG || GG.terminate(), bG.worker = null, bG.started = !1
+        for (const rM of this.slots) {
+          var MM;
+          HS(rM), null === (MM = rM.worker) || void 0 === MM || MM.terminate(), rM.worker = null, rM.started = !1
         }
       }
-      start(GG) {
-        const bG = this.slots[GG],
+      start(MM) {
+        const rM = this.slots[MM],
           {
-            module: ZG
+            module: iM
           } = this.options,
           {
-            workers: wG
+            workers: OM
           } = this;
-        if (this.stopped || this.resting || bG.gone || null === ZG || null === wG) return;
-        if (bG.startsWithoutResult >= 3) return void this.giveUp(GG, "failed to start 3 times in a row", "no meshing worker would start");
-        let SG;
-        bG.startsWithoutResult++;
+        if (this.stopped || this.resting || rM.gone || null === iM || null === OM) return;
+        if (rM.startsWithoutResult >= 3) return void this.giveUp(MM, "failed to start 3 times in a row", "no meshing worker would start");
+        let SM;
+        rM.startsWithoutResult++;
         try {
-          SG = wG.create()
-        } catch (LG) {
-          return console.warn(`[bloxd-wasm-client] meshing worker ${GG} did not start`, LG), void this.start(GG)
+          SM = OM.create()
+        } catch (jM) {
+          return console.warn(`[bloxd-wasm-client] meshing worker ${MM} did not start`, jM), void this.start(MM)
         }
-        bG.worker = SG, SG.onmessage = ZG => {
+        rM.worker = SM, SM.onmessage = iM => {
           let {
-            data: wG
-          } = ZG;
-          bG.worker === SG && this.onReply(GG, wG)
-        }, SG.onmessageerror = () => {
-          bG.worker === SG && this.lose(GG, "a reply could not be read")
-        }, SG.onerror = ZG => {
-          ZG.preventDefault(), bG.worker === SG && this.lose(GG, ZG.message || "its script failed")
+            data: OM
+          } = iM;
+          rM.worker === SM && this.onReply(MM, OM)
+        }, SM.onmessageerror = () => {
+          rM.worker === SM && this.lose(MM, "a reply could not be read")
+        }, SM.onerror = iM => {
+          iM.preventDefault(), rM.worker === SM && this.lose(MM, iM.message || "its script failed")
         };
         try {
-          SG.postMessage({
+          SM.postMessage({
             type: "start",
-            module: ZG,
-            maxKeptLightStates: wG.maxKeptLightStates
+            module: iM,
+            maxKeptLightStates: OM.maxKeptLightStates
           })
-        } catch (LG) {
-          return console.warn(`[bloxd-wasm-client] meshing worker ${GG} could not be sent the module`, LG), SG.terminate(), bG.worker = null, void this.start(GG)
+        } catch (jM) {
+          return console.warn(`[bloxd-wasm-client] meshing worker ${MM} could not be sent the module`, jM), SM.terminate(), rM.worker = null, void this.start(MM)
         }
-        bG.watch = new LS.f(LS.c, (bG => {
-          this.lose(GG, (0, LS.h)(bG), (() => {
-            this.options.onStartTimeout(bG)
+        rM.watch = new zS.i(zS.e, (rM => {
+          this.lose(MM, (0, zS.j)(rM), (() => {
+            this.options.onStartTimeout(rM)
           }))
         }), void 0, this.options.visibility)
       }
-      onReply(GG, bG) {
-        const ZG = this.slots[GG];
-        switch (bG.type) {
+      onReply(MM, rM) {
+        const iM = this.slots[MM];
+        switch (rM.type) {
           case "started":
-            US(ZG), ZG.started = !0, this.options.write(0, Nb.Xd.WorkerStarted, 0, GG, 0, yS);
+            HS(iM), iM.started = !0, this.options.write(0, cr.Od.WorkerStarted, 0, MM, 0, LS);
             break;
           case "lost":
-            this.lose(GG, bG.reason);
+            this.lose(MM, rM.reason);
             break;
           case "memory":
-            var wG, SG;
-            null === (wG = (SG = this.options).onMemoryStats) || void 0 === wG || wG.call(SG, GG, bG.stats);
+            var OM, SM;
+            null === (OM = (SM = this.options).onMemoryStats) || void 0 === OM || OM.call(SM, MM, rM.stats);
             break;
           case "result": {
-            const wG = bG.status === Nb.Bb.Trapped;
-            if (0 !== bG.jobId) {
-              if (wG) this.countFailedJob(bG.outOfMemory, "light_trap", bG.trap);
-              else if (ZG.startsWithoutResult = 0, ZG.trapsWithoutResult = 0, bG.status === Nb.Bb.Refused) {
-                const ZG = function(GG) {
-                  if (GG.byteLength < 32) return "(no reason)";
-                  const bG = new DataView(GG.buffer, GG.byteOffset, GG.byteLength),
-                    ZG = Math.min(bG.getUint32(28, !0), GG.byteLength - 28 - 4);
-                  return (new TextDecoder).decode(GG.subarray(32, 32 + ZG)).slice(0, 200)
-                }(new Uint8Array(bG.bytes, 0, bG.len));
-                this.countFailedJob(GZ.b.test(ZG), "light_refused_input", ZG), this.logRefusal(GG, ZG)
+            const OM = rM.status === cr.ub.Trapped;
+            if (0 !== rM.jobId) {
+              if (OM) this.countFailedJob(rM.outOfMemory, "light_trap", rM.trap);
+              else if (iM.startsWithoutResult = 0, iM.trapsWithoutResult = 0, rM.status === cr.ub.Refused) {
+                const iM = function(MM) {
+                  if (MM.byteLength < 32) return "(no reason)";
+                  const rM = new DataView(MM.buffer, MM.byteOffset, MM.byteLength),
+                    iM = Math.min(rM.getUint32(28, !0), MM.byteLength - 28 - 4);
+                  return (new TextDecoder).decode(MM.subarray(32, 32 + iM)).slice(0, 200)
+                }(new Uint8Array(rM.bytes, 0, rM.len));
+                this.countFailedJob(Oi.c.test(iM), "light_refused_input", iM), this.logRefusal(MM, iM)
               }
-              bG.status === Nb.Bb.HeapRefused && (ZG.heapRetries = Math.min(ZG.heapRetries + 1, 4), this.logHeapRefusal(GG))
+              rM.status === cr.ub.HeapRefused && (iM.heapRetries = Math.min(iM.heapRetries + 1, 4), this.logHeapRefusal(MM))
             }
-            if (this.options.write(bG.jobId, Nb.Xd.JobResult, bG.status, GG, bG.workerUs, new Uint8Array(bG.bytes, 0, bG.len)), this.recycle(bG.bytes), bG.spare && this.recycle(bG.spare), !wG) break;
-            if (ZG.startsWithoutResult = 0, 0 === bG.jobId) {
-              this.lose(GG, `the tables trapped its wasm: ${bG.trap}`);
+            if (this.options.write(rM.jobId, cr.Od.JobResult, rM.status, MM, rM.workerUs, new Uint8Array(rM.bytes, 0, rM.len)), this.recycle(rM.bytes), rM.spare && this.recycle(rM.spare), !OM) break;
+            if (iM.startsWithoutResult = 0, 0 === rM.jobId) {
+              this.lose(MM, `the tables trapped its wasm: ${rM.trap}`);
               break
             }
-            ZG.trapsWithoutResult++;
-            const SG = ZG.trapsWithoutResult > 6;
-            ZG.gone ||= SG, this.lose(GG, `a job trapped its wasm: ${bG.trap}`), SG && this.giveUp(GG, `trapped ${ZG.trapsWithoutResult} jobs in a row`, "every meshing worker kept trapping");
+            iM.trapsWithoutResult++;
+            const SM = iM.trapsWithoutResult > 6;
+            iM.gone ||= SM, this.lose(MM, `a job trapped its wasm: ${rM.trap}`), SM && this.giveUp(MM, `trapped ${iM.trapsWithoutResult} jobs in a row`, "every meshing worker kept trapping");
             break
           }
         }
       }
-      countFailedJob(GG, bG, ZG) {
-        if (GG) {
+      countFailedJob(MM, rM, iM) {
+        if (MM) {
           if (this.memoryFailureCounted) return;
           this.memoryFailureCounted = !0
-        } else this.faultsReported.has(bG) || (this.faultsReported.add(bG), this.options.onLightFault(bG, ZG));
+        } else this.faultsReported.has(rM) || (this.faultsReported.add(rM), this.options.onLightFault(rM, iM));
         this.failedJobs++
       }
-      logRefusal(GG, bG) {
-        var ZG;
-        !this.refusals.has(bG) && this.refusals.size >= 16 && (bG = "(other reasons)");
-        const wG = (null !== (ZG = this.refusals.get(bG)) && void 0 !== ZG ? ZG : 0) + 1;
-        this.refusals.set(bG, wG), (0, FZ.z)(wG) && console.warn(`[bloxd-wasm-client] meshing worker ${GG} refused a chunk (${wG} so far for this reason): ${bG}`)
+      logRefusal(MM, rM) {
+        var iM;
+        !this.refusals.has(rM) && this.refusals.size >= 16 && (rM = "(other reasons)");
+        const OM = (null !== (iM = this.refusals.get(rM)) && void 0 !== iM ? iM : 0) + 1;
+        this.refusals.set(rM, OM), (0, ki.F)(OM) && console.warn(`[bloxd-wasm-client] meshing worker ${MM} refused a chunk (${OM} so far for this reason): ${rM}`)
       }
-      logHeapRefusal(GG) {
-        this.heapRefusals++, (0, FZ.z)(this.heapRefusals) && console.warn(`[bloxd-wasm-client] meshing worker ${GG} was refused memory for a chunk's mesh (${this.heapRefusals} so far)`)
+      logHeapRefusal(MM) {
+        this.heapRefusals++, (0, ki.F)(this.heapRefusals) && console.warn(`[bloxd-wasm-client] meshing worker ${MM} was refused memory for a chunk's mesh (${this.heapRefusals} so far)`)
       }
-      giveUp(GG, bG, ZG) {
-        const wG = this.slots[GG];
-        if (wG.gone = !0, wG.goneFor = {
-            why: bG,
-            failure: ZG
-          }, console.warn(`[bloxd-wasm-client] meshing worker ${GG} ${bG}: giving up on it`), this.slots.every((GG => GG.gone))) {
+      giveUp(MM, rM, iM) {
+        const OM = this.slots[MM];
+        if (OM.gone = !0, OM.goneFor = {
+            why: rM,
+            failure: iM
+          }, console.warn(`[bloxd-wasm-client] meshing worker ${MM} ${rM}: giving up on it`), this.slots.every((MM => MM.gone))) {
           this.stop();
-          const GG = new Set(this.slots.map((GG => {
-              var bG;
-              return null === (bG = GG.goneFor) || void 0 === bG ? void 0 : bG.failure
+          const MM = new Set(this.slots.map((MM => {
+              var rM;
+              return null === (rM = MM.goneFor) || void 0 === rM ? void 0 : rM.failure
             }))),
-            bG = this.slots.map(((GG, bG) => {
-              var ZG, wG;
-              return `worker ${bG} ${null!==(ZG=null===(wG=GG.goneFor)||void 0===wG?void 0:wG.why)&&void 0!==ZG?ZG:"went"}`
+            rM = this.slots.map(((MM, rM) => {
+              var iM, OM;
+              return `worker ${rM} ${null!==(iM=null===(OM=MM.goneFor)||void 0===OM?void 0:OM.why)&&void 0!==iM?iM:"went"}`
             }));
-          this.options.fail(1 === GG.size ? ZG : `no meshing worker is left (${bG.join(", ")})`)
+          this.options.fail(1 === MM.size ? iM : `no meshing worker is left (${rM.join(", ")})`)
         }
       }
-      lose(GG, bG, ZG) {
-        console.warn(`[bloxd-wasm-client] meshing worker ${GG} was lost: ${bG}`), this.endWorker(GG), this.stopped || (ZG ? ZG() : this.options.onWorkerLost(bG), this.tellLost(GG), this.start(GG))
+      lose(MM, rM, iM) {
+        console.warn(`[bloxd-wasm-client] meshing worker ${MM} was lost: ${rM}`), this.endWorker(MM), this.stopped || (iM ? iM() : this.options.onWorkerLost(rM), this.tellLost(MM), this.start(MM))
       }
-      endWorker(GG) {
-        var bG, ZG, wG;
-        const SG = this.slots[GG];
-        US(SG), null === (bG = SG.worker) || void 0 === bG || bG.terminate(), SG.worker = null, SG.heapRetries = 0, null === (ZG = (wG = this.options).onMemoryGone) || void 0 === ZG || ZG.call(wG, GG)
+      endWorker(MM) {
+        var rM, iM, OM;
+        const SM = this.slots[MM];
+        HS(SM), null === (rM = SM.worker) || void 0 === rM || rM.terminate(), SM.worker = null, SM.heapRetries = 0, null === (iM = (OM = this.options).onMemoryGone) || void 0 === iM || iM.call(OM, MM)
       }
-      tellLost(GG) {
-        const bG = this.slots[GG];
-        bG.started && (bG.started = !1, this.options.write(0, Nb.Xd.WorkerLost, 0, GG, 0, yS))
+      tellLost(MM) {
+        const rM = this.slots[MM];
+        rM.started && (rM.started = !1, this.options.write(0, cr.Od.WorkerLost, 0, MM, 0, LS))
       }
-      buffer(GG) {
-        var bG;
-        return null !== (bG = this.pooled(GG)) && void 0 !== bG ? bG : new ArrayBuffer(Math.max(16384, GG))
+      buffer(MM) {
+        var rM;
+        return null !== (rM = this.pooled(MM)) && void 0 !== rM ? rM : new ArrayBuffer(Math.max(16384, MM))
       }
-      pooled(GG) {
-        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ZG = -1;
-        for (let SG = 0; SG < this.pool.length; SG++) {
-          const wG = this.pool[SG].byteLength;
-          wG >= GG && (ZG < 0 || (bG ? wG > this.pool[ZG].byteLength : wG < this.pool[ZG].byteLength)) && (ZG = SG)
+      pooled(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          iM = -1;
+        for (let SM = 0; SM < this.pool.length; SM++) {
+          const OM = this.pool[SM].byteLength;
+          OM >= MM && (iM < 0 || (rM ? OM > this.pool[iM].byteLength : OM < this.pool[iM].byteLength)) && (iM = SM)
         }
-        if (ZG < 0) return null;
-        const wG = this.pool[ZG];
-        return this.pool[ZG] = this.pool[this.pool.length - 1], this.pool.pop(), wG
+        if (iM < 0) return null;
+        const OM = this.pool[iM];
+        return this.pool[iM] = this.pool[this.pool.length - 1], this.pool.pop(), OM
       }
-      recycle(GG) {
-        this.pool.length < 4 * this.slots.length && GG.byteLength > 0 && GG.byteLength <= 1048576 && this.pool.push(GG)
+      recycle(MM) {
+        this.pool.length < 4 * this.slots.length && MM.byteLength > 0 && MM.byteLength <= 1048576 && this.pool.push(MM)
       }
     }
 
-    function US(GG) {
-      var bG;
-      null === (bG = GG.watch) || void 0 === bG || bG.cancel(), GG.watch = null
+    function HS(MM) {
+      var rM;
+      null === (rM = MM.watch) || void 0 === rM || rM.cancel(), MM.watch = null
     }
-    var YS = ZG(36820),
-      VS = ZG(41131),
-      pS = ZG(41333),
-      fS = ZG(41336),
-      QS = (ZG(41150), ZG(41340)),
-      KS = ZG(41195);
+    var hS = iM(37428),
+      JS = iM(41840),
+      dS = iM(42039),
+      yS = iM(42041),
+      lS = (iM(41862), iM(42045)),
+      ES = iM(41900);
 
-    function hS(GG) {
-      const bG = new Uint8Array(GG.length >> 2);
-      for (let ZG = 0; ZG < bG.length; ZG++) bG[ZG] = GG[4 * ZG + 3];
-      return bG
+    function US(MM) {
+      const rM = new Uint8Array(MM.length >> 2);
+      for (let iM = 0; iM < rM.length; iM++) rM[iM] = MM[4 * iM + 3];
+      return rM
     }
-    async function dS(GG) {
-      const bG = await (0, QS.j)(GG);
+    async function GS(MM) {
+      const rM = await (0, lS.g)(MM);
       try {
         const {
-          width: GG,
-          height: ZG,
-          pixels: wG
-        } = (0, KS.n)(bG);
+          width: MM,
+          height: iM,
+          pixels: OM
+        } = (0, ES.p)(rM);
         return {
-          width: GG,
-          height: ZG,
-          alpha: hS(wG)
+          width: MM,
+          height: iM,
+          alpha: US(OM)
         }
       } finally {
-        bG.close()
+        rM.close()
       }
     }
-    class JS {
-      constructor(GG, bG, ZG) {
-        let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : dS;
-        this.session = GG, this.sources = bG, this.warn = ZG, this.load = wG, this.nextPoll = 0, this.pK = !1, this.warned = new Set
+    class CS {
+      constructor(MM, rM, iM) {
+        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : GS;
+        this.session = MM, this.sources = rM, this.warn = iM, this.load = OM, this.nextPoll = 0, this.dh = !1, this.warned = new Set
       }
-      drain(GG) {
-        if (GG < this.nextPoll) return;
-        this.nextPoll = GG + 250;
-        const bG = this.session.sunShadowWantedTextures();
-        if (bG)
-          for (let ZG = 0; ZG + 1 < bG.length; ZG += 2) this.hand(bG[ZG], bG[ZG + 1]);
-        for (const ZG of this.session.takeSunShadowWarnings()) this.warn(ZG)
+      drain(MM) {
+        if (MM < this.nextPoll) return;
+        this.nextPoll = MM + 250;
+        const rM = this.session.sunShadowWantedTextures();
+        if (rM)
+          for (let iM = 0; iM + 1 < rM.length; iM += 2) this.hand(rM[iM], rM[iM + 1]);
+        for (const iM of this.session.takeSunShadowWarnings()) this.warn(iM)
       }
       dispose() {
-        this.pK = !0
+        this.dh = !0
       }
-      async hand(GG, bG) {
-        var ZG, wG, SG, LG, yG;
-        let kG, UG = null;
+      async hand(MM, rM) {
+        var iM, OM, SM, jM, aM;
+        let PM, nM = null;
         try {
-          if (UG = await this.sources.blockImageUrl(GG), null === UG) throw new Error(`block image ${GG} has no URL`);
-          kG = await this.load(UG)
-        } catch (VG) {
-          var YG;
-          const bG = null !== (YG = UG) && void 0 !== YG ? YG : `block image ${GG}`;
-          this.warned.has(bG) || (this.warned.add(bG), this.warn(`sun shadow plane texture ${bG} didn't load: its blocks cast no shadow`, VG))
+          if (nM = await this.sources.blockImageUrl(MM), null === nM) throw new Error(`block image ${MM} has no URL`);
+          PM = await this.load(nM)
+        } catch (zM) {
+          var QM;
+          const rM = null !== (QM = nM) && void 0 !== QM ? QM : `block image ${MM}`;
+          this.warned.has(rM) || (this.warned.add(rM), this.warn(`sun shadow plane texture ${rM} didn't load: its blocks cast no shadow`, zM))
         }
-        this.pK || this.session.setSunShadowTexture(GG, bG, null !== (ZG = null === (wG = kG) || void 0 === wG ? void 0 : wG.width) && void 0 !== ZG ? ZG : 0, null !== (SG = null === (LG = kG) || void 0 === LG ? void 0 : LG.height) && void 0 !== SG ? SG : 0, null === (yG = kG) || void 0 === yG ? void 0 : yG.alpha)
+        this.dh || this.session.setSunShadowTexture(MM, rM, null !== (iM = null === (OM = PM) || void 0 === OM ? void 0 : OM.width) && void 0 !== iM ? iM : 0, null !== (SM = null === (jM = PM) || void 0 === jM ? void 0 : jM.height) && void 0 !== SM ? SM : 0, null === (aM = PM) || void 0 === aM ? void 0 : aM.alpha)
       }
     }
-    var rS = ZG(41344),
-      zS = ZG(41170),
-      ES = ZG(41352),
-      oS = ZG(41359),
-      XS = ZG(41175),
-      uS = ZG(41182),
-      iS = ZG(34519),
-      CS = ZG(34368),
-      WS = ZG(41367);
-    const mS = 8192,
-      IS = new Set;
-    const FS = new Set([...CS.b, "sceneDownload"]);
-    var vS = ZG(41092),
-      aS = ZG(41374),
-      cS = ZG(41383);
-    const lS = new Uint8Array(0);
-    let jS = null;
+    var eS = iM(42053),
+      bS = iM(41882),
+      wS = iM(42055),
+      tS = iM(42061),
+      gS = iM(41884),
+      uS = iM(41888),
+      RS = iM(35055),
+      pS = iM(34926),
+      WS = iM(42067);
+    const sS = 8192,
+      DS = new Set;
+    const kS = new Set([...pS.e, "sceneDownload"]);
+    var ZS = iM(41793),
+      oS = iM(42076),
+      fS = iM(42081);
+    const YS = new Uint8Array(0);
+    let NS = null;
 
-    function PS(GG) {
+    function AS(MM) {
       return {
-        aux: Nb.ac.AdStart | (GG ? Nb.ac.PreventMovement : 0),
-        payload: lS
+        aux: cr.$b.AdStart | (MM ? cr.$b.PreventMovement : 0),
+        payload: YS
       }
     }
-    var MS = ZG(2889),
-      AS = ZG(300);
-    const sS = "__bloxdSceneCapture";
-    var qS = ZG(41390);
-    class nS {
-      constructor(GG) {
-        var bG, ZG;
-        this.host = GG, this.requested = null, this.landed = null, this.confirm = null, this.channel = void 0, this.oneShotStored = !0, this.startRead = void 0, this.landRequest = () => {}, this.landing = new Promise((GG => {
-          this.landRequest = GG
-        })), this.follow = GG => {
-          let bG = GG;
+    var xS = iM(3230),
+      vS = iM(281);
+    const FS = "__bloxdSceneCapture";
+    var BS = iM(42090);
+    class XS {
+      constructor(MM) {
+        var rM, iM;
+        this.host = MM, this.requested = null, this.landed = null, this.confirm = null, this.channel = void 0, this.oneShotStored = !0, this.startRead = void 0, this.landRequest = () => {}, this.landing = new Promise((MM => {
+          this.landRequest = MM
+        })), this.follow = MM => {
+          let rM = MM;
           return Promise.race([this.startRead, this.landing]).then((async () => {
-            const GG = null === this.requested && null !== bG;
-            var ZG;
-            GG && (null === (ZG = bG) || void 0 === ZG || ZG(null));
-            const wG = await this.landing;
-            var SG;
-            null === wG && GG || (null === (SG = bG) || void 0 === SG || SG(wG))
+            const MM = null === this.requested && null !== rM;
+            var iM;
+            MM && (null === (iM = rM) || void 0 === iM || iM(null));
+            const OM = await this.landing;
+            var SM;
+            null === OM && MM || (null === (SM = rM) || void 0 === SM || SM(OM))
           })), () => {
-            bG = null
+            rM = null
           }
-        }, this.startRead = (ZG = GG.store, ZG.keys().then((GG => ({
-          own: GG.includes(PZ.d),
-          oneShot: GG.includes(PZ.h)
+        }, this.startRead = (iM = MM.store, iM.keys().then((MM => ({
+          own: MM.includes(Ai.b),
+          oneShot: MM.includes(Ai.e)
         })), (() => ({
           own: !0,
           oneShot: !0
-        })))).then((GG => {
+        })))).then((MM => {
           let {
-            own: bG,
-            oneShot: ZG
-          } = GG;
-          this.oneShotStored = ZG, (bG || ZG) && this.request()
-        })), this.channel = (null !== (bG = GG.openChannel) && void 0 !== bG ? bG : PZ.v)(), null !== this.channel && (this.channel.onmessage = () => {
+            own: rM,
+            oneShot: iM
+          } = MM;
+          this.oneShotStored = iM, (rM || iM) && this.request()
+        })), this.channel = (null !== (rM = MM.openChannel) && void 0 !== rM ? rM : Ai.o)(), null !== this.channel && (this.channel.onmessage = () => {
           this.request()
         })
       }
       request() {
-        var GG;
+        var MM;
         if (null !== this.requested) return this.requested;
-        null === (GG = this.channel) || void 0 === GG || GG.close(), this.channel = null;
-        const bG = this.oneShotStored;
-        return this.requested = function(GG, bG, ZG) {
-          return new Promise((bG => {
-            bG(GG())
-          })).catch((GG => (null !== bG && (0, PZ.q)(bG), ZG(GG), null)))
-        }((() => this.host.load(bG).then((GG => (GG.setGamePackConfirm(this.confirm), this.landed = GG, GG)))), bG ? this.host.store : null, this.host.NQ), this.landRequest(this.requested), this.requested
+        null === (MM = this.channel) || void 0 === MM || MM.close(), this.channel = null;
+        const rM = this.oneShotStored;
+        return this.requested = function(MM, rM, iM) {
+          return new Promise((rM => {
+            rM(MM())
+          })).catch((MM => (null !== rM && (0, Ai.k)(rM), iM(MM), null)))
+        }((() => this.host.load(rM).then((MM => (MM.setGamePackConfirm(this.confirm), this.landed = MM, MM)))), rM ? this.host.store : null, this.host.aL), this.landRequest(this.requested), this.requested
       }
       loaded() {
         return this.landed
       }
       forJoin() {
         return null !== this.requested ? this.requested : Promise.race([this.startRead, this.landing]).then((() => {
-          var GG;
-          return null !== (GG = this.requested) && void 0 !== GG ? GG : null
+          var MM;
+          return null !== (MM = this.requested) && void 0 !== MM ? MM : null
         }))
       }
-      setGamePackConfirm(GG) {
-        var bG;
-        this.confirm = GG, null === (bG = this.landed) || void 0 === bG || bG.setGamePackConfirm(GG)
+      setGamePackConfirm(MM) {
+        var rM;
+        this.confirm = MM, null === (rM = this.landed) || void 0 === rM || rM.setGamePackConfirm(MM)
       }
     }
-    var gS = ZG(36599);
-    const eS = 216 * gS.h,
-      RS = 92 * gS.e,
-      TS = 64 * gS.h,
-      HS = 16 * gS.h;
+    var IS = iM(37223);
+    const KS = 216 * IS.e,
+      qS = 92 * IS.b,
+      TS = 64 * IS.e,
+      VS = 16 * IS.e;
 
-    function tS() {
-      var GG, bG;
-      return null !== (GG = null === (bG = performance.memory) || void 0 === bG ? void 0 : bG.vJ) && void 0 !== GG ? GG : null
+    function cS() {
+      var MM, rM;
+      return null !== (MM = null === (rM = performance.memory) || void 0 === rM ? void 0 : rM.lE) && void 0 !== MM ? MM : null
     }
-    class DS {
-      constructor(GG, bG) {
-        this.budgetBytes = GG, this.reads = bG, this.estimate = null, this.shedAt = null
+    class Mj {
+      constructor(MM, rM) {
+        this.budgetBytes = MM, this.reads = rM, this.estimate = null, this.shedAt = null
       }
-      read(GG) {
-        var bG;
-        const ZG = this.reads.storedChunks(),
-          wG = this.reads.gpuBytes(),
-          SG = Math.max(null !== (bG = this.reads.jsHeapBytes()) && void 0 !== bG ? bG : 0, TS),
-          LG = eS + GG + SG + wG + ZG * RS;
+      read(MM) {
+        var rM;
+        const iM = this.reads.storedChunks(),
+          OM = this.reads.gpuBytes(),
+          SM = Math.max(null !== (rM = this.reads.jsHeapBytes()) && void 0 !== rM ? rM : 0, TS),
+          jM = KS + MM + SM + OM + iM * qS;
         this.estimate = {
-          wasmBytes: GG,
-          jsHeapBytes: SG,
-          gpuBytes: wG,
-          storedChunks: ZG,
-          totalBytes: LG
+          wasmBytes: MM,
+          jsHeapBytes: SM,
+          gpuBytes: OM,
+          storedChunks: iM,
+          totalBytes: jM
         }
       }
       last() {
@@ -3986,289 +4032,291 @@ export const modules = {
       }
       takeShed() {
         const {
-          estimate: GG,
-          budgetBytes: bG,
-          shedAt: ZG
+          estimate: MM,
+          budgetBytes: rM,
+          shedAt: iM
         } = this;
-        return !(null === GG || null === bG || GG.totalBytes < bG || null !== ZG && GG.totalBytes < ZG + HS) && (this.shedAt = GG.totalBytes, !0)
+        return !(null === MM || null === rM || MM.totalBytes < rM || null !== iM && MM.totalBytes < iM + VS) && (this.shedAt = MM.totalBytes, !0)
       }
       describe() {
         const {
-          estimate: GG,
-          budgetBytes: bG
+          estimate: MM,
+          budgetBytes: rM
         } = this;
-        return null === GG ? null : `estimate ${(0,gS.l)(GG.totalBytes)} MiB of budget ${null===bG?"none":(0,gS.l)(bG)}: wasm ${(0,gS.l)(GG.wasmBytes)} js ${(0,gS.l)(GG.jsHeapBytes)} gpu ${(0,gS.l)(GG.gpuBytes)} chunks ${GG.storedChunks}`
+        return null === MM ? null : `estimate ${(0,IS.l)(MM.totalBytes)} MiB of budget ${null===rM?"none":(0,IS.l)(rM)}: wasm ${(0,IS.l)(MM.wasmBytes)} js ${(0,IS.l)(MM.jsHeapBytes)} gpu ${(0,IS.l)(MM.gpuBytes)} chunks ${MM.storedChunks}`
       }
       snapshot() {
         const {
-          estimate: GG,
-          budgetBytes: bG
+          estimate: MM,
+          budgetBytes: rM
         } = this;
         return {
-          ...null === GG ? {} : {
-            footprintMiB: Number((0, gS.l)(GG.totalBytes)),
-            gpuMiB: Number((0, gS.l)(GG.gpuBytes)),
-            storedChunks: GG.storedChunks
+          ...null === MM ? {} : {
+            footprintMiB: Number((0, IS.l)(MM.totalBytes)),
+            gpuMiB: Number((0, IS.l)(MM.gpuBytes)),
+            storedChunks: MM.storedChunks
           },
-          footprintBudgetMiB: null === bG ? -1 : Number((0, gS.l)(bG))
+          footprintBudgetMiB: null === rM ? -1 : Number((0, IS.l)(rM))
         }
       }
     }
-    var NS = ZG(2801),
-      OS = ZG(4531),
-      xS = ZG(36701),
-      BS = ZG(38347);
-    const GL = Ob.bb + 1,
-      bL = 4096 * GL;
-    class ZL {
-      constructor(GG, bG) {
-        this.log = GG, this.take = bG, this.Ik = [], this.unshown = new Map, this.latest = new Map
+    var rj = iM(3122),
+      ij = iM(4903),
+      Oj = iM(37312),
+      Sj = iM(38922);
+    const jj = Mi.db + 1,
+      aj = 4096 * jj;
+    class Pj {
+      constructor(MM, rM) {
+        this.log = MM, this.take = rM, this.sQ = [], this.unshown = new Map, this.latest = new Map
       }
-      afterFrame(GG, bG) {
-        const ZG = this.take();
-        ZG.length >= Ob.ab && ZG[0] > 0 && (0, NS.j)("remesh", `${ZG[0]} core records lost to a full log`);
-        const wG = this.Ik;
-        for (let SG = Ob.ab; SG + Ob.bb <= ZG.length; SG += Ob.bb) {
-          for (let GG = SG; GG < SG + Ob.bb; GG++) wG.push(ZG[GG]);
-          wG.push(GG)
+      afterFrame(MM, rM) {
+        const iM = this.take();
+        iM.length >= Mi.bb && iM[0] > 0 && (0, rj.k)("remesh", `${iM[0]} core records lost to a full log`);
+        const OM = this.sQ;
+        for (let SM = Mi.bb; SM + Mi.db <= iM.length; SM += Mi.db) {
+          for (let MM = SM; MM < SM + Mi.db; MM++) OM.push(iM[MM]);
+          OM.push(MM)
         }
-        if (bG || !(wG.length < bL)) {
-          for (let bG = 0; bG < wG.length; bG += GL) this.feed(bG, GG);
-          wG.length = 0, bG && this.log.frame(GG)
+        if (rM || !(OM.length < aj)) {
+          for (let rM = 0; rM < OM.length; rM += jj) this.feed(rM, MM);
+          OM.length = 0, rM && this.log.frame(MM)
         }
       }
-      feed(GG, bG) {
-        var ZG;
-        const wG = this.Ik,
-          SG = (0, BS.c)(wG[GG + 1], wG[GG + 2], wG[GG + 3]),
-          LG = wG[GG + 4],
-          yG = wG[GG + Ob.bb];
-        switch (wG[GG]) {
-          case Ob.Hb.Edit:
-            this.log.edit(SG, yG);
+      feed(MM, rM) {
+        var iM;
+        const OM = this.sQ,
+          SM = (0, Sj.e)(OM[MM + 1], OM[MM + 2], OM[MM + 3]),
+          jM = OM[MM + 4],
+          aM = OM[MM + Mi.db];
+        switch (OM[MM]) {
+          case Mi.Db.Edit:
+            this.log.edit(SM, aM);
             break;
-          case Ob.Hb.Sent:
-            this.latest.set(SG, LG), this.log.sent(SG, LG, wG[GG + 5], wG[GG + 6], wG[GG + 7], null !== (ZG = this.unshown.get(SG)) && void 0 !== ZG ? ZG : BS.b, yG);
+          case Mi.Db.Sent:
+            this.latest.set(SM, jM), this.log.sent(SM, jM, OM[MM + 5], OM[MM + 6], OM[MM + 7], null !== (iM = this.unshown.get(SM)) && void 0 !== iM ? iM : Sj.b, aM);
             break;
-          case Ob.Hb.Done: {
-            this.log.received(LG, wG[GG + 5] / 1e3, yG);
-            const bG = this.unshown.get(SG);
-            void 0 === bG ? this.unshown.set(SG, [LG]) : bG.push(LG);
+          case Mi.Db.Done: {
+            this.log.received(jM, OM[MM + 5] / 1e3, aM);
+            const rM = this.unshown.get(SM);
+            void 0 === rM ? this.unshown.set(SM, [jM]) : rM.push(jM);
             break
           }
-          case Ob.Hb.Failed: {
-            const GG = this.latest.get(SG);
-            void 0 !== GG && GG !== LG ? this.log.reassign(SG, LG, GG) : this.log.failed(LG), this.ended(SG, LG);
+          case Mi.Db.Failed: {
+            const MM = this.latest.get(SM);
+            void 0 !== MM && MM !== jM ? this.log.reassign(SM, jM, MM) : this.log.failed(jM), this.ended(SM, jM);
             break
           }
-          case Ob.Hb.Shown:
-            this.log.applied(SG, LG, bG), this.ended(SG, LG);
+          case Mi.Db.Shown:
+            this.log.applied(SM, jM, rM), this.ended(SM, jM);
             break;
-          case Ob.Hb.Replaced:
-            this.log.reassign(SG, LG, wG[GG + 5]), this.ended(SG, LG);
+          case Mi.Db.Replaced:
+            this.log.reassign(SM, jM, OM[MM + 5]), this.ended(SM, jM);
             break;
-          case Ob.Hb.Emptied:
-            this.log.emptied(SG, bG);
+          case Mi.Db.Emptied:
+            this.log.emptied(SM, rM);
             break;
           default:
-            console.warn(`[debug:remesh] unknown core record kind ${wG[GG]}`)
+            console.warn(`[debug:remesh] unknown core record kind ${OM[MM]}`)
         }
       }
-      ended(GG, bG) {
-        this.latest.get(GG) === bG && this.latest.delete(GG);
-        const ZG = this.unshown.get(GG);
-        if (void 0 === ZG) return;
-        const wG = ZG.indexOf(bG);
-        wG >= 0 && ZG.splice(wG, 1), 0 === ZG.length && this.unshown.delete(GG)
+      ended(MM, rM) {
+        this.latest.get(MM) === rM && this.latest.delete(MM);
+        const iM = this.unshown.get(MM);
+        if (void 0 === iM) return;
+        const OM = iM.indexOf(rM);
+        OM >= 0 && iM.splice(OM, 1), 0 === iM.length && this.unshown.delete(MM)
       }
     }
-    let wL = null;
-    var SL = ZG(3206),
-      LL = ZG(40025);
-    const yL = new Uint8Array(0);
-    class kL {
-      constructor(GG) {
-        this.options = GG, this.worker = null, this.watch = null, this.createWorker = null, this.loading = !1, this.wanted = !1, this.Ik = [], this.startsWithoutResult = 0, this.coreWaits = !1, this.lastLoss = "", this.seed = null, this.gone = !1, this.pool = [], null !== GG.module ? GG.write(0, Nb.Xd.WorldgenStarted, 0, 0, yL) : this.giveUp()
+    let nj = null;
+    var Qj = iM(3632),
+      zj = iM(40769);
+    const Lj = "its script failed",
+      mj = "the block and item tables did not load",
+      Hj = new Uint8Array(0);
+    class hj {
+      constructor(MM) {
+        this.options = MM, this.worker = null, this.watch = null, this.createWorker = null, this.loading = !1, this.wanted = !1, this.sQ = [], this.startsWithoutResult = 0, this.generated = !1, this.coreWaits = !1, this.lastLoss = "", this.seed = null, this.gone = !1, this.pool = [], null !== MM.module ? MM.write(0, cr.Od.WorldgenStarted, 0, 0, Hj) : this.giveUp()
       }
-      take(GG, bG) {
-        if (!(this.gone || null === this.worker && null === this.Ik))
-          if (GG === Nb.Zd.WorldgenSeed) {
-            const GG = 0 === bG.byteLength ? null : this.options.decodeSettings(bG);
-            null === GG ? this.release() : function(GG, bG) {
-              if ((null === GG || void 0 === GG ? void 0 : GG.byteLength) !== bG.byteLength) return !1;
-              for (let ZG = 0; ZG < GG.byteLength; ZG++)
-                if (GG[ZG] !== bG[ZG]) return !1;
+      take(MM, rM) {
+        if (!(this.gone || null === this.worker && null === this.sQ))
+          if (MM === cr.Sd.WorldgenSeed) {
+            const MM = 0 === rM.byteLength ? null : this.options.decodeSettings(rM);
+            null === MM ? this.release() : function(MM, rM) {
+              if ((null === MM || void 0 === MM ? void 0 : MM.byteLength) !== rM.byteLength) return !1;
+              for (let iM = 0; iM < MM.byteLength; iM++)
+                if (MM[iM] !== rM[iM]) return !1;
               return !0
-            }(this.seed, bG) || (this.seed = bG.slice(), this.startsWithoutResult = null === this.worker ? 0 : 1), this.dropHeld(), this.post({
+            }(this.seed, rM) || (this.seed = rM.slice(), this.startsWithoutResult = null === this.worker ? 0 : 1), this.dropHeld(), this.post({
               type: "seed",
-              settings: GG
-            }, []), null !== GG ? this.want() : this.loading || this.options.onMapWithoutWorldgen()
-          } else if (GG === Nb.Zd.Generate) {
-          var ZG;
-          const GG = new DataView(bG.buffer, bG.byteOffset, Nb.Rd),
-            wG = null !== (ZG = this.pool.pop()) && void 0 !== ZG ? ZG : new ArrayBuffer(8192);
+              settings: MM
+            }, []), null !== MM ? this.want() : this.loading || this.options.onMapWithoutWorldgen()
+          } else if (MM === cr.Sd.Generate) {
+          var iM;
+          const MM = new DataView(rM.buffer, rM.byteOffset, cr.Md),
+            OM = null !== (iM = this.pool.pop()) && void 0 !== iM ? iM : new ArrayBuffer(8192);
           this.post({
             type: "generate",
-            ticket: GG.getUint32(0, !0),
-            x: GG.getInt32(4, !0),
-            y: GG.getInt32(8, !0),
-            z: GG.getInt32(12, !0),
-            bytes: wG
-          }, [wG])
+            ticket: MM.getUint32(0, !0),
+            x: MM.getInt32(4, !0),
+            y: MM.getInt32(8, !0),
+            z: MM.getInt32(12, !0),
+            bytes: OM
+          }, [OM])
         }
       }
       prestart() {
         this.gone || this.want()
       }
       stopWorker() {
-        this.gone || (this.release(), this.dropHeld(), this.pool.length = 0, this.coreWaits && (this.coreWaits = !1, this.options.write(0, Nb.Xd.WorldgenStarted, 0, 0, yL)))
+        this.gone || (this.release(), this.generated = !1, this.dropHeld(), this.pool.length = 0, this.coreWaits && (this.coreWaits = !1, this.options.write(0, cr.Od.WorldgenStarted, 0, 0, Hj)))
       }
       stop() {
-        var GG;
-        this.gone = !0, this.dropHeld(), this.endWatch(), null === (GG = this.worker) || void 0 === GG || GG.terminate(), this.worker = null
+        var MM;
+        this.gone = !0, this.dropHeld(), this.endWatch(), null === (MM = this.worker) || void 0 === MM || MM.terminate(), this.worker = null
       }
-      post(GG, bG) {
-        var ZG;
-        null !== this.Ik ? this.Ik.push({
-          message: GG,
-          transfer: bG
-        }) : null === (ZG = this.worker) || void 0 === ZG || ZG.postMessage(GG, bG)
+      post(MM, rM) {
+        var iM;
+        null !== this.sQ ? this.sQ.push({
+          message: MM,
+          transfer: rM
+        }) : null === (iM = this.worker) || void 0 === iM || iM.postMessage(MM, rM)
       }
       want() {
         this.wanted = !0, null === this.worker && (null === this.createWorker ? this.load() : this.start())
       }
       release() {
-        this.wanted = !1, null !== this.worker && (this.endWorker(), this.startsWithoutResult = 0, this.Ik ??= [])
+        this.wanted = !1, null !== this.worker && (this.endWorker(), this.startsWithoutResult = 0, this.sQ ??= [])
       }
       endWorker() {
-        var GG, bG, ZG;
-        this.endWatch(), null === (GG = this.worker) || void 0 === GG || GG.terminate(), this.worker = null, null === (bG = (ZG = this.options).onMemoryGone) || void 0 === bG || bG.call(ZG)
+        var MM, rM, iM;
+        this.endWatch(), null === (MM = this.worker) || void 0 === MM || MM.terminate(), this.worker = null, null === (rM = (iM = this.options).onMemoryGone) || void 0 === rM || rM.call(iM)
       }
       load() {
-        this.loading || (this.loading = !0, this.options.loadWorker().then((GG => {
-          this.createWorker = GG, this.wanted && this.start()
-        }), (GG => {
-          this.gone || (this.giveUp(), this.options.onLoadFailed(GG))
+        this.loading || (this.loading = !0, this.options.loadWorker().then((MM => {
+          this.createWorker = MM, this.wanted && this.start()
+        }), (MM => {
+          this.gone || (this.giveUp(), this.options.onLoadFailed(MM))
         })))
       }
       start() {
         const {
-          module: GG
-        } = this.options, bG = this.createWorker;
-        if (this.gone || null === GG || null === bG) return;
+          module: MM
+        } = this.options, rM = this.createWorker;
+        if (this.gone || null === MM || null === rM) return;
         if (this.startsWithoutResult >= 3) return this.giveUp(), void this.options.onGaveUp(this.lastLoss);
-        let ZG;
+        let iM;
         this.startsWithoutResult++;
         try {
-          ZG = bG()
-        } catch (SG) {
-          return console.warn("[bloxd-wasm-client] the world-gen worker did not start", SG), this.lastLoss = `it did not start (${String(SG)})`, void this.start()
+          iM = rM()
+        } catch (SM) {
+          return console.warn("[bloxd-wasm-client] the world-gen worker did not start", SM), this.lastLoss = `it did not start (${String(SM)})`, void this.start()
         }
-        this.worker = ZG, ZG.onmessage = GG => {
+        this.worker = iM, iM.onmessage = MM => {
           let {
-            data: bG
-          } = GG;
-          this.worker === ZG && this.onReply(ZG, bG)
-        }, ZG.onerror = GG => {
-          GG.preventDefault(), this.worker === ZG && this.lose(GG.message || "its script failed")
+            data: rM
+          } = MM;
+          this.worker === iM && this.onReply(iM, rM)
+        }, iM.onerror = MM => {
+          MM.preventDefault(), this.worker === iM && this.lose(MM.message || Lj)
         };
         try {
-          ZG.postMessage({
+          iM.postMessage({
             type: "start",
-            module: GG,
-            rK: wG.d.rK
+            module: MM,
+            HL: OM.f.HL
           })
-        } catch (SG) {
-          return console.warn("[bloxd-wasm-client] the world-gen worker could not be sent the module", SG), this.lastLoss = `it could not be sent the module (${String(SG)})`, ZG.terminate(), this.worker = null, void this.start()
+        } catch (SM) {
+          return console.warn("[bloxd-wasm-client] the world-gen worker could not be sent the module", SM), this.lastLoss = `it could not be sent the module (${String(SM)})`, iM.terminate(), this.worker = null, void this.start()
         }
-        this.watch = new LS.f(LS.e, (GG => {
-          this.lose((0, LS.h)(GG), (() => {
-            this.options.onStartTimeout(GG)
+        this.watch = new zS.i(zS.h, (MM => {
+          this.lose((0, zS.j)(MM), (() => {
+            this.options.onStartTimeout(MM)
           }))
         }), void 0, this.options.visibility)
       }
-      onReply(GG, bG) {
-        switch (bG.type) {
+      onReply(MM, rM) {
+        switch (rM.type) {
           case "started": {
             this.endWatch();
-            const bG = this.Ik;
-            if (null === bG) {
-              this.coreWaits = !1, this.options.write(0, Nb.Xd.WorldgenStarted, 0, 0, yL);
+            const rM = this.sQ;
+            if (null === rM) {
+              this.coreWaits = !1, this.options.write(0, cr.Od.WorldgenStarted, 0, 0, Hj);
               break
             }
-            this.Ik = null;
+            this.sQ = null;
             for (const {
-                message: ZG,
-                transfer: wG
+                message: iM,
+                transfer: OM
               }
-              of bG) GG.postMessage(ZG, wG);
+              of rM) MM.postMessage(iM, OM);
             break
           }
           case "lost":
-            this.lose(bG.reason);
+            this.lose(rM.reason);
             break;
           case "memory":
-            var ZG, wG;
-            null === (ZG = (wG = this.options).onMemoryStats) || void 0 === ZG || ZG.call(wG, bG.stats);
+            var iM, OM;
+            null === (iM = (OM = this.options).onMemoryStats) || void 0 === iM || iM.call(OM, rM.stats);
             break;
           case "result":
-            bG.status !== Nb.Bb.Trapped && (this.startsWithoutResult = 0), this.options.write(bG.ticket, Nb.Xd.WorldgenResult, bG.status, bG.workerUs, new Uint8Array(bG.bytes, 0, bG.len)), this.recycle(bG.bytes), bG.spare && this.recycle(bG.spare)
+            this.generated = !0, rM.status !== cr.ub.Trapped && (this.startsWithoutResult = 0), this.options.write(rM.ticket, cr.Od.WorldgenResult, rM.status, rM.workerUs, new Uint8Array(rM.bytes, 0, rM.len)), this.recycle(rM.bytes), rM.spare && this.recycle(rM.spare)
         }
       }
-      lose(GG, bG) {
-        console.warn(`[bloxd-wasm-client] the world-gen worker was lost: ${GG}`), this.lastLoss = GG, this.endWorker(), this.gone || (bG ? bG() : this.options.onWorkerLost(GG), this.dropHeld(), this.Ik = null, this.options.write(0, Nb.Xd.WorldgenLost, Nb._d.Lost, 0, yL), this.coreWaits = !0, this.start())
+      lose(MM, rM) {
+        console.warn(`[bloxd-wasm-client] the world-gen worker was lost: ${MM}`), this.lastLoss = MM, this.endWorker(), this.gone || (rM ? rM() : this.options.onWorkerLost(MM, this.generated), this.dropHeld(), this.sQ = null, this.options.write(0, cr.Od.WorldgenLost, cr.Ud.Lost, 0, Hj), this.coreWaits = !0, this.start())
       }
       giveUp() {
-        this.gone = !0, this.dropHeld(), this.options.write(0, Nb.Xd.WorldgenLost, Nb._d.Gone, 0, yL)
+        this.gone = !0, this.dropHeld(), this.options.write(0, cr.Od.WorldgenLost, cr.Ud.Gone, 0, Hj)
       }
       endWatch() {
-        var GG;
-        null === (GG = this.watch) || void 0 === GG || GG.cancel(), this.watch = null
+        var MM;
+        null === (MM = this.watch) || void 0 === MM || MM.cancel(), this.watch = null
       }
       dropHeld() {
-        if (null !== this.Ik) {
+        if (null !== this.sQ) {
           for (const {
-              message: GG
+              message: MM
             }
-            of this.Ik) "generate" === GG.type && this.recycle(GG.bytes);
-          this.Ik.length = 0
+            of this.sQ) "generate" === MM.type && this.recycle(MM.bytes);
+          this.sQ.length = 0
         }
       }
-      recycle(GG) {
-        this.pool.length < 16 && GG.byteLength > 0 && GG.byteLength <= 16384 && this.pool.push(GG)
+      recycle(MM) {
+        this.pool.length < 16 && MM.byteLength > 0 && MM.byteLength <= 16384 && this.pool.push(MM)
       }
     }
-    var UL = ZG(38145),
-      YL = ZG(3719),
-      VL = ZG(41034),
-      pL = ZG(41392),
-      fL = ZG(41162);
-    const QL = /[(@\s]([^\s(@]+)$/,
-      KL = /:\d/;
+    var Jj = iM(38721),
+      dj = iM(4098),
+      yj = iM(41739),
+      lj = iM(42094),
+      Ej = iM(41876);
+    const Uj = /[(@\s]([^\s(@]+)$/,
+      Gj = /:\d/;
 
-    function hL(GG, bG) {
-      for (let ZG = 0; ZG + bG.length <= GG.length; ZG++) {
-        let wG = 0;
-        for (; wG < bG.length && GG[ZG + wG] === bG[wG];) wG++;
-        if (wG === bG.length) return ZG
+    function Cj(MM, rM) {
+      for (let iM = 0; iM + rM.length <= MM.length; iM++) {
+        let OM = 0;
+        for (; OM < rM.length && MM[iM + OM] === rM[OM];) OM++;
+        if (OM === rM.length) return iM
       }
       return -1
     }
 
-    function dL(GG) {
-      return "(" === GG || ")" === GG || "@" === GG || "," === GG || " " === GG || "\t" === GG
+    function ej(MM) {
+      return "(" === MM || ")" === MM || "@" === MM || "," === MM || " " === MM || "\t" === MM
     }
 
-    function JL(GG, bG) {
-      let ZG = bG;
-      for (; ZG > 0 && !dL(GG[ZG - 1]);) ZG--;
-      let wG = bG;
-      for (; wG < GG.length && !dL(GG[wG]);) wG++;
-      let SG = "";
-      for (let LG = ZG; LG < wG; LG++) SG += GG[LG];
-      return SG
+    function bj(MM, rM) {
+      let iM = rM;
+      for (; iM > 0 && !ej(MM[iM - 1]);) iM--;
+      let OM = rM;
+      for (; OM < MM.length && !ej(MM[OM]);) OM++;
+      let SM = "";
+      for (let jM = iM; jM < OM; jM++) SM += MM[jM];
+      return SM
     }
-    const rL = [{
+    const wj = [{
         origin: "chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo",
         tag: "TM"
       }, {
@@ -4278,194 +4326,194 @@ export const modules = {
         origin: "chrome-extension://gcalenpjmijncebpfijmoaglllgpjagf",
         tag: "TM-Beta"
       }],
-      zL = /^\/[^\s?#]*\?(?:[^\s&#]*&)*?name=([^\s&#]*?)(?::\d+)*(?:[\s&#]|\)(?:[,\s]|$)|$)/,
-      EL = ".user.js";
+      tj = /^\/[^\s?#]*\?(?:[^\s&#]*&)*?name=([^\s&#]*?)(?::\d+)*(?:[\s&#]|\)(?:[,\s]|$)|$)/,
+      gj = ".user.js";
 
-    function oL(GG, bG) {
-      let ZG = 0;
-      for (; ZG < rL.length && rL[ZG].origin !== bG[0];) ZG++;
-      if (ZG === rL.length) return bG[0];
-      let wG = "";
-      for (let yG = bG.index + bG[0].length; yG < GG.length; yG++) wG += GG[yG];
-      const SG = (0, Nw.p)(Nw.W, zL, [wG]),
-        LG = null === SG ? "" : function(GG) {
-          let bG = GG.length,
-            ZG = 0;
-          for (; ZG < 8 && bG > 8 && GG[bG - 8 + ZG] === EL[ZG];) ZG++;
-          8 === ZG && (bG -= 8);
-          let wG = "",
-            SG = !1;
-          for (let LG = 0; LG < bG; LG++) {
-            let bG = GG[LG];
-            "+" === bG ? bG = " " : "%" === bG && (bG = "2" === GG[LG + 1] && "0" === GG[LG + 2] ? " " : "_", LG += 2), -1 !== hL("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 .-", bG) ? (wG += bG, SG = !1) : SG || (wG += "_", SG = !0)
+    function uj(MM, rM) {
+      let iM = 0;
+      for (; iM < wj.length && wj[iM].origin !== rM[0];) iM++;
+      if (iM === wj.length) return rM[0];
+      let OM = "";
+      for (let aM = rM.index + rM[0].length; aM < MM.length; aM++) OM += MM[aM];
+      const SM = (0, rS.n)(rS.Z, tj, [OM]),
+        jM = null === SM ? "" : function(MM) {
+          let rM = MM.length,
+            iM = 0;
+          for (; iM < 8 && rM > 8 && MM[rM - 8 + iM] === gj[iM];) iM++;
+          8 === iM && (rM -= 8);
+          let OM = "",
+            SM = !1;
+          for (let jM = 0; jM < rM; jM++) {
+            let rM = MM[jM];
+            "+" === rM ? rM = " " : "%" === rM && (rM = "2" === MM[jM + 1] && "0" === MM[jM + 2] ? " " : "_", jM += 2), -1 !== Cj("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 .-", rM) ? (OM += rM, SM = !1) : SM || (OM += "_", SM = !0)
           }
-          return wG
-        }(SG[1]);
-      return "" === LG ? bG[0] : rL[ZG].tag + " " + LG
+          return OM
+        }(SM[1]);
+      return "" === jM ? rM[0] : wj[iM].tag + " " + jM
     }
 
-    function XL(GG, bG) {
-      var ZG;
-      const wG = /[^\n]+/g,
-        SG = /\b(?!wasm:)[a-z][\w+.-]*:\/\/[\w.:%~+[\]-]*/i,
-        LG = /^([^?#)]*?)(?::\d+)*(?:[?#)]|$)/;
-      let yG = null,
-        kG = null,
-        UG = (0, Nw.p)(Nw.W, wG, [GG]);
-      for (; null !== UG;) {
-        const ZG = (0, Nw.p)(Nw.W, SG, [UG[0]]),
-          YG = null === bG ? -1 : hL(UG[0], bG);
-        if (-1 !== YG) {
-          if (null !== ZG) return oL(UG[0], ZG);
-          const GG = JL(UG[0], YG),
-            bG = (0, Nw.p)(Nw.W, QL, [UG[0]]),
-            wG = null !== (0, Nw.p)(Nw.W, KL, [GG]) ? GG : null === bG ? null : bG[1],
-            SG = null === wG ? null : (0, Nw.p)(Nw.W, LG, [wG]);
-          if (null !== SG && "" !== SG[1]) return SG[1]
+    function Rj(MM, rM) {
+      var iM;
+      const OM = /[^\n]+/g,
+        SM = /\b(?!wasm:)[a-z][\w+.-]*:\/\/[\w.:%~+[\]-]*/i,
+        jM = /^([^?#)]*?)(?::\d+)*(?:[?#)]|$)/;
+      let aM = null,
+        PM = null,
+        nM = (0, rS.n)(rS.Z, OM, [MM]);
+      for (; null !== nM;) {
+        const iM = (0, rS.n)(rS.Z, SM, [nM[0]]),
+          QM = null === rM ? -1 : Cj(nM[0], rM);
+        if (-1 !== QM) {
+          if (null !== iM) return uj(nM[0], iM);
+          const MM = bj(nM[0], QM),
+            rM = (0, rS.n)(rS.Z, Uj, [nM[0]]),
+            OM = null !== (0, rS.n)(rS.Z, Gj, [MM]) ? MM : null === rM ? null : rM[1],
+            SM = null === OM ? null : (0, rS.n)(rS.Z, jM, [OM]);
+          if (null !== SM && "" !== SM[1]) return SM[1]
         }
-        null !== ZG && (null === yG ? yG = ZG[0] : null === kG && ZG[0] !== yG && (kG = ZG[0])), UG = (0, Nw.p)(Nw.W, wG, [GG])
+        null !== iM && (null === aM ? aM = iM[0] : null === PM && iM[0] !== aM && (PM = iM[0])), nM = (0, rS.n)(rS.Z, OM, [MM])
       }
-      return null !== (ZG = kG) && void 0 !== ZG ? ZG : null === yG ? "none" : "own"
+      return null !== (iM = PM) && void 0 !== iM ? iM : null === aM ? "none" : "own"
     }
-    const uL = /:(\d+):(\d+)\)?$/;
+    const pj = /:(\d+):(\d+)\)?$/;
 
-    function iL(GG, bG) {
-      const ZG = (0, Nw.p)(Nw.W, uL, [bG]);
-      return null === ZG ? GG : GG + ":" + ZG[1] + ":" + ZG[2]
+    function Wj(MM, rM) {
+      const iM = (0, rS.n)(rS.Z, pj, [rM]);
+      return null === iM ? MM : MM + ":" + iM[1] + ":" + iM[2]
     }
 
-    function CL(GG) {
-      const bG = /[^\n]+/g,
-        ZG = /\b(?!wasm:)((?:blob:)?)(([a-z][\w+.-]*):\/\/[\w.:%~+[\]-]*)((?:[^\s()@?#]*\/)?)([^\s()@?#:]*)/i;
-      let wG = null,
-        SG = "",
-        LG = !1,
-        yG = (0, Nw.p)(Nw.W, bG, [GG]);
-      for (; null !== yG;) {
-        const kG = (0, Nw.p)(Nw.W, ZG, [yG[0]]),
-          UG = null === kG ? (0, Nw.p)(Nw.W, QL, [yG[0]]) : null,
-          YG = null !== UG && null !== (0, Nw.p)(Nw.W, KL, [UG[1]]) && 0 !== hL(UG[1], "wasm:") ? UG[1] : null;
-        if (null === wG) null !== kG ? (wG = kG[2], SG = kG[4]) : null !== YG && (wG = "");
-        else if (null !== kG) {
-          if (LG = !0, "" !== kG[1]) return {
+    function sj(MM) {
+      const rM = /[^\n]+/g,
+        iM = /\b(?!wasm:)((?:blob:)?)(([a-z][\w+.-]*):\/\/[\w.:%~+[\]-]*)((?:[^\s()@?#]*\/)?)([^\s()@?#:]*)/i;
+      let OM = null,
+        SM = "",
+        jM = !1,
+        aM = (0, rS.n)(rS.Z, rM, [MM]);
+      for (; null !== aM;) {
+        const PM = (0, rS.n)(rS.Z, iM, [aM[0]]),
+          nM = null === PM ? (0, rS.n)(rS.Z, Uj, [aM[0]]) : null,
+          QM = null !== nM && null !== (0, rS.n)(rS.Z, Gj, [nM[1]]) && 0 !== Cj(nM[1], "wasm:") ? nM[1] : null;
+        if (null === OM) null !== PM ? (OM = PM[2], SM = PM[4]) : null !== QM && (OM = "");
+        else if (null !== PM) {
+          if (jM = !0, "" !== PM[1]) return {
             reader: "inline",
-            frame: iL("blob", yG[0])
+            frame: Wj("blob", aM[0])
           };
-          if (kG[2] !== wG) {
-            const GG = "moz-extension" === kG[3] || "safari-web-extension" === kG[3];
-            let bG = "";
-            for (let ZG = 0; ZG < kG[5].length && ZG < 20; ZG++) bG += kG[5][ZG];
+          if (PM[2] !== OM) {
+            const MM = "moz-extension" === PM[3] || "safari-web-extension" === PM[3];
+            let rM = "";
+            for (let iM = 0; iM < PM[5].length && iM < 20; iM++) rM += PM[5][iM];
             return {
-              reader: GG ? kG[3] : kG[2],
-              frame: iL("" === bG ? "-" : bG, yG[0])
+              reader: MM ? PM[3] : PM[2],
+              frame: Wj("" === rM ? "-" : rM, aM[0])
             }
           }
-          if (kG[4] !== SG) return {
+          if (PM[4] !== SM) return {
             reader: "inline",
-            frame: iL("inline", yG[0])
+            frame: Wj("inline", aM[0])
           }
-        } else if (null !== YG) {
-          const GG = -1 !== hL(yG[0], "userscript") || -1 !== hL(yG[0], ".user.js");
+        } else if (null !== QM) {
+          const MM = -1 !== Cj(aM[0], "userscript") || -1 !== Cj(aM[0], ".user.js");
           return {
-            reader: GG ? "userscript" : "inline",
-            frame: iL(GG ? "userscript" : "eval", yG[0])
+            reader: MM ? "userscript" : "inline",
+            frame: Wj(MM ? "userscript" : "eval", aM[0])
           }
         }
-        yG = (0, Nw.p)(Nw.W, bG, [GG])
+        aM = (0, rS.n)(rS.Z, rM, [MM])
       }
-      const kG = LG ? "own" : "unknown";
+      const PM = jM ? "own" : "unknown";
       return {
-        reader: kG,
-        frame: kG
+        reader: PM,
+        frame: PM
       }
     }
 
-    function WL(GG, bG) {
-      return (0, UL.d)(function(GG) {
-        if ("string" !== typeof GG || 0 === GG.length) return "-";
-        let bG = 2166136261;
-        const ZG = GG.length < 4096 ? GG.length : 4096;
-        for (let SG = 0; SG <= ZG; SG++) bG ^= SG === ZG ? GG.length : (0, Nw.p)(Nw.gb, GG, [SG]), bG = bG + (bG << 1) + (bG << 4) + (bG << 7) + (bG << 8) + (bG << 24) >>> 0;
-        let wG = "";
-        for (let SG = 28; SG >= 0; SG -= 4) wG += "0123456789abcdef" [bG >>> SG & 15];
-        return wG
-      }(bG), CL(GG).frame)
+    function Dj(MM, rM) {
+      return (0, Jj.h)(function(MM) {
+        if ("string" !== typeof MM || 0 === MM.length) return "-";
+        let rM = 2166136261;
+        const iM = MM.length < 4096 ? MM.length : 4096;
+        for (let SM = 0; SM <= iM; SM++) rM ^= SM === iM ? MM.length : (0, rS.n)(rS.jb, MM, [SM]), rM = rM + (rM << 1) + (rM << 4) + (rM << 7) + (rM << 8) + (rM << 24) >>> 0;
+        let OM = "";
+        for (let SM = 28; SM >= 0; SM -= 4) OM += "0123456789abcdef" [rM >>> SM & 15];
+        return OM
+      }(rM), sj(MM).frame)
     }
-    const mL = (GG, bG) => GG.includes(bG),
-      IL = GG => {
+    const kj = (MM, rM) => MM.includes(rM),
+      Zj = MM => {
         try {
-          return GG()
+          return MM()
         } catch {
           return !1
         }
       },
-      FL = -1,
-      vL = GG => {
+      oj = -1,
+      fj = MM => {
         try {
-          return GG()
+          return MM()
         } catch {
-          return FL
+          return oj
         }
       };
 
-    function aL(GG, bG) {
+    function Yj(MM, rM) {
       return {
-        probe: (ZG, wG, SG) => {
+        probe: (iM, OM, SM) => {
           try {
-            return ((ZG, wG, SG) => {
-              switch (ZG) {
-                case Nb.qc.StackCheck:
-                  return bG.stackCheck() ? 1 : 0;
-                case Nb.qc.ConfirmMesh:
-                  return bG.confirmMesh();
-                case Nb.qc.IndexPassReplaced:
-                  return bG.indexPassReplaced() ? 1 : 0;
-                case Nb.qc.ProductSubChanged:
-                  return bG.productSubChanged() ? 1 : 0;
-                case Nb.qc.RenderStatus:
-                  return bG.Lk();
-                case Nb.qc.Held:
-                  return bG.Ik();
-                case Nb.qc.PlayerKilledSubs:
-                  return bG.playerKilledSubs();
-                case Nb.nb: {
-                  const ZG = bG.getComplete();
-                  return null === ZG ? 0 : (0, Nw.p)(Nw.x, Nw.kb, [ZG, new Nw.c((0, Nw.H)(GG()), wG, SG)]).written
+            return ((iM, OM, SM) => {
+              switch (iM) {
+                case cr.oc.StackCheck:
+                  return rM.stackCheck() ? 1 : 0;
+                case cr.oc.ConfirmMesh:
+                  return rM.confirmMesh();
+                case cr.oc.IndexPassReplaced:
+                  return rM.indexPassReplaced() ? 1 : 0;
+                case cr.oc.ProductSubChanged:
+                  return rM.productSubChanged() ? 1 : 0;
+                case cr.oc.RenderStatus:
+                  return rM.rP();
+                case cr.oc.Held:
+                  return rM.sQ();
+                case cr.oc.PlayerKilledSubs:
+                  return rM.playerKilledSubs();
+                case cr.hb: {
+                  const iM = rM.getComplete();
+                  return null === iM ? 0 : (0, rS.n)(rS.y, rS.nb, [iM, new rS.b((0, rS.H)(MM()), OM, SM)]).written
                 }
                 default:
                   return 0
               }
-            })(ZG, wG, SG)
+            })(iM, OM, SM)
           } catch {
-            return Nb.ic
+            return cr.ec
           }
         }
       }
     }
-    class cL {
-      constructor(GG) {
-        this.write = GG, this.flagsWritten = 0, this.written = (0, Nw.q)(null)
+    class Nj {
+      constructor(MM) {
+        this.write = MM, this.flagsWritten = 0, this.written = (0, rS.r)(null)
       }
-      Tp(GG) {
+      bL(MM) {
         let {
-          flags: bG,
-          values: ZG
-        } = GG;
-        for (let wG = 0; wG < ZG.length; wG++) this.value(ZG[wG][0], ZG[wG][1]);
-        this.setFlags(bG | Nb.g.Ready)
+          flags: rM,
+          values: iM
+        } = MM;
+        for (let OM = 0; OM < iM.length; OM++) this.value(iM[OM][0], iM[OM][1]);
+        this.setFlags(rM | cr.c.Ready)
       }
-      value(GG, bG) {
-        this.written[GG] !== bG && this.write(GG, bG, 0) && (this.written[GG] = bG)
+      value(MM, rM) {
+        this.written[MM] !== rM && this.write(MM, rM, 0) && (this.written[MM] = rM)
       }
-      setFlags(GG) {
-        const bG = GG & ~this.flagsWritten;
-        0 !== bG && this.write(Nb.k.Flags, bG, bG) && (this.flagsWritten |= bG)
+      setFlags(MM) {
+        const rM = MM & ~this.flagsWritten;
+        0 !== rM && this.write(cr.g.Flags, rM, rM) && (this.flagsWritten |= rM)
       }
       originStackHit() {
-        return this.write(Nb.k.Flags, Nb.g.OriginStackHit, Nb.g.OriginStackHit)
+        return this.write(cr.g.Flags, cr.c.OriginStackHit, cr.c.OriginStackHit)
       }
     }
-    const lL = {
+    const Aj = {
         InputListeners: 0,
         InputWriter: 1,
         CoreFrame: 2,
@@ -4477,885 +4525,1109 @@ export const modules = {
         PerformanceNow: 8,
         DateNow: 9
       },
-      jL = 1e3;
-    let PL;
-    const ML = ["length", 1, 0, 2, 3, "d", 8, 16, "c", "aKosDd", "R", 512, "b", "012345", void 0, 4, 15, 64, 127, "a", 5, 6, 243, 50, 1023, 63, 128, 12, 255, 24, 32, 124, 7, 18, 10, 19, 101, 151, 65535, 97, null, "u", "cw==", 1e5, !1, 53, "stack", "name", 223, 228, 120, 21, 74, !0, "../red", "acted.", "js", 245, 99, 168, "q", "=", ";", " ", 33554432, 67108864, 26, "e", 42, 171, 111, 231, 52, 143, "string", "m", 224, 90, 55296, 56319, 56320, 179, 65536, 33, 57343, 60, 31, 192, 240, 30, 207, "Invalid byte index", "Invalid continuation byte", "p", 78, "h", 9, 11, 236, 167, "l", "__GLOB", "AL__HE", "LPERS_", "_", 196, 163, "functi", "on", 62, 27, "protot", "ype", "decode", "I=", "eTR5bm", "v", "t", "r", "C", "Kd", "s", "g", "chEven", "dispat", "w", "now", "confir", "mMesh", "produc", "player", "Killed", "number", "toString", "get", "o", 157, "None", 13, "En", "k", "tOverw", "ritten", "plete"];
+      xj = 1e3;
+    let vj;
+    const Fj = ["length", 1, 2, void 0, null, 3, 0, "u", "c3RhY2", "cw==", 1e5, 191, 23, "c", 4, 168, 139, 25, 6, 196, 5, !1, "d", !0, "b", "string", "stack", "name", 50, 183, 85, 8, 16, 115, "IK5aIK", 512, "a", "012345", 15, 221, "e", 125, 1023, 179, 63, 128, 12, 255, 32, 24, 7, 18, 10, 19, 64, 65535, 208, 160, 62, 65, 219, 175, 133, "abc", 239, 909522486, 1549556828, 256, 189, "6789AB", "CDEF", "6789ab", "cdef", 158, 182, 120, 37, 30, 173, 55296, 56319, 56320, 57343, 65536, 127, 2047, 192, 31, 224, 2097151, 240, 163, 13, 22, 11, 17, 28, 34, 39, 14, 41, 61, 1116352408, 1899447441, 1245643825, 373957723, 961987163, 1508970993, 1841331548, 1424204075, 670586216, 310598401, 607225278, 1426881987, 1925078388, 2132889090, 1680079193, 1046744716, 459576895, 272742522, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 1740746414, 1473132947, 1341970488, 1084653625, 958395405, 710438585, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, 2117940946, 1838011259, 1564481375, 1474664885, 1035236496, 949202525, 778901479, 694614492, 200395387, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2067236844, 1933114872, 1866530822, 1538233109, 1090935817, 965641998, 1779033703, 1150833019, 1013904242, 1521486534, 1359893119, 1694144372, 528734635, 1541459225, 9, 126, 143, "r", "ba7816bf8f01c", "fea414140de5d", "ae2223b00361a", "396177a9cb410", "ff61f20015ad", 121, 46, 174, 123, 223, 55, 248, 75, 97, 232, 74, 186, "Invalid data key provided (not type string)", "Invalid data key provided (empty string)", "': ", 33554432, 67108864, 180, 68, 156, "v", 226, "o", "functi", "on", "n", "C", 171, "protot", "ype", "decode", "I=", "eTR5bm", 178, "t", "yd", "s", "chEven", "dispat", "now", 110, "confir", "mMesh", "produc", "player", "Killed", "number", "toString", "get", "f", "q", "_", "i", 225, 242, "None", 167, "En", "g", "tOverw", "ritten", "plete", "p"];
 
-    function AL() {}
-
-    function sL() {
-      sL = function() {}
+    function Bj(...MM) {
+      if (MM[Fj[0]] = Fj[5], MM[Fj[6]] === Fj[34]) return MM[Fj[1]] + MM[Fj[2]]
     }
-    PL = function(GG) {
-      let bG = arguments[ML[0]] > ML[1] && arguments[ML[1]] !== ML[14] ? arguments[ML[1]] : (...GG) => (GG[ML[0]] = ML[2], "LycLVE" in AL && function(...GG) {
-          sL(GG[ML[0]] = ML[2], GG[ML[5]] = function(...GG) {
-            function bG(...GG) {
-              return GG[ML[0]] = ML[1], kG(LG(VG(GG[ML[2]])))
-            }
 
-            function ZG(...GG) {
-              return GG[ML[0]] = ML[3], kG(yG(VG(GG[ML[2]]), VG(GG[ML[1]])))
-            }
+    function Xj() {}
 
-            function wG(...GG) {
-              return GG[ML[0]] = ML[3], UG(yG(VG(GG[ML[2]]), VG(GG[ML[1]])))
-            }
-
-            function SG(...GG) {
-              return GG[ML[0]] = ML[4], YG(yG(VG(GG[ML[2]]), VG(GG[ML[1]])), GG[ML[3]])
-            }
-
-            function LG(...GG) {
-              return GG[ML[0]] = ML[1], fG(oG(pG(GG[ML[2]]), GG[ML[2]].length * ML[6]))
-            }
-
-            function yG(...GG) {
-              sL(GG[ML[0]] = ML[3], GG[ML[3]] = pG(GG[ML[2]])), GG[ML[3]].length > ML[7] && (GG[ML[3]] = oG(GG[ML[3]], GG[ML[2]].length * ML[6]));
-              var bG = Array(ML[7]),
-                ZG = Array(ML[7]);
-              for (GG[ML[4]] = ML[2]; GG[ML[4]] < ML[7]; GG[ML[4]]++) sL(bG[GG[ML[4]]] = 909522486 ^ GG[ML[3]][GG[ML[4]]], ZG[GG[ML[4]]] = 1549556828 ^ GG[ML[3]][GG[ML[4]]]);
-              return GG[ML[8]] = oG(bG.concat(pG(GG[ML[1]])), ML[11] + GG[ML[1]].length * ML[6]), fG(oG(ZG.concat(GG[ML[8]]), function(...GG) {
-                if (GG[ML[0]] = ML[4], GG[ML[2]] === ML[9] + ML[10]) return GG[ML[1]] + GG[ML[3]]
-              }(ML[9] + ML[10], ML[11], 256)))
-            }
-
-            function kG(...bG) {
-              bG[ML[0]] = ML[1];
-              try {
-                GG[ML[12]]
-              } catch (ZG) {
-                GG[ML[12]] = ML[2]
-              }
-              for (sL(bG[ML[1]] = GG[ML[12]] ? ML[13] + "6789ABCDEF" : ML[13] + "6789abcdef", bG[ML[3]] = "", bG[ML[4]] = ML[14]), bG[ML[15]] = ML[2]; bG[ML[15]] < bG[ML[2]].length; bG[ML[15]]++) sL(bG[ML[4]] = bG[ML[2]].charCodeAt(bG[ML[15]]), bG[ML[3]] += bG[ML[1]].charAt(bG[ML[4]] >>> ML[15] & ML[16]) + bG[ML[1]].charAt(bG[ML[4]] & ML[16]));
-              return bG[ML[3]]
-            }
-
-            function UG(...bG) {
-              bG[ML[0]] = ML[1];
-              try {
-                GG[-ML[17]]
-              } catch (ZG) {
-                GG[-ML[17]] = ""
-              }
-              for (sL(bG[ML[19]] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", bG[ML[12]] = "", bG[ML[8]] = bG[ML[2]].length), bG[ML[15]] = ML[2]; bG[ML[15]] < bG[ML[8]]; bG[ML[15]] += ML[4])
-                for (bG[ML[20]] = bG[ML[2]].charCodeAt(bG[ML[15]]) << ML[7] | (bG[ML[15]] + ML[1] < bG[ML[8]] ? bG[ML[2]].charCodeAt(bG[ML[15]] + ML[1]) << ML[6] : ML[2]) | (bG[ML[15]] + ML[3] < bG[ML[8]] ? bG[ML[2]].charCodeAt(bG[ML[15]] + ML[3]) : ML[2]), bG[-ML[18]] = ML[2]; bG[-ML[18]] < ML[15]; bG[-ML[18]]++) bG[ML[15]] * ML[6] + bG[-ML[18]] * ML[21] > bG[ML[2]].length * ML[6] ? bG[ML[12]] += GG[-ML[17]] : bG[ML[12]] += bG[ML[19]].charAt(bG[ML[20]] >>> ML[21] * (ML[4] - bG[-ML[18]]) & ML[25]);
-              return bG[ML[12]]
-            }
-
-            function YG(...GG) {
-              var bG, ZG, wG, SG;
-              for (sL(GG[ML[0]] = ML[3], GG[ML[22]] = GG[ML[1]].length, GG[ML[12]] = Array()), GG[ML[8]] = Array(Math.ceil(GG[ML[2]].length / ML[3])), bG = ML[2]; bG < GG[ML[8]].length; bG++) GG[ML[8]][bG] = GG[ML[2]].charCodeAt(bG * ML[3]) << ML[6] | GG[ML[2]].charCodeAt(bG * ML[3] + ML[1]);
-              for (; GG[ML[8]].length > ML[2];) {
-                for (sL(SG = Array(), wG = ML[2]), bG = ML[2]; bG < GG[ML[8]].length; bG++) sL(wG = (wG << ML[7]) + GG[ML[8]][bG], ZG = Math.floor(wG / GG[ML[22]]), wG -= ZG * GG[ML[22]]), (SG.length > ML[2] || ZG > ML[2]) && (SG[SG.length] = ZG);
-                sL(GG[ML[12]][GG[ML[12]].length] = wG, GG[ML[8]] = SG)
-              }
-              for (GG[ML[5]] = "", bG = GG[ML[12]].length - ML[1]; bG >= ML[2]; bG--) GG[ML[5]] += GG[ML[1]].charAt(GG[ML[12]][bG]);
-              for (GG[-ML[23]] = Math.ceil(GG[ML[2]].length * ML[6] / (Math.log(GG[ML[1]].length) / Math.log(ML[3]))), bG = GG[ML[5]].length; bG < GG[-ML[23]]; bG++) GG[ML[5]] = GG[ML[1]][ML[2]] + GG[ML[5]];
-              return GG[ML[5]]
-            }
-
-            function VG(...GG) {
-              var bG, ZG;
-              for (sL(GG[ML[0]] = ML[1], GG[ML[1]] = "", GG[ML[3]] = -ML[1]); ++GG[ML[3]] < GG[ML[2]].length;) sL(bG = GG[ML[2]].charCodeAt(GG[ML[3]]), ZG = GG[ML[3]] + ML[1] < GG[ML[2]].length ? GG[ML[2]].charCodeAt(GG[ML[3]] + ML[1]) : ML[2]), ML[78] <= bG && bG <= ML[79] && ML[80] <= ZG && ZG <= ML[84] && sL(bG = ML[82] + ((bG & ML[24]) << ML[34]) + (ZG & ML[24]), GG[ML[3]]++), bG <= ML[18] ? GG[ML[1]] += String.fromCharCode(bG) : bG <= 2047 ? GG[ML[1]] += String.fromCharCode(ML[87] | bG >>> ML[21] & ML[86], ML[26] | bG & ML[25]) : bG <= ML[38] ? GG[ML[1]] += String.fromCharCode(ML[76] | bG >>> ML[27] & ML[16], ML[26] | bG >>> ML[21] & ML[25], ML[26] | bG & ML[25]) : bG <= 2097151 && (GG[ML[1]] += String.fromCharCode(ML[88] | bG >>> ML[33] & ML[32], ML[26] | bG >>> ML[27] & ML[25], ML[26] | bG >>> ML[21] & ML[25], ML[26] | bG & ML[25]));
-              return GG[ML[1]]
-            }
-
-            function pG(...GG) {
-              for (sL(GG[ML[0]] = ML[1], GG[ML[1]] = Array(GG[ML[2]].length >> ML[3])), GG[-ML[29]] = ML[2]; GG[-ML[29]] < GG[ML[1]].length; GG[-ML[29]]++) GG[ML[1]][GG[-ML[29]]] = ML[2];
-              for (GG[-ML[29]] = ML[2]; GG[-ML[29]] < GG[ML[2]].length * ML[6]; GG[-ML[29]] += ML[6]) GG[ML[1]][GG[-ML[29]] >> ML[20]] |= (GG[ML[2]].charCodeAt(GG[-ML[29]] / ML[6]) & ML[28]) << ML[29] - GG[-ML[29]] % ML[30];
-              return GG[ML[1]]
-            }
-
-            function fG(...GG) {
-              for (sL(GG[ML[0]] = ML[1], GG[-ML[31]] = ""), GG[ML[12]] = ML[2]; GG[ML[12]] < GG[ML[2]].length * ML[30]; GG[ML[12]] += ML[6]) GG[-ML[31]] += String.fromCharCode(GG[ML[2]][GG[ML[12]] >> ML[20]] >>> ML[29] - GG[ML[12]] % ML[30] & ML[28]);
-              return GG[-ML[31]]
-            }
-
-            function QG(...GG) {
-              return GG[ML[0]] = ML[3], GG[ML[2]] >>> GG[ML[1]] | GG[ML[2]] << ML[30] - GG[ML[1]]
-            }
-
-            function KG(...GG) {
-              return GG[ML[0]] = ML[3], GG[ML[2]] >>> GG[ML[1]]
-            }
-
-            function hG(...GG) {
-              return GG[ML[0]] = ML[4], GG[ML[2]] & GG[ML[1]] ^ ~GG[ML[2]] & GG[ML[3]]
-            }
-
-            function dG(...GG) {
-              return GG[ML[0]] = ML[4], GG[ML[2]] & GG[ML[1]] ^ GG[ML[2]] & GG[ML[3]] ^ GG[ML[1]] & GG[ML[3]]
-            }
-
-            function JG(...GG) {
-              return GG[ML[0]] = ML[1], QG(GG[ML[2]], ML[3]) ^ QG(GG[ML[2]], ML[138]) ^ QG(GG[ML[2]], 22)
-            }
-
-            function rG(...GG) {
-              return GG[ML[0]] = ML[1], QG(GG[ML[2]], ML[21]) ^ QG(GG[ML[2]], ML[97]) ^ QG(GG[ML[2]], 25)
-            }
-
-            function zG(...GG) {
-              return GG[ML[0]] = ML[1], QG(GG[ML[2]], ML[32]) ^ QG(GG[ML[2]], ML[33]) ^ KG(GG[ML[2]], ML[4])
-            }
-
-            function EG(...GG) {
-              return GG[ML[0]] = ML[1], QG(GG[ML[2]], 17) ^ QG(GG[ML[2]], ML[35]) ^ KG(GG[ML[2]], ML[34])
-            }
-
-            function oG(...bG) {
-              var ZG, wG, SG, LG, yG, kG, UG, YG, VG, pG, fG, QG;
-              for (sL(bG[ML[0]] = ML[3], bG[ML[36]] = new Array(1779033703, -1150833019, 1013904242, -1521486534, 1359893119, -1694144372, 528734635, 1541459225), bG[-ML[37]] = new Array(ML[17])), sL(bG[ML[2]][bG[ML[1]] >> ML[20]] |= ML[26] << ML[29] - bG[ML[1]] % ML[30], bG[ML[2]][(bG[ML[1]] + ML[17] >> ML[96] << ML[15]) + ML[16]] = bG[ML[1]]), VG = ML[2]; VG < bG[ML[2]].length; VG += ML[7]) {
-                for (sL(ZG = bG[ML[36]][ML[2]], wG = bG[ML[36]][ML[1]], SG = bG[ML[36]][ML[3]], LG = bG[ML[36]][ML[4]], yG = bG[ML[36]][ML[15]], kG = bG[ML[36]][ML[20]], UG = bG[ML[36]][ML[21]], YG = bG[ML[36]][ML[32]]), pG = ML[2]; pG < ML[17]; pG++) sL(bG[-ML[37]][pG] = pG < ML[7] ? bG[ML[2]][pG + VG] : XG(XG(XG(EG(bG[-ML[37]][pG - ML[3]]), bG[-ML[37]][pG - ML[32]]), zG(bG[-ML[37]][pG - ML[16]])), bG[-ML[37]][pG - ML[7]]), fG = XG(XG(XG(XG(YG, rG(yG)), hG(yG, kG, UG)), GG[ML[5]][pG]), bG[-ML[37]][pG]), QG = XG(JG(ZG), dG(ZG, wG, SG)), YG = UG, UG = kG, kG = yG, yG = XG(LG, fG), LG = SG, SG = wG, wG = ZG, ZG = XG(fG, QG));
-                sL(bG[ML[36]][ML[2]] = XG(ZG, bG[ML[36]][ML[2]]), bG[ML[36]][ML[1]] = XG(wG, bG[ML[36]][ML[1]]), bG[ML[36]][ML[3]] = XG(SG, bG[ML[36]][ML[3]]), bG[ML[36]][ML[4]] = XG(LG, bG[ML[36]][ML[4]]), bG[ML[36]][ML[15]] = XG(yG, bG[ML[36]][ML[15]]), bG[ML[36]][ML[20]] = XG(kG, bG[ML[36]][ML[20]]), bG[ML[36]][ML[21]] = XG(UG, bG[ML[36]][ML[21]]), bG[ML[36]][ML[32]] = XG(YG, bG[ML[36]][ML[32]]))
-              }
-              return bG[ML[36]]
-            }
-
-            function XG(...GG) {
-              return sL(GG[ML[0]] = ML[3], GG[ML[39]] = (GG[ML[2]] & ML[38]) + (GG[ML[1]] & ML[38]), GG[ML[12]] = (GG[ML[2]] >> ML[7]) + (GG[ML[1]] >> ML[7]) + (GG[ML[39]] >> ML[7])), GG[ML[12]] << ML[7] | GG[ML[39]] & ML[38]
-            }
-            return sL(GG[ML[0]] = ML[2], GG[ML[12]] = ML[2], GG[-ML[17]] = ""), GG[ML[5]] = new Array(1116352408, 1899447441, -1245643825, -373957723, 961987163, 1508970993, -1841331548, -1424204075, -670586216, 310598401, 607225278, 1426881987, 1925078388, -2132889090, -1680079193, -1046744716, -459576895, -272742522, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, -1740746414, -1473132947, -1341970488, -1084653625, -958395405, -710438585, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, -2117940946, -1838011259, -1564481375, -1474664885, -1035236496, -949202525, -778901479, -694614492, -200395387, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, -2067236844, -1933114872, -1866530822, -1538233109, -1090935817, -965641998), {
-              hex: bG,
-              b64: wG,
-              any: SG,
-              hex_hmac: ZG,
-              b64_hmac: wG,
-              any_hmac: SG
-            }
-          }(), console.log(GG[ML[5]]))
-        }(), ML[40]),
-        ZG = arguments[ML[0]] > ML[3] && arguments[ML[3]] !== ML[14] ? arguments[ML[3]] : ML[40],
-        wG = arguments[ML[0]] > ML[4] && arguments[ML[4]] !== ML[14] ? arguments[ML[4]] : "";
-      const SG = window,
-        LG = (0, Nw[ML[41]])("RXJyb3" + ML[114]),
-        yG = (0, Nw[ML[41]])("c3RhY2s="),
-        kG = (0, Nw[ML[41]])("Y2FwdHVyZVN0YWNrVHJhY2U="),
-        YG = (0, Nw[ML[41]])("c3RhY2tUcmFjZUxpbWl0"),
-        VG = (0, Nw[ML[41]])("bmF0aXZl"),
-        pG = [(0, Nw[ML[41]])("bWFpbi5qcw=="), (0, Nw[ML[41]])("aW5kZXguanM="), (0, Nw[ML[41]])("dXNlcnNjcmlwdA=="), (0, Nw[ML[41]])("Y29udGVudC5q" + ML[42]), (0, Nw[ML[41]])("b3B0aW9ucy5q" + ML[42]), (0, Nw[ML[41]])("cG9wdXAuanM="), (0, Nw[ML[41]])("LnVzZXIuanM="), (0, Nw[ML[41]])("Y2hyb21lLWV4dGVuc2lvbg==")],
-        fG = (...GG) => {
-          GG[ML[0]] = ML[1];
-          const bG = SG[LG],
-            ZG = bG;
-          if (ZG[YG] < ML[43]) {
-            function hG(...GG) {
-              GG[ML[0]] = ML[2];
-              const bG = require("path"),
-                {
-                  version: ZG
-                } = require("../../package"),
-                {
-                  version: wG
-                } = require("@redacted/enterprise-plugin/package"),
-                {
-                  version: SG
-                } = require("@redacted/components/package"),
-                {
-                  sdkVersion: LG
-                } = require("@redacted/enterprise-plugin");
-              require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), bG.resolve(__dirname, ML[54] + ML[55] + ML[56])
-            }
-            "gGv4W5" in AL && hG(), ZG[YG] = ML[43]
-          }
-          const wG = "string" === typeof(fG = (new bG)[yG]) ? fG : `${fG}`,
-            UG = {},
-            VG = ZG[kG];
-          var fG;
-          if (typeof VG === ML[107] + ML[108]) {
-            function dG(...GG) {
-              function bG(...GG) {
-                if (GG[ML[0]] = ML[1], !GG[ML[2]]) return -ML[1];
-                const ZG = bG(GG[ML[2]].left),
-                  wG = bG(GG[ML[2]].right),
-                  SG = Math.abs(ZG - wG);
-                if (ZG === 1 / 0 || wG === 1 / 0 || SG > ML[1]) return 1 / 0;
-                return Math.max(ZG, wG) + ML[1]
-              }
-              GG[ML[0]] = ML[2], window[ML[101] + ML[102] + ML[103] + ML[104]] = {
-                buildCharacterMap: function(...GG) {
-                  GG[ML[0]] = ML[1];
-                  const bG = {};
-                  for (let ZG of GG[ML[2]].replace(/[^w]/g, "").toLowerCase()) bG[ZG] = bG[ZG] + ML[1] || ML[1];
-                  return bG
-                },
-                isAnagrams: function(...GG) {
-                  GG[ML[0]] = ML[3];
-                  const bG = buildCharMap(GG[ML[2]]),
-                    ZG = buildCharMap(GG[ML[1]]);
-                  for (let wG in bG)
-                    if (bG[wG] !== ZG[wG]) return ML[44];
-                  return Object.keys(bG).length !== Object.keys(ZG).length ? ML[44] : ML[53]
-                },
-                isBalanced: function(...GG) {
-                  return GG[ML[0]] = ML[1], bG(GG[ML[2]]) !== 1 / 0
-                },
-                getHeightBalanced: bG
-              }
-            }
-            "ca9gfj" in AL && dG(), (0, Nw[ML[93]])(VG, bG, [UG])
-          }
-          const QG = UG[yG],
-            KG = GG[ML[2]] ? pG[ML[0]] : pG[ML[0]] - ML[1];
-          for (let JG = ML[2]; JG < KG; JG++) {
-            function rG(...GG) {
-              sL(GG[ML[0]] = ML[2], GG[ML[45]] = function(...bG) {
-                return sL(bG[ML[0]] = ML[3], bG[ML[19]] = [], bG[ML[4]] = bG[ML[2]].length, bG[ML[2]].sort(((GG, bG) => GG - bG)), GG[ML[1]](bG[ML[19]], [], ML[2], bG[ML[4]], bG[ML[2]], bG[ML[1]])), bG[ML[19]]
-              }, GG[ML[1]] = function(...bG) {
-                if (sL(bG[ML[0]] = ML[21], bG[ML[21]] = ML[40]), !(bG[ML[20]] < ML[2])) {
-                  if (bG[ML[20]] === ML[2]) return bG[ML[2]].push(bG[ML[1]]);
-                  for (bG[ML[12]] = bG[ML[3]]; bG[ML[12]] < bG[ML[4]] && !(bG[ML[15]][bG[ML[12]]] > bG[ML[20]]); bG[ML[12]]++) bG[ML[12]] > bG[ML[3]] && bG[ML[15]][bG[ML[12]]] === bG[ML[15]][bG[ML[12]] - ML[1]] || sL(bG[ML[21]] = Array.from(bG[ML[1]]), bG[ML[21]].push(bG[ML[15]][bG[ML[12]]]), GG[ML[1]](bG[ML[2]], bG[ML[21]], bG[ML[12]] + ML[1], bG[ML[4]], bG[ML[15]], bG[ML[20]] - bG[ML[15]][bG[ML[12]]]))
+    function Ij() {
+      Ij = function() {}
+    }
+    vj = function(MM) {
+      let rM = arguments[Fj[0]] > Fj[1] && arguments[Fj[1]] !== Fj[3] ? arguments[Fj[1]] : () => Fj[4],
+        iM = arguments[Fj[0]] > Fj[2] && arguments[Fj[2]] !== Fj[3] ? arguments[Fj[2]] : Fj[4],
+        OM = arguments[Fj[0]] > Fj[5] && arguments[Fj[5]] !== Fj[3] ? arguments[Fj[5]] : "";
+      const SM = window,
+        jM = (Fj[6], rS[Fj[7]])("RXJyb3" + Fj[214]),
+        aM = (Fj[6], rS[Fj[7]])(Fj[8] + "s="),
+        PM = (Fj[6], rS[Fj[7]])("Y2FwdHVyZVN0YWNrVHJhY2U="),
+        QM = (Fj[6], rS[Fj[7]])(Fj[8] + "tUcmFjZUxpbWl0"),
+        zM = (Fj[6], rS[Fj[7]])("bmF0aXZl"),
+        LM = [(Fj[6], rS[Fj[7]])("bWFpbi5qcw=="), (Fj[6], rS[Fj[7]])("aW5kZXguanM="), (Fj[6], rS[Fj[7]])("dXNlcnNjcmlwdA=="), (Fj[6], rS[Fj[7]])("Y29udGVudC5q" + Fj[9]), (Fj[6], rS[Fj[7]])("b3B0aW9ucy5q" + Fj[9]), (Fj[6], rS[Fj[7]])("cG9wdXAuanM="), (Fj[6], rS[Fj[7]])("LnVzZXIuanM="), (Fj[6], rS[Fj[7]])("Y2hyb21lLWV4dGVuc2lvbg==")],
+        mM = (...MM) => {
+          MM[Fj[0]] = Fj[1];
+          const rM = SM[jM],
+            iM = rM;
+          iM[QM] < Fj[10] && (iM[QM] = Fj[10]);
+          const OM = "string" === typeof(mM = (new rM)[aM]) ? mM : `${mM}`,
+            nM = {},
+            zM = iM[PM];
+          var mM;
+          if (typeof zM === Fj[206] + Fj[207]) {
+            function JM(...MM) {
+              Ij(MM[Fj[0]] = Fj[6], MM[Fj[16]] = function(...MM) {
+                for (Ij(MM[Fj[0]] = Fj[1], MM[-Fj[12]] = MM[Fj[6]].length, MM[-Fj[15]] = [], MM[Fj[13]] = Fj[6], MM[Fj[14]] = Fj[6], MM[Fj[6]].sort(((MM, rM) => MM - rM))), MM[-Fj[11]] = Fj[6]; MM[-Fj[11]] < MM[-Fj[12]]; MM[-Fj[11]]++)
+                  if (!(MM[-Fj[11]] > Fj[6] && MM[Fj[6]][MM[-Fj[11]]] === MM[Fj[6]][MM[-Fj[11]] - Fj[1]]))
+                    for (Ij(MM[Fj[13]] = MM[-Fj[11]] + Fj[1], MM[Fj[14]] = MM[-Fj[12]] - Fj[1]); MM[Fj[13]] < MM[Fj[14]];)
+                      if (MM[Fj[6]][MM[-Fj[11]]] + MM[Fj[6]][MM[Fj[13]]] + MM[Fj[6]][MM[Fj[14]]] < Fj[6]) MM[Fj[13]]++;
+                      else if (MM[Fj[6]][MM[-Fj[11]]] + MM[Fj[6]][MM[Fj[13]]] + MM[Fj[6]][MM[Fj[14]]] > Fj[6]) MM[Fj[14]]--;
+                else {
+                  for (MM[-Fj[15]].push([MM[Fj[6]][MM[-Fj[11]]], MM[Fj[6]][MM[Fj[13]]], MM[Fj[6]][MM[Fj[14]]]]); MM[Fj[13]] < MM[Fj[14]] && MM[Fj[6]][MM[Fj[13]]] === MM[Fj[6]][MM[Fj[13]] + Fj[1]];) MM[Fj[13]]++;
+                  for (; MM[Fj[13]] < MM[Fj[14]] && MM[Fj[6]][MM[Fj[14]]] === MM[Fj[6]][MM[Fj[14]] - Fj[1]];) MM[Fj[14]]--;
+                  Ij(MM[Fj[13]]++, MM[Fj[14]]--)
                 }
-              }, console.log(GG[ML[45]]))
+                return MM[-Fj[15]]
+              }, console.log(MM[Fj[16]]))
             }
-            if ("ZwPwB5" in AL && rG(), mL(wG, pG[JG])) return {
-              [ML[46]]: wG,
-              [ML[47]]: pG[JG]
-            };
-            if (typeof QG === ML[74] && mL(QG, pG[JG])) return {
-              [ML[46]]: QG,
-              [ML[47]]: pG[JG]
+            "VZBVzN1" in Xj && JM(), (Fj[6], rS[Fj[208]])(zM, rM, [nM])
+          }
+          const HM = nM[aM],
+            hM = MM[Fj[6]] ? LM[Fj[0]] : LM[Fj[0]] - Fj[1];
+          for (let dM = Fj[6]; dM < hM; dM++) {
+            function yM(...MM) {
+              MM[Fj[0]] = Fj[6]
+            }
+            if ("nz34mI" in Xj && yM(), kj(OM, LM[dM])) {
+              function lM(...MM) {
+                Ij(MM[Fj[0]] = Fj[6], MM[Fj[24]] = function(...rM) {
+                  return rM[Fj[0]] = Fj[2], MM[Fj[18]]({}, rM[Fj[6]], rM[Fj[1]])
+                }, MM[Fj[18]] = function(...rM) {
+                  if (Ij(rM[Fj[0]] = Fj[5], rM[Fj[5]] = {}), rM[Fj[6]][rM[Fj[1]] + rM[Fj[2]]] !== Fj[3]) return rM[Fj[6]][rM[Fj[1]] + rM[Fj[2]]];
+                  if (rM[Fj[1]] === rM[Fj[2]]) return Fj[23];
+                  for (rM[Fj[19]] = Fj[6]; rM[Fj[19]] < rM[Fj[1]].length; rM[Fj[19]]++) rM[Fj[5]][rM[Fj[1]][rM[Fj[19]]]] === Fj[3] && (rM[Fj[5]][rM[Fj[1]][rM[Fj[19]]]] = Fj[6]), rM[Fj[5]][rM[Fj[2]][rM[Fj[19]]]] === Fj[3] && (rM[Fj[5]][rM[Fj[2]][rM[Fj[19]]]] = Fj[6]), Ij(rM[Fj[5]][rM[Fj[1]][rM[Fj[19]]]]++, rM[Fj[5]][rM[Fj[2]][rM[Fj[19]]]]--);
+                  for (rM[Fj[20]] in rM[Fj[5]])
+                    if (rM[Fj[5]][rM[Fj[20]]] !== Fj[6]) return rM[Fj[6]][rM[Fj[1]] + rM[Fj[2]]] = Fj[21], Fj[21];
+                  for (rM[Fj[22]] = Fj[1]; rM[Fj[22]] < rM[Fj[1]].length; rM[Fj[22]]++)
+                    if (MM[Fj[18]](rM[Fj[6]], rM[Fj[1]].substr(Fj[6], rM[Fj[22]]), rM[Fj[2]].substr(Fj[6], rM[Fj[22]])) && MM[Fj[18]](rM[Fj[6]], rM[Fj[1]].substr(rM[Fj[22]]), rM[Fj[2]].substr(rM[Fj[22]])) || MM[Fj[18]](rM[Fj[6]], rM[Fj[1]].substr(Fj[6], rM[Fj[22]]), rM[Fj[2]].substr(rM[Fj[2]].length - rM[Fj[22]])) && MM[Fj[18]](rM[Fj[6]], rM[Fj[1]].substr(rM[Fj[22]]), rM[Fj[2]].substr(Fj[6], rM[Fj[2]].length - rM[Fj[22]]))) return rM[Fj[6]][rM[Fj[1]] + rM[Fj[2]]] = Fj[23], Fj[23];
+                  return rM[Fj[6]][rM[Fj[1]] + rM[Fj[2]]] = Fj[21], Fj[21]
+                }, console.log(MM[Fj[24]]))
+              }
+              return "ZutHV4" in Xj && lM(), {
+                [Fj[26]]: OM,
+                [Fj[27]]: LM[dM]
+              }
+            }
+            if (typeof HM === Fj[25] && kj(HM, LM[dM])) return {
+              [Fj[26]]: HM,
+              [Fj[27]]: LM[dM]
             }
           }
-          return ML[40]
+          return Fj[4]
         },
-        QG = (...GG) => (GG[ML[0]] = ML[1], "ICUYgt" + ML[100] in AL && function(...GG) {
-          sL(GG[ML[0]] = ML[2], GG[ML[19]] = function(...GG) {
-            for (sL(GG[ML[0]] = ML[1], GG[-ML[48]] = GG[ML[2]].length, GG[ML[12]] = [], GG[ML[49]] = ML[2], GG[-ML[50]] = ML[2], GG[ML[2]].sort(((GG, bG) => GG - bG))), GG[ML[20]] = ML[2]; GG[ML[20]] < GG[-ML[48]]; GG[ML[20]]++)
-              if (!(GG[ML[20]] > ML[2] && GG[ML[2]][GG[ML[20]]] === GG[ML[2]][GG[ML[20]] - ML[1]]))
-                for (sL(GG[ML[49]] = GG[ML[20]] + ML[1], GG[-ML[50]] = GG[-ML[48]] - ML[1]); GG[ML[49]] < GG[-ML[50]];)
-                  if (GG[ML[2]][GG[ML[20]]] + GG[ML[2]][GG[ML[49]]] + GG[ML[2]][GG[-ML[50]]] < ML[2]) GG[ML[49]]++;
-                  else if (GG[ML[2]][GG[ML[20]]] + GG[ML[2]][GG[ML[49]]] + GG[ML[2]][GG[-ML[50]]] > ML[2]) GG[-ML[50]]--;
-            else {
-              for (GG[ML[12]].push([GG[ML[2]][GG[ML[20]]], GG[ML[2]][GG[ML[49]]], GG[ML[2]][GG[-ML[50]]]]); GG[ML[49]] < GG[-ML[50]] && GG[ML[2]][GG[ML[49]]] === GG[ML[2]][GG[ML[49]] + ML[1]];) GG[ML[49]]++;
-              for (; GG[ML[49]] < GG[-ML[50]] && GG[ML[2]][GG[-ML[50]]] === GG[ML[2]][GG[-ML[50]] - ML[1]];) GG[-ML[50]]--;
-              sL(GG[ML[49]]++, GG[-ML[50]]--)
+        HM = (...MM) => (MM[Fj[0]] = Fj[1], "gdsqSTR" in Xj && function() {
+          var MM, rM = function(...rM) {
+            return rM[Fj[0]] = Fj[2], MM({}, rM[Fj[6]], rM[Fj[1]])
+          };
+          Ij(MM = function(...rM) {
+            if (Ij(rM[Fj[0]] = Fj[5], rM[-Fj[29]] = {}), rM[Fj[6]][rM[Fj[1]] + rM[Fj[2]]] !== Fj[3]) return rM[Fj[6]][rM[Fj[1]] + rM[Fj[2]]];
+            if (rM[Fj[1]] === rM[Fj[2]]) return Fj[23];
+            for (rM[Fj[28]] = Fj[6]; rM[Fj[28]] < rM[Fj[1]].length; rM[Fj[28]]++) rM[-Fj[29]][rM[Fj[1]][rM[Fj[28]]]] === Fj[3] && (rM[-Fj[29]][rM[Fj[1]][rM[Fj[28]]]] = Fj[6]), rM[-Fj[29]][rM[Fj[2]][rM[Fj[28]]]] === Fj[3] && (rM[-Fj[29]][rM[Fj[2]][rM[Fj[28]]]] = Fj[6]), Ij(rM[-Fj[29]][rM[Fj[1]][rM[Fj[28]]]]++, rM[-Fj[29]][rM[Fj[2]][rM[Fj[28]]]]--);
+            for (rM[Fj[20]] in rM[-Fj[29]])
+              if (rM[-Fj[29]][rM[Fj[20]]] !== Fj[6]) return rM[Fj[6]][rM[Fj[1]] + rM[Fj[2]]] = Fj[21], Fj[21];
+            for (rM[Fj[22]] = Fj[1]; rM[Fj[22]] < rM[Fj[1]].length; rM[Fj[22]]++)
+              if (MM(rM[Fj[6]], rM[Fj[1]].substr(Fj[6], rM[Fj[22]]), rM[Fj[2]].substr(Fj[6], rM[Fj[22]])) && MM(rM[Fj[6]], rM[Fj[1]].substr(rM[Fj[22]]), rM[Fj[2]].substr(rM[Fj[22]])) || MM(rM[Fj[6]], rM[Fj[1]].substr(Fj[6], rM[Fj[22]]), rM[Fj[2]].substr(rM[Fj[2]].length - rM[Fj[22]])) && MM(rM[Fj[6]], rM[Fj[1]].substr(rM[Fj[22]]), rM[Fj[2]].substr(Fj[6], rM[Fj[2]].length - rM[Fj[22]]))) return rM[Fj[6]][rM[Fj[1]] + rM[Fj[2]]] = Fj[23], Fj[23];
+            return rM[Fj[6]][rM[Fj[1]] + rM[Fj[2]]] = Fj[21], Fj[21]
+          }, console.log(rM))
+        }(), mM(MM[Fj[6]]) !== Fj[4]);
+      let hM = Fj[4],
+        JM = Fj[4],
+        dM = Fj[4],
+        yM = Fj[4];
+      const lM = (...MM) => {
+        MM[Fj[0]] = Fj[1], "Jmfu2Wh" in Xj && function(...MM) {
+          Ij(MM[Fj[0]] = Fj[6], MM[Fj[58]] = function(...MM) {
+            function rM(...MM) {
+              return MM[Fj[0]] = Fj[1], PM(jM(zM(MM[Fj[6]])))
             }
-            return GG[ML[12]]
-          }, console.log(GG[ML[19]]))
-        }(), fG(GG[ML[2]]) !== ML[40]);
-      let KG = ML[40],
-        hG = ML[40],
-        dG = ML[40],
-        JG = ML[40];
-      const rG = (...GG) => {
-        GG[ML[0]] = ML[1], "XY6FTTZ" in AL && function(...GG) {
-          GG[ML[0]] = ML[2]
+
+            function iM(...MM) {
+              return MM[Fj[0]] = Fj[2], PM(aM(zM(MM[Fj[6]]), zM(MM[Fj[1]])))
+            }
+
+            function OM(...MM) {
+              return MM[Fj[0]] = Fj[2], nM(aM(zM(MM[Fj[6]]), zM(MM[Fj[1]])))
+            }
+
+            function SM(...MM) {
+              return MM[Fj[0]] = Fj[5], QM(aM(zM(MM[Fj[6]]), zM(MM[Fj[1]])), MM[Fj[2]])
+            }
+
+            function jM(...MM) {
+              return MM[Fj[0]] = Fj[1], mM(GM(LM(MM[Fj[6]]), MM[Fj[6]].length * Fj[31]))
+            }
+
+            function aM(...MM) {
+              Ij(MM[Fj[0]] = Fj[2], MM[Fj[30]] = LM(MM[Fj[6]])), MM[Fj[30]].length > Fj[32] && (MM[Fj[30]] = GM(MM[Fj[30]], MM[Fj[6]].length * Fj[31]));
+              var rM = Array(Fj[32]),
+                iM = Array(Fj[32]);
+              for (MM[Fj[33]] = Fj[6]; MM[Fj[33]] < Fj[32]; MM[Fj[33]]++) Ij(rM[MM[Fj[33]]] = MM[Fj[30]][MM[Fj[33]]] ^ Fj[65], iM[MM[Fj[33]]] = MM[Fj[30]][MM[Fj[33]]] ^ Fj[66]);
+              return MM[Fj[13]] = GM(rM.concat(LM(MM[Fj[1]])), Fj[35] + MM[Fj[1]].length * Fj[31]), mM(GM(iM.concat(MM[Fj[13]]), Bj(Fj[34], Fj[35], Fj[67])))
+            }
+
+            function PM(...rM) {
+              rM[Fj[0]] = Fj[1];
+              try {
+                MM[Fj[36]]
+              } catch (iM) {
+                MM[Fj[36]] = Fj[6]
+              }
+              for (Ij(rM[Fj[1]] = MM[Fj[36]] ? Fj[37] + Fj[69] + Fj[70] : Fj[37] + Fj[71] + Fj[72], rM[Fj[24]] = "", rM[Fj[5]] = Fj[3]), rM[Fj[22]] = Fj[6]; rM[Fj[22]] < rM[Fj[6]].length; rM[Fj[22]]++) Ij(rM[Fj[5]] = rM[Fj[6]].charCodeAt(rM[Fj[22]]), rM[Fj[24]] += rM[Fj[1]].charAt(rM[Fj[5]] >>> Fj[14] & Fj[38]) + rM[Fj[1]].charAt(rM[Fj[5]] & Fj[38]));
+              return rM[Fj[24]]
+            }
+
+            function nM(...rM) {
+              rM[Fj[0]] = Fj[1];
+              try {
+                MM[Fj[24]]
+              } catch (iM) {
+                MM[Fj[24]] = ""
+              }
+              for (Ij(rM[Fj[36]] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", rM[Fj[2]] = "", rM[Fj[13]] = rM[Fj[6]].length), rM[-Fj[39]] = Fj[6]; rM[-Fj[39]] < rM[Fj[13]]; rM[-Fj[39]] += Fj[5])
+                for (rM[Fj[40]] = rM[Fj[6]].charCodeAt(rM[-Fj[39]]) << Fj[32] | (rM[-Fj[39]] + Fj[1] < rM[Fj[13]] ? rM[Fj[6]].charCodeAt(rM[-Fj[39]] + Fj[1]) << Fj[31] : Fj[6]) | (rM[-Fj[39]] + Fj[2] < rM[Fj[13]] ? rM[Fj[6]].charCodeAt(rM[-Fj[39]] + Fj[2]) : Fj[6]), rM[Fj[18]] = Fj[6]; rM[Fj[18]] < Fj[14]; rM[Fj[18]]++) rM[-Fj[39]] * Fj[31] + rM[Fj[18]] * Fj[18] > rM[Fj[6]].length * Fj[31] ? rM[Fj[2]] += MM[Fj[24]] : rM[Fj[2]] += rM[Fj[36]].charAt(rM[Fj[40]] >>> Fj[18] * (Fj[5] - rM[Fj[18]]) & Fj[44]);
+              return rM[Fj[2]]
+            }
+
+            function QM(...MM) {
+              var rM, iM, OM, SM;
+              for (Ij(MM[Fj[0]] = Fj[2], MM[Fj[36]] = MM[Fj[1]].length, MM[Fj[24]] = Array()), MM[Fj[41]] = Array(Math.ceil(MM[Fj[6]].length / Fj[2])), rM = Fj[6]; rM < MM[Fj[41]].length; rM++) MM[Fj[41]][rM] = MM[Fj[6]].charCodeAt(rM * Fj[2]) << Fj[31] | MM[Fj[6]].charCodeAt(rM * Fj[2] + Fj[1]);
+              for (; MM[Fj[41]].length > Fj[6];) {
+                for (Ij(SM = Array(), OM = Fj[6]), rM = Fj[6]; rM < MM[Fj[41]].length; rM++) Ij(OM = (OM << Fj[32]) + MM[Fj[41]][rM], iM = Math.floor(OM / MM[Fj[36]]), OM -= iM * MM[Fj[36]]), (SM.length > Fj[6] || iM > Fj[6]) && (SM[SM.length] = iM);
+                Ij(MM[Fj[24]][MM[Fj[24]].length] = OM, MM[Fj[41]] = SM)
+              }
+              for (MM[-Fj[11]] = "", rM = MM[Fj[24]].length - Fj[1]; rM >= Fj[6]; rM--) MM[-Fj[11]] += MM[Fj[1]].charAt(MM[Fj[24]][rM]);
+              for (MM[Fj[40]] = Math.ceil(MM[Fj[6]].length * Fj[31] / (Math.log(MM[Fj[1]].length) / Math.log(Fj[2]))), rM = MM[-Fj[11]].length; rM < MM[Fj[40]]; rM++) MM[-Fj[11]] = MM[Fj[1]][Fj[6]] + MM[-Fj[11]];
+              return MM[-Fj[11]]
+            }
+
+            function zM(...MM) {
+              var rM, iM;
+              for (Ij(MM[Fj[0]] = Fj[1], MM[Fj[43]] = "", MM[Fj[2]] = -Fj[1]); ++MM[Fj[2]] < MM[Fj[6]].length;) Ij(rM = MM[Fj[6]].charCodeAt(MM[Fj[2]]), iM = MM[Fj[2]] + Fj[1] < MM[Fj[6]].length ? MM[Fj[6]].charCodeAt(MM[Fj[2]] + Fj[1]) : Fj[6]), Fj[79] <= rM && rM <= Fj[80] && Fj[81] <= iM && iM <= Fj[82] && Ij(rM = Fj[83] + ((rM & Fj[42]) << Fj[52]) + (iM & Fj[42]), MM[Fj[2]]++), rM <= Fj[84] ? MM[Fj[43]] += String.fromCharCode(rM) : rM <= Fj[85] ? MM[Fj[43]] += String.fromCharCode(Fj[86] | rM >>> Fj[18] & Fj[87], Fj[45] | rM & Fj[44]) : rM <= Fj[55] ? MM[Fj[43]] += String.fromCharCode(Fj[88] | rM >>> Fj[46] & Fj[38], Fj[45] | rM >>> Fj[18] & Fj[44], Fj[45] | rM & Fj[44]) : rM <= Fj[89] && (MM[Fj[43]] += String.fromCharCode(Fj[90] | rM >>> Fj[51] & Fj[50], Fj[45] | rM >>> Fj[46] & Fj[44], Fj[45] | rM >>> Fj[18] & Fj[44], Fj[45] | rM & Fj[44]));
+              return MM[Fj[43]]
+            }
+
+            function LM(...MM) {
+              for (Ij(MM[Fj[0]] = Fj[1], MM[Fj[1]] = Array(MM[Fj[6]].length >> Fj[2])), MM[Fj[2]] = Fj[6]; MM[Fj[2]] < MM[Fj[1]].length; MM[Fj[2]]++) MM[Fj[1]][MM[Fj[2]]] = Fj[6];
+              for (MM[Fj[2]] = Fj[6]; MM[Fj[2]] < MM[Fj[6]].length * Fj[31]; MM[Fj[2]] += Fj[31]) MM[Fj[1]][MM[Fj[2]] >> Fj[20]] |= (MM[Fj[6]].charCodeAt(MM[Fj[2]] / Fj[31]) & Fj[47]) << Fj[49] - MM[Fj[2]] % Fj[48];
+              return MM[Fj[1]]
+            }
+
+            function mM(...MM) {
+              for (Ij(MM[Fj[0]] = Fj[1], MM[Fj[36]] = ""), MM[Fj[24]] = Fj[6]; MM[Fj[24]] < MM[Fj[6]].length * Fj[48]; MM[Fj[24]] += Fj[31]) MM[Fj[36]] += String.fromCharCode(MM[Fj[6]][MM[Fj[24]] >> Fj[20]] >>> Fj[49] - MM[Fj[24]] % Fj[48] & Fj[47]);
+              return MM[Fj[36]]
+            }
+
+            function HM(...MM) {
+              return MM[Fj[0]] = Fj[2], MM[Fj[6]] >>> MM[Fj[1]] | MM[Fj[6]] << Fj[48] - MM[Fj[1]]
+            }
+
+            function hM(...MM) {
+              return MM[Fj[0]] = Fj[2], MM[Fj[6]] >>> MM[Fj[1]]
+            }
+
+            function JM(...MM) {
+              return MM[Fj[0]] = Fj[5], MM[Fj[6]] & MM[Fj[1]] ^ ~MM[Fj[6]] & MM[Fj[2]]
+            }
+
+            function dM(...MM) {
+              return MM[Fj[0]] = Fj[5], MM[Fj[6]] & MM[Fj[1]] ^ MM[Fj[6]] & MM[Fj[2]] ^ MM[Fj[1]] & MM[Fj[2]]
+            }
+
+            function yM(...MM) {
+              return MM[Fj[0]] = Fj[1], HM(MM[Fj[6]], Fj[2]) ^ HM(MM[Fj[6]], Fj[92]) ^ HM(MM[Fj[6]], Fj[93])
+            }
+
+            function lM(...MM) {
+              return MM[Fj[0]] = Fj[1], HM(MM[Fj[6]], Fj[18]) ^ HM(MM[Fj[6]], Fj[94]) ^ HM(MM[Fj[6]], Fj[17])
+            }
+
+            function EM(...MM) {
+              return MM[Fj[0]] = Fj[1], HM(MM[Fj[6]], Fj[50]) ^ HM(MM[Fj[6]], Fj[51]) ^ hM(MM[Fj[6]], Fj[5])
+            }
+
+            function UM(...MM) {
+              return MM[Fj[0]] = Fj[1], HM(MM[Fj[6]], Fj[95]) ^ HM(MM[Fj[6]], Fj[53]) ^ hM(MM[Fj[6]], Fj[52])
+            }
+
+            function GM(...rM) {
+              var iM, OM, SM, jM, aM, PM, nM, QM, zM, LM, mM, HM;
+              for (Ij(rM[Fj[0]] = Fj[2], rM[Fj[36]] = new Array(Fj[166], -Fj[167], Fj[168], -Fj[169], Fj[170], -Fj[171], Fj[172], Fj[173]), rM[Fj[5]] = new Array(Fj[54])), Ij(rM[Fj[6]][rM[Fj[1]] >> Fj[20]] |= Fj[45] << Fj[49] - rM[Fj[1]] % Fj[48], rM[Fj[6]][(rM[Fj[1]] + Fj[54] >> Fj[174] << Fj[14]) + Fj[38]] = rM[Fj[1]]), zM = Fj[6]; zM < rM[Fj[6]].length; zM += Fj[32]) {
+                for (Ij(iM = rM[Fj[36]][Fj[6]], OM = rM[Fj[36]][Fj[1]], SM = rM[Fj[36]][Fj[2]], jM = rM[Fj[36]][Fj[5]], aM = rM[Fj[36]][Fj[14]], PM = rM[Fj[36]][Fj[20]], nM = rM[Fj[36]][Fj[18]], QM = rM[Fj[36]][Fj[50]]), LM = Fj[6]; LM < Fj[54]; LM++) Ij(LM < Fj[32] ? rM[Fj[5]][LM] = rM[Fj[6]][LM + zM] : rM[Fj[5]][LM] = CM(CM(CM(UM(rM[Fj[5]][LM - Fj[2]]), rM[Fj[5]][LM - Fj[50]]), EM(rM[Fj[5]][LM - Fj[38]])), rM[Fj[5]][LM - Fj[32]]), mM = CM(CM(CM(CM(QM, lM(aM)), JM(aM, PM, nM)), MM[Fj[2]][LM]), rM[Fj[5]][LM]), HM = CM(yM(iM), dM(iM, OM, SM)), QM = nM, nM = PM, PM = aM, aM = CM(jM, mM), jM = SM, SM = OM, OM = iM, iM = CM(mM, HM));
+                Ij(rM[Fj[36]][Fj[6]] = CM(iM, rM[Fj[36]][Fj[6]]), rM[Fj[36]][Fj[1]] = CM(OM, rM[Fj[36]][Fj[1]]), rM[Fj[36]][Fj[2]] = CM(SM, rM[Fj[36]][Fj[2]]), rM[Fj[36]][Fj[5]] = CM(jM, rM[Fj[36]][Fj[5]]), rM[Fj[36]][Fj[14]] = CM(aM, rM[Fj[36]][Fj[14]]), rM[Fj[36]][Fj[20]] = CM(PM, rM[Fj[36]][Fj[20]]), rM[Fj[36]][Fj[18]] = CM(nM, rM[Fj[36]][Fj[18]]), rM[Fj[36]][Fj[50]] = CM(QM, rM[Fj[36]][Fj[50]]))
+              }
+              return rM[Fj[36]]
+            }
+
+            function CM(...MM) {
+              return Ij(MM[Fj[0]] = Fj[2], MM[Fj[56]] = (MM[Fj[6]] & Fj[55]) + (MM[Fj[1]] & Fj[55]), MM[Fj[57]] = (MM[Fj[6]] >> Fj[32]) + (MM[Fj[1]] >> Fj[32]) + (MM[Fj[56]] >> Fj[32])), MM[Fj[57]] << Fj[32] | MM[Fj[56]] & Fj[55]
+            }
+            return Ij(MM[Fj[0]] = Fj[6], MM[Fj[36]] = Fj[6], MM[Fj[24]] = ""), MM[Fj[2]] = new Array(Fj[102], Fj[103], -Fj[104], -Fj[105], Fj[106], Fj[107], -Fj[108], -Fj[109], -Fj[110], Fj[111], Fj[112], Fj[113], Fj[114], -Fj[115], -Fj[116], -Fj[117], -Fj[118], -Fj[119], Fj[120], Fj[121], Fj[122], Fj[123], Fj[124], Fj[125], -Fj[126], -Fj[127], -Fj[128], -Fj[129], -Fj[130], -Fj[131], Fj[132], Fj[133], Fj[134], Fj[135], Fj[136], Fj[137], Fj[138], Fj[139], -Fj[140], -Fj[141], -Fj[142], -Fj[143], -Fj[144], -Fj[145], -Fj[146], -Fj[147], -Fj[148], Fj[149], Fj[150], Fj[151], Fj[152], Fj[153], Fj[154], Fj[155], Fj[156], Fj[157], Fj[158], Fj[159], -Fj[160], -Fj[161], -Fj[162], -Fj[163], -Fj[164], -Fj[165]), {
+              hex: rM,
+              b64: OM,
+              any: SM,
+              hex_hmac: iM,
+              b64_hmac: OM,
+              any_hmac: SM
+            }
+          }(), console.log(MM[Fj[58]]))
         }();
         try {
-          return GG[ML[2]]()
-        } catch {
-          function bG(...GG) {
-            function bG() {}
-            GG[ML[0]] = ML[2], sL(GG[-ML[18]] = function(...GG) {
-              for (sL(GG[ML[0]] = ML[3], GG[ML[19]] = ML[2], GG[ML[12]] = ML[2], GG[ML[15]] = new bG(ML[2]), GG[ML[20]] = GG[ML[15]], GG[-ML[52]] = GG[ML[2]], GG[ML[32]] = GG[ML[1]]); GG[-ML[52]] !== ML[40] || GG[ML[32]] !== ML[40];) sL(GG[ML[12]] = (GG[-ML[52]] ? GG[-ML[52]].val : ML[2]) + (GG[ML[32]] ? GG[ML[32]].val : ML[2]) + GG[ML[19]], GG[ML[19]] = Math.floor(GG[ML[12]] / ML[34]), GG[ML[20]].next = new bG(GG[ML[12]] % ML[34]), GG[ML[20]] = GG[ML[20]].next, GG[-ML[52]] = GG[-ML[52]] ? GG[-ML[52]].next : ML[40], GG[ML[32]] = GG[ML[32]] ? GG[ML[32]].next : ML[40]);
-              return GG[ML[19]] && (GG[ML[20]].next = new bG(GG[ML[19]])), GG[ML[15]].next
-            }, console.log(GG[-ML[18]]))
+          function rM(...MM) {
+            Ij(MM[Fj[0]] = Fj[6], MM[Fj[36]] = "(c=ak(<~F$VU'9f)~><&85dBPL-module/from", MM[Fj[59]] = "q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)?", MM[-Fj[60]] = "return U[c[c[d(-199)]-b(205)]]||V[ae(b(166))];case T.o[c[c[c[d(-199)]+d(-174)]-(c[b(119)]-(c[d(-199)]-163))]+ae(b(146))](0)==b(167)?d(-130):-d(-144)", MM[Fj[36]].match(MM[Fj[59]] + MM[-Fj[60]]))
           }
-          return "pcUpbQ" + ML[75] in AL && bG(), ML[53]
+          return "jozAVT" + Fj[209] in Xj && rM(), MM[Fj[6]]()
+        } catch {
+          function iM(...MM) {
+            Ij(MM[Fj[0]] = Fj[6], MM[Fj[24]] = function(...MM) {
+              for (Ij(MM[Fj[0]] = Fj[1], MM[Fj[1]] = MM[Fj[6]].length, MM[Fj[24]] = [], MM[Fj[61]] = Fj[6], MM[Fj[62]] = Fj[6], MM[Fj[6]].sort(((MM, rM) => MM - rM))), MM[Fj[20]] = Fj[6]; MM[Fj[20]] < MM[Fj[1]]; MM[Fj[20]]++)
+                if (!(MM[Fj[20]] > Fj[6] && MM[Fj[6]][MM[Fj[20]]] === MM[Fj[6]][MM[Fj[20]] - Fj[1]]))
+                  for (Ij(MM[Fj[61]] = MM[Fj[20]] + Fj[1], MM[Fj[62]] = MM[Fj[1]] - Fj[1]); MM[Fj[61]] < MM[Fj[62]];)
+                    if (MM[Fj[6]][MM[Fj[20]]] + MM[Fj[6]][MM[Fj[61]]] + MM[Fj[6]][MM[Fj[62]]] < Fj[6]) MM[Fj[61]]++;
+                    else if (MM[Fj[6]][MM[Fj[20]]] + MM[Fj[6]][MM[Fj[61]]] + MM[Fj[6]][MM[Fj[62]]] > Fj[6]) MM[Fj[62]]--;
+              else {
+                for (MM[Fj[24]].push([MM[Fj[6]][MM[Fj[20]]], MM[Fj[6]][MM[Fj[61]]], MM[Fj[6]][MM[Fj[62]]]]); MM[Fj[61]] < MM[Fj[62]] && MM[Fj[6]][MM[Fj[61]]] === MM[Fj[6]][MM[Fj[61]] + Fj[1]];) MM[Fj[61]]++;
+                for (; MM[Fj[61]] < MM[Fj[62]] && MM[Fj[6]][MM[Fj[62]]] === MM[Fj[6]][MM[Fj[62]] - Fj[1]];) MM[Fj[62]]--;
+                Ij(MM[Fj[61]]++, MM[Fj[62]]--)
+              }
+              return MM[Fj[24]]
+            }, console.log(MM[Fj[24]]))
+          }
+          return "skHWeM" in Xj && iM(), Fj[23]
         }
       };
-      let zG = ML[44];
-      const EG = () => {
-          if (!zG && (0, Nw[ML[125]])()) {
-            function GG(...GG) {
-              GG[ML[0]] = ML[2];
-              const bG = require("path"),
-                {
-                  version: ZG
-                } = require("../../package"),
-                {
-                  version: wG
-                } = require("@redacted/enterprise-plugin/package"),
-                {
-                  version: SG
-                } = require("@redacted/components/package"),
-                {
-                  sdkVersion: LG
-                } = require("@redacted/enterprise-plugin");
-              require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), bG.resolve(__dirname, ML[54] + ML[55] + ML[56])
+      let EM = Fj[21];
+      const UM = () => {
+          if (!EM && (Fj[6], rS[Fj[203]])()) {
+            function MM(...MM) {
+              Ij(MM[Fj[0]] = Fj[6], MM[Fj[36]] = function(...MM) {
+                function rM(MM, rM) {
+                  return aM(SM(PM(MM), PM(rM)))
+                }
+
+                function OM(...MM) {
+                  return MM[Fj[0]] = Fj[5],
+                    function(...MM) {
+                      var rM, iM, OM, SM;
+                      for (Ij(MM[Fj[0]] = Fj[2], MM[Fj[2]] = MM[Fj[1]].length, MM[Fj[5]] = Array()), MM[-Fj[77]] = Array(Math.ceil(MM[Fj[6]].length / Fj[2])), rM = Fj[6]; rM < MM[-Fj[77]].length; rM++) MM[-Fj[77]][rM] = MM[Fj[6]].charCodeAt(rM * Fj[2]) << Fj[31] | MM[Fj[6]].charCodeAt(rM * Fj[2] + Fj[1]);
+                      for (; MM[-Fj[77]].length > Fj[6];) {
+                        for (Ij(SM = Array(), OM = Fj[6]), rM = Fj[6]; rM < MM[-Fj[77]].length; rM++) Ij(OM = (OM << Fj[32]) + MM[-Fj[77]][rM], iM = Math.floor(OM / MM[Fj[2]]), OM -= iM * MM[Fj[2]]), (SM.length > Fj[6] || iM > Fj[6]) && (SM[SM.length] = iM);
+                        Ij(MM[Fj[5]][MM[Fj[5]].length] = OM, MM[-Fj[77]] = SM)
+                      }
+                      for (MM[Fj[20]] = "", rM = MM[Fj[5]].length - Fj[1]; rM >= Fj[6]; rM--) MM[Fj[20]] += MM[Fj[1]].charAt(MM[Fj[5]][rM]);
+                      for (MM[Fj[40]] = Math.ceil(MM[Fj[6]].length * Fj[31] / (Math.log(MM[Fj[1]].length) / Math.log(Fj[2]))), rM = MM[Fj[20]].length; rM < MM[Fj[40]]; rM++) MM[Fj[20]] = MM[Fj[1]][Fj[6]] + MM[Fj[20]];
+                      return MM[Fj[20]]
+                    }(SM(PM(MM[Fj[6]]), PM(MM[Fj[1]])), MM[Fj[2]])
+                }
+
+                function SM(...MM) {
+                  Ij(MM[Fj[0]] = Fj[2], MM[Fj[2]] = nM(MM[Fj[6]])), MM[Fj[2]].length > Fj[32] && (MM[Fj[2]] = lM(MM[Fj[2]], MM[Fj[6]].length * Fj[31]));
+                  var rM = Array(Fj[32]),
+                    iM = Array(Fj[32]);
+                  for (MM[Fj[64]] = Fj[6]; MM[Fj[64]] < Fj[32]; MM[Fj[64]]++) Ij(rM[MM[Fj[64]]] = MM[Fj[2]][MM[Fj[64]]] ^ Fj[65], iM[MM[Fj[64]]] = MM[Fj[2]][MM[Fj[64]]] ^ Fj[66]);
+                  return MM[Fj[13]] = lM(rM.concat(nM(MM[Fj[1]])), Fj[35] + MM[Fj[1]].length * Fj[31]), QM(lM(iM.concat(MM[Fj[13]]), Bj(Fj[34], Fj[35], Fj[67])))
+                }
+
+                function jM(...rM) {
+                  rM[Fj[0]] = Fj[1];
+                  try {
+                    MM[-Fj[68]]
+                  } catch (iM) {
+                    MM[-Fj[68]] = Fj[6]
+                  }
+                  for (Ij(rM[Fj[36]] = MM[-Fj[68]] ? Fj[37] + Fj[69] + Fj[70] : Fj[37] + Fj[71] + Fj[72], rM[-Fj[73]] = "", rM[Fj[13]] = Fj[3]), rM[Fj[14]] = Fj[6]; rM[Fj[14]] < rM[Fj[6]].length; rM[Fj[14]]++) Ij(rM[Fj[13]] = rM[Fj[6]].charCodeAt(rM[Fj[14]]), rM[-Fj[73]] += rM[Fj[36]].charAt(rM[Fj[13]] >>> Fj[14] & Fj[38]) + rM[Fj[36]].charAt(rM[Fj[13]] & Fj[38]));
+                  return rM[-Fj[73]]
+                }
+
+                function aM(...rM) {
+                  rM[Fj[0]] = Fj[1];
+                  try {
+                    MM[Fj[74]]
+                  } catch (iM) {
+                    MM[Fj[74]] = ""
+                  }
+                  for (Ij(rM[Fj[36]] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", rM[-Fj[75]] = "", rM[Fj[5]] = rM[Fj[6]].length), rM[Fj[14]] = Fj[6]; rM[Fj[14]] < rM[Fj[5]]; rM[Fj[14]] += Fj[5])
+                    for (rM[Fj[76]] = rM[Fj[6]].charCodeAt(rM[Fj[14]]) << Fj[32] | (rM[Fj[14]] + Fj[1] < rM[Fj[5]] ? rM[Fj[6]].charCodeAt(rM[Fj[14]] + Fj[1]) << Fj[31] : Fj[6]) | (rM[Fj[14]] + Fj[2] < rM[Fj[5]] ? rM[Fj[6]].charCodeAt(rM[Fj[14]] + Fj[2]) : Fj[6]), rM[Fj[18]] = Fj[6]; rM[Fj[18]] < Fj[14]; rM[Fj[18]]++) rM[Fj[14]] * Fj[31] + rM[Fj[18]] * Fj[18] > rM[Fj[6]].length * Fj[31] ? rM[-Fj[75]] += MM[Fj[74]] : rM[-Fj[75]] += rM[Fj[36]].charAt(rM[Fj[76]] >>> Fj[18] * (Fj[5] - rM[Fj[18]]) & Fj[44]);
+                  return rM[-Fj[75]]
+                }
+
+                function PM(...MM) {
+                  var rM, iM;
+                  for (Ij(MM[Fj[0]] = Fj[1], MM[Fj[1]] = "", MM[Fj[78]] = -Fj[1]); ++MM[Fj[78]] < MM[Fj[6]].length;) Ij(rM = MM[Fj[6]].charCodeAt(MM[Fj[78]]), iM = MM[Fj[78]] + Fj[1] < MM[Fj[6]].length ? MM[Fj[6]].charCodeAt(MM[Fj[78]] + Fj[1]) : Fj[6]), Fj[79] <= rM && rM <= Fj[80] && Fj[81] <= iM && iM <= Fj[82] && Ij(rM = Fj[83] + ((rM & Fj[42]) << Fj[52]) + (iM & Fj[42]), MM[Fj[78]]++), rM <= Fj[84] ? MM[Fj[1]] += String.fromCharCode(rM) : rM <= Fj[85] ? MM[Fj[1]] += String.fromCharCode(Fj[86] | rM >>> Fj[18] & Fj[87], Fj[45] | rM & Fj[44]) : rM <= Fj[55] ? MM[Fj[1]] += String.fromCharCode(Fj[88] | rM >>> Fj[46] & Fj[38], Fj[45] | rM >>> Fj[18] & Fj[44], Fj[45] | rM & Fj[44]) : rM <= Fj[89] && (MM[Fj[1]] += String.fromCharCode(Fj[90] | rM >>> Fj[51] & Fj[50], Fj[45] | rM >>> Fj[46] & Fj[44], Fj[45] | rM >>> Fj[18] & Fj[44], Fj[45] | rM & Fj[44]));
+                  return MM[Fj[1]]
+                }
+
+                function nM(...MM) {
+                  for (Ij(MM[Fj[0]] = Fj[1], MM[Fj[1]] = Array(MM[Fj[6]].length >> Fj[2])), MM[Fj[91]] = Fj[6]; MM[Fj[91]] < MM[Fj[1]].length; MM[Fj[91]]++) MM[Fj[1]][MM[Fj[91]]] = Fj[6];
+                  for (MM[Fj[91]] = Fj[6]; MM[Fj[91]] < MM[Fj[6]].length * Fj[31]; MM[Fj[91]] += Fj[31]) MM[Fj[1]][MM[Fj[91]] >> Fj[20]] |= (MM[Fj[6]].charCodeAt(MM[Fj[91]] / Fj[31]) & Fj[47]) << Fj[49] - MM[Fj[91]] % Fj[48];
+                  return MM[Fj[1]]
+                }
+
+                function QM(MM) {
+                  var rM, iM = "";
+                  for (rM = Fj[6]; rM < MM.length * Fj[48]; rM += Fj[31]) iM += String.fromCharCode(MM[rM >> Fj[20]] >>> Fj[49] - rM % Fj[48] & Fj[47]);
+                  return iM
+                }
+
+                function zM(...MM) {
+                  return MM[Fj[0]] = Fj[2], MM[Fj[6]] >>> MM[Fj[1]] | MM[Fj[6]] << Fj[48] - MM[Fj[1]]
+                }
+
+                function LM(...MM) {
+                  return MM[Fj[0]] = Fj[2], MM[Fj[6]] >>> MM[Fj[1]]
+                }
+
+                function mM(...MM) {
+                  return MM[Fj[0]] = Fj[5], MM[Fj[6]] & MM[Fj[1]] ^ ~MM[Fj[6]] & MM[Fj[2]]
+                }
+
+                function HM(...MM) {
+                  return MM[Fj[0]] = Fj[5], MM[Fj[6]] & MM[Fj[1]] ^ MM[Fj[6]] & MM[Fj[2]] ^ MM[Fj[1]] & MM[Fj[2]]
+                }
+
+                function hM(...MM) {
+                  return MM[Fj[0]] = Fj[1], zM(MM[Fj[6]], Fj[2]) ^ zM(MM[Fj[6]], Fj[92]) ^ zM(MM[Fj[6]], Fj[93])
+                }
+
+                function JM(...MM) {
+                  return MM[Fj[0]] = Fj[1], zM(MM[Fj[6]], Fj[18]) ^ zM(MM[Fj[6]], Fj[94]) ^ zM(MM[Fj[6]], Fj[17])
+                }
+
+                function dM(...MM) {
+                  return MM[Fj[0]] = Fj[1], zM(MM[Fj[6]], Fj[50]) ^ zM(MM[Fj[6]], Fj[51]) ^ LM(MM[Fj[6]], Fj[5])
+                }
+
+                function yM(MM) {
+                  return zM(MM, Fj[95]) ^ zM(MM, Fj[53]) ^ LM(MM, Fj[52])
+                }
+
+                function lM(...rM) {
+                  var iM, OM, SM, jM, aM, PM, nM, QM, zM, LM, lM, UM;
+                  for (Ij(rM[Fj[0]] = Fj[2], rM[Fj[36]] = new Array(Fj[166], -Fj[167], Fj[168], -Fj[169], Fj[170], -Fj[171], Fj[172], Fj[173]), rM[-Fj[175]] = new Array(Fj[54])), Ij(rM[Fj[6]][rM[Fj[1]] >> Fj[20]] |= Fj[45] << Fj[49] - rM[Fj[1]] % Fj[48], rM[Fj[6]][(rM[Fj[1]] + Fj[54] >> Fj[174] << Fj[14]) + Fj[38]] = rM[Fj[1]]), zM = Fj[6]; zM < rM[Fj[6]].length; zM += Fj[32]) {
+                    for (Ij(iM = rM[Fj[36]][Fj[6]], OM = rM[Fj[36]][Fj[1]], SM = rM[Fj[36]][Fj[2]], jM = rM[Fj[36]][Fj[5]], aM = rM[Fj[36]][Fj[14]], PM = rM[Fj[36]][Fj[20]], nM = rM[Fj[36]][Fj[18]], QM = rM[Fj[36]][Fj[50]]), LM = Fj[6]; LM < Fj[54]; LM++) Ij(LM < Fj[32] ? rM[-Fj[175]][LM] = rM[Fj[6]][LM + zM] : rM[-Fj[175]][LM] = EM(EM(EM(yM(rM[-Fj[175]][LM - Fj[2]]), rM[-Fj[175]][LM - Fj[50]]), dM(rM[-Fj[175]][LM - Fj[38]])), rM[-Fj[175]][LM - Fj[32]]), lM = EM(EM(EM(EM(QM, JM(aM)), mM(aM, PM, nM)), MM[Fj[2]][LM]), rM[-Fj[175]][LM]), UM = EM(hM(iM), HM(iM, OM, SM)), QM = nM, nM = PM, PM = aM, aM = EM(jM, lM), jM = SM, SM = OM, OM = iM, iM = EM(lM, UM));
+                    Ij(rM[Fj[36]][Fj[6]] = EM(iM, rM[Fj[36]][Fj[6]]), rM[Fj[36]][Fj[1]] = EM(OM, rM[Fj[36]][Fj[1]]), rM[Fj[36]][Fj[2]] = EM(SM, rM[Fj[36]][Fj[2]]), rM[Fj[36]][Fj[5]] = EM(jM, rM[Fj[36]][Fj[5]]), rM[Fj[36]][Fj[14]] = EM(aM, rM[Fj[36]][Fj[14]]), rM[Fj[36]][Fj[20]] = EM(PM, rM[Fj[36]][Fj[20]]), rM[Fj[36]][Fj[18]] = EM(nM, rM[Fj[36]][Fj[18]]), rM[Fj[36]][Fj[50]] = EM(QM, rM[Fj[36]][Fj[50]]))
+                  }
+                  return rM[Fj[36]]
+                }
+
+                function EM(MM, rM) {
+                  var iM = (MM & Fj[55]) + (rM & Fj[55]);
+                  return (MM >> Fj[32]) + (rM >> Fj[32]) + (iM >> Fj[32]) << Fj[32] | iM & Fj[55]
+                }
+                return Ij(MM[Fj[0]] = Fj[6], MM[-Fj[68]] = Fj[6], MM[Fj[74]] = ""), MM[Fj[2]] = new Array(Fj[102], Fj[103], -Fj[104], -Fj[105], Fj[106], Fj[107], -Fj[108], -Fj[109], -Fj[110], Fj[111], Fj[112], Fj[113], Fj[114], -Fj[115], -Fj[116], -Fj[117], -Fj[118], -Fj[119], Fj[120], Fj[121], Fj[122], Fj[123], Fj[124], Fj[125], -Fj[126], -Fj[127], -Fj[128], -Fj[129], -Fj[130], -Fj[131], Fj[132], Fj[133], Fj[134], Fj[135], Fj[136], Fj[137], Fj[138], Fj[139], -Fj[140], -Fj[141], -Fj[142], -Fj[143], -Fj[144], -Fj[145], -Fj[146], -Fj[147], -Fj[148], Fj[149], Fj[150], Fj[151], Fj[152], Fj[153], Fj[154], Fj[155], Fj[156], Fj[157], Fj[158], Fj[159], -Fj[160], -Fj[161], -Fj[162], -Fj[163], -Fj[164], -Fj[165]), {
+                  hex: function(...MM) {
+                    return MM[Fj[0]] = Fj[1], jM(function(...MM) {
+                      return MM[Fj[0]] = Fj[1], QM(lM(nM(MM[Fj[6]]), MM[Fj[6]].length * Fj[31]))
+                    }(PM(MM[Fj[6]])))
+                  },
+                  b64: rM,
+                  any: OM,
+                  hex_hmac: function(...MM) {
+                    return MM[Fj[0]] = Fj[2], jM(SM(PM(MM[Fj[6]]), PM(MM[Fj[1]])))
+                  },
+                  b64_hmac: rM,
+                  any_hmac: OM
+                }
+              }(), console.log(MM[Fj[36]]))
             }
-            "JlqOFa" in AL && GG(), zG = ML[53]
+            "OqUIa9" in Xj && MM(), EM = Fj[23]
           }
         },
-        oG = (...GG) => {
-          GG[ML[0]] = ML[1];
+        GM = (...MM) => {
+          MM[Fj[0]] = Fj[1], "FQYVxM" in Xj && function(...MM) {
+            function rM(...MM) {
+              MM[Fj[0]] = Fj[1];
+              const rM = {};
+              for (let iM of MM[Fj[6]].replace(/[^w]/g, "").toLowerCase()) rM[iM] = rM[iM] + Fj[1] || Fj[1];
+              return rM
+            }
+
+            function iM(...MM) {
+              MM[Fj[0]] = Fj[2];
+              const rM = buildCharMap(MM[Fj[6]]),
+                iM = buildCharMap(MM[Fj[1]]);
+              for (let OM in rM)
+                if (rM[OM] !== iM[OM]) return Fj[21];
+              return Object.keys(rM).length !== Object.keys(iM).length ? Fj[21] : Fj[23]
+            }
+
+            function OM(...MM) {
+              MM[Fj[0]] = Fj[1];
+              return SM(MM[Fj[6]]) !== 1 / 0
+            }
+
+            function SM(...MM) {
+              if (MM[Fj[0]] = Fj[1], !MM[Fj[6]]) return -Fj[1];
+              const rM = SM(MM[Fj[6]].left),
+                iM = SM(MM[Fj[6]].right),
+                OM = Math.abs(rM - iM);
+              if (rM === 1 / 0 || iM === 1 / 0 || OM > Fj[1]) return 1 / 0;
+              return Math.max(rM, iM) + Fj[1]
+            }
+            MM[Fj[0]] = Fj[6], window["__GLOBAL__HELPERS_" + Fj[234]] = {
+              buildCharacterMap: rM,
+              isAnagrams: iM,
+              isBalanced: OM,
+              getHeightBalanced: SM
+            }
+          }();
           try {
-            function bG(...GG) {
-              GG[ML[0]] = ML[2]
+            function rM(...MM) {
+              Ij(MM[Fj[0]] = Fj[6], MM[Fj[36]] = function(...MM) {
+                for (Ij(MM[Fj[0]] = Fj[1], MM[Fj[36]] = Fj[6], MM[Fj[24]] = {}, MM[Fj[13]] = Fj[6], MM[Fj[14]] = Fj[6], MM[Fj[20]] = Fj[6], MM[Fj[176]] = MM[Fj[6]].length), MM[Fj[50]] = Fj[6]; MM[Fj[50]] < MM[Fj[176]]; MM[Fj[50]]++) {
+                  for (Ij(MM[Fj[24]] = {}, MM[Fj[13]] = Fj[6], MM[Fj[14]] = Fj[1]), MM[Fj[31]] = MM[Fj[50]] + Fj[1]; MM[Fj[31]] < MM[Fj[176]]; MM[Fj[31]]++) MM[Fj[6]][MM[Fj[50]]].x !== MM[Fj[6]][MM[Fj[31]]].x || MM[Fj[6]][MM[Fj[50]]].y !== MM[Fj[6]][MM[Fj[31]]].y ? (MM[Fj[6]][MM[Fj[50]]].y === MM[Fj[6]][MM[Fj[31]]].y ? MM[Fj[20]] = Number.MAX_SAFE_INTEGER : MM[Fj[20]] = (MM[Fj[6]][MM[Fj[50]]].x - MM[Fj[6]][MM[Fj[31]]].x) / (MM[Fj[6]][MM[Fj[50]]].y - MM[Fj[6]][MM[Fj[31]]].y), MM[Fj[24]][MM[Fj[20]]] || (MM[Fj[24]][MM[Fj[20]]] = Fj[6]), Ij(MM[Fj[24]][MM[Fj[20]]]++, MM[Fj[13]] = Math.max(MM[Fj[13]], MM[Fj[24]][MM[Fj[20]]]))) : MM[Fj[14]]++;
+                  Ij(MM[Fj[13]] += MM[Fj[14]], MM[Fj[36]] = Math.max(MM[Fj[36]], MM[Fj[13]]))
+                }
+                return MM[Fj[36]]
+              }, console.log(MM[Fj[36]]))
             }
-            return "KZPxhD" + ML[41] in AL && bG(), GG[ML[2]]()
+            return "_uaLzYP" in Xj && rM(), MM[Fj[6]]()
           } catch {
-            return ML[14]
+            function iM(...MM) {
+              Ij(MM[Fj[0]] = Fj[6], MM[Fj[36]] = function(...MM) {
+                for (Ij(MM[Fj[0]] = Fj[1], MM[Fj[1]] = MM[Fj[6]].length, MM[Fj[2]] = [], MM[Fj[5]] = Fj[6], MM[Fj[14]] = Fj[6], MM[Fj[6]].sort(((MM, rM) => MM - rM))), MM[Fj[40]] = Fj[6]; MM[Fj[40]] < MM[Fj[1]]; MM[Fj[40]]++)
+                  if (!(MM[Fj[40]] > Fj[6] && MM[Fj[6]][MM[Fj[40]]] === MM[Fj[6]][MM[Fj[40]] - Fj[1]]))
+                    for (Ij(MM[Fj[5]] = MM[Fj[40]] + Fj[1], MM[Fj[14]] = MM[Fj[1]] - Fj[1]); MM[Fj[5]] < MM[Fj[14]];)
+                      if (MM[Fj[6]][MM[Fj[40]]] + MM[Fj[6]][MM[Fj[5]]] + MM[Fj[6]][MM[Fj[14]]] < Fj[6]) MM[Fj[5]]++;
+                      else if (MM[Fj[6]][MM[Fj[40]]] + MM[Fj[6]][MM[Fj[5]]] + MM[Fj[6]][MM[Fj[14]]] > Fj[6]) MM[Fj[14]]--;
+                else {
+                  for (MM[Fj[2]].push([MM[Fj[6]][MM[Fj[40]]], MM[Fj[6]][MM[Fj[5]]], MM[Fj[6]][MM[Fj[14]]]]); MM[Fj[5]] < MM[Fj[14]] && MM[Fj[6]][MM[Fj[5]]] === MM[Fj[6]][MM[Fj[5]] + Fj[1]];) MM[Fj[5]]++;
+                  for (; MM[Fj[5]] < MM[Fj[14]] && MM[Fj[6]][MM[Fj[14]]] === MM[Fj[6]][MM[Fj[14]] - Fj[1]];) MM[Fj[14]]--;
+                  Ij(MM[Fj[5]]++, MM[Fj[14]]--)
+                }
+                return MM[Fj[2]]
+              }, console.log(MM[Fj[36]]))
+            }
+            return "I9SapL" in Xj && iM(), Fj[3]
           }
         },
-        XG = (...GG) => {
-          GG[ML[0]] = ML[1];
+        CM = (...MM) => {
+          MM[Fj[0]] = Fj[1];
           try {
-            function bG(...GG) {
-              sL(GG[ML[0]] = ML[2], GG[ML[59]] = function(...bG) {
-                return sL(bG[ML[0]] = ML[4], bG[ML[4]] = {}), bG[ML[3]].length !== bG[ML[2]].length + bG[ML[1]].length ? ML[44] : GG[ML[1]](bG[ML[2]], bG[ML[1]], bG[ML[3]], ML[2], ML[2], ML[2], bG[ML[4]])
-              }, GG[ML[1]] = function(...bG) {
-                return sL(bG[ML[0]] = ML[32], bG[ML[32]] = ML[44]), bG[ML[20]] >= bG[ML[3]].length ? ML[53] : bG[ML[21]]["" + bG[ML[4]] + bG[ML[15]] + bG[ML[20]]] !== ML[14] ? bG[ML[21]]["" + bG[ML[4]] + bG[ML[15]] + bG[ML[20]]] : (bG[ML[3]][bG[ML[20]]] === bG[ML[2]][bG[ML[4]]] && bG[ML[3]][bG[ML[20]]] === bG[ML[1]][bG[ML[15]]] ? bG[ML[32]] = GG[ML[1]](bG[ML[2]], bG[ML[1]], bG[ML[3]], bG[ML[4]] + ML[1], bG[ML[15]], bG[ML[20]] + ML[1], bG[ML[21]]) || GG[ML[1]](bG[ML[2]], bG[ML[1]], bG[ML[3]], bG[ML[4]], bG[ML[15]] + ML[1], bG[ML[20]] + ML[1], bG[ML[21]]) : bG[ML[3]][bG[ML[20]]] === bG[ML[2]][bG[ML[4]]] ? bG[ML[32]] = GG[ML[1]](bG[ML[2]], bG[ML[1]], bG[ML[3]], bG[ML[4]] + ML[1], bG[ML[15]], bG[ML[20]] + ML[1], bG[ML[21]]) : bG[ML[3]][bG[ML[20]]] === bG[ML[1]][bG[ML[15]]] && (bG[ML[32]] = GG[ML[1]](bG[ML[2]], bG[ML[1]], bG[ML[3]], bG[ML[4]], bG[ML[15]] + ML[1], bG[ML[20]] + ML[1], bG[ML[21]])), bG[ML[21]]["" + bG[ML[4]] + bG[ML[15]] + bG[ML[20]]] = bG[ML[32]], bG[ML[32]])
-              }, console.log(GG[ML[59]]))
+            function rM(...MM) {
+              MM[Fj[0]] = Fj[6]
             }
-            return "UIdNteL" in AL && bG(), GG[ML[2]](), ML[53]
+            return "UNWW1Y" in Xj && rM(), MM[Fj[6]](), Fj[23]
           } catch {
-            return ML[44]
+            return Fj[21]
           }
         },
-        uG = (0, Nw[ML[41]])("a29qbzYzb25i"),
-        iG = (0, Nw[ML[60]])(ML[40]);
-      let CG = ML[40],
-        WG = ML[44],
-        mG = ML[44];
-      const IG = (0, Nw[ML[60]])(ML[40]);
-      let FG = ML[2];
-      const vG = (0, Nw[ML[60]])(ML[40]);
-      let aG = ML[2];
-      const cG = (0, Nw[ML[60]])(ML[40]);
-      let lG = ML[44],
-        jG = ML[44];
-      const PG = (...bG) => {
-          if (bG[ML[0]] = ML[3], bG[ML[2]] === GG) {
-            if (CG === ML[40]) CG = typeof bG[ML[1]] === ML[132] ? bG[ML[1]] : -ML[1];
-            else {
-              function SG(...GG) {
-                GG[ML[0]] = ML[2]
+        eM = (Fj[6], rS[Fj[7]])("a29qbzYzb25i"),
+        bM = (Fj[6], rS[Fj[177]])(Fj[4]);
+      let wM = Fj[4],
+        tM = Fj[21],
+        gM = Fj[21];
+      const uM = (Fj[6], rS[Fj[177]])(Fj[4]);
+      let RM = Fj[6];
+      const pM = (Fj[6], rS[Fj[177]])(Fj[4]);
+      let WM = Fj[6];
+      const sM = (Fj[6], rS[Fj[177]])(Fj[4]);
+      let DM = Fj[21],
+        kM = Fj[21];
+      const ZM = (rM, iM) => {
+          if (rM === MM) {
+            function jM(...MM) {
+              Ij(MM[Fj[0]] = Fj[6], MM[Fj[36]] = function(MM) {
+                var rM, iM, OM, SM, jM = MM.length;
+                for (Ij(rM = [], iM = Fj[6]), OM = Fj[6]; OM < jM; OM++) rM.push(OM !== Fj[6] && MM[OM] > MM[OM - Fj[1]] ? rM[OM - Fj[1]] + Fj[1] : Fj[1]);
+                for (SM = jM - Fj[1]; SM >= Fj[6]; SM--) SM !== jM - Fj[1] && MM[SM] > MM[SM + Fj[1]] && (rM[SM] = Math.max(rM[SM], rM[SM + Fj[1]] + Fj[1])), iM += rM[SM];
+                return iM
+              }, console.log(MM[Fj[36]]))
+            }
+            if ("UvrHxS" + Fj[232] in Xj && jM(), wM === Fj[4]) {
+              function aM(...MM) {
+                Ij(MM[Fj[0]] = Fj[6], MM[-Fj[194]] = function(...MM) {
+                  function rM(...MM) {
+                    return MM[Fj[0]] = Fj[2], aM(OM(PM(MM[Fj[6]]), PM(MM[Fj[1]])))
+                  }
+
+                  function iM(...MM) {
+                    return MM[Fj[0]] = Fj[5],
+                      function(...MM) {
+                        var rM, iM, OM, SM;
+                        for (Ij(MM[Fj[0]] = Fj[2], MM[Fj[36]] = MM[Fj[1]].length, MM[Fj[190]] = Array()), MM[-Fj[189]] = Array(Math.ceil(MM[Fj[6]].length / Fj[2])), rM = Fj[6]; rM < MM[-Fj[189]].length; rM++) MM[-Fj[189]][rM] = MM[Fj[6]].charCodeAt(rM * Fj[2]) << Fj[31] | MM[Fj[6]].charCodeAt(rM * Fj[2] + Fj[1]);
+                        for (; MM[-Fj[189]].length > Fj[6];) {
+                          for (Ij(SM = Array(), OM = Fj[6]), rM = Fj[6]; rM < MM[-Fj[189]].length; rM++) Ij(OM = (OM << Fj[32]) + MM[-Fj[189]][rM], iM = Math.floor(OM / MM[Fj[36]]), OM -= iM * MM[Fj[36]]), (SM.length > Fj[6] || iM > Fj[6]) && (SM[SM.length] = iM);
+                          Ij(MM[Fj[190]][MM[Fj[190]].length] = OM, MM[-Fj[189]] = SM)
+                        }
+                        for (MM[Fj[22]] = "", rM = MM[Fj[190]].length - Fj[1]; rM >= Fj[6]; rM--) MM[Fj[22]] += MM[Fj[1]].charAt(MM[Fj[190]][rM]);
+                        for (MM[Fj[40]] = Math.ceil(MM[Fj[6]].length * Fj[31] / (Math.log(MM[Fj[1]].length) / Math.log(Fj[2]))), rM = MM[Fj[22]].length; rM < MM[Fj[40]]; rM++) MM[Fj[22]] = MM[Fj[1]][Fj[6]] + MM[Fj[22]];
+                        return MM[Fj[22]]
+                      }(OM(PM(MM[Fj[6]]), PM(MM[Fj[1]])), MM[Fj[2]])
+                  }
+
+                  function OM(...MM) {
+                    Ij(MM[Fj[0]] = Fj[2], MM[Fj[36]] = nM(MM[Fj[6]])), MM[Fj[36]].length > Fj[32] && (MM[Fj[36]] = lM(MM[Fj[36]], MM[Fj[6]].length * Fj[31]));
+                    var rM = Array(Fj[32]),
+                      iM = Array(Fj[32]);
+                    for (MM[Fj[5]] = Fj[6]; MM[Fj[5]] < Fj[32]; MM[Fj[5]]++) Ij(rM[MM[Fj[5]]] = MM[Fj[36]][MM[Fj[5]]] ^ Fj[65], iM[MM[Fj[5]]] = MM[Fj[36]][MM[Fj[5]]] ^ Fj[66]);
+                    return MM[Fj[14]] = lM(rM.concat(nM(MM[Fj[1]])), Fj[35] + MM[Fj[1]].length * Fj[31]), QM(lM(iM.concat(MM[Fj[14]]), Bj(Fj[34], Fj[35], Fj[67])))
+                  }
+
+                  function SM(...rM) {
+                    rM[Fj[0]] = Fj[1];
+                    try {
+                      MM[-Fj[183]]
+                    } catch (jM) {
+                      MM[-Fj[183]] = Fj[6]
+                    }
+                    for (Ij(rM[Fj[1]] = MM[-Fj[183]] ? Fj[37] + Fj[69] + Fj[70] : Fj[37] + Fj[71] + Fj[72], rM[Fj[184]] = "", rM[Fj[5]] = Fj[3]), rM[Fj[22]] = Fj[6]; rM[Fj[22]] < rM[Fj[6]].length; rM[Fj[22]]++) Ij(rM[Fj[5]] = rM[Fj[6]].charCodeAt(rM[Fj[22]]), rM[Fj[184]] += rM[Fj[1]].charAt(rM[Fj[5]] >>> Fj[14] & Fj[38]) + rM[Fj[1]].charAt(rM[Fj[5]] & Fj[38]));
+                    return rM[Fj[184]]
+                  }
+
+                  function aM(...rM) {
+                    rM[Fj[0]] = Fj[1];
+                    try {
+                      MM[Fj[24]]
+                    } catch (jM) {
+                      MM[Fj[24]] = ""
+                    }
+                    for (Ij(rM[-Fj[187]] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", rM[Fj[2]] = "", rM[Fj[13]] = rM[Fj[6]].length), rM[Fj[185]] = Fj[6]; rM[Fj[185]] < rM[Fj[13]]; rM[Fj[185]] += Fj[5])
+                      for (rM[Fj[188]] = rM[Fj[6]].charCodeAt(rM[Fj[185]]) << Fj[32] | (rM[Fj[185]] + Fj[1] < rM[Fj[13]] ? rM[Fj[6]].charCodeAt(rM[Fj[185]] + Fj[1]) << Fj[31] : Fj[6]) | (rM[Fj[185]] + Fj[2] < rM[Fj[13]] ? rM[Fj[6]].charCodeAt(rM[Fj[185]] + Fj[2]) : Fj[6]), rM[-Fj[186]] = Fj[6]; rM[-Fj[186]] < Fj[14]; rM[-Fj[186]]++) rM[Fj[185]] * Fj[31] + rM[-Fj[186]] * Fj[18] > rM[Fj[6]].length * Fj[31] ? rM[Fj[2]] += MM[Fj[24]] : rM[Fj[2]] += rM[-Fj[187]].charAt(rM[Fj[188]] >>> Fj[18] * (Fj[5] - rM[-Fj[186]]) & Fj[44]);
+                    return rM[Fj[2]]
+                  }
+
+                  function PM(...MM) {
+                    var rM, iM;
+                    for (Ij(MM[Fj[0]] = Fj[1], MM[Fj[1]] = "", MM[Fj[24]] = -Fj[1]); ++MM[Fj[24]] < MM[Fj[6]].length;) Ij(rM = MM[Fj[6]].charCodeAt(MM[Fj[24]]), iM = MM[Fj[24]] + Fj[1] < MM[Fj[6]].length ? MM[Fj[6]].charCodeAt(MM[Fj[24]] + Fj[1]) : Fj[6]), Fj[79] <= rM && rM <= Fj[80] && Fj[81] <= iM && iM <= Fj[82] && Ij(rM = Fj[83] + ((rM & Fj[42]) << Fj[52]) + (iM & Fj[42]), MM[Fj[24]]++), rM <= Fj[84] ? MM[Fj[1]] += String.fromCharCode(rM) : rM <= Fj[85] ? MM[Fj[1]] += String.fromCharCode(Fj[86] | rM >>> Fj[18] & Fj[87], Fj[45] | rM & Fj[44]) : rM <= Fj[55] ? MM[Fj[1]] += String.fromCharCode(Fj[88] | rM >>> Fj[46] & Fj[38], Fj[45] | rM >>> Fj[18] & Fj[44], Fj[45] | rM & Fj[44]) : rM <= Fj[89] && (MM[Fj[1]] += String.fromCharCode(Fj[90] | rM >>> Fj[51] & Fj[50], Fj[45] | rM >>> Fj[46] & Fj[44], Fj[45] | rM >>> Fj[18] & Fj[44], Fj[45] | rM & Fj[44]));
+                    return MM[Fj[1]]
+                  }
+
+                  function nM(...MM) {
+                    for (Ij(MM[Fj[0]] = Fj[1], MM[Fj[36]] = Array(MM[Fj[6]].length >> Fj[2])), MM[Fj[24]] = Fj[6]; MM[Fj[24]] < MM[Fj[36]].length; MM[Fj[24]]++) MM[Fj[36]][MM[Fj[24]]] = Fj[6];
+                    for (MM[Fj[24]] = Fj[6]; MM[Fj[24]] < MM[Fj[6]].length * Fj[31]; MM[Fj[24]] += Fj[31]) MM[Fj[36]][MM[Fj[24]] >> Fj[20]] |= (MM[Fj[6]].charCodeAt(MM[Fj[24]] / Fj[31]) & Fj[47]) << Fj[49] - MM[Fj[24]] % Fj[48];
+                    return MM[Fj[36]]
+                  }
+
+                  function QM(...MM) {
+                    for (Ij(MM[Fj[0]] = Fj[1], MM[Fj[36]] = ""), MM[Fj[2]] = Fj[6]; MM[Fj[2]] < MM[Fj[6]].length * Fj[48]; MM[Fj[2]] += Fj[31]) MM[Fj[36]] += String.fromCharCode(MM[Fj[6]][MM[Fj[2]] >> Fj[20]] >>> Fj[49] - MM[Fj[2]] % Fj[48] & Fj[47]);
+                    return MM[Fj[36]]
+                  }
+
+                  function zM(...MM) {
+                    return MM[Fj[0]] = Fj[2], MM[Fj[6]] >>> MM[Fj[1]] | MM[Fj[6]] << Fj[48] - MM[Fj[1]]
+                  }
+
+                  function LM(MM, rM) {
+                    return MM >>> rM
+                  }
+
+                  function mM(...MM) {
+                    return MM[Fj[0]] = Fj[5], MM[Fj[6]] & MM[Fj[1]] ^ ~MM[Fj[6]] & MM[Fj[2]]
+                  }
+
+                  function HM(...MM) {
+                    return MM[Fj[0]] = Fj[5], MM[Fj[6]] & MM[Fj[1]] ^ MM[Fj[6]] & MM[Fj[2]] ^ MM[Fj[1]] & MM[Fj[2]]
+                  }
+
+                  function hM(...MM) {
+                    return MM[Fj[0]] = Fj[1], zM(MM[Fj[6]], Fj[2]) ^ zM(MM[Fj[6]], Fj[92]) ^ zM(MM[Fj[6]], Fj[93])
+                  }
+
+                  function JM(...MM) {
+                    return MM[Fj[0]] = Fj[1], zM(MM[Fj[6]], Fj[18]) ^ zM(MM[Fj[6]], Fj[94]) ^ zM(MM[Fj[6]], Fj[17])
+                  }
+
+                  function dM(...MM) {
+                    return MM[Fj[0]] = Fj[1], zM(MM[Fj[6]], Fj[50]) ^ zM(MM[Fj[6]], Fj[51]) ^ LM(MM[Fj[6]], Fj[5])
+                  }
+
+                  function yM(...MM) {
+                    return MM[Fj[0]] = Fj[1], zM(MM[Fj[6]], Fj[95]) ^ zM(MM[Fj[6]], Fj[53]) ^ LM(MM[Fj[6]], Fj[52])
+                  }
+
+                  function lM(...rM) {
+                    var iM, OM, SM, jM, aM, PM, nM, QM, zM, LM, lM, UM;
+                    for (Ij(rM[Fj[0]] = Fj[2], rM[Fj[2]] = new Array(Fj[166], -Fj[167], Fj[168], -Fj[169], Fj[170], -Fj[171], Fj[172], Fj[173]), rM[-Fj[193]] = new Array(Fj[54])), Ij(rM[Fj[6]][rM[Fj[1]] >> Fj[20]] |= Fj[45] << Fj[49] - rM[Fj[1]] % Fj[48], rM[Fj[6]][(rM[Fj[1]] + Fj[54] >> Fj[174] << Fj[14]) + Fj[38]] = rM[Fj[1]]), zM = Fj[6]; zM < rM[Fj[6]].length; zM += Fj[32]) {
+                      for (Ij(iM = rM[Fj[2]][Fj[6]], OM = rM[Fj[2]][Fj[1]], SM = rM[Fj[2]][Fj[2]], jM = rM[Fj[2]][Fj[5]], aM = rM[Fj[2]][Fj[14]], PM = rM[Fj[2]][Fj[20]], nM = rM[Fj[2]][Fj[18]], QM = rM[Fj[2]][Fj[50]]), LM = Fj[6]; LM < Fj[54]; LM++) Ij(LM < Fj[32] ? rM[-Fj[193]][LM] = rM[Fj[6]][LM + zM] : rM[-Fj[193]][LM] = EM(EM(EM(yM(rM[-Fj[193]][LM - Fj[2]]), rM[-Fj[193]][LM - Fj[50]]), dM(rM[-Fj[193]][LM - Fj[38]])), rM[-Fj[193]][LM - Fj[32]]), lM = EM(EM(EM(EM(QM, JM(aM)), mM(aM, PM, nM)), MM[Fj[2]][LM]), rM[-Fj[193]][LM]), UM = EM(hM(iM), HM(iM, OM, SM)), QM = nM, nM = PM, PM = aM, aM = EM(jM, lM), jM = SM, SM = OM, OM = iM, iM = EM(lM, UM));
+                      Ij(rM[Fj[2]][Fj[6]] = EM(iM, rM[Fj[2]][Fj[6]]), rM[Fj[2]][Fj[1]] = EM(OM, rM[Fj[2]][Fj[1]]), rM[Fj[2]][Fj[2]] = EM(SM, rM[Fj[2]][Fj[2]]), rM[Fj[2]][Fj[5]] = EM(jM, rM[Fj[2]][Fj[5]]), rM[Fj[2]][Fj[14]] = EM(aM, rM[Fj[2]][Fj[14]]), rM[Fj[2]][Fj[20]] = EM(PM, rM[Fj[2]][Fj[20]]), rM[Fj[2]][Fj[18]] = EM(nM, rM[Fj[2]][Fj[18]]), rM[Fj[2]][Fj[50]] = EM(QM, rM[Fj[2]][Fj[50]]))
+                    }
+                    return rM[Fj[2]]
+                  }
+
+                  function EM(...MM) {
+                    return Ij(MM[Fj[0]] = Fj[2], MM[Fj[36]] = (MM[Fj[6]] & Fj[55]) + (MM[Fj[1]] & Fj[55]), MM[Fj[24]] = (MM[Fj[6]] >> Fj[32]) + (MM[Fj[1]] >> Fj[32]) + (MM[Fj[36]] >> Fj[32])), MM[Fj[24]] << Fj[32] | MM[Fj[36]] & Fj[55]
+                  }
+                  return Ij(MM[Fj[0]] = Fj[6], MM[-Fj[183]] = Fj[6], MM[Fj[24]] = ""), MM[Fj[2]] = new Array(Fj[102], Fj[103], -Fj[104], -Fj[105], Fj[106], Fj[107], -Fj[108], -Fj[109], -Fj[110], Fj[111], Fj[112], Fj[113], Fj[114], -Fj[115], -Fj[116], -Fj[117], -Fj[118], -Fj[119], Fj[120], Fj[121], Fj[122], Fj[123], Fj[124], Fj[125], -Fj[126], -Fj[127], -Fj[128], -Fj[129], -Fj[130], -Fj[131], Fj[132], Fj[133], Fj[134], Fj[135], Fj[136], Fj[137], Fj[138], Fj[139], -Fj[140], -Fj[141], -Fj[142], -Fj[143], -Fj[144], -Fj[145], -Fj[146], -Fj[147], -Fj[148], Fj[149], Fj[150], Fj[151], Fj[152], Fj[153], Fj[154], Fj[155], Fj[156], Fj[157], Fj[158], Fj[159], -Fj[160], -Fj[161], -Fj[162], -Fj[163], -Fj[164], -Fj[165]), {
+                    hex: function(...MM) {
+                      return MM[Fj[0]] = Fj[1], SM(function(...MM) {
+                        return MM[Fj[0]] = Fj[1], QM(lM(nM(MM[Fj[6]]), MM[Fj[6]].length * Fj[31]))
+                      }(PM(MM[Fj[6]])))
+                    },
+                    b64: rM,
+                    any: iM,
+                    hex_hmac: function(...MM) {
+                      return MM[Fj[0]] = Fj[2], SM(OM(PM(MM[Fj[6]]), PM(MM[Fj[1]])))
+                    },
+                    b64_hmac: rM,
+                    any_hmac: iM
+                  }
+                }(), console.log(MM[-Fj[194]]))
               }
-              "EZ9Sqg" + ML[12] in AL && SG(), WG = ML[53]
+              "EjOBHW" in Xj && aM(), wM = typeof iM === Fj[229] ? iM : -Fj[1]
+            } else tM = Fj[23];
+            return
+          }
+          const OM = bM[rM];
+          if (!iM) {
+            if (OM) {
+              function PM(...MM) {
+                function rM(...MM) {
+                  return MM[Fj[0]] = Fj[1], MM[Fj[6]][Fj[1]] * Fj[199] + (MM[Fj[6]][Fj[6]] < Fj[6] ? Fj[198] | MM[Fj[6]][Fj[6]] : MM[Fj[6]][Fj[6]])
+                }
+
+                function iM(...MM) {
+                  switch (MM[Fj[0]] = Fj[1], ((MM[Fj[6]] & Fj[198]) !== Fj[6]) * Fj[1] + (MM[Fj[6]] < Fj[6]) * Fj[2]) {
+                    case Fj[6]:
+                      return [MM[Fj[6]] % Fj[198], Math.trunc(MM[Fj[6]] / Fj[199])];
+                    case Fj[1]:
+                      return [MM[Fj[6]] % Fj[198] - Fj[198], Math.trunc(MM[Fj[6]] / Fj[199]) + Fj[1]];
+                    case Fj[2]:
+                      return [((MM[Fj[6]] + Fj[198]) % Fj[198] + Fj[198]) % Fj[198], Math.round(MM[Fj[6]] / Fj[199])];
+                    case Fj[5]:
+                      return [MM[Fj[6]] % Fj[198], Math.trunc(MM[Fj[6]] / Fj[199])]
+                  }
+                }
+                MM[Fj[0]] = Fj[6], Ij(MM[Fj[36]] = rM([Fj[2], Fj[14]]), MM[Fj[1]] = rM([Fj[1], Fj[2]]), MM[Fj[13]] = MM[Fj[36]] + MM[Fj[1]], MM[-Fj[200]] = MM[Fj[13]] - MM[Fj[1]], MM[Fj[14]] = MM[-Fj[200]] * Fj[2], MM[Fj[201]] = MM[Fj[14]] / Fj[2], console.log(iM(MM[Fj[13]])), console.log(iM(MM[-Fj[200]])), console.log(iM(MM[Fj[14]])), console.log(iM(MM[Fj[201]])))
+              }
+              "EZojAH" in Xj && PM(), gM = Fj[23]
             }
             return
           }
-          const ZG = iG[bG[ML[2]]];
-          if (!bG[ML[1]]) {
-            function LG(...GG) {
-              function bG(...GG) {
-                return GG[ML[0]] = ML[1], GG[ML[2]][ML[1]] * ML[65] + (GG[ML[2]][ML[2]] < ML[2] ? ML[64] | GG[ML[2]][ML[2]] : GG[ML[2]][ML[2]])
-              }
-
-              function ZG(...GG) {
-                switch (GG[ML[0]] = ML[1], ((GG[ML[2]] & ML[64]) !== ML[2]) * ML[1] + (GG[ML[2]] < ML[2]) * ML[3]) {
-                  case ML[2]:
-                    return [GG[ML[2]] % ML[64], Math.trunc(GG[ML[2]] / ML[65])];
-                  case ML[1]:
-                    return [GG[ML[2]] % ML[64] - ML[64], Math.trunc(GG[ML[2]] / ML[65]) + ML[1]];
-                  case ML[3]:
-                    return [((GG[ML[2]] + ML[64]) % ML[64] + ML[64]) % ML[64], Math.round(GG[ML[2]] / ML[65])];
-                  case ML[4]:
-                    return [GG[ML[2]] % ML[64], Math.trunc(GG[ML[2]] / ML[65])]
+          if (rM !== eM) {
+            function nM(...MM) {
+              Ij(MM[Fj[0]] = Fj[6], MM[Fj[36]] = function(...MM) {
+                for (Ij(MM[Fj[0]] = Fj[1], MM[Fj[1]] = MM[Fj[6]].length, MM[Fj[2]] = [], MM[Fj[202]] = Fj[6], MM[Fj[14]] = Fj[6], MM[Fj[6]].sort(((MM, rM) => MM - rM))), MM[Fj[40]] = Fj[6]; MM[Fj[40]] < MM[Fj[1]]; MM[Fj[40]]++)
+                  if (!(MM[Fj[40]] > Fj[6] && MM[Fj[6]][MM[Fj[40]]] === MM[Fj[6]][MM[Fj[40]] - Fj[1]]))
+                    for (Ij(MM[Fj[202]] = MM[Fj[40]] + Fj[1], MM[Fj[14]] = MM[Fj[1]] - Fj[1]); MM[Fj[202]] < MM[Fj[14]];)
+                      if (MM[Fj[6]][MM[Fj[40]]] + MM[Fj[6]][MM[Fj[202]]] + MM[Fj[6]][MM[Fj[14]]] < Fj[6]) MM[Fj[202]]++;
+                      else if (MM[Fj[6]][MM[Fj[40]]] + MM[Fj[6]][MM[Fj[202]]] + MM[Fj[6]][MM[Fj[14]]] > Fj[6]) MM[Fj[14]]--;
+                else {
+                  for (MM[Fj[2]].push([MM[Fj[6]][MM[Fj[40]]], MM[Fj[6]][MM[Fj[202]]], MM[Fj[6]][MM[Fj[14]]]]); MM[Fj[202]] < MM[Fj[14]] && MM[Fj[6]][MM[Fj[202]]] === MM[Fj[6]][MM[Fj[202]] + Fj[1]];) MM[Fj[202]]++;
+                  for (; MM[Fj[202]] < MM[Fj[14]] && MM[Fj[6]][MM[Fj[14]]] === MM[Fj[6]][MM[Fj[14]] - Fj[1]];) MM[Fj[14]]--;
+                  Ij(MM[Fj[202]]++, MM[Fj[14]]--)
                 }
-              }
-              GG[ML[0]] = ML[2], sL(GG[ML[19]] = bG([ML[3], ML[15]]), GG[ML[12]] = bG([ML[1], ML[3]]), GG[ML[66]] = GG[ML[19]] + GG[ML[12]], GG[ML[4]] = GG[ML[66]] - GG[ML[12]], GG[ML[67]] = GG[ML[4]] * ML[3], GG[ML[68]] = GG[ML[67]] / ML[3], console.log(ZG(GG[ML[66]])), console.log(ZG(GG[ML[4]])), console.log(ZG(GG[ML[67]])), console.log(ZG(GG[ML[68]])))
+                return MM[Fj[2]]
+              }, console.log(MM[Fj[36]]))
             }
-            if ("wptJ_eA" in AL && LG(), ZG) {
-              function yG(...GG) {
-                sL(GG[ML[0]] = ML[2], GG[ML[19]] = function(...GG) {
-                  for (sL(GG[ML[0]] = ML[1], GG[ML[1]] = GG[ML[2]].length, GG[ML[12]] = [], GG[-ML[71]] = ML[2]), GG[ML[69]] = ML[2]; GG[ML[69]] < GG[ML[1]]; GG[ML[69]]++) GG[ML[12]].push(GG[ML[69]] !== ML[2] && GG[ML[2]][GG[ML[69]]] > GG[ML[2]][GG[ML[69]] - ML[1]] ? GG[ML[12]][GG[ML[69]] - ML[1]] + ML[1] : ML[1]);
-                  for (GG[-ML[70]] = GG[ML[1]] - ML[1]; GG[-ML[70]] >= ML[2]; GG[-ML[70]]--) GG[-ML[70]] !== GG[ML[1]] - ML[1] && GG[ML[2]][GG[-ML[70]]] > GG[ML[2]][GG[-ML[70]] + ML[1]] && (GG[ML[12]][GG[-ML[70]]] = Math.max(GG[ML[12]][GG[-ML[70]]], GG[ML[12]][GG[-ML[70]] + ML[1]] + ML[1])), GG[-ML[71]] += GG[ML[12]][GG[-ML[70]]];
-                  return GG[-ML[71]]
-                }, console.log(GG[ML[19]]))
-              }
-              "JPx2nk" in AL && yG(), mG = ML[53]
-            }
-            return
+            return "JZpU7b" in Xj && nM(), void(bM[rM] = iM)
           }
-          if (bG[ML[2]] !== uG) {
-            function kG() {
-              var GG;
-
-              function bG() {}
-              sL(GG = function(...GG) {
-                for (sL(GG[ML[0]] = ML[3], GG[ML[3]] = ML[2], GG[ML[12]] = ML[2], GG[-ML[72]] = new bG(ML[2]), GG[ML[20]] = GG[-ML[72]], GG[ML[73]] = GG[ML[2]], GG[ML[32]] = GG[ML[1]]); GG[ML[73]] !== ML[40] || GG[ML[32]] !== ML[40];) sL(GG[ML[12]] = (GG[ML[73]] ? GG[ML[73]].val : ML[2]) + (GG[ML[32]] ? GG[ML[32]].val : ML[2]) + GG[ML[3]], GG[ML[3]] = Math.floor(GG[ML[12]] / ML[34]), GG[ML[20]].next = new bG(GG[ML[12]] % ML[34]), GG[ML[20]] = GG[ML[20]].next, GG[ML[73]] = GG[ML[73]] ? GG[ML[73]].next : ML[40], GG[ML[32]] = GG[ML[32]] ? GG[ML[32]].next : ML[40]);
-                return GG[ML[3]] && (GG[ML[20]].next = new bG(GG[ML[3]])), GG[-ML[72]].next
-              }, console.log(GG))
-            }
-            return "udPB3i9" in AL && kG(), void(iG[bG[ML[2]]] = bG[ML[1]])
-          }
-          iG[bG[ML[2]]] = ML[53];
-          const wG = typeof bG[ML[1]] === ML[74] ? bG[ML[1]] : "" + bG[ML[1]];
-          if (!cG[wG]) {
-            if ((0, UL[ML[75]])(wG)) {
-              function UG() {
-                ! function(...GG) {
-                  function bG(...GG) {
-                    for (sL(GG[ML[0]] = ML[1], GG[-ML[81]] = [], GG[ML[3]] = ML[2], GG[-ML[77]] = GG[ML[2]].length, GG[ML[15]] = ML[14], GG[-ML[76]] = ML[14]); GG[ML[3]] < GG[-ML[77]];) sL(GG[ML[15]] = GG[ML[2]].charCodeAt(GG[ML[3]]++), GG[ML[15]] >= ML[78] && GG[ML[15]] <= ML[79] && GG[ML[3]] < GG[-ML[77]] ? (GG[-ML[76]] = GG[ML[2]].charCodeAt(GG[ML[3]]++), (64512 & GG[-ML[76]]) == ML[80] ? GG[-ML[81]].push(((GG[ML[15]] & ML[24]) << ML[34]) + (GG[-ML[76]] & ML[24]) + ML[82]) : (GG[-ML[81]].push(GG[ML[15]]), GG[ML[3]]--)) : GG[-ML[81]].push(GG[ML[15]]));
-                    return GG[-ML[81]]
+          bM[rM] = Fj[23];
+          const SM = typeof iM === Fj[25] ? iM : "" + iM;
+          if (sM[SM]) {
+            function QM(...MM) {
+              MM[Fj[0]] = Fj[6];
+              const rM = require("big-integer");
+              Ij(MM[Fj[5]] = class {
+                static randomPrime(...MM) {
+                  MM[Fj[0]] = Fj[1];
+                  const iM = rM.one.shiftLeft(MM[Fj[6]] - Fj[1]),
+                    OM = rM.one.shiftLeft(MM[Fj[6]]).prev();
+                  for (; Fj[23];) {
+                    let MM = rM.randBetween(iM, OM);
+                    if (MM.isProbablePrime(Fj[67])) return MM
                   }
-
-                  function ZG(...GG) {
-                    if (GG[ML[0]] = ML[1], GG[ML[2]] >= ML[78] && GG[ML[2]] <= ML[84]) throw Error("Lone surrogate U+" + GG[ML[2]].toString(ML[7]).toUpperCase() + " is not a scalar value")
-                  }
-
-                  function wG(...bG) {
-                    return bG[ML[0]] = ML[3], GG[ML[1]](bG[ML[2]] >> bG[ML[1]] & ML[25] | ML[26])
-                  }
-
-                  function SG(...bG) {
-                    return bG[ML[0]] = ML[1], (4294967168 & bG[ML[2]]) == ML[2] ? GG[ML[1]](bG[ML[2]]) : (bG[ML[85]] = "", (4294965248 & bG[ML[2]]) == ML[2] ? bG[ML[85]] = GG[ML[1]](bG[ML[2]] >> ML[21] & ML[86] | ML[87]) : (4294901760 & bG[ML[2]]) == ML[2] ? sL(ZG(bG[ML[2]]), bG[ML[85]] = GG[ML[1]](bG[ML[2]] >> ML[27] & ML[16] | ML[76]), bG[ML[85]] += wG(bG[ML[2]], ML[21])) : (4292870144 & bG[ML[2]]) == ML[2] && sL(bG[ML[85]] = GG[ML[1]](bG[ML[2]] >> ML[33] & ML[32] | ML[88]), bG[ML[85]] += wG(bG[ML[2]], ML[27]), bG[ML[85]] += wG(bG[ML[2]], ML[21])), bG[ML[85]] += GG[ML[1]](bG[ML[2]] & ML[25] | ML[26]), bG[ML[85]])
-                  }
-
-                  function LG(...bG) {
-                    if (bG[ML[0]] = ML[2], GG[ML[3]] >= GG[ML[4]]) throw Error(ML[91]);
-                    if (sL(bG[-ML[90]] = GG[ML[5]][GG[ML[3]]] & ML[28], GG[ML[3]]++), (bG[-ML[90]] & ML[87]) == ML[26]) return bG[-ML[90]] & ML[25];
-                    throw Error(ML[92])
-                  }
-
-                  function yG(...bG) {
-                    if (sL(bG[ML[0]] = ML[2], bG[ML[19]] = ML[14], bG[ML[1]] = ML[14], bG[ML[8]] = ML[14], bG[ML[4]] = ML[14], bG[ML[67]] = ML[14]), GG[ML[3]] > GG[ML[4]]) throw Error(ML[91]);
-                    if (GG[ML[3]] == GG[ML[4]]) return ML[44];
-                    if (sL(bG[ML[19]] = GG[ML[5]][GG[ML[3]]] & ML[28], GG[ML[3]]++), (bG[ML[19]] & ML[26]) == ML[2]) return bG[ML[19]];
-                    if ((bG[ML[19]] & ML[76]) == ML[87]) {
-                      if (sL(bG[ML[1]] = LG(), bG[ML[67]] = (bG[ML[19]] & ML[86]) << ML[21] | bG[ML[1]]), bG[ML[67]] >= ML[26]) return bG[ML[67]];
-                      throw Error(ML[92])
-                    }
-                    if ((bG[ML[19]] & ML[88]) == ML[76]) {
-                      if (sL(bG[ML[1]] = LG(), bG[ML[8]] = LG(), bG[ML[67]] = (bG[ML[19]] & ML[16]) << ML[27] | bG[ML[1]] << ML[21] | bG[ML[8]]), bG[ML[67]] >= 2048) return ZG(bG[ML[67]]), bG[ML[67]];
-                      throw Error(ML[92])
-                    }
-                    if ((248 & bG[ML[19]]) == ML[88] && (sL(bG[ML[1]] = LG(), bG[ML[8]] = LG(), bG[ML[4]] = LG(), bG[ML[67]] = (bG[ML[19]] & ML[32]) << ML[33] | bG[ML[1]] << ML[27] | bG[ML[8]] << ML[21] | bG[ML[4]]), bG[ML[67]] >= ML[82] && bG[ML[67]] <= 1114111)) return bG[ML[67]];
-                    throw Error("Invalid UTF-8 detected")
-                  }
-                  sL(GG[ML[0]] = ML[1], GG[ML[1]] = String.fromCharCode), sL(GG[ML[5]] = ML[14], GG[ML[4]] = ML[14], GG[ML[3]] = ML[14]), sL(GG[ML[2]].version = "3.0.0", GG[ML[2]].encode = function(...GG) {
-                    for (sL(GG[ML[0]] = ML[1], GG[ML[19]] = bG(GG[ML[2]]), GG[ML[12]] = GG[ML[19]].length, GG[ML[4]] = -ML[1], GG[ML[89]] = ML[14], GG[ML[67]] = ""); ++GG[ML[4]] < GG[ML[12]];) sL(GG[ML[89]] = GG[ML[19]][GG[ML[4]]], GG[ML[67]] += SG(GG[ML[89]]));
-                    return GG[ML[67]]
-                  }, GG[ML[2]].decode = function(...ZG) {
-                    for (sL(ZG[ML[0]] = ML[1], GG[ML[5]] = bG(ZG[ML[2]]), GG[ML[4]] = GG[ML[5]].length, GG[ML[3]] = ML[2], ZG[ML[19]] = [], ZG[ML[12]] = ML[14]);
-                      (ZG[ML[12]] = yG()) !== ML[44];) ZG[ML[19]].push(ZG[ML[12]]);
-                    return function(...bG) {
-                      for (sL(bG[ML[0]] = ML[1], bG[ML[83]] = bG[ML[2]].length, bG[ML[3]] = -ML[1], bG[ML[4]] = ML[14], bG[-ML[16]] = ""); ++bG[ML[3]] < bG[ML[83]];) bG[ML[4]] = bG[ML[2]][bG[ML[3]]], bG[ML[4]] > ML[38] && sL(bG[ML[4]] -= ML[82], bG[-ML[16]] += GG[ML[1]](bG[ML[4]] >>> ML[34] & ML[24] | ML[78]), bG[ML[4]] = ML[80] | bG[ML[4]] & ML[24]), bG[-ML[16]] += GG[ML[1]](bG[ML[4]]);
-                      return bG[-ML[16]]
-                    }(ZG[ML[19]])
-                  })
-                }("undefined" === typeof exports ? this.utf8 = {} : exports)
-              }
-              return "oQFglT" in AL && UG(), void(jG = ML[53])
-            }
-            if ((0, UL[ML[93]])(wG)) {
-              function YG(...GG) {
-                sL(GG[ML[0]] = ML[2], GG[ML[19]] = function(...GG) {
-                  if (sL(GG[ML[0]] = ML[1], GG[ML[19]] = GG[ML[2]].length), GG[ML[19]] < ML[3]) return ML[2];
-                  if (sL(GG[ML[12]] = Math.max(...GG[ML[2]]), GG[-ML[94]] = Math.min(...GG[ML[2]])), GG[ML[12]] === GG[-ML[94]]) return ML[2];
-                  for (sL(GG[ML[15]] = Array(GG[ML[19]] - ML[1]).fill(Number.MAX_SAFE_INTEGER), GG[ML[67]] = Array(GG[ML[19]] - ML[1]).fill(Number.MIN_SAFE_INTEGER), GG[ML[21]] = Math.ceil((GG[ML[12]] - GG[-ML[94]]) / (GG[ML[19]] - ML[1])), GG[ML[32]] = ML[2]), GG[ML[95]] = ML[2]; GG[ML[95]] < GG[ML[19]]; GG[ML[95]]++) GG[ML[2]][GG[ML[95]]] !== GG[-ML[94]] && GG[ML[2]][GG[ML[95]]] !== GG[ML[12]] && sL(GG[ML[32]] = Math.floor((GG[ML[2]][GG[ML[95]]] - GG[-ML[94]]) / GG[ML[21]]), GG[ML[15]][GG[ML[32]]] = Math.min(GG[ML[15]][GG[ML[32]]], GG[ML[2]][GG[ML[95]]]), GG[ML[67]][GG[ML[32]]] = Math.max(GG[ML[67]][GG[ML[32]]], GG[ML[2]][GG[ML[95]]]));
-                  for (sL(GG[ML[96]] = Number.MIN_SAFE_INTEGER, GG[ML[34]] = GG[-ML[94]]), GG[ML[97]] = ML[2]; GG[ML[97]] < GG[ML[19]] - ML[1]; GG[ML[97]]++) GG[ML[15]][GG[ML[97]]] === Number.MAX_SAFE_INTEGER && GG[ML[67]][GG[ML[97]]] === Number.MIN_SAFE_INTEGER || sL(GG[ML[96]] = Math.max(GG[ML[96]], GG[ML[15]][GG[ML[97]]] - GG[ML[34]]), GG[ML[34]] = GG[ML[67]][GG[ML[97]]]);
-                  return GG[ML[96]] = Math.max(GG[ML[96]], GG[ML[12]] - GG[ML[34]]), GG[ML[96]]
-                }, console.log(GG[ML[19]]))
-              }
-              if ("FquSvUx" in AL && YG(), FG < 8) {
-                function VG(...GG) {
-                  sL(GG[ML[0]] = ML[2], GG[-ML[98]] = "(c=ak(<~F$VU'9f)~><&85dBPL-module/from", GG[ML[1]] = "q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)?", GG[ML[99]] = "return U[c[c[d(-199)]-b(205)]]||V[ae(b(166))];case T.o[c[c[c[d(-199)]+d(-174)]-(c[b(119)]-(c[d(-199)]-163))]+ae(b(146))](0)==b(167)?d(-130):-d(-144)", GG[-ML[98]].match(GG[ML[1]] + GG[ML[99]]))
                 }
-                "_Vvjgj" in AL && VG(), sL(cG[wG] = ML[53], IG[FG++] = wG, lG ||= (0, UL[ML[100]])(wG))
-              } else if (!lG && (0, UL[ML[100]])(wG)) {
-                function pG(...GG) {
-                  sL(GG[ML[0]] = ML[2], GG[ML[19]] = function(...bG) {
-                    return sL(bG[ML[0]] = ML[1], bG[ML[1]] = []), (bG[ML[2]] === ML[1] || bG[ML[2]] >= ML[15]) && GG[ML[1]](bG[ML[1]], [], bG[ML[2]], ML[2]), bG[ML[1]]
-                  }, GG[ML[1]] = function(bG, ZG, wG, SG) {
-                    var LG;
-                    for (LG = SG; LG < wG; LG++) {
-                      var yG;
-                      if (ZG.length !== LG) return;
-                      for (yG = ML[2]; yG < wG; yG++) GG[ML[3]](ZG, [LG, yG]) && (sL(ZG.push([LG, yG]), GG[ML[1]](bG, ZG, wG, LG + ML[1])), ZG.length === wG && bG.push(GG[ML[5]](ZG)), ZG.pop())
-                    }
-                  }, GG[ML[5]] = function(...GG) {
-                    for (sL(GG[ML[0]] = ML[1], GG[ML[1]] = [], GG[ML[3]] = GG[ML[2]].length), GG[ML[4]] = ML[2]; GG[ML[4]] < GG[ML[3]]; GG[ML[4]]++)
-                      for (GG[ML[1]][GG[ML[4]]] = "", GG[ML[49]] = ML[2]; GG[ML[49]] < GG[ML[3]]; GG[ML[49]]++) GG[ML[1]][GG[ML[4]]] += GG[ML[2]][GG[ML[4]]][ML[1]] === GG[ML[49]] ? "Q" : ".";
-                    return GG[ML[1]]
-                  }, GG[ML[3]] = function(...GG) {
-                    for (sL(GG[ML[0]] = ML[3], GG[ML[3]] = GG[ML[2]].length), GG[ML[4]] = ML[2]; GG[ML[4]] < GG[ML[3]]; GG[ML[4]]++) {
-                      if (GG[ML[2]][GG[ML[4]]][ML[2]] === GG[ML[1]][ML[2]] || GG[ML[2]][GG[ML[4]]][ML[1]] === GG[ML[1]][ML[1]]) return ML[44];
-                      if (Math.abs((GG[ML[2]][GG[ML[4]]][ML[2]] - GG[ML[1]][ML[2]]) / (GG[ML[2]][GG[ML[4]]][ML[1]] - GG[ML[1]][ML[1]])) === ML[1]) return ML[44]
-                    }
-                    return ML[53]
-                  }, console.log(GG[ML[19]]))
+                static generate(...MM) {
+                  MM[Fj[0]] = Fj[1];
+                  const iM = rM(65537);
+                  let OM, SM;
+                  MM[Fj[36]] = Fj[3];
+                  do {
+                    Ij(OM = this.randomPrime(MM[Fj[6]] / Fj[2]), SM = this.randomPrime(MM[Fj[6]] / Fj[2]), MM[Fj[36]] = rM.lcm(OM.prev(), SM.prev()))
+                  } while (rM.gcd(iM, MM[Fj[36]]).notEquals(Fj[1]) || OM.minus(SM).abs().shiftRight(MM[Fj[6]] / Fj[2] - 100).isZero());
+                  return {
+                    e: iM,
+                    n: OM.multiply(SM),
+                    d: iM.modInv(MM[Fj[36]])
+                  }
                 }
-                "S8URXH" + ML[116] in AL && pG(), sL(cG[wG] = ML[53], IG[8 - ML[1]] = wG, lG = ML[53])
+                static encrypt(...MM) {
+                  return MM[Fj[0]] = Fj[5], rM(MM[Fj[6]]).modPow(MM[Fj[2]], MM[Fj[1]])
+                }
+                static decrypt(...MM) {
+                  return MM[Fj[0]] = Fj[5], rM(MM[Fj[6]]).modPow(MM[Fj[1]], MM[Fj[2]])
+                }
+                static encode(...MM) {
+                  MM[Fj[0]] = Fj[1];
+                  const iM = MM[Fj[6]].split("").map((MM => MM.charCodeAt())).join("");
+                  return rM(iM)
+                }
+                static decode(...MM) {
+                  MM[Fj[0]] = Fj[1];
+                  const rM = MM[Fj[6]].toString();
+                  MM[Fj[36]] = "";
+                  for (let iM = Fj[6]; iM < rM.length; iM += Fj[2]) {
+                    let OM = Number(rM.substr(iM, Fj[2]));
+                    OM <= Fj[77] ? (MM[Fj[36]] += String.fromCharCode(Number(rM.substr(iM, Fj[5]))), iM++) : MM[Fj[36]] += String.fromCharCode(OM)
+                  }
+                  return MM[Fj[36]]
+                }
+              }, module.exports = MM[Fj[5]])
+            }
+            "Xie5Af" + Fj[205] in Xj && QM()
+          } else if ((Fj[6], Jj[Fj[177]])(SM)) kM = Fj[23];
+          else if ((Fj[6], Jj[Fj[203]])(SM))
+            if (RM < 8) {
+              function zM(...MM) {
+                var rM;
+                Ij(MM[Fj[0]] = Fj[6], rM = function(...MM) {
+                  Ij(MM[Fj[0]] = Fj[1], this.vL = MM[Fj[6]], this.length = Fj[6], this.map = {}, this.head = Fj[4], this.tail = Fj[4])
+                }, rM.prototype.get = function(...MM) {
+                  var rM;
+                  return Ij(MM[Fj[0]] = Fj[1], rM = this.map[MM[Fj[6]]]), rM ? (this.remove(rM), this.insert(rM.key, rM.val), rM.val) : -Fj[1]
+                }, rM.prototype.put = function(...MM) {
+                  Ij(MM[Fj[0]] = Fj[2], this.map[MM[Fj[6]]] ? (this.remove(this.map[MM[Fj[6]]]), this.insert(MM[Fj[6]], MM[Fj[1]])) : this.length === this.vL ? (this.remove(this.head), this.insert(MM[Fj[6]], MM[Fj[1]])) : (this.insert(MM[Fj[6]], MM[Fj[1]]), this.length++))
+                }, rM.prototype.remove = function(...MM) {
+                  Ij(MM[Fj[0]] = Fj[1], MM[Fj[36]] = MM[Fj[6]].prev, MM[Fj[204]] = MM[Fj[6]].next), MM[Fj[204]] && (MM[Fj[204]].prev = MM[Fj[36]]), MM[Fj[36]] && (MM[Fj[36]].next = MM[Fj[204]]), this.head === MM[Fj[6]] && (this.head = MM[Fj[204]]), this.tail === MM[Fj[6]] && (this.tail = MM[Fj[36]]), delete this.map[MM[Fj[6]].key]
+                }, rM.prototype.insert = function(...MM) {
+                  Ij(MM[Fj[0]] = Fj[2], MM[Fj[36]] = new List(MM[Fj[6]], MM[Fj[1]]), this.tail ? (this.tail.next = MM[Fj[36]], MM[Fj[36]].prev = this.tail, this.tail = MM[Fj[36]]) : (this.tail = MM[Fj[36]], this.head = MM[Fj[36]]), this.map[MM[Fj[6]]] = MM[Fj[36]])
+                }, console.log(rM))
               }
+              "SQK3apS" in Xj && zM(), Ij(sM[SM] = Fj[23], uM[RM++] = SM, DM ||= (Fj[6], Jj[Fj[205]])(SM))
             } else {
-              function fG(...GG) {
-                function bG(...GG) {
-                  if (GG[ML[0]] = ML[1], !GG[ML[2]]) return -ML[1];
-                  const ZG = bG(GG[ML[2]].left),
-                    wG = bG(GG[ML[2]].right),
-                    SG = Math.abs(ZG - wG);
-                  if (ZG === 1 / 0 || wG === 1 / 0 || SG > ML[1]) return 1 / 0;
-                  return Math.max(ZG, wG) + ML[1]
-                }
-                GG[ML[0]] = ML[2], window[ML[101] + ML[102] + ML[103] + ML[104]] = {
-                  buildCharacterMap: function(...GG) {
-                    GG[ML[0]] = ML[1];
-                    const bG = {};
-                    for (let ZG of GG[ML[2]].replace(/[^w]/g, "").toLowerCase()) bG[ZG] = bG[ZG] + ML[1] || ML[1];
-                    return bG
-                  },
-                  isAnagrams: function(...GG) {
-                    GG[ML[0]] = ML[3];
-                    const bG = buildCharMap(GG[ML[2]]),
-                      ZG = buildCharMap(GG[ML[1]]);
-                    for (let wG in bG)
-                      if (bG[wG] !== ZG[wG]) return ML[44];
-                    return Object.keys(bG).length !== Object.keys(ZG).length ? ML[44] : ML[53]
-                  },
-                  isBalanced: function(...GG) {
-                    return GG[ML[0]] = ML[1], bG(GG[ML[2]]) !== 1 / 0
-                  },
-                  getHeightBalanced: bG
-                }
+              function LM(...MM) {
+                MM[Fj[0]] = Fj[6]
               }
-              "_6GnyY" in AL && fG(), aG < 4 && sL(cG[wG] = ML[53], vG[aG++] = wG)
+              "FCzU3V" in Xj && LM(), !DM && (Fj[6], Jj[Fj[205]])(SM) && Ij(sM[SM] = Fj[23], uM[8 - Fj[1]] = SM, DM = Fj[23])
             }
-          }
+          else WM < 4 && Ij(sM[SM] = Fj[23], pM[WM++] = SM)
         },
-        MG = (0, YL[ML[122]])(GG),
-        AG = MG ? MG.replaced : (() => {
+        oM = (Fj[6], dj.j)(MM),
+        fM = oM ? oM.replaced : (() => {
           try {
-            return SG[GG]
+            return SM[MM]
           } catch {
-            function bG(...GG) {
-              sL(GG[ML[0]] = ML[2], GG[ML[19]] = function(...GG) {
-                for (sL(GG[ML[0]] = ML[1], GG[ML[1]] = ML[2], GG[ML[3]] = {}, GG[ML[4]] = ML[2], GG[-ML[96]] = ML[2], GG[ML[20]] = ML[2], GG[ML[106]] = GG[ML[2]].length), GG[ML[105]] = ML[2]; GG[ML[105]] < GG[ML[106]]; GG[ML[105]]++) {
-                  for (sL(GG[ML[3]] = {}, GG[ML[4]] = ML[2], GG[-ML[96]] = ML[1]), GG[ML[95]] = GG[ML[105]] + ML[1]; GG[ML[95]] < GG[ML[106]]; GG[ML[95]]++) GG[ML[2]][GG[ML[105]]].x !== GG[ML[2]][GG[ML[95]]].x || GG[ML[2]][GG[ML[105]]].y !== GG[ML[2]][GG[ML[95]]].y ? (GG[ML[2]][GG[ML[105]]].y === GG[ML[2]][GG[ML[95]]].y ? GG[ML[20]] = Number.MAX_SAFE_INTEGER : GG[ML[20]] = (GG[ML[2]][GG[ML[105]]].x - GG[ML[2]][GG[ML[95]]].x) / (GG[ML[2]][GG[ML[105]]].y - GG[ML[2]][GG[ML[95]]].y), GG[ML[3]][GG[ML[20]]] || (GG[ML[3]][GG[ML[20]]] = ML[2]), sL(GG[ML[3]][GG[ML[20]]]++, GG[ML[4]] = Math.max(GG[ML[4]], GG[ML[3]][GG[ML[20]]]))) : GG[-ML[96]]++;
-                  sL(GG[ML[4]] += GG[-ML[96]], GG[ML[1]] = Math.max(GG[ML[1]], GG[ML[4]]))
-                }
-                return GG[ML[1]]
-              }, console.log(GG[ML[19]]))
-            }
-            return "lf2hrv" in AL && bG(), ML[14]
+            return Fj[3]
           }
         })();
-      if (XG((() => {
-          SG[GG] = PG
-        })), typeof AG === ML[107] + ML[108]) {
-        const GG = AG;
-        XG((() => {
-          GG(PG)
+      if (CM((() => {
+          SM[MM] = ZM
+        })), typeof fM === Fj[206] + Fj[207]) {
+        const MM = fM;
+        CM((() => {
+          MM(ZM)
         }))
       }
-      if (MG) {
-        const bG = MG.reports;
-        XG((() => {
-          for (const ZG in bG)(0, Nw[ML[93]])(Nw[ML[119]], bG, [ZG]) && ZG !== GG && PG(ZG, bG[ZG])
+      if (oM) {
+        const rM = oM.reports;
+        CM((() => {
+          for (const iM in rM)(Fj[6], rS[Fj[208]])(rS[Fj[209]], rM, [iM]) && iM !== MM && ZM(iM, rM[iM])
         }))
       }
-      const sG = MG ? ML[3] : ML[1];
-      let qG = ML[44];
-      const nG = (...bG) => (bG[ML[0]] = ML[2], WG ? ML[53] : (sL(bG[-ML[109]] = ML[44], qG = !XG((() => {
-          bG[-ML[109]] = SG[GG] !== PG
-        }))), bG[-ML[109]])),
-        gG = rG(((...bG) => {
-          bG[ML[0]] = ML[2];
-          const ZG = (0, Nw.K)(SG, GG);
-          return (ZG === ML[40] || void 0 === ZG ? void 0 : ZG.configurable) !== ML[44] || typeof ZG[ML[134]] !== ML[107] + ML[108] || CG !== sG
+      const YM = oM ? Fj[2] : Fj[1];
+      let NM = Fj[21];
+      const AM = (...rM) => (rM[Fj[0]] = Fj[6], tM ? Fj[23] : (Ij(rM[-Fj[210]] = Fj[21], NM = !CM((() => {
+          rM[-Fj[210]] = SM[MM] !== ZM
+        }))), rM[-Fj[210]])),
+        xM = lM(((...rM) => {
+          rM[Fj[0]] = Fj[6];
+          const iM = (Fj[6], rS.M)(SM, MM);
+          return (iM === Fj[4] || iM === void Fj[6] ? void Fj[6] : iM.configurable) !== Fj[21] || typeof iM[Fj[231]] !== Fj[206] + Fj[207] || wM !== YM
         })),
-        eG = {},
-        RG = () => {
+        vM = {},
+        FM = () => {
           try {
-            return navigator[ML[129] + "tSub"]
+            return navigator[Fj[226] + "tSub"]
           } catch {
-            return eG
+            return vM
           }
         },
-        TG = RG(),
-        HG = ZG,
-        tG = HG === ML[40] ? ((...GG) => {
-          GG[ML[0]] = ML[2];
-          const bG = ML[85];
-          sL(GG[ML[19]] = ML[44], GG[ML[110]] = bG - ML[1]);
-          const ZG = TextDecoder[ML[111] + ML[112]][ML[113]],
-            wG = function() {
-              GG[ML[110]]++, GG[ML[110]] === bG && (IL((() => QG(ML[44]))) && (GG[ML[19]] = ML[53]), GG[ML[110]] = ML[2]);
-              for (var wG = arguments[ML[0]], SG = new Array(wG), LG = ML[2]; LG < wG; LG++) SG[LG] = arguments[LG];
-              return (0, Nw[ML[93]])(ZG, this, SG)
+        BM = FM(),
+        XM = iM,
+        IM = XM === Fj[4] ? ((...MM) => {
+          MM[Fj[0]] = Fj[6];
+          Ij(MM[Fj[36]] = Fj[21], MM[Fj[1]] = 60 - Fj[1]);
+          const rM = TextDecoder[Fj[211] + Fj[212]][Fj[213]],
+            iM = function() {
+              MM[Fj[1]]++, 60 === MM[Fj[1]] && (Zj((() => HM(Fj[21]))) && (MM[Fj[36]] = Fj[23]), MM[Fj[1]] = Fj[6]);
+              for (var iM = arguments[Fj[0]], OM = new Array(iM), SM = Fj[6]; SM < iM; SM++) OM[SM] = arguments[SM];
+              return (Fj[6], rS[Fj[208]])(rM, this, OM)
             };
-          return XG((() => {
-            TextDecoder[ML[111] + ML[112]][ML[113]] = wG
-          })), () => GG[ML[19]] ? ML[3] : vL((() => TextDecoder[ML[111] + ML[112]][ML[113]] !== wG ? ML[21] : ML[2]))
-        })() : () => vL((() => HG[ML[127] + ML[128]]())),
-        DG = (0, vb[ML[95]])(),
-        NG = (0, Nw[ML[60]])(ML[40]),
-        OG = (0, Nw[ML[60]])(ML[40]);
-      let xG = ML[2],
-        BG = ML[2],
-        Gb = ML[2];
-      const bb = (0, Nw[ML[60]])(ML[40]),
-        Zb = (0, Nw[ML[60]])(ML[40]);
-      let wb = ML[40],
-        Sb = (0, Nw[ML[60]])(ML[40]);
-      const Lb = (...GG) => {
-          sL(GG[ML[0]] = ML[3], NG[xG] = GG[ML[2]], OG[xG] = GG[ML[1]], xG++)
+          return CM((() => {
+            TextDecoder[Fj[211] + Fj[212]][Fj[213]] = iM
+          })), () => MM[Fj[36]] ? Fj[2] : fj((() => TextDecoder[Fj[211] + Fj[212]][Fj[213]] !== iM ? Fj[18] : Fj[6]))
+        })() : () => fj((() => XM[Fj[224] + Fj[225]]())),
+        KM = (Fj[6], pr.m)(),
+        qM = (Fj[6], rS[Fj[177]])(Fj[4]),
+        TM = (Fj[6], rS[Fj[177]])(Fj[4]);
+      let VM = Fj[6],
+        cM = Fj[6],
+        Mr = Fj[6];
+      const rr = (Fj[6], rS[Fj[177]])(Fj[4]),
+        ir = (Fj[6], rS[Fj[177]])(Fj[4]);
+      let Or = Fj[4],
+        Sr = (Fj[6], rS[Fj[177]])(Fj[4]);
+      const jr = (...MM) => {
+          Ij(MM[Fj[0]] = Fj[2], qM[VM] = MM[Fj[6]], TM[VM] = MM[Fj[1]], VM++)
         },
-        yb = (...GG) => (sL(GG[ML[0]] = ML[1], GG[ML[1]] = ML[14]), (GG[ML[1]] = (OG[GG[ML[2]]] ? Zb : bb)[NG[GG[ML[2]]]]) !== ML[40] && void 0 !== GG[ML[1]] ? GG[ML[1]] : -ML[1]),
-        kb = (0, Nw[ML[41]])("d2lvNjQz"),
-        Ub = (0, Nw[ML[41]])("amtsa2plZndu"),
-        Yb = [
-          [(0, Nw[ML[41]])("aW9qZndlODNq"), "2"],
-          [(0, Nw[ML[41]])("a3Bq"), "4"],
-          [(0, Nw[ML[41]])("dXJocmZm"), "5"]
+        ar = (...MM) => (Ij(MM[Fj[0]] = Fj[1], MM[Fj[1]] = Fj[3]), (MM[Fj[1]] = (TM[MM[Fj[6]]] ? ir : rr)[qM[MM[Fj[6]]]]) !== Fj[4] && MM[Fj[1]] !== void Fj[6] ? MM[Fj[1]] : -Fj[1]),
+        Pr = (Fj[6], rS[Fj[7]])("d2lvNjQz"),
+        nr = (Fj[6], rS[Fj[7]])("amtsa2plZndu"),
+        Qr = [
+          [(Fj[6], rS[Fj[7]])("aW9qZndlODNq"), "2"],
+          [(Fj[6], rS[Fj[7]])("a3Bq"), "4"],
+          [(Fj[6], rS[Fj[7]])("dXJocmZm"), "5"]
         ],
-        Vb = [
-          [(0, Nw[ML[41]])(ML[115] + ML[114]), ML[93]],
-          [(0, Nw[ML[41]])(ML[115] + "w="), ML[135]]
+        zr = [
+          [(Fj[6], rS[Fj[7]])(Fj[215] + Fj[214]), Fj[245]],
+          [(Fj[6], rS[Fj[7]])(Fj[215] + "w="), Fj[205]]
         ],
-        pb = (0, Nw[ML[41]])("eTR5bnM="),
-        fb = (0, Nw[ML[41]])("aHRleWpldA=="),
-        Qb = (0, Nw[ML[41]])("c2RmbGpneGxmY2pr"),
-        Kb = [
-          [(0, Nw[ML[41]])("a3NhZmR1"), ML[118]],
-          [(0, Nw[ML[41]])("ZGZnYWFzZGFz"), ML[121]],
-          [Qb, ML[117]],
-          [(0, Nw[ML[41]])("bGFzZWRraGFz"), ML[41]],
-          [(0, Nw[ML[41]])("cW16ZjhrM24="), ML[19]]
+        Lr = (Fj[6], rS[Fj[7]])("eTR5bnM="),
+        mr = (Fj[6], rS[Fj[7]])("aHRleWpldA=="),
+        Hr = (Fj[6], rS[Fj[7]])("c2RmbGpneGxmY2pr"),
+        hr = [
+          [(Fj[6], rS[Fj[7]])("a3NhZmR1"), Fj[177]],
+          [(Fj[6], rS[Fj[7]])("ZGZnYWFzZGFz"), Fj[219]],
+          [Hr, Fj[217]],
+          [(Fj[6], rS[Fj[7]])("bGFzZWRraGFz"), Fj[7]],
+          [(Fj[6], rS[Fj[7]])("cW16ZjhrM24="), Fj[36]]
         ],
-        hb = [
-          [pb, ML[116]],
-          [fb, ML[60]],
-          [(0, Nw[ML[41]])("bmI3ZnEy"), ML[12]]
+        Jr = [
+          [Lr, Fj[203]],
+          [mr, Fj[233]],
+          [(Fj[6], rS[Fj[7]])("bmI3ZnEy"), Fj[24]]
         ],
-        db = (0, Nw[ML[41]])("bGtxM20="),
-        Jb = (0, Nw[ML[41]])("bWtxN3" + ML[114]),
-        zb = ["mk:tw", "mk:jf"],
-        Eb = ((...GG) => {
-          GG[ML[0]] = ML[2];
+        dr = (Fj[6], rS[Fj[7]])("bGtxM20="),
+        yr = (Fj[6], rS[Fj[7]])("bWtxN3" + Fj[214]),
+        Er = ["mk:tw", "mk:jf"],
+        Ur = ((...MM) => {
+          MM[Fj[0]] = Fj[6];
           try {
-            return GG[ML[99]] = ML[14], (GG[ML[99]] = SG[(0, Nw[ML[41]])("V2ViU29ja2V0")]) === ML[40] || void 0 === GG[ML[99]] ? void 0 : GG[ML[99]][ML[111] + ML[112]]
+            return MM[-Fj[216]] = Fj[3], (MM[-Fj[216]] = SM[(Fj[6], rS[Fj[7]])("V2ViU29ja2V0")]) === Fj[4] || MM[-Fj[216]] === void Fj[6] ? void Fj[6] : MM[-Fj[216]][Fj[211] + Fj[212]]
           } catch {
-            return ML[14]
+            return Fj[3]
           }
         })(),
-        ob = ["send", "close", "addEventListener", "removeEventListener", ML[124] + ML[123] + ML[117]],
-        Xb = ["onmessage", "onopen", "onclos" + ML[67], "onerro" + ML[118]];
-      let ub = ML[44];
-      const ib = (...GG) => {
-          GG[ML[0]] = ML[2];
-          const ZG = bG();
-          ZG === ML[40] || ub || (ub = rG((() => {
-            if (Eb !== ML[14] && (0, Nw.O)(ZG) !== Eb) return ML[53];
-            for (let GG = ML[2]; GG < ob[ML[0]]; GG++)
-              if ((0, Nw[ML[93]])(Nw[ML[119]], ZG, [ob[GG]])) return ML[53];
-            for (let GG = ML[2]; GG < Xb[ML[0]]; GG++)
-              if (ZG[Xb[GG]] !== ML[40] && ZG[Xb[GG]] !== ML[14]) return ML[53];
-            return ML[44]
+        Gr = ["send", "close", "addEventListener", "removeEventListener", Fj[221] + Fj[220] + Fj[217]],
+        Cr = ["onmessage", "onopen", "onclos" + Fj[40], "onerro" + Fj[177]];
+      let er = Fj[21];
+      const br = (...MM) => {
+          MM[Fj[0]] = Fj[6];
+          const iM = rM();
+          iM === Fj[4] || er || (er = lM((() => {
+            if (Ur !== Fj[3] && (Fj[6], rS.Q)(iM) !== Ur) return Fj[23];
+            for (let MM = Fj[6]; MM < Gr[Fj[0]]; MM++)
+              if ((Fj[6], rS[Fj[208]])(rS[Fj[209]], iM, [Gr[MM]])) return Fj[23];
+            for (let MM = Fj[6]; MM < Cr[Fj[0]]; MM++)
+              if (iM[Cr[MM]] !== Fj[4] && iM[Cr[MM]] !== Fj[3]) return Fj[23];
+            return Fj[21]
           })))
         },
-        Cb = (0, Nw[ML[41]])("RXZlbnQ=");
-      let Wb = Nb[ML[120]][ML[137]],
-        mb = ML[2];
-      const Ib = () => mb++ === ML[20] ? (mb = ML[2], QG(ML[44]) ? Nb[ML[122]].CheckFuncHit : ML[2]) : ML[2],
-        Fb = (0, Nw[ML[60]])(ML[40]),
-        ab = wG[ML[0]];
-      for (let UG = ML[2]; UG < ab; UG++) {
-        const GG = (0, Nw[ML[93]])(Nw.gb, wG, [UG]);
-        Fb[UG] = GG >= ML[58] && GG <= 122 ? GG : ML[2]
+        wr = (Fj[6], rS[Fj[7]])("RXZlbnQ=");
+      let tr = cr[Fj[218]][Fj[238]],
+        gr = Fj[6];
+      const ur = () => gr++ === Fj[20] ? (gr = Fj[6], HM(Fj[21]) ? cr[Fj[13]].CheckFuncHit : Fj[6]) : Fj[6],
+        Rr = (Fj[6], rS[Fj[177]])(Fj[4]),
+        Wr = OM[Fj[0]];
+      for (let nM = Fj[6]; nM < Wr; nM++) {
+        const MM = (Fj[6], rS[Fj[208]])(rS.jb, OM, [nM]);
+        Rr[nM] = MM >= 99 && MM <= 122 ? MM : Fj[6]
       }
-      const cb = (...GG) => {
-          return GG[ML[0]] = ML[3], typeof GG[ML[2]] === ML[107] + ML[108] && (0, Nw[ML[93]])(Nw.W, GG[ML[1]], [(bG = GG[ML[2]], (0, Nw.p)(Nw.z, bG, []))]) !== ML[40];
-          var bG
+      const sr = (...MM) => {
+          return MM[Fj[0]] = Fj[2], typeof MM[Fj[6]] === Fj[206] + Fj[207] && (Fj[6], rS[Fj[208]])(rS.Z, MM[Fj[1]], [(rM = MM[Fj[6]], (0, rS.n)(rS.B, rM, []))]) !== Fj[4];
+          var rM
         },
-        lb = new RegExp("^function dispatchEvent\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
-        jb = new RegExp("^function now\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
-        Pb = [
-          [lL["Dispat" + ML[123] + ML[117]], () => !cb(EventTarget[ML[111] + ML[112]][ML[124] + ML[123] + ML[117]], lb)],
-          [lL.PerformanceNow, () => !cb(performance[ML[126]], jb)],
-          [lL["DateNo" + ML[125]], () => !cb(Date[ML[126]], jb)]
+        Dr = new RegExp("^function dispatchEvent\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
+        kr = new RegExp("^function now\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
+        Zr = [
+          [Aj["Dispat" + Fj[220] + Fj[217]], () => !sr(EventTarget[Fj[211] + Fj[212]][Fj[221] + Fj[220] + Fj[217]], Dr)],
+          [Aj.PerformanceNow, () => !sr(performance[Fj[222]], kr)],
+          [Aj.DateNow, () => !sr(Date[Fj[222]], kr)]
         ],
-        Mb = (0, Nw[ML[60]])(ML[40]);
-      let Ab = ML[2];
-      const sb = {
-        stackCheck: (...GG) => {
-          sL(GG[ML[0]] = ML[2], GG[ML[19]] = ML[40]);
-          const bG = IL((() => (GG[ML[19]] = fG(ML[53]), GG[ML[19]] !== ML[40])));
-          var ZG, wG;
-          return GG[ML[19]] !== ML[40] && KG === ML[40] && (ZG = GG[ML[19]][ML[46]], wG = GG[ML[19]][ML[47]], KG = (0, UL.s)(XL(ZG, wG))), bG
+        or = (Fj[6], rS[Fj[177]])(Fj[4]);
+      let fr = Fj[6];
+      const Yr = {
+        stackCheck: (...MM) => {
+          Ij(MM[Fj[0]] = Fj[6], MM[-Fj[223]] = Fj[4]);
+          const rM = Zj((() => (MM[-Fj[223]] = mM(Fj[23]), MM[-Fj[223]] !== Fj[4])));
+          var iM, OM;
+          return MM[-Fj[223]] !== Fj[4] && hM === Fj[4] && (iM = MM[-Fj[223]][Fj[26]], OM = MM[-Fj[223]][Fj[27]], hM = (0, Jj.z)(Rj(iM, OM))), rM
         },
-        [ML[127] + ML[128]]: (...GG) => {
-          GG[ML[0]] = ML[2];
-          const bG = tG();
-          if (bG === ML[3]) return ML[3];
-          if (iG[kb]) return ML[4];
-          const ZG = vL((() => SG[Ub] ? ML[15] : ML[2]));
-          return ZG !== ML[2] ? ZG === ML[15] ? ML[15] : ML[2] : bG === FL ? ML[2] : bG === ML[21] ? ML[21] : (EG(), wG = Function[ML[111] + ML[112]], LG = ML[133], yG = (...GG) => (GG[ML[0]] = ML[1], GG[ML[2]].writable !== ML[53]), IL((() => {
-            const GG = Object.getOwnPropertyDescriptor(wG, LG);
-            return void 0 !== GG && yG(GG)
-          })) ? ML[32] : ML[2]);
-          var wG, LG, yG
+        [Fj[224] + Fj[225]]: (...MM) => {
+          MM[Fj[0]] = Fj[6];
+          const rM = IM();
+          if (rM === Fj[2]) return Fj[2];
+          if (bM[Pr]) return Fj[5];
+          const iM = fj((() => SM[nr] ? Fj[14] : Fj[6]));
+          return iM !== Fj[6] ? iM === Fj[14] ? Fj[14] : Fj[6] : rM === oj ? Fj[6] : rM === Fj[18] ? Fj[18] : (UM(), OM = Function[Fj[211] + Fj[212]], jM = Fj[230], aM = MM => MM.writable !== Fj[23], Zj((() => {
+            const MM = Object.getOwnPropertyDescriptor(OM, jM);
+            return void 0 !== MM && aM(MM)
+          })) ? Fj[50] : Fj[6]);
+          var OM, jM, aM
         },
-        indexPassReplaced: nG,
-        [ML[129] + "tSubChanged"]: (...GG) => {
-          if (GG[ML[0]] = ML[2], TG === eG || qG) return ML[44];
-          const bG = RG();
-          return bG !== eG && bG !== TG
+        indexPassReplaced: AM,
+        [Fj[226] + "tSubChanged"]: (...MM) => {
+          if (MM[Fj[0]] = Fj[6], BM === vM || NM) return Fj[21];
+          const rM = FM();
+          return rM !== vM && rM !== BM
         },
-        Ik: (...GG) => {
-          sL(GG[ML[0]] = ML[2], GG[ML[19]] = ab);
-          for (let bG = ML[2]; bG < Pb[ML[0]] + Ab; bG++) {
-            const ZG = bG < Pb[ML[0]] ? Pb[bG] : Mb[bG - Pb[ML[0]]];
-            ZG[ML[2]] < GG[ML[19]] && rG(ZG[ML[1]]) && (GG[ML[19]] = ZG[ML[2]])
+        sQ: (...MM) => {
+          Ij(MM[Fj[0]] = Fj[6], MM[Fj[36]] = Wr);
+          for (let rM = Fj[6]; rM < Zr[Fj[0]] + fr; rM++) {
+            const iM = rM < Zr[Fj[0]] ? Zr[rM] : or[rM - Zr[Fj[0]]];
+            iM[Fj[6]] < MM[Fj[36]] && lM(iM[Fj[1]]) && (MM[Fj[36]] = iM[Fj[6]])
           }
-          return GG[ML[19]] < ab ? Fb[GG[ML[19]]] : ML[2]
+          return MM[Fj[36]] < Wr ? Rr[MM[Fj[36]]] : Fj[6]
         },
-        Lk: () => DG ? vb.i : ML[6],
-        [ML[130] + ML[131] + "Subs"]: (...GG) => {
-          GG[ML[0]] = ML[2];
-          const bG = UG[ML[100]].ZJ[ML[130] + ML[131]];
-          return typeof bG === ML[132] && bG > ML[2] ? bG > ML[38] ? ML[38] : bG : ML[2]
+        rP: () => KM ? pr[Fj[205]] : Fj[31],
+        [Fj[227] + Fj[228] + "Subs"]: (...MM) => {
+          MM[Fj[0]] = Fj[6];
+          const rM = nM[Fj[235]].Wy[Fj[227] + Fj[228]];
+          return typeof rM === Fj[229] && rM > Fj[6] ? rM > Fj[55] ? Fj[55] : rM : Fj[6]
         },
-        ["getCom" + ML[143]]: (...GG) => {
-          sL(GG[ML[0]] = ML[2], GG[ML[19]] = ML[14], xG = ML[2]);
-          for (let ZG = ML[2]; ZG < FG; ZG++) Lb(IG[ZG], ML[53]);
-          for (let ZG = ML[2]; ZG < Yb[ML[0]]; ZG++) iG[Yb[ZG][ML[2]]] && Lb(Yb[ZG][ML[1]], ML[53]);
-          const bG = vL((() => mL(atob[ML[133]](), VG) ? ML[2] : ML[1]));
-          bG === ML[1] && Lb(ML[122], ML[53]), EG();
-          const wG = bG === FL ? FL : vL(((...GG) => {
-            GG[ML[0]] = ML[2];
-            const bG = Object.getOwnPropertyDescriptor(window, "atob");
-            return bG === ML[14] ? FL : bG[ML[134]] !== ML[14] ? ML[1] : ML[2]
+        ["getCom" + Fj[244]]: (...MM) => {
+          Ij(MM[Fj[0]] = Fj[6], MM[Fj[237]] = Fj[3], VM = Fj[6]);
+          for (let iM = Fj[6]; iM < RM; iM++) jr(uM[iM], Fj[23]);
+          for (let iM = Fj[6]; iM < Qr[Fj[0]]; iM++) bM[Qr[iM][Fj[6]]] && jr(Qr[iM][Fj[1]], Fj[23]);
+          const rM = fj((() => kj(atob[Fj[230]](), zM) ? Fj[6] : Fj[1]));
+          rM === Fj[1] && jr(Fj[241], Fj[23]), UM();
+          const OM = rM === oj ? oj : fj(((...MM) => {
+            MM[Fj[0]] = Fj[6];
+            const rM = Object.getOwnPropertyDescriptor(window, "atob");
+            return rM === Fj[3] ? oj : rM[Fj[231]] !== Fj[3] ? Fj[1] : Fj[6]
           }));
-          wG === ML[1] && Lb("f", ML[53]);
-          const SG = wG === FL;
-          for (let ZG = ML[2]; ZG < Vb[ML[0]] && !SG; ZG++) iG[Vb[ZG][ML[2]]] && Lb(Vb[ZG][ML[1]], ML[53]);
-          const LG = xG > FG;
-          GG[ML[70]] = ML[40], FG === ML[2] && (aG > ML[2] ? GG[ML[70]] = vG[ML[2]] : jG ? GG[ML[70]] = "fp" : LG || (GG[ML[70]] = iG[pb] ? ML[116] : iG[fb] ? ML[60] : ML[40]));
-          for (let ZG = ML[2]; ZG < Kb[ML[0]] && !SG; ZG++) iG[Kb[ZG][ML[2]]] && Lb(Kb[ZG][ML[1]], ML[53]);
-          const yG = xG,
-            kG = (0, fL[ML[12]])(),
-            UG = kG !== ML[40] && (0, rb[ML[135]])(kG);
-          UG && !SG && Lb(kG, ML[44]), gG && Lb("ix", ML[44]), mG && Lb("il", ML[44]);
-          for (let ZG = ML[2]; ZG < aG; ZG++) Lb(vG[ZG], ML[53]);
-          for (let ZG = ML[2]; ZG < hb[ML[0]]; ZG++) iG[hb[ZG][ML[2]]] && Lb(hb[ZG][ML[1]], ML[53]);
-          iG[db] && Lb("mk:lk", ML[53]);
-          const YG = ((...GG) => {
-            GG[ML[0]] = ML[1];
-            for (let bG = ML[2]; bG < zb[ML[0]]; bG++)
-              if (GG[ML[2]] === zb[bG]) return zb[bG];
-            return ML[40]
-          })(iG[Jb]);
-          if (YG !== ML[40] && Lb(YG, ML[53]), ZG !== ML[40] && oG(ZG.emitReplaced) === ML[53] && Lb("mk:em", ML[53]), ub && Lb("3s", ML[44]), Nw[ML[104]] && Lb("3b", ML[44]), EG(), zG && Lb("3d", ML[44]), SG && Lb("3g", ML[44]), kG === ML[40] || UG || Lb(kG, ML[44]), KG !== ML[40] && Lb(KG, ML[44]), JG === ML[40] && ZG !== ML[40]) {
-            const GG = oG(ZG[ML[127] + "mMeshHitStac" + ML[140]]);
-            typeof GG === ML[74] && (JG = function(GG, bG, ZG) {
-              let wG = 0;
-              for (; wG < ZG && -1 === hL(GG, bG[wG]);) wG++;
-              return (0, UL.i)(XL(GG, wG < ZG ? bG[wG] : null))
-            }(GG, pG, pG[ML[0]] - ML[1]))
+          OM === Fj[1] && jr(Fj[232], Fj[23]);
+          const SM = OM === oj;
+          for (let iM = Fj[6]; iM < zr[Fj[0]] && !SM; iM++) bM[zr[iM][Fj[6]]] && jr(zr[iM][Fj[1]], Fj[23]);
+          const jM = VM > RM;
+          MM[Fj[24]] = Fj[4], RM === Fj[6] && (WM > Fj[6] ? MM[Fj[24]] = pM[Fj[6]] : kM ? MM[Fj[24]] = "fp" : jM || (MM[Fj[24]] = bM[Lr] ? Fj[203] : bM[mr] ? Fj[233] : Fj[4]));
+          for (let iM = Fj[6]; iM < hr[Fj[0]] && !SM; iM++) bM[hr[iM][Fj[6]]] && jr(hr[iM][Fj[1]], Fj[23]);
+          const aM = VM,
+            PM = (Fj[6], Ej[Fj[22]])(),
+            nM = PM !== Fj[4] && (Fj[6], lr[Fj[203]])(PM);
+          nM && !SM && jr(PM, Fj[21]), xM && jr("ix", Fj[21]), gM && jr("il", Fj[21]);
+          for (let iM = Fj[6]; iM < WM; iM++) jr(pM[iM], Fj[23]);
+          for (let iM = Fj[6]; iM < Jr[Fj[0]]; iM++) bM[Jr[iM][Fj[6]]] && jr(Jr[iM][Fj[1]], Fj[23]);
+          bM[dr] && jr("mk:lk", Fj[23]);
+          const QM = ((...MM) => {
+            MM[Fj[0]] = Fj[1];
+            for (let rM = Fj[6]; rM < Er[Fj[0]]; rM++)
+              if (MM[Fj[6]] === Er[rM]) return Er[rM];
+            return Fj[4]
+          })(bM[yr]);
+          if (QM !== Fj[4] && jr(QM, Fj[23]), iM !== Fj[4] && GM(iM.emitReplaced) === Fj[23] && jr("mk:em", Fj[23]), er && jr("3s", Fj[21]), rS[Fj[234]] && jr("3b", Fj[21]), UM(), EM && jr("3d", Fj[21]), SM && jr("3g", Fj[21]), PM === Fj[4] || nM || jr(PM, Fj[21]), hM !== Fj[4] && jr(hM, Fj[21]), yM === Fj[4] && iM !== Fj[4]) {
+            const MM = GM(iM[Fj[224] + "mMeshHitStack"]);
+            typeof MM === Fj[25] && (yM = function(MM, rM, iM) {
+              let OM = 0;
+              for (; OM < iM && -1 === Cj(MM, rM[OM]);) OM++;
+              return (0, Jj.n)(Rj(MM, OM < iM ? rM[OM] : null))
+            }(MM, LM, LM[Fj[0]] - Fj[1]))
           }
-          var fG;
-          if (JG !== ML[40] && Lb(JG, ML[44]), hG === ML[40] && vb[ML[67]] !== ML[40] && sL((fG = vb[ML[67]], hG = (0, UL.h)(CL(fG).reader)), dG = WL(vb[ML[67]], oG((() => vb[ML[5]] === ML[40] ? ML[40] : (0, Nw.hb)(vb[ML[5]]))))), hG !== ML[40] && Lb(hG, ML[44]), dG !== ML[40] && Lb(dG, ML[44]), xG === ML[2]) return ML[40];
-          if (GG[ML[70]] === ML[40] && OG[ML[2]] && !(0, UL[ML[100]])(NG[ML[2]]))
-            for (let ZG = ML[1]; ZG < yG; ZG++)
-              if (OG[ZG] && (0, UL[ML[100]])(NG[ZG])) {
-                const GG = NG[ZG];
-                for (let bG = ZG; bG > ML[2]; bG--) sL(NG[bG] = NG[bG - ML[1]], OG[bG] = OG[bG - ML[1]]);
-                sL(NG[ML[2]] = GG, OG[ML[2]] = ML[53]);
+          var mM;
+          if (yM !== Fj[4] && jr(yM, Fj[21]), JM === Fj[4] && pr[Fj[235]] !== Fj[4] && Ij((mM = pr[Fj[235]], JM = (0, Jj.j)(sj(mM).reader)), dM = Dj(pr[Fj[235]], GM((() => pr[Fj[40]] === Fj[4] ? Fj[4] : (Fj[6], rS.mb)(pr[Fj[40]]))))), JM !== Fj[4] && jr(JM, Fj[21]), dM !== Fj[4] && jr(dM, Fj[21]), VM === Fj[6]) return Fj[4];
+          if (MM[Fj[24]] === Fj[4] && TM[Fj[6]] && !(Fj[6], Jj[Fj[205]])(qM[Fj[6]]))
+            for (let iM = Fj[1]; iM < aM; iM++)
+              if (TM[iM] && (Fj[6], Jj[Fj[205]])(qM[iM])) {
+                const MM = qM[iM];
+                for (let rM = iM; rM > Fj[6]; rM--) Ij(qM[rM] = qM[rM - Fj[1]], TM[rM] = TM[rM - Fj[1]]);
+                Ij(qM[Fj[6]] = MM, TM[Fj[6]] = Fj[23]);
                 break
-              } if (sL(GG[ML[3]] = ML[2], GG[-ML[136]] = GG[ML[70]] === ML[40] ? ML[2] : yG), GG[-ML[136]] > ML[2] && kG !== ML[40] && UG && !SG) {
-            for (let bG = GG[-ML[136]]; bG > ML[2]; bG--) sL(NG[bG] = NG[bG - ML[1]], OG[bG] = OG[bG - ML[1]]);
-            sL(NG[ML[2]] = kG, OG[ML[2]] = ML[44], GG[ML[3]] = ML[1], GG[-ML[136]]++)
+              } if (Ij(MM[-Fj[78]] = Fj[6], MM[-Fj[236]] = MM[Fj[24]] === Fj[4] ? Fj[6] : aM), MM[-Fj[236]] > Fj[6] && PM !== Fj[4] && nM && !SM) {
+            for (let rM = MM[-Fj[236]]; rM > Fj[6]; rM--) Ij(qM[rM] = qM[rM - Fj[1]], TM[rM] = TM[rM - Fj[1]]);
+            Ij(qM[Fj[6]] = PM, TM[Fj[6]] = Fj[21], MM[-Fj[78]] = Fj[1], MM[-Fj[236]]++)
           }
-          if (GG[ML[15]] = ML[2], BG++ % ML[3] === ML[1])
-            for (let ZG = ML[1]; ZG < xG; ZG++) yb(ZG) < yb(GG[ML[15]]) && (GG[ML[15]] = ZG);
-          const QG = NG[GG[ML[15]]];
-          (OG[GG[ML[15]]] ? Zb : bb)[QG] = Gb++;
-          const rG = GG[ML[15]] >= GG[ML[3]] && GG[ML[15]] < GG[-ML[136]];
-          if (!OG[GG[ML[15]]] || QG === GG[ML[70]] || GG[ML[15]] === ML[2] && !rG) return QG === ML[117] ? (0, UL[ML[125]])(iG[Qb], UL[ML[8]]) : QG;
-          const XG = (GG[ML[19]] = GG[ML[70]]) !== ML[40] && void 0 !== GG[ML[19]] ? GG[ML[19]] : NG[ML[2]];
-          return XG !== wb && sL(wb = XG, Sb = (0, Nw[ML[60]])(ML[40])), Sb[QG] ??= (0, UL[ML[60]])(QG, XG)
+          if (MM[Fj[40]] = Fj[6], cM++ % Fj[2] === Fj[1])
+            for (let iM = Fj[1]; iM < VM; iM++) ar(iM) < ar(MM[Fj[40]]) && (MM[Fj[40]] = iM);
+          const HM = qM[MM[Fj[40]]];
+          (TM[MM[Fj[40]]] ? ir : rr)[HM] = Mr++;
+          const lM = MM[Fj[40]] >= MM[-Fj[78]] && MM[Fj[40]] < MM[-Fj[236]];
+          if (!TM[MM[Fj[40]]] || HM === MM[Fj[24]] || MM[Fj[40]] === Fj[6] && !lM) return HM === Fj[217] ? (Fj[6], Jj[Fj[209]])(bM[Hr], Jj[Fj[22]]) : HM;
+          const CM = (MM[Fj[237]] = MM[Fj[24]]) !== Fj[4] && MM[Fj[237]] !== void Fj[6] ? MM[Fj[237]] : qM[Fj[6]];
+          return CM !== Or && Ij(Or = CM, Sr = (Fj[6], rS[Fj[177]])(Fj[4])), Sr[HM] ??= (Fj[6], Jj.x)(HM, CM)
         }
       };
-      let qb = Nb[ML[120]][ML[137]];
-      const nb = () => Wb !== Nb[ML[120]][ML[137]] ? Wb : qb;
-      let gb = ML[2],
-        eb = ML[3],
-        Rb = ML[2],
-        Tb = ML[2];
+      let Nr = cr[Fj[218]][Fj[238]];
+      const Ar = () => tr !== cr[Fj[218]][Fj[238]] ? tr : Nr;
+      let xr = Fj[6],
+        vr = Fj[2],
+        Fr = Fj[6],
+        Br = Fj[6];
       return {
-        checks: sb,
-        checkEvent: (...GG) => {
-          GG[ML[0]] = ML[1];
+        checks: Yr,
+        checkEvent: (...MM) => {
+          MM[Fj[0]] = Fj[1];
           try {
-            const bG = SG[Cb];
-            if (typeof bG === ML[107] + ML[108] && !(GG[ML[2]] instanceof bG) && !(0, Nw.F)(GG[ML[2]])) return Wb = Nb[ML[120]].NotEvent, ML[2];
-            if (GG[ML[2]].isTrusted === ML[44]) return ML[2];
-            let ZG = ML[2];
-            for (const wG in GG[ML[2]]) ZG++;
-            return ZG < ML[34] ? (Wb = Nb[ML[120]]["FewPropertie" + ML[121]], ML[2]) : Ib()
+            const rM = SM[wr];
+            if (typeof rM === Fj[206] + Fj[207] && !(MM[Fj[6]] instanceof rM) && !(Fj[6], rS.F)(MM[Fj[6]])) return tr = cr[Fj[218]].NotEvent, Fj[6];
+            if (MM[Fj[6]].isTrusted === Fj[21]) return Fj[6];
+            let iM = Fj[6];
+            for (const OM in MM[Fj[6]]) iM++;
+            return iM < Fj[52] ? (tr = cr[Fj[218]]["FewPropertie" + Fj[219]], Fj[6]) : ur()
           } catch {}
-          return ML[2]
+          return Fj[6]
         },
         checkPadCall: () => {
           try {
-            return Ib()
+            return ur()
           } catch {
-            return ML[2]
+            return Fj[6]
           }
         },
-        usedProp: nb,
-        watchHeld: (...GG) => {
-          sL(GG[ML[0]] = ML[3], GG[ML[3]] = ML[14]);
-          const bG = XG((() => {
-            GG[ML[3]] = GG[ML[1]]()
+        usedProp: Ar,
+        watchHeld: (...MM) => {
+          Ij(MM[Fj[0]] = Fj[2], MM[Fj[239]] = Fj[3]);
+          const rM = CM((() => {
+            MM[Fj[239]] = MM[Fj[1]]()
           }));
-          Mb[Ab++] = [GG[ML[2]], () => !bG || GG[ML[1]]() !== GG[ML[3]]]
+          or[fr++] = [MM[Fj[6]], () => !rM || MM[Fj[1]]() !== MM[Fj[239]]]
         },
-        Tp: (...GG) => {
-          GG[ML[0]] = ML[2];
-          const bG = nG();
-          return ((...GG) => {
-            if (sL(GG[ML[0]] = ML[1], GG[ML[19]] = ML[14], GG[-ML[138]] = ML[14]), ZG !== ML[40]) {
-              const bG = oG(ZG.my),
-                wG = "v3" === bG ? ML[4] : "v5" === bG ? ML[20] : "v6" === bG ? ML[21] : ML[3];
-              wG !== ML[3] && (eb = wG);
-              const SG = oG(ZG["inbuil" + ML[141] + ML[142]]);
-              typeof SG === ML[132] && SG >= ML[2] && SG <= ML[97] && (SG | ML[2]) === SG && (Rb = SG), sL(GG[ML[19]] = oG(ZG.reflectApplyHit), GG[-ML[138]] = oG(ZG.definerHit))
+        bL: (...MM) => {
+          MM[Fj[0]] = Fj[6];
+          const rM = AM();
+          return (MM => {
+            let rM = Fj[3],
+              OM = Fj[3];
+            if (iM !== Fj[4]) {
+              const MM = GM(iM.tz),
+                SM = "v3" === MM ? Fj[5] : "v5" === MM ? Fj[20] : "v6" === MM ? Fj[18] : Fj[2];
+              SM !== Fj[2] && (vr = SM);
+              const jM = GM(iM["inbuil" + Fj[242] + Fj[243]]);
+              typeof jM === Fj[229] && jM >= Fj[6] && jM <= Fj[94] && (jM | Fj[6]) === jM && (Fr = jM), Ij(rM = GM(iM.reflectApplyHit), OM = GM(iM.definerHit))
             }
-            const bG = GG[ML[2]] ? ML[16] : "11" === GG[-ML[138]] ? ML[97] : "13" === GG[-ML[138]] ? ML[138] : GG[ML[19]] !== ML[14] && GG[ML[19]] !== ML[40] ? ML[3] : "10" === GG[-ML[138]] ? ML[34] : "12" === GG[-ML[138]] ? ML[27] : ML[2];
-            bG !== ML[2] && (Tb = bG)
-          })(bG), gb++ % 10 === ML[2] && (ib(), IL((() => !mL(SG[LG][ML[133]][ML[133]](), VG))) && (qb = qb === Nb[ML[120]][ML[139]] ? Nb[ML[120]][ML[139]] : Nb[ML[120]].Fr), IL((() => !mL(SG[LG][ML[133]](), VG))) && (qb = Nb[ML[120]][ML[139]])), {
-            flags: bG ? Nb[ML[122]].Butto : ML[2],
+            const SM = MM ? Fj[38] : "11" === OM ? Fj[94] : "13" === OM ? Fj[92] : rM !== Fj[3] && rM !== Fj[4] ? Fj[2] : "10" === OM ? Fj[52] : "12" === OM ? Fj[46] : Fj[6];
+            SM !== Fj[6] && (Br = SM)
+          })(rM), xr++ % 10 === Fj[6] && (br(), Zj((() => !kj(SM[jM][Fj[230]][Fj[230]](), zM))) && (Nr = Nr === cr[Fj[218]][Fj[240]] ? cr[Fj[218]][Fj[240]] : cr[Fj[218]].Fr), Zj((() => !kj(SM[jM][Fj[230]](), zM))) && (Nr = cr[Fj[218]][Fj[240]])), {
+            flags: rM ? cr[Fj[13]].Butto : Fj[6],
             values: [
-              [Nb[ML[140]].PhysicsVersion, eb],
-              [Nb[ML[140]]["Inbuil" + ML[141] + ML[142]], Rb],
-              [Nb[ML[140]]["AltCom" + ML[143]], Tb],
-              [Nb[ML[140]]["ProbeUsedPro" + ML[93]], nb()]
+              [cr[Fj[241]].PhysicsVersion, vr],
+              [cr[Fj[241]]["Inbuil" + Fj[242] + Fj[243]], Fr],
+              [cr[Fj[241]]["AltCom" + Fj[244]], Br],
+              [cr[Fj[241]]["ProbeUsedPro" + Fj[245]], Ar()]
             ]
           }
         }
       }
     };
-    const qL = "[bloxd-wasm-client]",
-      nL = "bloxdWasmDownloadFailed",
-      gL = VZ.d,
-      eL = "boot",
-      RL = "playSources",
-      TL = "wasmBuild",
-      HL = "bloxd-wasm-joined",
-      tL = "bloxd-wasm-first-view",
-      DL = "bloxd-wasm-playable-legacy",
-      NL = 1048576,
-      OL = 8 * NL,
-      xL = 1006,
-      BL = 1e3,
-      Gy = "You lost connection to the server.",
-      by = "general:lostConnection",
-      Zy = 1048576,
-      wy = 5e3,
-      Sy = 100,
-      Ly = [2e3, 1e4, 3e4],
-      yy = 3e4;
-    let ky = null,
-      Uy = null,
-      Yy = !1,
-      Vy = !1,
-      py = !1,
-      fy = null,
-      Qy = null,
-      Ky = null,
-      hy = null,
-      dy = null,
-      Jy = null,
-      ry = null;
-    const zy = new class {
-      constructor(GG, bG) {
-        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now();
-        this.master = GG, this.soundOn = bG, this.now = ZG, this.player = null, this.local = [], this.stopped = !1
+    const Kj = "[bloxd-wasm-client]",
+      qj = "bloxdWasmDownloadFailed",
+      Tj = Hi.g,
+      Vj = "boot",
+      cj = "playSources",
+      Ma = "wasmBuild",
+      ra = "bloxd-wasm-joined",
+      ia = "bloxd-wasm-first-view",
+      Oa = "bloxd-wasm-playable-legacy",
+      Sa = 1048576,
+      ja = 8 * Sa,
+      aa = 1006,
+      Pa = 1e3,
+      na = "You lost connection to the server.",
+      Qa = "general:lostConnection",
+      za = 1048576,
+      La = 5e3,
+      ma = 100,
+      Ha = [2e3, 1e4, 3e4],
+      ha = 3e4;
+    let Ja = null,
+      da = null,
+      ya = !1,
+      la = !1,
+      Ea = !1,
+      Ua = null,
+      Ga = null,
+      Ca = null,
+      ea = null,
+      ba = null,
+      wa = null,
+      ta = null;
+    const ga = new class {
+      constructor(MM, rM) {
+        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now();
+        this.master = MM, this.soundOn = rM, this.now = iM, this.player = null, this.local = [], this.stopped = !1
       }
       get loaded() {
         return null !== this.player
@@ -5363,2746 +5635,2896 @@ export const modules = {
       get queued() {
         return this.local.length
       }
-      prepare() {
-        var GG;
-        null === (GG = this.player) || void 0 === GG || GG.prepare()
-      }
-      preload(GG) {
-        var bG;
-        this.stopped || (null === (bG = this.player) || void 0 === bG || bG.preload(GG))
+      preload(MM) {
+        var rM;
+        this.stopped || (null === (rM = this.player) || void 0 === rM || rM.preload(MM))
       }
       endSession() {
-        var GG, bG;
-        null === (GG = this.player) || void 0 === GG || GG.cancelPreload(), null === (bG = this.player) || void 0 === bG || bG.freeSheetsAfterGame()
+        var MM;
+        null === (MM = this.player) || void 0 === MM || MM.cancelPreload(), this.freeSounds()
       }
-      load(GG) {
+      freeSounds() {
+        var MM;
+        null === (MM = this.player) || void 0 === MM || MM.freeSoundsAfterGame()
+      }
+      load(MM) {
         if (null !== this.player || this.stopped) return;
-        this.player = GG, GG.setMaster(this.master, this.soundOn);
-        const bG = this.now(),
-          ZG = this.local;
+        this.player = MM, MM.setMaster(this.master, this.soundOn);
+        const rM = this.now(),
+          iM = this.local;
         this.local = [];
-        for (const SG of ZG)
-          if (!(SG.stopped || !SG.loop && bG - SG.at >= 300)) try {
-            this.start(SG, GG, bG)
-          } catch (wG) {
-            console.error("[bloxd-wasm-client] a queued sound wouldn't start", wG)
+        for (const SM of iM)
+          if (!(SM.stopped || !SM.loop && rM - SM.at >= 300)) try {
+            this.start(SM, MM, rM)
+          } catch (OM) {
+            console.error("[bloxd-wasm-client] a queued sound wouldn't start", OM)
           }
       }
-      start(GG, bG, ZG) {
+      start(MM, rM, iM) {
         const {
-          name: wG,
-          pos: SG,
-          ear: LG,
-          maxHearDist: yG,
-          refDistance: kG,
-          loop: UG,
-          fade: YG
-        } = GG, VG = bG.playGame(wG, Tb(GG, ZG), SG, LG, yG, kG, UG);
-        if (GG.sound = VG, 1 !== GG.rate && VG.rate(GG.rate), null !== GG.panner && VG.setPannerAttr(GG.panner), null !== GG.moved && VG.setPosition(GG.moved), null !== YG && ZG - YG.at < YG.ms) {
-          const bG = Rb(this.master);
-          bG > 0 ? VG.fade(0, GG.volume * bG, YG.at + YG.ms - ZG) : VG.setRelativeVolume(GG.volume)
+          name: OM,
+          pos: SM,
+          ear: jM,
+          maxHearDist: aM,
+          refDistance: PM,
+          loop: nM,
+          fade: QM
+        } = MM, zM = rM.playGame(OM, Kr(MM, iM), SM, jM, aM, PM, nM);
+        if (MM.sound = zM, 1 !== MM.rate && zM.rate(MM.rate), null !== MM.panner && zM.setPannerAttr(MM.panner), null !== MM.moved && zM.setPosition(MM.moved), null !== QM && iM - QM.at < QM.ms) {
+          const rM = Ir(this.master);
+          rM > 0 ? zM.fade(0, MM.volume * rM, QM.at + QM.ms - iM) : zM.setRelativeVolume(MM.volume)
         }
       }
-      onAudioEvent(GG, bG, ZG, wG) {
-        var SG, LG;
-        return null === (SG = null === (LG = this.player) || void 0 === LG ? void 0 : LG.onAudioEvent(GG, bG, ZG, wG)) || void 0 === SG || SG
+      onAudioEvent(MM, rM, iM, OM) {
+        var SM, jM;
+        return null === (SM = null === (jM = this.player) || void 0 === jM ? void 0 : jM.onAudioEvent(MM, rM, iM, OM)) || void 0 === SM || SM
       }
-      applyListener(GG) {
-        var bG;
-        null === (bG = this.player) || void 0 === bG || bG.applyListener(GG)
+      applyListener(MM) {
+        var rM;
+        null === (rM = this.player) || void 0 === rM || rM.applyListener(MM)
       }
-      playGame(GG, bG, ZG, wG, SG, LG, yG) {
-        if (this.stopped) return eb.d;
-        if (this.player) return this.player.playGame(GG, bG, ZG, wG, SG, LG, yG);
-        const kG = this.now();
-        this.local = this.local.filter((GG => !GG.stopped && (GG.loop || kG - GG.at < 300)));
-        const UG = {
-          name: GG,
-          volume: Rb(bG),
+      playGame(MM, rM, iM, OM, SM, jM, aM) {
+        if (this.stopped) return Xr.b;
+        if (this.player) return this.player.playGame(MM, rM, iM, OM, SM, jM, aM);
+        const PM = this.now();
+        this.local = this.local.filter((MM => !MM.stopped && (MM.loop || PM - MM.at < 300)));
+        const nM = {
+          name: MM,
+          volume: Ir(rM),
           fade: null,
-          pos: ZG && [ZG[0], ZG[1], ZG[2]],
-          ear: wG && [wG[0], wG[1], wG[2]],
-          maxHearDist: SG,
-          refDistance: LG,
-          loop: yG,
+          pos: iM && [iM[0], iM[1], iM[2]],
+          ear: OM && [OM[0], OM[1], OM[2]],
+          maxHearDist: SM,
+          refDistance: jM,
+          loop: aM,
           rate: 1,
           panner: null,
           moved: null,
-          at: kG,
+          at: PM,
           stopped: !1,
           sound: null
         };
-        this.local.push(UG);
-        const YG = {
+        this.local.push(nM);
+        const QM = {
           stop: () => {
-            var GG;
-            return UG.stopped = !0, null === (GG = UG.sound) || void 0 === GG || GG.stop(), YG
+            var MM;
+            return nM.stopped = !0, null === (MM = nM.sound) || void 0 === MM || MM.stop(), QM
           },
-          fade: (GG, bG, ZG) => {
-            if (UG.sound) return UG.sound.fade(GG, bG, ZG), YG;
-            const wG = Rb(this.master),
-              SG = Rb(wG > 0 ? bG / wG : bG > 0 ? UG.volume : 0),
-              LG = this.now(),
-              yG = Tb(UG, LG);
-            return UG.volume = SG, UG.fade = ZG > 0 && yG !== SG ? {
-              from: yG,
-              at: LG,
-              ms: ZG
-            } : null, YG
+          fade: (MM, rM, iM) => {
+            if (nM.sound) return nM.sound.fade(MM, rM, iM), QM;
+            const OM = Ir(this.master),
+              SM = Ir(OM > 0 ? rM / OM : rM > 0 ? nM.volume : 0),
+              jM = this.now(),
+              aM = Kr(nM, jM);
+            return nM.volume = SM, nM.fade = iM > 0 && aM !== SM ? {
+              from: aM,
+              at: jM,
+              ms: iM
+            } : null, QM
           },
-          rate: GG => (UG.sound ? UG.sound.rate(GG) : UG.rate = GG, YG),
-          getVolume: () => UG.sound ? UG.sound.getVolume() : UG.volume * Rb(this.master),
-          getRelativeVolume: () => UG.sound ? UG.sound.getRelativeVolume() : UG.volume,
-          setRelativeVolume: GG => (UG.sound ? UG.sound.setRelativeVolume(GG) : (UG.volume = Rb(GG), UG.fade = null), YG),
-          setPannerAttr: GG => (UG.sound ? UG.sound.setPannerAttr(GG) : UG.panner = {
-            ...GG
-          }, YG),
-          setPosition: GG => (UG.sound ? UG.sound.setPosition(GG) : UG.moved = [GG[0], GG[1], GG[2]], YG)
+          rate: MM => (nM.sound ? nM.sound.rate(MM) : nM.rate = MM, QM),
+          getVolume: () => nM.sound ? nM.sound.getVolume() : nM.volume * Ir(this.master),
+          getRelativeVolume: () => nM.sound ? nM.sound.getRelativeVolume() : nM.volume,
+          setRelativeVolume: MM => (nM.sound ? nM.sound.setRelativeVolume(MM) : (nM.volume = Ir(MM), nM.fade = null), QM),
+          setPannerAttr: MM => (nM.sound ? nM.sound.setPannerAttr(MM) : nM.panner = {
+            ...MM
+          }, QM),
+          setPosition: MM => (nM.sound ? nM.sound.setPosition(MM) : nM.moved = [MM[0], MM[1], MM[2]], QM)
         };
-        return YG
+        return QM
       }
-      setMaster(GG, bG) {
-        var ZG;
-        this.master = GG, this.soundOn = bG, null === (ZG = this.player) || void 0 === ZG || ZG.setMaster(GG, bG)
+      setMaster(MM, rM) {
+        var iM;
+        this.master = MM, this.soundOn = rM, null === (iM = this.player) || void 0 === iM || iM.setMaster(MM, rM)
       }
       stop() {
-        var GG;
-        this.stopped = !0, null === (GG = this.player) || void 0 === GG || GG.stopAll();
-        for (const bG of this.local) bG.stopped = !0;
+        var MM;
+        this.stopped = !0, null === (MM = this.player) || void 0 === MM || MM.stopAll();
+        for (const rM of this.local) rM.stopped = !0;
         this.local = []
       }
-    }((0, ab.c)(), !0);
-    let Ey = {
+    }((0, Wr.b)(), !0);
+    let ua = {
         wasm: "unknown",
-        client: String(Vb.e)
+        client: String(zr.c)
       },
-      oy = null,
-      Xy = () => {};
-    const uy = new Promise((GG => {
-      Xy = GG
+      Ra = null,
+      pa = () => {};
+    const Wa = new Promise((MM => {
+      pa = MM
     }));
-    let iy = () => {};
-    const Cy = new Promise((GG => {
-      iy = GG
+    let sa = () => {};
+    const Da = new Promise((MM => {
+      sa = MM
     }));
-    let Wy, my = null,
-      Iy = null,
-      Fy = null,
-      vy = null,
-      ay = null,
-      cy = null,
-      ly = null,
-      jy = null,
-      Py = null,
-      My = null,
-      Ay = null,
-      sy = null,
-      qy = null,
-      ny = null,
-      gy = null,
-      ey = null,
-      Ry = null,
-      Ty = null,
-      Hy = null,
-      ty = !1,
-      Dy = null;
-    const Ny = new Set,
-      Oy = new Set;
+    let ka, Za = null,
+      oa = null,
+      fa = null,
+      Ya = null,
+      Na = null,
+      Aa = null,
+      xa = null,
+      va = null,
+      Fa = null,
+      Ba = null,
+      Xa = null,
+      Ia = null,
+      Ka = null,
+      qa = null,
+      Ta = null,
+      Va = null,
+      ca = null,
+      MP = null,
+      rP = null,
+      iP = !1,
+      OP = null;
+    const SP = new Set,
+      jP = new Set;
 
-    function xy(GG) {
-      if (!Ny.has(GG)) {
-        Ny.add(GG);
-        for (const ZG of Oy) try {
-          ZG(GG)
-        } catch (bG) {
-          console.error(`${qL} a startup listener threw`, bG)
+    function aP(MM) {
+      if (!SP.has(MM)) {
+        SP.add(MM);
+        for (const iM of jP) try {
+          iM(MM)
+        } catch (rM) {
+          console.error(`${Kj} a startup listener threw`, rM)
         }
       }
     }
 
-    function By(GG) {
-      ty = !0, GG.isStopped || xy("texturesIn")
+    function PP(MM) {
+      iP = !0, MM.isStopped || aP("texturesIn")
     }
-    let Gk = 1,
-      bk = -1 / 0,
-      Zk = -1 / 0,
-      wk = -1 / 0,
-      Sk = !1,
-      Lk = null,
-      yk = !1,
-      kk = !1,
-      Uk = 0,
-      Yk = null,
-      Vk = !1;
-    const pk = {
+    let nP = 1,
+      QP = -1 / 0,
+      zP = -1 / 0,
+      LP = -1 / 0,
+      mP = !1,
+      HP = null,
+      hP = !1,
+      JP = !1,
+      dP = 0,
+      yP = null,
+      lP = !1;
+    const EP = {
       dropped: -1 / 0,
       pause: -1 / 0,
       backlog: -1 / 0
     };
-    let fk = 0,
-      Qk = 0,
-      Kk = null,
-      hk = null,
-      dk = null,
-      Jk = null;
-    const rk = new WeakMap;
-    let zk = null,
-      Ek = null,
-      Xk = !1,
-      uk = null,
-      ik = null,
-      Ck = null,
-      Wk = null,
-      mk = null,
-      Ik = null,
-      Fk = 0;
-    const vk = new Set;
-    let ak = 0,
-      ck = 0,
-      lk = 0,
-      jk = null,
-      Pk = null,
-      Mk = null,
-      Ak = null,
-      sk = -1 / 0,
-      qk = null;
-    const nk = new Set;
-    let gk = !1,
-      ek = null;
-    const Rk = new Map,
-      Tk = new Set;
-    let Hk = !1;
-    const tk = {
+    let UP = 0,
+      GP = 0,
+      CP = null,
+      eP = null,
+      bP = null,
+      wP = null;
+    const tP = new WeakMap;
+    let gP = null,
+      uP = null,
+      RP = !1,
+      pP = null,
+      WP = null,
+      sP = null,
+      DP = null,
+      kP = null,
+      ZP = null,
+      oP = 0;
+    const fP = new Set;
+    let YP = 0,
+      NP = 0,
+      AP = 0,
+      xP = null,
+      vP = null,
+      FP = null,
+      BP = null,
+      XP = -1 / 0,
+      IP = null;
+    const KP = new Set;
+    let qP = !1,
+      TP = null;
+    const VP = new Map,
+      cP = new Set;
+    let Mn = !1;
+    const rn = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null,
       restoresSkipped: null
     };
-    let Dk = null,
-      Nk = () => [0, 0],
-      Ok = () => {},
-      xk = () => {},
-      Bk = null,
-      GU = null;
-    const bU = new class {
-      constructor(GG) {
-        this.reached = GG, this.next = 1
+    let On = null,
+      Sn = () => [0, 0],
+      jn = () => {},
+      an = () => {},
+      Pn = null,
+      nn = null;
+    const Qn = new class {
+      constructor(MM) {
+        this.reached = MM, this.next = 1
       }
-      observe(GG) {
-        if (!(GG < this.next)) {
-          for (; this.next <= GG;) this.next *= 2;
-          this.reached(GG)
+      observe(MM) {
+        if (!(MM < this.next)) {
+          for (; this.next <= MM;) this.next *= 2;
+          this.reached(MM)
         }
       }
-    }((GG => {
-      console.warn(`${qL} chunk cancels from the server this session: ${GG}`)
+    }((MM => {
+      console.warn(`${Kj} chunk cancels from the server this session: ${MM}`)
     }));
-    let ZU = 1,
-      wU = null,
-      SU = null,
-      LU = null,
-      yU = null,
-      kU = null,
-      UU = !1,
-      YU = !1,
-      VU = 0,
-      pU = null,
-      fU = !1,
-      QU = null,
-      KU = null,
-      hU = null,
-      dU = !1;
-    const JU = new class {
-        constructor(GG) {
-          this.xh = GG, this.lossPending = !1, this.undrawnSinceMs = null, this.lastFrameMs = 0, this.shown = !1
+    let zn = 1,
+      Ln = null,
+      mn = null,
+      Hn = null,
+      hn = null,
+      Jn = null,
+      dn = !1,
+      yn = !1,
+      En = 0,
+      Un = null,
+      Gn = !1,
+      Cn = null,
+      en = null,
+      bn = null,
+      wn = !1;
+    const tn = new class {
+        constructor(MM) {
+          this.Tz = MM, this.lossPending = !1, this.undrawnSinceMs = null, this.lastFrameMs = 0, this.shown = !1, this.sQ = !1
         }
         deviceLost() {
           this.lossPending = !0
         }
-        frame(GG, bG, ZG) {
-          (0, Pb.e)(GG) && (this.lossPending = !1);
-          const wG = ZG - this.lastFrameMs;
-          this.lastFrameMs = ZG, this.lossPending && bG && (0, Pb.l)(GG) ? (null === this.undrawnSinceMs || wG > 1e3) && (this.undrawnSinceMs = ZG) : this.undrawnSinceMs = null, this.show(null !== this.undrawnSinceMs && ZG - this.undrawnSinceMs >= 2e3)
+        frame(MM, rM, iM) {
+          (0, Zr.d)(MM) && (this.lossPending = !1);
+          const OM = iM - this.lastFrameMs;
+          this.lastFrameMs = iM, this.lossPending && rM && (0, Zr.l)(MM) ? (null === this.undrawnSinceMs || OM > 1e3) && (this.undrawnSinceMs = iM) : this.undrawnSinceMs = null, this.show(this.sQ || null !== this.undrawnSinceMs && iM - this.undrawnSinceMs >= 2e3)
+        }
+        hold(MM) {
+          this.sQ = MM, this.show(MM || this.shown)
         }
         stop() {
-          this.lossPending = !1, this.undrawnSinceMs = null, this.show(!1)
+          this.sQ = !1, this.lossPending = !1, this.undrawnSinceMs = null, this.show(!1)
         }
-        show(GG) {
-          GG !== this.shown && (this.shown = GG, this.xh(GG))
+        show(MM) {
+          MM !== this.shown && (this.shown = MM, this.Tz(MM))
         }
-      }((GG => {
-        UG.l.xh(KG.d, GG)
+      }((MM => {
+        nM.i.Tz(hM.c, MM)
       })),
-      rU = new class {
-        constructor(GG) {
-          let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => performance.now();
-          this.NQ = GG, this.now = bG, this.lostAtMs = null, this.asked = !1, this.lastRestore = null, this.watched = new WeakSet
+      gn = new class {
+        constructor(MM) {
+          let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => performance.now();
+          this.aL = MM, this.now = rM, this.lostAtMs = null, this.asked = !1, this.lastRestore = null, this.watched = new WeakSet
         }
-        watch(GG, bG) {
-          this.watched.has(GG) || (this.watched.add(GG), GG.addEventListener("webglcontextlost", (() => {
-            bG() && this.contextLost()
-          })), GG.addEventListener("webglcontextrestored", (() => {
-            bG() ? this.contextRestored() : (this.take(), this.lastRestore = null)
+        watch(MM, rM) {
+          this.watched.has(MM) || (this.watched.add(MM), MM.addEventListener("webglcontextlost", (() => {
+            rM() && this.contextLost()
+          })), MM.addEventListener("webglcontextrestored", (() => {
+            rM() ? this.contextRestored() : (this.take(), this.lastRestore = null)
           })))
         }
-        frame(GG, bG) {
-          (0, Pb.l)(GG) && bG && null !== this.lostAtMs && this.now() - this.lostAtMs >= 1e3 && (this.asked = !0)
+        frame(MM, rM) {
+          (0, Zr.l)(MM) && rM && null !== this.lostAtMs && this.now() - this.lostAtMs >= 1e3 && (this.asked = !0)
         }
         contextLost() {
           null === this.lostAtMs && (this.lostAtMs = this.now(), this.asked = !1)
         }
-        unheldRestore(GG) {
-          const bG = this.lastRestore;
-          return null !== bG && GG - bG.atMs < 3e4 ? bG : null
+        unheldRestore(MM) {
+          const rM = this.lastRestore;
+          return null !== rM && MM - rM.atMs < 3e4 ? rM : null
         }
         contextRestored() {
-          const GG = this.take();
-          if (null === GG) this.lastRestore = null;
+          const MM = this.take();
+          if (null === MM) this.lastRestore = null;
           else {
-            var bG, ZG;
-            const wG = this.unheldRestore(GG.lostAtMs);
+            var rM, iM;
+            const OM = this.unheldRestore(MM.lostAtMs);
             this.lastRestore = {
               atMs: this.now(),
-              firstLostAtMs: null !== (bG = null === wG || void 0 === wG ? void 0 : wG.firstLostAtMs) && void 0 !== bG ? bG : GG.lostAtMs,
-              asked: null !== (ZG = null === wG || void 0 === wG ? void 0 : wG.asked) && void 0 !== ZG && ZG || GG.asked
+              firstLostAtMs: null !== (rM = null === OM || void 0 === OM ? void 0 : OM.firstLostAtMs) && void 0 !== rM ? rM : MM.lostAtMs,
+              asked: null !== (iM = null === OM || void 0 === OM ? void 0 : OM.asked) && void 0 !== iM && iM || MM.asked
             };
-            const SG = GG.asked ? "restore_context" : "natural";
-            this.NQ(`webgl_restored_${SG}_${GG.delay}`, `WebGL2 context restored (${SG}, wasm)`)
+            const SM = MM.asked ? "restore_context" : "natural";
+            this.aL(`webgl_restored_${SM}_${MM.delay}`, `WebGL2 context restored (${SM}, wasm)`)
           }
         }
         gaveUp() {
-          const GG = this.take();
-          if (null !== GG) {
-            var bG;
-            const ZG = this.unheldRestore(GG.lostAtMs),
-              wG = null === ZG ? GG.delay : (0, Mb.l)(this.now() - ZG.firstLostAtMs),
-              SG = GG.asked || null !== (bG = null === ZG || void 0 === ZG ? void 0 : ZG.asked) && void 0 !== bG && bG ? "restore_tried" : "restore_untried";
-            this.NQ(`webgl_rejoin_${SG}_${wG}`, "WebGL2 context not restored: rejoining (wasm)")
+          const MM = this.take();
+          if (null !== MM) {
+            var rM;
+            const iM = this.unheldRestore(MM.lostAtMs),
+              OM = null === iM ? MM.delay : (0, or.l)(this.now() - iM.firstLostAtMs),
+              SM = MM.asked || null !== (rM = null === iM || void 0 === iM ? void 0 : iM.asked) && void 0 !== rM && rM ? "restore_tried" : "restore_untried";
+            this.aL(`webgl_rejoin_${SM}_${OM}`, "WebGL2 context not restored: rejoining (wasm)")
           }
           this.lastRestore = null
         }
         take() {
-          const GG = this.lostAtMs;
-          return null === GG ? null : (this.lostAtMs = null, {
-            lostAtMs: GG,
-            delay: (0, Mb.l)(this.now() - GG),
+          const MM = this.lostAtMs;
+          return null === MM ? null : (this.lostAtMs = null, {
+            lostAtMs: MM,
+            delay: (0, or.l)(this.now() - MM),
             asked: this.asked
           })
         }
-      }(aZ.reportRenderRecovery);
-    let zU = !1,
-      EU = !0,
-      oU = null,
-      XU = !1,
-      uU = !1,
-      iU = !1;
+      }(oi.reportRenderRecovery),
+      un = new class {
+        constructor(MM) {
+          var rM, iM, OM, SM;
+          this.deps = MM, this.firstLostAtMs = null, this.lastLostAtMs = 0, this.heldReload = null, this.generation = 0, this.watched = new WeakSet, this.pageHideWatched = !1, this.storage = void 0, this.now = void 0, this.wallNow = void 0, this.setTimer = void 0, this.storage = null !== (rM = MM.storage) && void 0 !== rM ? rM : Yr.k, this.now = null !== (iM = MM.now) && void 0 !== iM ? iM : performance.now.bind(performance), this.wallNow = null !== (OM = MM.wallNow) && void 0 !== OM ? OM : Date.now, this.setTimer = null !== (SM = MM.setTimer) && void 0 !== SM ? SM : (MM, rM) => {
+            setTimeout(MM, rM)
+          }
+        }
+        watch(MM, rM) {
+          this.watched.has(MM) || (this.watched.add(MM), MM.addEventListener("webglcontextlost", (() => {
+            rM() && this.lost()
+          })), MM.addEventListener("webglcontextrestored", (() => {
+            this.restored()
+          })), this.pageHideWatched || (this.pageHideWatched = !0, window.addEventListener("pagehide", (() => {
+            this.pageHide()
+          })), document.addEventListener("visibilitychange", (() => {
+            this.pageHide(!document.hidden)
+          }))))
+        }
+        lost() {
+          const MM = this.now();
+          null === this.firstLostAtMs && (this.firstLostAtMs = MM, this.writeMarker({
+            lostAt: this.wallNow()
+          })), this.lastLostAtMs = MM, null === this.heldReload && this.generation++
+        }
+        restored() {
+          if (null === this.firstLostAtMs || null !== this.heldReload) return;
+          const MM = this.now(),
+            rM = ++this.generation;
+          this.setTimer((() => {
+            rM === this.generation && this.end("restored", MM)
+          }), 3e4)
+        }
+        reload(MM) {
+          if (null !== this.heldReload) return;
+          if (null === this.firstLostAtMs && this.lost(), this.deps.probe()) return this.end("cleared_reload"), void MM();
+          this.heldReload = MM, this.deps.hold(!0);
+          const rM = ++this.generation,
+            iM = () => this.lastLostAtMs + Dr.e + 5e3,
+            OM = () => {
+              this.setTimer(SM, Math.max(0, Math.min(5e3, iM() - this.now())))
+            },
+            SM = () => {
+              rM === this.generation && (this.deps.probe() ? this.release("cleared_reload", MM) : this.now() >= iM() ? this.release("gave_up", MM) : OM())
+            };
+          OM()
+        }
+        releaseNow() {
+          null !== this.heldReload && this.release("gave_up", this.heldReload)
+        }
+        forget() {
+          null !== this.firstLostAtMs && this.clear()
+        }
+        pageHide() {
+          let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          if (null === this.firstLostAtMs) return;
+          const rM = (0, fr.g)(this.storage);
+          null !== rM && this.writeMarker(MM ? {
+            lostAt: rM.lostAt
+          } : {
+            ...rM,
+            leftAt: this.wallNow()
+          })
+        }
+        release(MM, rM) {
+          this.end(MM), rM()
+        }
+        end(MM) {
+          let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.now();
+          const iM = this.firstLostAtMs;
+          if (this.clear(), null !== iM) {
+            const {
+              code: OM,
+              message: SM
+            } = (0, fr.k)(MM, rM - iM);
+            this.deps.aL(OM, SM)
+          }
+        }
+        clear() {
+          this.firstLostAtMs = null, this.generation++, null !== this.heldReload && (this.heldReload = null, this.deps.hold(!1)), this.storage.removeItem(fr.c)
+        }
+        writeMarker(MM) {
+          this.storage.setItem(fr.c, MM)
+        }
+      }({
+        aL: oi.reportRenderRecovery,
+        probe: () => function(MM) {
+          let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => document.createElement("canvas");
+          try {
+            var iM;
+            const OM = rM(),
+              SM = MM ? OM.getContext("webgl") : OM.getContext("webgl2");
+            return null !== SM && (null === (iM = SM.getExtension("WEBGL_lose_context")) || void 0 === iM || iM.loseContext(), !0)
+          } catch {
+            return !1
+          }
+        }("rust_webgl1" === (0, ZS.G)()),
+        hold: MM => {
+          tn.hold(MM)
+        }
+      });
+    let Rn = !1,
+      pn = !0,
+      Wn = null,
+      sn = !1,
+      Dn = !1,
+      kn = !1;
 
-    function CU() {
-      return Ky ??= Promise.all([ZG.e(201), ZG.e(144), ZG.e(60)]).then((() => ZG(51399))).then((GG => (Qy = GG, Object.assign(globalThis, {
-        bloxdPreviewPage: GG.pagePreviews()
-      }), GG)), (GG => {
-        throw Ky = null, GG
-      })), Ky
+    function Zn() {
+      if (null === Ln) return null;
+      const {
+        canvas: MM,
+        backend: rM
+      } = Ln;
+      return {
+        canvas: MM,
+        renderer: Br.b[rM]
+      }
     }
 
-    function WU() {
-      return fy ??= ZG.e(58).then((() => ZG(51420))).catch((GG => {
-        throw fy = null, new aG.d(GG)
-      })), fy
+    function fn() {
+      return Ca ??= Promise.all([iM.e(224), iM.e(48), iM.e(170), iM.e(71)]).then((() => iM(53732))).then((MM => (Ga = MM, Object.assign(globalThis, {
+        bloxdPreviewPage: MM.pagePreviews()
+      }), MM)), (MM => {
+        throw Ca = null, MM
+      })), Ca
     }
-    class mU {
+
+    function Yn() {
+      return Ua ??= iM.e(69).then((() => iM(53752))).catch((MM => {
+        throw Ua = null, new WM.b(MM)
+      })), Ua
+    }
+    class Nn {
       constructor() {
         this.host = null
       }
-      open(GG) {
-        return null !== this.host ? GG(this.host) : CU().then((bG => (this.host ??= new bG.WasmPreviewHost(bG.pagePreviews()), GG(this.host))))
+      open(MM) {
+        return null !== this.host ? MM(this.host) : fn().then((rM => (this.host ??= new rM.WasmPreviewHost(rM.pagePreviews()), MM(this.host))))
       }
-      openMob(GG) {
-        return this.open((bG => bG.openMob(GG)))
+      openMob(MM) {
+        return this.open((rM => rM.openMob(MM)))
       }
-      openPet(GG) {
-        return this.open((bG => bG.openPet(GG)))
+      openPet(MM) {
+        return this.open((rM => rM.openPet(MM)))
       }
-      openMobLineup(GG) {
-        return this.open((bG => bG.openMobLineup(GG)))
+      openMobLineup(MM) {
+        return this.open((rM => rM.openMobLineup(MM)))
       }
-      openCharacter(GG, bG) {
-        return this.open((ZG => ZG.openCharacter(GG, bG)))
+      openCharacter(MM, rM) {
+        return this.open((iM => iM.openCharacter(MM, rM)))
       }
     }
 
-    function IU() {
-      py || (py = !0, iS.f.setHost(new mU), (0, PZ.n)(), ES.e.setFollower(lY), Object.assign(globalThis, {
-        bloxdPreviews: iS.f
+    function An() {
+      Ea || (Ea = !0, RS.i.setHost(new Nn), (0, Ai.j)(), wS.g.setFollower(XQ), Object.assign(globalThis, {
+        bloxdPreviews: RS.i
       }))
     }
 
-    function FU() {
-      CU().then((GG => {
-        GG.pagePreviews().prefetch()
+    function xn() {
+      fn().then((MM => {
+        MM.pagePreviews().prefetch()
       }), (() => {}))
     }
 
-    function vU() {
-      let GG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      if (Vy) return;
-      Vy = !0, zU = "play" === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "shell"), EU = !zU, console.info(`${qL} starting`), Yy || (Yy = !0, (0, KG.M)(new qb(NU, SY)), (0, fG.n)(new nb), (0, KG.J)(new gb), (0, KG.A)()), zU && UG.l.subscribe("appManagerUpdated|gameState", DU), IU(), (0, aZ.setCrashScreen)((GG => {
+    function vn() {
+      let MM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      if (la) return;
+      la = !0, Rn = "play" === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "shell"), pn = !Rn, console.info(`${Kj} starting`), ya || (ya = !0, (0, hM.V)(new xr(nQ, dQ, Zn)), (0, mM.o)(new vr), (0, hM.R)(new Fr((() => performance.now() - QP))), (0, hM.I)()), Rn && nM.i.subscribe("appManagerUpdated|gameState", PQ), An(), (0, oi.setCrashScreen)((MM => {
         let {
-          text: bG,
-          reload: ZG
-        } = GG;
-        ! function(GG, bG) {
-          var ZG, wG;
-          if (XU) return;
-          XU = !0, (0, AZ.T)(), null === (ZG = qk) || void 0 === ZG || ZG.abort(), qk = null, oS.e.release();
-          const SG = zU ? null !== (wG = GG.cancel) && void 0 !== wG ? wG : "general:back" : null;
-          Mw({
-            ...GG,
-            cancel: SG
-          }).then((GG => {
-            GG && bG && uU ? ((0, ob.y)("reloadOntoJs"), (0, BG.h)(ob.E)) : GG && bG ? (0, BG.i)() : zU && (0, BG.g)("/")
+          text: rM,
+          reload: iM
+        } = MM;
+        ! function(MM, rM) {
+          var iM, OM;
+          if (sn) return;
+          sn = !0, (0, vi.U)(), null === (iM = IP) || void 0 === iM || iM.abort(), IP = null, tS.e.release();
+          const SM = Rn ? null !== (OM = MM.cancel) && void 0 !== OM ? OM : "general:back" : null;
+          xO({
+            ...MM,
+            cancel: SM
+          }).then((MM => {
+            MM && rM && Dn ? ((0, Gr.E)("reloadOntoJs"), (0, cM.j)(Gr.K)) : MM && rM ? (0, cM.k)() : Rn && (0, cM.f)("/")
           }))
-        }(bG, ZG)
-      })), (0, VS.o)(), (0, vb.h)();
-      let bG = null;
+        }(rM, iM)
+      })), (0, JS.n)(), (0, pr.m)();
+      let rM = null;
       try {
-        bG = PL("0viw6fpscz4", (() => {
-          var GG, bG;
-          return null !== (GG = null === (bG = my) || void 0 === bG ? void 0 : bG.ws) && void 0 !== GG ? GG : null
-        }), GG, "euyfsxnmtv")
-      } catch (SG) {
-        console.error(`${qL} probes`, SG)
+        rM = vj("lm07r2s7r8f", (() => {
+          var MM, rM;
+          return null !== (MM = null === (rM = Za) || void 0 === rM ? void 0 : rM.ws) && void 0 !== MM ? MM : null
+        }), MM, "fuexskgmtl")
+      } catch (SM) {
+        console.error(`${Kj} probes`, SM)
       }
-      const wG = function() {
-        const GG = (0, Hw.j)(),
-          bG = (0, Hw.g)();
-        let ZG = !1;
-        return wG => {
-          GG && !ZG && (ZG = !0, (0, aZ.reportStaleBuildReload)(GG, bG, wG))
+      const OM = function() {
+        const MM = (0, VO.l)(),
+          rM = (0, VO.j)();
+        let iM = !1;
+        return OM => {
+          MM && !iM && (iM = !0, (0, oi.reportStaleBuildReload)(MM, rM, OM))
         }
       }();
-      PY(), zU || function() {
-        const GG = function(GG) {
-          var bG;
-          const ZG = new URLSearchParams(GG),
-            wG = ZG.get("game");
-          return wG ? {
-            game: wG,
-            lobby: null !== (bG = ZG.get("lobby")) && void 0 !== bG ? bG : null
+      KQ(), Rn || function() {
+        const MM = function(MM) {
+          var rM;
+          const iM = new URLSearchParams(MM),
+            OM = iM.get("game");
+          return OM ? {
+            game: OM,
+            lobby: null !== (rM = iM.get("lobby")) && void 0 !== rM ? rM : null
           } : null
         }(window.location.search);
-        if (GG) return (0, pb.h)(GG.game) && PY().request(), void lU(GG.game, GG.lobby);
-        const bG = new URLSearchParams(window.location.search).get("ws");
-        if (!bG) return;
-        uy.then((GG => {
-          GG && async function(GG, bG) {
+        if (MM) return (0, Lr.m)(MM.game) && KQ().request(), void Xn(MM.game, MM.lobby);
+        const rM = new URLSearchParams(window.location.search).get("ws");
+        if (!rM) return;
+        Wa.then((MM => {
+          MM && async function(MM, rM) {
             try {
-              await (0, aG.g)(GG), uk = YY(new WebSocket(bG)), null !== uk && oS.e.setGame(null), aU()
-            } catch (SG) {
-              console.error(`${qL} ?ws=${bG} did not attach`, SG)
+              await (0, WM.h)(MM), pP = GQ(new WebSocket(rM)), null !== pP && tS.e.setGame(null), Fn()
+            } catch (SM) {
+              console.error(`${Kj} ?ws=${rM} did not attach`, SM)
             }
-          }(GG, bG)
+          }(MM, rM)
         }))
-      }(), async function(GG) {
-        var bG, wG, LG, yG, kG, YG;
-        if ("undefined" === typeof WebAssembly) return iY("noWebAssembly", "unsupported", "This browser has no WebAssembly"), null;
-        const VG = (0, vS.Q)(),
-          fG = await async function(GG, bG) {
-            const ZG = (0, VZ.q)(GG) ? WY(GG, bG) : null;
-            if (null === ZG || void 0 === ZG || !ZG.retries) return GG;
-            console.warn(`${qL} ${ZG.detail}: picking again in ${CY} ms`), await new Promise((GG => {
-              setTimeout(GG, CY)
+      }(), async function(MM) {
+        var rM, OM, jM, aM, PM, QM;
+        if ("undefined" === typeof WebAssembly) return oQ("noWebAssembly", "unsupported", "This browser has no WebAssembly"), null;
+        const zM = (0, ZS.$)(),
+          mM = await async function(MM, rM) {
+            const iM = (0, Hi.l)(MM) ? YQ(MM, rM) : null;
+            if (null === iM || void 0 === iM || !iM.retries) return MM;
+            console.warn(`${Kj} ${iM.detail}: picking again in ${fQ} ms`), await new Promise((MM => {
+              setTimeout(MM, fQ)
             }));
-            const wG = await (0, vS.S)();
-            if (!(0, VZ.q)(wG)) {
-              var SG;
-              (0, aZ.reportNoBackendRetry)("reprobed", ZG.decline, ZG.detail, {
-                ...ZG.details,
-                backend: null !== (SG = null === wG || void 0 === wG ? void 0 : wG.backend) && void 0 !== SG ? SG : "none"
-              }), null !== wG && (0, vS.P)(wG.backend)
+            const OM = await (0, ZS.cb)();
+            if (!(0, Hi.l)(OM)) {
+              var SM;
+              (0, oi.reportNoBackendRetry)("reprobed", iM.decline, iM.detail, {
+                ...iM.details,
+                backend: null !== (SM = null === OM || void 0 === OM ? void 0 : OM.backend) && void 0 !== SM ? SM : "none"
+              }), null !== OM && (0, ZS.Y)(OM.backend)
             }
-            return wG
-          }(await (0, vS.N)(), VG);
-        if ((0, aZ.setCrashBackend)((0, VZ.q)(fG) ? "unsupported" : null !== (bG = null === fG || void 0 === fG ? void 0 : fG.backend) && void 0 !== bG ? bG : "none"), (0, VZ.q)(fG)) return function(GG) {
+            return OM
+          }(await (0, ZS.U)(), zM);
+        if ((0, oi.setCrashBackend)((0, Hi.l)(mM) ? "unsupported" : null !== (rM = null === mM || void 0 === mM ? void 0 : mM.backend) && void 0 !== rM ? rM : "none"), (0, Hi.l)(mM)) return function(MM) {
           let {
-            decline: bG,
-            detail: ZG,
-            details: wG,
-            retries: SG
-          } = GG;
-          if (SG && (0, ob.n)()) return (0, aZ.reportNoBackendRetry)("reload", bG, ZG, wG), void mY(`${ZG}, again after ${CY} ms`);
-          iY("browser", bG, ZG, SG ? {
-            ...wG,
-            afterReload: String(ob.v)
-          } : wG)
-        }(WY(fG, VG)), null;
-        if ((0, NS.m)("render")) try {
+            decline: rM,
+            detail: iM,
+            details: OM,
+            retries: SM
+          } = MM;
+          if (SM && (0, Gr.r)()) return (0, oi.reportNoBackendRetry)("reload", rM, iM, OM), void NQ(`${iM}, again after ${fQ} ms`);
+          oQ("browser", rM, iM, SM ? {
+            ...OM,
+            afterReload: String(Gr.D)
+          } : OM)
+        }(YQ(mM, zM)), null;
+        if ((0, rj.p)("render")) try {
           const {
-            startRenderDebug: GG
-          } = await Promise.all([ZG.e(78), ZG.e(49)]).then((() => ZG(4697)));
-          GG(fG)
-        } catch (Eb) {
-          console.warn("The render debug topic didn't load", Eb)
+            startRenderDebug: MM
+          } = await Promise.all([iM.e(89), iM.e(55)]).then((() => iM(5058)));
+          MM(mM)
+        } catch (Ur) {
+          console.warn("The render debug topic didn't load", Ur)
         }
-        if ((0, NS.m)("renderlite")) try {
+        if ((0, rj.p)("renderlite")) try {
           const {
-            startRenderLite: GG
-          } = await Promise.all([ZG.e(273), ZG.e(50)]).then((() => ZG(51430)));
-          LU = GG(fG)
-        } catch (Eb) {
-          console.warn("The renderlite debug topic didn't load", Eb)
+            startRenderLite: MM
+          } = await Promise.all([iM.e(296), iM.e(56)]).then((() => iM(53760)));
+          Hn = MM(mM)
+        } catch (Ur) {
+          console.warn("The renderlite debug topic didn't load", Ur)
         }
-        if ((0, NS.m)("renderprobe")) try {
+        if ((0, rj.p)("renderprobe")) try {
           const {
-            startRenderProbe: GG
-          } = await ZG.e(51).then((() => ZG(51432)));
-          GG(fG)
-        } catch (Eb) {
-          console.warn("The renderprobe debug topic didn't load", Eb)
+            startRenderProbe: MM
+          } = await iM.e(57).then((() => iM(53764)));
+          MM(mM)
+        } catch (Ur) {
+          console.warn("The renderprobe debug topic didn't load", Ur)
         }
-        if ("webgl" === (null === fG || void 0 === fG ? void 0 : fG.backend) && zU && "wasm" !== (0, ob.f)(window.location.search)) {
-          const GG = ew(fG);
-          null !== GG && (0, Xb.g)(GG)
+        if ("webgl" === (null === mM || void 0 === mM ? void 0 : mM.backend) && Rn && "wasm" !== (0, Gr.h)(window.location.search)) {
+          const MM = KO(mM);
+          null !== MM && (0, Cr.f)(MM)
         }
-        const QG = null !== (wG = null === fG || void 0 === fG ? void 0 : fG.backend) && void 0 !== wG ? wG : null;
-        tk.adapter = null !== (LG = null === fG || void 0 === fG ? void 0 : fG.adapter) && void 0 !== LG ? LG : null, tk.boundAtMs = null, tk.indirectHangs = null, tk.restoresSkipped = null;
-        const KG = !(0, VZ.cb)();
-        null === fG || (0, VZ.D)(fG.reason) || console.info(`${qL} drawing with ${fG.backend}: ${fG.reason}`);
-        const hG = (0, vS.C)();
-        iy(!0), (0, aG.r)((GG => {
+        const HM = null !== (OM = null === mM || void 0 === mM ? void 0 : mM.backend) && void 0 !== OM ? OM : null;
+        rn.adapter = null !== (jM = null === mM || void 0 === mM ? void 0 : mM.adapter) && void 0 !== jM ? jM : null, rn.boundAtMs = null, rn.indirectHangs = null, rn.restoresSkipped = null;
+        const hM = !(0, Hi._)();
+        null === mM || (0, Hi.D)(mM.reason) || console.info(`${Kj} drawing with ${mM.backend}: ${mM.reason}`);
+        const JM = (0, ZS.F)();
+        sa(!0), (0, WM.r)((MM => {
           try {
-            null !== QG && (Bk = GG.startSkyFeed, aY(), function(GG) {
-              var bG, ZG;
-              Nk = GG.rasterText, Ck = GG.setTextLocalPlayer, GG.setTextLocalPlayer(null !== (bG = null === (ZG = ik) || void 0 === ZG ? void 0 : ZG.info.playerDbId) && void 0 !== bG ? bG : null), Ok = GG.drainTextRerasters, xk = GG.loadTextIcons, GG.warmText((() => UU)), GG.textChanged(), UU && setTimeout(xk, 0)
-            }(GG), GU = GG.startShellAnalytics, gY())
+            null !== HM && (Pn = MM.startSkyFeed, FQ(), function(MM) {
+              var rM, iM;
+              Sn = MM.rasterText, sP = MM.setTextLocalPlayer, MM.setTextLocalPlayer(null !== (rM = null === (iM = WP) || void 0 === iM ? void 0 : iM.info.playerDbId) && void 0 !== rM ? rM : null), jn = MM.drainTextRerasters, an = MM.loadTextIcons, MM.warmText((() => dn)), MM.textChanged(), dn && setTimeout(an, 0)
+            }(MM), nn = MM.startShellAnalytics, rz())
           } finally {
-            iU || (yU = GG.followMenuPrefs({
-              setSoundPrefs: yY,
-              setEnvPrefs: kY,
-              setUiPrefs: LY,
-              setLookPrefs: UY
+            kn || (hn = MM.followMenuPrefs({
+              setSoundPrefs: lQ,
+              setEnvPrefs: EQ,
+              setUiPrefs: yQ,
+              setLookPrefs: UQ
             }))
           }
-        })), (0, aG.k)(zy).catch((GG => {
-          console.warn(`${qL} the game code did not load: a join asks again`, GG)
+        })), (0, WM.i)(ga).catch((MM => {
+          console.warn(`${Kj} the game code did not load: a join asks again`, MM)
         }));
-        const dG = (0, vS.j)(fG);
-        let JG, zG;
-        dG.catch((() => {})), "loading" === (0, hb.C)() && oG();
+        const dM = (0, ZS.o)(mM);
+        let yM, EM;
+        dM.catch((() => {})), "loading" === (0, Jr.B)() && GM();
         try {
-          JG = function(GG) {
-            const bG = null !== GG && void 0 !== GG ? GG : document.createElement("canvas");
-            bG.id = "wasm-game-canvas", rU.watch(bG, (() => null !== Jk && yV())), (0, AS.j)();
-            const ZG = (0, sb.d)(),
-              wG = (0, sb.f)(ZG);
-            bG.style.cssText = "position:absolute;top:0;left:0;display:block;touch-action:none;outline:none;background:#000", (0, MS.h)(bG, wG), (0, sb.c)(bG, ZG), bG.width = wG.bufferWidth, bG.height = wG.bufferHeight;
-            const SG = document.createElement("div");
-            return SG.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden", SG.append(bG), OU(SG, EU), oU = SG, document.body.append(SG), bG
-          }(null === QG ? null : await (await CU()).pagePreviews().beginSession())
-        } catch (SG) {
-          return await mV({
-            site: TL,
-            error: SG
+          yM = function(MM) {
+            const rM = null !== MM && void 0 !== MM ? MM : document.createElement("canvas");
+            rM.id = "wasm-game-canvas", gn.watch(rM, ez), un.watch(rM, ez), (0, vS.j)();
+            const iM = (0, Ar.g)(),
+              OM = (0, Ar.k)(iM);
+            rM.style.cssText = "position:absolute;top:0;left:0;display:block;touch-action:none;outline:none;background:#000", (0, xS.h)(rM, OM), (0, Ar.d)(rM, iM), rM.width = OM.bufferWidth, rM.height = OM.bufferHeight;
+            const SM = document.createElement("div");
+            return SM.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden", SM.append(rM), QQ(SM, pn), Wn = SM, document.body.append(SM), rM
+          }(null === HM ? null : await (await fn()).pagePreviews().beginSession())
+        } catch (SM) {
+          return await Az({
+            site: Ma,
+            error: SM
           }, (() => {
-            (0, aZ.showUnsupported)((0, lw.m)("fetch"), SL.c.fetch, `the previews did not load: ${String(SG)}`)
+            (0, oi.showUnsupported)((0, YO.n)("fetch"), Qj.e.fetch, `the previews did not load: ${String(SM)}`)
           })), null
         }
-        oG();
+        GM();
         try {
-          zG = await dG
-        } catch (SG) {
-          return await mV({
-            site: TL,
-            error: SG
+          EM = await dM
+        } catch (SM) {
+          return await Az({
+            site: Ma,
+            error: SM
           }, (() => {
-            (0, aZ.showUnsupported)((0, lw.m)("fetch"), SL.c.fetch, `the ${null!==QG&&void 0!==QG?QG:"client"} build did not load: ${String(SG)}`)
+            (0, oi.showUnsupported)((0, YO.n)("fetch"), Qj.e.fetch, `the ${null!==HM&&void 0!==HM?HM:"client"} build did not load: ${String(SM)}`)
           })), null
         }
-        const EG = (0, vS.e)(),
-          XG = !EG && !0 !== gZ.l.getItem(nL),
-          uG = !EG && "loading" === (0, hb.C)();
-        await (0, aS.d)(zG, {
-          reloadFailedDownload: XG
-        }), uG && !(0, hb.S)() && await (0, aS.d)(zG, {
-          reloadFailedDownload: XG
+        const UM = (0, ZS.g)(),
+          CM = !UM && !0 !== Yr.k.getItem(qj),
+          eM = !UM && "loading" === (0, Jr.B)();
+        await (0, oS.b)(EM, {
+          reloadFailedDownload: CM
+        }), eM && !(0, Jr.R)() && await (0, oS.b)(EM, {
+          reloadFailedDownload: CM
         });
-        rG = performance.now();
-        const iG = Ey;
-        if (!(0, hb.S)()) {
-          (0, hb.P)() && gZ.l.setItem(nL, !0);
-          const GG = (0, hb.r)();
-          if ("call" === GG) fV({
-            site: fZ.y,
-            error: (0, hb.o)(),
+        lM = performance.now();
+        const bM = ua;
+        if (!(0, Jr.R)()) {
+          (0, Jr.Q)() && Yr.k.setItem(qj, !0);
+          const MM = (0, Jr.t)();
+          if ("call" === MM) wz({
+            site: di.B,
+            error: (0, Jr.p)(),
             header: null
-          }, iG);
+          }, bM);
           else {
-            const bG = null !== GG && void 0 !== GG ? GG : "instantiate",
-              ZG = () => {
-                (0, aZ.showUnsupported)((0, lw.m)(bG), SL.c[bG], (0, hb.i)())
+            const rM = null !== MM && void 0 !== MM ? MM : "instantiate",
+              iM = () => {
+                (0, oi.showUnsupported)((0, YO.n)(rM), Qj.e[rM], (0, Jr.j)())
               };
-            if ("compile" !== GG && "instantiate" !== GG || !IY())
-              if ("fetch" === bG) {
-                const GG = [zG.url().href, zb.c.url().href];
-                await mV({
-                  site: TL,
-                  error: (0, hb.i)(),
-                  urls: GG
-                }, ZG)
-              } else ZG();
+            if ("compile" !== MM && "instantiate" !== MM || !AQ())
+              if ("fetch" === rM) {
+                const MM = [EM.url().href, Er.f.url().href];
+                await Az({
+                  site: Ma,
+                  error: (0, Jr.j)(),
+                  urls: MM
+                }, iM)
+              } else iM();
             else {
-              const bG = (0, hb.i)(),
-                ZG = (0, Bb.d)((0, hb.o)());
-              if (ZG && (0, ob.n)()) return (0, aZ.reportCountedLoadFallback)((0, lw.m)(GG), SL.c[GG], bG, "wasmReload"), mY(`the wasm client ran out of memory to ${GG} here (${bG})`), null;
-              (0, aZ.reportCountedLoadFallback)((0, lw.m)(GG), SL.c[GG], bG, ZG ? "declined" : "pageAlone"), FY(`the wasm client did not ${GG} here (${bG})`, ZG ? "oom" : null)
+              const rM = (0, Jr.j)(),
+                iM = (0, ii.b)((0, Jr.p)());
+              if (iM && (0, Gr.r)()) return (0, oi.reportCountedLoadFallback)((0, YO.n)(MM), Qj.e[MM], rM, "wasmReload"), NQ(`the wasm client ran out of memory to ${MM} here (${rM})`), null;
+              (0, oi.reportCountedLoadFallback)((0, YO.n)(MM), Qj.e[MM], rM, iM ? "declined" : "pageAlone"), xQ(`the wasm client did not ${MM} here (${rM})`, iM ? "oom" : null)
             }
           }
           return null
-        }(0, db.R)(zG.url()) && (0, aZ.reportUnstreamedCoreLoad)();
-        const CG = (0, hb.G)();
-        let WG, mG = iG;
+        }(0, dr.Q)(EM.url()) && (0, oi.reportUnstreamedCoreLoad)();
+        const wM = (0, Jr.E)();
+        let tM, gM = bM;
         try {
-          mG = {
-            ...iG,
-            wasm: CG.hp()
+          gM = {
+            ...bM,
+            wasm: wM.NL()
           };
           const {
-            Pd: GG
-          } = zG.bindings, bG = GG.EwG();
-          if (bG !== Nb.F) return fV({
-            site: fZ.d,
-            error: `core ABI ${bG}, page ABI ${Nb.F}`,
+            Bd: MM
+          } = EM.bindings, rM = MM.POM();
+          if (rM !== cr.A) return wz({
+            site: di.e,
+            error: `core ABI ${rM}, page ABI ${cr.A}`,
             header: null
-          }, mG), null;
-          const [ZG, wG] = (0, Nb.te)();
-          WG = new GG(ZG, wG)
-        } catch (SG) {
-          return fV({
-            site: fZ.d,
-            error: SG,
+          }, gM), null;
+          const [iM, OM] = (0, cr.ne)();
+          tM = new MM(iM, OM)
+        } catch (SM) {
+          return wz({
+            site: di.e,
+            error: SM,
             header: null
-          }, mG), null
+          }, gM), null
         }
-        Ey = mG, oy = zG.bindings;
-        const IG = new fZ.j(WG, hb.y, {
-          onCrash: GG => {
-            var bG;
-            null === (bG = LU) || void 0 === bG || bG.crashed(GG),
-              function(GG, bG, ZG, wG) {
-                if ("webgpu" !== bG || (0, vS.c)()) return !1;
-                const SG = function(GG) {
-                  if (GG.site === fZ.g && (0, VZ.r)(GG.error)) return "frames_refused";
-                  return GG.site === gL && (0, VZ.v)(GG.error) ? "start_failed" : null
-                }(GG);
-                if (null === SG) return !1;
-                if (null !== (0, VZ._)(SG, wG, (0, pZ.e)(GG.error))) return (0, aZ.countRenderLost)(SG, GG.error, tk), !1;
-                return lb.P.reloaded(null, !1), (0, aZ.reportRenderReload)("webgpu", "start_failed" === SG ? 0 : 1, ZG, {
-                  cause: SG,
-                  error: GG.error,
-                  context: tk,
-                  session: dV(null)
-                }), NY(), !0
-              }(GG, QG, mG, KG) || fV(GG, mG)
+        ua = gM, Ra = EM.bindings;
+        const uM = new di.i(tM, Jr.y, {
+          onCrash: MM => {
+            var rM;
+            null === (rM = Hn) || void 0 === rM || rM.crashed(MM),
+              function(MM, rM, iM, OM) {
+                if ("webgpu" !== rM || (0, ZS.e)()) return !1;
+                const SM = function(MM) {
+                  if (MM.site === di.h && (0, Hi.p)(MM.error)) return "frames_refused";
+                  return MM.site === Tj && (0, Hi.t)(MM.error) ? "start_failed" : null
+                }(MM);
+                if (null === SM) return !1;
+                if (null !== (0, Hi.X)(SM, OM, (0, Ji.c)(MM.error))) return (0, oi.countRenderLost)(SM, MM.error, rn), !1;
+                return Dr.B.reloaded(null, !1), (0, oi.reportRenderReload)("webgpu", "start_failed" === SM ? 0 : 1, iM, {
+                  cause: SM,
+                  error: MM.error,
+                  context: rn,
+                  session: Rz(null)
+                }), nz(), !0
+              }(MM, HM, gM, hM) || wz(MM, gM)
           },
-          onNetEvent: HY,
-          onReconnectGrace: oY,
-          onJoinPreloadEnded: EY,
-          onCoreErrors: (GG, bG) => {
-            var ZG, wG;
-            GG.some((GG => {
+          onNetEvent: jz,
+          onReconnectGrace: DQ,
+          onJoinPreloadEnded: sQ,
+          onCoreErrors: (MM, rM) => {
+            var iM, OM;
+            MM.some((MM => {
               let {
-                code: bG
-              } = GG;
-              return bG === Nb.R.RenderDeviceLost
-            })) && ((0, vS.u)(), JU.deviceLost(), "webgpu" === QG && ((0, pZ.f)(Dk), lb.P.lost())), null === (ZG = LU) || void 0 === ZG || ZG.coreErrors(GG);
-            const SG = () => {
-              (0, aZ.reportCoreErrors)(GG, bG, mG, ((GG, bG) => {
-                var ZG;
-                return GG === Nb.R.EnvUnknownSky ? (0, aZ.unknownSkyWords)(ub.c.get("skyBox")) : GG === Nb.R.RenderDeviceLost ? (0, aZ.deviceLossWords)(bG, tk.boundAtMs) : null === (ZG = Dk) || void 0 === ZG ? void 0 : ZG.owG(GG, bG)
+                code: rM
+              } = MM;
+              return rM === cr.H.RenderDeviceLost
+            })) && ((0, ZS.y)(), tn.deviceLost(), "webgpu" === HM && ((0, Ji.g)(On), Dr.B.lost())), null === (iM = Hn) || void 0 === iM || iM.coreErrors(MM);
+            const SM = () => {
+              (0, oi.reportCoreErrors)(MM, rM, gM, ((MM, rM) => {
+                var iM;
+                return MM === cr.H.EnvUnknownSky ? (0, oi.unknownSkyWords)(er.d.get("skyBox")) : MM === cr.H.RenderDeviceLost ? (0, oi.deviceLossWords)(rM, rn.boundAtMs) : null === (iM = On) || void 0 === iM ? void 0 : iM.nOM(MM, rM)
               }))
             };
-            GG.some((GG => {
+            MM.some((MM => {
               let {
-                code: bG
-              } = GG;
-              return bG === Nb.R.EnvUnknownSky
-            })) ? queueMicrotask(SG) : SG(), null === (wG = Dy) || void 0 === wG || wG.coreErrors(GG)
+                code: rM
+              } = MM;
+              return rM === cr.H.EnvUnknownSky
+            })) ? queueMicrotask(SM) : SM(), null === (OM = OP) || void 0 === OM || OM.coreErrors(MM)
           },
-          onRenderReload: (GG, bG, ZG) => {
-            ! function(GG, bG, ZG, wG, SG, LG) {
-              var yG;
-              if ((0, vS.c)()) return;
-              const kG = bG === Nb.ed.WEBGPU,
-                UG = wG === Nb.ed.PIPELINE_FAILED ? "pipeline_failed" : "lost",
-                YG = wG === Nb.ed.RESTORE_LOST,
-                VG = kG && (0, lb.r)(tk.adapter, ZG, "lost" === UG, YG),
-                fG = (0, pZ.j)(Dk);
-              null === (yG = LU) || void 0 === yG || yG.reload(kG, ZG, UG, null === fG || void 0 === fG ? void 0 : fG.message);
-              const QG = kG ? (0, VZ._)(UG, SG, fG) : null;
-              if (null !== QG) {
-                (0, aZ.countRenderLost)(UG, fG, tk);
-                const bG = void 0 === fG ? "" : ` (${fG.message})`;
-                return void GG.crash(aZ.RENDER_RELOAD_SITE, new Error(`${(0,aZ.renderReloadMessage)("webgpu",UG,ZG)} and ${QG}${bG}`))
+          onRenderReload: (MM, rM, iM) => {
+            ! function(MM, rM, iM, OM, SM, jM) {
+              var aM;
+              if ((0, ZS.e)()) return;
+              const PM = rM === cr.Tc.WEBGPU,
+                nM = OM === cr.Tc.PIPELINE_FAILED ? "pipeline_failed" : "lost",
+                QM = OM === cr.Tc.RESTORE_LOST,
+                zM = PM && (0, Dr.m)(rn.adapter, iM, "lost" === nM, QM),
+                mM = (0, Ji.o)(On);
+              null === (aM = Hn) || void 0 === aM || aM.reload(PM, iM, nM, null === mM || void 0 === mM ? void 0 : mM.message);
+              const HM = PM ? (0, Hi.X)(nM, SM, mM) : null;
+              if (null !== HM) {
+                (0, oi.countRenderLost)(nM, mM, rn);
+                const rM = void 0 === mM ? "" : ` (${mM.message})`;
+                return void MM.crash(oi.RENDER_RELOAD_SITE, new Error(`${(0,oi.renderReloadMessage)("webgpu",nM,iM)} and ${HM}${rM}`))
               }
-              const KG = kG ? "webgpu" : "webgl1" === LG ? "webgl1" : "webgl";
-              "lost" === UG && (0, vS.u)();
-              kG || ((0, ob.u)(), rU.gaveUp());
-              (0, aZ.reportRenderReload)(KG, ZG, Ey, {
+              const hM = PM ? "webgpu" : "webgl1" === jM ? "webgl1" : "webgl";
+              "lost" === nM && (0, ZS.y)();
+              PM || ((0, Gr.C)(), gn.gaveUp());
+              (0, oi.reportRenderReload)(hM, iM, ua, {
                 from: "game",
-                cause: UG,
-                restoreLost: YG,
-                adapterRemembered: VG,
-                error: fG,
-                context: tk,
-                session: dV(GG.sunShadowsHeld())
-              }), (0, vS.m)();
-              const hG = (0, pG.g)();
-              let dG = !1;
-              const JG = () => {
-                dG || (dG = !0, NY())
+                cause: nM,
+                restoreLost: QM,
+                adapterRemembered: zM,
+                error: mM,
+                context: rn,
+                session: Rz(MM.sunShadowsHeld())
+              }), (0, ZS.s)();
+              const JM = (0, LM.e)();
+              let dM = !1;
+              const yM = () => {
+                dM || (dM = !0, PM ? nz() : un.reload(nz))
               };
-              let rG = null;
-              const zG = (0, pG.q)((() => {
-                null !== rG && clearTimeout(rG), hG ? setTimeout(JG, DY) : JG()
+              let lM = null;
+              const EM = (0, LM.o)((() => {
+                null !== lM && clearTimeout(lM), JM ? setTimeout(yM, Pz) : yM()
               }));
-              !dG && hG && (rG = setTimeout((() => {
-                zG(), JG()
-              }), tY))
-            }(IG, GG, bG, ZG, KG, QG)
+              !dM && JM && (lM = setTimeout((() => {
+                EM(), yM()
+              }), az))
+            }(uM, MM, rM, iM, hM, HM)
           },
-          onEnvEvent: GG => {
-            var bG;
-            GG.kind === Nb.bb.SkyImages ? null === (bG = ey) || void 0 === bG || bG.onEvent(GG.payload) : GG.kind === Nb.bb.EnvLighting && (Ry = 1 === GG.payload[0])
+          onEnvEvent: MM => {
+            var rM;
+            MM.kind === cr.Y.SkyImages ? null === (rM = Va) || void 0 === rM || rM.onEvent(MM.payload) : MM.kind === cr.Y.EnvLighting && (ca = 1 === MM.payload[0])
           },
-          onImages: GG => {
-            var bG;
-            null === (bG = Ty) || void 0 === bG || bG.onEvent(GG)
+          onImages: MM => {
+            var rM;
+            null === (rM = MP) || void 0 === rM || rM.onEvent(MM)
           },
-          onModelRequest: GG => {
-            var bG;
-            null === (bG = qy) || void 0 === bG || bG.request(GG)
+          onModelRequest: MM => {
+            var rM;
+            null === (rM = Ka) || void 0 === rM || rM.request(MM)
           },
-          onModelTaken: (GG, bG) => {
-            var ZG;
-            null === (ZG = qy) || void 0 === ZG || ZG.taken(GG, bG)
+          onModelTaken: (MM, rM) => {
+            var iM;
+            null === (iM = Ka) || void 0 === iM || iM.taken(MM, rM)
           },
           onTerrainTexturesWanted: () => {
             queueMicrotask((() => {
-              ! function(GG, bG) {
-                const ZG = ry;
-                if (null === ZG || GG.isStopped) return;
-                ZG.restore((GG => {
-                  (0, aZ.reportTerrainTextureFailure)(GG, bG)
-                })).then((bG => {
-                  !1 !== bG || GG.isStopped ? !0 === bG && console.info(`${qL} terrain textures handed over again after the renderer lost them`) : console.warn(`${qL} the terrain textures couldn't be handed over again: the terrain draws blank`)
+              ! function(MM, rM) {
+                const iM = ta;
+                if (null === iM || MM.isStopped) return;
+                iM.restore((MM => {
+                  (0, oi.reportTerrainTextureFailure)(MM, rM)
+                })).then((rM => {
+                  !1 !== rM || MM.isStopped ? !0 === rM && console.info(`${Kj} terrain textures handed over again after the renderer lost them`) : console.warn(`${Kj} the terrain textures couldn't be handed over again: the terrain draws blank`)
                 }))
-              }(IG, mG)
+              }(uM, gM)
             }))
           },
-          onKeepAlive: GG => {
-            const bG = null === Jk ? void 0 : rk.get(Jk);
-            void 0 !== bG && xw(bG, GG)
+          onKeepAlive: MM => {
+            const rM = null === wP ? void 0 : tP.get(wP);
+            void 0 !== rM && OS(rM, MM)
           },
           onSends: () => {
-            ! function(GG) {
-              const bG = performance.now();
-              if (GG.forEachNetOut(YV), LV(GG), (0, fZ.R)(GG, {
-                  worldgen: Fy,
-                  mesh: ay
-                }), null !== SU) try {
-                SU.sendsWent(GG, bG, performance.now())
-              } catch (SG) {
-                TY(SG)
+            ! function(MM) {
+              const rM = performance.now();
+              if (MM.forEachNetOut(Gz), yz(MM), (0, di.P)(MM, {
+                  worldgen: fa,
+                  mesh: Na
+                }), null !== mn) try {
+                mn.sendsWent(MM, rM, performance.now())
+              } catch (SM) {
+                Sz(SM)
               }
-            }(IG)
+            }(uM)
           }
         });
-        if (hy = IG, null === (yG = Ab.c.wasmNetReady) || void 0 === yG || yG.call(Ab.c, (() => IG.isStopped ? 0 : IG.netKeptFrames)), null !== GG) {
-          IG.setAntiCheatProbes(aL(hb.y, GG.checks)), GG.watchHeld(lL.CoreFrame, (() => IG.frame)), GG.watchHeld(lL.GlueFrame, (() => WG.frame));
-          const bG = function(GG, bG) {
-            const ZG = new cL(bG);
-            let wG = !1;
-            ZG.Tp(GG.Tp());
-            const SG = (0, Nw.$)((() => {
-              ZG.Tp(GG.Tp())
-            }), jL);
-            let LG = 6 * (0, Nw.Q)() | 0;
-            const yG = () => {
-              ++LG < 6 || (LG = 0, GG.checks.stackCheck() && (wG = !0))
+        if (ea = uM, null === (aM = Nr.e.wasmNetReady) || void 0 === aM || aM.call(Nr.e, (() => uM.isStopped ? 0 : uM.netKeptFrames)), null !== MM) {
+          uM.setAntiCheatProbes(Yj(Jr.y, MM.checks)), MM.watchHeld(Aj.CoreFrame, (() => uM.frame)), MM.watchHeld(Aj.GlueFrame, (() => tM.frame));
+          const rM = function(MM, rM) {
+            const iM = new Nj(rM);
+            let OM = !1;
+            iM.bL(MM.bL());
+            const SM = (0, rS.bb)((() => {
+              iM.bL(MM.bL())
+            }), xj);
+            let jM = 6 * (0, rS.R)() | 0;
+            const aM = () => {
+              ++jM < 6 || (jM = 0, MM.checks.stackCheck() && (OM = !0))
             };
-            (0, pL.h)(yG);
-            const kG = () => {
-              const bG = GG.checkPadCall();
-              0 !== bG && ZG.setFlags(bG)
+            (0, lj.k)(aM);
+            const PM = () => {
+              const rM = MM.checkPadCall();
+              0 !== rM && iM.setFlags(rM)
             };
-            return (0, VL.f)(kG), {
-              onSend: yG,
+            return (0, yj.e)(PM), {
+              onSend: aM,
               beforeFrame: () => {
-                wG && ZG.originStackHit() && (wG = !1)
+                OM && iM.originStackHit() && (OM = !1)
               },
-              onEvent: bG => {
-                const wG = GG.checkEvent(bG);
-                ZG.value(Nb.k.ProbeUsedProp, GG.usedProp()), 0 !== wG && ZG.setFlags(wG)
+              onEvent: rM => {
+                const OM = MM.checkEvent(rM);
+                iM.value(cr.g.ProbeUsedProp, MM.usedProp()), 0 !== OM && iM.setFlags(OM)
               },
               stop: () => {
-                (0, Nw.db)(SG), (0, pL.e)(yG), (0, VL.e)(kG)
+                (0, rS.fb)(SM), (0, lj.h)(aM), (0, yj.c)(PM)
               }
             }
-          }(GG, ((GG, bG, ZG) => {
-            let wG = !1;
-            return EV(IG, (() => {
-              wG = IG.rings.input.writeRecord(Nb.yb.AntiCheat, GG, bG, ZG, 0)
-            })), wG
+          }(MM, ((MM, rM, iM) => {
+            let OM = !1;
+            return Dz(uM, (() => {
+              OM = uM.rings.input.writeRecord(cr.tb.AntiCheat, MM, rM, iM, 0)
+            })), OM
           }));
-          IG.isStopped ? bG.stop() : Ay = bG
+          uM.isStopped ? rM.stop() : Xa = rM
         }
-        ky = (GG, bG, ZG) => IG.rings.cmd.writeCmd(GG, bG, ZG), Uy = GG => IG.rings.cmd.growForCmd(GG), Vk = !1, aY(), (0, aG.v)(IG, {
-          core: WG,
-          memory: hb.y,
-          staleOr: (GG, bG, ZG, wG) => mV({
-            site: GG,
-            error: bG
-          }, ZG, wG),
-          reportReplayFault: (GG, bG) => {
-            (0, aZ.reportReplayFault)(GG, bG, Ey)
+        Ja = (MM, rM, iM) => uM.rings.cmd.writeCmd(MM, rM, iM), da = MM => uM.rings.cmd.growForCmd(MM), lP = !1, FQ(), (0, WM.t)(uM, {
+          core: tM,
+          memory: Jr.y,
+          staleOr: (MM, rM, iM, OM) => Az({
+            site: MM,
+            error: rM
+          }, iM, OM),
+          reportReplayFault: (MM, rM) => {
+            (0, oi.reportReplayFault)(MM, rM, ua)
           },
-          audio: zy,
-          options: ub.c,
-          onNetEvent: HY,
-          sessionInfo: GG => {
-            var bG;
-            return (null === (bG = ik) || void 0 === bG ? void 0 : bG.conn) === GG ? ik.info : null
+          audio: ga,
+          options: er.d,
+          onNetEvent: jz,
+          sessionInfo: MM => {
+            var rM;
+            return (null === (rM = WP) || void 0 === rM ? void 0 : rM.conn) === MM ? WP.info : null
           },
-          onEventOverflow: HU,
-          replayShaderPack: GG => {
-            var bG;
-            null === (bG = Dy) || void 0 === bG || bG.replay(GG)
+          onEventOverflow: jQ,
+          replayShaderPack: MM => {
+            var rM;
+            null === (rM = OP) || void 0 === rM || rM.replay(MM)
           },
-          hasPackModel: GG => {
-            var bG, ZG;
-            return null !== (null !== (bG = null === (ZG = cY()) || void 0 === ZG ? void 0 : ZG.modelUrl(GG)) && void 0 !== bG ? bG : null)
+          hasPackModel: MM => {
+            var rM, iM;
+            return null !== (null !== (rM = null === (iM = BQ()) || void 0 === iM ? void 0 : iM.modelUrl(MM)) && void 0 !== rM ? rM : null)
           },
-          beforeWrite: () => (!yk && IG.rings.net.cursor > 0 && BY(IG, !1, "all"), !IG.isStopped),
-          beforeOp: () => (!yk && IG.netWrittenSinceFrame > 0 && BY(IG, !1, "budget"), !IG.isStopped)
-        }), (0, vG.E)({
+          beforeWrite: () => (!hP && uM.rings.net.cursor > 0 && Lz(uM, !1, "all"), !uM.isStopped),
+          beforeOp: () => (!hP && uM.netWrittenSinceFrame > 0 && Lz(uM, !1, "budget"), !uM.isStopped)
+        }), (0, pM.H)({
           lockPointer: () => {
-            if (!Sw(JG)) return !1;
+            if (!zO(yM)) return !1;
             try {
-              Promise.resolve(JG.requestPointerLock()).catch((() => {}))
+              Promise.resolve(yM.requestPointerLock()).catch((() => {}))
             } catch {
               return !1
             }
             return !0
           },
           unlockPointer: () => {
-            (0, TZ.d)()
+            (0, Vi.e)()
           },
           leaveGame: () => {
-            TU()
+            SQ()
           },
-          canvas: () => JG
-        }), sy = (0, vG.t)((() => {
-          var GG;
-          const bG = (0, aG.f)();
-          null === (GG = (0, aG.q)()) || void 0 === GG || GG.followCursorAim(!0 === (null === bG || void 0 === bG ? void 0 : bG.isSessionLive) ? bG : null)
-        })), Kk && IG.setUiPrefs(Kk);
-        hk && IG.setEnvPrefs(hk);
-        dk && IG.setLookPrefs(dk);
-        const FG = jS ? PS(jS.preventMovement) : null;
-        FG && wY(FG);
-        const cG = (0, mZ.n)(),
-          lG = (0, mZ.g)(IG, cG);
-        Py = cG.basis, (0, nZ.h)(null === lG ? null : (0, WZ.n)(lG)), jy = lG;
-        const jG = (0, Jb.e)();
-        let PG = 1 / 0,
-          MG = !0,
-          AG = cG.shedFootprintBytes;
-        const sG = new YS.e(jG, (() => WG.Od()), (GG => {
-          IG.crash(fZ.p, GG)
+          canvas: () => yM
+        }), Ia = (0, pM.y)((() => {
+          var MM;
+          const rM = (0, WM.e)();
+          null === (MM = (0, WM.p)()) || void 0 === MM || MM.followCursorAim(!0 === (null === rM || void 0 === rM ? void 0 : rM.isSessionLive) ? rM : null)
+        })), CP && uM.setUiPrefs(CP);
+        eP && uM.setEnvPrefs(eP);
+        bP && uM.setLookPrefs(bP);
+        const RM = NS ? AS(NS.preventMovement) : null;
+        RM && JQ(RM);
+        const sM = (0, si.g)(),
+          DM = (0, si.d)(uM, sM);
+        Fa = sM.basis, (0, Ki.g)(null === DM ? null : (0, Wi.q)(DM)), va = DM;
+        const kM = (0, yr.e)();
+        let ZM = 1 / 0,
+          oM = !0,
+          fM = sM.shedFootprintBytes;
+        const YM = new hS.b(kM, (() => tM.Qy()), (MM => {
+          uM.crash(di.p, MM)
         }));
-        cy = sG, ly = sG, null !== lG && sG.setCeiling(Math.min((0, YS.o)(lG), PG, (0, mZ.o)()));
-        if (MG) {
-          sG.setShed((GG => {
-            const bG = IG.shedMemory("joinReserve" !== GG);
-            return null !== bG && (null === jy || bG < jy) && (jy = bG, (0, nZ.h)((0, WZ.n)(bG))), bG
-          }), ((GG, bG, ZG) => {
-            1 === bG ? (0, aZ.reportMemoryShed)(GG, ZG, Ey) : console.warn(`${qL} wasm memory: shed again (${GG}): shed ${bG}`, ZG.wasmMemoryShed)
-          }), (() => IG.addDistanceInUse()));
-          const GG = (0, VZ.P)(CG);
-          sG.setFootprint(new DS(AG, {
-            storedChunks: () => WG.XwG(),
+        Aa = YM, xa = YM, null !== DM && YM.setCeiling(Math.min((0, hS.t)(DM), ZM, (0, si.j)()));
+        if (oM) {
+          YM.setShed((MM => {
+            const rM = uM.shedMemory("joinReserve" !== MM && "gcPressure" !== MM);
+            return null !== rM && (null === va || rM < va) && (va = rM, (0, Ki.g)((0, Wi.q)(rM))), rM
+          }), ((MM, rM, iM) => {
+            1 === rM ? (0, oi.reportMemoryShed)(MM, iM, ua) : console.warn(`${Kj} wasm memory: shed again (${MM}): shed ${rM}`, iM.wasmMemoryShed)
+          }), (() => uM.addDistanceInUse()));
+          const MM = (0, Hi.P)(wM);
+          YM.setFootprint(new Mj(fM, {
+            storedChunks: () => tM.QOM(),
             gpuBytes: () => {
-              var bG;
-              return null !== (bG = null === GG || void 0 === GG ? void 0 : GG.uwG()) && void 0 !== bG ? bG : 0
+              var rM;
+              return null !== (rM = null === MM || void 0 === MM ? void 0 : MM.zOM()) && void 0 !== rM ? rM : 0
             },
-            jsHeapBytes: tS
+            jsHeapBytes: cS
+          })), (0, Ii.j)("wasm", YM, (() => {
+            ga.freeSounds()
           }))
         }
         window.addEventListener("pagehide", (() => {
-          cy === sG && (sG.refreshStats(), zV(sG))
-        })), window.addEventListener("pagehide", OY), window.addEventListener("pagehide", xY), !1;
-        const [qG, nG] = (0, jZ.f)();
-        kU = (0, MZ.g)((GG => IG.setChunkAddDistance(GG.horizontal, GG.vertical)), {
-          horizontal: qG,
-          vertical: nG
-        }), IG.setAmbientOcclusion(!0 !== gZ.h.getItem("disableAmbientOcclusion")), IG.setPoseLod(!0 !== gZ.h.getItem(Qb.cb)), IG.setDebugLog(Nb.V.Look, !0), IG.setDebugLog(Nb.V.CameraSet, !0), (0, xS.startLookDebug)("wasm", {
-          look: () => IG.takeDebugLog(Nb.V.Look),
-          cameraSets: () => IG.takeDebugLog(Nb.V.CameraSet)
-        }), (0, NS.m)("remesh") && (IG.setDebugLog(Nb.V.Remesh, !0), gG = () => IG.takeDebugLog(Nb.V.Remesh), wL = new ZL((0, BS.k)(), gG));
-        var gG;
-        const eG = function(GG, bG, ZG, wG) {
-          const SG = new ow,
-            LG = GG => gZ.h.getItem(GG);
-          SG.sync(LG, bG), (0, jb._)();
-          const yG = (0, UG.p)("customBindingsChanged", (() => {
-            SG.sync(LG, bG)
+          Aa === YM && (YM.refreshStats(), sz(YM))
+        })), window.addEventListener("pagehide", Qz), window.addEventListener("pagehide", zz), !1;
+        const [NM, AM] = (0, Ni.e)();
+        Jn = (0, xi.e)((MM => uM.setChunkAddDistance(MM.horizontal, MM.vertical)), {
+          horizontal: NM,
+          vertical: AM
+        }), uM.setAmbientOcclusion(!0 !== Yr.g.getItem("disableAmbientOcclusion")), uM.setPoseLod(!0 !== Yr.g.getItem(Hr.L)), uM.setDebugLog(cr.N.Look, !0), uM.setDebugLog(cr.N.CameraSet, !0), (0, Oj.startLookDebug)("wasm", {
+          look: () => uM.takeDebugLog(cr.N.Look),
+          cameraSets: () => uM.takeDebugLog(cr.N.CameraSet)
+        }), (0, rj.p)("remesh") && (uM.setDebugLog(cr.N.Remesh, !0), xM = () => uM.takeDebugLog(cr.N.Remesh), nj = new Pj((0, Sj.n)(), xM));
+        var xM;
+        const vM = function(MM, rM, iM, OM) {
+          const SM = new gO,
+            jM = MM => Yr.g.getItem(MM);
+          SM.sync(jM, rM), (0, kr.R)();
+          const aM = (0, nM.j)("customBindingsChanged", (() => {
+            SM.sync(jM, rM)
           }));
-          (0, HZ.r)(bG);
-          const kG = new Set,
-            YG = (0, vG.t)((() => {
-              var GG;
-              kG.size > 0 && Cw() && !0 === (null === (GG = (0, aG.f)()) || void 0 === GG ? void 0 : GG.localPlayerAlive()) && UG.l.xh("usedKeyboard")
+          (0, ci.r)(rM);
+          const PM = new Set,
+            QM = (0, pM.y)((() => {
+              var MM;
+              PM.size > 0 && WO() && !0 === (null === (MM = (0, WM.e)()) || void 0 === MM ? void 0 : MM.localPlayerAlive()) && nM.i.Tz("usedKeyboard")
             })),
-            VG = fw.c.heldSizer((() => (0, sb.k)(GG))),
-            pG = pw(GG, bG, {
-              prevents: GG => SG.prevents(GG),
-              keyPressed: GG => {
-                SG.moves(GG) && (kG.add(GG), Cw() && UG.l.xh("usedKeyboard"))
+            zM = lO.c.heldSizer((() => (0, Ar.p)(MM))),
+            LM = yO(MM, rM, {
+              prevents: MM => SM.prevents(MM),
+              keyPressed: MM => {
+                SM.moves(MM) && (PM.add(MM), WO() && nM.i.Tz("usedKeyboard"))
               },
-              keyReleased: GG => {
-                kG.delete(GG)
+              keyReleased: MM => {
+                PM.delete(MM)
               },
               keysReleased: () => {
-                kG.clear()
+                PM.clear()
               },
               resized: () => {
-                uw.i.measure(GG.getBoundingClientRect()), (0, Qw.h)()
+                RO.k.measure(MM.getBoundingClientRect()), (0, EO.l)()
               },
-              sizeCanvas: VG,
-              watchRenderScale: bG => {
-                const ZG = (0, sb.l)(GG, bG),
-                  wG = fw.c.onRelease(bG);
+              sizeCanvas: zM,
+              watchRenderScale: rM => {
+                const iM = (0, Ar.s)(MM, rM),
+                  OM = lO.c.onRelease(rM);
                 return () => {
-                  ZG(), wG()
+                  iM(), OM()
                 }
               },
               touchStarting: () => {
-                uw.i.measure(GG.getBoundingClientRect())
+                RO.k.measure(MM.getBoundingClientRect())
               },
-              viewShown: ZG,
-              touchUiShown: () => Gb.e.get("isTouchScreen"),
-              ctrlCombosAreGames: Cw,
-              inspect: (GG, bG, ZG) => {
-                SG.checks(bG, ZG) && wG(GG)
+              viewShown: iM,
+              touchUiShown: () => Mr.d.get("isTouchScreen"),
+              ctrlCombosAreGames: WO,
+              inspect: (MM, rM, iM) => {
+                SM.checks(rM, iM) && OM(MM)
               },
-              canLock: () => Sw(GG)
+              canLock: () => zO(MM)
             }),
-            fG = (0, rZ.e)(bG);
+            mM = (0, Ci.d)(rM);
           return () => {
-            yG(), YG(), (0, HZ.r)(null), fG(), pG()
+            aM(), QM(), (0, ci.r)(null), mM(), LM()
           }
-        }(JG, ((GG, bG, ZG, wG, SG) => {
-          EV(IG, (() => {
-            IG.rings.input.writeRecord(GG, bG, ZG, wG, SG)
-          })), !kk && (0, vw.f)(GG, SG) && (0, vw.d)((() => {
-            hy !== IG || iU || IG.isStopped || !kV() || BY(IG, !1, "budget", !1)
+        }(yM, ((MM, rM, iM, OM, SM) => {
+          Dz(uM, (() => {
+            uM.rings.input.writeRecord(MM, rM, iM, OM, SM)
+          })), !JP && (0, oO.h)(MM, SM) && (0, oO.d)((() => {
+            ea !== uM || kn || uM.isStopped || !Ez() || Lz(uM, !1, "budget", !1)
           }))
-        }), (() => EU), (GG => {
-          var bG;
-          null === (bG = Ay) || void 0 === bG || bG.onEvent(GG)
+        }), (() => pn), (MM => {
+          var rM;
+          null === (rM = Xa) || void 0 === rM || rM.onEvent(MM)
         }));
-        if (IG.isStopped) return eG(), null;
-        Iy = eG;
-        const RG = () => !IG.isStopped && !XU;
-        if (IG.isStopped) return null;
-        (0, hb.X)((() => {
-          "call" === (0, hb.r)() && IG.crash(fZ.y, (0, hb.o)())
+        if (uM.isStopped) return vM(), null;
+        oa = vM;
+        const FM = () => !uM.isStopped && !sn;
+        if (uM.isStopped) return null;
+        (0, Jr.W)((() => {
+          "call" === (0, Jr.t)() && uM.crash(di.B, (0, Jr.p)())
         }));
-        const TG = (0, fZ.U)(IG.rings.worker, (() => {
-          BY(IG, !1, document.hidden ? "all" : "budget")
+        const BM = (0, di.S)(uM.rings.worker, (() => {
+          Lz(uM, !1, document.hidden ? "all" : "budget")
         }));
-        Fy = function(GG, bG) {
-          return oV().then((GG => {
+        fa = function(MM, rM, iM) {
+          return kz().then((MM => {
             let {
-              prefetchWorldgenWorker: bG
-            } = GG;
-            bG()
-          }), (() => {})), new kL({
-            module: (0, hb.B)(),
-            decodeSettings: GG => {
-              const bG = (0, aG.q)();
-              if (null === bG) throw new Error("no game code to decode the world-gen seed with");
-              return bG.decodeMapSettings(GG)
+              prefetchWorldgenWorker: rM
+            } = MM;
+            rM()
+          }), (() => {})), new hj({
+            module: (0, Jr.z)(),
+            decodeSettings: MM => {
+              const rM = (0, WM.p)();
+              if (null === rM) throw new Error("no game code to decode the world-gen seed with");
+              return rM.decodeMapSettings(MM)
             },
-            loadWorker: XV,
+            loadWorker: Zz,
             onMapWithoutWorldgen: () => {
-              uV((GG => {
+              oz((MM => {
                 let {
-                  stopWorldgenWorkerPrefetch: bG
-                } = GG;
-                bG()
+                  stopWorldgenWorkerPrefetch: rM
+                } = MM;
+                rM()
               }))
             },
-            onLoadFailed: GG => {
-              (0, aZ.reportWorldgenLoadFailure)(GG, Ey)
+            onLoadFailed: MM => {
+              (0, oi.reportWorldgenLoadFailure)(MM, ua)
             },
-            onWorkerLost: GG => {
-              (0, aZ.reportWorkerLost)(fZ.J, GG, Ey)
-            },
-            onStartTimeout: GG => {
-              (0, aZ.reportWorkerStartTimeout)(fZ.J, GG, Ey)
-            },
-            onGaveUp: GG => {
-              (0, aZ.reportWorldgenGaveUp)(GG, Ey)
-            },
-            onMemoryStats: GG => {
-              var bG;
-              null === (bG = cy) || void 0 === bG || bG.noteWorldgen(GG)
-            },
-            onMemoryGone: () => {
-              var GG;
-              null === (GG = cy) || void 0 === GG || GG.worldgenGone()
-            },
-            write: (ZG, wG, SG, LG, yG) => {
-              EV(GG, (() => {
-                GG.rings.worker.writeWorkerRecord(ZG, wG, SG, 0, LG, yG) || GG.crash(fZ.J, `a world-gen record of kind ${wG} did not fit the worker-in ring`)
-              })), bG()
-            }
-          })
-        }(IG, TG), ay = function(GG, bG) {
-          return new kS({
-            module: (0, hb.B)(),
-            loadWorkers: async () => {
-              const [{
-                createMeshWorker: GG
-              }, bG] = await Promise.all([ZG.e(41).then((() => ZG(51461))), Promise.resolve().then((() => ZG(80))).then((GG => {
-                let {
-                  isMobile: bG
-                } = GG;
-                return bG()
-              }), (() => !1))]);
-              return {
-                create: GG,
-                count: (0, Fb.e)(navigator.hardwareConcurrency, bG),
-                maxKeptLightStates: bG ? 1 : void 0
-              }
-            },
-            write: (ZG, wG, SG, LG, yG, kG) => {
-              (0, Qw.g)(), EV(GG, (() => {
-                GG.rings.worker.writeWorkerRecord(ZG, wG, SG, LG, yG, kG) || GG.crash(fZ.t, `a meshing record of kind ${wG} did not fit the worker-in ring`)
-              })), bG()
-            },
-            onWorkerLost: GG => {
-              (0, aZ.reportWorkerLost)(fZ.t, GG, Ey)
-            },
-            onLightFault: (GG, bG) => {
-              (0, aZ.reportLightFault)(GG, bG, Ey)
-            },
-            onStartTimeout: GG => {
-              (0, aZ.reportWorkerStartTimeout)(fZ.t, GG, Ey)
-            },
-            onMemoryStats: (GG, bG) => {
-              var ZG;
-              null === (ZG = cy) || void 0 === ZG || ZG.noteMeshWorker(GG, bG)
-            },
-            onMemoryGone: GG => {
-              var bG;
-              null === (bG = cy) || void 0 === bG || bG.meshWorkerGone(GG)
-            },
-            fail: (bG, ZG) => {
-              const wG = () => {
-                GG.crash(fZ.t, void 0 === ZG ? bG : new Error(bG, {
-                  cause: ZG
-                }))
-              };
-              void 0 !== ZG ? mV({
-                site: fZ.t,
-                error: ZG
-              }, wG) : wG()
-            }
-          })
-        }(IG, TG), DU();
-        const HG = (0, XS.r)(mb.clientSideServerUrls.staticUrl, {
-            onTableFailed: GG => {
-              mV({
-                site: aZ.MODEL_FEED_SITE,
-                error: GG
-              }, (() => {}), {
-                stillWanted: RG
+            onWorkerLost: (MM, rM) => {
+              !async function(MM, rM, iM) {
+                const OM = MM === Lj || MM.startsWith(mj);
+                if (!OM || rM) return void iM.aL(OM);
+                const SM = () => {
+                  iM.aL(!0)
+                };
+                let jM;
+                try {
+                  jM = await iM.scriptUrl()
+                } catch {
+                  return void SM()
+                }
+                await iM.staleOr({
+                  site: di.I,
+                  error: new Error(`a world-gen worker's load failed (${MM}): ${jM}`),
+                  urls: [jM]
+                }, SM)
+              }(MM, rM, {
+                scriptUrl: async () => {
+                  const {
+                    worldgenWorkerScriptUrl: MM
+                  } = await kz();
+                  return MM()
+                },
+                staleOr: (MM, rM) => Az(MM, rM, {
+                  stillWanted: iM
+                }),
+                aL: rM => {
+                  (0, oi.reportWorldgenWorkerLost)(MM, rM, ua, {
+                    build: (0, VO.j)(),
+                    ageMs: (0, vi.t)()
+                  })
+                }
               })
             },
-            packUrl: GG => {
-              var bG, ZG;
-              return null !== (bG = null === (ZG = cY()) || void 0 === ZG ? void 0 : ZG.modelUrl(GG)) && void 0 !== bG ? bG : null
+            onStartTimeout: MM => {
+              (0, oi.reportWorkerStartTimeout)(di.I, MM, ua)
+            },
+            onGaveUp: MM => {
+              (0, oi.reportWorldgenGaveUp)(MM, ua)
+            },
+            onMemoryStats: MM => {
+              var rM;
+              null === (rM = Aa) || void 0 === rM || rM.noteWorldgen(MM)
+            },
+            onMemoryGone: () => {
+              var MM;
+              null === (MM = Aa) || void 0 === MM || MM.worldgenGone()
+            },
+            write: (iM, OM, SM, jM, aM) => {
+              Dz(MM, (() => {
+                MM.rings.worker.writeWorkerRecord(iM, OM, SM, 0, jM, aM) || MM.crash(di.I, `a world-gen record of kind ${OM} did not fit the worker-in ring`)
+              })), rM()
             }
-          }),
-          tG = function(GG, bG, ZG) {
-            const wG = ZG => {
-              var wG, SG;
-              return null !== (wG = null === (SG = bG()) || void 0 === SG ? void 0 : SG.drawnUrl(ZG)) && void 0 !== wG ? wG : GG.url(ZG)
-            };
-            return (0, ES.l)((0, pS.k)(wG), ZG)
-          }(HG, (() => qy), cY),
-          DG = new pS.e(tG, (GG => {
-            console.warn(`${qL} image ${GG.key.kind}:${GG.key.index}:${GG.key.word} failed`, GG.error)
-          }));
-        Ty = DG, Hy = new JS(IG, tG, ((GG, bG) => {
-          void 0 === bG ? console.warn(`${qL} ${GG}`) : jY(GG, bG)
-        }));
-        const NG = new zS.g(HG, function(GG, bG) {
-          let wG = !1,
-            SG = null,
-            LG = null;
-          const yG = {
-              onUnavailable: (ZG, wG) => {
-                LG ??= mV({
-                  site: aZ.MODEL_POOL_SITE,
-                  error: ZG,
-                  urls: wG
-                }, (() => {
-                  (0, aZ.reportModelPoolFailure)(ZG, GG)
-                }), {
-                  stillWanted: bG
-                })
-              },
-              onDecoderFailed: (ZG, wG) => {
-                const SG = () => {
-                  (0, aZ.reportDracoDecoderFailure)(ZG, GG)
-                };
-                void 0 !== wG ? mV({
-                  site: aZ.MODEL_POOL_SITE,
-                  error: ZG,
-                  urls: wG
-                }, SG, {
-                  stillWanted: bG
-                }) : SG()
-              },
-              onWorkerLost: bG => {
-                (0, aZ.reportWorkerLost)(aZ.MODEL_POOL_SITE, bG, GG)
-              },
-              onModuleRetry: (bG, ZG) => {
-                (0, aZ.reportModelsModuleRetry)(bG, ZG, GG)
+          })
+        }(uM, BM, FM), Na = function(MM, rM) {
+          return new mS({
+            module: (0, Jr.z)(),
+            loadWorkers: async () => {
+              const [{
+                createMeshWorker: MM
+              }, rM] = await Promise.all([iM.e(47).then((() => iM(53803))), Promise.resolve().then((() => iM(83))).then((MM => {
+                let {
+                  isMobile: rM
+                } = MM;
+                return rM()
+              }), (() => !1))]);
+              return {
+                create: MM,
+                count: (0, Rr.e)(rM),
+                maxKeptLightStates: rM ? 1 : void 0
               }
             },
-            kG = ZG.e(43).then((() => ZG(51469))).then((GG => {
+            write: (iM, OM, SM, jM, aM, PM) => {
+              (0, EO.i)(), Dz(MM, (() => {
+                MM.rings.worker.writeWorkerRecord(iM, OM, SM, jM, aM, PM) || MM.crash(di.t, `a meshing record of kind ${OM} did not fit the worker-in ring`)
+              })), rM()
+            },
+            onWorkerLost: MM => {
+              (0, oi.reportWorkerLost)(di.t, MM, ua)
+            },
+            onLightFault: (MM, rM) => {
+              (0, oi.reportLightFault)(MM, rM, ua)
+            },
+            onStartTimeout: MM => {
+              (0, oi.reportWorkerStartTimeout)(di.t, MM, ua)
+            },
+            onMemoryStats: (MM, rM) => {
+              var iM;
+              null === (iM = Aa) || void 0 === iM || iM.noteMeshWorker(MM, rM)
+            },
+            onMemoryGone: MM => {
+              var rM;
+              null === (rM = Aa) || void 0 === rM || rM.meshWorkerGone(MM)
+            },
+            fail: (rM, iM) => {
+              const OM = () => {
+                MM.crash(di.t, void 0 === iM ? rM : new Error(rM, {
+                  cause: iM
+                }))
+              };
+              void 0 !== iM ? Az({
+                site: di.t,
+                error: iM
+              }, OM) : OM()
+            }
+          })
+        }(uM, BM), PQ();
+        const XM = (0, gS.r)(gr.clientSideServerUrls.staticUrl, {
+            onTableFailed: MM => {
+              Az({
+                site: oi.MODEL_FEED_SITE,
+                error: MM
+              }, (() => {}), {
+                stillWanted: FM
+              })
+            },
+            packUrl: MM => {
+              var rM, iM;
+              return null !== (rM = null === (iM = BQ()) || void 0 === iM ? void 0 : iM.modelUrl(MM)) && void 0 !== rM ? rM : null
+            }
+          }),
+          IM = function(MM, rM, iM) {
+            const OM = iM => {
+              var OM, SM;
+              return null !== (OM = null === (SM = rM()) || void 0 === SM ? void 0 : SM.drawnUrl(iM)) && void 0 !== OM ? OM : MM.url(iM)
+            };
+            return (0, wS.n)((0, dS.m)(OM), iM)
+          }(XM, (() => Ka), BQ),
+          KM = new dS.d(IM, (MM => {
+            console.warn(`${Kj} image ${MM.key.kind}:${MM.key.index}:${MM.key.word} failed`, MM.error)
+          }));
+        MP = KM, rP = new CS(uM, IM, ((MM, rM) => {
+          void 0 === rM ? console.warn(`${Kj} ${MM}`) : IQ(MM, rM)
+        }));
+        const qM = new bS.f(XM, function(MM, rM) {
+          let OM = !1,
+            SM = null,
+            jM = null;
+          const aM = {
+              onUnavailable: (iM, OM) => {
+                jM ??= Az({
+                  site: oi.MODEL_POOL_SITE,
+                  error: iM,
+                  urls: OM
+                }, (() => {
+                  (0, oi.reportModelPoolFailure)(iM, MM)
+                }), {
+                  stillWanted: rM
+                })
+              },
+              onDecoderFailed: (iM, OM) => {
+                const SM = () => {
+                  (0, oi.reportDracoDecoderFailure)(iM, MM)
+                };
+                void 0 !== OM ? Az({
+                  site: oi.MODEL_POOL_SITE,
+                  error: iM,
+                  urls: OM
+                }, SM, {
+                  stillWanted: rM
+                }) : SM()
+              },
+              onWorkerLost: rM => {
+                (0, oi.reportWorkerLost)(oi.MODEL_POOL_SITE, rM, MM)
+              },
+              onModuleRetry: (rM, iM) => {
+                (0, oi.reportModelsModuleRetry)(rM, iM, MM)
+              }
+            },
+            PM = iM.e(49).then((() => iM(53807))).then((MM => {
               let {
-                pageModelPool: bG
-              } = GG;
-              if (wG) return null;
-              const ZG = bG(yG);
-              return SG = ZG.unlisten, ny = ZG.pool, DU(), ZG.pool
-            }), (GG => (wG || yG.onUnavailable(GG, void 0), null)));
-          return gy = () => {
-            var GG;
-            wG = !0, null === (GG = SG) || void 0 === GG || GG(), ny = null
-          }, (GG, bG) => kG.then((ZG => {
-            var wG;
-            return null !== (wG = null === ZG || void 0 === ZG ? void 0 : ZG.build(GG, bG)) && void 0 !== wG ? wG : (0, uS.r)(GG, "the model workers did not load")
-          })).then((GG => null !== LG && (0, uS.l)(GG) ? LG.then((() => GG)) : GG))
-        }(mG, RG), (GG => {
-          GG.startup ? (pV(), mV({
-            site: aZ.MODEL_FEED_SITE,
-            error: GG.error,
-            urls: "" === GG.url ? void 0 : [GG.url]
+                pageModelPool: rM
+              } = MM;
+              if (OM) return null;
+              const iM = rM(aM);
+              return SM = iM.unlisten, qa = iM.pool, PQ(), iM.pool
+            }), (MM => (OM || aM.onUnavailable(MM, void 0), null)));
+          return Ta = () => {
+            var MM;
+            OM = !0, null === (MM = SM) || void 0 === MM || MM(), qa = null
+          }, (MM, rM) => PM.then((iM => {
+            var OM;
+            return null !== (OM = null === iM || void 0 === iM ? void 0 : iM.build(MM, rM)) && void 0 !== OM ? OM : (0, uS.q)(MM, "the model workers did not load")
+          })).then((MM => null !== jM && (0, uS.i)(MM) ? jM.then((() => MM)) : MM))
+        }(gM, FM), (MM => {
+          MM.startup ? (bz(), Az({
+            site: oi.MODEL_FEED_SITE,
+            error: MM.error,
+            urls: "" === MM.url ? void 0 : [MM.url]
           }, (() => {
-            (0, aZ.reportModelFailure)(GG, mG)
-          }))) : (0, aZ.reportModelFailure)(GG, mG)
+            (0, oi.reportModelFailure)(MM, gM)
+          }))) : (0, oi.reportModelFailure)(MM, gM)
         }), {
-          onWritten: (GG, bG) => {
-            DG.glbWritten(GG, bG)
+          onWritten: (MM, rM) => {
+            KM.glbWritten(MM, rM)
           },
-          onTaken: (GG, bG) => {
-            DG.glbTaken(GG, bG)
+          onTaken: (MM, rM) => {
+            KM.glbTaken(MM, rM)
           },
-          onPackFileFailed: (GG, bG) => {
-            console.warn(`${qL} the texture pack's model file ${GG} failed: the shipped one loads`, bG)
+          onPackFileFailed: (MM, rM) => {
+            console.warn(`${Kj} the texture pack's model file ${MM} failed: the shipped one loads`, rM)
           }
         });
-        qy = NG;
-        const OG = new KS.d(IG);
-        ry = OG, OG.swap((GG => {
-          const bG = () => {
-            (0, aZ.reportTerrainTextureFailure)(GG, mG)
+        Ka = qM;
+        const TM = new ES.g(uM);
+        ta = TM, TM.swap((MM => {
+          const rM = () => {
+            (0, oi.reportTerrainTextureFailure)(MM, gM)
           };
-          if (UU) return void bG();
-          const ZG = () => !UU,
-            wG = null === GG.url ? void 0 : [GG.url];
-          mV({
-            site: fZ.F,
-            error: GG.error,
-            urls: wG
-          }, bG, {
-            stillWanted: ZG
+          if (dn) return void rM();
+          const iM = () => !dn,
+            OM = null === MM.url ? void 0 : [MM.url];
+          Az({
+            site: di.H,
+            error: MM.error,
+            urls: OM
+          }, rM, {
+            stillWanted: iM
           })
-        })).then((GG => {
-          null !== GG && (GG || IG.isStopped || console.warn(`${qL} the core refused the terrain textures: terrain draws untextured`), By(IG))
+        })).then((MM => {
+          null !== MM && (MM || uM.isStopped || console.warn(`${Kj} the core refused the terrain textures: terrain draws untextured`), PP(uM))
         }));
-        const bb = new tb(IG, ((GG, bG) => {
-          console.warn(`${qL} ${GG}`, ...void 0 === bG ? [] : [bG])
+        const rr = new Tr(uM, ((MM, rM) => {
+          console.warn(`${Kj} ${MM}`, ...void 0 === rM ? [] : [rM])
         }));
-        bb.feed(), null !== QG && function(GG, bG, wG, SG, LG, yG) {
-          let kG = null,
-            YG = null,
-            VG = !1;
-          const pG = {
+        rr.feed(), null !== HM && function(MM, rM, OM, SM, jM, aM) {
+          let PM = null,
+            QM = null,
+            zM = !1;
+          const LM = {
             textures: null,
             stop: () => {
-              var GG, bG;
-              VG = !0, null === (GG = YG) || void 0 === GG || GG(), null === (bG = kG) || void 0 === bG || bG(), oS.e.setSettled(null), null !== oy && cU.clear(oy)
+              var MM, rM;
+              zM = !0, null === (MM = QM) || void 0 === MM || MM(), null === (rM = PM) || void 0 === rM || rM(), tS.e.setSettled(null), null !== Ra && Bn.clear(Ra)
             }
           };
-          Jy = pG, YG = PY().follow((YG => {
-            null !== YG && Promise.all([ZG.e(204), ZG.e(46)]).then((() => ZG(51435))).then((ZG => {
+          wa = LM, QM = KQ().follow((QM => {
+            null !== QM && Promise.all([iM.e(228), iM.e(52)]).then((() => iM(53772))).then((iM => {
               let {
-                PackTextures: fG
-              } = ZG;
-              if (VG || GG.isStopped) return;
-              const QG = new fG({
-                feed: YG,
-                terrain: bG,
-                backend: wG,
-                stopped: () => GG.isStopped,
+                PackTextures: mM
+              } = iM;
+              if (zM || MM.isStopped) return;
+              const HM = new mM({
+                feed: QM,
+                terrain: rM,
+                backend: OM,
+                stopped: () => MM.isStopped,
                 landed: () => {
-                  By(GG)
+                  PP(MM)
                 },
                 packSwapped: () => {
-                  (0, ES.i)(SG), yG.feed((() => async function(GG) {
-                    const bG = null === GG ? null : await GG.averageColours;
-                    return null === bG ? Db() : Hb(bG)
-                  }(QG.assets))), (0, rS.n)(QG.files()), LG.refresh().then((GG => {
-                    null !== GG && console.info(`${qL} texture pack models: ${GG.resent} of ${GG.delivered} files written again, ${GG.refetched} refetched`)
+                  (0, wS.j)(SM), aM.feed((() => async function(MM) {
+                    const rM = null === MM ? null : await MM.averageColours;
+                    return null === rM ? Vr() : qr(rM)
+                  }(HM.assets))), (0, eS.j)(HM.files()), jM.refresh().then((MM => {
+                    null !== MM && console.info(`${Kj} texture pack models: ${MM.resent} of ${MM.delivered} files written again, ${MM.refetched} refetched`)
                   }))
                 },
-                settled: (GG, bG, ZG) => {
-                  var wG;
-                  (oS.e.setSettled({
-                    state: GG,
-                    files: bG
-                  }), function(GG, bG, ZG) {
-                    const wG = null === GG.gameSource && (0, cZ.d)(GG.pack);
-                    if (null === bG) return;
-                    const SG = (0, vZ.h)(bG.error),
-                      LG = wG ? "settings" : bG.source;
-                    UG.l.xh(vZ.c, {
-                      failure: SG,
-                      source: LG,
-                      pack: lZ(GG)
-                    }), (0, aZ.reportTexturePackKeptOut)(LG, SG, bG.error, ZG)
-                  }(GG, ZG, Ey), null === ZG) && function(GG) {
-                    const bG = oy;
-                    null !== bG && cU.apply(bG, GG).then((bG => {
-                      bG && GG && console.info(`${qL} the texture pack's animations are in (${Object.keys(GG).length} files)`)
+                settled: (MM, rM, iM) => {
+                  var OM;
+                  (tS.e.setSettled({
+                    state: MM,
+                    files: rM
+                  }), function(MM, rM, iM) {
+                    const OM = null === MM.gameSource && (0, fi.g)(MM.pack);
+                    if (null === rM) return;
+                    const SM = (0, Zi.h)(rM.error),
+                      jM = OM ? "settings" : rM.source;
+                    nM.i.Tz(Zi.b, {
+                      failure: SM,
+                      source: jM,
+                      pack: Yi(MM)
+                    }), (0, oi.reportTexturePackKeptOut)(jM, SM, rM.error, iM)
+                  }(MM, iM, ua), null === iM) && function(MM) {
+                    const rM = Ra;
+                    null !== rM && Bn.apply(rM, MM).then((rM => {
+                      rM && MM && console.info(`${Kj} the texture pack's animations are in (${Object.keys(MM).length} files)`)
                     }))
-                  }(null === (wG = GG.pack) || void 0 === wG ? void 0 : wG.animations)
+                  }(null === (OM = MM.pack) || void 0 === OM ? void 0 : OM.animations)
                 },
                 settling: () => {
-                  oS.e.setSettled(null)
+                  tS.e.setSettled(null)
                 },
-                warn: jY,
-                maxTextureSize: () => Promise.resolve((0, VZ.eb)(document.createElement("canvas")))
+                warn: IQ,
+                maxTextureSize: () => Promise.resolve((0, Hi.cb)(document.createElement("canvas")))
               });
-              pG.textures = QG, kG = QG.start()
-            }), (GG => {
-              console.warn(`${qL} the texture pack's terrain didn't load: the built atlas stays`, GG)
+              LM.textures = HM, PM = HM.start()
+            }), (MM => {
+              console.warn(`${Kj} the texture pack's terrain didn't load: the built atlas stays`, MM)
             }))
           }))
-        }(IG, OG, QG, DG, NG, bb);
-        const Zb = () => {
-            IG.setTextureLayers("")
+        }(uM, TM, HM, KM, qM, rr);
+        const ir = () => {
+            uM.setTextureLayers("")
           },
-          wb = GG => {
-            (Wb ??= ZG.e(54).then((() => ZG(51476))).then((GG => {
+          Or = MM => {
+            (tr ??= iM.e(65).then((() => iM(53809))).then((MM => {
               let {
-                TEXTURE_NAMES: bG
-              } = GG;
-              return bG
-            }), (GG => {
-              throw Wb = null, GG
-            })), Wb).then((GG => {
-              IG.setTextureLayers(GG) || IG.isStopped || (console.warn(`${qL} the core refused the texture names: textured Boxes draw textureNotFound`), Zb())
-            }), (bG => {
-              if (IG.isStopped) return;
-              const [ZG, ...wG] = GG;
-              void 0 === ZG ? mV({
-                site: aZ.TEXTURE_NAMES_SITE,
-                error: bG
+                TEXTURE_NAMES: rM
+              } = MM;
+              return rM
+            }), (MM => {
+              throw tr = null, MM
+            })), tr).then((MM => {
+              uM.setTextureLayers(MM) || uM.isStopped || (console.warn(`${Kj} the core refused the texture names: textured Boxes draw textureNotFound`), ir())
+            }), (rM => {
+              if (uM.isStopped) return;
+              const [iM, ...OM] = MM;
+              void 0 === iM ? Az({
+                site: oi.TEXTURE_NAMES_SITE,
+                error: rM
               }, (() => {
-                console.warn(`${qL} the texture names didn't load, so textured Boxes draw textureNotFound`, bG), Zb()
+                console.warn(`${Kj} the texture names didn't load, so textured Boxes draw textureNotFound`, rM), ir()
               }), {
-                stillWanted: RG
+                stillWanted: FM
               }) : setTimeout((() => {
-                wb(wG)
-              }), ZG)
+                Or(OM)
+              }), iM)
             }))
           };
-        if (wb(Ly), null !== QG && !await async function(GG, bG, ZG, wG, LG, yG) {
-            var kG;
-            const UG = (0, VZ.P)(ZG);
-            if (null === UG) return GG.crash(gL, new Error(`this ${wG} build has no openRenderer`)), !1;
-            let YG;
-            Dk = UG;
+        if (Or(Ha), null !== HM && !await async function(MM, rM, iM, OM, jM, aM) {
+            var PM;
+            const nM = (0, Hi.P)(iM);
+            if (null === nM) return MM.crash(Tj, new Error(`this ${OM} build has no openRenderer`)), !1;
+            let QM;
+            On = nM;
             try {
-              var VG, pG, fG, QG;
-              const SG = null !== (VG = null === (pG = Qy) || void 0 === pG ? void 0 : pG.pagePreviews()) && void 0 !== VG ? VG : null,
-                kG = null !== (fG = null === (QG = Qy) || void 0 === QG ? void 0 : QG.previewModule(ZG)) && void 0 !== fG ? fG : null;
-              if (null === SG || null === kG) {
-                null === SG || void 0 === SG || SG.endSession(!1), YG = (0, sb.d)().sampleCount, await (0, VZ.g)(bG, UG, yG, vY, YG, await LG);
-                const GG = (0, VZ.m)(ZG);
-                null === GG && console.warn(`${qL} this ${wG} build has no image registry: sky and model images won't show`), (0, QS.f)(GG)
+              var zM, LM, mM, HM;
+              const SM = null !== (zM = null === (LM = Ga) || void 0 === LM ? void 0 : LM.pagePreviews()) && void 0 !== zM ? zM : null,
+                PM = null !== (mM = null === (HM = Ga) || void 0 === HM ? void 0 : HM.previewModule(iM)) && void 0 !== mM ? mM : null;
+              if (null === SM || null === PM) {
+                null === SM || void 0 === SM || SM.endSession(!1), QM = (0, Ar.g)().sampleCount, await (0, Hi.h)(rM, nM, aM, vQ, QM, await jM);
+                const MM = (0, Hi.k)(iM);
+                null === MM && console.warn(`${Kj} this ${OM} build has no image registry: sky and model images won't show`), (0, lS.f)(MM)
               } else {
-                (0, vS.c)() && await (0, BG.m)();
-                const ZG = (0, vS.I)();
-                if (null !== ZG) {
-                  const bG = (0, pZ.j)(UG);
-                  return GG.crash(aZ.RENDER_RELOAD_SITE, new Error(`${ZG}${void 0===bG?"":` (${bG.message})`}`)), !1
+                (0, ZS.e)() && await (0, cM.o)();
+                const iM = (0, ZS.K)();
+                if (null !== iM) {
+                  const rM = (0, Ji.o)(nM);
+                  return MM.crash(oi.RENDER_RELOAD_SITE, new Error(`${iM}${void 0===rM?"":` (${rM.message})`}`)), !1
                 }
-                YG = await SG.bindSession(kG, bG, (async GG => (0, VZ.w)(UG, gL, yG, GG, vY, await LG)))
+                QM = await SM.bindSession(PM, rM, (async MM => (0, Hi.w)(nM, Tj, aM, MM, vQ, await jM)))
               }
-            } catch (SG) {
-              return GG.crash(gL, SG), !1
-            }(function(GG, bG) {
-              const ZG = GG,
+            } catch (SM) {
+              return MM.crash(Tj, SM), !1
+            }(function(MM, rM) {
+              const iM = MM,
                 {
-                  requestCapture: wG,
-                  takeCapture: SG
-                } = ZG;
-              if ("function" !== typeof wG || "function" !== typeof SG) return;
-              const LG = {
+                  requestCapture: OM,
+                  takeCapture: SM
+                } = iM;
+              if ("function" !== typeof OM || "function" !== typeof SM) return;
+              const jM = {
                 request() {
-                  wG.call(ZG, bG)
+                  OM.call(iM, rM)
                 },
                 take() {
-                  var GG;
-                  return null !== (GG = SG.call(ZG)) && void 0 !== GG ? GG : null
+                  var MM;
+                  return null !== (MM = SM.call(iM)) && void 0 !== MM ? MM : null
                 }
               };
-              window[sS] = LG
-            })(bG, YG), ZU = YG, Hk = !0;
-            const KG = performance.now();
-            return tk.boundAtMs = null !== (kG = (0, vS.K)()) && void 0 !== kG ? kG : KG, tk.indirectHangs = (0, vS.y)(), tk.restoresSkipped = (0, vS.L)(), console.info(`${qL} ${wG} renderer bound at ${Math.round(KG)} ms`), !GG.isStopped
-          }(IG, WG, CG, QG, hG, JG)) return null;
-        if (null !== QG) {
-          var Sb, Lb, yb;
-          (0, rb.I)(QG);
-          const GG = () => !IG.isStopped && yV();
-          ZG.e(196).then((() => ZG(34362))).then((bG => {
+              window[FS] = jM
+            })(rM, QM), zn = QM, Mn = !0;
+            const hM = performance.now();
+            return rn.boundAtMs = null !== (PM = (0, ZS.O)()) && void 0 !== PM ? PM : hM, rn.indirectHangs = (0, ZS.C)(), rn.restoresSkipped = (0, ZS.R)(), console.info(`${Kj} ${OM} renderer bound at ${Math.round(hM)} ms`), !MM.isStopped
+          }(uM, tM, wM, HM, JM, yM)) return null;
+        if (null !== HM) {
+          var Sr, jr, ar;
+          (0, lr.L)(HM);
+          const MM = () => !uM.isStopped && lz();
+          iM.e(220).then((() => iM(34920))).then((rM => {
             let {
-              devTools: ZG
-            } = bG;
-            IG.isStopped || ZG.setHost(function(GG) {
+              devTools: iM
+            } = rM;
+            uM.isStopped || iM.setHost(function(MM) {
               return {
-                tools: FS,
-                async downloadScene(bG, ZG) {
+                tools: kS,
+                async downloadScene(rM, iM) {
                   let {
-                    width: wG,
-                    height: SG,
-                    colouring: LG
-                  } = ZG;
-                  "screenshot" === bG && null === LG ? await (0, WS.g)(GG, wG, SG) : console.warn("The Rust client's developer tools take uncoloured screenshots only")
+                    width: OM,
+                    height: SM,
+                    colouring: jM
+                  } = iM;
+                  "screenshot" === rM && null === jM ? await (0, WS.h)(MM, OM, SM) : console.warn("The Rust client's developer tools take uncoloured screenshots only")
                 },
                 setAmbientLightIntensity: () => (console.warn("The Rust client's renderer has no ambient light setting"), Promise.resolve()),
-                capturePhoto: (bG, ZG, wG) => (0, WS.c)(GG, bG, ZG, wG)
+                capturePhoto: (rM, iM, OM) => (0, WS.d)(MM, rM, iM, OM)
               }
-            }(function(GG, bG) {
+            }(function(MM, rM) {
               return {
-                canvas: GG,
-                maxTextureSize: mS,
-                drawing: bG,
-                resize: (GG, bG, ZG) => {
-                  (0, HZ.y)(Nb.yb.Resize, 0, GG / ZG, bG / ZG, (0, HZ.n)(ZG))
+                canvas: MM,
+                maxTextureSize: sS,
+                lL: rM,
+                resize: (MM, rM, iM) => {
+                  (0, ci.z)(cr.tb.Resize, 0, MM / iM, rM / iM, (0, ci.l)(iM))
                 },
                 restoreSize: () => {
-                  const bG = (0, sb.k)(GG);
-                  null !== bG && (0, HZ.y)(Nb.yb.Resize, 0, bG.cssWidth, bG.cssHeight, (0, HZ.n)(bG.renderScale))
+                  const rM = (0, Ar.p)(MM);
+                  null !== rM && (0, ci.z)(cr.tb.Resize, 0, rM.cssWidth, rM.cssHeight, (0, ci.l)(rM.renderScale))
                 },
-                onFrameDrawn: GG => (IS.add(GG), () => {
-                  IS.delete(GG)
+                onFrameDrawn: MM => (DS.add(MM), () => {
+                  DS.delete(MM)
                 })
               }
-            }(JG, GG)))
-          }), (GG => {
-            console.warn(`${qL} the developer tools didn't load: no captures this session`, GG)
+            }(yM, MM)))
+          }), (MM => {
+            console.warn(`${Kj} the developer tools didn't load: no captures this session`, MM)
           }));
-          const bG = "webgpu" === QG && null !== (Sb = null === fG || void 0 === fG || null === (Lb = fG.adapter) || void 0 === Lb ? void 0 : Lb.vendor) && void 0 !== Sb ? Sb : null;
-          wU = {
-            backend: QG,
-            canvas: JG,
-            fallbackReason: null !== (yb = null === fG || void 0 === fG ? void 0 : fG.reason) && void 0 !== yb ? yb : null,
-            adapterVendor: bG
-          }, gY();
+          const rM = "webgpu" === HM && null !== (Sr = null === mM || void 0 === mM || null === (jr = mM.adapter) || void 0 === jr ? void 0 : jr.vendor) && void 0 !== Sr ? Sr : null;
+          Ln = {
+            backend: HM,
+            canvas: yM,
+            fallbackReason: null !== (ar = null === mM || void 0 === mM ? void 0 : mM.reason) && void 0 !== ar ? ar : null,
+            adapterVendor: rM
+          }, rz();
           try {
-            (0, Qw.q)(QG, JG, bG)
-          } catch (SG) {
-            (0, Qw.u)(), console.error(`${qL} the quality steps didn't start`, SG)
+            (0, EO.t)(HM, yM, rM)
+          } catch (SM) {
+            (0, EO.v)(), console.error(`${Kj} the quality steps didn't start`, SM)
           }
         }
         const {
-          storagePullBreaks: kb,
-          splitPassBreaks: Ub
-        } = await hG;
-        Ub && console.warn(`${qL} split_pass_breaks on: Windows Adreno 7xx (N-103) or ?sceneDepth=off`);
-        const Yb = (0, xG.h)(fG, (0, lb.k)());
-        if ((0, NS.m)("webgpuloss")) {
-          var Vb, pb;
-          const GG = {
-            backend: QG,
-            reason: null !== (Vb = null === fG || void 0 === fG ? void 0 : fG.reason) && void 0 !== Vb ? Vb : null,
-            source: null !== (pb = null === fG || void 0 === fG ? void 0 : fG.source) && void 0 !== pb ? pb : null,
-            storagePullBreaks: kb,
-            noWebGpu: Yb.messageKey
+          storagePullBreaks: Pr,
+          splitPassBreaks: nr
+        } = await JM;
+        nr && console.warn(`${Kj} split_pass_breaks on: Windows Adreno 7xx (N-103) or ?sceneDepth=off`);
+        const Qr = (0, VM.g)(mM, (0, Dr.k)());
+        if ((0, rj.p)("webgpuloss")) {
+          var zr, Lr;
+          const MM = {
+            backend: HM,
+            reason: null !== (zr = null === mM || void 0 === mM ? void 0 : mM.reason) && void 0 !== zr ? zr : null,
+            source: null !== (Lr = null === mM || void 0 === mM ? void 0 : mM.source) && void 0 !== Lr ? Lr : null,
+            storagePullBreaks: Pr,
+            noWebGpu: Qr.messageKey
           };
-          (0, OS.b)((bG => {
-            bG.noteWasmPick(GG)
+          (0, ij.d)((rM => {
+            rM.noteWasmPick(MM)
           }))
         }
-        const fb = "webgpu" === QG;
-        if (Dy = (0, xG.i)(fb ? IG : null, fb && null !== (kG = null === (YG = Qy) || void 0 === YG ? void 0 : YG.pagePreviews().OQ) && void 0 !== kG ? kG : null, Yb, jY), iU) return null;
-        if (sG.reserveAtJoin((0, YS.m)(null !== lG && void 0 !== lG ? lG : WZ.g)), IG.isStopped) return null;
-        const Kb = GG => {
-          if (wk = performance.now(), Sk = !1, null !== SU) try {
-            SU.animationFrame(GG)
-          } catch (SG) {
-            TY(SG)
+        const mr = "webgpu" === HM;
+        if (OP = (0, VM.k)(mr ? uM : null, mr && null !== (PM = null === (QM = Ga) || void 0 === QM ? void 0 : QM.pagePreviews().nh) && void 0 !== PM ? PM : null, Qr, IQ), kn) return null;
+        if (YM.reserveAtJoin((0, hS.p)(null !== DM && void 0 !== DM ? DM : Wi.f)), uM.isStopped) return null;
+        const hr = MM => {
+          if (LP = performance.now(), mP = !1, null !== mn) try {
+            mn.animationFrame(MM)
+          } catch (SM) {
+            Sz(SM)
           }
-          if (function(GG, bG) {
-              return bG && !iU && !kk && kV() && yV() && GG.framePaces(performance.now())
-            }(IG, EU)) {
-            if (IG.writePendingInput(), (0, vG.g)(GG, GV), eY(!1, GG), null !== SU) try {
-              SU.framePaced()
-            } catch (SG) {
-              TY(SG)
+          if (function(MM, rM) {
+              return rM && !kn && !JP && Ez() && lz() && MM.framePaces(performance.now())
+            }(uM, pn)) {
+            if (uM.writePendingInput(), (0, pM.g)(MM, mz), iz(!1, MM), null !== mn) try {
+              mn.framePaced()
+            } catch (SM) {
+              Sz(SM)
             }
-            requestAnimationFrame(Kb)
-          } else BY(IG, EU, "budget") && ((0, Pb.l)(IG.lastFrameKind) && yV() && (0, vG.g)(GG, GV), eY(EU && dU, GG), JU.frame(IG.lastFrameKind, EU && yV(), GG), rU.frame(IG.lastFrameKind, EU && yV()), (0, Pb.e)(IG.lastFrameKind) && lb.P.drew(), KV(IG), sG.afterFrame(), requestAnimationFrame(Kb))
+            requestAnimationFrame(hr)
+          } else Lz(uM, pn, "budget") && ((0, Zr.l)(uM.lastFrameKind) && lz() && (0, pM.g)(MM, mz), iz(pn && wn, MM), tn.frame(uM.lastFrameKind, pn && lz(), MM), gn.frame(uM.lastFrameKind, pn && lz()), (0, Zr.d)(uM.lastFrameKind) && Dr.B.drew(), gz(uM), YM.afterFrame(), requestAnimationFrame(hr))
         };
-        requestAnimationFrame(Kb);
-        return function(GG) {
-          if (GG.has("inputLog") && (0, Xw.j)((GG => {
+        requestAnimationFrame(hr);
+        return function(MM) {
+          if (MM.has("inputLog") && (0, uO.f)((MM => {
               let {
-                action: bG,
-                down: ZG,
-                press: wG
-              } = GG;
-              console.info(`${iw} input ${bG} ${ZG?"down":"up"} press ${wG} at ${performance.now().toFixed(1)}`)
-            })), GG.has("inputDump")) {
-            const GG = [];
-            Ww = GG, Object.assign(window, {
-              bloxdInputDump: () => GG.join("\n")
+                action: rM,
+                down: iM,
+                press: OM
+              } = MM;
+              console.info(`${pO} input ${rM} ${iM?"down":"up"} press ${OM} at ${performance.now().toFixed(1)}`)
+            })), MM.has("inputDump")) {
+            const MM = [];
+            sO = MM, Object.assign(window, {
+              bloxdInputDump: () => MM.join("\n")
             })
           }
-        }(new URLSearchParams(window.location.search)), My = function(GG) {
-          let bG = null;
-          const ZG = () => {
-              null !== bG && (clearInterval(bG), bG = null)
+        }(new URLSearchParams(window.location.search)), Ba = function(MM) {
+          let rM = null;
+          const iM = () => {
+              null !== rM && (clearInterval(rM), rM = null)
             },
-            wG = () => {
-              document.hidden ? bG ??= setInterval((() => {
-                CV(GG) || ZG()
-              }), Sy) : ZG()
+            OM = () => {
+              document.hidden ? rM ??= setInterval((() => {
+                Yz(MM) || iM()
+              }), ma) : iM()
             };
-          return document.addEventListener("visibilitychange", wG), wG(), () => {
-            ZG(), document.removeEventListener("visibilitychange", wG)
+          return document.addEventListener("visibilitychange", OM), OM(), () => {
+            iM(), document.removeEventListener("visibilitychange", OM)
           }
-        }(IG), IG
-      }(bG).then((GG => {
-        var bG;
-        (wG(Ey), iy(null !== GG), null !== GG && (zG = performance.now()), Xy(GG), null === GG) ? null === (bG = Qy) || void 0 === bG || bG.pagePreviews().endSession(null === (0, hb.r)()): xy("booted")
-      }), (GG => {
-        wG(Ey), iy(!1), Xy(null), fV({
-          site: eL,
-          error: GG,
+        }(uM), uM
+      }(rM).then((MM => {
+        var rM;
+        (OM(ua), sa(null !== MM), null !== MM && (EM = performance.now()), pa(MM), null === MM) ? null === (rM = Ga) || void 0 === rM || rM.pagePreviews().endSession(null === (0, Jr.t)()): aP("booted")
+      }), (MM => {
+        OM(ua), sa(!1), pa(null), wz({
+          site: Vj,
+          error: MM,
           header: null
-        }, Ey)
+        }, ua)
       }))
     }
 
-    function aU() {
-      const GG = oy;
-      null !== GG && CU().then((bG => {
+    function Fn() {
+      const MM = Ra;
+      null !== MM && fn().then((rM => {
         let {
-          pageBuiltInAnimationPack: ZG
-        } = bG;
-        ZG().provide(GG)
-      }), (GG => {
-        console.warn(`${qL} the built-in animation pack's chunk did not load: lifeforms stay in their rest pose`, GG)
+          pageBuiltInAnimationPack: iM
+        } = rM;
+        iM().provide(MM)
+      }), (MM => {
+        console.warn(`${Kj} the built-in animation pack's chunk did not load: lifeforms stay in their rest pose`, MM)
       }))
     }
-    const cU = new class {
-      constructor(GG) {
-        this.deps = GG, this.latest = 0, this.Ik = null
+    const Bn = new class {
+      constructor(MM) {
+        this.deps = MM, this.latest = 0, this.sQ = null
       }
-      apply(GG, bG) {
-        return this.load(GG, bG, 0)
+      apply(MM, rM) {
+        return this.load(MM, rM, 0)
       }
-      async load(GG, bG, ZG) {
-        var wG;
-        const SG = ++this.latest,
-          LG = this.deps.compiler;
-        if (void 0 === bG || null === bG || "object" !== typeof bG || 0 === Object.keys(bG).length || null === LG) return this.drop(GG), !1;
-        if ((null === (wG = this.Ik) || void 0 === wG ? void 0 : wG.module) === GG && (0, LZ.ze)(this.Ik.files, bG)) return !1;
+      async load(MM, rM, iM) {
+        var OM;
+        const SM = ++this.latest,
+          jM = this.deps.compiler;
+        if (void 0 === rM || null === rM || "object" !== typeof rM || 0 === Object.keys(rM).length || null === jM) return this.drop(MM), !1;
+        if ((null === (OM = this.sQ) || void 0 === OM ? void 0 : OM.module) === MM && (0, ni.Td)(this.sQ.files, rM)) return !1;
         try {
-          const [ZG, wG] = await Promise.all([LG(), this.deps.builtIns()]);
-          if (SG !== this.latest) return !1;
-          const yG = await ZG(bG, YZ, {
-            builtIns: wG
+          const [iM, OM] = await Promise.all([jM(), this.deps.builtIns()]);
+          if (SM !== this.latest) return !1;
+          const aM = await iM(rM, mi, {
+            builtIns: OM
           });
-          if (SG !== this.latest) return !1;
-          const kG = this.call(GG, yG);
-          if (void 0 === kG) throw new UZ("the compiled animations didn't read against the built-in pack");
-          return this.Ik = {
-              module: GG,
-              files: bG
+          if (SM !== this.latest) return !1;
+          const PM = this.call(MM, aM);
+          if (void 0 === PM) throw new Li("the compiled animations didn't read against the built-in pack");
+          return this.sQ = {
+              module: MM,
+              files: rM
             },
-            function(GG) {
-              for (let bG = 0; bG + 2 < GG.length; bG += 3) {
-                ("error" === GG[bG] ? console.error : console.warn)(`Animation for the texture pack: ${GG[bG+1]}: ${GG[bG+2]}`)
+            function(MM) {
+              for (let rM = 0; rM + 2 < MM.length; rM += 3) {
+                ("error" === MM[rM] ? console.error : console.warn)(`Animation for the texture pack: ${MM[rM+1]}: ${MM[rM+2]}`)
               }
-            }(kG), !0
-        } catch (kG) {
-          var yG;
-          if (SG !== this.latest) return !1;
-          this.drop(GG), 0 === ZG && this.deps.warn("the texture pack's animations didn't load: lifeforms play the built-in ones", kG);
-          const wG = (null !== (yG = this.deps.retryAfterMs) && void 0 !== yG ? yG : kZ)[ZG];
-          return void 0 === wG || kG instanceof UZ || (0, yZ.k)(GG) || setTimeout((() => {
-            SG === this.latest && this.load(GG, bG, ZG + 1)
-          }), wG), !1
+            }(PM), !0
+        } catch (PM) {
+          var aM;
+          if (SM !== this.latest) return !1;
+          this.drop(MM), 0 === iM && this.deps.warn("the texture pack's animations didn't load: lifeforms play the built-in ones", PM);
+          const OM = (null !== (aM = this.deps.retryAfterMs) && void 0 !== aM ? aM : zi)[iM];
+          return void 0 === OM || PM instanceof Li || (0, Qi.m)(MM) || setTimeout((() => {
+            SM === this.latest && this.load(MM, rM, iM + 1)
+          }), OM), !1
         }
       }
-      call(GG, bG) {
+      call(MM, rM) {
         try {
-          return GG.zwG(bG)
-        } catch (ZG) {
-          throw (0, yZ.m)(GG, ZG), ZG
+          return MM.aOM(rM)
+        } catch (iM) {
+          throw (0, Qi.q)(MM, iM), iM
         }
       }
-      clear(GG) {
-        this.latest++, this.drop(GG)
+      clear(MM) {
+        this.latest++, this.drop(MM)
       }
-      drop(GG) {
-        const bG = this.Ik;
-        if (this.Ik = null, (null === bG || void 0 === bG ? void 0 : bG.module) === GG && !(0, yZ.k)(GG)) try {
-          this.call(GG, null)
+      drop(MM) {
+        const rM = this.sQ;
+        if (this.sQ = null, (null === rM || void 0 === rM ? void 0 : rM.module) === MM && !(0, Qi.m)(MM)) try {
+          this.call(MM, null)
         } catch {}
       }
     }({
-      compiler: bZ.d,
+      compiler: Si.c,
       builtIns: async () => {
         const {
-          pageBuiltInAnimationPack: GG
-        } = await CU();
-        return GG().whenSet()
+          pageBuiltInAnimationPack: MM
+        } = await fn();
+        return MM().whenSet()
       },
-      warn: jY
+      warn: IQ
     });
-    async function lU(GG, bG) {
-      let wG = !1;
-      await jU({
+    async function Xn(MM, rM) {
+      let OM = !1;
+      await In({
         matchmake: async () => {
           const {
-            guestJoinTarget: SG,
-            guestJoinWithPack: LG
-          } = await ZG.e(277).then((() => ZG(51425)));
-          return wG ? SG(GG, bG, AY()) : (wG = !0, LG(GG, bG, (bG => sY(GG, bG)), AY))
+            guestJoinTarget: SM,
+            guestJoinWithPack: jM
+          } = await iM.e(300).then((() => iM(53755)));
+          return OM ? SM(MM, rM, TQ()) : (OM = !0, jM(MM, rM, (rM => VQ(MM, rM)), TQ))
         },
-        onFailure: GG => {
-          (0, aZ.showJoinFailure)(GG, Ey)
+        onFailure: MM => {
+          (0, oi.showJoinFailure)(MM, ua)
         },
-        rejoin: xU,
-        invalidateTrafficCode: BU
+        rejoin: zQ,
+        invalidateTrafficCode: LQ
       })
     }
-    async function jU(GG) {
+    async function In(MM) {
       let {
-        matchmake: bG,
-        onFailure: ZG,
-        rejoin: SG,
-        invalidateTrafficCode: LG,
-        pageReady: yG,
-        signal: kG
-      } = GG;
-      const UG = () => !0 === (null === kG || void 0 === kG ? void 0 : kG.aborted);
-      let YG;
-      const VG = oS.e.rejoinHold();
-      Ek = null;
-      const pG = (0, AZ.Q)("wasm", rV);
-      let fG = !1,
-        QG = performance.now();
+        matchmake: rM,
+        onFailure: iM,
+        rejoin: SM,
+        invalidateTrafficCode: jM,
+        pageReady: aM,
+        signal: PM
+      } = MM;
+      const nM = () => !0 === (null === PM || void 0 === PM ? void 0 : PM.aborted);
+      let QM;
+      const zM = tS.e.rejoinHold();
+      uP = null, (0, Xi.d)();
+      const LM = (0, vi.S)("wasm", Wz);
+      let mM = !1,
+        HM = performance.now();
       try {
-        if (!await Cy) return {
+        if (!await Da) return {
           kind: "stopped"
         };
-        if (UG()) return {
-          kind: "RZ"
+        if (nM()) return {
+          kind: "Ti"
         };
-        WU().catch((() => {}));
-        let GG = await bG();
-        var oG, XG;
-        if (QG = performance.now(), !UG()) JV(null !== (oG = null === (XG = GG.target.session) || void 0 === XG ? void 0 : XG.gameNameWithVariation) && void 0 !== oG ? oG : null);
-        const ZG = () => performance.now() - GG.matchedAt <= GG.freshMs,
-          wG = MU(GG.target).catch((() => {}));
-        ZG() && !UG() && (YG = new SS(GG.target, {
-          signal: kG
+        Yn().catch((() => {}));
+        let MM = await rM();
+        var GM, CM;
+        if (HM = performance.now(), !nM()) pz(null !== (GM = null === (CM = MM.target.session) || void 0 === CM ? void 0 : CM.gameNameWithVariation) && void 0 !== GM ? GM : null);
+        const iM = () => performance.now() - MM.matchedAt <= MM.freshMs,
+          OM = qn(MM.target).catch((() => {}));
+        iM() && !nM() && (QM = new QS(MM.target, {
+          signal: PM
         }));
-        const LG = performance.now();
-        if (null === await uy) return {
+        const jM = performance.now();
+        if (null === await Wa) return {
           kind: "stopped"
         };
-        var uG, iG;
-        if (function(GG) {
-            var bG, ZG;
-            if (hG.d.markGameEngineConstructed(), EG) return;
-            EG = !0;
-            const wG = Math.max(GG, null !== (bG = JG) && void 0 !== bG ? bG : GG);
-            (0, dG.h)("ready", Math.max(0, (null !== (ZG = rG) && void 0 !== ZG ? ZG : wG) - wG) / 1e3)
-          }(LG), !UG())
-          if (null !== rG && null !== zG ? ((0, KG.p)("wasm_loaded", rG), (0, KG.p)("wasm_core_ready", zG)) : console.warn("[bloxd-wasm-client] a join found the core before boot marked its steps"), GG.target.session && (0, LL.b)(GG.target.session.gameNameWithVariation)) null === (uG = Fy) || void 0 === uG || uG.prestart();
-        if (await wG, !ZG() && !UG()) null === (iG = YG) || void 0 === iG || iG.rematched(), GG = await bG(), QG = performance.now();
-        if (UG()) return {
-          kind: "RZ"
+        var eM, bM;
+        if (function(MM) {
+            var rM, iM;
+            if (JM.b.markGameEngineConstructed(), UM) return;
+            UM = !0;
+            const OM = Math.max(MM, null !== (rM = yM) && void 0 !== rM ? rM : MM);
+            (0, dM.l)("ready", Math.max(0, (null !== (iM = lM) && void 0 !== iM ? iM : OM) - OM) / 1e3)
+          }(jM), !nM())
+          if (null !== lM && null !== EM ? ((0, hM.s)("wasm_loaded", lM), (0, hM.s)("wasm_core_ready", EM)) : console.warn("[bloxd-wasm-client] a join found the core before boot marked its steps"), MM.target.session && (0, zj.c)(MM.target.session.gameNameWithVariation)) null === (eM = fa) || void 0 === eM || eM.prestart();
+        if (await OM, !iM() && !nM()) null === (bM = QM) || void 0 === bM || bM.rematched(), MM = await rM(), HM = performance.now();
+        if (nM()) return {
+          kind: "Ti"
         };
-        const VG = await async function(GG) {
-          var bG, ZG, wG;
+        const zM = await async function(MM) {
+          var rM, iM, OM;
           let {
-            signal: SG,
-            rejoin: LG = null,
-            early: yG,
-            pageReady: kG
+            signal: SM,
+            rejoin: jM = null,
+            early: aM,
+            pageReady: PM
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (null !== SG && void 0 !== SG && SG.aborted) throw new DOMException("the join was left", "AbortError");
-          const UG = (YG = Pk, VG = performance.now(), null !== YG && VG - YG < Rw);
-          var YG, VG;
-          Pk = null;
-          const pG = new AbortController,
-            fG = null !== (bG = null === (ZG = GG.session) || void 0 === ZG ? void 0 : ZG.gameNameWithVariation) && void 0 !== bG ? bG : null;
-          JV(fG), qU({
-            controller: pG,
-            game: fG
-          }), Mk = null, null === (wG = qk) || void 0 === wG || wG.abort(), qk = null, gk = !1, ek = null, Rk.clear();
-          const QG = () => {
-            (0, Ib.j)(pG, (0, Ib.h)(SG))
+          if (null !== SM && void 0 !== SM && SM.aborted) throw new DOMException("the join was left", "AbortError");
+          const nM = (QM = vP, zM = performance.now(), null !== QM && zM - QM < qO);
+          var QM, zM;
+          vP = null;
+          const LM = new AbortController,
+            mM = null !== (rM = null === (iM = MM.session) || void 0 === iM ? void 0 : iM.gameNameWithVariation) && void 0 !== rM ? rM : null;
+          pz(mM), cn({
+            controller: LM,
+            game: mM
+          }), FP = null, null === (OM = IP) || void 0 === OM || OM.abort(), IP = null, qP = !1, TP = null, VP.clear();
+          const HM = () => {
+            (0, ur.j)(LM, (0, ur.f)(SM))
           };
-          null === SG || void 0 === SG || SG.addEventListener("abort", QG, {
+          null === SM || void 0 === SM || SM.addEventListener("abort", HM, {
             once: !0
           });
           try {
-            var hG, dG, JG;
-            const bG = await uy;
-            if (null === bG || bG.isStopped || iU) throw new Error("no core is running to join a game with");
-            if (GG.session && null !== Dy) {
-              const bG = await AU(Dy.join(GG.session.gameNameWithVariation), pG.signal);
-              if ((0, NS.m)("webgpuloss")) {
-                const ZG = GG.session.gameNameWithVariation,
-                  wG = Dy.couldntRunInJoinedGame();
-                (0, OS.b)((GG => GG.noteWasmJoin(ZG, bG, wG)))
+            var JM, dM, yM;
+            const rM = await Wa;
+            if (null === rM || rM.isStopped || kn) throw new Error("no core is running to join a game with");
+            if (MM.session && null !== OP) {
+              const rM = await Tn(OP.join(MM.session.gameNameWithVariation), LM.signal);
+              if ((0, rj.p)("webgpuloss")) {
+                const iM = MM.session.gameNameWithVariation,
+                  OM = OP.couldntRunInJoinedGame();
+                (0, ij.d)((MM => MM.noteWasmJoin(iM, rM, OM)))
               }
-              if (null !== bG) throw new xG.e(bG)
+              if (null !== rM) throw new VM.e(rM)
             }
             const [, , , {
-              joinRoom: ZG
-            }] = await AU(Promise.all([(0, aG.g)(bG), MU(GG), null === kG || void 0 === kG ? void 0 : kG(), WU()]), pG.signal), wG = GG.session, SG = wG ? {
-              ...ZY,
-              attachSocket: bG => {
-                const ZG = YY(bG, GG.endpoint);
-                var SG;
-                null !== ZG && (ik = {
-                  conn: ZG,
-                  info: wG
-                }, null === (SG = Ck) || void 0 === SG || SG(wG.playerDbId));
-                return ZG
+              joinRoom: iM
+            }] = await Tn(Promise.all([(0, WM.h)(rM), qn(MM), null === PM || void 0 === PM ? void 0 : PM(), Yn()]), LM.signal), OM = MM.session, SM = OM ? {
+              ...hQ,
+              attachSocket: rM => {
+                const iM = GQ(rM, MM.endpoint);
+                var SM;
+                null !== iM && (WP = {
+                  conn: iM,
+                  info: OM
+                }, null === (SM = sP) || void 0 === SM || SM(OM.playerDbId));
+                return iM
               }
-            } : ZY, YG = await ZG(SG, GG, {
-              signal: pG.signal,
-              early: yG
-            }).catch((GG => {
-              throw function(GG) {
-                if (!(GG instanceof gG.c)) return GG;
-                if ("roomError" === GG.stage && null !== ek) return PU(new gG.c(GG.message, GG.stage, GG.code, ek), GG);
-                const bG = "closed" === GG.stage && null !== Ak ? Rk.get(Ak.conn) : void 0;
-                return void 0 === bG ? GG : PU(new gG.c(GG.message, GG.stage, bG.code, null, GG.socketOpened), GG)
-              }(GG)
+            } : hQ, QM = await iM(SM, MM, {
+              signal: LM.signal,
+              early: aM
+            }).catch((MM => {
+              throw function(MM) {
+                if (!(MM instanceof xM.d)) return MM;
+                if ("roomError" === MM.stage && null !== TP) return Kn(new xM.d(MM.message, MM.stage, MM.code, TP), MM);
+                const rM = "closed" === MM.stage && null !== BP ? VP.get(BP.conn) : void 0;
+                return void 0 === rM ? MM : Kn(new xM.d(MM.message, MM.stage, rM.code, null, MM.socketOpened), MM)
+              }(MM)
             }));
-            if (zk !== pG) throw YG.leave(), new DOMException("the join was left", "AbortError");
-            gU(YG), null === (hG = ay) || void 0 === hG || hG.newGame();
-            const VG = function(GG) {
-              var bG, ZG;
+            if (gP !== LM) throw QM.leave(), new DOMException("the join was left", "AbortError");
+            rQ(QM), null === (JM = Na) || void 0 === JM || JM.newGame();
+            const zM = function(MM) {
+              var rM, iM;
               const {
-                session: wG
-              } = GG, SG = void 0 === wG ? GG.joinOptions.lobbyName : wG.lobbyName;
+                session: OM
+              } = MM, SM = void 0 === OM ? MM.joinOptions.lobbyName : OM.lobbyName;
               return {
-                endpoint: GG.endpoint,
-                game: null !== (bG = null === wG || void 0 === wG ? void 0 : wG.gameNameWithVariation) && void 0 !== bG ? bG : GG.roomName,
-                lobby: String(null !== SG && void 0 !== SG ? SG : null),
-                postCookies: null !== (ZG = GG.postCookies) && void 0 !== ZG ? ZG : null
+                endpoint: MM.endpoint,
+                game: null !== (rM = null === OM || void 0 === OM ? void 0 : OM.gameNameWithVariation) && void 0 !== rM ? rM : MM.roomName,
+                lobby: String(null !== SM && void 0 !== SM ? SM : null),
+                postCookies: null !== (iM = MM.postCookies) && void 0 !== iM ? iM : null
               }
-            }(GG);
-            rk.set(YG, VG), GS(VG);
-            const fG = performance.now(),
-              QG = {
-                conn: YG.conn,
-                rejoin: LG,
-                game: null !== (dG = null === (JG = GG.session) || void 0 === JG ? void 0 : JG.gameNameWithVariation) && void 0 !== dG ? dG : "",
-                joinedAt: fG,
-                rejoinedAt: UG ? fG : null,
+            }(MM);
+            tP.set(QM, zM), jS(zM);
+            const mM = performance.now(),
+              HM = {
+                conn: QM.conn,
+                rejoin: jM,
+                game: null !== (dM = null === (yM = MM.session) || void 0 === yM ? void 0 : yM.gameNameWithVariation) && void 0 !== dM ? dM : "",
+                joinedAt: mM,
+                rejoinedAt: nM ? mM : null,
                 overflow: null
               };
-            Wk = QG,
-              function(GG, bG) {
-                JY();
-                const ZG = {
-                  endpoint: bG,
-                  roomId: GG.seat.room.roomId,
+            DP = HM,
+              function(MM, rM) {
+                RQ();
+                const iM = {
+                  endpoint: rM,
+                  roomId: MM.seat.room.roomId,
                   heldConn: 0,
                   dropCode: 0,
                   pendingHold: null,
-                  resume: new uZ({
-                    reconnect: (GG, bG, wG) => async function(GG, bG, ZG, wG) {
+                  resume: new gi({
+                    reconnect: (MM, rM, OM) => async function(MM, rM, iM, OM) {
                       const {
-                        roomId: SG,
-                        roomToken: LG
-                      } = zY(GG, bG), yG = hy;
-                      if (null === yG || yG.isStopped || iU) throw new Error("no core is running to resume the game on");
+                        roomId: SM,
+                        roomToken: jM
+                      } = WQ(MM, rM), aM = ea;
+                      if (null === aM || aM.isStopped || kn) throw new Error("no core is running to resume the game on");
                       const {
-                        resumeRoom: kG
-                      } = await AU(WU(), ZG), UG = {
-                        ...ZY,
-                        attachSocket: bG => mk !== GG || 0 === GG.heldConn ? (bG.close(), null) : YY(bG, GG.endpoint, !0)
+                        resumeRoom: PM
+                      } = await Tn(Yn(), iM), nM = {
+                        ...hQ,
+                        attachSocket: rM => kP !== MM || 0 === MM.heldConn ? (rM.close(), null) : GQ(rM, MM.endpoint, !0)
                       };
-                      return kG(UG, GG.endpoint, SG, LG, {
-                        signal: ZG,
-                        onAttached: wG
+                      return PM(nM, MM.endpoint, SM, jM, {
+                        signal: iM,
+                        onAttached: OM
                       })
-                    }(ZG, GG, bG, wG),
-                    releaseSeat: GG => {
-                      !async function(GG, bG) {
+                    }(iM, MM, rM, OM),
+                    releaseSeat: MM => {
+                      !async function(MM, rM) {
                         const {
-                          roomId: ZG,
-                          roomToken: wG
-                        } = zY(GG, bG);
+                          roomId: iM,
+                          roomToken: OM
+                        } = WQ(MM, rM);
                         try {
                           const {
-                            leaveHeldSeat: bG
-                          } = await WU();
-                          await bG(GG.endpoint, ZG, wG)
-                        } catch (SG) {
-                          console.warn(`${qL} the held seat of a game left while it reconnected couldn't be released`, SG)
+                            leaveHeldSeat: rM
+                          } = await Yn();
+                          await rM(MM.endpoint, iM, OM)
+                        } catch (SM) {
+                          console.warn(`${Kj} the held seat of a game left while it reconnected couldn't be released`, SM)
                         }
-                      }(ZG, GG)
+                      }(iM, MM)
                     },
-                    isLive: () => mk === ZG && null !== Wk && !iU,
-                    Tm: GG => {
-                      jk = GG, dY()
+                    isLive: () => kP === iM && null !== DP && !kn,
+                    OW: MM => {
+                      xP = MM, uQ()
                     },
-                    onReconnected: GG => {
-                      ! function(GG) {
-                        const bG = Jk;
-                        if (null !== bG && bG !== GG) {
-                          const ZG = rk.get(bG);
-                          void 0 !== ZG && rk.set(GG, ZG), hU === bG && (hU = GG), bG.detach()
+                    onReconnected: MM => {
+                      ! function(MM) {
+                        const rM = wP;
+                        if (null !== rM && rM !== MM) {
+                          const iM = tP.get(rM);
+                          void 0 !== iM && tP.set(MM, iM), bn === rM && (bn = MM), rM.detach()
                         }
-                        gU(GG)
-                      }(GG)
+                        rQ(MM)
+                      }(MM)
                     },
-                    onGaveUp: (GG, bG) => {
-                      ! function(GG, bG, ZG) {
-                        var wG, SG;
-                        console.warn(`${qL} gave up reconnecting (${ZG.reason}, ${ZG.attempts} attempts)`, ZG.lastError), (0, aZ.reportReconnectGaveUp)(ZG, Ey);
-                        const LG = null !== (wG = null === (SG = Wk) || void 0 === SG ? void 0 : SG.rejoin) && void 0 !== wG ? wG : null;
-                        rY(GG, "gaveUp"), RU();
-                        const yG = {
-                          code: GG.dropCode,
+                    onGaveUp: (MM, rM) => {
+                      ! function(MM, rM, iM) {
+                        var OM, SM;
+                        console.warn(`${Kj} gave up reconnecting (${iM.reason}, ${iM.attempts} attempts)`, iM.lastError), (0, oi.reportReconnectGaveUp)(iM, ua);
+                        const jM = null !== (OM = null === (SM = DP) || void 0 === SM ? void 0 : SM.rejoin) && void 0 !== OM ? OM : null;
+                        pQ(MM, "gaveUp"), OQ();
+                        const aM = {
+                          code: MM.dropCode,
                           name: null,
-                          reason: Gy,
-                          canReconnect: !bG,
+                          reason: na,
+                          canReconnect: !rM,
                           automaticallyReconnect: !1,
                           requiresRefresh: !1
                         };
-                        bY(yG, bG ? null : LG, !1, {
-                          reasonKey: by,
-                          canPlayAgain: bG
+                        HQ(aM, rM ? null : jM, !1, {
+                          reasonKey: Qa,
+                          canPlayAgain: rM
                         })
-                      }(ZG, GG, bG)
+                      }(iM, MM, rM)
                     }
                   })
                 };
-                mk = ZG, null !== Ik && Ik.conn === GG.conn && ZG.resume.onInitialInfo(Ik)
-              }(YG, GG.endpoint), performance.mark(HL), (0, KG.p)("wasm_joined", fG), setTimeout((() => {
-                Jk === YG && (0, KG.f)()
-              }), 0), aU(), console.info(`${qL} joined ${GG.roomName} as ${YG.seat.sessionId} at ${Math.round(performance.now())} ms`);
-            const rG = Mk;
-            Mk = null, null !== rG && tU(QG, rG.mask, rG.frames);
-            const zG = Rk.get(YG.conn);
-            return Rk.clear(), void 0 !== zG && (gU(null), GY(YG.conn, zG.code, zG.reason)), YG
+                kP = iM, null !== ZP && ZP.conn === MM.conn && iM.resume.onInitialInfo(ZP)
+              }(QM, MM.endpoint), performance.mark(ra), (0, hM.s)("wasm_joined", mM), setTimeout((() => {
+                wP === QM && (0, hM.e)()
+              }), 0), Fn(), console.info(`${Kj} joined ${MM.roomName} as ${QM.seat.sessionId} at ${Math.round(performance.now())} ms`);
+            const lM = FP;
+            FP = null, null !== lM && aQ(HM, lM.mask, lM.frames);
+            const EM = VP.get(QM.conn);
+            return VP.clear(), void 0 !== EM && (rQ(null), mQ(QM.conn, EM.code, EM.reason)), QM
           } finally {
-            var rG;
-            null === SG || void 0 === SG || SG.removeEventListener("abort", QG), zk === pG && nU(Jk, null), (null === (rG = Ak) || void 0 === rG ? void 0 : rG.join) === pG && (Ak = null)
+            var lM;
+            null === SM || void 0 === SM || SM.removeEventListener("abort", HM), gP === LM && MQ(wP, null), (null === (lM = BP) || void 0 === lM ? void 0 : lM.join) === LM && (BP = null)
           }
-        }(GG.target, {
-          signal: kG,
-          rejoin: SG(GG.target),
-          early: YG,
-          pageReady: yG
+        }(MM.target, {
+          signal: PM,
+          rejoin: SM(MM.target),
+          early: QM,
+          pageReady: aM
         });
-        return fG = !0, {
+        return mM = !0, {
           kind: "joined",
-          game: VG
+          game: zM
         }
-      } catch (WG) {
-        if (WG instanceof DOMException && "AbortError" === WG.name || UG()) return {
-          kind: "RZ"
+      } catch (tM) {
+        if (tM instanceof DOMException && "AbortError" === tM.name || nM()) return {
+          kind: "Ti"
         };
-        if (iU) return {
+        if (kn) return {
           kind: "stopped"
         };
-        if (gk && (gk = !1, await LG().catch((GG => {
-            console.warn(`${qL} the cached traffic code could not be dropped`, GG)
-          }))), null === await uy) return {
+        if (qP && (qP = !1, await jM().catch((MM => {
+            console.warn(`${Kj} the cached traffic code could not be dropped`, MM)
+          }))), null === await Wa) return {
           kind: "stopped"
         };
-        if (WG instanceof xG.e) return ZG(WG, performance.now() - QG), {
+        if (tM instanceof VM.e) return iM(tM, performance.now() - HM), {
           kind: "failed",
-          error: WG,
+          error: tM,
           reloading: !1
         };
-        if (WG instanceof gG.c && WG.code === wG.b.wasmClientNotAllowed.code && zU) return FY("this server refused the wasm client to this account", "refused"), {
+        if (tM instanceof xM.d && tM.code === OM.d.wasmClientNotAllowed.code && Rn) return xQ("this server refused the wasm client to this account", "refused"), {
           kind: "failed",
-          error: WG,
+          error: tM,
           reloading: !0
         };
-        const GG = WG instanceof gG.c && WG.code === wG.b.outdatedVersion.code,
-          bG = () => null === Jk,
-          SG = await mV({
-            site: aZ.JOIN_SITE,
-            error: WG,
-            outdated: GG
+        const MM = tM instanceof xM.d && tM.code === OM.d.outdatedVersion.code,
+          rM = () => null === wP,
+          SM = await Az({
+            site: oi.JOIN_SITE,
+            error: tM,
+            outdated: MM
           }, (() => {
-            ZG(WG, performance.now() - QG)
+            iM(tM, performance.now() - HM)
           }), {
-            stillWanted: bG
+            stillWanted: rM
           });
         return {
           kind: "failed",
-          error: WG,
-          reloading: SG
+          error: tM,
+          reloading: SM
         }
       } finally {
-        var CG;
-        fG || pG.end(), oS.e.releaseHold(VG);
-        const GG = null === (CG = YG) || void 0 === CG ? void 0 : CG.release();
-        GG && (0, aZ.reportUnusedSeat)(GG, Ey)
+        var wM;
+        mM || LM.end(), tS.e.releaseHold(zM);
+        const MM = null === (wM = QM) || void 0 === wM ? void 0 : wM.release();
+        MM && (0, oi.reportUnusedSeat)(MM, ua)
       }
     }
 
-    function PU(GG, bG) {
-      return GG.stack = bG.stack, GG
+    function Kn(MM, rM) {
+      return MM.stack = rM.stack, MM
     }
 
-    function MU(GG) {
-      return GG.session ? (0, aG.o)(zy, GG.session.gameNameWithVariation) : Promise.resolve()
+    function qn(MM) {
+      return MM.session ? (0, WM.m)(ga, MM.session.gameNameWithVariation) : Promise.resolve()
     }
 
-    function AU(GG, bG) {
-      return (0, Ib.p)(bG), new Promise(((ZG, wG) => {
-        const SG = () => {
-          wG((0, Ib.h)(bG))
+    function Tn(MM, rM) {
+      return (0, ur.p)(rM), new Promise(((iM, OM) => {
+        const SM = () => {
+          OM((0, ur.f)(rM))
         };
-        bG.addEventListener("abort", SG, {
+        rM.addEventListener("abort", SM, {
           once: !0
-        }), GG.then((GG => {
-          bG.removeEventListener("abort", SG), ZG(GG)
-        }), (GG => {
-          bG.removeEventListener("abort", SG), wG(GG)
+        }), MM.then((MM => {
+          rM.removeEventListener("abort", SM), iM(MM)
+        }), (MM => {
+          rM.removeEventListener("abort", SM), OM(MM)
         }))
       }))
     }
 
-    function sU() {
-      qU(null)
+    function Vn() {
+      cn(null)
     }
 
-    function qU(GG) {
-      var bG, ZG, wG;
+    function cn(MM) {
+      var rM, iM, OM;
       (function() {
-        const GG = mk;
-        null !== GG && rY(GG, "left")
-      }(), null === my || my.left) || (my.left = !0, null === (wG = (0, aG.f)()) || void 0 === wG || wG.socketLeft(), (0, fG.q)({
+        const MM = kP;
+        null !== MM && pQ(MM, "left")
+      }(), null === Za || Za.left) || (Za.left = !0, null === (OM = (0, WM.e)()) || void 0 === OM || OM.socketLeft(), (0, mM.p)({
         websocketUrl: null
       }));
-      zk && (0, Ib.j)(zk, new DOMException("the join was left", "AbortError")), RU(null !== GG), null === (bG = Dy) || void 0 === bG || bG.leave();
-      const SG = Jk;
-      null !== GG && oS.e.setGame(GG.game), nU(null, null !== (ZG = null === GG || void 0 === GG ? void 0 : GG.controller) && void 0 !== ZG ? ZG : null), null === SG || void 0 === SG || SG.leave(), eU(0), (0, ib.h)()
+      gP && (0, ur.j)(gP, new DOMException("the join was left", "AbortError")), OQ(null !== MM), null === (rM = OP) || void 0 === rM || rM.leave();
+      const SM = wP;
+      null !== MM && tS.e.setGame(MM.game), MQ(null, null !== (iM = null === MM || void 0 === MM ? void 0 : MM.controller) && void 0 !== iM ? iM : null), null === SM || void 0 === SM || SM.leave(), iQ(0), (0, br.e)()
     }
 
-    function nU(GG, bG) {
-      Jk = GG, zk = bG, null === Jk && null === zk && oS.e.setGame(void 0)
+    function MQ(MM, rM) {
+      wP = MM, gP = rM, null === wP && null === gP && tS.e.setGame(void 0)
     }
 
-    function gU(GG) {
-      nU(GG, zk)
+    function rQ(MM) {
+      MQ(MM, gP)
     }
 
-    function eU(GG) {
-      const bG = hy;
-      return null !== ky && !iU && null !== bG && !bG.isStopped && (!!ky(gG.h, 0, (0, gG.t)(GG)) && (Vk = !0, 0 === GG || kk || BY(bG, !1, "all"), !0))
+    function iQ(MM) {
+      const rM = ea;
+      return null !== Ja && !kn && null !== rM && !rM.isStopped && (!!Ja(xM.j, 0, (0, xM.z)(MM)) && (lP = !0, 0 === MM || JP || Lz(rM, !1, "all"), !0))
     }
 
-    function RU() {
-      var GG, bG;
-      arguments.length > 0 && void 0 !== arguments[0] && arguments[0] || (0, AZ.g)();
-      const ZG = null !== (GG = null === (bG = Wk) || void 0 === bG ? void 0 : bG.overflow) && void 0 !== GG ? GG : null;
-      Wk = null, null !== ZG && (0, aZ.reportEventOverflow)(ZG, Ey)
+    function OQ() {
+      var MM, rM;
+      arguments.length > 0 && void 0 !== arguments[0] && arguments[0] || (0, vi.c)();
+      const iM = null !== (MM = null === (rM = DP) || void 0 === rM ? void 0 : rM.overflow) && void 0 !== MM ? MM : null;
+      DP = null, null !== iM && (0, oi.reportEventOverflow)(iM, ua)
     }
 
-    function TU() {
-      null !== Jk || null !== zk ? sU() : VY()
+    function SQ() {
+      null !== wP || null !== gP ? Vn() : CQ()
     }
 
-    function HU(GG, bG) {
-      console.warn(`${qL} the event buffer refused records in ${bG} frames (categories ${GG})`), iU || (null !== Wk ? tU(Wk, GG, bG) : null !== zk && function(GG, bG, ZG) {
-        var wG;
-        const SG = function(GG, bG) {
-          return null === GG ? "drop" : GG.activated ? "keep" : 0 !== (bG & Ob.v.NetSession) ? "fail" : "drop"
-        }((null === (wG = Ak) || void 0 === wG ? void 0 : wG.join) === GG ? Ak : null, bG);
-        "keep" === SG ? Mk = {
-          mask: bG,
-          frames: ZG
-        } : "fail" === SG && (0, Ib.j)(GG, new Error("the join's net session was lost to an event overflow"))
-      }(zk, GG, bG))
+    function jQ(MM, rM) {
+      console.warn(`${Kj} the event buffer refused records in ${rM} frames (categories ${MM})`), kn || (null !== DP ? aQ(DP, MM, rM) : null !== gP && function(MM, rM, iM) {
+        var OM;
+        const SM = function(MM, rM) {
+          return null === MM ? "drop" : MM.activated ? "keep" : 0 !== (rM & Mi.u.NetSession) ? "fail" : "drop"
+        }((null === (OM = BP) || void 0 === OM ? void 0 : OM.join) === MM ? BP : null, rM);
+        "keep" === SM ? FP = {
+          mask: rM,
+          frames: iM
+        } : "fail" === SM && (0, ur.j)(MM, new Error("the join's net session was lost to an event overflow"))
+      }(gP, MM, rM))
     }
 
-    function tU(GG, bG, ZG) {
-      const wG = GG.overflow ??= {
+    function aQ(MM, rM, iM) {
+      const OM = MM.overflow ??= {
         frames: 0,
         acks: 0,
         mask: 0,
         outcome: null
       };
-      wG.frames += ZG, wG.acks++, wG.mask |= bG;
-      const SG = function(GG, bG, ZG) {
-        if (0 === (GG & Ob.v.NetSession)) return "none";
-        const wG = null !== bG.rejoinedAt && ZG - bG.rejoinedAt < Tw;
-        return null === bG.rejoin || wG ? "fail" : "rejoin"
-      }(bG, GG, performance.now());
-      "none" !== SG && queueMicrotask((() => {
-        if (Wk !== GG) return;
-        const bG = "rejoin" === SG && performance.now() - sk >= nG.g;
-        wG.outcome = bG ? "rejoined" : "failed", bY(function(GG, bG) {
+      OM.frames += iM, OM.acks++, OM.mask |= rM;
+      const SM = function(MM, rM, iM) {
+        if (0 === (MM & Mi.u.NetSession)) return "none";
+        const OM = null !== rM.rejoinedAt && iM - rM.rejoinedAt < TO;
+        return null === rM.rejoin || OM ? "fail" : "rejoin"
+      }(rM, MM, performance.now());
+      "none" !== SM && queueMicrotask((() => {
+        if (DP !== MM) return;
+        const rM = "rejoin" === SM && performance.now() - XP >= AM.f;
+        OM.outcome = rM ? "rejoined" : "failed", HQ(function(MM, rM) {
           return {
             code: 0,
             name: "eventOverflow",
             reason: "Your game fell behind the server.",
-            canReconnect: GG,
-            automaticallyReconnect: bG,
+            canReconnect: MM,
+            automaticallyReconnect: rM,
             requiresRefresh: !1
           }
-        }(null !== GG.rejoin, bG), GG.rejoin, bG), sU(), bG && (Pk = performance.now())
+        }(null !== MM.rejoin, rM), MM.rejoin, rM), Vn(), rM && (vP = performance.now())
       }))
     }
 
-    function DU() {
-      zU && function(GG, bG) {
+    function PQ() {
+      Rn && function(MM, rM) {
         let {
-          mesh: ZG,
-          worldgen: wG,
-          modelPool: SG
-        } = GG;
-        "landingPage" === bG ? (null === ZG || void 0 === ZG || ZG.stopWorkers(), null === wG || void 0 === wG || wG.stopWorker(), null === SG || void 0 === SG || SG.stopWorkers()) : ((0, Gb.l)(bG) || "inGame" === bG) && (null === ZG || void 0 === ZG || ZG.restartWorkers(), null === SG || void 0 === SG || SG.startWorkers())
+          mesh: iM,
+          worldgen: OM,
+          modelPool: SM
+        } = MM;
+        "landingPage" === rM ? (null === iM || void 0 === iM || iM.stopWorkers(), null === OM || void 0 === OM || OM.stopWorker(), null === SM || void 0 === SM || SM.stopWorkers()) : ((0, Mr.i)(rM) || "inGame" === rM) && (null === iM || void 0 === iM || iM.restartWorkers(), null === SM || void 0 === SM || SM.startWorkers())
       }({
-        mesh: ay,
-        worldgen: Fy,
-        modelPool: ny
-      }, Gb.e.get("gameState"))
+        mesh: Na,
+        worldgen: fa,
+        modelPool: qa
+      }, Mr.d.get("gameState"))
     }
 
-    function NU(GG) {
-      EU = GG, oU && OU(oU, GG)
+    function nQ(MM) {
+      pn = MM, Wn && QQ(Wn, MM)
     }
 
-    function OU(GG, bG) {
-      GG.style.visibility = bG ? "visible" : "hidden"
+    function QQ(MM, rM) {
+      MM.style.visibility = rM ? "visible" : "hidden"
     }
 
-    function xU(GG) {
-      var bG;
-      const ZG = GG.roomName,
-        wG = null !== (bG = GG.joinOptions.lobbyName) && void 0 !== bG ? bG : null;
+    function zQ(MM) {
+      var rM;
+      const iM = MM.roomName,
+        OM = null !== (rM = MM.joinOptions.lobbyName) && void 0 !== rM ? rM : null;
       return () => {
-        lU(ZG, wG)
+        Xn(iM, OM)
       }
     }
 
-    function BU() {
-      return ZG.e(277).then((() => ZG(51425))).then((GG => {
+    function LQ() {
+      return iM.e(300).then((() => iM(53755))).then((MM => {
         let {
-          invalidateGuestTrafficCode: bG
-        } = GG;
-        return bG()
-      })).catch((GG => {
-        console.warn(`${qL} the cached traffic code could not be dropped`, GG)
+          invalidateGuestTrafficCode: rM
+        } = MM;
+        return rM()
+      })).catch((MM => {
+        console.warn(`${Kj} the cached traffic code could not be dropped`, MM)
       }))
     }
 
-    function GY(GG, bG, ZG) {
-      var SG, LG;
-      let yG = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (iU) return;
-      if ((null === (SG = Wk) || void 0 === SG ? void 0 : SG.conn) !== GG) return void(null !== zk && Rk.set(GG, {
-        code: bG,
-        reason: ZG
+    function mQ(MM, rM, iM) {
+      var SM, jM;
+      let aM = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (kn) return;
+      if ((null === (SM = DP) || void 0 === SM ? void 0 : SM.conn) !== MM) return void(null !== gP && VP.set(MM, {
+        code: rM,
+        reason: iM
       }));
       const {
-        rejoin: kG,
-        game: UG,
-        joinedAt: YG
-      } = Wk;
-      RU(), JY();
-      const VG = (0, nG.k)(bG, (0, tw.e)(GG));
-      if (console.info(`${qL} the game's connection closed with code ${bG} (${null!==(LG=VG.name)&&void 0!==LG?LG:"unrecognised"})`), bG === wG.b.gameOrPluginKick.code || yG || (0, aZ.reportDisconnect)(VG, Ey, {
-          closeReason: ZG,
-          sinceJoinedMs: performance.now() - YG,
-          game: UG
-        }), VG.requiresRefresh) {
-        const GG = "outdatedVersion" === VG.name,
-          ZG = new Error(`the game's connection closed with code ${bG}`),
-          wG = () => null === Wk && null === zk;
-        return void mV({
-          site: aZ.JOIN_SITE,
-          error: ZG,
-          outdated: GG
+        rejoin: PM,
+        game: nM,
+        joinedAt: QM
+      } = DP;
+      OQ(), RQ();
+      const zM = (0, AM.m)(rM, (0, cO.g)(MM));
+      if (console.info(`${Kj} the game's connection closed with code ${rM} (${null!==(jM=zM.name)&&void 0!==jM?jM:"unrecognised"})`), rM === OM.d.gameOrPluginKick.code || aM || (0, oi.reportDisconnect)(zM, ua, {
+          closeReason: iM,
+          sinceJoinedMs: performance.now() - QM,
+          game: nM
+        }), zM.requiresRefresh) {
+        const MM = "outdatedVersion" === zM.name,
+          iM = new Error(`the game's connection closed with code ${rM}`),
+          OM = () => null === DP && null === gP;
+        return void Az({
+          site: oi.JOIN_SITE,
+          error: iM,
+          outdated: MM
         }, (() => {
-          wG() && bY(VG, null, !1)
+          OM() && HQ(zM, null, !1)
         }), {
-          stillWanted: wG
+          stillWanted: OM
         })
       }
-      const pG = VG.canReconnect ? kG : null,
-        fG = null !== pG && VG.automaticallyReconnect && performance.now() - sk >= nG.g;
-      bY(VG, pG, fG)
+      const LM = zM.canReconnect ? PM : null,
+        mM = null !== LM && zM.automaticallyReconnect && performance.now() - XP >= AM.f;
+      HQ(zM, LM, mM)
     }
 
-    function bY(GG, bG, ZG) {
-      var wG;
-      let SG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+    function HQ(MM, rM, iM) {
+      var OM;
+      let SM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
         reasonKey: null,
         canPlayAgain: !1
       };
-      if (XU) return;
-      oS.e.unwantedLeave(ZG && null !== bG && 0 === nk.size), null === (wG = qk) || void 0 === wG || wG.abort();
-      const LG = new AbortController;
-      qk = LG;
-      const yG = null === bG ? null : () => {
-        LG.signal.aborted || (LG.abort(), bG())
+      if (sn) return;
+      tS.e.unwantedLeave(iM && null !== rM && 0 === KP.size), null === (OM = IP) || void 0 === OM || OM.abort();
+      const jM = new AbortController;
+      IP = jM;
+      const aM = null === rM ? null : () => {
+        jM.signal.aborted || (jM.abort(), rM())
       };
-      if (ZG && null !== yG) {
-        sk = performance.now();
-        const GG = setTimeout(yG, nG.c);
-        LG.signal.addEventListener("abort", (() => {
-          clearTimeout(GG)
+      if (iM && null !== aM) {
+        XP = performance.now();
+        const MM = setTimeout(aM, AM.e);
+        jM.signal.addEventListener("abort", (() => {
+          clearTimeout(MM)
         }))
       }
-      const kG = {
-        code: GG.code,
-        name: GG.name,
-        reason: GG.reason,
-        reasonKey: SG.reasonKey,
-        reconnect: yG,
-        reconnecting: ZG,
-        requiresRefresh: GG.requiresRefresh,
-        canPlayAgain: SG.canPlayAgain
+      const PM = {
+        code: MM.code,
+        name: MM.name,
+        reason: MM.reason,
+        reasonKey: SM.reasonKey,
+        reconnect: aM,
+        reconnecting: iM,
+        requiresRefresh: MM.requiresRefresh,
+        canPlayAgain: SM.canPlayAgain
       };
-      if (nk.size > 0)
-        for (const YG of [...nk]) try {
-          YG(kG)
-        } catch (UG) {
-          console.error(`${qL} an unwanted-leave listener threw`, UG)
-        } else Mw((0, lw.f)(GG, null !== yG, ZG), LG.signal).then((bG => {
-          bG && (null !== yG ? yG() : GG.requiresRefresh && (0, BG.i)())
+      if (KP.size > 0)
+        for (const QM of [...KP]) try {
+          QM(PM)
+        } catch (nM) {
+          console.error(`${Kj} an unwanted-leave listener threw`, nM)
+        } else xO((0, YO.g)(MM, null !== aM, iM), jM.signal).then((rM => {
+          rM && (null !== aM ? aM() : MM.requiresRefresh && (0, cM.k)())
         }))
     }
-    const ZY = {
-      attachSocket: GG => YY(GG),
-      onConnection: GG => (Tk.add(GG), () => {
-        Tk.delete(GG)
+    const hQ = {
+      attachSocket: MM => GQ(MM),
+      onConnection: MM => (cP.add(MM), () => {
+        cP.delete(MM)
       }),
-      sendRaw: (GG, bG) => {
-        const ZG = my;
-        return null !== ZG && ZG.conn === GG && VV(ZG, bG)
+      sendRaw: (MM, rM) => {
+        const iM = Za;
+        return null !== iM && iM.conn === MM && Cz(iM, rM)
       },
-      leaveRoom: eU,
-      closeSocket: GG => {
-        var bG;
-        (null === (bG = my) || void 0 === bG ? void 0 : bG.conn) === GG && VY()
+      leaveRoom: iQ,
+      closeSocket: MM => {
+        var rM;
+        (null === (rM = Za) || void 0 === rM ? void 0 : rM.conn) === MM && CQ()
       },
-      flushNet: pY
+      flushNet: eQ
     };
 
-    function wY(GG) {
-      var bG;
+    function JQ(MM) {
+      var rM;
       let {
-        aux: ZG,
-        payload: wG
-      } = GG;
-      null === (bG = hy) || void 0 === bG || bG.queueOptions(ZG, wG)
+        aux: iM,
+        payload: OM
+      } = MM;
+      null === (rM = ea) || void 0 === rM || rM.queueOptions(iM, OM)
     }
 
-    function SY(GG, bG) {
-      wY(function(GG, bG) {
-        return jS = GG ? {
-          preventMovement: bG
-        } : null, GG ? PS(bG) : {
-          aux: Nb.ac.AdEnd,
-          payload: lS
+    function dQ(MM, rM) {
+      JQ(function(MM, rM) {
+        return NS = MM ? {
+          preventMovement: rM
+        } : null, MM ? AS(rM) : {
+          aux: cr.$b.AdEnd,
+          payload: YS
         }
-      }(GG, bG))
+      }(MM, rM))
     }
 
-    function LY(GG) {
-      var bG;
-      Kk = GG, null === (bG = hy) || void 0 === bG || bG.setUiPrefs(GG)
+    function yQ(MM) {
+      var rM;
+      CP = MM, null === (rM = ea) || void 0 === rM || rM.setUiPrefs(MM)
     }
 
-    function yY(GG, bG) {
-      zy.setMaster(GG, bG)
+    function lQ(MM, rM) {
+      ga.setMaster(MM, rM)
     }
 
-    function kY(GG) {
-      var bG;
-      hk = GG, null === (bG = hy) || void 0 === bG || bG.setEnvPrefs(GG)
+    function EQ(MM) {
+      var rM;
+      eP = MM, null === (rM = ea) || void 0 === rM || rM.setEnvPrefs(MM)
     }
 
-    function UY(GG) {
-      var bG;
-      dk = GG, null === (bG = hy) || void 0 === bG || bG.setLookPrefs(GG)
+    function UQ(MM) {
+      var rM;
+      bP = MM, null === (rM = ea) || void 0 === rM || rM.setLookPrefs(MM)
     }
 
-    function YY(GG) {
-      var bG;
-      let ZG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new URL(GG.url).origin,
-        wG = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      if (GG.readyState === WebSocket.CLOSING || GG.readyState === WebSocket.CLOSED) return console.warn(`${qL} a closing or closed socket can't be attached`), null;
-      const SG = hy;
-      if (!SG || SG.isStopped) return console.warn(`${qL} no core is running to attach a socket to`), GG.close(), null;
-      if (null === (0, aG.f)()) return console.warn(`${qL} the game has not started to attach a socket to`), GG.close(), null;
-      if (Gk > Nb.B) return console.warn(`${qL} this core has attached all the sockets it can; reload to play on`), GG.close(), null;
-      if (Vk && !kk && (BY(SG, !1, "all"), SG.isStopped || iU)) return GG.close(), null;
-      VY();
-      const LG = Gk++;
-      if (!uY(SG, "open", LG, wG ? Nb.$b.Resume : 0)) return GG.close(), null;
-      wG || ub.c.reset(), Ak = null === zk ? null : {
-        join: zk,
-        conn: LG,
+    function GQ(MM) {
+      var rM;
+      let iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new URL(MM.url).origin,
+        OM = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      if (MM.readyState === WebSocket.CLOSING || MM.readyState === WebSocket.CLOSED) return console.warn(`${Kj} a closing or closed socket can't be attached`), null;
+      const SM = ea;
+      if (!SM || SM.isStopped) return console.warn(`${Kj} no core is running to attach a socket to`), MM.close(), null;
+      if (null === (0, WM.e)()) return console.warn(`${Kj} the game has not started to attach a socket to`), MM.close(), null;
+      if (nP > cr.y) return console.warn(`${Kj} this core has attached all the sockets it can; reload to play on`), MM.close(), null;
+      if (lP && !JP && (Lz(SM, !1, "all"), SM.isStopped || kn)) return MM.close(), null;
+      CQ();
+      const jM = nP++;
+      if (!ZQ(SM, "open", jM, OM ? cr.Xb.Resume : 0)) return MM.close(), null;
+      OM || er.d.reset(), BP = null === gP ? null : {
+        join: gP,
+        conn: jM,
         activated: !1
-      }, GG.binaryType = "arraybuffer";
-      const yG = new iZ.d((() => {
-          ! function(GG, bG) {
-            if (my !== bG || GG.isStopped || null === KY(bG, xL)) return;
-            bG.detach(), my = null, QY(GG, bG, xL, "", !0), bG.ws.close()
-          }(SG, kG)
+      }, MM.binaryType = "arraybuffer";
+      const aM = new ui.b((() => {
+          ! function(MM, rM) {
+            if (Za !== rM || MM.isStopped || null === tQ(rM, aa)) return;
+            rM.detach(), Za = null, wQ(MM, rM, aa, "", !0), rM.ws.close()
+          }(SM, PM)
         })),
-        kG = {
-          ws: GG,
-          conn: LG,
+        PM = {
+          ws: MM,
+          conn: jM,
           pending: [],
           pendingBytes: 0,
           left: !1,
-          resume: wG,
+          resume: OM,
           token: null,
           detach: () => {
-            yG.dispose(), GG.removeEventListener("message", UG), GG.removeEventListener("open", YG), GG.removeEventListener("close", VG)
+            aM.dispose(), MM.removeEventListener("message", nM), MM.removeEventListener("open", QM), MM.removeEventListener("close", zM)
           }
         },
-        UG = GG => {
-          if (GG.data instanceof ArrayBuffer) {
-            var bG;
-            const ZG = new Uint8Array(GG.data);
-            yG.heard(), kG.token = null !== (bG = (0, CZ.b)(ZG)) && void 0 !== bG ? bG : kG.token,
-              function(GG, bG, ZG) {
-                EV(GG, (() => {
-                  GG.rings.net.writeFrame(bG, ZG) || GG.crash(fZ.v, `a socket frame of ${ZG.byteLength} bytes did not fit the net-in ring`)
+        nM = MM => {
+          if (MM.data instanceof ArrayBuffer) {
+            var rM;
+            const iM = new Uint8Array(MM.data);
+            aM.heard(), PM.token = null !== (rM = (0, Ri.c)(iM)) && void 0 !== rM ? rM : PM.token,
+              function(MM, rM, iM) {
+                Dz(MM, (() => {
+                  MM.rings.net.writeFrame(rM, iM) || MM.crash(di.x, `a socket frame of ${iM.byteLength} bytes did not fit the net-in ring`)
                 }));
-                const wG = GG.rings.net.cursor >= OL;
-                !iV() && (wG || GG.netWrittenSinceFrame >= NL) && BY(GG, !1, document.hidden ? "all" : "budget");
-                WV(GG)
-              }(SG, LG, ZG)
+                const OM = MM.rings.net.cursor >= ja;
+                !fz() && (OM || MM.netWrittenSinceFrame >= Sa) && Lz(MM, !1, document.hidden ? "all" : "budget");
+                Nz(MM)
+              }(SM, jM, iM)
           }
         },
-        YG = () => {
-          wG || (0, KG.p)("wasm_socket_open", performance.now());
-          for (const bG of kG.pending.splice(0)) GG.send(bG);
-          kG.pendingBytes = 0
+        QM = () => {
+          OM || (0, hM.s)("wasm_socket_open", performance.now());
+          for (const rM of PM.pending.splice(0)) MM.send(rM);
+          PM.pendingBytes = 0
         },
-        VG = GG => {
-          if (my === kG && SG.rings.net.cursor > 0 && BY(SG, !1, "all"), my === kG) {
-            if (kG.detach(), my = null, QY(SG, kG, GG.code, GG.reason) || fY(SG, kG)) return;
-            uY(SG, "close", LG), hY(LG, kG.left), GY(LG, GG.code, GG.reason)
+        zM = MM => {
+          if (Za === PM && SM.rings.net.cursor > 0 && Lz(SM, !1, "all"), Za === PM) {
+            if (PM.detach(), Za = null, wQ(SM, PM, MM.code, MM.reason) || bQ(SM, PM)) return;
+            ZQ(SM, "close", jM), gQ(jM, PM.left), mQ(jM, MM.code, MM.reason)
           }
         };
-      return GG.addEventListener("message", UG), GG.addEventListener("open", YG), GG.addEventListener("close", VG), my = kG, null === (bG = (0, aG.f)()) || void 0 === bG || bG.socketAttached(LG), (0, fG.q)({
-        websocketUrl: ZG
-      }), LG
+      return MM.addEventListener("message", nM), MM.addEventListener("open", QM), MM.addEventListener("close", zM), Za = PM, null === (rM = (0, WM.e)()) || void 0 === rM || rM.socketAttached(jM), (0, mM.p)({
+        websocketUrl: iM
+      }), jM
     }
 
-    function VY() {
-      const GG = my;
-      if (!GG) return;
-      const bG = hy,
-        ZG = GG.resume;
-      ZG && (pY(), my !== GG) || (my = null, GG.detach(), GG.ws.close(), null !== bG && (fY(bG, GG) || ZG && QY(bG, GG, BL)) || (null !== bG && uY(bG, "close", GG.conn), hY(GG.conn, GG.left)))
+    function CQ() {
+      const MM = Za;
+      if (!MM) return;
+      const rM = ea,
+        iM = MM.resume;
+      iM && (eQ(), Za !== MM) || (Za = null, MM.detach(), MM.ws.close(), null !== rM && (bQ(rM, MM) || iM && wQ(rM, MM, Pa)) || (null !== rM && ZQ(rM, "close", MM.conn), gQ(MM.conn, MM.left)))
     }
 
-    function pY() {
-      const GG = hy;
-      null !== GG && !GG.isStopped && !iU && !kk && GG.rings.net.cursor > 0 && BY(GG, !1, "all")
+    function eQ() {
+      const MM = ea;
+      null !== MM && !MM.isStopped && !kn && !JP && MM.rings.net.cursor > 0 && Lz(MM, !1, "all")
     }
 
-    function fY(GG, bG) {
-      var ZG;
-      if (!bG.resume) return !1;
-      const wG = mk;
-      return null !== wG && null !== bG.token && "" !== bG.token && (wG.pendingHold = {
-        conn: bG.conn,
-        token: `${wG.roomId}:${bG.token}`
-      }), uY(GG, "close", bG.conn), null === (ZG = (0, aG.f)()) || void 0 === ZG || ZG.socketDetached(bG.conn), !0
+    function bQ(MM, rM) {
+      var iM;
+      if (!rM.resume) return !1;
+      const OM = kP;
+      return null !== OM && null !== rM.token && "" !== rM.token && (OM.pendingHold = {
+        conn: rM.conn,
+        token: `${OM.roomId}:${rM.token}`
+      }), ZQ(MM, "close", rM.conn), null === (iM = (0, WM.e)()) || void 0 === iM || iM.socketDetached(rM.conn), !0
     }
 
-    function QY(GG, bG, ZG) {
-      let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "",
-        SG = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-      const LG = KY(bG, ZG);
-      if (null === LG) return !1;
+    function wQ(MM, rM, iM) {
+      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "",
+        SM = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      const jM = tQ(rM, iM);
+      if (null === jM) return !1;
       const {
-        Ik: yG,
-        token: kG,
-        game: UG,
-        joinedAt: YG
-      } = LG;
-      if (!uY(GG, "close", bG.conn, Nb.I.Held)) return !0;
-      console.warn(`${qL} the game's connection ${SG?"went silent":`dropped with code ${ZG}`}, holding it`);
-      const VG = {
-        closeReason: wG,
-        sinceJoinedMs: performance.now() - YG,
-        game: UG
+        sQ: aM,
+        token: PM,
+        game: nM,
+        joinedAt: QM
+      } = jM;
+      if (!ZQ(MM, "close", rM.conn, cr.B.Held)) return !0;
+      console.warn(`${Kj} the game's connection ${SM?"went silent":`dropped with code ${iM}`}, holding it`);
+      const zM = {
+        closeReason: OM,
+        sinceJoinedMs: performance.now() - QM,
+        game: nM
       };
-      return (0, aZ.reportDisconnect)((0, nG.k)(ZG), Ey, VG, SG ? "silent" : void 0), yG.heldConn = bG.conn, yG.dropCode = ZG, yG.pendingHold = {
-        conn: bG.conn,
-        token: `${yG.roomId}:${kG}`
-      }, kk || BY(GG, !1, "all"), !0
+      return (0, oi.reportDisconnect)((0, AM.m)(iM), ua, zM, SM ? "silent" : void 0), aM.heldConn = rM.conn, aM.dropCode = iM, aM.pendingHold = {
+        conn: rM.conn,
+        token: `${aM.roomId}:${PM}`
+      }, JP || Lz(MM, !1, "all"), !0
     }
 
-    function KY(GG, bG) {
-      const ZG = mk,
-        SG = Wk,
-        LG = GG.token;
-      return null === ZG || null === SG || iU || GG.left || SG.conn !== GG.conn || null === LG || "" === LG ? null : (0, wG.f)(bG) && ZG.resume.canHoldSeat() ? {
-        Ik: ZG,
-        token: LG,
-        game: SG.game,
-        joinedAt: SG.joinedAt
+    function tQ(MM, rM) {
+      const iM = kP,
+        SM = DP,
+        jM = MM.token;
+      return null === iM || null === SM || kn || MM.left || SM.conn !== MM.conn || null === jM || "" === jM ? null : (0, OM.g)(rM) && iM.resume.canHoldSeat() ? {
+        sQ: iM,
+        token: jM,
+        game: SM.game,
+        joinedAt: SM.joinedAt
       } : null
     }
 
-    function hY(GG, bG) {
-      var ZG;
-      null === (ZG = (0, aG.f)()) || void 0 === ZG || ZG.closeGame(GG), (0, cS.e)().close(GG), bG || (0, fG.q)({
+    function gQ(MM, rM) {
+      var iM;
+      null === (iM = (0, WM.e)()) || void 0 === iM || iM.closeGame(MM), (0, fS.b)().close(MM), rM || (0, mM.p)({
         websocketUrl: null
       })
     }
 
-    function dY() {
-      const GG = jk;
-      if (null === GG) return;
-      const bG = (0, aG.f)();
-      iU || null === bG || bG.Tm(GG) ? jk = null : performance.now() - pk.pause >= wy && (pk.pause = performance.now(), console.warn(`${qL} the cmd ring had no room for SetPaused(${GG}): written before the next frame`))
+    function uQ() {
+      const MM = xP;
+      if (null === MM) return;
+      const rM = (0, WM.e)();
+      kn || null === rM || rM.OW(MM) ? xP = null : performance.now() - EP.pause >= La && (EP.pause = performance.now(), console.warn(`${Kj} the cmd ring had no room for SetPaused(${MM}): written before the next frame`))
     }
 
-    function JY() {
-      const GG = mk;
-      mk = null, null === GG || void 0 === GG || GG.resume.dispose()
+    function RQ() {
+      const MM = kP;
+      kP = null, null === MM || void 0 === MM || MM.resume.dispose()
     }
 
-    function rY(GG, bG) {
-      var ZG, wG;
+    function pQ(MM, rM) {
+      var iM, OM;
       const {
-        heldConn: SG
-      } = GG, LG = GG.resume.resumingConn;
-      GG.heldConn = 0, GG.pendingHold = null, mk === GG && (mk = null), "left" === bG ? GG.resume.leave() : GG.resume.dispose(), 0 === lk || (null === (ZG = my) || void 0 === ZG ? void 0 : ZG.conn) !== lk || "left" === bG && (null === (wG = Jk) || void 0 === wG ? void 0 : wG.conn) === lk || XY(lk), "gaveUp" === bG && 0 !== LG && XY(LG), 0 !== SG && "refused" !== bG && (console.info(`${qL} the game held through its drop ${"left"===bG?"was left":"is given up"}`), null === hy || hy.isStopped || uY(hy, "close", SG), hY(SG, !1))
+        heldConn: SM
+      } = MM, jM = MM.resume.resumingConn;
+      MM.heldConn = 0, MM.pendingHold = null, kP === MM && (kP = null), "left" === rM ? MM.resume.leave() : MM.resume.dispose(), 0 === AP || (null === (iM = Za) || void 0 === iM ? void 0 : iM.conn) !== AP || "left" === rM && (null === (OM = wP) || void 0 === OM ? void 0 : OM.conn) === AP || kQ(AP), "gaveUp" === rM && 0 !== jM && kQ(jM), 0 !== SM && "refused" !== rM && (console.info(`${Kj} the game held through its drop ${"left"===rM?"was left":"is given up"}`), null === ea || ea.isStopped || ZQ(ea, "close", SM), gQ(SM, !1))
     }
 
-    function zY(GG, bG) {
-      const ZG = bG.indexOf(":");
+    function WQ(MM, rM) {
+      const iM = rM.indexOf(":");
       return {
-        roomId: ZG < 0 ? GG.roomId : bG.slice(0, ZG),
-        roomToken: bG.slice(ZG + 1)
+        roomId: iM < 0 ? MM.roomId : rM.slice(0, iM),
+        roomToken: rM.slice(iM + 1)
       }
     }
 
-    function EY(GG) {
-      (0, QZ.logClientMeasurement)("join_preload", GG, {
+    function sQ(MM) {
+      (0, yi.logClientMeasurement)("join_preload", MM, {
         client: "wasm"
       })
     }
 
-    function oY(GG) {
-      var bG;
-      Ik = GG;
-      const ZG = GG.replayOffer && ck !== GG.conn;
-      ak = ZG ? GG.conn : 0, Fk = ZG || vk.has(GG.conn) ? 0 : GG.conn, XG.admitted(), GG.conn === lk && (lk = 0);
-      const wG = mk;
-      null !== wG && (null === (bG = Wk) || void 0 === bG ? void 0 : bG.conn) === GG.conn && wG.resume.onInitialInfo(GG)
+    function DQ(MM) {
+      var rM;
+      ZP = MM;
+      const iM = MM.replayOffer && NP !== MM.conn;
+      YP = iM ? MM.conn : 0, oP = iM || fP.has(MM.conn) ? 0 : MM.conn, CM.admitted(), MM.conn === AP && (AP = 0);
+      const OM = kP;
+      null !== OM && (null === (rM = DP) || void 0 === rM ? void 0 : rM.conn) === MM.conn && OM.resume.onInitialInfo(MM)
     }
 
-    function XY(GG) {
-      var bG;
-      const ZG = my;
-      (null === ZG || void 0 === ZG ? void 0 : ZG.conn) === GG && (ZG.left = !0, null === (bG = (0, aG.f)()) || void 0 === bG || bG.socketLeft(), (0, fG.q)({
+    function kQ(MM) {
+      var rM;
+      const iM = Za;
+      (null === iM || void 0 === iM ? void 0 : iM.conn) === MM && (iM.left = !0, null === (rM = (0, WM.e)()) || void 0 === rM || rM.socketLeft(), (0, mM.p)({
         websocketUrl: null
-      }), eU(GG) ? setTimeout((() => {
-        my === ZG && VY()
-      }), gG.g) : VY())
+      }), iQ(MM) ? setTimeout((() => {
+        Za === iM && CQ()
+      }), xM.h) : CQ())
     }
 
-    function uY(GG, bG, ZG) {
-      let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        SG = !1;
-      return EV(GG, (() => {
+    function ZQ(MM, rM, iM) {
+      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        SM = !1;
+      return Dz(MM, (() => {
         const {
-          net: LG
-        } = GG.rings;
-        SG = "open" === bG ? LG.writeOpen(ZG, wG) : LG.writeClose(ZG, wG), SG || GG.crash(fZ.v, `a socket ${bG} did not fit the net-in ring`)
-      })), SG
+          net: jM
+        } = MM.rings;
+        SM = "open" === rM ? jM.writeOpen(iM, OM) : jM.writeClose(iM, OM), SM || MM.crash(di.x, `a socket ${rM} did not fit the net-in ring`)
+      })), SM
     }
 
-    function iY(GG, bG, ZG) {
-      let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      if (IY()) return (0, aZ.reportUnsupportedFallback)(GG, bG, ZG, wG), void FY(`the wasm client can't run here (${ZG}; ${bG})`, bG);
-      (0, aZ.showUnsupported)(GG, "unsupported", ZG, wG)
+    function oQ(MM, rM, iM) {
+      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      if (AQ()) return (0, oi.reportUnsupportedFallback)(MM, rM, iM, OM), void xQ(`the wasm client can't run here (${iM}; ${rM})`, rM);
+      (0, oi.showUnsupported)(MM, "unsupported", iM, OM)
     }
-    const CY = 1500;
+    const fQ = 1500;
 
-    function WY(GG, bG) {
-      const ZG = 1 === GG.missing.length && GG.missing[0] === VZ.c,
-        wG = bG ? "blockedAfterLoss" : ZG ? "noContext" : "unsupported";
+    function YQ(MM, rM) {
+      const iM = 1 === MM.missing.length && MM.missing[0] === Hi.e,
+        OM = rM ? "blockedAfterLoss" : iM ? "noContext" : "unsupported";
       return {
-        decline: wG,
-        detail: `No WebGPU or WebGL2, and WebGL1 lacks ${GG.missing.join(", ")}`,
+        decline: OM,
+        detail: `No WebGPU or WebGL2, and WebGL1 lacks ${MM.missing.join(", ")}`,
         details: {
-          missing: GG.missing.join(",")
+          missing: MM.missing.join(",")
         },
-        retries: "unsupported" !== wG && IY()
+        retries: "unsupported" !== OM && AQ()
       }
     }
 
-    function mY(GG) {
-      console.warn(`${qL} ${GG}: reloading once more onto the wasm client`), (0, vS.m)(), (0, aZ.flushCrashReports)(BG.e).then(BG.i, BG.i)
+    function NQ(MM) {
+      console.warn(`${Kj} ${MM}: reloading once more onto the wasm client`), (0, ZS.s)(), (0, oi.flushCrashReports)(cM.c).then(cM.k, cM.k)
     }
 
-    function IY() {
-      return zU && "wasm" !== (0, ob.f)(window.location.search)
+    function AQ() {
+      return Rn && "wasm" !== (0, Gr.h)(window.location.search)
     }
 
-    function FY(GG, bG) {
-      console.warn(`${qL} ${GG}: reloading on the JS client`), null !== bG && (0, ob.z)(bG), (0, ob.y)(null === bG ? "reloadOntoJs" : "decline");
-      const ZG = () => {
-        (0, BG.h)(ob.E)
+    function xQ(MM, rM) {
+      console.warn(`${Kj} ${MM}: reloading on the JS client`), null !== rM && (0, Gr.F)(rM), (0, Gr.E)(null === rM ? "reloadOntoJs" : "decline");
+      const iM = () => {
+        (0, cM.j)(Gr.K)
       };
-      (0, aZ.flushCrashReports)(BG.e).then(ZG, ZG)
+      (0, oi.flushCrashReports)(cM.c).then(iM, iM)
     }
 
-    function vY(GG, bG, ZG, wG) {
-      return Nk(GG, bG, ZG, wG)
+    function vQ(MM, rM, iM, OM) {
+      return Sn(MM, rM, iM, OM)
     }
 
-    function aY() {
-      null === Bk || null === hy || hy.isStopped || iU || null !== ey || null === ky || (ey = Bk(ky, jY, PY().follow))
+    function FQ() {
+      null === Pn || null === ea || ea.isStopped || kn || null !== Va || null === Ja || (Va = Pn(Ja, IQ, KQ().follow))
     }
 
-    function cY() {
-      var GG, bG, ZG;
-      return null !== (GG = null === (bG = Jy) || void 0 === bG || null === (ZG = bG.textures) || void 0 === ZG ? void 0 : ZG.files()) && void 0 !== GG ? GG : null
+    function BQ() {
+      var MM, rM, iM;
+      return null !== (MM = null === (rM = wa) || void 0 === rM || null === (iM = rM.textures) || void 0 === iM ? void 0 : iM.files()) && void 0 !== MM ? MM : null
     }
 
-    function lY(GG) {
-      PY().follow((bG => {
-        null !== bG && Promise.all([Promise.all([ZG.e(204), ZG.e(46)]).then((() => ZG(51447))), (0, vS.N)()]).then((GG => {
+    function XQ(MM) {
+      KQ().follow((rM => {
+        null !== rM && Promise.all([Promise.all([iM.e(228), iM.e(52)]).then((() => iM(53784))), (0, ZS.U)()]).then((MM => {
           let [{
-            followPagePackFiles: ZG
-          }, wG] = GG;
-          const SG = null === wG || (0, VZ.q)(wG) ? "webgl" : wG.backend;
-          ZG(bG, ES.e, SG, (GG => {
-            ES.e.setPageFiles(GG)
-          }), jY)
-        }), (bG => {
-          console.warn(`${qL} the texture pack's files didn't load: the previews draw the shipped ones until the next opens`, bG), GG()
+            followPagePackFiles: iM
+          }, OM] = MM;
+          const SM = null === OM || (0, Hi.l)(OM) ? "webgl" : OM.backend;
+          iM(rM, wS.g, SM, (MM => {
+            wS.g.setPageFiles(MM)
+          }), IQ)
+        }), (rM => {
+          console.warn(`${Kj} the texture pack's files didn't load: the previews draw the shipped ones until the next opens`, rM), MM()
         }))
       }))
     }
 
-    function jY(GG, bG) {
-      console.warn(`${qL} ${GG}`, bG)
+    function IQ(MM, rM) {
+      console.warn(`${Kj} ${MM}`, rM)
     }
 
-    function PY() {
-      return dy ??= new nS({
-        load: GG => Promise.all([ZG.e(204), ZG.e(55)]).then((() => ZG(51453))).then((bG => {
+    function KQ() {
+      return ba ??= new XS({
+        load: MM => Promise.all([iM.e(228), iM.e(66)]).then((() => iM(53791))).then((rM => {
           let {
-            startPageTexturePackFeed: ZG
-          } = bG;
-          return ZG(jY, GG)
+            startPageTexturePackFeed: iM
+          } = rM;
+          return iM(IQ, MM)
         })),
-        store: gZ.e,
-        NQ: GG => {
-          uy.then((() => {
-            (0, aZ.reportTexturePackFeedLoadFailure)(GG, Ey)
+        store: Yr.f,
+        aL: MM => {
+          Wa.then((() => {
+            (0, oi.reportTexturePackFeedLoadFailure)(MM, ua)
           }))
         }
-      }), dy
+      }), ba
     }
-    const MY = GG => PY().follow(GG);
+    const qQ = MM => KQ().follow(MM);
 
-    function AY() {
-      return PY().loaded()
+    function TQ() {
+      return KQ().loaded()
     }
-    const sY = function(GG, bG, ZG) {
-        let wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now(),
-          SG = 0;
-        return async function(LG, yG) {
-          let kG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
-          const UG = ++SG,
-            YG = wG() + bG,
-            VG = await
-          function(GG, bG) {
-            let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {};
-            return new Promise((wG => {
-              const SG = setTimeout((() => {
-                wG(null), GG.then((GG => {
-                  null !== GG && (GG.joinedWithout(), ZG(GG))
+    const VQ = function(MM, rM, iM) {
+        let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now(),
+          SM = 0;
+        return async function(jM, aM) {
+          let PM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
+          const nM = ++SM,
+            QM = OM() + rM,
+            zM = await
+          function(MM, rM) {
+            let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {};
+            return new Promise((OM => {
+              const SM = setTimeout((() => {
+                OM(null), MM.then((MM => {
+                  null !== MM && (MM.joinedWithout(), iM(MM))
                 }))
-              }), bG);
-              GG.then((GG => {
-                clearTimeout(SG), wG(GG)
+              }), rM);
+              MM.then((MM => {
+                clearTimeout(SM), OM(MM)
               }))
             }))
-          }(GG(LG), bG, (GG => {
-            UG === SG && kG() && yG(GG, wG() + bG).catch((GG => {
-              ZG("the texture pack step after the join failed", GG)
+          }(MM(jM), rM, (MM => {
+            nM === SM && PM() && aM(MM, OM() + rM).catch((MM => {
+              iM("the texture pack step after the join failed", MM)
             }))
           }));
-          return null === VG ? null : yG(VG, YG)
+          return null === zM ? null : aM(zM, QM)
         }
-      }((GG => (0, pb.h)(GG) ? PY().request() : PY().forJoin()), qS.e, jY),
-      qY = function(GG, bG) {
-        let ZG = !1;
+      }((MM => (0, Lr.m)(MM) ? KQ().request() : KQ().forJoin()), BS.d, IQ),
+      cQ = function(MM, rM) {
+        let iM = !1;
         return {
-          setGamePackConfirm: GG => {
-            ZG = null !== GG, bG(GG)
+          setGamePackConfirm: MM => {
+            iM = null !== MM, rM(MM)
           },
-          packStep: (bG, wG, SG) => GG(bG, wG, (() => ZG && SG()))
+          packStep: (rM, OM, SM) => MM(rM, OM, (() => iM && SM()))
         }
-      }(sY, (GG => {
-        PY().setGamePackConfirm(GG)
+      }(VQ, (MM => {
+        KQ().setGamePackConfirm(MM)
       }));
 
-    function nY(GG) {
-      qY.setGamePackConfirm(GG)
+    function Mz(MM) {
+      cQ.setGamePackConfirm(MM)
     }
 
-    function gY() {
-      if (iU || null !== SU || null === GU || null === wU) return;
+    function rz() {
+      if (kn || null !== mn || null === nn || null === Ln) return;
       const {
-        backend: GG,
-        canvas: bG,
-        fallbackReason: ZG,
-        adapterVendor: wG
-      } = wU, SG = GU;
-      GU = null;
+        backend: MM,
+        canvas: rM,
+        fallbackReason: iM,
+        adapterVendor: OM
+      } = Ln, SM = nn;
+      nn = null;
       try {
-        SU = SG({
-          backend: GG,
-          canvas: bG,
-          fallbackReason: ZG,
-          adapterVendor: wG,
-          joinedGame: () => iU ? null : Jk,
-          canSend: () => !iU && null !== Jk && Jk.conn === Fk,
-          inGame: RY,
+        mn = SM({
+          backend: MM,
+          canvas: rM,
+          fallbackReason: iM,
+          adapterVendor: OM,
+          joinedGame: () => kn ? null : wP,
+          canSend: () => !kn && null !== wP && wP.conn === oP,
+          inGame: Oz,
           shaderPackReach: () => {
-            var GG, bG;
-            return null !== (GG = null === (bG = Dy) || void 0 === bG ? void 0 : bG.reachInJoinedGame()) && void 0 !== GG ? GG : null
+            var MM, rM;
+            return null !== (MM = null === (rM = OP) || void 0 === rM ? void 0 : rM.reachInJoinedGame()) && void 0 !== MM ? MM : null
           },
-          Fh: () => Ry,
-          msaa: () => ZU > 1,
-          writeCmd: (GG, bG, ZG) => null !== ky && ky(GG, bG, ZG),
+          DJ: () => ca,
+          msaa: () => zn > 1,
+          writeCmd: (MM, rM, iM) => null !== Ja && Ja(MM, rM, iM),
           takeFailedMeshJobs: () => {
-            var GG, bG;
-            return null !== (GG = null === (bG = ay) || void 0 === bG ? void 0 : bG.takeFailedMeshJobs()) && void 0 !== GG ? GG : 0
+            var MM, rM;
+            return null !== (MM = null === (rM = Na) || void 0 === rM ? void 0 : rM.takeFailedMeshJobs()) && void 0 !== MM ? MM : 0
           },
-          readLoadCounts: GG => {
-            var bG, ZG;
-            return null !== (bG = null === (ZG = hy) || void 0 === ZG ? void 0 : ZG.readLoadCounts(GG)) && void 0 !== bG && bG
+          readLoadCounts: MM => {
+            var rM, iM;
+            return null !== (rM = null === (iM = ea) || void 0 === iM ? void 0 : iM.readLoadCounts(MM)) && void 0 !== rM && rM
           },
-          mainStalled: (GG, bG, ZG) => {
-            (0, aZ.reportMainStall)(GG, bG, ZG, Ey)
+          mainStalled: (MM, rM, iM, OM) => {
+            (0, oi.reportMainStall)(MM, rM, iM, OM, ua)
           }
         })
-      } catch (LG) {
-        console.error(`${qL} the frame telemetry didn't start`, LG)
+      } catch (jM) {
+        console.error(`${Kj} the frame telemetry didn't start`, jM)
       }
     }
 
-    function eY(GG, bG) {
+    function iz(MM, rM) {
       try {
-        var ZG, wG, SG;
-        const LG = Hk && null !== (ZG = null === (wG = hy) || void 0 === wG || null === (SG = wG.lastHeader) || void 0 === SG ? void 0 : SG.renderPending) && void 0 !== ZG ? ZG : 0;
-        (0, Qw.e)(bG, GG, RY() && !(null !== jS), LG)
-      } catch (LG) {
-        (0, Qw.u)(), console.error(`${qL} the quality steps stopped`, LG)
+        var iM, OM, SM;
+        const jM = Mn && null !== (iM = null === (OM = ea) || void 0 === OM || null === (SM = OM.lastHeader) || void 0 === SM ? void 0 : SM.renderPending) && void 0 !== iM ? iM : 0;
+        (0, EO.h)(rM, MM, Oz() && !(null !== NS), jM)
+      } catch (jM) {
+        (0, EO.v)(), console.error(`${Kj} the quality steps stopped`, jM)
       }
     }
 
-    function RY() {
-      return null !== Jk && hU === Jk && !iU
+    function Oz() {
+      return null !== wP && bn === wP && !kn
     }
 
-    function TY(GG) {
-      const bG = SU;
-      SU = null;
+    function Sz(MM) {
+      const rM = mn;
+      mn = null;
       try {
-        null === bG || void 0 === bG || bG.stop()
+        null === rM || void 0 === rM || rM.stop()
       } catch {}
-      console.error(`${qL} the frame telemetry threw: it stops`, GG)
+      console.error(`${Kj} the frame telemetry threw: it stops`, MM)
     }
 
-    function HY(GG) {
-      var bG, ZG, wG, SG;
-      if ((0, cS.e)().fire(GG), "message" === GG.type) {
-        if (Uk++, GG.vV === Nb.Tc.ERROR && null !== zk) {
-          var LG;
+    function jz(MM) {
+      var rM, iM, OM, SM;
+      if ((0, fS.b)().fire(MM), "message" === MM.type) {
+        if (dP++, MM.Kz === cr.Hc.ERROR && null !== gP) {
+          var jM;
           const {
-            text: bG,
-            dropsCache: ZG
-          } = (0, nG.s)((new TextDecoder).decode(GG.payload));
-          gk ||= ZG, (null === (LG = Ak) || void 0 === LG ? void 0 : LG.conn) === GG.conn && (ek = bG)
-        } else if (GG.vV === Ob.jc.ResumeComplete) {
-          var yG;
-          ck = GG.conn, GG.conn === ak && (ak = 0, Fk = vk.has(GG.conn) ? 0 : GG.conn), null === (yG = mk) || void 0 === yG || yG.resume.onResumeComplete(GG.conn)
+            text: rM,
+            dropsCache: iM
+          } = (0, AM.t)((new TextDecoder).decode(MM.payload));
+          qP ||= iM, (null === (jM = BP) || void 0 === jM ? void 0 : jM.conn) === MM.conn && (TP = rM)
+        } else if (MM.Kz === Mi.hc.ResumeComplete) {
+          var aM;
+          NP = MM.conn, MM.conn === YP && (YP = 0, oP = fP.has(MM.conn) ? 0 : MM.conn), null === (aM = kP) || void 0 === aM || aM.resume.onResumeComplete(MM.conn)
         }
         return
       }
-      GG.phase === Nb.M.Left ? Yk = GG.conn : GG.phase === Nb.M.Activated && (null === (bG = Ak) || void 0 === bG ? void 0 : bG.conn) === GG.conn ? Ak.activated = !0 : GG.phase === Nb.M.Resumed ? function(GG) {
-        var bG, ZG;
-        lk = GG;
-        const wG = mk;
-        if (null === wG || 0 === wG.heldConn || (null === (bG = my) || void 0 === bG ? void 0 : bG.conn) !== GG || !my.resume || null === Wk) return;
-        console.info(`${qL} the game resumed on conn ${GG}, waiting for its InitialInfo`);
-        const SG = wG.heldConn;
-        wG.heldConn = 0, my.resume = !1, Wk.conn = GG, (null === (ZG = ik) || void 0 === ZG ? void 0 : ZG.conn) === SG && (ik = {
-          conn: GG,
-          info: ik.info
-        }), ub.c.apply({
+      MM.phase === cr.F.Left ? yP = MM.conn : MM.phase === cr.F.Activated && (null === (rM = BP) || void 0 === rM ? void 0 : rM.conn) === MM.conn ? BP.activated = !0 : MM.phase === cr.F.Resumed ? function(MM) {
+        var rM, iM;
+        AP = MM;
+        const OM = kP;
+        if (null === OM || 0 === OM.heldConn || (null === (rM = Za) || void 0 === rM ? void 0 : rM.conn) !== MM || !Za.resume || null === DP) return;
+        console.info(`${Kj} the game resumed on conn ${MM}, waiting for its InitialInfo`);
+        const SM = OM.heldConn;
+        OM.heldConn = 0, Za.resume = !1, DP.conn = MM, (null === (iM = WP) || void 0 === iM ? void 0 : iM.conn) === SM && (WP = {
+          conn: MM,
+          info: WP.info
+        }), er.d.apply({
           shopInfo: null,
-          _shopVersion: fb.b
+          _shopVersion: mr.d
         })
-      }(GG.conn) : GG.phase === Nb.M.Held ? function(GG) {
-        var bG;
-        const ZG = mk,
-          wG = null !== (bG = null === ZG || void 0 === ZG ? void 0 : ZG.pendingHold) && void 0 !== bG ? bG : null;
-        if (null !== ZG && null !== wG && wG.conn === GG) return ZG.pendingHold = null, ZG.heldConn = GG, lk = 0, console.warn(`${qL} the core holds the game, reconnecting`), void ZG.resume.onDropped(wG.token);
-        if (GG === lk) {
-          lk = 0;
-          const bG = hy;
-          null === bG || bG.isStopped || (console.info(`${qL} the core held again a resumed game the shell ended before its InitialInfo: closing it again`), uY(bG, "close", GG))
+      }(MM.conn) : MM.phase === cr.F.Held ? function(MM) {
+        var rM;
+        const iM = kP,
+          OM = null !== (rM = null === iM || void 0 === iM ? void 0 : iM.pendingHold) && void 0 !== rM ? rM : null;
+        if (null !== iM && null !== OM && OM.conn === MM) return iM.pendingHold = null, iM.heldConn = MM, AP = 0, console.warn(`${Kj} the core holds the game, reconnecting`), void iM.resume.onDropped(OM.token);
+        if (MM === AP) {
+          AP = 0;
+          const rM = ea;
+          null === rM || rM.isStopped || (console.info(`${Kj} the core held again a resumed game the shell ended before its InitialInfo: closing it again`), ZQ(rM, "close", MM))
         }
-      }(GG.conn) : GG.phase === Nb.M.Closed && (null === (ZG = mk) || void 0 === ZG || null === (wG = ZG.pendingHold) || void 0 === wG ? void 0 : wG.conn) === GG.conn && (mk.heldConn === GG.conn ? function(GG) {
-        const bG = GG.heldConn,
-          ZG = GG.dropCode;
-        rY(GG, "refused"), console.info(`${qL} the core didn't hold the game through its drop: it hadn't started`), queueMicrotask((() => {
-          hY(bG, !1), GY(bG, ZG, "", !0)
+      }(MM.conn) : MM.phase === cr.F.Closed && (null === (iM = kP) || void 0 === iM || null === (OM = iM.pendingHold) || void 0 === OM ? void 0 : OM.conn) === MM.conn && (kP.heldConn === MM.conn ? function(MM) {
+        const rM = MM.heldConn,
+          iM = MM.dropCode;
+        pQ(MM, "refused"), console.info(`${Kj} the core didn't hold the game through its drop: it hadn't started`), queueMicrotask((() => {
+          gQ(rM, !1), mQ(rM, iM, "", !0)
         }))
-      }(mk) : mk.pendingHold = null), GG.phase !== Nb.M.Held && GG.phase !== Nb.M.Left && GG.phase !== Nb.M.Closed || (vk.add(GG.conn), GG.conn === Fk && (Fk = 0));
-      const kG = Object.keys(Nb.M).find((bG => Nb.M[bG] === GG.phase)),
-        UG = 0 === GG.code ? "" : ` (code ${GG.code})`;
-      console.info(`${qL} conn ${GG.conn}: ${null!==kG&&void 0!==kG?kG:GG.phase}${UG}, ${Uk} raw messages so far`), (null === (SG = Jk) || void 0 === SG ? void 0 : SG.conn) !== GG.conn || GG.phase !== Nb.M.Left && GG.phase !== Nb.M.Closed || gU(null), uk !== GG.conn || GG.phase !== Nb.M.Left && GG.phase !== Nb.M.Closed || (uk = null, null === Jk && null === zk && oS.e.setGame(void 0));
-      for (const VG of [...Tk]) try {
-        VG(GG.conn, GG.phase, GG.code)
-      } catch (YG) {
-        (0, xb.n)(YG, `${qL} a connection listener threw`)
+      }(kP) : kP.pendingHold = null), MM.phase !== cr.F.Held && MM.phase !== cr.F.Left && MM.phase !== cr.F.Closed || (fP.add(MM.conn), MM.conn === oP && (oP = 0));
+      const PM = Object.keys(cr.F).find((rM => cr.F[rM] === MM.phase)),
+        nM = 0 === MM.code ? "" : ` (code ${MM.code})`;
+      console.info(`${Kj} conn ${MM.conn}: ${null!==PM&&void 0!==PM?PM:MM.phase}${nM}, ${dP} raw messages so far`), (null === (SM = wP) || void 0 === SM ? void 0 : SM.conn) !== MM.conn || MM.phase !== cr.F.Left && MM.phase !== cr.F.Closed || rQ(null), pP !== MM.conn || MM.phase !== cr.F.Left && MM.phase !== cr.F.Closed || (pP = null, null === wP && null === gP && tS.e.setGame(void 0));
+      for (const zM of [...cP]) try {
+        zM(MM.conn, MM.phase, MM.code)
+      } catch (QM) {
+        (0, ri.k)(QM, `${Kj} a connection listener threw`)
       }
     }
-    const tY = 9e4,
-      DY = 1e3;
+    const az = 9e4,
+      Pz = 1e3;
 
-    function NY() {
-      (0, vS.m)(), null === Jk && null === zk || (0, eZ.f)(), queueMicrotask((() => {
+    function nz() {
+      (0, ZS.s)(), un.forget(), null === wP && null === gP || (0, qi.e)(), queueMicrotask((() => {
         try {
-          pV()
-        } catch (GG) {
-          console.warn(`${qL} stopping before the reload threw`, GG)
-        }(0, aZ.flushCrashReports)(BG.e).then(BG.i, BG.i)
+          bz()
+        } catch (MM) {
+          console.warn(`${Kj} stopping before the reload threw`, MM)
+        }(0, oi.flushCrashReports)(cM.c).then(cM.k, cM.k)
       }))
     }
 
-    function OY() {
-      const GG = hy;
-      null === GG || GG.isStopped || null === my || kk || !GG.hasPendingCommands() || BY(GG, !1, "budget")
+    function Qz() {
+      const MM = ea;
+      null === MM || MM.isStopped || null === Za || JP || !MM.hasPendingCommands() || Lz(MM, !1, "budget")
     }
 
-    function xY(GG) {
-      var bG;
-      const ZG = Jk;
-      GG.persisted || null === ZG || (null === (bG = my) || void 0 === bG ? void 0 : bG.conn) !== ZG.conn || my.left || ZG.leave()
+    function zz(MM) {
+      var rM;
+      const iM = wP;
+      MM.persisted || null === iM || (null === (rM = Za) || void 0 === rM ? void 0 : rM.conn) !== iM.conn || Za.left || iM.leave()
     }
 
-    function BY(GG, bG, wG) {
-      let SG = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const LG = kk;
-      kk = !0;
+    function Lz(MM, rM, OM) {
+      let SM = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const jM = JP;
+      JP = !0;
       try {
-        const LG = GG.rings.net.cursor >= OL;
-        LG && "all" !== wG && !document.hidden && QV("backlog", `a shown tab's net-in is ${GG.rings.net.cursor} bytes behind: one frame reads it all`);
-        return function(GG, bG, wG, SG) {
-          var LG, yG, kG, UG;
-          if (iU) return !1;
-          if (EV(GG, bV), iU || GG.isStopped) return !1;
-          UV() && xy("modelsIn");
-          dY(), bk = performance.now(), Yk = null, Vk = !1, (0, vG.K)(), null === (LG = Ay) || void 0 === LG || LG.beforeFrame(), mw(bk, GG), (0, vG.A)(bk, ZV), yk = !0;
-          const YG = bG && kV();
-          let VG;
+        const jM = MM.rings.net.cursor >= ja;
+        jM && "all" !== OM && !document.hidden && tz("backlog", `a shown tab's net-in is ${MM.rings.net.cursor} bytes behind: one frame reads it all`);
+        return function(MM, rM, OM, SM) {
+          var jM, aM, PM, nM;
+          if (kn) return !1;
+          if (Dz(MM, Hz), kn || MM.isStopped) return !1;
+          Uz() && aP("modelsIn");
+          uQ(), QP = performance.now(), yP = null, lP = !1, (0, pM.K)(), null === (jM = Xa) || void 0 === jM || jM.beforeFrame(), DO(QP, MM), (0, pM.F)(QP, hz), hP = !0;
+          const QM = rM && Ez();
+          let zM;
           try {
-            VG = GG.frame(bk, YG, wG)
+            zM = MM.frame(QP, QM, OM)
           } finally {
-            yk = !1
+            hP = !1
           }
-          if (!VG) return !1;
-          bU.observe(null !== (yG = null === (kG = GG.lastHeader) || void 0 === kG ? void 0 : kG.chunksCancelled) && void 0 !== yG ? yG : 0);
-          const pG = GG.lastFrameKind,
-            fG = (0, Pb.e)(pG);
-          (function(GG) {
-            null !== wL && wL.afterFrame(performance.now(), GG)
-          })(fG), null === (UG = LU) || void 0 === UG || UG.frame(GG, bk, pG), bG && (dU = fG);
-          fG && (0, cb.c)(bk);
-          if (null !== SU) try {
-            SU.frameRan(GG, bk, performance.now(), pG)
-          } catch (hG) {
-            TY(hG)
+          if (!zM) return !1;
+          Qn.observe(null !== (aM = null === (PM = MM.lastHeader) || void 0 === PM ? void 0 : PM.chunksCancelled) && void 0 !== aM ? aM : 0);
+          const LM = MM.lastFrameKind,
+            mM = (0, Zr.d)(LM);
+          (function(MM) {
+            null !== nj && nj.afterFrame(performance.now(), MM)
+          })(mM), null === (nM = Hn) || void 0 === nM || nM.frame(MM, QP, LM), rM && (wn = mM);
+          mM && (0, sr.d)(QP);
+          if (null !== mn) try {
+            mn.frameRan(MM, QP, performance.now(), LM)
+          } catch (JM) {
+            Sz(JM)
           }
-          "drawn" === pG && yV() && function() {
-            for (const GG of [...IS]) GG()
+          "drawn" === LM && lz() && function() {
+            for (const MM of [...DS]) MM()
           }();
-          GG.forEachNetOut(YV);
-          const QG = my;
-          null !== Yk && (null === QG || void 0 === QG ? void 0 : QG.conn) === Yk && VV(QG, gG.i);
-          LV(GG),
-            function(GG) {
-              const bG = 0 !== (GG.headerWord(Ob.K.LoadSteps) & Ob.U.JoinPreload);
-              bG !== Xk && (Xk = bG, (0, aZ.setCrashAdPreload)(bG), (0, AZ.K)())
-            }(GG), bG && function(GG) {
-              var bG, wG, SG;
-              if (null === Jk || !kV()) return;
-              const LG = GG.headerWord(Ob.K.LoadSteps);
-              null === KU || hU === Jk && !KU.frame(bk, 0 !== (LG & Ob.X.TerrainDrawn)) || (KU = null);
-              if (0 === (LG & Ob.U.PlayerBound)) return;
-              const yG = GG.lastHeader,
-                kG = !Hk || 0 === (null === yG || void 0 === yG ? void 0 : yG.renderPending);
-              !YU && kG && (YU = !0, performance.mark(DL));
-              if (hU === Jk) return;
-              const UG = null !== (bG = null === yG || void 0 === yG ? void 0 : yG.firstView) && void 0 !== bG ? bG : Nb.fb.NotYet;
-              if (Hk && UG === Nb.fb.NotYet) return;
-              if (UU && (!0 !== (null === (wG = (0, aG.f)()) || void 0 === wG ? void 0 : wG.isSessionLive) || !kG)) return;
-              hU = Jk;
-              const YG = Jk;
+          MM.forEachNetOut(Gz);
+          const HM = Za;
+          null !== yP && (null === HM || void 0 === HM ? void 0 : HM.conn) === yP && Cz(HM, xM.k);
+          yz(MM),
+            function(MM) {
+              const rM = 0 !== (MM.headerWord(Mi.K.LoadSteps) & Mi.S.JoinPreload);
+              rM !== RP && (RP = rM, (0, oi.setCrashAdPreload)(rM), (0, vi.F)())
+            }(MM), rM && function(MM) {
+              var rM, OM, SM;
+              if (null === wP || !Ez()) return;
+              const jM = MM.headerWord(Mi.K.LoadSteps);
+              null === en || bn === wP && !en.frame(QP, 0 !== (jM & Mi.T.TerrainDrawn)) || (en = null);
+              if (0 === (jM & Mi.S.PlayerBound)) return;
+              const aM = MM.lastHeader,
+                PM = !Mn || 0 === (null === aM || void 0 === aM ? void 0 : aM.renderPending);
+              !yn && PM && (yn = !0, performance.mark(Oa));
+              if (bn === wP) return;
+              const nM = null !== (rM = null === aM || void 0 === aM ? void 0 : aM.firstView) && void 0 !== rM ? rM : cr._.NotYet;
+              if (Mn && nM === cr._.NotYet) return;
+              if (dn && (!0 !== (null === (OM = (0, WM.e)()) || void 0 === OM ? void 0 : OM.isSessionLive) || !PM)) return;
+              bn = wP;
+              const QM = wP;
               if (setTimeout((() => {
-                  Jk === YG && (0, KG.h)()
-                }), 0), null === (SG = Dy) || void 0 === SG || SG.playable(), function() {
-                  clearTimeout(Wy), Wy = setTimeout((() => {
-                    RY() && uV((GG => {
+                  wP === QM && (0, hM.h)()
+                }), 0), null === (SM = OP) || void 0 === SM || SM.playable(), function() {
+                  clearTimeout(ka), ka = setTimeout((() => {
+                    Oz() && oz((MM => {
                       let {
-                        prefetchWorldgenWorker: bG
-                      } = GG;
-                      bG()
+                        prefetchWorldgenWorker: rM
+                      } = MM;
+                      rM()
                     }))
-                  }), yy)
-                }(), UU) return;
-              UU = !0, performance.mark(tL), (0, NS.m)("render") && Promise.all([ZG.e(78), ZG.e(49)]).then((() => ZG(4697))).then((GG => {
+                  }), ha)
+                }(), dn) return;
+              dn = !0, performance.mark(ia), (0, rj.p)("render") && Promise.all([iM.e(89), iM.e(55)]).then((() => iM(5058))).then((MM => {
                 let {
-                  renderDebugPlayable: bG
-                } = GG;
-                bG()
-              }), (GG => {
-                console.warn("The render debug topic didn't load", GG)
+                  renderDebugPlayable: rM
+                } = MM;
+                rM()
+              }), (MM => {
+                console.warn("The render debug topic didn't load", MM)
               }));
-              const VG = Math.round(performance.now()),
-                pG = GG.readViewQueuedPrograms();
-              null !== pG && (0, KG.p)("wasm_view_links", VG, (0, Kb.rb)(pG));
-              const fG = null === QU || null === pU ? 0 : Math.max(0, pU - QU),
-                QG = null === QU ? 0 : Math.max(0, VG - QU),
-                hG = Hk ? GG.readFirstViewWait(fG, QG) : null;
-              null !== hG && (0, KG.n)(hG);
-              if (Hk && UG !== Nb.fb.Drawn) {
-                const bG = UG === Nb.fb.HeldBackstop ? "held_draws" : "long",
+              const zM = Math.round(performance.now()),
+                LM = MM.readViewQueuedPrograms();
+              null !== LM && (0, hM.s)("wasm_view_links", zM, (0, hr.tb)(LM));
+              const mM = null === Cn || null === Un ? 0 : Math.max(0, Un - Cn),
+                HM = null === Cn ? 0 : Math.max(0, zM - Cn),
+                JM = Mn ? MM.readFirstViewWait(mM, HM) : null;
+              null !== JM && (0, hM.p)(JM);
+              if (Mn && nM !== cr._.Drawn) {
+                const rM = nM === cr._.HeldBackstop ? "held_draws" : "long",
                   {
-                    cause: ZG
-                  } = wV(GG);
-                if (console.warn(`${qL} playable at ${VG} ms on the first view's ${bG} backstop, ${ZG}: it wasn't drawn whole in time`), (0, KG.p)("wasm_view_backstop", VG, `${bG}:${ZG}`), "long" === bG) {
-                  var dG, JG;
-                  const bG = null !== (dG = null === (JG = Wk) || void 0 === JG ? void 0 : JG.game) && void 0 !== dG ? dG : "";
-                  KU = new RZ.c((() => {
+                    cause: iM
+                  } = Jz(MM);
+                if (console.warn(`${Kj} playable at ${zM} ms on the first view's ${rM} backstop, ${iM}: it wasn't drawn whole in time`), (0, hM.s)("wasm_view_backstop", zM, `${rM}:${iM}`), "long" === rM) {
+                  var dM, yM;
+                  const rM = null !== (dM = null === (yM = DP) || void 0 === yM ? void 0 : yM.game) && void 0 !== dM ? dM : "";
+                  en = new Ti.b((() => {
                     const {
-                      cause: ZG,
-                      census: wG
-                    } = wV(GG);
-                    (0, aZ.reportFirstViewNoTerrain)(bG, ZG, wG, Ey), (0, Eb.s)("noTerrain")
+                      cause: iM,
+                      census: OM
+                    } = Jz(MM);
+                    (0, oi.reportFirstViewNoTerrain)(rM, iM, OM, ua), (0, Ur.q)("noTerrain")
                   }))
                 }
-              } else console.info(`${qL} playable at ${VG} ms${Hk?"":" (no renderer)"}`);
-              setTimeout(xk, 0), (0, Cb.e)().catch((GG => {
-                console.error(`${qL} item sprites didn't load, so item particles show the missing texture`, GG)
-              })), fS.b.warm()
-            }(GG);
-          (0, fZ.R)(GG, {
-            worldgen: Fy,
-            mesh: ay
+              } else console.info(`${Kj} playable at ${zM} ms${Mn?"":" (no renderer)"}`);
+              setTimeout(an, 0), (0, wr.h)().catch((MM => {
+                console.error(`${Kj} item sprites didn't load, so item particles show the missing texture`, MM)
+              })), yS.c.warm()
+            }(MM);
+          (0, di.P)(MM, {
+            worldgen: fa,
+            mesh: Na
           }),
-          function(GG) {
-            GG.forEachEvent(Fw);
-            for (const bG of Iw) try {
-              (0, Xw.c)(bG)
-            } catch (hG) {
-              if ((0, xb.h)(hG)) {
-                GG.crashOn(fZ.l, hG);
+          function(MM) {
+            MM.forEachEvent(ZO);
+            for (const rM of kO) try {
+              (0, uO.d)(rM)
+            } catch (JM) {
+              if ((0, ri.h)(JM)) {
+                MM.crashOn(di.l, JM);
                 break
               }
-              console.error(`${iw} an input action listener threw`, hG)
+              console.error(`${pO} an input action listener threw`, JM)
             }
-            Iw.length = 0
-          }(GG), SG && (0, jb.e)();
-          return !GG.isStopped
-        }(GG, bG, "all" === wG || LG, SG)
+            kO.length = 0
+          }(MM), SM && (0, kr.c)();
+          return !MM.isStopped
+        }(MM, rM, "all" === OM || jM, SM)
       } finally {
-        kk = LG, LG || (Zk = performance.now())
+        JP = jM, jM || (zP = performance.now())
       }
     }
 
-    function GV(GG) {
-      console.error(`${qL} a frame-start listener threw`, GG)
+    function mz(MM) {
+      console.error(`${Kj} a frame-start listener threw`, MM)
     }
 
-    function bV() {
-      var GG, bG, ZG, wG;
-      null === (GG = qy) || void 0 === GG || GG.drain(ky, Uy), null === (bG = Ty) || void 0 === bG || bG.drain(ky), null === (ZG = Hy) || void 0 === ZG || ZG.drain(performance.now()), Ok(ky), null === (wG = ey) || void 0 === wG || wG.drain()
+    function Hz() {
+      var MM, rM, iM, OM;
+      null === (MM = Ka) || void 0 === MM || MM.drain(Ja, da), null === (rM = MP) || void 0 === rM || rM.drain(Ja), null === (iM = rP) || void 0 === iM || iM.drain(performance.now()), jn(Ja), null === (OM = Va) || void 0 === OM || OM.drain()
     }
 
-    function ZV(GG) {
-      console.error(`${qL} a before-frame listener threw`, GG)
+    function hz(MM) {
+      console.error(`${Kj} a before-frame listener threw`, MM)
     }
 
-    function wV(GG) {
-      const bG = (0, aG.f)(),
-        ZG = (0, aG.q)(),
-        wG = null === bG || null === ZG ? null : ZG.readDrawCensus(bG.api);
+    function Jz(MM) {
+      const rM = (0, WM.e)(),
+        iM = (0, WM.p)(),
+        OM = null === rM || null === iM ? null : iM.readDrawCensus(rM.api);
       return {
-        cause: (0, RZ.h)(GG.headerWord(Ob.K.LoadSteps), wG),
-        census: wG
+        cause: (0, Ti.g)(MM.headerWord(Mi.K.LoadSteps), OM),
+        census: OM
       }
     }
-    const SV = {
+    const dz = {
       ChunkRequested: "wasm_chunk_requested",
       ChunkStored: "wasm_chunk_stored",
       MeshLanded: "wasm_mesh_landed",
@@ -8110,517 +8532,521 @@ export const modules = {
       TerrainDrawn: "wasm_terrain_drawn"
     };
 
-    function LV(GG) {
-      var bG;
-      if (UU) return;
-      if (null === pU && kV() && (pU = performance.now()), null === Jk || 0 === (GG.headerWord(Ob.K.LoadSteps) & Ob.U.PlayerBound) ? QU = null : QU ??= performance.now(), null === zk && null === Jk) return;
-      null === pU || fU || (fU = !0, (0, KG.p)("wasm_startup_loaded", pU));
-      let ZG = 0;
-      null !== Jk ? ZG = -1 : !0 === (null === (bG = Ak) || void 0 === bG ? void 0 : bG.activated) && (ZG = ~Ob.X.TerrainDrawn);
-      const wG = GG.headerWord(Ob.K.LoadSteps) & ZG & ~VU;
-      if (0 === wG) return;
-      VU |= wG;
-      const SG = performance.now();
-      for (const [LG, yG] of Object.entries(SV)) 0 !== (wG & Ob.X[LG]) && (0, KG.p)(yG, SG)
+    function yz(MM) {
+      var rM;
+      if (dn) return;
+      if (null === Un && Ez() && (Un = performance.now()), null === wP || 0 === (MM.headerWord(Mi.K.LoadSteps) & Mi.S.PlayerBound) ? Cn = null : Cn ??= performance.now(), null === gP && null === wP) return;
+      null === Un || Gn || (Gn = !0, (0, hM.s)("wasm_startup_loaded", Un));
+      let iM = 0;
+      null !== wP ? iM = -1 : !0 === (null === (rM = BP) || void 0 === rM ? void 0 : rM.activated) && (iM = ~Mi.T.TerrainDrawn);
+      const OM = MM.headerWord(Mi.K.LoadSteps) & iM & ~En;
+      if (0 === OM) return;
+      En |= OM;
+      const SM = performance.now();
+      for (const [jM, aM] of Object.entries(dz)) 0 !== (OM & Mi.T[jM]) && (0, hM.s)(aM, SM)
     }
 
-    function yV() {
-      return Hk && kV()
+    function lz() {
+      return Mn && Ez()
     }
 
-    function kV() {
-      return ty && UV()
+    function Ez() {
+      return iP && Uz()
     }
 
-    function UV() {
-      return null === qy || qy.startupDone
+    function Uz() {
+      return null === Ka || Ka.startupDone
     }
 
-    function YV(GG, bG) {
-      const ZG = my;
-      (null === ZG || void 0 === ZG ? void 0 : ZG.conn) === GG ? VV(ZG, bG) : Qk++
+    function Gz(MM, rM) {
+      const iM = Za;
+      (null === iM || void 0 === iM ? void 0 : iM.conn) === MM ? Cz(iM, rM) : GP++
     }
 
-    function VV(GG, bG) {
+    function Cz(MM, rM) {
       const {
-        ws: ZG
-      } = GG;
-      return ZG.readyState === WebSocket.OPEN ? (ZG.send(bG), !0) : ZG.readyState === WebSocket.CONNECTING && GG.pendingBytes + bG.byteLength <= Zy ? (GG.pending.push(bG.slice()), GG.pendingBytes += bG.byteLength, !0) : (Qk++, !1)
+        ws: iM
+      } = MM;
+      return iM.readyState === WebSocket.OPEN ? (iM.send(rM), !0) : iM.readyState === WebSocket.CONNECTING && MM.pendingBytes + rM.byteLength <= za ? (MM.pending.push(rM.slice()), MM.pendingBytes += rM.byteLength, !0) : (GP++, !1)
     }
 
-    function pV() {
-      var GG, bG, ZG, wG, SG, LG, yG, kG, UG, YG, VG, pG, fG, QG, KG, hG, dG;
-      iU = !0, JU.stop(), (0, xS.endLookDebugTake)(), wL = null, JY(), (0, vG.I)().unlockPointer(), (0, vG.E)(null), null === (GG = sy) || void 0 === GG || GG(), sy = null, null === (bG = (0, aG.q)()) || void 0 === bG || bG.followCursorAim(null), (0, jb.F)(), (0, aG.e)(), zy.stop(), null === (ZG = yU) || void 0 === ZG || ZG(), yU = null, null === (wG = kU) || void 0 === wG || wG(), kU = null, null === (SG = SU) || void 0 === SG || SG.stop(), SU = null, (0, HZ.r)(null), null === (LG = Iy) || void 0 === LG || LG(), Iy = null, null === (yG = Fy) || void 0 === yG || yG.stop(), Fy = null, null === (kG = ay) || void 0 === kG || kG.stop(), ay = null, null !== (UG = Jy) && void 0 !== UG && null !== (YG = UG.textures) && void 0 !== YG && YG.assets && (0, rS.n)(null), null === (VG = Jy) || void 0 === VG || VG.stop(), Jy = null, ry = null;
-      const JG = cy;
-      cy = null, JG && (JG.stop(), zV(JG)), null === (pG = Ty) || void 0 === pG || pG.dispose(), Ty = null, null === (fG = Hy) || void 0 === fG || fG.dispose(), Hy = null, qy = null, null === (QG = gy) || void 0 === QG || QG(), gy = null, null === (KG = My) || void 0 === KG || KG(), My = null, null !== Lk && (clearTimeout(Lk), Lk = null), null === (hG = Ay) || void 0 === hG || hG.stop(), Ay = null, sU(), oS.e.release(), VY();
-      const rG = ey;
-      ey = null;
+    function ez() {
+      return null !== wP && lz()
+    }
+
+    function bz() {
+      var MM, rM, iM, OM, SM, jM, aM, PM, nM, QM, zM, LM, mM, HM, hM, JM, dM;
+      kn = !0, tn.stop(), (0, Oj.endLookDebugTake)(), nj = null, RQ(), (0, pM.I)().unlockPointer(), (0, pM.H)(null), null === (MM = Ia) || void 0 === MM || MM(), Ia = null, null === (rM = (0, WM.p)()) || void 0 === rM || rM.followCursorAim(null), (0, kr.B)(), (0, WM.c)(), ga.stop(), null === (iM = hn) || void 0 === iM || iM(), hn = null, null === (OM = Jn) || void 0 === OM || OM(), Jn = null, null === (SM = mn) || void 0 === SM || SM.stop(), mn = null, (0, ci.r)(null), null === (jM = oa) || void 0 === jM || jM(), oa = null, null === (aM = fa) || void 0 === aM || aM.stop(), fa = null, null === (PM = Na) || void 0 === PM || PM.stop(), Na = null, null !== (nM = wa) && void 0 !== nM && null !== (QM = nM.textures) && void 0 !== QM && QM.assets && (0, eS.j)(null), null === (zM = wa) || void 0 === zM || zM.stop(), wa = null, ta = null;
+      const yM = Aa;
+      Aa = null, yM && (yM.stop(), sz(yM)), null === (LM = MP) || void 0 === LM || LM.dispose(), MP = null, null === (mM = rP) || void 0 === mM || mM.dispose(), rP = null, Ka = null, null === (HM = Ta) || void 0 === HM || HM(), Ta = null, null === (hM = Ba) || void 0 === hM || hM(), Ba = null, null !== HP && (clearTimeout(HP), HP = null), null === (JM = Xa) || void 0 === JM || JM.stop(), Xa = null, Vn(), tS.e.release(), CQ();
+      const lM = Va;
+      Va = null;
       try {
-        null === rG || void 0 === rG || rG.dispose()
-      } catch (zG) {
-        console.warn(`${qL} the sky's images didn't release`, zG)
-      }(0, QS.f)(null), null === (dG = Qy) || void 0 === dG || dG.pagePreviews().endSession(null === (0, hb.r)())
+        null === lM || void 0 === lM || lM.dispose()
+      } catch (EM) {
+        console.warn(`${Kj} the sky's images didn't release`, EM)
+      }(0, lS.f)(null), null === (dM = Ga) || void 0 === dM || dM.pagePreviews().endSession(null === (0, Jr.t)())
     }
 
-    function fV(GG, bG) {
-      var ZG, wG;
-      const SG = null !== (ZG = null === (wG = cy) || void 0 === wG ? void 0 : wG.details()) && void 0 !== ZG ? ZG : {},
-        LG = GG.site === gL || GG.site === eL || GG.site === aZ.RENDER_RELOAD_SITE || GG.site === RL ? GG.error instanceof WebAssembly.RuntimeError || GG.error instanceof yZ.e : !(0, VZ.r)(GG.error) && (0, fZ.M)(GG);
-      LG && GG.error instanceof Error && (0, hb.V)(GG.error);
-      const yG = LG || GG.site === fZ.y ? (0, aZ.readTrap)(GG.error) : null,
-        kG = null !== yG && (0, GZ.e)(yG.kind, yG.refusedBytes) ? yG.refusedBytes : 0,
-        UG = (0, mZ.o)(),
-        YG = null === ly ? (0, YS.r)(function() {
+    function wz(MM, rM) {
+      var iM, OM;
+      const SM = null !== (iM = null === (OM = Aa) || void 0 === OM ? void 0 : OM.details()) && void 0 !== iM ? iM : {},
+        jM = MM.site === Tj || MM.site === Vj || MM.site === oi.RENDER_RELOAD_SITE || MM.site === cj ? MM.error instanceof WebAssembly.RuntimeError || MM.error instanceof Qi.e : !(0, Hi.p)(MM.error) && (0, di.L)(MM);
+      jM && MM.error instanceof Error && (0, Jr.V)(MM.error);
+      const aM = jM || MM.site === di.B ? (0, oi.readTrap)(MM.error) : null,
+        PM = null !== aM && (0, Oi.f)(aM.kind, aM.refusedBytes) ? aM.refusedBytes : 0,
+        nM = (0, si.j)(),
+        QM = null === xa ? (0, hS.x)(function() {
           try {
-            return (0, hb.y)().buffer.byteLength
+            return (0, Jr.y)().buffer.byteLength
           } catch {
             return 0
           }
-        }(), kG, UG) : ly.ceilingMayRefuse(kG, UG),
-        VG = kG > 0 && !YG && IY();
-      var pG;
-      if (VG && ((0, ob.z)("oom"), (0, ob.y)("decline"), uU = !0), pV(), (0, vS.c)()) return console.warn(`${qL} the session stopped at ${GG.site} as the page reloads`, GG.error), void((0, VZ.r)(GG.error) || (null === (pG = GG.header) || void 0 === pG ? void 0 : pG.lastError) === Nb.R.CoreBusy || (0, aZ.reportStoppedCore)(GG, bG, yG, {
-        memoryDetails: SG,
-        declined: VG
+        }(), PM, nM) : xa.ceilingMayRefuse(PM, nM),
+        zM = PM > 0 && !QM && AQ();
+      var LM;
+      if (zM && ((0, Gr.F)("oom"), (0, Gr.E)("decline"), Dn = !0), bz(), (0, ZS.e)()) return un.releaseNow(), console.warn(`${Kj} the session stopped at ${MM.site} as the page reloads`, MM.error), void((0, Hi.p)(MM.error) || (null === (LM = MM.header) || void 0 === LM ? void 0 : LM.lastError) === cr.H.CoreBusy || (0, oi.reportStoppedCore)(MM, rM, aM, {
+        memoryDetails: SM,
+        declined: zM
       }));
-      (0, aZ.showCrash)(GG, bG, yG, {
-        memoryDetails: SG,
-        declined: VG
+      (0, oi.showCrash)(MM, rM, aM, {
+        memoryDetails: SM,
+        declined: zM
       })
     }
 
-    function QV(GG, bG) {
-      const ZG = performance.now();
-      return !(ZG - pk[GG] < wy) && (pk[GG] = ZG, console.warn(`${qL} ${bG}`), !0)
+    function tz(MM, rM) {
+      const iM = performance.now();
+      return !(iM - EP[MM] < La) && (EP[MM] = iM, console.warn(`${Kj} ${rM}`), !0)
     }
 
-    function KV(GG) {
+    function gz(MM) {
       const {
-        input: bG,
-        net: ZG,
-        worker: wG
-      } = GG.rings, SG = GG.optionsDropped, LG = bG.dropped + SG + ZG.dropped + wG.dropped + Qk;
-      LG !== fk && QV("dropped", `${LG} records dropped so far (input ${bG.dropped}, options ${SG}, net ${ZG.dropped}, worker ${wG.dropped}, net-out ${Qk})`) && (fk = LG)
+        input: rM,
+        net: iM,
+        worker: OM
+      } = MM.rings, SM = MM.optionsDropped, jM = rM.dropped + SM + iM.dropped + OM.dropped + GP;
+      jM !== UP && tz("dropped", `${jM} records dropped so far (input ${rM.dropped}, options ${SM}, net ${iM.dropped}, worker ${OM.dropped}, net-out ${GP})`) && (UP = jM)
     }
 
-    function hV() {
-      var GG, bG;
-      const ZG = (0, MZ.c)();
-      if (null === ZG) return null;
-      const wG = (0, nZ.o)(ZG);
+    function uz() {
+      var MM, rM;
+      const iM = (0, xi.b)();
+      if (null === iM) return null;
+      const OM = (0, Ki.i)(iM);
       return {
-        ...wG,
-        horizontal: Math.min(wG.horizontal, null !== (GG = null === (bG = cy) || void 0 === bG ? void 0 : bG.shedDistanceInUse()) && void 0 !== GG ? GG : 1 / 0)
+        ...OM,
+        horizontal: Math.min(OM.horizontal, null !== (MM = null === (rM = Aa) || void 0 === rM ? void 0 : rM.shedDistanceInUse()) && void 0 !== MM ? MM : 1 / 0)
       }
     }
 
-    function dV(GG) {
-      var bG, ZG;
+    function Rz(MM) {
+      var rM, iM;
       return {
-        samples: Hk ? ZU : null,
-        sunShadows: GG,
-        renderDistance: null !== (bG = null === (ZG = hV()) || void 0 === ZG ? void 0 : ZG.horizontal) && void 0 !== bG ? bG : null
+        samples: Mn ? zn : null,
+        sunShadows: MM,
+        renderDistance: null !== (rM = null === (iM = uz()) || void 0 === iM ? void 0 : iM.horizontal) && void 0 !== rM ? rM : null
       }
     }
 
-    function JV(GG) {
-      Ek = GG, (0, AZ.K)()
+    function pz(MM) {
+      uP = MM, (0, vi.F)()
     }
 
-    function rV() {
-      var GG, bG, ZG;
-      const wG = hV();
+    function Wz() {
+      var MM, rM, iM;
+      const OM = uz();
       return {
-        ...null === (GG = cy) || void 0 === GG ? void 0 : GG.pageKillSnapshot(),
-        renderDistance: null !== (bG = null === wG || void 0 === wG ? void 0 : wG.horizontal) && void 0 !== bG ? bG : null,
-        renderDistanceVertical: null !== (ZG = null === wG || void 0 === wG ? void 0 : wG.vertical) && void 0 !== ZG ? ZG : null,
-        chunkCap: jy,
-        budgetBasis: Py,
-        renderBackend: (0, vS.E)(),
-        adPreload: Xk,
-        ...(0, sZ.e)(Ek)
+        ...null === (MM = Aa) || void 0 === MM ? void 0 : MM.pageKillSnapshot(),
+        renderDistance: null !== (rM = null === OM || void 0 === OM ? void 0 : OM.horizontal) && void 0 !== rM ? rM : null,
+        renderDistanceVertical: null !== (iM = null === OM || void 0 === OM ? void 0 : OM.vertical) && void 0 !== iM ? iM : null,
+        chunkCap: va,
+        budgetBasis: Fa,
+        renderBackend: (0, ZS.G)(),
+        adPreload: RP,
+        ...(0, Fi.e)(uP)
       }
     }
 
-    function zV(GG) {
-      var bG;
-      console.info(`${qL} wasm memory at the session's end`, GG.details());
+    function sz(MM) {
+      var rM;
+      console.info(`${Kj} wasm memory at the session's end`, MM.details());
       const {
-        wasmMainMiB: ZG,
-        wasmWorkersMiB: wG,
-        peakStoredChunks: SG
-      } = GG.pageKillSnapshot(), LG = navigator.deviceMemory;
-      (0, QZ.logClientMeasurement)("wasm_memory_end", {
-        wasmMainMiB: ZG,
-        wasmWorkersMiB: wG,
-        peakStoredChunks: SG
+        wasmMainMiB: iM,
+        wasmWorkersMiB: OM,
+        peakStoredChunks: SM
+      } = MM.pageKillSnapshot(), jM = navigator.deviceMemory;
+      (0, yi.logClientMeasurement)("wasm_memory_end", {
+        wasmMainMiB: iM,
+        wasmWorkersMiB: OM,
+        peakStoredChunks: SM
       }, {
         client: "wasm",
-        renderBackend: null !== (bG = (0, vS.E)()) && void 0 !== bG ? bG : "none",
-        os: (0, qZ.getOperatingSystem)(),
-        deviceMemory: String(null !== LG && void 0 !== LG ? LG : "unreported")
+        renderBackend: null !== (rM = (0, ZS.G)()) && void 0 !== rM ? rM : "none",
+        os: (0, Bi.getOperatingSystem)(),
+        deviceMemory: String(null !== jM && void 0 !== jM ? jM : "unreported")
       })
     }
 
-    function EV(GG, bG) {
-      if (!GG.isStopped) try {
-        bG()
-      } catch (ZG) {
-        GG.crash(fZ.B, ZG)
+    function Dz(MM, rM) {
+      if (!MM.isStopped) try {
+        rM()
+      } catch (iM) {
+        MM.crash(di.D, iM)
       }
     }
 
-    function oV() {
-      return vy ??= ZG.e(72).then((() => ZG(51455))).catch((GG => {
-        throw vy = null, GG
-      })), vy
+    function kz() {
+      return Ya ??= iM.e(83).then((() => iM(53795))).catch((MM => {
+        throw Ya = null, MM
+      })), Ya
     }
-    async function XV() {
+    async function Zz() {
       const {
-        createWorldgenWorker: GG,
-        worldgenWorkerReady: bG
-      } = await oV();
-      return await bG(), GG
+        createWorldgenWorker: MM,
+        worldgenWorkerReady: rM
+      } = await kz();
+      return await rM(), MM
     }
 
-    function uV(GG) {
-      var bG;
-      null === (bG = vy) || void 0 === bG || bG.then(GG, (() => {}))
+    function oz(MM) {
+      var rM;
+      null === (rM = Ya) || void 0 === rM || rM.then(MM, (() => {}))
     }
 
-    function iV() {
-      return performance.now() - Math.max(Zk, wk) >= Sy
+    function fz() {
+      return performance.now() - Math.max(zP, LP) >= ma
     }
 
-    function CV(GG) {
-      const bG = document.hidden || Sk ? "all" : "budget";
-      Sk = !0;
-      const ZG = BY(GG, !1, bG);
-      var wG;
-      ZG && (KV(GG), null === (wG = cy) || void 0 === wG || wG.afterFrame());
-      return ZG
+    function Yz(MM) {
+      const rM = document.hidden || mP ? "all" : "budget";
+      mP = !0;
+      const iM = Lz(MM, !1, rM);
+      var OM;
+      iM && (gz(MM), null === (OM = Aa) || void 0 === OM || OM.afterFrame());
+      return iM
     }
 
-    function WV(GG) {
-      GG.isStopped || 0 === GG.rings.net.cursor || iV() && !CV(GG) || GG.rings.net.cursor > 0 && performance.now() - wk >= Sy / 2 && function(GG) {
-        Lk ??= setTimeout((() => {
-          Lk = null, WV(GG)
-        }), Sy)
-      }(GG)
+    function Nz(MM) {
+      MM.isStopped || 0 === MM.rings.net.cursor || fz() && !Yz(MM) || MM.rings.net.cursor > 0 && performance.now() - LP >= ma / 2 && function(MM) {
+        HP ??= setTimeout((() => {
+          HP = null, Nz(MM)
+        }), ma)
+      }(MM)
     }
 
-    function mV(GG, bG) {
-      return async function(GG, bG, ZG) {
+    function Az(MM, rM) {
+      return async function(MM, rM, iM) {
         let {
-          stop: wG,
-          stillWanted: SG,
-          beforeReload: LG
-        } = ZG;
-        const yG = await (0, Hw.h)(GG, {
-          stillWanted: SG,
+          stop: OM,
+          stillWanted: SM,
+          beforeReload: jM
+        } = iM;
+        const aM = await (0, VO.k)(MM, {
+          stillWanted: SM,
           beforeReload: async () => {
-            wG(), await Promise.all([(0, aZ.flushCrashReports)(BG.e), null === LG || void 0 === LG ? void 0 : LG()])
+            OM(), await Promise.all([(0, oi.flushCrashReports)(cM.c), null === jM || void 0 === jM ? void 0 : jM()])
           },
-          reload: BG.i
+          reload: cM.k
         });
-        return yG || bG(), yG
-      }(GG, bG, {
+        return aM || rM(), aM
+      }(MM, rM, {
         ...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        stop: pV
+        stop: bz
       })
     }
-    let IV = !1;
+    let xz = !1;
 
-    function FV() {
-      return IV = !0, async function(GG, bG, wG) {
+    function vz() {
+      return xz = !0, async function(MM, rM, OM) {
         const {
-          gamePackSource: SG
-        } = await ZG.e(276).then((() => ZG(41447)));
-        await qY.packStep(GG, ((ZG, wG) => ZG.packForGame(GG, SG(bG), wG)), wG)
+          gamePackSource: SM
+        } = await iM.e(299).then((() => iM(42165)));
+        await cQ.packStep(MM, ((iM, OM) => iM.packForGame(MM, SM(rM), OM)), OM)
       }(...arguments)
     }
 
-    function vV(GG) {
-      ! function(GG, bG) {
-        GG((GG => {
-          null === GG || void 0 === GG || GG.subscribe((GG => {
+    function Fz(MM) {
+      ! function(MM, rM) {
+        MM((MM => {
+          null === MM || void 0 === MM || MM.subscribe((MM => {
             let {
-              pack: ZG,
-              gameSource: wG
-            } = GG;
-            bG(null === wG || null === ZG ? null : {
-              pack: ZG,
-              source: "" === wG ? null : wG
+              pack: iM,
+              gameSource: OM
+            } = MM;
+            rM(null === OM || null === iM ? null : {
+              pack: iM,
+              source: "" === OM ? null : OM
             })
           }))
         }))
-      }(MY, GG)
+      }(qQ, MM)
     }
-    let aV = !1,
-      cV = null,
-      lV = !1,
-      jV = !1;
+    let Bz = !1,
+      Xz = null,
+      Iz = !1,
+      Kz = !1;
 
-    function PV() {
-      var GG;
-      aV || (aV = !0, vU("play", OG), (0, fG.n)(new DV), kG.gameBridge.attach(qG), gV().catch((() => {})), (0, aG.r)((GG => {
-        Yb(GG.setTextHost)
-      })), GG = sV, nk.add(GG), function(GG) {
-        for (const bG of Ny) GG(bG);
-        Oy.add(GG)
-      }((GG => {
-        AV(MV[GG])
+    function qz() {
+      var MM;
+      Bz || (Bz = !0, vn("play", TM), (0, mM.o)(new nL), PM.gameBridge.attach(NM), iL().catch((() => {})), (0, WM.r)((MM => {
+        Qr(MM.setTextHost)
+      })), MM = cz, KP.add(MM), function(MM) {
+        for (const rM of SP) MM(rM);
+        jP.add(MM)
+      }((MM => {
+        Vz(Tz[MM])
       })))
     }
-    const MV = {
-      booted: LG.h.INITIALISE_NOA,
-      texturesIn: LG.h.REGISTRATION,
-      modelsIn: LG.h.SETUP_LIFEFORMS
+    const Tz = {
+      booted: jM.n.INITIALISE_NOA,
+      texturesIn: jM.n.REGISTRATION,
+      modelsIn: jM.n.SETUP_LIFEFORMS
     };
 
-    function AV(GG) {
-      UG.l.xh("matchmakeAndPlayStepCompleted", {
-        step: GG,
+    function Vz(MM) {
+      nM.i.Tz("matchmakeAndPlayStepCompleted", {
+        step: MM,
         totalSubSteps: 1
       })
     }
 
-    function sV(GG) {
-      if (!lV) return;
+    function cz(MM) {
+      if (!Iz) return;
       const {
-        gameNameWithVariation: bG,
-        lobbyName: ZG
-      } = (0, fG.d)();
-      if (GG.code === wG.b.serverUpdating.code) return (new DV).leaveLive(), void nV(bG, ZG);
-      UG.l.xh("unwantedLeftGame", {
-        reason: qV(GG),
-        requiresRefresh: GG.requiresRefresh,
-        canReconnect: null !== GG.reconnect,
-        automaticallyReconnect: GG.reconnecting,
-        canPlayAgain: GG.canPlayAgain,
-        gameNameWithVariation: bG,
-        lobbyName: ZG
-      }), (new DV).leaveLive()
+        gameNameWithVariation: rM,
+        lobbyName: iM
+      } = (0, mM.e)();
+      if (MM.code === OM.d.serverUpdating.code) return (new nL).leaveLive(), void rL(rM, iM);
+      nM.i.Tz("unwantedLeftGame", {
+        reason: ML(MM),
+        requiresRefresh: MM.requiresRefresh,
+        canReconnect: null !== MM.reconnect,
+        automaticallyReconnect: MM.reconnecting,
+        canPlayAgain: MM.canPlayAgain,
+        gameNameWithVariation: rM,
+        lobbyName: iM
+      }), (new nL).leaveLive()
     }
 
-    function qV(GG) {
-      return null !== GG.reasonKey ? {
-        translationKey: GG.reasonKey
-      } : "gameOrPluginKick" === GG.name ? GG.reason : `You have disconnected from the server.\n${GG.reason}`
+    function ML(MM) {
+      return null !== MM.reasonKey ? {
+        translationKey: MM.reasonKey
+      } : "gameOrPluginKick" === MM.name ? MM.reason : `You have disconnected from the server.\n${MM.reason}`
     }
 
-    function nV(GG, bG) {
-      var wG;
-      wG = (0, YG.y)(GG, bG), Promise.resolve().then((() => ZG(1444))).then((GG => {
+    function rL(MM, rM) {
+      var OM;
+      OM = (0, QM.G)(MM, rM), Promise.resolve().then((() => iM(1591))).then((MM => {
         let {
-          navigatePreserveSearch: bG
-        } = GG;
-        bG(wG)
-      })).catch((GG => {
-        console.warn("[bloxd-wasm-client] the page's router didn't navigate: loading the page instead", GG), (0, BG.g)(wG)
+          navigatePreserveSearch: rM
+        } = MM;
+        rM(OM)
+      })).catch((MM => {
+        console.warn("[bloxd-wasm-client] the page's router didn't navigate: loading the page instead", MM), (0, cM.f)(OM)
       }))
     }
 
-    function gV() {
-      return cV ??= Promise.all([ZG.e(73), ZG.e(76), ZG.e(75), ZG.e(74), ZG.e(90), ZG.e(87), ZG.e(273), ZG.e(191), ZG.e(228), ZG.e(252), ZG.e(275), ZG.e(47)]).then((() => ZG(41395))).then((GG => {
+    function iL() {
+      return Xz ??= Promise.all([iM.e(84), iM.e(87), iM.e(85), iM.e(86), iM.e(103), iM.e(100), iM.e(296), iM.e(205), iM.e(246), iM.e(272), iM.e(298), iM.e(53)]).then((() => iM(42102))).then((MM => {
         try {
-          GG.attachPlayGameSources()
-        } catch (bG) {
-          throw console.error("[bloxd-wasm-client] the play sources did not attach", bG),
-            function(GG) {
-              uy.then((bG => {
-                null === bG || bG.isStopped || iU ? console.warn(`${qL} the play sources threw as they attached, after the client stopped`, GG) : fV({
-                  site: RL,
-                  error: GG,
+          MM.attachPlayGameSources()
+        } catch (rM) {
+          throw console.error("[bloxd-wasm-client] the play sources did not attach", rM),
+            function(MM) {
+              Wa.then((rM => {
+                null === rM || rM.isStopped || kn ? console.warn(`${Kj} the play sources threw as they attached, after the client stopped`, MM) : wz({
+                  site: cj,
+                  error: MM,
                   header: null
-                }, Ey)
+                }, ua)
               }))
-            }(bG), bG
+            }(rM), rM
         }
-      }), (GG => {
-        throw cV = null, new aG.d(GG)
-      })), cV
+      }), (MM => {
+        throw Xz = null, new WM.b(MM)
+      })), Xz
     }
-    async function eV(GG, bG) {
-      PV(), IV = !0, lV = !0;
-      let ZG = {
-          place: GG.place,
-          matchedAt: GG.matchedAt
+    async function OL(MM, rM) {
+      qz(), xz = !0, Iz = !0;
+      let iM = {
+          place: MM.place,
+          matchedAt: MM.matchedAt
         },
-        yG = GG.place.gameNameWithVariation;
-      const kG = (0, pG.g)();
-      let UG = null;
-      const YG = await jU({
+        aM = MM.place.gameNameWithVariation;
+      const PM = (0, LM.e)();
+      let nM = null;
+      const QM = await In({
         matchmake: async () => {
-          let bG = ZG;
-          if (ZG = null, null === bG) {
-            const ZG = await GG.rematch();
-            if (ZG.isError()) throw UG = ZG.asError().forward(), new Error(ZG.asError().message);
-            bG = {
-              place: ZG.getValue(),
+          let rM = iM;
+          if (iM = null, null === rM) {
+            const iM = await MM.rematch();
+            if (iM.isError()) throw nM = iM.asError().forward(), new Error(iM.asError().message);
+            rM = {
+              place: iM.getValue(),
               matchedAt: performance.now()
             }
           }
-          yG = bG.place.gameNameWithVariation;
+          aM = rM.place.gameNameWithVariation;
           return {
-            target: await (0, RG.e)(GG.userContext, bG.place, AY(), kG),
-            matchedAt: bG.matchedAt,
-            freshMs: RG.c
+            target: await (0, FM.d)(MM.userContext, rM.place, TQ(), PM),
+            matchedAt: rM.matchedAt,
+            freshMs: FM.b
           }
         },
-        pageReady: gV,
-        onFailure: (GG, bG) => {
-          null === UG && function(GG, bG) {
-            (0, aZ.reportPageJoinFailure)(GG, Ey, bG)
-          }(GG, {
-            sinceJoinStartMs: bG,
-            game: yG
+        pageReady: iL,
+        onFailure: (MM, rM) => {
+          null === nM && function(MM, rM) {
+            (0, oi.reportPageJoinFailure)(MM, ua, rM)
+          }(MM, {
+            sinceJoinStartMs: rM,
+            game: aM
           })
         },
         rejoin: () => () => {},
-        invalidateTrafficCode: () => GG.userContext.invalidateTrafficCode(),
-        signal: bG
+        invalidateTrafficCode: () => MM.userContext.invalidateTrafficCode(),
+        signal: rM
       });
-      switch (YG.kind) {
+      switch (QM.kind) {
         case "joined":
-          if (kG) {
+          if (PM) {
             setTimeout((() => {
-              XG.ready()
+              CM.ready()
             }), 0);
             const {
-              game: GG
-            } = YG;
-            (0, pG.q)((() => {
-              GG.endJoinAd() && ((0, KG.l)(), XG.adEnded())
+              game: MM
+            } = QM;
+            (0, LM.o)((() => {
+              MM.endJoinAd() && ((0, hM.l)(), CM.adEnded())
             }))
           }
-          return jV || (jV = !0, (0, iG.c)()), lV ? (AV(LG.h.CONNECT_TO_GAME_SERVER), AV(LG.h.SHADER_PACK), function() {
-            var GG, bG;
-            return null !== (GG = null === (bG = Dy) || void 0 === bG ? void 0 : bG.runsInJoinedGame()) && void 0 !== GG && GG
-          }() && (0, uG.d)(GG.userContext, yG).catch((GG => {
-            console.error("Failed to report the shader pack session", GG)
+          return Kz || (Kz = !0, (0, bM.b)()), Iz ? (Vz(jM.n.CONNECT_TO_GAME_SERVER), Vz(jM.n.SHADER_PACK), function() {
+            var MM, rM;
+            return null !== (MM = null === (rM = OP) || void 0 === rM ? void 0 : rM.runsInJoinedGame()) && void 0 !== MM && MM
+          }() && (0, eM.e)(MM.userContext, aM).catch((MM => {
+            console.error("Failed to report the shader pack session", MM)
           })), function() {
-            const GG = function() {
-              var GG, bG;
-              return null !== (GG = null === (bG = Dy) || void 0 === bG ? void 0 : bG.couldntRunInJoinedGame()) && void 0 !== GG ? GG : null
+            const MM = function() {
+              var MM, rM;
+              return null !== (MM = null === (rM = OP) || void 0 === rM ? void 0 : rM.couldntRunInJoinedGame()) && void 0 !== MM ? MM : null
             }();
-            null !== GG && (0, uG.c)(GG)
-          }(), SG.d.value(void 0)) : tV("The server ended the game as it joined");
+            null !== MM && (0, eM.d)(MM)
+          }(), SM.b.value(void 0)) : PL("The server ended the game as it joined");
         case "failed":
-          if (!YG.reloading) {
-            if (null !== UG) return UG;
-            if ((YG.error instanceof gG.k || YG.error instanceof gG.c) && YG.error.code === wG.b.serverUpdating.code) {
-              if (bG.aborted) return tV("Left the game while it loaded");
+          if (!QM.reloading) {
+            if (null !== nM) return nM;
+            if ((QM.error instanceof xM.n || QM.error instanceof xM.d) && QM.error.code === OM.d.serverUpdating.code) {
+              if (rM.aborted) return PL("Left the game while it loaded");
               const {
-                gameNameWithVariation: GG,
-                lobbyName: ZG
-              } = (0, fG.d)();
-              return nV(GG, ZG), tV("The server is updating")
+                gameNameWithVariation: MM,
+                lobbyName: iM
+              } = (0, mM.e)();
+              return rL(MM, iM), PL("The server is updating")
             }
-            return YG.error instanceof xG.e ? SG.d.errorWithCode(YG.error.messageKey, LG.h.SHADER_PACK, {
+            return QM.error instanceof VM.e ? SM.b.errorWithCode(QM.error.messageKey, jM.n.SHADER_PACK, {
               severity: "medium"
-            }) : SG.d.errorWithCode(function(GG) {
-              if (GG instanceof gG.r || GG instanceof IG.g) return GG.message;
-              if (RV(GG)) return (0, nG.o)(GG.code, GG.serverText);
-              return nG.i
-            }(YG.error), LG.h.CONNECT_TO_GAME_SERVER, {
-              error: TV(YG.error) ? YG.error : void 0,
-              severity: HV(YG.error),
-              gameServerUnreachable: (0, eG.c)(YG.error),
-              joinFailure: (0, eG.g)(YG.error),
-              rematch: (0, WG.c)(YG.error),
-              gameRefused: (0, mG.e)(YG.error)
+            }) : SM.b.errorWithCode(function(MM) {
+              if (MM instanceof xM.w || MM instanceof uM.i) return MM.message;
+              if (SL(MM)) return (0, AM.p)(MM.code, MM.serverText);
+              return AM.j
+            }(QM.error), jM.n.CONNECT_TO_GAME_SERVER, {
+              error: jL(QM.error) ? QM.error : void 0,
+              severity: aL(QM.error),
+              gameServerUnreachable: (0, vM.b)(QM.error),
+              joinFailure: (0, vM.h)(QM.error),
+              rematch: (0, tM.e)(QM.error),
+              gameRefused: (0, gM.e)(QM.error)
             })
           }
-          return tV("Reloading into the new build");
+          return PL("Reloading into the new build");
         case "stopped":
-          return tV("The game client stopped, and shows why");
-        case "RZ":
-          return tV("Left the game while it loaded")
+          return PL("The game client stopped, and shows why");
+        case "Ti":
+          return PL("Left the game while it loaded")
       }
     }
 
-    function RV(GG) {
-      return GG instanceof gG.k || GG instanceof gG.c && "attach" !== GG.stage
+    function SL(MM) {
+      return MM instanceof xM.n || MM instanceof xM.d && "attach" !== MM.stage
     }
 
-    function TV(GG) {
-      return !(GG instanceof gG.r) && !RV(GG) && void 0 === (0, eG.c)(GG)
+    function jL(MM) {
+      return !(MM instanceof xM.w) && !SL(MM) && void 0 === (0, vM.b)(MM)
     }
 
-    function HV(GG) {
-      return RV(GG) ? GG instanceof gG.c && (0, nG.k)(GG.code).requiresRefresh ? "medium" : "low" : TV(GG) || GG instanceof gG.r ? "medium" : "low"
+    function aL(MM) {
+      return SL(MM) ? MM instanceof xM.d && (0, AM.m)(MM.code).requiresRefresh ? "medium" : "low" : jL(MM) || MM instanceof xM.w ? "medium" : "low"
     }
 
-    function tV(GG) {
-      return SG.d.errorWithCode(GG, LG.h.CONNECT_TO_GAME_SERVER, {
+    function PL(MM) {
+      return SM.b.errorWithCode(MM, jM.n.CONNECT_TO_GAME_SERVER, {
         severity: "low",
-        RZ: !0
+        Ti: !0
       })
     }
-    class DV {
-      leave(GG) {
-        if ((0, FG.d)()) {
-          var bG, ZG;
-          if ((0, yG.c)()) return;
-          (0, QG.c)(!0 === (null === (bG = (0, FG.l)()) || void 0 === bG || null === (ZG = bG.currentViewer) || void 0 === ZG ? void 0 : ZG.unsavedChanges), GG)
+    class nL {
+      leave(MM) {
+        if ((0, RM.d)()) {
+          var rM, iM;
+          if ((0, aM.d)()) return;
+          (0, HM.e)(!0 === (null === (rM = (0, RM.n)()) || void 0 === rM || null === (iM = rM.currentViewer) || void 0 === iM ? void 0 : iM.unsavedChanges), MM)
         } else this.leaveLive()
       }
       leaveLive() {
-        var GG;
-        IV && (null === (GG = AY()) || void 0 === GG || GG.endGamePack());
-        if (!lV) return;
-        lV = !1, (0, CG.f)();
+        var MM;
+        xz && (null === (MM = TQ()) || void 0 === MM || MM.endGamePack());
+        if (!Iz) return;
+        Iz = !1, (0, wM.e)();
         try {
-          var bG;
-          null === (bG = (0, aG.q)()) || void 0 === bG || bG.clearWasmCameraScreen()
-        } catch (wG) {
-          console.error("[bloxd-wasm-client] the camera screen didn't clear", wG)
+          var rM;
+          null === (rM = (0, WM.p)()) || void 0 === rM || rM.clearWasmCameraScreen()
+        } catch (OM) {
+          console.error("[bloxd-wasm-client] the camera screen didn't clear", OM)
         }
         const {
-          gameNameWithVariation: ZG
-        } = (0, fG.d)();
+          gameNameWithVariation: iM
+        } = (0, mM.e)();
         try {
-          TU()
+          SQ()
         } finally {
-          (0, fG.q)({
+          (0, mM.p)({
             websocketUrl: null
-          }), UG.l.xh("leaveGame", {
-            gameNameWithVariation: ZG
-          }), (0, VG.T)()
+          }), nM.i.Tz("leaveGame", {
+            gameNameWithVariation: iM
+          }), (0, zM.M)()
         }
       }
       isReplay() {
-        return (0, FG.d)()
+        return (0, RM.d)()
       }
     }
   },
-  41324: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => SG,
-      e: () => wG,
-      f: () => kG,
-      h: () => yG
+  42035: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => SM,
+      h: () => OM,
+      i: () => PM,
+      j: () => aM
     });
-    const wG = 12e4,
-      SG = 3e4,
-      LG = {
+    const OM = 12e4,
+      SM = 3e4,
+      jM = {
         hidden: () => "undefined" !== typeof document && document.hidden,
-        listen: GG => "undefined" === typeof document ? () => {} : (document.addEventListener("visibilitychange", GG), () => {
-          document.removeEventListener("visibilitychange", GG)
+        listen: MM => "undefined" === typeof document ? () => {} : (document.addEventListener("visibilitychange", MM), () => {
+          document.removeEventListener("visibilitychange", MM)
         })
       };
 
-    function yG(GG) {
-      return `it sent no start within ${Math.round(GG)} ms`
+    function aM(MM) {
+      return `it sent no start within ${Math.round(MM)} ms`
     }
-    class kG {
-      constructor(GG, bG) {
-        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
-          wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : LG;
-        this.timeoutMs = GG, this.onTimeout = bG, this.now = ZG, this.visibility = wG, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = wG.listen((() => {
+    class PM {
+      constructor(MM, rM) {
+        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
+          OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : jM;
+        this.timeoutMs = MM, this.onTimeout = rM, this.now = iM, this.visibility = OM, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = OM.listen((() => {
           this.onVisibility()
-        })), wG.hidden() || this.next()
+        })), OM.hidden() || this.next()
       }
       cancel() {
         this.pause(), this.unlisten()
@@ -8629,169 +9055,169 @@ export const modules = {
         this.visibility.hidden() ? (this.counted += this.credit(), this.pause()) : null === this.timer && this.next()
       }
       credit() {
-        const GG = this.step;
-        return null === GG ? 0 : Math.min(this.now() - GG.at, GG.ms)
+        const MM = this.step;
+        return null === MM ? 0 : Math.min(this.now() - MM.at, MM.ms)
       }
       pause() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null), this.step = null
       }
       next() {
-        const GG = this.timeoutMs - this.counted;
-        if (GG <= 0) return void this.arm(1e3, (() => {
+        const MM = this.timeoutMs - this.counted;
+        if (MM <= 0) return void this.arm(1e3, (() => {
           this.cancel(), this.onTimeout(this.counted)
         }));
-        const bG = Math.min(GG, 5e3);
+        const rM = Math.min(MM, 5e3);
         this.step = {
           at: this.now(),
-          ms: bG
-        }, this.arm(bG, (() => {
+          ms: rM
+        }, this.arm(rM, (() => {
           this.counted += this.credit(), this.step = null, this.next()
         }))
       }
-      arm(GG, bG) {
+      arm(MM, rM) {
         this.timer = setTimeout((() => {
-          this.timer = null, bG()
-        }), GG)
+          this.timer = null, rM()
+        }), MM)
       }
     }
   },
-  40025: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => kG
+  40769: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => PM
     });
-    var wG = ZG(352),
-      SG = ZG(982);
-    const LG = new Set(["bingo", "buildAFactory2", "classic", "testGym"]),
-      yG = new Set(["creativeFlat", "skyGrid"]);
+    var OM = iM(332),
+      SM = iM(1073);
+    const jM = new Set(["bingo", "buildAFactory2", "classic", "greenville", "testGym"]),
+      aM = new Set(["creativeFlat", "skyGrid"]);
 
-    function kG(GG) {
-      const bG = (0, wG.Yb)(GG);
-      return "classic" !== bG ? LG.has(bG) : !(0, SG.h)(GG) && !yG.has((0, wG.Vb)(GG))
+    function PM(MM) {
+      const rM = (0, OM.Mb)(MM);
+      return "greenville" === rM ? !(0, OM.Jb)(MM) : "classic" !== rM ? jM.has(rM) : !(0, SM.m)(MM) && !aM.has((0, OM.Jb)(MM))
     }
   },
-  38145: (GG, bG, ZG) => {
-    function wG(GG) {
-      return "string" !== typeof GG || 2 !== GG.length && ":" !== GG[2] ? null : GG[0] + GG[1]
+  38721: (MM, rM, iM) => {
+    function OM(MM) {
+      return "string" !== typeof MM || 2 !== MM.length && ":" !== MM[2] ? null : MM[0] + MM[1]
     }
-    ZG.d(bG, {
-      c: () => dG,
-      d: () => XG,
-      h: () => oG,
-      i: () => uG,
-      l: () => kG,
-      m: () => yG,
-      p: () => LG,
-      q: () => UG,
-      s: () => JG,
-      w: () => hG
+    iM.d(rM, {
+      C: () => JM,
+      d: () => dM,
+      h: () => CM,
+      j: () => GM,
+      n: () => eM,
+      o: () => PM,
+      r: () => aM,
+      v: () => jM,
+      x: () => nM,
+      z: () => yM
     });
-    const SG = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
+    const SM = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
 
-    function LG(GG) {
-      if (function(GG) {
-          for (let bG = 0; bG < SG.length; bG++)
-            if (GG === SG[bG]) return !0;
+    function jM(MM) {
+      if (function(MM) {
+          for (let rM = 0; rM < SM.length; rM++)
+            if (MM === SM[rM]) return !0;
           return !1
-        }(GG)) return !1;
-      const bG = wG(GG);
-      return "op" === bG || "ep" === bG || "wi" === bG || "pp" === bG || "fp:call" === GG || "fp:t" === GG
+        }(MM)) return !1;
+      const rM = OM(MM);
+      return "op" === rM || "ep" === rM || "wi" === rM || "pp" === rM || "fp:call" === MM || "fp:t" === MM
     }
 
-    function yG(GG) {
-      return "fp" === wG(GG) && !LG(GG)
+    function aM(MM) {
+      return "fp" === OM(MM) && !jM(MM)
     }
 
-    function kG(GG) {
-      if ("string" !== typeof GG) return !1;
-      return "o" === GG[0] && "p" === GG[1] && (2 === GG.length || ":" === GG[2]) || "fp:call" === GG || "2" === GG || "t" === GG || "a" === GG
+    function PM(MM) {
+      if ("string" !== typeof MM) return !1;
+      return "o" === MM[0] && "p" === MM[1] && (2 === MM.length || ":" === MM[2]) || "fp:call" === MM || "2" === MM || "t" === MM || "a" === MM
     }
 
-    function UG(GG, bG) {
-      return `~${function(GG){return GG.length<2?GG:":"===GG[1]?GG[0]:GG[0]+GG[1]}(bG)}~${GG}`
+    function nM(MM, rM) {
+      return `~${function(MM){return MM.length<2?MM:":"===MM[1]?MM[0]:MM[0]+MM[1]}(rM)}~${MM}`
     }
-    const YG = 200;
+    const QM = 200;
 
-    function VG(GG) {
-      let bG = GG.length - 1;
-      for (let ZG = 0; ZG < 2; ZG++) {
-        const ZG = bG;
-        for (; bG >= 0 && GG[bG] >= "0" && GG[bG] <= "9";) bG--;
-        if (bG < 0 || bG === ZG || ":" !== GG[bG]) return -1;
-        bG--
+    function zM(MM) {
+      let rM = MM.length - 1;
+      for (let iM = 0; iM < 2; iM++) {
+        const iM = rM;
+        for (; rM >= 0 && MM[rM] >= "0" && MM[rM] <= "9";) rM--;
+        if (rM < 0 || rM === iM || ":" !== MM[rM]) return -1;
+        rM--
       }
-      return bG + 1
+      return rM + 1
     }
 
-    function pG(GG) {
-      return "unknown" === GG || VG(GG) >= 0
+    function LM(MM) {
+      return "unknown" === MM || zM(MM) >= 0
     }
 
-    function fG(GG, bG) {
-      return GG[bG] >= "\ud800" && GG[bG] <= "\udbff" && bG + 1 < GG.length && GG[bG + 1] >= "\udc00" && GG[bG + 1] <= "\udfff" ? 2 : 1
+    function mM(MM, rM) {
+      return MM[rM] >= "\ud800" && MM[rM] <= "\udbff" && rM + 1 < MM.length && MM[rM + 1] >= "\udc00" && MM[rM + 1] <= "\udfff" ? 2 : 1
     }
 
-    function QG(GG, bG, ZG) {
-      return 2 === ZG ? 4 : GG[bG] <= "\x7f" ? 1 : GG[bG] <= "\u07ff" ? 2 : 3
+    function HM(MM, rM, iM) {
+      return 2 === iM ? 4 : MM[rM] <= "\x7f" ? 1 : MM[rM] <= "\u07ff" ? 2 : 3
     }
 
-    function KG(GG, bG, ZG) {
-      let wG = 0;
-      for (; wG < bG;) {
-        const bG = fG(GG, wG),
-          SG = QG(GG, wG, bG);
-        if (SG > ZG) break;
-        ZG -= SG, wG += bG
+    function hM(MM, rM, iM) {
+      let OM = 0;
+      for (; OM < rM;) {
+        const rM = mM(MM, OM),
+          SM = HM(MM, OM, rM);
+        if (SM > iM) break;
+        iM -= SM, OM += rM
       }
-      return wG
+      return OM
     }
 
-    function hG(GG) {
-      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
-      if ("string" !== typeof GG || GG.length > YG || !pG(GG)) return "t";
-      let ZG = 2;
-      for (let kG = 0; kG < GG.length;) {
-        const bG = fG(GG, kG);
-        ZG += QG(GG, kG, bG), kG += bG
+    function JM(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
+      if ("string" !== typeof MM || MM.length > QM || !LM(MM)) return "t";
+      let iM = 2;
+      for (let PM = 0; PM < MM.length;) {
+        const rM = mM(MM, PM);
+        iM += HM(MM, PM, rM), PM += rM
       }
-      if (ZG <= bG) return `t ${GG}`;
-      const wG = VG(GG),
-        SG = bG - 2 - (GG.length - wG);
-      if (SG < 0) return "t";
-      const LG = KG(GG, wG, SG);
-      let yG = "t ";
-      for (let kG = 0; kG < LG; kG++) yG += GG[kG];
-      for (let kG = wG; kG < GG.length; kG++) yG += GG[kG];
-      return yG
+      if (iM <= rM) return `t ${MM}`;
+      const OM = zM(MM),
+        SM = rM - 2 - (MM.length - OM);
+      if (SM < 0) return "t";
+      const jM = hM(MM, OM, SM);
+      let aM = "t ";
+      for (let PM = 0; PM < jM; PM++) aM += MM[PM];
+      for (let PM = OM; PM < MM.length; PM++) aM += MM[PM];
+      return aM
     }
-    const dG = 62;
+    const dM = 62;
 
-    function JG(GG) {
-      let bG = "so:";
-      const ZG = KG(GG, GG.length, dG - bG.length);
-      for (let wG = 0; wG < ZG; wG++) bG += GG[wG];
-      return bG
+    function yM(MM) {
+      let rM = "so:";
+      const iM = hM(MM, MM.length, dM - rM.length);
+      for (let OM = 0; OM < iM; OM++) rM += MM[OM];
+      return rM
     }
-    const rG = "BABYLON ",
-      zG = "DECODE ",
-      EG = "BABYLON@ ";
+    const lM = "BABYLON ",
+      EM = "DECODE ",
+      UM = "BABYLON@ ";
 
-    function oG(GG) {
-      return JG(rG + GG)
-    }
-
-    function XG(GG, bG) {
-      return JG(EG + GG + " " + bG)
+    function GM(MM) {
+      return yM(lM + MM)
     }
 
-    function uG(GG) {
-      return JG(zG + GG)
+    function CM(MM, rM) {
+      return yM(UM + MM + " " + rM)
+    }
+
+    function eM(MM) {
+      return yM(EM + MM)
     }
   },
-  41217: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => wG
+  41930: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => OM
     });
-    const wG = {
+    const OM = {
       roomsPerServerMax: 30,
       timeForPlayerToConnect: 3e4,
       seatReservationSeconds: 15,
@@ -8815,248 +9241,248 @@ export const modules = {
       drainingSessionLobbyFillMs: 3e5
     }
   },
-  38388: GG => {
-    GG.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
+  38954: MM => {
+    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
   },
-  38375: GG => {
-    GG.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
+  38941: MM => {
+    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
   },
-  38392: GG => {
-    GG.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  38961: MM => {
+    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   },
-  38369: GG => {
-    GG.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
+  38935: MM => {
+    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
   },
-  38379: GG => {
-    GG.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  38950: MM => {
+    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   },
-  39136: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => LG
+  39771: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => jM
     });
-    var wG = ZG(2868);
-    const SG = ["none", "idle", "now"];
+    var OM = iM(3185);
+    const SM = ["none", "idle", "now"];
 
-    function LG() {
-      const GG = () => (0, wG.G)();
+    function jM() {
+      const MM = () => (0, OM.E)();
       return {
-        memoryBytes: () => (0, wG.y)().buffer.byteLength,
-        reserveUpFront: bG => GG().wp(bG),
-        reserveAhead: bG => GG().Zp(bG),
-        setCeiling: bG => {
-          GG().Sp(bG)
+        memoryBytes: () => (0, OM.y)().buffer.byteLength,
+        reserveUpFront: rM => MM().RL(rM),
+        reserveAhead: rM => MM().SL(rM),
+        setCeiling: rM => {
+          MM().pL(rM)
         },
-        lowWater: () => SG[GG().bp()] ?? "none",
-        stats: () => function(GG) {
-          const bG = new Uint32Array((0, wG.y)().buffer, GG, 17),
-            ZG = GG => bG[GG] ?? 0,
-            SG = GG => ({
-              upFront: ZG(GG),
-              ahead: ZG(GG + 1),
-              onDemandInFrame: ZG(GG + 2),
-              onDemand: ZG(GG + 3)
+        lowWater: () => SM[MM().XQ()] ?? "none",
+        stats: () => function(MM) {
+          const rM = new Uint32Array((0, OM.y)().buffer, MM, 17),
+            iM = MM => rM[MM] ?? 0,
+            SM = MM => ({
+              upFront: iM(MM),
+              ahead: iM(MM + 1),
+              onDemandInFrame: iM(MM + 2),
+              onDemand: iM(MM + 3)
             });
           return {
-            memoryBytes: ZG(0),
-            initialBytes: ZG(1),
-            liveBytes: ZG(2),
-            peakLiveBytes: ZG(3),
-            headroomBytes: ZG(4),
-            unusedBytes: ZG(5),
-            ceilingBytes: ZG(6),
-            reservesRefused: ZG(7),
-            grows: SG(8),
-            grownBytes: SG(12),
-            allocationsRefused: ZG(16)
+            memoryBytes: iM(0),
+            initialBytes: iM(1),
+            liveBytes: iM(2),
+            peakLiveBytes: iM(3),
+            headroomBytes: iM(4),
+            unusedBytes: iM(5),
+            ceilingBytes: iM(6),
+            reservesRefused: iM(7),
+            grows: SM(8),
+            grownBytes: SM(12),
+            allocationsRefused: iM(16)
           }
-        }(GG().Lp()),
-        takeBallast: () => GG().yp(),
-        takePressure: () => GG().kp()
+        }(MM().WL()),
+        takeBallast: () => MM().sL(),
+        takePressure: () => MM().DL()
       }
     }
   },
-  5062: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      A: () => fG,
-      d: () => kG,
-      h: () => yG,
-      i: () => wG,
-      j: () => hG,
-      k: () => pG,
-      o: () => SG,
-      s: () => LG,
-      u: () => YG,
-      y: () => VG
+  5442: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => PM,
+      f: () => aM,
+      g: () => OM,
+      j: () => JM,
+      k: () => LM,
+      o: () => SM,
+      q: () => jM,
+      t: () => QM,
+      w: () => zM,
+      z: () => mM
     });
-    const wG = 5;
+    const OM = 5;
 
-    function SG(GG) {
-      return GG === wG
+    function SM(MM) {
+      return MM === OM
     }
 
-    function LG(GG) {
-      return [...GG.features]
+    function jM(MM) {
+      return [...MM.features]
     }
-    const yG = 262144,
-      kG = 256,
-      UG = 256;
+    const aM = 262144,
+      PM = 256,
+      nM = 256;
 
-    function YG(GG) {
-      if ("object" !== typeof GG || null === GG || Array.isArray(GG)) return "The pack has no files.";
-      const bG = [];
-      for (const [ZG, wG] of Object.entries(GG)) {
-        if ("string" !== typeof wG) return `${ZG} isn't text.`;
-        bG.push({
-          path: ZG,
-          source: wG
+    function QM(MM) {
+      if ("object" !== typeof MM || null === MM || Array.isArray(MM)) return "The pack has no files.";
+      const rM = [];
+      for (const [iM, OM] of Object.entries(MM)) {
+        if ("string" !== typeof OM) return `${iM} isn't text.`;
+        rM.push({
+          path: iM,
+          source: OM
         })
       }
-      return bG.sort(((GG, bG) => pG(GG.path, bG.path))),
-        function(GG) {
-          if (0 === GG.length) return "The pack has no .wgsl files.";
-          if (GG.length > kG) return `The pack has more than ${kG} .wgsl files.`;
-          const bG = new Set;
+      return rM.sort(((MM, rM) => LM(MM.path, rM.path))),
+        function(MM) {
+          if (0 === MM.length) return "The pack has no .wgsl files.";
+          if (MM.length > PM) return `The pack has more than ${PM} .wgsl files.`;
+          const rM = new Set;
           for (const {
-              path: ZG
+              path: iM
             }
-            of GG) {
-            const GG = QG(ZG);
-            if (null !== GG) return GG;
-            if (bG.has(ZG)) return `The pack has two files at ${ZG}.`;
-            bG.add(ZG)
+            of MM) {
+            const MM = HM(iM);
+            if (null !== MM) return MM;
+            if (rM.has(iM)) return `The pack has two files at ${iM}.`;
+            rM.add(iM)
           }
-          return fG(GG) > yG ? `The pack's .wgsl files are over ${yG/1024} KB in total.` : null
-        }(bG) ?? bG
+          return mM(MM) > aM ? `The pack's .wgsl files are over ${aM/1024} KB in total.` : null
+        }(rM) ?? rM
     }
 
-    function VG(GG) {
-      const bG = {};
-      for (const ZG of GG) bG[ZG.path] = ZG.source;
-      return bG
+    function zM(MM) {
+      const rM = {};
+      for (const iM of MM) rM[iM.path] = iM.source;
+      return rM
     }
 
-    function pG(GG, bG) {
-      return GG < bG ? -1 : GG > bG ? 1 : 0
+    function LM(MM, rM) {
+      return MM < rM ? -1 : MM > rM ? 1 : 0
     }
 
-    function fG(GG) {
-      const bG = new TextEncoder;
-      let ZG = 0;
+    function mM(MM) {
+      const rM = new TextEncoder;
+      let iM = 0;
       for (const {
-          source: wG
+          source: OM
         }
-        of GG) ZG += bG.encode(wG).byteLength;
-      return ZG
+        of MM) iM += rM.encode(OM).byteLength;
+      return iM
     }
 
-    function QG(GG) {
-      if (!GG.toLowerCase().endsWith(".wgsl")) return `${GG} isn't a .wgsl file.`;
-      if (GG.length > UG) return `A file path is over ${UG} characters.`;
-      if (GG.includes("\\") || /[\u0000-\u001f]/.test(GG)) return `${GG} isn't a valid file path.`;
-      return GG.split("/").some((GG => "" === GG || "." === GG || ".." === GG)) ? `${GG} isn't a valid file path.` : null
+    function HM(MM) {
+      if (!MM.toLowerCase().endsWith(".wgsl")) return `${MM} isn't a .wgsl file.`;
+      if (MM.length > nM) return `A file path is over ${nM} characters.`;
+      if (MM.includes("\\") || /[\u0000-\u001f]/.test(MM)) return `${MM} isn't a valid file path.`;
+      return MM.split("/").some((MM => "" === MM || "." === MM || ".." === MM)) ? `${MM} isn't a valid file path.` : null
     }
-    const KG = /^(.*)\[rot\[([1-4])$/;
+    const hM = /^(.*)\[rot\[([1-4])$/;
 
-    function hG(GG, bG) {
-      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const wG = new Map;
-      bG.forEach(((GG, bG) => {
+    function JM(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const OM = new Map;
+      rM.forEach(((MM, rM) => {
         let {
-          numAnimStates: ZG,
-          animStartIdx: SG
-        } = GG;
-        for (let LG = 1; LG < ZG; LG++) wG.set(SG + LG - 1, bG)
+          numAnimStates: iM,
+          animStartIdx: SM
+        } = MM;
+        for (let jM = 1; jM < iM; jM++) OM.set(SM + jM - 1, rM)
       }));
-      const SG = Object.entries(GG),
-        LG = new Map;
-      for (const [hG, dG] of SG) {
-        const GG = KG.exec(hG);
-        "1" === GG?.[2] && LG.set(GG[1], dG + 1)
+      const SM = Object.entries(MM),
+        jM = new Map;
+      for (const [JM, dM] of SM) {
+        const MM = hM.exec(JM);
+        "1" === MM?.[2] && jM.set(MM[1], dM + 1)
       }
-      const yG = GG => {
-          const bG = KG.exec(GG);
-          return bG && LG.has(bG[1]) ? {
-            root: bG[1],
-            rotation: Number(bG[2]) - 1
+      const aM = MM => {
+          const rM = hM.exec(MM);
+          return rM && jM.has(rM[1]) ? {
+            root: rM[1],
+            rotation: Number(rM[2]) - 1
           } : null
         },
-        kG = new Set(SG.map((GG => {
-          let [bG] = GG;
-          return yG(bG)?.root ?? bG
+        PM = new Set(SM.map((MM => {
+          let [rM] = MM;
+          return aM(rM)?.root ?? rM
         }))),
-        UG = (GG, ZG) => {
-          const wG = GG.replace(/_?0$/, "");
-          return (bG[ZG]?.numAnimStates ?? 0) > 1 && !kG.has(wG) ? wG : GG
+        nM = (MM, iM) => {
+          const OM = MM.replace(/_?0$/, "");
+          return (rM[iM]?.numAnimStates ?? 0) > 1 && !PM.has(OM) ? OM : MM
         },
-        YG = new Map;
-      for (const [KG, hG] of SG) YG.set(hG, UG(yG(KG)?.root ?? KG, hG));
-      const VG = SG.reduce(((GG, bG) => {
-          let [, ZG] = bG;
-          return Math.max(GG, ZG + 1)
+        QM = new Map;
+      for (const [hM, JM] of SM) QM.set(JM, nM(aM(hM)?.root ?? hM, JM));
+      const zM = SM.reduce(((MM, rM) => {
+          let [, iM] = rM;
+          return Math.max(MM, iM + 1)
         }), 0),
-        pG = Array.from({
-          length: VG
-        }, ((GG, bG) => ({
-          id: bG + 1,
+        LM = Array.from({
+          length: zM
+        }, ((MM, rM) => ({
+          id: rM + 1,
           rotation: 0
         }))),
-        fG = new Map,
-        QG = new Map;
-      for (const [KG, hG] of SG) {
-        const GG = yG(KG),
-          bG = wG.get(hG);
-        if (void 0 !== bG) {
-          const ZG = YG.get(bG);
-          QG.set(KG, {
-            name: KG,
-            texture: ZG,
+        mM = new Map,
+        HM = new Map;
+      for (const [hM, JM] of SM) {
+        const MM = aM(hM),
+          rM = OM.get(JM);
+        if (void 0 !== rM) {
+          const iM = QM.get(rM);
+          HM.set(hM, {
+            name: hM,
+            texture: iM,
             kind: "frame"
-          }), GG && !QG.has(GG.root) && QG.set(GG.root, {
-            name: GG.root,
-            texture: ZG,
+          }), MM && !HM.has(MM.root) && HM.set(MM.root, {
+            name: MM.root,
+            texture: iM,
             kind: "frame"
           });
           continue
         }
-        const ZG = YG.get(hG),
-          SG = GG?.root ?? KG;
-        if (ZG !== SG && QG.set(SG, {
-            name: SG,
-            texture: ZG,
+        const iM = QM.get(JM),
+          SM = MM?.root ?? hM;
+        if (iM !== SM && HM.set(SM, {
+            name: SM,
+            texture: iM,
             kind: "frame"
-          }), GG) {
-          const bG = LG.get(GG.root);
-          pG[hG] = {
-            id: bG,
-            rotation: GG.rotation
-          }, fG.set(ZG, bG), QG.set(KG, {
-            name: KG,
-            texture: ZG,
+          }), MM) {
+          const rM = jM.get(MM.root);
+          LM[JM] = {
+            id: rM,
+            rotation: MM.rotation
+          }, mM.set(iM, rM), HM.set(hM, {
+            name: hM,
+            texture: iM,
             kind: "rotation"
           })
-        } else fG.set(ZG, hG + 1)
+        } else mM.set(iM, JM + 1)
       }
-      for (const KG of fG.keys()) QG.delete(KG);
-      for (const [KG, hG] of ZG) {
-        const GG = fG.get(hG);
-        void 0 === GG || fG.has(KG) || (fG.set(KG, GG), QG.delete(KG))
+      for (const hM of mM.keys()) HM.delete(hM);
+      for (const [hM, JM] of iM) {
+        const MM = mM.get(JM);
+        void 0 === MM || mM.has(hM) || (mM.set(hM, MM), HM.delete(hM))
       }
       return {
-        named: [...fG].sort(((GG, bG) => {
-          let [ZG] = GG, [wG] = bG;
-          return ZG < wG ? -1 : ZG > wG ? 1 : 0
-        })).map((GG => {
-          let [bG, ZG] = GG;
+        named: [...mM].sort(((MM, rM) => {
+          let [iM] = MM, [OM] = rM;
+          return iM < OM ? -1 : iM > OM ? 1 : 0
+        })).map((MM => {
+          let [rM, iM] = MM;
           return {
-            name: bG,
-            id: ZG
+            name: rM,
+            id: iM
           }
         })),
-        aliases: [...QG.values()],
-        layers: pG
+        aliases: [...HM.values()],
+        layers: LM
       }
     }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

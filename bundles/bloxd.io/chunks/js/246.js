@@ -1,4045 +1,860 @@
 export const id = 246;
 export const ids = [246];
 export const modules = {
-  38207: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => pG,
-      f: () => yG
+  40765: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => OM,
+      f: () => SM
     });
-    var wG = ZG(9280),
-      SG = ZG(9249),
-      LG = ZG(352);
-    const yG = {
-      "Maple Door": {
-        positions: [{
-          block: "Maple Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Maple Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Maple Door|meta|rot1|open": {
-        positions: [{
-          block: "Maple Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Maple Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Maple Door|meta|rot2|closed": {
-        positions: [{
-          block: "Maple Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Maple Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Maple Door|meta|rot2|open": {
-        positions: [{
-          block: "Maple Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Maple Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Maple Door|meta|rot3|closed": {
-        positions: [{
-          block: "Maple Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Maple Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Maple Door|meta|rot3|open": {
-        positions: [{
-          block: "Maple Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Maple Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Maple Door|meta|rot4|closed": {
-        positions: [{
-          block: "Maple Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Maple Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Maple Door|meta|rot4|open": {
-        positions: [{
-          block: "Maple Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Maple Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pine Door": {
-        positions: [{
-          block: "Pine Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pine Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pine Door|meta|rot1|open": {
-        positions: [{
-          block: "Pine Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pine Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pine Door|meta|rot2|closed": {
-        positions: [{
-          block: "Pine Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pine Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pine Door|meta|rot2|open": {
-        positions: [{
-          block: "Pine Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pine Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pine Door|meta|rot3|closed": {
-        positions: [{
-          block: "Pine Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pine Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pine Door|meta|rot3|open": {
-        positions: [{
-          block: "Pine Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pine Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pine Door|meta|rot4|closed": {
-        positions: [{
-          block: "Pine Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pine Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pine Door|meta|rot4|open": {
-        positions: [{
-          block: "Pine Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pine Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Plum Door": {
-        positions: [{
-          block: "Plum Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Plum Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Plum Door|meta|rot1|open": {
-        positions: [{
-          block: "Plum Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Plum Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Plum Door|meta|rot2|closed": {
-        positions: [{
-          block: "Plum Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Plum Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Plum Door|meta|rot2|open": {
-        positions: [{
-          block: "Plum Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Plum Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Plum Door|meta|rot3|closed": {
-        positions: [{
-          block: "Plum Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Plum Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Plum Door|meta|rot3|open": {
-        positions: [{
-          block: "Plum Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Plum Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Plum Door|meta|rot4|closed": {
-        positions: [{
-          block: "Plum Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Plum Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Plum Door|meta|rot4|open": {
-        positions: [{
-          block: "Plum Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Plum Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cedar Door": {
-        positions: [{
-          block: "Cedar Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cedar Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cedar Door|meta|rot1|open": {
-        positions: [{
-          block: "Cedar Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cedar Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cedar Door|meta|rot2|closed": {
-        positions: [{
-          block: "Cedar Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cedar Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cedar Door|meta|rot2|open": {
-        positions: [{
-          block: "Cedar Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cedar Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cedar Door|meta|rot3|closed": {
-        positions: [{
-          block: "Cedar Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cedar Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cedar Door|meta|rot3|open": {
-        positions: [{
-          block: "Cedar Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cedar Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cedar Door|meta|rot4|closed": {
-        positions: [{
-          block: "Cedar Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cedar Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cedar Door|meta|rot4|open": {
-        positions: [{
-          block: "Cedar Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cedar Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Aspen Door": {
-        positions: [{
-          block: "Aspen Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Aspen Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Aspen Door|meta|rot1|open": {
-        positions: [{
-          block: "Aspen Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Aspen Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Aspen Door|meta|rot2|closed": {
-        positions: [{
-          block: "Aspen Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Aspen Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Aspen Door|meta|rot2|open": {
-        positions: [{
-          block: "Aspen Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Aspen Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Aspen Door|meta|rot3|closed": {
-        positions: [{
-          block: "Aspen Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Aspen Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Aspen Door|meta|rot3|open": {
-        positions: [{
-          block: "Aspen Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Aspen Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Aspen Door|meta|rot4|closed": {
-        positions: [{
-          block: "Aspen Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Aspen Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Aspen Door|meta|rot4|open": {
-        positions: [{
-          block: "Aspen Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Aspen Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Jungle Door": {
-        positions: [{
-          block: "Jungle Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Jungle Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Jungle Door|meta|rot1|open": {
-        positions: [{
-          block: "Jungle Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Jungle Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Jungle Door|meta|rot2|closed": {
-        positions: [{
-          block: "Jungle Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Jungle Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Jungle Door|meta|rot2|open": {
-        positions: [{
-          block: "Jungle Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Jungle Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Jungle Door|meta|rot3|closed": {
-        positions: [{
-          block: "Jungle Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Jungle Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Jungle Door|meta|rot3|open": {
-        positions: [{
-          block: "Jungle Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Jungle Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Jungle Door|meta|rot4|closed": {
-        positions: [{
-          block: "Jungle Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Jungle Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Jungle Door|meta|rot4|open": {
-        positions: [{
-          block: "Jungle Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Jungle Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Palm Door": {
-        positions: [{
-          block: "Palm Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Palm Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Palm Door|meta|rot1|open": {
-        positions: [{
-          block: "Palm Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Palm Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Palm Door|meta|rot2|closed": {
-        positions: [{
-          block: "Palm Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Palm Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Palm Door|meta|rot2|open": {
-        positions: [{
-          block: "Palm Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Palm Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Palm Door|meta|rot3|closed": {
-        positions: [{
-          block: "Palm Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Palm Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Palm Door|meta|rot3|open": {
-        positions: [{
-          block: "Palm Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Palm Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Palm Door|meta|rot4|closed": {
-        positions: [{
-          block: "Palm Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Palm Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Palm Door|meta|rot4|open": {
-        positions: [{
-          block: "Palm Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Palm Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pear Door": {
-        positions: [{
-          block: "Pear Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pear Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pear Door|meta|rot1|open": {
-        positions: [{
-          block: "Pear Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pear Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pear Door|meta|rot2|closed": {
-        positions: [{
-          block: "Pear Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pear Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pear Door|meta|rot2|open": {
-        positions: [{
-          block: "Pear Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pear Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pear Door|meta|rot3|closed": {
-        positions: [{
-          block: "Pear Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pear Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pear Door|meta|rot3|open": {
-        positions: [{
-          block: "Pear Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pear Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pear Door|meta|rot4|closed": {
-        positions: [{
-          block: "Pear Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pear Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pear Door|meta|rot4|open": {
-        positions: [{
-          block: "Pear Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pear Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cherry Door": {
-        positions: [{
-          block: "Cherry Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cherry Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cherry Door|meta|rot1|open": {
-        positions: [{
-          block: "Cherry Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cherry Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cherry Door|meta|rot2|closed": {
-        positions: [{
-          block: "Cherry Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cherry Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cherry Door|meta|rot2|open": {
-        positions: [{
-          block: "Cherry Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cherry Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cherry Door|meta|rot3|closed": {
-        positions: [{
-          block: "Cherry Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cherry Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cherry Door|meta|rot3|open": {
-        positions: [{
-          block: "Cherry Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cherry Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cherry Door|meta|rot4|closed": {
-        positions: [{
-          block: "Cherry Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cherry Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cherry Door|meta|rot4|open": {
-        positions: [{
-          block: "Cherry Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cherry Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Spectral Door": {
-        positions: [{
-          block: "Spectral Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Spectral Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Spectral Door|meta|rot1|open": {
-        positions: [{
-          block: "Spectral Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Spectral Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Spectral Door|meta|rot2|closed": {
-        positions: [{
-          block: "Spectral Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Spectral Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Spectral Door|meta|rot2|open": {
-        positions: [{
-          block: "Spectral Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Spectral Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Spectral Door|meta|rot3|closed": {
-        positions: [{
-          block: "Spectral Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Spectral Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Spectral Door|meta|rot3|open": {
-        positions: [{
-          block: "Spectral Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Spectral Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Spectral Door|meta|rot4|closed": {
-        positions: [{
-          block: "Spectral Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Spectral Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Spectral Door|meta|rot4|open": {
-        positions: [{
-          block: "Spectral Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Spectral Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Mango Door": {
-        positions: [{
-          block: "Mango Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Mango Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Mango Door|meta|rot1|open": {
-        positions: [{
-          block: "Mango Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Mango Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Mango Door|meta|rot2|closed": {
-        positions: [{
-          block: "Mango Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Mango Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Mango Door|meta|rot2|open": {
-        positions: [{
-          block: "Mango Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Mango Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Mango Door|meta|rot3|closed": {
-        positions: [{
-          block: "Mango Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Mango Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Mango Door|meta|rot3|open": {
-        positions: [{
-          block: "Mango Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Mango Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Mango Door|meta|rot4|closed": {
-        positions: [{
-          block: "Mango Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Mango Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Mango Door|meta|rot4|open": {
-        positions: [{
-          block: "Mango Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Mango Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "White Bed": {
-        positions: [{
-          block: "White Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_White Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "White Bed|meta|rot2": {
-        positions: [{
-          block: "White Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_White Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "White Bed|meta|rot3": {
-        positions: [{
-          block: "White Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_White Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "White Bed|meta|rot4": {
-        positions: [{
-          block: "White Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_White Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Orange Bed": {
-        positions: [{
-          block: "Orange Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Orange Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Orange Bed|meta|rot2": {
-        positions: [{
-          block: "Orange Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Orange Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Orange Bed|meta|rot3": {
-        positions: [{
-          block: "Orange Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Orange Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Orange Bed|meta|rot4": {
-        positions: [{
-          block: "Orange Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Orange Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Magenta Bed": {
-        positions: [{
-          block: "Magenta Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Magenta Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Magenta Bed|meta|rot2": {
-        positions: [{
-          block: "Magenta Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Magenta Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Magenta Bed|meta|rot3": {
-        positions: [{
-          block: "Magenta Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Magenta Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Magenta Bed|meta|rot4": {
-        positions: [{
-          block: "Magenta Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Magenta Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Light Blue Bed": {
-        positions: [{
-          block: "Light Blue Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Blue Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Light Blue Bed|meta|rot2": {
-        positions: [{
-          block: "Light Blue Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Blue Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Light Blue Bed|meta|rot3": {
-        positions: [{
-          block: "Light Blue Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Blue Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Light Blue Bed|meta|rot4": {
-        positions: [{
-          block: "Light Blue Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Blue Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Yellow Bed": {
-        positions: [{
-          block: "Yellow Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Yellow Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Yellow Bed|meta|rot2": {
-        positions: [{
-          block: "Yellow Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Yellow Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Yellow Bed|meta|rot3": {
-        positions: [{
-          block: "Yellow Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Yellow Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Yellow Bed|meta|rot4": {
-        positions: [{
-          block: "Yellow Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Yellow Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Lime Bed": {
-        positions: [{
-          block: "Lime Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Lime Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Lime Bed|meta|rot2": {
-        positions: [{
-          block: "Lime Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Lime Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Lime Bed|meta|rot3": {
-        positions: [{
-          block: "Lime Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Lime Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Lime Bed|meta|rot4": {
-        positions: [{
-          block: "Lime Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Lime Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Pink Bed": {
-        positions: [{
-          block: "Pink Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pink Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Pink Bed|meta|rot2": {
-        positions: [{
-          block: "Pink Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pink Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Pink Bed|meta|rot3": {
-        positions: [{
-          block: "Pink Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pink Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Pink Bed|meta|rot4": {
-        positions: [{
-          block: "Pink Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pink Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Gray Bed": {
-        positions: [{
-          block: "Gray Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Gray Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Gray Bed|meta|rot2": {
-        positions: [{
-          block: "Gray Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Gray Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Gray Bed|meta|rot3": {
-        positions: [{
-          block: "Gray Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Gray Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Gray Bed|meta|rot4": {
-        positions: [{
-          block: "Gray Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Gray Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Light Gray Bed": {
-        positions: [{
-          block: "Light Gray Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Gray Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Light Gray Bed|meta|rot2": {
-        positions: [{
-          block: "Light Gray Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Gray Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Light Gray Bed|meta|rot3": {
-        positions: [{
-          block: "Light Gray Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Gray Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Light Gray Bed|meta|rot4": {
-        positions: [{
-          block: "Light Gray Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Gray Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Cyan Bed": {
-        positions: [{
-          block: "Cyan Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cyan Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Cyan Bed|meta|rot2": {
-        positions: [{
-          block: "Cyan Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cyan Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Cyan Bed|meta|rot3": {
-        positions: [{
-          block: "Cyan Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cyan Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Cyan Bed|meta|rot4": {
-        positions: [{
-          block: "Cyan Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cyan Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Purple Bed": {
-        positions: [{
-          block: "Purple Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Purple Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Purple Bed|meta|rot2": {
-        positions: [{
-          block: "Purple Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Purple Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Purple Bed|meta|rot3": {
-        positions: [{
-          block: "Purple Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Purple Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Purple Bed|meta|rot4": {
-        positions: [{
-          block: "Purple Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Purple Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Blue Bed": {
-        positions: [{
-          block: "Blue Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Blue Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Blue Bed|meta|rot2": {
-        positions: [{
-          block: "Blue Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Blue Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Blue Bed|meta|rot3": {
-        positions: [{
-          block: "Blue Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Blue Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Blue Bed|meta|rot4": {
-        positions: [{
-          block: "Blue Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Blue Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Brown Bed": {
-        positions: [{
-          block: "Brown Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Brown Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Brown Bed|meta|rot2": {
-        positions: [{
-          block: "Brown Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Brown Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Brown Bed|meta|rot3": {
-        positions: [{
-          block: "Brown Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Brown Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Brown Bed|meta|rot4": {
-        positions: [{
-          block: "Brown Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Brown Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Green Bed": {
-        positions: [{
-          block: "Green Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Green Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Green Bed|meta|rot2": {
-        positions: [{
-          block: "Green Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Green Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Green Bed|meta|rot3": {
-        positions: [{
-          block: "Green Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Green Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Green Bed|meta|rot4": {
-        positions: [{
-          block: "Green Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Green Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Red Bed": {
-        positions: [{
-          block: "Red Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Red Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Red Bed|meta|rot2": {
-        positions: [{
-          block: "Red Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Red Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Red Bed|meta|rot3": {
-        positions: [{
-          block: "Red Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Red Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Red Bed|meta|rot4": {
-        positions: [{
-          block: "Red Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Red Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Black Bed": {
-        positions: [{
-          block: "Black Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Black Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Black Bed|meta|rot2": {
-        positions: [{
-          block: "Black Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Black Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Black Bed|meta|rot3": {
-        positions: [{
-          block: "Black Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Black Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Black Bed|meta|rot4": {
-        positions: [{
-          block: "Black Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Black Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Tall Grass": {
-        positions: [{
-          block: "Tall Grass",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "Tall Grass|Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Jungle Tall Grass": {
-        positions: [{
-          block: "Jungle Tall Grass",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "Jungle Tall Grass|Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "White Strongbed": {
-        positions: [{
-          block: "White Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_White Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "White Strongbed|meta|rot2": {
-        positions: [{
-          block: "White Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_White Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "White Strongbed|meta|rot3": {
-        positions: [{
-          block: "White Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_White Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "White Strongbed|meta|rot4": {
-        positions: [{
-          block: "White Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_White Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Orange Strongbed": {
-        positions: [{
-          block: "Orange Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Orange Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Orange Strongbed|meta|rot2": {
-        positions: [{
-          block: "Orange Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Orange Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Orange Strongbed|meta|rot3": {
-        positions: [{
-          block: "Orange Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Orange Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Orange Strongbed|meta|rot4": {
-        positions: [{
-          block: "Orange Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Orange Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Magenta Strongbed": {
-        positions: [{
-          block: "Magenta Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Magenta Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Magenta Strongbed|meta|rot2": {
-        positions: [{
-          block: "Magenta Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Magenta Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Magenta Strongbed|meta|rot3": {
-        positions: [{
-          block: "Magenta Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Magenta Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Magenta Strongbed|meta|rot4": {
-        positions: [{
-          block: "Magenta Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Magenta Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Light Blue Strongbed": {
-        positions: [{
-          block: "Light Blue Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Blue Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Light Blue Strongbed|meta|rot2": {
-        positions: [{
-          block: "Light Blue Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Blue Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Light Blue Strongbed|meta|rot3": {
-        positions: [{
-          block: "Light Blue Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Blue Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Light Blue Strongbed|meta|rot4": {
-        positions: [{
-          block: "Light Blue Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Blue Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Yellow Strongbed": {
-        positions: [{
-          block: "Yellow Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Yellow Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Yellow Strongbed|meta|rot2": {
-        positions: [{
-          block: "Yellow Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Yellow Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Yellow Strongbed|meta|rot3": {
-        positions: [{
-          block: "Yellow Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Yellow Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Yellow Strongbed|meta|rot4": {
-        positions: [{
-          block: "Yellow Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Yellow Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Lime Strongbed": {
-        positions: [{
-          block: "Lime Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Lime Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Lime Strongbed|meta|rot2": {
-        positions: [{
-          block: "Lime Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Lime Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Lime Strongbed|meta|rot3": {
-        positions: [{
-          block: "Lime Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Lime Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Lime Strongbed|meta|rot4": {
-        positions: [{
-          block: "Lime Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Lime Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Pink Strongbed": {
-        positions: [{
-          block: "Pink Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pink Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Pink Strongbed|meta|rot2": {
-        positions: [{
-          block: "Pink Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pink Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Pink Strongbed|meta|rot3": {
-        positions: [{
-          block: "Pink Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pink Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Pink Strongbed|meta|rot4": {
-        positions: [{
-          block: "Pink Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pink Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Gray Strongbed": {
-        positions: [{
-          block: "Gray Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Gray Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Gray Strongbed|meta|rot2": {
-        positions: [{
-          block: "Gray Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Gray Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Gray Strongbed|meta|rot3": {
-        positions: [{
-          block: "Gray Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Gray Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Gray Strongbed|meta|rot4": {
-        positions: [{
-          block: "Gray Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Gray Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Light Gray Strongbed": {
-        positions: [{
-          block: "Light Gray Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Gray Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Light Gray Strongbed|meta|rot2": {
-        positions: [{
-          block: "Light Gray Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Gray Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Light Gray Strongbed|meta|rot3": {
-        positions: [{
-          block: "Light Gray Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Gray Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Light Gray Strongbed|meta|rot4": {
-        positions: [{
-          block: "Light Gray Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Gray Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Cyan Strongbed": {
-        positions: [{
-          block: "Cyan Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cyan Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Cyan Strongbed|meta|rot2": {
-        positions: [{
-          block: "Cyan Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cyan Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Cyan Strongbed|meta|rot3": {
-        positions: [{
-          block: "Cyan Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cyan Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Cyan Strongbed|meta|rot4": {
-        positions: [{
-          block: "Cyan Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cyan Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Purple Strongbed": {
-        positions: [{
-          block: "Purple Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Purple Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Purple Strongbed|meta|rot2": {
-        positions: [{
-          block: "Purple Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Purple Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Purple Strongbed|meta|rot3": {
-        positions: [{
-          block: "Purple Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Purple Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Purple Strongbed|meta|rot4": {
-        positions: [{
-          block: "Purple Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Purple Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Blue Strongbed": {
-        positions: [{
-          block: "Blue Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Blue Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Blue Strongbed|meta|rot2": {
-        positions: [{
-          block: "Blue Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Blue Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Blue Strongbed|meta|rot3": {
-        positions: [{
-          block: "Blue Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Blue Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Blue Strongbed|meta|rot4": {
-        positions: [{
-          block: "Blue Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Blue Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Brown Strongbed": {
-        positions: [{
-          block: "Brown Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Brown Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Brown Strongbed|meta|rot2": {
-        positions: [{
-          block: "Brown Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Brown Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Brown Strongbed|meta|rot3": {
-        positions: [{
-          block: "Brown Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Brown Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Brown Strongbed|meta|rot4": {
-        positions: [{
-          block: "Brown Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Brown Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Green Strongbed": {
-        positions: [{
-          block: "Green Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Green Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Green Strongbed|meta|rot2": {
-        positions: [{
-          block: "Green Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Green Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Green Strongbed|meta|rot3": {
-        positions: [{
-          block: "Green Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Green Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Green Strongbed|meta|rot4": {
-        positions: [{
-          block: "Green Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Green Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Red Strongbed": {
-        positions: [{
-          block: "Red Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Red Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Red Strongbed|meta|rot2": {
-        positions: [{
-          block: "Red Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Red Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Red Strongbed|meta|rot3": {
-        positions: [{
-          block: "Red Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Red Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Red Strongbed|meta|rot4": {
-        positions: [{
-          block: "Red Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Red Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Black Strongbed": {
-        positions: [{
-          block: "Black Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Black Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Black Strongbed|meta|rot2": {
-        positions: [{
-          block: "Black Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Black Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Black Strongbed|meta|rot3": {
-        positions: [{
-          block: "Black Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Black Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Black Strongbed|meta|rot4": {
-        positions: [{
-          block: "Black Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Black Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Leaf Bed": {
-        positions: [{
-          block: "Leaf Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Leaf Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Leaf Bed|meta|rot2": {
-        positions: [{
-          block: "Leaf Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Leaf Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Leaf Bed|meta|rot3": {
-        positions: [{
-          block: "Leaf Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Leaf Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Leaf Bed|meta|rot4": {
-        positions: [{
-          block: "Leaf Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Leaf Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Vending Machine": {
-        positions: [{
-          block: "Vending Machine",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Vending Machine Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Vending Machine|meta|rot2": {
-        positions: [{
-          block: "Vending Machine|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Vending Machine Top|meta|rot2",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Vending Machine|meta|rot3": {
-        positions: [{
-          block: "Vending Machine|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Vending Machine Top|meta|rot3",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Vending Machine|meta|rot4": {
-        positions: [{
-          block: "Vending Machine|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Vending Machine Top|meta|rot4",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      ...kG("White"),
-      ...kG("Orange"),
-      ...kG("Magenta"),
-      ...kG("Light Blue"),
-      ...kG("Yellow"),
-      ...kG("Lime"),
-      ...kG("Pink"),
-      ...kG("Gray"),
-      ...kG("Light Gray"),
-      ...kG("Cyan"),
-      ...kG("Purple"),
-      ...kG("Blue"),
-      ...kG("Brown"),
-      ...kG("Green"),
-      ...kG("Red"),
-      ...kG("Black"),
-      ...kG("Draugr"),
-      ...kG("Skull"),
-      ...kG("Rainbow"),
-      ...UG("Sheep"),
-      ...UG("Cow"),
-      ...UG("Pig"),
-      ...UG("Horse"),
-      ...UG("Camel"),
-      ...UG("Wolf"),
-      ...UG("Deer"),
-      ...UG("Wildcat"),
-      ...YG("Radar"),
-      ...YG("Inactive Radar"),
-      ...YG("Active Radar"),
-      ...VG("Magenta"),
-      ...VG("Light Gray"),
-      ...VG("Red"),
-      ...VG("White"),
-      ...VG("Orange"),
-      ...VG("Light Blue"),
-      ...VG("Yellow"),
-      ...VG("Lime"),
-      ...VG("Pink"),
-      ...VG("Gray"),
-      ...VG("Cyan"),
-      ...VG("Purple"),
-      ...VG("Blue"),
-      ...VG("Brown"),
-      ...VG("Green"),
-      ...VG("Black"),
-      "Auto Miner": {
-        positions: [{
-          block: "Auto Miner",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Auto Miner Body",
-          x: 0,
-          y: 1,
-          z: -1
-        }, {
-          block: "_Auto Miner Drill Front",
-          x: 0,
-          y: 1,
-          z: -2
-        }, {
-          block: "_Auto Miner Drill Back",
-          x: 0,
-          y: 1,
-          z: 0
-        }, {
-          block: "_Auto Miner Foot Front",
-          x: 0,
-          y: 0,
-          z: -2
-        }]
-      },
-      "Auto Miner|meta|rot2": {
-        positions: [{
-          block: "Auto Miner|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Auto Miner Body|meta|rot2",
-          x: -1,
-          y: 1,
-          z: 0
-        }, {
-          block: "_Auto Miner Drill Front|meta|rot2",
-          x: -2,
-          y: 1,
-          z: 0
-        }, {
-          block: "_Auto Miner Drill Back|meta|rot2",
-          x: 0,
-          y: 1,
-          z: 0
-        }, {
-          block: "_Auto Miner Foot Front|meta|rot2",
-          x: -2,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Auto Miner|meta|rot3": {
-        positions: [{
-          block: "Auto Miner|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Auto Miner Body|meta|rot3",
-          x: 0,
-          y: 1,
-          z: 1
-        }, {
-          block: "_Auto Miner Drill Front|meta|rot3",
-          x: 0,
-          y: 1,
-          z: 2
-        }, {
-          block: "_Auto Miner Drill Back|meta|rot3",
-          x: 0,
-          y: 1,
-          z: 0
-        }, {
-          block: "_Auto Miner Foot Front|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 2
-        }]
-      },
-      "Auto Miner|meta|rot4": {
-        positions: [{
-          block: "Auto Miner|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Auto Miner Body|meta|rot4",
-          x: 1,
-          y: 1,
-          z: 0
-        }, {
-          block: "_Auto Miner Drill Front|meta|rot4",
-          x: 2,
-          y: 1,
-          z: 0
-        }, {
-          block: "_Auto Miner Drill Back|meta|rot4",
-          x: 0,
-          y: 1,
-          z: 0
-        }, {
-          block: "_Auto Miner Foot Front|meta|rot4",
-          x: 2,
-          y: 0,
-          z: 0
-        }]
-      },
-      ... function() {
-        const GG = "Lunite Auto Miner";
-        return {
-          [GG]: {
-            positions: [{
-              block: GG,
-              x: 0,
-              y: 0,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Body",
-              x: 0,
-              y: 1,
-              z: -1
-            }, {
-              block: "_Lunite Auto Miner Drill Front",
-              x: 0,
-              y: 1,
-              z: -2
-            }, {
-              block: "_Lunite Auto Miner Drill Back",
-              x: 0,
-              y: 1,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Foot Front",
-              x: 0,
-              y: 0,
-              z: -2
-            }]
-          },
-          [`${GG}|meta|rot2`]: {
-            positions: [{
-              block: `${GG}|meta|rot2`,
-              x: 0,
-              y: 0,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Body|meta|rot2",
-              x: -1,
-              y: 1,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Drill Front|meta|rot2",
-              x: -2,
-              y: 1,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Drill Back|meta|rot2",
-              x: 0,
-              y: 1,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Foot Front|meta|rot2",
-              x: -2,
-              y: 0,
-              z: 0
-            }]
-          },
-          [`${GG}|meta|rot3`]: {
-            positions: [{
-              block: `${GG}|meta|rot3`,
-              x: 0,
-              y: 0,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Body|meta|rot3",
-              x: 0,
-              y: 1,
-              z: 1
-            }, {
-              block: "_Lunite Auto Miner Drill Front|meta|rot3",
-              x: 0,
-              y: 1,
-              z: 2
-            }, {
-              block: "_Lunite Auto Miner Drill Back|meta|rot3",
-              x: 0,
-              y: 1,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Foot Front|meta|rot3",
-              x: 0,
-              y: 0,
-              z: 2
-            }]
-          },
-          [`${GG}|meta|rot4`]: {
-            positions: [{
-              block: `${GG}|meta|rot4`,
-              x: 0,
-              y: 0,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Body|meta|rot4",
-              x: 1,
-              y: 1,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Drill Front|meta|rot4",
-              x: 2,
-              y: 1,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Drill Back|meta|rot4",
-              x: 0,
-              y: 1,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Foot Front|meta|rot4",
-              x: 2,
-              y: 0,
-              z: 0
-            }]
-          }
-        }
-      }(),
-      ... function() {
-        const GG = {
-            1: GG => ({
-              x: 0,
-              z: GG
-            }),
-            2: GG => ({
-              x: GG,
-              z: 0
-            }),
-            3: GG => ({
-              x: 0,
-              z: -GG
-            }),
-            4: GG => ({
-              x: -GG,
-              z: 0
-            })
-          },
-          bG = {};
-        for (let ZG = 1; ZG <= 4; ZG++) {
-          const SG = 1 === ZG ? "" : `|meta|rot${ZG}`;
-          bG[`${wG.d[0].block}${SG}`] = {
-            positions: wG.d.map((bG => {
-              let {
-                block: wG,
-                y: LG,
-                z: yG
-              } = bG;
-              return {
-                block: `${wG}${SG}`,
-                y: LG,
-                ...GG[ZG](yG)
-              }
-            }))
-          }
-        }
-        return bG
-      }(),
-      ... function() {
-        const GG = {};
-        for (let bG = 1; bG <= wG.m; bG++) {
-          const ZG = (0, wG.lc)(bG),
-            SG = wG.n[bG - 1],
-            LG = [{
-              block: ZG,
-              x: 0,
-              y: 0,
-              z: 0
-            }];
-          for (const GG of wG.h)
-            for (let bG = 1; bG <= SG; bG++) {
-              if ("southwest" === GG && 1 === bG) continue;
-              const {
-                x: ZG,
-                z: SG
-              } = wG.i[GG];
-              LG.push({
-                block: (0, wG.jc)(GG, bG),
-                x: ZG,
-                y: bG - 1,
-                z: SG
-              })
-            }
-          GG[ZG] = {
-            positions: LG
-          }
-        }
-        return GG
-      }(),
-      "Solar Panel": {
-        positions: [{
-          block: "Solar Panel",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Solar Panel SE",
-          x: 1,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Solar Panel NW",
-          x: 0,
-          y: 0,
-          z: -1
-        }, {
-          block: "_Solar Panel NE",
-          x: 1,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Solar Panel|meta|rot2": {
-        positions: [{
-          block: "Solar Panel|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Solar Panel SE|meta|rot2",
-          x: 0,
-          y: 0,
-          z: -1
-        }, {
-          block: "_Solar Panel NW|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Solar Panel NE|meta|rot2",
-          x: -1,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Solar Panel|meta|rot3": {
-        positions: [{
-          block: "Solar Panel|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Solar Panel SE|meta|rot3",
-          x: -1,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Solar Panel NW|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }, {
-          block: "_Solar Panel NE|meta|rot3",
-          x: -1,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Solar Panel|meta|rot4": {
-        positions: [{
-          block: "Solar Panel|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Solar Panel SE|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 1
-        }, {
-          block: "_Solar Panel NW|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Solar Panel NE|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Homestead Core": {
-        positions: [{
-          block: "Homestead Core",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Homestead Core Mid",
-          x: 0,
-          y: 1,
-          z: 0
-        }, {
-          block: "_Homestead Core Top",
-          x: 0,
-          y: 2,
-          z: 0
-        }]
-      }
-    };
-
-    function kG(GG) {
-      return {
-        [`${GG} Banner`]: {
-          positions: [{
-            block: `${GG} Banner`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${GG} Banner Flag|meta|rot1|bot`,
-            x: 0,
-            y: 1,
-            z: 0
-          }]
-        },
-        [`${GG} Banner|meta|rot2|bot`]: {
-          positions: [{
-            block: `${GG} Banner|meta|rot2|bot`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${GG} Banner Flag|meta|rot2|bot`,
-            x: 0,
-            y: 1,
-            z: 0
-          }]
-        },
-        [`${GG} Banner|meta|rot3|bot`]: {
-          positions: [{
-            block: `${GG} Banner|meta|rot3|bot`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${GG} Banner Flag|meta|rot3|bot`,
-            x: 0,
-            y: 1,
-            z: 0
-          }]
-        },
-        [`${GG} Banner|meta|rot4|bot`]: {
-          positions: [{
-            block: `${GG} Banner|meta|rot4|bot`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${GG} Banner Flag|meta|rot4|bot`,
-            x: 0,
-            y: 1,
-            z: 0
-          }]
-        },
-        [`${GG} Banner|meta|rot1|side`]: {
-          positions: [{
-            block: `${GG} Banner|meta|rot1|side`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${GG} Banner Flag|meta|rot1|side`,
-            x: 0,
-            y: -1,
-            z: 0
-          }]
-        },
-        [`${GG} Banner|meta|rot2|side`]: {
-          positions: [{
-            block: `${GG} Banner|meta|rot2|side`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${GG} Banner Flag|meta|rot2|side`,
-            x: 0,
-            y: -1,
-            z: 0
-          }]
-        },
-        [`${GG} Banner|meta|rot3|side`]: {
-          positions: [{
-            block: `${GG} Banner|meta|rot3|side`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${GG} Banner Flag|meta|rot3|side`,
-            x: 0,
-            y: -1,
-            z: 0
-          }]
-        },
-        [`${GG} Banner|meta|rot4|side`]: {
-          positions: [{
-            block: `${GG} Banner|meta|rot4|side`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${GG} Banner Flag|meta|rot4|side`,
-            x: 0,
-            y: -1,
-            z: 0
-          }]
-        },
-        [`${GG} Banner|meta|rot1|top`]: {
-          positions: [{
-            block: `${GG} Banner|meta|rot1|top`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${GG} Banner Flag`,
-            x: 0,
-            y: -1,
-            z: 0
-          }]
-        },
-        [`${GG} Banner|meta|rot2|top`]: {
-          positions: [{
-            block: `${GG} Banner|meta|rot2|top`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${GG} Banner Flag|meta|rot2|top`,
-            x: 0,
-            y: -1,
-            z: 0
-          }]
-        },
-        [`${GG} Banner|meta|rot3|top`]: {
-          positions: [{
-            block: `${GG} Banner|meta|rot3|top`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${GG} Banner Flag|meta|rot3|top`,
-            x: 0,
-            y: -1,
-            z: 0
-          }]
-        },
-        [`${GG} Banner|meta|rot4|top`]: {
-          positions: [{
-            block: `${GG} Banner|meta|rot4|top`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${GG} Banner Flag|meta|rot4|top`,
-            x: 0,
-            y: -1,
-            z: 0
-          }]
-        }
-      }
-    }
-
-    function UG(GG) {
-      const bG = (0, LG.ac)(GG);
-      return {
-        [bG]: {
-          positions: [{
-            block: bG,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${bG} Top Left`,
-            x: 0,
-            y: 1,
-            z: 0
-          }, {
-            block: `_${bG} Top Right`,
-            x: -1,
-            y: 1,
-            z: 0
-          }, {
-            block: `_${bG} Bottom Right`,
-            x: -1,
-            y: 0,
-            z: 0
-          }]
-        },
-        [`${bG}|meta|rot2`]: {
-          positions: [{
-            block: `${bG}|meta|rot2`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${bG} Top Left|meta|rot2`,
-            x: 0,
-            y: 1,
-            z: 0
-          }, {
-            block: `_${bG} Top Right|meta|rot2`,
-            x: 0,
-            y: 1,
-            z: 1
-          }, {
-            block: `_${bG} Bottom Right|meta|rot2`,
-            x: 0,
-            y: 0,
-            z: 1
-          }]
-        },
-        [`${bG}|meta|rot3`]: {
-          positions: [{
-            block: `${bG}|meta|rot3`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${bG} Top Left|meta|rot3`,
-            x: 0,
-            y: 1,
-            z: 0
-          }, {
-            block: `_${bG} Top Right|meta|rot3`,
-            x: 1,
-            y: 1,
-            z: 0
-          }, {
-            block: `_${bG} Bottom Right|meta|rot3`,
-            x: 1,
-            y: 0,
-            z: 0
-          }]
-        },
-        [`${bG}|meta|rot4`]: {
-          positions: [{
-            block: `${bG}|meta|rot4`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${bG} Top Left|meta|rot4`,
-            x: 0,
-            y: 1,
-            z: 0
-          }, {
-            block: `_${bG} Top Right|meta|rot4`,
-            x: 0,
-            y: 1,
-            z: -1
-          }, {
-            block: `_${bG} Bottom Right|meta|rot4`,
-            x: 0,
-            y: 0,
-            z: -1
-          }]
-        }
-      }
-    }
-
-    function YG(GG) {
-      const bG = `_${GG} Back`,
-        ZG = `_${GG} Dish`;
-      return {
-        [GG]: {
-          positions: [{
-            block: GG,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: bG,
-            x: 0,
-            y: 0,
-            z: -1
-          }, {
-            block: ZG,
-            x: 0,
-            y: 1,
-            z: -1
-          }]
-        },
-        [`${GG}|meta|rot2`]: {
-          positions: [{
-            block: `${GG}|meta|rot2`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `${bG}|meta|rot2`,
-            x: -1,
-            y: 0,
-            z: 0
-          }, {
-            block: `${ZG}|meta|rot2`,
-            x: -1,
-            y: 1,
-            z: 0
-          }]
-        },
-        [`${GG}|meta|rot3`]: {
-          positions: [{
-            block: `${GG}|meta|rot3`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `${bG}|meta|rot3`,
-            x: 0,
-            y: 0,
-            z: 1
-          }, {
-            block: `${ZG}|meta|rot3`,
-            x: 0,
-            y: 1,
-            z: 1
-          }]
-        },
-        [`${GG}|meta|rot4`]: {
-          positions: [{
-            block: `${GG}|meta|rot4`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `${bG}|meta|rot4`,
-            x: 1,
-            y: 0,
-            z: 0
-          }, {
-            block: `${ZG}|meta|rot4`,
-            x: 1,
-            y: 1,
-            z: 0
-          }]
-        }
-      }
-    }
-
-    function VG(GG) {
-      const bG = `Small ${GG} Pod`;
-      return {
-        [bG]: {
-          positions: [{
-            block: bG,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_Small ${GG} Pod Mid`,
-            x: 0,
-            y: 1,
-            z: 0
-          }, {
-            block: `_Small ${GG} Pod Top`,
-            x: 0,
-            y: 2,
-            z: 0
-          }]
-        }
-      }
-    }
-    for (const fG in yG) {
-      for (const GG of yG[fG].positions)
-        if (GG.id = SG.l[GG.block].id, fG === GG.block && (0 !== GG.x || 0 !== GG.y || 0 !== GG.z)) throw new Error(`Multiblock "${fG}" has main block "${GG.block}" at non-origin position (${GG.x}, ${GG.y}, ${GG.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
-      yG[SG.l[fG].id] = yG[fG]
-    }
-    const pG = {};
-    for (const fG in yG)
-      for (const {
-          block: GG,
-          x: bG,
-          y: ZG,
-          z: wG
-        }
-        of yG[fG].positions) {
-        const LG = {
-          mainMultiblock: fG,
-          compX: bG,
-          compY: ZG,
-          compZ: wG
-        };
-        pG[GG] = LG, pG[SG.l[GG].id] = LG
-      }
+    const OM = "The world isn't loaded, so no blocks can be seen.",
+      SM = "The world isn't loaded, so nothing in it can be seen."
   },
-  38641: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => UG,
-      d: () => kG
-    });
-    var wG = ZG(9249),
-      SG = ZG(9309),
-      LG = ZG(9318);
-    const yG = SG.v.map((GG => {
-      let {
-        dx: bG,
-        dz: ZG
-      } = GG;
-      return [bG, 0, ZG]
-    }));
-
-    function kG(GG) {
-      const bG = wG.l[GG];
-      return !!bG && GG !== wG.e && !bG.model && !bG.UQ && !1 !== bG.solid && !bG.bd
+  40140: (MM, rM, iM) => {
+    function OM(MM) {
+      return !(!MM.lobbyLeaderboardInfo && !MM.lobbyManage)
     }
-    class UG {
-      constructor(GG) {
-        this.model = GG, this.reshapeOffsets = [...yG, [0, -1, 0]]
-      }
-      handles(GG) {
-        const bG = wG.l[GG];
-        return (null === bG || void 0 === bG ? void 0 : bG.model) === this.model && void 0 !== bG.attachedTop
-      }
-      affects(GG) {
-        return this.handles(GG) || kG(GG) || (0, LG.s)(wG.l[GG])
-      }
-      shape(GG, bG, ZG, yG, UG) {
-        let YG = this.handles(GG(bG, ZG + 1, yG)) ? SG.k : 0;
-        return SG.v.forEach(((UG, VG) => {
-          let {
-            dx: pG,
-            dz: fG
-          } = UG;
-          const QG = GG(bG + pG, ZG, yG + fG);
-          (this.handles(QG) || kG(QG) || function(GG, bG) {
-            const ZG = wG.l[GG];
-            return (0, LG.s)(ZG) && (0, LG.o)(ZG.meta.rot) === (0 !== SG.v[bG].dx)
-          }(QG, VG)) && (YG |= 1 << VG)
-        })), (0, wG.p)((0, SG.o)(wG.l[UG].meta.rootName, YG))
-      }
-    }
-  },
-  38409: (GG, bG, ZG) => {
-    function wG(GG, bG) {
-      var ZG;
-      bG || (bG = {});
-      const wG = null !== (ZG = bG.customAttributes) && void 0 !== ZG ? ZG : {};
-      var SG, LG, yG;
-      "Gun" === (null === GG || void 0 === GG ? void 0 : GG.type) && (wG.shotsLeft = null !== (SG = null !== (LG = wG.shotsLeft) && void 0 !== LG ? LG : null === (yG = wG.gunStats) || void 0 === yG ? void 0 : yG.clipSize) && void 0 !== SG ? SG : GG.clipSize);
-      if (wG.enchantmentTier && (wG.enchantmentTier = wG.enchantmentTier.toString()), wG.enchantments)
-        for (const pG in wG.enchantments) {
-          const GG = wG.enchantments[pG];
-          if ("number" !== typeof GG) {
-            const bG = parseInt(GG);
-            isNaN(bG) || bG < 0 ? wG.enchantments[pG] = void 0 : wG.enchantments[pG] = bG > 1e9 ? 1e9 : bG
-          }
-        }
-      if (wG.enchantmentData)
-        for (const pG in wG.enchantmentData) {
-          const GG = wG.enchantmentData[pG];
-          if (!GG) continue;
-          if ("object" !== typeof GG) {
-            wG.enchantmentData[pG] = void 0;
-            continue
-          }
-          const bG = GG.icon,
-            ZG = GG.description;
-          var kG, UG, YG, VG;
-          if ("string" !== typeof bG) wG.enchantmentData[pG].icon = null !== (kG = null === bG || void 0 === bG || null === (UG = bG.toString) || void 0 === UG ? void 0 : UG.call(bG)) && void 0 !== kG ? kG : void 0;
-          if ("string" !== typeof ZG) wG.enchantmentData[pG].description = null !== (YG = null === ZG || void 0 === ZG || null === (VG = ZG.toString) || void 0 === VG ? void 0 : VG.call(ZG)) && void 0 !== YG ? YG : void 0
-        }
-      return bG.customAttributes = wG, bG
-    }
-    ZG.d(bG, {
-      e: () => wG
+    iM.d(rM, {
+      d: () => OM
     })
   },
-  38634: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => uG,
-      e: () => JG,
-      f: () => UG,
-      i: () => pG,
-      j: () => iG
+  37767: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => jM,
+      f: () => SM
     });
-    var wG = ZG(9249),
-      SG = ZG(9292),
-      LG = ZG(38641);
-    const yG = (0, wG.p)("Noticeboard"),
-      kG = (0, wG.p)("Standing Noticeboard|meta|rot4|lrud");
+    let OM = () => null;
 
-    function UG(GG) {
-      return yG <= GG && GG <= kG
-    }
-    const YG = new Uint8Array(kG - yG + 1);
-    for (let CG = yG; CG <= kG; CG++) YG[CG - yG] = (0, SG.o)(wG.l[CG].meta.metaStr);
-    const VG = 64,
-      pG = VG * VG,
-      [fG, QG, KG, hG] = [0, 1, 2, 3];
-
-    function dG(GG) {
-      var bG, ZG;
-      return "string" === typeof(null === GG || void 0 === GG || null === (bG = GG.persisted) || void 0 === bG || null === (ZG = bG.shared) || void 0 === ZG ? void 0 : ZG.text)
+    function SM(MM) {
+      OM = MM
     }
 
-    function JG(GG) {
-      return dG(GG) && "" !== GG.persisted.shared.text.trim()
+    function jM(MM, rM) {
+      return OM(MM, rM)
+    }
+  },
+  41691: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => JM,
+      d: () => EM,
+      e: () => lM,
+      i: () => dM
+    });
+    var OM = iM(22),
+      SM = iM(41695),
+      jM = iM(41677),
+      aM = iM(41697),
+      PM = iM(41682),
+      nM = iM(41704),
+      QM = iM(41712);
+
+    function zM(MM) {
+      var rM, iM;
+      const OM = (0, jM.e)();
+      return OM ? null === (rM = (0, SM.e)(OM.api, MM[0], MM[1], MM[2])) || void 0 === rM || null === (iM = rM.persisted) || void 0 === iM ? void 0 : iM.shared : void 0
     }
 
-    function rG(GG, bG) {
-      let [ZG, , wG] = bG;
-      const [LG, , yG] = SG.v[GG][QG];
-      return ZG * LG + wG * yG
+    function LM(MM) {
+      return `${MM[0]},${MM[1]},${MM[2]}`
+    }
+    const mM = new Map;
+    let HM = null,
+      hM = 0;
+
+    function JM() {
+      return hM
     }
 
-    function zG(GG, bG, ZG) {
-      return ZG[1] - bG[1] || rG(GG, bG) - rG(GG, ZG)
-    }
-
-    function EG(GG, bG, ZG, LG, kG) {
-      var UG;
-      let VG = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : GG(bG[0], bG[1], bG[2]);
-      if (!(YG[VG - yG] & 1 << ZG)) return null;
-      const [pG, fG, QG] = SG.v[kG][ZG], KG = [bG[0] + pG, bG[1] + fG, bG[2] + QG], hG = GG(KG[0], KG[1], KG[2]), dG = null === (UG = wG.l[hG]) || void 0 === UG ? void 0 : UG.meta;
-      return (null === dG || void 0 === dG ? void 0 : dG.rootId) === LG && dG.rot === kG && YG[hG - yG] & 1 << (1 ^ ZG) ? KG : null
-    }
-
-    function oG(GG, bG, ZG, LG) {
-      const yG = GG(bG, ZG, LG);
-      if (!UG(yG)) return null;
-      const {
-        rootId: kG,
-        rot: YG
-      } = wG.l[yG].meta, pG = (bG, ZG) => {
-        let wG = bG,
-          SG = 1;
-        for (let LG = EG(GG, wG, ZG, kG, YG); LG && SG < VG; LG = EG(GG, wG, ZG, kG, YG)) wG = LG, SG++;
-        return {
-          end: wG,
-          cells: SG
-        }
-      }, dG = pG(pG([bG, ZG, LG], fG).end, KG).end, JG = pG(dG, QG).cells, [rG, , zG] = SG.v[YG][QG];
-      let oG = 1;
-      GG: for (; oG < VG; oG++)
-        for (let bG = 0; bG < JG; bG++)
-          if (!EG(GG, [dG[0] + rG * bG, dG[1] - oG + 1, dG[2] + zG * bG], hG, kG, YG)) break GG;
-      return {
-        anchor: dG,
-        rootId: kG,
-        rot: YG,
-        width: JG,
-        height: oG
-      }
-    }
-
-    function XG(GG, bG) {
-      for (const ZG of function(GG) {
-          let {
-            anchor: bG,
-            rot: ZG,
-            width: wG,
-            height: LG
-          } = GG;
-          const [yG, , kG] = SG.v[ZG][QG], UG = [];
-          for (let SG = 0; SG < LG; SG++)
-            for (let GG = 0; GG < wG; GG++) UG.push([bG[0] + yG * GG, bG[1] - SG, bG[2] + kG * GG]);
-          return UG
-        }(GG))
-        if (dG(bG(ZG[0], ZG[1], ZG[2]))) return ZG;
-      return null
-    }
-
-    function uG(GG, bG, ZG, SG, LG) {
-      const yG = GG(ZG, SG, LG);
-      if (!UG(yG)) return null;
-      const {
-        rootId: kG,
-        rot: YG
-      } = wG.l[yG].meta, VG = [
-        [ZG, SG, LG]
-      ], fG = new Set([VG[0].join()]);
-      let QG = VG[0],
-        KG = null;
-      for (let wG = 0; wG < VG.length; wG++) {
-        const ZG = VG[wG];
-        if (zG(YG, ZG, QG) < 0 && (QG = ZG), dG(bG(ZG[0], ZG[1], ZG[2]))) {
-          const bG = oG(GG, ZG[0], ZG[1], ZG[2]);
-          (!KG || zG(YG, bG.anchor, KG.anchor) < 0) && (KG = bG)
-        }
-        for (let bG = 0; bG < 4 && VG.length < pG; bG++) {
-          const wG = EG(GG, ZG, bG, kG, YG);
-          wG && !fG.has(wG.join()) && (fG.add(wG.join()), VG.push(wG))
-        }
-      }
-      return KG ??= oG(GG, QG[0], QG[1], QG[2]), {
-        cells: VG,
-        topLeft: QG,
-        rect: KG,
-        textCell: XG(KG, bG)
-      }
-    }
-
-    function iG(GG, bG, ZG, yG, kG) {
-      if (null !== ZG && UG(ZG)) {
+    function dM(MM) {
+      const rM = null !== HM && HM.key === LM(MM.pos) ? HM.type : null;
+      if (null === rM) return MM;
+      let iM = null;
+      if ("Iron" === rM) {
         const {
-          rootName: GG,
-          rot: bG
-        } = wG.l[ZG].meta;
-        if (SG.v[bG].some((GG => {
-            let [bG, ZG, wG] = GG;
-            return bG === yG[0] && ZG === yG[1] && wG === yG[2]
-          }))) return {
-          root: GG,
-          rot: bG
+          cachedPasskey: rM,
+          ...OM
+        } = yM(MM.pos);
+        iM = {
+          oa: null !== rM && void 0 !== rM ? rM : [0, 0, 0, 0],
+          ...OM
         }
       }
-      const [YG, VG] = SG.l[kG], pG = GG(bG[0] - YG, bG[1], bG[2] - VG);
       return {
-        root: (0, LG.d)(pG) ? SG.B : SG.y,
-        rot: kG
+        ...MM,
+        type: rM,
+        ironChest: iM
+      }
+    }
+
+    function yM(MM) {
+      const rM = zM(MM),
+        iM = null === rM || void 0 === rM ? void 0 : rM.ownerDbId,
+        OM = function(MM) {
+          var rM;
+          let iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zM(MM);
+          const OM = LM(MM),
+            SM = mM.get(OM);
+          return SM ? SM.lastOpened < (null !== (rM = null === iM || void 0 === iM ? void 0 : iM.passkeyLastUpdated) && void 0 !== rM ? rM : 0) ? (mM.delete(OM), null) : [...SM.oa] : null
+        }(MM, rM);
+      return void 0 === iM ? {
+        cachedPasskey: OM
+      } : {
+        ownerDbId: iM,
+        cachedPasskey: OM
+      }
+    }(0, QM.h)(aM.b, (MM => {
+      const rM = (0, nM.d)(aM.b, MM);
+      if (!(0, nM.c)(rM) || rM.ui) return;
+      if (hM++, !rM.ei || null === rM.ti) return void(HM = null);
+      const iM = LM(rM.ti);
+      HM = {
+        key: iM,
+        type: rM.wi
+      }, null !== rM.gi && mM.set(iM, {
+        oa: [...rM.gi],
+        lastOpened: Date.now()
+      })
+    })), (0, QM.c)((() => {
+      mM.clear(), HM = null, hM++
+    })), (0, QM.e)((() => {
+      null !== HM && (HM = null, hM++, OM.i.Tz("chestToggleFromServer", !1, !0))
+    }));
+    const lM = {
+        boardEditRequested: {
+          watch: MM => (0, OM.j)("EditBoard", (rM => {
+            let {
+              pos: iM
+            } = rM;
+            if (null === iM) return void MM(null);
+            const OM = (0, jM.e)(),
+              SM = (0, jM.p)();
+            OM && SM && MM(SM.readBoardToEdit(OM.api, OM.chunks, iM))
+          }))
+        },
+        ironChestOpenRequested: {
+          watch: MM => (0, OM.j)("OpenIronChest", (rM => {
+            let {
+              pos: iM
+            } = rM;
+            MM(function(MM) {
+              return {
+                pos: MM,
+                ...yM(MM)
+              }
+            }(iM))
+          }))
+        }
+      },
+      EM = {
+        writeOnBoard(MM) {
+          var rM;
+          let {
+            pos: iM,
+            text: OM,
+            textSize: SM
+          } = MM;
+          null === (rM = (0, jM.e)()) || void 0 === rM || rM.send(PM.d.UpdateBoard, (0, PM.U)({
+            mQ: iM,
+            hQ: OM,
+            JQ: SM
+          }))
+        },
+        writeBook(MM) {
+          var rM;
+          let {
+            pages: iM,
+            title: OM,
+            published: SM
+          } = MM;
+          null === (rM = (0, jM.e)()) || void 0 === rM || rM.send(PM.d.UpdateBook, (0, PM.X)({
+            aQ: iM,
+            nQ: OM,
+            QQ: SM
+          }))
+        },
+        writeNameTag(MM) {
+          var rM;
+          null === (rM = (0, jM.e)()) || void 0 === rM || rM.send(PM.d.UpdateNameTag, MM)
+        },
+        setCustomLobbyBlock(MM) {
+          let {
+            pos: rM,
+            blockName: iM
+          } = MM;
+          const OM = (0, jM.p)(),
+            SM = (0, jM.e)();
+          OM && SM && SM.send(PM.d.SetCustomLobbyBlock, (0, PM.K)({
+            jP: OM.blockIdOf(iM),
+            SP: rM
+          }))
+        }
+      }
+  },
+  41728: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => nM,
+      f: () => aM,
+      h: () => PM
+    });
+    var OM = iM(41669),
+      SM = iM(5188),
+      jM = iM(41677);
+
+    function aM() {
+      var MM;
+      const rM = null === (MM = (0, jM.e)()) || void 0 === MM ? void 0 : MM.api.localId;
+      return void 0 === rM || rM === OM.Nc ? null : String(rM)
+    }
+
+    function PM(MM) {
+      const rM = (0, jM.e)();
+      if (null !== rM) return MM(rM);
+      let iM = null;
+      const OM = (0, SM.x)((() => {
+        const rM = (0, jM.e)();
+        null !== rM && null === iM && (OM(), iM = MM(rM))
+      }));
+      return () => {
+        var MM;
+        OM(), null === (MM = iM) || void 0 === MM || MM()
+      }
+    }
+
+    function nM(MM, rM, iM) {
+      return {
+        current: () => {
+          const iM = (0, jM.e)();
+          return null === iM ? rM : MM(iM)()
+        },
+        watch: rM => PM((OM => {
+          const SM = MM(OM);
+          let jM = SM();
+          return rM(jM), iM((() => {
+            const MM = SM();
+            MM !== jM && (jM = MM, rM(MM))
+          }))
+        }))
       }
     }
   },
-  38649: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => LG,
-      g: () => yG,
-      k: () => SG,
-      n: () => kG
+  41723: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => QM
     });
-    var wG = ZG(359);
-    const SG = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...ZG(595).u.map((GG => `${GG} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...wG.k, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
-      LG = ["Obby RPG"];
+    var OM = iM(41677),
+      SM = iM(41728),
+      jM = iM(41734);
 
-    function yG(GG) {
-      const bG = GG.indexOf("|");
-      return -1 === bG ? {
-        item: GG,
-        clientPredictedThrower: null
-      } : {
-        item: GG.slice(0, bG),
-        clientPredictedThrower: GG.slice(bG + 1)
+    function aM() {
+      var MM, rM;
+      return null !== (MM = null === (rM = (0, OM.e)()) || void 0 === rM ? void 0 : rM.itemBridgeSources) && void 0 !== MM ? MM : jM.c
+    }
+
+    function PM(MM) {
+      return {
+        current: () => aM().states[MM].current(),
+        watch: rM => (0, SM.h)((iM => {
+          const OM = iM.itemBridgeSources.states[MM];
+          return rM(OM.current()), OM.watch(rM)
+        }))
       }
     }
-    const kG = [...SG, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
+
+    function nM(MM) {
+      return {
+        watch: rM => (0, SM.h)((iM => iM.itemBridgeSources.events[MM].watch(rM)))
+      }
+    }
+    const QM = {
+      states: {
+        inventory: PM("inventory"),
+        hotbar: PM("hotbar"),
+        crafting: PM("crafting"),
+        heldItemAim: PM("heldItemAim")
+      },
+      events: {
+        hotbarSlotRequested: nM("hotbarSlotRequested"),
+        hotbarScrolled: nM("hotbarScrolled"),
+        numberKeyPressed: nM("numberKeyPressed"),
+        inventoryDropRequested: nM("inventoryDropRequested"),
+        chestToggled: nM("chestToggled"),
+        chestRefreshed: nM("chestRefreshed"),
+        inventorySynced: nM("inventorySynced"),
+        enchantingTableOpened: nM("enchantingTableOpened")
+      },
+      commands: {
+        selectHotbarSlot: MM => aM().commands.selectHotbarSlot(MM),
+        removeInventoryItem: MM => aM().commands.removeInventoryItem(MM),
+        swapInventorySlots: MM => aM().commands.swapInventorySlots(MM),
+        moveInventoryItem: MM => aM().commands.moveInventoryItem(MM),
+        quickMoveInventoryItem: MM => aM().commands.quickMoveInventoryItem(MM),
+        closeChest: MM => aM().commands.closeChest(MM),
+        focusCrafting: MM => aM().commands.focusCrafting(MM),
+        craftRecipe: MM => aM().commands.craftRecipe(MM),
+        salvageItem: MM => aM().commands.salvageItem(MM),
+        enchantItem: MM => aM().commands.enchantItem(MM)
+      },
+      queries: {
+        enchantingOffer: MM => aM().queries.enchantingOffer(MM)
+      }
+    }
+  },
+  41734: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => PM
+    });
+    var OM = iM(40765);
+
+    function SM(MM) {
+      return {
+        current: () => MM,
+        watch: () => () => {}
+      }
+    }
+
+    function jM() {}
+    const aM = Object.freeze([0, 0, 0]),
+      PM = {
+        states: {
+          health: SM({
+            health: null,
+            maxHealth: null,
+            shield: null,
+            maxShield: null
+          }),
+          inventory: SM({
+            player: [],
+            chestOrCreative: [],
+            chest: null,
+            creative: !1,
+            selectedSlot: 0,
+            freeSlots: 0
+          }),
+          hotbar: SM({
+            items: [],
+            ammo: 0,
+            selectedSlot: null
+          }),
+          stationItems: SM({
+            enchantable: {},
+            salvageable: {}
+          }),
+          itemInfo: SM({}),
+          creativeVisibility: SM({
+            publicLobby: !1,
+            shownInGame: {}
+          }),
+          aura: SM(null),
+          heldItemAim: SM({
+            gun: !1,
+            aimable: !1,
+            chargeName: null
+          }),
+          crouching: SM(!1),
+          gliderBoostFuel: SM(0),
+          flight: SM({
+            canFly: !1,
+            flying: !1
+          }),
+          crafting: SM({
+            focus: null,
+            recipes: [],
+            detail: null
+          }),
+          players: SM({
+            ids: [],
+            byId: {},
+            localId: null
+          }),
+          lobbyLeaderboardRows: SM({}),
+          fullInventory: SM(!1),
+          crosshairTarget: SM({
+            interactPrompt: null,
+            blockText: null,
+            neededTool: null
+          }),
+          localPlayerAlive: SM(!0),
+          freeCamera: SM({
+            allowed: !1,
+            movesFly: !1
+          }),
+          replay: SM(null),
+          replayEdits: SM(null),
+          replayRecorder: SM({
+            recording: !1,
+            clipping: !1,
+            hasClipBuffer: !1,
+            seconds: 0
+          }),
+          replayVideoExporting: SM(!1)
+        },
+        events: {
+          hotbarSlotRequested: {
+            watch: () => () => {}
+          },
+          hotbarScrolled: {
+            watch: () => () => {}
+          },
+          hotbarDropRequested: {
+            watch: () => () => {}
+          },
+          inventoryDropRequested: {
+            watch: () => () => {}
+          },
+          numberKeyPressed: {
+            watch: () => () => {}
+          },
+          chestToggled: {
+            watch: () => () => {}
+          },
+          chestRefreshed: {
+            watch: () => () => {}
+          },
+          inventorySynced: {
+            watch: () => () => {}
+          },
+          enchantingTableOpened: {
+            watch: () => () => {}
+          },
+          cosmeticsUpdated: {
+            watch: () => () => {}
+          },
+          shotDamageToShow: {
+            watch: () => () => {}
+          },
+          boardEditRequested: {
+            watch: () => () => {}
+          },
+          kill: {
+            watch: () => () => {}
+          },
+          chatReceived: {
+            watch: () => () => {}
+          },
+          ironChestOpenRequested: {
+            watch: () => () => {}
+          },
+          localEffectUpdated: {
+            watch: () => () => {}
+          },
+          localPlayerAliveSet: {
+            watch: () => () => {}
+          },
+          replayUiActionRequested: {
+            watch: () => () => {}
+          },
+          replayViewerRequested: {
+            watch: () => () => {}
+          }
+        },
+        commands: {
+          selectHotbarSlot: jM,
+          removeInventoryItem: () => !1,
+          swapInventorySlots: () => !1,
+          moveInventoryItem: () => !1,
+          quickMoveInventoryItem: () => null,
+          closeChest: jM,
+          setInventoryOpen: jM,
+          changeIronChestPasskey: jM,
+          dragReplayCamera: jM,
+          applyTemporaryThirdPerson: jM,
+          holdEmoteWheel: jM,
+          recordFlyingMiddleText: jM,
+          focusCrafting: jM,
+          craftRecipe: () => ({
+            Ha: 0,
+            Pz: null,
+            amountAddedToSlot: 0
+          }),
+          salvageItem: () => !1,
+          enchantItem: jM,
+          setShopOpen: jM,
+          buyShopItem: jM,
+          lobbyManage: jM,
+          sendChatMessage: jM,
+          ignorePlayer: jM,
+          reportPlayer: jM,
+          reportWorldCodeChat: jM,
+          requestDiscordReportKey: jM,
+          reportLobbyOrGame: jM,
+          playEmote: jM,
+          updateMyCosmetic: jM,
+          writeOnBoard: jM,
+          writeBook: jM,
+          writeNameTag: jM,
+          setCustomLobbyBlock: jM,
+          openIronChest: jM,
+          sendCodeCollab: jM,
+          clickCodeBlock: jM,
+          bindCustomButtonKeys: jM,
+          pressCustomButton: jM,
+          moveReplayFreecam: jM,
+          holdReplayFreecamVertical: jM,
+          respawn: jM,
+          wakeUp: jM,
+          requestLeaderboard: jM,
+          completeTask: jM,
+          setServerCookie: jM,
+          answerUiRequest: jM,
+          chooseRewardedAd: jM,
+          setCameraZoom: jM,
+          setFreeCameraMovesFly: jM,
+          setBlockHighlight: jM,
+          setCrosshairInteractPrompt: jM,
+          setLookSensitivity: jM,
+          replayAction: jM,
+          setReplayPlaying: jM,
+          seekReplay: jM,
+          setReplayCameraMode: jM,
+          syncReplayCameraMode: jM,
+          setReplayCameraKeyframe: jM,
+          moveReplayCameraKeyframe: jM,
+          deleteReplayCameraKeyframes: jM,
+          setReplayPlaybackMark: jM,
+          cropReplay: () => !1,
+          holdReplayForShaderPackFailure: jM,
+          exportReplayVideo: jM,
+          toggleRecording: jM,
+          saveClip: jM,
+          setRecorderPrefs: jM,
+          setReplayViewerOpen: jM
+        },
+        queries: {
+          enchantingOffer: () => ({
+            perks: [],
+            options: []
+          }),
+          worldCodeAiChunk: () => OM.c,
+          worldCodeAiGameState: () => OM.f
+        },
+        lookups: {
+          localPos: () => aM,
+          targetedBlockPos: () => null,
+          blockAtViewPoint: () => null,
+          momentumFrac: () => 0,
+          screenPos: () => ({
+            x: 0,
+            y: 0
+          }),
+          cameraZoom: () => 0,
+          freeCameraPos: () => null,
+          blocksStandingOn: () => [],
+          dropAhead: () => !1,
+          replayCamera: () => null,
+          leaveGameReloadsPage: () => !1,
+          codeBlockClickable: () => !1
+        }
+      }
+  },
+  41674: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => wM,
+      f: () => bM,
+      g: () => tM,
+      k: () => eM,
+      m: () => GM
+    });
+    var OM = iM(40325),
+      SM = iM(1229),
+      jM = iM(2067),
+      aM = iM(2078),
+      PM = iM(3693),
+      nM = iM(37767),
+      QM = iM(1373),
+      zM = iM(41677),
+      LM = iM(5214),
+      mM = iM(2619),
+      HM = iM(41682),
+      hM = iM(41691),
+      JM = iM(41723);
+    let dM = null;
+
+    function yM(MM) {
+      const rM = new Map,
+        iM = iM => {
+          if ("string" !== typeof iM) return;
+          let OM = rM.get(iM);
+          return void 0 === OM && (OM = MM(iM), void 0 !== OM && rM.set(iM, OM)), OM
+        };
+      return new Proxy({}, {
+        get: (MM, rM) => iM(rM),
+        has: (MM, rM) => void 0 !== iM(rM)
+      })
+    }
+
+    function lM(MM) {
+      const rM = (0, PM.d)(MM);
+      return void 0 !== rM && (0, PM.g)(rM) === MM
+    }
+
+    function EM(MM) {
+      var rM;
+      const iM = null === (rM = (0, zM.e)()) || void 0 === rM ? void 0 : rM.tables;
+      if (void 0 === iM || !lM(MM)) return;
+      const OM = {
+          displayName: iM.getDisplayName(MM)
+        },
+        SM = iM.getItemStat(MM, "description");
+      void 0 !== SM && null !== SM && (OM.description = SM);
+      const {
+        rootName: jM
+      } = iM.getMetaInfo(MM);
+      jM !== MM && (OM.rootName = jM);
+      const aM = iM.getItemStat(MM, "armourReduction");
+      return void 0 !== aM && null !== aM && (OM.armourReduction = aM), OM
+    }(0, zM.r)((MM => {
+      dM = MM
+    }));
+    const UM = (0, aM.l)("DisplayName", "Description");
+
+    function GM() {
+      return Boolean(jM.d.get("useInventory") && jM.d.get("useFullInventory"))
+    }
+    let CM = null;
+    const eM = {
+        inventory: function() {
+          const MM = JM.d.states.inventory;
+          let rM = null;
+          const iM = MM => {
+            var iM;
+            return null === MM.chest ? MM : ((null === (iM = rM) || void 0 === iM ? void 0 : iM.from) === MM && rM.chestVersion === (0, hM.b)() || (rM = {
+              from: MM,
+              chestVersion: (0, hM.b)(),
+              view: {
+                ...MM,
+                chest: (0, hM.i)(MM.chest)
+              }
+            }), rM.view)
+          };
+          return {
+            current: () => iM(MM.current()),
+            watch: rM => MM.watch((MM => {
+              rM(iM(MM))
+            }))
+          }
+        }(),
+        crafting: JM.d.states.crafting,
+        stationItems: {
+          current() {
+            var MM;
+            return (null === (MM = CM) || void 0 === MM ? void 0 : MM.namesVersion) !== (0, PM.h)() && (CM = {
+              namesVersion: (0, PM.h)(),
+              items: {
+                enchantable: yM((MM => {
+                  const rM = (0, PM.d)(MM);
+                  return void 0 !== rM && null !== dM && dM.enchantmentPerksOf(rM).length > 0 || void 0
+                })),
+                salvageable: yM((MM => !(!lM(MM) || null === (0, nM.d)(MM)) || void 0))
+              }
+            }), CM.items
+          },
+          watch: () => () => {}
+        },
+        itemInfo: function() {
+          let MM = null;
+          const rM = () => {
+            var rM;
+            return (null === (rM = MM) || void 0 === rM ? void 0 : rM.namesVersion) !== (0, PM.h)() && (MM = {
+              namesVersion: (0, PM.h)(),
+              infos: yM(EM)
+            }), MM.infos
+          };
+          return {
+            current: rM,
+            watch: iM => (0, aM.u)((OM => {
+              OM.some(UM) && (MM = null, iM(rM()))
+            }))
+          }
+        }(),
+        creativeVisibility: (0, aM.q)((function() {
+          const MM = {};
+          for (const SM of null !== (rM = null === (iM = dM) || void 0 === iM ? void 0 : iM.creativeItemIds()) && void 0 !== rM ? rM : []) {
+            var rM, iM, aM, nM;
+            const QM = (0, PM.g)(SM);
+            if (void 0 === QM) continue;
+            const zM = null !== (aM = jM.d.get((0, OM.g)(QM, "showInCreativeInven"))) && void 0 !== aM ? aM : null === (nM = dM) || void 0 === nM ? void 0 : nM.showInCreativeInvenOf(SM);
+            "boolean" === typeof zM && (MM[QM] = zM)
+          }
+          return {
+            publicLobby: (0, SM.P)((0, QM.e)().lobbyName),
+            shownInGame: MM
+          }
+        }), ["connectedGameChanged"], (0, aM.l)("ShowInCreativeInven")),
+        fullInventory: (0, aM.q)(GM, [], (0, aM.p)("useInventory", "useFullInventory"))
+      },
+      bM = {
+        inventoryDropRequested: JM.d.events.inventoryDropRequested,
+        chestToggled: JM.d.events.chestToggled,
+        chestRefreshed: JM.d.events.chestRefreshed,
+        inventorySynced: JM.d.events.inventorySynced,
+        enchantingTableOpened: JM.d.events.enchantingTableOpened
+      },
+      wM = {
+        removeInventoryItem: JM.d.commands.removeInventoryItem,
+        swapInventorySlots: JM.d.commands.swapInventorySlots,
+        moveInventoryItem: JM.d.commands.moveInventoryItem,
+        quickMoveInventoryItem: JM.d.commands.quickMoveInventoryItem,
+        closeChest: JM.d.commands.closeChest,
+        setInventoryOpen(MM) {
+          (0, LM.k)(mM.C.InventoryOpen, MM ? mM.C.InventoryOpen : 0)
+        },
+        focusCrafting: JM.d.commands.focusCrafting,
+        craftRecipe: JM.d.commands.craftRecipe,
+        salvageItem: JM.d.commands.salvageItem,
+        enchantItem: JM.d.commands.enchantItem,
+        changeIronChestPasskey(MM) {
+          var rM;
+          let {
+            pos: iM,
+            oa: OM
+          } = MM;
+          null === (rM = (0, zM.e)()) || void 0 === rM || rM.send(HM.d.ChangeIronChestPasskey, (0, HM.j)({
+            ti: iM,
+            oa: OM
+          }))
+        },
+        openIronChest(MM) {
+          var rM;
+          let {
+            pos: iM,
+            oa: OM
+          } = MM;
+          null === (rM = (0, zM.e)()) || void 0 === rM || rM.send(HM.d.OpenIronChest, (0, HM.B)({
+            ti: iM,
+            oa: OM
+          }))
+        }
+      },
+      tM = {
+        enchantingOffer: JM.d.queries.enchantingOffer
+      }
+  },
+  41714: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => OM,
+      g: () => zM,
+      h: () => aM,
+      i: () => SM,
+      k: () => PM,
+      l: () => QM
+    });
+    class OM extends Error {
+      constructor() {
+        super(...arguments), this.name = "CoreCorruption"
+      }
+    }
+
+    function SM(MM) {
+      return MM instanceof RangeError && /call stack/i.test(MM.message) || MM instanceof Error && "InternalError" === MM.name && /recursion/i.test(MM.message)
+    }
+    const jM = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+
+    function aM(MM) {
+      var rM;
+      return MM instanceof WebAssembly.RuntimeError || MM instanceof OM || SM(MM) && jM.test(null !== (rM = MM.stack) && void 0 !== rM ? rM : "")
+    }
+
+    function PM(MM, rM) {
+      if (aM(MM)) throw MM;
+      console.error(rM, MM)
+    }
+
+    function nM(MM, rM, iM, SM, jM) {
+      if (rM % SM !== 0 || rM + iM > MM.byteLength) throw new OM(`${jM}: ${iM} bytes at ${rM}, ${SM}-aligned, outside ${MM.byteLength} bytes of memory`)
+    }
+
+    function QM(MM, rM, iM, OM, SM) {
+      return 0 === iM ? null : (nM(rM, iM, OM * MM.BYTES_PER_ELEMENT, MM.BYTES_PER_ELEMENT, SM), new MM(rM, iM, OM))
+    }
+
+    function zM(MM, rM, iM, OM, SM) {
+      return 0 === rM ? null : (nM(MM, rM, iM, OM, SM), new DataView(MM, rM, iM))
+    }
+  },
+  41677: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => OM,
+      c: () => yM,
+      e: () => JM,
+      h: () => dM,
+      i: () => mM,
+      m: () => HM,
+      p: () => zM,
+      r: () => LM,
+      t: () => hM
+    });
+    class OM extends Error {
+      constructor(MM) {
+        super(`the join's code did not load: ${MM instanceof Error?MM.message:String(MM)}`, {
+          cause: MM
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === MM || void 0 === MM ? void 0 : MM.request
+      }
+    }
+    let SM = null,
+      jM = null,
+      aM = null;
+    const PM = [];
+    let nM = null;
+
+    function QM(MM, rM) {
+      try {
+        MM(rM)
+      } catch (iM) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", iM)
+      }
+    }
+
+    function zM() {
+      return nM
+    }
+
+    function LM(MM) {
+      PM.push(MM), null !== nM && QM(MM, nM)
+    }
+
+    function mM(MM) {
+      return SM ??= Promise.all([iM.e(84), iM.e(111), iM.e(86), iM.e(244), iM.e(89), iM.e(245), iM.e(224), iM.e(109), iM.e(264), iM.e(296), iM.e(48), iM.e(213), iM.e(232), iM.e(222), iM.e(205), iM.e(206), iM.e(170), iM.e(101), iM.e(134), iM.e(272), iM.e(68)]).then((() => iM(45248))).then((rM => {
+        rM.loadAudio(MM), nM = rM;
+        for (const MM of PM) QM(MM, rM);
+        return rM
+      })).catch((MM => {
+        throw SM = null, MM
+      })), SM
+    }
+    async function HM(MM, rM) {
+      try {
+        const iM = await mM(MM);
+        await iM.loadClientGame(rM)
+      } catch (iM) {
+        throw new OM(iM)
+      }
+    }
+
+    function hM(MM, rM) {
+      jM = {
+        running: MM,
+        shell: rM
+      }
+    }
+
+    function JM() {
+      return aM
+    }
+    async function dM(MM) {
+      const rM = jM;
+      if ((null === rM || void 0 === rM ? void 0 : rM.running) !== MM) throw new Error("the core's session has ended");
+      const iM = await mM(rM.shell.audio).catch((MM => {
+        throw new OM(MM)
+      }));
+      if (null !== aM) return aM;
+      if (jM !== rM || MM.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (aM = iM.startGameHost(MM, rM.shell), null === aM) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return aM
+    }
+
+    function yM() {
+      null !== aM && (null !== nM ? nM.endGameHost(aM) : aM.closeGame()), aM = null, jM = null
+    }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

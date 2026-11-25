@@ -1,257 +1,262 @@
-export const id = 19;
-export const ids = [19];
+export const id = 22;
+export const ids = [22];
 export const modules = {
-  36946: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => QG,
-      d: () => KG,
-      g: () => fG,
-      j: () => pG
+  37538: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => HM,
+      i: () => hM,
+      m: () => mM,
+      p: () => LM
     });
-    var wG = ZG(34472),
-      SG = ZG(36951),
-      LG = ZG(36955),
-      yG = ZG(8759),
-      kG = ZG(1389),
-      UG = ZG(51),
-      YG = ZG(59),
-      VG = ZG(1067);
+    var OM = iM(35017),
+      SM = iM(37542),
+      jM = iM(37544),
+      aM = iM(9328),
+      PM = iM(1516),
+      nM = iM(44),
+      QM = iM(65),
+      zM = iM(1303);
 
-    function pG() {
-      var GG;
-      return (0, kG.j)(SG.c, (0, SG.l)()), (0, VG.jsx)(VG.Fragment, {
-        children: null === (GG = (0, SG.l)()) || void 0 === GG ? void 0 : GG.content
+    function LM() {
+      var MM;
+      return (0, PM.e)(SM.e, (0, SM.t)()), (0, zM.jsx)(zM.Fragment, {
+        children: null === (MM = (0, SM.t)()) || void 0 === MM ? void 0 : MM.content
       })
     }
 
-    function fG(GG) {
-      var bG;
+    function mM(MM) {
+      var rM;
       let {
-        show: ZG
-      } = GG;
-      (0, kG.j)(SG.c, (0, SG.l)());
-      const YG = null === (bG = (0, SG.l)()) || void 0 === bG ? void 0 : bG.menu;
-      return (0, UG.useEffect)((() => {
-        var GG;
-        ZG || (null === YG || void 0 === YG || null === (GG = YG.onClose) || void 0 === GG || GG.call(YG), (0, LG.m)())
-      }), [ZG, YG]), (0, UG.useEffect)((() => ZG ? (0, yG.g)(LG.t, LG.f) : void 0), [ZG]), (0, VG.jsx)(wG.b, {
-        showing: ZG,
+        show: iM
+      } = MM;
+      (0, PM.e)(SM.e, (0, SM.t)());
+      const QM = null === (rM = (0, SM.t)()) || void 0 === rM ? void 0 : rM.menu;
+      return (0, nM.useEffect)((() => {
+        var MM;
+        iM || (null === QM || void 0 === QM || null === (MM = QM.onClose) || void 0 === MM || MM.call(QM), (0, jM.q)())
+      }), [iM, QM]), (0, nM.useEffect)((() => iM ? (0, aM.e)(jM.y, jM.f) : void 0), [iM]), (0, zM.jsx)(OM.e, {
+        showing: iM,
         globallyUniqueKey: "clientGameMenu",
-        children: null === YG || void 0 === YG ? void 0 : YG.content
+        children: null === QM || void 0 === QM ? void 0 : QM.content
       })
     }
 
-    function QG(GG) {
+    function HM(MM) {
       let {
-        placement: bG = "bottom"
-      } = GG;
-      return (0, VG.jsx)("div", {
-        id: `clientGameHud-${bG}`,
+        placement: rM = "bottom"
+      } = MM;
+      return (0, zM.jsx)("div", {
+        id: `clientGameHud-${rM}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function KG(GG) {
+    function hM(MM) {
       let {
-        children: bG,
-        placement: ZG = "bottom"
-      } = GG;
-      const [wG, SG] = (0, UG.useState)(null);
-      return (0, UG.useEffect)((() => {
-        SG(document.getElementById(`clientGameHud-${ZG}`))
-      }), [ZG]), wG ? (0, YG.createPortal)(bG, wG) : null
+        children: rM,
+        placement: iM = "bottom"
+      } = MM;
+      const [OM, SM] = (0, nM.useState)(null);
+      return (0, nM.useEffect)((() => {
+        SM(document.getElementById(`clientGameHud-${iM}`))
+      }), [iM]), OM ? (0, QM.createPortal)(rM, OM) : null
     }
   },
-  34472: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => LG
+  35017: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => jM
     });
-    var wG = ZG(4558),
-      SG = ZG(4561);
+    var OM = iM(4919),
+      SM = iM(4923);
 
-    function LG(GG) {
+    function jM(MM) {
       let {
-        children: bG,
-        showing: ZG,
-        globallyUniqueKey: LG,
-        alwaysMountChildren: yG = !1,
-        doGameplayStartStopOnShow: kG = !0,
-        keepsMovement: UG = !1
-      } = GG;
-      return (0, SG.e)(!0, ZG, LG, UG), (0, wG.d)(kG, ZG), ZG || yG ? bG : null
+        children: rM,
+        showing: iM,
+        globallyUniqueKey: jM,
+        alwaysMountChildren: aM = !1,
+        doGameplayStartStopOnShow: PM = !0,
+        keepsMovement: nM = !1
+      } = MM;
+      return (0, SM.c)(!0, iM, jM, nM), (0, OM.c)(PM, iM), iM || aM ? rM : null
     }
   },
-  8759: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => LG,
-      g: () => SG
+  9328: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => jM,
+      e: () => SM
     });
-    let wG = null;
-    const SG = function(GG) {
-        const bG = {
-          cycle: GG,
+    let OM = null;
+    const SM = function(MM) {
+        const rM = {
+          cycle: MM,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return wG = bG, () => {
-          wG === bG && (wG = null)
+        return OM = rM, () => {
+          OM === rM && (OM = null)
         }
       },
-      LG = () => {
-        var GG;
-        return null !== (GG = wG) && void 0 !== GG && GG.canCycle() ? wG.cycle : null
+      jM = () => {
+        var MM;
+        return null !== (MM = OM) && void 0 !== MM && MM.canCycle() ? OM.cycle : null
       }
   },
-  36955: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => LG,
-      f: () => hG,
-      h: () => dG,
-      j: () => kG,
-      k: () => fG,
-      m: () => JG,
-      p: () => pG,
-      r: () => zG,
-      t: () => KG,
-      x: () => rG
+  37544: (MM, rM, iM) => {
+    iM.d(rM, {
+      B: () => lM,
+      b: () => jM,
+      f: () => JM,
+      i: () => dM,
+      j: () => PM,
+      m: () => mM,
+      q: () => yM,
+      u: () => LM,
+      x: () => EM,
+      y: () => hM
     });
-    var wG = ZG(17),
-      SG = ZG(19);
-    const LG = "clientGameInventoryButtonsChanged",
-      yG = new Map;
+    var OM = iM(19),
+      SM = iM(22);
+    const jM = "clientGameInventoryButtonsChanged",
+      aM = new Map;
 
-    function kG() {
-      return [...yG.values()].sort(((GG, bG) => {
-        var ZG, wG;
-        return (null !== (ZG = GG.order) && void 0 !== ZG ? ZG : 0) - (null !== (wG = bG.order) && void 0 !== wG ? wG : 0)
+    function PM() {
+      return [...aM.values()].sort(((MM, rM) => {
+        var iM, OM;
+        return (null !== (iM = MM.order) && void 0 !== iM ? iM : 0) - (null !== (OM = rM.order) && void 0 !== OM ? OM : 0)
       }))
     }
-    let UG = null;
+    let nM = null;
 
-    function YG(GG) {
-      UG = GG
+    function QM(MM) {
+      nM = MM
     }
-    let VG = !1;
+    let zM = !1;
 
-    function pG(GG) {
-      VG = !0;
+    function LM(MM) {
+      zM = !0;
       try {
-        GG.onClick()
+        MM.onClick()
       } finally {
-        VG = !1
+        zM = !1
       }
-      GG.panel && "clientGame" === wG.e.get("openInGameMenuName") && YG(GG.id)
+      MM.panel && "clientGame" === OM.d.get("openInGameMenuName") && QM(MM.id)
     }
 
-    function fG() {
-      return VG
+    function mM() {
+      return zM
     }
 
-    function QG() {
-      return kG().filter((GG => GG.panel && !GG.disabled))
+    function HM() {
+      return PM().filter((MM => MM.panel && !MM.disabled))
     }
 
-    function KG(GG) {
-      const bG = QG(),
-        ZG = bG.findIndex((GG => GG.id === UG));
-      return !(ZG < 0 || bG.length < 2) && (pG(bG[(ZG + GG + bG.length) % bG.length]), !0)
+    function hM(MM) {
+      const rM = HM(),
+        iM = rM.findIndex((MM => MM.id === nM));
+      return !(iM < 0 || rM.length < 2) && (LM(rM[(iM + MM + rM.length) % rM.length]), !0)
     }
 
-    function hG() {
-      return null !== UG && QG().length > 1
+    function JM() {
+      return null !== nM && HM().length > 1
     }
 
-    function dG() {
-      YG(null)
+    function dM() {
+      QM(null)
     }
 
-    function JG() {
-      "inventory" !== wG.e.get("openInGameMenuName") && YG(null)
+    function yM() {
+      "inventory" !== OM.d.get("openInGameMenuName") && QM(null)
     }
 
-    function rG() {
-      const GG = UG;
-      return YG(null), GG
+    function lM() {
+      const MM = nM;
+      return QM(null), MM
     }
 
-    function zG(GG) {
-      return yG.set(GG.id, GG), SG.l.xh(LG, kG(), !0), () => {
-        yG.get(GG.id) === GG && (yG.delete(GG.id), SG.l.xh(LG, kG()))
+    function EM(MM) {
+      return aM.set(MM.id, MM), SM.i.Tz(jM, PM(), !0), () => {
+        aM.get(MM.id) === MM && (aM.delete(MM.id), SM.i.Tz(jM, PM()))
       }
     }
   },
-  36951: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => kG,
-      f: () => dG,
-      i: () => JG,
-      j: () => fG,
-      l: () => YG,
-      m: () => hG,
-      n: () => QG,
-      q: () => VG
+  37542: (MM, rM, iM) => {
+    iM.d(rM, {
+      A: () => HM,
+      C: () => zM,
+      e: () => PM,
+      g: () => lM,
+      k: () => dM,
+      n: () => yM,
+      p: () => mM,
+      t: () => QM,
+      w: () => JM
     });
-    var wG = ZG(17),
-      SG = ZG(19),
-      LG = ZG(1251),
-      yG = ZG(36955);
-    const kG = "clientGameUiChanged";
-    let UG = null;
+    var OM = iM(19),
+      SM = iM(22),
+      jM = iM(1313),
+      aM = iM(37544);
+    const PM = "clientGameUiChanged";
+    let nM = null;
 
-    function YG() {
-      return UG
+    function QM() {
+      return nM
     }
 
-    function VG(GG, bG) {
-      const ZG = {
-        content: GG,
-        menu: bG
+    function zM(MM, rM) {
+      const iM = {
+        content: MM,
+        menu: rM
       };
-      return UG = ZG, SG.l.xh(kG, UG, !0), () => {
-        UG === ZG && (UG = null, KG = !1, dG(), SG.l.xh(kG, null))
+      return nM = iM, SM.i.Tz(PM, nM, !0), () => {
+        nM === iM && (nM = null, hM = !1, dM(), SM.i.Tz(PM, null))
       }
     }
-    let pG = null;
+    let LM = null;
 
-    function fG() {
-      return pG
+    function mM() {
+      return LM
     }
 
-    function QG(GG) {
-      return pG = GG, () => {
-        pG === GG && (pG = null)
+    function HM(MM) {
+      return LM = MM, () => {
+        LM === MM && (LM = null)
       }
     }
-    let KG = !1;
+    let hM = !1;
 
-    function hG() {
-      const GG = wG.e.get("openInGameMenuName");
-      "clientGame" !== GG && (KG = "inventory" === GG), (0, yG.k)() || (0, yG.h)(), (0, LG.z)(LG.e), wG.e.set({
+    function JM() {
+      const MM = OM.d.get("openInGameMenuName");
+      "clientGame" !== MM && (hM = "inventory" === MM), (0, aM.m)() || (0, aM.i)(), (0, jM.z)(jM.e), OM.d.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function dG() {
-      rG(!1)
+    function dM() {
+      EM(!1)
     }
 
-    function JG() {
-      rG(KG)
+    function yM() {
+      EM(hM)
     }
 
-    function rG(GG) {
-      "clientGame" === wG.e.get("openInGameMenuName") && wG.e.set({
-        openInGameMenuName: GG ? "inventory" : null
-      }), GG || (0, yG.h)(), KG = !1
+    function lM() {
+      hM && EM(!1)
+    }
+
+    function EM(MM) {
+      "clientGame" === OM.d.get("openInGameMenuName") && OM.d.set({
+        openInGameMenuName: MM ? "inventory" : null
+      }), MM || (0, aM.i)(), hM = !1
     }
   },
-  39859: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      default: () => BG
+  40563: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      default: () => cM
     });
-    const wG = {
+    const OM = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -261,270 +266,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var SG = ZG(51),
-      LG = ZG(38445),
-      yG = ZG(352);
-    const kG = ["Basic", "Rare", "Super"];
+    var SM = iM(44),
+      jM = iM(39012),
+      aM = iM(332);
+    const PM = ["Basic", "Rare", "Super"];
 
-    function UG(GG, bG) {
-      return `${"Basic"===bG?"":`${bG} `}${"Simple"===GG?"":`${GG} `}Lucky Block`
+    function nM(MM, rM) {
+      return `${"Basic"===rM?"":`${rM} `}${"Simple"===MM?"":`${MM} `}Lucky Block`
     }
-    const YG = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((GG => kG.map((bG => [UG(GG, bG), {
-      category: GG,
-      rarity: bG
+    const QM = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((MM => PM.map((rM => [nM(MM, rM), {
+      category: MM,
+      rarity: rM
     }])))));
-    YG.keys();
+    QM.keys();
 
-    function VG(GG) {
-      return YG.get(GG)
+    function zM(MM) {
+      return QM.get(MM)
     }
-    const pG = "Obsidian",
-      fG = ["Cobweb"],
-      QG = [...["Red", "Blue", "Green", "Yellow"].map((GG => `${(0,yG.gb)(GG)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", pG, ...fG];
+    const LM = "Obsidian",
+      mM = ["Cobweb"],
+      HM = [...["Red", "Blue", "Green", "Yellow"].map((MM => `${(0,aM.$)(MM)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", LM, ...mM];
 
-    function KG(GG) {
-      return QG.includes(GG)
+    function hM(MM) {
+      return HM.includes(MM)
     }
-    var hG = ZG(604);
+    var JM = iM(625);
 
-    function dG(GG, bG) {
-      const ZG = VG(GG);
-      if (ZG) {
-        const GG = VG(bG);
-        if (!GG) return;
-        const wG = kG.length - 1 - kG.indexOf(GG.rarity);
-        return (GG.category === ZG.category ? 0 : 1) * kG.length + wG
+    function dM(MM, rM) {
+      const iM = zM(MM);
+      if (iM) {
+        const MM = zM(rM);
+        if (!MM) return;
+        const OM = PM.length - 1 - PM.indexOf(MM.rarity);
+        return (MM.category === iM.category ? 0 : 1) * PM.length + OM
       }
-      if (!KG(GG)) return;
-      if (bG === GG) return 0;
-      const wG = GG => KG(GG) && !fG.includes(GG) && GG !== pG;
-      return wG(GG) && wG(bG) ? 1 : void 0
+      if (!hM(MM)) return;
+      if (rM === MM) return 0;
+      const OM = MM => hM(MM) && !mM.includes(MM) && MM !== LM;
+      return OM(MM) && OM(rM) ? 1 : void 0
     }
-    const JG = [...Array.from({
-      length: hG.t - hG.s
-    }, ((GG, bG) => hG.s + bG)), ...Array.from({
-      length: hG.s
-    }, ((GG, bG) => bG))];
-    class rG {
-      constructor(GG) {
-        this.inventory = GG, this.pending = new Map
+    const yM = [...Array.from({
+      length: JM.r - JM.q
+    }, ((MM, rM) => JM.q + rM)), ...Array.from({
+      length: JM.q
+    }, ((MM, rM) => rM))];
+    class lM {
+      constructor(MM) {
+        this.inventory = MM, this.pending = new Map
       }
-      onPlace(GG) {
-        var bG;
-        const ZG = this.inventory.selectedSlot(),
-          wG = this.inventory.itemAt(ZG);
-        (null === wG || void 0 === wG ? void 0 : wG.name) === GG && (null !== (bG = wG.amount) && void 0 !== bG ? bG : 1) <= 1 && zG(GG) && this.pending.set(ZG, GG)
+      onPlace(MM) {
+        var rM;
+        const iM = this.inventory.selectedSlot(),
+          OM = this.inventory.itemAt(iM);
+        (null === OM || void 0 === OM ? void 0 : OM.name) === MM && (null !== (rM = OM.amount) && void 0 !== rM ? rM : 1) <= 1 && EM(MM) && this.pending.set(iM, MM)
       }
-      onDrop(GG, bG) {
-        bG < hG.s && null === this.inventory.itemAt(bG) && zG(GG) && this.refill(bG, GG)
+      onDrop(MM, rM) {
+        rM < JM.q && null === this.inventory.itemAt(rM) && EM(MM) && this.refill(rM, MM)
       }
-      Tp() {
-        const GG = [...this.pending];
+      bL() {
+        const MM = [...this.pending];
         this.pending.clear();
-        for (const [bG, ZG] of GG) null === this.inventory.itemAt(bG) && this.refill(bG, ZG)
+        for (const [rM, iM] of MM) null === this.inventory.itemAt(rM) && this.refill(rM, iM)
       }
-      refill(GG, bG) {
-        const ZG = function(GG, bG, ZG, wG) {
-          let SG, LG = 1 / 0;
-          for (const yG of JG) {
-            if (yG === bG) continue;
-            const kG = wG(yG);
-            if (!kG || yG < hG.s && bG !== ZG) continue;
-            const UG = dG(GG, kG.name);
-            void 0 !== UG && UG < LG && (SG = yG, LG = UG)
+      refill(MM, rM) {
+        const iM = function(MM, rM, iM, OM) {
+          let SM, jM = 1 / 0;
+          for (const aM of yM) {
+            if (aM === rM) continue;
+            const PM = OM(aM);
+            if (!PM || aM < JM.q && rM !== iM) continue;
+            const nM = dM(MM, PM.name);
+            void 0 !== nM && nM < jM && (SM = aM, jM = nM)
           }
-          return SG
-        }(bG, GG, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== ZG && this.inventory.swap(GG, ZG)
+          return SM
+        }(rM, MM, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== iM && this.inventory.swap(MM, iM)
       }
     }
 
-    function zG(GG) {
-      return !!VG(GG) || KG(GG)
+    function EM(MM) {
+      return !!zM(MM) || hM(MM)
     }
-    var EG = ZG(36951),
-      oG = ZG(59),
-      XG = ZG(1006),
-      uG = ZG.n(XG);
-    const iG = "Lucky Clover",
-      CG = {
+    var UM = iM(37542),
+      GM = iM(65),
+      CM = iM(1116),
+      eM = iM.n(CM);
+    const bM = "Lucky Clover",
+      wM = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function WG(GG) {
-      return CG[GG][0]
+    function tM(MM) {
+      return wM[MM][0]
     }
 
-    function mG(GG) {
-      return kG.filter((bG => GG >= WG(bG)))
+    function gM(MM) {
+      return PM.filter((rM => MM >= tM(rM)))
     }
-    var IG = ZG(333),
-      FG = ZG(2409),
-      vG = ZG(17),
-      aG = ZG(2549),
-      cG = ZG(1889),
-      lG = ZG(36946),
-      jG = ZG(1016);
-    var PG = ZG(1067);
-    const MG = {
-      Basic: yG.O.whiteUiText,
-      Rare: yG.O.goldUiText,
-      Super: yG.O.cyanUiText
+    var uM = iM(313),
+      RM = iM(2640),
+      pM = iM(19),
+      WM = iM(2811),
+      sM = iM(2026),
+      DM = iM(37538),
+      kM = iM(1398);
+    var ZM = iM(1303);
+    const oM = {
+      Basic: aM.L.whiteUiText,
+      Rare: aM.L.goldUiText,
+      Super: aM.L.cyanUiText
     };
-    let AG = 1;
+    let fM = 1;
 
-    function sG() {
-      const GG = (0, FG.i)("currencyAmounts"),
-        bG = null === GG || void 0 === GG ? void 0 : GG.Clovers;
-      return !bG || bG.hidden ? null : (0, PG.jsx)(lG.d, {
-        children: (0, PG.jsx)(qG, {
-          amount: bG.amount
+    function YM() {
+      const MM = (0, RM.f)("currencyAmounts"),
+        rM = null === MM || void 0 === MM ? void 0 : MM.Clovers;
+      return !rM || rM.hidden ? null : (0, ZM.jsx)(DM.i, {
+        children: (0, ZM.jsx)(NM, {
+          amount: rM.amount
         })
       })
     }
 
-    function qG(GG) {
-      var bG, ZG, wG;
+    function NM(MM) {
+      var rM, iM, OM;
       let {
-        amount: LG
-      } = GG;
+        amount: jM
+      } = MM;
       const {
-        openEverythingMenuName: UG
-      } = (0, vG.o)(["openEverythingMenuName"]), YG = (0, aG.e)(), [VG, pG] = (0, SG.useState)(LG), [fG, QG] = (0, SG.useState)(null), [KG, hG] = (0, SG.useState)(0), [dG, JG] = (0, SG.useState)([]), rG = (0, SG.useRef)(LG), zG = (0, SG.useRef)(!1), EG = (0, SG.useRef)(null), XG = UG === IG.u.SHOP;
-      (0, SG.useEffect)((() => {
-        const GG = rG.current;
-        if (rG.current = LG, LG <= GG || XG) return void pG(LG);
-        const bG = YG || dG.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (ZG = LG - GG, wG = !zG.current, ZG <= 0 || !wG && ZG < 40 ? 0 : Math.min(4, Math.ceil(ZG / 30)));
-        var ZG, wG;
-        if (zG.current = !0, mG(LG).length > mG(GG).length && hG(AG++), bG > 0) {
-          const GG = [];
-          for (let ZG = 0; ZG < bG; ZG++) GG.push({
-            id: AG++,
+        openEverythingMenuName: nM
+      } = (0, pM.m)(["openEverythingMenuName"]), QM = (0, WM.b)(), [zM, LM] = (0, SM.useState)(jM), [mM, HM] = (0, SM.useState)(null), [hM, JM] = (0, SM.useState)(0), [dM, yM] = (0, SM.useState)([]), lM = (0, SM.useRef)(jM), EM = (0, SM.useRef)(!1), UM = (0, SM.useRef)(null), CM = nM === uM.m.SHOP;
+      (0, SM.useEffect)((() => {
+        const MM = lM.current;
+        if (lM.current = jM, jM <= MM || CM) return void LM(jM);
+        const rM = QM || dM.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (iM = jM - MM, OM = !EM.current, iM <= 0 || !OM && iM < 40 ? 0 : Math.min(4, Math.ceil(iM / 30)));
+        var iM, OM;
+        if (EM.current = !0, gM(jM).length > gM(MM).length && JM(fM++), rM > 0) {
+          const MM = [];
+          for (let iM = 0; iM < rM; iM++) MM.push({
+            id: fM++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * ZG
+            delayMs: 70 * iM
           });
-          JG((bG => [...bG, ...GG]))
+          yM((rM => [...rM, ...MM]))
         }
-        const SG = bG > 0 ? 600 : 0;
-        QG({
-          id: AG++,
-          delayMs: SG
+        const SM = rM > 0 ? 600 : 0;
+        HM({
+          id: fM++,
+          delayMs: SM
         });
-        const kG = performance.now() + SG;
-        let UG = 0;
-        const VG = bG => {
-          const ZG = yG.c.clamp((bG - kG) / 600, 0, 1);
-          pG(Math.round(GG + (LG - GG) * ZG)), ZG < 1 && (UG = requestAnimationFrame(VG))
+        const PM = performance.now() + SM;
+        let nM = 0;
+        const zM = rM => {
+          const iM = aM.d.clamp((rM - PM) / 600, 0, 1);
+          LM(Math.round(MM + (jM - MM) * iM)), iM < 1 && (nM = requestAnimationFrame(zM))
         };
-        return UG = requestAnimationFrame(VG), () => {
-          cancelAnimationFrame(UG)
+        return nM = requestAnimationFrame(zM), () => {
+          cancelAnimationFrame(nM)
         }
-      }), [LG, XG]);
-      const CG = function(GG) {
-          var bG;
-          const ZG = null !== (bG = kG.find((bG => GG < WG(bG)))) && void 0 !== bG ? bG : "Super";
+      }), [jM, CM]);
+      const wM = function(MM) {
+          var rM;
+          const iM = null !== (rM = PM.find((rM => MM < tM(rM)))) && void 0 !== rM ? rM : "Super";
           return {
-            rarity: ZG,
-            progress: yG.c.clamp(GG / WG(ZG), 0, 1)
+            rarity: iM,
+            progress: aM.d.clamp(MM / tM(iM), 0, 1)
           }
-        }(VG),
-        FG = mG(VG).at(-1);
-      return (0, PG.jsxs)(PG.Fragment, {
-        children: [(0, PG.jsx)("div", {
+        }(zM),
+        RM = gM(zM).at(-1);
+      return (0, ZM.jsxs)(ZM.Fragment, {
+        children: [(0, ZM.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, PG.jsxs)("div", {
-            className: uG()("LuckyCloverWallet", {
-              Capped: FG && "Basic" !== FG
+          children: (0, ZM.jsxs)("div", {
+            className: eM()("LuckyCloverWallet", {
+              Capped: RM && "Basic" !== RM
             }),
-            style: FG && {
-              "--luckyTierColour": MG[FG]
+            style: RM && {
+              "--luckyTierColour": oM[RM]
             },
-            children: [(0, PG.jsx)("div", {
+            children: [(0, ZM.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${CG.progress})`
+                transform: `scaleX(${wM.progress})`
               }
-            }), KG > 0 && (0, PG.jsx)("div", {
+            }), hM > 0 && (0, ZM.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(bG=null===fG||void 0===fG?void 0:fG.delayMs)&&void 0!==bG?bG:0}ms`
+                animationDelay: `${null!==(rM=null===mM||void 0===mM?void 0:mM.delayMs)&&void 0!==rM?rM:0}ms`
               }
-            }, KG), (0, PG.jsx)("div", {
-              ref: EG,
-              className: uG()("LuckyCloverWalletIcon", fG && "Bounce"),
+            }, hM), (0, ZM.jsx)("div", {
+              ref: UM,
+              className: eM()("LuckyCloverWalletIcon", mM && "Bounce"),
               style: {
-                animationDelay: `${null!==(wG=null===fG||void 0===fG?void 0:fG.delayMs)&&void 0!==wG?wG:0}ms`
+                animationDelay: `${null!==(OM=null===mM||void 0===mM?void 0:mM.delayMs)&&void 0!==OM?OM:0}ms`
               },
-              children: (0, PG.jsx)(cG.b, {
-                itemName: iG,
+              children: (0, ZM.jsx)(sM.b, {
+                itemName: bM,
                 amount: 0
               })
-            }, null !== (ZG = null === fG || void 0 === fG ? void 0 : fG.id) && void 0 !== ZG ? ZG : 0), (0, PG.jsx)("span", {
+            }, null !== (iM = null === mM || void 0 === mM ? void 0 : mM.id) && void 0 !== iM ? iM : 0), (0, ZM.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: VG
-            }), FG && (0, PG.jsx)(jG.c, {
+              children: zM
+            }), RM && (0, ZM.jsx)(kM.b, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, oG.createPortal)(dG.map((GG => (0, PG.jsx)(nG, {
-          flyer: GG,
-          target: EG,
+        }), (0, GM.createPortal)(dM.map((MM => (0, ZM.jsx)(AM, {
+          flyer: MM,
+          target: UM,
           onDone: () => {
-            JG((bG => bG.filter((bG => bG.id !== GG.id))))
+            yM((rM => rM.filter((rM => rM.id !== MM.id))))
           }
-        }, GG.id))), document.body)]
+        }, MM.id))), document.body)]
       })
     }
 
-    function nG(GG) {
+    function AM(MM) {
       let {
-        flyer: bG,
-        target: ZG,
-        onDone: wG
-      } = GG;
-      const LG = (0, SG.useRef)(null);
-      return (0, SG.useEffect)((() => {
-        var GG;
-        const SG = null === (GG = ZG.current) || void 0 === GG ? void 0 : GG.getBoundingClientRect();
-        if (!LG.current || !SG) return void wG();
+        flyer: rM,
+        target: iM,
+        onDone: OM
+      } = MM;
+      const jM = (0, SM.useRef)(null);
+      return (0, SM.useEffect)((() => {
+        var MM;
+        const SM = null === (MM = iM.current) || void 0 === MM ? void 0 : MM.getBoundingClientRect();
+        if (!jM.current || !SM) return void OM();
         const {
-          x: yG,
-          y: kG
-        } = bG, UG = yG + 140 * (Math.random() - .5), YG = kG - 30 - 40 * Math.random(), VG = LG.current.animate([{
-          transform: `translate(${yG}px, ${kG}px) scale(0.3)`,
+          x: aM,
+          y: PM
+        } = rM, nM = aM + 140 * (Math.random() - .5), QM = PM - 30 - 40 * Math.random(), zM = jM.current.animate([{
+          transform: `translate(${aM}px, ${PM}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${UG}px, ${YG}px) scale(1.3)`,
+          transform: `translate(${nM}px, ${QM}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${SG.left}px, ${SG.top}px) scale(0.8)`,
+          transform: `translate(${SM.left}px, ${SM.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: bG.delayMs,
+          delay: rM.delayMs,
           fill: "backwards"
         });
-        return VG.onfinish = wG, () => {
-          VG.cancel()
+        return zM.onfinish = OM, () => {
+          zM.cancel()
         }
-      }), []), (0, PG.jsx)("div", {
-        ref: LG,
+      }), []), (0, ZM.jsx)("div", {
+        ref: jM,
         className: "LuckyCloverFlying",
-        children: (0, PG.jsx)(cG.b, {
-          itemName: iG,
+        children: (0, ZM.jsx)(sM.b, {
+          itemName: bM,
           amount: 0
         })
       })
     }
-    var gG = ZG(19);
-    const eG = "luckyGearUpgradeView",
-      RG = {
+    var xM = iM(22);
+    const vM = "luckyGearUpgradeView",
+      FM = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -532,13 +537,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function TG(GG) {
-      var bG;
-      return null !== (bG = RG[GG.split(" ")[0]]) && void 0 !== bG ? bG : "#e07bff"
+    function BM(MM) {
+      var rM;
+      return null !== (rM = FM[MM.split(" ")[0]]) && void 0 !== rM ? rM : "#e07bff"
     }
-    class HG {
-      constructor(GG, bG) {
-        this.selectedSlot = GG, this.itemAt = bG, this.rings = [], this.unseen = new Map, this.view = {
+    class XM {
+      constructor(MM, rM) {
+        this.selectedSlot = MM, this.itemAt = rM, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -546,200 +551,200 @@ export const modules = {
       getView() {
         return this.view
       }
-      hK(GG) {
-        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [ZG, wG, SG] of GG) this.rings.push({
+      GL(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [iM, OM, SM] of MM) this.rings.push({
           id: this.nextId++,
-          slot: ZG,
-          colour: TG(SG),
-          until: bG + 1200
-        }), ZG !== this.selectedSlot() && this.unseen.set(ZG, {
-          from: wG,
-          to: SG
+          slot: iM,
+          colour: BM(SM),
+          until: rM + 1200
+        }), iM !== this.selectedSlot() && this.unseen.set(iM, {
+          from: OM,
+          to: SM
         });
-        this.xh()
+        this.Tz()
       }
-      Tp() {
-        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
+      bL() {
+        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const bG = this.rings.filter((bG => bG.until > GG));
-        let ZG = bG.length !== this.rings.length;
-        this.rings = bG;
-        for (const [wG, {
-            from: SG,
-            to: LG
+        const rM = this.rings.filter((rM => rM.until > MM));
+        let iM = rM.length !== this.rings.length;
+        this.rings = rM;
+        for (const [OM, {
+            from: SM,
+            to: jM
           }] of this.unseen) {
-          const GG = this.itemAt(wG);
-          (wG === this.selectedSlot() || GG !== LG && GG !== SG) && (this.unseen.delete(wG), ZG = !0)
+          const MM = this.itemAt(OM);
+          (OM === this.selectedSlot() || MM !== jM && MM !== SM) && (this.unseen.delete(OM), iM = !0)
         }
-        ZG && this.xh()
+        iM && this.Tz()
       }
-      xh() {
+      Tz() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, gG.l.xh(eG, this.view)
+        }, xM.i.Tz(vM, this.view)
       }
     }
-    var tG = ZG(1389);
+    var IM = iM(1516);
 
-    function DG(GG) {
-      return document.querySelector(`.HotBar [data-inven-idx="${GG}"]`)
+    function KM(MM) {
+      return document.querySelector(`.HotBar [data-inven-idx="${MM}"]`)
     }
 
-    function NG(GG) {
+    function qM(MM) {
       let {
-        ring: bG
-      } = GG;
-      const [ZG, wG] = (0, SG.useState)(null);
-      return (0, SG.useLayoutEffect)((() => {
-        var GG, ZG;
-        wG(null !== (GG = null === (ZG = DG(bG.slot)) || void 0 === ZG ? void 0 : ZG.getBoundingClientRect()) && void 0 !== GG ? GG : null)
-      }), [bG]), ZG ? (0, PG.jsx)("div", {
+        ring: rM
+      } = MM;
+      const [iM, OM] = (0, SM.useState)(null);
+      return (0, SM.useLayoutEffect)((() => {
+        var MM, iM;
+        OM(null !== (MM = null === (iM = KM(rM.slot)) || void 0 === iM ? void 0 : iM.getBoundingClientRect()) && void 0 !== MM ? MM : null)
+      }), [rM]), iM ? (0, ZM.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: ZG.left,
-          top: ZG.top,
-          width: ZG.width,
-          height: ZG.height,
-          "--ringColour": bG.colour,
+          left: iM.left,
+          top: iM.top,
+          width: iM.width,
+          height: iM.height,
+          "--ringColour": rM.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function OG(GG) {
+    function TM(MM) {
       let {
-        slot: bG
-      } = GG;
-      const [ZG, wG] = (0, SG.useState)(null);
-      return (0, SG.useLayoutEffect)((() => {
-        const GG = () => {
-          wG(DG(bG))
+        slot: rM
+      } = MM;
+      const [iM, OM] = (0, SM.useState)(null);
+      return (0, SM.useLayoutEffect)((() => {
+        const MM = () => {
+          OM(KM(rM))
         };
-        GG();
-        const ZG = new MutationObserver(GG),
-          SG = document.querySelector(".BottomMiddleElements");
-        return SG && ZG.observe(SG, {
+        MM();
+        const iM = new MutationObserver(MM),
+          SM = document.querySelector(".BottomMiddleElements");
+        return SM && iM.observe(SM, {
           childList: !0,
           subtree: !0
         }), () => {
-          ZG.disconnect()
+          iM.disconnect()
         }
-      }), [bG]), ZG ? (0, oG.createPortal)((0, PG.jsx)("div", {
+      }), [rM]), iM ? (0, GM.createPortal)((0, ZM.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), ZG) : null
+      }), iM) : null
     }
 
-    function xG(GG) {
+    function VM(MM) {
       let {
-        controller: bG
-      } = GG;
-      const ZG = (0, tG.j)(eG, bG.getView());
-      return (0, PG.jsxs)(PG.Fragment, {
-        children: [ZG.rings.map((GG => (0, PG.jsx)(NG, {
-          ring: GG
-        }, GG.id))), ZG.unseenSlots.map((GG => (0, PG.jsx)(OG, {
-          slot: GG
-        }, GG)))]
+        controller: rM
+      } = MM;
+      const iM = (0, IM.e)(vM, rM.getView());
+      return (0, ZM.jsxs)(ZM.Fragment, {
+        children: [iM.rings.map((MM => (0, ZM.jsx)(qM, {
+          ring: MM
+        }, MM.id))), iM.unseenSlots.map((MM => (0, ZM.jsx)(TM, {
+          slot: MM
+        }, MM)))]
       })
     }
-    const BG = function(GG, bG, ZG, yG) {
-      let kG, {
-          localPlayerId: UG
-        } = yG,
-        YG = null;
-      const VG = new rG({
-          itemAt: GG => kG.getItemSlot(UG, GG),
-          selectedSlot: () => kG.getSelectedInventorySlotI(UG),
-          swap: (GG, bG) => {
-            kG.swapInventorySlots(GG, bG)
+    const cM = function(MM, rM, iM, aM) {
+      let PM, {
+          localPlayerId: nM
+        } = aM,
+        QM = null;
+      const zM = new lM({
+          itemAt: MM => PM.getItemSlot(nM, MM),
+          selectedSlot: () => PM.getSelectedInventorySlotI(nM),
+          swap: (MM, rM) => {
+            PM.swapInventorySlots(MM, rM)
           }
         }),
-        pG = new HG((() => kG.getSelectedInventorySlotI(UG)), (GG => {
-          var bG;
-          return null === (bG = kG.getItemSlot(UG, GG)) || void 0 === bG ? void 0 : bG.name
+        LM = new XM((() => PM.getSelectedInventorySlotI(nM)), (MM => {
+          var rM;
+          return null === (rM = PM.getItemSlot(nM, MM)) || void 0 === rM ? void 0 : rM.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, LG.c)()
+          placeAgainstBeds: (0, jM.d)()
         },
-        onCreate: GG => {
-          kG = GG, YG = (0, EG.q)((0, SG.createElement)(SG.Fragment, null, (0, SG.createElement)(sG), (0, SG.createElement)(xG, {
-            controller: pG
+        onCreate: MM => {
+          PM = MM, QM = (0, UM.C)((0, SM.createElement)(SM.Fragment, null, (0, SM.createElement)(YM), (0, SM.createElement)(VM, {
+            controller: LM
           })))
         },
         onClose: () => {
-          var GG;
-          null === (GG = YG) || void 0 === GG || GG()
+          var MM;
+          null === (MM = QM) || void 0 === MM || MM()
         },
-        Tp: () => {
-          VG.Tp(), pG.Tp()
+        bL: () => {
+          zM.bL(), LM.bL()
         },
-        onReceivedMessageFromServer: (GG, bG) => {
-          "luckyGearUpgrade" === GG && pG.hK(bG)
+        onReceivedMessageFromServer: (MM, rM) => {
+          "luckyGearUpgrade" === MM && LM.GL(rM)
         },
-        onPlayerChangeBlock: (GG, bG, ZG, wG, SG, LG) => {
-          "Air" !== LG && VG.onPlace(LG)
+        onPlayerChangeBlock: (MM, rM, iM, OM, SM, jM) => {
+          "Air" !== jM && zM.onPlace(jM)
         },
-        onPlayerDropItem: (GG, bG, ZG, wG) => {
-          VG.onDrop(bG, wG)
+        onPlayerDropItem: (MM, rM, iM, OM) => {
+          zM.onDrop(rM, OM)
         },
-        onPlayerAltAction: (GG, bG, ZG, SG, LG, yG) => {
-          if (!yG || "Mesh" !== kG.getEntityType(yG)) return;
-          const UG = kG.getEntityName(yG),
-            YG = Object.values(wG).find((GG => GG.name === UG));
-          YG && kG.openShop(GG, !1, YG.shopTab)
+        onPlayerAltAction: (MM, rM, iM, SM, jM, aM) => {
+          if (!aM || "Mesh" !== PM.getEntityType(aM)) return;
+          const nM = PM.getEntityName(aM),
+            QM = Object.values(OM).find((MM => MM.name === nM));
+          QM && PM.openShop(MM, !1, QM.shopTab)
         }
       }
     }
   },
-  38445: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => kG
+  39012: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => PM
     });
-    var wG = ZG(352),
-      SG = ZG(37287),
-      LG = ZG(4492);
-    const yG = ["Leaf Bed", "_Leaf Bed Head", ...wG.Sc.flatMap((GG => [`${GG} Bed`, `_${GG} Bed Head`, `${GG} Strongbed`, `_${GG} Strongbed Head`]))];
+    var OM = iM(332),
+      SM = iM(37858),
+      jM = iM(4854);
+    const aM = ["Leaf Bed", "_Leaf Bed Head", ...OM.Ec.flatMap((MM => [`${MM} Bed`, `_${MM} Bed Head`, `${MM} Strongbed`, `_${MM} Strongbed Head`]))];
 
-    function kG() {
-      let GG;
+    function PM() {
+      let MM;
       return {
-        onCreate(bG) {
-          GG = bG
+        onCreate(rM) {
+          MM = rM
         },
-        altVetoBlocks: yG,
-        onPlayerAttemptAltAction(bG, ZG, wG, yG, kG, UG) {
-          var YG;
-          if ((0, SG.d)(GG.getMetaInfo(kG).rootName) && !GG.isEntityInteractable(UG) && (0, LG.d)(null === (YG = GG.YZG(bG)) || void 0 === YG ? void 0 : YG.typeObj.type)) return "preventAction"
+        altVetoBlocks: aM,
+        onPlayerAttemptAltAction(rM, iM, OM, aM, PM, nM) {
+          var QM;
+          if ((0, SM.e)(MM.getMetaInfo(PM).rootName) && !MM.isEntityInteractable(nM) && (0, jM.g)(null === (QM = MM.TrM(rM)) || void 0 === QM ? void 0 : QM.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  37287: (GG, bG, ZG) => {
-    function wG(GG) {
-      return GG.includes("Leaf Bed")
+  37858: (MM, rM, iM) => {
+    function OM(MM) {
+      return MM.includes("Leaf Bed")
     }
 
-    function SG(GG) {
-      return / Bed(?: Head)?(?:\||$)/.test(GG) && !wG(GG)
+    function SM(MM) {
+      return / Bed(?: Head)?(?:\||$)/.test(MM) && !OM(MM)
     }
 
-    function LG(GG) {
-      return GG.includes(" Strongbed")
+    function jM(MM) {
+      return MM.includes(" Strongbed")
     }
 
-    function yG(GG) {
-      return wG(GG) || SG(GG) || LG(GG)
+    function aM(MM) {
+      return OM(MM) || SM(MM) || jM(MM)
     }
-    ZG.d(bG, {
-      d: () => yG,
-      f: () => wG,
-      j: () => LG,
-      n: () => SG
+    iM.d(rM, {
+      e: () => aM,
+      g: () => OM,
+      h: () => jM,
+      l: () => SM
     })
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

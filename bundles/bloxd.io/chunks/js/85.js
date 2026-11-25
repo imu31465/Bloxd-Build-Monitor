@@ -1,4495 +1,10111 @@
 export const id = 85;
 export const ids = [85];
 export const modules = {
-  4779: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      default: () => wG
+  37981: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => OM
     });
-    const wG = String.raw`export interface GameApi {
-		/** The ID of the player running the code.
-		 *
-		 * Lobby code usually has nobody running it, so this is null.
-		 */
-		myId: string | null
-		/** The position of the code block or press to code board */
-		thisPos: [number, number, number]
-		/** The owner of the current custom lobby */
-		lobbyOwnerId: string | null
-		/**
- * Get position of a player / entity.
- * @param entityId
- */
-getPosition(entityId: EntityId): Pos
-/**
- * Set position of a player / entity.
- * @param entityId
- * @param x Can also be an array, in which case y and z shouldn't be passed
- * @param y
- * @param z
- */
-setPosition(entityId: EntityId, x: number | number[], y?: number, z?: number): void
-/**
- * Get the scale of a lifeform.
- * @param lifeformId
- */
-getLifeformScale(lifeformId: LifeformId): number
-/**
- * Set the visual + physical scale of a lifeform. A scale of 1 is the default size.
- * Bodies stop growing at 25 blocks wide and 90 tall (a player's at scale 50); past that only the model grows.
- * getLifeformScale returns the scale rounded to 32-bit precision (0.7 reads back as 0.699999988079071).
- *
- * @param lifeformId
- * @param scale Must be a positive number, from about 1.4e-45 to 3.4e38.
- */
-setLifeformScale(lifeformId: LifeformId, scale: number): void
-/**
- * Get all the player ids.
- */
-getPlayerIds(): PlayerId[]
-/**
- * Whether a player is currently in the game
- *
- * @param playerId
- */
-playerIsInGame(playerId: PlayerId): boolean
-/**
- * Whether a player is signed in to a Bloxd account: false for guests, who are still in the game.
- * To check that a player is still in the game, use playerIsInGame.
- * @param playerId
- * @returns
- */
-playerIsLoggedIn(playerId: PlayerId): boolean
-/**
- * Returns the party that the player was in when they joined the game. The returned object contains the playerDbIds, as well
- * as the playerIds if available, of the party leader and members.
- *
- * @param playerId
- * @returns
- */
-getPlayerPartyWhenJoined(playerId: PlayerId): { partyCode: string; playerDbIds: PlayerDbId[] } | null
-/**
- * Get the number of players in the room
- */
-getNumPlayers(): number
-/**
- * Get the co-ordinates of the blocks the entity is standing on as a list. For example, if the centre of the entity is at 0,0,0
- * this function will return [[0, -1, 0], [-1, -1, 0], [0, -1, -1], [-1, -1, -1]]
- * If the entity is just standing on one block, the function would return e.g. [[0, 0, 0]]
- * If the entity is midair or has no physics body, returns an empty list [].
- *
- * @param playerId
- */
-getBlockCoordinatesPlayerStandingOn(playerId: EntityId): number[][]
-/**
- * Get the types of block the entity is standing on
- * For example, if an entity is standing on 4 dirt blocks, this will return ["Dirt", "Dirt", "Dirt", "Dirt"]
- * Returns an empty list if the entity is midair or has no physics body.
- * @param playerId
- */
-getBlockTypesPlayerStandingOn(playerId: EntityId): any[]
-/**
- * Get the up to 12 unit co-ordinates the entity is located within
- * (Samples the four horizontal corners at up to three vertical levels)
- *
- * @param lifeformId
- * @returns List of x, y, z positions e.g. [[-1, 0, 0], [-1, 1, 0], [-1, 2, 0]]
- */
-getUnitCoordinatesLifeformWithin(lifeformId: EntityId): number[][]
-/**
- * Show the shop tutorial for a player. Will not be shown if they have ever seen the shop tutorial in your game before.
- * @param playerId
- */
-showShopTutorial(playerId: PlayerId): void
-/**
- * Get the current shield of an entity.
- * @param entityId
- */
-getShieldAmount(entityId: EntityId): number
-/**
- * Set the current shield of a lifeform.
- *
- * @param lifeformId
- * @param newShieldAmount
- */
-setShieldAmount(lifeformId: LifeformId, newShieldAmount: number): void
-/**
- * Get the current health of an entity.
- * @param entityId
- */
-getHealth(entityId: PlayerId): number
-/**
- * @param lifeformId
- * @param changeAmount Must be an integer. A positive amount will increase the entity's health. A negative amount will decrease the entity's shield first, then their health.
- * @param whoDidDamage Optional - If damage done by another player
- * @param broadcastLifeformHurt
- *
- * @return Whether the entity was killed
- */
-applyHealthChange(lifeformId: LifeformId, changeAmount: number, whoDidDamage?: LifeformId | { lifeformId: LifeformId; withItem: string }, broadcastLifeformHurt?: boolean): boolean
-/**
- * Set the current health of an entity.
- * If you want to set their health to more than their current max health, the optional increaseMaxHealthIfNeeded must be true.
- *
- * @param entityId
- * @param newHealth Can be null to make the player not have health
- * @param whoDidDamage Optional
- * @param increaseMaxHealthIfNeeded Optional
- *
- * @return Whether this change in health killed the player
- */
-setHealth(entityId: EntityId, newHealth: number | null, whoDidDamage?: LifeformId | { lifeformId: LifeformId; withItem: string }, increaseMaxHealthIfNeeded?: boolean): boolean
-/**
- * Make it as if hittingEId hit hitEId
- *
- * @param hittingEId
- * @param hitEId
- * @param dirFacing
- * @param bodyPartHit
- * @param overrides
- * @returns whether the attack damaged the lifeform
- */
-applyMeleeHit(hittingEId: LifeformId, hitEId: LifeformId, dirFacing: number[], bodyPartHit?: LifeformBodyPart | null, overrides?: { damage?: number | null; heldItemName?: string | null; horizontalKbMultiplier?: number; verticalKbMultiplier?: number; }): boolean
-/**
- * Apply damage to a lifeform.
- * eId is the player initiating the damage, hitEId is the lifeform being hit.
- *
- * It is recommended to self-inflict damage when the game code wants to apply damage to a lifeform.
- *
- * @param eId
- * @param hitEId
- * @param attemptedDmgAmt
- * @param withItem
- * @param bodyPartHit
- * @param attackDir
- * @param showCritParticles
- * @param reduceVerticalKbVelocity
- * @param horizontalKbMultiplier
- * @param verticalKbMultiplier
- * @param broadcastEntityHurt
- * @param attackCooldownSettings
- * @param hittingSoundOverride
- * @param ignoreOtherEntitySettingCanAttack
- * @param isTrueDamage
- * @param damagerDbId
- * @param damageCause What dealt the hit, passed to the damage callbacks. Defaults to null
- *
- * @returns whether the attack damaged the lifeform
- */
-attemptApplyDamage({
-		eId,
-		hitEId,
-		attemptedDmgAmt,
-		withItem,
-		bodyPartHit,
-		attackDir,
-		showCritParticles,
-		reduceVerticalKbVelocity,
-		horizontalKbMultiplier,
-		verticalKbMultiplier,
-		broadcastEntityHurt,
-		attackCooldownSettings,
-		hittingSoundOverride,
-		ignoreOtherEntitySettingCanAttack,
-		isTrueDamage,
-		damagerDbId,
-		damageCause,
-	}: PlayerAttemptDamageOtherPlayerOpts): boolean
-/**
- * Create enchantment attributes for an item at a given enchantment level. Same behaviour as if that level of enchant was selected for the item in an enchanting table.
- * @param itemName
- * @param enchantmentLevel
- */
-createEnchantmentAttributesForItem(itemName: ItemName, enchantmentLevel: number): EnchantmentAttributes
-/**
- * Force respawn a player, stopping their motion
- * @param playerId
- * @param respawnPos
- */
-forceRespawn(playerId: PlayerId, respawnPos?: number[]): void
-/**
- * Kill a lifeform, e.g. api.killLifeform(playerId).
- * @param lifeformId
- * @param whoKilled - Optional: who killed them, as a lifeform id or { lifeformId, withItem }. Leave it out (not null) when nothing killed them
- */
-killLifeform(lifeformId: LifeformId, whoKilled?: LifeformId | { lifeformId: LifeformId; withItem: string }): void
-/**
- * Gets the player's current killstreak
- *
- * @param playerId
- * @returns
- */
-getCurrentKillstreak(playerId: PlayerId): number
-/**
- * Clears the player's current killstreak
- *
- * @param playerId
- */
-clearKillstreak(playerId: PlayerId): void
-/**
- * Whether a lifeform is alive or dead (or on the respawn screen, in a player's case).
- *
- * @param lifeformId
- * @returns
- */
-isAlive(lifeformId: LifeformId): boolean
-/**
- * Send a message to everyone
- *
- * @param message The text contained within the message. Can use \`Custom Text Styling\`.
- * @param style An optional style argument. Can contain values for fontWeight and color of the message.
- *          style is ignored if message uses custom text styling (i.e. is not a string).
- */
-broadcastMessage(message: string | CustomTextStyling, style?: { fontWeight?: number | string; color?: string; colour?: string }): void
-/**
- * Send a message to a specific player
- *
- * @param playerId Id of the player
- * @param message The text contained within the message. Can use \`Custom Text Styling\`.
- * @param style An optional style argument. Can contain values for fontWeight and color of the message.
- *              style is ignored if message uses custom text styling (i.e. is not a string).
- */
-sendMessage(playerId: PlayerId, message: string | CustomTextStyling, style?: { fontWeight?: number | string; color?: string }): void
-/**
- * Send a flying middle message to a specific player
- *
- * @param playerId Id of the player
- * @param message The text contained within the message. Can be either a string or use \`Custom Text Styling\`.
- * @param distanceFromAction The distance from the action that has caused this message to be displayed,
- *                           this value will be used to determine how the message flies across the screen.
- * @param lifetimeMs How long the message will be visible in milliseconds. Defaults to 1000ms.
- */
-sendFlyingMiddleMessage(playerId: PlayerId, message: string | CustomTextStyling, distanceFromAction: number, lifetimeMs?: number): void
-/**
- * Modify a client option at runtime and send to the client if it changed
- *
- * @param playerId
- * @param option The name of the option
- * @param value The new value of the option
- */
-setClientOption<PassedOption extends ClientOption>(playerId: PlayerId, option: PassedOption, value: ClientOptions[PassedOption]): void
-/**
- * Returns the current value of a client option
- *
- * @param playerId
- * @param option
- */
-getClientOption<PassedOption extends ClientOption>(playerId: PlayerId, option: PassedOption): ClientOptions[PassedOption]
-/**
- * Create a new shop item under the given category.
- * Will create a new category if it does not exist.
- * If the shop item already exists then it will be replaced.
- * If any per-player overrides exist under the same categoryKey and itemKey then they will be deleted.
- *
- * @param categoryKey - The key of the category to create the item in
- * @param itemKey - The unique key for the item
- * @param item - The shop item to create (will be mutated)
- */
-createShopItem(categoryKey: ShopCategoryKey, itemKey: ShopItemKey, item: ShopItem): void
-/**
- * Update selected properties of an existing shop item.
- * For example, { canBuy: true } to allow players to purchase the item.
- * Throws an error if the item does not exist.
- *
- * @param categoryKey - The key of the category containing the item
- * @param itemKey - The unique key for the item
- * @param changes - Partial shop item properties to update
- */
-updateShopItem(categoryKey: ShopCategoryKey, itemKey: ShopItemKey, changes: Partial<ShopItem>): void
-/**
- * Delete an existing shop item.
- * Throws an error if the item does not exist.
- * Will also delete all per-player overrides for the shop item.
- *
- * @param categoryKey - The key of the category containing the item
- * @param itemKey - The unique key for the item
- */
-deleteShopItem(categoryKey: ShopCategoryKey, itemKey: ShopItemKey): void
-/**
- * Set properties of a shop category.
- *
- * @param categoryKey - The key of the category to configure
- * @param config - Category configuration properties
- */
-configureShopCategory(categoryKey: ShopCategoryKey, config: ShopCategoryConfig): void
-/**
- * Create a new shop item for a specific player.
- * Will create a new category if it does not exist.
- * Will replace any overrides this player already has for the same item.
- *
- * @param playerId - The player to create the item for
- * @param categoryKey - The key of the category to create the item in
- * @param itemKey - The unique key for the item
- * @param item - The shop item to create (will be mutated)
- */
-createShopItemForPlayer(playerId: PlayerId, categoryKey: ShopCategoryKey, itemKey: ShopItemKey, item: ShopItem): void
-/**
- * Update selected properties of an existing shop item for a specific player.
- * For example, { canBuy: true } to allow this player to purchase the item.
- * Throws an error if the item does not exist.
- *
- * @param playerId - The player to update the item for
- * @param categoryKey - The key of the category containing the item
- * @param itemKey - The unique key for the item
- * @param changes - Partial shop item properties to update
- */
-updateShopItemForPlayer(playerId: PlayerId, categoryKey: ShopCategoryKey, itemKey: ShopItemKey, changes: Partial<ShopItem>): void
-/**
- * Delete a specific player's overrides for a shop item.
- * Like other methods, it doesn't matter whether the overrides were created
- * using createShopItemForPlayer or by using updateShopItemForPlayer instead.
- * This method does nothing if the overrides don't exist or are defined internally by the engine.
- *
- * @param playerId - The player to reset the item for
- * @param categoryKey - The key of the category containing the item
- * @param itemKey - The unique key for the item
- */
-resetShopItemForPlayer(playerId: PlayerId, categoryKey: ShopCategoryKey, itemKey: ShopItemKey): void
-/**
- * Configure a shop category for a specific player.
- *
- * @param playerId - The player to configure the category for
- * @param categoryKey - The key of the category to configure
- * @param config - Category configuration properties
- */
-configureShopCategoryForPlayer(playerId: PlayerId, categoryKey: ShopCategoryKey, config: ShopCategoryConfig): void
-/**
- * Modify client options at runtime
- *
- * @param playerId
- * @param optionsObj An object which contains key value pairs of new settings. E.g {canChange: true, speedMultiplier: false}
- */
-setClientOptions(playerId: PlayerId, optionsObj: Partial<ClientOptions>): void
-/**
- * Sets a client option to its default value. This will be the value stored in your game's defaultClientOptions, otherwise Bloxd's default.
- *
- * @param playerId
- * @param option
- */
-setClientOptionToDefault(playerId: PlayerId, option: ClientOption): void
-/**
- * Set every player's other-entity setting to a specific value for a particular entity.
- * includeNewJoiners=true means that new players joining the game will also have this other player setting applied.
- *
- * @param targetedPlayerId
- * @param settingName
- * @param settingValue
- * @param includeNewJoiners
- */
-setTargetedPlayerSettingForEveryone<Setting extends OtherEntitySetting>(targetedPlayerId: EntityId, settingName: Setting, settingValue: OtherEntitySettings[Setting], includeNewJoiners?: boolean): void
-/**
- * Set a player's other-entity setting for every player, mob and Person mesh in the game.
- * includeNewJoiners=true means that the player will have the setting applied to new joiners.
- *
- * @param playerId
- * @param settingName
- * @param settingValue
- * @param includeNewJoiners
- */
-setEveryoneSettingForPlayer<Setting extends OtherEntitySetting>(playerId: PlayerId, settingName: Setting, settingValue: OtherEntitySettings[Setting], includeNewJoiners?: boolean): void
-/**
- * Set a player's other-entity setting for a specific entity.
- *
- * @param relevantPlayerId
- * @param targetedEntityId
- * @param settingName
- * @param settingValue
- */
-setOtherEntitySetting<Setting extends OtherEntitySetting>(relevantPlayerId: PlayerId, targetedEntityId: EntityId, settingName: Setting, settingValue: OtherEntitySettings[Setting]): void
-/**
- * Set many of a player's other-entity settings for a specific entity.
- *
- * @param relevantPlayerId
- * @param targetedEntityId
- * @param settingsObject
- */
-setOtherEntitySettings(relevantPlayerId: PlayerId, targetedEntityId: EntityId, settingsObject: Partial<OtherEntitySettings>): void
-/**
- * Get the value of a player's other-entity setting for a specific entity.
- *
- * @param relevantPlayerId
- * @param targetedEntityId
- * @param settingName
- */
-getOtherEntitySetting<Setting extends OtherEntitySetting>(relevantPlayerId: PlayerId, targetedEntityId: EntityId, settingName: Setting): OtherEntitySettings[Setting]
-/**
- * Reset a player's other-entity setting for a specific entity to the game's default value.
- *
- * @param relevantPlayerId
- * @param targetedEntityId
- * @param settingName
- */
-setOtherEntitySettingToDefault<Setting extends OtherEntitySetting>(relevantPlayerId: PlayerId, targetedEntityId: EntityId, settingName: Setting): void
-/**
- * Play particle effect on all clients, or only on some clients if clientPredictedBy is specified
- * @param opts
- * @param clientPredictedBy Play only on clients where the entity clientPredictedBy
- *                          is visible and not the viewing player
- */
-playParticleEffect(opts: TempParticleSystemOpts | ParticlePresetOpts, clientPredictedBy?: EntityId | null): void
-/**
- * Animates the given entity. Pass \`null\` for \`animation\` to stop the entity's current animation (the
- * \`initialTimeFraction\` and \`animationSpeed\` arguments are ignored in that case). Keyframes can rotate, move and
- * scale each part; a scale multiplies the part's own, so \`[2, 2, 2]\` doubles a head \`api.scalePlayerMeshNodes\` enlarged.
- * Scale keyframe values are clamped to between -16 and 16.
- *
- * Pass a clip name instead (such as \`"animation.quadruped.head_wave"\`, or just \`"head_wave"\`) to play a clip of the texture pack's or
- * Bloxd's built-in animation on a mob or vehicle that has animation. It adds onto the entity's automatic animation,
- * as a head nod plays over a walk, or replaces the parts it moves if the clip sets \`override_previous_animation\`. It
- * blends back out when a one-shot clip ends or the animation is stopped; a looping or held clip plays until
- * stopped or replaced. An entity without animation, or a name no clip has (or several share: give the full name),
- * plays nothing. A name must be 1 to 128 characters long, or the call throws.
- * @param entityId
- * @param animation
- * @param initialTimeFraction
- * @param animationSpeed
- */
-animateEntity(entityId: EntityId, animation: AnimationSchema | BlockbenchAnimationSchema | string | null, initialTimeFraction?: number, animationSpeed?: number): void
-/**
- * Get the in game name of an entity: a player's name, or "" for a mob nobody named. Use getEntityType for what kind of mob it is.
- * @param entityId
- */
-getEntityName(entityId: EntityId): string
-/**
- * Given the name of a player, get their id
- * @param playerName
- */
-getPlayerId(playerName: string): PlayerId | null
-/**
- * Given a player, get their permanent identifier that doesn't change when leaving and re-entering
- *
- * @param playerId
- */
-getPlayerDbId(playerId: PlayerId): PlayerDbId
-/**
- * Returns null if player not in lobby
- *
- * @param dbId
- */
-getPlayerIdFromDbId(dbId: PlayerDbId): PlayerId | null
-/**
- * Gets the persistent database ID for the given mob.
- * This can be useful for reasoning about mobs that have been loaded from the database, such as owned mobs.
- *
- * @param mobId - The ID of the mob from spawnMob
- * @returns The persistent database ID for the mob, or null if the mob is not persistent
- */
-getMobDbId(mobId: MobId): MobDbId | null
-/**
- * Kick a player from the lobby, showing them the reason.
- *
- * NOTE: In a world's own lobby, World Code can't kick the world's owner or co-owners: they stay and see why.
- *
- * @param playerId
- * @param reason Shown to the kicked player
- */
-kickPlayer(playerId: PlayerId, reason: string): void
-/**
- * Check if the block at a specific position is in a loaded chunk.
- * @param x
- * @param y
- * @param z
- * @return boolean
- */
-isBlockInLoadedChunk(x: number, y: number, z: number): boolean
-/**
- * Get the name of a block.
- * @param x could be an array [x, y, z]. If so, the other params shouldn't be passed.
- * @param y
- * @param z
- * @return blockName - any block name, including 'Air'
- */
-getBlock(x: number | number[], y?: number, z?: number): BlockName
-/**
- * Used to get the block id at a specific position.
- * Intended only for use in hot code paths - default to getBlock for most use cases
- *
- * @param x
- * @param y
- * @param z
- */
-getBlockId(x: number, y: number, z: number): BlockId
-/**
- * Set a block. Valid names are any block name, including 'Air'
- *
- * This function is optimised for setting broad swathes of blocks. For example, if you have a 50x50x50 area you need to turn to air, it will run performantly if you call this in double nested loops.
- *
- * IF you're only changing a few blocks, you want this to be super snappy for players, AND you're calling this outside of your _tick function, you can use api.setOptimisations(false).
- *
- * If you want the optimisations for large quantities of blocks later on, then call api.setOptimisations(true) when you're done.
- *
- *
- *
- * @param x Can be an array
- * @param y Should be blockname if first param is array
- * @param z
- * @param blockName
- */
-setBlock(x: number | number[], y: number | BlockName, z?: number, blockName?: BlockName): void
-/**
- * Initiate a block change "by the world".
- * Calls onWorldAttemptChangeBlock, then onWorldChangeBlock if allowed.
- * initiatorDbId is null if the change was initiated by the game code.
- *
- * @param initiatorDbId
- * @param x
- * @param y
- * @param z
- * @param blockName
- * @param extraInfo
- *
- * @returns "preventChange" if the change was prevented, "preventDrop" if the change was allowed but without dropping any items, and undefined if the change was allowed with an item drop
- */
-attemptWorldChangeBlock(initiatorDbId: PlayerDbId | null, x: number, y: number, z: number, blockName: BlockName, extraInfo?: WorldBlockChangedInfo | null): "preventChange" | "preventDrop" | void
-/**
- * Returns whether a block is solid or not.
- * E.g. Grass block is solid, while water, ladder and water are not.
- * Will be true if the block is unloaded.
- *
- * @param x
- * @param y
- * @param z
- */
-getBlockSolidity(x: number | number[], y?: number, z?: number): boolean
-/**
- * Helper function that sets all blocks in a rectangle to a specific block.
- *
- * @param pos1 array [x, y, z]
- * @param pos2 array [x, y, z]
- * @param blockName
- */
-setBlockRect(pos1: number[], pos2: number[], blockName: BlockName): void
-/**
- * Create walls by providing two opposite corners of the cuboid
- *
- *
- * @param pos1 array [x, y, z]
- * @param pos2 array [x, y, z]
- * @param blockName
- * @param hasFloor
- * @param hasCeiling
- */
-setBlockWalls(pos1: number[], pos2: number[], blockName: BlockName, hasFloor?: boolean, hasCeiling?: boolean): void
-/**
- * Copies chunk from one position to another.
- * A good use case for this is storing 'template' chunks that can be continuously copied to a new position.
- * In order to reset an area to the template, e.g. resetting a session-based game.
- *
- * NOTE: Does nothing if the source chunk is not loaded.
- *
- * @param fromPos - A block coordinate within the chunk to copy from.
- * @param toPos - A block coordinate within the chunk to copy to.
- */
-copyChunk(fromPos: number[], toPos: number[]): void
-/**
- * Use this to get a chunk ndarray you can edit and set in resetChunk.
- *
- * Only use chunk helpers if you REALLY need the performance (i.e. you are iterating over tens of thousands of blocks)
- * ReturnedObject.blockData is a 32x32x32 ndarray of air.
- * (see https://www.npmjs.com/package/ndarray)
- * Each block id is a 16-bit number
- */
-getEmptyChunk(): GameChunk
-/**
- * Splits the block name by '|'. If no meta info, metaInfo is ''
- *
- * @param blockName
- */
-getMetaInfo(blockName: BlockName | null | undefined): ItemMetaInfo
-/**
- * Get the numeric id of a block used in the ndarrays returned from getChunk
- * I.e. chunk.blockData.set(x, y, z, api.blockNameToBlockId("Dirt"))
- * or chunk.blockData.get(x, y, z) === api.blockNameToBlockId("Dirt")
- *
- * @param blockName
- * @param allowInvalidBlock Don't throw an error if the block name is invalid.
- * Defaults false. If true and name is invalid, returns null.
- * @returns
- */
-blockNameToBlockId(blockName: BlockName, allowInvalidBlock?: boolean): number | null
-/**
- * Goes from block id to block name. The reverse of blockNameToBlockId
- *
- * @param blockId
- */
-blockIdToBlockName(blockId: BlockId): BlockName
-/**
- * Get the unique id of the chunk containing pos in the current map
- *
- * @param pos
- */
-blockCoordToChunkId(pos: number[]): string
-/**
- * Get the co-ordinates of the block in the chunk with the lowest x, y, and z co-ordinates
- *
- * @param chunkId
- */
-chunkIdToBotLeftCoord(chunkId: string): [number, number, number]
-/**
- * @deprecated - prefer using other UI elements
- * (this UI element hasn't been properly thought through in combination with other elements like killfeed, uirequests, etc)
- *
- * Send a player an icon in the top right corner
- *
- * @param playerId
- * @param icon Can be any icon from font-awesome.
- * @param text The text to send.
- * @param opts Can include keys duration, width, height, color, iconSizeMult.
- *
- * Default opts: {
- *  duration: 8, // seconds
- *  width: 400px,
- *  height: 100px,
- *  color: 'rgb(102, 102, 102)', // must be rgb in this format (hex not supported),
- *  iconSizeMult: 5,
- *  textAndIconColor: "white", // can be any colour supported by css (e.g. hex, rgb),
- *  fontSize: '17px',
- * }
- */
-sendTopRightHelper(playerId: PlayerId, icon: string, text: string, opts: { duration?: number; width?: number; height?: number; color?: string; iconSizeMult?: number; textAndIconColor?: string; fontSize?: string; }): void
-/**
- * Whether the player is on a mobile device or a computer.
- * @param playerId
- */
-isMobile(playerId: PlayerId): boolean
-/**
- * Get the amount of a given currency a player has.
- * @param playerId
- * @param currencyId
- * @returns The amount of the currency, or null if the currency is not defined.
- */
-getCurrencyAmount(playerId: PlayerId, currencyId: string): number | null
-/**
- * Create a dropped item.
- * @param x
- * @param y
- * @param z
- * @param itemName Name of the item. Any item name, including blocks and 'Air'
- * @param amount The amount of the item in the drop. Defaults to 1 when omitted. Use 0 for a collect-only trigger that does not add to inventory (fires onPlayerPickedUpItem with itemAmount 0).
- * @param mergeItems Whether to merge the item into a nearby item of same type, if one exists. Defaults to false.
- * @param attributes Attributes of the item being dropped
- * @param timeTillDespawn Time till the item automatically despawns in milliseconds. Defaults to 5 mins, max of 1 hour.
- * @param dropperId Who dropped the item.
- * @param options Additional options, such as doPhysics and size. With doPhysics, the physics body is at most 25 blocks across.
- * @returns the id you can pass to setCantPickUpItem, or null if the item drop limit was reached
- */
-createItemDrop(x: number, y: number, z: number, itemName: ItemName, amount?: number | null, mergeItems?: boolean, attributes?: ItemAttributes, timeTillDespawn?: number, dropperId?: LifeformId | null, options?: ItemDropOptions): EntityId | null
-/**
- * Prevent a player from picking up an item. itemId returned by createItemDrop
- *
- * @param playerId
- * @param itemId
- */
-setCantPickUpItem(playerId: PlayerId, itemId: EntityId): void
-/**
- * Reset a player's ability to pick up an item. itemId returned by createItemDrop
- *
- * @param playerId
- * @param itemId
- */
-resetCanPickUpItem(playerId: PlayerId, itemId: EntityId): void
-/**
- * Delete an item drop by item drop entity ID
- *
- * @param itemId
- */
-deleteItemDrop(itemId: EntityId): void
-/**
- * Create an invisible audio entity at a world position that loops a sound to
- * nearby players (e.g. a waterfall or fireplace).
- *
- * Audio entities count against the same budget as physics-less mesh entities; returns null
- * if that budget is exhausted.
- *
- * @param x
- * @param y
- * @param z
- * @param soundName The sound to loop.
- * @param volume
- * @param options {refDistance: number, maxHearDist: number, rate: number}
- * refDistance: higher means the sound decreases less in volume with distance. Defaults to 3. Hitting is 4. Guns are 10
- * maxHearDist: sound is not played if player is further than this. Defaults to 30
- * rate: The speed of playback. Also affects pitch. 0.5-4. Lower playback = lower pitch. Good for varying the sound.
- * E.g. item pickup sound has a random rate between 1 and 1.5.
- * @returns the audio entity ID, or null if the entity budget is exhausted
- */
-attemptCreateAudioEntity(x: number, y: number, z: number, soundName: string, volume?: number, options?: { refDistance?: number; maxHearDist?: number; rate?: number; }): EntityId | null
-/**
- * Update an audio entity's config (sound, volume, falloff, rate). Only the provided fields
- * change.
- *
- * @param eId
- * @param opts Any subset of soundName, volume, refDistance, maxHearDist, rate.
- */
-updateAudioEntity(eId: EntityId, opts: Partial<AudioEntityOpts>): void
-/**
- * Delete an audio entity by its entity ID (returned by attemptCreateAudioEntity).
- *
- * @param eId
- */
-deleteAudioEntity(eId: EntityId): void
-/**
- * Returns all items overlapping with the given player
- *
- * @param playerId
- * @returns the overlapping item entity IDs
- */
-getItemIDsOverlappingWithPlayer(playerId: PlayerId): EntityId[]
-/**
- * Get the metadata about a block or item before stats have been modified by any client options
- * (i.e. its entry in the initial metadata object)
- *
- * @param itemName
- */
-getInitialItemMetadata(itemName: string): Partial<BlockMetadataItem & NonBlockMetadataItem>
-/**
- * Get stat info about a block or item
- * Either based on a client option for a player: (e.g. \`DirtTtb\`)
- * or its entry in the initial metadata object if no client option is set.
- *
- * If null is passed for lifeformId, this is simply its entry in blockMetadata etc.
- *
- *
- * @param lifeformId
- * @param itemName
- * @param stat
- */
-getItemStat<K extends keyof AnyMetadataItem>(lifeformId: LifeformId | null, itemName: ItemName, stat: K): AnyMetadataItem[K]
-/**
- * Set a stat attribute for a block or item
- *
- * NOTE: Only a subset of stats are customisable this way.
- * afterEatenItem requires an unstackable food.
- * minChargeStateToUse must be within the item's chargeStages and set on the base item, applying to all its charging variants.
- * fishingRodInfo adjusts existing rods; drops names the replacement mining drop.
- * Example: setItemStat(playerId, "Iron Dagger", "comboInfo", { comboWindowMs: 1000, comboMultipliers: [1, 1.5, 2] })
- *
- * @param playerId
- * @param itemName
- * @param stat
- * @param value
- */
-setItemStat<K extends CustomItemStat>(playerId: PlayerId, itemName: ItemName, stat: K, value: AnyMetadataItem[K]): void
-/**
- * Set the direction the player is looking.
- *
- * @param playerId
- * @param direction a vector of the direction to look, format [x, y, z]
- */
-setCameraDirection(playerId: PlayerId, direction: number[]): void
-/**
- * Shake a player's camera.
- *
- * @param playerId
- * @param intensity Shake "power" (0..1); the client clamps the accumulated power to 1.
- * @param durationMs How long the shake lasts, in milliseconds.
- */
-shakePlayerCamera(playerId: PlayerId, intensity: number, durationMs?: number): void
-/**
- * Set an entity's opacity
- * A simple helper that calls setTargetedPlayerSettingForEveryone
- *
- * @param playerId
- * @param opacity
- */
-setPlayerOpacity(playerId: EntityId, opacity: number): void
-/**
- * Set the opacity of an entity for one player
- * A simple helper that calls setOtherEntitySetting
- *
- * @param playerIdWhoViewsOpacityPlayer The player who sees that with opacity
- * @param playerIdOfOpacityPlayer The entity whose opacity is changed
- * @param opacity
- */
-setPlayerOpacityForOnePlayer(playerIdWhoViewsOpacityPlayer: PlayerId, playerIdOfOpacityPlayer: EntityId, opacity: number): void
-/**
- * Obtain Date.now() value saved at start of current game tick
- */
-now(): number
-/**
- * Check your game (and, optionally, a entity) is still valid and executing.
- * Useful if you're using async functions and await within your game.
- * If you use await/async or promises and do not check this, your game could have closed and then the rest of your
- * async code executes.
- *
- * @param entityId
- */
-checkValid(entityId?: EntityId | null): boolean
-/**
- * Let a player change a block at a specific co-ordinate. Useful when client option canChange is false.
- * Overrides blockRect and blockType settings, so also useful when you have disallowed changing of a block type with setCantChangeBlockType.
- * Using this on 1000s of blocks will cause lag - if that is needed, find a way to use setCanChangeBlockType.
- *
- * @param playerId
- * @param x
- * @param y
- * @param z
- */
-setCanChangeBlock(playerId: PlayerId, x: number, y: number, z: number): void
-/**
- * Prevents a player from changing a block at a specific co-ordinate. Useful when client option canChange is true.
- * Overrides blockRect and blockType settings, so also useful when you have allowed changing of a block type with setCantChangeBlockType.
- * Using this on 1000s of blocks will cause lag - if that is needed, find a way to use setCantChangeBlockType.
- *
- * @param playerId
- * @param x
- * @param y
- * @param z
- */
-setCantChangeBlock(playerId: PlayerId, x: number, y: number, z: number): void
-/**
- * Remove any previous can/cant change block settings for a player at a specific co-ordinate
- *
- * @param playerId
- * @param x
- * @param y
- * @param z
- */
-resetCanChangeBlock(playerId: PlayerId, x: number, y: number, z: number): void
-/**
- * Lets a player Change a block type. Valid names are any block name, including 'Air'
- * Less priority than cant change block pos/can change block rect
- *
- * @param playerId
- * @param blockName
- */
-setCanChangeBlockType(playerId: PlayerId, blockName: BlockName): void
-/**
- * Stops a player from changing a block type. Valid names are any block name, including 'Air'
- * Less priority than can change block pos/can change block rect
- *
- * @param playerId
- * @param blockName
- */
-setCantChangeBlockType(playerId: PlayerId, blockName: BlockName): void
-/**
- * Remove any previous can/cant change block type settings for a player
- *
- * @param playerId
- * @param blockName
- */
-resetCanChangeBlockType(playerId: PlayerId, blockName: BlockName): void
-/**
- * Make it so a player can Change blocks within two points. Coordinates are inclusive. E.g. if [0, 0, 0] is pos1
- * and [1, 1, 1] is pos2 then the 8 blocks contained within low and high will be able to be broken.
- * Overrides setCantChangeBlockType
- *
- *
- * @param playerId
- * @param pos1 Arg as [x, y, z]
- * @param pos2 Arg as [x, y, z]
- */
-setCanChangeBlockRect(playerId: PlayerId, pos1: number[], pos2: number[]): void
-/**
- * Make it so a player cant Change blocks within two points. Coordinates are inclusive. E.g. if [0, 0, 0] is pos1
- * and [1, 1, 1] is pos2 then the 8 blocks contained within pos1 and pos2 won't be able to be broken.
- * Overrides setCanChangeBlockType
- *
- *
- * @param playerId
- * @param pos1 Arg as [x, y, z]
- * @param pos2 Arg as [x, y, z]
- */
-setCantChangeBlockRect(playerId: PlayerId, pos1: number[], pos2: number[]): void
-/**
- * Remove any previous can/cant change block rect settings for a player
- *
- * @param playerId
- * @param pos1
- * @param pos2
- */
-resetCanChangeBlockRect(playerId: PlayerId, pos1: number[], pos2: number[]): void
-/**
- * Allow a player to walk through a type of block. For blocks that are normally solid and not seethrough, the player will experience slight visual glitches while inside the block.
- *
- * A player standing inside a block that turns solid for them is lifted onto it if there is room above. To let them stay where they are, remove the block before making its type solid again.
- *
- * @param playerId
- * @param blockName
- * @param disable If you've enabled a player to walk through a block and want to make the block solid for them again, pass this with true. Otherwise you only need to pass playerId and blockName
- */
-setWalkThroughType(playerId: PlayerId, blockName: BlockName, disable?: boolean): void
-/**
- * Allow a player to walk through (or not walk through) voxels that are located within a given rectangle.
- * For blocks that are normally solid and not seethrough, the player will experience slight visual glitches while inside the block.
- *
- * You could set both pos1 and pos2 to [0, 0, 0] to make only 0, 0, 0 walkthrough, for example.
- *
- * A player standing inside a voxel that turns solid for them is lifted onto it if there is room above, including onto a CANT_WALK_THROUGH rect.
- * To let them stay where they are, remove the block before removing its exemption.
- *
- * @param playerId
- * @param pos1 The one corner of the cuboid. Format [x, y, z]
- * @param pos2 The top right corner of the cuboid. Format [x, y, z]
- * @param updateType The type of update. Whether to make a rect solid, or able to be walked through.
- * Pass DEFAULT_WALK_THROUGH with a previously passed rect to disable any walkthrough setting for that rect.
- */
-setWalkThroughRect(playerId: PlayerId, pos1: number[], pos2: number[], updateType: WalkThroughType): void
-/**
- * Give a player an item and a certain amount of that item.
- * Returns the amount of item added to the users inventory.
- *
- * @param playerId
- * @param itemName
- * @param itemAmount
- * @param attributes An optional object for certain types of item. For guns this can contain the shotsLeft field which is the amount of ammo the gun currently has.
- */
-giveItem(playerId: PlayerId, itemName: ItemName, itemAmount?: number | null, attributes?: ItemAttributes): number
-/**
- * Whether the player has space in their inventory to get new blocks
- * @param playerId
- */
-inventoryIsFull(playerId: PlayerId): boolean
-/**
- * Put an item in a specific index. Default hotbar is indexes 0-9
- *
- * @param playerId
- * @param itemSlotIndex 0-indexed
- * @param itemName Can be 'Air', in which case itemAmount will be ignored and the slot will be cleared.
- * @param itemAmount -1 for infinity. Should not be set, or null, for items that are not stackable.
- * @param attributes An optional object for certain types of item. For guns this can contain the shotsLeft field which is the amount of ammo the gun currently has.
- * \`customAttributes.bar = { fraction, colour? }\` (0 to 1, hex colour) draws a charge bar on the item's slot. A stack shares one bar, so make barred items unstackable.
- * @param tellClient whether to tell client about it - results in desync between client and server if client doesnt locally perform the same action
- */
-setItemSlot(playerId: PlayerId, itemSlotIndex: number, itemName: ItemName, itemAmount?: number | null, attributes?: ItemAttributes, tellClient?: boolean): void
-/**
- * Remove an amount of item from a player's inventory
- *
- * @param playerId
- * @param itemName
- * @param amount
- */
-removeItemName(playerId: PlayerId, itemName: ItemName, amount: number): void
-/**
- * Get the item at a specific index
- * Returns null if there is no item at that index
- * If there is an item, return an object of the format { name: string; amount: number | null; attributes: ItemAttributes; }
- *
- * @param playerId
- * @param itemSlotIndex
- */
-getItemSlot(playerId: PlayerId, itemSlotIndex: number): InvenItem | null
-/**
- * Finds the index of a particular item in a player's inventory.
- *
- * @param playerId
- * @param itemName
- * @return The index of the item in the player's inventory, or null if the item is not found.
- */
-findItem(playerId: PlayerId, itemName: ItemName): number | null
-/**
- * Whether a player has an item
- *
- * @param playerId
- * @param itemName
- * @returns bool
- */
-hasItem(playerId: PlayerId, itemName: ItemName): boolean
-/**
- * The amount of an itemName a player has.
- * Returns 0 if the player has none, and a negative number if infinite.
- *
- * @param playerId
- * @param itemName
- * @returns number
- */
-getInventoryItemAmount(playerId: PlayerId, itemName: ItemName): number
-/**
- * Clear the players inventory
- *
- * @param playerId
- */
-clearInventory(playerId: PlayerId): void
-/**
- * Force the player to have the ith inventory slot selected. E.g. newI 0 makes the player have the 0th inventory slot selected
- *
- * @param playerId
- * @param newI integer from 0-9
- */
-setSelectedInventorySlotI(playerId: PlayerId, newI: number): void
-/**
- * Get a player's currently selected inventory slot
- * @param playerId
- * @returns
- */
-getSelectedInventorySlotI(playerId: PlayerId): number
-/**
- * Get the currently held item of a player
- * Returns null if no item is being held
- * If an item is held, return an object of the format {name: itemName, amount: amountOfItem}
- *
- * @param playerId
- */
-getHeldItem(playerId: PlayerId): InvenItem | null
-/**
- * Get the amount of free slots in a player's inventory.
- *
- * @param playerId
- * @returns number
- */
-getInventoryFreeSlotCount(playerId: PlayerId): number
-/**
- * Checks if a player is able to open a chest at a given location,
- * as per the rules laid out by the "onPlayerAttemptOpenChest" game callback.
- * Returns true if the player can open the chest, false if they cannot, and void if the chest does not exist.
- *
- * @param playerId
- * @param chestX
- * @param chestY
- * @param chestZ
- */
-canOpenStandardChest(playerId: PlayerId, chestX: number, chestY: number, chestZ: number): boolean | null
-/**
- * Open a chest for a player.
- * If there is no chest, or the player cannot open it, do nothing.
- * WARNING: This may call "onPlayerAttemptOpenChest" to determine if the player has permission to open it. Using this function inside that callback risks infinite recursion.
- *
- * @param playerId
- * @param x
- * @param y
- * @param z
- */
-openChestForPlayer(playerId: PlayerId, x: number, y: number, z: number): void
-/**
- * Close a chest for a player.
- * If the player does not have a chest open, do nothing.
- *
- * @param playerId
- */
-closeChestForPlayer(playerId: PlayerId): void
-/**
- * Read a player's current crafting recipe set, keyed by output item name. Includes any
- * per-player overrides set via \`editItemCraftingRecipes\` / \`removeItemCraftingRecipes\`.
- *
- * @param playerId
- */
-getCraftingRecipesForPlayer(playerId: PlayerId): Record<string, RecipesForItem>
-/**
- * Give a standard chest an item and a certain amount of that item.
- * Returns the amount of item added to the chest.
- *
- * @param chestPos
- * @param itemName
- * @param itemAmount
- * @param playerId The player who is interacting with the chest.
- * @param attributes An optional object for certain types of item. For guns this can contain the shotsLeft field which is the amount of ammo the gun currently has.
- */
-giveStandardChestItem(chestPos: number[], itemName: ItemName, itemAmount?: number, playerId?: PlayerId, attributes?: ItemAttributes): number
-/**
- * Remove an amount of item from a standardChest inventory
- *
- * @param chestPos
- * @param itemName
- * @param amount
- * @param playerId The player who is interacting with the chest.
- */
-removeItemNameFromStandardChest(chestPos: number[], itemName: ItemName, amount: number, playerId?: PlayerId): void
-/**
- * Get the amount of free slots in a standard chest
- * Returns null for non-chests
- *
- * @param chestPos
- * @returns number
- */
-getStandardChestFreeSlotCount(chestPos: number[]): number | null
-/**
- * The amount of an itemName a standard chest has.
- * Returns 0 if the standard chest has none, and a negative number if infinite.
- *
- * @param chestPos
- * @param itemName
- * @returns number
- */
-getStandardChestItemAmount(chestPos: number[], itemName: ItemName): number
-/**
- * Get the item at a chest slot. Null if empty otherwise format {name: itemName, amount: amountOfItem}
- *
- * @param chestPos
- * @param idx
- */
-getStandardChestItemSlot(chestPos: number[], idx: number): InvenItem | null
-/**
- * Get all the items from a standard chest in order. Use this instead of repetitive calls to getStandardChestItemSlot
- *
- * @param chestPos
- */
-getStandardChestItems(chestPos: number[]): (InvenItem | null)[]
-/**
- * @param chestPos
- * @param idx 0-indexed
- * @param itemName Can be 'Air', in which case itemAmount will be ignored and the slot will be cleared.
- * @param itemAmount -1 for infinity. Should not be set, or null, for items that are not stackable.
- * @param playerId The player who is interacting with the chest.
- * @param attributes An optional object for certain types of item. For guns this can contain the shotsLeft field which is the amount of ammo the gun currently has.
- */
-setStandardChestItemSlot(chestPos: number[], idx: number, itemName: ItemName, itemAmount?: number | null, playerId?: PlayerId, attributes?: ItemAttributes): void
-/**
- * Find the index of a particular item in a standard chest
- * @param chestPos
- * @param itemName
- */
-findStandardChestItem(chestPos: number[], itemName: ItemName): number | null
-/**
- * Get the item in a player's moonstone chest slot. Null if empty
- *
- * Moonstone chests are a type of chest where a player accesses the same contents no matter the location of the moonstone chest
- *
- * @param playerId
- * @param idx
- */
-getMoonstoneChestItemSlot(playerId: PlayerId, idx: number): InvenItem | null
-/**
- * Get all the items from a moonstone chest in order. Use this instead of repetitive calls to getMoonstoneChestItemSlot
- *
- * Moonstone chests are a type of chest where a player accesses the same contents no matter the location of the moonstone chest
- *
- * @param playerId
- */
-getMoonstoneChestItems(playerId: PlayerId): (InvenItem | null)[]
-/**
- * Moonstone chests are a type of chest where a player accesses the same contents no matter the location of the moonstone chest
- *
- * @param playerId
- * @param idx 0-indexed
- * @param itemName Can be 'Air', in which case itemAmount will be ignored and the slot will be cleared.
- * @param itemAmount -1 for infinity. Should not be set, or null, for items that are not stackable.
- * @param metadata An optional object for certain types of item. For guns this can contain the shotsLeft field which is the amount of ammo the gun currently has.
- */
-setMoonstoneChestItemSlot(playerId: PlayerId, idx: number, itemName: ItemName, itemAmount?: number | null, metadata?: ItemAttributes): void
-/**
- * Store data about a block in a performant manner. Data is cleared when block changes.
- * E.g. chest: \`persisted.chestStr\` is a JSON array of nulls and items, each with a string \`name\`; anything else in it is stored as a load reads it
- * Works well with blocks marked tickable (e.g. wheat)
- *
- * @param x
- * @param y
- * @param z
- * @param data
- */
-setBlockData(x: number, y: number, z: number, data: object): void
-/**
- * Get stored data about a block in a performant manner. Data is cleared when block changes.
- * E.g. chest
- * Works well with blocks marked tickable (e.g. wheat)
- *
- * @param x
- * @param y
- * @param z
- */
-getBlockData(x: number, y: number, z: number): any
-/**
- * Get the name of the lobby this game is running in.
- */
-getLobbyName(): string
-/**
- * Integer lobby names are public
- * @returns boolean
- */
-isPublicLobby(): boolean
-/**
- * Returns if the current lobby the game is running in is special - e.g. a discord guild or dm, or simply a standard lobby
- */
-getLobbyType(): LobbyType
-/**
- * Update the progress bar in the bottom right corner.
- * Can be queued.
- *
- * @param playerId
- * @param toFraction The fraction of the progress bar you want to be filled up.
- * @param toDuration The time it takes for the bar to reach the given toFraction in ms.
- * If this is too low and you queue multiple updates, this toFraction could be skipped. Treat 200ms as a minimum.
- */
-progressBarUpdate(playerId: PlayerId, toFraction: number, toDuration?: number): void
-/**
- * This will initiate the MiddleScreenBar, starting at empty and filling up to full over the given duration.
- * Good to represent cooldowns (eg gun reload) or charged items (eg crossbow)
- *
- * @param playerId
- * @param duration ms over which the MiddleScreenBar fills up
- * @param chargeExpiresAutomatically Defaults to true. If true, the bar will disappear upon reaching full. If false, the bar will remain at full until hidden with removeMiddleScreenBar
- * @param horizontalBarRemOffset Offset the bar left or right (in css unit - rem)
- */
-initiateMiddleScreenBar(playerId: PlayerId, duration: number, chargeExpiresAutomatically?: boolean, horizontalBarRemOffset?: number): void
-/**
- * If there is any current middle screen bar running, this will hide it
- *
- * @param playerId
- */
-removeMiddleScreenBar(playerId: PlayerId): void
-/**
- * Show a hitmarker on the player's screen (the X-shaped crosshair flash indicating a successful hit).
- * Useful for custom weapons or things that need visual hit feedback.
- *
- * @param playerId The player to show the hitmarker to
- * @param isCrit If true, shows an enhanced critical-hit hitmarker with a longer, more dramatic animation
- * @param directionVector Optional [x, y, z] direction vector. When provided, the hitmarker appears
- *   at the projected screen position of that direction rather than at the centre of the screen.
- *   Same flow as mobile melee attacks where the tap point differs from screen centre.
- */
-sendHitmarker(playerId: PlayerId, isCrit?: boolean, directionVector?: number[] | null): void
-/**
- * Show a directional arrow indicator on the player's screen pointing toward a world position.
- * When the position is off-screen the indicator is a rotating chevron at the screen edge.
- * When the position is on-screen it becomes a small marker dot.
- *
- * The arrow persists until explicitly cleared via \`clearDirectionArrow\`.
- * Calling again with the same \`id\` updates the existing arrow in-place.
- *
- * @param playerId The player to show the arrow to
- * @param id Unique identifier for this arrow (allows multiple concurrent arrows)
- * @param position [x, y, z] world position the arrow should point toward
- * @param text Optional label rendered below the indicator. Supports CustomTextStyling for rich text with icons/colours.
- * @param showDistance If true, displays the distance (in blocks) from the player to the arrow position.
- * @param style Optional style object (same format as CustomTextStyling's StyledText \`style\`). Controls chevron/marker colour, label typography, and opacity.
- */
-setDirectionArrow(playerId: PlayerId, id: string, position: number[], text?: string | CustomTextStyling | null, showDistance?: boolean, style?: TextStyle | null): void
-/**
- * Clear a directional arrow from the player's screen.
- *
- * @param playerId The player to clear the arrow for
- * @param id The arrow identifier to clear. If null, clears all arrows for this player.
- */
-clearDirectionArrow(playerId: PlayerId, id?: string | null): void
-/**
- * Edit the crafting recipes for a player.
- *
- * @param playerId
- * @param itemName
- * @param recipesForItem
- */
-editItemCraftingRecipes(playerId: PlayerId, itemName: ItemName, recipesForItem: RecipesForItem): void
-/**
- * Reset the crafting recipes for a given back to its original bloxd state
- *
- * @param playerId
- * @param itemName Resets all crafting recipes for the given player if null, otherwise resets the crafting recipes for the given item.
- */
-resetItemCraftingRecipes(playerId: PlayerId, itemName: string | null): void
-/**
- * Removes crafting recipes
- *
- * @param playerId
- * @param itemName Removes all crafting recipes for the given player if null, otherwise removes the crafting recipes for the given item.
- */
-removeItemCraftingRecipes(playerId: PlayerId, itemName: string | null): void
-/**
- * Check if a position is within a cubic rectangle
- *
- * @param coordsToCheck
- * @param pos1 position of one corner
- * @param pos2 position of opposite corner
- * @param addOneToMax
- */
-isInsideRect(coordsToCheck: number[], pos1: number[], pos2: number[], addOneToMax?: boolean): boolean
-/**
- * Get the entities in the rect between [minX, minY, minZ] and [maxX, maxY, maxZ]
- *
- * @param minCoords
- * @param maxCoords
- * @returns
- */
-getEntitiesInRect(minCoords: number[], maxCoords: number[]): EntityId[]
-/**
- * What kind of entity it is: "Player", or a mob's type like "Draugr Zombie" or "Pig"
- * @param entityId
- */
-getEntityType(entityId: EntityId): EntityType
-/**
- * Gets the item name of a dropped item
- *
- * @param itemEId - The ID of the dropped item from createItemDrop
- * @returns
- */
-getItemDropName(itemEId: EntityId): ItemName | null
-/**
- * Deletes all items dropped in the world
- */
-deleteAllItems(): void
-/**
- * Create a mob herd. A mob herd represents a collection of mobs that move together.
- */
-createMobHerd(): MobHerdId
-/**
- * Try to spawn a mob into the world at a given position. Returns null on failure.
- * WARNING: Either the "onPlayerAttemptSpawnMob" or the "onWorldAttemptSpawnMob" game callback will be called
- * depending on whether "spawnerId" is provided. Calling this function inside those callbacks risks infinite recursion.
- * @param mobType
- * @param x
- * @param y
- * @param z
- * @param opts Includes:
- *  - mobHerdId The ID of this mob's herd. (A mob herd represents a collection of mobs that move together.)
- *  - spawnerId The ID of the player who tried to spawn this mob.
- *  - mobDbId A persistent ID for the mob. This can be useful when loading mob data from the database. If the DB ID is already taken, null will be returned.
- *  - name If set, gives the mob a name that will be displayed as a nametag above their head.
- *  - playSoundOnSpawn
- *  - variation
- *  - physicsOpts { width: number; height: number; collidesEntities: boolean }. The body is at most 25 blocks wide and 90 tall.
- * @returns null if the mob could not be spawned.
- * This can happen when there are too many mobs in the world for the current number
- * of players in the lobby, or if the area is protected e.g. by spawn area protection.
- */
-attemptSpawnMob<TMobType extends MobType>(mobType: TMobType, x: number, y: number, z: number, opts?: MobSpawnOpts<TMobType>): MobId | null
-/**
- * Dispose of a mob's state and remove them from the world without triggering "on death" flows.
- * Always succeeds.
- * @param mobId
- */
-despawnMob(mobId: MobId): void
-/**
- * Returns the current default value for a mob setting.
- *
- * @param mobType
- * @param setting
- */
-getDefaultMobSetting<TMobType extends MobType, TMobSetting extends MobSetting>(mobType: TMobType, setting: TMobSetting): MobSettings<TMobType>[TMobSetting]
-/**
- * Set the default value for a mob setting.
- * @param mobType
- * @param setting
- * @param value
- */
-setDefaultMobSetting<TMobType extends MobType, TMobSetting extends MobSetting>(mobType: TMobType, setting: TMobSetting, value: MobSettings<TMobType>[TMobSetting]): void
-/**
- * Get the current value of a mob setting for a specific mob.
- * @param mobId
- * @param setting
- * @param returnDefaultIfNotOverridden - If true, return the default setting if not overridden.
- */
-getMobSetting<TMobSetting extends MobSetting>(mobId: MobId, setting: TMobSetting, returnDefaultIfNotOverridden?: boolean): MobSettings<MobType>[TMobSetting]
-/**
- * Set the current value of a mob setting for a specific mob.
- * @param mobId
- * @param setting
- * @param value
- */
-setMobSetting<TMobSetting extends MobSetting>(mobId: MobId, setting: TMobSetting, value: MobSettings<MobType>[TMobSetting]): void
-/**
- * Get the number of mobs in the world.
- */
-getNumMobs(): number
-/**
- * Get the mob IDs of all mobs in the world.
- */
-getMobIds(): MobId[]
-/**
- * Gets the current AI state for the given mob.
- * @param mobId
- */
-getMobAiState(mobId: MobId): { state: MobAiState; params: MobAiStateParams<MobAiState> }
-/**
- * Sets the current AI state for the given mob.
- * Some AI states will require context such as the ID of the lifeform being chased.
- * The mob's AI normally moves on by itself after a few seconds, or when a player comes near.
- * Pass \`{ hold: true }\` to keep it in this state until you set another one.
- * @param mobId
- * @param state
- * @param params
- * @param opts hold: never time out, ignore nearby players and don't fight back when hit. The mob still leaves the state if its target leaves the game or turns invisible, or if it is tamed.
- */
-setMobAiState<TState extends MobAiState>(mobId: MobId, state: TState, params: MobAiStateParams<TState>, opts?: MobAiStateOptions): void
-/**
- * Clears any aggro the mob has towards the given lifeform.
- * If the mob is currently chasing or running away from it, this also transitions the mob back to idle.
- * @param mobId
- * @param targetLifeformId
- */
-passifyHostility(mobId: MobId, targetLifeformId: LifeformId): void
-/**
- * Try to create a throwable entity.
- * Similar to creating a mesh entity and uses the same rate limiting.
- * However, this uses the predefined throwables system and physics used by throwable items with the game
- * Each throwable item has its own behaviour already, including default velocity, damage and gravity multipliers.
- *
- * @param throwerEId
- * @param itemName Must be an Item that is usually throwable in-engine
- * @param position Starting position
- * @param direction
- * @param velocityMult Multiplier for the default velocity of the throwable item
- * @param damageMult Multiplier for the default damage of the throwable item
- * @param gravityMult Multiplier for the default gravity of the throwable item
- * @param attributes item attributes (currently used only for the "Boomerag" item)
- * @returns null if throwable creation failed, otherwise the entity ID.
- */
-attemptCreateThrowable(throwerEId: EntityId, itemName: ThrowableItem, position: [number, number, number], direction: [number, number, number], velocityMult?: number, damageMult?: number, gravityMult?: number, attributes?: ItemAttributes): string
-/**
- * Delete a throwable entity before it automatically removes itself.
- * @param eId
- * @returns true if the entity was deleted, false if it was not a throwable entity
- */
-deleteThrowable(eId: EntityId): boolean
-/**
- * Try to create a mesh entity. This creates an entity whose mesh position is synced with clients.
- * Set entity position using setPosition
- * There is a limit to the number of mesh entities that can be created: 400 without physics (audio entities count too), 100 with physics (throwables count too).
- * Separately, each player sees only the nearest 100 mesh entities of one kind (the mesh type, or the block name for a BloxdBlock); farther ones are hidden.
- * @param type
- * @param opts
- * @param name The default name for the nametag
- * @param physicsOptions Physics Options. With doPhysics, the physics body is at most 25 blocks across, however big the mesh; the entity collision box is the body grown by widthExpandAmt and heightExpandAmt.
- * @param initiatorId The entity that initiated the creation of the mesh entity.
- * @returns null if the entity creation failed, otherwise the entity ID.
- */
-attemptCreateMeshEntity<MeshType extends MeshEntityType>(type: MeshType, opts: MeshEntityOpts[MeshType], name?: string, physicsOptions?: MeshEntityPhysicsOpts, initiatorId?: EntityId): EntityId | null
-/**
- * Update a mesh entity. If used on a non-mesh entity, will do nothing.
- *
- * @param eId
- * @param type
- * @param opts
- */
-updateMeshEntity<MeshType extends MeshEntityType>(eId: EntityId, type: MeshType, opts: MeshEntityOpts[MeshType]): void
-/**
- * Delete any non-player entity (mesh entity, mob, audio entity, item drop, throwable, etc.) and dispose of their state.
- * @param eId
- * @returns whether the entity's replicated state existed and was deleted
- */
-deleteEntity(eId: EntityId): boolean
-/**
- * Delete a mesh entity
- *
- * @param eId
- * @returns whether the api successfully deleted the meshEntity
- */
-deleteMeshEntity(eId: EntityId): boolean
-/**
- * Apply an impulse to an entity
- *
- * @param eId
- * @param xImpulse
- * @param yImpulse
- * @param zImpulse
- */
-applyImpulse(eId: EntityId, xImpulse: number, yImpulse: number, zImpulse: number): void
-/**
- * Get the velocity of an entity
- * Will return [0, 0, 0] if the entity doesn't have a physics body
- *
- * @param eId
- */
-getVelocity(eId: EntityId): Pos
-/**
- * Set the velocity of an entity
- *
- * @param eId
- * @param x
- * @param y
- * @param z
- */
-setVelocity(eId: EntityId, x: number, y: number, z: number): void
-/**
- * @deprecated use setEntityRotation
- * Set the heading for a server-auth entity.
- *
- * @param entityId
- * @param newHeading
- */
-setEntityHeading(entityId: EntityId, newHeading: number): void
-/**
- * @deprecated use getEntityRotation
- * Get the heading for a server-auth entity.
- *
- * @param entityId
- */
-getEntityHeading(entityId: EntityId): number
-/**
- * Get the rotation for a server-auth entity.
- *
- * @param entityId
- */
-getEntityRotation(entityId: EntityId): Pos
-/**
- * Set the rotation for a server-auth entity.
- * A mob or player-shaped entity turns its head first; set the lockHeadToBody entity setting to turn its whole body.
- *
- * @param entityId
- * @param xRotation
- * @param yRotation
- * @param zRotation
- */
-setEntityRotation(entityId: EntityId, xRotation: number, yRotation: number, zRotation: number): void
-/**
- * Get the amount of an item in an item entity
- *
- * @param itemId
- * @returns number
- */
-getItemAmount(itemId: EntityId): number
-/**
- * Set the amount of an item in an item entity
- *
- * @param itemId
- * @param newAmount
- */
-setItemAmount(itemId: EntityId, newAmount: number): void
-/**
- * Update the max players and soft max players matchmaking will use
- *
- * softMaxPlayers is the number of players that matchmaking will route to using "Quick Play".
- * Once the softMaxPlayers limit is reached, this lobby can only be joined by requesting the lobby name or joining a friend.
- *
- * maxPlayers is the absolute maximum: a lobby will not have more players than this.
- * Tip: softMaxPlayers should be around 90% of maxPlayers
- *
- * WARNING: This change is not immediate, as it takes a while for matchmaking to find out.
- * Also, this will not kick players out of the lobby if set to a lower value than the current player count.
- *
- * @param softMaxPlayers
- * @param maxPlayers
- */
-setMaxPlayers(softMaxPlayers: number, maxPlayers: number): void
-/**
- * Set whether a player who joins while an ad plays enters the world only once the ad ends, so nothing can hurt them
- * while they can't play. On by default. Turn it off in a round-based game, so a party's players are all in the lobby
- * when a round starts. Games using the \`@plugins/sessionBasedGame\` plugin have it off already.
- *
- * @param joinsWait
- */
-setJoinsWaitForAds(joinsWait: boolean): void
-/**
- * Tell a player to disconnect from the current lobby and join a new one.
- *
- * To connect to a specific variation, format is \`gamename_variation\`.
- * For Custom Games, this will be \`classic_playerSchematic|XXXXXXXXXX\` or
- * \`classic_playerSchematic|XXXXXXXXXX|<varname>\` for a named sub-variation.
- *
- * NOTE: Players won't disconnect immediately (they may play an ad before being redirected).
- * In a world's own lobby, the world's owner and co-owners are asked first and can choose to stay.
- *
- * @param playerId
- * @param game Defaults to the current game.
- * @param lobbyName Defaults to "Quick Play"
- */
-matchmakePlayer(playerId: PlayerId, game?: string, lobbyName?: string): void
-/**
- * Create and register the UI for the requested quicktime event (QTE) to the screen.
- * Handle the result via the onPlayerFinishQTE engine callback.
- *
- * @param playerId
- * @param qteParameters - includes type and parameters
- * @returns an id that can be passed to deleteQTE
- */
-addQTE<T extends QTEType>(playerId: PlayerId, qteParameters: QTEClientParameters<T>): QTERequestId
-/**
- * Delete a quicktime event from the screen
- *
- * @param playerId
- * @param id Returned from the addQTE request you want to cancel
- */
-deleteQTE(playerId: PlayerId, id: QTERequestId): void
-/**
- * Check whether the player has any qteRequests
- */
-hasActiveQTE(playerId: PlayerId): boolean
-/**
- * Delete a request for a player.
- *
- * @param playerId
- * @param id Returned from the addUiRequest call you want to cancel
- */
-deleteUiRequest(playerId: PlayerId, id: UiRequestId): void
-/**
- * Show a message over the shop in the same place that a shop item's onBoughtMessage is shown.
- * Displays for a couple seconds before disappearing
- * Use case is to show a dynamic message when player buys an item
- *
- * @param playerId
- * @param info
- */
-sendOverShopInfo(playerId: PlayerId, info: string | CustomTextStyling): void
-/**
- * Open the shop UI for a player
- *
- * @param playerId
- * @param toggle Whether to close the shop if it's already open. Leave this off when opening from an
- * interaction: holding the interact button re-fires the alt action every ~50-150ms, so a toggle would
- * flicker the shop open and closed until release.
- * @param forceCategoryKey If set, will change the shop to this category
- * @param onlyIfNonEmpty If true, will only open the shop if the category (or shop, if no category is provided) is non-empty
- */
-openShop(playerId: PlayerId, toggle?: boolean, forceCategoryKey?: ShopCategoryKey | null, onlyIfNonEmpty?: boolean): void
-/**
- * Apply an effect to a lifeform.
- * Can be an inbuilt effect E.g. "Speed" (speed boost), "Damage" (damage boost).
- * For inbuilt just pass the name of the effect and the functionality is handled in-engine.
- * For custom effect, you pass customEffectInfo. The icon can be an InGameIconName or a bloxd item name.
- * The custom effect onEndCb is an optional helper within which you can undo the effect you applied.
- * Note that onEndCb will not work for press to code boards, code blocks or world code.
- *
- * @param lifeformId
- * @param effectName
- * @param duration
- * @param customEffectInfo
- */
-applyEffect(lifeformId: LifeformId, effectName: string, duration: number | null, customEffectInfo: { icon?: IngameIconName | ItemName; onEndCb?: () => void; displayName?: string | TranslatedText } & Partial<InbuiltEffectInfo>): void
-/**
- * Check if a lifeform has an effect.
- *
- * @param lifeformId
- * @param name
- * @param atOrAboveLevel Checks whether the effect is at or above the given level
- */
-hasEffect(lifeformId: LifeformId, name: string, atOrAboveLevel?: number): boolean
-/**
- * Get the level of an effect on a lifeform, or 0 if they don't have it.
- *
- * @param lifeformId
- * @param name
- */
-getEffectLevel(lifeformId: LifeformId, name: string): number
-/**
- * Get all the effects currently applied to a lifeform.
- *
- * @param lifeformId
- */
-getEffects(lifeformId: LifeformId): string[]
-/**
- * Remove an effect from a lifeform.
- *
- * @param lifeformId
- * @param name
- */
-removeEffect(lifeformId: LifeformId, name: string): void
-/**
- * Change a part of a player's skin.
- * UGC code is restricted to cosmetics from packs with ugcSelectable; internal code can use any cosmetics.
- * @param playerId Player to change
- * @param cosmeticType Type of cosmetic
- * @param cosmeticName Chosen cosmetic, will be made lowercase automatically
- */
-changePlayerIntoSkin(playerId: PlayerId, cosmeticType: CosmeticType, cosmeticName: CosmeticName): void
-/**
- * Remove gamemode-applied skin from a player
- * @param playerId
- */
-removeAppliedSkin(playerId: PlayerId): void
-/**
- * Get a single equipped cosmetic for a player.
- * @param playerId
- * @param cosmeticType Type of cosmetic
- */
-getPlayerCosmetic(playerId: PlayerId, cosmeticType: CosmeticType): CosmeticName
-/**
- * Set an entity's meshScaling setting by 3d vector. Model node scaling is applied to lifeforms;
- * for mesh entities, this setting affects nametag placement and interaction reach, not the model's nodes.
- * State from prior calls to this api is lost so if you want to have multiple nodes scaled, pass in all the scales at once.
- *
- * @param playerId
- * @param nodeScales
- */
-scalePlayerMeshNodes(playerId: EntityId, nodeScales: EntityMeshScalingMap): void
-/**
- *  Attach/detach mesh instances to/from an entity
- *  @param eId
- *  @param node node to attach to
- *  @param type if null, detaches mesh from this node
- *  @param opts
- *  @param offset
- *  @param rotation
- */
-updateEntityNodeMeshAttachment<MeshType extends MeshEntityType>(eId: EntityId, node: EntityNamedNode, type: MeshType | null, opts?: MeshEntityOpts[MeshType], offset?: Pos, rotation?: Pos): void
-/**
- * Set the pose of the player
- * @param playerId
- * @param pose
- * @param poseOffset
- */
-setPlayerPose(playerId: PlayerId, pose: PlayerPose, poseOffset?: Pos): void
-/**
- * Set physics state of player (vehicle type and tier).
- *
- * For types that have tiers (e.g. BOAT, GLIDER, CAR), a \`tier\` of \`null\` defaults to the first
- * tier (0). Types without tiers (e.g. DEFAULT) must be given a \`null\` tier.
- * @param playerId
- * @param physicsState
- * @param positionOffset - Optional offset to adjust the player's collision box, which is at most 25 blocks wide and 90 tall
- */
-setPlayerPhysicsState(playerId: PlayerId, physicsState: PlayerPhysicsState<PhysicsType>, positionOffset?: Pos): void
-/**
- * Get physics state for player
- * @param playerId
- */
-getPlayerPhysicsState(playerId: PlayerId): PlayerPhysicsState<PhysicsType>
-/**
- * Seat a player in a vehicle. Seat 0 drives; other seats follow the vehicle without movement control.
- * The player leaves their current vehicle and replaces anyone occupying the requested seat.
- * @param playerId
- * @param vehicleEId A spawned vehicle or a rideable mob.
- * @param seatIndex Seat index (default 0).
- */
-setPlayerVehicle(playerId: PlayerId, vehicleEId: EntityId, seatIndex?: number): void
-/**
- * Take a player off whatever they are riding, dropping them where it is. Does nothing if they are
- * not riding anything.
- * @param playerId
- */
-exitPlayerVehicle(playerId: PlayerId): void
-/**
- * The seat layout for a vehicle entity - at minimum one driver seat (index 0), optionally more
- * passenger seats after it. Resolved from the spawned vehicle's def (\`VehicleMeshEntityDef.seats\`,
- * falling back to a single driver seat at the physics type/tier's own \`riderOffset\` default) or a
- * rideable mob's override (\`getMobVehicleSeats\`, falling back to its \`rideHeight\`). Throws if
- * \`vehicleEId\` is not a vehicle.
- */
-getVehicleSeats(vehicleEId: EntityId): VehicleSeat[]
-/**
- * The current value of a physics setting for a specific vehicle entity: the value set via
- * \`setVehicleSetting\` if overridden, otherwise (when \`returnDefaultIfNotOverridden\`) the type/tier
- * default from the vehicle's physics state. Mirrors \`getMobSetting\`.
- *
- * The one default not read from the type/tier is a mob's \`riderOffset\`, which comes from its ride height.
- *
- * A per-block setting (e.g. \`"IceCanAutoStep"\`) is \`undefined\` when that block is unlisted, which means
- * the block does not change the setting rather than that the setting is off.
- */
-getVehicleSetting<TSetting extends SettableVehicleSetting>(vehicleEId: EntityId, setting: TSetting, returnDefaultIfNotOverridden?: boolean): SettableVehicleSettingValue<TSetting>
-/**
- * Override a physics setting for a specific vehicle entity, replacing the type/tier default for that
- * vehicle's rider. The override is stored on the shared Bloxd and, when the vehicle currently has a
- * rider, replicated to that rider's client. Mirrors \`setMobSetting\`.
- *
- * A setting can also be overridden for one block by naming the block first, e.g.
- * \`setVehicleSetting(boatId, "IceCanAutoStep", true)\`. That is stored as an entry of the matching
- * \`<setting>ByBlock\` record, which the physics tick reads as a precomputed block lookup.
- *
- * The rider's body is at most 25 blocks wide and 90 tall: a larger \`width\` or \`height\` acts as that.
- */
-setVehicleSetting<TSetting extends SettableVehicleSetting>(vehicleEId: EntityId, setting: TSetting, value: SettableVehicleSettingValue<TSetting>): void
-/**
- * Try to spawn a rideable vehicle, which players can mount with an alt action.
- * There is a limit to the number of mesh entities with physics that can be created.
- * WARNING: Either the "onPlayerAttemptSpawnVehicle" or the "onWorldAttemptSpawnVehicle" game callback will be called
- * depending on whether "spawnerId" is provided. Calling this function inside those callbacks risks infinite recursion.
- * @param vehicleType
- * @param x
- * @param y
- * @param z
- * @param opts Includes:
- *  - spawnerId The ID of the player who spawned the vehicle. The vehicle faces away from them.
- * @returns null if the vehicle could not be spawned, otherwise the entity ID of the vehicle.
- */
-attemptSpawnVehicle(vehicleType: MeshEntityVehicleType, x: number, y: number, z: number, opts?: VehicleSpawnOpts): EntityId | null
-/**
- * Dispose of a vehicle's state and remove them from the world.
- * Always succeeds.
- * @param vehicleId
- */
-despawnVehicle(vehicleId: EntityId): void
-/**
- * Add following entity to an entity
- * @param playerId
- * @param eId
- * @param offset
- * @param followsPlayerRotation
- */
-addFollowingEntityToPlayer(playerId: EntityId, eId: EntityId, offset?: number[], followsPlayerRotation?: boolean): void
-/**
- * Remove following entity from an entity
- * @param playerId
- * @param entityEId
- */
-removeFollowingEntityFromPlayer(playerId: EntityId, entityEId: EntityId): void
-/**
- * Set camera zoom for a player
- * @param playerId
- * @param zoom
- */
-setCameraZoom(playerId: PlayerId, zoom: number): void
-/**
- * @param playerId hears the sound
- * @param soundName Can also be a prefix. If so, a random sound with that prefix will be played
- * @param volume 0-1. If it's too quiet and volume is 1, normalise your sound in audacity
- * @param rate The speed of playback. Also affects pitch. 0.5-4. Lower playback = lower pitch
- *        Good for varying the sound. E.g. item pickup sound has a random rate between 1 and 1.5.
- * @param posSettings
- * {playerIdOrPos: EntityId | number[], maxHearDist: number, refDistance: number}
- * playerIdOrPos: The entity the sound originates from, or the position of the sound
- * maxHearDist: sound is not played if player is further than this. Default 15
- * refDistance: higher means the sound decreases less in volume with distance. Default 3. Hitting is 4. Guns are 10
- *
- */
-playSound(playerId: PlayerId, soundName: string, volume: number, rate: number, posSettings?: { playerIdOrPos: EntityId | number[]; maxHearDist?: number; refDistance?: number; }): void
-/**
- * See documentation for api.playSound
- */
-broadcastSound(soundName: string, volume: number, rate: number, posSettings?: { playerIdOrPos: EntityId | number[]; maxHearDist?: number; refDistance?: number; }, exceptPlayerId?: PlayerId | null): void
-/**
- * See documentation for api.playSound
- */
-playClientPredictedSound(soundName: string, volume: number, rate: number, posSettings?: { playerIdOrPos: EntityId | number[]; maxHearDist?: number; refDistance?: number; }, predictedBy?: EntityId): void
-
-calcExplosionForce(eId: EntityId, explosionType: ExplosionType, knockbackFactor: number, explosionRadius: number, explosionPos: number[], ignoreProjectiles: boolean): { force: Pos; forceFrac: number; }
-/**
- * Add a custom killfeed message to the killfeed
- * @param killer - The entity ID or a custom name and colour for the killer
- * @param victim - The entity ID or a custom name and colour for the victim
- * @param withItem - The item used
- */
-addCustomKillfeedMessage(killer: { eId: EntityId } | { name: string; colour: string }, victim: { eId: EntityId } | { name: string; colour: string }, withItem: string): void
-/**
- * Get the position of a player's target block and the block adjacent to it (e.g. where a block would be placed)
- *
- *
- * Note: This position is a tick ahead of the client's block target info (noa.targetedBlock),
- * since the client updates the blocktarget before the entities tick (and since it uses the renderposition of the camera)
- *
- * This normally doesn't matter but if you are client predicting something based on noa.targetedBlock
- * (currently only applicable to in-engine code), you should not verify using this
- *
- * @param playerId
- */
-getPlayerTargetInfo(playerId: PlayerId): { position: Pos; normal: Pos; adjacent: Pos }
-/**
- * Get the position of a player's camera and the direction (both in Euclidean and spherical coordinates) they are attempting to use an item.
- * The camPos has the same limitations described in getPlayerTargetInfo
- *
- * @param playerId
- */
-getPlayerFacingInfo(playerId: PlayerId): { camPos: Pos; dir: Pos; angleDir: AngleDir; moveHeading: number }
-/**
- * Raycast for a block in the world.
- * Given a position and a direction, find the first block that the "ray" hits.
- *
- * @param fromPos
- * @param dirVec
- */
-raycastForBlock(fromPos: number[], dirVec: number[]): BlockRaycastResult
-/**
- * Prevents the player from taking fall damage next time they land on the ground
- * @param playerId
- */
-preventFallDamageNextGrounding(playerId: PlayerId): void
-/**
- * Check whether a player is crouching
- *
- * @param playerId
- */
-isPlayerCrouching(playerId: PlayerId): boolean
-/**
- * Get the aura info for a player
- * @param playerId
- */
-getAuraInfo(playerId: PlayerId): { level: number; totalAura: number; auraPerLevel: number }
-/**
- * Sets the total aura for a player. Will not go over max level or under 0
- * @param playerId
- * @param totalAura
- */
-setTotalAura(playerId: PlayerId, totalAura: number): void
-/**
- * Set the aura level for a player - shortcut for setTotalAura(level * auraPerLevel)
- * @param playerId
- * @param level
- */
-setAuraLevel(playerId: PlayerId, level: number): void
-/**
- * Add (or remove if negative) aura to a player. Will not go over max level or under 0
- * @param playerId
- * @param auraDiff
- * @returns The actual change in aura
- */
-applyAuraChange(playerId: PlayerId, auraDiff: number): number
-/**
- * Updates the particle systems of multiple mesh entities at specified nodes
- * @param updates
- */
-updateMeshParticleSystems(updates: MeshParticleSystemUpdates): void
-/**
- * Register an event for analytics. Custom games only: anywhere else, World Code gets an error.
- * Special value is eventType "match" and eventValue "match_started" to mark the start of a match when calculating average quantities
- * Each player can send 20 events a minute. Each day a game can have 20 game categories, 20 event types in each and
- * 50 event values for each type; once it goes past one, events at that level are dropped until midnight UTC
- *
- * @param playerId - The player associated with the event
- * @param eventType - The type of event e.g. "shop" or "death", at most 64 characters
- * @param eventValue - The detail of the event e.g. the item bought or cause of death, at most 128 characters
- * @param gameCategoryId - The game category id e.g. the map you're playing on or the variant of the game to filter by or compare, at most 128 characters
- * @param gameStartTimeMs - The time the game or match started in milliseconds since 1970, within the last 30 days - use to get event times relative to the start of the game.
- * Each event also records the player's lifetime playtime
- * @param position - Where the event happened, e.g. where the player died or the block they broke, shown on Studio's heatmap. In the same frame of reference as the game's registerAnalyticsPlayerPosition positions for this category. Without one, no position is recorded
- * @param numericValue - A number the event measures, e.g. the coins earned, the round's score or the seconds it took.
- */
-registerAnalyticsEvent(playerId: string, eventType: string, eventValue: string | null, gameCategoryId: string | null, gameStartTimeMs: number, position?: Pos | null, numericValue?: number | null): void
-/**
- * Record where a player is for the analytics heatmap. Call it at a regular interval (e.g. once a second).
- * Custom games only: anywhere else, World Code gets an error.
- * Each player can send 120 positions a minute. Each day a game can send 100,000 different blocks (event positions
- * included); once it goes past that, positions are dropped until midnight UTC
- *
- * @param playerId - The player whose position to record
- * @param gameCategoryId - The game category id e.g. the map you're playing on or the variant of the game to filter by, at most 128 characters
- * @param gameStartTimeMs - The time the game or match started in milliseconds since 1970, within the last 30 days - used to get a playback of positions
- * @param position - The position of the player to record. Defaults to the player's global position.
- */
-registerAnalyticsPlayerPosition(playerId: string, gameCategoryId: string | null, gameStartTimeMs: number, position?: Pos | null): void
-/**
- * Gets a database value that is saved per lobby.
- * @param key
- */
-getLobbyDbValue(key: string): string | number | null
-/**
- * Sets a database value that is saved per lobby. This persists between sessions.
- * @param key
- * @param value
- */
-setLobbyDbValue(key: string, value: string | number): void
-/**
- * Deletes a database value that is saved per lobby.
- * @param key
- */
-deleteLobbyDbValue(key: string): void
-/**
- * Deletes all database values that are saved per lobby.
- */
-deleteAllLobbyDbValues(): void
-/**
- * Gets a database value that is saved per player.
- * @param playerId
- * @param key
- */
-getPlayerDbValue(playerId: PlayerId, key: string): string | number | null
-/**
- * Sets a database value that is saved per player. For custom games this persists between sessions and
- * between lobbies, and is shared across all of the game's variations (e.g. a hub and its sub-modes).
- * @param playerId
- * @param key
- * @param value
- */
-setPlayerDbValue(playerId: PlayerId, key: string, value: string | number): void
-/**
- * Deletes a database value that is saved per player.
- * @param playerId
- * @param key
- */
-deletePlayerDbValue(playerId: PlayerId, key: string): void
-/**
- * Deletes all database values that are saved per player, including persisted currencies.
- * @param playerId
- */
-deleteAllPlayerDbValues(playerId: PlayerId): void
-/**
- * Dynamically define a currency for a player and show it on the HUD.
- * Amounts will persist between sessions if \`persistent\` is set to true.
- * Persistent currencies count towards db length limits.
- *
- * Example usage:
- * \`\`\`js
- * api.setCurrency(myId, "myCurrency", { amount: 100, icon: "coins", iconColour: "blue", persistent: true })
- * \`\`\`
- *
- * @param playerId
- * @param currencyId
- * @param info - { amount, icon } are required (icon is an icon name such as "coins"); iconColour, persistent, hidden and subtext are optional
- */
-setCurrency(playerId: PlayerId, currencyId: string, info: UgcCurrencyInfo): void
-/**
- * Delete a currency from a player. This will make the currency unknown to the player.
- * @param playerId
- * @param currencyId
- */
-deleteCurrency(playerId: PlayerId, currencyId: string): void
-/**
- * Set the amount of a currency a player has. For persistent currencies, amount/subtext count towards db length limits.
- * @param playerId
- * @param currencyId
- * @param amount
- * @param subtext
- */
-setCurrencyAmount(playerId: PlayerId, currencyId: string, amount: number, subtext?: string | CustomTextStyling): void
-/**
- * Give a player an amount of currency. Can be negative to remove money.
- * The currency must exist for the player first, or this throws: make it with setCurrency (with an icon), e.g. in onPlayerJoin.
- * @param playerId
- * @param currencyId
- * @param amount
- */
-giveCurrencyAmount(playerId: PlayerId, currencyId: string, amount: number): void
-/**
- * Replace a world chunk with a chunk from a project schematic, including air and block data.
- * Both positions are block coordinates selecting their containing 32-block chunk.
- * Add schematics in the Code Editor. Missing paths or source chunks throw an error.
- * @param schematicPath Project-relative path, including .bloxdschem.
- * @param srcCoords Block coordinates in the schematic's chunk grid (including selection padding).
- * @param destCoords Block coordinates in the world. Existing blocks are replaced without break drops.
- */
-setChunkAsSchematic(schematicPath: string, srcCoords: Pos, destCoords: Pos): void
-/**
- * Get a project schematic's stored dimensions as [x, y, z], including selection padding.
- * Uses the active project snapshot. Missing schematic paths throw an error.
- * @param schematicPath Project-relative path, including .bloxdschem.
- */
-getSchematicDimensions(schematicPath: string): Pos
-/**
- * Set a default value to be returned by your callback code if it throws an error.
- *
- * @param cbName The name of the callback to set the default value for.
- * @param value The default value to return.
- */
-setCallbackValueFallback(cbName: UserCallbacks, value: any): void
-/**
- * Set the gamemode of a player. This is persistent across lobbies for custom games.
- *
- * @param playerId The ID of the player to set the gamemode of.
- * @param gamemode The gamemode to set the player to.
- */
-setPlayerGamemode(playerId: PlayerId, gamemode: WorldGamemode): void
-/**
- * Get the gamemode of a player.
- *
- * @param playerId The ID of the player to get the gamemode of.
- * @returns The gamemode of the player.
- */
-getPlayerGamemode(playerId: PlayerId): WorldGamemode
-/**
- * Returns true if your code is about to be interrupted for exceeding its time budget.
- * Use this to break up long-running code into smaller chunks.
- *
- *
- * ### Example:
- * \`\`\`js
- * // Resume from where we stopped last time (or 0 on the first run)
- * let savedLoopCounter = 0
- *
- * // ...
- *
- * for (let i = savedLoopCounter; i < 1000; i++) {
- * 	if (api.isNearInterrupt()) {
- * 		// Out of time - remember our progress and stop before getting killed
- * 		savedLoopCounter = i
- * 		break
- * 	}
- *
- * 	someExpensiveFunction()
- * }
- * \`\`\`
- */
-isNearInterrupt(): boolean
-/**
- * Schedule small text to be displayed in the middle of the screen (middleTextLower).
- * This text will be removed after the duration.
- * Stacking queued texts will schedule them to be displayed one after the other.
- * NOTE: Overriding the middleTextLower client option may cause queued texts to be displayed incorrectly.
- *
- * @param playerId The ID of the player to display the text to.
- * @param text The text to display.
- * @param duration The duration of the text in milliseconds.
- * @returns The ID of the queued command.
- */
-queueMiddleTextLower(playerId: PlayerId, text: string | CustomTextStyling, duration: number): QueuedCommandId
-/**
- * Schedule large text to be displayed in the middle of the screen (middleTextUpper).
- * This text will be removed after the duration.
- * Stacking queued texts will schedule them to be displayed one after the other.
- * NOTE: Overriding the middleTextUpper client option may cause queued texts to be displayed incorrectly.
- *
- * @param playerId The ID of the player to display the text to.
- * @param text The text to display.
- * @param duration The duration of the text in milliseconds.
- * @returns The ID of the queued command.
- */
-queueMiddleTextUpper(playerId: PlayerId, text: string | CustomTextStyling, duration: number): QueuedCommandId
-/**
- * Schedule text to be displayed in the crosshair.
- * This text will be removed after the duration.
- * Stacking queued texts will schedule them to be displayed one after the other.
- * NOTE: Overriding the crosshairText client option may cause queued texts to be displayed incorrectly.
- *
- * @param playerId The ID of the player to display the text to.
- * @param text The text to display.
- * @param duration The duration of the text in milliseconds.
- * @returns The ID of the queued command.
- */
-queueCrosshairText(playerId: PlayerId, text: string | CustomTextStyling, duration: number): QueuedCommandId
-/**
- * Get the status of a queued command.
- *
- * @param id The ID of the queued command to get the status of.
- * @returns NOT_IN_QUEUE, WAITING_TO_RUN, or CURRENTLY_RUNNING.
- */
-getQueuedStatus(id: QueuedCommandId): QueuedStatusString
-/**
- * Remove a queued command from the queue.
- *
- * @param id The ID of the queued command to remove.
- */
-removeFromQueue(id: QueuedCommandId): void
-/**
- * Add a request for the player to answer in the top right corner. E.g. accepting or denying a tprequest.
- *
- * Use onUiRequestResponded to handle the response.
- *
- * Example Usage:
- * \`\`\`js
- * const myRequestId = api.addUiRequest(playerId, {
- *   type: "standard",
- *   title: "Do you want to join the game?",
- * }, 5000)
- *
- * onUiRequestResponded = (playerId, uiRequestId, response) => {
- *   if (uiRequestId === myRequestId) {
- *     api.log(response)
- *   }
- * }
- * \`\`\`
- *
- *
- * @param playerId The ID of the player to add the request to.
- * @param parameters The parameters of the request.
- * @param timeoutAfterMs The timeout after which the request will be automatically deleted. A response will not be given and onUiRequestResponded will not be called.
- * @returns The ID of the request. Pass into deleteUiRequest or cross-reference with onUiRequestResponded.
- */
-addUiRequest(playerId: PlayerId, parameters: UiRequestClientParameters, timeoutAfterMs?: number): UiRequestId
-/**
- * Add a request for the player to answer in the form of a popup. This blocks the player from doing anything else until they respond.
- *
- * Use onUiRequestResponded to handle the response.
- *
- * Example Usage:
- * \`\`\`js
- * const myRequestId = api.addUiRequestPopup(playerId, "Do you want to join the game?")
- *
- * onUiRequestResponded = (playerId, uiRequestId, response) => {
- *   if (uiRequestId === myRequestId) {
- *     api.log(response)
- *   }
- * }
- * \`\`\`
- *
- * @param playerId The ID of the player to add the request to.
- * @param requestText The text of the request.
- * @returns The ID of the request, or null if the request was rate limited. Pass into deleteUiRequest or cross-reference with onUiRequestResponded.
- */
-addUiRequestPopup(playerId: PlayerId, requestText: string): UiRequestId | null
-/**
- * Matchmake a player into a sub-variation of the current custom game.
- * Pass \`"default"\` for the default variation.
- *
- * @param playerId The player to matchmake
- * @param varname Sub-variation name (\`[A-Za-z0-9_-]\`, 1-32 chars), or \`"default"\`
- */
-matchmakeToVariation(playerId: PlayerId, varname: string): void
-/**
- * Get the current sub-variation name.
- * Returns \`"default"\` when there is no named sub-variation.
- */
-getVariation(): string
-/**
- * Whether the player joined with this custom game's texture pack applied. False if they skipped applying it
- * (kicking them shows the prompt again when they rejoin).
- * Only published custom games prompt for their pack, so anywhere else this says so and returns true.
- * @param playerId
- */
-isUsingCustomGameTexturePack(playerId: PlayerId): boolean
-/**
- * Log a message to chat.
-*/
-log(message: any): void
-
-	}
-
-export interface Console {
-		/** Log a message to chat. */
-		log(message: any): void
-	}
-
-export type EntityId = string
-
-export type Pos = [number, number, number]
-
-export type LifeformId = EntityId
-
-export type PlayerId = LifeformId
-
-export type PlayerDbId = string
-
-export type LifeformBodyPart = (_TypeOf["lifeformBodyParts"])[number]
-
-export interface PlayerAttemptDamageOtherPlayerOpts {
-	eId: PlayerId
-	hitEId: PlayerId
-	attemptedDmgAmt: number
-	withItem: string
-	bodyPartHit?: LifeformBodyPart
-	attackDir?: number[]
-	showCritParticles?: boolean
-	reduceVerticalKbVelocity?: boolean
-	horizontalKbMultiplier?: number
-	verticalKbMultiplier?: number
-	broadcastEntityHurt?: boolean
-	attackCooldownSettings?: { type: string; cooldownMs: number } | null
-	hittingSoundOverride?: HittingSoundOverride
-	ignoreOtherEntitySettingCanAttack?: boolean
-	isTrueDamage?: boolean
-	// The damaging playerDbId. If null, will default to the dbId of \`eId\`
-	damagerDbId?: PlayerId | null
-	// What dealt the hit, passed to the damage callbacks as \`damageInfo.cause\`. Null when not given.
-	damageCause?: DamageCause | null
-}
-
-export type HittingSoundOverride = { sound: string; volume: number; pitch: number }
-
-export type DamageCause = (_TypeOf["damageCauses"])[number]
-
-export type ItemName = string
-
-export type EnchantmentAttributes = {
-	enchantments: Partial<Record<EnchantmentPerk, number>>
-	enchantmentTier: EnchantmentTier
-	id: string
-}
-
-export type EnchantmentPerk =
-	// Swords
-	| "Damage"
-	| "Attack Speed"
-	| "Critical Damage"
-
-	// Armour
-	| "Protection"
-	| "Health"
-	| "Health Regen"
-
-	// Special Armour
-	| "Stomp Damage"
-	| "Knockback Resist"
-
-	// Bows & Crossbows
-	| "Arrow Speed"
-	| "Arrow Damage"
-	| "Quick Charge"
-
-	// Tools
-	| "Break Speed"
-	| "Momentum"
-	| "Mining Yield"
-	| "Farming Yield"
-	| "Mining Aura"
-	| "Digging Aura"
-	| "Lumber Aura"
-	| "Farming Aura"
-
-	// Sticks
-	| "Horizontal Knockback"
-	| "Vertical Knockback"
-
-	// Hang Gliders
-	| "Firecracker Cooldown"
-	| "Firecracker Boost"
-	| "Gliding Speed"
-
-export type EnchantmentTier = (_TypeOf["enchantmentTiers"])[number]
-
-export type CustomTextStyling = (string | EntityName | TranslatedText | StyledIcon | StyledText | ProgressBar | StyledKeyBinding)[]
-
-export type TranslatedText = {
-	translationKey: string
-	params?: Record<string, string | number | boolean | EntityName>
-}
-
-export type EntityName = {
-	entityName: string
-	ranks?: Readonly<Rank[]>
-	style?: {
-		color?: string
-		colour?: string
-	}
-}
-
-export type Rank = (_TypeOf["ranks"])[number]
-
-export type StyledIcon = {
-	icon: string
-	style?: {
-		color?: string
-		colour?: string
-		fontSize?: FontSize
-		opacity?: number
-	}
-}
-
-export type FontSize = string
-
-export type StyledText = {
-	str: string | EntityName | TranslatedText
-	style?: TextStyle
-}
-
-export type TextStyle = {
-	// A CSS colour name, hex or rgb()/hsl()-style colour, e.g. "red", "#ff0000", "rgba(255, 0, 0, 0.5)"
-	color?: string
-	colour?: string
-	fontWeight?: string
-	fontSize?: FontSize
-	fontStyle?: string
-	opacity?: number
-}
-
-export type ProgressBar = {
-	// Mandatory discriminator: marks this CustomTextStyling item as a progress bar.
-	type: "ProgressBar"
-	progress: number
-	width?: FontSize
-	height?: FontSize
-	colours?: string[]
-	backgroundColour?: string
-}
-
-export type StyledKeyBinding = {
-	type: "StyledKeyBinding"
-	action: NoaAction
-	style?: TextStyle
-}
-
-export type NoaAction = (_TypeOf["noaActions"])[number]
-
-export type ClientOption = keyof ClientOptions
-
-export type EarthSkyBox = {
-	type: "earth"
-	inclination?: number
-	turbidity?: number
-	infiniteDistance?: boolean
-	luminance?: number
-	// Sky appearance (light intensity); higher = more saturated sky.
-	rayleigh?: number
-	// Mie scattering coefficient in [0, 0.1]; affects mieDirectionalG impact.
-	mieCoefficient?: number
-	// Amount of haze particles per Mie scattering theory.
-	mieDirectionalG?: number
-	// Distance of the sun from the active scene camera.
-	distance?: number
-	// When \`useSunPosition\` is true, this overrides \`inclination\` + \`azimuth\`.
-	sunPosition?: Vec3
-	useSunPosition?: boolean
-	xCameraOffset?: number
-	yCameraOffset?: number
-	zCameraOffset?: number
-	// Direction the sky considers "up"; defaults to [0, 1, 0].
-	up?: Vec3
-	// Dither the sky to reduce visible banding.
-	dithering?: boolean
-	azimuth?: number
-	// Not part of sky model by default; heavily tint to a vertex color
-	vertexTint?: Vec3
-}
-
-export type Vec3 = [number, number, number]
-
-export type LobbyLeaderboardInfo = Record<
-	string,
-	{
-		displayName?: string | CustomTextStyling
-		hidden?: boolean
-		sortOrder?: "ascending" | "descending" // No value means descending
-		sortPriority?: number
-	}
->
-
-export type TextWithDisplayOptions = {
-	showBackground?: boolean // Defaults to true. When false, the option's background panel is hidden.
-	content: string | CustomTextStyling
-}
-
-export type CustomButtonsType = CustomButtonType[]
-
-export type CustomButtonType = {
-	id: string // Identifier for the button. Used in the callbacks onPlayerPressedButton and onPlayerReleasedButton.
-	icon: string // Icon to display for the button. Can be a font awesome icon such as "house" or a bloxd icon such as "Dirt".
-	keycode: string // Key to trigger the button. Use a keycode like "KeyR" for the letter R. Allowed keys are letters ("KeyA" to "KeyZ"), the number row ("Digit0" to "Digit9"), arrow keys ("ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight") and "Space", shown as "_" next to the button. A key keeps its usual action too, so Space also jumps for players who have not changed their jump key.
-	description?: string // Optional description for the button explaining what it does.
-}
-
-export type HeaderChip = string | CustomTextStyling | TextWithDisplayOptions
-
-export type DialogueText = string | TranslatedText
-
-export type SpeechVoice = SpeechVoicePreset | SpeechSynth
-
-export type SpeechVoicePreset = keyof _TypeOf["SPEECH_VOICE_PRESETS"]
-
-export type SpeechSynth = Readonly<{
-	/** The tone of each blip, from the purest (sine) to the buzziest (sawtooth). */
-	waveform: SpeechSynthWaveform
-	/** The voice's pitch, which intonation moves each word away from. */
-	pitchHz: number
-	/** How far the pitch slides over each blip; negative falls. */
-	glideSemitones: number
-	/** How long each blip sounds. */
-	durationMs: number
-	/** The fade in at the start of the blip. */
-	attackMs: number
-	/** The fade at the end of the blip, within \`durationMs\`. */
-	releaseMs: number
-	/** Darkens a bright waveform; null leaves it unfiltered. */
-	lowpassHz: number | null
-	/** 1 is the engine's speech level. */
-	volume: number
-	intonation: SpeechIntonation
-	/** The speaking rate: each syllable takes this long, and sets when the next word appears. */
-	syllableMs: number
-}>
-
-export type SpeechSynthWaveform = (_TypeOf["SPEECH_SYNTH_WAVEFORMS"])[number]
-
-export type SpeechIntonation = Readonly<{
-	/** How far each word sits from the voice's pitch, either way. */
-	variationSemitones: number
-	/** How far the pitch falls from the first word of a sentence to its last. */
-	declineSemitones: number
-	/** How far the last word of a question rises. */
-	questionRiseSemitones: number
-	/** How far a whole exclamation is lifted. */
-	exclaimLiftSemitones: number
-}>
-
-export type GunshotOrigin = "default" | "head"
-
-export type CameraSettings = DefaultCameraSettings | FixedCameraSettings | FollowCameraSettings | PathCameraSettings | FrameCameraSettings
-
-export type DefaultCameraSettings = Pick<CameraSettingsBase, "blendInMs" | "blendEasing" | "transition" | "letterbox" | "hideHud"> & { mode: "default" }
-
-export type FixedCameraSettings = CameraSettingsBase & {
-	mode: "fixed"
-	position: Pos
-	/** What to look at. Defaults to the player. */
-	lookAt?: CameraTarget
-	/** Look this way instead of at something. */
-	lookDirection?: Pos
-}
-
-export type FollowCameraSettings = CameraSettingsBase & {
-	mode: "follow"
-	/** The entity to follow. Defaults to the player. */
-	target?: EntityId
-	/** Where the camera sits relative to the target, in blocks. */
-	offset: Pos
-	/** "world" (default) keeps the offset on world axes; "target" turns it with the target's heading, +z ahead of the target. */
-	offsetSpace?: CameraOffsetSpace
-	/** What to look at. Defaults to the target. */
-	lookAt?: CameraTarget
-	lookDirection?: Pos
-	/** Trail behind the target by about this many ms. 0 sticks to it. */
-	smoothMs?: number
-	/** Move in towards the target rather than go through terrain between them, for side-on and chase cameras. Default false: a top-down camera would dive through treetops. */
-	avoidTerrain?: boolean
-}
-
-export type PathCameraSettings = CameraSettingsBase & {
-	mode: "path"
-	keyframes: CameraPathKeyframe[]
-	/** true (default): a smooth curve through the keyframes. false: straight lines between them. */
-	smooth?: boolean
-	/** Start again from the first keyframe after the last. */
-	loop?: boolean
-}
-
-export type FrameCameraSettings = CameraSettingsBase & {
-	mode: "frame"
-	/**
-	 * The entities and positions to keep in view. Entities the player is too far from to see, or that have left, are
-	 * left out. With none to frame, an empty list too, the camera holds where and how far it last framed, at this
-	 * camera's own angle, or frames the player if it has framed nothing yet.
-	 */
-	targets: CameraTarget[]
-	/** Compass direction the camera looks in, in degrees: 0 looks along +z, 90 along +x. Default 0. */
-	viewHeading?: number
-	/** Degrees the camera looks down, from 0 (level) to 90 (straight down). Default 45. */
-	viewElevation?: number
-	/** Blocks of space to keep around the targets. Default 2. */
-	padding?: number
-	/** Closest the camera comes to the middle of the targets, in blocks. Default 6, or furthestDistance if that is closer. */
-	closestDistance?: number
-	/** Furthest the camera goes from the middle of the targets, in blocks, even if some targets leave the view. Default 64, or closestDistance if that is further. */
-	furthestDistance?: number
-	/**
-	 * Ease towards a new framing over about this many ms as the targets move, and round to a new angle from the frame
-	 * camera this one replaces. 0 sticks to them. Default 400.
-	 */
-	smoothMs?: number
-}
-
-export type CameraSettingsBase = {
-	/** Blend from the current view into this camera over this many ms. 0 cuts straight to it. */
-	blendInMs?: number
-	/** How the blend eases. Default "easeInOut". */
-	blendEasing?: CameraEasing
-	/** Fade into this camera through a colour instead, cutting to it under the colour: blendInMs is ignored. */
-	transition?: CameraTransition
-	/** Cinematic bars across the top and bottom of the screen while this camera is on. Presses on the bars do nothing in the world, and dragging on them doesn't turn the camera. */
-	letterbox?: boolean
-	/**
-	 * Hide the HUD while this camera is on. Nametags, dialogue, the chat being typed in, the respawn and sleeping screens,
-	 * QTEs, UI requests, touch controls and the settings button on touch screens stay.
-	 */
-	hideHud?: boolean
-	/** Field of view in degrees. Omit to keep the player's own. */
-	fov?: number
-	/**
-	 * Which way the player's body faces while this camera is on. Movement is always relative to the camera.
-	 * "movement" (default): turns to face where they walk. "camera": faces where the camera looks.
-	 * "cursor": shows the mouse cursor and faces what is under it, or what was last tapped on touch screens, aiming
-	 * blocks, hits and shots there; the mouse no longer turns the camera. For top-down and isometric games.
-	 */
-	playerFacing?: CameraPlayerFacing
-	playerLook?: CameraPlayerLook
-}
-
-export type CameraEasing = (_TypeOf["CAMERA_EASING_NAMES"])[number] | [number, number, number, number]
-
-export type CameraTransition = {
-	/** "#rrggbb". Default "#000000". A fade already showing keeps its colour until the screen clears. */
-	colour?: string
-	/** At least 200. */
-	outMs: number
-	/** Default 0. */
-	holdMs?: number
-	/** At least 200. */
-	inMs: number
-}
-
-export type CameraPlayerFacing = (_TypeOf["CAMERA_PLAYER_FACINGS"])[number]
-
-export type CameraPlayerLook = {
-	/** Degrees left and right of the aim; 180 lets the player turn all the way round. Default 0, locked. */
-	maxYaw?: number
-	/** Degrees up and down from the aim. Default 0, locked. */
-	maxPitch?: number
-	/** Once the player stops moving the mouse, ease back to the aim over this many ms. Omit to stay where they looked. */
-	returnMs?: number
-}
-
-export type CameraTarget = Pos | EntityId
-
-export type CameraOffsetSpace = (_TypeOf["CAMERA_OFFSET_SPACES"])[number]
-
-export type CameraPathKeyframe = {
-	/** When the camera reaches this keyframe, in ms from the start of the path. */
-	timeMs: number
-	position: Pos
-	/** What the camera looks at here. Without it or \`lookDirection\`, the camera looks along the path. */
-	lookAt?: CameraTarget
-	lookDirection?: Pos
-	/** Field of view here, in degrees. */
-	fov?: number
-	/** How the camera eases from this keyframe to the next. Default "linear", so smooth paths keep a steady speed. */
-	easing?: CameraEasing
-}
-
-export type ShopCategoryKey = string
-
-export type ShopItemKey = string
-
-export type ShopItem = {
-	image: string
-	schematicId?: SchematicId
-	cost?: number
-	currency?: string
-	amount?: number // Display amount shown on the shop tile image (0 and 1 are not displayed)
-	imageColour?: string
-	canBuy?: boolean
-	isSelected?: boolean
-	buyButtonText?: string | CustomTextStyling
-	customTitle?: string | CustomTextStyling
-	description?: string | CustomTextStyling
-	onBoughtMessage?: string | CustomTextStyling
-	redDot?: boolean
-	forceRemoveRedDot?: boolean
-	isRewardedAd?: boolean
-	badge?: { text: string | CustomTextStyling; type: ShopItemBadgeType }
-	userInput?: ShopItemUserInput
-	enchant?: {
-		tier: EnchantmentTier
-		enchantments: Partial<Record<EnchantmentPerk, number>>
-		enchantmentData?: Record<string, { icon?: string; description?: string }>
-	}
-
-	// Not defined on client, must be defined on server
-	boughtCallback?: (
-		playerId: PlayerId,
-		cost: number,
-		currency: string,
-		categoryKey: ShopCategoryKey,
-		itemKey: ShopItemKey,
-		userInput: string,
-		amount: number | undefined,
-	) => void
-	sell?: boolean // Optional, defaults to false. If true, the sign of "cost" is flipped. So a "cost" of -25 would give the player 25 currency AND be displayed as "25" (instead of -25)
-	sortPriority?: number // Descending, bigger number means closer to the top
-	hidden?: boolean
-	smp?: SmpShopItemMeta // Set by the SMP marketplace plugin only, for its own shop screens
-}
-
-export type ShopItemUserInput =
-	| { type: "text"; placeholderText?: string; wordCharsOnly?: boolean; initialValue?: string } // wordCharsOnly defaults to false. If true, only allows \w character (alphanumeric and _). initialValue always takes precedence as the text input value when set.
-	| { type: "number"; placeholderText?: string; initialValue?: string }
-	| {
-			type: "dropdown"
-			dropdownOptions: readonly (string | { option: string; cost: number })[]
-			shouldResetSelectionOnOptionsChange?: boolean // Defaults to false. If true, the selection will reset to the first option when dropdownOptions changes.
-			initialValue?: string
-			autoSubmit?: boolean // Defaults to false. If true, the dropdown will automatically submit when the user selects an option.
-	  }
-	| { type: "player"; excludedPlayers?: PlayerId[] } // Defaults to excluding the current player
-	| { type: "color"; initialValue?: string }
-
-export type SmpShopItemMeta =
-	/**
-	 * The search box. \`item\` is the player's searched item; \`extra\` and \`excluded\` adjust the creative items it finds;
-	 * \`names\` holds the names this player sees for items a game renamed
-	 */
-	| { kind: "search"; item: string | null; extra?: readonly string[]; excluded?: readonly string[]; names?: Readonly<Record<string, string>> }
-	/** A plain listing or order box for the searched item. \`owned\` is how many the player has */
-	| { kind: "creator"; item: string | null; step: "quantity" | "price"; owned: number; quantity?: number; fee?: SmpListingFeeRule }
-	/** A listing box for one enchanted copy, listed whole */
-	| { kind: "enchantedCreator"; item: string; quantity: number }
-	/** A market listing. \`seller\` is null for the player's own */
-	| { kind: "listing"; item: string; quantity: number; pricePerItem: number; seller: string | null; expiresAt: number }
-	/** An Instant Sell stack */
-	| { kind: "sell"; item: string; quantity: number; pricePerItem: number }
-	/** Gold from a sale, or items back from an expired listing */
-	| { kind: "collect"; type: "sold" | "expired"; item: string; quantity: number; pricePerItem: number }
-	/** One of the player's active listings */
-	| { kind: "myListing"; item: string; quantity: number; pricePerItem: number; expiresAt: number }
-	/** A buy order. \`creator\` is null for the player's own; \`owned\` is how many the player could deliver; \`processing\` while a delivery to it is on its way */
-	| { kind: "order"; item: string; wanted: number; delivered: number; pricePerItem: number; creator: string | null; owned: number; processing?: boolean }
-	/** One of the player's orders, or delivered items left over from one */
-	| { kind: "myOrder"; item: string; wanted: number; delivered: number; collectable: number; pricePerItem: number }
-	/** A placeholder shown when a list is empty */
-	| { kind: "empty" }
-
-export type SmpListingFeeRule = { readonly rate: number; readonly taxFreeAllowance: number }
-
-export type SchematicId = string
-
-export type ShopItemBadgeType = (_TypeOf["shopItemBadgeTypes"])[number]
-
-export type ShopCategoryConfig = Partial<{
-	autoSelectCategory: boolean
-	customTitle: string // Supports translation keys and ordinary text
-	redDot: boolean
-	forceRemoveRedDot: boolean
-	sortPriority: number
-	description: string | CustomTextStyling
-	smp: SmpShopCategoryKind // Set by the SMP marketplace plugin with its dedicatedUi option only: clients draw this category's body with the marketplace's own screens
-}>
-
-export type SmpShopCategoryKind = "sell" | "market" | "collect" | "orders" | "myOrders"
-
-export type OtherEntitySetting = keyof OtherEntitySettings
-
-export type EntityMeshScalingMap = {
-	[key in EntityNamedNode]?: number[]
-}
-
-export type EntityNamedNode = PlayerMeshNamedNode
-
-export type PlayerMeshNamedNode = (_TypeOf["playerMeshNamedNodes"])[number]
-
-export type LobbyLeaderboardValues = Record<string, string | number | CustomTextStyling>
-
-export type ChatTags = CustomTextStyling[]
-
-export type NameTagInfo = {
-	backgroundColor?: string
-	content?: (CustomTextStyling[number] | RankInfo)[]
-	subtitle?: (CustomTextStyling[number] | RankInfo)[]
-	subtitleBackgroundColor?: string
-	minLighting?: number
-	healthbar?: HealthbarInfo
-	border?: NameTagBorder
-}
-
-export type RankInfo = {
-	// Font Awesome icon name
-	icon: string
-	mainRGB: string
-	// Defaults to mainRGB
-	bracketRGB?: string
-	chatTag: {
-		str: string
-		// Defaults to mainRGB
-		strRGB?: string
-	}[]
-	// Defaults to none
-	nameTag: {
-		// Defaults to normal name colour (white)
-		iconRGB?: string
-		// Defaults to none
-		iconShadowRGB?: string
-	}
-	visible: boolean // If false, this rank will not be shown in the player list or in the chat
-}
-
-export type HealthbarInfo = Readonly<{
-	// Controls when the healthbar is shown.
-	// "onDamage" (default) shows it for a few seconds after the entity takes damage.
-	display?: HealthbarDisplay
-	height?: FontSize
-	// Track colour behind the depleting bar. Undefined leaves the background transparent.
-	backgroundColour?: string
-	// Fill colour of the bar. Either a flat colour, or a gradient keyed on health fraction.
-	// Undefined uses the default green -> orange -> red depleting gradient.
-	foregroundColour?: string | readonly HealthbarColourGradient[]
-}>
-
-export type NameTagBorder = Readonly<{
-	colour: string
-	// Visual preset:
-	// - "solid": a flat outline.
-	// - "glow": an outline with an outer glow - reads as powerful/elite, ideal for bosses.
-	// - "double": two concentric outlines for an ornate, high-stakes look.
-	style?: NameTagBorderStyle
-	width?: FontSize
-	applyTo?: NameTagBorderTarget
-}>
-
-export type HealthbarDisplay = (_TypeOf["healthbarDisplays"])[number]
-
-export type HealthbarColourGradient = Readonly<{ healthFraction: number; colour: string }>
-
-export type NameTagBorderStyle = (_TypeOf["nameTagBorderStyles"])[number]
-
-export type NameTagBorderTarget = (_TypeOf["nameTagBorderTargets"])[number]
-
-export type MultilineTextBox = {
-	content: (CustomTextStyling[number] | RankInfo)[]
-	backgroundColor?: string
-	animateIn?: boolean
-	/** Overrides canSeeNametagsThroughWalls for this text: true draws it over blocks and entities, false lets them hide it. */
-	visibleThroughWalls?: boolean
-}
-
-export type TempParticleSystemOpts = ParticleSystemOpts & {
-	dir1: number[]
-	dir2: number[]
-	pos1: number[]
-	pos2: number[]
-	manualEmitCount: number
-	hideDist: number
-}
-
-export type ParticlePresetOpts = {
-	presetId: ParticlePresetId
-	pos1: number[]
-	pos2: number[]
-}
-
-export type ParticleSystemOpts = {
-	texture: string
-	minLifeTime: number
-	maxLifeTime: number
-	minEmitPower: number
-	maxEmitPower: number
-	minSize: number
-	maxSize: number
-	gravity: number[]
-	velocityGradients: VelocityGradient[]
-	colorGradients: TimeColorGradient[] | RandomColorGradient[]
-	blendMode: ParticleSystemBlendMode
-}
-
-export type VelocityGradient = {
-	timeFraction: number
-	factor: number
-	factor2: number
-}
-
-export type TimeColorGradient = {
-	timeFraction: number
-	minColor: [number, number, number, number]
-	maxColor?: [number, number, number, number]
-}
-
-export type RandomColorGradient = {
-	color: [number, number, number]
-}
-
-export type ParticlePresetId = keyof _TypeOf["particlePresets"]
-
-export type AnimationSchema = Readonly<{
-	animationDurationMs: number
-	loop?: LoopModeSchema
-	nodeAnimations?: NodeSkeletonAnimationSchema
-}>
-
-export type BlockbenchAnimationSchema = Readonly<{
-	animation_length: number // The duration of the animation in seconds.
-	loop?: BlockbenchLoopModeSchema
-	bones?: BlockbenchBonesAnimationSchema
-}>
-
-export type LoopModeSchema = boolean | "hold-on-last-frame"
-
-export type AnimationTimelineSchema = readonly KeyframeSchema[]
-
-export type KeyframeSchema = Readonly<{
-	timeFraction: number
-	rotation?: LerpPointSchema // Rotations are assumed to be in radians.
-	position?: LerpPointSchema // Position offsets in mesh-local units; (0, 0, 0) means the node's rest pose.
-	scale?: LerpPointSchema // Multipliers of the node's own scale, clamped to -16..16; (1, 1, 1) leaves it as it is.
-}>
-
-export type LerpPointSchema =
-	| Point
-	| Readonly<{
-			lerpMode?: LerpModeSchema
-			point: Point
-	  }>
-	| Readonly<{
-			lerpMode?: LerpModeSchema
-			pre: Point // When lerping towards a point, we lerp towards its pre.
-			post: Point // When lerping away from a point, we lerp away from its post.
-	  }>
-
-export type Point = Readonly<Vec3>
-
-export type LerpModeSchema = "linear" | "catmull-rom-spline"
-
-export type BlockbenchLoopModeSchema = boolean | "hold_on_last_frame"
-
-export type BlockbenchAnimationTimelineSchema<P = Point> = P | Readonly<Record<TimestampString, BlockbenchAnimationFrameSchema<P>>>
-
-export type TimestampString = string
-
-export type BlockbenchAnimationFrameSchema<P = Point> =
-	| P
-	| Readonly<{
-			lerp_mode?: BlockbenchLerpModeSchema
-			pre?: P // When lerping towards a point, we lerp towards its pre.
-			post: P // When lerping away from a point, we lerp away from its post.
-	  }>
-
-export type BlockbenchLerpModeSchema = "linear" | "catmullrom"
-
-export type NodeSkeletonAnimationSchema = Readonly<Record<NodeName, NodeAnimationSchema>>
-
-export type NodeName = string
-
-export type NodeAnimationSchema = Readonly<{
-	timeline: AnimationTimelineSchema
-}>
-
-export type BlockbenchBonesAnimationSchema = Readonly<Record<NodeName, BlockbenchBoneAnimationSchema>>
-
-export type BlockbenchBoneAnimationSchema = Readonly<{
-	rotation?: BlockbenchAnimationTimelineSchema // Blockbench rotations are in degrees.
-	position?: BlockbenchAnimationTimelineSchema // Blockbench position offsets in mesh-local units; rest pose is (0, 0, 0).
-	// Multipliers of the node's own scale, clamped to -16..16; (1, 1, 1) leaves it as it is. A number scales every axis
-	// alike, as Blockbench writes a uniform scale.
-	scale?: BlockbenchAnimationTimelineSchema<Point | number>
-}>
-
-export type MobId = LifeformId
-
-export type MobDbId = string
-
-export type BlockName = string
-
-export type BlockId = number
-
-export type WorldBlockChangedInfo = {
-	cause: WorldBlockChangedCause | null
-}
-
-export type WorldBlockChangedCause = "Paintball" | "FloorCreator" | "Sapling" | "StemFruit" | "MeltingIce" | "Explosion" | "AutoShape"
-
-export type GameChunk = {
-	blockData: any
-	extraInfo: PersistedExtraInfo
-}
-
-export type PersistedExtraInfo = {
-	specialBlocks: any[]
-	entities: any[]
-	// We allow games and plugins to store custom metadata in the chunk,
-	// but that metadata should be:
-	// - minimal, to avoid issues where the chunk is too large to store;
-	// - updated infrequently, to avoid excessive writes to the DB.
-	customMetadata: any
-}
-
-export type StairsCorner = (_TypeOf["stairsCorners"])[number]
-
-export type MobType = (_TypeOf["mobTypes"])[number]
-
-export type ItemAttributes = {
-	customDisplayName?: string
-	customDescription?: string
-	/** Free-form data kept with the item. \`bar: { fraction, colour? }\` (0 to 1, hex colour) draws a bar under the item's slot. */
-	customAttributes?: Record<string, any>
-}
-
-export type ItemDropOptions = Readonly<
-	Partial<{
-		doPhysics: boolean
-		size: number
-	}>
->
-
-export type AudioEntityOpts = {
-	soundName: string
-	// Base relative volume in [0, 1], before distance attenuation.
-	volume: number
-	// Inverse-distance reference distance in blocks; larger = gentler falloff.
-	refDistance: number
-	// Hard cutoff distance in blocks; beyond this the entity is silent.
-	maxHearDist: number
-	// Playback rate multiplier (1 = normal pitch/speed).
-	rate: number
-}
-
-export type AnimParams = {
-	animTextures: string[]
-	animationInterval: number
-	/**
-	 * Whether each frame fades into the next (Minecraft's \`interpolate\`), rather than cutting to it: one in-between frame
-	 * per pair, at half the interval, for intervals of 200 ms or more. Default true.
-	 */
-	interpolateFrames?: boolean
-}
-
-export type HarvestType = "granule" | "wood" | "rock" | "cuttable"
-
-export type BlockMetadataModelType =
-	| "CentreCross"
-	| "SquareSided"
-	| "CustomPlanes"
-	| "CustomModel"
-	| "Slab"
-	| "Stairs"
-	| "door"
-	| "trapdoor"
-	| "rotatableOffset"
-	| "rotatable"
-	| "fence"
-	| "fenceGate"
-
-export type SpecialToolDrop = { tool: ItemName | ItemName[]; drops: ItemName | BlockName }
-
-export type RecursiveReadonly<T> = T extends Primitive
-	? T
-	: T extends (...args: never[]) => unknown
-		? T
-		: T extends readonly unknown[]
-			? number extends T["length"]
-				? ReadonlyArray<RecursiveReadonly<T[number]>> // T[]
-				: { readonly [K in keyof T]: RecursiveReadonly<T[K]> } // Tuple
-			: Readonly<{ [K in keyof T]: RecursiveReadonly<T[K]> }>
-
-export type Primitive = string | number | boolean | bigint | symbol | undefined | null
-
-export type SoundType = "stone" | "wood" | "gravel" | "grass" | "glass" | "sand" | "snow" | "cloth"
-
-export type GunStatsOverride = Partial<Omit<GunMetadata, NonOverridableStats>>
-
-export type GunMetadata = {
-	gunType: GunCategory // Used for sounds
-	scopeType: "none" | "sniper"
-	muzzleFlashOffsetFromGun: Vec3
-	muzzleFlashScale?: number
-	autoFireWithMouse: boolean
-	fireRate: number
-	fireRateWithHeldTouch?: number
-	/** How fast spread recovers and shot sounds are paced, in ms; unset, the fire interval */
-	cadenceMs?: number
-	/**
-	 * ms from equipping to the first shot. A game overriding fireRate, fireRateWithHeldTouch or cadenceMs without its own
-	 * equipDelay waits the fire interval less 0.9 of cadenceMs instead
-	 */
-	equipDelay?: number
-	burstCount?: number
-	burstDelay?: number
-	damage: number
-	shotPelletCount?: number
-	reloadTime?: number
-	clipSize: number
-	reloadBulletsIndividually?: boolean
-	bulletReloadTime?: number
-	cockTime?: number
-	tagSpeedMult: number
-	subsequentTagSpeedReductionScalar: number
-	inaccuracyStanding: number
-	inaccuracyFromShot: number
-	inaccuracyMovement: number
-	yVelocityInaccuracy: number
-	inaccuracyFromJump: number
-	altInaccuracyStanding: number
-	altInaccuracyFromShot: number
-	altInaccuracyMovement: number
-	recoveryRate: number
-
-	msPerRound?: number // computed from fireRate
-	msPerRoundTouchScreen?: number // computed from fireRateWithHeldTouch
-
-	altYVelocityInaccuracy?: number
-	altInaccuracyFromJump?: number
-
-	hasVerticalInaccuracy?: boolean
-
-	keepScopeOnShot?: boolean
-
-	aimZoomFactor?: number
-
-	// Kickback
-	kickbackDecreaseRate: number
-	minKickback?: number
-	maxKickback?: number
-	kickbackRate?: number
-}
-
-export type NonOverridableStats =
-	// Precomputed values
-	| "msPerRound"
-	| "msPerRoundTouchScreen"
-
-	// These two don't even work lol
-	// TODO: Fix them
-	| "tagSpeedMult"
-	| "subsequentTagSpeedReductionScalar"
-
-export type GunCategory = (_TypeOf["gunCategories"])[number]
-
-export type WeaponComboInfo = Readonly<{
-	comboWindowMs: number
-	comboMultipliers: readonly number[]
-	backstabAngle?: number // If present, hitting an enemy from behind within this angle (radians) skip to end of combo
-}>
-
-export type AnyMetadataItem = Partial<BlockMetadataItem & NonBlockMetadataItem>
-
-export type CustomItemStat = (_TypeOf["customItemStats"])[number]
-
-export type InvenItem = { name: string; amount: number | null; attributes: ItemAttributes; typeObj: any }
-
-export type RecipesForItem = RecursiveReadonly<
-	{
-		requires: { items: ItemName[]; amt: number }[]
-		produces: number
-		station?: string | string[]
-		onCraftedAura?: number
-		isStarterRecipe?: boolean
-		attributes?: ItemAttributes
-	}[]
->
-
-export type EntityType = NetworkedEntityType | "Item" | null
-
-export type NetworkedEntityType =
-	| LifeformType
-	| ThrowableItem
-	// A mesh entity's kind and options are in MeshEntitySchema's fields
-	| "Mesh"
-	| string
-	| "AudioEntity"
-
-export type LifeformType = (_TypeOf["lifeformTypes"])[number]
-
-export type ThrowableItem = string
-
-export type MobHerdId = number
-
-export type MobSpawnOpts<TMobType extends MobType> = Partial<{
-	mobHerdId: MobHerdId
-	spawnerId: PlayerId
-	mobDbId: MobDbId
-	name: string
-	playSoundOnSpawn: boolean
-	variation: MobVariation<TMobType>
-	physicsOpts: Partial<{
-		width: number
-		height: number
-		collidesEntities: boolean
-	}>
-}>
-
-export type MobVariation<TMobType extends MobType> = (_TypeOf["mobVariations"])[TMobType][number]
-
-export type MobSetting = (_TypeOf["mobSettings"])[number]
-
-export type MobSettings<TMobType extends MobType> = {
-	variation: MobVariation<TMobType>
-	name: string
-	maxHealth: number
-	initialHealth: number
-	idleSound: string | null
-	attackSound: string | null
-	secondaryAttackSound: string | null
-	hurtSound: string | null
-	onDeathItemDrops: readonly MobItemDrop[]
-	onDeathParticleTexture: string
-	onDeathAura: number
-	baseWalkingSpeed: number
-	baseRunningSpeed: number
-	walkingSpeedMultiplier: number
-	runningSpeedMultiplier: number
-	jumpCount: number
-	baseJumpImpulseXZ: number
-	baseJumpImpulseY: number
-	jumpMultiplier: number
-	runAwayRadius: number
-	chaseRadius: number
-	territoryRadius: number
-	hostilityRadius: number
-	stoppingRadius: number
-	attackInterval: number
-	attackRadius: number
-	secondaryAttackRadius: number
-	attackDamage: number
-	secondaryAttackDamage: number
-	isReceivingDamageCooldownGlobal: boolean // When the mob is attacked, a short cooldown prevents further damage from the same attack type. If true, all attackers share that cooldown. If false, each attacker has their own.
-	knockbackReceivedMultiplier: number // Scales incoming knockback when the mob is hit: 0 = immune (no knockback), 1 = normal, 2 = double. Applied on top of any worn-armour/effect knockback resistance.
-	attackImpulse: number
-	secondaryAttackImpulse: number
-	rangedAttackInaccuracy: number // Total angular width of the random cone (in radians), 0 = perfectly accurate (laser-aim). Only affects throwable/projectile attacks
-	burstAttackInfo: MobBurstAttackInfo | null
-	secondaryBurstAttackInfo: MobBurstAttackInfo | null
-	heldItemName: ItemName | null
-	heldItemEnchantmentTier: EnchantmentTier | null
-	armour: MobArmour
-	attackItemName: ItemName | null
-	secondaryAttackItemName: ItemName | null
-	swingArmOnAttack: boolean
-	swingArmOnSecondaryAttack: boolean
-	attackEffectName: string | null
-	attackEffectDuration: number
-	warpTargetSpecialAttackInfo: MobWarpTargetSpecialAttackInfo | null
-	combatTetherInfo: MobCombatTetherCombatInfo | null
-	evadeInfo: MobEvadeInfo | null
-	chargeSpecialAttackInfo: MobChargeSpecialAttackInfo | null
-	tameInfo: Readonly<MobTameInfo> | null
-	onTamedHealthMultiplier: number
-	petInfo: Readonly<MobPetInfo> // Instance-specific information related to mob feeding
-	ownerDbId: PlayerDbId | null
-	minFollowingRadius: number
-	maxFollowingRadius: number
-	isRideable: boolean
-	healthRegen: MobHealthRegenSettings | null
-	ridingSpeedMult: number
-	bridgeInfo: MobBridgeInfo | null
-	// Impulse-driven movement (independent slide / jump / random-facing capabilities). \`walking*\` apply while
-	// moving at walking speed (idle wander + walkToPosition), \`running*\` at running speed (chase/flee/follow/
-	// runToPosition). Null = ordinary speed-driven movement.
-	walkingSlideInfo: MobSlideInfo | null
-	runningSlideInfo: MobSlideInfo | null
-	walkingJumpInfo: MobJumpInfo | null
-	runningJumpInfo: MobJumpInfo | null
-	walkingRandomFacingInfo: MobRandomFacingInfo | null
-	runningRandomFacingInfo: MobRandomFacingInfo | null
-	metaInfo: string
-}
-
-export type MobItemDrop = Readonly<{
-	itemName: ItemName
-	probabilityOfDrop?: number
-
-	// If a mob drops an item, then we choose a random amount within these bounds.
-	dropMinAmount?: number
-	dropMaxAmount?: number
-
-	// If true, the item will "burst" out of the mob rather than just dropping.
-	applyBurstImpulseToDrop?: boolean
-}>
-
-export type MobBurstAttackInfo = Readonly<{
-	burstAttackIntervals: readonly number[]
-}>
-
-export type MobArmour = Partial<Readonly<Record<ArmourPart, MobArmourPiece>>>
-
-export type MobWarpTargetSpecialAttackInfo = Readonly<{
-	cooldown: number
-	range: number
-	sound: string | null
-	delay: number
-	minDestinationRadius: number
-	maxDestinationRadius: number
-	swingArm: boolean
-	particleOpts: TempMobParticleOpts | null
-}>
-
-export type MobCombatTetherCombatInfo = Readonly<{
-	range: number
-	particleOpts: MobParticleOpts
-}>
-
-export type MobEvadeInfo = Readonly<{
-	probability: number
-	impulse: number
-	minAngle: number
-	maxAngle: number
-}>
-
-export type MobChargeSpecialAttackInfo = Readonly<{
-	// Multiplier applied to the running speed during the straight dash. Defaults to 1.
-	chargeSpeedMult?: number
-	// Max heading error (radians) at which the mob is considered "facing" its target and may dash. Defaults to a small tolerance.
-	faceTolerance?: number
-	// Pose shown while dashing, reverted to the resting pose when the charge ends. Defaults to "zombie".
-	chargePose?: PlayerPose
-}>
-
-export type MobTameInfo = {
-	tameItemName: ItemName | readonly ItemName[]
-	probabilityOfTame: number
-	isSaddleable?: boolean
-	saddleItemName?: ItemName
-	foodItemNames?: readonly ItemName[]
-	foodItemsWithEffects?: readonly Readonly<ItemNameWithEffects>[]
-	supportsFriendship?: boolean
-	likedFoods?: readonly ItemName[]
-	neutralFoods?: readonly ItemName[]
-	dislikedFoods?: readonly ItemName[]
-	guaranteedDrop?: ItemName
-	commonDrops?: ItemName[]
-	levelUpBonuses?: LevelUpBonuses
-}
-
-export type MobPetInfo = {
-	friendshipPoints: number
-	lastFedAt: number
-	highestFriendshipLevelReached: MobFeedLevel
-	superlikedFood: ItemName | null
-	superlikedFoodKnown: boolean
-	bonusesGained: readonly MobLevelUpBonus[]
-}
-
-export type MobHealthRegenSettings = Readonly<{
-	amount: number
-	interval: number
-	startAfter: number
-}>
-
-export type MobBridgeInfo = Readonly<{
-	// The block to place.
-	blockToPlace: BlockName
-	// If true, only place while stood on solid ground (decorates the surface walked over); if false, place
-	// even while airborne (lets the mob bridge a gap beneath itself).
-	mustBeGrounded: boolean
-	// Only overwrite a cell currently holding one of these blocks, so real terrain is never destroyed.
-	// Omitted means \`["Air"]\` (fill empty space only); an empty array replaces nothing at all, not even
-	// air. A cell already holding \`blockToPlace\` is skipped (would be a no-op).
-	blocksToReplace?: readonly BlockName[]
-	// Vertical offset from the cell the mob occupies. Defaults to 0 (a surface trail); -1 places beneath the
-	// mob's feet (bridging). Non-negative offsets intersect the mob, so \`blockToPlace\` must be non-solid there.
-	yOffset?: number
-	// If a |Decaying variant exists for \`blockToPlace\`, use it to turn blocks into air after \`msToDecay\` ms.
-	msToDecay?: number
-}>
-
-export type MobSlideInfo = Readonly<{
-	// Horizontal impulse at the start of a slide (initial speed = impulse / mass).
-	impulse: number
-	// Lowered friction the burst coasts on (below the mob's normal friction so it carries far), restored on end.
-	friction: number
-	// How long (ms) the low-friction coast lasts.
-	durationBounds: Bounds
-	// Rest (ms) after the coast ends before the next slide. Larger = fewer slides.
-	intervalBounds: Bounds
-}>
-
-export type MobJumpInfo = Readonly<{
-	// Rest (ms) between hops (a hop only fires once grounded). Larger = fewer hops.
-	intervalBounds: Bounds
-}>
-
-export type MobRandomFacingInfo = Readonly<{
-	// Weighted offsets to pick from (via getWeightedRandom); \`weight\`s are non-negative,
-	// and at least one must be greater than 0. E.g. \`[{ offset: Math.PI, weight: 2 },
-	// { offset: 0, weight: 1 }]\` faces backwards twice as often as forwards.
-	offsets: readonly Readonly<{ offset: number; weight: number }>[]
-	// Bounds (ms) between re-rolls.
-	intervalBounds: Bounds
-}>
-
-export type ArmourPart = (_TypeOf["armourPieces"])[number]
-
-export type MobArmourPiece = Readonly<{
-	itemName: ItemName
-	enchantmentTier?: EnchantmentTier
-}>
-
-export type TempMobParticleOpts = Readonly<{
-	duration: number
-}> &
-	MobParticleOpts
-
-export type MobParticleOpts = Readonly<Pick<MeshParticleSystemOpts, "texture" | "colorGradients">>
-
-export type MeshParticleSystemOpts = ParticleSystemOpts &
-	CommonMeshEntityOpts & {
-		height: number
-		width: number
-		depth: number
-		emitRate: number
-		/** Include the followed lifeform's visual offset, including its vehicle seat. */
-		followTargetMeshOffset?: boolean
-		/** Ring emits radially from the perimeter; width/depth set its diameters, height its thickness. */
-		emitterShape?: "box" | "ring"
-		dir1?: number[]
-		dir2?: number[]
-	}
-
-export type CommonMeshEntityOpts = {
-	hideDist?: number
-	meshOffset?: number[]
-	autoRotate?: boolean
-	lineToEId?: EntityId // EntityId to connect to using a line
-}
-
-export type PlayerPose = (_TypeOf["playerPoses"])[number]
-
-export type ItemNameWithEffects = { itemName: ItemName; effects: readonly Readonly<EffectOpts>[]; healAmt?: number }
-
-export type LevelUpBonuses = RecursiveReadonly<Record<MobFeedLevelUpLevels, MobLevelUpBonus>>
-
-export type EffectOpts = { name: PotionEffect; duration: number; level: number }
-
-export type PotionEffect = (_TypeOf["potionEffects"])[number]
-
-export type MobFeedLevelUpLevels = Exclude<MobFeedLevel, 0>
-
-export type MobLevelUpBonus = (_TypeOf["mobLevelUpBonuses"])[number]
-
-export type MobFeedLevel = InclusiveRange<_TypeOf["MAX_MOB_FEED_LEVEL"]>
-
-export type InclusiveRange<N extends number, Arr extends number[] = []> = Arr["length"] extends N
-	? Arr[number] | Arr["length"]
-	: InclusiveRange<N, [...Arr, Arr["length"]]>
-
-export type Bounds = Readonly<MutableBounds>
-
-export type MutableBounds = {
-		min: number
-		max: number
-	}
-
-export type MobAiState = (_TypeOf["mobAiStates"])[number]
-
-export type MobAiStateParams<TState extends MobAiState> = MobWorldView[TState]
-
-export type MobWorldView = {
-	// The mob is stood still, but it still has awareness of its environment.
-	// For example: if the mob is hostile, it will still chase and attack nearby players.
-	idle: null
-	// The mob is stood still, and it has no awareness of its environment.
-	// It will not even react if provoked.
-	disabled: null
-	// The mob is stood still (idle) and is about to turn.
-	idleBeforeTurning: null
-	// The mob has chosen a new direction at random and is turning to face it.
-	turning: null
-	// The mob is stood still (idle) and is about to walk.
-	idleBeforeWalking: null
-	// The mob is walking in the direction it is facing.
-	walking: null
-	// The mob is running away from the target lifeform.
-	runningAway: { targetId: LifeformId }
-	// The mob is chasing the target lifeform.
-	chasing: { targetId: LifeformId }
-	// A charge-attack mob is stood still, rotating at its \`turnRate\` until it faces the target,
-	// at which point it captures the target's current position and transitions to \`charging\`.
-	turningBeforeCharging: { targetId: LifeformId }
-	// A charge-attack mob is dashing straight at the position of the target captured when it
-	// entered the state, ignoring the target's live position mid-dash (so the charge is dodgeable).
-	charging: { targetId: LifeformId }
-	// The mob is following the target lifeform.
-	// It will stop if it is within the \`minFollowingDistance\` (mob setting) of the target,
-	// and teleport to the target if it is outside the \`maxFollowingDistance\` (mob setting) of the target.
-	following: { targetId: LifeformId }
-	// The mob is stood still looking at the target.
-	watching: { targetId: LifeformId }
-	// The mob is walking towards the position.
-	// It will stop if it is within the \`stoppingRadius\` (mob setting) of the position.
-	walkingToPosition: { pos: Pos }
-	// The mob is running towards the position.
-	// It will stop if it is within the \`stoppingRadius\` (mob setting) of the position.
-	runningToPosition: { pos: Pos }
-}
-
-export type MobAiStateOptions = {
-	/**
-	 * Keep the mob in this state until you set another one: it never times out, ignores nearby players and doesn't
-	 * fight back when hit. It still leaves the state when the state ends itself, such as when its target leaves the
-	 * game or turns invisible, or when it is tamed. A charge can't be held: it lasts one leg as usual.
-	 */
-	hold?: boolean
-}
-
-export type MeshEntityType = keyof MeshEntityOpts
-
-export type MeshEntityOpts = {
-	Box: CommonMeshEntityOpts & {
-		width: number
-		height: number
-		depth: number
-		diffuseColor?: number[]
-		emissiveColor?: number[]
-		backFaceCulling?: boolean // Default true
-		texture?: string // Can be a blockname. Wraps every one block
-		faceUV?: number[][]
-		animateTexture?: boolean // If true, \`texture\` must be an animated block name (e.g. "Lava", "Red Portal") and the Box cycles through its frames.
-	}
-	BloxdBlock: CommonMeshEntityOpts & {
-		blockName: BlockNameOrId
-		size: number | [number, number, number]
-		/** Enchantment sheen, drawn only when attached to an entity node, as a worn glider is. */
-		enchantmentTier?: EnchantmentTier
-	}
-	Person: CommonMeshEntityOpts & {
-		size?: number
-		textures?: Partial<Cosmetics>
-		pose?: PlayerPose
-	}
-	Leaderboard: LeaderboardMeshOpts
-	ParticleEmitter: MeshParticleSystemOpts
-}
-
-export type MeshEntityPhysicsOpts = {
-	doPhysics: boolean
-	onCollideTerrain?: () => void // Unsupported for custom code
-	collidesEntities?: boolean
-	collideBits?: number // bitmask category of this entity
-	collideMask?: number // bitmask category of entities this entity collides with
-	heightExpandAmt?: number // expand hitbox height by this amount
-	widthExpandAmt?: number // expand hitbox width by this amount
-}
-
-export type BlockNameOrId = BlockName | BlockId
-
-export type Cosmetics = Record<CosmeticType, CosmeticName>
-
-export type LeaderboardMeshOpts = CommonMeshEntityOpts & {
-	leaderboard: string
-	title?: string
-	scoreLabel?: string
-	/** Uniform scale of the 2.5 by 3.75 block board. Defaults to 1. */
-	size?: number
-	/** Absolute width in blocks, overriding the width derived from size. */
-	width?: number
-	/** Absolute height in blocks, overriding the height derived from size. */
-	height?: number
-}
-
-export type CosmeticType = (_TypeOf["cosmeticTypes"])[number]
-
-export type CosmeticName = string
-
-export type QTEType = keyof QTEDefinitions
-
-export type QTEClientParameters<T extends QTEType = QTEType> = {
-	type: T
-	parameters: QTEParametersForType<T>
-}
-
-export type QTEParametersForType<T extends QTEType> = QTEDefinitions[T]["params"]
-
-export interface QTEDefinitions {
-	progressBar: { params: ProgressBarQteParams; state: ProgressBarQteState }
-	timedClick: { params: TimedClickQteParams; state: TimedClickQteState }
-	gravityBar: { params: GravityBarQteParams; state: GravityBarQteState }
-	precisionBar: { params: PrecisionBarQteParams; state: PrecisionBarQteState }
-	rhythmClick: { params: RhythmClickQteParams; state: RhythmClickQteState }
-}
-
-export type ProgressBarQteParams = Readonly<{
-	/** Starting progress value (0-100) @default 30 */
-	progressStartValue?: number
-	/** How much progress drains each tick while the player isn't clicking @default 0.075 */
-	progressDecreasePerTick: number
-	/** How much progress is gained per click @default 5 */
-	progressPerClick: number
-	/** If true, the QTE fails when progress reaches 0; otherwise progress clamps at 0 @default false */
-	canFail: boolean
-	/** Rich text shown as the QTE prompt @default [{ str: "Click repeatedly to complete!" }] */
-	description: CustomTextStyling
-	/** Icon displayed on the click target @default "fa-solid fa-computer-mouse" */
-	clickIcon: string
-	/** Scale multiplier for the click icon (must be > 0) @default 1 @sensibleDefault 3 */
-	scale?: number
-	/** Rotation in degrees for the click icon (must be ≥ 0) @default 15 */
-	rotation?: number
-}>
-
-export type ProgressBarQteState = {
-	progress: number
-	clickCount: number
-}
-
-export type TimedClickQteParams = Readonly<{
-	/** Duration in milliseconds the player has to click @default 3000 */
-	timeWindow: number
-	/** Icon displayed on the click target @default "fa-solid fa-computer-mouse" */
-	icon: string
-	/** Rich text shown as the QTE prompt @default [{ str: "Click to complete the QTE!" }] */
-	label: CustomTextStyling
-	/** Whether to display a countdown timer @default true */
-	showTimer: boolean
-	/** Scale multiplier for the icon (must be > 0) @default 1 @sensibleDefault 3 */
-	scale?: number
-	/** Rotation in degrees for the icon (must be ≥ 0) @default 15 */
-	rotation?: number
-	/** If true, the icon pulses with a breathing animation anchored to the centre @default false */
-	breatheCenter?: boolean
-}>
-
-export type TimedClickQteState = {
-	timeRemaining: number
-	timeWindow: number
-}
-
-export type GravityBarQteParams = Readonly<{
-	/** Starting progress value (0-100) @default 30 */
-	progressStartValue?: number
-	/** Size of the player's catch zone as a fraction of the bar (must be > 0, 0-1) @default 0.25 */
-	catchZoneSize: number
-	/** Speed at which the mover travels along the bar (must be > 0) @default 3 */
-	moverSpeed: number
-	/** How erratically the mover changes direction (higher = more unpredictable) @default 0.8 */
-	moverErraticness: number
-	/** Downward pull on the catch zone when the player isn't holding click @default 1 */
-	gravity: number
-	/** Upward force on the catch zone while the player holds click @default 1.5 */
-	riseSpeed: number
-	/** Progress gained per second while the mover is inside the catch zone @default 8 */
-	progressGainPerSecond: number
-	/** Progress lost per second while the mover is outside the catch zone @default 4 */
-	progressDrainPerSecond: number
-	/** If true, the QTE fails when progress reaches 0; otherwise progress clamps at 0 @default false */
-	canFail: boolean
-	/** Rich text shown as the QTE prompt @default [{ str: "Hold to catch!" }] */
-	description: CustomTextStyling
-	/** Icon displayed on the mover @default "Moonfish" */
-	icon?: string
-}>
-
-export type GravityBarQteState = {
-	catchZonePosition: number
-	catchZoneSize: number
-	moverPosition: number
-	progress: number
-	isCatching: boolean
-}
-
-export type PrecisionBarQteParams = Readonly<{
-	/** Speed of the marker in full bar-widths per second (must be > 0, e.g. 1.0 = one full sweep per second) @default 0.5 */
-	speed: number
-	/** Fraction of the bar that counts as the success zone, centred in the middle (must be > 0, 0-1, e.g. 0.15 = 15%) @default 0.15 */
-	successZoneSize: number
-	/** Rich text shown as the QTE prompt @default [{ str: "Click when the marker is within the green zone." }] */
-	label: CustomTextStyling
-	/** Icon displayed on the marker @default "" */
-	icon?: string
-	/** Scale multiplier for the icon (must be > 0) @default 1 */
-	scale?: number
-	/** Rotation in degrees for the icon (must be ≥ 0) @default 0 */
-	rotation?: number
-}>
-
-export type PrecisionBarQteState = {
-	/** Marker position as 0–1 where 0.5 is the centre */
-	markerPosition: number
-}
-
-export type RhythmClickQteParams = Readonly<{
-	/** Number of successful clicks needed to complete the QTE (must be a positive integer) @default 5 */
-	requiredSuccesses: number
-	/** Duration in milliseconds for the outer circle to shrink from max size to centre (must be > 0) @default 1200 */
-	shrinkDurationMs: number
-	/** Fraction of the inner circle radius that counts as a successful overlap (must be > 0, 0-1, e.g. 0.15 = ±15%) @default 0.15 */
-	toleranceFraction: number
-	/** Max misses allowed before failing. If omitted, unlimited misses are permitted (must be a non-negative integer) @default 3 */
-	maxMisses?: number
-	/** Rich text shown as the QTE prompt @default [{ str: "Click when the circles align!" }] */
-	label: CustomTextStyling
-	/** Icon displayed in the centre of the circles @default "" */
-	icon?: string
-}>
-
-export type RhythmClickQteState = {
-	/** Current outer circle radius as a fraction of the max radius (1 = fully expanded, 0 = at centre) */
-	outerCircleProgress: number
-	/** Number of successful clicks so far */
-	successes: number
-	/** Number of required successes to complete */
-	requiredSuccesses: number
-	/** Number of misses so far */
-	misses: number
-	/** Result of the most recent click: null if no click yet, true if hit, false if miss */
-	lastClickResult: boolean | null
-}
-
-export type QTERequestId = number
-
-export type UiRequestId = number
-
-export type IngameIconName = (_TypeOf["ingameIconNames"])[number]
-
-export type InbuiltEffectInfo = { inbuiltLevel: number; initiatorId?: PlayerId }
-
-export type PlayerPhysicsState<TPhysicsType extends PhysicsType> = Readonly<{ type: TPhysicsType; tier: PhysicsTier<TPhysicsType> }>
-
-export type PhysicsTier<TPhysicsType extends PhysicsType> = PhysicsTiers[TPhysicsType] | null
-
-export type PhysicsTiers = {
-	[0]: null
-	[1]: BoatTier
-	[2]: GliderTier
-	[3]: BalloonTier
-	[4]: SleepingTier
-	[5]: null
-	[6]: CarTier
-	[7]: null
-}
-
-export type VehicleSeat = Readonly<{
-	role: "driver" | "passenger"
-	localOffset: Pos
-}>
-
-export type SettableVehicleSetting = VehicleSetting | BlockVehicleSetting
-
-export type SettableVehicleSettingValue<TSetting extends SettableVehicleSetting> = TSetting extends VehicleSetting
-	? VehicleSettingValue<TSetting>
-	: BlockVehicleSettingValue<TSetting>
-
-export type VehicleSetting = Exclude<keyof ResolvedPhysicsSettings<PhysicsType>, ByBlockRecordKey | "upwardImpulseOnUse">
-
-export type BlockVehicleSetting = string
-
-export type ResolvedPhysicsSettings<TPhysicsType extends PhysicsType> = DefaultPhysicsTypeSettings & AllPhysicsSettings[TPhysicsType]
-
-export type ByBlockRecordKey = string
-
-export type DefaultPhysicsTypeSettings = Readonly<{
-	/** How heavy it is. Heavier things resist being pushed around, and sink rather than float. */
-	mass: number
-	/** How much water and lava slow it down. \`-1\` uses the world's normal drag. */
-	fluidDrag: number
-	/** \`fluidDrag\` for sideways movement only. \`-1\` falls back to \`fluidDrag\`. */
-	fluidDragHorizontal: number
-	/** \`fluidDrag\` for up-and-down movement only. \`-1\` falls back to \`fluidDrag\`. */
-	fluidDragVertical: number
-	/** How hard gravity pulls it down, compared to a normal player. \`0\` = it never falls. */
-	gravityMultiplier: number
-	/** How wide it is, in blocks. */
-	width: number
-	/** How tall it is, in blocks. */
-	height: number
-	/** Whether the rider is allowed to sprint. */
-	canRun: boolean
-	/**
-	 * How hard the rider pushes off the ground when jumping, compared to a normal jump. \`0\` = cannot jump.
-	 * Multiplies the \`jumpAmount\` client option rather than replacing it, and heavier types need a bigger
-	 * value to reach the same height.
-	 */
-	jumpMultiplier: number
-	/** An upward shove the moment the rider uses the vehicle, like a balloon lifting off. \`0\` = none. */
-	upwardImpulseOnUse: number
-	/** Whether it climbs one-block steps by itself, rather than the rider jumping them. */
-	canAutoStep: boolean
-	/** Overrides \`canAutoStep\` for particular blocks, by block name. Unlisted blocks use \`canAutoStep\`. */
-	canAutoStepByBlock: Readonly<Record<BlockName, boolean>>
-	/**
-	 * Where the rider sits, as \`[x, y, z]\` blocks from the middle of the vehicle. A rideable mob defaults
-	 * to its own ride height rather than to this type's value.
-	 */
-	riderOffset: Pos
-	/** How the rider's body is posed while riding. */
-	pose: PlayerPose
-	/**
-	 * A badge shown to the rider for as long as they ride. \`null\` = none. \`icon\` is an ingame icon or an
-	 * item name. \`name\` must be one that a physics type already uses, such as \`"Driving"\` or \`"Boating"\`,
-	 * because only those are cleared again when the rider gets off.
-	 */
-	effect: { name: string; icon: string; duration?: number } | null
-	/** How quickly it slows to a stop once the rider stops steering. Bigger = stops sooner. */
-	standingFriction: number
-	/** Its top speed, as a multiplier on normal walking speed. \`0\` = it cannot move. */
-	speedMultiplier: number
-	/** An extra speed multiplier used while on solid ground. */
-	landSpeedMultiplier: number
-	/** An extra speed multiplier used while in water or lava. */
-	fluidSpeedMultiplier: number
-	/** An extra speed multiplier used while in the air. */
-	airSpeedMultiplier: number
-	/**
-	 * Extra speed multipliers for the block underfoot, by block name. Solid ground only, and stacks with
-	 * \`speedMultiplier\` and the land/fluid/air multiplier. When several listed blocks are underfoot, the
-	 * value furthest from \`1\` wins.
-	 */
-	speedMultiplierByBlock: Readonly<Record<BlockName, number>>
-	/** Caps how hard it is pushed while far below the speed it is aiming for, so it takes longer to get going. \`0\` = no cap. */
-	maxPushDistance: number
-	/** How hard steering pushes it. Bigger = it speeds up and changes direction more sharply. */
-	movementForceMultiplier: number
-	/** Turns off the usual steering-driven movement, as for a sleeping player. */
-	disableBaseMovement: boolean
-	/** Whether footstep sounds are silenced. */
-	disableFootstepSounds: boolean
-	/**
-	 * How bouncy walls are: \`0\` stops dead, \`1\` keeps all its speed. Stacks with the \`bounciness\` client
-	 * option. Rebounds have a floor speed, so slow bumps come back faster than they arrived.
-	 */
-	horizontalBounciness: number
-	/**
-	 * How bouncy the floor is: \`0\` lands flat, \`1\` bounces back as fast as it fell. Stacks with the
-	 * \`bounciness\` client option, and has the same rebound floor as \`horizontalBounciness\`.
-	 */
-	verticalBounciness: number
-	/** How fast it must hit a wall, in blocks per second, before \`horizontalBounciness\` applies. \`0\` = any contact. */
-	minHorizontalSpeedToBounce: number
-	/**
-	 * How fast it must be falling, in blocks per second, before \`verticalBounciness\` applies. \`0\` bounces
-	 * off any contact, leaving a bouncy vehicle jiggling in place.
-	 */
-	minVerticalSpeedToBounce: number
-	/** Shakes the camera when it hits a wall hard enough; it need not bounce. \`null\` = no shake. See \`ImpactCameraShakeOpts\`. */
-	horizontalImpactCameraShake: ImpactCameraShakeOpts | null
-	/** Shakes the camera when it hits a floor or ceiling hard enough; it need not bounce. \`null\` = no shake. See \`ImpactCameraShakeOpts\`. */
-	verticalImpactCameraShake: ImpactCameraShakeOpts | null
-	/**
-	 * Makes it steer like a car: left and right turn it rather than sliding it sideways. \`null\` moves
-	 * freely in any direction, like a walking player. See \`SteeringOpts\`.
-	 */
-	steering: SteeringOpts | null
-	/** Locks the direction it faces, in radians, ignoring the camera. \`null\` = it faces wherever the camera or steering points. */
-	fixedHeading: number | null
-	/** Makes it skip across water like a stone once it is fast enough. \`null\` = it floats normally. See \`FluidSkipOpts\`. */
-	fluidSkip: FluidSkipOpts | null
-	/**
-	 * Lets it fly once mid-air and descending. Supported movement types: \`GLIDING\` and \`FLOATING\`.
-	 * \`null\` = it cannot fly. See \`AirborneModeOpts\`.
-	 */
-	airborneMode: AirborneModeOpts | null
-	/** How it moves while flying. \`null\` = it steers the same way it does on the ground. See \`AirborneMovementOpts\`. */
-	airborneMovement: AirborneMovementOpts | null
-	/**
-	 * Caps how fast it falls while flying. Only used when \`airborneMovement\` is \`"heading"\`.
-	 * \`null\` = it falls at full speed. See \`FallSpeedLimitOpts\`.
-	 */
-	airborneFallSpeedLimit: FallSpeedLimitOpts | null
-}>
-
-export type AllPhysicsSettings = {
-	[0]: {}
-	[1]: {}
-	[2]: {}
-	[3]: {}
-	[4]: {}
-	[5]: {}
-	[6]: {}
-	[7]: {}
-}
-
-export type ImpactCameraShakeOpts = Readonly<{
-	/** The crash speed, in blocks per second, needed to shake at all, so small bumps are ignored. */
-	minSpeed: number
-	/** How much shake each extra block per second adds. Shake runs from \`0\` (still) to \`1\` (violent). */
-	intensityPerSpeed: number
-	/** The most shake one crash can cause. */
-	maxIntensity: number
-	/** How long the shake lasts, in milliseconds. */
-	durationMs: number
-}>
-
-export type SteeringOpts = Readonly<{
-	/** How fast it turns, in radians per second. Bigger = snappier steering and tighter corners. */
-	turnRate: number
-	/** How much speed a hard corner costs, from \`0\` (none) to \`1\` (all of it). */
-	corneringSpeedDamping: number
-	/**
-	 * How much it grips the ground. \`0\` slides sideways like a hovercraft on ice; bigger values make it
-	 * follow its nose round corners. Solid ground only, unless \`gripInFluid\` is on.
-	 */
-	gripStrength: number
-	/** Whether it also grips while floating in water, so a boat can corner like a kart. */
-	gripInFluid: boolean
-}>
-
-export type FluidSkipOpts = Readonly<{
-	/** How fast it must be going, in blocks per second, to start skipping. */
-	minSpeed: number
-	/** How much of its speed above \`minSpeed\` becomes upward launch speed. Bigger = higher skips. */
-	launchSpeedFraction: number
-	/** How snappily it leaves the water. Bigger = a sharp pop; smaller = a slow heave. */
-	launchApproachRate: number
-}>
-
-export type AirborneModeOpts = Readonly<{
-	/** Which movement type to switch to: \`GLIDING\` for gliders, \`FLOATING\` for balloons. */
-	activeMovementType: MovementType
-	/** How long the flying lasts, in milliseconds, before it drops the rider. \`null\` = no limit. */
-	durationMs: number | null
-	/** Whether the flying ending also throws the rider off, as a popping balloon does. */
-	exitsVehicleOnEnd: boolean
-}>
-
-export type AirborneMovementOpts = HeadingAirborneMovement | CameraDirectionAirborneMovement
-
-export type FallSpeedLimitOpts = Readonly<{
-	/** The fastest it may fall, in blocks per second. */
-	maxFallSpeed: number
-	/** Roughly how long, in seconds, it takes to slow back to the limit. Smaller = a firmer catch. */
-	slowDownSeconds: number
-	/** Whether to also cancel gravity while holding it back, so the limit is not slowly overpowered. */
-	compensateGravity: boolean
-}>
-
-export type HeadingAirborneMovement = Readonly<{ model: "heading" }>
-
-export type CameraDirectionAirborneMovement = Readonly<{
-	model: "cameraDirection"
-	/** The fastest it can fly. Better gliders get a bigger value, and dive and climb more sharply. */
-	maxSpeed: number
-	/** The slowest it can fly. It never stalls below this, however steeply it climbs. */
-	minSpeed: number
-	/** How much looking up or down changes its speed. Bigger = dives gain speed quickly. */
-	pitchAcceleration: number
-	/** How much drag slows it each tick. \`0\` = none. */
-	friction: number
-	/** How many ticks an outside shove - a fuel boost, or knockback - keeps its momentum before flight takes over again. */
-	impulseDecayTicks: number
-	/** How strongly it is nudged forwards, then gently downwards, so a level glider sinks slowly. */
-	biasMagnitude: number
-	/** How much leftover speed from a shove is shed each tick. */
-	excessVelocityBleedPerTick: number
-}>
-
-export type PerBlockVehicleSetting = (_TypeOf["perBlockVehicleSettings"])[number]
-
-export type VehicleSettingValue<TVehicleSetting extends StoredVehicleSetting> = ResolvedPhysicsSettings<PhysicsType>[TVehicleSetting]
-
-export type BlockVehicleSettingValue<TSetting extends string> = {
-	[TPerBlockSetting in PerBlockVehicleSetting]: TSetting extends string
-		? PerBlockVehicleSettingValue<TPerBlockSetting>
-		: never
-}[PerBlockVehicleSetting]
-
-export type PerBlockVehicleSettingValue<TSetting extends PerBlockVehicleSetting> = VehicleSettingValue<string>[BlockName]
-
-export type MeshEntityVehicleType = (_TypeOf["meshEntityVehiclesTypes"])[number]
-
-export type VehicleSpawnOpts = Partial<{
-	spawnerId: PlayerId
-}>
-
-export type AngleDir = {
-	theta: number
-	phi: number
-}
-
-export type BlockRaycastResult = {
-	blockID: BlockId // The block ID of the block that was hit
-	position: Pos // The position of the block that was hit
-	normal: Pos // The normal of the face that was hit
-	adjacent: Pos // The position of the block adjacent to the hit face
-} | null
-
-export type MeshParticleSystemUpdates = Record<EntityId, Record<NodeName, MeshParticleSystemUpdate>>
-
-export type MeshParticleSystemUpdate = {
-	particleSystemDir1?: number[]
-	particleSystemDir2?: number[]
-	particleSystemMinSize?: number
-	particleSystemMaxSize?: number
-	particleSystemPlayingState?: boolean
-	particleSystemColorGradients?: TimeColorGradient[]
-}
-
-export type UgcCurrencyInfo = {
-	amount: number
-	icon: string
-	iconColour?: string
-	persistent?: boolean
-	hidden?: boolean
-	subtext?: string | CustomTextStyling
-}
-
-export type UserCallbacks = "tick" | "onClose" | "onPlayerJoin" | "onPlayerLeave" | "onPlayerJump" | "onRespawnRequest" | "playerCommand" | "onPlayerChat" | "onPlayerAttemptChangeBlock" | "onPlayerChangeBlock" | "onBlockStand" | "onBlockStandStart" | "onBlockStandStop" | "onPlayerAttemptCraft" | "onPlayerCraft" | "onPlayerAttemptOpenChest" | "onPlayerOpenedChest" | "onPlayerMoveItemOutOfInventory" | "onPlayerDropItem" | "onPlayerPickedUpItem" | "onPlayerSelectInventorySlot" | "onPlayerAttack" | "onPlayerDamagingOtherPlayer" | "onPlayerDamagingMob" | "onMobDamagingPlayer" | "onMobDamagingOtherMob" | "onAttemptKillPlayer" | "onPlayerKilledOtherPlayer" | "onMobKilledPlayer" | "onPlayerKilledMob" | "onMobKilledOtherMob" | "onPlayerPotionEffect" | "onPlayerDamagingMeshEntity" | "onPlayerBreakMeshEntity" | "onPlayerUsedThrowable" | "onPlayerThrowableHitTerrain" | "onTouchscreenActionButton" | "onPlayerMoveInvenItem" | "onPlayerMoveItemIntoIdxs" | "onPlayerSwapInvenSlots" | "onPlayerMoveInvenItemWithAmt" | "onPlayerAttemptAltAction" | "onPlayerAltAction" | "onPlayerClick" | "onPlayerClickUp" | "onClientOptionUpdated" | "onMobSettingUpdated" | "onInventoryUpdated" | "onChestUpdated" | "onWorldAttemptChangeBlock" | "onWorldChangeBlock" | "onCreateBloxdMeshEntity" | "onEntityCollision" | "onPlayerAttemptSpawnMob" | "onWorldAttemptSpawnMob" | "onPlayerSpawnMob" | "onWorldSpawnMob" | "onWorldAttemptDespawnMob" | "onMobDespawned" | "onPlayerAttemptSpawnVehicle" | "onWorldAttemptSpawnVehicle" | "onPlayerSpawnVehicle" | "onWorldSpawnVehicle" | "onVehicleDespawned" | "onEntityDeleted" | "onChunkLoaded" | "onPlayerRequestChunk" | "onItemDropCreated" | "onPlayerStartChargingItem" | "onPlayerFinishChargingItem" | "onPlayerAttemptFish" | "onPlayerSucceededFishCatch" | "onPlayerFailedFishCatch" | "onPlayerFinishQTE" | "onPlayerToggledShopMenu" | "onPlayerBoughtShopItem" | "onPlayerPlayedEmote" | "onPlayerEnteredVehicle" | "onPlayerExitedVehicle" | "onPlayerPressedButton" | "onPlayerReleasedButton" | "onUiRequestResponded" | "doPeriodicSave"
-
-export type WorldGamemode = (_TypeOf["worldGamemodes"])[number]
-
-export type QueuedCommandId = string
-
-export type QueuedStatusString = (_TypeOf["QUEUED_COMMAND_STATUS_STRINGS"])[keyof _TypeOf["QUEUED_COMMAND_STATUS_STRINGS"]]
-
-export type UiRequestClientParameters = {
-	type: "standard" | "rewardedAd"
-	title: string | CustomTextStyling
-	icons?: string[]
-	acceptText?: string | CustomTextStyling
-	denyText?: string | CustomTextStyling
-	successText?: string | CustomTextStyling
-	autoDismissAfterMs?: number
-}
-
-export type MultiBlockInfo = {
-	positions: { block: string; id: number; x: number; y: number; z: number }[]
-}
-
-export type DamageInfo = Readonly<{
-	cause: DamageCause | null
-}>
-
-export type BoughtShopItem = Omit<ShopItem, "boughtCallback" | "schematicId" | "isRewardedAd">
-
-export type OnPlayerChatObjectResponse = Record<PlayerId, false | ChatMessageObject>
-
-export type ChatMessageObject = {
-	prefixContent?: ChatTags
-	chatContent?: CustomTextStyling
-}
-
-export type FishingAttemptOptions = {
-	/** Item selected for this attempt's reward. Defaults to an engine-selected fish. */
-	caughtItemName?: ItemName
-	/** Delay after entering water, in milliseconds. Defaults to the rod's metadata config. */
-	biteDelayMs?: number
-	/** Defaults to a timed-click QTE with a nine-second window. */
-	qte?: { [T in QTEType]: QTEClientParameters<T> }[QTEType]
-}
-
-export interface _TypeOf {
-	lifeformBodyParts: readonly ["Torso", "Head", "ArmRight", "ArmLeft", "LegLeft", "LegRight"]
-	damageCauses: readonly ["Melee", "Projectile", "Gun", "Explosion", "Spikes", "Fall", "Stomp", "Thorns", "Effect"]
-	enchantmentTiers: readonly ["Tier 1", "Tier 2", "Tier 3", "Tier 4", "Tier 5"]
-	ranks: readonly ["developer", "admin", "super", "youtuber", "creatorLevel1", "creatorLevel2", "creatorLevel3"]
-	noaActions: readonly ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo"]
-	SPEECH_VOICE_PRESETS: { readonly soft: { readonly waveform: "sine"; readonly pitchHz: 300; readonly glideSemitones: -0.5; readonly durationMs: 80; readonly attackMs: 6; readonly releaseMs: 18; readonly lowpassHz: any; readonly volume: 0.6; readonly intonation: { readonly variationSemitones: 1.2; readonly declineSemitones: 1.5; readonly questionRiseSemitones: 3.5; readonly exclaimLiftSemitones: 1.5; }; readonly syllableMs: 60; }; readonly regular: { readonly waveform: "triangle"; readonly pitchHz: 195; readonly glideSemitones: -0.6; readonly durationMs: 70; readonly attackMs: 2; readonly releaseMs: 12; readonly lowpassHz: any; readonly volume: 1; readonly intonation: { readonly variationSemitones: 1.5; readonly declineSemitones: 2; readonly questionRiseSemitones: 4; readonly exclaimLiftSemitones: 2; }; readonly syllableMs: 52; }; readonly dark: { readonly waveform: "sawtooth"; readonly pitchHz: 80; readonly glideSemitones: -0.6; readonly durationMs: 85; readonly attackMs: 6; readonly releaseMs: 16; readonly lowpassHz: 420; readonly volume: 1.05; readonly intonation: { readonly variationSemitones: 1; readonly declineSemitones: 3.5; readonly questionRiseSemitones: 2.5; readonly exclaimLiftSemitones: 1; }; readonly syllableMs: 64; }; readonly "high-pitched": { readonly waveform: "triangle"; readonly pitchHz: 300; readonly glideSemitones: -0.8; readonly durationMs: 55; readonly attackMs: 2; readonly releaseMs: 10; readonly lowpassHz: any; readonly volume: 0.8; readonly intonation: { readonly variationSemitones: 2.2; readonly declineSemitones: 2; readonly questionRiseSemitones: 5; readonly exclaimLiftSemitones: 3; }; readonly syllableMs: 44; }; readonly gruff: { readonly waveform: "sawtooth"; readonly pitchHz: 105; readonly glideSemitones: -0.8; readonly durationMs: 75; readonly attackMs: 4; readonly releaseMs: 14; readonly lowpassHz: 900; readonly volume: 0.85; readonly intonation: { readonly variationSemitones: 1.2; readonly declineSemitones: 3; readonly questionRiseSemitones: 3; readonly exclaimLiftSemitones: 2; }; readonly syllableMs: 58; }; readonly lively: { readonly waveform: "square"; readonly pitchHz: 230; readonly glideSemitones: 0.6; readonly durationMs: 55; readonly attackMs: 2; readonly releaseMs: 10; readonly lowpassHz: 2400; readonly volume: 0.5; readonly intonation: { readonly variationSemitones: 2.6; readonly declineSemitones: 1.5; readonly questionRiseSemitones: 5; readonly exclaimLiftSemitones: 3.5; }; readonly syllableMs: 44; }; readonly posh: { readonly waveform: "triangle"; readonly pitchHz: 175; readonly glideSemitones: 1.2; readonly durationMs: 90; readonly attackMs: 6; readonly releaseMs: 20; readonly lowpassHz: 2000; readonly volume: 1; readonly intonation: { readonly variationSemitones: 2; readonly declineSemitones: 4; readonly questionRiseSemitones: 5; readonly exclaimLiftSemitones: 2.5; }; readonly syllableMs: 60; }; readonly mechanical: { readonly waveform: "square"; readonly pitchHz: 140; readonly glideSemitones: 0; readonly durationMs: 60; readonly attackMs: 0; readonly releaseMs: 4; readonly lowpassHz: 1400; readonly volume: 0.55; readonly intonation: { readonly variationSemitones: 0; readonly declineSemitones: 0; readonly questionRiseSemitones: 0; readonly exclaimLiftSemitones: 0; }; readonly syllableMs: 62; }; }
-	SPEECH_SYNTH_WAVEFORMS: readonly ["sine", "triangle", "square", "sawtooth"]
-	CAMERA_EASING_NAMES: readonly ["linear", "easeIn", "easeOut", "easeInOut"]
-	CAMERA_PLAYER_FACINGS: readonly ["movement", "camera", "cursor"]
-	CAMERA_OFFSET_SPACES: readonly ["world", "target"]
-	shopItemBadgeTypes: readonly ["new", "lucky"]
-	playerMeshNamedNodes: readonly ["TorsoNode", "HeadMesh", "ArmRightMesh", "ArmLeftMesh", "LegLeftMesh", "LegRightMesh"]
-	healthbarDisplays: readonly ["always", "never", "onDamage"]
-	nameTagBorderStyles: readonly ["solid", "glow", "double"]
-	nameTagBorderTargets: readonly ["both", "nametag", "healthbar"]
-	particlePresets: { readonly damageInner: unknown; readonly damageOuter: unknown; readonly bouncinessInner: unknown; readonly bouncinessOuter: unknown; readonly healthRegenInner: unknown; readonly healthRegenOuter: unknown; readonly speedInner: unknown; readonly speedOuter: unknown; readonly damageReductionInner: unknown; readonly damageReductionOuter: unknown; readonly invisibleInner: unknown; readonly invisibleOuter: unknown; readonly jumpBoostInner: unknown; readonly jumpBoostOuter: unknown; readonly knockbackInner: unknown; readonly knockbackOuter: unknown; readonly poisonedInner: unknown; readonly poisonedOuter: unknown; readonly slownessInner: unknown; readonly slownessOuter: unknown; readonly weaknessInner: unknown; readonly weaknessOuter: unknown; readonly cleansedInner: unknown; readonly cleansedOuter: unknown; readonly instantDamageInner: unknown; readonly instantDamageOuter: unknown; readonly healingPulseInner: unknown; readonly healingPulseOuter: unknown; readonly instantHealthInner: unknown; readonly instantHealthOuter: unknown; readonly hasteInner: unknown; readonly hasteOuter: unknown; readonly shieldInner: unknown; readonly shieldOuter: unknown; readonly doubleJumpInner: unknown; readonly doubleJumpOuter: unknown; readonly heatResistanceInner: unknown; readonly heatResistanceOuter: unknown; readonly thiefInner: unknown; readonly thiefOuter: unknown; readonly miningYieldInner: unknown; readonly miningYieldOuter: unknown; readonly brainRotInner: unknown; readonly brainRotOuter: unknown; readonly auraInner: unknown; readonly auraOuter: unknown; readonly wallClimbingInner: unknown; readonly wallClimbingOuter: unknown; readonly airWalkInner: unknown; readonly airWalkOuter: unknown; readonly pickpocketerInner: unknown; readonly pickpocketerOuter: unknown; readonly lifestealInner: unknown; readonly lifestealOuter: unknown; readonly blindnessInner: unknown; readonly blindnessOuter: unknown; readonly poopyInner: unknown; readonly poopyOuter: unknown; readonly glowingInner: unknown; readonly glowingOuter: unknown; readonly nightVisionInner: unknown; readonly nightVisionOuter: unknown; readonly xRayVisionInner: unknown; readonly xRayVisionOuter: unknown; readonly defaultFirecrackerSmall: { readonly colorGradients: TimeColorGradient[]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly defaultFirecrackerLarge: { readonly colorGradients: TimeColorGradient[]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mango: unknown; readonly yellowFirecrackerSmall: unknown; readonly yellowFirecrackerLarge: unknown; readonly limeFirecrackerSmall: unknown; readonly limeFirecrackerLarge: unknown; readonly greenFirecrackerSmall: unknown; readonly greenFirecrackerLarge: unknown; readonly cyanFirecrackerSmall: unknown; readonly cyanFirecrackerLarge: unknown; readonly blueFirecrackerSmall: unknown; readonly blueFirecrackerLarge: unknown; readonly purpleFirecrackerSmall: unknown; readonly purpleFirecrackerLarge: unknown; readonly pinkFirecrackerSmall: unknown; readonly pinkFirecrackerLarge: unknown; readonly redFirecrackerSmall: unknown; readonly redFirecrackerLarge: unknown; readonly orangeFirecrackerSmall: unknown; readonly orangeFirecrackerLarge: unknown; readonly blackFirecrackerSmall: unknown; readonly blackFirecrackerLarge: unknown; readonly brownFirecrackerSmall: unknown; readonly brownFirecrackerLarge: unknown; readonly grayFirecrackerSmall: unknown; readonly grayFirecrackerLarge: unknown; readonly lightBlueFirecrackerSmall: unknown; readonly lightBlueFirecrackerLarge: unknown; readonly lightGrayFirecrackerSmall: unknown; readonly lightGrayFirecrackerLarge: unknown; readonly magentaFirecrackerSmall: unknown; readonly magentaFirecrackerLarge: unknown; readonly whiteFirecrackerSmall: unknown; readonly whiteFirecrackerLarge: unknown; readonly brainRot: unknown; readonly stomp: unknown; readonly fertiliser: unknown; readonly bonemeal: unknown; readonly mobTameSuccess: unknown; readonly mobTameFailure: unknown; readonly mobCatch: unknown; readonly spawnCaughtMob: unknown; readonly mobFeedDefault: unknown; readonly mobFeedSuperliked: { readonly colorGradients: TimeColorGradient[]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobFeedLike: { readonly colorGradients: TimeColorGradient[]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobFeedNeutral: { readonly colorGradients: TimeColorGradient[]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobFeedDisliked: { readonly colorGradients: TimeColorGradient[]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobDeath: unknown; readonly mobDeathSoul: unknown; readonly boardShopSuccess: unknown; readonly mobSpawnerBlockFail: { readonly colorGradients: [{ readonly timeFraction: 0; readonly minColor: [80, 80, 80, 1]; readonly maxColor: [160, 160, 160, 1]; }]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobSpawnerBlockPassive: { readonly colorGradients: [{ readonly timeFraction: 0; readonly minColor: [0, 200, 50, 1]; readonly maxColor: [0, 255, 100, 1]; }]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobSpawnerBlockNeutral: { readonly colorGradients: [{ readonly timeFraction: 0; readonly minColor: [200, 200, 0, 1]; readonly maxColor: [255, 255, 0, 1]; }]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobSpawnerBlockHostile: { readonly colorGradients: [{ readonly timeFraction: 0; readonly minColor: [200, 10, 0, 1]; readonly maxColor: [255, 20, 0, 1]; }]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobSpawnOrb: unknown; readonly aura: unknown; }
-	stairsCorners: readonly ["innerLeft", "innerRight", "outerLeft", "outerRight"]
-	mobTypes: readonly ["Pig", "Cow", "Sheep", "Horse", "Camel", "Iron Goofy Golem", "Gold Goofy Golem", "Diamond Goofy Golem", "Moonstone Goofy Golem", "Deer", "Slime", "Wolf", "Wildcat", "Spirit Golem", "Spirit Wolf", "Spirit Bear", "Spirit Stag", "Spirit Gorilla", "Bear", "Stag", "Gold Watermelon Stag", "Gorilla", "Cave Golem", "Draugr Zombie", "Draugr Skeleton", "Frost Golem", "Frost Zombie", "Frost Skeleton", "Draugr Knight", "Draugr Huntress", "Magma Golem", "Draugr Warper", "Frost Wraith", "Draugr Reaver", "Stalker", "Crone", "Iron Guardian", "Gold Guardian", "Diamond Guardian", "Moonstone Guardian", "Tiki Terror", "NPC", "67", "Bobino Musculino", "Capitano Explovissimo", "Desert Fennec", "Armour Collector", "Furnace Knight", "Lil Knight", "Glass Gremlin", "Glass Bro", "Lord Vulcan", "Zombie", "Skeleton", "Mummy", "Scorpion", "Vulcanite", "Evil Tome", "Magma Toad"]
-	gunCategories: readonly ["semi_automatic", "submachine", "rifle", "pistol", "shotgun"]
-	customItemStats: readonly ["ttb", "displayName", "harvestLevel", "stoodOnSpeedMultiplier", "specialToolDrop", "specialToolBonusDrops", "drops", "onMinedAura", "description", "altActionable", "eatHealAmt", "eatShieldAmt", "afterEatenItem", "minChargeStateToUse", "damage", "attackRange", "attackCooldownMs", "abilityCooldownMs", "dashImpulse", "knockbackHorizontalScalar", "knockbackVerticalScalar", "comboInfo", "velocityMultiplier", "fishingRodInfo", "secondaryDamage", "absorbThrowable", "armourReduction", "knockbackReduction", "CrosshairText", "gunStats", "showInCreativeInven", "bridgeLength"]
-	lifeformTypes: readonly ["Player", "Pig", "Cow", "Sheep", "Horse", "Camel", "Iron Goofy Golem", "Gold Goofy Golem", "Diamond Goofy Golem", "Moonstone Goofy Golem", "Deer", "Slime", "Wolf", "Wildcat", "Spirit Golem", "Spirit Wolf", "Spirit Bear", "Spirit Stag", "Spirit Gorilla", "Bear", "Stag", "Gold Watermelon Stag", "Gorilla", "Cave Golem", "Draugr Zombie", "Draugr Skeleton", "Frost Golem", "Frost Zombie", "Frost Skeleton", "Draugr Knight", "Draugr Huntress", "Magma Golem", "Draugr Warper", "Frost Wraith", "Draugr Reaver", "Stalker", "Crone", "Iron Guardian", "Gold Guardian", "Diamond Guardian", "Moonstone Guardian", "Tiki Terror", "NPC", "67", "Bobino Musculino", "Capitano Explovissimo", "Desert Fennec", "Armour Collector", "Furnace Knight", "Lil Knight", "Glass Gremlin", "Glass Bro", "Lord Vulcan", "Zombie", "Skeleton", "Mummy", "Scorpion", "Vulcanite", "Evil Tome", "Magma Toad"]
-	mobVariations: { readonly Pig: readonly ["default"]; readonly Cow: readonly ["default", "cream"]; readonly Sheep: readonly ["default", "black", "red", "orange", "pink", "purple", "yellow", "blue", "brown", "cyan", "gray", "green", "lightBlue", "lightGray", "lime", "magenta"]; readonly Horse: readonly ["default", "black", "brown", "cream"]; readonly Camel: readonly ["default", "brown"]; readonly Slime: readonly ["default"]; readonly "Cave Golem": readonly ["default", "iron", "corrupted"]; readonly "Draugr Zombie": readonly ["default", "longHairChestplate", "longHairClothed", "shortHairClothed", "flower", "flower2", "mushroom", "vine", "vine2", "corrupted", "corrupted2"]; readonly "Draugr Skeleton": readonly ["default"]; readonly "Frost Golem": readonly ["default"]; readonly "Frost Zombie": readonly ["default", "longHairChestplate", "shortHairClothed"]; readonly "Frost Skeleton": readonly ["default"]; readonly "Draugr Knight": readonly ["default"]; readonly Wolf: readonly ["default", "white", "brown", "grey", "spectral"]; readonly Bear: readonly ["default"]; readonly Deer: readonly ["default"]; readonly Stag: readonly ["default"]; readonly "Gold Watermelon Stag": readonly ["default"]; readonly Gorilla: readonly ["default"]; readonly Wildcat: readonly ["default", "tabby", "grey", "black", "calico", "siamese", "leopard"]; readonly "Magma Golem": readonly ["default"]; readonly "Draugr Huntress": readonly ["default", "chainmail"]; readonly "Spirit Golem": readonly ["default"]; readonly "Spirit Wolf": readonly ["default"]; readonly "Spirit Bear": readonly ["default"]; readonly "Spirit Stag": readonly ["default"]; readonly "Spirit Gorilla": readonly ["default"]; readonly "Draugr Warper": readonly ["default"]; readonly "Frost Wraith": readonly ["default", "tattered", "frostKing", "accursed"]; readonly "Draugr Reaver": readonly ["default"]; readonly Stalker: readonly ["default", "crimson", "frost", "void"]; readonly Crone: readonly ["default"]; readonly "Iron Guardian": readonly ["default"]; readonly "Gold Guardian": readonly ["default"]; readonly "Diamond Guardian": readonly ["default"]; readonly "Moonstone Guardian": readonly ["default"]; readonly "Iron Goofy Golem": readonly ["default", "flaking", "patchy", "shedding", "bare", "stone"]; readonly "Gold Goofy Golem": readonly ["default", "flaking", "patchy", "shedding", "bare", "stone"]; readonly "Diamond Goofy Golem": readonly ["default", "flaking", "patchy", "shedding", "bare", "stone"]; readonly "Moonstone Goofy Golem": readonly ["default", "flaking", "patchy", "shedding", "bare", "stone"]; readonly "Tiki Terror": readonly ["default", "titan", "tormentor", "tyrant"]; readonly NPC: readonly ["default", "emma", "leo", "isabel", "sanjay", "imara", "enoch", "sara", "carmen", "chef"]; readonly "67": readonly ["default"]; readonly "Bobino Musculino": readonly ["default"]; readonly "Capitano Explovissimo": readonly ["default"]; readonly "Desert Fennec": readonly ["default"]; readonly "Armour Collector": readonly ["default"]; readonly "Furnace Knight": readonly ["default"]; readonly "Lil Knight": readonly ["default"]; readonly "Glass Gremlin": readonly ["default"]; readonly "Glass Bro": readonly ["default"]; readonly "Lord Vulcan": readonly ["default"]; readonly Zombie: readonly ["default"]; readonly Skeleton: readonly ["default"]; readonly Mummy: readonly ["default"]; readonly Scorpion: readonly ["default"]; readonly Vulcanite: readonly ["default"]; readonly "Evil Tome": readonly ["default"]; readonly "Magma Toad": readonly ["default"]; }
-	mobSettings: readonly ["variation", "name", "maxHealth", "initialHealth", "idleSound", "attackSound", "secondaryAttackSound", "hurtSound", "onDeathItemDrops", "onDeathParticleTexture", "onDeathAura", "baseWalkingSpeed", "baseRunningSpeed", "walkingSpeedMultiplier", "runningSpeedMultiplier", "jumpCount", "baseJumpImpulseXZ", "baseJumpImpulseY", "jumpMultiplier", "runAwayRadius", "chaseRadius", "territoryRadius", "hostilityRadius", "stoppingRadius", "attackInterval", "attackRadius", "secondaryAttackRadius", "attackDamage", "secondaryAttackDamage", "isReceivingDamageCooldownGlobal", "knockbackReceivedMultiplier", "attackImpulse", "secondaryAttackImpulse", "rangedAttackInaccuracy", "burstAttackInfo", "secondaryBurstAttackInfo", "heldItemName", "heldItemEnchantmentTier", "armour", "attackItemName", "secondaryAttackItemName", "swingArmOnAttack", "swingArmOnSecondaryAttack", "attackEffectName", "attackEffectDuration", "warpTargetSpecialAttackInfo", "combatTetherInfo", "evadeInfo", "chargeSpecialAttackInfo", "tameInfo", "onTamedHealthMultiplier", "petInfo", "ownerDbId", "minFollowingRadius", "maxFollowingRadius", "isRideable", "healthRegen", "ridingSpeedMult", "bridgeInfo", "walkingSlideInfo", "runningSlideInfo", "walkingJumpInfo", "runningJumpInfo", "walkingRandomFacingInfo", "runningRandomFacingInfo", "metaInfo"]
-	armourPieces: readonly ["Helmet", "Chestplate", "Gauntlets", "Leggings", "Boots"]
-	playerPoses: readonly ["standing", "sitting", "zombie", "gliding", "driving", "sleeping", "riding"]
-	potionEffects: readonly ["Speed", "Damage Reduction", "Damage", "Invisible", "Jump Boost", "Knockback", "Poisoned", "Slowness", "Weakness", "Cleansed", "Instant Damage", "Health Regen", "Healing Pulse", "Instant Health", "Haste", "Shield", "Double Jump", "Heat Resistance", "Thief", "X-Ray Vision", "Mining Yield", "Brain Rot", "Aura", "Wall Climbing", "Air Walk", "Pickpocketer", "Lifesteal", "Bounciness", "Blindness", "Poopy", "Glowing", "Night Vision"]
-	MAX_MOB_FEED_LEVEL: 5
-	mobLevelUpBonuses: readonly ["Renaming", "Special Drops", "Thorns", "Rainbow Wool", "Max Health +", "Damage +", "Riding Speed +", "Passenger Speed +", "Double Poop", "Self Yield", "Painting", "Friends", "Pack Leader", "Poison Claws", "Mob Power", "Mob Yield", "Feed Aura", "Antlers"]
-	mobAiStates: readonly ["idle", "disabled", "idleBeforeTurning", "turning", "idleBeforeWalking", "walking", "runningAway", "chasing", "turningBeforeCharging", "charging", "following", "watching", "walkingToPosition", "runningToPosition"]
-	cosmeticTypes: readonly ["skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "cape", "nameColour", "profileEffect", "emote"]
-	ingameIconNames: readonly ["Damage", "Damage Reduction", "Speed", "VoidJump", "Fist", "Frozen", "Hydrated", "Invisible", "Jump Boost", "Poisoned", "Slowness", "Weakness", "Health Regen", "Healing Pulse", "Haste", "Double Jump", "Heat Resistance", "Gliding", "Boating", "Obsidian Boating", "Riding", "Bunny Hop", "FallDamage", "Feather Falling", "Thief", "X-Ray Vision", "Mining Yield", "Brain Rot", "Rested Damage", "Rested Haste", "Rested Speed", "Rested Farming Yield", "Rested Aura", "Blindness", "Pickpocketer", "Lifesteal", "Bounciness", "Air Walk", "Wall Climbing", "Thorns", "Poopy", "Glowing", "Night Vision", "Irradiated", "Draugr Knight Head", "Draugr Warper Head", "Magma Golem Head", "Mystery Fish", "Damage Enchantment", "Critical Damage Enchantment", "Attack Speed Enchantment", "Protection Enchantment", "Health Enchantment", "Health Regen Enchantment", "Stomp Damage Enchantment", "Knockback Resist Enchantment", "Arrow Speed Enchantment", "Arrow Damage Enchantment", "Quick Charge Enchantment", "Break Speed Enchantment", "Momentum Enchantment", "Mining Yield Enchantment", "Farming Yield Enchantment", "Mining Aura Enchantment", "Digging Aura Enchantment", "Lumber Aura Enchantment", "Farming Aura Enchantment", "Vertical Knockback Enchantment", "Horizontal Knockback Enchantment", "Firecracker Cooldown Enchantment", "Firecracker Boost Enchantment", "Gliding Speed Enchantment", "Self Yield", "Friends", "Riding Speed", "Feed Aura", "Double Poop", "Mob Slayer", "Rainbow Wool", "Pack Leader", "Max Health", "Poison Claws", "Mob Yield", "Antlers Bonus", "Health", "HealthShield", "Cross", "Friendship", "Dotted Friendship", "Hunger", "Empty Hunger", "Pixelated Heart", "Question Mark", "Trader Black", "Trader Blue", "Trader Piggy"]
-	perBlockVehicleSettings: readonly ["canAutoStep", "speedMultiplier"]
-	meshEntityVehiclesTypes: readonly ["Boat", "Obsidian Boat", "Hovercraft", "Yellow Kart", "White Kart", "Red Kart", "Purple Kart", "Pink Kart", "Orange Kart", "Magenta Kart", "Lime Kart", "Light Gray Kart", "Light Blue Kart", "Green Kart", "Gray Kart", "Cyan Kart", "Brown Kart", "Blue Kart", "Black Kart", "Off Roader", "Gold Mining Drill", "Iron Mining Drill", "Diamond Mining Drill", "Moonstone Mining Drill", "Armored Car", "Light Blue Car", "Speedboat"]
-	worldGamemodes: readonly ["survival", "peaceful", "creative", "survivaladventure", "peacefuladventure", "spectator"]
-	QUEUED_COMMAND_STATUS_STRINGS: { readonly 0: "NOT_IN_QUEUE"; readonly 1: "WAITING_TO_RUN"; readonly 2: "CURRENTLY_RUNNING"; }
-	ItemMetaInfo: {
-		readonly rootName: string
-		readonly rootId: number
-		readonly metaStr: string
-		readonly rot: number | null
-		readonly open: boolean | null
-		readonly halfblockPlacement: HalfblockPlacement | null
-		readonly growing: true | null
-		readonly treeBase: true | null
-		readonly treeCanopy: true | null
-		readonly books: number | null
-		readonly freshlyGrown: true | null
-		readonly roots: true | null
-		readonly lava: true | null
-		readonly top: true | null
-		readonly grassRoots: true | null
-		readonly breaking: true | null
-		readonly flashing: true | null
-		readonly stairsCorner: StairsCorner | null
-		readonly charging: number | null
-		readonly direction: number | null
-		readonly requiresAmmo: true | null
-		readonly woodType: string | null
-		readonly caughtMobType: MobType | null
-	}
-	BlockMetadataItem: {
-		displayName: string | TranslatedText | CustomTextStyling
-		ttb?: number
-		textureInfo: | string
-			| (string | AnimParams)[]
-			| [number, number, number, number?]
-			| ({
-					colour?: [number, number, number, number?]
-			  } & AnimParams)
-		texturePerSide: number[]
-		harvestType: HarvestType
-		transTex: boolean
-		model: BlockMetadataModelType | string
-		itemTexture: string
-		drops: string
-		/** How many of \`drops\` a normal break gives, multiplying any mining yield. Default 1. */
-		dropAmount?: number
-		solid: boolean
-		/** Compiled voxel-aabb-sweep shape; omitted for a full cube. On nonsolid blocks, used only for targeting and highlights. */
-		subvoxelShape?: number[]
-		heldItemScale: number
-		modelScale: number
-		meta: ItemMetaInfo
-		rootMetaDesc: string
-		particlesIgnoreBlack: boolean
-		harvestLevel: number
-		fluid: boolean
-		specialToolDrop: SpecialToolDrop
-		specialToolBonusDrops: RecursiveReadonly<Record<string, { bonusDrop: string; probabilityOfDrop: number }[]>>
-		damage: number
-		stoodOnSpeedMultiplier: number
-		/** Carries a player standing on this block's top at [x, y, z] blocks/s (y ignored): a moving surface they can walk on, e.g. a conveyor. Omit for a still block. */
-		surfaceVelocity?: Vec3
-		description: string | TranslatedText | CustomTextStyling
-		altActionable: boolean
-		soundType: { break: SoundType; place: SoundType }
-		unlitStandaloneMesh: boolean
-		customPlanesInfo: { textureIdx: number; yRot: number }[]
-		customModelInfo: {
-			yOffset?: number
-			/** Only honoured by onRotatableCreate. */
-			yRotOffset?: number
-			/** Only honoured by onRotatableCreate. */
-			xRotOffset?: number
-			unlit?: boolean
-			emissiveColor?: Vec3
-			backFaceCulling?: boolean
-			/** The model's texture is \`frames\` frames stacked top to bottom, each shown for \`animationInterval\` ms, 100 at least. Its UVs cover the first. */
-			textureAnimation?: { frames: number; animationInterval: number }
-		}
-		absorbThrowable?: boolean
-		CrosshairText?: string | CustomTextStyling
-		/** Light emission as [R, G, B], each 0-15. Omit for no emission. */
-		lightEmission?: Vec3
-		/** Sky light emission level: null or 0-15. 0 is equivalent to null (no emission). */
-		skyLightEmission?: number
-		/** Light attenuation when light passes through this block. Default: 1 for air/transparent, 3 for fluid, 15 for opaque. */
-		lightFilter?: number
-		name: string
-		id: number
-		atlasIdx: number | number[]
-		stackable: boolean
-		heldItemGlb?: string
-		blockModel: string
-		blockModelItem: boolean
-		twoDBlockItem: boolean
-		rotatableOffsetAmt: number
-		canBePlacedOver: boolean
-		/** The half-high top placed above this block with it, and removed or reshaped with it (a fence's). */
-		attachedTop?: BlockName
-		/** For a slab, the block it becomes when a matching slab is placed into its open half. */
-		slabFullBlock?: BlockName
-		onMinedAura: number
-		showInCreativeInven?: boolean
-		gunStats?: GunStatsOverride
-	}
-	NonBlockMetadataItem: {
-		displayName?: string | TranslatedText | CustomTextStyling
-		type: "Item" | "Tool" | "Gun" | "FullAuto" | "Armour" | "GrayscaleArmour" | "Chargeable"
-		textureInfo: string | string[] | [number, number, number, number?]
-		weight: number
-		heldItemScale: number
-		heldItemGlb?: string
-		/** Extra Euler rotation (radians) applied only to the first-person held mesh, on top of the default hand pose. */
-		firstPersonHeldRotationOffset?: Vec3
-		/** Extra Euler rotation (radians) applied only to the third-person held mesh, on top of the default pose. */
-		thirdPersonHeldRotationOffset?: Vec3
-		description?: string | TranslatedText | CustomTextStyling
-		stackable: boolean
-		eatable?: boolean
-		chargeSound?: string
-		afterEatenItem?: ItemName
-		eatShieldAmt?: number
-		eatHealAmt?: number
-		chargeStages?: number
-		chargeTime?: number
-		minChargeStateToUse?: number
-		damage?: number
-		attackRange?: number
-		secondaryDamage?: number
-		holdAsAiming?: boolean
-		hideAimingUI?: boolean
-		requiresArrow?: boolean
-		knockbackHorizontalScalar?: number
-		knockbackVerticalScalar?: number
-		attackCooldownMs?: number
-		abilityCooldownMs?: number
-		dashImpulse?: number
-		comboInfo?: WeaponComboInfo
-		velocityMultiplier?: number
-		fishingRodInfo?: {
-			/** Minimum and maximum engine fishing bite delay, in milliseconds. */
-			biteDelayMs: readonly [number, number]
-		}
-		harvests?: HarvestType
-		multiplier?: number
-		level?: number
-		lumberjackHeight?: number
-		armourReduction?: number
-		knockbackReduction?: number
-		id?: number
-		name?: string
-		isCustom?: boolean
-		/** Light emission as [R, G, B], each 0-15. Omit for no emission. */
-		lightEmission?: Vec3
-		/** Spotlight reach in blocks. When set, the local player emits a directional beam (instead of the default omnidirectional held light) while holding this item, or wearing it if a helmet. */
-		spotlightRange?: number
-		/** Full cone apex angle in degrees (smaller = tighter beam). Only used with \`spotlightRange\`; omit for the default width. */
-		spotlightConeAngle?: number
-		meta?: ItemMetaInfo
-		rootMetaDesc?: string
-		keepMetaInChest?: boolean
-		gunType?: GunCategory
-		scopeType?: "none" | "sniper"
-		muzzleFlashOffsetFromGun?: Vec3
-		muzzleFlashScale?: number
-		autoFireWithMouse?: boolean
-		fireRate?: number
-		fireRateWithHeldTouch?: number
-		/** How fast spread recovers and shot sounds are paced, in ms; unset, the fire interval */
-		cadenceMs?: number
-		/**
-		 * ms from equipping to the first shot. A game overriding fireRate, fireRateWithHeldTouch or cadenceMs without its own
-		 * equipDelay waits the fire interval less 0.9 of cadenceMs instead
-		 */
-		equipDelay?: number
-		burstCount?: number
-		burstDelay?: number
-		shotPelletCount?: number
-		reloadTime?: number
-		clipSize?: number
-		reloadBulletsIndividually?: boolean
-		bulletReloadTime?: number
-		cockTime?: number
-		tagSpeedMult?: number
-		subsequentTagSpeedReductionScalar?: number
-		inaccuracyStanding?: number
-		inaccuracyFromShot?: number
-		inaccuracyMovement?: number
-		yVelocityInaccuracy?: number
-		inaccuracyFromJump?: number
-		altInaccuracyStanding?: number
-		altInaccuracyFromShot?: number
-		altInaccuracyMovement?: number
-		recoveryRate?: number
-		aimZoomFactor?: number
-		kickbackDecreaseRate?: number
-		minKickback?: number
-		maxKickback?: number
-		kickbackRate?: number
-		hasVerticalInaccuracy?: boolean
-		keepScopeOnShot?: boolean
-		msPerRound?: number
-		msPerRoundTouchScreen?: number
-		altYVelocityInaccuracy?: number
-		altInaccuracyFromJump?: number
-		fireInterval?: number
-		bridgeLength?: number
-		gunStats?: GunStatsOverride
-		showInCreativeInven?: boolean
-	}
-	LoadedChunk: {
-		anySetsRan: boolean
-		readonly lastUpdated: number
-		set(x: number, y: number, z: number, id: BlockId): void
-		get(x: number, y: number, z: number): number
-		/**
-		 * Returns the underlying array of the chunk
-		 * This exists for performance reasons only
-		 * Be careful using this - updating the data directly without calling set or setUnderlying will result in inconsistent state
-		 */
-		getUnderlyingData(): Uint16Array<ArrayBufferLike>
-		setUnderlying(idx: number, id: BlockId): void
-	}
-}
-
-export type ItemMetaInfo = _TypeOf["ItemMetaInfo"]
-
-export type BlockMetadataItem = _TypeOf["BlockMetadataItem"]
-
-export type NonBlockMetadataItem = _TypeOf["NonBlockMetadataItem"]
-
-export type LoadedChunk = _TypeOf["LoadedChunk"]
-
-export type Song = "Adigold - A Place To Be Free" | "Adigold - Butterfly Effect" | "Adigold - Dreamless Sleep" | "Adigold - Frozen Pulse" | "Adigold - Frozen Skies" | "Adigold - Healing Thoughts" | "Adigold - Here Forever" | "Adigold - Just a Little Hope" | "Adigold - Just Like Heaven" | "Adigold - Memories Remain" | "Adigold - Place To Be" | "Adigold - The Riverside" | "Adigold - The Wonder" | "Adigold - Vetrar (Cut B)" | "Awkward Comedy Quirky" | "battle-ship-111902" | "cdk-Silence-Await" | "corsairs-studiokolomna-main-version-23542-02-33" | "ghost-Reverie-small-theme" | "happy" | "Heroic-Demise-New" | "I-am-the-Sea-The-Room-4" | "Juhani Junkala [Retro Game Music Pack] Ending" | "Juhani Junkala [Retro Game Music Pack] Level 1" | "Juhani Junkala [Retro Game Music Pack] Level 2" | "Juhani Junkala [Retro Game Music Pack] Level 3" | "Juhani Junkala [Retro Game Music Pack] Title Screen" | "LonePeakMusic-Highway-1" | "Mojo Productions - Pirates" | "Mojo Productions - Sneaky Jazz" | "Mojo Productions - The Sneaky" | "Mojo Productions - The Sneaky Jazz" | "progress" | "raise-the-sails-152124" | "ramblinglibrarian-I-Have-Often-T" | "Slow-Motion-Bensound" | "snowflake-Ethereal-Space" | "the-epic-adventure-131399" | "TownTheme" | "The Suspense Ambient" | "Epic1" | "Epic2" | "Emotional Epic" | "Enemy Marked" | "spooky" | "Shuffling Crypt" | "Tower of Doom" | "Wild Infernos" | "Molten Rift"
-
-export type ParticleSystemBlendMode = 0 | 1 | 2 | 3 | 4
-
-export type HalfblockPlacement = 0 | 1 | 2
-
-export type WalkThroughType = 0 | 1 | 2
-
-export type LobbyType = 0 | 1 | 2
-
-export type PhysicsType = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
-
-export type BoatTier = 0 | 1 | 2
-
-export type GliderTier = 0 | 1 | 2 | 3
-
-export type BalloonTier = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15
-
-export type SleepingTier = 0 | 1 | 2 | 3
-
-export type CarTier = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
-
-export type MovementType = 0 | 1 | 2
-
-export type ExplosionType = 0 | 1 | 2
-
-export type ClientOptions = {
-		canChange: boolean
-		/** How far, in blocks from the eye, the player can break, place and use blocks. 0 to 20. */
-		blockReach: number
-		ezBridging: boolean
-		/** How long an ez bridging block grows before it is solid. 0 places it instantly. Null uses 900ms, or instant in creative. */
-		ezBridgingGrowMs: number
-		ezTowering: boolean
-		/** How long an ez towering block grows before it is solid. 0 places it instantly. Null uses 900ms, or instant in creative. */
-		ezToweringGrowMs: number
-		speedMultiplier: number
-		crouchingSpeed: number
-		/** you should probably use speed multiplier - this doesn't make much sense on phone */
-		walkingSpeed: number
-		/** you should probably use speed multiplier - this doesn't make much sense on phone */
-		runningSpeed: number
-		jumpAmount: number
-		airJumpCount: number
-		/** While airborne with jump held: upward force (blocks/s per second, 0 to 45; gravity is 20) until vertical speed nears maxUpSpeed (blocks/s; negative slows a fall). Null = off. */
-		jumpHoldThrust: { maxUpSpeed: number; force: number; }
-		bunnyhopMaxMultiplier: number
-		music: Song
-		musicVolumeLevel: number
-		/** Not recommended to use as it lags when being loaded. */
-		skyBox: string | EarthSkyBox
-		minChunkAddDist: [number, number]
-		showPlayersInUnloadedChunks: boolean
-		useInventory: boolean
-		/** For now just enables the full inventory UI */
-		useFullInventory: boolean
-		/** Hotbar/inventory panel colour as a hex string e.g. #682323; slot shades derive from it */
-		inventoryColourOverride: string
-		/** Hotbar slots (0-based) that pulse to draw the player's eye, e.g. to the item a tutorial wants them to use. [] for none. */
-		highlightedHotbarSlots: number[]
-		canCraft: boolean
-		canFish: boolean
-		canPickUpItems: boolean
-		/** Whether an item the player drops or a block they break drops shows at once on their screen, before the server drops it */
-		predictDroppedItems: boolean
-		playerZoom: number
-		zoomOutDistance: number
-		maxPlayerZoom: number
-		lobbyLeaderboardInfo: LobbyLeaderboardInfo
-		canCustomiseChar: boolean
-		/** used if canChange is true but useInventory is false */
-		defaultBlock: string
-		cantChangeError: string | CustomTextStyling
-		cantBreakError: string | CustomTextStyling
-		cantBuildError: string | CustomTextStyling
-		/** The contents of the action button. Supports custom text styling. onTouchscreenActionButton will be called when button pressed. */
-		touchscreenActionButton: string | CustomTextStyling
-		strictFluidBuckets: boolean
-		preserveProtectedFluidSources: boolean
-		fillBrokenBlocksWithWater: boolean
-		canUseZoomKey: boolean
-		canAltAction: boolean
-		canSeeNametagsThroughWalls: boolean
-		showBasicMovementControls: boolean
-		/** Centred text at the very top of the screen, level with the FPS counter / coordinates / room name. Drops below that strip when a centred placement would overlap it. */
-		middleTextTop: string | CustomTextStyling | TextWithDisplayOptions
-		middleTextUpper: string | CustomTextStyling | TextWithDisplayOptions
-		middleTextLower: string | CustomTextStyling | TextWithDisplayOptions
-		/** A row of compact chips rendered in the top-left HUD strip, concatenated immediately after the FPS counter / coordinates / room name. */
-		headerChips: HeaderChip[]
-		/** Lobby-only subtitle shown after the custom game name in the top-left header */
-		customVariationTitle: string
-		RightInfoText: string | CustomTextStyling | TextWithDisplayOptions
-		crosshairText: string | CustomTextStyling
-		/** If set, clients will only be able to see the closest x players (good for client perf in games with many players) */
-		numClosestPlayersVisible: number
-		showProgressBar: boolean
-		showKillfeed: boolean
-		/** Whether the viewer renders speech bubbles above other players when they send chat messages. Off by default. */
-		showChatBubbles: boolean
-		/** A line of dialogue in the panel below the crosshair, revealed word by word in its voice. Each new value is a new line. */
-		dialogue: Readonly<{ line: DialogueText; speakerName?: string | CustomTextStyling; voice?: SpeechVoice; animateIn?: boolean; }>
-		/** Allows player to select a channel that is passed as argument to onPlayerChat. See engineGameplayTypes.ts for expected format */
-		chatChannels: { channelName: string; elementContent: string | CustomTextStyling; elementBgColor: string; }[]
-		creative: boolean
-		/** while in creative */
-		flySpeedMultiplier: number
-		/** Ignored if creative is false */
-		canPickBlocks: boolean
-		/** Position of the compass target. If string, will be parsed as a player id */
-		compassTarget: string | number | number[]
-		ttbMultiplier: number
-		/** only applicable if useInventory is true */
-		inventoryItemsMoveable: boolean
-		invincible: boolean
-		maxShield: number
-		/** Shield upon joining and respawn. */
-		initialShield: number
-		maxHealth: number
-		/** Health upon joining and respawn. Can be null for the player to not have health. */
-		initialHealth: number
-		/** Fraction of max health that regens each regen tick */
-		healthRegenAmount: number
-		/** How often health regen is ticked */
-		healthRegenInterval: number
-		/** How long after a player receives damage to start regen again */
-		healthRegenStartAfter: number
-		/** Duration of the +damage effect from plum */
-		effectDamageDuration: number
-		/** Duration of +speed effect from cracked coconut */
-		effectSpeedDuration: number
-		/** Duration of +damage reduction effect from pear */
-		effectDamageReductionDuration: number
-		/** Duration of +health regen effect from cherry */
-		effectHealthRegenDuration: number
-		/** Duration of potion effects */
-		potionEffectDuration: number
-		/** Duration of splash potion effects */
-		splashPotionEffectDuration: number
-		/** Duration of arrow potion effects */
-		arrowPotionEffectDuration: number
-		/** RGBA array [r, g, b, a] for camera screen tint effect. Values fall between 0 and 1. */
-		cameraTint: [number, number, number, number]
-		/** Fog distance which overrides graphic settings. Uses graphic settings if null. */
-		fogChunkDistanceOverride: number
-		/** Blocks from the eye at which fog turns solid, thickening all the way out. Overrides fogChunkDistanceOverride and graphic settings when set. */
-		fogBlockDistanceOverride: number
-		/** Fog colour override - as a hex string e.g. #ffffff */
-		fogColourOverride: string
-		/** Applies fog to the skybox, which is otherwise unaffected by fog */
-		fogOnSkybox: boolean
-		/** After dying, the player can respawn after this many seconds */
-		secsToRespawn: number
-		/** When player is dead, also shows a play again button matchmakes player into a new lobby. Mostly useful for sessionBased games */
-		usePlayAgainButton: boolean
-		/** If true, player will respawn automatically after secsToRespawn seconds. Won't show an ad so autoRespawn needs to be false some of the time */
-		autoRespawn: boolean
-		/** Text to show on respawn button. (E.g. "Spectate") */
-		respawnButtonText: string
-		/** Whether the player can use the respawn button. Otherwise forces either play again or exit */
-		useRespawnButton: boolean
-		/** MS before a killstreak expires. (defaults to never expiring) */
-		killstreakDuration: number
-		/** Damage multiplier for all types of damage */
-		dealingDamageMultiplier: number
-		/** Mult for when the player hits a head. Only applies to guns */
-		dealingDamageHeadMultiplier: number
-		/** Mult for when the player hits a leg. Only applies to guns */
-		dealingDamageLegMultiplier: number
-		/** Mult for when the player hits neither a leg or a head. Only applies to guns */
-		dealingDamageDefaultMultiplier: number
-		/** Where gunshots originate from. "default" preserves camera-assisted behavior. */
-		gunshotOrigin: GunshotOrigin
-		/** Mult for all types of incoming damage */
-		receivingDamageMultiplier: number
-		/** When the player is attacked, a short cooldown prevents further damage from the same attack type. If true, all attackers share that cooldown. If false, each attacker has their own. */
-		isReceivingDamageCooldownGlobal: boolean
-		/** Mult for horizontal knockback when dealing damage */
-		horizontalKnockbackMultiplier: number
-		/** Mult for vertical knockback when dealing damage */
-		verticalKnockbackMultiplier: number
-		/** Mult for the damage done by "stomping" on a lifeform, i.e.: falling on them wearing Spiked Boots. */
-		stompDamageMultiplier: number
-		/** Radius around the player that will be affected by the stomp damage. */
-		stompDamageRadius: number
-		/** Mult for the radius within which mobs can detect the player when crouching. If a player's mult is 2, then mobs will think they are twice as far away. */
-		crouchMobDetectionRadiusMultiplier: number
-		/** Scale factor to use for dropped item meshes */
-		droppedItemScale: number
-		/** Amount that player camera is affected by movement based fov */
-		movementBasedFovScale: number
-		/** Amount of friction to apply to airborne players - only change if absolutely necessary */
-		airFrictionScale: number
-		/** Amount of friction to apply to grounded players - only change if absolutely necessary */
-		groundFrictionScale: number
-		/** Amount of acceleration to apply to airborne players - only change if absolutely necessary */
-		airAccScale: number
-		/** Whether to allow players to strafe and conserve momentum while airborne */
-		airMomentumConservation: boolean
-		/** Multiplier applied to gravity during normal movement */
-		gravityMultiplier: number
-		/** How much the player bounces off of solid blocks */
-		bounciness: number
-		/** Whether the player can climb walls */
-		canClimbWalls: boolean
-		/** Whether the player can crouch */
-		canCrouch: boolean
-		/** Whether players take fall damage */
-		fallDamage: boolean
-		/** How much aura levels up the player */
-		auraPerLevel: number
-		/** Max aura the player can have */
-		maxAuraLevel: number
-		/** Distance in blocks over which we reduce the opacity of entities as they approach the camera */
-		proximityFadeDistance: number
-		/** Minimum opacity multiplier reachable when fading entities based on camera proximity */
-		proximityFadeMinOpacity: number
-		/** Force the camera to look in a specific direction [x, y, z]. Set to null to allow free camera movement. */
-		forcedCameraDirection: [number, number, number]
-		/** Duration in ms to animate/transition to the forced camera direction. 0 = instant. */
-		forcedCameraDirectionTransitionMs: number
-		/** Roll angle of the camera in radians */
-		cameraRoll: number
-		/** Duration in ms to animate/transition to the camera roll angle. 0 = instant. */
-		cameraRollTransitionMs: number
-		/** Third-person camera origin rotation offset [x, y, z] in radians. */
-		cameraRotationOffset: [number, number, number]
-		/** Third-person camera origin translation offset [x, y, z] in blocks. */
-		cameraPositionOffset: [number, number, number]
-		/** Where the camera is and what it looks at: the player's own ("default"), or a fixed, follow, path or frame camera. */
-		gameCamera: CameraSettings
-		/** When null, just use the player's graphics setting. When set, forces lighting on (true) or off (false). */
-		lightingOverride: boolean
-		/** Sky light colour override - hex string e.g. #ffffff. */
-		skyLightColourOverride: string
-		/** Ambient (absence of sky light) colour override - hex string e.g. #ffffff. */
-		ambientLightColourOverride: string
-		/** The dimmest light the player can see by - hex string e.g. #ffffff. Anywhere darker is lifted to it, e.g. caves and night. */
-		visionMinLightColour: string
-		/** Held item light colour override - hex colour string e.g. #ffffff. Applied regardless of any held item. */
-		heldLightColourOverride: string
-		/** Held item light range override. Distance is measured in blocks. */
-		heldLightRangeOverride: number
-		/** Held item light cone angle override. Angle is measured in degrees. Larger number = wider beam. */
-		heldLightConeAngleOverride: number
-		/** When true, hides world and chunk coordinates regardless of the player's setting. */
-		hideCoordinates: boolean
-		/** When false, players can't record replays or save clips. Turning it off mid-game discards any recording in progress. Set it for the whole game, not per area: chunks load before players reach them, and turning it back on lets new clips include every loaded chunk. */
-		canRecordReplays: boolean
-		/** Renders a terrain-following strip of animated chevron arrows on the ground from this player to the target position. Optional \`colour\` is any CSS colour string (e.g. "red", "#ffaa00", "rgb(255,0,0)"), or null for default white. */
-		groundArrowPath: { target: [number, number, number]; colour?: string; }
-		customButtons: CustomButtonsType
-	}
-
-export type OtherEntitySettings = {
-		opacity: number
-		zIndex: 0 | 1
-		overlayColour: string
-		canAttack: boolean
-		canSee: boolean
-		interactable: boolean
-		interactionPrompt: string | CustomTextStyling
-		showDamageAmounts: boolean
-		lockHeadToBody: boolean
-		killfeedColour: string
-		meshScaling: EntityMeshScalingMap
-		colorInLobbyLeaderboard: string
-		lobbyLeaderboardValues: LobbyLeaderboardValues
-		lobbyLeaderboardTags: ChatTags
-		nameTagInfo: NameTagInfo
-		hasPriorityNametag: boolean
-		alwaysInInterest: boolean
-		multilineTextBox: MultilineTextBox
-		nameColour: "default" | "yellow" | "lime" | "green" | "aqua" | "cyan" | "blue" | "purple" | "pink" | "red" | "orange"
-	}
-`
+    const OM = {
+      "AK-47": {
+        gunType: "semi_automatic",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-5.5, -.25, 0],
+        muzzleFlashScale: 1.5,
+        autoFireWithMouse: !0,
+        fireRate: 600,
+        cadenceMs: 75,
+        equipDelay: 24,
+        damage: 20,
+        reloadTime: 2300,
+        clipSize: 30,
+        tagSpeedMult: .8,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 10,
+        inaccuracyFromShot: 22,
+        inaccuracyMovement: 45,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 45,
+        altInaccuracyStanding: 5,
+        altInaccuracyFromShot: 9,
+        altInaccuracyMovement: 28,
+        recoveryRate: .005,
+        minKickback: .023,
+        maxKickback: .06,
+        kickbackRate: 10,
+        kickbackDecreaseRate: 5e-6
+      },
+      M16: {
+        gunType: "semi_automatic",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-5.5, -.5, 0],
+        muzzleFlashScale: 1.5,
+        autoFireWithMouse: !0,
+        fireRate: 708,
+        cadenceMs: 60 / 900 * 1e3,
+        equipDelay: 23,
+        damage: 17,
+        reloadTime: 2300,
+        clipSize: 30,
+        tagSpeedMult: .8,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 8,
+        inaccuracyFromShot: 12,
+        inaccuracyMovement: 35,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 45,
+        altInaccuracyStanding: 3,
+        altInaccuracyFromShot: 8,
+        altInaccuracyMovement: 20,
+        recoveryRate: .005,
+        minKickback: .022,
+        maxKickback: .06,
+        kickbackRate: 10,
+        kickbackDecreaseRate: 5e-6
+      },
+      MP40: {
+        gunType: "submachine",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-5.5, -.25, 0],
+        muzzleFlashScale: 1.5,
+        autoFireWithMouse: !0,
+        fireRate: 900,
+        cadenceMs: 40,
+        equipDelay: 22,
+        damage: 14,
+        reloadTime: 1700,
+        clipSize: 30,
+        tagSpeedMult: .85,
+        subsequentTagSpeedReductionScalar: .4,
+        inaccuracyStanding: 13,
+        inaccuracyFromShot: 15,
+        inaccuracyMovement: 6,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 55,
+        altInaccuracyStanding: 11,
+        altInaccuracyFromShot: 12,
+        altInaccuracyMovement: 5,
+        recoveryRate: .005,
+        minKickback: .022,
+        maxKickback: .05,
+        kickbackRate: 10,
+        kickbackDecreaseRate: 5e-6
+      },
+      "TAR-21": {
+        gunType: "rifle",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-7.5, -.5, 0],
+        muzzleFlashScale: 3,
+        autoFireWithMouse: !1,
+        fireRate: 128,
+        cadenceMs: 400,
+        equipDelay: 119,
+        damage: 50,
+        reloadTime: 2300,
+        clipSize: 20,
+        tagSpeedMult: .75,
+        subsequentTagSpeedReductionScalar: .6,
+        inaccuracyStanding: 10,
+        inaccuracyFromShot: 60,
+        inaccuracyMovement: 45,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 75,
+        altInaccuracyStanding: 6,
+        altInaccuracyFromShot: 40,
+        altInaccuracyMovement: 30,
+        recoveryRate: .0065,
+        minKickback: .04,
+        maxKickback: .05,
+        kickbackRate: 25,
+        kickbackDecreaseRate: 5e-6
+      },
+      M1911: {
+        gunType: "pistol",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-3.5, -1, 0],
+        autoFireWithMouse: !1,
+        fireRate: 600,
+        cadenceMs: 75,
+        equipDelay: 24,
+        damage: 22,
+        reloadTime: 1500,
+        clipSize: 16,
+        tagSpeedMult: .8,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 15,
+        inaccuracyFromShot: 20,
+        inaccuracyMovement: 15,
+        yVelocityInaccuracy: 1.5,
+        inaccuracyFromJump: 15,
+        altInaccuracyStanding: 12,
+        altInaccuracyFromShot: 12,
+        altInaccuracyMovement: 10,
+        recoveryRate: .01,
+        minKickback: .045,
+        maxKickback: .05,
+        kickbackRate: 0,
+        kickbackDecreaseRate: 8e-6
+      },
+      "One Shot Pistol": {
+        gunType: "semi_automatic",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-3.5, -1, 0],
+        autoFireWithMouse: !1,
+        fireRate: 600,
+        cadenceMs: 75,
+        equipDelay: 24,
+        damage: 1,
+        reloadTime: 5e3,
+        clipSize: 1,
+        tagSpeedMult: .8,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 0,
+        inaccuracyFromShot: 25,
+        inaccuracyMovement: 15,
+        yVelocityInaccuracy: 1.01,
+        inaccuracyFromJump: 25,
+        altInaccuracyStanding: 10,
+        altInaccuracyFromShot: 25,
+        altInaccuracyMovement: 25,
+        recoveryRate: .005,
+        minKickback: .045,
+        maxKickback: .045,
+        kickbackRate: 0,
+        kickbackDecreaseRate: 5e-6
+      },
+      "Double Barrel": {
+        gunType: "shotgun",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-6.5, -1, 0],
+        muzzleFlashScale: 5,
+        autoFireWithMouse: !1,
+        fireRate: 150,
+        cadenceMs: 120,
+        equipDelay: 284,
+        damage: 12,
+        shotPelletCount: 10,
+        clipSize: 2,
+        reloadBulletsIndividually: !0,
+        bulletReloadTime: 650,
+        cockTime: 400,
+        tagSpeedMult: .65,
+        subsequentTagSpeedReductionScalar: .6,
+        inaccuracyStanding: 110,
+        inaccuracyFromShot: 90,
+        inaccuracyMovement: 28,
+        yVelocityInaccuracy: 5,
+        inaccuracyFromJump: 150,
+        altInaccuracyStanding: 55,
+        altInaccuracyFromShot: 55,
+        altInaccuracyMovement: 16,
+        hasVerticalInaccuracy: !0,
+        recoveryRate: .008,
+        minKickback: .18,
+        maxKickback: .22,
+        kickbackRate: 0,
+        kickbackDecreaseRate: 5e-6
+      },
+      AWP: {
+        gunType: "rifle",
+        scopeType: "sniper",
+        muzzleFlashOffsetFromGun: [-8, -2, 0],
+        muzzleFlashScale: 2,
+        autoFireWithMouse: !1,
+        fireRate: 42.8,
+        cadenceMs: 60 / 43 * 1e3,
+        equipDelay: 156,
+        damage: 70,
+        reloadTime: 2500,
+        clipSize: 5,
+        tagSpeedMult: .75,
+        subsequentTagSpeedReductionScalar: .6,
+        inaccuracyStanding: 150,
+        inaccuracyFromShot: 200,
+        inaccuracyMovement: 150,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 75,
+        altInaccuracyStanding: 1,
+        altInaccuracyFromShot: 1,
+        altInaccuracyMovement: 112,
+        recoveryRate: .02,
+        minKickback: .1,
+        maxKickback: .1,
+        kickbackRate: 0,
+        kickbackDecreaseRate: 5e-6,
+        aimZoomFactor: 3.5
+      },
+      Deagle: {
+        gunType: "rifle",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-3.5, -1, 0],
+        muzzleFlashScale: 1.3,
+        autoFireWithMouse: !1,
+        fireRate: 200,
+        cadenceMs: 60 / 220 * 1e3,
+        equipDelay: 44,
+        damage: 36,
+        reloadTime: 2e3,
+        clipSize: 7,
+        tagSpeedMult: .78,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 9,
+        inaccuracyFromShot: 22,
+        inaccuracyMovement: 14,
+        yVelocityInaccuracy: 1.5,
+        inaccuracyFromJump: 11,
+        altInaccuracyStanding: 7,
+        altInaccuracyFromShot: 14,
+        altInaccuracyMovement: 9,
+        recoveryRate: .003,
+        minKickback: .07,
+        maxKickback: .095,
+        kickbackRate: 6,
+        kickbackDecreaseRate: 6e-6
+      },
+      "Striker-12": {
+        gunType: "shotgun",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-6.5, -1, 0],
+        muzzleFlashScale: 3.5,
+        autoFireWithMouse: !0,
+        fireRate: 185,
+        cadenceMs: 250,
+        equipDelay: 92,
+        damage: 5,
+        shotPelletCount: 12,
+        clipSize: 12,
+        reloadTime: 2600,
+        tagSpeedMult: .68,
+        subsequentTagSpeedReductionScalar: .58,
+        inaccuracyStanding: 144,
+        inaccuracyFromShot: 120,
+        inaccuracyMovement: 48,
+        yVelocityInaccuracy: 7,
+        inaccuracyFromJump: 95,
+        altInaccuracyStanding: 80,
+        altInaccuracyFromShot: 80,
+        altInaccuracyMovement: 32,
+        hasVerticalInaccuracy: !0,
+        recoveryRate: .0055,
+        minKickback: .09,
+        maxKickback: .12,
+        kickbackRate: 4,
+        kickbackDecreaseRate: 5e-6
+      },
+      VSR: {
+        gunType: "submachine",
+        scopeType: "sniper",
+        keepScopeOnShot: !0,
+        muzzleFlashOffsetFromGun: [-6.5, -.5, 0],
+        muzzleFlashScale: 2,
+        autoFireWithMouse: !0,
+        fireRate: 450,
+        cadenceMs: 60 / 620 * 1e3,
+        equipDelay: 45,
+        damage: 15,
+        reloadTime: 1700,
+        clipSize: 20,
+        tagSpeedMult: .78,
+        subsequentTagSpeedReductionScalar: .58,
+        inaccuracyStanding: 44,
+        inaccuracyFromShot: 64,
+        inaccuracyMovement: 64,
+        yVelocityInaccuracy: 5,
+        inaccuracyFromJump: 55,
+        altInaccuracyStanding: 5,
+        altInaccuracyFromShot: 8,
+        altInaccuracyMovement: 32,
+        recoveryRate: .0055,
+        minKickback: .018,
+        maxKickback: .04,
+        kickbackRate: 12,
+        kickbackDecreaseRate: 5e-6,
+        aimZoomFactor: 2.4
+      },
+      Minigun: {
+        gunType: "submachine",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-8, -2, 0],
+        muzzleFlashScale: 5,
+        autoFireWithMouse: !0,
+        fireRate: 1800,
+        cadenceMs: 15,
+        equipDelay: 19,
+        damage: 20,
+        reloadTime: 2400,
+        clipSize: 100,
+        tagSpeedMult: .75,
+        subsequentTagSpeedReductionScalar: .6,
+        inaccuracyStanding: 25,
+        inaccuracyFromShot: 15,
+        inaccuracyMovement: 20,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 75,
+        altInaccuracyStanding: 25,
+        altInaccuracyFromShot: 15,
+        altInaccuracyMovement: 20,
+        hasVerticalInaccuracy: !0,
+        recoveryRate: .01,
+        minKickback: .005,
+        maxKickback: .005,
+        kickbackRate: 0,
+        kickbackDecreaseRate: 1e-5
+      },
+      SKAR: {
+        gunType: "semi_automatic",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-5.5, -.5, 0],
+        muzzleFlashScale: 1.5,
+        autoFireWithMouse: !0,
+        fireRate: 450,
+        cadenceMs: 60 / 550 * 1e3,
+        equipDelay: 27,
+        damage: 33,
+        reloadTime: 2800,
+        clipSize: 20,
+        tagSpeedMult: .8,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 8,
+        inaccuracyFromShot: 22,
+        inaccuracyMovement: 35,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 45,
+        altInaccuracyStanding: 3,
+        altInaccuracyFromShot: 15,
+        altInaccuracyMovement: 20,
+        recoveryRate: .008,
+        minKickback: .04,
+        maxKickback: .109,
+        kickbackRate: 10,
+        kickbackDecreaseRate: 5e-6
+      },
+      FMR: {
+        gunType: "semi_automatic",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-5.5, -.5, 0],
+        muzzleFlashScale: 1.5,
+        autoFireWithMouse: !1,
+        fireRate: 450,
+        cadenceMs: 150,
+        equipDelay: 16,
+        burstCount: 3,
+        burstDelay: 200 / 3,
+        damage: 17,
+        reloadTime: 2200,
+        clipSize: 21,
+        tagSpeedMult: .8,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 6,
+        inaccuracyFromShot: 8,
+        inaccuracyMovement: 30,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 45,
+        altInaccuracyStanding: 2.5,
+        altInaccuracyFromShot: 5.5,
+        altInaccuracyMovement: 17,
+        recoveryRate: .007,
+        minKickback: .015,
+        maxKickback: .04,
+        kickbackRate: 10,
+        kickbackDecreaseRate: 5e-6
+      },
+      "Block-19": {
+        gunType: "pistol",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-3.5, -1, 0],
+        autoFireWithMouse: !1,
+        fireRate: 200,
+        cadenceMs: 60 / 210 * 1e3,
+        equipDelay: 45,
+        burstCount: 4,
+        burstDelay: 38,
+        damage: 20,
+        reloadTime: 1350,
+        clipSize: 24,
+        tagSpeedMult: .8,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 12,
+        inaccuracyFromShot: 14,
+        inaccuracyMovement: 14,
+        yVelocityInaccuracy: 1.5,
+        inaccuracyFromJump: 14,
+        altInaccuracyStanding: 9,
+        altInaccuracyFromShot: 9,
+        altInaccuracyMovement: 8,
+        recoveryRate: .008,
+        minKickback: .04,
+        maxKickback: .055,
+        kickbackRate: 6,
+        kickbackDecreaseRate: 8e-6
+      },
+      "Mini Izu": {
+        gunType: "pistol",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-5.5, -1, 0],
+        autoFireWithMouse: !0,
+        fireRate: 923,
+        cadenceMs: 60 / 1615 * 1e3,
+        equipDelay: 21,
+        damage: 13,
+        reloadTime: 1400,
+        clipSize: 22,
+        tagSpeedMult: .85,
+        subsequentTagSpeedReductionScalar: .4,
+        inaccuracyStanding: 15,
+        inaccuracyFromShot: 20,
+        inaccuracyMovement: 8,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 60,
+        altInaccuracyStanding: 12,
+        altInaccuracyFromShot: 16,
+        altInaccuracyMovement: 6,
+        recoveryRate: .005,
+        minKickback: .03,
+        maxKickback: .075,
+        kickbackRate: 12,
+        kickbackDecreaseRate: 5e-6
+      },
+      GPMG: {
+        gunType: "rifle",
+        scopeType: "none",
+        muzzleFlashOffsetFromGun: [-12.5, -.5, 0],
+        muzzleFlashScale: 2,
+        autoFireWithMouse: !0,
+        fireRate: 600,
+        cadenceMs: 60 / 700 * 1e3,
+        equipDelay: 25,
+        damage: 24,
+        reloadTime: 4500,
+        clipSize: 75,
+        tagSpeedMult: .78,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 10,
+        inaccuracyFromShot: 24,
+        inaccuracyMovement: 45,
+        yVelocityInaccuracy: 4,
+        inaccuracyFromJump: 55,
+        altInaccuracyStanding: 4,
+        altInaccuracyFromShot: 16,
+        altInaccuracyMovement: 24,
+        hasVerticalInaccuracy: !0,
+        recoveryRate: .01,
+        minKickback: .032,
+        maxKickback: .09,
+        kickbackRate: 9,
+        kickbackDecreaseRate: 1e-5
+      },
+      DMR: {
+        gunType: "semi_automatic",
+        scopeType: "sniper",
+        keepScopeOnShot: !0,
+        muzzleFlashOffsetFromGun: [-6, -.5, 0],
+        muzzleFlashScale: 1.6,
+        autoFireWithMouse: !1,
+        fireRate: 270,
+        cadenceMs: 200,
+        equipDelay: 37,
+        damage: 34,
+        reloadTime: 2200,
+        clipSize: 8,
+        tagSpeedMult: .78,
+        subsequentTagSpeedReductionScalar: .55,
+        inaccuracyStanding: 8,
+        inaccuracyFromShot: 18,
+        inaccuracyMovement: 30,
+        yVelocityInaccuracy: 2,
+        inaccuracyFromJump: 30,
+        altInaccuracyStanding: 1.5,
+        altInaccuracyFromShot: 6,
+        altInaccuracyMovement: 18,
+        recoveryRate: .004,
+        minKickback: .04,
+        maxKickback: .065,
+        kickbackRate: 5,
+        kickbackDecreaseRate: 6e-6,
+        aimZoomFactor: 2.8
+      }
+    };
+    for (const SM of Object.values(OM)) SM.msPerRound = 60 / SM.fireRate * 1e3, SM.msPerRoundTouchScreen = void 0 !== SM.fireRateWithHeldTouch ? 60 / SM.fireRateWithHeldTouch * 1e3 : SM.msPerRound, SM.cadenceMs ??= SM.msPerRound, SM.altYVelocityInaccuracy ??= SM.yVelocityInaccuracy, SM.altInaccuracyFromJump ??= SM.inaccuracyFromJump
+  },
+  37983: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => aM,
+      f: () => nM,
+      g: () => QM,
+      h: () => zM,
+      k: () => PM,
+      l: () => dM
+    });
+    var OM = iM(332),
+      SM = iM(613),
+      jM = iM(340);
+    const aM = ["", "|meta|charging2", "|meta|charging3", "|meta|charging4"];
+
+    function PM(MM, rM) {
+      return "" === rM ? MM : `${MM} ${rM}`
+    }
+
+    function nM(MM, rM, iM, SM) {
+      const jM = MM.replace((0, OM.oe)(rM.material), (0, OM.oe)(iM));
+      if (rM.kind === SM || "" === rM.kind) return jM;
+      const aM = (0, OM.oe)(rM.kind);
+      if (!jM.includes(aM)) throw new Error(`Cannot name assets for "${PM(iM,SM)}": "${jM}" has no "${aM}" to replace`);
+      return jM.replace(aM, (0, OM.oe)(SM))
+    }
+
+    function QM(MM) {
+      return MM.creativeKinds ? MM.creativeKinds.flatMap((rM => MM.materials.map((MM => PM(MM, rM))))) : MM.materials.flatMap((rM => MM.kinds.filter((rM => {
+        var iM;
+        return !(null !== (iM = MM.hiddenKinds) && void 0 !== iM && iM.includes(rM))
+      })).map((MM => PM(rM, MM)))))
+    }
+
+    function zM(MM, rM) {
+      return MM.flatMap((MM => MM.kinds.includes(rM) ? MM.materials.map((MM => PM(MM, rM))) : []))
+    }
+    const LM = {
+      name: "diamondVariants",
+      materials: jM.j,
+      kinds: jM.i.map((MM => MM.trimStart())),
+      inheritsFrom: MM => ({
+        material: "Diamond",
+        kind: MM
+      }),
+      hiddenKinds: ["Crossbow Charged"],
+      creativeKinds: ["", "Fragment", "Pickaxe", "Axe", "Spade", "Hoe", "Sword", "Bow", "Crossbow", "Spear", "Dagger", "Club", "Mace", "Whip", "Boomerang", "Helmet", "Chestplate", "Gauntlets", "Leggings", "Boots"],
+      description: (MM, rM) => {
+        if ("Fragment" === rM) return {
+          translationKey: "Magmasteel" === MM ? "item:forgeFragmentDescription" : "item:elementalShardDescription"
+        }
+      }
+    };
+
+    function mM(MM) {
+      return {
+        translationKey: `item:${(0,OM.me)(MM)}`
+      }
+    }
+    const HM = {
+        name: "decorativeArmour",
+        materials: jM.c,
+        kinds: SM.b,
+        inheritsFrom: MM => ({
+          material: "Diamond",
+          kind: MM
+        }),
+        displayName: mM
+      },
+      hM = {
+        name: "keys",
+        materials: ["Wooden", "Stone", "Iron", "Gold", "Diamond"],
+        kinds: ["Key"],
+        metadata: () => ({
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        }),
+        displayName: mM
+      },
+      JM = {
+        Staff: "Club",
+        Shard: "Fragment"
+      },
+      dM = [LM, HM, {
+        name: "elemental",
+        materials: jM.k,
+        kinds: ["Shard", "Sword", "Bow", "Crossbow", "Crossbow Charged", "Spear", "Dagger", "Club", "Mace", "Whip", "Staff", ...SM.b],
+        inheritsFrom: MM => {
+          var rM;
+          return {
+            material: "Diamond",
+            kind: null !== (rM = JM[MM]) && void 0 !== rM ? rM : MM
+          }
+        },
+        hiddenKinds: ["Crossbow Charged"],
+        displayName: mM,
+        description: (MM, rM) => {
+          if ("Shard" === rM) return {
+            translationKey: "Sanguine" === MM || "Astral" === MM ? "item:forgeFragmentDescription" : "item:elementalShardDescription"
+          }
+        }
+      }, hM]
+  },
+  37975: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => mM,
+      d: () => UM,
+      e: () => GM,
+      i: () => EM,
+      k: () => wM,
+      m: () => gM,
+      p: () => eM
+    });
+    var OM = iM(332),
+      SM = iM(9863),
+      jM = iM(4843),
+      aM = iM(9816),
+      PM = iM(9839),
+      nM = iM(37979),
+      QM = iM(37983),
+      zM = iM(37988),
+      LM = iM(37996);
+    const mM = 16,
+      HM = {
+        comboWindowMs: 800,
+        comboMultipliers: [.5, 2 / 3, 5 / 6, 1],
+        backstabAngle: 2 * Math.PI / 3
+      },
+      hM = {
+        "Wood Pickaxe": {
+          displayName: {
+            translationKey: "item:woodPickaxe"
+          },
+          type: "Tool",
+          textureInfo: "wooden_pickaxe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 18,
+          description: {
+            translationKey: "item:pickaxeDescription"
+          },
+          stackable: !1,
+          harvests: "rock",
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Pickaxe": {
+          displayName: {
+            translationKey: "item:stonePickaxe"
+          },
+          type: "Tool",
+          textureInfo: "stone_pickaxe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 22,
+          description: {
+            translationKey: "item:pickaxeDescription"
+          },
+          stackable: !1,
+          harvests: "rock",
+          multiplier: 3.5,
+          level: 2
+        },
+        "Iron Pickaxe": {
+          displayName: {
+            translationKey: "item:ironPickaxe"
+          },
+          type: "Tool",
+          textureInfo: "iron_pickaxe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 27,
+          description: {
+            translationKey: "item:pickaxeDescription"
+          },
+          stackable: !1,
+          harvests: "rock",
+          multiplier: 6,
+          level: 3
+        },
+        "Gold Pickaxe": {
+          displayName: {
+            translationKey: "item:goldPickaxe"
+          },
+          type: "Tool",
+          textureInfo: "golden_pickaxe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 30,
+          description: {
+            translationKey: "item:pickaxeDescription"
+          },
+          stackable: !1,
+          harvests: "rock",
+          multiplier: 7,
+          level: 4
+        },
+        "Diamond Pickaxe": {
+          displayName: {
+            translationKey: "item:diamondPickaxe"
+          },
+          type: "Tool",
+          textureInfo: "diamond_pickaxe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 32,
+          description: {
+            translationKey: "item:pickaxeDescription"
+          },
+          stackable: !1,
+          harvests: "rock",
+          multiplier: 8,
+          level: 5
+        },
+        "Moonstone Pickaxe": {
+          displayName: {
+            translationKey: "item:moonstonePickaxe"
+          },
+          type: "Tool",
+          textureInfo: "moonstone_pickaxe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 32,
+          description: {
+            translationKey: "item:moonstonePickaxeDescription"
+          },
+          stackable: !1,
+          harvests: "rock",
+          multiplier: 9,
+          level: 5
+        },
+        "Golem Pickaxe": {
+          displayName: {
+            translationKey: "item:golemPickaxe"
+          },
+          type: "Tool",
+          textureInfo: "golem_pickaxe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 32,
+          description: {
+            translationKey: "item:golemPickaxeDescription"
+          },
+          stackable: !1,
+          harvests: "rock",
+          multiplier: 8,
+          level: 5
+        },
+        "Wood Axe": {
+          displayName: {
+            translationKey: "item:woodAxe"
+          },
+          type: "Tool",
+          textureInfo: "wooden_axe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 20,
+          description: {
+            translationKey: "item:axeDescription"
+          },
+          stackable: !1,
+          harvests: "wood",
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Axe": {
+          displayName: {
+            translationKey: "item:stoneAxe"
+          },
+          type: "Tool",
+          textureInfo: "stone_axe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 24,
+          description: {
+            translationKey: "item:axeDescription"
+          },
+          stackable: !1,
+          harvests: "wood",
+          multiplier: 3.5,
+          level: 2
+        },
+        "Iron Axe": {
+          displayName: {
+            translationKey: "item:ironAxe"
+          },
+          type: "Tool",
+          textureInfo: "iron_axe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 31,
+          description: {
+            translationKey: "item:axeDescription"
+          },
+          stackable: !1,
+          harvests: "wood",
+          multiplier: 6,
+          level: 3
+        },
+        "Gold Axe": {
+          displayName: {
+            translationKey: "item:goldAxe"
+          },
+          type: "Tool",
+          textureInfo: "golden_axe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 33,
+          description: {
+            translationKey: "item:axeDescription"
+          },
+          stackable: !1,
+          harvests: "wood",
+          multiplier: 7,
+          level: 4
+        },
+        "Diamond Axe": {
+          displayName: {
+            translationKey: "item:diamondAxe"
+          },
+          type: "Tool",
+          textureInfo: "diamond_axe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 36,
+          description: {
+            translationKey: "item:axeDescription"
+          },
+          stackable: !1,
+          harvests: "wood",
+          multiplier: 8,
+          level: 5
+        },
+        "Moonstone Axe": {
+          displayName: {
+            translationKey: "item:moonstoneAxe"
+          },
+          type: "Tool",
+          textureInfo: "moonstone_axe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 36,
+          description: {
+            translationKey: "item:moonstoneAxeDescription"
+          },
+          stackable: !1,
+          harvests: "wood",
+          multiplier: 9,
+          level: 5,
+          lumberjackHeight: 6
+        },
+        "Artisan Axe": {
+          displayName: "Artisan Axe",
+          type: "Tool",
+          textureInfo: "artisan_axe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 31,
+          description: {
+            translationKey: "item:axeDescription"
+          },
+          stackable: !1,
+          harvests: "wood",
+          multiplier: 6,
+          level: 3
+        },
+        "Wood Spade": {
+          displayName: {
+            translationKey: "item:woodSpade"
+          },
+          type: "Tool",
+          textureInfo: "wooden_shovel",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 15,
+          description: {
+            translationKey: "item:spadeDescription"
+          },
+          stackable: !1,
+          harvests: "granule",
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Spade": {
+          displayName: {
+            translationKey: "item:stoneSpade"
+          },
+          type: "Tool",
+          textureInfo: "stone_shovel",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 19,
+          description: {
+            translationKey: "item:spadeDescription"
+          },
+          stackable: !1,
+          harvests: "granule",
+          multiplier: 3.5,
+          level: 2
+        },
+        "Iron Spade": {
+          displayName: {
+            translationKey: "item:ironSpade"
+          },
+          type: "Tool",
+          textureInfo: "iron_shovel",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 24,
+          description: {
+            translationKey: "item:spadeDescription"
+          },
+          stackable: !1,
+          harvests: "granule",
+          multiplier: 6,
+          level: 3
+        },
+        "Gold Spade": {
+          displayName: {
+            translationKey: "item:goldSpade"
+          },
+          type: "Tool",
+          textureInfo: "golden_shovel",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 26,
+          description: {
+            translationKey: "item:spadeDescription"
+          },
+          stackable: !1,
+          harvests: "granule",
+          multiplier: 7,
+          level: 4
+        },
+        "Diamond Spade": {
+          displayName: {
+            translationKey: "item:diamondSpade"
+          },
+          type: "Tool",
+          textureInfo: "diamond_shovel",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 28,
+          description: {
+            translationKey: "item:spadeDescription"
+          },
+          stackable: !1,
+          harvests: "granule",
+          multiplier: 8,
+          level: 5
+        },
+        "Wood Sword": {
+          displayName: {
+            translationKey: "item:woodSword"
+          },
+          type: "Tool",
+          textureInfo: "wooden_sword",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 22,
+          description: {
+            translationKey: "item:swordDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Sword": {
+          displayName: {
+            translationKey: "item:stoneSword"
+          },
+          type: "Tool",
+          textureInfo: "stone_sword",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 27,
+          description: {
+            translationKey: "item:swordDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 2
+        },
+        "Iron Sword": {
+          displayName: {
+            translationKey: "item:ironSword"
+          },
+          type: "Tool",
+          textureInfo: "iron_sword",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 34,
+          description: {
+            translationKey: "item:swordDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 3
+        },
+        "Gold Sword": {
+          displayName: {
+            translationKey: "item:goldSword"
+          },
+          type: "Tool",
+          textureInfo: "golden_sword",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 37,
+          description: {
+            translationKey: "item:swordDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 4
+        },
+        "Diamond Sword": {
+          displayName: {
+            translationKey: "item:diamondSword"
+          },
+          type: "Tool",
+          textureInfo: "diamond_sword",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 40,
+          description: {
+            translationKey: "item:swordDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Knight Sword": {
+          displayName: {
+            translationKey: "item:knightSword"
+          },
+          type: "Tool",
+          textureInfo: "knight_sword",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 43,
+          knockbackHorizontalScalar: 1.7,
+          description: {
+            translationKey: "item:knightSwordDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Wood Hoe": {
+          displayName: {
+            translationKey: "item:woodHoe"
+          },
+          type: "Tool",
+          textureInfo: "wooden_hoe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 15,
+          description: {
+            translationKey: "item:hoeDescription"
+          },
+          stackable: !1,
+          harvests: "cuttable",
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Hoe": {
+          displayName: {
+            translationKey: "item:stoneHoe"
+          },
+          type: "Tool",
+          textureInfo: "stone_hoe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 19,
+          description: {
+            translationKey: "item:hoeDescription"
+          },
+          stackable: !1,
+          harvests: "cuttable",
+          multiplier: 2.5,
+          level: 2
+        },
+        "Iron Hoe": {
+          displayName: {
+            translationKey: "item:ironHoe"
+          },
+          type: "Tool",
+          textureInfo: "iron_hoe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 24,
+          description: {
+            translationKey: "item:hoeDescription"
+          },
+          stackable: !1,
+          harvests: "cuttable",
+          multiplier: 3.25,
+          level: 3
+        },
+        "Gold Hoe": {
+          displayName: {
+            translationKey: "item:goldHoe"
+          },
+          type: "Tool",
+          textureInfo: "golden_hoe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 26,
+          description: {
+            translationKey: "item:hoeDescription"
+          },
+          stackable: !1,
+          harvests: "cuttable",
+          multiplier: 3.75,
+          level: 4
+        },
+        "Diamond Hoe": {
+          displayName: {
+            translationKey: "item:diamondHoe"
+          },
+          type: "Tool",
+          textureInfo: "diamond_hoe",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 28,
+          description: {
+            translationKey: "item:hoeDescription"
+          },
+          stackable: !1,
+          harvests: "cuttable",
+          multiplier: 4.25,
+          level: 5
+        },
+        Flashlight: {
+          displayName: {
+            translationKey: "item:flashlight"
+          },
+          description: {
+            translationKey: "item:flashlightDescription"
+          },
+          type: "Item",
+          textureInfo: "flashlight",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          Ch: [15, 15, 15],
+          spotlightRange: 20,
+          spotlightConeAngle: 60,
+          firstPersonHeldRotationOffset: [-.34, -.014, .081],
+          thirdPersonHeldRotationOffset: [Math.PI / 2, 0, 0]
+        },
+        "Mining Helmet": {
+          displayName: {
+            translationKey: "item:miningHelmet"
+          },
+          description: {
+            translationKey: "item:miningHelmetDescription"
+          },
+          type: "Armour",
+          textureInfo: "mining_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07,
+          Ch: [15, 14, 11],
+          spotlightRange: 12,
+          spotlightConeAngle: 90
+        },
+        "Wood Helmet": {
+          displayName: {
+            translationKey: "item:woodHelmet"
+          },
+          type: "Armour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Iron Helmet": {
+          displayName: {
+            translationKey: "item:ironHelmet"
+          },
+          type: "Armour",
+          textureInfo: "iron_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .09
+        },
+        "Gold Helmet": {
+          displayName: {
+            translationKey: "item:goldHelmet"
+          },
+          type: "Armour",
+          textureInfo: "golden_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .11
+        },
+        "Diamond Helmet": {
+          displayName: {
+            translationKey: "item:diamondHelmet"
+          },
+          type: "Armour",
+          textureInfo: "diamond_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Wood Chestplate": {
+          displayName: {
+            translationKey: "item:woodChestplate"
+          },
+          type: "Armour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Iron Chestplate": {
+          displayName: {
+            translationKey: "item:ironChestplate"
+          },
+          type: "Armour",
+          textureInfo: "iron_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .18
+        },
+        "Gold Chestplate": {
+          displayName: {
+            translationKey: "item:goldChestplate"
+          },
+          type: "Armour",
+          textureInfo: "golden_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .21
+        },
+        "Diamond Chestplate": {
+          displayName: {
+            translationKey: "item:diamondChestplate"
+          },
+          type: "Armour",
+          textureInfo: "diamond_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .24
+        },
+        "Fur Chestplate": {
+          displayName: {
+            translationKey: "item:furChestplate"
+          },
+          type: "Armour",
+          textureInfo: "fur_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          description: {
+            translationKey: "item:furChestplateDescription"
+          },
+          stackable: !1,
+          armourReduction: .22,
+          knockbackReduction: 1
+        },
+        "Wood Leggings": {
+          displayName: {
+            translationKey: "item:woodLeggings"
+          },
+          type: "Armour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Iron Leggings": {
+          displayName: {
+            translationKey: "item:ironLeggings"
+          },
+          type: "Armour",
+          textureInfo: "iron_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .14
+        },
+        "Gold Leggings": {
+          displayName: {
+            translationKey: "item:goldLeggings"
+          },
+          type: "Armour",
+          textureInfo: "golden_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .16
+        },
+        "Diamond Leggings": {
+          displayName: {
+            translationKey: "item:diamondLeggings"
+          },
+          type: "Armour",
+          textureInfo: "diamond_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .19
+        },
+        "Wood Boots": {
+          displayName: {
+            translationKey: "item:woodBoots"
+          },
+          type: "Armour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Iron Boots": {
+          displayName: {
+            translationKey: "item:ironBoots"
+          },
+          type: "Armour",
+          textureInfo: "iron_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Gold Boots": {
+          displayName: {
+            translationKey: "item:goldBoots"
+          },
+          type: "Armour",
+          textureInfo: "golden_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .09
+        },
+        "Diamond Boots": {
+          displayName: {
+            translationKey: "item:diamondBoots"
+          },
+          type: "Armour",
+          textureInfo: "diamond_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Spiked Boots": {
+          displayName: {
+            translationKey: "item:spikedBoots"
+          },
+          type: "Armour",
+          textureInfo: "spiked_boots",
+          weight: 1,
+          heldItemScale: 1,
+          description: {
+            translationKey: "item:spikedBootsDescription"
+          },
+          stackable: !1,
+          armourReduction: .09
+        },
+        "Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:woodGauntlets"
+          },
+          type: "Armour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Iron Gauntlets": {
+          displayName: {
+            translationKey: "item:ironGauntlets"
+          },
+          type: "Armour",
+          textureInfo: "iron_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .08
+        },
+        "Gold Gauntlets": {
+          displayName: {
+            translationKey: "item:goldGauntlets"
+          },
+          type: "Armour",
+          textureInfo: "golden_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Diamond Gauntlets": {
+          displayName: {
+            translationKey: "item:diamondGauntlets"
+          },
+          type: "Armour",
+          textureInfo: "diamond_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .11
+        },
+        "Military Helmet": {
+          displayName: {
+            translationKey: "item:militaryHelmet"
+          },
+          type: "Armour",
+          textureInfo: "military_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .11
+        },
+        "Military Chestplate": {
+          displayName: {
+            translationKey: "item:militaryChestplate"
+          },
+          type: "Armour",
+          textureInfo: "military_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .21
+        },
+        "Military Gauntlets": {
+          displayName: {
+            translationKey: "item:militaryGauntlets"
+          },
+          type: "Armour",
+          textureInfo: "military_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Military Leggings": {
+          displayName: {
+            translationKey: "item:militaryLeggings"
+          },
+          type: "Armour",
+          textureInfo: "military_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .16
+        },
+        "Military Boots": {
+          displayName: {
+            translationKey: "item:militaryBoots"
+          },
+          type: "Armour",
+          textureInfo: "military_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .09
+        },
+        "White Wood Helmet": {
+          displayName: {
+            translationKey: "item:whiteWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "White Wood Chestplate": {
+          displayName: {
+            translationKey: "item:whiteWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "White Wood Leggings": {
+          displayName: {
+            translationKey: "item:whiteWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "White Wood Boots": {
+          displayName: {
+            translationKey: "item:whiteWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "White Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:whiteWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Orange Wood Helmet": {
+          displayName: {
+            translationKey: "item:orangeWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Orange Wood Chestplate": {
+          displayName: {
+            translationKey: "item:orangeWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Orange Wood Leggings": {
+          displayName: {
+            translationKey: "item:orangeWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Orange Wood Boots": {
+          displayName: {
+            translationKey: "item:orangeWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Orange Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:orangeWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Magenta Wood Helmet": {
+          displayName: {
+            translationKey: "item:magentaWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Magenta Wood Chestplate": {
+          displayName: {
+            translationKey: "item:magentaWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Magenta Wood Leggings": {
+          displayName: {
+            translationKey: "item:magentaWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Magenta Wood Boots": {
+          displayName: {
+            translationKey: "item:magentaWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Magenta Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:magentaWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Light Blue Wood Helmet": {
+          displayName: {
+            translationKey: "item:lightBlueWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Light Blue Wood Chestplate": {
+          displayName: {
+            translationKey: "item:lightBlueWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Light Blue Wood Leggings": {
+          displayName: {
+            translationKey: "item:lightBlueWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Light Blue Wood Boots": {
+          displayName: {
+            translationKey: "item:lightBlueWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Light Blue Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:lightBlueWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Yellow Wood Helmet": {
+          displayName: {
+            translationKey: "item:yellowWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Yellow Wood Chestplate": {
+          displayName: {
+            translationKey: "item:yellowWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Yellow Wood Leggings": {
+          displayName: {
+            translationKey: "item:yellowWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Yellow Wood Boots": {
+          displayName: {
+            translationKey: "item:yellowWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Yellow Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:yellowWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Lime Wood Helmet": {
+          displayName: {
+            translationKey: "item:limeWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Lime Wood Chestplate": {
+          displayName: {
+            translationKey: "item:limeWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Lime Wood Leggings": {
+          displayName: {
+            translationKey: "item:limeWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Lime Wood Boots": {
+          displayName: {
+            translationKey: "item:limeWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Lime Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:limeWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Pink Wood Helmet": {
+          displayName: {
+            translationKey: "item:pinkWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Pink Wood Chestplate": {
+          displayName: {
+            translationKey: "item:pinkWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Pink Wood Leggings": {
+          displayName: {
+            translationKey: "item:pinkWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Pink Wood Boots": {
+          displayName: {
+            translationKey: "item:pinkWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Pink Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:pinkWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Gray Wood Helmet": {
+          displayName: {
+            translationKey: "item:grayWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Gray Wood Chestplate": {
+          displayName: {
+            translationKey: "item:grayWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Gray Wood Leggings": {
+          displayName: {
+            translationKey: "item:grayWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Gray Wood Boots": {
+          displayName: {
+            translationKey: "item:grayWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Gray Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:grayWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Light Gray Wood Helmet": {
+          displayName: {
+            translationKey: "item:lightGrayWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Light Gray Wood Chestplate": {
+          displayName: {
+            translationKey: "item:lightGrayWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Light Gray Wood Leggings": {
+          displayName: {
+            translationKey: "item:lightGrayWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Light Gray Wood Boots": {
+          displayName: {
+            translationKey: "item:lightGrayWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Light Gray Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:lightGrayWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Cyan Wood Helmet": {
+          displayName: {
+            translationKey: "item:cyanWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Cyan Wood Chestplate": {
+          displayName: {
+            translationKey: "item:cyanWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Cyan Wood Leggings": {
+          displayName: {
+            translationKey: "item:cyanWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Cyan Wood Boots": {
+          displayName: {
+            translationKey: "item:cyanWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Cyan Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:cyanWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Purple Wood Helmet": {
+          displayName: {
+            translationKey: "item:purpleWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Purple Wood Chestplate": {
+          displayName: {
+            translationKey: "item:purpleWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Purple Wood Leggings": {
+          displayName: {
+            translationKey: "item:purpleWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Purple Wood Boots": {
+          displayName: {
+            translationKey: "item:purpleWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Purple Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:purpleWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Blue Wood Helmet": {
+          displayName: {
+            translationKey: "item:blueWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Blue Wood Chestplate": {
+          displayName: {
+            translationKey: "item:blueWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Blue Wood Leggings": {
+          displayName: {
+            translationKey: "item:blueWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Blue Wood Boots": {
+          displayName: {
+            translationKey: "item:blueWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Blue Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:blueWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Brown Wood Helmet": {
+          displayName: {
+            translationKey: "item:brownWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Brown Wood Chestplate": {
+          displayName: {
+            translationKey: "item:brownWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Brown Wood Leggings": {
+          displayName: {
+            translationKey: "item:brownWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Brown Wood Boots": {
+          displayName: {
+            translationKey: "item:brownWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Brown Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:brownWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Green Wood Helmet": {
+          displayName: {
+            translationKey: "item:greenWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Green Wood Chestplate": {
+          displayName: {
+            translationKey: "item:greenWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Green Wood Leggings": {
+          displayName: {
+            translationKey: "item:greenWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Green Wood Boots": {
+          displayName: {
+            translationKey: "item:greenWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Green Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:greenWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Red Wood Helmet": {
+          displayName: {
+            translationKey: "item:redWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Red Wood Chestplate": {
+          displayName: {
+            translationKey: "item:redWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Red Wood Leggings": {
+          displayName: {
+            translationKey: "item:redWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Red Wood Boots": {
+          displayName: {
+            translationKey: "item:redWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Red Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:redWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        "Black Wood Helmet": {
+          displayName: {
+            translationKey: "item:blackWoodHelmet"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_helmet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .07
+        },
+        "Black Wood Chestplate": {
+          displayName: {
+            translationKey: "item:blackWoodChestplate"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_chestplate",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .13
+        },
+        "Black Wood Leggings": {
+          displayName: {
+            translationKey: "item:blackWoodLeggings"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_leggings",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .1
+        },
+        "Black Wood Boots": {
+          displayName: {
+            translationKey: "item:blackWoodBoots"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_boots",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .05
+        },
+        "Black Wood Gauntlets": {
+          displayName: {
+            translationKey: "item:blackWoodGauntlets"
+          },
+          type: "GrayscaleArmour",
+          textureInfo: "wood_gauntlets",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          armourReduction: .06
+        },
+        Shears: {
+          displayName: {
+            translationKey: "item:shears"
+          },
+          type: "Tool",
+          textureInfo: "shears",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 27,
+          stackable: !1,
+          harvests: "cuttable",
+          multiplier: 3,
+          level: 3
+        },
+        "Artisan Shears": {
+          displayName: {
+            translationKey: "item:artisanShears"
+          },
+          type: "Tool",
+          textureInfo: "artisan_shears",
+          weight: 1,
+          heldItemScale: 1,
+          damage: 27,
+          stackable: !1,
+          harvests: "cuttable",
+          multiplier: 3,
+          level: 3
+        },
+        Stick: {
+          displayName: {
+            translationKey: "item:stick"
+          },
+          type: "Item",
+          textureInfo: "stick",
+          weight: 1,
+          heldItemScale: 1,
+          knockbackHorizontalScalar: 2,
+          knockbackVerticalScalar: 1.2,
+          description: {
+            translationKey: "item:stickDescription"
+          },
+          stackable: !1
+        },
+        Coal: {
+          displayName: {
+            translationKey: "item:coal"
+          },
+          type: "Item",
+          textureInfo: "coal",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Raw Iron": {
+          displayName: {
+            translationKey: "item:rawIron"
+          },
+          type: "Item",
+          textureInfo: "raw_iron",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:rawIronDescription"
+          }
+        },
+        "Iron Bar": {
+          displayName: {
+            translationKey: "item:ironBar"
+          },
+          type: "Item",
+          textureInfo: "iron_ingot",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Iron Fragment": {
+          displayName: {
+            translationKey: "item:ironFragment"
+          },
+          type: "Item",
+          textureInfo: "iron_fragment",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:ironFragmentDescription"
+          }
+        },
+        "Raw Gold": {
+          displayName: {
+            translationKey: "item:rawGold"
+          },
+          type: "Item",
+          textureInfo: "raw_gold",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:rawGoldDescription"
+          }
+        },
+        "Gold Bar": {
+          displayName: {
+            translationKey: "item:goldBar"
+          },
+          type: "Item",
+          textureInfo: "gold_ingot",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Gold Fragment": {
+          displayName: {
+            translationKey: "item:goldFragment"
+          },
+          type: "Item",
+          textureInfo: "gold_fragment",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:goldFragmentDescription"
+          }
+        },
+        Diamond: {
+          displayName: {
+            translationKey: "item:diamond"
+          },
+          type: "Item",
+          textureInfo: "diamond",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Diamond Fragment": {
+          displayName: {
+            translationKey: "item:diamondFragment"
+          },
+          type: "Item",
+          textureInfo: "diamond_fragment",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:diamondFragmentDescription"
+          }
+        },
+        Moonstone: {
+          displayName: {
+            translationKey: "item:moonstone"
+          },
+          type: "Item",
+          textureInfo: "moonstone",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        Lunite: {
+          displayName: {
+            translationKey: "item:lunite"
+          },
+          type: "Item",
+          textureInfo: "lunite",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:luniteDescription"
+          }
+        },
+        "Moonstone Fragment": {
+          displayName: {
+            translationKey: "item:moonstoneFragment"
+          },
+          type: "Item",
+          textureInfo: "moonstone_fragment",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:moonstoneFragmentDescription"
+          }
+        },
+        Bowl: {
+          displayName: {
+            translationKey: "item:bowl"
+          },
+          type: "Item",
+          textureInfo: "bowl",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        ...(0, nM.b)("Bowl of Cranberries", {
+          displayName: {
+            translationKey: "item:bowlOfCranberries"
+          },
+          type: "Chargeable",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeStages: 1,
+          chargeTime: 300,
+          stackable: !1,
+          eatHealAmt: 10,
+          description: {
+            translationKey: "item:bowlOfCranberriesDescription"
+          }
+        }, ["bowl_of_cranberries_1", "bowl_of_cranberries_2", "bowl_of_cranberries_3", "bowl_of_cranberries_4"]),
+        "Mushroom Soup": {
+          displayName: {
+            translationKey: "item:mushroomSoup"
+          },
+          type: "Chargeable",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          eatHealAmt: 15,
+          chargeSound: "eat1",
+          chargeStages: 1,
+          chargeTime: 375,
+          stackable: !1,
+          afterEatenItem: "Bowl",
+          textureInfo: "mushroom_soup",
+          rootMetaDesc: "Mushroom Soup|meta|charging1"
+        },
+        "Glowing Soup": {
+          displayName: {
+            translationKey: "item:glowingSoup"
+          },
+          type: "Chargeable",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          eatHealAmt: 5,
+          chargeSound: "eat1",
+          chargeStages: 1,
+          chargeTime: 375,
+          stackable: !1,
+          afterEatenItem: "Bowl",
+          textureInfo: "glowing_soup",
+          description: {
+            translationKey: "item:glowingSoupDescription"
+          },
+          Ch: [4, 11, 11],
+          rootMetaDesc: "Glowing Soup|meta|charging1"
+        },
+        "Night Vision Soup": {
+          displayName: {
+            translationKey: "item:nightVisionSoup"
+          },
+          type: "Chargeable",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          eatHealAmt: 10,
+          chargeSound: "eat1",
+          chargeStages: 1,
+          chargeTime: 375,
+          stackable: !1,
+          afterEatenItem: "Bowl",
+          textureInfo: "night_vision_soup",
+          description: {
+            translationKey: "item:nightVisionSoupDescription"
+          },
+          rootMetaDesc: "Night Vision Soup|meta|charging1"
+        },
+        Cotton: {
+          displayName: {
+            translationKey: "item:cotton"
+          },
+          type: "Item",
+          textureInfo: "cotton",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Gold Crop": {
+          displayName: {
+            translationKey: "item:goldCrop"
+          },
+          type: "Item",
+          textureInfo: "gold_crop",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:goldCropDescription"
+          }
+        },
+        Bucket: {
+          displayName: {
+            translationKey: "item:bucket"
+          },
+          type: "Item",
+          textureInfo: "bucket",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Water Bucket": {
+          displayName: {
+            translationKey: "item:waterBucket"
+          },
+          type: "Item",
+          textureInfo: "water_bucket",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Lava Bucket": {
+          displayName: {
+            translationKey: "item:lavaBucket"
+          },
+          type: "Item",
+          textureInfo: "lava_bucket",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          Ch: [12, 7, 2]
+        },
+        Boat: {
+          displayName: {
+            translationKey: "item:boat"
+          },
+          type: "Item",
+          textureInfo: "oak_boat",
+          heldItemGlb: "Boat Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        INTERNAL_MESH_Boat: {
+          type: "Item",
+          textureInfo: "oak_boat",
+          heldItemGlb: "Boat",
+          weight: 1,
+          heldItemScale: 4,
+          stackable: !1
+        },
+        "Obsidian Boat": {
+          displayName: {
+            translationKey: "item:obsidianBoat"
+          },
+          description: {
+            translationKey: "item:obsidianBoatDescription"
+          },
+          type: "Item",
+          textureInfo: "obsidian_boat",
+          heldItemGlb: "Obsidian Boat Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Obsidian Boat": {
+          type: "Item",
+          textureInfo: "obsidian_boat",
+          heldItemGlb: "Obsidian Boat",
+          weight: 1,
+          heldItemScale: 4,
+          stackable: !1
+        },
+        Speedboat: {
+          displayName: {
+            translationKey: "item:speedboat"
+          },
+          type: "Item",
+          textureInfo: "speedboat",
+          heldItemGlb: "Speedboat Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        INTERNAL_MESH_Speedboat: {
+          type: "Item",
+          textureInfo: "speedboat",
+          heldItemGlb: "Speedboat",
+          weight: 1,
+          heldItemScale: 4,
+          stackable: !1
+        },
+        "Wood Hang Glider": {
+          displayName: {
+            translationKey: "item:woodHangGlider"
+          },
+          type: "Item",
+          textureInfo: "hang_glider",
+          heldItemGlb: "Wood Hang Glider Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Wood Hang Glider": {
+          type: "Item",
+          textureInfo: "hang_glider",
+          heldItemGlb: "Wood Hang Glider",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Iron Hang Glider": {
+          displayName: {
+            translationKey: "item:ironHangGlider"
+          },
+          type: "Item",
+          textureInfo: "hang_glider_iron",
+          heldItemGlb: "Iron Hang Glider Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Iron Hang Glider": {
+          type: "Item",
+          textureInfo: "hang_glider_iron",
+          heldItemGlb: "Iron Hang Glider",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Gold Hang Glider": {
+          displayName: {
+            translationKey: "item:goldHangGlider"
+          },
+          type: "Item",
+          textureInfo: "hang_glider_gold",
+          heldItemGlb: "Gold Hang Glider Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Gold Hang Glider": {
+          type: "Item",
+          textureInfo: "hang_glider_gold",
+          heldItemGlb: "Gold Hang Glider",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Diamond Hang Glider": {
+          displayName: {
+            translationKey: "item:diamondHangGlider"
+          },
+          type: "Item",
+          textureInfo: "hang_glider_diamond",
+          heldItemGlb: "Diamond Hang Glider Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Diamond Hang Glider": {
+          type: "Item",
+          textureInfo: "hang_glider_diamond",
+          heldItemGlb: "Diamond Hang Glider",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        Hovercraft: {
+          displayName: {
+            translationKey: "item:hovercraft"
+          },
+          type: "Item",
+          textureInfo: "hovercraft",
+          heldItemGlb: "Hovercraft Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        INTERNAL_MESH_Hovercraft: {
+          type: "Item",
+          textureInfo: "hovercraft",
+          heldItemGlb: "Hovercraft",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        ...(0, PM.L)((MM => `${MM} Kart`), {
+          displayName: MM => ({
+            translationKey: `item:${(0,OM.me)(MM)}Kart`
+          }),
+          textureInfo: MM => `${(0,OM.oe)(MM)}_kart`,
+          heldItemGlb: MM => `${MM} Kart Item`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        }),
+        ...(0, PM.L)((MM => `INTERNAL_MESH_${MM} Kart`), {
+          textureInfo: MM => `${(0,OM.oe)(MM)}_kart`,
+          heldItemGlb: MM => `${MM} Kart`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        }),
+        "Off Roader": {
+          displayName: {
+            translationKey: "item:offRoader"
+          },
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Off Roader Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Off Roader": {
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Off Roader",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Gold Mining Drill": {
+          displayName: {
+            translationKey: "item:goldMiningDrill"
+          },
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Off Roader Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Iron Mining Drill": {
+          displayName: {
+            translationKey: "item:ironMiningDrill"
+          },
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Off Roader Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Diamond Mining Drill": {
+          displayName: {
+            translationKey: "item:diamondMiningDrill"
+          },
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Off Roader Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Moonstone Mining Drill": {
+          displayName: {
+            translationKey: "item:moonstoneMiningDrill"
+          },
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Off Roader Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Armored Car": {
+          displayName: {
+            translationKey: "item:armoredCar"
+          },
+          type: "Item",
+          textureInfo: "armored_car",
+          heldItemGlb: "Armored Car Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Gold Mining Drill": {
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Gold Mining Drill",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Iron Mining Drill": {
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Iron Mining Drill",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Diamond Mining Drill": {
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Diamond Mining Drill",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Moonstone Mining Drill": {
+          type: "Item",
+          textureInfo: "off_roader",
+          heldItemGlb: "Moonstone Mining Drill",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "INTERNAL_MESH_Armored Car": {
+          type: "Item",
+          textureInfo: "armored_car",
+          heldItemGlb: "Armored Car",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Light Blue Car": {
+          displayName: {
+            translationKey: "item:lightBlueCar"
+          },
+          type: "Item",
+          textureInfo: "light_blue_car",
+          heldItemGlb: "Car Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        INTERNAL_MESH_Car: {
+          type: "Item",
+          textureInfo: "light_blue_car",
+          heldItemGlb: "Car",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        Snowball: {
+          displayName: {
+            translationKey: "item:snowball"
+          },
+          type: "Item",
+          textureInfo: "snowball",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:throwableItemDescription"
+          },
+          secondaryDamage: 4
+        },
+        "Snowball Launcher": {
+          displayName: "Snowball Launcher",
+          type: "FullAuto",
+          textureInfo: "snowball",
+          heldItemGlb: "Snowball",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: "Rapidly fires snowballs!",
+          fireInterval: 216,
+          secondaryDamage: 4,
+          holdAsAiming: !1,
+          hideAimingUI: !0
+        },
+        Pebble: {
+          displayName: {
+            translationKey: "item:pebble"
+          },
+          type: "Item",
+          textureInfo: "pebble",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:throwableItemDescription"
+          },
+          secondaryDamage: 10
+        },
+        "Reinforced Pebble": {
+          displayName: {
+            translationKey: "item:reinforcedPebble"
+          },
+          type: "Item",
+          textureInfo: "reinforced_pebble",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:throwableItemDescription"
+          },
+          secondaryDamage: 13
+        },
+        Bullet: {
+          displayName: "Bullet",
+          type: "Item",
+          textureInfo: "arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        Ball: {
+          displayName: {
+            translationKey: "item:ball"
+          },
+          type: "Item",
+          textureInfo: "ball",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:ballDescription"
+          }
+        },
+        "Reinforced Ball": {
+          displayName: {
+            translationKey: "item:reinforcedBall"
+          },
+          type: "Item",
+          textureInfo: "reinforced_ball",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:reinforcedBallDescription"
+          }
+        },
+        "Frag Grenade": {
+          displayName: {
+            translationKey: "item:fragGrenade"
+          },
+          type: "Item",
+          textureInfo: "frag_grenade",
+          weight: 1,
+          heldItemScale: 6,
+          stackable: !0,
+          description: {
+            translationKey: "item:fragGrenadeDescription"
+          }
+        },
+        "Mining Grenade": {
+          displayName: {
+            translationKey: "item:miningGrenade"
+          },
+          type: "Item",
+          textureInfo: "mining_grenade",
+          weight: 1,
+          heldItemScale: 6,
+          stackable: !0,
+          description: {
+            translationKey: "item:miningGrenadeDescription"
+          }
+        },
+        "Smoke Grenade": {
+          displayName: {
+            translationKey: "item:smokeGrenade"
+          },
+          type: "Item",
+          textureInfo: "smoke_grenade",
+          weight: 1,
+          heldItemScale: 6,
+          stackable: !0,
+          description: {
+            translationKey: "item:smokeGrenadeDescription"
+          }
+        },
+        "Moonstone Orb": {
+          displayName: {
+            translationKey: "item:moonstoneOrb"
+          },
+          type: "Item",
+          textureInfo: "moonstone_orb",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:moonstoneOrbDescription"
+          }
+        },
+        Fireball: {
+          displayName: {
+            translationKey: "item:fireball"
+          },
+          type: "Item",
+          textureInfo: "fireball",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:fireballDescription"
+          },
+          secondaryDamage: 13
+        },
+        "Bouncy Bomb": {
+          displayName: {
+            translationKey: "item:bouncyBomb"
+          },
+          type: "Item",
+          textureInfo: "bouncy_bomb",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:bouncyBombDescription"
+          },
+          secondaryDamage: 5
+        },
+        RPG: {
+          displayName: {
+            translationKey: "item:rpg"
+          },
+          type: "FullAuto",
+          textureInfo: "rpg",
+          weight: 1,
+          heldItemScale: 1.2,
+          stackable: !0,
+          description: {
+            translationKey: "item:rpgDescription"
+          },
+          secondaryDamage: 13,
+          holdAsAiming: !0,
+          hideAimingUI: !0
+        },
+        "Obby RPG": {
+          displayName: {
+            translationKey: "item:rpg"
+          },
+          type: "FullAuto",
+          textureInfo: "rpg",
+          weight: 1,
+          heldItemScale: 1.2,
+          stackable: !1,
+          description: {
+            translationKey: "item:rpgDescription"
+          },
+          holdAsAiming: !0,
+          hideAimingUI: !0,
+          fireInterval: 817
+        },
+        "Super RPG": {
+          displayName: {
+            translationKey: "item:superRpg"
+          },
+          type: "FullAuto",
+          textureInfo: "super_rpg",
+          weight: 1,
+          heldItemScale: 1.2,
+          stackable: !0,
+          description: {
+            translationKey: "item:superRpgDescription"
+          },
+          secondaryDamage: 20,
+          holdAsAiming: !0,
+          hideAimingUI: !0
+        },
+        "Grenade Launcher": {
+          displayName: {
+            translationKey: "item:grenadeLauncher"
+          },
+          type: "FullAuto",
+          textureInfo: "grenade_launcher",
+          weight: 1,
+          heldItemScale: 1.2,
+          stackable: !0,
+          description: {
+            translationKey: "item:grenadeLauncherDescription"
+          },
+          secondaryDamage: 16,
+          holdAsAiming: !0,
+          hideAimingUI: !0
+        },
+        Iceball: {
+          displayName: {
+            translationKey: "item:iceball"
+          },
+          type: "Item",
+          textureInfo: "iceball",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:iceballDescription"
+          },
+          secondaryDamage: 8
+        },
+        "67 Base Projectile": {
+          displayName: "67 Base Projectile",
+          type: "Item",
+          itemTexture: "67_projectile_base",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "The base projectile for the 67 character in Heroes v Brainrots",
+          secondaryDamage: 14
+        },
+        "67 Boosted Projectile": {
+          displayName: "67 Boosted Projectile",
+          type: "Item",
+          itemTexture: "67_projectile_boosted",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "The boosted projectile for the 67 character in Heroes v Brainrots",
+          secondaryDamage: 19
+        },
+        "Capitano Grenade": {
+          displayName: "Capitano Grenade",
+          type: "Item",
+          textureInfo: "moonstone_explosive_side",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "A small explosive grenade thrown by Capitano Explovissimo in Heroes v Brainrots"
+        },
+        "Scatter Pellet": {
+          displayName: "Scatter Pellet",
+          type: "Item",
+          textureInfo: "pebble",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "Primary spread shot from Scatter in Heroes v Brainrots",
+          secondaryDamage: 8
+        },
+        ...(0, nM.i)("Wood Bow", {
+          displayName: {
+            translationKey: "item:woodBow"
+          },
+          type: "Chargeable",
+          textureName: "wood_bow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Wood Bow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          secondaryDamage: Math.floor(37.4),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        ...(0, nM.i)("Stone Bow", {
+          displayName: {
+            translationKey: "item:stoneBow"
+          },
+          type: "Chargeable",
+          textureName: "stone_bow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Stone Bow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          secondaryDamage: Math.floor(45.9),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        ...(0, nM.i)("Iron Bow", {
+          displayName: {
+            translationKey: "item:ironBow"
+          },
+          type: "Chargeable",
+          textureName: "iron_bow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Iron Bow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          secondaryDamage: Math.floor(57.8),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        ...(0, nM.i)("Gold Bow", {
+          displayName: {
+            translationKey: "item:goldBow"
+          },
+          type: "Chargeable",
+          textureName: "gold_bow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Gold Bow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          secondaryDamage: Math.floor(62.9),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        ...(0, nM.i)("Diamond Bow", {
+          displayName: {
+            translationKey: "item:diamondBow"
+          },
+          type: "Chargeable",
+          textureName: "diamond_bow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Diamond Bow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          secondaryDamage: Math.floor(68),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        ...(0, nM.i)("Wood Crossbow", {
+          displayName: {
+            translationKey: "item:woodCrossbow"
+          },
+          type: "Chargeable",
+          textureName: "wood_crossbow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Wood Crossbow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        ...(0, nM.i)("Stone Crossbow", {
+          displayName: {
+            translationKey: "item:stoneCrossbow"
+          },
+          type: "Chargeable",
+          textureName: "stone_crossbow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Stone Crossbow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        ...(0, nM.i)("Iron Crossbow", {
+          displayName: {
+            translationKey: "item:ironCrossbow"
+          },
+          type: "Chargeable",
+          textureName: "iron_crossbow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Iron Crossbow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        ...(0, nM.i)("Gold Crossbow", {
+          displayName: {
+            translationKey: "item:goldCrossbow"
+          },
+          type: "Chargeable",
+          textureName: "gold_crossbow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Gold Crossbow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        ...(0, nM.i)("Diamond Crossbow", {
+          displayName: {
+            translationKey: "item:diamondCrossbow"
+          },
+          type: "Chargeable",
+          textureName: "diamond_crossbow",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Diamond Crossbow|meta|charging1",
+          chargeStages: 4,
+          chargeTime: 700,
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          },
+          requiresArrow: !0
+        }),
+        "Wood Crossbow Charged": {
+          displayName: {
+            translationKey: "item:woodCrossbowCharged"
+          },
+          type: "Chargeable",
+          textureInfo: "wood_crossbow_charged",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          secondaryDamage: Math.floor(37.4),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          }
+        },
+        "Stone Crossbow Charged": {
+          displayName: {
+            translationKey: "item:stoneCrossbowCharged"
+          },
+          type: "Chargeable",
+          textureInfo: "stone_crossbow_charged",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          secondaryDamage: Math.floor(45.9),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          }
+        },
+        "Iron Crossbow Charged": {
+          displayName: {
+            translationKey: "item:ironCrossbowCharged"
+          },
+          type: "Chargeable",
+          textureInfo: "iron_crossbow_charged",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          secondaryDamage: Math.floor(57.8),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          }
+        },
+        "Gold Crossbow Charged": {
+          displayName: {
+            translationKey: "item:goldCrossbowCharged"
+          },
+          type: "Chargeable",
+          textureInfo: "gold_crossbow_charged",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          secondaryDamage: Math.floor(62.9),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          }
+        },
+        "Diamond Crossbow Charged": {
+          displayName: {
+            translationKey: "item:diamondCrossbowCharged"
+          },
+          type: "Chargeable",
+          textureInfo: "diamond_crossbow_charged",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          secondaryDamage: Math.floor(68),
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:bowDescription"
+          }
+        },
+        Arrow: {
+          displayName: {
+            translationKey: "item:arrow"
+          },
+          type: "Item",
+          textureInfo: "arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        ...(0, nM.n)("Compass", {
+          displayName: {
+            translationKey: "item:compass"
+          },
+          type: "Directional",
+          textureName: "compass",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          rootMetaDesc: "Compass|meta|dir1",
+          description: {
+            translationKey: "item:compassDescription"
+          }
+        }),
+        "Chunk Map": {
+          displayName: "Chunk Map",
+          type: "Item",
+          textureInfo: "chunk_map",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0,
+          description: "Drop into any locked chunk to instantly unlock it."
+        },
+        Bread: {
+          displayName: {
+            translationKey: "item:bread"
+          },
+          type: "Chargeable",
+          textureInfo: "bread",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 24,
+          description: {
+            translationKey: "item:foodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 950,
+          rootMetaDesc: "Bread|meta|charging1"
+        },
+        "Bowl of Rice": {
+          displayName: {
+            translationKey: "item:bowlOfRice"
+          },
+          type: "Chargeable",
+          textureInfo: "bowl_of_rice",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          eatable: !0,
+          afterEatenItem: "Bowl",
+          chargeSound: "eat1",
+          eatHealAmt: 26,
+          description: {
+            translationKey: "item:foodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 375,
+          rootMetaDesc: "Bowl of Rice|meta|charging1"
+        },
+        Apple: {
+          displayName: {
+            translationKey: "item:apple"
+          },
+          type: "Chargeable",
+          textureInfo: "apple",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 12,
+          description: {
+            translationKey: "item:foodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Apple|meta|charging1"
+        },
+        Plum: {
+          displayName: {
+            translationKey: "item:plum"
+          },
+          type: "Chargeable",
+          textureInfo: "plum",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:plumDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Plum|meta|charging1"
+        },
+        Coconut: {
+          displayName: {
+            translationKey: "item:coconut"
+          },
+          type: "Item",
+          textureInfo: "coconut",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:coconutDescription"
+          },
+          secondaryDamage: 5
+        },
+        "Cracked Coconut": {
+          displayName: {
+            translationKey: "item:crackedCoconut"
+          },
+          type: "Chargeable",
+          textureInfo: "cracked_coconut",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:crackedCoconutDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Cracked Coconut|meta|charging1"
+        },
+        Pear: {
+          displayName: {
+            translationKey: "item:pear"
+          },
+          type: "Chargeable",
+          textureInfo: "pear",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:pearDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Pear|meta|charging1"
+        },
+        Cherry: {
+          displayName: {
+            translationKey: "item:cherry"
+          },
+          type: "Chargeable",
+          textureInfo: "cherry",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:cherryDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Cherry|meta|charging1"
+        },
+        Banana: {
+          displayName: {
+            translationKey: "item:banana"
+          },
+          type: "Chargeable",
+          textureInfo: "banana",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:bananaDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Banana|meta|charging1"
+        },
+        "Watermelon Slice": {
+          displayName: {
+            translationKey: "item:watermelonSlice"
+          },
+          type: "Chargeable",
+          textureInfo: "watermelon_slice",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:watermelonSliceDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Watermelon Slice|meta|charging1"
+        },
+        "Gold Watermelon Slice": {
+          displayName: {
+            translationKey: "item:goldWatermelonSlice"
+          },
+          type: "Chargeable",
+          textureInfo: "glistering_watermelon_slice",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:watermelonSliceDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Gold Watermelon Slice|meta|charging1"
+        },
+        "Melon Slice": {
+          displayName: {
+            translationKey: "item:melonSlice"
+          },
+          type: "Chargeable",
+          textureInfo: "melon_slice",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:melonSliceDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Melon Slice|meta|charging1"
+        },
+        "Gold Melon Slice": {
+          displayName: {
+            translationKey: "item:goldMelonSlice"
+          },
+          type: "Chargeable",
+          textureInfo: "glistering_melon_slice",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:melonSliceDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Gold Melon Slice|meta|charging1"
+        },
+        "Pumpkin Pie": {
+          displayName: {
+            translationKey: "item:pumpkinPie"
+          },
+          type: "Chargeable",
+          textureInfo: "pumpkin_pie",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:pumpkinPieDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Pumpkin Pie|meta|charging1"
+        },
+        Corn: {
+          displayName: {
+            translationKey: "item:corn"
+          },
+          type: "Chargeable",
+          textureInfo: "corn",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatShieldAmt: 20,
+          description: {
+            translationKey: "item:cornDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 850,
+          rootMetaDesc: "Corn|meta|charging1"
+        },
+        Cornbread: {
+          displayName: {
+            translationKey: "item:cornbread"
+          },
+          type: "Chargeable",
+          textureInfo: "cornbread",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 24,
+          eatShieldAmt: 20,
+          description: {
+            translationKey: "item:cornbreadDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 950,
+          rootMetaDesc: "Cornbread|meta|charging1"
+        },
+        "Chili Pepper": {
+          displayName: {
+            translationKey: "item:chiliPepper"
+          },
+          type: "Chargeable",
+          textureInfo: "chili_pepper",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:chiliPepperDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Chili Pepper|meta|charging1"
+        },
+        Mango: {
+          displayName: {
+            translationKey: "item:mango"
+          },
+          type: "Item",
+          textureInfo: "mango",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 5,
+          description: {
+            translationKey: "item:mangoDescription"
+          }
+        },
+        Carrot: {
+          displayName: {
+            translationKey: "item:carrot"
+          },
+          type: "Chargeable",
+          textureInfo: "carrot",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:carrotDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Carrot|meta|charging1"
+        },
+        "Gold Carrot": {
+          displayName: {
+            translationKey: "item:goldCarrot"
+          },
+          type: "Chargeable",
+          textureInfo: "gold_carrot",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:goldCarrotDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 750,
+          rootMetaDesc: "Gold Carrot|meta|charging1"
+        },
+        "Raw Potato": {
+          displayName: {
+            translationKey: "item:rawPotato"
+          },
+          type: "Chargeable",
+          textureInfo: "raw_potato",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 20,
+          description: {
+            translationKey: "item:rawFoodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1050,
+          rootMetaDesc: "Raw Potato|meta|charging1"
+        },
+        "Baked Potato": {
+          displayName: {
+            translationKey: "item:bakedPotato"
+          },
+          type: "Chargeable",
+          textureInfo: "baked_potato",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 20,
+          description: {
+            translationKey: "item:bakedPotatoDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1050,
+          rootMetaDesc: "Baked Potato|meta|charging1"
+        },
+        Beetroot: {
+          displayName: {
+            translationKey: "item:beetroot"
+          },
+          type: "Chargeable",
+          textureInfo: "beetroot",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          stackable: !0,
+          description: {
+            translationKey: "item:beetrootDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1250,
+          rootMetaDesc: "Beetroot|meta|charging1"
+        },
+        "Raw Porkchop": {
+          displayName: {
+            translationKey: "item:rawPorkchop"
+          },
+          type: "Chargeable",
+          textureInfo: "raw_porkchop",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 25,
+          description: {
+            translationKey: "item:rawFoodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 950,
+          rootMetaDesc: "Raw Porkchop|meta|charging1"
+        },
+        "Cooked Porkchop": {
+          displayName: {
+            translationKey: "item:cookedPorkchop"
+          },
+          type: "Chargeable",
+          textureInfo: "cooked_porkchop",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 25,
+          description: {
+            translationKey: "item:foodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 950,
+          rootMetaDesc: "Cooked Porkchop|meta|charging1"
+        },
+        "Raw Beef": {
+          displayName: {
+            translationKey: "item:rawBeef"
+          },
+          type: "Chargeable",
+          textureInfo: "raw_beef",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 28,
+          description: {
+            translationKey: "item:rawFoodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1200,
+          rootMetaDesc: "Raw Beef|meta|charging1"
+        },
+        Steak: {
+          displayName: {
+            translationKey: "item:steak"
+          },
+          type: "Chargeable",
+          textureInfo: "steak",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 28,
+          description: {
+            translationKey: "item:foodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1200,
+          rootMetaDesc: "Steak|meta|charging1"
+        },
+        "Raw Mutton": {
+          displayName: {
+            translationKey: "item:rawMutton"
+          },
+          type: "Chargeable",
+          textureInfo: "raw_mutton",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 20,
+          description: {
+            translationKey: "item:rawFoodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 800,
+          rootMetaDesc: "Raw Mutton|meta|charging1"
+        },
+        "Cooked Mutton": {
+          displayName: {
+            translationKey: "item:cookedMutton"
+          },
+          type: "Chargeable",
+          textureInfo: "cooked_mutton",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 20,
+          description: {
+            translationKey: "item:foodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 800,
+          rootMetaDesc: "Cooked Mutton|meta|charging1"
+        },
+        "Raw Venison": {
+          displayName: {
+            translationKey: "item:rawVenison"
+          },
+          type: "Chargeable",
+          textureInfo: "raw_venison",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 16,
+          description: {
+            translationKey: "item:rawFoodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 600,
+          rootMetaDesc: "Raw Venison|meta|charging1"
+        },
+        "Cooked Venison": {
+          displayName: {
+            translationKey: "item:cookedVenison"
+          },
+          type: "Chargeable",
+          textureInfo: "cooked_venison",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 16,
+          description: {
+            translationKey: "item:foodDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 600,
+          rootMetaDesc: "Cooked Venison|meta|charging1"
+        },
+        "Rotten Flesh": {
+          displayName: {
+            translationKey: "item:rottenFlesh"
+          },
+          type: "Chargeable",
+          textureInfo: "rotten_flesh",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          eatHealAmt: 15,
+          description: {
+            translationKey: "item:rottenFleshDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 850,
+          rootMetaDesc: "Rotten Flesh|meta|charging1"
+        },
+        "Rotten Brain": {
+          displayName: {
+            translationKey: "item:rottenBrain"
+          },
+          type: "Chargeable",
+          textureInfo: "rotten_brain",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          description: {
+            translationKey: "item:rottenBrainDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 650,
+          rootMetaDesc: "Rotten Brain|meta|charging1"
+        },
+        Bone: {
+          displayName: {
+            translationKey: "item:bone"
+          },
+          type: "Item",
+          textureInfo: "bone",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Bone Meal": {
+          displayName: {
+            translationKey: "item:boneMeal"
+          },
+          type: "Item",
+          textureInfo: "bone_meal",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:boneMealDescription"
+          }
+        },
+        Leather: {
+          displayName: {
+            translationKey: "item:leather"
+          },
+          type: "Item",
+          textureInfo: "leather",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        Saddle: {
+          displayName: {
+            translationKey: "item:saddle"
+          },
+          type: "Item",
+          textureInfo: "saddle",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1
+        },
+        "Spirit Saddle": {
+          displayName: {
+            translationKey: "item:spiritSaddle"
+          },
+          type: "Item",
+          textureInfo: "spirit_saddle",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:spiritSaddleDescription"
+          }
+        },
+        Fur: {
+          displayName: {
+            translationKey: "item:fur"
+          },
+          type: "Item",
+          textureInfo: "fur",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:furDescription"
+          }
+        },
+        "Golem Eye": {
+          displayName: {
+            translationKey: "item:golemEye"
+          },
+          type: "Item",
+          textureInfo: "golem_eye",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:golemEyeDescription"
+          }
+        },
+        "Knight Heart": {
+          displayName: {
+            translationKey: "item:knightHeart"
+          },
+          type: "Item",
+          textureInfo: "knight_heart",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:knightHeartDescription"
+          }
+        },
+        "Teleport Heart": {
+          displayName: "Teleport Heart",
+          type: "Item",
+          textureInfo: "teleport_heart",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "The still-beating core of a Blink. Salvaged from a Warp Stalker."
+        },
+        "Frost Shard": {
+          displayName: "Frost Shard",
+          type: "Item",
+          textureInfo: "frost_shard",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "A splinter of cryogenic shell that never melts. Salvaged from a Frost Revenant."
+        },
+        "Molten Cog": {
+          displayName: "Molten Cog",
+          type: "Item",
+          textureInfo: "molten_cog",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "A gear from an overload mechanism, seized mid-cycle. Salvaged from a Magma Warden."
+        },
+        "Choir Bell": {
+          displayName: "Choir Bell",
+          type: "Item",
+          textureInfo: "choir_bell",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "The toll that calls the dead. Salvaged from a Hollow Choir."
+        },
+        "Siege Core": {
+          displayName: "Siege Core",
+          type: "Item",
+          textureInfo: "siege_core",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "The firing heart of a barrage. Salvaged from a Siege Engine."
+        },
+        Flywheel: {
+          displayName: "Flywheel",
+          type: "Item",
+          textureInfo: "flywheel",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "The wheel a room-mill spins around. Salvaged from a Carousel."
+        },
+        "Radiant Spark": {
+          displayName: "Radiant Spark",
+          type: "Item",
+          textureInfo: "radiant_spark",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "A mote of the failure state itself. Salvaged from Breach Zero."
+        },
+        "Brood Sac": {
+          displayName: "Brood Sac",
+          type: "Item",
+          textureInfo: "brood_sac",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "A sac filled with an acidic bile. Still full. Salvaged from a Broodfather."
+        },
+        Bandolier: {
+          displayName: "Bandolier",
+          type: "Item",
+          textureInfo: "bandolier",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: "Her charge belt. Three still on it, and nobody has volunteered to count again. Salvaged from a Deadlock."
+        },
+        "Name Tag": {
+          displayName: {
+            translationKey: "item:nameTag"
+          },
+          type: "Item",
+          textureInfo: "name_tag",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:nameTagDescription"
+          }
+        },
+        Book: {
+          displayName: {
+            translationKey: "item:book"
+          },
+          type: "Item",
+          textureInfo: "book",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:bookDescription"
+          }
+        },
+        "Empty Bottle": {
+          displayName: {
+            translationKey: "item:emptyBottle"
+          },
+          type: "Item",
+          textureInfo: "empty_bottle",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:emptyBottleDescription"
+          }
+        },
+        "Water Bottle": {
+          displayName: {
+            translationKey: "item:waterBottle"
+          },
+          type: "Chargeable",
+          textureInfo: "water_bottle",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:waterBottleDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Water Bottle|meta|charging1"
+        },
+        "Slowness Potion": {
+          displayName: {
+            translationKey: "item:slownessPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "slowness_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:slownessPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Slowness Potion|meta|charging1"
+        },
+        "Slowness Potion II": {
+          displayName: {
+            translationKey: "item:slownessPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "slowness_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Slowness Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:slownessPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Slowness Potion II|meta|charging1"
+        },
+        "Splash Slowness Potion": {
+          displayName: {
+            translationKey: "item:splashSlownessPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_slowness_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashSlownessPotionDescription"
+          },
+          rootMetaDesc: "Splash Slowness Potion|meta|charging1"
+        },
+        "Splash Slowness Potion II": {
+          displayName: {
+            translationKey: "item:splashSlownessPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_slowness_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Slowness Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashSlownessPotionDescription"
+          },
+          rootMetaDesc: "Splash Slowness Potion II|meta|charging1"
+        },
+        "Arrow of Slowness": {
+          displayName: {
+            translationKey: "item:arrowOfSlowness"
+          },
+          type: "Item",
+          textureInfo: "slowness_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Poison Potion": {
+          displayName: {
+            translationKey: "item:poisonPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "poison",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:poisonPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Poison Potion|meta|charging1"
+        },
+        "Poison Potion II": {
+          displayName: {
+            translationKey: "item:poisonPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "poison",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Poison Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:poisonPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Poison Potion II|meta|charging1"
+        },
+        "Splash Poison Potion": {
+          displayName: {
+            translationKey: "item:splashPoisonPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_poison",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashPoisonPotionDescription"
+          },
+          rootMetaDesc: "Splash Poison Potion|meta|charging1"
+        },
+        "Splash Poison Potion II": {
+          displayName: {
+            translationKey: "item:splashPoisonPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_poison",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Poison Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashPoisonPotionDescription"
+          },
+          rootMetaDesc: "Splash Poison Potion II|meta|charging1"
+        },
+        "Arrow of Poison": {
+          displayName: {
+            translationKey: "item:arrowOfPoison"
+          },
+          type: "Item",
+          textureInfo: "poison_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Weakness Potion": {
+          displayName: {
+            translationKey: "item:weaknessPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "weakness_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:weaknessPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Weakness Potion|meta|charging1"
+        },
+        "Weakness Potion II": {
+          displayName: {
+            translationKey: "item:weaknessPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "weakness_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Weakness Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:weaknessPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Weakness Potion II|meta|charging1"
+        },
+        "Splash Weakness Potion": {
+          displayName: {
+            translationKey: "item:splashWeaknessPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_weakness_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashWeaknessPotionDescription"
+          }
+        },
+        "Splash Weakness Potion II": {
+          displayName: {
+            translationKey: "item:splashWeaknessPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_weakness_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Weakness Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashWeaknessPotionDescription"
+          }
+        },
+        "Arrow of Weakness": {
+          displayName: {
+            translationKey: "item:arrowOfWeakness"
+          },
+          type: "Item",
+          textureInfo: "weakness_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Instant Damage Potion": {
+          displayName: {
+            translationKey: "item:instantDamagePotion"
+          },
+          type: "Chargeable",
+          textureInfo: "instant_damage_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:instantDamagePotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Instant Damage Potion|meta|charging1"
+        },
+        "Instant Damage Potion II": {
+          displayName: {
+            translationKey: "item:instantDamagePotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "instant_damage_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Instant Damage Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:instantDamagePotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Instant Damage Potion II|meta|charging1"
+        },
+        "Splash Instant Damage Potion": {
+          displayName: {
+            translationKey: "item:splashInstantDamagePotion"
+          },
+          type: "Item",
+          textureInfo: "splash_instant_damage_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashInstantDamagePotionDescription"
+          }
+        },
+        "Splash Instant Damage Potion II": {
+          displayName: {
+            translationKey: "item:splashInstantDamagePotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_instant_damage_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Instant Damage Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashInstantDamagePotionDescription"
+          }
+        },
+        "Arrow of Instant Damage": {
+          displayName: {
+            translationKey: "item:arrowOfInstantDamage"
+          },
+          type: "Item",
+          textureInfo: "instant_damage_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Milk Potion": {
+          displayName: {
+            translationKey: "item:milkPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "milk_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:milkPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Milk Potion|meta|charging1"
+        },
+        "Splash Milk Potion": {
+          displayName: {
+            translationKey: "item:splashMilkPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_milk_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:milkPotionDescription"
+          }
+        },
+        "Arrow of Milk": {
+          displayName: {
+            translationKey: "item:arrowOfMilk"
+          },
+          type: "Item",
+          textureInfo: "milk_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Speed Potion": {
+          displayName: {
+            translationKey: "item:speedPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "speed_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:speedPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Speed Potion|meta|charging1"
+        },
+        "Speed Potion II": {
+          displayName: {
+            translationKey: "item:speedPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "speed_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Speed Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:speedPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Speed Potion II|meta|charging1"
+        },
+        "Splash Speed Potion": {
+          displayName: {
+            translationKey: "item:splashSpeedPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_speed_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashSpeedPotionDescription"
+          },
+          rootMetaDesc: "Splash Speed Potion|meta|charging1"
+        },
+        "Splash Speed Potion II": {
+          displayName: {
+            translationKey: "item:splashSpeedPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_speed_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Speed Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashSpeedPotionDescription"
+          }
+        },
+        "Arrow of Speed": {
+          displayName: {
+            translationKey: "item:arrowOfSpeed"
+          },
+          type: "Item",
+          textureInfo: "speed_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Defense Potion": {
+          displayName: {
+            translationKey: "item:defensePotion"
+          },
+          type: "Chargeable",
+          textureInfo: "defense_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:defensePotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Defense Potion|meta|charging1"
+        },
+        "Defense Potion II": {
+          displayName: {
+            translationKey: "item:defensePotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "defense_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Defense Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:defensePotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Defense Potion II|meta|charging1"
+        },
+        "Splash Defense Potion": {
+          displayName: {
+            translationKey: "item:splashDefensePotion"
+          },
+          type: "Item",
+          textureInfo: "splash_defense_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashDefensePotionDescription"
+          }
+        },
+        "Splash Defense Potion II": {
+          displayName: {
+            translationKey: "item:splashDefensePotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_defense_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Defense Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashDefensePotionDescription"
+          }
+        },
+        "Arrow of Defense": {
+          displayName: {
+            translationKey: "item:arrowOfDefense"
+          },
+          type: "Item",
+          textureInfo: "defense_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Strength Potion": {
+          displayName: {
+            translationKey: "item:strengthPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "strength_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:strengthPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Strength Potion|meta|charging1"
+        },
+        "Strength Potion II": {
+          displayName: {
+            translationKey: "item:strengthPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "strength_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Strength Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:strengthPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Strength Potion II|meta|charging1"
+        },
+        "Splash Strength Potion": {
+          displayName: {
+            translationKey: "item:splashStrengthPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_strength_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashStrengthPotionDescription"
+          }
+        },
+        "Splash Strength Potion II": {
+          displayName: {
+            translationKey: "item:splashStrengthPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_strength_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Strength Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashStrengthPotionDescription"
+          }
+        },
+        "Arrow of Strength": {
+          displayName: {
+            translationKey: "item:arrowOfStrength"
+          },
+          type: "Item",
+          textureInfo: "strength_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Invisibility Potion": {
+          displayName: {
+            translationKey: "item:invisibilityPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "invisibility_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:invisibilityPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Invisibility Potion|meta|charging1"
+        },
+        "Splash Invisibility Potion": {
+          displayName: {
+            translationKey: "item:splashInvisibilityPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_invisibility_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashInvisibilityPotionDescription"
+          }
+        },
+        "Arrow of Invisibility": {
+          displayName: {
+            translationKey: "item:arrowOfInvisibility"
+          },
+          type: "Item",
+          textureInfo: "invisibility_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Jump Potion": {
+          displayName: {
+            translationKey: "item:jumpPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "jump_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:jumpPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1e3,
+          rootMetaDesc: "Jump Potion|meta|charging1"
+        },
+        "Jump Potion II": {
+          displayName: {
+            translationKey: "item:jumpPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "jump_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Jump Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:jumpPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1e3,
+          rootMetaDesc: "Jump Potion II|meta|charging1"
+        },
+        "Splash Jump Potion": {
+          displayName: {
+            translationKey: "item:splashJumpPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_jump_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashJumpPotionDescription"
+          }
+        },
+        "Splash Jump Potion II": {
+          displayName: {
+            translationKey: "item:splashJumpPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_jump_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Jump Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashJumpPotionDescription"
+          }
+        },
+        "Arrow of Jumping": {
+          displayName: {
+            translationKey: "item:arrowOfJumping"
+          },
+          type: "Item",
+          textureInfo: "jump_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Knockback Potion": {
+          displayName: {
+            translationKey: "item:knockbackPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "knockback_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:knockbackPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Knockback Potion|meta|charging1"
+        },
+        "Splash Knockback Potion": {
+          displayName: {
+            translationKey: "item:splashKnockbackPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_knockback_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashKnockbackPotionDescription"
+          }
+        },
+        "Splash Knockback Potion II": {
+          displayName: {
+            translationKey: "item:splashKnockbackPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_knockback_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Knockback Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashKnockbackPotionDescription"
+          }
+        },
+        "Arrow of Knockback": {
+          displayName: {
+            translationKey: "item:arrowOfKnockback"
+          },
+          type: "Item",
+          textureInfo: "knockback_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Regeneration Potion": {
+          displayName: {
+            translationKey: "item:regenerationPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "regen_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:regenerationPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Regeneration Potion|meta|charging1"
+        },
+        "Regeneration Potion II": {
+          displayName: {
+            translationKey: "item:regenerationPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "regen_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Regeneration Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:regenerationPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Regeneration Potion II|meta|charging1"
+        },
+        "Splash Regeneration Potion": {
+          displayName: {
+            translationKey: "item:splashRegenerationPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_regen_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashRegenerationPotionDescription"
+          }
+        },
+        "Splash Regeneration Potion II": {
+          displayName: {
+            translationKey: "item:splashRegenerationPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_regen_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Regeneration Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashRegenerationPotionDescription"
+          }
+        },
+        "Arrow of Regeneration": {
+          displayName: {
+            translationKey: "item:arrowOfRegeneration"
+          },
+          type: "Item",
+          textureInfo: "regen_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Instant Healing Potion": {
+          displayName: {
+            translationKey: "item:instantHealingPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "heal_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:instantHealingPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Instant Healing Potion|meta|charging1"
+        },
+        "Instant Healing Potion II": {
+          displayName: {
+            translationKey: "item:instantHealingPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "heal_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Instant Healing Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:instantHealingPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Instant Healing Potion II|meta|charging1"
+        },
+        "Splash Instant Healing Potion": {
+          displayName: {
+            translationKey: "item:splashInstantHealingPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_heal_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashInstantHealingPotionDescription"
+          }
+        },
+        "Splash Instant Healing Potion II": {
+          displayName: {
+            translationKey: "item:splashInstantHealingPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_heal_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Instant Healing Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashInstantHealingPotionDescription"
+          }
+        },
+        "Arrow of Instant Healing": {
+          displayName: {
+            translationKey: "item:arrowOfInstantHealing"
+          },
+          type: "Item",
+          textureInfo: "heal_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Haste Potion": {
+          displayName: {
+            translationKey: "item:hastePotion"
+          },
+          type: "Chargeable",
+          textureInfo: "haste_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:hastePotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Haste Potion|meta|charging1"
+        },
+        "Haste Potion II": {
+          displayName: {
+            translationKey: "item:hastePotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "haste_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Haste Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:hastePotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Haste Potion II|meta|charging1"
+        },
+        "Splash Haste Potion": {
+          displayName: {
+            translationKey: "item:splashHastePotion"
+          },
+          type: "Item",
+          textureInfo: "splash_haste_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashHastePotionDescription"
+          }
+        },
+        "Splash Haste Potion II": {
+          displayName: {
+            translationKey: "item:splashHastePotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_haste_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Haste Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashHastePotionDescription"
+          }
+        },
+        "Arrow of Haste": {
+          displayName: {
+            translationKey: "item:arrowOfHaste"
+          },
+          type: "Item",
+          textureInfo: "haste_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Shield Potion": {
+          displayName: {
+            translationKey: "item:shieldPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "shield_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:shieldPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Shield Potion|meta|charging1"
+        },
+        "Shield Potion II": {
+          displayName: {
+            translationKey: "item:shieldPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "shield_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Shield Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:shieldPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Shield Potion II|meta|charging1"
+        },
+        "Splash Shield Potion": {
+          displayName: {
+            translationKey: "item:splashShieldPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_shield_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashShieldPotionDescription"
+          }
+        },
+        "Splash Shield Potion II": {
+          displayName: {
+            translationKey: "item:splashShieldPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_shield_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Shield Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashShieldPotionDescription"
+          }
+        },
+        "Arrow of Shield": {
+          displayName: {
+            translationKey: "item:arrowOfShield"
+          },
+          type: "Item",
+          textureInfo: "shield_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Double Jump Potion": {
+          displayName: {
+            translationKey: "item:doubleJumpPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "double_jump_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:doubleJumpPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Double Jump Potion|meta|charging1"
+        },
+        "Splash Double Jump Potion": {
+          displayName: {
+            translationKey: "item:splashDoubleJumpPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_double_jump_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashDoubleJumpPotionDescription"
+          }
+        },
+        "Arrow of Double Jump": {
+          displayName: {
+            translationKey: "item:arrowOfDoubleJump"
+          },
+          type: "Item",
+          textureInfo: "double_jump_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Heat Resistance Potion": {
+          displayName: {
+            translationKey: "item:heatResistancePotion"
+          },
+          type: "Chargeable",
+          textureInfo: "heat_resistance_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:heatResistancePotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Heat Resistance Potion|meta|charging1"
+        },
+        "Splash Heat Resistance Potion": {
+          displayName: {
+            translationKey: "item:splashHeatResistancePotion"
+          },
+          type: "Item",
+          textureInfo: "splash_heat_resistance_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashHeatResistancePotionDescription"
+          }
+        },
+        "Arrow of Heat Resistance": {
+          displayName: {
+            translationKey: "item:arrowOfHeatResistance"
+          },
+          type: "Item",
+          textureInfo: "heat_resistance_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "X-Ray Vision Potion": {
+          displayName: {
+            translationKey: "item:xRayVisionPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "x_ray_vision_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:xRayVisionPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "X-Ray Vision Potion|meta|charging1"
+        },
+        "Splash X-Ray Vision Potion": {
+          displayName: {
+            translationKey: "item:splashXRayVisionPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_x_ray_vision_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashXRayVisionPotionDescription"
+          }
+        },
+        "Arrow of X-Ray Vision": {
+          displayName: {
+            translationKey: "item:arrowOfXRayVision"
+          },
+          type: "Item",
+          textureInfo: "x_ray_vision_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Mining Yield Potion": {
+          displayName: {
+            translationKey: "item:miningYieldPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "mining_yield_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:miningYieldPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Mining Yield Potion|meta|charging1"
+        },
+        "Mining Yield Potion II": {
+          displayName: {
+            translationKey: "item:miningYieldPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "mining_yield_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Mining Yield Potion",
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:miningYieldPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Mining Yield Potion II|meta|charging1"
+        },
+        "Splash Mining Yield Potion": {
+          displayName: {
+            translationKey: "item:splashMiningYieldPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_mining_yield_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashMiningYieldPotionDescription"
+          }
+        },
+        "Splash Mining Yield Potion II": {
+          displayName: {
+            translationKey: "item:splashMiningYieldPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_mining_yield_potion",
+          weight: 1,
+          heldItemScale: 1,
+          heldItemGlb: "Splash Mining Yield Potion",
+          stackable: !1,
+          description: {
+            translationKey: "item:splashMiningYieldPotionDescription"
+          }
+        },
+        "Arrow of Mining Yield": {
+          displayName: {
+            translationKey: "item:arrowOfMiningYield"
+          },
+          type: "Item",
+          textureInfo: "mining_yield_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Brain Rot Potion": {
+          displayName: {
+            translationKey: "item:brainRotPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "brain_rot_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:brainRotPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Brain Rot Potion|meta|charging1"
+        },
+        "Splash Brain Rot Potion": {
+          displayName: {
+            translationKey: "item:splashBrainRotPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_brain_rot_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashBrainRotPotionDescription"
+          }
+        },
+        "Arrow of Brain Rot": {
+          displayName: {
+            translationKey: "item:arrowOfBrainRot"
+          },
+          type: "Item",
+          textureInfo: "brain_rot_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Chaos Potion": {
+          displayName: {
+            translationKey: "item:chaosPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "chaos_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:chaosPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 600,
+          rootMetaDesc: "Chaos Potion|meta|charging1"
+        },
+        "Teleportation Potion": {
+          displayName: {
+            translationKey: "item:teleportationPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "teleportation_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          afterEatenItem: "Empty Bottle",
+          stackable: !1,
+          description: {
+            translationKey: "item:teleportationPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 600,
+          rootMetaDesc: "Teleportation Potion|meta|charging1"
+        },
+        Ammo: {
+          displayName: {
+            translationKey: "item:ammo"
+          },
+          type: "Item",
+          textureInfo: "ammo",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        ...(0, nM.r)("AK-47", {
+          heldItemScale: 2
+        }),
+        ...(0, nM.r)("M16", {
+          heldItemScale: 2
+        }),
+        ...(0, nM.r)("MP40", {
+          heldItemScale: 2.5
+        }),
+        ...(0, nM.r)("TAR-21", {
+          heldItemScale: 2.5
+        }),
+        ...(0, nM.r)("M1911", {
+          heldItemScale: 2
+        }),
+        ...(0, nM.r)("One Shot Pistol", {
+          heldItemScale: 2,
+          heldItemGlb: "M1911",
+          textureInfo: "M1911"
+        }),
+        ...(0, nM.r)("Double Barrel", {
+          heldItemScale: 2.5,
+          textureInfo: "Double-barreled"
+        }),
+        ...(0, nM.r)("AWP", {
+          heldItemScale: 3
+        }),
+        ...(0, nM.r)("Deagle", {
+          heldItemScale: 2
+        }),
+        ...(0, nM.r)("Striker-12", {
+          heldItemScale: 2.5
+        }),
+        ...(0, nM.r)("VSR", {
+          heldItemScale: 2.5
+        }),
+        ...(0, nM.r)("DMR", {
+          heldItemScale: 2.5
+        }),
+        ...(0, nM.r)("Minigun", {
+          heldItemScale: 3
+        }),
+        ...(0, nM.r)("FMR", {
+          heldItemScale: 2
+        }),
+        ...(0, nM.r)("SKAR", {
+          heldItemScale: 2.5
+        }),
+        ...(0, nM.r)("Block-19", {
+          heldItemScale: 2.5
+        }),
+        ...(0, nM.r)("Mini Izu", {
+          heldItemScale: 2
+        }),
+        ...(0, nM.r)("GPMG", {
+          heldItemScale: 2.8
+        }),
+        "Gold Coin": {
+          displayName: {
+            translationKey: "item:goldCoin"
+          },
+          type: "Item",
+          textureInfo: "gold_coin",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        Updraft: {
+          displayName: {
+            translationKey: "item:updraft"
+          },
+          type: "FullAuto",
+          textureInfo: "updraft",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:updraftDescription"
+          },
+          fireInterval: 515
+        },
+        Snowdash: {
+          displayName: {
+            translationKey: "item:snowdash"
+          },
+          type: "FullAuto",
+          textureInfo: "snowdash",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:snowdashDescription"
+          },
+          fireInterval: 515
+        },
+        "Floor Creator": {
+          displayName: {
+            translationKey: "item:floorCreator"
+          },
+          type: "Item",
+          textureInfo: "floor_creator",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:floorCreatorDescription"
+          }
+        },
+        "Moonstone Remote Explosive": {
+          displayName: {
+            translationKey: "item:moonstoneRemoteExplosive"
+          },
+          type: "Item",
+          textureInfo: "moonstone_remote_explosive",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:moonstoneRemoteExplosiveDescription"
+          },
+          heldItemGlb: "Moonstone Remote"
+        },
+        "Moonstone Remote": {
+          displayName: {
+            translationKey: "item:moonstoneRemote"
+          },
+          type: "Item",
+          textureInfo: "moonstone_remote",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:moonstoneRemoteDescription"
+          }
+        },
+        "Ice Bridge": {
+          displayName: {
+            translationKey: "item:iceBridge"
+          },
+          type: "Item",
+          textureInfo: "ice_bridge",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:iceBridgeDescription"
+          },
+          bridgeLength: mM
+        },
+        "Maple Planks Bridge": {
+          displayName: {
+            translationKey: "item:maplePlanksBridge"
+          },
+          type: "Item",
+          textureInfo: "maple_planks_bridge",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:maplePlanksBridgeDescription"
+          },
+          bridgeLength: mM
+        },
+        "Messy Stone Bridge": {
+          displayName: {
+            translationKey: "item:messyStoneBridge"
+          },
+          type: "Item",
+          textureInfo: "messy_stone_bridge",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:messyStoneBridgeDescription"
+          },
+          bridgeLength: mM
+        },
+        ...(0, PM.L)((MM => `${MM} Balloon`), {
+          displayName: MM => ({
+            translationKey: `item:${(0,OM.me)(MM)}Balloon`
+          }),
+          textureInfo: MM => `${(0,OM.oe)(MM)}_balloon`,
+          heldItemGlb: MM => `${MM} Balloon Item`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:balloonDescription"
+          }
+        }),
+        ...(0, PM.L)((MM => `INTERNAL_MESH_${MM} Balloon`), {
+          textureInfo: MM => `${(0,OM.oe)(MM)}_balloon`,
+          heldItemGlb: MM => `${MM} Balloon`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 4,
+          stackable: !1
+        }),
+        ...(0, PM.L)((MM => `${MM} Popup Tower`), {
+          displayName: MM => ({
+            translationKey: `item:${(0,OM.me)(MM)}PopupTower`
+          }),
+          textureInfo: MM => `${(0,OM.oe)(MM)}_popup_tower`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:popupTowerDescription"
+          }
+        }),
+        ...(0, PM.L)((MM => `${MM} Paintball Gun`), {
+          displayName: MM => ({
+            translationKey: `item:${(0,OM.me)(MM)}PaintballGun`
+          }),
+          textureInfo: MM => `${(0,OM.oe)(MM)}_paintball_gun`,
+          type: "FullAuto",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !1,
+          description: {
+            translationKey: "item:paintballGunDescription"
+          },
+          fireInterval: 167,
+          secondaryDamage: 100,
+          holdAsAiming: !0,
+          hideAimingUI: !0
+        }),
+        ...(0, PM.L)((MM => `${MM} Paintball`), {
+          displayName: MM => ({
+            translationKey: `item:${(0,OM.me)(MM)}Paintball`
+          }),
+          textureInfo: MM => `${(0,OM.oe)(MM)}_paintball`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:paintballDescription"
+          }
+        }),
+        ...(0, PM.L)((MM => `${MM} Heavy Paintball Gun`), {
+          displayName: MM => ({
+            translationKey: `item:${(0,OM.me)(MM)}HeavyPaintballGun`
+          }),
+          textureInfo: MM => `${(0,OM.oe)(MM)}_heavy_paintball_gun`,
+          type: "FullAuto",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:paintballGunDescription"
+          },
+          fireInterval: 1015,
+          secondaryDamage: 250,
+          holdAsAiming: !0,
+          hideAimingUI: !0
+        }),
+        ...(0, PM.L)((MM => `${MM} Paintball Explosive Item`), {
+          displayName: MM => ({
+            translationKey: `item:${(0,OM.me)(MM)}PaintballExplosive`
+          }),
+          textureInfo: MM => `explosive_paint_${(0,OM.oe)(MM)}`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:paintballExplosiveDescription"
+          }
+        }),
+        ...(0, PM.L)((MM => `${MM} Sticky Paintball Explosive Item`), {
+          displayName: MM => ({
+            translationKey: `item:${(0,OM.me)(MM)}StickyPaintballExplosive`
+          }),
+          textureInfo: MM => `explosive_paint_sticky_${(0,OM.oe)(MM)}`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:stickyPaintballExplosiveDescription"
+          }
+        }),
+        ...(0, PM.L)((MM => `${MM} Seeking Paintball Explosive Item`), {
+          displayName: MM => ({
+            translationKey: `item:${(0,OM.me)(MM)}SeekingPaintballExplosive`
+          }),
+          textureInfo: MM => `explosive_paint_seeking_${(0,OM.oe)(MM)}`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:seekingPaintballExplosiveDescription"
+          }
+        }),
+        ...(0, PM.L)((MM => `${MM} Quick Paintball Explosive Item`), {
+          displayName: MM => ({
+            translationKey: `item:${(0,OM.me)(MM)}QuickPaintballExplosive`
+          }),
+          textureInfo: MM => `explosive_paint_quick_${(0,OM.oe)(MM)}`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:quickPaintballExplosiveDescription"
+          }
+        }),
+        ...(0, nM.m)((MM => `${MM} Paint Bow`), {
+          displayName: MM => ({
+            translationKey: `item:${(0,OM.me)(MM)}PaintBow`
+          }),
+          textureName: MM => `${(0,OM.oe)(MM)}_paint_bow`,
+          rootMetaDesc: MM => `${MM} Paint Bow|meta|charging1`,
+          type: "Chargeable",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1,
+          chargeStages: 4,
+          chargeTime: 1500,
+          holdAsAiming: !0,
+          description: {
+            translationKey: "item:paintBowDescription"
+          },
+          minChargeStateToUse: 0
+        }),
+        ...(0, nM.v)(),
+        "Mob Catcher": {
+          displayName: {
+            translationKey: "item:mobCatcher"
+          },
+          type: "Item",
+          textureInfo: "mob_catcher",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:mobCatcherDescription"
+          }
+        },
+        ...(0, nM.e)(),
+        ...(0, nM.i)("Timed Spike Bomb", {
+          displayName: {
+            translationKey: "item:timedSpikeBomb"
+          },
+          type: "Chargeable",
+          textureName: "timed_spike_bomb",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:timedSpikeBombDescription"
+          },
+          chargeStages: 4,
+          chargeTime: 2e3,
+          chargeSound: "fallsmall",
+          rootMetaDesc: "Timed Spike Bomb|meta|charging1"
+        }),
+        "Toxin Ball": {
+          displayName: {
+            translationKey: "item:toxinBall"
+          },
+          type: "Item",
+          textureInfo: "toxin_ball",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:toxinBallDescription"
+          },
+          secondaryDamage: 13
+        },
+        "Aura XP Fragment": {
+          displayName: {
+            translationKey: "item:auraXpFragment"
+          },
+          type: "Chargeable",
+          textureInfo: "aura_xp_fragment",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          description: {
+            translationKey: "item:auraXpFragmentDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 500,
+          rootMetaDesc: "Aura XP Fragment|meta|charging1"
+        },
+        "Aura XP Orb": {
+          displayName: {
+            translationKey: "item:auraXpOrb"
+          },
+          type: "Chargeable",
+          textureInfo: "aura_xp_orb",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          eatable: !0,
+          chargeSound: "eat1",
+          description: {
+            translationKey: "item:auraXpOrbDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1250,
+          rootMetaDesc: "Aura XP Orb|meta|charging1"
+        },
+        "Aura XP Potion": {
+          displayName: {
+            translationKey: "item:auraXpPotion"
+          },
+          type: "Chargeable",
+          textureInfo: "aura_xp_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:auraXpPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Aura XP Potion|meta|charging1"
+        },
+        "Aura XP Potion II": {
+          displayName: {
+            translationKey: "item:auraXpPotionII"
+          },
+          type: "Chargeable",
+          textureInfo: "aura_xp_potion",
+          weight: 1,
+          heldItemScale: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          stackable: !1,
+          afterEatenItem: "Empty Bottle",
+          description: {
+            translationKey: "item:auraXpPotionDescription"
+          },
+          chargeStages: 1,
+          chargeTime: 1600,
+          rootMetaDesc: "Aura XP Potion II|meta|charging1"
+        },
+        "Splash Aura XP Potion": {
+          displayName: {
+            translationKey: "item:splashAuraXpPotion"
+          },
+          type: "Item",
+          textureInfo: "splash_aura_xp_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashAuraXpPotionDescription"
+          }
+        },
+        "Splash Aura XP Potion II": {
+          displayName: {
+            translationKey: "item:splashAuraXpPotionII"
+          },
+          type: "Item",
+          textureInfo: "splash_aura_xp_potion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:splashAuraXpPotionDescription"
+          }
+        },
+        "Arrow of Aura XP": {
+          displayName: {
+            translationKey: "item:arrowOfAuraXp"
+          },
+          type: "Item",
+          textureInfo: "aura_xp_arrow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        Firecracker: {
+          displayName: {
+            translationKey: "item:firecracker"
+          },
+          type: "Item",
+          textureInfo: "firecracker",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:firecrackerDescription"
+          },
+          secondaryDamage: 15
+        },
+        "Rainbow Firecracker": {
+          displayName: {
+            translationKey: "item:rainbowFirecracker"
+          },
+          type: "Item",
+          textureInfo: "firecracker_rainbow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:firecrackerDescription"
+          },
+          secondaryDamage: 15
+        },
+        ...(0, PM.L)((MM => `${MM} Firecracker`), {
+          displayName: MM => ({
+            translationKey: `item:${(0,OM.me)(MM)}Firecracker`
+          }),
+          textureInfo: MM => `firecracker_${(0,OM.oe)(MM)}`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:firecrackerDescription"
+          },
+          secondaryDamage: 15
+        }),
+        "Firecracker Pebble": {
+          displayName: {
+            translationKey: "item:firecrackerPebble"
+          },
+          type: "Item",
+          textureInfo: "firecracker_pebble",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:firecrackerPebbleDescription"
+          },
+          secondaryDamage: 15
+        },
+        "Rainbow Firecracker Pebble": {
+          displayName: {
+            translationKey: "item:rainbowFirecrackerPebble"
+          },
+          type: "Item",
+          textureInfo: "firecracker_pebble_rainbow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:firecrackerPebbleDescription"
+          },
+          secondaryDamage: 15
+        },
+        ...(0, PM.L)((MM => `${MM} Firecracker Pebble`), {
+          displayName: MM => ({
+            translationKey: `item:${(0,OM.me)(MM)}FirecrackerPebble`
+          }),
+          textureInfo: MM => `firecracker_pebble_${(0,OM.oe)(MM)}`,
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:firecrackerPebbleDescription"
+          },
+          secondaryDamage: 15
+        }),
+        "WorldBuilder Wand": {
+          displayName: {
+            translationKey: "item:worldBuilderWand"
+          },
+          type: "Item",
+          textureInfo: "worldbuilder_wand",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:worldBuilderWandDescription"
+          }
+        },
+        "Red Strongfish": {
+          displayName: {
+            translationKey: "item:redStrongfish"
+          },
+          type: "Item",
+          textureInfo: "strongfish_red",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Green Strongfish": {
+          displayName: {
+            translationKey: "item:greenStrongfish"
+          },
+          type: "Item",
+          textureInfo: "strongfish_green",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Moon Strongfish": {
+          displayName: {
+            translationKey: "item:moonStrongfish"
+          },
+          type: "Item",
+          textureInfo: "strongfish_moon",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        Wheatfish: {
+          displayName: {
+            translationKey: "item:wheatfish"
+          },
+          type: "Chargeable",
+          textureInfo: "wheatfish",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0,
+          description: {
+            translationKey: "item:wheatfishDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          eatHealAmt: 15,
+          rootMetaDesc: "Wheatfish|meta|charging1"
+        },
+        Moonfish: {
+          displayName: {
+            translationKey: "item:moonfish"
+          },
+          type: "Item",
+          textureInfo: "moonfish",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        Bombfish: {
+          displayName: {
+            translationKey: "item:bombfish"
+          },
+          type: "Item",
+          textureInfo: "bombfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Boomerang Fish": {
+          displayName: {
+            translationKey: "item:boomerangFish"
+          },
+          type: "Item",
+          textureInfo: "boomerang_fish",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Root Flounder": {
+          displayName: {
+            translationKey: "item:rootFlounder"
+          },
+          type: "Item",
+          textureInfo: "root_flounder",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Abyss Carp": {
+          displayName: {
+            translationKey: "item:abyssCarp"
+          },
+          type: "Item",
+          textureInfo: "abyss_carp",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        "Boulder Bass": {
+          displayName: {
+            translationKey: "item:boulderBass"
+          },
+          type: "Item",
+          textureInfo: "boulder_bass",
+          weight: 1,
+          heldItemScale: 2,
+          stackable: !0
+        },
+        Barnaclejaw: {
+          displayName: {
+            translationKey: "item:barnacleJaw"
+          },
+          type: "Item",
+          textureInfo: "barnaclejaw",
+          weight: 1,
+          heldItemScale: 2,
+          stackable: !0
+        },
+        "Crystalized Wheatfish": {
+          displayName: {
+            translationKey: "item:crystalizedWheatfish"
+          },
+          type: "Item",
+          textureInfo: "crystalized_wheatfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        Darter: {
+          displayName: {
+            translationKey: "item:darter"
+          },
+          type: "Chargeable",
+          textureInfo: "darter",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0,
+          description: {
+            translationKey: "item:darterDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          eatHealAmt: 10,
+          rootMetaDesc: "Darter|meta|charging1"
+        },
+        "Shadow Darter": {
+          displayName: {
+            translationKey: "item:shadowDarter"
+          },
+          type: "Item",
+          textureInfo: "darter_shadow",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Electric Eel": {
+          displayName: {
+            translationKey: "item:electricEel"
+          },
+          type: "Item",
+          textureInfo: "electric_eel",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Grass Snapper": {
+          displayName: {
+            translationKey: "item:grassSnapper"
+          },
+          type: "Item",
+          textureInfo: "grass_snapper",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        "Jungle Spinefish": {
+          displayName: {
+            translationKey: "item:jungleSpinefish"
+          },
+          type: "Item",
+          textureInfo: "jungle_spinefish",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        "Mangler Catfish": {
+          displayName: {
+            translationKey: "item:manglerCatfish"
+          },
+          type: "Item",
+          textureInfo: "mangler_catfish",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        "Mossback Arapaima": {
+          displayName: {
+            translationKey: "item:mossbackArapaima"
+          },
+          type: "Item",
+          textureInfo: "mossback_arapaima",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        "Sandbelly Piranha": {
+          displayName: {
+            translationKey: "item:sandbellyPiranha"
+          },
+          type: "Chargeable",
+          textureInfo: "sandbelly_piranha",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:sandbellyPiranhaDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          eatHealAmt: 10,
+          rootMetaDesc: "Sandbelly Piranha|meta|charging1"
+        },
+        "Shadeback Ray": {
+          displayName: {
+            translationKey: "item:shadebackRay"
+          },
+          type: "Item",
+          textureInfo: "shadeback_ray",
+          weight: 2,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Mudbelly Tilapia": {
+          displayName: {
+            translationKey: "item:mudbellyTilapia"
+          },
+          type: "Chargeable",
+          textureInfo: "mudbelly_tilapia",
+          weight: 1.5,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:mudbellyTilapiaDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          eatHealAmt: 30,
+          rootMetaDesc: "Mudbelly Tilapia|meta|charging1"
+        },
+        "Mireback Carp": {
+          displayName: {
+            translationKey: "item:mirebackCarp"
+          },
+          type: "Item",
+          textureInfo: "mireback_carp",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        "Rotslab Eel": {
+          displayName: {
+            translationKey: "item:rotslabEel"
+          },
+          type: "Item",
+          textureInfo: "rotslab_eel",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Aether Minnow": {
+          displayName: {
+            translationKey: "item:aetherMinnow"
+          },
+          type: "Item",
+          textureInfo: "aether_minnow",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Murkborne Ray": {
+          displayName: {
+            translationKey: "item:murkborneRay"
+          },
+          type: "Item",
+          textureInfo: "murkborne_ray",
+          weight: 1,
+          heldItemScale: 2,
+          stackable: !0
+        },
+        "Eldertide Leviathan": {
+          displayName: {
+            translationKey: "item:eldertideLeviathan"
+          },
+          type: "Item",
+          textureInfo: "eldertide_leviathan",
+          weight: 1,
+          heldItemScale: 3,
+          stackable: !0
+        },
+        Oarfish: {
+          displayName: {
+            translationKey: "item:oarfish"
+          },
+          type: "Item",
+          textureInfo: "oarfish",
+          weight: 1,
+          heldItemScale: 2,
+          stackable: !0
+        },
+        "Alpha Moon Strongfish": {
+          displayName: {
+            translationKey: "item:alphaMoonStrongfish"
+          },
+          type: "Item",
+          textureInfo: "alpha_moon_strongfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Bamboo Catfish": {
+          displayName: {
+            translationKey: "item:bambooCatfish"
+          },
+          type: "Item",
+          textureInfo: "bamboo_catfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Blackwater Bream": {
+          displayName: {
+            translationKey: "item:blackwaterBream"
+          },
+          type: "Item",
+          textureInfo: "blackwater_bream",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Blackwater Leviathan": {
+          displayName: {
+            translationKey: "item:blackwaterLeviathan"
+          },
+          type: "Item",
+          textureInfo: "blackwater_leviathan",
+          weight: 1,
+          heldItemScale: 5,
+          stackable: !0
+        },
+        "Boned Sturgeon": {
+          displayName: {
+            translationKey: "item:bonedSturgeon"
+          },
+          type: "Item",
+          textureInfo: "boned_sturgeon",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Bull Shark": {
+          displayName: {
+            translationKey: "item:bullShark"
+          },
+          type: "Item",
+          textureInfo: "bull_shark",
+          weight: 1,
+          heldItemScale: 2,
+          stackable: !0
+        },
+        "Channel Sawfish": {
+          displayName: {
+            translationKey: "item:channelSawfish"
+          },
+          type: "Item",
+          textureInfo: "channel_sawfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Coastal Mullet": {
+          displayName: {
+            translationKey: "item:coastalMullet"
+          },
+          type: "Item",
+          textureInfo: "coastal_mullet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        Coelacanth: {
+          displayName: {
+            translationKey: "item:coelacanth"
+          },
+          type: "Item",
+          textureInfo: "coelacanth",
+          weight: 1,
+          heldItemScale: 4,
+          stackable: !0
+        },
+        "Driftwood Catfish": {
+          displayName: {
+            translationKey: "item:driftwoodCatfish"
+          },
+          type: "Item",
+          textureInfo: "driftwood_catfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Eagle Ray": {
+          displayName: {
+            translationKey: "item:eagleRay"
+          },
+          type: "Item",
+          textureInfo: "eagle_ray",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        "Giant Grouper": {
+          displayName: {
+            translationKey: "item:giantGrouper"
+          },
+          type: "Item",
+          textureInfo: "giant_grouper",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Giant Moray": {
+          displayName: {
+            translationKey: "item:giantMoray"
+          },
+          type: "Item",
+          textureInfo: "giant_moray",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Giant Stingray": {
+          displayName: {
+            translationKey: "item:giantStingray"
+          },
+          type: "Item",
+          textureInfo: "giant_stingray",
+          weight: 1,
+          heldItemScale: 2,
+          stackable: !0
+        },
+        "Golden Mahseer": {
+          description: {
+            translationKey: "item:goldenMahseerDescription"
+          },
+          displayName: {
+            translationKey: "item:goldenMahseer"
+          },
+          type: "Item",
+          textureInfo: "golden_mahseer",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        "Greenfin Loach": {
+          displayName: {
+            translationKey: "item:greenfinLoach"
+          },
+          type: "Item",
+          textureInfo: "greenfin_loach",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Mangrove Herring": {
+          displayName: {
+            translationKey: "item:mangroveHerring"
+          },
+          type: "Item",
+          textureInfo: "mangrove_herring",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Moonlit Boomerang Fish": {
+          displayName: {
+            translationKey: "item:moonlitBoomerangFish"
+          },
+          type: "Item",
+          textureInfo: "moonlit_boomerang_fish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Moonstone Pupfish": {
+          displayName: {
+            translationKey: "item:moonstonePupfish"
+          },
+          type: "Chargeable",
+          textureInfo: "moonstone_pupfish",
+          weight: 1,
+          heldItemScale: .75,
+          stackable: !0,
+          description: {
+            translationKey: "item:moonstonePupfishDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          eatHealAmt: 10,
+          rootMetaDesc: "Moonstone Pupfish|meta|charging1"
+        },
+        "Mudline Perch": {
+          displayName: {
+            translationKey: "item:mudlinePerch"
+          },
+          type: "Item",
+          textureInfo: "mudline_perch",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Murk Stingray": {
+          displayName: {
+            translationKey: "item:murkStingray"
+          },
+          type: "Item",
+          textureInfo: "murk_stingray",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        Needlefish: {
+          displayName: {
+            translationKey: "item:needlefish"
+          },
+          type: "Item",
+          textureInfo: "needlefish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Nomai Moray": {
+          displayName: {
+            translationKey: "item:nomaiMoray"
+          },
+          type: "Item",
+          textureInfo: "nomai_moray",
+          weight: 1,
+          heldItemScale: 1.5,
+          stackable: !0
+        },
+        "Pearlescent Moonfish": {
+          displayName: {
+            translationKey: "item:pearlescentMoonfish"
+          },
+          type: "Item",
+          textureInfo: "pearlescent_moonfish",
+          weight: 1,
+          heldItemScale: .75,
+          stackable: !0
+        },
+        "Rainbow Guppy": {
+          displayName: {
+            translationKey: "item:rainbowGuppy"
+          },
+          type: "Item",
+          textureInfo: "rainbow_guppy",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Red Snapper": {
+          displayName: {
+            translationKey: "item:redSnapper"
+          },
+          type: "Item",
+          textureInfo: "red_snapper",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Reedglass Minnow": {
+          displayName: {
+            translationKey: "item:reedglassMinnow"
+          },
+          type: "Item",
+          textureInfo: "reedglass_minnow",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Reef Sardine": {
+          displayName: {
+            translationKey: "item:reefSardine"
+          },
+          type: "Item",
+          textureInfo: "reef_sardine",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Root Perch": {
+          displayName: {
+            translationKey: "item:rootPerch"
+          },
+          type: "Item",
+          textureInfo: "root_perch",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Rust Scad": {
+          displayName: {
+            translationKey: "item:rustScad"
+          },
+          type: "Item",
+          textureInfo: "rust_scad",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        Seahorse: {
+          displayName: {
+            translationKey: "item:seahorse"
+          },
+          type: "Item",
+          textureInfo: "seahorse",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        Snakehead: {
+          displayName: {
+            translationKey: "item:snakehead"
+          },
+          type: "Item",
+          textureInfo: "snakehead",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Spined Stickleback": {
+          displayName: {
+            translationKey: "item:spinedStickleback"
+          },
+          type: "Item",
+          textureInfo: "spined_stickleback",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Stone Grouper": {
+          displayName: {
+            translationKey: "item:stoneGrouper"
+          },
+          type: "Item",
+          textureInfo: "stone_grouper",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Sumpback Carp": {
+          displayName: {
+            translationKey: "item:sumpbackCarp"
+          },
+          type: "Item",
+          textureInfo: "sumpback_carp",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Sunset Minnow": {
+          displayName: {
+            translationKey: "item:sunsetMinnow"
+          },
+          type: "Item",
+          textureInfo: "sunset_minnow",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        Tarpon: {
+          displayName: {
+            translationKey: "item:tarpon"
+          },
+          type: "Item",
+          textureInfo: "tarpon",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Threadfin Bream": {
+          displayName: {
+            translationKey: "item:threadfinBream"
+          },
+          type: "Item",
+          textureInfo: "threadfin_bream",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Tri-Pointed Needlefish": {
+          displayName: {
+            translationKey: "item:triPointedNeedlefish"
+          },
+          type: "Item",
+          textureInfo: "tri_pointed_needlefish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Game Dev Fish": {
+          displayName: {
+            translationKey: "item:gameDevFish"
+          },
+          type: "Item",
+          textureInfo: "ellie_fish",
+          weight: 1,
+          heldItemScale: 1.75,
+          stackable: !0
+        },
+        "Armoured Searobin": {
+          displayName: {
+            translationKey: "item:armouredSearobin"
+          },
+          type: "Item",
+          textureInfo: "armoured_searobin",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Ash Lionfish": {
+          displayName: {
+            translationKey: "item:ashLionfish"
+          },
+          type: "Item",
+          textureInfo: "ash_lionfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Barefrost Toothfish": {
+          displayName: {
+            translationKey: "item:barefrostToothfish"
+          },
+          type: "Item",
+          textureInfo: "barefrost_toothfish",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Blackfin Icefish": {
+          displayName: {
+            translationKey: "item:blackfinIcefish"
+          },
+          type: "Item",
+          textureInfo: "blackfin_icefish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Basalt Pipefish": {
+          displayName: {
+            translationKey: "item:basaltPipefish"
+          },
+          type: "Item",
+          textureInfo: "basalt_pipefish",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Brimstone Spikefish": {
+          displayName: {
+            translationKey: "item:brimstoneSpikefish"
+          },
+          type: "Item",
+          textureInfo: "brimstone_spikefish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Cinder Leviathan": {
+          displayName: {
+            translationKey: "item:cinderLeviathan"
+          },
+          type: "Item",
+          textureInfo: "cinder_leviathan",
+          weight: 1,
+          heldItemScale: 3,
+          stackable: !0
+        },
+        "Crowned Flame Angelfish": {
+          displayName: {
+            translationKey: "item:crownedFlameAngelfish"
+          },
+          type: "Item",
+          textureInfo: "crowned_flame_angelfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Deepwater Lanternfish": {
+          displayName: {
+            translationKey: "item:deepwaterLanternfish"
+          },
+          type: "Item",
+          textureInfo: "deepwater_lanternfish",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Driftice Capelin": {
+          displayName: {
+            translationKey: "item:drifticeCapelin"
+          },
+          type: "Item",
+          textureInfo: "driftice_capelin",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Ember Chub": {
+          displayName: {
+            translationKey: "item:emberChub"
+          },
+          type: "Item",
+          textureInfo: "ember_chub",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Embermark Wrasse": {
+          displayName: {
+            translationKey: "item:embermarkWrasse"
+          },
+          type: "Item",
+          textureInfo: "embermark_wrasse",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Eviota Vader": {
+          displayName: {
+            translationKey: "item:eviotaVader"
+          },
+          type: "Item",
+          textureInfo: "eviota_vader",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Frost Herring": {
+          displayName: {
+            translationKey: "item:frostHerring"
+          },
+          type: "Item",
+          textureInfo: "frost_herring",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Frost Wolf Eel": {
+          displayName: {
+            translationKey: "item:frostWolfEel"
+          },
+          type: "Item",
+          textureInfo: "frost_wolf_eel",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Frostpaint Notie": {
+          displayName: {
+            translationKey: "item:frostpaintNotie"
+          },
+          type: "Item",
+          textureInfo: "frostpaint_notie",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Frozen Grenadier": {
+          displayName: {
+            translationKey: "item:frozenGrenadier"
+          },
+          type: "Item",
+          textureInfo: "frozen_grenadier",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Giant Trevally": {
+          displayName: {
+            translationKey: "item:giantTrevally"
+          },
+          type: "Item",
+          textureInfo: "giant_trevally",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Glacial Lanternfish": {
+          displayName: {
+            translationKey: "item:glacialLanternfish"
+          },
+          type: "Item",
+          textureInfo: "glacial_lanternfish",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Glacial Silverfish": {
+          displayName: {
+            translationKey: "item:glacialSilverfish"
+          },
+          type: "Item",
+          textureInfo: "glacial_silverfish",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Heatwarp Flounder": {
+          displayName: {
+            translationKey: "item:heatwarpFlounder"
+          },
+          type: "Item",
+          textureInfo: "heatwarp_flounder",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        Hatchetfish: {
+          displayName: {
+            translationKey: "item:hatchetfish"
+          },
+          type: "Item",
+          textureInfo: "hatchetfish",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Ice Spined Notothenia": {
+          displayName: {
+            translationKey: "item:iceSpinedNotothenia"
+          },
+          type: "Item",
+          textureInfo: "ice_spined_notothenia",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Iceshelf Skate": {
+          displayName: {
+            translationKey: "item:iceshelfSkate"
+          },
+          type: "Item",
+          textureInfo: "iceshelf_skate",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Icy Sculpin": {
+          displayName: {
+            translationKey: "item:icySculpin"
+          },
+          type: "Item",
+          textureInfo: "icy_sculpin",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Lavaflow Trout": {
+          displayName: {
+            translationKey: "item:lavaflowTrout"
+          },
+          type: "Item",
+          textureInfo: "lavaflow_trout",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Lavawake Slopefish": {
+          displayName: {
+            translationKey: "item:lavawakeSlopefish"
+          },
+          type: "Item",
+          textureInfo: "lavawake_slopefish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Magma Sardinella": {
+          displayName: {
+            translationKey: "item:magmaSardinella"
+          },
+          type: "Item",
+          textureInfo: "magma_sardinella",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Magma Trout": {
+          displayName: {
+            translationKey: "item:magmaTrout"
+          },
+          type: "Item",
+          textureInfo: "magma_trout",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Marbled Moray Cod": {
+          displayName: {
+            translationKey: "item:marbledMorayCod"
+          },
+          type: "Item",
+          textureInfo: "marbled_moray_cod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Molten Lotella Cod": {
+          displayName: {
+            translationKey: "item:moltenLotellaCod"
+          },
+          type: "Item",
+          textureInfo: "molten_lotella_cod",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Northern Wolffish": {
+          displayName: {
+            translationKey: "item:northernWolffish"
+          },
+          type: "Item",
+          textureInfo: "northern_wolffish",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Paleice Rockcod": {
+          displayName: {
+            translationKey: "item:paleiceRockcod"
+          },
+          type: "Item",
+          textureInfo: "paleice_rockcod",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Permafrost Halibut": {
+          displayName: {
+            translationKey: "item:permafrostHalibut"
+          },
+          type: "Item",
+          textureInfo: "permafrost_halibut",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        Pithead: {
+          displayName: {
+            translationKey: "item:pithead"
+          },
+          type: "Item",
+          textureInfo: "pithead",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Polarflash Electron": {
+          displayName: {
+            translationKey: "item:polarflashElectron"
+          },
+          type: "Item",
+          textureInfo: "polarflash_electron",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Pyroclast Eel": {
+          displayName: {
+            translationKey: "item:pyroclastEel"
+          },
+          type: "Item",
+          textureInfo: "pyroclast_eel",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Pyroscale Grouper": {
+          displayName: {
+            translationKey: "item:pyroscaleGrouper"
+          },
+          type: "Item",
+          textureInfo: "pyroscale_grouper",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Red Pyreside": {
+          displayName: {
+            translationKey: "item:redPyreside"
+          },
+          type: "Item",
+          textureInfo: "red_pyreside",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Rimesnouted Lancetfish": {
+          displayName: {
+            translationKey: "item:rimesnoutedLancetfish"
+          },
+          type: "Item",
+          textureInfo: "rimesnouted_lancetfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Scorched Sunfish": {
+          displayName: {
+            translationKey: "item:scorchedSunfish"
+          },
+          type: "Item",
+          textureInfo: "scorched_sunfish",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !0
+        },
+        "Scored Dace": {
+          displayName: {
+            translationKey: "item:scoredDace"
+          },
+          type: "Item",
+          textureInfo: "scored_dace",
+          weight: 1,
+          heldItemScale: .5,
+          stackable: !0
+        },
+        "Silver Dragonfish": {
+          displayName: {
+            translationKey: "item:silverDragonfish"
+          },
+          type: "Item",
+          textureInfo: "silver_dragonfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Snow Haddock": {
+          displayName: {
+            translationKey: "item:snowHaddock"
+          },
+          type: "Item",
+          textureInfo: "snow_haddock",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Volcanic Catfish": {
+          displayName: {
+            translationKey: "item:volcanicCatfish"
+          },
+          type: "Item",
+          textureInfo: "volcanic_catfish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Volcanic Semperi": {
+          displayName: {
+            translationKey: "item:volcanicSemperi"
+          },
+          type: "Item",
+          textureInfo: "volcanic_semperi",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Rusty Rod": {
+          description: {
+            translationKey: "item:rustyRodDescription"
+          },
+          displayName: {
+            translationKey: "item:rustyRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [7e3, 9e3]
+          },
+          textureInfo: "rusty_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Lucky Rod": {
+          description: {
+            translationKey: "item:luckyRodDescription"
+          },
+          displayName: {
+            translationKey: "item:luckyRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "lucky_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Sturdy Rod": {
+          description: {
+            translationKey: "item:sturdyRodDescription"
+          },
+          displayName: {
+            translationKey: "item:sturdyRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [5e3, 7e3]
+          },
+          textureInfo: "sturdy_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Jungle Rod": {
+          displayName: {
+            translationKey: "item:jungleRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "jungle_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Draugr Rod": {
+          displayName: {
+            translationKey: "item:draugrRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "draugr_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Cursed Rod": {
+          displayName: {
+            translationKey: "item:cursedRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "cursed_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Tangle Resistant Rod": {
+          displayName: {
+            translationKey: "item:tangleResistantRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "tangle_resistant_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Speed Rod": {
+          description: {
+            translationKey: "item:speedRodDescription"
+          },
+          displayName: {
+            translationKey: "item:speedRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "speed_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Carbon Rod": {
+          displayName: {
+            translationKey: "item:carbonRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "carbon_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Deep Sea Rod": {
+          displayName: {
+            translationKey: "item:deepSeaRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "deep_sea_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Master Rod": {
+          displayName: {
+            translationKey: "item:masterRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "master_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Obsidian Rod": {
+          displayName: {
+            translationKey: "item:obsidianRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "obsidian_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Molten Magma Rod": {
+          displayName: {
+            translationKey: "item:moltenMagmaRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "molten_magma_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Frost Rod": {
+          displayName: {
+            translationKey: "item:frostRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "frost_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Black Ice Rod": {
+          displayName: {
+            translationKey: "item:blackIceRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "black_ice_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        "Mythic Rod": {
+          displayName: {
+            translationKey: "item:mythicRod"
+          },
+          type: "Item",
+          fishingRodInfo: {
+            biteDelayMs: [2e3, 4e3]
+          },
+          textureInfo: "mythic_rod",
+          weight: 1,
+          heldItemScale: 1.25,
+          stackable: !1
+        },
+        Acorn: {
+          displayName: {
+            translationKey: "item:acorn"
+          },
+          type: "Chargeable",
+          textureInfo: "acorn",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:acornDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 500,
+          eatHealAmt: 3,
+          rootMetaDesc: "Acorn|meta|charging1"
+        },
+        "Acorn Jelly": {
+          displayName: {
+            translationKey: "item:acornJelly"
+          },
+          type: "Chargeable",
+          textureInfo: "acorn_jelly",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:acornJellyDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          rootMetaDesc: "Acorn Jelly|meta|charging1"
+        },
+        "Cow's Milk": {
+          displayName: {
+            translationKey: "item:cowsMilk"
+          },
+          type: "Chargeable",
+          textureInfo: "cows_milk",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:cowsMilkDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          chargeTime: 500,
+          eatHealAmt: 3,
+          rootMetaDesc: "Cow's Milk|meta|charging1"
+        },
+        Cheese: {
+          displayName: {
+            translationKey: "item:cheese"
+          },
+          type: "Chargeable",
+          textureInfo: "cheese",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:cheeseDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          rootMetaDesc: "Cheese|meta|charging1"
+        },
+        "Caught Fish": {
+          displayName: {
+            translationKey: "item:caughtFish"
+          },
+          type: "Chargeable",
+          textureInfo: "caught_fish",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:caughtFishDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 500,
+          eatHealAmt: 3,
+          rootMetaDesc: "Caught Fish|meta|charging1"
+        },
+        "Fish Fillet": {
+          displayName: {
+            translationKey: "item:fishFillet"
+          },
+          type: "Chargeable",
+          textureInfo: "fish_fillet",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:fishFilletDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          rootMetaDesc: "Fish Fillet|meta|charging1"
+        },
+        "Meaty Bone": {
+          displayName: {
+            translationKey: "item:meatyBone"
+          },
+          type: "Chargeable",
+          textureInfo: "meaty_bone",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:meatyBoneDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 500,
+          eatHealAmt: 3,
+          rootMetaDesc: "Meaty Bone|meta|charging1"
+        },
+        "Blinding Pebble": {
+          displayName: {
+            translationKey: "item:blindingPebble"
+          },
+          type: "Item",
+          textureInfo: "blinding_pebble",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:blindingPebbleDescription"
+          },
+          secondaryDamage: 15
+        },
+        "Sheep's Milk": {
+          displayName: {
+            translationKey: "item:sheepsMilk"
+          },
+          type: "Chargeable",
+          textureInfo: "sheeps_milk",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:sheepsMilkDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          chargeTime: 500,
+          eatHealAmt: 3,
+          rootMetaDesc: "Sheep's Milk|meta|charging1"
+        },
+        "Yoghurt Pot": {
+          displayName: {
+            translationKey: "item:yoghurtPot"
+          },
+          type: "Chargeable",
+          textureInfo: "yoghurt_pot",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:yoghurtPotDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          rootMetaDesc: "Yoghurt Pot|meta|charging1"
+        },
+        Truffle: {
+          displayName: {
+            translationKey: "item:truffle"
+          },
+          type: "Chargeable",
+          textureInfo: "truffle",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:truffleDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 500,
+          eatHealAmt: 3,
+          rootMetaDesc: "Truffle|meta|charging1"
+        },
+        "Truffle Oil": {
+          displayName: {
+            translationKey: "item:truffleOil"
+          },
+          type: "Chargeable",
+          textureInfo: "truffle_oil",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:truffleOilDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "drink",
+          chargeTime: 750,
+          rootMetaDesc: "Truffle Oil|meta|charging1"
+        },
+        Oats: {
+          displayName: {
+            translationKey: "item:oats"
+          },
+          type: "Chargeable",
+          textureInfo: "oats",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:oatsDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 500,
+          eatHealAmt: 3,
+          rootMetaDesc: "Oats|meta|charging1"
+        },
+        Porridge: {
+          displayName: {
+            translationKey: "item:porridge"
+          },
+          type: "Chargeable",
+          textureInfo: "porridge",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:porridgeDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          rootMetaDesc: "Porridge|meta|charging1"
+        },
+        Dates: {
+          displayName: {
+            translationKey: "item:dates"
+          },
+          type: "Chargeable",
+          textureInfo: "dates",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:datesDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 500,
+          eatHealAmt: 3,
+          rootMetaDesc: "Dates|meta|charging1"
+        },
+        "Date Pudding": {
+          displayName: {
+            translationKey: "item:datePudding"
+          },
+          type: "Chargeable",
+          textureInfo: "date_pudding",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:datePuddingDescription"
+          },
+          chargeStages: 1,
+          eatable: !0,
+          chargeSound: "eat1",
+          chargeTime: 750,
+          rootMetaDesc: "Date Pudding|meta|charging1"
+        },
+        Poop: {
+          displayName: {
+            translationKey: "item:poop"
+          },
+          type: "Item",
+          textureInfo: "poop",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:poopDescription"
+          },
+          secondaryDamage: 1
+        },
+        Fertiliser: {
+          displayName: {
+            translationKey: "item:fertiliser"
+          },
+          type: "Item",
+          textureInfo: "fertiliser",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: "item:fertiliserDescription"
+          }
+        },
+        Medkit: {
+          displayName: {
+            translationKey: "item:medkit"
+          },
+          type: "Item",
+          textureInfo: "medkit",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Wood Spear": {
+          displayName: {
+            translationKey: "item:woodSpear"
+          },
+          type: "Tool",
+          textureInfo: "wood_spear",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 18,
+          attackRange: 5,
+          description: {
+            translationKey: "item:spearDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 1,
+          abilityCooldownMs: 1600,
+          dashImpulse: 18
+        },
+        "Stone Spear": {
+          displayName: {
+            translationKey: "item:stoneSpear"
+          },
+          type: "Tool",
+          textureInfo: "stone_spear",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 22,
+          attackRange: 5,
+          description: {
+            translationKey: "item:spearDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 2,
+          abilityCooldownMs: 1600,
+          dashImpulse: 20
+        },
+        "Iron Spear": {
+          displayName: {
+            translationKey: "item:ironSpear"
+          },
+          type: "Tool",
+          textureInfo: "iron_spear",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 28,
+          attackRange: 5,
+          description: {
+            translationKey: "item:spearDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 3,
+          abilityCooldownMs: 1600,
+          dashImpulse: 22
+        },
+        "Gold Spear": {
+          displayName: {
+            translationKey: "item:goldSpear"
+          },
+          type: "Tool",
+          textureInfo: "gold_spear",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 30,
+          attackRange: 5,
+          description: {
+            translationKey: "item:spearDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 4,
+          abilityCooldownMs: 1600,
+          dashImpulse: 25
+        },
+        "Diamond Spear": {
+          displayName: {
+            translationKey: "item:diamondSpear"
+          },
+          type: "Tool",
+          textureInfo: "diamond_spear",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 32,
+          attackRange: 5,
+          description: {
+            translationKey: "item:spearDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5,
+          abilityCooldownMs: 1600,
+          dashImpulse: 28
+        },
+        "Moonstone Spear": {
+          displayName: {
+            translationKey: "item:moonstoneSpear"
+          },
+          type: "Tool",
+          textureInfo: "moonstone_spear",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 32,
+          attackRange: 5,
+          description: {
+            translationKey: "item:spearDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5,
+          abilityCooldownMs: 1600,
+          dashImpulse: 28
+        },
+        "Wood Dagger": {
+          displayName: {
+            translationKey: "item:woodDagger"
+          },
+          type: "Tool",
+          textureInfo: "wood_dagger",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 20,
+          attackRange: 2.5,
+          attackCooldownMs: 250,
+          knockbackHorizontalScalar: .4,
+          knockbackVerticalScalar: .8,
+          comboInfo: HM,
+          description: {
+            translationKey: "item:daggerDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Dagger": {
+          displayName: {
+            translationKey: "item:stoneDagger"
+          },
+          type: "Tool",
+          textureInfo: "stone_dagger",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 25,
+          attackRange: 2.5,
+          attackCooldownMs: 250,
+          knockbackHorizontalScalar: .4,
+          knockbackVerticalScalar: .8,
+          comboInfo: HM,
+          description: {
+            translationKey: "item:daggerDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 2
+        },
+        "Iron Dagger": {
+          displayName: {
+            translationKey: "item:ironDagger"
+          },
+          type: "Tool",
+          textureInfo: "iron_dagger",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 31,
+          attackRange: 2.5,
+          attackCooldownMs: 250,
+          knockbackHorizontalScalar: .4,
+          knockbackVerticalScalar: .8,
+          comboInfo: HM,
+          description: {
+            translationKey: "item:daggerDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 3
+        },
+        "Gold Dagger": {
+          displayName: {
+            translationKey: "item:goldDagger"
+          },
+          type: "Tool",
+          textureInfo: "gold_dagger",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 34,
+          attackRange: 2.5,
+          attackCooldownMs: 250,
+          knockbackHorizontalScalar: .4,
+          knockbackVerticalScalar: .8,
+          comboInfo: HM,
+          description: {
+            translationKey: "item:daggerDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 4
+        },
+        "Diamond Dagger": {
+          displayName: {
+            translationKey: "item:diamondDagger"
+          },
+          type: "Tool",
+          textureInfo: "diamond_dagger",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 36,
+          attackRange: 2.5,
+          attackCooldownMs: 250,
+          knockbackHorizontalScalar: .4,
+          knockbackVerticalScalar: .8,
+          comboInfo: HM,
+          description: {
+            translationKey: "item:daggerDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Moonstone Dagger": {
+          displayName: {
+            translationKey: "item:moonstoneDagger"
+          },
+          type: "Tool",
+          textureInfo: "moonstone_dagger",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 36,
+          attackRange: 2.5,
+          attackCooldownMs: 250,
+          knockbackHorizontalScalar: .4,
+          knockbackVerticalScalar: .8,
+          comboInfo: HM,
+          description: {
+            translationKey: "item:daggerDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Wood Boomerang": {
+          displayName: {
+            translationKey: "item:woodBoomerang"
+          },
+          type: "Tool",
+          textureInfo: "wood_boomerang",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 11,
+          secondaryDamage: 11,
+          description: {
+            translationKey: "item:boomerangDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Boomerang": {
+          displayName: {
+            translationKey: "item:stoneBoomerang"
+          },
+          type: "Tool",
+          textureInfo: "stone_boomerang",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 14,
+          secondaryDamage: 14,
+          description: {
+            translationKey: "item:boomerangDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 2
+        },
+        "Iron Boomerang": {
+          displayName: {
+            translationKey: "item:ironBoomerang"
+          },
+          type: "Tool",
+          textureInfo: "iron_boomerang",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 17,
+          secondaryDamage: 17,
+          description: {
+            translationKey: "item:boomerangDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 3
+        },
+        "Gold Boomerang": {
+          displayName: {
+            translationKey: "item:goldBoomerang"
+          },
+          type: "Tool",
+          textureInfo: "gold_boomerang",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 19,
+          secondaryDamage: 19,
+          description: {
+            translationKey: "item:boomerangDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 4
+        },
+        "Diamond Boomerang": {
+          displayName: {
+            translationKey: "item:diamondBoomerang"
+          },
+          type: "Tool",
+          textureInfo: "diamond_boomerang",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 20,
+          secondaryDamage: 20,
+          description: {
+            translationKey: "item:boomerangDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Moonstone Boomerang": {
+          displayName: {
+            translationKey: "item:moonstoneBoomerang"
+          },
+          type: "Tool",
+          textureInfo: "moonstone_boomerang",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 20,
+          secondaryDamage: 20,
+          description: {
+            translationKey: "item:boomerangDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Wood Club": {
+          displayName: {
+            translationKey: "item:woodClub"
+          },
+          type: "Tool",
+          textureInfo: "wood_club",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 22,
+          knockbackHorizontalScalar: 1.7,
+          knockbackVerticalScalar: 1.2,
+          description: {
+            translationKey: "item:clubDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Club": {
+          displayName: {
+            translationKey: "item:stoneClub"
+          },
+          type: "Tool",
+          textureInfo: "stone_club",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 27,
+          knockbackHorizontalScalar: 1.9,
+          knockbackVerticalScalar: 1.2,
+          description: {
+            translationKey: "item:clubDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 2
+        },
+        "Iron Club": {
+          displayName: {
+            translationKey: "item:ironClub"
+          },
+          type: "Tool",
+          textureInfo: "iron_club",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 34,
+          knockbackHorizontalScalar: 2.1,
+          knockbackVerticalScalar: 1.2,
+          description: {
+            translationKey: "item:clubDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 3
+        },
+        "Gold Club": {
+          displayName: {
+            translationKey: "item:goldClub"
+          },
+          type: "Tool",
+          textureInfo: "gold_club",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 37,
+          knockbackHorizontalScalar: 2.3,
+          knockbackVerticalScalar: 1.2,
+          description: {
+            translationKey: "item:clubDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 4
+        },
+        "Diamond Club": {
+          displayName: {
+            translationKey: "item:diamondClub"
+          },
+          type: "Tool",
+          textureInfo: "diamond_club",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 40,
+          knockbackHorizontalScalar: 2.5,
+          knockbackVerticalScalar: 1.2,
+          description: {
+            translationKey: "item:clubDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Moonstone Club": {
+          displayName: {
+            translationKey: "item:moonstoneClub"
+          },
+          type: "Tool",
+          textureInfo: "moonstone_club",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 40,
+          knockbackHorizontalScalar: 2.5,
+          knockbackVerticalScalar: 1.2,
+          description: {
+            translationKey: "item:clubDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Wood Mace": {
+          displayName: {
+            translationKey: "item:woodMace"
+          },
+          type: "Tool",
+          textureInfo: "wood_mace",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 11,
+          velocityMultiplier: 2.2,
+          description: {
+            translationKey: "item:maceDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Mace": {
+          displayName: {
+            translationKey: "item:stoneMace"
+          },
+          type: "Tool",
+          textureInfo: "stone_mace",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 14,
+          velocityMultiplier: 2.4,
+          description: {
+            translationKey: "item:maceDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 2
+        },
+        "Iron Mace": {
+          displayName: {
+            translationKey: "item:ironMace"
+          },
+          type: "Tool",
+          textureInfo: "iron_mace",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 17,
+          velocityMultiplier: 2.6,
+          description: {
+            translationKey: "item:maceDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 3
+        },
+        "Gold Mace": {
+          displayName: {
+            translationKey: "item:goldMace"
+          },
+          type: "Tool",
+          textureInfo: "gold_mace",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 19,
+          velocityMultiplier: 2.8,
+          description: {
+            translationKey: "item:maceDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 4
+        },
+        "Diamond Mace": {
+          displayName: {
+            translationKey: "item:diamondMace"
+          },
+          type: "Tool",
+          textureInfo: "diamond_mace",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 20,
+          velocityMultiplier: 3,
+          description: {
+            translationKey: "item:maceDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Moonstone Mace": {
+          displayName: {
+            translationKey: "item:moonstoneMace"
+          },
+          type: "Tool",
+          textureInfo: "moonstone_mace",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 20,
+          velocityMultiplier: 3,
+          description: {
+            translationKey: "item:maceDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Wood Whip": {
+          displayName: {
+            translationKey: "item:woodWhip"
+          },
+          type: "Tool",
+          textureInfo: "wood_whip",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 8,
+          attackRange: 8,
+          knockbackHorizontalScalar: -1,
+          description: {
+            translationKey: "item:whipDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 1
+        },
+        "Stone Whip": {
+          displayName: {
+            translationKey: "item:stoneWhip"
+          },
+          type: "Tool",
+          textureInfo: "stone_whip",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 11,
+          attackRange: 8,
+          knockbackHorizontalScalar: -1.2,
+          description: {
+            translationKey: "item:whipDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 2
+        },
+        "Iron Whip": {
+          displayName: {
+            translationKey: "item:ironWhip"
+          },
+          type: "Tool",
+          textureInfo: "iron_whip",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 14,
+          attackRange: 8,
+          knockbackHorizontalScalar: -1.4,
+          description: {
+            translationKey: "item:whipDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 3
+        },
+        "Gold Whip": {
+          displayName: {
+            translationKey: "item:goldWhip"
+          },
+          type: "Tool",
+          textureInfo: "gold_whip",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 16,
+          attackRange: 8,
+          knockbackHorizontalScalar: -1.6,
+          description: {
+            translationKey: "item:whipDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 4
+        },
+        "Diamond Whip": {
+          displayName: {
+            translationKey: "item:diamondWhip"
+          },
+          type: "Tool",
+          textureInfo: "diamond_whip",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 17,
+          attackRange: 8,
+          knockbackHorizontalScalar: -1.8,
+          description: {
+            translationKey: "item:whipDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Moonstone Whip": {
+          displayName: {
+            translationKey: "item:moonstoneWhip"
+          },
+          type: "Tool",
+          textureInfo: "moonstone_whip",
+          weight: 1,
+          heldItemScale: 1.1,
+          damage: 17,
+          attackRange: 8,
+          knockbackHorizontalScalar: -1.8,
+          description: {
+            translationKey: "item:whipDescription"
+          },
+          stackable: !1,
+          harvests: null,
+          multiplier: 2,
+          level: 5
+        },
+        "Beef Stew": {
+          displayName: {
+            translationKey: "item:beefStew"
+          },
+          type: "Item",
+          textureInfo: "beef_stew",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:beefStewDescription"
+          }
+        },
+        Chicken: {
+          displayName: {
+            translationKey: "item:chicken"
+          },
+          type: "Item",
+          textureInfo: "chicken",
+          heldItemGlb: "chicken",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:chickenDescription"
+          }
+        },
+        Coleslaw: {
+          displayName: {
+            translationKey: "item:coleslaw"
+          },
+          type: "Item",
+          textureInfo: "coleslaw",
+          heldItemGlb: "coleslaw",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:coleslawDescription"
+          }
+        },
+        Egg: {
+          displayName: {
+            translationKey: "item:egg"
+          },
+          type: "Item",
+          textureInfo: "egg",
+          heldItemGlb: "egg",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:eggDescription"
+          }
+        },
+        "Fish N Chips": {
+          displayName: {
+            translationKey: "item:fishNChips"
+          },
+          type: "Item",
+          textureInfo: "fish_n_chips",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:fishNChipsDescription"
+          }
+        },
+        "Fried Rice": {
+          displayName: {
+            translationKey: "item:friedRice"
+          },
+          type: "Item",
+          textureInfo: "fried_rice",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:friedRiceDescription"
+          }
+        },
+        Lettuce: {
+          displayName: {
+            translationKey: "item:lettuce"
+          },
+          type: "Item",
+          textureInfo: "lettuce",
+          heldItemGlb: "lettuce",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:lettuceDescription"
+          }
+        },
+        Omelette: {
+          displayName: {
+            translationKey: "item:omelette"
+          },
+          type: "Item",
+          textureInfo: "omelette",
+          heldItemGlb: "omelette",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:omeletteDescription"
+          }
+        },
+        Onion: {
+          displayName: {
+            translationKey: "item:onion"
+          },
+          type: "Item",
+          textureInfo: "onion",
+          heldItemGlb: "onion",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:onionDescription"
+          }
+        },
+        "Red Cabbage": {
+          displayName: {
+            translationKey: "item:redCabbage"
+          },
+          type: "Item",
+          textureInfo: "red_cabbage",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:redCabbageDescription"
+          }
+        },
+        "Roast Dinner": {
+          displayName: {
+            translationKey: "item:roastDinner"
+          },
+          type: "Item",
+          textureInfo: "roast_dinner",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:roastDinnerDescription"
+          }
+        },
+        Salad: {
+          displayName: {
+            translationKey: "item:salad"
+          },
+          type: "Item",
+          textureInfo: "salad",
+          heldItemGlb: "salad",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:saladDescription"
+          }
+        },
+        "Stuffed Pepper": {
+          displayName: {
+            translationKey: "item:stuffedPepper"
+          },
+          type: "Item",
+          textureInfo: "stuffed_pepper",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:stuffedPepperDescription"
+          }
+        },
+        Sushi: {
+          displayName: {
+            translationKey: "item:sushi"
+          },
+          type: "Item",
+          textureInfo: "sushi",
+          heldItemGlb: "sushi",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:sushiDescription"
+          }
+        },
+        Tomato: {
+          displayName: {
+            translationKey: "item:tomato"
+          },
+          type: "Item",
+          textureInfo: "tomato",
+          heldItemGlb: "tomato",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:tomatoDescription"
+          }
+        },
+        "Vegetable Soup": {
+          displayName: {
+            translationKey: "item:vegetableSoup"
+          },
+          type: "Item",
+          textureInfo: "veg_soup",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:vegetableSoupDescription"
+          }
+        },
+        "Common Lottery Ticket": {
+          displayName: [{
+            str: "Common Lottery Ticket",
+            style: {
+              color: "#4d4d4d"
+            }
+          }],
+          description: "Take it to the Lottery stall in the spawn hub to redeem it for a reward.",
+          type: "Item",
+          textureInfo: "book",
+          heldItemGlb: "Book",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Uncommon Lottery Ticket": {
+          displayName: [{
+            str: "Uncommon Lottery Ticket",
+            style: {
+              color: "#A9FF21"
+            }
+          }],
+          description: "Take it to the Lottery stall in the spawn hub to redeem it for a reward.",
+          type: "Item",
+          textureInfo: "book",
+          heldItemGlb: "Book",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Rare Lottery Ticket": {
+          displayName: [{
+            str: "Rare Lottery Ticket",
+            style: {
+              color: "#84E0FF"
+            }
+          }],
+          description: "Take it to the Lottery stall in the spawn hub to redeem it for a reward.",
+          type: "Item",
+          textureInfo: "book",
+          heldItemGlb: "Book",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Epic Lottery Ticket": {
+          displayName: [{
+            str: "Epic Lottery Ticket",
+            style: {
+              color: "#800080"
+            }
+          }],
+          description: "Take it to the Lottery stall in the spawn hub to redeem it for a reward.",
+          type: "Item",
+          textureInfo: "book",
+          heldItemGlb: "Book",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Legendary Lottery Ticket": {
+          displayName: [{
+            str: "Legendary Lottery Ticket",
+            style: {
+              color: "#ffa500"
+            }
+          }],
+          description: "Take it to the Lottery stall in the spawn hub to redeem it for a reward.",
+          type: "Item",
+          textureInfo: "book",
+          heldItemGlb: "Book",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        ...(0, nM.j)("Wood Clock", "clock_wood", {
+          displayName: {
+            translationKey: "item:woodClock"
+          },
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:clockDescription"
+          }
+        }),
+        ...(0, nM.j)("Gold Clock", "clock_gold", {
+          displayName: {
+            translationKey: "item:goldClock"
+          },
+          type: "Item",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !1,
+          description: {
+            translationKey: "item:clockDescription"
+          }
+        }),
+        "Lucky Sword Upgrade": {
+          displayName: "Sword Upgrade",
+          description: "Use to permanently advance your Sword tier for this match. Share spare upgrades with your team.",
+          type: "Item",
+          textureInfo: "lucky_sword_upgrade",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Lucky Armour Upgrade": {
+          displayName: "Armour Upgrade",
+          description: "Use to permanently advance your Armour tier for this match. Share spare upgrades with your team.",
+          type: "Item",
+          textureInfo: "lucky_armour_upgrade",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Lucky Tools Upgrade": {
+          displayName: "Tools Upgrade",
+          description: "Use to permanently advance your Pickaxe and Axe tier for this match. Share spare upgrades with your team.",
+          type: "Item",
+          textureInfo: "lucky_tools_upgrade",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Lucky Clover": {
+          displayName: "Clovers",
+          description: "Earned from lucky blocks, kills and beds. Spend them at your base's Lucky Trader and Lucky Upgrades.",
+          type: "Item",
+          textureInfo: "lucky_clover",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Void Net": {
+          displayName: "Void Wings",
+          description: "Keep one in your inventory. Falling into the void uses it up and puts you back on solid ground.",
+          type: "Item",
+          textureInfo: "void_net",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Lucky Bomb": {
+          displayName: "Lucky Bomb",
+          description: "A random lucky effect for everyone it splashes, you included. Usually good!",
+          type: "Item",
+          textureInfo: "lucky_bomb",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Unlucky Bomb": {
+          displayName: "Unlucky Bomb",
+          description: "A random unlucky effect for everyone it splashes, you included. Usually bad!",
+          type: "Item",
+          textureInfo: "unlucky_bomb",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Swap Orb": {
+          displayName: "Swap Orb",
+          description: "Throw near an enemy or mob to swap places with them.",
+          type: "Item",
+          textureInfo: "swap_orb",
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          secondaryDamage: 1
+        },
+        "Golden Lucky Clover": {
+          displayName: "Golden Clover",
+          description: "A shiny golden four-leaf clover.",
+          type: "Item",
+          textureInfo: "golden_lucky_clover",
+          weight: 0,
+          heldItemScale: 1,
+          stackable: !0
+        },
+        "Demolition Sticky Bomb Launcher": {
+          displayName: "Sticky Bomb Launcher",
+          description: "Sticks where it lands and goes off by itself.",
+          type: "Item",
+          textureInfo: "rpg",
+          heldItemGlb: "RPG",
+          weight: 1,
+          heldItemScale: 1.2,
+          stackable: !1
+        },
+        "Demolition Impact Grenade Launcher": {
+          displayName: "Impact Grenade Launcher",
+          description: "Bursts on the first thing it hits.",
+          type: "Item",
+          textureInfo: "rpg",
+          heldItemGlb: "RPG",
+          weight: 1,
+          heldItemScale: 1.2,
+          stackable: !1
+        },
+        "Demolition Sticky Charge Launcher": {
+          displayName: "Sticky Charge Launcher",
+          description: "Sticks where it lands. Set them all off with Attack.",
+          type: "Item",
+          textureInfo: "rpg",
+          heldItemGlb: "RPG",
+          weight: 1,
+          heldItemScale: 1.2,
+          stackable: !1
+        },
+        "Demolition Cluster Bomb Launcher": {
+          displayName: "Cluster Bomb Launcher",
+          description: "Splits into five bomblets.",
+          type: "Item",
+          textureInfo: "rpg",
+          heldItemGlb: "RPG",
+          weight: 1,
+          heldItemScale: 1.2,
+          stackable: !1
+        },
+        "Demolition Rocket Launcher": {
+          displayName: "Rocket Launcher",
+          description: "Flies straight and bursts on impact.",
+          type: "Item",
+          textureInfo: "rpg",
+          heldItemGlb: "RPG",
+          weight: 1,
+          heldItemScale: 1.2,
+          stackable: !1
+        }
+      };
+    for (const uM of QM.l)
+      for (const MM of uM.materials)
+        for (const rM of uM.kinds) {
+          var JM, dM, yM, lM;
+          const iM = null === (JM = uM.inheritsFrom) || void 0 === JM ? void 0 : JM.call(uM, rM),
+            SM = (0, QM.k)(MM, rM);
+          if (hM[SM]) throw new Error(`Item family "${uM.name}" would overwrite the existing item "${SM}"`);
+          const jM = {
+              displayName: null !== (dM = null === (yM = uM.displayName) || void 0 === yM ? void 0 : yM.call(uM, SM)) && void 0 !== dM ? dM : SM
+            },
+            aM = null === (lM = uM.description) || void 0 === lM ? void 0 : lM.call(uM, MM, rM);
+          if (void 0 !== aM && (jM.description = aM), !iM) {
+            if (!uM.metadata) throw new Error(`Item family "${uM.name}" declares neither inheritsFrom nor metadata`);
+            const MM = (0, OM.oe)(SM);
+            hM[SM] = {
+              ...uM.metadata(rM),
+              ...jM,
+              textureInfo: MM,
+              heldItemGlb: MM
+            };
+            continue
+          }
+          const PM = (0, QM.k)(iM.material, iM.kind);
+          if (!hM[PM]) throw new Error(`Item family "${uM.name}" inherits "${SM}" from "${PM}", which is not registered`);
+          for (const OM of QM.c) {
+            const aM = hM[`${PM}${OM}`];
+            if (!aM) continue;
+            const nM = (0, QM.f)(aM.textureInfo, iM, MM, rM),
+              zM = {
+                ...aM,
+                ...jM,
+                textureInfo: nM,
+                heldItemGlb: nM
+              };
+            aM.rootMetaDesc && (zM.rootMetaDesc = aM.rootMetaDesc.replace(PM, SM)), hM[`${SM}${OM}`] = zM
+          }
+        }
+    hM["Cracked Rubellite Pickaxe"] = {
+      ...hM["Rubellite Pickaxe"],
+      displayName: "Cracked Rubellite Pickaxe",
+      description: "Ruby calls it cracked, not beaten. A sturdy pickaxe ready for the stubborn stone in her mine.",
+      multiplier: 4.75,
+      level: 3,
+      damage: 24
+    };
+    for (const [uM, RM] of [
+        ["Goldheart Engine", "goldheartEngine"],
+        ["Deepbite Drill Tip", "deepbiteDrillTip"],
+        ["Empty Fuel Cell", "emptyFuelCell"],
+        ["Blackfire Fuel Cell", "blackfireFuelCell"]
+      ]) hM[uM] = {
+      displayName: {
+        translationKey: `item:${RM}`
+      },
+      description: {
+        translationKey: `item:${RM}Description`
+      },
+      type: "Item",
+      textureInfo: (0, OM.oe)(uM),
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0
+    };
+    for (const [uM, RM] of [
+        ["Doom Rivet", "doomRivet"],
+        ["Doom Crest", "doomCrest"]
+      ]) hM[uM] = {
+      displayName: {
+        translationKey: `item:${RM}`
+      },
+      description: {
+        translationKey: `item:${RM}Description`
+      },
+      type: "Item",
+      textureInfo: (0, OM.oe)(uM),
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    for (const [uM, RM, pM] of [
+        ["Raw Copper", "rawCopper", "raw_copper"],
+        ["Copper Bar", "copperBar", "copper_bar"],
+        ["Iron Grit", "ironGrit", "iron_grit"],
+        ["Gold Grit", "goldGrit", "gold_grit"],
+        ["Copper Grit", "copperGrit", "copper_grit"],
+        ["Charcoal", "charcoal", "charcoal"]
+      ]) hM[uM] = {
+      displayName: {
+        translationKey: `item:${RM}`
+      },
+      description: {
+        translationKey: `item:${RM}Description`
+      },
+      type: "Item",
+      textureInfo: pM,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    hM["Recall Beacon"] = {
+      displayName: {
+        translationKey: "item:recallBeacon"
+      },
+      description: {
+        translationKey: "item:recallBeaconDescription"
+      },
+      type: "Item",
+      textureInfo: "recall_beacon",
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !1,
+      showInCreativeInven: !1
+    }, hM["Iron Hammer"] = {
+      displayName: {
+        translationKey: "item:ironHammer"
+      },
+      description: {
+        translationKey: "item:ironHammerDescription"
+      },
+      type: "Tool",
+      textureInfo: "iron_hammer",
+      weight: 1,
+      heldItemScale: 1,
+      damage: 27,
+      stackable: !1,
+      harvests: "rock",
+      multiplier: 2.5,
+      level: 3,
+      showInCreativeInven: !1
+    };
+    for (const [uM, RM, pM] of [
+        ["Iron Plate", "ironPlate", "iron_plate"],
+        ["Copper Wire", "copperWire", "copper_wire"],
+        ["Motor", "motor", "motor"]
+      ]) hM[uM] = {
+      displayName: {
+        translationKey: `item:${RM}`
+      },
+      description: {
+        translationKey: `item:${RM}Description`
+      },
+      type: "Item",
+      textureInfo: pM,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    for (const [uM, RM, pM] of [
+        ["Machine Parts", "machineParts", "machine_parts"],
+        ["Relay Coil", "relayCoil", "relay_coil"],
+        ["Deposit Seed (Copper)", "depositSeedCopper", "deposit_seed_copper"],
+        ["Deposit Seed (Gold)", "depositSeedGold", "deposit_seed_gold"],
+        ["Deposit Seed (Voltite)", "depositSeedVoltite", "deposit_seed_voltite"],
+        ["Deposit Seed (Coal)", "depositSeedCoal", "deposit_seed_coal"],
+        ["Deposit Seed (Iron)", "depositSeedIron", "deposit_seed_iron"],
+        ["Deposit Seed (Stone)", "depositSeedStone", "deposit_seed_stone"]
+      ]) hM[uM] = {
+      displayName: {
+        translationKey: `item:${RM}`
+      },
+      description: {
+        translationKey: `item:${RM}Description`
+      },
+      type: "Item",
+      textureInfo: pM,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    for (const [uM, RM, pM, WM] of [
+        ["Steel Bar", "steelBar", "steel_bar", !0],
+        ["Gold Plate", "goldPlate", "gold_plate", !0],
+        ["Logic Board", "logicBoard", "logic_board", !0],
+        ["Machine Hull", "machineHull", "machine_hull", !0],
+        ["Raw Voltite", "rawVoltite", "raw_voltite", !0],
+        ["Power Coupler", "powerCoupler", "power_coupler", !1],
+        ["Ore Lens", "oreLens", "ore_lens", !1],
+        ["Homing Beacon", "homingBeacon", "homing_beacon", !1],
+        ["Pull Charm", "pullCharm", "pull_charm", !1]
+      ]) hM[uM] = {
+      displayName: {
+        translationKey: `item:${RM}`
+      },
+      description: {
+        translationKey: `item:${RM}Description`
+      },
+      type: "Item",
+      textureInfo: pM,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: WM,
+      showInCreativeInven: !1
+    };
+    hM["Vein Breaker"] = {
+      displayName: {
+        translationKey: "item:veinBreaker"
+      },
+      description: {
+        translationKey: "item:veinBreakerDescription"
+      },
+      type: "Tool",
+      textureInfo: "vein_breaker",
+      weight: 1,
+      heldItemScale: 1,
+      damage: 27,
+      stackable: !1,
+      harvests: "rock",
+      multiplier: 6,
+      level: 3,
+      showInCreativeInven: !1
+    };
+    for (const [uM, RM, pM, WM] of [
+        ["Voltite Dust", "voltiteDust", "voltite_dust", !0],
+        ["Voltite Cell", "voltiteCell", "voltite_cell", !0],
+        ["Sky Pack", "skyPack", "sky_pack", !1],
+        ["Dusk Moss", "duskMoss", "dusk_moss", !0]
+      ]) hM[uM] = {
+      displayName: {
+        translationKey: `item:${RM}`
+      },
+      description: {
+        translationKey: `item:${RM}Description`
+      },
+      type: "Item",
+      textureInfo: pM,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: WM,
+      showInCreativeInven: !1
+    };
+    for (const [uM, RM, pM] of [
+        ["Star Alloy", "starAlloy", "star_alloy"],
+        ["Moonstone Dust", "moonstoneDust", "moonstone_dust"],
+        ["Comet Shard", "cometShard", "comet_shard"],
+        ["Comet Core", "cometCore", "comet_core"]
+      ]) hM[uM] = {
+      displayName: {
+        translationKey: `item:${RM}`
+      },
+      description: {
+        translationKey: `item:${RM}Description`
+      },
+      type: "Item",
+      textureInfo: pM,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    hM["Starbore Drill"] = {
+      displayName: {
+        translationKey: "item:starboreDrill"
+      },
+      description: {
+        translationKey: "item:starboreDrillDescription"
+      },
+      type: "Tool",
+      textureInfo: "starbore_drill",
+      weight: 1,
+      heldItemScale: 1,
+      damage: 30,
+      stackable: !1,
+      harvests: "rock",
+      multiplier: 8,
+      level: 5,
+      showInCreativeInven: !1
+    };
+    for (const uM of [2, 3, 4, 5, 6, 7, 8, 9, 10]) hM[`Core Tier ${uM}`] = {
+      displayName: {
+        translationKey: `item:coreTier${uM}`
+      },
+      description: {
+        translationKey: `item:coreTier${uM}Description`
+      },
+      type: "Item",
+      textureInfo: `core_tier_${Math.min(uM,5)}`,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    hM["Arc Caster"] = {
+      displayName: {
+        translationKey: "item:arcCaster"
+      },
+      description: {
+        translationKey: "item:arcCasterDescription"
+      },
+      type: "Item",
+      textureInfo: "arc_caster",
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !1,
+      showInCreativeInven: !1
+    };
+    for (const [uM, RM] of [
+        ["Helmet", .14],
+        ["Chestplate", .25],
+        ["Gauntlets", .12],
+        ["Leggings", .2],
+        ["Boots", .11]
+      ]) hM[`Voltplate ${uM}`] = {
+      displayName: {
+        translationKey: `item:voltplate${uM}`
+      },
+      description: {
+        translationKey: `item:voltplate${uM}Description`
+      },
+      type: "Armour",
+      textureInfo: `voltplate_${uM.toLowerCase()}`,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !1,
+      armourReduction: RM,
+      showInCreativeInven: !1
+    };
+    for (const uM of LM.h)
+      for (const MM of LM.l) {
+        const rM = (0, LM.q)(uM, MM);
+        hM[rM] = {
+          displayName: {
+            translationKey: `item:${(0,OM.me)(rM)}`
+          },
+          description: {
+            translationKey: `item:sword${MM}Description`
+          },
+          type: "Item",
+          textureInfo: (0, OM.oe)(rM),
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          showInCreativeInven: !1
+        }
+      }
+    hM["Moonstone Sword"] = {
+      ...hM["Diamond Sword"],
+      displayName: {
+        translationKey: "item:moonstoneSword"
+      },
+      textureInfo: "moonstone_sword",
+      showInCreativeInven: !1
+    }, hM["Magmaward Fuel"] = {
+      displayName: {
+        translationKey: "item:magmawardFuel"
+      },
+      description: {
+        translationKey: "item:magmawardFuelDescription"
+      },
+      type: "Item",
+      textureInfo: "magmaward_fuel",
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    for (const [uM, RM, pM] of [
+        ["Raw Uranium", "rawUranium", "raw_uranium"],
+        ["Uranium Grit", "uraniumGrit", "uranium_grit"],
+        ["Uranium Pellet", "uraniumPellet", "uranium_pellet"],
+        ["Plutonium Pellet", "plutoniumPellet", "plutonium_pellet"],
+        ["Spent Pellet", "spentPellet", "spent_pellet"],
+        ["Glow Dust", "glowDust", "glow_dust"],
+        ["Biomass", "biomass", "biomass"],
+        ["Graphite", "graphite", "graphite"],
+        ["Containment Plate", "containmentPlate", "containment_plate"],
+        ["Heat Exchanger", "heatExchanger", "heat_exchanger"],
+        ["Focus Lens", "focusLens", "focus_lens"],
+        ["Nova Matter", "novaMatter", "nova_matter"],
+        ["Deposit Seed (Uranium)", "depositSeedUranium", "deposit_seed_uranium"]
+      ]) hM[uM] = {
+      displayName: {
+        translationKey: `item:${RM}`
+      },
+      description: {
+        translationKey: `item:${RM}Description`
+      },
+      type: "Item",
+      textureInfo: pM,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    for (const [uM, RM, pM] of [
+        ["Reactor Blueprint", "reactorBlueprint", "reactor_blueprint"],
+        ["Wrench", "wrench", "wrench"],
+        ["Advanced Coupler", "advancedCoupler", "advanced_coupler"],
+        ["Nova Coupler", "novaCoupler", "nova_upgrade"]
+      ]) hM[uM] = {
+      displayName: {
+        translationKey: `item:${RM}`
+      },
+      description: {
+        translationKey: `item:${RM}Description`
+      },
+      type: "Item",
+      textureInfo: pM,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !1,
+      showInCreativeInven: !1
+    };
+    for (const uM of ["Arc Caster", "Power Coupler", "Advanced Coupler", "Nova Coupler"]) hM[uM].firstPersonHeldRotationOffset = hM.Flashlight.firstPersonHeldRotationOffset, hM[uM].thirdPersonHeldRotationOffset = hM.Flashlight.thirdPersonHeldRotationOffset;
+    for (const uM of [11, 12, 13, 14, 15]) hM[`Core Tier ${uM}`] = {
+      displayName: {
+        translationKey: `item:coreTier${uM}`
+      },
+      description: {
+        translationKey: `item:coreTier${uM}Description`
+      },
+      type: "Item",
+      textureInfo: "core_tier_5",
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    for (const [uM, RM, pM, WM] of [
+        ["Jet Chestplate", "jetChestplate", "jetpack", 0],
+        ["Nova Jet Chestplate", "novaJetChestplate", "nova_jetpack", .27]
+      ]) hM[uM] = {
+      displayName: {
+        translationKey: `item:${RM}`
+      },
+      description: {
+        translationKey: `item:${RM}Description`
+      },
+      type: "Armour",
+      textureInfo: pM,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !1,
+      armourReduction: WM,
+      showInCreativeInven: !1
+    };
+    for (const [uM, RM] of [
+        ["Helmet", .15],
+        ["Chestplate", .27],
+        ["Gauntlets", .13],
+        ["Leggings", .21],
+        ["Boots", .12]
+      ]) hM[`Nova ${uM}`] = {
+      displayName: {
+        translationKey: `item:nova${uM}`
+      },
+      description: {
+        translationKey: `item:nova${uM}Description`
+      },
+      type: "Armour",
+      textureInfo: `nova_${uM.toLowerCase()}`,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !1,
+      armourReduction: RM,
+      showInCreativeInven: !1
+    };
+    hM["Nova Blade"] = {
+      displayName: {
+        translationKey: "item:novaBlade"
+      },
+      description: {
+        translationKey: "item:novaBladeDescription"
+      },
+      type: "Tool",
+      textureInfo: "nova_blade",
+      weight: 1,
+      heldItemScale: 1.1,
+      damage: 50,
+      stackable: !1,
+      harvests: null,
+      multiplier: 2,
+      level: 1,
+      showInCreativeInven: !1
+    }, hM["Mob Cage"] = {
+      displayName: {
+        translationKey: "item:mobCage"
+      },
+      description: {
+        translationKey: "item:mobCageDescription"
+      },
+      type: "Item",
+      textureInfo: "mob_cage",
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !0,
+      showInCreativeInven: !1
+    };
+    for (const uM of ["Pig", "Cow", "Sheep", "Deer", "Stag"]) hM[`Caged ${uM}`] = {
+      displayName: {
+        translationKey: `item:caged${uM}`
+      },
+      description: {
+        translationKey: "item:cagedMobDescription"
+      },
+      type: "Item",
+      textureInfo: "mob_cage_filled",
+      weight: 1,
+      heldItemScale: 1,
+      stackable: !1,
+      showInCreativeInven: !1
+    };
+    hM["Nova Multitool"] = {
+      displayName: {
+        translationKey: "item:novaMultitool"
+      },
+      description: {
+        translationKey: "item:novaMultitoolDescription"
+      },
+      type: "Tool",
+      textureInfo: "nova_multitool",
+      weight: 1,
+      heldItemScale: 1,
+      damage: 32,
+      stackable: !1,
+      harvests: "rock",
+      multiplier: 1,
+      level: 5,
+      showInCreativeInven: !1
+    }, hM["Pocket Terminal"] = {
+      displayName: {
+        translationKey: "item:pocketTerminal"
+      },
+      description: {
+        translationKey: "item:pocketTerminalDescription"
+      },
+      type: "Item",
+      textureInfo: "pocket_terminal",
+      weight: 1,
+      heldItemScale: .4,
+      stackable: !1,
+      showInCreativeInven: !1,
+      firstPersonHeldRotationOffset: [-.53, 1.67, .02],
+      thirdPersonHeldRotationOffset: [-Math.PI / 2, 0, 0]
+    };
+    for (const [uM, RM, pM, WM] of [
+        ["Comet Beacon", "cometBeacon", "comet_beacon", !0],
+        ["Nova Wrench", "novaWrench", "nova_wrench", !1]
+      ]) hM[uM] = {
+      displayName: {
+        translationKey: `item:${RM}`
+      },
+      description: {
+        translationKey: `item:${RM}Description`
+      },
+      type: "Item",
+      textureInfo: pM,
+      weight: 1,
+      heldItemScale: 1,
+      stackable: WM,
+      showInCreativeInven: !1
+    };
+
+    function EM(MM, rM) {
+      return [...MM, ...(0, QM.h)(QM.l, rM)].map((MM => wM[MM].id))
+    }
+
+    function UM(MM) {
+      return MM.split(" ")[0]
+    }
+    const GM = .0018;
+    let CM = Object.values(aM.k).reduce(((MM, rM) => Math.max(MM, rM.id)), 0) + 1;
+    for (const uM in hM) hM[uM].id = CM, hM[uM].name = uM, hM[CM] = hM[uM], (0, SM.f)(hM, hM[uM]), ++CM;
+    const eM = {};
+    for (const uM in hM) {
+      var bM;
+      const MM = hM[uM];
+      eM[uM] = null !== (bM = eM[MM.id]) && void 0 !== bM ? bM : new jM.h(MM)
+    }
+    const wM = {},
+      tM = [aM.k, eM].flatMap(Object.entries);
+    for (const [uM, RM] of tM) wM[uM] = RM, wM[RM.id] = RM;
+    for (const uM of zM.e) {
+      const MM = uM;
+      if (!wM[MM]) throw new Error(`Missing "${MM}" item for vehicle type "${uM}"`)
+    }
+    const gM = {};
+    for (const uM in hM)
+      if ("rock" === hM[uM].harvests) {
+        const MM = hM[uM].level;
+        if (void 0 !== MM && "string" === typeof uM)
+          for (let rM = 0; rM <= MM; rM++) {
+            const iM = gM[rM];
+            (void 0 === iM || MM < hM[iM].level) && (gM[rM] = uM)
+          }
+      }
+  },
+  37979: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => HM,
+      e: () => dM,
+      i: () => PM,
+      j: () => LM,
+      m: () => mM,
+      n: () => nM,
+      r: () => yM,
+      v: () => hM
+    });
+    var OM = iM(332),
+      SM = iM(620),
+      jM = iM(9839),
+      aM = iM(37981);
+
+    function PM(MM, rM) {
+      console.assert("meta|charging1" === rM.rootMetaDesc.split("|").slice(1).join("|"), "charging root item .rootMetaDesc must be |meta|charging1");
+      const iM = {
+        ...rM
+      };
+      return delete iM.rootMetaDesc, {
+        [MM]: {
+          ...rM,
+          textureInfo: rM.textureName
+        },
+        [`${MM}|meta|charging2`]: {
+          ...iM,
+          textureInfo: `${rM.textureName}_charging_2`
+        },
+        [`${MM}|meta|charging3`]: {
+          ...iM,
+          textureInfo: `${rM.textureName}_charging_3`
+        },
+        [`${MM}|meta|charging4`]: {
+          ...iM,
+          textureInfo: `${rM.textureName}_charging_4`
+        }
+      }
+    }
+
+    function nM(MM, rM) {
+      console.assert("meta|dir1" === rM.rootMetaDesc.split("|").slice(1).join("|"), "charging root item .rootMetaDesc must be |meta|dir1");
+      const iM = {
+        ...rM
+      };
+      return delete iM.rootMetaDesc, {
+        [MM]: {
+          ...rM,
+          heldItemGlb: MM,
+          textureInfo: rM.textureName
+        },
+        [`${MM}|meta|dir2`]: {
+          ...iM,
+          displayName: MM,
+          textureInfo: `${rM.textureName}_dir_2`
+        },
+        [`${MM}|meta|dir3`]: {
+          ...iM,
+          displayName: MM,
+          textureInfo: `${rM.textureName}_dir_3`
+        },
+        [`${MM}|meta|dir4`]: {
+          ...iM,
+          displayName: MM,
+          textureInfo: `${rM.textureName}_dir_4`
+        },
+        [`${MM}|meta|dir5`]: {
+          ...iM,
+          displayName: MM,
+          textureInfo: `${rM.textureName}_dir_5`
+        },
+        [`${MM}|meta|dir6`]: {
+          ...iM,
+          displayName: MM,
+          textureInfo: `${rM.textureName}_dir_6`
+        },
+        [`${MM}|meta|dir7`]: {
+          ...iM,
+          displayName: MM,
+          textureInfo: `${rM.textureName}_dir_7`
+        },
+        [`${MM}|meta|dir8`]: {
+          ...iM,
+          displayName: MM,
+          textureInfo: `${rM.textureName}_dir_8`
+        },
+        [`${MM}|meta|dir9`]: {
+          ...iM,
+          displayName: MM,
+          textureInfo: `${rM.textureName}_dir_9`
+        },
+        [`${MM}|meta|dir10`]: {
+          ...iM,
+          displayName: MM,
+          textureInfo: `${rM.textureName}_dir_10`
+        },
+        [`${MM}|meta|dir11`]: {
+          ...iM,
+          displayName: MM,
+          textureInfo: `${rM.textureName}_dir_11`
+        },
+        [`${MM}|meta|dir12`]: {
+          ...iM,
+          displayName: MM,
+          textureInfo: `${rM.textureName}_dir_12`
+        }
+      }
+    }
+    const QM = "midday",
+      zM = ["midnight", "late_night", "sunrise", "early_day", QM, "late_day", "sunset", "early_night"].filter((MM => MM !== QM));
+
+    function LM(MM, rM, iM) {
+      const OM = {
+        [MM]: {
+          ...iM,
+          heldItemGlb: `${rM}_${QM}`,
+          textureInfo: `${rM}_${QM}`
+        }
+      };
+      for (const SM of zM) OM[`${MM}|meta|${SM}`] = {
+        ...iM,
+        heldItemGlb: `${rM}_${SM}`,
+        textureInfo: `${rM}_${SM}`
+      };
+      return OM
+    }
+
+    function mM(MM, rM) {
+      const iM = {},
+        OM = (0, jM.L)(MM, rM);
+      for (const SM in OM) Object.assign(iM, PM(SM, OM[SM]));
+      return iM
+    }
+
+    function HM(MM, rM, iM) {
+      console.assert(4 === iM.length, "Must have 4 textures for bowl fill metadatas");
+      const OM = {
+        ...rM
+      };
+      delete OM.rootMetaDesc, delete OM.textureInfo, delete OM.afterEatenItem;
+      const SM = `Partially Full ${MM}`,
+        jM = `Half Full ${MM}`,
+        aM = `Nearly Full ${MM}`,
+        PM = MM;
+      return {
+        [SM]: {
+          ...rM,
+          textureInfo: iM[0],
+          afterEatenItem: "Bowl",
+          rootMetaDesc: `${SM}|meta|charging1`
+        },
+        [jM]: {
+          ...rM,
+          textureInfo: iM[1],
+          afterEatenItem: SM,
+          rootMetaDesc: `${jM}|meta|charging1`
+        },
+        [aM]: {
+          ...rM,
+          textureInfo: iM[2],
+          afterEatenItem: jM,
+          rootMetaDesc: `${aM}|meta|charging1`
+        },
+        [PM]: {
+          ...rM,
+          textureInfo: iM[3],
+          afterEatenItem: aM,
+          rootMetaDesc: `${PM}|meta|charging1`
+        }
+      }
+    }
+
+    function hM() {
+      return Object.fromEntries(SM.w.map((MM => {
+        const rM = (0, OM.me)(MM),
+          iM = (0, OM.oe)(MM);
+        return [(0, OM.Ub)(MM), {
+          displayName: {
+            translationKey: `item:${rM}SpawnOrb`
+          },
+          type: "Item",
+          textureInfo: `${iM}_spawn_orb`,
+          weight: 1,
+          heldItemScale: 1,
+          stackable: !0,
+          description: {
+            translationKey: `item:${rM}SpawnOrbDescription`,
+            params: {
+              mob: MM
+            }
+          }
+        }]
+      })))
+    }
+    const JM = {
+      Sheep: SM.q.Sheep,
+      "Cave Golem": ["corrupted"],
+      "Draugr Zombie": ["flower", "flower2", "mushroom", "vine", "vine2", "corrupted", "corrupted2"],
+      "Draugr Huntress": ["chainmail"],
+      "Frost Wraith": ["tattered", "frostKing", "accursed"]
+    };
+
+    function dM() {
+      return Object.fromEntries(SM.p.flatMap((MM => {
+        const rM = (0, OM.oe)(MM);
+        return SM.q[MM].map((iM => {
+          var SM;
+          const jM = "default" !== iM && (null === (SM = JM[MM]) || void 0 === SM ? void 0 : SM.includes(iM)),
+            aM = jM ? {
+              heldItemGlb: (0, OM.yb)(MM, "default")
+            } : {};
+          return [(0, OM.yb)(MM, iM), {
+            type: "Item",
+            textureInfo: `caught_${rM}_${jM?"default":iM}`,
+            weight: 1,
+            heldItemScale: 1,
+            stackable: !1,
+            ...aM
+          }]
+        }))
+      })))
+    }
+
+    function yM(MM, rM) {
+      var iM;
+      const OM = {
+        type: "Gun",
+        textureInfo: MM,
+        weight: 1,
+        stackable: !1,
+        keepMetaInChest: !0,
+        ...rM,
+        ...aM.d[MM]
+      };
+      return {
+        [MM]: OM,
+        [`${MM}|RequiresAmmo`]: {
+          ...OM,
+          displayName: MM,
+          heldItemGlb: null !== (iM = OM.heldItemGlb) && void 0 !== iM ? iM : MM
+        }
+      }
+    }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

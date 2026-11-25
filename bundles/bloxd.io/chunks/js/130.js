@@ -1,444 +1,213 @@
 export const id = 130;
-export const ids = [130];
+export const ids = [130, 151];
 export const modules = {
-  6567: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => kG
+  7120: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      loadShaderPackTextures: () => aM,
+      shaderPackTextures: () => PM
     });
-    var wG = ZG(1006),
-      SG = ZG.n(wG),
-      LG = ZG(1151),
-      yG = ZG(1067);
+    var OM = iM(5442);
+    let SM = null,
+      jM = null;
 
-    function kG(GG) {
-      let {
-        item: bG,
-        className: ZG
-      } = GG;
-      const {
-        t: wG
-      } = (0, LG.w)();
-      return null === bG.renderId || bG.previewsOutdated ? (0, yG.jsx)("div", {
-        className: SG()("ShaderPackPreviewsNotice", ZG),
-        children: (0, yG.jsx)("span", {
-          children: wG(null === bG.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
+    function aM() {
+      return jM ??= Promise.all([iM.e(84), iM.e(204)]).then((() => iM(41585))).then((MM => {
+        let {
+          FORMER_BLOCK_IMAGE_NAMES: rM,
+          textureNameToIndex: iM,
+          textureAnimationData: jM
+        } = MM;
+        return SM ??= (0, OM.j)(iM, jM, rM), SM
+      })), jM
+    }
+
+    function PM() {
+      if (null === SM) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return SM
+    }
+  },
+  5442: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => PM,
+      f: () => aM,
+      g: () => OM,
+      j: () => JM,
+      k: () => LM,
+      o: () => SM,
+      q: () => jM,
+      t: () => QM,
+      w: () => zM,
+      z: () => mM
+    });
+    const OM = 5;
+
+    function SM(MM) {
+      return MM === OM
+    }
+
+    function jM(MM) {
+      return [...MM.features]
+    }
+    const aM = 262144,
+      PM = 256,
+      nM = 256;
+
+    function QM(MM) {
+      if ("object" !== typeof MM || null === MM || Array.isArray(MM)) return "The pack has no files.";
+      const rM = [];
+      for (const [iM, OM] of Object.entries(MM)) {
+        if ("string" !== typeof OM) return `${iM} isn't text.`;
+        rM.push({
+          path: iM,
+          source: OM
         })
-      }) : null
-    }
-  },
-  6583: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => YG
-    });
-    var wG = ZG(1006),
-      SG = ZG.n(wG),
-      LG = ZG(6561),
-      yG = ZG(1151),
-      kG = ZG(6559),
-      UG = ZG(1067);
-
-    function YG(GG) {
-      let {
-        selected: bG,
-        onSelect: ZG,
-        imageUrl: wG
-      } = GG;
-      const {
-        t: YG
-      } = (0, yG.w)();
-      return (0, UG.jsx)("div", {
-        className: "ShaderPackViewPicker",
-        children: LG.F.map((GG => {
-          const LG = wG(GG);
-          return (0, UG.jsxs)("button", {
-            type: "button",
-            "aria-pressed": GG === bG,
-            className: SG()("ShaderPackViewOption", {
-              Selected: GG === bG
-            }),
-            onClick: () => {
-              ZG(GG)
-            },
-            children: [null !== LG && (0, UG.jsx)("img", {
-              src: LG,
-              alt: "",
-              loading: "lazy",
-              draggable: !1
-            }), (0, UG.jsx)("span", {
-              className: "SmallTextBold",
-              children: YG(kG.jb[GG])
-            })]
-          }, GG)
-        }))
-      })
-    }
-  },
-  6576: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => fG,
-      e: () => QG,
-      i: () => pG,
-      k: () => KG
-    });
-    var wG = ZG(51),
-      SG = ZG(6561),
-      LG = ZG(1431),
-      yG = ZG(6559),
-      kG = ZG(6580),
-      UG = ZG(1092);
-    const YG = "shaderPackListingView",
-      VG = "shaderPackListingFilterOpen";
-
-    function pG() {
-      var GG;
-      const [bG, ZG] = (0, kG.b)(YG, SG.F[0]);
-      return [null !== (GG = SG.F.find((GG => GG === bG))) && void 0 !== GG ? GG : SG.F[0], ZG]
-    }
-
-    function fG() {
-      (0, wG.useEffect)((() => () => {
-        window.location.pathname.startsWith(yG.X) || (0, yG.k)()
-      }), [])
-    }
-
-    function QG() {
-      return (0, kG.b)(VG, !1)
-    }
-
-    function KG() {
-      const {
-        userContext: GG,
-        isUserContextUpdating: bG
-      } = (0, UG.e)(), [ZG, SG] = (0, wG.useState)(null), yG = (0, wG.useRef)(new Set);
-
-      function kG(GG, bG) {
-        SG((ZG => {
-          const wG = new Set(ZG);
-          return bG ? wG.add(GG) : wG.delete(GG), wG
-        }))
       }
-      return (0, wG.useEffect)((() => {
-        if (bG) return;
-        let ZG = !1;
-        return LG.d.getFavouriteShaderPacks(GG).then((GG => {
-          ZG || SG(new Set(GG))
-        })).catch((GG => {
-          console.error("Failed to get favourite shader packs", GG), ZG || SG(new Set)
-        })), () => {
-          ZG = !0
+      return rM.sort(((MM, rM) => LM(MM.path, rM.path))),
+        function(MM) {
+          if (0 === MM.length) return "The pack has no .wgsl files.";
+          if (MM.length > PM) return `The pack has more than ${PM} .wgsl files.`;
+          const rM = new Set;
+          for (const {
+              path: iM
+            }
+            of MM) {
+            const MM = HM(iM);
+            if (null !== MM) return MM;
+            if (rM.has(iM)) return `The pack has two files at ${iM}.`;
+            rM.add(iM)
+          }
+          return mM(MM) > aM ? `The pack's .wgsl files are over ${aM/1024} KB in total.` : null
+        }(rM) ?? rM
+    }
+
+    function zM(MM) {
+      const rM = {};
+      for (const iM of MM) rM[iM.path] = iM.source;
+      return rM
+    }
+
+    function LM(MM, rM) {
+      return MM < rM ? -1 : MM > rM ? 1 : 0
+    }
+
+    function mM(MM) {
+      const rM = new TextEncoder;
+      let iM = 0;
+      for (const {
+          source: OM
         }
-      }), [GG, bG]), {
-        isFavourite: GG => null === ZG ? null : ZG.has(GG),
-        toggle: function(bG) {
-          if (null === ZG || yG.current.has(bG)) return;
-          yG.current.add(bG);
-          const wG = !ZG.has(bG);
-          kG(bG, wG), (wG ? LG.d.favouriteShaderPack(GG, bG) : LG.d.unfavouriteShaderPack(GG, bG)).catch((GG => {
-            console.error("Failed to change a favourite shader pack", GG), kG(bG, !wG)
-          })).finally((() => {
-            yG.current.delete(bG)
-          }))
-        }
+        of MM) iM += rM.encode(OM).byteLength;
+      return iM
+    }
+
+    function HM(MM) {
+      if (!MM.toLowerCase().endsWith(".wgsl")) return `${MM} isn't a .wgsl file.`;
+      if (MM.length > nM) return `A file path is over ${nM} characters.`;
+      if (MM.includes("\\") || /[\u0000-\u001f]/.test(MM)) return `${MM} isn't a valid file path.`;
+      return MM.split("/").some((MM => "" === MM || "." === MM || ".." === MM)) ? `${MM} isn't a valid file path.` : null
+    }
+    const hM = /^(.*)\[rot\[([1-4])$/;
+
+    function JM(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const OM = new Map;
+      rM.forEach(((MM, rM) => {
+        let {
+          numAnimStates: iM,
+          animStartIdx: SM
+        } = MM;
+        for (let jM = 1; jM < iM; jM++) OM.set(SM + jM - 1, rM)
+      }));
+      const SM = Object.entries(MM),
+        jM = new Map;
+      for (const [JM, dM] of SM) {
+        const MM = hM.exec(JM);
+        "1" === MM?.[2] && jM.set(MM[1], dM + 1)
       }
-    }
-  },
-  6559: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      D: () => KG,
-      G: () => JG,
-      K: () => mG,
-      N: () => VG,
-      R: () => FG,
-      S: () => hG,
-      V: () => AG,
-      W: () => PG,
-      X: () => yG,
-      Z: () => MG,
-      bb: () => UG,
-      c: () => rG,
-      eb: () => kG,
-      f: () => CG,
-      g: () => dG,
-      hb: () => lG,
-      jb: () => jG,
-      k: () => fG,
-      mb: () => zG,
-      n: () => pG,
-      q: () => vG,
-      qb: () => IG,
-      s: () => QG,
-      v: () => aG,
-      z: () => sG
-    });
-    var wG = ZG(6561),
-      SG = ZG(140),
-      LG = ZG(4575);
-    const yG = "/shader-packs",
-      kG = `${yG}/publish`;
-
-    function UG(GG) {
-      return `${yG}/${encodeURIComponent(GG)}`
-    }
-    let YG = null;
-
-    function VG(GG) {
-      YG = GG
-    }
-
-    function pG() {
-      return YG
-    }
-
-    function fG() {
-      YG = null
-    }
-
-    function QG(GG) {
-      return GG.playerHasRank("developer") || GG.playerHasRank("admin")
-    }
-    const KG = ["terrain", "water", "models", "sunShadows", "strict"],
-      hG = {
-        terrain: "shaderPackListing:filterTerrain",
-        water: "shaderPackListing:filterWater",
-        models: "shaderPackListing:filterModels",
-        sunShadows: "shaderPackListing:filterShadows",
-        strict: "shaderPackListing:filterAllGames"
-      };
-
-    function dG(GG, bG) {
-      return GG.withFeatures.includes(bG) ? "with" : GG.withoutFeatures.includes(bG) ? "without" : null
-    }
-
-    function JG(GG) {
-      return null === GG ? "with" : "with" === GG ? "without" : null
-    }
-
-    function rG(GG) {
-      return "with" === GG ? "only" : null === GG ? "include" : void 0
-    }
-
-    function zG(GG, bG) {
-      const ZG = dG(GG, bG),
-        wG = GG => GG.filter((GG => GG !== bG));
-      return {
-        withFeatures: null === ZG ? [...GG.withFeatures, bG] : wG(GG.withFeatures),
-        withoutFeatures: "with" === ZG ? [...GG.withoutFeatures, bG] : wG(GG.withoutFeatures)
-      }
-    }
-    const EG = "section",
-      oG = "sort",
-      XG = "filters",
-      uG = "q",
-      iG = "banned",
-      CG = "popular",
-      WG = "strict";
-
-    function mG(GG) {
-      var bG, ZG, SG;
-      const yG = GG.get(EG),
-        kG = (null !== (bG = GG.get(XG)) && void 0 !== bG ? bG : WG).split(","),
-        UG = GG.get(iG);
-      return {
-        section: "favourites" === yG || "mine" === yG ? yG : "explore",
-        sort: null !== (ZG = wG.z.find((bG => bG === GG.get(oG)))) && void 0 !== ZG ? ZG : CG,
-        withFeatures: KG.filter((GG => kG.includes(GG) && !kG.includes(`-${GG}`))),
-        withoutFeatures: KG.filter((GG => kG.includes(`-${GG}`))),
-        searchQuery: (null === (SG = GG.get(uG)) || void 0 === SG ? void 0 : SG.slice(0, wG.K)) || null,
-        pageNumber: (0, LG.d)(GG.get(LG.c)),
-        banned: "only" === UG ? "with" : "include" === UG ? null : "without"
-      }
-    }
-
-    function IG(GG, bG) {
-      var ZG;
-      const wG = cG(bG);
-      (0, LG.g)(GG, EG, "explore" === bG.section ? null : bG.section), (0, LG.g)(GG, oG, bG.sort === CG ? null : bG.sort), (0, LG.g)(GG, XG, wG === WG ? null : wG), (0, LG.g)(GG, uG, bG.searchQuery), (0, LG.g)(GG, iG, null !== (ZG = rG(bG.banned)) && void 0 !== ZG ? ZG : null), (0, LG.k)(GG, bG.pageNumber)
-    }
-
-    function FG(GG) {
-      const bG = new URLSearchParams;
-      return IG(bG, {
-        section: "explore",
-        sort: CG,
-        withFeatures: "strict" === GG ? [GG] : [GG, "strict"],
-        withoutFeatures: [],
-        searchQuery: null,
-        pageNumber: 1,
-        banned: "without"
-      }), `${yG}?${bG.toString()}`
-    }
-
-    function vG(GG) {
-      return cG(GG) === WG
-    }
-
-    function aG(GG) {
-      return null !== GG.searchQuery || "with" === GG.banned || cG(GG) !== WG
-    }
-
-    function cG(GG) {
-      return KG.flatMap((bG => {
-        const ZG = dG(GG, bG);
-        return "with" === ZG ? [bG] : "without" === ZG ? [`-${bG}`] : []
-      })).join(",")
-    }
-    const lG = {
-        popular: "shaderPackListing:sortPopular",
-        updated: "shaderPackListing:sortUpdated",
-        newest: "shaderPackListing:sortNewest"
-      },
-      jG = {
-        forest: "shaderPackListing:viewForest",
-        desert: "shaderPackListing:viewDesert",
-        water: "shaderPackListing:viewWater",
-        night: "shaderPackListing:viewNight",
-        cave: "shaderPackListing:viewCave"
-      };
-
-    function PG(GG) {
-      return Math.round(100 * Math.max(0, 1 - 1 / GG))
-    }
-
-    function MG(GG, bG, ZG, SG) {
-      const LG = [];
-      GG.isBanned && LG.push({
-        tone: "warning",
-        text: SG("shaderPackListing:ownerBanned"),
-        detail: null
-      });
-      const {
-        pending: yG
-      } = GG;
-      if (null === GG.brokenError || yG && !yG.error || LG.push({
-          tone: "warning",
-          text: SG("shaderPackListing:ownerBroken"),
-          detail: GG.brokenError
-        }), null !== yG && void 0 !== yG && yG.error) LG.push({
-        tone: "warning",
-        text: SG(bG ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, wG.l)(yG.error) ? null : yG.error
-      });
-      else if (yG) {
-        const GG = null === yG.renderNotBefore ? 0 : yG.renderNotBefore - ZG,
-          wG = String(Math.ceil(GG / 6e4)),
-          kG = SG(bG ? GG > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : GG > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: wG
+      const aM = MM => {
+          const rM = hM.exec(MM);
+          return rM && jM.has(rM[1]) ? {
+            root: rM[1],
+            rotation: Number(rM[2]) - 1
+          } : null
+        },
+        PM = new Set(SM.map((MM => {
+          let [rM] = MM;
+          return aM(rM)?.root ?? rM
+        }))),
+        nM = (MM, iM) => {
+          const OM = MM.replace(/_?0$/, "");
+          return (rM[iM]?.numAnimStates ?? 0) > 1 && !PM.has(OM) ? OM : MM
+        },
+        QM = new Map;
+      for (const [hM, JM] of SM) QM.set(JM, nM(aM(hM)?.root ?? hM, JM));
+      const zM = SM.reduce(((MM, rM) => {
+          let [, iM] = rM;
+          return Math.max(MM, iM + 1)
+        }), 0),
+        LM = Array.from({
+          length: zM
+        }, ((MM, rM) => ({
+          id: rM + 1,
+          rotation: 0
+        }))),
+        mM = new Map,
+        HM = new Map;
+      for (const [hM, JM] of SM) {
+        const MM = aM(hM),
+          rM = OM.get(JM);
+        if (void 0 !== rM) {
+          const iM = QM.get(rM);
+          HM.set(hM, {
+            name: hM,
+            texture: iM,
+            kind: "frame"
+          }), MM && !HM.has(MM.root) && HM.set(MM.root, {
+            name: MM.root,
+            texture: iM,
+            kind: "frame"
           });
-        LG.push({
-          tone: "info",
-          text: kG,
-          detail: null
-        })
-      }
-      return GG.listed || LG.push({
-        tone: "info",
-        text: SG("shaderPackListing:ownerUnlisted"),
-        detail: null
-      }), LG
-    }
-
-    function AG(GG) {
-      return Math.max(1, Math.round(GG / 1024))
-    }
-
-    function sG(GG, bG, ZG) {
-      return GG instanceof SG.b && GG.errorMessageForUser ? GG.errorMessageForUser : bG(ZG)
-    }
-  },
-  6580: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => LG
-    });
-    var wG = ZG(51),
-      SG = ZG(29);
-
-    function LG(GG, bG) {
-      var ZG;
-      const [LG, yG] = (0, wG.useState)(null !== (ZG = SG.h.getItem(GG)) && void 0 !== ZG ? ZG : bG);
-      return [LG, bG => {
-        SG.h.setItem(GG, bG), yG(bG)
-      }]
-    }
-  },
-  6561: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      B: () => kG,
-      C: () => yG,
-      F: () => wG,
-      G: () => fG,
-      K: () => VG,
-      O: () => EG,
-      S: () => pG,
-      T: () => YG,
-      b: () => KG,
-      c: () => dG,
-      e: () => hG,
-      h: () => QG,
-      l: () => zG,
-      n: () => XG,
-      q: () => UG,
-      u: () => SG,
-      v: () => oG,
-      z: () => LG
-    });
-    const wG = ["forest", "desert", "water", "night", "cave"];
-    const SG = {
-        full: {
-          width: 3840,
-          height: 2160
-        },
-        large: {
-          width: 1920,
-          height: 1080
-        },
-        thumb: {
-          width: 640,
-          height: 360
+          continue
         }
-      },
-      LG = ["popular", "updated", "newest"],
-      yG = 3,
-      kG = 32,
-      UG = 300;
-
-    function YG(GG, bG) {
-      return GG.slice(0, bG).replace(/[\uD800-\uDBFF]$/, "")
-    }
-    const VG = 64,
-      pG = 512,
-      fG = 18e5;
-
-    function QG(GG) {
-      const bG = GG,
-        ZG = null === bG || void 0 === bG ? void 0 : bG.files;
-      return "number" === typeof(null === bG || void 0 === bG ? void 0 : bG.apiVersion) && "string" === typeof bG.name && (null === bG.author || "string" === typeof bG.author) && (void 0 === bG.keepCircleShadows || "boolean" === typeof bG.keepCircleShadows) && "object" === typeof ZG && null !== ZG && Object.values(ZG).every((GG => "string" === typeof GG))
-    }
-    const KG = "Bloxdhub",
-      hG = "https://bloxdhub.com/shaders";
-
-    function dG(GG) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(GG)}`
-    }
-    const JG = "Screenshot generation failed.",
-      rG = "Its screenshots couldn't be generated:";
-
-    function zG(GG) {
-      var bG;
-      return GG === JG || null !== (bG = null === GG || void 0 === GG ? void 0 : GG.startsWith(rG)) && void 0 !== bG && bG
-    }
-
-    function EG(GG, bG) {
-      return `shaderPacks/${GG}/${bG}.json`
-    }
-
-    function oG(GG, bG, ZG, wG) {
-      return null === bG.renderId ? XG(GG, bG.baselineVersion, ZG, wG) : `${GG}/${function(GG,bG,ZG,wG){return`shaderPacks/${GG}/${bG}/${ZG}-${wG}.webp`}(bG.packId,bG.renderId,ZG,wG)}`
-    }
-
-    function XG(GG, bG, ZG, wG) {
-      return `${GG}/${function(GG,bG,ZG){return`shaderPacks/baseline/${GG}/${bG}-${ZG}.webp`}(bG,ZG,wG)}`
+        const iM = QM.get(JM),
+          SM = MM?.root ?? hM;
+        if (iM !== SM && HM.set(SM, {
+            name: SM,
+            texture: iM,
+            kind: "frame"
+          }), MM) {
+          const rM = jM.get(MM.root);
+          LM[JM] = {
+            id: rM,
+            rotation: MM.rotation
+          }, mM.set(iM, rM), HM.set(hM, {
+            name: hM,
+            texture: iM,
+            kind: "rotation"
+          })
+        } else mM.set(iM, JM + 1)
+      }
+      for (const hM of mM.keys()) HM.delete(hM);
+      for (const [hM, JM] of iM) {
+        const MM = mM.get(JM);
+        void 0 === MM || mM.has(hM) || (mM.set(hM, MM), HM.delete(hM))
+      }
+      return {
+        named: [...mM].sort(((MM, rM) => {
+          let [iM] = MM, [OM] = rM;
+          return iM < OM ? -1 : iM > OM ? 1 : 0
+        })).map((MM => {
+          let [rM, iM] = MM;
+          return {
+            name: rM,
+            id: iM
+          }
+        })),
+        aliases: [...HM.values()],
+        layers: LM
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

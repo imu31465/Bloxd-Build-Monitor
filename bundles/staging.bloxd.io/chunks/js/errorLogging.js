@@ -1,139 +1,139 @@
-export const id = 31;
-export const ids = [31];
+export const id = 36;
+export const ids = [36];
 export const modules = {
-  6703: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      BaseExtension: () => GZ,
-      BaseInstrumentation: () => bZ,
-      BaseTransport: () => xS,
-      CSPInstrumentation: () => CS,
-      ConsoleInstrumentation: () => aZ,
-      ConsoleTransport: () => wL,
-      EVENT_CLICK: () => zb,
-      EVENT_NAVIGATION: () => Eb,
-      EVENT_ROUTE_CHANGE: () => Wb,
-      EVENT_SESSION_EXTEND: () => ib,
-      EVENT_SESSION_RESUME: () => ub,
-      EVENT_SESSION_START: () => Xb,
-      EVENT_VIEW_CHANGED: () => ob,
-      ErrorsInstrumentation: () => lZ,
-      FetchTransport: () => oL,
-      InternalLoggerLevel: () => Rb,
-      LogLevel: () => zZ,
-      MAX_SESSION_PERSISTENCE_TIME: () => UG,
-      NavigationInstrumentation: () => nS,
-      Observable: () => rZ,
-      PerformanceInstrumentation: () => tw,
-      PersistentSessionsManager: () => Mb,
-      SESSION_EXPIRATION_TIME: () => LG,
-      SESSION_INACTIVITY_TIME: () => yG,
-      STORAGE_KEY: () => SG,
-      SessionInstrumentation: () => wZ,
-      TransportItemType: () => BS,
-      UserActionInstrumentation: () => iS,
-      UserActionState: () => hS,
-      VERSION: () => ZZ,
-      ViewInstrumentation: () => PZ,
-      VolatileSessionsManager: () => Ab,
-      WebVitalsInstrumentation: () => lw,
-      allLogLevels: () => oZ,
-      browserMeta: () => tS,
-      buildStackFrame: () => SZ,
-      captureMetas: () => ML,
-      createInternalLogger: () => WL,
-      createPromiseBuffer: () => QL,
-      createSession: () => NS,
-      deepEqual: () => rb,
-      defaultEventDomain: () => wG,
-      defaultExceptionType: () => CZ,
-      defaultGlobalObjectKey: () => mL,
-      defaultInternalLoggerLevel: () => Hb,
-      defaultLogLevel: () => EZ,
-      faro: () => hG,
-      genShortID: () => Jb,
-      getCurrentTimestamp: () => Kb,
-      getDataFromSafariExtensions: () => fZ,
-      getIgnoreUrls: () => tG,
-      getInternalFaroFromGlobalObject: () => fG,
-      getStackFramesFromError: () => KZ,
-      getTransportBody: () => ZL,
-      getUrlFromResource: () => NG,
-      getWebInstrumentations: () => gS,
-      globalObject: () => VG,
-      initializeFaro: () => xL,
-      internalGlobalObjectKey: () => pG,
-      isArray: () => FG,
-      isBoolean: () => CG,
-      isDomError: () => sG,
-      isDomException: () => qG,
-      isElement: () => gG,
-      isElementDefined: () => nG,
-      wK: () => HG,
-      isError: () => MG,
-      isErrorDefined: () => PG,
-      isErrorEvent: () => AG,
-      isEvent: () => jG,
-      isEventDefined: () => lG,
-      isFunction: () => IG,
-      isInstanceOf: () => zG,
-      isInt: () => iG,
-      isInternalFaroOnGlobalObject: () => KG,
-      isMap: () => RG,
-      isMapDefined: () => eG,
-      isNull: () => oG,
-      isNumber: () => uG,
-      isObject: () => mG,
-      isPrimitive: () => cG,
-      isRegExp: () => vG,
-      isString: () => XG,
-      isSymbol: () => WG,
-      isSyntheticEvent: () => TG,
-      isThenable: () => aG,
-      isToString: () => rG,
-      isTypeof: () => JG,
-      isUndefined: () => EG,
-      makeCoreConfig: () => vL,
-      noop: () => eb,
-      osMeta: () => DS,
-      parseStacktrace: () => hZ,
-      sdkMeta: () => OS,
-      setInternalFaroOnGlobalObject: () => QG,
-      transportItemTypeToBodyKey: () => GL,
-      unknownString: () => jZ,
-      userActionDataAttribute: () => Dw,
-      userActionTimeoutDataAttribute: () => Nw
+  7156: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      BaseExtension: () => Mi,
+      BaseInstrumentation: () => ri,
+      BaseTransport: () => cS,
+      CSPInstrumentation: () => tS,
+      ConsoleInstrumentation: () => Di,
+      ConsoleTransport: () => Sj,
+      EVENT_CLICK: () => Er,
+      EVENT_NAVIGATION: () => Ur,
+      EVENT_ROUTE_CHANGE: () => tr,
+      EVENT_SESSION_EXTEND: () => br,
+      EVENT_SESSION_RESUME: () => er,
+      EVENT_SESSION_START: () => Cr,
+      EVENT_VIEW_CHANGED: () => Gr,
+      ErrorsInstrumentation: () => Zi,
+      FetchTransport: () => Cj,
+      InternalLoggerLevel: () => Fr,
+      LogLevel: () => Ui,
+      MAX_SESSION_PERSISTENCE_TIME: () => nM,
+      NavigationInstrumentation: () => xS,
+      Observable: () => Ei,
+      PerformanceInstrumentation: () => KO,
+      PersistentSessionsManager: () => or,
+      SESSION_EXPIRATION_TIME: () => jM,
+      SESSION_INACTIVITY_TIME: () => aM,
+      STORAGE_KEY: () => SM,
+      SessionInstrumentation: () => Oi,
+      TransportItemType: () => Mj,
+      UserActionInstrumentation: () => wS,
+      UserActionState: () => dS,
+      VERSION: () => ii,
+      ViewInstrumentation: () => fi,
+      VolatileSessionsManager: () => fr,
+      WebVitalsInstrumentation: () => kO,
+      allLogLevels: () => Ci,
+      browserMeta: () => KS,
+      buildStackFrame: () => Si,
+      captureMetas: () => fj,
+      createInternalLogger: () => gj,
+      createPromiseBuffer: () => hj,
+      createSession: () => TS,
+      deepEqual: () => lr,
+      defaultEventDomain: () => OM,
+      defaultExceptionType: () => ti,
+      defaultGlobalObjectKey: () => uj,
+      defaultInternalLoggerLevel: () => Xr,
+      defaultLogLevel: () => Gi,
+      faro: () => JM,
+      genShortID: () => yr,
+      getCurrentTimestamp: () => hr,
+      getDataFromSafariExtensions: () => mi,
+      getIgnoreUrls: () => IM,
+      getInternalFaroFromGlobalObject: () => mM,
+      getStackFramesFromError: () => Ji,
+      getTransportBody: () => Oj,
+      getUrlFromResource: () => qM,
+      getWebInstrumentations: () => vS,
+      globalObject: () => zM,
+      initializeFaro: () => cj,
+      internalGlobalObjectKey: () => LM,
+      isArray: () => RM,
+      isBoolean: () => wM,
+      isDomError: () => YM,
+      isDomException: () => NM,
+      isElement: () => xM,
+      isElementDefined: () => AM,
+      dL: () => XM,
+      isError: () => oM,
+      isErrorDefined: () => ZM,
+      isErrorEvent: () => fM,
+      isEvent: () => kM,
+      isEventDefined: () => DM,
+      isFunction: () => uM,
+      isInstanceOf: () => EM,
+      isInt: () => bM,
+      isInternalFaroOnGlobalObject: () => hM,
+      isMap: () => FM,
+      isMapDefined: () => vM,
+      isNull: () => GM,
+      isNumber: () => eM,
+      isObject: () => gM,
+      isPrimitive: () => sM,
+      isRegExp: () => pM,
+      isString: () => CM,
+      isSymbol: () => tM,
+      isSyntheticEvent: () => BM,
+      isThenable: () => WM,
+      isToString: () => lM,
+      isTypeof: () => yM,
+      isUndefined: () => UM,
+      makeCoreConfig: () => Wj,
+      noop: () => vr,
+      osMeta: () => qS,
+      parseStacktrace: () => di,
+      sdkMeta: () => VS,
+      setInternalFaroOnGlobalObject: () => HM,
+      transportItemTypeToBodyKey: () => rj,
+      unknownString: () => oi,
+      userActionDataAttribute: () => qO,
+      userActionTimeoutDataAttribute: () => TO
     });
-    const wG = "browser",
-      SG = "com.grafana.faro.session",
-      LG = 144e5,
-      yG = 9e5,
-      kG = 1e3,
-      UG = yG,
-      YG = {
+    const OM = "browser",
+      SM = "com.grafana.faro.session",
+      jM = 144e5,
+      aM = 9e5,
+      PM = 1e3,
+      nM = aM,
+      QM = {
         enabled: !0,
         persistent: !1,
-        maxSessionPersistenceTime: UG
+        maxSessionPersistenceTime: nM
       };
-    const VG = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof ZG.g ? ZG.g : "undefined" !== typeof self ? self : void 0;
-    const pG = "_faroInternal";
+    const zM = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof iM.g ? iM.g : "undefined" !== typeof self ? self : void 0;
+    const LM = "_faroInternal";
 
-    function fG() {
-      return VG[pG]
+    function mM() {
+      return zM[LM]
     }
 
-    function QG(GG) {
-      GG.config.isolate ? GG.internalLogger.debug("Skipping registering internal Faro instance on global object") : (GG.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(VG, pG, {
+    function HM(MM) {
+      MM.config.isolate ? MM.internalLogger.debug("Skipping registering internal Faro instance on global object") : (MM.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(zM, LM, {
         configurable: !1,
         enumerable: !1,
         writable: !1,
-        value: GG
+        value: MM
       }))
     }
 
-    function KG() {
-      return pG in VG
+    function hM() {
+      return LM in zM
     }
-    let hG = {
+    let JM = {
       api: {
         pushLog: () => {},
         pushError: () => {},
@@ -160,592 +160,592 @@ export const modules = {
       }
     };
 
-    function dG(GG, bG, ZG, wG, SG, LG, yG) {
-      return bG.debug("Initializing Faro"), hG = {
-          api: LG,
-          config: ZG,
-          instrumentations: yG,
-          internalLogger: bG,
-          metas: wG,
-          pause: SG.pause,
-          transports: SG,
-          unpatchedConsole: GG,
-          unpause: SG.unpause
-        }, QG(hG),
-        function(GG) {
-          if (GG.config.preventGlobalExposure) GG.internalLogger.debug("Skipping registering public Faro instance in the global scope");
+    function dM(MM, rM, iM, OM, SM, jM, aM) {
+      return rM.debug("Initializing Faro"), JM = {
+          api: jM,
+          config: iM,
+          instrumentations: aM,
+          internalLogger: rM,
+          metas: OM,
+          pause: SM.pause,
+          transports: SM,
+          unpatchedConsole: MM,
+          unpause: SM.unpause
+        }, HM(JM),
+        function(MM) {
+          if (MM.config.preventGlobalExposure) MM.internalLogger.debug("Skipping registering public Faro instance in the global scope");
           else {
-            if (GG.internalLogger.debug(`Registering public faro reference in the global scope using "${GG.config.globalObjectKey}" key`), GG.config.globalObjectKey in VG) return void GG.internalLogger.warn(`Skipping global registration due to key "${GG.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
-            Object.defineProperty(VG, GG.config.globalObjectKey, {
+            if (MM.internalLogger.debug(`Registering public faro reference in the global scope using "${MM.config.globalObjectKey}" key`), MM.config.globalObjectKey in zM) return void MM.internalLogger.warn(`Skipping global registration due to key "${MM.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
+            Object.defineProperty(zM, MM.config.globalObjectKey, {
               configurable: !1,
               writable: !1,
-              value: GG
+              value: MM
             })
           }
-        }(hG), hG
+        }(JM), JM
     }
 
-    function JG(GG, bG) {
-      return typeof GG === bG
+    function yM(MM, rM) {
+      return typeof MM === rM
     }
 
-    function rG(GG, bG) {
-      return Object.prototype.toString.call(GG) === `[object ${bG}]`
+    function lM(MM, rM) {
+      return Object.prototype.toString.call(MM) === `[object ${rM}]`
     }
 
-    function zG(GG, bG) {
+    function EM(MM, rM) {
       try {
-        return GG instanceof bG
-      } catch (ZG) {
+        return MM instanceof rM
+      } catch (iM) {
         return !1
       }
     }
-    const EG = GG => JG(GG, "undefined"),
-      oG = GG => JG(GG, "null"),
-      XG = GG => JG(GG, "string"),
-      uG = GG => JG(GG, "number") && !isNaN(GG) || JG(GG, "bigint"),
-      iG = GG => uG(GG) && Number.isInteger(GG),
-      CG = GG => JG(GG, "boolean"),
-      WG = GG => JG(GG, "symbol"),
-      mG = GG => !oG(GG) && JG(GG, "object"),
-      IG = GG => JG(GG, "function"),
-      FG = GG => rG(GG, "Array"),
-      vG = GG => rG(GG, "RegExp"),
-      aG = GG => IG(null === GG || void 0 === GG ? void 0 : GG.then),
-      cG = GG => !mG(GG) && !IG(GG),
-      lG = "undefined" !== typeof Event,
-      jG = GG => lG && zG(GG, Event),
-      PG = "undefined" !== typeof Error,
-      MG = GG => PG && zG(GG, Error),
-      AG = GG => rG(GG, "ErrorEvent"),
-      sG = GG => rG(GG, "DOMError"),
-      qG = GG => rG(GG, "DOMException"),
-      nG = "undefined" !== typeof Element,
-      gG = GG => nG && zG(GG, Element),
-      eG = "undefined" !== typeof Map,
-      RG = GG => eG && zG(GG, Map),
-      TG = GG => mG(GG) && "nativeEvent" in GG && "preventDefault" in GG && "stopPropagation" in GG;
+    const UM = MM => yM(MM, "undefined"),
+      GM = MM => yM(MM, "null"),
+      CM = MM => yM(MM, "string"),
+      eM = MM => yM(MM, "number") && !isNaN(MM) || yM(MM, "bigint"),
+      bM = MM => eM(MM) && Number.isInteger(MM),
+      wM = MM => yM(MM, "boolean"),
+      tM = MM => yM(MM, "symbol"),
+      gM = MM => !GM(MM) && yM(MM, "object"),
+      uM = MM => yM(MM, "function"),
+      RM = MM => lM(MM, "Array"),
+      pM = MM => lM(MM, "RegExp"),
+      WM = MM => uM(null === MM || void 0 === MM ? void 0 : MM.then),
+      sM = MM => !gM(MM) && !uM(MM),
+      DM = "undefined" !== typeof Event,
+      kM = MM => DM && EM(MM, Event),
+      ZM = "undefined" !== typeof Error,
+      oM = MM => ZM && EM(MM, Error),
+      fM = MM => lM(MM, "ErrorEvent"),
+      YM = MM => lM(MM, "DOMError"),
+      NM = MM => lM(MM, "DOMException"),
+      AM = "undefined" !== typeof Element,
+      xM = MM => AM && EM(MM, Element),
+      vM = "undefined" !== typeof Map,
+      FM = MM => vM && EM(MM, Map),
+      BM = MM => gM(MM) && "nativeEvent" in MM && "preventDefault" in MM && "stopPropagation" in MM;
 
-    function HG(GG) {
-      return null == GG || (FG(GG) || XG(GG) ? 0 === GG.length : !!mG(GG) && 0 === Object.keys(GG).length)
+    function XM(MM) {
+      return null == MM || (RM(MM) || CM(MM) ? 0 === MM.length : !!gM(MM) && 0 === Object.keys(MM).length)
     }
 
-    function tG() {
-      return hG.transports.transports.flatMap((GG => GG.getIgnoreUrls()))
+    function IM() {
+      return JM.transports.transports.flatMap((MM => MM.getIgnoreUrls()))
     }
 
-    function DG() {
-      let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      return tG().some((bG => GG && null != GG.match(bG)))
+    function KM() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      return IM().some((rM => MM && null != MM.match(rM)))
     }
 
-    function NG(GG) {
-      return XG(GG) ? GG : GG instanceof URL ? GG.href : !HG(GG) && IG(null === GG || void 0 === GG ? void 0 : GG.toString) ? GG.toString() : void 0
+    function qM(MM) {
+      return CM(MM) ? MM : MM instanceof URL ? MM.href : !XM(MM) && uM(null === MM || void 0 === MM ? void 0 : MM.toString) ? MM.toString() : void 0
     }
-    const OG = "sessionStorage",
-      xG = "localStorage";
+    const TM = "sessionStorage",
+      VM = "localStorage";
 
-    function BG(GG) {
+    function cM(MM) {
       try {
-        let bG;
-        bG = window[GG];
-        const ZG = "__faro_storage_test__";
-        return bG.setItem(ZG, ZG), bG.removeItem(ZG), !0
-      } catch (ZG) {
-        var bG;
-        return null === (bG = hG.internalLogger) || void 0 === bG || bG.info(`Web storage of type ${GG} is not available. Reason: ${ZG}`), !1
+        let rM;
+        rM = window[MM];
+        const iM = "__faro_storage_test__";
+        return rM.setItem(iM, iM), rM.removeItem(iM), !0
+      } catch (iM) {
+        var rM;
+        return null === (rM = JM.internalLogger) || void 0 === rM || rM.info(`Web storage of type ${MM} is not available. Reason: ${iM}`), !1
       }
     }
 
-    function Gb(GG, bG) {
-      return Lb(bG) ? window[bG].getItem(GG) : null
+    function Mr(MM, rM) {
+      return jr(rM) ? window[rM].getItem(MM) : null
     }
 
-    function bb(GG, bG, ZG) {
-      if (Lb(ZG)) try {
-        window[ZG].setItem(GG, bG)
-      } catch (wG) {}
+    function rr(MM, rM, iM) {
+      if (jr(iM)) try {
+        window[iM].setItem(MM, rM)
+      } catch (OM) {}
     }
 
-    function Zb(GG, bG) {
-      Lb(bG) && window[bG].removeItem(GG)
+    function ir(MM, rM) {
+      jr(rM) && window[rM].removeItem(MM)
     }
-    const wb = BG(xG),
-      Sb = BG(OG);
+    const Or = cM(VM),
+      Sr = cM(TM);
 
-    function Lb(GG) {
-      return GG === xG ? wb : GG === OG && Sb
-    }
-
-    function yb(GG) {
-      return yb = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(GG) {
-        return typeof GG
-      } : function(GG) {
-        return GG && "function" == typeof Symbol && GG.constructor === Symbol && GG !== Symbol.prototype ? "symbol" : typeof GG
-      }, yb(GG)
+    function jr(MM) {
+      return MM === VM ? Or : MM === TM && Sr
     }
 
-    function kb(GG) {
-      var bG = function(GG, bG) {
-        if ("object" != yb(GG) || !GG) return GG;
-        var ZG = GG[Symbol.toPrimitive];
-        if (void 0 !== ZG) {
-          var wG = ZG.call(GG, bG || "default");
-          if ("object" != yb(wG)) return wG;
+    function ar(MM) {
+      return ar = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(MM) {
+        return typeof MM
+      } : function(MM) {
+        return MM && "function" == typeof Symbol && MM.constructor === Symbol && MM !== Symbol.prototype ? "symbol" : typeof MM
+      }, ar(MM)
+    }
+
+    function Pr(MM) {
+      var rM = function(MM, rM) {
+        if ("object" != ar(MM) || !MM) return MM;
+        var iM = MM[Symbol.toPrimitive];
+        if (void 0 !== iM) {
+          var OM = iM.call(MM, rM || "default");
+          if ("object" != ar(OM)) return OM;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === bG ? String : Number)(GG)
-      }(GG, "string");
-      return "symbol" == yb(bG) ? bG : bG + ""
+        return ("string" === rM ? String : Number)(MM)
+      }(MM, "string");
+      return "symbol" == ar(rM) ? rM : rM + ""
     }
 
-    function Ub(GG, bG, ZG) {
-      return (bG = kb(bG)) in GG ? Object.defineProperty(GG, bG, {
-        value: ZG,
+    function nr(MM, rM, iM) {
+      return (rM = Pr(rM)) in MM ? Object.defineProperty(MM, rM, {
+        value: iM,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : GG[bG] = ZG, GG
+      }) : MM[rM] = iM, MM
     }
 
-    function Yb(GG, bG) {
-      var ZG = Object.keys(GG);
+    function Qr(MM, rM) {
+      var iM = Object.keys(MM);
       if (Object.getOwnPropertySymbols) {
-        var wG = Object.getOwnPropertySymbols(GG);
-        bG && (wG = wG.filter((function(bG) {
-          return Object.getOwnPropertyDescriptor(GG, bG).enumerable
-        }))), ZG.push.apply(ZG, wG)
+        var OM = Object.getOwnPropertySymbols(MM);
+        rM && (OM = OM.filter((function(rM) {
+          return Object.getOwnPropertyDescriptor(MM, rM).enumerable
+        }))), iM.push.apply(iM, OM)
       }
-      return ZG
+      return iM
     }
 
-    function Vb(GG) {
-      for (var bG = 1; bG < arguments.length; bG++) {
-        var ZG = null != arguments[bG] ? arguments[bG] : {};
-        bG % 2 ? Yb(Object(ZG), !0).forEach((function(bG) {
-          Ub(GG, bG, ZG[bG])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(GG, Object.getOwnPropertyDescriptors(ZG)) : Yb(Object(ZG)).forEach((function(bG) {
-          Object.defineProperty(GG, bG, Object.getOwnPropertyDescriptor(ZG, bG))
+    function zr(MM) {
+      for (var rM = 1; rM < arguments.length; rM++) {
+        var iM = null != arguments[rM] ? arguments[rM] : {};
+        rM % 2 ? Qr(Object(iM), !0).forEach((function(rM) {
+          nr(MM, rM, iM[rM])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(MM, Object.getOwnPropertyDescriptors(iM)) : Qr(Object(iM)).forEach((function(rM) {
+          Object.defineProperty(MM, rM, Object.getOwnPropertyDescriptor(iM, rM))
         }))
       }
-      return GG
+      return MM
     }
 
-    function pb() {
-      let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : hG;
-      var bG, ZG, wG;
-      const SG = GG.config.sessionTracking,
-        LG = null !== (bG = null !== (ZG = null === SG || void 0 === SG || null === (wG = SG.sampler) || void 0 === wG ? void 0 : wG.call(SG, {
-          metas: GG.metas.value
-        })) && void 0 !== ZG ? ZG : null === SG || void 0 === SG ? void 0 : SG.samplingRate) && void 0 !== bG ? bG : 1,
-        yG = "number" === typeof LG ? function(GG) {
-          return Math.min(1, Math.max(0, GG))
-        }(LG) : 0;
-      if (!(yG > 0)) return !1;
-      if (1 === yG) return !0;
+    function Lr() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : JM;
+      var rM, iM, OM;
+      const SM = MM.config.sessionTracking,
+        jM = null !== (rM = null !== (iM = null === SM || void 0 === SM || null === (OM = SM.sampler) || void 0 === OM ? void 0 : OM.call(SM, {
+          metas: MM.metas.value
+        })) && void 0 !== iM ? iM : null === SM || void 0 === SM ? void 0 : SM.samplingRate) && void 0 !== rM ? rM : 1,
+        aM = "number" === typeof jM ? function(MM) {
+          return Math.min(1, Math.max(0, MM))
+        }(jM) : 0;
+      if (!(aM > 0)) return !1;
+      if (1 === aM) return !0;
       try {
-        const GG = "undefined" !== typeof window ? window.crypto : void 0;
-        if ("function" === typeof(null === GG || void 0 === GG ? void 0 : GG.getRandomValues)) {
-          const bG = new Uint32Array(1);
-          return GG.getRandomValues(bG), bG[0] / Math.pow(2, 32) < yG
+        const MM = "undefined" !== typeof window ? window.crypto : void 0;
+        if ("function" === typeof(null === MM || void 0 === MM ? void 0 : MM.getRandomValues)) {
+          const rM = new Uint32Array(1);
+          return MM.getRandomValues(rM), rM[0] / Math.pow(2, 32) < aM
         }
-      } catch (kG) {}
-      return Math.random() < yG
+      } catch (PM) {}
+      return Math.random() < aM
     }
 
-    function fb() {
+    function mr() {
       return Date.now()
     }
 
-    function Qb() {
+    function Hr() {
       return "undefined" !== typeof performance && "function" === typeof performance.now ? performance.now() : Date.now()
     }
 
-    function Kb() {
+    function hr() {
       return (new Date).toISOString()
     }
 
-    function hb(GG) {
-      return new Date(GG).toISOString()
+    function Jr(MM) {
+      return new Date(MM).toISOString()
     }
-    const db = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
+    const dr = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
 
-    function Jb() {
-      let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      const bG = new Uint32Array(GG),
-        ZG = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
-      if (null === ZG || void 0 === ZG ? void 0 : ZG.getRandomValues) ZG.getRandomValues(bG);
+    function yr() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      const rM = new Uint32Array(MM),
+        iM = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
+      if (null === iM || void 0 === iM ? void 0 : iM.getRandomValues) iM.getRandomValues(rM);
       else
-        for (let SG = 0; SG < GG; SG++) bG[SG] = Math.floor(4294967296 * Math.random());
-      let wG = "";
-      for (let SG = 0; SG < GG; SG++) wG += db[bG[SG] % 59];
-      return wG
+        for (let SM = 0; SM < MM; SM++) rM[SM] = Math.floor(4294967296 * Math.random());
+      let OM = "";
+      for (let SM = 0; SM < MM; SM++) OM += dr[rM[SM] % 59];
+      return OM
     }
 
-    function rb(GG, bG) {
-      if (GG === bG) return !0;
-      if (JG(GG, "number") && isNaN(GG)) return JG(bG, "number") && isNaN(bG);
-      const ZG = FG(GG),
-        wG = FG(bG);
-      if (ZG !== wG) return !1;
-      if (ZG && wG) {
-        const ZG = GG.length;
-        if (ZG !== bG.length) return !1;
-        for (let wG = ZG; 0 !== wG--;)
-          if (!rb(GG[wG], bG[wG])) return !1;
+    function lr(MM, rM) {
+      if (MM === rM) return !0;
+      if (yM(MM, "number") && isNaN(MM)) return yM(rM, "number") && isNaN(rM);
+      const iM = RM(MM),
+        OM = RM(rM);
+      if (iM !== OM) return !1;
+      if (iM && OM) {
+        const iM = MM.length;
+        if (iM !== rM.length) return !1;
+        for (let OM = iM; 0 !== OM--;)
+          if (!lr(MM[OM], rM[OM])) return !1;
         return !0
       }
-      const SG = mG(GG),
-        LG = mG(bG);
-      if (SG !== LG) return !1;
-      if (GG && bG && SG && LG) {
-        const ZG = Object.keys(GG),
-          wG = Object.keys(bG);
-        if (ZG.length !== wG.length) return !1;
-        for (let GG of ZG)
-          if (!wG.includes(GG)) return !1;
-        for (let SG of ZG)
-          if (!rb(GG[SG], bG[SG])) return !1;
+      const SM = gM(MM),
+        jM = gM(rM);
+      if (SM !== jM) return !1;
+      if (MM && rM && SM && jM) {
+        const iM = Object.keys(MM),
+          OM = Object.keys(rM);
+        if (iM.length !== OM.length) return !1;
+        for (let MM of iM)
+          if (!OM.includes(MM)) return !1;
+        for (let SM of iM)
+          if (!lr(MM[SM], rM[SM])) return !1;
         return !0
       }
       return !1
     }
-    const zb = "click",
-      Eb = "navigation",
-      ob = "view_changed",
-      Xb = "session_start",
-      ub = "session_resume",
-      ib = "session_extend",
-      Cb = "service_name_override",
-      Wb = "route_change";
+    const Er = "click",
+      Ur = "navigation",
+      Gr = "view_changed",
+      Cr = "session_start",
+      er = "session_resume",
+      br = "session_extend",
+      wr = "service_name_override",
+      tr = "route_change";
 
-    function mb() {
+    function gr() {
       let {
-        sessionId: GG,
-        started: bG,
-        lastActivity: ZG,
-        isSampled: wG = !0
-      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, SG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hG;
-      var LG;
-      const yG = fb(),
-        kG = null === (LG = SG.config) || void 0 === LG || null === (LG = LG.sessionTracking) || void 0 === LG ? void 0 : LG.generateSessionId;
-      return null == GG && (GG = "function" === typeof kG ? kG() : Jb()), {
-        sessionId: GG,
-        lastActivity: null !== ZG && void 0 !== ZG ? ZG : yG,
-        started: null !== bG && void 0 !== bG ? bG : yG,
-        isSampled: wG
+        sessionId: MM,
+        started: rM,
+        lastActivity: iM,
+        isSampled: OM = !0
+      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, SM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JM;
+      var jM;
+      const aM = mr(),
+        PM = null === (jM = SM.config) || void 0 === jM || null === (jM = jM.sessionTracking) || void 0 === jM ? void 0 : jM.generateSessionId;
+      return null == MM && (MM = "function" === typeof PM ? PM() : yr()), {
+        sessionId: MM,
+        lastActivity: null !== iM && void 0 !== iM ? iM : aM,
+        started: null !== rM && void 0 !== rM ? rM : aM,
+        isSampled: OM
       }
     }
 
-    function Ib(GG) {
-      if (null == GG) return !1;
-      const bG = fb();
-      return bG - GG.started < 144e5 && bG - GG.lastActivity < yG
+    function ur(MM) {
+      if (null == MM) return !1;
+      const rM = mr();
+      return rM - MM.started < 144e5 && rM - MM.lastActivity < aM
     }
 
-    function Fb(GG) {
+    function Rr(MM) {
       let {
-        fetchUserSession: bG,
-        storeUserSession: ZG,
-        adoptSession: wG,
-        updateInterval: SG = 0
-      } = GG, kG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hG, UG = 0;
+        fetchUserSession: rM,
+        storeUserSession: iM,
+        adoptSession: OM,
+        updateInterval: SM = 0
+      } = MM, PM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JM, nM = 0;
       return function() {
         let {
-          forceSessionExtend: GG = !1,
-          refreshActivity: YG = !0
+          forceSessionExtend: MM = !1,
+          refreshActivity: QM = !0
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        var VG, pG;
-        if (!bG || !ZG) return;
-        const fG = fb();
-        if (!GG && fG < UG && UG - fG <= SG) return;
-        const QG = kG.config.sessionTracking,
-          KG = null === QG || void 0 === QG ? void 0 : QG.persistent;
-        if (KG && !wb || !KG && !Sb) return;
-        const hG = bG();
-        if (UG = Math.min(fG + SG, (null !== (VG = null === hG || void 0 === hG ? void 0 : hG.started) && void 0 !== VG ? VG : fG) + LG, (null !== (pG = null === hG || void 0 === hG ? void 0 : hG.lastActivity) && void 0 !== pG ? pG : fG) + yG), !1 === GG && Ib(hG)) {
-          var dG;
-          YG && ZG(Vb(Vb({}, hG), {}, {
-            lastActivity: fG
+        var zM, LM;
+        if (!rM || !iM) return;
+        const mM = mr();
+        if (!MM && mM < nM && nM - mM <= SM) return;
+        const HM = PM.config.sessionTracking,
+          hM = null === HM || void 0 === HM ? void 0 : HM.persistent;
+        if (hM && !Or || !hM && !Sr) return;
+        const JM = rM();
+        if (nM = Math.min(mM + SM, (null !== (zM = null === JM || void 0 === JM ? void 0 : JM.started) && void 0 !== zM ? zM : mM) + jM, (null !== (LM = null === JM || void 0 === JM ? void 0 : JM.lastActivity) && void 0 !== LM ? LM : mM) + aM), !1 === MM && ur(JM)) {
+          var dM;
+          QM && iM(zr(zr({}, JM), {}, {
+            lastActivity: mM
           }));
-          const GG = null === (dG = kG.metas.value.session) || void 0 === dG ? void 0 : dG.id;
-          null != wG && null != hG.sessionMeta && hG.sessionId !== GG && wG(hG.sessionMeta)
+          const MM = null === (dM = PM.metas.value.session) || void 0 === dM ? void 0 : dM.id;
+          null != OM && null != JM.sessionMeta && JM.sessionId !== MM && OM(JM.sessionMeta)
         } else {
-          var JG, rG, zG;
-          let GG = ab(mb({
-            isSampled: pb(kG)
-          }, kG), hG, kG);
-          UG = fG + SG, ZG(GG), null === (JG = kG.api) || void 0 === JG || JG.setSession(GG.sessionMeta), null === QG || void 0 === QG || null === (rG = QG.onSessionChange) || void 0 === rG || rG.call(QG, null !== (zG = null === hG || void 0 === hG ? void 0 : hG.sessionMeta) && void 0 !== zG ? zG : null, GG.sessionMeta)
+          var yM, lM, EM;
+          let MM = Wr(gr({
+            isSampled: Lr(PM)
+          }, PM), JM, PM);
+          nM = mM + SM, iM(MM), null === (yM = PM.api) || void 0 === yM || yM.setSession(MM.sessionMeta), null === HM || void 0 === HM || null === (lM = HM.onSessionChange) || void 0 === lM || lM.call(HM, null !== (EM = null === JM || void 0 === JM ? void 0 : JM.sessionMeta) && void 0 !== EM ? EM : null, MM.sessionMeta)
         }
       }
     }
 
-    function vb(GG) {
-      let bG, {
-          fetchUserSession: ZG,
-          storeUserSession: wG,
-          updateInterval: SG = 0
-        } = GG,
-        LG = 0;
-      return GG => {
-        const yG = fb();
-        if (GG === bG && yG < LG && LG - yG <= SG) return;
-        bG = GG, LG = yG + SG;
-        const kG = ZG();
-        (null === kG || void 0 === kG ? void 0 : kG.sessionId) === GG && Ib(kG) && wG(Vb(Vb({}, kG), {}, {
-          lastActivity: yG
+    function pr(MM) {
+      let rM, {
+          fetchUserSession: iM,
+          storeUserSession: OM,
+          updateInterval: SM = 0
+        } = MM,
+        jM = 0;
+      return MM => {
+        const aM = mr();
+        if (MM === rM && aM < jM && jM - aM <= SM) return;
+        rM = MM, jM = aM + SM;
+        const PM = iM();
+        (null === PM || void 0 === PM ? void 0 : PM.sessionId) === MM && ur(PM) && OM(zr(zr({}, PM), {}, {
+          lastActivity: aM
         }))
       }
     }
 
-    function ab(GG, bG) {
-      let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : hG;
-      var wG, SG, LG, yG, kG, UG;
-      const YG = Vb(Vb({}, GG), {}, {
+    function Wr(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : JM;
+      var OM, SM, jM, aM, PM, nM;
+      const QM = zr(zr({}, MM), {}, {
           sessionMeta: {
-            id: GG.sessionId,
-            attributes: lb(Vb(Vb(Vb({}, null === (wG = ZG.config.sessionTracking) || void 0 === wG || null === (wG = wG.session) || void 0 === wG ? void 0 : wG.attributes), null !== (SG = null === (LG = ZG.metas.value.session) || void 0 === LG ? void 0 : LG.attributes) && void 0 !== SG ? SG : {}), {}, {
-              isSampled: GG.isSampled.toString()
+            id: MM.sessionId,
+            attributes: Dr(zr(zr(zr({}, null === (OM = iM.config.sessionTracking) || void 0 === OM || null === (OM = OM.session) || void 0 === OM ? void 0 : OM.attributes), null !== (SM = null === (jM = iM.metas.value.session) || void 0 === jM ? void 0 : jM.attributes) && void 0 !== SM ? SM : {}), {}, {
+              isSampled: MM.isSampled.toString()
             }))
           }
         }),
-        VG = null !== (yG = null === (kG = ZG.metas.value.session) || void 0 === kG ? void 0 : kG.overrides) && void 0 !== yG ? yG : null === bG || void 0 === bG || null === (UG = bG.sessionMeta) || void 0 === UG ? void 0 : UG.overrides;
-      HG(VG) || (YG.sessionMeta.overrides = VG);
-      const pG = null === bG || void 0 === bG ? void 0 : bG.sessionId;
-      return null != pG && (YG.sessionMeta.attributes.previousSession = pG), YG
+        zM = null !== (aM = null === (PM = iM.metas.value.session) || void 0 === PM ? void 0 : PM.overrides) && void 0 !== aM ? aM : null === rM || void 0 === rM || null === (nM = rM.sessionMeta) || void 0 === nM ? void 0 : nM.overrides;
+      XM(zM) || (QM.sessionMeta.overrides = zM);
+      const LM = null === rM || void 0 === rM ? void 0 : rM.sessionId;
+      return null != LM && (QM.sessionMeta.attributes.previousSession = LM), QM
     }
 
-    function cb(GG) {
+    function sr(MM) {
       let {
-        fetchUserSession: bG,
-        storeUserSession: ZG
-      } = GG, wG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hG, SG = !1;
-      return function(GG) {
-        if (SG) return;
-        const LG = GG.session,
-          yG = bG();
-        let kG = null === LG || void 0 === LG ? void 0 : LG.id;
-        const UG = null === LG || void 0 === LG ? void 0 : LG.attributes,
-          YG = null === LG || void 0 === LG ? void 0 : LG.overrides,
-          VG = null === yG || void 0 === yG ? void 0 : yG.sessionMeta,
-          pG = null === VG || void 0 === VG ? void 0 : VG.overrides,
-          fG = !!YG && !rb(YG, pG),
-          QG = !!UG && !rb(UG, null === VG || void 0 === VG ? void 0 : VG.attributes);
-        if (LG && kG !== (null === yG || void 0 === yG ? void 0 : yG.sessionId) || QG || fG) {
-          var KG, hG;
-          const GG = null != yG && kG === yG.sessionId,
-            bG = ab(GG ? yG : mb({
-              sessionId: kG,
-              isSampled: pb(wG)
-            }, wG), yG, wG),
-            LG = null === yG || void 0 === yG || null === (KG = yG.sessionMeta) || void 0 === KG || null === (KG = KG.attributes) || void 0 === KG ? void 0 : KG.previousSession;
-          GG && null != LG && LG !== bG.sessionId && (bG.sessionMeta.attributes.previousSession = LG), (null === (hG = bG.sessionMeta.attributes) || void 0 === hG ? void 0 : hG.previousSession) === bG.sessionId && delete bG.sessionMeta.attributes.previousSession, ZG(bG),
-            function(GG, bG) {
-              let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-              var SG, LG, yG;
-              if (!bG) return;
-              const kG = ZG.serviceName,
-                UG = null !== (SG = null !== (LG = wG.serviceName) && void 0 !== LG ? LG : null === (yG = GG.metas.value.app) || void 0 === yG ? void 0 : yG.name) && void 0 !== SG ? SG : "";
-              kG && kG !== UG && GG.api.pushEvent(Cb, {
-                serviceName: kG,
-                previousServiceName: UG
+        fetchUserSession: rM,
+        storeUserSession: iM
+      } = MM, OM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JM, SM = !1;
+      return function(MM) {
+        if (SM) return;
+        const jM = MM.session,
+          aM = rM();
+        let PM = null === jM || void 0 === jM ? void 0 : jM.id;
+        const nM = null === jM || void 0 === jM ? void 0 : jM.attributes,
+          QM = null === jM || void 0 === jM ? void 0 : jM.overrides,
+          zM = null === aM || void 0 === aM ? void 0 : aM.sessionMeta,
+          LM = null === zM || void 0 === zM ? void 0 : zM.overrides,
+          mM = !!QM && !lr(QM, LM),
+          HM = !!nM && !lr(nM, null === zM || void 0 === zM ? void 0 : zM.attributes);
+        if (jM && PM !== (null === aM || void 0 === aM ? void 0 : aM.sessionId) || HM || mM) {
+          var hM, JM;
+          const MM = null != aM && PM === aM.sessionId,
+            rM = Wr(MM ? aM : gr({
+              sessionId: PM,
+              isSampled: Lr(OM)
+            }, OM), aM, OM),
+            jM = null === aM || void 0 === aM || null === (hM = aM.sessionMeta) || void 0 === hM || null === (hM = hM.attributes) || void 0 === hM ? void 0 : hM.previousSession;
+          MM && null != jM && jM !== rM.sessionId && (rM.sessionMeta.attributes.previousSession = jM), (null === (JM = rM.sessionMeta.attributes) || void 0 === JM ? void 0 : JM.previousSession) === rM.sessionId && delete rM.sessionMeta.attributes.previousSession, iM(rM),
+            function(MM, rM) {
+              let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+              var SM, jM, aM;
+              if (!rM) return;
+              const PM = iM.serviceName,
+                nM = null !== (SM = null !== (jM = OM.serviceName) && void 0 !== jM ? jM : null === (aM = MM.metas.value.app) || void 0 === aM ? void 0 : aM.name) && void 0 !== SM ? SM : "";
+              PM && PM !== nM && MM.api.pushEvent(wr, {
+                serviceName: PM,
+                previousServiceName: nM
               })
-            }(wG, fG, YG, pG), SG = !0;
+            }(OM, mM, QM, LM), SM = !0;
           try {
-            wG.api.setSession(bG.sessionMeta)
+            OM.api.setSession(rM.sessionMeta)
           } finally {
-            SG = !1
+            SM = !1
           }
         }
       }
     }
 
-    function lb(GG) {
-      const bG = {};
-      for (const ZG of Object.keys(GG)) {
-        const wG = GG[ZG];
-        void 0 !== wG && (bG[ZG] = wG)
+    function Dr(MM) {
+      const rM = {};
+      for (const iM of Object.keys(MM)) {
+        const OM = MM[iM];
+        void 0 !== OM && (rM[iM] = OM)
       }
-      return bG
+      return rM
     }
 
-    function jb() {
-      let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return JSON.stringify(null !== GG && void 0 !== GG ? GG : {}, function() {
-        const GG = new WeakSet;
-        return function(bG, ZG) {
-          if (mG(ZG) && null !== ZG) {
-            if (GG.has(ZG)) return null;
-            GG.add(ZG)
+    function kr() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      return JSON.stringify(null !== MM && void 0 !== MM ? MM : {}, function() {
+        const MM = new WeakSet;
+        return function(rM, iM) {
+          if (gM(iM) && null !== iM) {
+            if (MM.has(iM)) return null;
+            MM.add(iM)
           }
-          return ZG
+          return iM
         }
       }())
     }
 
-    function Pb() {
-      let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const bG = {};
-      for (const [ZG, wG] of Object.entries(GG)) bG[ZG] = mG(wG) && null !== wG ? jb(wG) : String(wG);
-      return bG
+    function Zr() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const rM = {};
+      for (const [iM, OM] of Object.entries(MM)) rM[iM] = gM(OM) && null !== OM ? kr(OM) : String(OM);
+      return rM
     }
-    var Mb = class GG {
+    var or = class MM {
       constructor() {
-        var bG = this;
-        let ZG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : hG;
-        this.context = ZG, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = GG => {
+        var rM = this;
+        let iM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : JM;
+        this.context = iM, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = MM => {
           this.adopting = !0;
           try {
-            var bG;
-            null === (bG = this.context.api) || void 0 === bG || bG.setSession(GG)
+            var rM;
+            null === (rM = this.context.api) || void 0 === rM || rM.setSession(MM)
           } finally {
             this.adopting = !1
           }
         }, this.updateSession = function() {
           let {
-            refreshActivity: GG = !0
+            refreshActivity: MM = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return bG.updateUserSession({
-            refreshActivity: GG
+          return rM.updateUserSession({
+            refreshActivity: MM
           })
-        }, this.recordActivity = vb({
-          fetchUserSession: GG.fetchUserSession,
-          storeUserSession: GG.storeUserSession,
-          updateInterval: kG
-        }), this.updateUserSession = Fb({
-          fetchUserSession: GG.fetchUserSession,
-          storeUserSession: GG.storeUserSession,
+        }, this.recordActivity = pr({
+          fetchUserSession: MM.fetchUserSession,
+          storeUserSession: MM.storeUserSession,
+          updateInterval: PM
+        }), this.updateUserSession = Rr({
+          fetchUserSession: MM.fetchUserSession,
+          storeUserSession: MM.storeUserSession,
           adoptSession: this.adoptSession,
-          updateInterval: kG
-        }, ZG), this.init()
+          updateInterval: PM
+        }, iM), this.init()
       }
       static removeUserSession() {
-        Zb(SG, GG.storageTypeLocal)
+        ir(SM, MM.storageTypeLocal)
       }
-      static storeUserSession(bG) {
-        bb(SG, jb(bG), GG.storageTypeLocal)
+      static storeUserSession(rM) {
+        rr(SM, kr(rM), MM.storageTypeLocal)
       }
       static fetchUserSession() {
-        const bG = Gb(SG, GG.storageTypeLocal);
-        return bG ? JSON.parse(bG) : null
+        const rM = Mr(SM, MM.storageTypeLocal);
+        return rM ? JSON.parse(rM) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var GG;
+            var MM;
             this.updateSession({
               refreshActivity: !1
             });
-            const bG = null === (GG = this.context.api) || void 0 === GG || null === (GG = GG.getSession()) || void 0 === GG ? void 0 : GG.id;
-            bG && this.recordActivity(bG)
+            const rM = null === (MM = this.context.api) || void 0 === MM || null === (MM = MM.getSession()) || void 0 === MM ? void 0 : MM.id;
+            rM && this.recordActivity(rM)
           }
-        })), this.context.metas.addListener(cb({
-          fetchUserSession: GG.fetchUserSession,
-          storeUserSession: GG.storeUserSession
+        })), this.context.metas.addListener(sr({
+          fetchUserSession: MM.fetchUserSession,
+          storeUserSession: MM.storeUserSession
         }, this.context))
       }
     };
-    Mb.storageTypeLocal = xG;
-    var Ab = class GG {
+    or.storageTypeLocal = VM;
+    var fr = class MM {
       constructor() {
-        var bG = this;
-        let ZG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : hG;
-        this.context = ZG, this.isAdopting = () => !1, this.updateSession = function() {
+        var rM = this;
+        let iM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : JM;
+        this.context = iM, this.isAdopting = () => !1, this.updateSession = function() {
           let {
-            refreshActivity: GG = !0
+            refreshActivity: MM = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return bG.updateUserSession({
-            refreshActivity: GG
+          return rM.updateUserSession({
+            refreshActivity: MM
           })
-        }, this.recordActivity = vb({
-          fetchUserSession: GG.fetchUserSession,
-          storeUserSession: GG.storeUserSession,
-          updateInterval: kG
-        }), this.updateUserSession = Fb({
-          fetchUserSession: GG.fetchUserSession,
-          storeUserSession: GG.storeUserSession,
-          updateInterval: kG
-        }, ZG), this.init()
+        }, this.recordActivity = pr({
+          fetchUserSession: MM.fetchUserSession,
+          storeUserSession: MM.storeUserSession,
+          updateInterval: PM
+        }), this.updateUserSession = Rr({
+          fetchUserSession: MM.fetchUserSession,
+          storeUserSession: MM.storeUserSession,
+          updateInterval: PM
+        }, iM), this.init()
       }
       static removeUserSession() {
-        Zb(SG, GG.storageTypeSession)
+        ir(SM, MM.storageTypeSession)
       }
-      static storeUserSession(bG) {
-        bb(SG, jb(bG), GG.storageTypeSession)
+      static storeUserSession(rM) {
+        rr(SM, kr(rM), MM.storageTypeSession)
       }
       static fetchUserSession() {
-        const bG = Gb(SG, GG.storageTypeSession);
-        return bG ? JSON.parse(bG) : null
+        const rM = Mr(SM, MM.storageTypeSession);
+        return rM ? JSON.parse(rM) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var GG;
+            var MM;
             this.updateSession({
               refreshActivity: !1
             });
-            const bG = null === (GG = this.context.api) || void 0 === GG || null === (GG = GG.getSession()) || void 0 === GG ? void 0 : GG.id;
-            bG && this.recordActivity(bG)
+            const rM = null === (MM = this.context.api) || void 0 === MM || null === (MM = MM.getSession()) || void 0 === MM ? void 0 : MM.id;
+            rM && this.recordActivity(rM)
           }
-        })), this.context.metas.addListener(cb({
-          fetchUserSession: GG.fetchUserSession,
-          storeUserSession: GG.storeUserSession
+        })), this.context.metas.addListener(sr({
+          fetchUserSession: MM.fetchUserSession,
+          storeUserSession: MM.storeUserSession
         }, this.context))
       }
     };
-    Ab.storageTypeSession = OG;
-    const sb = new WeakMap;
+    fr.storageTypeSession = TM;
+    const Yr = new WeakMap;
 
-    function qb(GG) {
-      let bG = sb.get(GG);
-      if (!bG) {
-        let ZG = [],
-          wG = [];
-        bG = {
-          addSessionUpdateListener: GG => {
-            ZG.push(GG)
+    function Nr(MM) {
+      let rM = Yr.get(MM);
+      if (!rM) {
+        let iM = [],
+          OM = [];
+        rM = {
+          addSessionUpdateListener: MM => {
+            iM.push(MM)
           },
-          removeSessionUpdateListener: GG => {
-            ZG = ZG.filter((bG => bG !== GG))
+          removeSessionUpdateListener: MM => {
+            iM = iM.filter((rM => rM !== MM))
           },
-          notifySessionUpdate: GG => {
-            ZG.forEach((bG => bG(GG)))
+          notifySessionUpdate: MM => {
+            iM.forEach((rM => rM(MM)))
           },
-          shouldCapture: () => wG.every((GG => GG())),
-          addCaptureFilter: GG => {
-            wG.push(GG)
+          shouldCapture: () => OM.every((MM => MM())),
+          addCaptureFilter: MM => {
+            OM.push(MM)
           },
-          removeCaptureFilter: GG => {
-            wG = wG.filter((bG => bG !== GG))
+          removeCaptureFilter: MM => {
+            OM = OM.filter((rM => rM !== MM))
           }
-        }, sb.set(GG, bG)
+        }, Yr.set(MM, rM)
       }
-      return bG
+      return rM
     }
-    var nb = class {
-      constructor(GG, bG, ZG) {
-        this.metas = GG, this.transports = bG, this.onActivate = ZG, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = GG => {
-          var bG, ZG, wG;
-          const SG = this.pending;
-          var LG, yG;
-          if ("overrides" === GG.type) return void(this.pending = {
-            reset: null !== (LG = null === SG || void 0 === SG ? void 0 : SG.reset) && void 0 !== LG && LG,
-            inheritOverrides: null === (yG = null === SG || void 0 === SG ? void 0 : SG.inheritOverrides) || void 0 === yG || yG,
-            session: Vb(Vb({}, null === SG || void 0 === SG ? void 0 : SG.session), {}, {
-              overrides: Vb(Vb({}, null === SG || void 0 === SG ? void 0 : SG.session.overrides), GG.overrides)
+    var Ar = class {
+      constructor(MM, rM, iM) {
+        this.metas = MM, this.transports = rM, this.onActivate = iM, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = MM => {
+          var rM, iM, OM;
+          const SM = this.pending;
+          var jM, aM;
+          if ("overrides" === MM.type) return void(this.pending = {
+            reset: null !== (jM = null === SM || void 0 === SM ? void 0 : SM.reset) && void 0 !== jM && jM,
+            inheritOverrides: null === (aM = null === SM || void 0 === SM ? void 0 : SM.inheritOverrides) || void 0 === aM || aM,
+            session: zr(zr({}, null === SM || void 0 === SM ? void 0 : SM.session), {}, {
+              overrides: zr(zr({}, null === SM || void 0 === SM ? void 0 : SM.session.overrides), MM.overrides)
             })
           });
-          const kG = GG.session,
-            UG = HG(kG) || null != kG && "id" in kG && !kG.id,
-            YG = null !== (bG = null === kG || void 0 === kG ? void 0 : kG.overrides) && void 0 !== bG ? bG : null === SG || void 0 === SG ? void 0 : SG.session.overrides;
+          const PM = MM.session,
+            nM = XM(PM) || null != PM && "id" in PM && !PM.id,
+            QM = null !== (rM = null === PM || void 0 === PM ? void 0 : PM.overrides) && void 0 !== rM ? rM : null === SM || void 0 === SM ? void 0 : SM.session.overrides;
           this.pending = {
-            reset: UG || !(null === kG || void 0 === kG ? void 0 : kG.id) && null !== (ZG = null === SG || void 0 === SG ? void 0 : SG.reset) && void 0 !== ZG && ZG,
-            inheritOverrides: !(!GG.overrides && void 0 !== (null === kG || void 0 === kG ? void 0 : kG.overrides)) && (null === (wG = null === SG || void 0 === SG ? void 0 : SG.inheritOverrides) || void 0 === wG || wG),
+            reset: nM || !(null === PM || void 0 === PM ? void 0 : PM.id) && null !== (iM = null === SM || void 0 === SM ? void 0 : SM.reset) && void 0 !== iM && iM,
+            inheritOverrides: !(!MM.overrides && void 0 !== (null === PM || void 0 === PM ? void 0 : PM.overrides)) && (null === (OM = null === SM || void 0 === SM ? void 0 : SM.inheritOverrides) || void 0 === OM || OM),
             session: {
-              id: null === kG || void 0 === kG ? void 0 : kG.id,
-              attributes: (null === kG || void 0 === kG ? void 0 : kG.attributes) && Vb({}, kG.attributes),
-              overrides: GG.overrides ? Vb(Vb({}, null === SG || void 0 === SG ? void 0 : SG.session.overrides), GG.overrides) : YG && Vb({}, YG)
+              id: null === PM || void 0 === PM ? void 0 : PM.id,
+              attributes: (null === PM || void 0 === PM ? void 0 : PM.attributes) && zr({}, PM.attributes),
+              overrides: MM.overrides ? zr(zr({}, null === SM || void 0 === SM ? void 0 : SM.session.overrides), MM.overrides) : QM && zr({}, QM)
             }
           }
         }, this.activate = () => {
@@ -753,553 +753,553 @@ export const modules = {
         }
       }
       initialize() {
-        var GG, bG;
-        this.waiting = !0, qb(this.metas).addSessionUpdateListener(this.recordUpdate), qb(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (GG = (bG = this.metas).addCaptureListener) || void 0 === GG || GG.call(bG, this.activate), this.activate()
+        var MM, rM;
+        this.waiting = !0, Nr(this.metas).addSessionUpdateListener(this.recordUpdate), Nr(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (MM = (rM = this.metas).addCaptureListener) || void 0 === MM || MM.call(rM, this.activate), this.activate()
       }
       destroy() {
-        var GG, bG;
-        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), qb(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (GG = (bG = this.metas).removeCaptureListener) || void 0 === GG || GG.call(bG, this.activate), qb(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
+        var MM, rM;
+        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), Nr(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (MM = (rM = this.metas).removeCaptureListener) || void 0 === MM || MM.call(rM, this.activate), Nr(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
       }
     };
 
-    function gb(GG) {
-      return (null === GG || void 0 === GG ? void 0 : GG.persistent) ? Mb : Ab
+    function xr(MM) {
+      return (null === MM || void 0 === MM ? void 0 : MM.persistent) ? or : fr
     }
 
-    function eb() {}
-    let Rb = function(GG) {
-      return GG[GG.OFF = 0] = "OFF", GG[GG.ERROR = 1] = "ERROR", GG[GG.WARN = 2] = "WARN", GG[GG.INFO = 3] = "INFO", GG[GG.VERBOSE = 4] = "VERBOSE", GG
+    function vr() {}
+    let Fr = function(MM) {
+      return MM[MM.OFF = 0] = "OFF", MM[MM.ERROR = 1] = "ERROR", MM[MM.WARN = 2] = "WARN", MM[MM.INFO = 3] = "INFO", MM[MM.VERBOSE = 4] = "VERBOSE", MM
     }({});
-    const Tb = {
-        debug: eb,
-        error: eb,
-        info: eb,
+    const Br = {
+        debug: vr,
+        error: vr,
+        info: vr,
         prefix: "Faro",
-        warn: eb
+        warn: vr
       },
-      Hb = 1;
+      Xr = 1;
 
-    function tb(GG) {
-      return tb = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(GG) {
-        return typeof GG
-      } : function(GG) {
-        return GG && "function" == typeof Symbol && GG.constructor === Symbol && GG !== Symbol.prototype ? "symbol" : typeof GG
-      }, tb(GG)
+    function Ir(MM) {
+      return Ir = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(MM) {
+        return typeof MM
+      } : function(MM) {
+        return MM && "function" == typeof Symbol && MM.constructor === Symbol && MM !== Symbol.prototype ? "symbol" : typeof MM
+      }, Ir(MM)
     }
 
-    function Db(GG) {
-      var bG = function(GG, bG) {
-        if ("object" != tb(GG) || !GG) return GG;
-        var ZG = GG[Symbol.toPrimitive];
-        if (void 0 !== ZG) {
-          var wG = ZG.call(GG, bG || "default");
-          if ("object" != tb(wG)) return wG;
+    function Kr(MM) {
+      var rM = function(MM, rM) {
+        if ("object" != Ir(MM) || !MM) return MM;
+        var iM = MM[Symbol.toPrimitive];
+        if (void 0 !== iM) {
+          var OM = iM.call(MM, rM || "default");
+          if ("object" != Ir(OM)) return OM;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === bG ? String : Number)(GG)
-      }(GG, "string");
-      return "symbol" == tb(bG) ? bG : bG + ""
+        return ("string" === rM ? String : Number)(MM)
+      }(MM, "string");
+      return "symbol" == Ir(rM) ? rM : rM + ""
     }
 
-    function Nb(GG, bG, ZG) {
-      return (bG = Db(bG)) in GG ? Object.defineProperty(GG, bG, {
-        value: ZG,
+    function qr(MM, rM, iM) {
+      return (rM = Kr(rM)) in MM ? Object.defineProperty(MM, rM, {
+        value: iM,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : GG[bG] = ZG, GG
+      }) : MM[rM] = iM, MM
     }
 
-    function Ob(GG, bG) {
-      var ZG = Object.keys(GG);
+    function Tr(MM, rM) {
+      var iM = Object.keys(MM);
       if (Object.getOwnPropertySymbols) {
-        var wG = Object.getOwnPropertySymbols(GG);
-        bG && (wG = wG.filter((function(bG) {
-          return Object.getOwnPropertyDescriptor(GG, bG).enumerable
-        }))), ZG.push.apply(ZG, wG)
+        var OM = Object.getOwnPropertySymbols(MM);
+        rM && (OM = OM.filter((function(rM) {
+          return Object.getOwnPropertyDescriptor(MM, rM).enumerable
+        }))), iM.push.apply(iM, OM)
       }
-      return ZG
+      return iM
     }
 
-    function xb(GG) {
-      for (var bG = 1; bG < arguments.length; bG++) {
-        var ZG = null != arguments[bG] ? arguments[bG] : {};
-        bG % 2 ? Ob(Object(ZG), !0).forEach((function(bG) {
-          Nb(GG, bG, ZG[bG])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(GG, Object.getOwnPropertyDescriptors(ZG)) : Ob(Object(ZG)).forEach((function(bG) {
-          Object.defineProperty(GG, bG, Object.getOwnPropertyDescriptor(ZG, bG))
+    function Vr(MM) {
+      for (var rM = 1; rM < arguments.length; rM++) {
+        var iM = null != arguments[rM] ? arguments[rM] : {};
+        rM % 2 ? Tr(Object(iM), !0).forEach((function(rM) {
+          qr(MM, rM, iM[rM])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(MM, Object.getOwnPropertyDescriptors(iM)) : Tr(Object(iM)).forEach((function(rM) {
+          Object.defineProperty(MM, rM, Object.getOwnPropertyDescriptor(iM, rM))
         }))
       }
-      return GG
+      return MM
     }
-    const Bb = xb({}, console);
-    var GZ = class {
+    const cr = Vr({}, console);
+    var Mi = class {
         constructor() {
-          this.unpatchedConsole = Bb, this.internalLogger = Tb, this.config = {}, this.metas = {}
+          this.unpatchedConsole = cr, this.internalLogger = Br, this.config = {}, this.metas = {}
         }
         logDebug() {
-          for (var GG = arguments.length, bG = new Array(GG), ZG = 0; ZG < GG; ZG++) bG[ZG] = arguments[ZG];
-          this.internalLogger.debug(`${this.name}\n`, ...bG)
+          for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
+          this.internalLogger.debug(`${this.name}\n`, ...rM)
         }
         logInfo() {
-          for (var GG = arguments.length, bG = new Array(GG), ZG = 0; ZG < GG; ZG++) bG[ZG] = arguments[ZG];
-          this.internalLogger.info(`${this.name}\n`, ...bG)
+          for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
+          this.internalLogger.info(`${this.name}\n`, ...rM)
         }
         logWarn() {
-          for (var GG = arguments.length, bG = new Array(GG), ZG = 0; ZG < GG; ZG++) bG[ZG] = arguments[ZG];
-          this.internalLogger.warn(`${this.name}\n`, ...bG)
+          for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
+          this.internalLogger.warn(`${this.name}\n`, ...rM)
         }
         logError() {
-          for (var GG = arguments.length, bG = new Array(GG), ZG = 0; ZG < GG; ZG++) bG[ZG] = arguments[ZG];
-          this.internalLogger.error(`${this.name}\n`, ...bG)
+          for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
+          this.internalLogger.error(`${this.name}\n`, ...rM)
         }
       },
-      bZ = class extends GZ {
+      ri = class extends Mi {
         constructor() {
           super(...arguments), this.api = {}, this.transports = {}
         }
       };
-    const ZZ = "2.12.1";
-    var wZ = class extends bZ {
+    const ii = "2.12.1";
+    var Oi = class extends ri {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = ZZ, this.isAdoptingSession = () => !1
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = ii, this.isAdoptingSession = () => !1
       }
-      sendSessionStartEvent(GG) {
-        var bG;
-        const ZG = GG.session;
-        if (ZG && ZG.id !== (null === (bG = this.notifiedSession) || void 0 === bG ? void 0 : bG.id)) {
-          var wG;
-          if (this.isAdoptingSession()) return void(this.notifiedSession = ZG);
-          if (this.notifiedSession && this.notifiedSession.id === (null === (wG = ZG.attributes) || void 0 === wG ? void 0 : wG.previousSession)) return this.api.pushEvent(ib, {}, void 0, {
+      sendSessionStartEvent(MM) {
+        var rM;
+        const iM = MM.session;
+        if (iM && iM.id !== (null === (rM = this.notifiedSession) || void 0 === rM ? void 0 : rM.id)) {
+          var OM;
+          if (this.isAdoptingSession()) return void(this.notifiedSession = iM);
+          if (this.notifiedSession && this.notifiedSession.id === (null === (OM = iM.attributes) || void 0 === OM ? void 0 : OM.previousSession)) return this.api.pushEvent(br, {}, void 0, {
             skipDedupe: !0
-          }), void(this.notifiedSession = ZG);
-          this.notifiedSession = ZG, this.api.pushEvent(Xb, {}, void 0, {
+          }), void(this.notifiedSession = iM);
+          this.notifiedSession = iM, this.api.pushEvent(Cr, {}, void 0, {
             skipDedupe: !0
           })
         }
       }
-      createInitialSession(GG, bG, ZG) {
-        const wG = null === ZG || void 0 === ZG ? void 0 : ZG.session;
-        let SG, LG, yG = GG.fetchUserSession();
-        if (bG.persistent && bG.maxSessionPersistenceTime && yG) {
-          const GG = fb();
-          yG.lastActivity < GG - bG.maxSessionPersistenceTime && (Mb.removeUserSession(), yG = null)
+      createInitialSession(MM, rM, iM) {
+        const OM = null === iM || void 0 === iM ? void 0 : iM.session;
+        let SM, jM, aM = MM.fetchUserSession();
+        if (rM.persistent && rM.maxSessionPersistenceTime && aM) {
+          const MM = mr();
+          aM.lastActivity < MM - rM.maxSessionPersistenceTime && (or.removeUserSession(), aM = null)
         }
-        const kG = Ib(yG);
-        if ((null === ZG || void 0 === ZG ? void 0 : ZG.reset) || !kG || (null === wG || void 0 === wG ? void 0 : wG.id) && wG.id !== (null === yG || void 0 === yG ? void 0 : yG.sessionId)) {
-          var UG, YG, VG, pG, fG, QG;
-          LG = mb({
-            sessionId: (null === ZG || void 0 === ZG ? void 0 : ZG.reset) ? void 0 : null !== (UG = null === wG || void 0 === wG ? void 0 : wG.id) && void 0 !== UG ? UG : null === (YG = bG.session) || void 0 === YG ? void 0 : YG.id,
-            isSampled: pb(this)
+        const PM = ur(aM);
+        if ((null === iM || void 0 === iM ? void 0 : iM.reset) || !PM || (null === OM || void 0 === OM ? void 0 : OM.id) && OM.id !== (null === aM || void 0 === aM ? void 0 : aM.sessionId)) {
+          var nM, QM, zM, LM, mM, HM;
+          jM = gr({
+            sessionId: (null === iM || void 0 === iM ? void 0 : iM.reset) ? void 0 : null !== (nM = null === OM || void 0 === OM ? void 0 : OM.id) && void 0 !== nM ? nM : null === (QM = rM.session) || void 0 === QM ? void 0 : QM.id,
+            isSampled: Lr(this)
           }, this);
-          const GG = LG.sessionId,
-            KG = ZG && kG ? null === yG || void 0 === yG || null === (VG = yG.sessionMeta) || void 0 === VG ? void 0 : VG.overrides : void 0,
-            hG = KG ? Vb(Vb({}, null === (pG = bG.session) || void 0 === pG ? void 0 : pG.overrides), KG) : null === (fG = bG.session) || void 0 === fG ? void 0 : fG.overrides;
-          LG.sessionMeta = Vb({
-            id: GG,
-            attributes: Vb({
-              isSampled: LG.isSampled.toString()
-            }, null === (QG = bG.session) || void 0 === QG ? void 0 : QG.attributes)
-          }, hG ? {
-            overrides: hG
-          } : {}), SG = Xb
+          const MM = jM.sessionId,
+            hM = iM && PM ? null === aM || void 0 === aM || null === (zM = aM.sessionMeta) || void 0 === zM ? void 0 : zM.overrides : void 0,
+            JM = hM ? zr(zr({}, null === (LM = rM.session) || void 0 === LM ? void 0 : LM.overrides), hM) : null === (mM = rM.session) || void 0 === mM ? void 0 : mM.overrides;
+          jM.sessionMeta = zr({
+            id: MM,
+            attributes: zr({
+              isSampled: jM.isSampled.toString()
+            }, null === (HM = rM.session) || void 0 === HM ? void 0 : HM.attributes)
+          }, JM ? {
+            overrides: JM
+          } : {}), SM = Cr
         } else {
-          var KG, hG;
-          const GG = null === yG || void 0 === yG ? void 0 : yG.sessionId;
-          LG = mb({
-            sessionId: GG,
-            isSampled: yG.isSampled || !1,
-            started: null === yG || void 0 === yG ? void 0 : yG.started
+          var hM, JM;
+          const MM = null === aM || void 0 === aM ? void 0 : aM.sessionId;
+          jM = gr({
+            sessionId: MM,
+            isSampled: aM.isSampled || !1,
+            started: null === aM || void 0 === aM ? void 0 : aM.started
           }, this);
-          const ZG = null === yG || void 0 === yG ? void 0 : yG.sessionMeta,
-            wG = Vb(Vb({}, null === (KG = bG.session) || void 0 === KG ? void 0 : KG.overrides), null === ZG || void 0 === ZG ? void 0 : ZG.overrides);
-          LG.sessionMeta = Vb(Vb({}, bG.session), {}, {
-            id: GG,
-            attributes: Vb(Vb(Vb({}, null === (hG = bG.session) || void 0 === hG ? void 0 : hG.attributes), null === ZG || void 0 === ZG ? void 0 : ZG.attributes), {}, {
-              isSampled: LG.isSampled.toString()
+          const iM = null === aM || void 0 === aM ? void 0 : aM.sessionMeta,
+            OM = zr(zr({}, null === (hM = rM.session) || void 0 === hM ? void 0 : hM.overrides), null === iM || void 0 === iM ? void 0 : iM.overrides);
+          jM.sessionMeta = zr(zr({}, rM.session), {}, {
+            id: MM,
+            attributes: zr(zr(zr({}, null === (JM = rM.session) || void 0 === JM ? void 0 : JM.attributes), null === iM || void 0 === iM ? void 0 : iM.attributes), {}, {
+              isSampled: jM.isSampled.toString()
             }),
-            overrides: wG
-          }), SG = ub
+            overrides: OM
+          }), SM = er
         }
-        var dG;
-        if (wG && (LG.sessionMeta = Vb(Vb({}, LG.sessionMeta), {}, {
-            attributes: Vb(Vb(Vb({}, null === (dG = LG.sessionMeta) || void 0 === dG ? void 0 : dG.attributes), wG.attributes), {}, {
-              isSampled: LG.isSampled.toString()
+        var dM;
+        if (OM && (jM.sessionMeta = zr(zr({}, jM.sessionMeta), {}, {
+            attributes: zr(zr(zr({}, null === (dM = jM.sessionMeta) || void 0 === dM ? void 0 : dM.attributes), OM.attributes), {}, {
+              isSampled: jM.isSampled.toString()
             })
-          }), wG.overrides)) {
-          const GG = (null === ZG || void 0 === ZG ? void 0 : ZG.inheritOverrides) ? Vb(Vb({}, LG.sessionMeta.overrides), wG.overrides) : wG.overrides;
-          Object.keys(GG).length > 0 ? LG.sessionMeta.overrides = GG : delete LG.sessionMeta.overrides
+          }), OM.overrides)) {
+          const MM = (null === iM || void 0 === iM ? void 0 : iM.inheritOverrides) ? zr(zr({}, jM.sessionMeta.overrides), OM.overrides) : OM.overrides;
+          Object.keys(MM).length > 0 ? jM.sessionMeta.overrides = MM : delete jM.sessionMeta.overrides
         }
         return {
-          initialSession: LG,
-          lifecycleType: SG
+          initialSession: jM,
+          lifecycleType: SM
         }
       }
-      registerBeforeSendHook(GG) {
-        var bG;
-        this.beforeSendHook = bG => {
-          var ZG, wG;
-          const SG = null === (ZG = bG.meta.session) || void 0 === ZG ? void 0 : ZG.id;
-          SG && !this.transports.isPaused() && GG(SG);
-          const LG = null === (wG = bG.meta.session) || void 0 === wG ? void 0 : wG.attributes;
-          if (LG && "true" === (null === LG || void 0 === LG ? void 0 : LG.isSampled)) {
-            var yG;
-            let GG = JSON.parse(JSON.stringify(bG));
-            const ZG = null === (yG = GG.meta.session) || void 0 === yG ? void 0 : yG.attributes;
-            var kG;
-            if (null === ZG || void 0 === ZG || delete ZG.isSampled, 0 === Object.keys(null !== ZG && void 0 !== ZG ? ZG : {}).length) null === (kG = GG.meta.session) || void 0 === kG || delete kG.attributes;
-            return GG
+      registerBeforeSendHook(MM) {
+        var rM;
+        this.beforeSendHook = rM => {
+          var iM, OM;
+          const SM = null === (iM = rM.meta.session) || void 0 === iM ? void 0 : iM.id;
+          SM && !this.transports.isPaused() && MM(SM);
+          const jM = null === (OM = rM.meta.session) || void 0 === OM ? void 0 : OM.attributes;
+          if (jM && "true" === (null === jM || void 0 === jM ? void 0 : jM.isSampled)) {
+            var aM;
+            let MM = JSON.parse(JSON.stringify(rM));
+            const iM = null === (aM = MM.meta.session) || void 0 === aM ? void 0 : aM.attributes;
+            var PM;
+            if (null === iM || void 0 === iM || delete iM.isSampled, 0 === Object.keys(null !== iM && void 0 !== iM ? iM : {}).length) null === (PM = MM.meta.session) || void 0 === PM || delete PM.attributes;
+            return MM
           }
           return null
-        }, null === (bG = this.transports) || void 0 === bG || bG.addBeforeSendHooks(this.beforeSendHook)
+        }, null === (rM = this.transports) || void 0 === rM || rM.addBeforeSendHooks(this.beforeSendHook)
       }
       initialize() {
-        var GG;
+        var MM;
         this.logDebug("init session instrumentation");
-        const bG = document.prerendering;
-        var ZG;
-        if ((null === (GG = this.config.sessionTracking) || void 0 === GG ? void 0 : GG.enabled) && (bG || this.prerenderSession)) return null !== (ZG = this.prerenderSession) && void 0 !== ZG || (this.prerenderSession = new nb(this.metas, this.transports, (GG => {
-          this.prerenderSession = void 0, this.initializeSession(GG)
+        const rM = document.prerendering;
+        var iM;
+        if ((null === (MM = this.config.sessionTracking) || void 0 === MM ? void 0 : MM.enabled) && (rM || this.prerenderSession)) return null !== (iM = this.prerenderSession) && void 0 !== iM || (this.prerenderSession = new Ar(this.metas, this.transports, (MM => {
+          this.prerenderSession = void 0, this.initializeSession(MM)
         }))), void this.prerenderSession.initialize();
         this.initializeSession()
       }
-      initializeSession(GG) {
-        const bG = this.config.sessionTracking;
-        if (null === bG || void 0 === bG ? void 0 : bG.enabled) {
-          var ZG, wG;
-          const SG = gb(bG),
-            LG = new SG(this);
-          this.isAdoptingSession = LG.isAdopting, this.registerBeforeSendHook(LG.recordActivity);
+      initializeSession(MM) {
+        const rM = this.config.sessionTracking;
+        if (null === rM || void 0 === rM ? void 0 : rM.enabled) {
+          var iM, OM;
+          const SM = xr(rM),
+            jM = new SM(this);
+          this.isAdoptingSession = jM.isAdopting, this.registerBeforeSendHook(jM.recordActivity);
           const {
-            initialSession: yG,
-            lifecycleType: kG
-          } = this.createInitialSession(SG, bG, GG);
-          SG.storeUserSession(yG);
-          const UG = yG.sessionMeta;
-          this.notifiedSession = UG, this.api.setSession(UG), this.captureListener = () => {
-            this.transports.isPaused() || LG.updateSession({
+            initialSession: aM,
+            lifecycleType: PM
+          } = this.createInitialSession(SM, rM, MM);
+          SM.storeUserSession(aM);
+          const nM = aM.sessionMeta;
+          this.notifiedSession = nM, this.api.setSession(nM), this.captureListener = () => {
+            this.transports.isPaused() || jM.updateSession({
               refreshActivity: !1
             })
-          }, null === (ZG = (wG = this.metas).addCaptureListener) || void 0 === ZG || ZG.call(wG, this.captureListener), kG === Xb && this.api.pushEvent(Xb, {}, void 0, {
+          }, null === (iM = (OM = this.metas).addCaptureListener) || void 0 === iM || iM.call(OM, this.captureListener), PM === Cr && this.api.pushEvent(Cr, {}, void 0, {
             skipDedupe: !0
-          }), kG === ub && this.api.pushEvent(ub, {}, void 0, {
+          }), PM === er && this.api.pushEvent(er, {}, void 0, {
             skipDedupe: !0
           })
         }
         this.sessionStartListener = this.sendSessionStartEvent.bind(this), this.metas.addListener(this.sessionStartListener)
       }
       destroy() {
-        var GG, bG, ZG;
-        (null === (GG = this.prerenderSession) || void 0 === GG || GG.destroy(), this.captureListener) && (null === (bG = (ZG = this.metas).removeCaptureListener) || void 0 === bG || bG.call(ZG, this.captureListener), this.captureListener = void 0);
+        var MM, rM, iM;
+        (null === (MM = this.prerenderSession) || void 0 === MM || MM.destroy(), this.captureListener) && (null === (rM = (iM = this.metas).removeCaptureListener) || void 0 === rM || rM.call(iM, this.captureListener), this.captureListener = void 0);
         this.beforeSendHook && (this.transports.removeBeforeSendHooks(this.beforeSendHook), this.beforeSendHook = void 0), this.sessionStartListener && (this.metas.removeListener(this.sessionStartListener), this.sessionStartListener = void 0)
       }
     };
 
-    function SZ(GG, bG, ZG, wG) {
-      const SG = {
-        filename: GG || document.location.href,
-        function: bG || "?"
+    function Si(MM, rM, iM, OM) {
+      const SM = {
+        filename: MM || document.location.href,
+        function: rM || "?"
       };
-      return void 0 !== ZG && (SG.lineno = ZG), void 0 !== wG && (SG.colno = wG), SG
+      return void 0 !== iM && (SM.lineno = iM), void 0 !== OM && (SM.colno = OM), SM
     }
-    const LZ = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
-      yZ = /\((\S*)(?::(\d+))(?::(\d+))\)/,
-      kZ = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
-      UZ = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
-      YZ = "safari-extension",
-      VZ = "safari-web-extension",
-      pZ = /Minified React error #\d+;/i;
+    const ji = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
+      ai = /\((\S*)(?::(\d+))(?::(\d+))\)/,
+      Pi = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
+      ni = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
+      Qi = "safari-extension",
+      zi = "safari-web-extension",
+      Li = /Minified React error #\d+;/i;
 
-    function fZ(GG, bG) {
-      const ZG = null === GG || void 0 === GG ? void 0 : GG.includes(YZ),
-        wG = !ZG && (null === GG || void 0 === GG ? void 0 : GG.includes("safari-web-extension"));
-      return ZG || wG ? [(null === GG || void 0 === GG ? void 0 : GG.includes("@")) ? GG.split("@")[0] : GG, ZG ? `${YZ}:${bG}` : `${VZ}:${bG}`] : [GG, bG]
+    function mi(MM, rM) {
+      const iM = null === MM || void 0 === MM ? void 0 : MM.includes(Qi),
+        OM = !iM && (null === MM || void 0 === MM ? void 0 : MM.includes("safari-web-extension"));
+      return iM || OM ? [(null === MM || void 0 === MM ? void 0 : MM.includes("@")) ? MM.split("@")[0] : MM, iM ? `${Qi}:${rM}` : `${zi}:${rM}`] : [MM, rM]
     }
-    const QZ = 1024;
+    const Hi = 1024;
 
-    function KZ(GG) {
-      let bG = [];
-      GG.stacktrace ? bG = GG.stacktrace.split("\n").filter(((GG, bG) => bG % 2 === 0)) : GG.stack && (bG = GG.stack.split("\n"));
-      const ZG = bG.reduce(((bG, ZG, wG) => {
-        if (ZG.length > QZ) return bG;
-        let SG, LG, yG, kG, UG;
-        if (SG = LZ.exec(ZG)) {
-          if (LG = SG[1], yG = SG[2], kG = SG[3], UG = SG[4], null === yG || void 0 === yG ? void 0 : yG.startsWith("eval")) {
-            const GG = yZ.exec(yG);
-            GG && (yG = GG[1], kG = GG[2], UG = GG[3])
+    function Ji(MM) {
+      let rM = [];
+      MM.stacktrace ? rM = MM.stacktrace.split("\n").filter(((MM, rM) => rM % 2 === 0)) : MM.stack && (rM = MM.stack.split("\n"));
+      const iM = rM.reduce(((rM, iM, OM) => {
+        if (iM.length > Hi) return rM;
+        let SM, jM, aM, PM, nM;
+        if (SM = ji.exec(iM)) {
+          if (jM = SM[1], aM = SM[2], PM = SM[3], nM = SM[4], null === aM || void 0 === aM ? void 0 : aM.startsWith("eval")) {
+            const MM = ai.exec(aM);
+            MM && (aM = MM[1], PM = MM[2], nM = MM[3])
           }
-          yG = (null === yG || void 0 === yG ? void 0 : yG.startsWith("address at ")) ? yG.substring(11) : yG, [LG, yG] = fZ(LG, yG)
-        } else if (SG = kZ.exec(ZG)) {
-          if (LG = SG[1], yG = SG[3], kG = SG[4], UG = SG[5], yG && yG.includes(" > eval")) {
-            const GG = UZ.exec(yG);
-            GG && (LG = LG || "eval", yG = GG[1], kG = GG[2])
-          } else 0 === wG && !UG && uG(GG.columnNumber) && (UG = String(GG.columnNumber + 1));
-          [LG, yG] = fZ(LG, yG)
+          aM = (null === aM || void 0 === aM ? void 0 : aM.startsWith("address at ")) ? aM.substring(11) : aM, [jM, aM] = mi(jM, aM)
+        } else if (SM = Pi.exec(iM)) {
+          if (jM = SM[1], aM = SM[3], PM = SM[4], nM = SM[5], aM && aM.includes(" > eval")) {
+            const MM = ni.exec(aM);
+            MM && (jM = jM || "eval", aM = MM[1], PM = MM[2])
+          } else 0 === OM && !nM && eM(MM.columnNumber) && (nM = String(MM.columnNumber + 1));
+          [jM, aM] = mi(jM, aM)
         }
-        return (yG || LG) && bG.push(SZ(yG, LG, kG ? Number(kG) : void 0, UG ? Number(UG) : void 0)), bG
+        return (aM || jM) && rM.push(Si(aM, jM, PM ? Number(PM) : void 0, nM ? Number(nM) : void 0)), rM
       }), []);
-      return pZ.test(GG.message) ? ZG.slice(1) : ZG
+      return Li.test(MM.message) ? iM.slice(1) : iM
     }
 
-    function hZ(GG) {
+    function di(MM) {
       return {
-        frames: KZ(GG)
+        frames: Ji(MM)
       }
     }
-    const dZ = "http-request-start",
-      JZ = "http-request-end";
-    var rZ = class GG {
+    const yi = "http-request-start",
+      li = "http-request-end";
+    var Ei = class MM {
       constructor() {
         this.subscribers = []
       }
-      subscribe(GG) {
-        return this.subscribers.push(GG), {
-          unsubscribe: () => this.unsubscribe(GG)
+      subscribe(MM) {
+        return this.subscribers.push(MM), {
+          unsubscribe: () => this.unsubscribe(MM)
         }
       }
-      unsubscribe(GG) {
-        this.subscribers = this.subscribers.filter((bG => bG !== GG))
+      unsubscribe(MM) {
+        this.subscribers = this.subscribers.filter((rM => rM !== MM))
       }
-      notify(GG) {
-        this.subscribers.forEach((bG => bG(GG)))
+      notify(MM) {
+        this.subscribers.forEach((rM => rM(MM)))
       }
       first() {
-        const bG = new GG,
-          ZG = GG => {
-            bG.notify(GG), wG.unsubscribe()
+        const rM = new MM,
+          iM = MM => {
+            rM.notify(MM), OM.unsubscribe()
           },
-          wG = this.subscribe(ZG),
-          SG = bG.unsubscribe.bind(bG);
-        return this.withUnsubscribeOverride(bG, SG, ZG)
+          OM = this.subscribe(iM),
+          SM = rM.unsubscribe.bind(rM);
+        return this.withUnsubscribeOverride(rM, SM, iM)
       }
-      takeWhile(bG) {
-        const ZG = new GG,
-          wG = GG => {
-            bG(GG) ? ZG.notify(GG) : ZG.unsubscribe(wG)
+      takeWhile(rM) {
+        const iM = new MM,
+          OM = MM => {
+            rM(MM) ? iM.notify(MM) : iM.unsubscribe(OM)
           };
-        this.subscribe(wG);
-        const SG = ZG.unsubscribe.bind(ZG);
-        return this.withUnsubscribeOverride(ZG, SG, wG)
+        this.subscribe(OM);
+        const SM = iM.unsubscribe.bind(iM);
+        return this.withUnsubscribeOverride(iM, SM, OM)
       }
-      filter(bG) {
-        const ZG = new GG,
-          wG = GG => {
-            bG(GG) && ZG.notify(GG)
+      filter(rM) {
+        const iM = new MM,
+          OM = MM => {
+            rM(MM) && iM.notify(MM)
           };
-        this.subscribe(wG);
-        const SG = ZG.unsubscribe.bind(ZG);
-        return this.withUnsubscribeOverride(ZG, SG, wG)
+        this.subscribe(OM);
+        const SM = iM.unsubscribe.bind(iM);
+        return this.withUnsubscribeOverride(iM, SM, OM)
       }
       merge() {
-        const bG = new GG,
-          ZG = [];
-        for (var wG = arguments.length, SG = new Array(wG), LG = 0; LG < wG; LG++) SG[LG] = arguments[LG];
-        SG.forEach((GG => {
-          const wG = GG.subscribe((GG => {
-            bG.notify(GG)
+        const rM = new MM,
+          iM = [];
+        for (var OM = arguments.length, SM = new Array(OM), jM = 0; jM < OM; jM++) SM[jM] = arguments[jM];
+        SM.forEach((MM => {
+          const OM = MM.subscribe((MM => {
+            rM.notify(MM)
           }));
-          ZG.push(wG)
+          iM.push(OM)
         }));
-        const yG = bG.unsubscribeAll.bind(bG);
-        return bG.unsubscribe = () => {
-          ZG.forEach((GG => GG.unsubscribe())), yG()
-        }, bG
+        const aM = rM.unsubscribeAll.bind(rM);
+        return rM.unsubscribe = () => {
+          iM.forEach((MM => MM.unsubscribe())), aM()
+        }, rM
       }
-      withUnsubscribeOverride(GG, bG, ZG) {
-        return GG.unsubscribe = GG => {
-          bG(GG), this.unsubscribe(ZG)
-        }, GG
+      withUnsubscribeOverride(MM, rM, iM) {
+        return MM.unsubscribe = MM => {
+          rM(MM), this.unsubscribe(iM)
+        }, MM
       }
       unsubscribeAll() {
         this.subscribers = []
       }
     };
-    let zZ = function(GG) {
-      return GG.TRACE = "trace", GG.DEBUG = "debug", GG.INFO = "info", GG.LOG = "log", GG.WARN = "warn", GG.ERROR = "error", GG
+    let Ui = function(MM) {
+      return MM.TRACE = "trace", MM.DEBUG = "debug", MM.INFO = "info", MM.LOG = "log", MM.WARN = "warn", MM.ERROR = "error", MM
     }({});
-    const EZ = "log",
-      oZ = ["trace", "debug", "info", "log", "warn", "error"];
-    let XZ, uZ = !1;
-    const iZ = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
-      CZ = "Error",
-      WZ = GG => GG.map((GG => mG(GG) ? jb(GG) : String(GG))).join(" ");
+    const Gi = "log",
+      Ci = ["trace", "debug", "info", "log", "warn", "error"];
+    let ei, bi = !1;
+    const wi = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
+      ti = "Error",
+      gi = MM => MM.map((MM => gM(MM) ? kr(MM) : String(MM))).join(" ");
 
-    function mZ(GG) {
-      let bG, ZG, wG, SG, LG = [];
-      if (AG(GG) && GG.error) bG = GG.error.message, ZG = GG.error.name, LG = KZ(GG.error);
-      else if ((wG = sG(GG)) || qG(GG)) {
+    function ui(MM) {
+      let rM, iM, OM, SM, jM = [];
+      if (fM(MM) && MM.error) rM = MM.error.message, iM = MM.error.name, jM = Ji(MM.error);
+      else if ((OM = YM(MM)) || NM(MM)) {
         const {
-          name: SG,
-          message: LG
-        } = GG;
-        ZG = null !== SG && void 0 !== SG ? SG : wG ? "DOMError" : "DOMException", bG = LG ? `${ZG}: ${LG}` : ZG
-      } else MG(GG) ? (ZG = GG.name, bG = GG.message, LG = KZ(GG)) : (mG(GG) || (SG = jG(GG))) && (ZG = SG ? GG.constructor.name : void 0, bG = `Non-Error exception captured with keys: ${Object.keys(GG)}`);
-      return [bG, ZG, LG]
+          name: SM,
+          message: jM
+        } = MM;
+        iM = null !== SM && void 0 !== SM ? SM : OM ? "DOMError" : "DOMException", rM = jM ? `${iM}: ${jM}` : iM
+      } else oM(MM) ? (iM = MM.name, rM = MM.message, jM = Ji(MM)) : (gM(MM) || (SM = kM(MM))) && (iM = SM ? MM.constructor.name : void 0, rM = `Non-Error exception captured with keys: ${Object.keys(MM)}`);
+      return [rM, iM, jM]
     }
 
-    function IZ(GG) {
-      const [bG, ZG, wG, SG, LG] = GG;
-      let yG, kG, UG = [];
-      const YG = XG(bG),
-        VG = SZ(ZG, "?", wG, SG);
-      return LG || !YG ? ([yG, kG, UG] = mZ(null !== LG && void 0 !== LG ? LG : bG), 0 === UG.length && (UG = [VG])) : YG && ([yG, kG] = function(GG) {
-        var bG, ZG;
-        const wG = GG.match(iZ),
-          SG = null !== (bG = null === wG || void 0 === wG ? void 0 : wG[1]) && void 0 !== bG ? bG : CZ;
-        return [null !== (ZG = null === wG || void 0 === wG ? void 0 : wG[2]) && void 0 !== ZG ? ZG : GG, SG]
-      }(bG), UG = [VG]), {
-        value: yG,
-        type: kG,
-        stackFrames: UG
+    function Ri(MM) {
+      const [rM, iM, OM, SM, jM] = MM;
+      let aM, PM, nM = [];
+      const QM = CM(rM),
+        zM = Si(iM, "?", OM, SM);
+      return jM || !QM ? ([aM, PM, nM] = ui(null !== jM && void 0 !== jM ? jM : rM), 0 === nM.length && (nM = [zM])) : QM && ([aM, PM] = function(MM) {
+        var rM, iM;
+        const OM = MM.match(wi),
+          SM = null !== (rM = null === OM || void 0 === OM ? void 0 : OM[1]) && void 0 !== rM ? rM : ti;
+        return [null !== (iM = null === OM || void 0 === OM ? void 0 : OM[2]) && void 0 !== iM ? iM : MM, SM]
+      }(rM), nM = [zM]), {
+        value: aM,
+        type: PM,
+        stackFrames: nM
       }
     }
 
-    function FZ(GG, bG) {
-      return MG(GG[0]) ? IZ(GG) : {
-        value: bG(GG)
+    function Wi(MM, rM) {
+      return oM(MM[0]) ? Ri(MM) : {
+        value: rM(MM)
       }
     }
-    const vZ = GG => GG.map((GG => {
+    const si = MM => MM.map((MM => {
       try {
-        return String(GG)
-      } catch (bG) {
+        return String(MM)
+      } catch (rM) {
         return ""
       }
     })).join(" ");
-    var aZ = class GG extends bZ {
+    var Di = class MM extends ri {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = ZZ, this.errorSerializer = vZ
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = ii, this.errorSerializer = si
       }
       initialize() {
-        var bG, ZG;
-        const wG = this.config.consoleInstrumentation,
-          SG = (null === wG || void 0 === wG ? void 0 : wG.serializeErrors) || !!(null === wG || void 0 === wG ? void 0 : wG.errorSerializer);
-        this.errorSerializer = SG ? null !== (bG = null === wG || void 0 === wG ? void 0 : wG.errorSerializer) && void 0 !== bG ? bG : WZ : vZ;
-        const LG = null !== (ZG = null === wG || void 0 === wG ? void 0 : wG.disabledLevels) && void 0 !== ZG ? ZG : GG.defaultDisabledLevels,
-          yG = function(GG) {
-            if (XZ || (XZ = new rZ), !uZ) {
-              const bG = null !== GG && void 0 !== GG ? GG : Bb;
-              oZ.forEach((GG => {
-                console[GG] = function() {
-                  for (var ZG, wG = arguments.length, SG = new Array(wG), LG = 0; LG < wG; LG++) SG[LG] = arguments[LG];
-                  XZ.notify({
+        var rM, iM;
+        const OM = this.config.consoleInstrumentation,
+          SM = (null === OM || void 0 === OM ? void 0 : OM.serializeErrors) || !!(null === OM || void 0 === OM ? void 0 : OM.errorSerializer);
+        this.errorSerializer = SM ? null !== (rM = null === OM || void 0 === OM ? void 0 : OM.errorSerializer) && void 0 !== rM ? rM : gi : si;
+        const jM = null !== (iM = null === OM || void 0 === OM ? void 0 : OM.disabledLevels) && void 0 !== iM ? iM : MM.defaultDisabledLevels,
+          aM = function(MM) {
+            if (ei || (ei = new Ei), !bi) {
+              const rM = null !== MM && void 0 !== MM ? MM : cr;
+              Ci.forEach((MM => {
+                console[MM] = function() {
+                  for (var iM, OM = arguments.length, SM = new Array(OM), jM = 0; jM < OM; jM++) SM[jM] = arguments[jM];
+                  ei.notify({
                     type: "console",
-                    level: GG,
-                    args: SG
-                  }), null === (ZG = bG[GG]) || void 0 === ZG || ZG.apply(console, SG)
+                    level: MM,
+                    args: SM
+                  }), null === (iM = rM[MM]) || void 0 === iM || iM.apply(console, SM)
                 }
-              })), uZ = !0
+              })), bi = !0
             }
-            return XZ
+            return ei
           }(this.unpatchedConsole);
-        this.subscription = yG.subscribe((bG => {
+        this.subscription = aM.subscribe((rM => {
           let {
-            level: ZG,
-            args: SG
-          } = bG;
-          if (!LG.includes(ZG)) try {
-            if (ZG !== zZ.ERROR || (null === wG || void 0 === wG ? void 0 : wG.consoleErrorAsLog))
-              if (ZG === zZ.ERROR && (null === wG || void 0 === wG ? void 0 : wG.consoleErrorAsLog)) {
+            level: iM,
+            args: SM
+          } = rM;
+          if (!jM.includes(iM)) try {
+            if (iM !== Ui.ERROR || (null === OM || void 0 === OM ? void 0 : OM.consoleErrorAsLog))
+              if (iM === Ui.ERROR && (null === OM || void 0 === OM ? void 0 : OM.consoleErrorAsLog)) {
                 const {
-                  value: bG,
-                  type: wG,
-                  stackFrames: LG
-                } = FZ(SG, this.errorSerializer);
-                this.api.pushLog(bG ? [GG.consoleErrorPrefix + bG] : SG, {
-                  level: ZG,
+                  value: rM,
+                  type: OM,
+                  stackFrames: jM
+                } = Wi(SM, this.errorSerializer);
+                this.api.pushLog(rM ? [MM.consoleErrorPrefix + rM] : SM, {
+                  level: iM,
                   context: {
-                    value: null !== bG && void 0 !== bG ? bG : "",
-                    type: null !== wG && void 0 !== wG ? wG : "",
-                    stackFrames: (null === LG || void 0 === LG ? void 0 : LG.length) ? WZ(LG) : ""
+                    value: null !== rM && void 0 !== rM ? rM : "",
+                    type: null !== OM && void 0 !== OM ? OM : "",
+                    stackFrames: (null === jM || void 0 === jM ? void 0 : jM.length) ? gi(jM) : ""
                   }
                 })
-              } else this.api.pushLog(SG, {
-                level: ZG
+              } else this.api.pushLog(SM, {
+                level: iM
               });
             else {
               const {
-                value: bG,
-                type: ZG,
-                stackFrames: wG
-              } = FZ(SG, this.errorSerializer);
-              if (bG && !ZG && !wG) return void this.api.pushError(new Error(GG.consoleErrorPrefix + bG));
-              this.api.pushError(new Error(GG.consoleErrorPrefix + bG), {
-                type: ZG,
-                stackFrames: wG
+                value: rM,
+                type: iM,
+                stackFrames: OM
+              } = Wi(SM, this.errorSerializer);
+              if (rM && !iM && !OM) return void this.api.pushError(new Error(MM.consoleErrorPrefix + rM));
+              this.api.pushError(new Error(MM.consoleErrorPrefix + rM), {
+                type: iM,
+                stackFrames: OM
               })
             }
-          } catch (yG) {
-            this.logError(yG)
+          } catch (aM) {
+            this.logError(aM)
           }
         }))
       }
       destroy() {
-        var GG;
-        null === (GG = this.subscription) || void 0 === GG || GG.unsubscribe(), this.subscription = void 0
+        var MM;
+        null === (MM = this.subscription) || void 0 === MM || MM.unsubscribe(), this.subscription = void 0
       }
     };
-    aZ.defaultDisabledLevels = [zZ.DEBUG, zZ.TRACE, zZ.LOG], aZ.consoleErrorPrefix = "console.error: ";
-    const cZ = [];
-    var lZ = class extends bZ {
+    Di.defaultDisabledLevels = [Ui.DEBUG, Ui.TRACE, Ui.LOG], Di.consoleErrorPrefix = "console.error: ";
+    const ki = [];
+    var Zi = class extends ri {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = ZZ
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = ii
       }
       initialize() {
         this.logDebug("Initializing"),
-          function(GG) {
-            const bG = window.onerror;
+          function(MM) {
+            const rM = window.onerror;
             window.onerror = function() {
-              for (var ZG = arguments.length, wG = new Array(ZG), SG = 0; SG < ZG; SG++) wG[SG] = arguments[SG];
+              for (var iM = arguments.length, OM = new Array(iM), SM = 0; SM < iM; SM++) OM[SM] = arguments[SM];
               try {
                 const {
-                  value: bG,
-                  type: ZG,
-                  stackFrames: SG
-                } = IZ(wG), LG = wG[4];
-                if (bG) {
-                  const wG = {
-                    type: ZG,
-                    stackFrames: SG
+                  value: rM,
+                  type: iM,
+                  stackFrames: SM
+                } = Ri(OM), jM = OM[4];
+                if (rM) {
+                  const OM = {
+                    type: iM,
+                    stackFrames: SM
                   };
-                  null != LG && (wG.originalError = LG), GG.pushError(new Error(bG), wG)
+                  null != jM && (OM.originalError = jM), MM.pushError(new Error(rM), OM)
                 }
               } finally {
-                null === bG || void 0 === bG || bG.apply(window, wG)
+                null === rM || void 0 === rM || rM.apply(window, OM)
               }
             }
           }(this.api),
-          function(GG) {
-            const bG = bG => {
-              var ZG;
-              let wG, SG, LG = bG;
-              if (LG.reason) LG = bG.reason;
-              else if (null === (ZG = bG.detail) || void 0 === ZG ? void 0 : ZG.reason) {
-                var yG;
-                LG = null === (yG = bG.detail) || void 0 === yG ? void 0 : yG.reason
+          function(MM) {
+            const rM = rM => {
+              var iM;
+              let OM, SM, jM = rM;
+              if (jM.reason) jM = rM.reason;
+              else if (null === (iM = rM.detail) || void 0 === iM ? void 0 : iM.reason) {
+                var aM;
+                jM = null === (aM = rM.detail) || void 0 === aM ? void 0 : aM.reason
               }
-              let kG = [];
-              cG(LG) ? (wG = `Non-Error promise rejection captured with value: ${String(LG)}`, SG = "UnhandledRejection") : [wG, SG, kG] = mZ(LG), wG && GG.pushError(new Error(wG), {
-                type: SG,
-                stackFrames: kG
+              let PM = [];
+              sM(jM) ? (OM = `Non-Error promise rejection captured with value: ${String(jM)}`, SM = "UnhandledRejection") : [OM, SM, PM] = ui(jM), OM && MM.pushError(new Error(OM), {
+                type: SM,
+                stackFrames: PM
               })
             };
-            window.addEventListener("unhandledrejection", bG), cZ.push(bG)
+            window.addEventListener("unhandledrejection", rM), ki.push(rM)
           }(this.api)
       }
     };
-    const jZ = "unknown";
-    var PZ = class extends bZ {
+    const oi = "unknown";
+    var fi = class extends ri {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = ZZ, this.waitingForActivation = !1, this.sendViewChangedEvent = GG => {
-          var bG;
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = ii, this.waitingForActivation = !1, this.sendViewChangedEvent = MM => {
+          var rM;
           if (this.waitingForActivation || document.prerendering) return;
-          const ZG = GG.view;
-          if (ZG && ZG.name !== (null === (bG = this.notifiedView) || void 0 === bG ? void 0 : bG.name)) {
-            var wG, SG, LG;
-            const GG = null !== (wG = null === (SG = this.notifiedView) || void 0 === SG ? void 0 : SG.name) && void 0 !== wG ? wG : jZ;
-            this.notifiedView = ZG, this.api.pushEvent(ob, {
-              fromView: GG,
-              toView: null !== (LG = ZG.name) && void 0 !== LG ? LG : jZ
+          const iM = MM.view;
+          if (iM && iM.name !== (null === (rM = this.notifiedView) || void 0 === rM ? void 0 : rM.name)) {
+            var OM, SM, jM;
+            const MM = null !== (OM = null === (SM = this.notifiedView) || void 0 === SM ? void 0 : SM.name) && void 0 !== OM ? OM : oi;
+            this.notifiedView = iM, this.api.pushEvent(Gr, {
+              fromView: MM,
+              toView: null !== (jM = iM.name) && void 0 !== jM ? jM : oi
             }, void 0, {
               skipDedupe: !0
             })
@@ -1319,1292 +1319,1292 @@ export const modules = {
         this.waitingForActivation = !1, this.metas.removeListener(this.sendViewChangedEvent), document.removeEventListener("prerenderingchange", this.prerenderListener)
       }
     };
-    class MZ {
+    class Yi {
       t;
       o = 0;
       i = [];
-      l(GG) {
-        if (GG.hadRecentInput) return;
-        const bG = this.i[0],
-          ZG = this.i.at(-1);
-        this.o && bG && ZG && GG.startTime - ZG.startTime < 1e3 && GG.startTime - bG.startTime < 5e3 ? (this.o += GG.value, this.i.push(GG)) : (this.o = GG.value, this.i = [GG]), this.t?.(GG)
+      l(MM) {
+        if (MM.hadRecentInput) return;
+        const rM = this.i[0],
+          iM = this.i.at(-1);
+        this.o && rM && iM && MM.startTime - iM.startTime < 1e3 && MM.startTime - rM.startTime < 5e3 ? (this.o += MM.value, this.i.push(MM)) : (this.o = MM.value, this.i = [MM]), this.t?.(MM)
       }
     }
-    const AZ = () => {
-        const GG = performance.getEntriesByType("navigation")[0];
-        if (GG && GG.responseStart > 0 && GG.responseStart < performance.now()) return GG
+    const Ni = () => {
+        const MM = performance.getEntriesByType("navigation")[0];
+        if (MM && MM.responseStart > 0 && MM.responseStart < performance.now()) return MM
       },
-      sZ = GG => {
+      Ai = MM => {
         if ("loading" === document.readyState) return "loading";
-        const bG = AZ();
-        if (bG) {
-          if (GG < bG.domInteractive) return "loading";
-          if (0 === bG.domContentLoadedEventStart || GG < bG.domContentLoadedEventStart) return "dom-interactive";
-          if (0 === bG.domComplete || GG < bG.domComplete) return "dom-content-loaded"
+        const rM = Ni();
+        if (rM) {
+          if (MM < rM.domInteractive) return "loading";
+          if (0 === rM.domContentLoadedEventStart || MM < rM.domContentLoadedEventStart) return "dom-interactive";
+          if (0 === rM.domComplete || MM < rM.domComplete) return "dom-content-loaded"
         }
         return "complete"
       },
-      qZ = GG => {
-        const bG = GG.nodeName;
-        return 1 === GG.nodeType ? bG.toLowerCase() : bG.toUpperCase().replace(/^#/, "")
+      xi = MM => {
+        const rM = MM.nodeName;
+        return 1 === MM.nodeType ? rM.toLowerCase() : rM.toUpperCase().replace(/^#/, "")
       },
-      nZ = GG => {
-        let bG = "";
+      vi = MM => {
+        let rM = "";
         try {
-          for (; 9 !== GG?.nodeType;) {
-            const ZG = GG,
-              wG = ZG.id ? "#" + ZG.id : [qZ(ZG), ...Array.from(ZG.classList ?? []).sort()].join(".");
-            if (bG.length + wG.length > 99) return bG || wG;
-            if (bG = bG ? wG + ">" + bG : wG, ZG.id) break;
-            GG = ZG.parentNode
+          for (; 9 !== MM?.nodeType;) {
+            const iM = MM,
+              OM = iM.id ? "#" + iM.id : [xi(iM), ...Array.from(iM.classList ?? []).sort()].join(".");
+            if (rM.length + OM.length > 99) return rM || OM;
+            if (rM = rM ? OM + ">" + rM : OM, iM.id) break;
+            MM = iM.parentNode
           }
         } catch {}
-        return bG
+        return rM
       },
-      gZ = new WeakMap;
+      Fi = new WeakMap;
 
-    function eZ(GG, bG) {
-      let ZG = gZ.get(bG);
-      return ZG || (ZG = new WeakMap, gZ.set(bG, ZG)), ZG.get(GG) || ZG.set(GG, new bG), ZG.get(GG)
+    function Bi(MM, rM) {
+      let iM = Fi.get(rM);
+      return iM || (iM = new WeakMap, Fi.set(rM, iM)), iM.get(MM) || iM.set(MM, new rM), iM.get(MM)
     }
-    let RZ = -1;
-    const TZ = () => RZ,
-      HZ = GG => {
-        addEventListener("pageshow", (bG => {
-          bG.persisted && (RZ = bG.timeStamp, GG(bG))
+    let Xi = -1;
+    const Ii = () => Xi,
+      Ki = MM => {
+        addEventListener("pageshow", (rM => {
+          rM.persisted && (Xi = rM.timeStamp, MM(rM))
         }), !0)
       },
-      tZ = (GG, bG, ZG, wG) => {
-        let SG, LG;
-        return yG => {
-          bG.value >= 0 && (yG || wG) && (LG = bG.value - (SG ?? 0), (LG || void 0 === SG) && (SG = bG.value, bG.delta = LG, bG.rating = ((GG, bG) => GG > bG[1] ? "poor" : GG > bG[0] ? "needs-improvement" : "good")(bG.value, ZG), GG(bG)))
+      qi = (MM, rM, iM, OM) => {
+        let SM, jM;
+        return aM => {
+          rM.value >= 0 && (aM || OM) && (jM = rM.value - (SM ?? 0), (jM || void 0 === SM) && (SM = rM.value, rM.delta = jM, rM.rating = ((MM, rM) => MM > rM[1] ? "poor" : MM > rM[0] ? "needs-improvement" : "good")(rM.value, iM), MM(rM)))
         }
       },
-      DZ = GG => {
-        requestAnimationFrame((() => requestAnimationFrame((() => GG()))))
+      Ti = MM => {
+        requestAnimationFrame((() => requestAnimationFrame((() => MM()))))
       },
-      NZ = () => AZ()?.activationStart ?? 0;
-    let OZ = -1;
-    const xZ = new Set,
-      BZ = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
-      Gw = GG => {
+      Vi = () => Ni()?.activationStart ?? 0;
+    let ci = -1;
+    const MO = new Set,
+      rO = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
+      iO = MM => {
         if ("hidden" === document.visibilityState) {
-          if ("visibilitychange" === GG.type)
-            for (const GG of xZ) GG();
-          isFinite(OZ) || (OZ = "visibilitychange" === GG.type ? GG.timeStamp : 0, removeEventListener("prerenderingchange", Gw, !0))
+          if ("visibilitychange" === MM.type)
+            for (const MM of MO) MM();
+          isFinite(ci) || (ci = "visibilitychange" === MM.type ? MM.timeStamp : 0, removeEventListener("prerenderingchange", iO, !0))
         }
       },
-      bw = function() {
-        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (OZ = 1 / 0), OZ < 0) {
-          const GG = NZ(),
-            bG = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((bG => "hidden" === bG.name && bG.startTime >= GG))?.startTime;
-          OZ = bG ?? BZ(), addEventListener("visibilitychange", Gw, !0), addEventListener("prerenderingchange", Gw, !0), HZ((() => {
+      OO = function() {
+        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (ci = 1 / 0), ci < 0) {
+          const MM = Vi(),
+            rM = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((rM => "hidden" === rM.name && rM.startTime >= MM))?.startTime;
+          ci = rM ?? rO(), addEventListener("visibilitychange", iO, !0), addEventListener("prerenderingchange", iO, !0), Ki((() => {
             setTimeout((() => {
-              OZ = BZ()
+              ci = rO()
             }))
           }))
         }
         return {
           get firstHiddenTime() {
-            return OZ
+            return ci
           },
-          onHidden(GG) {
-            xZ.add(GG)
+          onHidden(MM) {
+            MO.add(MM)
           }
         }
       },
-      Zw = function(GG) {
-        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          ZG = arguments.length > 2 ? arguments[2] : void 0,
-          wG = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          SG = arguments.length > 4 ? arguments[4] : void 0,
-          LG = arguments.length > 5 ? arguments[5] : void 0,
-          yG = arguments.length > 6 ? arguments[6] : void 0;
-        const kG = AZ(),
-          UG = kG?.navigationId || 0;
-        let YG = "navigate";
-        return ZG ? YG = ZG : TZ() >= 0 ? YG = "back-forward-cache" : kG && (document.prerendering || NZ() > 0 ? YG = "prerender" : document.wasDiscarded ? YG = "restore" : kG.type && (YG = kG.type.replace(/_/g, "-"))), {
-          name: GG,
-          value: bG,
+      SO = function(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          iM = arguments.length > 2 ? arguments[2] : void 0,
+          OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          SM = arguments.length > 4 ? arguments[4] : void 0,
+          jM = arguments.length > 5 ? arguments[5] : void 0,
+          aM = arguments.length > 6 ? arguments[6] : void 0;
+        const PM = Ni(),
+          nM = PM?.navigationId || 0;
+        let QM = "navigate";
+        return iM ? QM = iM : Ii() >= 0 ? QM = "back-forward-cache" : PM && (document.prerendering || Vi() > 0 ? QM = "prerender" : document.wasDiscarded ? QM = "restore" : PM.type && (QM = PM.type.replace(/_/g, "-"))), {
+          name: MM,
+          value: rM,
           rating: "good",
           delta: 0,
           entries: [],
           id: `v6-${Date.now()}-${Math.floor(8999999999999*Math.random())+1e12}`,
-          navigationType: YG,
-          navigationId: wG || UG,
-          navigationInteractionId: SG,
-          navigationURL: LG || kG?.name,
-          navigationStartTime: yG || 0
+          navigationType: QM,
+          navigationId: OM || nM,
+          navigationInteractionId: SM,
+          navigationURL: jM || PM?.name,
+          navigationStartTime: aM || 0
         }
       },
-      ww = function(GG, bG) {
-        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      jO = function(MM, rM) {
+        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         try {
-          const wG = GG.filter((GG => PerformanceObserver.supportedEntryTypes.includes(GG)));
-          if (wG.length > 0) {
-            const GG = new PerformanceObserver((GG => {
+          const OM = MM.filter((MM => PerformanceObserver.supportedEntryTypes.includes(MM)));
+          if (OM.length > 0) {
+            const MM = new PerformanceObserver((MM => {
               queueMicrotask((() => {
-                const ZG = GG.getEntries();
-                wG.length > 1 && ZG.sort(((GG, bG) => GG.startTime + GG.duration - (bG.startTime + bG.duration))), bG(ZG)
+                const iM = MM.getEntries();
+                OM.length > 1 && iM.sort(((MM, rM) => MM.startTime + MM.duration - (rM.startTime + rM.duration))), rM(iM)
               }))
             }));
-            for (const bG of wG) GG.observe({
-              type: bG,
+            for (const rM of OM) MM.observe({
+              type: rM,
               buffered: !0,
-              ...ZG
+              ...iM
             });
-            return GG
+            return MM
           }
         } catch {}
       },
-      Sw = GG => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && GG && GG.reportSoftNavs,
-      Lw = (GG, bG) => {
-        if (GG.set(bG.navigationId, bG), GG.size > 2) {
-          const bG = GG.keys().next().value;
-          void 0 !== bG && GG.delete(bG)
+      aO = MM => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && MM && MM.reportSoftNavs,
+      PO = (MM, rM) => {
+        if (MM.set(rM.navigationId, rM), MM.size > 2) {
+          const rM = MM.keys().next().value;
+          void 0 !== rM && MM.delete(rM)
         }
       },
-      yw = GG => {
-        let bG = !1;
+      nO = MM => {
+        let rM = !1;
         return () => {
-          bG || (GG(), bG = !0)
+          rM || (MM(), rM = !0)
         }
       };
-    class kw {
+    class QO {
       u
     }
-    const Uw = GG => {
-        document.prerendering ? addEventListener("prerenderingchange", GG, !0) : GG()
+    const zO = MM => {
+        document.prerendering ? addEventListener("prerenderingchange", MM, !0) : MM()
       },
-      Yw = [1800, 3e3],
-      Vw = function(GG) {
-        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const ZG = Sw(bG);
-        Uw((() => {
-          const wG = eZ(bG, kw),
-            SG = bw();
-          let LG, yG = Zw("FCP");
-          const kG = ww(["paint"], (GG => {
-            for (const bG of GG) "first-contentful-paint" === bG.name && (kG.disconnect(), bG.startTime < SG.firstHiddenTime && (yG.value = Math.max(bG.startTime - NZ(), 0), yG.entries.push(bG), yG.navigationId = bG.navigationId || yG.navigationId, LG(!0)))
+      LO = [1800, 3e3],
+      mO = function(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const iM = aO(rM);
+        zO((() => {
+          const OM = Bi(rM, QO),
+            SM = OO();
+          let jM, aM = SO("FCP");
+          const PM = jO(["paint"], (MM => {
+            for (const rM of MM) "first-contentful-paint" === rM.name && (PM.disconnect(), rM.startTime < SM.firstHiddenTime && (aM.value = Math.max(rM.startTime - Vi(), 0), aM.entries.push(rM), aM.navigationId = rM.navigationId || aM.navigationId, jM(!0)))
           }));
-          kG && (LG = tZ(GG, yG, Yw, bG.reportAllChanges), HZ((ZG => {
-            yG = Zw("FCP", -1, "back-forward-cache", yG.navigationId, yG.navigationInteractionId, yG.navigationURL, TZ()), LG = tZ(GG, yG, Yw, bG.reportAllChanges), DZ((() => {
-              yG.value = performance.now() - ZG.timeStamp, LG(!0)
+          PM && (jM = qi(MM, aM, LO, rM.reportAllChanges), Ki((iM => {
+            aM = SO("FCP", -1, "back-forward-cache", aM.navigationId, aM.navigationInteractionId, aM.navigationURL, Ii()), jM = qi(MM, aM, LO, rM.reportAllChanges), Ti((() => {
+              aM.value = performance.now() - iM.timeStamp, jM(!0)
             }))
-          }))), ZG && ww(["soft-navigation"], (ZG => {
-            ZG.forEach((ZG => {
-              wG.u && ZG.navigationId && Lw(wG.u, ZG);
-              const SG = Math.max((ZG.presentationTime || ZG.paintTime || 0) - ZG.startTime, 0);
-              yG = Zw("FCP", SG, "soft-navigation", ZG.navigationId, ZG.interactionId, ZG.name, ZG.startTime), LG = tZ(GG, yG, Yw, bG.reportAllChanges), LG(!0)
+          }))), iM && jO(["soft-navigation"], (iM => {
+            iM.forEach((iM => {
+              OM.u && iM.navigationId && PO(OM.u, iM);
+              const SM = Math.max((iM.presentationTime || iM.paintTime || 0) - iM.startTime, 0);
+              aM = SO("FCP", SM, "soft-navigation", iM.navigationId, iM.interactionId, iM.name, iM.startTime), jM = qi(MM, aM, LO, rM.reportAllChanges), jM(!0)
             }))
-          }), bG)
+          }), rM)
         }))
       },
-      pw = [.1, .25],
-      fw = GG => GG.find((GG => 1 === GG.node?.nodeType)) || GG[0];
-    let Qw = 0,
-      Kw = 1 / 0,
-      hw = 0;
-    const dw = GG => {
-      for (const bG of GG) bG.interactionId && (Kw = Math.min(Kw, bG.interactionId), hw = Math.max(hw, bG.interactionId), Qw = hw ? (hw - Kw) / 7 + 1 : 0)
+      HO = [.1, .25],
+      hO = MM => MM.find((MM => 1 === MM.node?.nodeType)) || MM[0];
+    let JO = 0,
+      dO = 1 / 0,
+      yO = 0;
+    const lO = MM => {
+      for (const rM of MM) rM.interactionId && (dO = Math.min(dO, rM.interactionId), yO = Math.max(yO, rM.interactionId), JO = yO ? (yO - dO) / 7 + 1 : 0)
     };
-    let Jw;
-    const rw = () => Jw ? Qw : performance.interactionCount ?? 0;
-    class zw {
+    let EO;
+    const UO = () => EO ? JO : performance.interactionCount ?? 0;
+    class GO {
       h = 0;
       v = [];
       p = new Map;
       m;
       M;
       T() {
-        return rw() - this.h
+        return UO() - this.h
       }
       D() {
-        this.h = rw(), this.v.length = 0, this.p.clear()
+        this.h = UO(), this.v.length = 0, this.p.clear()
       }
-      S(GG) {
-        const bG = this.T(),
-          ZG = Math.min(this.v.length - 1, Math.floor(bG / 50));
-        return !bG || -1 !== ZG || "soft-navigation" !== GG && "back-forward-cache" !== GG ? this.v[ZG] : {
+      S(MM) {
+        const rM = this.T(),
+          iM = Math.min(this.v.length - 1, Math.floor(rM / 50));
+        return !rM || -1 !== iM || "soft-navigation" !== MM && "back-forward-cache" !== MM ? this.v[iM] : {
           k: 8,
           id: -1,
           entries: []
         }
       }
-      l(GG) {
-        if (this.m?.(GG), !GG.interactionId) return;
-        const bG = this.v.at(-1);
-        let ZG = this.p.get(GG.interactionId);
-        if (ZG || this.v.length < 10 || GG.duration > bG.k) {
-          if (ZG ? GG.duration > ZG.k ? (ZG.entries = [GG], ZG.k = GG.duration) : GG.duration === ZG.k && GG.startTime === ZG.entries[0].startTime && ZG.entries.push(GG) : (ZG = {
-              id: GG.interactionId,
-              entries: [GG],
-              k: GG.duration
-            }, this.p.set(ZG.id, ZG), this.v.push(ZG)), this.v.sort(((GG, bG) => bG.k - GG.k)), this.v.length > 10) {
-            const GG = this.v.splice(10);
-            for (const bG of GG) this.p.delete(bG.id)
+      l(MM) {
+        if (this.m?.(MM), !MM.interactionId) return;
+        const rM = this.v.at(-1);
+        let iM = this.p.get(MM.interactionId);
+        if (iM || this.v.length < 10 || MM.duration > rM.k) {
+          if (iM ? MM.duration > iM.k ? (iM.entries = [MM], iM.k = MM.duration) : MM.duration === iM.k && MM.startTime === iM.entries[0].startTime && iM.entries.push(MM) : (iM = {
+              id: MM.interactionId,
+              entries: [MM],
+              k: MM.duration
+            }, this.p.set(iM.id, iM), this.v.push(iM)), this.v.sort(((MM, rM) => rM.k - MM.k)), this.v.length > 10) {
+            const MM = this.v.splice(10);
+            for (const rM of MM) this.p.delete(rM.id)
           }
-          this.M?.(ZG)
+          this.M?.(iM)
         }
       }
     }
-    const Ew = GG => {
-        const bG = "requestIdleCallback" in globalThis ? 1e3 : 0,
-          ZG = globalThis.requestIdleCallback || setTimeout,
-          wG = globalThis.cancelIdleCallback || clearTimeout;
-        if ("hidden" === document.visibilityState) GG();
+    const CO = MM => {
+        const rM = "requestIdleCallback" in globalThis ? 1e3 : 0,
+          iM = globalThis.requestIdleCallback || setTimeout,
+          OM = globalThis.cancelIdleCallback || clearTimeout;
+        if ("hidden" === document.visibilityState) MM();
         else {
-          const SG = yw(GG);
-          let LG = -1;
-          const yG = () => {
-            wG(LG), SG()
+          const SM = nO(MM);
+          let jM = -1;
+          const aM = () => {
+            OM(jM), SM()
           };
-          addEventListener("visibilitychange", yG, {
+          addEventListener("visibilitychange", aM, {
             once: !0,
             capture: !0
-          }), LG = ZG((() => {
-            removeEventListener("visibilitychange", yG, {
+          }), jM = iM((() => {
+            removeEventListener("visibilitychange", aM, {
               capture: !0
-            }), SG()
+            }), SM()
           }), {
-            timeout: bG
+            timeout: rM
           })
         }
       },
-      ow = [200, 500],
-      Xw = function(GG) {
-        let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const ZG = eZ(bG = Object.assign({}, bG), zw);
-        let wG = [],
-          SG = [],
-          LG = 0;
-        const yG = new WeakMap,
-          kG = new WeakMap;
-        let UG = !1;
-        const YG = () => {
-            UG || (UG = !0, Ew(VG))
+      eO = [200, 500],
+      bO = function(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const iM = Bi(rM = Object.assign({}, rM), GO);
+        let OM = [],
+          SM = [],
+          jM = 0;
+        const aM = new WeakMap,
+          PM = new WeakMap;
+        let nM = !1;
+        const QM = () => {
+            nM || (nM = !0, CO(zM))
           },
-          VG = () => {
-            const GG = new Set(ZG.v.map((GG => yG.get(GG.entries[0])))),
-              bG = SG.length - 10;
-            SG = SG.filter(((ZG, wG) => wG >= bG || GG.has(ZG)));
-            const kG = new Set;
-            for (const ZG of SG) {
-              const GG = pG(ZG.startTime, ZG.processingEnd);
-              for (const bG of GG) kG.add(bG)
+          zM = () => {
+            const MM = new Set(iM.v.map((MM => aM.get(MM.entries[0])))),
+              rM = SM.length - 10;
+            SM = SM.filter(((iM, OM) => OM >= rM || MM.has(iM)));
+            const PM = new Set;
+            for (const iM of SM) {
+              const MM = LM(iM.startTime, iM.processingEnd);
+              for (const rM of MM) PM.add(rM)
             }
-            const YG = wG.length - 10;
-            wG = wG.filter(((GG, bG) => kG.has(GG) || bG >= YG && GG.startTime > LG)), UG = !1
+            const QM = OM.length - 10;
+            OM = OM.filter(((MM, rM) => PM.has(MM) || rM >= QM && MM.startTime > jM)), nM = !1
           };
-        ZG.m = GG => {
-          const ZG = GG.startTime + GG.duration;
-          let wG;
-          LG = Math.max(LG, GG.processingEnd);
-          for (let LG = SG.length - 1; LG >= 0; LG--) {
-            const yG = SG[LG];
-            if (Math.abs(ZG - yG.renderTime) <= 8) {
-              wG = yG, wG.startTime = Math.min(GG.startTime, wG.startTime), wG.processingStart = Math.min(GG.processingStart, wG.processingStart), wG.processingEnd = Math.max(GG.processingEnd, wG.processingEnd), bG.includeProcessedEventEntries && wG.entries.push(GG);
+        iM.m = MM => {
+          const iM = MM.startTime + MM.duration;
+          let OM;
+          jM = Math.max(jM, MM.processingEnd);
+          for (let jM = SM.length - 1; jM >= 0; jM--) {
+            const aM = SM[jM];
+            if (Math.abs(iM - aM.renderTime) <= 8) {
+              OM = aM, OM.startTime = Math.min(MM.startTime, OM.startTime), OM.processingStart = Math.min(MM.processingStart, OM.processingStart), OM.processingEnd = Math.max(MM.processingEnd, OM.processingEnd), rM.includeProcessedEventEntries && OM.entries.push(MM);
               break
             }
           }
-          wG || (wG = {
-            startTime: GG.startTime,
-            processingStart: GG.processingStart,
-            processingEnd: GG.processingEnd,
-            renderTime: ZG,
-            entries: bG.includeProcessedEventEntries ? [GG] : []
-          }, SG.push(wG)), GG.interactionId && yG.set(GG, wG), YG()
-        }, ZG.M = GG => {
-          if (!kG.get(GG)) {
-            const ZG = GG.entries.find((GG => GG.target))?.target;
-            if (ZG) {
-              const wG = bG.generateTarget?.(ZG) ?? nZ(ZG);
-              kG.set(GG, wG)
+          OM || (OM = {
+            startTime: MM.startTime,
+            processingStart: MM.processingStart,
+            processingEnd: MM.processingEnd,
+            renderTime: iM,
+            entries: rM.includeProcessedEventEntries ? [MM] : []
+          }, SM.push(OM)), MM.interactionId && aM.set(MM, OM), QM()
+        }, iM.M = MM => {
+          if (!PM.get(MM)) {
+            const iM = MM.entries.find((MM => MM.target))?.target;
+            if (iM) {
+              const OM = rM.generateTarget?.(iM) ?? vi(iM);
+              PM.set(MM, OM)
             } else {
-              const bG = GG.entries.find((GG => GG.targetSelector))?.targetSelector;
-              bG && kG.set(GG, bG)
+              const rM = MM.entries.find((MM => MM.targetSelector))?.targetSelector;
+              rM && PM.set(MM, rM)
             }
           }
         };
-        const pG = (GG, bG) => {
-          const ZG = [];
-          for (const SG of wG)
-            if (!(SG.startTime + SG.duration < GG)) {
-              if (SG.startTime > bG) break;
-              ZG.push(SG)
-            } return ZG
+        const LM = (MM, rM) => {
+          const iM = [];
+          for (const SM of OM)
+            if (!(SM.startTime + SM.duration < MM)) {
+              if (SM.startTime > rM) break;
+              iM.push(SM)
+            } return iM
         };
-        ww(["long-animation-frame"], (GG => {
-            wG = wG.concat(GG), YG()
-          }), bG),
-          function(GG) {
-            let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        jO(["long-animation-frame"], (MM => {
+            OM = OM.concat(MM), QM()
+          }), rM),
+          function(MM) {
+            let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             if (!globalThis.PerformanceEventTiming || !("interactionId" in PerformanceEventTiming.prototype)) return;
-            const ZG = bw();
-            Uw((() => {
-              "interactionCount" in performance || Jw || (Jw = ww(["event"], dw, {
+            const iM = OO();
+            zO((() => {
+              "interactionCount" in performance || EO || (EO = jO(["event"], lO, {
                 durationThreshold: 0
               }));
-              let wG, SG = Zw("INP");
-              const LG = eZ(bG, zw),
-                yG = (ZG, yG, kG, UG, YG) => {
-                  LG.D(), SG = Zw("INP", -1, ZG, yG, kG, UG, YG), wG = tZ(GG, SG, ow, bG.reportAllChanges)
+              let OM, SM = SO("INP");
+              const jM = Bi(rM, GO),
+                aM = (iM, aM, PM, nM, QM) => {
+                  jM.D(), SM = SO("INP", -1, iM, aM, PM, nM, QM), OM = qi(MM, SM, eO, rM.reportAllChanges)
                 },
-                kG = () => {
-                  const GG = LG.S(SG.navigationType);
-                  GG && GG.k !== SG.value && (SG.value = GG.k, SG.entries = GG.entries, wG())
+                PM = () => {
+                  const MM = jM.S(SM.navigationType);
+                  MM && MM.k !== SM.value && (SM.value = MM.k, SM.entries = MM.entries, OM())
                 },
-                UG = GG => {
-                  kG(), wG(!0), yG("soft-navigation", GG.navigationId, GG.interactionId, GG.name, GG.startTime)
+                nM = MM => {
+                  PM(), OM(!0), aM("soft-navigation", MM.navigationId, MM.interactionId, MM.name, MM.startTime)
                 },
-                YG = function(GG) {
-                  let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                  Ew((() => {
-                    for (const bG of GG) "soft-navigation" !== bG.entryType ? LG.l(bG) : UG(bG);
-                    kG(), bG && wG(!0)
+                QM = function(MM) {
+                  let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                  CO((() => {
+                    for (const rM of MM) "soft-navigation" !== rM.entryType ? jM.l(rM) : nM(rM);
+                    PM(), rM && OM(!0)
                   }))
                 },
-                VG = ["event", "first-input"];
-              Sw(bG) && VG.push("soft-navigation");
-              const pG = ww(VG, YG, {
-                ...bG,
-                durationThreshold: bG.durationThreshold ?? 40
+                zM = ["event", "first-input"];
+              aO(rM) && zM.push("soft-navigation");
+              const LM = jO(zM, QM, {
+                ...rM,
+                durationThreshold: rM.durationThreshold ?? 40
               });
-              wG = tZ(GG, SG, ow, bG.reportAllChanges), pG && (ZG.onHidden((() => {
-                YG(pG.takeRecords(), !0)
-              })), HZ((() => {
-                yG("back-forward-cache", SG.navigationId, SG.navigationInteractionId, SG.navigationURL, TZ())
+              OM = qi(MM, SM, eO, rM.reportAllChanges), LM && (iM.onHidden((() => {
+                QM(LM.takeRecords(), !0)
+              })), Ki((() => {
+                aM("back-forward-cache", SM.navigationId, SM.navigationInteractionId, SM.navigationURL, Ii())
               })))
             }))
-          }((bG => {
-            GG((GG => {
-              if (0 === GG.entries.length) {
-                const bG = GG.navigationStartTime || 0,
-                  ZG = {
+          }((rM => {
+            MM((MM => {
+              if (0 === MM.entries.length) {
+                const rM = MM.navigationStartTime || 0,
+                  iM = {
                     processedEventEntries: [],
                     longAnimationFrameEntries: [],
                     inputDelay: 0,
                     processingDuration: 0,
-                    presentationDelay: GG.value,
-                    loadState: sZ(bG)
+                    presentationDelay: MM.value,
+                    loadState: Ai(rM)
                   };
-                return Object.assign(GG, {
-                  attribution: ZG
+                return Object.assign(MM, {
+                  attribution: iM
                 })
               }
-              const bG = GG.entries[0],
-                wG = yG.get(bG),
-                SG = Math.max(wG.processingStart, bG.startTime),
-                LG = Math.max(bG.startTime + bG.duration, SG),
-                UG = Math.min(wG.processingEnd, LG),
-                YG = wG.entries.sort(((GG, bG) => GG.processingStart - bG.processingStart)),
-                VG = pG(bG.startTime, UG),
-                fG = ZG.p.get(bG.interactionId),
-                QG = {
-                  interactionTarget: kG.get(fG),
-                  interactionType: bG.name.startsWith("key") ? "keyboard" : "pointer",
-                  interactionTime: bG.startTime,
-                  nextPaintTime: LG,
-                  processedEventEntries: YG,
-                  longAnimationFrameEntries: VG,
-                  inputDelay: SG - bG.startTime,
-                  processingDuration: UG - SG,
-                  presentationDelay: LG - UG,
-                  loadState: sZ(bG.startTime),
+              const rM = MM.entries[0],
+                OM = aM.get(rM),
+                SM = Math.max(OM.processingStart, rM.startTime),
+                jM = Math.max(rM.startTime + rM.duration, SM),
+                nM = Math.min(OM.processingEnd, jM),
+                QM = OM.entries.sort(((MM, rM) => MM.processingStart - rM.processingStart)),
+                zM = LM(rM.startTime, nM),
+                mM = iM.p.get(rM.interactionId),
+                HM = {
+                  interactionTarget: PM.get(mM),
+                  interactionType: rM.name.startsWith("key") ? "keyboard" : "pointer",
+                  interactionTime: rM.startTime,
+                  nextPaintTime: jM,
+                  processedEventEntries: QM,
+                  longAnimationFrameEntries: zM,
+                  inputDelay: SM - rM.startTime,
+                  processingDuration: nM - SM,
+                  presentationDelay: jM - nM,
+                  loadState: Ai(rM.startTime),
                   longestScript: void 0,
                   totalScriptDuration: void 0,
                   totalStyleAndLayoutDuration: void 0,
                   totalPaintDuration: void 0,
                   totalUnattributedDuration: void 0
                 };
-              return (GG => {
-                const bG = GG.interactionTime,
-                  ZG = GG.nextPaintTime;
-                if (!GG.longAnimationFrameEntries?.length || !bG || !ZG) return;
-                const wG = GG.inputDelay,
-                  SG = GG.processingDuration;
-                let LG, yG, kG = 0,
-                  UG = 0,
-                  YG = 0,
-                  VG = 0;
-                for (const QG of GG.longAnimationFrameEntries) {
-                  UG = UG + QG.startTime + QG.duration - QG.styleAndLayoutStart;
-                  for (const GG of QG.scripts) {
-                    const ZG = GG.startTime + GG.duration;
-                    if (ZG < bG) continue;
-                    const YG = ZG - Math.max(bG, GG.startTime),
-                      pG = GG.duration ? YG / GG.duration * GG.forcedStyleAndLayoutDuration : 0;
-                    kG += YG - pG, UG += pG, YG > VG && (yG = GG.startTime < bG + wG ? "input-delay" : GG.startTime >= bG + wG + SG ? "presentation-delay" : "processing-duration", LG = GG, VG = YG)
+              return (MM => {
+                const rM = MM.interactionTime,
+                  iM = MM.nextPaintTime;
+                if (!MM.longAnimationFrameEntries?.length || !rM || !iM) return;
+                const OM = MM.inputDelay,
+                  SM = MM.processingDuration;
+                let jM, aM, PM = 0,
+                  nM = 0,
+                  QM = 0,
+                  zM = 0;
+                for (const HM of MM.longAnimationFrameEntries) {
+                  nM = nM + HM.startTime + HM.duration - HM.styleAndLayoutStart;
+                  for (const MM of HM.scripts) {
+                    const iM = MM.startTime + MM.duration;
+                    if (iM < rM) continue;
+                    const QM = iM - Math.max(rM, MM.startTime),
+                      LM = MM.duration ? QM / MM.duration * MM.forcedStyleAndLayoutDuration : 0;
+                    PM += QM - LM, nM += LM, QM > zM && (aM = MM.startTime < rM + OM ? "input-delay" : MM.startTime >= rM + OM + SM ? "presentation-delay" : "processing-duration", jM = MM, zM = QM)
                   }
                 }
-                const pG = GG.longAnimationFrameEntries.at(-1),
-                  fG = pG ? pG.startTime + pG.duration : 0;
-                fG >= bG + wG + SG && (YG = ZG - fG), LG && yG && (GG.longestScript = {
-                  entry: LG,
-                  subpart: yG,
-                  intersectingDuration: VG
-                }), GG.totalScriptDuration = kG, GG.totalStyleAndLayoutDuration = UG, GG.totalPaintDuration = YG, GG.totalUnattributedDuration = ZG - bG - kG - UG - YG
-              })(QG), Object.assign(GG, {
-                attribution: QG
+                const LM = MM.longAnimationFrameEntries.at(-1),
+                  mM = LM ? LM.startTime + LM.duration : 0;
+                mM >= rM + OM + SM && (QM = iM - mM), jM && aM && (MM.longestScript = {
+                  entry: jM,
+                  subpart: aM,
+                  intersectingDuration: zM
+                }), MM.totalScriptDuration = PM, MM.totalStyleAndLayoutDuration = nM, MM.totalPaintDuration = QM, MM.totalUnattributedDuration = iM - rM - PM - nM - QM
+              })(HM), Object.assign(MM, {
+                attribution: HM
               })
-            })(bG))
-          }), bG)
+            })(rM))
+          }), rM)
       };
-    class uw {
+    class wO {
       m;
       u;
-      l(GG) {
-        this.m?.(GG)
+      l(MM) {
+        this.m?.(MM)
       }
     }
-    const iw = [2500, 4e3];
-    let Cw = 50;
-    const Ww = [];
-    ww(["resource"], (GG => {
-      for (const bG of GG) Ww.push(bG), Ww.length > Cw && Ww.shift()
+    const tO = [2500, 4e3];
+    let gO = 50;
+    const uO = [];
+    jO(["resource"], (MM => {
+      for (const rM of MM) uO.push(rM), uO.length > gO && uO.shift()
     }));
-    const mw = [800, 1800],
-      Iw = GG => {
-        document.prerendering ? Uw((() => Iw(GG))) : "complete" !== document.readyState ? addEventListener("load", (() => Iw(GG)), !0) : setTimeout(GG)
+    const RO = [800, 1800],
+      pO = MM => {
+        document.prerendering ? zO((() => pO(MM))) : "complete" !== document.readyState ? addEventListener("load", (() => pO(MM)), !0) : setTimeout(MM)
       },
-      Fw = "load_state",
-      vw = "time_to_first_byte";
-    var aw = class {
-        constructor(GG, bG) {
-          this.corePushMeasurement = GG, this.webVitalConfig = bG
+      WO = "load_state",
+      sO = "time_to_first_byte";
+    var DO = class {
+        constructor(MM, rM) {
+          this.corePushMeasurement = MM, this.webVitalConfig = rM
         }
         initialize() {
           this.measureCLS(), this.measureFCP(), this.measureINP(), this.measureLCP(), this.measureTTFB()
         }
         measureCLS() {
-          var GG;
-          ! function(GG) {
-            let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const ZG = eZ(bG = Object.assign({}, bG), MZ),
-              wG = new WeakMap;
-            ZG.t = GG => {
-                if (GG?.sources?.length) {
-                  const ZG = fw(GG.sources),
-                    SG = ZG?.node;
-                  if (SG) {
-                    const GG = bG.generateTarget?.(SG) ?? nZ(SG);
-                    wG.set(ZG, GG)
+          var MM;
+          ! function(MM) {
+            let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const iM = Bi(rM = Object.assign({}, rM), Yi),
+              OM = new WeakMap;
+            iM.t = MM => {
+                if (MM?.sources?.length) {
+                  const iM = hO(MM.sources),
+                    SM = iM?.node;
+                  if (SM) {
+                    const MM = rM.generateTarget?.(SM) ?? vi(SM);
+                    OM.set(iM, MM)
                   }
                 }
               },
-              function(GG) {
-                let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                const ZG = bw();
-                Vw(yw((() => {
-                  let wG, SG = Zw("CLS", 0);
-                  const LG = eZ(bG, MZ),
-                    yG = (ZG, yG, kG, UG, YG) => {
-                      SG = Zw("CLS", 0, ZG, yG, kG, UG, YG), LG.o = 0, wG = tZ(GG, SG, pw, bG.reportAllChanges)
+              function(MM) {
+                let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                const iM = OO();
+                mO(nO((() => {
+                  let OM, SM = SO("CLS", 0);
+                  const jM = Bi(rM, Yi),
+                    aM = (iM, aM, PM, nM, QM) => {
+                      SM = SO("CLS", 0, iM, aM, PM, nM, QM), jM.o = 0, OM = qi(MM, SM, HO, rM.reportAllChanges)
                     },
-                    kG = function() {
-                      let GG = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                      LG.o > SG.value && (SG.value = LG.o, SG.entries = LG.i), wG(GG)
+                    PM = function() {
+                      let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                      jM.o > SM.value && (SM.value = jM.o, SM.entries = jM.i), OM(MM)
                     },
-                    UG = GG => {
-                      kG(!0), yG("soft-navigation", GG.navigationId, GG.interactionId, GG.name, GG.startTime)
+                    nM = MM => {
+                      PM(!0), aM("soft-navigation", MM.navigationId, MM.interactionId, MM.name, MM.startTime)
                     },
-                    YG = GG => {
-                      for (const bG of GG) "soft-navigation" !== bG.entryType ? LG.l(bG) : UG(bG);
-                      kG()
+                    QM = MM => {
+                      for (const rM of MM) "soft-navigation" !== rM.entryType ? jM.l(rM) : nM(rM);
+                      PM()
                     },
-                    VG = ["layout-shift"];
-                  Sw(bG) && VG.push("soft-navigation");
-                  const pG = ww(VG, YG);
-                  pG && (wG = tZ(GG, SG, pw, bG.reportAllChanges), ZG.onHidden((() => {
-                    YG(pG.takeRecords()), wG(!0)
-                  })), HZ((() => {
-                    yG("back-forward-cache", SG.navigationId, SG.navigationInteractionId, SG.navigationURL, TZ()), DZ(wG)
-                  })), setTimeout(wG))
+                    zM = ["layout-shift"];
+                  aO(rM) && zM.push("soft-navigation");
+                  const LM = jO(zM, QM);
+                  LM && (OM = qi(MM, SM, HO, rM.reportAllChanges), iM.onHidden((() => {
+                    QM(LM.takeRecords()), OM(!0)
+                  })), Ki((() => {
+                    aM("back-forward-cache", SM.navigationId, SM.navigationInteractionId, SM.navigationURL, Ii()), Ti(OM)
+                  })), setTimeout(OM))
                 })))
-              }((bG => {
-                GG((GG => {
-                  let bG = {};
-                  if (GG.entries.length) {
-                    const ZG = GG.entries.reduce(((GG, bG) => GG.value > bG.value ? GG : bG));
-                    if (ZG?.sources?.length) {
-                      const GG = fw(ZG.sources);
-                      GG && (bG = {
-                        largestShiftTarget: wG.get(GG),
-                        largestShiftTime: ZG.startTime,
-                        largestShiftValue: ZG.value,
-                        largestShiftSource: GG,
-                        largestShiftEntry: ZG,
-                        loadState: sZ(ZG.startTime)
+              }((rM => {
+                MM((MM => {
+                  let rM = {};
+                  if (MM.entries.length) {
+                    const iM = MM.entries.reduce(((MM, rM) => MM.value > rM.value ? MM : rM));
+                    if (iM?.sources?.length) {
+                      const MM = hO(iM.sources);
+                      MM && (rM = {
+                        largestShiftTarget: OM.get(MM),
+                        largestShiftTime: iM.startTime,
+                        largestShiftValue: iM.value,
+                        largestShiftSource: MM,
+                        largestShiftEntry: iM,
+                        loadState: Ai(iM.startTime)
                       })
                     }
                   }
-                  return Object.assign(GG, {
-                    attribution: bG
+                  return Object.assign(MM, {
+                    attribution: rM
                   })
-                })(bG))
-              }), bG)
-          }((GG => {
+                })(rM))
+              }), rM)
+          }((MM => {
             const {
-              loadState: bG,
-              largestShiftValue: ZG,
-              largestShiftTime: wG,
-              largestShiftTarget: SG
-            } = GG.attribution, LG = this.buildInitialValues(GG);
-            this.addIfPresent(LG, "largest_shift_value", ZG), this.addIfPresent(LG, "largest_shift_time", wG);
-            const yG = this.buildInitialContext(GG);
-            this.addIfPresent(yG, Fw, bG), this.addIfPresent(yG, "largest_shift_target", SG), this.pushMeasurement(LG, yG)
+              loadState: rM,
+              largestShiftValue: iM,
+              largestShiftTime: OM,
+              largestShiftTarget: SM
+            } = MM.attribution, jM = this.buildInitialValues(MM);
+            this.addIfPresent(jM, "largest_shift_value", iM), this.addIfPresent(jM, "largest_shift_time", OM);
+            const aM = this.buildInitialContext(MM);
+            this.addIfPresent(aM, WO, rM), this.addIfPresent(aM, "largest_shift_target", SM), this.pushMeasurement(jM, aM)
           }), {
-            reportAllChanges: null === (GG = this.webVitalConfig) || void 0 === GG ? void 0 : GG.reportAllChanges
+            reportAllChanges: null === (MM = this.webVitalConfig) || void 0 === MM ? void 0 : MM.reportAllChanges
           })
         }
         measureFCP() {
-          var GG;
-          ! function(GG) {
-            let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const ZG = eZ(bG = Object.assign({}, bG), kw);
-            Sw(bG) && (ZG.u = new Map), Vw((bG => {
-              GG((GG => {
-                let bG = {
+          var MM;
+          ! function(MM) {
+            let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const iM = Bi(rM = Object.assign({}, rM), QO);
+            aO(rM) && (iM.u = new Map), mO((rM => {
+              MM((MM => {
+                let rM = {
                   timeToFirstByte: 0,
-                  firstByteToFCP: GG.value,
-                  loadState: sZ(TZ())
+                  firstByteToFCP: MM.value,
+                  loadState: Ai(Ii())
                 };
-                if ("soft-navigation" !== GG.navigationType) {
-                  if (GG.entries.length) {
-                    const ZG = AZ(),
-                      wG = GG.entries.at(-1);
-                    if (ZG) {
-                      const SG = ZG.responseStart,
-                        LG = ZG.activationStart || 0,
-                        yG = Math.max(0, SG - LG);
-                      bG = {
-                        timeToFirstByte: yG,
-                        firstByteToFCP: GG.value - yG,
-                        loadState: sZ(GG.entries[0].startTime),
-                        navigationEntry: ZG,
-                        fcpEntry: wG
+                if ("soft-navigation" !== MM.navigationType) {
+                  if (MM.entries.length) {
+                    const iM = Ni(),
+                      OM = MM.entries.at(-1);
+                    if (iM) {
+                      const SM = iM.responseStart,
+                        jM = iM.activationStart || 0,
+                        aM = Math.max(0, SM - jM);
+                      rM = {
+                        timeToFirstByte: aM,
+                        firstByteToFCP: MM.value - aM,
+                        loadState: Ai(MM.entries[0].startTime),
+                        navigationEntry: iM,
+                        fcpEntry: OM
                       }
                     }
                   }
                 } else {
-                  const wG = ZG.u?.get(GG.navigationId);
-                  wG && (bG = {
+                  const OM = iM.u?.get(MM.navigationId);
+                  OM && (rM = {
                     timeToFirstByte: 0,
-                    firstByteToFCP: GG.value,
+                    firstByteToFCP: MM.value,
                     loadState: "complete",
-                    navigationEntry: wG
+                    navigationEntry: OM
                   })
                 }
-                return Object.assign(GG, {
-                  attribution: bG
+                return Object.assign(MM, {
+                  attribution: rM
                 })
-              })(bG))
-            }), bG)
-          }((GG => {
+              })(rM))
+            }), rM)
+          }((MM => {
             const {
-              firstByteToFCP: bG,
-              timeToFirstByte: ZG,
-              loadState: wG
-            } = GG.attribution, SG = this.buildInitialValues(GG);
-            this.addIfPresent(SG, "first_byte_to_fcp", bG), this.addIfPresent(SG, vw, ZG);
-            const LG = this.buildInitialContext(GG);
-            this.addIfPresent(LG, Fw, wG), this.pushMeasurement(SG, LG)
+              firstByteToFCP: rM,
+              timeToFirstByte: iM,
+              loadState: OM
+            } = MM.attribution, SM = this.buildInitialValues(MM);
+            this.addIfPresent(SM, "first_byte_to_fcp", rM), this.addIfPresent(SM, sO, iM);
+            const jM = this.buildInitialContext(MM);
+            this.addIfPresent(jM, WO, OM), this.pushMeasurement(SM, jM)
           }), {
-            reportAllChanges: null === (GG = this.webVitalConfig) || void 0 === GG ? void 0 : GG.reportAllChanges
+            reportAllChanges: null === (MM = this.webVitalConfig) || void 0 === MM ? void 0 : MM.reportAllChanges
           })
         }
         measureINP() {
-          var GG;
-          Xw((GG => {
-            var bG;
+          var MM;
+          bO((MM => {
+            var rM;
             const {
-              interactionTime: ZG,
-              presentationDelay: wG,
-              inputDelay: SG,
-              processingDuration: LG,
-              nextPaintTime: yG,
-              loadState: kG,
-              interactionTarget: UG,
-              interactionType: YG,
-              totalScriptDuration: VG,
-              totalStyleAndLayoutDuration: pG,
-              totalPaintDuration: fG,
-              totalUnattributedDuration: QG,
-              longestScript: KG
-            } = GG.attribution, hG = this.buildInitialValues(GG);
-            this.addIfPresent(hG, "interaction_time", ZG), this.addIfPresent(hG, "presentation_delay", wG), this.addIfPresent(hG, "input_delay", SG), this.addIfPresent(hG, "processing_duration", LG), this.addIfPresent(hG, "next_paint_time", yG), this.addNumberIfDefined(hG, "total_script_duration", VG), this.addNumberIfDefined(hG, "total_style_and_layout_duration", pG), this.addNumberIfDefined(hG, "total_paint_duration", fG), this.addNumberIfDefined(hG, "total_unattributed_duration", QG), this.addNumberIfDefined(hG, "longest_script_intersecting_duration", null === KG || void 0 === KG ? void 0 : KG.intersectingDuration);
-            const dG = this.buildInitialContext(GG);
-            this.addIfPresent(dG, Fw, kG), this.addIfPresent(dG, "interaction_target", UG), this.addIfPresent(dG, "interaction_type", YG), this.addIfPresent(dG, "longest_script_subpart", null === KG || void 0 === KG ? void 0 : KG.subpart), this.addIfPresent(dG, "longest_script_invoker_type", null === KG || void 0 === KG ? void 0 : KG.entry.invokerType), (null === (bG = this.webVitalConfig) || void 0 === bG ? void 0 : bG.trackAttributionSources) && (this.addIfPresent(dG, "longest_script_invoker", null === KG || void 0 === KG ? void 0 : KG.entry.invoker), this.addIfPresent(dG, "longest_script_source_url", null === KG || void 0 === KG ? void 0 : KG.entry.sourceURL), this.addIfPresent(dG, "longest_script_source_function_name", null === KG || void 0 === KG ? void 0 : KG.entry.sourceFunctionName), this.addIfPresent(dG, "longest_script_source_char_position", void 0 !== (null === KG || void 0 === KG ? void 0 : KG.entry.sourceCharPosition) ? String(KG.entry.sourceCharPosition) : void 0)), this.pushMeasurement(hG, dG)
+              interactionTime: iM,
+              presentationDelay: OM,
+              inputDelay: SM,
+              processingDuration: jM,
+              nextPaintTime: aM,
+              loadState: PM,
+              interactionTarget: nM,
+              interactionType: QM,
+              totalScriptDuration: zM,
+              totalStyleAndLayoutDuration: LM,
+              totalPaintDuration: mM,
+              totalUnattributedDuration: HM,
+              longestScript: hM
+            } = MM.attribution, JM = this.buildInitialValues(MM);
+            this.addIfPresent(JM, "interaction_time", iM), this.addIfPresent(JM, "presentation_delay", OM), this.addIfPresent(JM, "input_delay", SM), this.addIfPresent(JM, "processing_duration", jM), this.addIfPresent(JM, "next_paint_time", aM), this.addNumberIfDefined(JM, "total_script_duration", zM), this.addNumberIfDefined(JM, "total_style_and_layout_duration", LM), this.addNumberIfDefined(JM, "total_paint_duration", mM), this.addNumberIfDefined(JM, "total_unattributed_duration", HM), this.addNumberIfDefined(JM, "longest_script_intersecting_duration", null === hM || void 0 === hM ? void 0 : hM.intersectingDuration);
+            const dM = this.buildInitialContext(MM);
+            this.addIfPresent(dM, WO, PM), this.addIfPresent(dM, "interaction_target", nM), this.addIfPresent(dM, "interaction_type", QM), this.addIfPresent(dM, "longest_script_subpart", null === hM || void 0 === hM ? void 0 : hM.subpart), this.addIfPresent(dM, "longest_script_invoker_type", null === hM || void 0 === hM ? void 0 : hM.entry.invokerType), (null === (rM = this.webVitalConfig) || void 0 === rM ? void 0 : rM.trackAttributionSources) && (this.addIfPresent(dM, "longest_script_invoker", null === hM || void 0 === hM ? void 0 : hM.entry.invoker), this.addIfPresent(dM, "longest_script_source_url", null === hM || void 0 === hM ? void 0 : hM.entry.sourceURL), this.addIfPresent(dM, "longest_script_source_function_name", null === hM || void 0 === hM ? void 0 : hM.entry.sourceFunctionName), this.addIfPresent(dM, "longest_script_source_char_position", void 0 !== (null === hM || void 0 === hM ? void 0 : hM.entry.sourceCharPosition) ? String(hM.entry.sourceCharPosition) : void 0)), this.pushMeasurement(JM, dM)
           }), {
-            reportAllChanges: null === (GG = this.webVitalConfig) || void 0 === GG ? void 0 : GG.reportAllChanges
+            reportAllChanges: null === (MM = this.webVitalConfig) || void 0 === MM ? void 0 : MM.reportAllChanges
           })
         }
         measureLCP() {
-          var GG;
-          ! function(GG) {
-            let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            null != (bG = Object.assign({}, bG)).resourceBufferSize && (Cw = bG.resourceBufferSize);
-            const ZG = eZ(bG, uw),
-              wG = new WeakMap;
-            Sw(bG) && (ZG.u = new Map), ZG.m = GG => {
-                const ZG = GG.element;
-                if (ZG) {
-                  const SG = bG.generateTarget?.(ZG) ?? nZ(ZG);
-                  wG.set(GG, SG)
-                } else GG.id && wG.set(GG, `#${GG.id}`)
+          var MM;
+          ! function(MM) {
+            let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            null != (rM = Object.assign({}, rM)).resourceBufferSize && (gO = rM.resourceBufferSize);
+            const iM = Bi(rM, wO),
+              OM = new WeakMap;
+            aO(rM) && (iM.u = new Map), iM.m = MM => {
+                const iM = MM.element;
+                if (iM) {
+                  const SM = rM.generateTarget?.(iM) ?? vi(iM);
+                  OM.set(MM, SM)
+                } else MM.id && OM.set(MM, `#${MM.id}`)
               },
-              function(GG) {
-                let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                  ZG = !1;
-                const wG = Sw(bG);
-                Uw((() => {
-                  let SG, LG = bw(),
-                    yG = Zw("LCP");
-                  const kG = eZ(bG, uw),
-                    UG = (wG, kG, UG, YG, VG) => {
-                      yG = Zw("LCP", -1, wG, kG, UG, YG, VG), SG = tZ(GG, yG, iw, bG.reportAllChanges), ZG = !1, "soft-navigation" === wG && (LG = bw(!0))
+              function(MM) {
+                let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                  iM = !1;
+                const OM = aO(rM);
+                zO((() => {
+                  let SM, jM = OO(),
+                    aM = SO("LCP");
+                  const PM = Bi(rM, wO),
+                    nM = (OM, PM, nM, QM, zM) => {
+                      aM = SO("LCP", -1, OM, PM, nM, QM, zM), SM = qi(MM, aM, tO, rM.reportAllChanges), iM = !1, "soft-navigation" === OM && (jM = OO(!0))
                     },
-                    YG = GG => {
-                      kG.u && GG.navigationId && Lw(kG.u, GG), ZG || SG(!0), UG("soft-navigation", GG.navigationId, GG.interactionId, GG.name, GG.startTime);
-                      const bG = GG.getLargestInteractionContentfulPaint?.();
-                      bG && VG([bG])
+                    QM = MM => {
+                      PM.u && MM.navigationId && PO(PM.u, MM), iM || SM(!0), nM("soft-navigation", MM.navigationId, MM.interactionId, MM.name, MM.startTime);
+                      const rM = MM.getLargestInteractionContentfulPaint?.();
+                      rM && zM([rM])
                     },
-                    VG = GG => {
-                      bG.reportAllChanges || wG || (GG = GG.slice(-1));
-                      for (const bG of GG) {
-                        if (!bG) continue;
-                        if ("soft-navigation" === bG.entryType) {
-                          YG(bG);
+                    zM = MM => {
+                      rM.reportAllChanges || OM || (MM = MM.slice(-1));
+                      for (const rM of MM) {
+                        if (!rM) continue;
+                        if ("soft-navigation" === rM.entryType) {
+                          QM(rM);
                           continue
                         }
-                        let GG = 0,
-                          ZG = [],
-                          wG = bG.startTime;
-                        if ("largest-contentful-paint" === bG.entryType) GG = Math.max(bG.startTime - NZ(), 0), kG.l(bG), ZG = [bG];
-                        else if ("interaction-contentful-paint" === bG.entryType) {
-                          const SG = bG;
-                          if (!yG.navigationId) continue;
-                          if ("interactionId" in SG && SG.interactionId != yG.navigationInteractionId) continue;
-                          wG = SG.largestContentfulPaint?.renderTime || 0, GG = Math.max(wG - bG.startTime, 0), SG.largestContentfulPaint && (kG.l(SG.largestContentfulPaint), ZG = [SG.largestContentfulPaint])
+                        let MM = 0,
+                          iM = [],
+                          OM = rM.startTime;
+                        if ("largest-contentful-paint" === rM.entryType) MM = Math.max(rM.startTime - Vi(), 0), PM.l(rM), iM = [rM];
+                        else if ("interaction-contentful-paint" === rM.entryType) {
+                          const SM = rM;
+                          if (!aM.navigationId) continue;
+                          if ("interactionId" in SM && SM.interactionId != aM.navigationInteractionId) continue;
+                          OM = SM.largestContentfulPaint?.renderTime || 0, MM = Math.max(OM - rM.startTime, 0), SM.largestContentfulPaint && (PM.l(SM.largestContentfulPaint), iM = [SM.largestContentfulPaint])
                         }
-                        wG < LG.firstHiddenTime && (yG.value = GG, yG.entries = ZG, SG())
+                        OM < jM.firstHiddenTime && (aM.value = MM, aM.entries = iM, SM())
                       }
                     },
-                    pG = ["largest-contentful-paint"];
-                  wG && pG.push("interaction-contentful-paint", "soft-navigation");
-                  const fG = ww(pG, VG);
-                  if (fG) {
-                    SG = tZ(GG, yG, iw, bG.reportAllChanges);
-                    const LG = ["keydown", "click", "visibilitychange"],
-                      kG = GG => {
-                        if (GG.isTrusted && !ZG) {
-                          const GG = yG.id;
-                          Ew((() => {
-                            if (!ZG) {
-                              if (!wG) {
-                                fG.disconnect();
-                                for (const GG of LG) removeEventListener(GG, kG, {
+                    LM = ["largest-contentful-paint"];
+                  OM && LM.push("interaction-contentful-paint", "soft-navigation");
+                  const mM = jO(LM, zM);
+                  if (mM) {
+                    SM = qi(MM, aM, tO, rM.reportAllChanges);
+                    const jM = ["keydown", "click", "visibilitychange"],
+                      PM = MM => {
+                        if (MM.isTrusted && !iM) {
+                          const MM = aM.id;
+                          CO((() => {
+                            if (!iM) {
+                              if (!OM) {
+                                mM.disconnect();
+                                for (const MM of jM) removeEventListener(MM, PM, {
                                   capture: !0
                                 })
                               }
-                              GG === yG.id && (ZG = !0, SG(!0))
+                              MM === aM.id && (iM = !0, SM(!0))
                             }
                           }))
                         }
                       };
-                    for (const GG of LG) addEventListener(GG, kG, {
+                    for (const MM of jM) addEventListener(MM, PM, {
                       capture: !0
                     });
-                    HZ((wG => {
-                      UG("back-forward-cache", yG.navigationId, yG.navigationInteractionId, yG.navigationURL, TZ()), SG = tZ(GG, yG, iw, bG.reportAllChanges), DZ((() => {
-                        yG.value = performance.now() - wG.timeStamp, ZG = !0, SG(!0)
+                    Ki((OM => {
+                      nM("back-forward-cache", aM.navigationId, aM.navigationInteractionId, aM.navigationURL, Ii()), SM = qi(MM, aM, tO, rM.reportAllChanges), Ti((() => {
+                        aM.value = performance.now() - OM.timeStamp, iM = !0, SM(!0)
                       }))
                     }))
                   }
                 }))
-              }((bG => {
-                GG((GG => {
-                  let bG = {
+              }((rM => {
+                MM((MM => {
+                  let rM = {
                     timeToFirstByte: 0,
                     resourceLoadDelay: 0,
                     resourceLoadDuration: 0,
-                    elementRenderDelay: GG.value
+                    elementRenderDelay: MM.value
                   };
-                  if (GG.entries.length) {
-                    const SG = GG.entries.at(-1),
-                      LG = GG => GG.name === SG.url && (GG.requestStart || GG.startTime) <= SG.startTime,
-                      yG = SG.url && (Ww.findLast(LG) || performance.getEntriesByType("resource").findLast(LG));
-                    let kG;
-                    bG.target = wG.get(SG), bG.lcpEntry = SG, SG.url && (bG.url = SG.url), yG && (bG.lcpResourceEntry = yG);
-                    let UG = 0,
-                      YG = 0;
-                    if ("soft-navigation" !== GG.navigationType ? (kG = AZ(), UG = kG?.activationStart ?? 0, YG = kG?.responseStart ?? 0) : (UG = GG.navigationStartTime || 0, kG = ZG.u?.get(GG.navigationId)), kG) {
-                      const ZG = Math.max(0, YG - UG),
-                        wG = Math.max(ZG, yG ? (yG.requestStart || yG.startTime) - UG : 0),
-                        SG = Math.min(GG.value, Math.max(wG, yG ? yG.responseEnd - UG : 0));
-                      bG = {
-                        ...bG,
-                        timeToFirstByte: ZG,
-                        resourceLoadDelay: wG - ZG,
-                        resourceLoadDuration: SG - wG,
-                        elementRenderDelay: GG.value - SG,
-                        navigationEntry: kG
+                  if (MM.entries.length) {
+                    const SM = MM.entries.at(-1),
+                      jM = MM => MM.name === SM.url && (MM.requestStart || MM.startTime) <= SM.startTime,
+                      aM = SM.url && (uO.findLast(jM) || performance.getEntriesByType("resource").findLast(jM));
+                    let PM;
+                    rM.target = OM.get(SM), rM.lcpEntry = SM, SM.url && (rM.url = SM.url), aM && (rM.lcpResourceEntry = aM);
+                    let nM = 0,
+                      QM = 0;
+                    if ("soft-navigation" !== MM.navigationType ? (PM = Ni(), nM = PM?.activationStart ?? 0, QM = PM?.responseStart ?? 0) : (nM = MM.navigationStartTime || 0, PM = iM.u?.get(MM.navigationId)), PM) {
+                      const iM = Math.max(0, QM - nM),
+                        OM = Math.max(iM, aM ? (aM.requestStart || aM.startTime) - nM : 0),
+                        SM = Math.min(MM.value, Math.max(OM, aM ? aM.responseEnd - nM : 0));
+                      rM = {
+                        ...rM,
+                        timeToFirstByte: iM,
+                        resourceLoadDelay: OM - iM,
+                        resourceLoadDuration: SM - OM,
+                        elementRenderDelay: MM.value - SM,
+                        navigationEntry: PM
                       }
                     }
                   }
-                  return Object.assign(GG, {
-                    attribution: bG
+                  return Object.assign(MM, {
+                    attribution: rM
                   })
-                })(bG))
-              }), bG)
-          }((GG => {
-            var bG;
+                })(rM))
+              }), rM)
+          }((MM => {
+            var rM;
             const {
-              elementRenderDelay: ZG,
-              resourceLoadDelay: wG,
-              resourceLoadDuration: SG,
-              timeToFirstByte: LG,
-              target: yG,
-              url: kG,
-              lcpResourceEntry: UG
-            } = GG.attribution, YG = this.buildInitialValues(GG);
-            this.addIfPresent(YG, "element_render_delay", ZG), this.addIfPresent(YG, "resource_load_delay", wG), this.addIfPresent(YG, "resource_load_duration", SG), this.addIfPresent(YG, vw, LG);
-            const VG = this.buildInitialContext(GG);
-            this.addIfPresent(VG, "element", yG), (null === (bG = this.webVitalConfig) || void 0 === bG ? void 0 : bG.trackAttributionSources) && (this.addIfPresent(VG, "resource_url", kG), this.addIfPresent(VG, "resource_delivery_type", null === UG || void 0 === UG ? void 0 : UG.deliveryType), this.addIfPresent(VG, "resource_initiator_type", null === UG || void 0 === UG ? void 0 : UG.initiatorType)), this.pushMeasurement(YG, VG)
+              elementRenderDelay: iM,
+              resourceLoadDelay: OM,
+              resourceLoadDuration: SM,
+              timeToFirstByte: jM,
+              target: aM,
+              url: PM,
+              lcpResourceEntry: nM
+            } = MM.attribution, QM = this.buildInitialValues(MM);
+            this.addIfPresent(QM, "element_render_delay", iM), this.addIfPresent(QM, "resource_load_delay", OM), this.addIfPresent(QM, "resource_load_duration", SM), this.addIfPresent(QM, sO, jM);
+            const zM = this.buildInitialContext(MM);
+            this.addIfPresent(zM, "element", aM), (null === (rM = this.webVitalConfig) || void 0 === rM ? void 0 : rM.trackAttributionSources) && (this.addIfPresent(zM, "resource_url", PM), this.addIfPresent(zM, "resource_delivery_type", null === nM || void 0 === nM ? void 0 : nM.deliveryType), this.addIfPresent(zM, "resource_initiator_type", null === nM || void 0 === nM ? void 0 : nM.initiatorType)), this.pushMeasurement(QM, zM)
           }), {
-            reportAllChanges: null === (GG = this.webVitalConfig) || void 0 === GG ? void 0 : GG.reportAllChanges
+            reportAllChanges: null === (MM = this.webVitalConfig) || void 0 === MM ? void 0 : MM.reportAllChanges
           })
         }
         measureTTFB() {
-          var GG;
-          ! function(GG) {
-            ! function(GG) {
-              let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const ZG = Sw(bG);
-              let wG = Zw("TTFB"),
-                SG = tZ(GG, wG, mw, bG.reportAllChanges);
-              Iw((() => {
-                const LG = AZ();
-                if (LG) {
-                  const yG = LG.responseStart;
-                  wG.value = Math.max(yG - NZ(), 0), wG.entries = [LG], SG(!0), HZ((() => {
-                    wG = Zw("TTFB", 0, "back-forward-cache", wG.navigationId, wG.navigationInteractionId, wG.navigationURL, TZ()), SG = tZ(GG, wG, mw, bG.reportAllChanges), SG(!0)
-                  })), ZG && ww(["soft-navigation"], (ZG => {
-                    ZG.forEach((ZG => {
-                      ZG.navigationId && (wG = Zw("TTFB", 0, "soft-navigation", ZG.navigationId, ZG.interactionId, ZG.name, ZG.startTime), wG.entries = [ZG], SG = tZ(GG, wG, mw, bG.reportAllChanges), SG(!0))
+          var MM;
+          ! function(MM) {
+            ! function(MM) {
+              let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const iM = aO(rM);
+              let OM = SO("TTFB"),
+                SM = qi(MM, OM, RO, rM.reportAllChanges);
+              pO((() => {
+                const jM = Ni();
+                if (jM) {
+                  const aM = jM.responseStart;
+                  OM.value = Math.max(aM - Vi(), 0), OM.entries = [jM], SM(!0), Ki((() => {
+                    OM = SO("TTFB", 0, "back-forward-cache", OM.navigationId, OM.navigationInteractionId, OM.navigationURL, Ii()), SM = qi(MM, OM, RO, rM.reportAllChanges), SM(!0)
+                  })), iM && jO(["soft-navigation"], (iM => {
+                    iM.forEach((iM => {
+                      iM.navigationId && (OM = SO("TTFB", 0, "soft-navigation", iM.navigationId, iM.interactionId, iM.name, iM.startTime), OM.entries = [iM], SM = qi(MM, OM, RO, rM.reportAllChanges), SM(!0))
                     }))
-                  }), bG)
+                  }), rM)
                 }
               }))
-            }((bG => {
-              GG((GG => {
-                const bG = GG.entries[0];
-                let ZG = {
+            }((rM => {
+              MM((MM => {
+                const rM = MM.entries[0];
+                let iM = {
                   waitingDuration: 0,
                   cacheDuration: 0,
                   dnsDuration: 0,
                   connectionDuration: 0,
                   requestDuration: 0,
-                  navigationEntry: bG
+                  navigationEntry: rM
                 };
-                if (GG.entries.length && bG instanceof PerformanceNavigationTiming) {
-                  const wG = bG.activationStart || 0,
-                    SG = Math.max((bG.workerStart || bG.fetchStart || 0) - wG, 0),
-                    LG = Math.max(bG.domainLookupStart - wG, 0),
-                    yG = Math.max(bG.connectStart - wG, 0),
-                    kG = Math.max(bG.connectEnd - wG, 0);
-                  ZG = {
-                    waitingDuration: SG,
-                    cacheDuration: LG - SG,
-                    dnsDuration: yG - LG,
-                    connectionDuration: kG - yG,
-                    requestDuration: GG.value - kG,
-                    navigationEntry: bG
+                if (MM.entries.length && rM instanceof PerformanceNavigationTiming) {
+                  const OM = rM.activationStart || 0,
+                    SM = Math.max((rM.workerStart || rM.fetchStart || 0) - OM, 0),
+                    jM = Math.max(rM.domainLookupStart - OM, 0),
+                    aM = Math.max(rM.connectStart - OM, 0),
+                    PM = Math.max(rM.connectEnd - OM, 0);
+                  iM = {
+                    waitingDuration: SM,
+                    cacheDuration: jM - SM,
+                    dnsDuration: aM - jM,
+                    connectionDuration: PM - aM,
+                    requestDuration: MM.value - PM,
+                    navigationEntry: rM
                   }
                 }
-                return Object.assign(GG, {
-                  attribution: ZG
+                return Object.assign(MM, {
+                  attribution: iM
                 })
-              })(bG))
+              })(rM))
             }), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
-          }((GG => {
+          }((MM => {
             const {
-              dnsDuration: bG,
-              connectionDuration: ZG,
-              requestDuration: wG,
-              waitingDuration: SG,
-              cacheDuration: LG
-            } = GG.attribution, yG = this.buildInitialValues(GG);
-            this.addIfPresent(yG, "dns_duration", bG), this.addIfPresent(yG, "connection_duration", ZG), this.addIfPresent(yG, "request_duration", wG), this.addIfPresent(yG, "waiting_duration", SG), this.addIfPresent(yG, "cache_duration", LG);
-            const kG = this.buildInitialContext(GG);
-            this.pushMeasurement(yG, kG)
+              dnsDuration: rM,
+              connectionDuration: iM,
+              requestDuration: OM,
+              waitingDuration: SM,
+              cacheDuration: jM
+            } = MM.attribution, aM = this.buildInitialValues(MM);
+            this.addIfPresent(aM, "dns_duration", rM), this.addIfPresent(aM, "connection_duration", iM), this.addIfPresent(aM, "request_duration", OM), this.addIfPresent(aM, "waiting_duration", SM), this.addIfPresent(aM, "cache_duration", jM);
+            const PM = this.buildInitialContext(MM);
+            this.pushMeasurement(aM, PM)
           }), {
-            reportAllChanges: null === (GG = this.webVitalConfig) || void 0 === GG ? void 0 : GG.reportAllChanges
+            reportAllChanges: null === (MM = this.webVitalConfig) || void 0 === MM ? void 0 : MM.reportAllChanges
           })
         }
-        buildInitialValues(GG) {
+        buildInitialValues(MM) {
           return {
-            [GG.name.toLowerCase()]: GG.value,
-            delta: GG.delta
+            [MM.name.toLowerCase()]: MM.value,
+            delta: MM.delta
           }
         }
-        buildInitialContext(GG) {
-          var bG;
-          const ZG = null !== (bG = Gb("com.grafana.faro.lastNavigationId", OG)) && void 0 !== bG ? bG : jZ;
+        buildInitialContext(MM) {
+          var rM;
+          const iM = null !== (rM = Mr("com.grafana.faro.lastNavigationId", TM)) && void 0 !== rM ? rM : oi;
           return {
-            id: GG.id,
-            rating: GG.rating,
-            navigation_type: GG.navigationType,
-            navigation_entry_id: ZG
+            id: MM.id,
+            rating: MM.rating,
+            navigation_type: MM.navigationType,
+            navigation_entry_id: iM
           }
         }
-        pushMeasurement(GG, bG) {
+        pushMeasurement(MM, rM) {
           this.corePushMeasurement({
             type: "web-vitals",
-            values: GG
+            values: MM
           }, {
-            context: bG
+            context: rM
           })
         }
-        addIfPresent(GG, bG, ZG) {
-          ZG && (GG[bG] = ZG)
+        addIfPresent(MM, rM, iM) {
+          iM && (MM[rM] = iM)
         }
-        addNumberIfDefined(GG, bG, ZG) {
-          void 0 !== ZG && (GG[bG] = ZG)
+        addNumberIfDefined(MM, rM, iM) {
+          void 0 !== iM && (MM[rM] = iM)
         }
       },
-      lw = class extends bZ {
+      kO = class extends ri {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = ZZ
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = ii
         }
         initialize() {
-          this.logDebug("Initializing"), new aw(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
+          this.logDebug("Initializing"), new DO(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
         }
       };
-    const jw = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
+    const ZO = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
 
-    function Pw() {
-      let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-      for (const bG of GG)
-        if ("traceparent" === bG.name) {
-          if (!jw.test(bG.description)) continue;
-          const [, GG, ZG] = bG.description.split("-");
-          if (null != GG && null != ZG) return {
-            traceId: GG,
-            spanId: ZG
+    function oO() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+      for (const rM of MM)
+        if ("traceparent" === rM.name) {
+          if (!ZO.test(rM.description)) continue;
+          const [, MM, iM] = rM.description.split("-");
+          if (null != MM && null != iM) return {
+            traceId: MM,
+            spanId: iM
           };
           break
         }
     }
 
-    function Mw(GG) {
-      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    function fO(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         wallNow: Date.now(),
         monoNow: performance.now()
       };
       const {
-        wallNow: ZG,
-        monoNow: wG
-      } = bG;
-      return Math.min(ZG, ZG - (wG - GG))
+        wallNow: iM,
+        monoNow: OM
+      } = rM;
+      return Math.min(iM, iM - (OM - MM))
     }
 
-    function Aw(GG) {
-      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      for (const [ZG, wG] of Object.entries(bG)) {
-        const bG = GG[ZG];
-        return null != bG && (FG(wG) ? wG.includes(bG) : bG === wG)
+    function YO(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      for (const [iM, OM] of Object.entries(rM)) {
+        const rM = MM[iM];
+        return null != rM && (RM(OM) ? OM.includes(rM) : rM === OM)
       }
       return !0
     }
 
-    function sw(GG) {
+    function NO(MM) {
       const {
-        connectEnd: bG,
-        connectStart: ZG,
-        decodedBodySize: wG,
-        domainLookupEnd: SG,
-        domainLookupStart: LG,
-        duration: yG,
-        encodedBodySize: kG,
-        fetchStart: UG,
-        initiatorType: YG,
-        name: VG,
-        nextHopProtocol: pG,
-        redirectEnd: fG,
-        redirectStart: QG,
-        renderBlockingStatus: KG,
-        requestStart: hG,
-        responseEnd: dG,
-        responseStart: JG,
-        responseStatus: rG,
-        secureConnectionStart: zG,
-        transferSize: EG,
-        workerStart: oG
-      } = GG;
+        connectEnd: rM,
+        connectStart: iM,
+        decodedBodySize: OM,
+        domainLookupEnd: SM,
+        domainLookupStart: jM,
+        duration: aM,
+        encodedBodySize: PM,
+        fetchStart: nM,
+        initiatorType: QM,
+        name: zM,
+        nextHopProtocol: LM,
+        redirectEnd: mM,
+        redirectStart: HM,
+        renderBlockingStatus: hM,
+        requestStart: JM,
+        responseEnd: dM,
+        responseStart: yM,
+        responseStatus: lM,
+        secureConnectionStart: EM,
+        transferSize: UM,
+        workerStart: GM
+      } = MM;
       return {
-        name: VG,
-        httpHost: nw(VG),
-        duration: gw(yG),
-        tcpHandshakeTime: gw(bG - ZG),
-        dnsLookupTime: gw(SG - LG),
-        tlsNegotiationTime: gw(bG - zG),
-        responseStatus: gw(rG),
-        redirectTime: gw(fG - QG),
-        requestTime: gw(JG - hG),
-        responseTime: gw(dG - JG),
-        fetchTime: gw(dG - UG),
-        serviceWorkerTime: gw(oG > 0 ? UG - oG : 0),
-        decodedBodySize: gw(wG),
-        encodedBodySize: gw(kG),
+        name: zM,
+        httpHost: xO(zM),
+        duration: vO(aM),
+        tcpHandshakeTime: vO(rM - iM),
+        dnsLookupTime: vO(SM - jM),
+        tlsNegotiationTime: vO(rM - EM),
+        responseStatus: vO(lM),
+        redirectTime: vO(mM - HM),
+        requestTime: vO(yM - JM),
+        responseTime: vO(dM - yM),
+        fetchTime: vO(dM - nM),
+        serviceWorkerTime: vO(GM > 0 ? nM - GM : 0),
+        decodedBodySize: vO(OM),
+        encodedBodySize: vO(PM),
         cacheHitStatus: function() {
-          let GG = "fullLoad";
-          0 === EG ? wG > 0 && (GG = "cache") : null != rG ? 304 === rG && (GG = "conditionalFetch") : kG > 0 && EG < kG && (GG = "conditionalFetch");
-          return GG
+          let MM = "fullLoad";
+          0 === UM ? OM > 0 && (MM = "cache") : null != lM ? 304 === lM && (MM = "conditionalFetch") : PM > 0 && UM < PM && (MM = "conditionalFetch");
+          return MM
         }(),
-        renderBlockingStatus: gw(KG),
-        protocol: pG,
-        initiatorType: YG,
+        renderBlockingStatus: vO(hM),
+        protocol: LM,
+        initiatorType: QM,
         visibilityState: document.visibilityState,
-        ttfb: gw(JG - hG),
-        transferSize: gw(EG)
+        ttfb: vO(yM - JM),
+        transferSize: vO(UM)
       }
     }
 
-    function qw(GG) {
+    function AO(MM) {
       const {
-        activationStart: bG,
-        domComplete: ZG,
-        domContentLoadedEventEnd: wG,
-        domContentLoadedEventStart: SG,
-        domInteractive: LG,
-        fetchStart: yG,
-        loadEventEnd: kG,
-        loadEventStart: UG,
-        responseStart: YG,
-        type: VG
-      } = GG, pG = function() {
-        var GG;
-        return null != (null === (GG = performance.timing) || void 0 === GG ? void 0 : GG.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
+        activationStart: rM,
+        domComplete: iM,
+        domContentLoadedEventEnd: OM,
+        domContentLoadedEventStart: SM,
+        domInteractive: jM,
+        fetchStart: aM,
+        loadEventEnd: PM,
+        loadEventStart: nM,
+        responseStart: QM,
+        type: zM
+      } = MM, LM = function() {
+        var MM;
+        return null != (null === (MM = performance.timing) || void 0 === MM ? void 0 : MM.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
       }();
-      return Vb(Vb({}, sw(GG)), {}, {
-        pageLoadTime: gw(ZG - yG),
-        documentParsingTime: gw(pG ? LG - pG : null),
-        domProcessingTime: gw(ZG - LG),
-        domContentLoadHandlerTime: gw(wG - SG),
-        onLoadTime: gw(kG - UG),
-        ttfb: gw(Math.max(YG - (null !== bG && void 0 !== bG ? bG : 0), 0)),
-        type: VG
+      return zr(zr({}, NO(MM)), {}, {
+        pageLoadTime: vO(iM - aM),
+        documentParsingTime: vO(LM ? jM - LM : null),
+        domProcessingTime: vO(iM - jM),
+        domContentLoadHandlerTime: vO(OM - SM),
+        onLoadTime: vO(PM - nM),
+        ttfb: vO(Math.max(QM - (null !== rM && void 0 !== rM ? rM : 0), 0)),
+        type: zM
       })
     }
 
-    function nw(GG) {
+    function xO(MM) {
       try {
-        return new URL(GG).host || jZ
-      } catch (bG) {
-        return jZ
+        return new URL(MM).host || oi
+      } catch (rM) {
+        return oi
       }
     }
 
-    function gw(GG) {
-      return null == GG ? jZ : "number" === typeof GG ? Math.round(GG > 0 ? GG : 0).toString() : GG.toString()
+    function vO(MM) {
+      return null == MM ? oi : "number" === typeof MM ? Math.round(MM > 0 ? MM : 0).toString() : MM.toString()
     }
-    const ew = {
+    const FO = {
       initiatorType: ["xmlhttprequest", "fetch"]
     };
 
-    function Rw(GG, bG, ZG, wG, SG, LG, yG) {
+    function BO(MM, rM, iM, OM, SM, jM, aM) {
       try {
-        var kG = GG[LG](yG),
-          UG = kG.value
-      } catch (GG) {
-        return void ZG(GG)
+        var PM = MM[jM](aM),
+          nM = PM.value
+      } catch (MM) {
+        return void iM(MM)
       }
-      kG.done ? bG(UG) : Promise.resolve(UG).then(wG, SG)
+      PM.done ? rM(nM) : Promise.resolve(nM).then(OM, SM)
     }
 
-    function Tw(GG) {
+    function XO(MM) {
       return function() {
-        var bG = this,
-          ZG = arguments;
-        return new Promise((function(wG, SG) {
-          var LG = GG.apply(bG, ZG);
+        var rM = this,
+          iM = arguments;
+        return new Promise((function(OM, SM) {
+          var jM = MM.apply(rM, iM);
 
-          function yG(GG) {
-            Rw(LG, wG, SG, yG, kG, "next", GG)
+          function aM(MM) {
+            BO(jM, OM, SM, aM, PM, "next", MM)
           }
 
-          function kG(GG) {
-            Rw(LG, wG, SG, yG, kG, "throw", GG)
+          function PM(MM) {
+            BO(jM, OM, SM, aM, PM, "throw", MM)
           }
-          yG(void 0)
+          aM(void 0)
         }))
       }
     }
-    const Hw = new rZ;
-    var tw = class extends bZ {
+    const IO = new Ei;
+    var KO = class extends ri {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = ZZ
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = ii
       }
       initialize() {
-        var GG = this;
+        var MM = this;
         if (!("PerformanceObserver" in window)) return void this.logDebug("performance observer not supported. Disable performance instrumentation.");
-        let bG = !1;
-        const ZG = () => {
-          ! function(GG) {
-            if ("complete" === document.readyState) GG();
+        let rM = !1;
+        const iM = () => {
+          ! function(MM) {
+            if ("complete" === document.readyState) MM();
             else {
-              const bG = () => {
-                "complete" === document.readyState && (GG(), document.removeEventListener("readystatechange", bG))
+              const rM = () => {
+                "complete" === document.readyState && (MM(), document.removeEventListener("readystatechange", rM))
               };
-              document.addEventListener("readystatechange", bG)
+              document.addEventListener("readystatechange", rM)
             }
-          }(Tw((function*() {
-            if (bG) return;
-            const ZG = GG.api.pushEvent,
+          }(XO((function*() {
+            if (rM) return;
+            const iM = MM.api.pushEvent,
               {
-                faroNavigationId: wG
-              } = yield function(GG) {
-                let bG;
-                const ZG = new Promise((GG => {
-                  bG = GG
+                faroNavigationId: OM
+              } = yield function(MM) {
+                let rM;
+                const iM = new Promise((MM => {
+                  rM = MM
                 }));
-                return new PerformanceObserver((ZG => {
-                  var wG;
-                  const [SG] = ZG.getEntries();
-                  if (null == SG || DG(SG.name)) return;
-                  const LG = SG.toJSON();
-                  let yG = Pw(null === LG || void 0 === LG ? void 0 : LG.serverTiming);
-                  const kG = null !== (wG = Gb("com.grafana.faro.lastNavigationId", OG)) && void 0 !== wG ? wG : jZ,
-                    UG = Vb(Vb({}, qw(LG)), {}, {
-                      faroNavigationId: Jb(),
-                      faroPreviousNavigationId: kG
+                return new PerformanceObserver((iM => {
+                  var OM;
+                  const [SM] = iM.getEntries();
+                  if (null == SM || KM(SM.name)) return;
+                  const jM = SM.toJSON();
+                  let aM = oO(null === jM || void 0 === jM ? void 0 : jM.serverTiming);
+                  const PM = null !== (OM = Mr("com.grafana.faro.lastNavigationId", TM)) && void 0 !== OM ? OM : oi,
+                    nM = zr(zr({}, AO(jM)), {}, {
+                      faroNavigationId: yr(),
+                      faroPreviousNavigationId: PM
                     });
-                  bb("com.grafana.faro.lastNavigationId", UG.faroNavigationId, OG), GG("faro.performance.navigation", UG, void 0, {
-                    spanContext: yG,
-                    timestampOverwriteMs: Mw(LG.startTime)
-                  }), bG(UG)
+                  rr("com.grafana.faro.lastNavigationId", nM.faroNavigationId, TM), MM("faro.performance.navigation", nM, void 0, {
+                    spanContext: aM,
+                    timestampOverwriteMs: fO(jM.startTime)
+                  }), rM(nM)
                 })).observe({
                   type: "navigation",
                   buffered: !0
-                }), ZG
-              }(ZG);
-            bG || null == wG || function(GG, bG, ZG, wG) {
-              const SG = wG.trackResources;
-              new PerformanceObserver((wG => {
-                const LG = wG.getEntries(),
-                  yG = {
+                }), iM
+              }(iM);
+            rM || null == OM || function(MM, rM, iM, OM) {
+              const SM = OM.trackResources;
+              new PerformanceObserver((OM => {
+                const jM = OM.getEntries(),
+                  aM = {
                     wallNow: Date.now(),
                     monoNow: performance.now()
                   };
-                for (const kG of LG) {
-                  if (DG(kG.name)) continue;
-                  null === ZG || void 0 === ZG || ZG.notify({
+                for (const PM of jM) {
+                  if (KM(PM.name)) continue;
+                  null === iM || void 0 === iM || iM.notify({
                     type: "resource"
                   });
-                  const wG = kG.toJSON();
-                  let LG = Pw(null === wG || void 0 === wG ? void 0 : wG.serverTiming);
-                  (null == SG && Aw(wG, ew) || SG) && bG("faro.performance.resource", Vb(Vb({}, sw(wG)), {}, {
-                    faroNavigationId: GG,
-                    faroResourceId: Jb()
+                  const OM = PM.toJSON();
+                  let jM = oO(null === OM || void 0 === OM ? void 0 : OM.serverTiming);
+                  (null == SM && YO(OM, FO) || SM) && rM("faro.performance.resource", zr(zr({}, NO(OM)), {}, {
+                    faroNavigationId: MM,
+                    faroResourceId: yr()
                   }), void 0, {
-                    spanContext: LG,
-                    timestampOverwriteMs: Mw(wG.startTime, yG)
+                    spanContext: jM,
+                    timestampOverwriteMs: fO(OM.startTime, aM)
                   })
                 }
               })).observe({
                 type: "resource",
                 buffered: !0
               })
-            }(wG, ZG, Hw, GG.config)
+            }(OM, iM, IO, MM.config)
           })))
         };
         this.cancelInitialization = () => {
-          bG = !0, document.removeEventListener("prerenderingchange", ZG)
-        }, document.prerendering ? document.addEventListener("prerenderingchange", ZG, {
+          rM = !0, document.removeEventListener("prerenderingchange", iM)
+        }, document.prerendering ? document.addEventListener("prerenderingchange", iM, {
           once: !0
-        }) : ZG()
+        }) : iM()
       }
       destroy() {
-        var GG;
-        null === (GG = this.cancelInitialization) || void 0 === GG || GG.call(this), this.cancelInitialization = void 0
+        var MM;
+        null === (MM = this.cancelInitialization) || void 0 === MM || MM.call(this), this.cancelInitialization = void 0
       }
     };
-    const Dw = "data-faro-user-action-name",
-      Nw = Dw.replace(/-name$/, "-timeout"),
-      Ow = 1e3;
+    const qO = "data-faro-user-action-name",
+      TO = qO.replace(/-name$/, "-timeout"),
+      VO = 1e3;
 
-    function xw(GG) {
-      return `data-${(GG.startsWith("data-")?GG.slice(5):GG).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
+    function cO(MM) {
+      return `data-${(MM.startsWith("data-")?MM.slice(5):MM).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
     }
 
-    function Bw(GG) {
-      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
-        ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : eb;
-      if (void 0 === GG) return bG;
-      let wG = NaN;
+    function MS(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
+        iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : vr;
+      if (void 0 === MM) return rM;
+      let OM = NaN;
       try {
-        wG = "string" === typeof GG && "" === GG.trim() ? NaN : Number(GG)
-      } catch (SG) {}
-      return !Number.isFinite(wG) || wG <= 0 ? (ZG(`initialActivityTimeout must be a finite number greater than zero; using ${bG} ms`), bG) : wG > 1e3 ? (ZG(`initialActivityTimeout cannot exceed ${Ow} ms; clamping to the maximum`), Ow) : wG
+        OM = "string" === typeof MM && "" === MM.trim() ? NaN : Number(MM)
+      } catch (SM) {}
+      return !Number.isFinite(OM) || OM <= 0 ? (iM(`initialActivityTimeout must be a finite number greater than zero; using ${rM} ms`), rM) : OM > 1e3 ? (iM(`initialActivityTimeout cannot exceed ${VO} ms; clamping to the maximum`), VO) : OM
     }
 
-    function GS(GG, bG, ZG) {
-      return void 0 !== GG && window.clearTimeout(GG), window.setTimeout((() => {
-        bG()
-      }), ZG)
+    function rS(MM, rM, iM) {
+      return void 0 !== MM && window.clearTimeout(MM), window.setTimeout((() => {
+        rM()
+      }), iM)
     }
 
-    function bS(GG) {
-      return GG.type === JZ
+    function iS(MM) {
+      return MM.type === li
     }
-    let ZS, wS;
+    let OS, SS;
 
-    function SS() {
-      return ZS || (ZS = new rZ), wS || (wS = new MutationObserver(((GG, bG) => {
-        ZS.notify({
+    function jS() {
+      return OS || (OS = new Ei), SS || (SS = new MutationObserver(((MM, rM) => {
+        OS.notify({
           type: "dom-mutation"
         })
-      })), wS.observe(document, {
+      })), SS.observe(document, {
         attributes: !0,
         childList: !0,
         subtree: !0,
         characterData: !0
-      })), ZS
+      })), OS
     }
-    const LS = "fetch",
-      yS = "xhr";
-    let kS, US, YS, VS, pS = !1;
+    const aS = "fetch",
+      PS = "xhr";
+    let nS, QS, zS, LS, mS = !1;
 
-    function fS() {
-      if (kS) return kS;
+    function HS() {
+      if (nS) return nS;
 
-      function GG(GG) {
-        kS.notify({
-          type: dZ,
-          request: GG
+      function MM(MM) {
+        nS.notify({
+          type: yi,
+          request: MM
         })
       }
 
-      function bG(GG) {
-        kS.notify({
-          type: JZ,
-          request: GG
+      function rM(MM) {
+        nS.notify({
+          type: li,
+          request: MM
         })
       }
-      return kS = new rZ, pS || (! function(GG) {
+      return nS = new Ei, mS || (! function(MM) {
         let {
-          onRequestEnd: bG,
-          onRequestStart: ZG
-        } = GG;
-        YS || (YS = window.fetch);
+          onRequestEnd: rM,
+          onRequestStart: iM
+        } = MM;
+        zS || (zS = window.fetch);
         window.fetch = function() {
-          var GG, wG;
-          const SG = null !== (GG = NG(arguments[0])) && void 0 !== GG ? GG : "",
-            LG = DG(SG),
-            yG = (null !== (wG = arguments[1]) && void 0 !== wG ? wG : {}).method,
-            kG = Jb();
-          return LG || ZG({
-            url: SG,
-            method: yG,
-            requestId: kG,
-            apiType: LS
-          }), YS.apply(this, arguments).then((GG => (LG || bG({
-            url: SG,
-            method: yG,
-            requestId: kG,
-            apiType: LS
-          }), GG))).catch((GG => {
-            throw LG || bG({
-              url: SG,
-              method: yG,
-              requestId: kG,
-              apiType: LS
-            }), GG
+          var MM, OM;
+          const SM = null !== (MM = qM(arguments[0])) && void 0 !== MM ? MM : "",
+            jM = KM(SM),
+            aM = (null !== (OM = arguments[1]) && void 0 !== OM ? OM : {}).method,
+            PM = yr();
+          return jM || iM({
+            url: SM,
+            method: aM,
+            requestId: PM,
+            apiType: aS
+          }), zS.apply(this, arguments).then((MM => (jM || rM({
+            url: SM,
+            method: aM,
+            requestId: PM,
+            apiType: aS
+          }), MM))).catch((MM => {
+            throw jM || rM({
+              url: SM,
+              method: aM,
+              requestId: PM,
+              apiType: aS
+            }), MM
           }))
         }
       }({
-        onRequestStart: GG,
-        onRequestEnd: bG
-      }), function(GG) {
+        onRequestStart: MM,
+        onRequestEnd: rM
+      }), function(MM) {
         let {
-          onRequestStart: bG,
-          onRequestEnd: ZG
-        } = GG;
-        US || (US = XMLHttpRequest.prototype.open);
+          onRequestStart: rM,
+          onRequestEnd: iM
+        } = MM;
+        QS || (QS = XMLHttpRequest.prototype.open);
         XMLHttpRequest.prototype.open = function() {
-          const GG = arguments[1],
-            wG = DG(GG),
-            SG = arguments[0],
-            LG = Jb();
+          const MM = arguments[1],
+            OM = KM(MM),
+            SM = arguments[0],
+            jM = yr();
           this.addEventListener("loadstart", (function() {
-            wG || bG({
-              url: GG,
-              method: SG,
-              requestId: LG,
-              apiType: yS
+            OM || rM({
+              url: MM,
+              method: SM,
+              requestId: jM,
+              apiType: PS
             })
           })), this.addEventListener("load", (function() {
-            wG || ZG({
-              url: GG,
-              method: SG,
-              requestId: LG,
-              apiType: yS
+            OM || iM({
+              url: MM,
+              method: SM,
+              requestId: jM,
+              apiType: PS
             })
           })), this.addEventListener("error", (function() {
-            wG || ZG({
-              url: GG,
-              method: SG,
-              requestId: LG,
-              apiType: yS
+            OM || iM({
+              url: MM,
+              method: SM,
+              requestId: jM,
+              apiType: PS
             })
           })), this.addEventListener("abort", (function() {
-            wG || ZG({
-              url: GG,
-              method: SG,
-              requestId: LG,
-              apiType: yS
+            OM || iM({
+              url: MM,
+              method: SM,
+              requestId: jM,
+              apiType: PS
             })
-          })), US.apply(this, arguments)
+          })), QS.apply(this, arguments)
         }
       }({
-        onRequestStart: GG,
-        onRequestEnd: bG
-      }), pS = !0), kS
+        onRequestStart: MM,
+        onRequestEnd: rM
+      }), mS = !0), nS
     }
-    let QS, KS = !1;
-    let hS = function(GG) {
-      return GG[GG.Started = 0] = "Started", GG[GG.Halted = 1] = "Halted", GG[GG.Cancelled = 2] = "Cancelled", GG[GG.Ended = 3] = "Ended", GG
+    let hS, JS = !1;
+    let dS = function(MM) {
+      return MM[MM.Started = 0] = "Started", MM[MM.Halted = 1] = "Halted", MM[MM.Cancelled = 2] = "Cancelled", MM[MM.Ended = 3] = "Ended", MM
     }({});
-    var dS = class {
-      constructor(GG, bG) {
-        let ZG = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
-        this.userAction = GG, this.logDebug = bG, this.initialActivityTimeout = ZG, this.http = fS(), this.dom = SS(), this.perf = (VS || (VS = new rZ), KS || (QS = Hw.subscribe((GG => {
-          "resource" === GG.type && VS.notify({
+    var yS = class {
+      constructor(MM, rM) {
+        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
+        this.userAction = MM, this.logDebug = rM, this.initialActivityTimeout = iM, this.http = HS(), this.dom = jS(), this.perf = (LS || (LS = new Ei), JS || (hS = IO.subscribe((MM => {
+          "resource" === MM.type && LS.notify({
             type: "resource-entry"
           })
-        })), KS = !0), VS), this.isValid = !1, this.runningRequests = new Map
+        })), JS = !0), LS), this.isValid = !1, this.runningRequests = new Map
       }
       attach() {
-        this.allMonitorsSub = (new rZ).merge(this.http, this.dom, this.perf).takeWhile((() => [hS.Started, hS.Halted].includes(this.userAction.getState()))).filter((GG => !!(this.userAction.getState() !== hS.Halted || bS(GG) && this.runningRequests.has(GG.request.requestId)))).subscribe((GG => {
-          (function(GG) {
-            return GG.type === dZ
-          })(GG) && this.runningRequests.set(GG.request.requestId, GG.request), bS(GG) && this.runningRequests.delete(GG.request.requestId), bS(GG) ? this.userAction.getState() === hS.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
-        })), this.stateSub = this.userAction.filter((GG => [hS.Ended, hS.Cancelled].includes(GG))).first().subscribe((() => this.cleanup())), this.startupTid = GS(this.startupTid, (() => {
+        this.allMonitorsSub = (new Ei).merge(this.http, this.dom, this.perf).takeWhile((() => [dS.Started, dS.Halted].includes(this.userAction.getState()))).filter((MM => !!(this.userAction.getState() !== dS.Halted || iS(MM) && this.runningRequests.has(MM.request.requestId)))).subscribe((MM => {
+          (function(MM) {
+            return MM.type === yi
+          })(MM) && this.runningRequests.set(MM.request.requestId, MM.request), iS(MM) && this.runningRequests.delete(MM.request.requestId), iS(MM) ? this.userAction.getState() === dS.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
+        })), this.stateSub = this.userAction.filter((MM => [dS.Ended, dS.Cancelled].includes(MM))).first().subscribe((() => this.cleanup())), this.startupTid = rS(this.startupTid, (() => {
           this.logDebug("User action not sent; no DOM, resource, or HTTP activity:", this.userAction.name), this.cancelAction()
         }), this.initialActivityTimeout)
       }
       scheduleFollowUp() {
         this.clearTimer(this.followUpTid), this.followUpTid = window.setTimeout((() => {
-          this.userAction.getState() === hS.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
+          this.userAction.getState() === dS.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
         }), 100)
       }
       haltAction() {
-        this.userAction.getState() === hS.Started && (this.userAction.halt(), this.startHaltTimeout())
+        this.userAction.getState() === dS.Started && (this.userAction.halt(), this.startHaltTimeout())
       }
       startHaltTimeout() {
-        this.clearTimer(this.haltTid), this.haltTid = GS(this.haltTid, (() => {
-          this.userAction.getState() === hS.Halted && this.endAction()
+        this.clearTimer(this.haltTid), this.haltTid = rS(this.haltTid, (() => {
+          this.userAction.getState() === dS.Halted && this.endAction()
         }), 1e4)
       }
       endAction() {
@@ -2614,183 +2614,183 @@ export const modules = {
         this.userAction.cancel(), this.cleanup()
       }
       cleanup() {
-        var GG, bG;
-        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (GG = this.allMonitorsSub) || void 0 === GG || GG.unsubscribe(), null === (bG = this.stateSub) || void 0 === bG || bG.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
+        var MM, rM;
+        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (MM = this.allMonitorsSub) || void 0 === MM || MM.unsubscribe(), null === (rM = this.stateSub) || void 0 === rM || rM.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
       }
-      clearTimer(GG) {
-        void 0 !== GG && window.clearTimeout(GG)
+      clearTimer(MM) {
+        void 0 !== MM && window.clearTimeout(MM)
       }
     };
 
-    function JS(GG) {
-      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eb;
-      var ZG;
+    function lS(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vr;
+      var iM;
       const {
-        api: wG,
-        config: SG,
-        internalLogger: LG
-      } = GG, yG = Bw(null === (ZG = SG.userActionsInstrumentation) || void 0 === ZG ? void 0 : ZG.initialActivityTimeout, 100, bG);
+        api: OM,
+        config: SM,
+        internalLogger: jM
+      } = MM, aM = MS(null === (iM = SM.userActionsInstrumentation) || void 0 === iM ? void 0 : iM.initialActivityTimeout, 100, rM);
       return {
-        processUserEvent: function(GG) {
-          var bG, ZG;
-          const LG = null !== (bG = null === (ZG = SG.userActionsInstrumentation) || void 0 === ZG ? void 0 : ZG.dataAttributeName) && void 0 !== bG ? bG : Dw,
-            yG = GG.target;
-          if (!(yG instanceof Element)) return;
-          const kG = function(GG, bG) {
-              let ZG = GG;
-              for (; ZG;) {
-                if (ZG.hasAttribute(bG)) return ZG;
-                ZG = ZG.parentElement
+        processUserEvent: function(MM) {
+          var rM, iM;
+          const jM = null !== (rM = null === (iM = SM.userActionsInstrumentation) || void 0 === iM ? void 0 : iM.dataAttributeName) && void 0 !== rM ? rM : qO,
+            aM = MM.target;
+          if (!(aM instanceof Element)) return;
+          const PM = function(MM, rM) {
+              let iM = MM;
+              for (; iM;) {
+                if (iM.hasAttribute(rM)) return iM;
+                iM = iM.parentElement
               }
               return null
-            }(yG, xw(LG)),
-            UG = function(GG, bG) {
-              if (!GG) return;
-              const ZG = function(GG) {
-                  return xw(GG).slice(5).replace(/-(.)/g, ((GG, bG) => bG.toUpperCase()))
-                }(bG),
-                wG = GG.dataset;
-              for (const SG in wG)
-                if (SG === ZG) return wG[SG]
-            }(kG, LG);
-          if (!kG || !UG) return;
-          const YG = function(GG, bG) {
-            const ZG = GG.getAttribute(function(GG) {
-              const bG = xw(GG);
-              return bG.endsWith("-name") ? `${bG.slice(0,-5)}-timeout` : `${bG}-timeout`
-            }(bG));
-            return null === ZG ? void 0 : Number(ZG)
-          }(kG, LG);
-          wG.startUserAction(UG, {}, {
-            triggerName: GG.type,
-            initialActivityTimeout: YG
+            }(aM, cO(jM)),
+            nM = function(MM, rM) {
+              if (!MM) return;
+              const iM = function(MM) {
+                  return cO(MM).slice(5).replace(/-(.)/g, ((MM, rM) => rM.toUpperCase()))
+                }(rM),
+                OM = MM.dataset;
+              for (const SM in OM)
+                if (SM === iM) return OM[SM]
+            }(PM, jM);
+          if (!PM || !nM) return;
+          const QM = function(MM, rM) {
+            const iM = MM.getAttribute(function(MM) {
+              const rM = cO(MM);
+              return rM.endsWith("-name") ? `${rM.slice(0,-5)}-timeout` : `${rM}-timeout`
+            }(rM));
+            return null === iM ? void 0 : Number(iM)
+          }(PM, jM);
+          OM.startUserAction(nM, {}, {
+            triggerName: MM.type,
+            initialActivityTimeout: QM
           })
         },
-        processUserActionStarted: function(GG, ZG) {
-          const wG = GG,
-            SG = Bw(ZG, yG, bG);
-          new dS(wG, LG.debug, SG).attach()
+        processUserActionStarted: function(MM, iM) {
+          const OM = MM,
+            SM = MS(iM, aM, rM);
+          new yS(OM, jM.debug, SM).attach()
         }
       }
     }
-    const rS = "user_action_start",
-      zS = {
+    const ES = "user_action_start",
+      US = {
         Normal: "normal",
         Critical: "critical"
       };
-    var ES = class {
+    var GS = class {
         constructor() {
           this.buffer = []
         }
-        addItem(GG) {
-          this.buffer.push(GG)
+        addItem(MM) {
+          this.buffer.push(MM)
         }
-        flushBuffer(GG) {
-          if (IG(GG))
-            for (const bG of this.buffer) GG(bG);
+        flushBuffer(MM) {
+          if (uM(MM))
+            for (const rM of this.buffer) MM(rM);
           this.buffer.length = 0
         }
         size() {
           return this.buffer.length
         }
       },
-      oS = class extends rZ {
-        constructor(GG) {
+      CS = class extends Ei {
+        constructor(MM) {
           let {
-            name: bG,
-            parentId: ZG,
-            trigger: wG,
-            transports: SG,
-            attributes: LG,
-            trackUserActionsExcludeItem: yG,
-            importance: kG = zS.Normal,
-            pushEvent: UG
-          } = GG;
-          super(), this.name = bG, this.attributes = LG, this.id = Jb(), this.trigger = wG, this.parentId = null !== ZG && void 0 !== ZG ? ZG : this.id, this.trackUserActionsExcludeItem = yG, this.importance = kG, this._pushEvent = UG, this._itemBuffer = new ES, this._transports = SG, this._state = 0, this._start()
+            name: rM,
+            parentId: iM,
+            trigger: OM,
+            transports: SM,
+            attributes: jM,
+            trackUserActionsExcludeItem: aM,
+            importance: PM = US.Normal,
+            pushEvent: nM
+          } = MM;
+          super(), this.name = rM, this.attributes = jM, this.id = yr(), this.trigger = OM, this.parentId = null !== iM && void 0 !== iM ? iM : this.id, this.trackUserActionsExcludeItem = aM, this.importance = PM, this._pushEvent = nM, this._itemBuffer = new GS, this._transports = SM, this._state = 0, this._start()
         }
-        addItem(GG) {
-          return 0 === this._state && (this._itemBuffer.addItem(GG), !0)
+        addItem(MM) {
+          return 0 === this._state && (this._itemBuffer.addItem(MM), !0)
         }
         _start() {
-          this._state = 0, 0 === this._state && (this.startTime = fb(), this._startTimeMono = Qb())
+          this._state = 0, 0 === this._state && (this.startTime = mr(), this._startTimeMono = Hr())
         }
         halt() {
           0 === this._state && (this._state = 1, this.notify(this._state))
         }
         cancel() {
-          0 === this._state && this._itemBuffer.flushBuffer((GG => {
-            this._transports.execute(GG)
+          0 === this._state && this._itemBuffer.flushBuffer((MM => {
+            this._transports.execute(MM)
           })), this._state = 2, this.notify(this._state)
         }
         end() {
           if (2 === this._state) return;
-          const GG = fb(),
-            bG = Qb() - this._startTimeMono;
-          this._state = 3, this._itemBuffer.flushBuffer((GG => {
-            if (function(GG, bG) {
-                return (null === bG || void 0 === bG ? void 0 : bG(GG)) || "measurement" === GG.type && "web-vitals" === GG.payload.type
-              }(GG, this.trackUserActionsExcludeItem)) return void this._transports.execute(GG);
-            const bG = xb(xb({}, GG), {}, {
-              payload: xb(xb({}, GG.payload), {}, {
+          const MM = mr(),
+            rM = Hr() - this._startTimeMono;
+          this._state = 3, this._itemBuffer.flushBuffer((MM => {
+            if (function(MM, rM) {
+                return (null === rM || void 0 === rM ? void 0 : rM(MM)) || "measurement" === MM.type && "web-vitals" === MM.payload.type
+              }(MM, this.trackUserActionsExcludeItem)) return void this._transports.execute(MM);
+            const rM = Vr(Vr({}, MM), {}, {
+              payload: Vr(Vr({}, MM.payload), {}, {
                 action: {
                   parentId: this.id,
                   name: this.name
                 }
               })
             });
-            this._transports.execute(bG)
-          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", xb({
+            this._transports.execute(rM)
+          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", Vr({
             userActionName: this.name,
             userActionStartTime: this.startTime.toString(),
-            userActionEndTime: GG.toString(),
-            userActionDuration: bG.toString(),
+            userActionEndTime: MM.toString(),
+            userActionDuration: rM.toString(),
             userActionTrigger: this.trigger,
             userActionImportance: this.importance
-          }, Pb(this.attributes)), void 0, {
+          }, Zr(this.attributes)), void 0, {
             timestampOverwriteMs: this.startTime,
-            customPayloadTransformer: GG => (GG.action = {
+            customPayloadTransformer: MM => (MM.action = {
               id: this.id,
               name: this.name
-            }, GG)
+            }, MM)
           })
         }
         getState() {
           return this._state
         }
       };
-    const XS = new rZ;
+    const eS = new Ei;
 
-    function uS(GG, bG) {
-      return !!GG && (0 === (null === GG || void 0 === GG ? void 0 : GG.getState()) && (GG.addItem(bG), !0))
+    function bS(MM, rM) {
+      return !!MM && (0 === (null === MM || void 0 === MM ? void 0 : MM.getState()) && (MM.addItem(rM), !0))
     }
-    var iS = class extends bZ {
+    var wS = class extends ri {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = ZZ
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = ii
         }
         initialize() {
           const {
-            processUserEvent: GG,
-            processUserActionStarted: bG
-          } = JS(hG, (GG => this.logWarn(GG)));
-          this._processUserEvent = GG, this._processKeydown = bG => {
-            [" ", "Enter"].includes(bG.key) && GG(bG)
-          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = XS.subscribe((GG => {
+            processUserEvent: MM,
+            processUserActionStarted: rM
+          } = lS(JM, (MM => this.logWarn(MM)));
+          this._processUserEvent = MM, this._processKeydown = rM => {
+            [" ", "Enter"].includes(rM.key) && MM(rM)
+          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = eS.subscribe((MM => {
             let {
-              type: ZG,
-              userAction: wG,
-              initialActivityTimeout: SG
-            } = GG;
-            "user_action_start" === ZG && bG(wG, SG)
+              type: iM,
+              userAction: OM,
+              initialActivityTimeout: SM
+            } = MM;
+            "user_action_start" === iM && rM(OM, SM)
           }))
         }
         destroy() {
-          var GG;
-          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (GG = this._userActionSub) || void 0 === GG || GG.unsubscribe()
+          var MM;
+          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (MM = this._userActionSub) || void 0 === MM || MM.unsubscribe()
         }
       },
-      CS = class extends bZ {
+      tS = class extends ri {
         constructor() {
-          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = ZZ, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
+          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = ii, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
         }
         initialize() {
           document.addEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
@@ -2798,239 +2798,239 @@ export const modules = {
         destroy() {
           document.removeEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
         }
-        securitypolicyviolationHandler(GG) {
-          const bG = {
-            blockedURI: GG.blockedURI,
-            columnNumber: GG.columnNumber,
-            disposition: GG.disposition,
-            documentURI: GG.documentURI,
-            effectiveDirective: GG.effectiveDirective,
-            lineNumber: GG.lineNumber,
-            originalPolicy: GG.originalPolicy,
-            referrer: GG.referrer,
-            sample: GG.sample,
-            sourceFile: GG.sourceFile,
-            statusCode: GG.statusCode,
-            violatedDirective: GG.violatedDirective
+        securitypolicyviolationHandler(MM) {
+          const rM = {
+            blockedURI: MM.blockedURI,
+            columnNumber: MM.columnNumber,
+            disposition: MM.disposition,
+            documentURI: MM.documentURI,
+            effectiveDirective: MM.effectiveDirective,
+            lineNumber: MM.lineNumber,
+            originalPolicy: MM.originalPolicy,
+            referrer: MM.referrer,
+            sample: MM.sample,
+            sourceFile: MM.sourceFile,
+            statusCode: MM.statusCode,
+            violatedDirective: MM.violatedDirective
           };
-          this.api.pushEvent("securitypolicyviolation", Pb(bG))
+          this.api.pushEvent("securitypolicyviolation", Zr(rM))
         }
       };
-    var WS = class extends rZ {
-      constructor(GG, bG) {
-        var ZG, wG, SG, LG;
-        super(), this._tracking = !1, this.eventsObservable = GG, this._options = {
-          inactivityMs: null !== (ZG = null === bG || void 0 === bG ? void 0 : bG.inactivityMs) && void 0 !== ZG ? ZG : 100,
-          drainTimeoutMs: null !== (wG = null === bG || void 0 === bG ? void 0 : bG.drainTimeoutMs) && void 0 !== wG ? wG : 1e4,
-          isOperationStart: null !== (SG = null === bG || void 0 === bG ? void 0 : bG.isOperationStart) && void 0 !== SG ? SG : () => {},
-          isOperationEnd: null !== (LG = null === bG || void 0 === bG ? void 0 : bG.isOperationEnd) && void 0 !== LG ? LG : () => {}
+    var gS = class extends Ei {
+      constructor(MM, rM) {
+        var iM, OM, SM, jM;
+        super(), this._tracking = !1, this.eventsObservable = MM, this._options = {
+          inactivityMs: null !== (iM = null === rM || void 0 === rM ? void 0 : rM.inactivityMs) && void 0 !== iM ? iM : 100,
+          drainTimeoutMs: null !== (OM = null === rM || void 0 === rM ? void 0 : rM.drainTimeoutMs) && void 0 !== OM ? OM : 1e4,
+          isOperationStart: null !== (SM = null === rM || void 0 === rM ? void 0 : rM.isOperationStart) && void 0 !== SM ? SM : () => {},
+          isOperationEnd: null !== (jM = null === rM || void 0 === rM ? void 0 : rM.isOperationEnd) && void 0 !== jM ? jM : () => {}
         }, this._initialize()
       }
       _initialize() {
-        this.eventsObservable.filter((() => this._tracking)).subscribe((GG => {
-          var bG;
-          this._lastEventTime = Qb(), null === (bG = this._currentEvents) || void 0 === bG || bG.push(GG);
-          const ZG = this._options.isOperationStart(GG);
-          var wG;
-          ZG && (null === (wG = this._activeOperations) || void 0 === wG || wG.set(ZG, !0));
-          const SG = this._options.isOperationEnd(GG);
-          var LG;
-          SG && (null === (LG = this._activeOperations) || void 0 === LG || LG.delete(SG));
+        this.eventsObservable.filter((() => this._tracking)).subscribe((MM => {
+          var rM;
+          this._lastEventTime = Hr(), null === (rM = this._currentEvents) || void 0 === rM || rM.push(MM);
+          const iM = this._options.isOperationStart(MM);
+          var OM;
+          iM && (null === (OM = this._activeOperations) || void 0 === OM || OM.set(iM, !0));
+          const SM = this._options.isOperationEnd(MM);
+          var jM;
+          SM && (null === (jM = this._activeOperations) || void 0 === jM || jM.delete(SM));
           this._scheduleInactivityCheck()
         }))
       }
       startTracking() {
-        this._tracking || (this._tracking = !0, this._startTime = Qb(), this._lastEventTime = this._startTime, this.notify({
+        this._tracking || (this._tracking = !0, this._startTime = Hr(), this._lastEventTime = this._startTime, this.notify({
           message: "tracking-started"
         }), this._currentEvents = [], this._activeOperations = new Map, this._scheduleInactivityCheck())
       }
       stopTracking() {
-        let GG;
-        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), GG = this.hasActiveOperations() ? Qb() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
+        let MM;
+        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), MM = this.hasActiveOperations() ? Hr() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
           message: "tracking-ended",
           events: this._currentEvents,
-          duration: GG
+          duration: MM
         })
       }
       _scheduleInactivityCheck() {
-        this._inactivityTid = mS(this._inactivityTid, (() => {
+        this._inactivityTid = uS(this._inactivityTid, (() => {
           this.hasActiveOperations() ? this._startDrainTimeout() : this.stopTracking()
         }), this._options.inactivityMs)
       }
       _startDrainTimeout() {
-        this._drainTid = mS(this._drainTid, (() => {
+        this._drainTid = uS(this._drainTid, (() => {
           this.stopTracking()
         }), this._options.drainTimeoutMs)
       }
       hasActiveOperations() {
         return !!this._activeOperations && this._activeOperations.size > 0
       }
-      _clearTimer(GG) {
-        GG && clearTimeout(GG)
+      _clearTimer(MM) {
+        MM && clearTimeout(MM)
       }
     };
 
-    function mS(GG, bG, ZG) {
-      return GG && clearTimeout(GG), GG = setTimeout((() => {
-        bG()
-      }), ZG)
+    function uS(MM, rM, iM) {
+      return MM && clearTimeout(MM), MM = setTimeout((() => {
+        rM()
+      }), iM)
     }
-    let IS;
-    const FS = new Set,
-      vS = new Map;
-    let aS, cS, lS, jS, PS, MS, AS, sS, qS = !1;
-    var nS = class extends bZ {
+    let RS;
+    const pS = new Set,
+      WS = new Map;
+    let sS, DS, kS, ZS, oS, fS, YS, NS, AS = !1;
+    var xS = class extends ri {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = ZZ
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = ii
       }
       initialize() {
-        const GG = fS(),
-          bG = SS(),
-          ZG = function() {
-            function GG(GG, bG) {
-              const ZG = null !== bG && void 0 !== bG ? bG : location.href;
-              ZG !== cS && (aS.notify({
+        const MM = HS(),
+          rM = jS(),
+          iM = function() {
+            function MM(MM, rM) {
+              const iM = null !== rM && void 0 !== rM ? rM : location.href;
+              iM !== DS && (sS.notify({
                 type: "url-change",
-                from: cS,
-                to: ZG,
-                trigger: GG
-              }), cS = ZG)
+                from: DS,
+                to: iM,
+                trigger: MM
+              }), DS = iM)
             }
-            if (aS || (aS = new rZ, cS = location.href), !qS)
+            if (sS || (sS = new Ei, DS = location.href), !AS)
               if ("navigation" in window && "NavigateEvent" in window) {
-                AS = bG => {
+                YS = rM => {
                   try {
-                    const ZG = null === bG || void 0 === bG ? void 0 : bG.destination;
-                    (null === ZG || void 0 === ZG ? void 0 : ZG.sameDocument) && "string" === typeof ZG.url && GG("navigate", ZG.url)
-                  } catch (ZG) {}
-                }, window.navigation.addEventListener("navigate", AS);
-                const bG = window.NavigateEvent;
-                bG && bG.prototype && "function" === typeof bG.prototype.intercept && (sS || (sS = bG.prototype.intercept), bG.prototype.intercept = function(bG) {
+                    const iM = null === rM || void 0 === rM ? void 0 : rM.destination;
+                    (null === iM || void 0 === iM ? void 0 : iM.sameDocument) && "string" === typeof iM.url && MM("navigate", iM.url)
+                  } catch (iM) {}
+                }, window.navigation.addEventListener("navigate", YS);
+                const rM = window.NavigateEvent;
+                rM && rM.prototype && "function" === typeof rM.prototype.intercept && (NS || (NS = rM.prototype.intercept), rM.prototype.intercept = function(rM) {
                   try {
-                    const bG = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
-                      ZG = null === this || void 0 === this ? void 0 : this.destination;
-                    bG && ZG && !1 === ZG.sameDocument && "string" === typeof ZG.url && GG("navigate-intercept", ZG.url)
-                  } catch (ZG) {}
-                  return sS.call(this, bG)
-                }), qS = !0
-              } else lS || (lS = window.history.pushState), window.history.pushState = function() {
-                for (var bG = arguments.length, ZG = new Array(bG), wG = 0; wG < bG; wG++) ZG[wG] = arguments[wG];
-                const SG = lS.apply(window.history, ZG);
-                return GG("pushState"), SG
-              }, jS || (jS = window.history.replaceState), window.history.replaceState = function() {
-                for (var bG = arguments.length, ZG = new Array(bG), wG = 0; wG < bG; wG++) ZG[wG] = arguments[wG];
-                const SG = jS.apply(window.history, ZG);
-                return GG("replaceState"), SG
-              }, PS = () => GG("popstate"), MS = () => GG("hashchange"), window.addEventListener("popstate", PS), window.addEventListener("hashchange", MS), qS = !0;
-            return aS
+                    const rM = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
+                      iM = null === this || void 0 === this ? void 0 : this.destination;
+                    rM && iM && !1 === iM.sameDocument && "string" === typeof iM.url && MM("navigate-intercept", iM.url)
+                  } catch (iM) {}
+                  return NS.call(this, rM)
+                }), AS = !0
+              } else kS || (kS = window.history.pushState), window.history.pushState = function() {
+                for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
+                const SM = kS.apply(window.history, iM);
+                return MM("pushState"), SM
+              }, ZS || (ZS = window.history.replaceState), window.history.replaceState = function() {
+                for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
+                const SM = ZS.apply(window.history, iM);
+                return MM("replaceState"), SM
+              }, oS = () => MM("popstate"), fS = () => MM("hashchange"), window.addEventListener("popstate", oS), window.addEventListener("hashchange", fS), AS = !0;
+            return sS
           }(),
-          wG = (SG = ["pointerdown", "keydown"], IS || (IS = new rZ), SG.forEach((GG => {
-            if (!FS.has(GG)) {
-              const bG = () => {
-                IS.notify({
+          OM = (SM = ["pointerdown", "keydown"], RS || (RS = new Ei), SM.forEach((MM => {
+            if (!pS.has(MM)) {
+              const rM = () => {
+                RS.notify({
                   type: "interaction",
-                  name: GG
+                  name: MM
                 })
               };
-              window.addEventListener(GG, bG), FS.add(GG), vS.set(GG, bG)
+              window.addEventListener(MM, rM), pS.add(MM), WS.set(MM, rM)
             }
-          })), IS);
-        var SG;
-        const LG = new WS((new rZ).merge(GG, bG, ZG), {
+          })), RS);
+        var SM;
+        const jM = new gS((new Ei).merge(MM, rM, iM), {
           inactivityMs: 100,
           drainTimeoutMs: 1e4,
-          isOperationStart: GG => function(GG) {
-            return GG.type === dZ
-          }(GG) ? GG.request.requestId : void 0,
-          isOperationEnd: GG => function(GG) {
-            return GG.type === JZ
-          }(GG) ? GG.request.requestId : void 0
+          isOperationStart: MM => function(MM) {
+            return MM.type === yi
+          }(MM) ? MM.request.requestId : void 0,
+          isOperationEnd: MM => function(MM) {
+            return MM.type === li
+          }(MM) ? MM.request.requestId : void 0
         });
-        LG.filter((GG => "tracking-ended" === GG.message)).subscribe((GG => {
-          var bG, ZG;
-          if ((null === (bG = GG.events) || void 0 === bG ? void 0 : bG.some((GG => "url-change" === GG.type))) && (null === (ZG = GG.events) || void 0 === ZG ? void 0 : ZG.some((GG => "dom-mutation" === GG.type)))) {
-            var wG;
-            const bG = null === (wG = GG.events) || void 0 === wG ? void 0 : wG.find((GG => "url-change" === GG.type));
-            hG.api.pushEvent("faro.navigation", {
-              fromUrl: null === bG || void 0 === bG ? void 0 : bG.from,
-              toUrl: null === bG || void 0 === bG ? void 0 : bG.to,
+        jM.filter((MM => "tracking-ended" === MM.message)).subscribe((MM => {
+          var rM, iM;
+          if ((null === (rM = MM.events) || void 0 === rM ? void 0 : rM.some((MM => "url-change" === MM.type))) && (null === (iM = MM.events) || void 0 === iM ? void 0 : iM.some((MM => "dom-mutation" === MM.type)))) {
+            var OM;
+            const rM = null === (OM = MM.events) || void 0 === OM ? void 0 : OM.find((MM => "url-change" === MM.type));
+            JM.api.pushEvent("faro.navigation", {
+              fromUrl: null === rM || void 0 === rM ? void 0 : rM.from,
+              toUrl: null === rM || void 0 === rM ? void 0 : rM.to,
               sameDocument: String(!0),
-              duration: GG.duration
+              duration: MM.duration
             })
           }
-        })), wG.subscribe((() => {
-          LG.startTracking()
+        })), OM.subscribe((() => {
+          jM.startTracking()
         }))
       }
     };
 
-    function gS() {
-      let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const bG = [new iS, new lZ, new lw, new wZ, new PZ, new nS];
-      return !1 !== GG.enablePerformanceInstrumentation && bG.unshift(new tw), !1 !== GG.enableContentSecurityPolicyInstrumentation && bG.push(new CS), !1 !== GG.captureConsole && bG.push(new aZ), bG
+    function vS() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const rM = [new wS, new Zi, new kO, new Oi, new fi, new xS];
+      return !1 !== MM.enablePerformanceInstrumentation && rM.unshift(new KO), !1 !== MM.enableContentSecurityPolicyInstrumentation && rM.push(new tS), !1 !== MM.captureConsole && rM.push(new Di), rM
     }
-    var eS = ZG(6706);
-    let RS, TS;
+    var FS = iM(7161);
+    let BS, XS;
 
-    function HS() {
-      const GG = "undefined" !== typeof navigator ? navigator.userAgent : "";
-      return RS === GG && TS || (TS = new eS.UAParser(GG).getResult(), RS = GG), TS
+    function IS() {
+      const MM = "undefined" !== typeof navigator ? navigator.userAgent : "";
+      return BS === MM && XS || (XS = new FS.UAParser(MM).getResult(), BS = MM), XS
     }
-    const tS = () => {
+    const KS = () => {
         const {
-          browser: GG,
-          os: bG,
-          ua: ZG
-        } = HS(), {
-          name: wG,
-          version: SG
-        } = GG, {
-          name: LG,
-          version: yG
-        } = bG, kG = navigator.language, UG = ZG.includes("Mobi"), YG = function() {
-          if (!wG || !SG) return;
+          browser: MM,
+          os: rM,
+          ua: iM
+        } = IS(), {
+          name: OM,
+          version: SM
+        } = MM, {
+          name: jM,
+          version: aM
+        } = rM, PM = navigator.language, nM = iM.includes("Mobi"), QM = function() {
+          if (!OM || !SM) return;
           if ("userAgentData" in navigator && navigator.userAgentData) return navigator.userAgentData.brands
         }();
         return {
           browser: {
-            name: null !== wG && void 0 !== wG ? wG : jZ,
-            version: null !== SG && void 0 !== SG ? SG : jZ,
-            os: `${null!==LG&&void 0!==LG?LG:jZ} ${null!==yG&&void 0!==yG?yG:jZ}`,
-            userAgent: null !== ZG && void 0 !== ZG ? ZG : jZ,
-            language: null !== kG && void 0 !== kG ? kG : jZ,
-            mobile: UG,
-            brands: null !== YG && void 0 !== YG ? YG : jZ,
+            name: null !== OM && void 0 !== OM ? OM : oi,
+            version: null !== SM && void 0 !== SM ? SM : oi,
+            os: `${null!==jM&&void 0!==jM?jM:oi} ${null!==aM&&void 0!==aM?aM:oi}`,
+            userAgent: null !== iM && void 0 !== iM ? iM : oi,
+            language: null !== PM && void 0 !== PM ? PM : oi,
+            mobile: nM,
+            brands: null !== QM && void 0 !== QM ? QM : oi,
             viewportWidth: `${window.innerWidth}`,
             viewportHeight: `${window.innerHeight}`
           }
         }
       },
-      DS = () => {
+      qS = () => {
         const {
-          name: GG,
-          version: bG
-        } = HS().os;
-        if (!GG && !bG) return {};
-        const ZG = {};
-        return GG && (ZG.name = GG), bG && (ZG.version = bG), {
-          os: ZG
+          name: MM,
+          version: rM
+        } = IS().os;
+        if (!MM && !rM) return {};
+        const iM = {};
+        return MM && (iM.name = MM), rM && (iM.version = rM), {
+          os: iM
         }
       };
 
-    function NS(GG) {
-      var bG, ZG, wG;
+    function TS(MM) {
+      var rM, iM, OM;
       return {
-        id: null !== (bG = null === (ZG = hG.config) || void 0 === ZG || null === (ZG = ZG.sessionTracking) || void 0 === ZG || null === (wG = ZG.generateSessionId) || void 0 === wG ? void 0 : wG.call(ZG)) && void 0 !== bG ? bG : Jb(),
-        attributes: GG
+        id: null !== (rM = null === (iM = JM.config) || void 0 === iM || null === (iM = iM.sessionTracking) || void 0 === iM || null === (OM = iM.generateSessionId) || void 0 === OM ? void 0 : OM.call(iM)) && void 0 !== rM ? rM : yr(),
+        attributes: MM
       }
     }
-    const OS = () => ({
+    const VS = () => ({
       sdk: {
         name: "faro-web",
-        version: ZZ
+        version: ii
       }
     });
-    var xS = class extends GZ {
+    var cS = class extends Mi {
       isBatched() {
         return !1
       }
@@ -3038,10 +3038,10 @@ export const modules = {
         return []
       }
     };
-    let BS = function(GG) {
-      return GG.EXCEPTION = "exception", GG.LOG = "log", GG.MEASUREMENT = "measurement", GG.TRACE = "trace", GG.EVENT = "event", GG
+    let Mj = function(MM) {
+      return MM.EXCEPTION = "exception", MM.LOG = "log", MM.MEASUREMENT = "measurement", MM.TRACE = "trace", MM.EVENT = "event", MM
     }({});
-    const GL = {
+    const rj = {
       exception: "exceptions",
       log: "logs",
       measurement: "measurements",
@@ -3049,356 +3049,356 @@ export const modules = {
       event: "events"
     };
 
-    function bL(GG, bG) {
-      var ZG, wG;
-      if (void 0 === bG) return GG;
-      if (void 0 === GG) return {
-        resourceSpans: bG
+    function ij(MM, rM) {
+      var iM, OM;
+      if (void 0 === rM) return MM;
+      if (void 0 === MM) return {
+        resourceSpans: rM
       };
-      const SG = null === (ZG = GG.resourceSpans) || void 0 === ZG ? void 0 : ZG[0];
-      if (void 0 === SG) return GG;
-      const LG = (null === SG || void 0 === SG ? void 0 : SG.scopeSpans) || [],
-        yG = (null === bG || void 0 === bG || null === (wG = bG[0]) || void 0 === wG ? void 0 : wG.scopeSpans) || [];
-      return xb(xb({}, GG), {}, {
-        resourceSpans: [xb(xb({}, SG), {}, {
-          scopeSpans: [...LG, ...yG]
+      const SM = null === (iM = MM.resourceSpans) || void 0 === iM ? void 0 : iM[0];
+      if (void 0 === SM) return MM;
+      const jM = (null === SM || void 0 === SM ? void 0 : SM.scopeSpans) || [],
+        aM = (null === rM || void 0 === rM || null === (OM = rM[0]) || void 0 === OM ? void 0 : OM.scopeSpans) || [];
+      return Vr(Vr({}, MM), {}, {
+        resourceSpans: [Vr(Vr({}, SM), {}, {
+          scopeSpans: [...jM, ...aM]
         })]
       })
     }
 
-    function ZL(GG) {
-      let bG = {
+    function Oj(MM) {
+      let rM = {
         meta: {}
       };
-      return void 0 !== GG[0] && (bG.meta = GG[0].meta), GG.forEach((GG => {
-        switch (GG.type) {
+      return void 0 !== MM[0] && (rM.meta = MM[0].meta), MM.forEach((MM => {
+        switch (MM.type) {
           case "log":
           case "event":
           case "exception":
           case "measurement": {
-            const ZG = GL[GG.type],
-              wG = bG[ZG];
-            bG = xb(xb({}, bG), {}, {
-              [ZG]: void 0 === wG ? [GG.payload] : [...wG, GG.payload]
+            const iM = rj[MM.type],
+              OM = rM[iM];
+            rM = Vr(Vr({}, rM), {}, {
+              [iM]: void 0 === OM ? [MM.payload] : [...OM, MM.payload]
             });
             break
           }
           case "trace":
-            bG = xb(xb({}, bG), {}, {
-              traces: bL(bG.traces, GG.payload.resourceSpans)
+            rM = Vr(Vr({}, rM), {}, {
+              traces: ij(rM.traces, MM.payload.resourceSpans)
             })
         }
-      })), bG
+      })), rM
     }
-    var wL = class extends xS {
+    var Sj = class extends cS {
       constructor() {
-        let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        super(), this.options = GG, this.name = "@grafana/faro-web-sdk:transport-console", this.version = ZZ
+        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        super(), this.options = MM, this.name = "@grafana/faro-web-sdk:transport-console", this.version = ii
       }
-      send(GG) {
-        var bG;
-        return this.unpatchedConsole[null !== (bG = this.options.level) && void 0 !== bG ? bG : zZ.DEBUG]("New event", ZL([GG]))
+      send(MM) {
+        var rM;
+        return this.unpatchedConsole[null !== (rM = this.options.level) && void 0 !== rM ? rM : Ui.DEBUG]("New event", Oj([MM]))
       }
     };
-    const SL = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      LL = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      yL = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
-      kL = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      UL = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      YL = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const jj = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      aj = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      Pj = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
+      nj = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      Qj = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      zj = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    function VL(GG) {
+    function Lj(MM) {
       let {
-        weekday: bG,
-        day: ZG,
-        month: wG,
-        year: SG,
-        hour: LG,
-        minute: yG,
-        second: kG
-      } = GG;
-      if (SG < 1900 || ZG < 1 || LG > 23 || yG > 59 || kG > 60) return;
-      const UG = 60 === kG,
-        YG = new Date(0);
-      return YG.setUTCFullYear(SG, wG, ZG), YG.setUTCHours(LG, yG, UG ? 59 : kG, 0), YG.getUTCDay() === bG && YG.getUTCDate() === ZG && YG.getUTCMonth() === wG && YG.getUTCFullYear() === SG && YG.getUTCHours() === LG && YG.getUTCMinutes() === yG && YG.getUTCSeconds() === (UG ? 59 : kG) ? YG.getTime() + (UG ? 1e3 : 0) : void 0
+        weekday: rM,
+        day: iM,
+        month: OM,
+        year: SM,
+        hour: jM,
+        minute: aM,
+        second: PM
+      } = MM;
+      if (SM < 1900 || iM < 1 || jM > 23 || aM > 59 || PM > 60) return;
+      const nM = 60 === PM,
+        QM = new Date(0);
+      return QM.setUTCFullYear(SM, OM, iM), QM.setUTCHours(jM, aM, nM ? 59 : PM, 0), QM.getUTCDay() === rM && QM.getUTCDate() === iM && QM.getUTCMonth() === OM && QM.getUTCFullYear() === SM && QM.getUTCHours() === jM && QM.getUTCMinutes() === aM && QM.getUTCSeconds() === (nM ? 59 : PM) ? QM.getTime() + (nM ? 1e3 : 0) : void 0
     }
-    var pL = class {
-      constructor(GG) {
-        this.options = GG, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
+    var mj = class {
+      constructor(MM) {
+        this.options = MM, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
       }
       reserve() {
-        var GG = this;
+        var MM = this;
         if (this.admitted >= this.options.bufferSize) return;
         this.admitted++;
-        const bG = this.sequence++;
-        let ZG = !1;
+        const rM = this.sequence++;
+        let iM = !1;
         return {
           deliver: function() {
-            var ZG = Tw((function*(ZG) {
-              const wG = GG.options.getNow();
-              let SG, LG = 0;
+            var iM = XO((function*(iM) {
+              const OM = MM.options.getNow();
+              let SM, jM = 0;
               for (;;) {
-                var yG, kG, UG;
-                const YG = GG.options.retry.maxAttempts - LG,
-                  VG = yield GG.runAttempt((() => ZG(YG, GG.unloading)), LG > 0);
-                if (LG += VG.attemptsMade, "success" === VG.kind) return {
+                var aM, PM, nM;
+                const QM = MM.options.retry.maxAttempts - jM,
+                  zM = yield MM.runAttempt((() => iM(QM, MM.unloading)), jM > 0);
+                if (jM += zM.attemptsMade, "success" === zM.kind) return {
                   kind: "success",
-                  attempts: LG,
-                  elapsedTimeMs: GG.options.getNow() - wG
+                  attempts: jM,
+                  elapsedTimeMs: MM.options.getNow() - OM
                 };
-                if (SG = VG.failure, "terminal" === VG.kind || GG.unloading) return {
+                if (SM = zM.failure, "terminal" === zM.kind || MM.unloading) return {
                   kind: "terminal",
-                  attempts: LG,
-                  elapsedTimeMs: GG.options.getNow() - wG,
-                  failure: SG
+                  attempts: jM,
+                  elapsedTimeMs: MM.options.getNow() - OM,
+                  failure: SM
                 };
-                if (LG >= GG.options.retry.maxAttempts) return {
+                if (jM >= MM.options.retry.maxAttempts) return {
                   kind: "terminal",
-                  attempts: LG,
-                  elapsedTimeMs: GG.options.getNow() - wG,
-                  failure: SG,
+                  attempts: jM,
+                  elapsedTimeMs: MM.options.getNow() - OM,
+                  failure: SM,
                   reason: "retries-exhausted"
                 };
-                if (null != VG.retryAfterMs && VG.retryAfterMs > GG.options.retry.maxBackoffMs) return {
+                if (null != zM.retryAfterMs && zM.retryAfterMs > MM.options.retry.maxBackoffMs) return {
                   kind: "terminal",
-                  attempts: LG,
-                  elapsedTimeMs: GG.options.getNow() - wG,
-                  failure: SG,
+                  attempts: jM,
+                  elapsedTimeMs: MM.options.getNow() - OM,
+                  failure: SM,
                   reason: "retry-after-too-long"
                 };
-                const pG = Math.min(null !== (yG = VG.retryAfterMs) && void 0 !== yG ? yG : GG.options.retry.initialBackoffMs * Math.pow(GG.options.retry.backoffMultiplier, LG - 1), GG.options.retry.maxBackoffMs);
-                if (null === (kG = (UG = GG.options).onRetry) || void 0 === kG || kG.call(UG, pG, LG + 1), yield GG.waitForTurn(bG, pG)) {
-                  const bG = GG.options.retry.maxAttempts - LG,
-                    SG = yield GG.runAttempt((() => ZG(bG, !0)));
-                  return LG += SG.attemptsMade, {
-                    kind: "success" === SG.kind ? "success" : "terminal",
-                    attempts: LG,
-                    elapsedTimeMs: GG.options.getNow() - wG,
-                    failure: "success" === SG.kind ? void 0 : SG.failure
+                const LM = Math.min(null !== (aM = zM.retryAfterMs) && void 0 !== aM ? aM : MM.options.retry.initialBackoffMs * Math.pow(MM.options.retry.backoffMultiplier, jM - 1), MM.options.retry.maxBackoffMs);
+                if (null === (PM = (nM = MM.options).onRetry) || void 0 === PM || PM.call(nM, LM, jM + 1), yield MM.waitForTurn(rM, LM)) {
+                  const rM = MM.options.retry.maxAttempts - jM,
+                    SM = yield MM.runAttempt((() => iM(rM, !0)));
+                  return jM += SM.attemptsMade, {
+                    kind: "success" === SM.kind ? "success" : "terminal",
+                    attempts: jM,
+                    elapsedTimeMs: MM.options.getNow() - OM,
+                    failure: "success" === SM.kind ? void 0 : SM.failure
                   }
                 }
               }
             }));
-            return function(GG) {
-              return ZG.apply(this, arguments)
+            return function(MM) {
+              return iM.apply(this, arguments)
             }
           }(),
           release: () => {
-            ZG || (ZG = !0, this.admitted--)
+            iM || (iM = !0, this.admitted--)
           }
         }
       }
       flush() {
         this.unloading = !0, this.nextSendAt = 0;
-        const GG = this.waiting.splice(0);
+        const MM = this.waiting.splice(0);
         null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0);
-        for (const bG of GG) bG.resolve(!0);
+        for (const rM of MM) rM.resolve(!0);
         this.runNextAttempt()
       }
       resume() {
         this.unloading = !1
       }
-      runAttempt(GG) {
-        let bG = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return new Promise(((ZG, wG) => {
+      runAttempt(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return new Promise(((iM, OM) => {
           this.attemptQueue.push({
             run: () => {
               this.inProgress++;
-              const bG = () => {
+              const rM = () => {
                 this.inProgress--, this.runNextAttempt()
               };
-              GG().then((GG => {
-                bG(), ZG(GG)
-              }), (GG => {
-                bG(), wG(GG)
+              MM().then((MM => {
+                rM(), iM(MM)
+              }), (MM => {
+                rM(), OM(MM)
               }))
             },
-            isRedelivery: bG
+            isRedelivery: rM
           }), this.runNextAttempt()
         }))
       }
       runNextAttempt() {
         for (null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0); this.inProgress < this.options.concurrency && this.attemptQueue.length > 0;) {
-          const GG = this.options.getNow(),
-            bG = this.attemptQueue.findIndex((bG => {
+          const MM = this.options.getNow(),
+            rM = this.attemptQueue.findIndex((rM => {
               let {
-                isRedelivery: ZG
-              } = bG;
-              return this.unloading || !ZG || GG >= this.nextSendAt
+                isRedelivery: iM
+              } = rM;
+              return this.unloading || !iM || MM >= this.nextSendAt
             }));
-          if (bG < 0) return void(this.redeliveryTimer = setTimeout((() => {
+          if (rM < 0) return void(this.redeliveryTimer = setTimeout((() => {
             this.redeliveryTimer = void 0, this.runNextAttempt()
-          }), Math.max(0, this.nextSendAt - GG)));
-          const [ZG] = this.attemptQueue.splice(bG, 1);
-          ZG.isRedelivery && !this.unloading && (this.nextSendAt = GG + 1), ZG.run()
+          }), Math.max(0, this.nextSendAt - MM)));
+          const [iM] = this.attemptQueue.splice(rM, 1);
+          iM.isRedelivery && !this.unloading && (this.nextSendAt = MM + 1), iM.run()
         }
       }
-      waitForTurn(GG, bG) {
-        const ZG = Math.min(bG * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
-        return new Promise((bG => {
+      waitForTurn(MM, rM) {
+        const iM = Math.min(rM * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
+        return new Promise((rM => {
           this.waiting.push({
-            sequence: GG,
-            readyAt: this.options.getNow() + ZG,
-            resolve: bG
-          }), this.waiting.sort(((GG, bG) => GG.readyAt === bG.readyAt ? GG.sequence - bG.sequence : GG.readyAt - bG.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
+            sequence: MM,
+            readyAt: this.options.getNow() + iM,
+            resolve: rM
+          }), this.waiting.sort(((MM, rM) => MM.readyAt === rM.readyAt ? MM.sequence - rM.sequence : MM.readyAt - rM.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
         }))
       }
       scheduleNext() {
         if (null != this.waitingTimer || 0 === this.waiting.length) return;
-        const GG = this.waiting[0],
-          bG = GG.readyAt;
+        const MM = this.waiting[0],
+          rM = MM.readyAt;
         this.waitingTimer = setTimeout((() => {
           this.waitingTimer = void 0;
-          const bG = this.waiting.indexOf(GG);
-          bG >= 0 && this.waiting.splice(bG, 1), GG.resolve(!1), this.scheduleNext()
-        }), Math.max(0, bG - this.options.getNow()))
+          const rM = this.waiting.indexOf(MM);
+          rM >= 0 && this.waiting.splice(rM, 1), MM.resolve(!1), this.scheduleNext()
+        }), Math.max(0, rM - this.options.getNow()))
       }
     };
 
-    function fL(GG, bG) {
-      if (null == GG) return {};
-      var ZG, wG, SG = function(GG, bG) {
-        if (null == GG) return {};
-        var ZG = {};
-        for (var wG in GG)
-          if ({}.hasOwnProperty.call(GG, wG)) {
-            if (bG.includes(wG)) continue;
-            ZG[wG] = GG[wG]
-          } return ZG
-      }(GG, bG);
+    function Hj(MM, rM) {
+      if (null == MM) return {};
+      var iM, OM, SM = function(MM, rM) {
+        if (null == MM) return {};
+        var iM = {};
+        for (var OM in MM)
+          if ({}.hasOwnProperty.call(MM, OM)) {
+            if (rM.includes(OM)) continue;
+            iM[OM] = MM[OM]
+          } return iM
+      }(MM, rM);
       if (Object.getOwnPropertySymbols) {
-        var LG = Object.getOwnPropertySymbols(GG);
-        for (wG = 0; wG < LG.length; wG++) ZG = LG[wG], bG.includes(ZG) || {}.propertyIsEnumerable.call(GG, ZG) && (SG[ZG] = GG[ZG])
+        var jM = Object.getOwnPropertySymbols(MM);
+        for (OM = 0; OM < jM.length; OM++) iM = jM[OM], rM.includes(iM) || {}.propertyIsEnumerable.call(MM, iM) && (SM[iM] = MM[iM])
       }
-      return SG
+      return SM
     }
 
-    function QL(GG) {
+    function hj(MM) {
       const {
-        size: bG,
-        concurrency: ZG
-      } = GG, wG = [];
-      let SG = 0;
-      const LG = () => {
-        if (SG < ZG && wG.length) {
+        size: rM,
+        concurrency: iM
+      } = MM, OM = [];
+      let SM = 0;
+      const jM = () => {
+        if (SM < iM && OM.length) {
           const {
-            producer: GG,
-            resolve: bG,
-            reject: ZG
-          } = wG.shift();
-          SG++, GG().then((GG => {
-            SG--, LG(), bG(GG)
-          }), (GG => {
-            SG--, LG(), ZG(GG)
+            producer: MM,
+            resolve: rM,
+            reject: iM
+          } = OM.shift();
+          SM++, MM().then((MM => {
+            SM--, jM(), rM(MM)
+          }), (MM => {
+            SM--, jM(), iM(MM)
           }))
         }
       };
       return {
-        add: GG => {
-          if (wG.length + SG >= bG) throw new Error("Task buffer full");
-          return new Promise(((bG, ZG) => {
-            wG.push({
-              producer: GG,
-              resolve: bG,
-              reject: ZG
-            }), LG()
+        add: MM => {
+          if (OM.length + SM >= rM) throw new Error("Task buffer full");
+          return new Promise(((rM, iM) => {
+            OM.push({
+              producer: MM,
+              resolve: rM,
+              reject: iM
+            }), jM()
           }))
         }
       }
     }
-    const KL = ["headers"],
-      hL = ["keepalive", "signal"],
-      dL = new Set([408, 425, 429, 500, 502, 503, 504]),
-      JL = new Set([429, 503]);
-    let rL = 0,
-      zL = 0;
-    var EL = class extends Error {};
-    var oL = class extends xS {
-      constructor(GG) {
-        var bG, ZG, wG, SG, LG, yG, kG, UG, YG, VG, pG, fG, QG, KG, hG, dG, JG;
-        super(), this.options = GG, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = ZZ, this.pendingCustomSends = 0, this.getNow = null !== (bG = GG.getNow) && void 0 !== bG ? bG : Date.now, this.requestTimeoutMs = null !== (ZG = GG.requestTimeoutMs) && void 0 !== ZG ? ZG : 1e4, this.compressionEnabled = null !== (wG = GG.requestCompression) && void 0 !== wG && wG && "undefined" !== typeof CompressionStream, GG.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new pL({
-          bufferSize: null !== (SG = GG.bufferSize) && void 0 !== SG ? SG : 30,
-          concurrency: null !== (LG = GG.concurrency) && void 0 !== LG ? LG : 5,
+    const Jj = ["headers"],
+      dj = ["keepalive", "signal"],
+      yj = new Set([408, 425, 429, 500, 502, 503, 504]),
+      lj = new Set([429, 503]);
+    let Ej = 0,
+      Uj = 0;
+    var Gj = class extends Error {};
+    var Cj = class extends cS {
+      constructor(MM) {
+        var rM, iM, OM, SM, jM, aM, PM, nM, QM, zM, LM, mM, HM, hM, JM, dM, yM;
+        super(), this.options = MM, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = ii, this.pendingCustomSends = 0, this.getNow = null !== (rM = MM.getNow) && void 0 !== rM ? rM : Date.now, this.requestTimeoutMs = null !== (iM = MM.requestTimeoutMs) && void 0 !== iM ? iM : 1e4, this.compressionEnabled = null !== (OM = MM.requestCompression) && void 0 !== OM && OM && "undefined" !== typeof CompressionStream, MM.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new mj({
+          bufferSize: null !== (SM = MM.bufferSize) && void 0 !== SM ? SM : 30,
+          concurrency: null !== (jM = MM.concurrency) && void 0 !== jM ? jM : 5,
           retry: {
-            maxAttempts: null !== (yG = null === (kG = GG.retry) || void 0 === kG ? void 0 : kG.maxAttempts) && void 0 !== yG ? yG : 3,
-            initialBackoffMs: null !== (UG = null !== (YG = null === (VG = GG.retry) || void 0 === VG ? void 0 : VG.initialBackoffMs) && void 0 !== YG ? YG : GG.defaultRateLimitBackoffMs) && void 0 !== UG ? UG : 1e3,
-            maxBackoffMs: null !== (pG = null === (fG = GG.retry) || void 0 === fG ? void 0 : fG.maxBackoffMs) && void 0 !== pG ? pG : 3e4,
-            backoffMultiplier: null !== (QG = null === (KG = GG.retry) || void 0 === KG ? void 0 : KG.backoffMultiplier) && void 0 !== QG ? QG : 2
+            maxAttempts: null !== (aM = null === (PM = MM.retry) || void 0 === PM ? void 0 : PM.maxAttempts) && void 0 !== aM ? aM : 3,
+            initialBackoffMs: null !== (nM = null !== (QM = null === (zM = MM.retry) || void 0 === zM ? void 0 : zM.initialBackoffMs) && void 0 !== QM ? QM : MM.defaultRateLimitBackoffMs) && void 0 !== nM ? nM : 1e3,
+            maxBackoffMs: null !== (LM = null === (mM = MM.retry) || void 0 === mM ? void 0 : mM.maxBackoffMs) && void 0 !== LM ? LM : 3e4,
+            backoffMultiplier: null !== (HM = null === (hM = MM.retry) || void 0 === hM ? void 0 : hM.backoffMultiplier) && void 0 !== HM ? HM : 2
           },
           getNow: this.getNow,
-          getRandom: null !== (hG = GG.getRandom) && void 0 !== hG ? hG : Math.random,
-          onRetry: (GG, bG) => {
-            this.logDebug(`Retrying failed request after ${GG}ms. Attempt ${bG}.`)
+          getRandom: null !== (JM = MM.getRandom) && void 0 !== JM ? JM : Math.random,
+          onRetry: (MM, rM) => {
+            this.logDebug(`Retrying failed request after ${MM}ms. Attempt ${rM}.`)
           }
-        }), this.customPromiseBuffer = QL({
-          size: null !== (dG = GG.bufferSize) && void 0 !== dG ? dG : 30,
-          concurrency: null !== (JG = GG.concurrency) && void 0 !== JG ? JG : 5
+        }), this.customPromiseBuffer = hj({
+          size: null !== (dM = MM.bufferSize) && void 0 !== dM ? dM : 30,
+          concurrency: null !== (yM = MM.concurrency) && void 0 !== yM ? yM : 5
         }), this.defaultPromiseBuffer = {
-          add: GG => {
-            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(GG);
-            const bG = this.deliveryQueue.reserve();
-            if (!bG) throw new Error("Task buffer full");
-            return this.runBufferedTask(bG, GG)
+          add: MM => {
+            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(MM);
+            const rM = this.deliveryQueue.reserve();
+            if (!rM) throw new Error("Task buffer full");
+            return this.runBufferedTask(rM, MM)
           }
-        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (GG => {
-          GG.persisted && this.deliveryQueue.resume()
+        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (MM => {
+          MM.persisted && this.deliveryQueue.resume()
         })))
       }
-      send(GG) {
-        var bG = this;
-        return Tw((function*() {
-          const ZG = bG.promiseBuffer;
-          if (ZG !== bG.defaultPromiseBuffer || ZG.add !== bG.defaultBufferAdd) {
-            bG.pendingCustomSends++;
+      send(MM) {
+        var rM = this;
+        return XO((function*() {
+          const iM = rM.promiseBuffer;
+          if (iM !== rM.defaultPromiseBuffer || iM.add !== rM.defaultBufferAdd) {
+            rM.pendingCustomSends++;
             try {
-              yield ZG.add((() => bG.deliver(GG)))
-            } catch (wG) {
-              bG.logError("Permanent delivery failure", {
-                error: wG,
+              yield iM.add((() => rM.deliver(MM)))
+            } catch (OM) {
+              rM.logError("Permanent delivery failure", {
+                error: OM,
                 attempts: 0,
                 elapsedTimeMs: 0
               })
             } finally {
-              bG.pendingCustomSends--
+              rM.pendingCustomSends--
             }
-          } else yield bG.deliver(GG)
+          } else yield rM.deliver(MM)
         }))()
       }
-      runBufferedTask(GG, bG) {
-        return Tw((function*() {
-          let ZG;
+      runBufferedTask(MM, rM) {
+        return XO((function*() {
+          let iM;
           try {
-            return yield GG.deliver(Tw((function*() {
-              return ZG = yield bG(), {
+            return yield MM.deliver(XO((function*() {
+              return iM = yield rM(), {
                 kind: "success",
                 attemptsMade: 1
               }
-            }))), ZG
+            }))), iM
           } finally {
-            GG.release()
+            MM.release()
           }
         }))()
       }
-      deliver(GG) {
-        var bG = this;
-        return Tw((function*() {
-          const ZG = bG.deliveryQueue.reserve();
-          if (ZG) try {
-            const wG = yield bG.prepareRequest(GG), SG = yield ZG.deliver(((GG, ZG) => bG.performAttempt(wG, GG, ZG)));
-            "terminal" === SG.kind && bG.logError("retries-exhausted" === SG.reason ? "Delivery retries exhausted" : "Permanent delivery failure", Vb(Vb({}, SG.failure), {}, {
-              reason: SG.reason,
-              attempts: SG.attempts,
-              elapsedTimeMs: SG.elapsedTimeMs
+      deliver(MM) {
+        var rM = this;
+        return XO((function*() {
+          const iM = rM.deliveryQueue.reserve();
+          if (iM) try {
+            const OM = yield rM.prepareRequest(MM), SM = yield iM.deliver(((MM, iM) => rM.performAttempt(OM, MM, iM)));
+            "terminal" === SM.kind && rM.logError("retries-exhausted" === SM.reason ? "Delivery retries exhausted" : "Permanent delivery failure", zr(zr({}, SM.failure), {}, {
+              reason: SM.reason,
+              attempts: SM.attempts,
+              elapsedTimeMs: SM.elapsedTimeMs
             }))
-          } catch (wG) {
-            bG.logError("Permanent delivery failure", {
-              error: wG,
+          } catch (OM) {
+            rM.logError("Permanent delivery failure", {
+              error: OM,
               attempts: 0,
               elapsedTimeMs: 0
             })
           } finally {
-            ZG.release()
-          } else bG.logError("Permanent delivery failure", {
+            iM.release()
+          } else rM.logError("Permanent delivery failure", {
             error: "Reliable delivery queue is full",
             attempts: 0,
             elapsedTimeMs: 0
@@ -3406,477 +3406,477 @@ export const modules = {
         }))()
       }
       getIgnoreUrls() {
-        var GG;
-        return [this.options.url].concat(null !== (GG = this.config.ignoreUrls) && void 0 !== GG ? GG : [])
+        var MM;
+        return [this.options.url].concat(null !== (MM = this.config.ignoreUrls) && void 0 !== MM ? MM : [])
       }
       isBatched() {
         return !0
       }
-      prepareRequest(GG) {
-        var bG = this;
-        return Tw((function*() {
-          var ZG, wG;
-          const SG = ZL(GG),
-            LG = null === (ZG = SG.meta.session) || void 0 === ZG ? void 0 : ZG.id,
-            yG = JSON.stringify(SG),
-            kG = null !== (wG = bG.options.requestOptions) && void 0 !== wG ? wG : {},
+      prepareRequest(MM) {
+        var rM = this;
+        return XO((function*() {
+          var iM, OM;
+          const SM = Oj(MM),
+            jM = null === (iM = SM.meta.session) || void 0 === iM ? void 0 : iM.id,
+            aM = JSON.stringify(SM),
+            PM = null !== (OM = rM.options.requestOptions) && void 0 !== OM ? OM : {},
             {
-              headers: UG = {}
-            } = kG,
-            YG = fL(kG, KL),
+              headers: nM = {}
+            } = PM,
+            QM = Hj(PM, Jj),
             {
-              keepalive: VG,
-              signal: pG
-            } = YG,
-            fG = fL(YG, hL),
-            QG = {};
-          for (const [GG, bG] of Object.entries(UG)) QG[GG] = "function" === typeof bG ? yield bG(): bG;
-          let KG = yG,
-            hG = function(GG) {
-              return "undefined" === typeof TextEncoder ? GG.length : (new TextEncoder).encode(GG).byteLength
-            }(yG);
-          const dG = {};
-          return bG.compressionEnabled && (KG = yield bG.compress(yG), hG = KG.size, dG["Content-Encoding"] = "gzip"), {
-            bodySize: hG,
-            sessionId: LG,
-            requestInit: Vb({
+              keepalive: zM,
+              signal: LM
+            } = QM,
+            mM = Hj(QM, dj),
+            HM = {};
+          for (const [MM, rM] of Object.entries(nM)) HM[MM] = "function" === typeof rM ? yield rM(): rM;
+          let hM = aM,
+            JM = function(MM) {
+              return "undefined" === typeof TextEncoder ? MM.length : (new TextEncoder).encode(MM).byteLength
+            }(aM);
+          const dM = {};
+          return rM.compressionEnabled && (hM = yield rM.compress(aM), JM = hM.size, dM["Content-Encoding"] = "gzip"), {
+            bodySize: JM,
+            sessionId: jM,
+            requestInit: zr({
               method: "POST",
-              headers: Vb(Vb(Vb(Vb(Vb({
+              headers: zr(zr(zr(zr(zr({
                 "Content-Type": "application/json"
-              }, dG), QG), bG.options.apiKey ? {
-                "x-api-key": bG.options.apiKey
-              } : {}), LG ? {
-                "x-faro-session-id": LG
+              }, dM), HM), rM.options.apiKey ? {
+                "x-api-key": rM.options.apiKey
+              } : {}), jM ? {
+                "x-faro-session-id": jM
               } : {}), {}, {
-                "Idempotency-Key": Jb(20)
+                "Idempotency-Key": yr(20)
               }),
-              body: KG
-            }, fG)
+              body: hM
+            }, mM)
           }
         }))()
       }
-      performAttempt(GG, bG, ZG) {
-        var wG = this;
-        return Tw((function*() {
-          var SG;
-          const LG = null === (SG = wG.options.requestOptions) || void 0 === SG ? void 0 : SG.signal;
-          if (null === LG || void 0 === LG ? void 0 : LG.aborted) return {
+      performAttempt(MM, rM, iM) {
+        var OM = this;
+        return XO((function*() {
+          var SM;
+          const jM = null === (SM = OM.options.requestOptions) || void 0 === SM ? void 0 : SM.signal;
+          if (null === jM || void 0 === jM ? void 0 : jM.aborted) return {
             kind: "terminal",
             failure: {
-              error: LG.reason
+              error: jM.reason
             },
             attemptsMade: 0
           };
-          let yG = 0;
+          let aM = 0;
           try {
-            var kG;
-            const SG = yield wG.fetchWithKeepaliveFallback(GG.requestInit, GG.bodySize, !!ZG || (null === (kG = wG.options.requestOptions) || void 0 === kG ? void 0 : kG.keepalive), bG, (() => yG++));
-            if (wG.handleResponse(SG, GG.sessionId), SG.status >= 200 && SG.status < 300) return {
+            var PM;
+            const SM = yield OM.fetchWithKeepaliveFallback(MM.requestInit, MM.bodySize, !!iM || (null === (PM = OM.options.requestOptions) || void 0 === PM ? void 0 : PM.keepalive), rM, (() => aM++));
+            if (OM.handleResponse(SM, MM.sessionId), SM.status >= 200 && SM.status < 300) return {
               kind: "success",
-              attemptsMade: yG
+              attemptsMade: aM
             };
-            const LG = {
-              status: SG.status
+            const jM = {
+              status: SM.status
             };
-            return !dL.has(SG.status) || ZG ? {
+            return !yj.has(SM.status) || iM ? {
               kind: "terminal",
-              failure: LG,
-              attemptsMade: yG
+              failure: jM,
+              attemptsMade: aM
             } : {
               kind: "retry",
-              failure: LG,
-              attemptsMade: yG,
-              retryAfterMs: JL.has(SG.status) ? wG.getRetryAfterDelayMs(SG) : void 0
+              failure: jM,
+              attemptsMade: aM,
+              retryAfterMs: lj.has(SM.status) ? OM.getRetryAfterDelayMs(SM) : void 0
             }
-          } catch (UG) {
-            const GG = {
-              error: UG
+          } catch (nM) {
+            const MM = {
+              error: nM
             };
-            return (null === LG || void 0 === LG ? void 0 : LG.aborted) || !wG.isFetchNetworkError(UG) || ZG ? {
+            return (null === jM || void 0 === jM ? void 0 : jM.aborted) || !OM.isFetchNetworkError(nM) || iM ? {
               kind: "terminal",
-              failure: GG,
-              attemptsMade: yG
+              failure: MM,
+              attemptsMade: aM
             } : {
               kind: "retry",
-              failure: GG,
-              attemptsMade: yG
+              failure: MM,
+              attemptsMade: aM
             }
           }
         }))()
       }
-      fetchWithKeepaliveFallback(GG, bG, ZG, wG, SG) {
-        var LG = this;
-        return Tw((function*() {
-          const yG = LG.getNow(),
-            kG = LG.reserveKeepalive(bG, ZG);
+      fetchWithKeepaliveFallback(MM, rM, iM, OM, SM) {
+        var jM = this;
+        return XO((function*() {
+          const aM = jM.getNow(),
+            PM = jM.reserveKeepalive(rM, iM);
           try {
-            return yield LG.fetchWithTimeout(Vb(Vb({}, GG), {}, {
-              keepalive: kG.keepalive
-            }), LG.requestTimeoutMs, SG)
-          } catch (YG) {
-            var UG;
-            if (kG.keepalive && wG > 1 && LG.isFetchNetworkError(YG) && !(YG instanceof EL) && !(null === (UG = LG.options.requestOptions) || void 0 === UG || null === (UG = UG.signal) || void 0 === UG ? void 0 : UG.aborted)) {
-              LG.logDebug("Retrying failed keepalive request with keepalive disabled.");
-              const bG = LG.requestTimeoutMs - (LG.getNow() - yG);
-              return LG.fetchWithTimeout(Vb(Vb({}, GG), {}, {
+            return yield jM.fetchWithTimeout(zr(zr({}, MM), {}, {
+              keepalive: PM.keepalive
+            }), jM.requestTimeoutMs, SM)
+          } catch (QM) {
+            var nM;
+            if (PM.keepalive && OM > 1 && jM.isFetchNetworkError(QM) && !(QM instanceof Gj) && !(null === (nM = jM.options.requestOptions) || void 0 === nM || null === (nM = nM.signal) || void 0 === nM ? void 0 : nM.aborted)) {
+              jM.logDebug("Retrying failed keepalive request with keepalive disabled.");
+              const rM = jM.requestTimeoutMs - (jM.getNow() - aM);
+              return jM.fetchWithTimeout(zr(zr({}, MM), {}, {
                 keepalive: !1
-              }), bG, SG)
+              }), rM, SM)
             }
-            throw YG
+            throw QM
           } finally {
-            kG.release()
+            PM.release()
           }
         }))()
       }
-      fetchWithTimeout(GG, bG, ZG) {
-        var wG = this;
-        return Tw((function*() {
-          var SG;
-          const LG = null === (SG = wG.options.requestOptions) || void 0 === SG ? void 0 : SG.signal;
-          if (wG.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return ZG(), fetch(wG.options.url, Vb(Vb({}, GG), {}, {
-            signal: LG
+      fetchWithTimeout(MM, rM, iM) {
+        var OM = this;
+        return XO((function*() {
+          var SM;
+          const jM = null === (SM = OM.options.requestOptions) || void 0 === SM ? void 0 : SM.signal;
+          if (OM.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return iM(), fetch(OM.options.url, zr(zr({}, MM), {}, {
+            signal: jM
           }));
-          if (bG <= 0) throw new EL("Request timed out");
-          const yG = new AbortController,
-            kG = () => yG.abort(null === LG || void 0 === LG ? void 0 : LG.reason);
-          null === LG || void 0 === LG || LG.addEventListener("abort", kG, {
+          if (rM <= 0) throw new Gj("Request timed out");
+          const aM = new AbortController,
+            PM = () => aM.abort(null === jM || void 0 === jM ? void 0 : jM.reason);
+          null === jM || void 0 === jM || jM.addEventListener("abort", PM, {
             once: !0
           });
-          let UG = !1;
-          const YG = setTimeout((() => {
-            UG = !0, yG.abort()
-          }), bG);
+          let nM = !1;
+          const QM = setTimeout((() => {
+            nM = !0, aM.abort()
+          }), rM);
           try {
-            return ZG(), yield fetch(wG.options.url, Vb(Vb({}, GG), {}, {
-              signal: yG.signal
+            return iM(), yield fetch(OM.options.url, zr(zr({}, MM), {}, {
+              signal: aM.signal
             }))
-          } catch (VG) {
-            if (UG && !(null === LG || void 0 === LG ? void 0 : LG.aborted)) throw new EL("Request timed out");
-            throw VG
+          } catch (zM) {
+            if (nM && !(null === jM || void 0 === jM ? void 0 : jM.aborted)) throw new Gj("Request timed out");
+            throw zM
           } finally {
-            clearTimeout(YG), null === LG || void 0 === LG || LG.removeEventListener("abort", kG)
+            clearTimeout(QM), null === jM || void 0 === jM || jM.removeEventListener("abort", PM)
           }
         }))()
       }
-      getRetryAfterDelayMs(GG) {
-        const bG = GG.headers.get("Retry-After");
-        if (!bG) return;
-        if (/^\d+$/.test(bG)) {
-          const GG = 1e3 * Number(bG);
-          return Number.isFinite(GG) ? GG : Number.POSITIVE_INFINITY
+      getRetryAfterDelayMs(MM) {
+        const rM = MM.headers.get("Retry-After");
+        if (!rM) return;
+        if (/^\d+$/.test(rM)) {
+          const MM = 1e3 * Number(rM);
+          return Number.isFinite(MM) ? MM : Number.POSITIVE_INFINITY
         }
-        const ZG = this.getNow(),
-          wG = function(GG, bG) {
-            const ZG = SL.exec(GG);
-            if (ZG) {
-              const [, GG, bG, wG, SG, LG, yG, kG] = ZG;
-              return VL({
-                weekday: kL.indexOf(GG),
-                day: Number(bG),
-                month: YL.indexOf(wG),
-                year: Number(SG),
-                hour: Number(LG),
-                minute: Number(yG),
-                second: Number(kG)
+        const iM = this.getNow(),
+          OM = function(MM, rM) {
+            const iM = jj.exec(MM);
+            if (iM) {
+              const [, MM, rM, OM, SM, jM, aM, PM] = iM;
+              return Lj({
+                weekday: nj.indexOf(MM),
+                day: Number(rM),
+                month: zj.indexOf(OM),
+                year: Number(SM),
+                hour: Number(jM),
+                minute: Number(aM),
+                second: Number(PM)
               })
             }
-            const wG = LL.exec(GG);
-            if (wG) {
-              const [, GG, ZG, yG, kG, UG, YG, VG] = wG, pG = new Date(bG);
-              if (Number.isNaN(pG.getTime())) return;
-              const fG = pG.getUTCFullYear();
-              let QG = 100 * Math.floor(fG / 100) + Number(kG);
-              QG < fG && (QG += 100);
-              const KG = YL.indexOf(yG),
-                hG = {
-                  month: KG,
-                  day: Number(ZG),
-                  hour: Number(UG),
-                  minute: Number(YG),
-                  second: Number(VG),
+            const OM = aj.exec(MM);
+            if (OM) {
+              const [, MM, iM, aM, PM, nM, QM, zM] = OM, LM = new Date(rM);
+              if (Number.isNaN(LM.getTime())) return;
+              const mM = LM.getUTCFullYear();
+              let HM = 100 * Math.floor(mM / 100) + Number(PM);
+              HM < mM && (HM += 100);
+              const hM = zj.indexOf(aM),
+                JM = {
+                  month: hM,
+                  day: Number(iM),
+                  hour: Number(nM),
+                  minute: Number(QM),
+                  second: Number(zM),
                   millisecond: 0
                 },
-                dG = {
-                  month: pG.getUTCMonth(),
-                  day: pG.getUTCDate(),
-                  hour: pG.getUTCHours(),
-                  minute: pG.getUTCMinutes(),
-                  second: pG.getUTCSeconds(),
-                  millisecond: pG.getUTCMilliseconds()
+                dM = {
+                  month: LM.getUTCMonth(),
+                  day: LM.getUTCDate(),
+                  hour: LM.getUTCHours(),
+                  minute: LM.getUTCMinutes(),
+                  second: LM.getUTCSeconds(),
+                  millisecond: LM.getUTCMilliseconds()
                 };
-              return (QG > fG + 50 || QG === fG + 50 && (LG = dG, ((SG = hG).month - LG.month || SG.day - LG.day || SG.hour - LG.hour || SG.minute - LG.minute || SG.second - LG.second || SG.millisecond - LG.millisecond) > 0)) && (QG -= 100), VL({
-                weekday: UL.indexOf(GG),
-                day: Number(ZG),
-                month: KG,
-                year: QG,
-                hour: Number(UG),
-                minute: Number(YG),
-                second: Number(VG)
+              return (HM > mM + 50 || HM === mM + 50 && (jM = dM, ((SM = JM).month - jM.month || SM.day - jM.day || SM.hour - jM.hour || SM.minute - jM.minute || SM.second - jM.second || SM.millisecond - jM.millisecond) > 0)) && (HM -= 100), Lj({
+                weekday: Qj.indexOf(MM),
+                day: Number(iM),
+                month: hM,
+                year: HM,
+                hour: Number(nM),
+                minute: Number(QM),
+                second: Number(zM)
               })
             }
-            var SG, LG;
-            const yG = yL.exec(GG);
-            if (!yG) return;
-            const [, kG, UG, YG, VG, pG, fG, QG, KG] = yG;
-            return VL({
-              weekday: kL.indexOf(kG),
-              day: Number(null !== YG && void 0 !== YG ? YG : VG),
-              month: YL.indexOf(UG),
-              year: Number(KG),
-              hour: Number(pG),
-              minute: Number(fG),
-              second: Number(QG)
+            var SM, jM;
+            const aM = Pj.exec(MM);
+            if (!aM) return;
+            const [, PM, nM, QM, zM, LM, mM, HM, hM] = aM;
+            return Lj({
+              weekday: nj.indexOf(PM),
+              day: Number(null !== QM && void 0 !== QM ? QM : zM),
+              month: zj.indexOf(nM),
+              year: Number(hM),
+              hour: Number(LM),
+              minute: Number(mM),
+              second: Number(HM)
             })
-          }(bG, ZG);
-        return null == wG ? void 0 : Math.max(0, wG - ZG)
+          }(rM, iM);
+        return null == OM ? void 0 : Math.max(0, OM - iM)
       }
-      reserveKeepalive(GG, bG) {
-        if (!1 === bG || GG > 6e4 || rL + GG > 6e4 || zL >= 9) return {
+      reserveKeepalive(MM, rM) {
+        if (!1 === rM || MM > 6e4 || Ej + MM > 6e4 || Uj >= 9) return {
           keepalive: !1,
-          release: eb
+          release: vr
         };
-        rL += GG, zL++;
-        let ZG = !1;
+        Ej += MM, Uj++;
+        let iM = !1;
         return {
           keepalive: !0,
           release: () => {
-            ZG || (ZG = !0, rL -= GG, zL--)
+            iM || (iM = !0, Ej -= MM, Uj--)
           }
         }
       }
-      handleResponse(GG, bG) {
-        202 === GG.status && "invalid" === GG.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), bG), GG.text().catch(eb)
+      handleResponse(MM, rM) {
+        202 === MM.status && "invalid" === MM.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), rM), MM.text().catch(vr)
       }
-      isFetchNetworkError(GG) {
-        return GG instanceof TypeError || GG instanceof EL || GG instanceof DOMException && "AbortError" === GG.name
+      isFetchNetworkError(MM) {
+        return MM instanceof TypeError || MM instanceof Gj || MM instanceof DOMException && "AbortError" === MM.name
       }
-      compress(GG) {
-        return Tw((function*() {
-          const bG = [],
-            ZG = new ReadableStream({
-              start(bG) {
-                bG.enqueue((new TextEncoder).encode(GG)), bG.close()
+      compress(MM) {
+        return XO((function*() {
+          const rM = [],
+            iM = new ReadableStream({
+              start(rM) {
+                rM.enqueue((new TextEncoder).encode(MM)), rM.close()
               }
             }).pipeThrough(new CompressionStream("gzip")).getReader();
           for (;;) {
             const {
-              done: GG,
-              value: wG
-            } = yield ZG.read();
-            if (GG) return new Blob(bG);
-            bG.push(wG)
+              done: MM,
+              value: OM
+            } = yield iM.read();
+            if (MM) return new Blob(rM);
+            rM.push(OM)
           }
         }))()
       }
-      extendFaroSession(GG, bG, ZG) {
-        var wG, SG;
-        const LG = GG.sessionTracking;
-        if (!(null === LG || void 0 === LG ? void 0 : LG.enabled)) return void bG("Session expired.");
+      extendFaroSession(MM, rM, iM) {
+        var OM, SM;
+        const jM = MM.sessionTracking;
+        if (!(null === jM || void 0 === jM ? void 0 : jM.enabled)) return void rM("Session expired.");
         const {
-          fetchUserSession: yG,
-          storeUserSession: kG
-        } = gb(LG), UG = null === (wG = this.metas.value.session) || void 0 === wG ? void 0 : wG.id, YG = null === (SG = yG()) || void 0 === SG ? void 0 : SG.sessionId;
-        ZG && ZG === UG && ZG === YG ? (Fb({
-          fetchUserSession: yG,
-          storeUserSession: kG
+          fetchUserSession: aM,
+          storeUserSession: PM
+        } = xr(jM), nM = null === (OM = this.metas.value.session) || void 0 === OM ? void 0 : OM.id, QM = null === (SM = aM()) || void 0 === SM ? void 0 : SM.sessionId;
+        iM && iM === nM && iM === QM ? (Rr({
+          fetchUserSession: aM,
+          storeUserSession: PM
         })({
           forceSessionExtend: !0
-        }), bG("Session expired; created new session.")) : bG("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
+        }), rM("Session expired; created new session.")) : rM("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
       }
     };
-    const XL = () => {
-      const GG = window.k6;
+    const ej = () => {
+      const MM = window.k6;
       return {
-        k6: Vb({
+        k6: zr({
           isK6Browser: !0
-        }, (null === GG || void 0 === GG ? void 0 : GG.testRunId) && {
-          testRunId: null === GG || void 0 === GG ? void 0 : GG.testRunId
+        }, (null === MM || void 0 === MM ? void 0 : MM.testRunId) && {
+          testRunId: null === MM || void 0 === MM ? void 0 : MM.testRunId
         })
       }
     };
-    let uL, iL;
+    let bj, wj;
 
-    function CL() {
+    function tj() {
       let {
-        generatePageId: GG,
-        initialPageMeta: bG
+        generatePageId: MM,
+        initialPageMeta: rM
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return () => {
-        const ZG = location.href;
-        return IG(GG) && uL !== ZG && (uL = ZG, iL = GG(location)), {
-          page: Vb(Vb({
-            url: ZG
-          }, iL ? {
-            id: iL
-          } : {}), bG)
+        const iM = location.href;
+        return uM(MM) && bj !== iM && (bj = iM, wj = MM(location)), {
+          page: zr(zr({
+            url: iM
+          }, wj ? {
+            id: wj
+          } : {}), rM)
         }
       }
     }
 
-    function WL() {
-      let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Bb,
-        bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const ZG = Tb;
-      return bG > 0 && (ZG.error = bG >= 1 ? function() {
-        for (var bG = arguments.length, wG = new Array(bG), SG = 0; SG < bG; SG++) wG[SG] = arguments[SG];
-        GG.error(`${ZG.prefix}\n`, ...wG)
-      } : eb, ZG.warn = bG >= 2 ? function() {
-        for (var bG = arguments.length, wG = new Array(bG), SG = 0; SG < bG; SG++) wG[SG] = arguments[SG];
-        GG.warn(`${ZG.prefix}\n`, ...wG)
-      } : eb, ZG.info = bG >= 3 ? function() {
-        for (var bG = arguments.length, wG = new Array(bG), SG = 0; SG < bG; SG++) wG[SG] = arguments[SG];
-        GG.info(`${ZG.prefix}\n`, ...wG)
-      } : eb, ZG.debug = bG >= 4 ? function() {
-        for (var bG = arguments.length, wG = new Array(bG), SG = 0; SG < bG; SG++) wG[SG] = arguments[SG];
-        GG.debug(`${ZG.prefix}\n`, ...wG)
-      } : eb), ZG
+    function gj() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : cr,
+        rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const iM = Br;
+      return rM > 0 && (iM.error = rM >= 1 ? function() {
+        for (var rM = arguments.length, OM = new Array(rM), SM = 0; SM < rM; SM++) OM[SM] = arguments[SM];
+        MM.error(`${iM.prefix}\n`, ...OM)
+      } : vr, iM.warn = rM >= 2 ? function() {
+        for (var rM = arguments.length, OM = new Array(rM), SM = 0; SM < rM; SM++) OM[SM] = arguments[SM];
+        MM.warn(`${iM.prefix}\n`, ...OM)
+      } : vr, iM.info = rM >= 3 ? function() {
+        for (var rM = arguments.length, OM = new Array(rM), SM = 0; SM < rM; SM++) OM[SM] = arguments[SM];
+        MM.info(`${iM.prefix}\n`, ...OM)
+      } : vr, iM.debug = rM >= 4 ? function() {
+        for (var rM = arguments.length, OM = new Array(rM), SM = 0; SM < rM; SM++) OM[SM] = arguments[SM];
+        MM.debug(`${iM.prefix}\n`, ...OM)
+      } : vr), iM
     }
-    const mL = "faro",
-      IL = {
+    const uj = "faro",
+      Rj = {
         enabled: !0,
         sendTimeout: 250,
         itemLimit: 50
       },
-      FL = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
+      pj = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
 
-    function vL(GG) {
-      var bG, ZG, SG, LG, yG, kG;
-      const UG = [],
-        VG = WL(GG.unpatchedConsole, GG.internalLoggerLevel);
-      GG.transports ? ((GG.url || GG.apiKey) && VG.error('if "transports" is defined, "url" and "apiKey" should not be defined'), UG.push(...GG.transports)) : GG.url ? UG.push(new oL({
-        url: GG.url,
-        apiKey: GG.apiKey,
-        requestCompression: GG.requestCompression
-      })) : VG.error('either "url" or "transports" must be defined');
+    function Wj(MM) {
+      var rM, iM, SM, jM, aM, PM;
+      const nM = [],
+        zM = gj(MM.unpatchedConsole, MM.internalLoggerLevel);
+      MM.transports ? ((MM.url || MM.apiKey) && zM.error('if "transports" is defined, "url" and "apiKey" should not be defined'), nM.push(...MM.transports)) : MM.url ? nM.push(new Cj({
+        url: MM.url,
+        apiKey: MM.apiKey,
+        requestCompression: MM.requestCompression
+      })) : zM.error('either "url" or "transports" must be defined');
       const {
-        dedupe: pG = !0,
-        eventDomain: fG = wG,
-        globalObjectKey: QG = mL,
-        instrumentations: KG = gS(),
-        internalLoggerLevel: hG = Hb,
-        isolate: dG = !1,
-        logArgsSerializer: JG = vZ,
-        metas: rG = cL(GG),
-        paused: zG = !1,
-        preventGlobalExposure: EG = !1,
-        unpatchedConsole: oG = Bb,
-        url: XG,
-        experimental: uG
-      } = GG, iG = fL(GG, FL), CG = null !== (bG = null === uG || void 0 === uG ? void 0 : uG.trackNavigation) && void 0 !== bG && bG, WG = {
-        dataAttributeName: xw(null !== (ZG = null === (SG = GG.userActionsInstrumentation) || void 0 === SG ? void 0 : SG.dataAttributeName) && void 0 !== ZG ? ZG : Dw),
-        excludeItem: null === (LG = GG.userActionsInstrumentation) || void 0 === LG ? void 0 : LG.excludeItem,
-        initialActivityTimeout: Bw(null === (yG = GG.userActionsInstrumentation) || void 0 === yG ? void 0 : yG.initialActivityTimeout, 100, (GG => VG.warn(GG)))
+        dedupe: LM = !0,
+        eventDomain: mM = OM,
+        globalObjectKey: HM = uj,
+        instrumentations: hM = vS(),
+        internalLoggerLevel: JM = Xr,
+        isolate: dM = !1,
+        logArgsSerializer: yM = si,
+        metas: lM = Dj(MM),
+        paused: EM = !1,
+        preventGlobalExposure: UM = !1,
+        unpatchedConsole: GM = cr,
+        url: CM,
+        experimental: eM
+      } = MM, bM = Hj(MM, pj), wM = null !== (rM = null === eM || void 0 === eM ? void 0 : eM.trackNavigation) && void 0 !== rM && rM, tM = {
+        dataAttributeName: cO(null !== (iM = null === (SM = MM.userActionsInstrumentation) || void 0 === SM ? void 0 : SM.dataAttributeName) && void 0 !== iM ? iM : qO),
+        excludeItem: null === (jM = MM.userActionsInstrumentation) || void 0 === jM ? void 0 : jM.excludeItem,
+        initialActivityTimeout: MS(null === (aM = MM.userActionsInstrumentation) || void 0 === aM ? void 0 : aM.initialActivityTimeout, 100, (MM => zM.warn(MM)))
       };
-      return Vb(Vb({}, iG), {}, {
-        batching: Vb(Vb({}, IL), GG.batching),
-        dedupe: pG,
-        globalObjectKey: QG,
-        instrumentations: aL(KG, GG),
-        internalLoggerLevel: hG,
-        isolate: dG,
-        logArgsSerializer: JG,
-        metas: rG,
-        parseStacktrace: hZ,
-        paused: zG,
-        preventGlobalExposure: EG,
-        transports: UG,
-        unpatchedConsole: oG,
-        eventDomain: fG,
-        ignoreUrls: [...null !== (kG = GG.ignoreUrls) && void 0 !== kG ? kG : [], ...XG ? [XG] : [], /\/collect(?:\/[\w]*)?$/],
-        sessionTracking: Vb(Vb(Vb({}, YG), GG.sessionTracking), lL({
-          trackGeolocation: GG.trackGeolocation,
-          sessionTracking: GG.sessionTracking
+      return zr(zr({}, bM), {}, {
+        batching: zr(zr({}, Rj), MM.batching),
+        dedupe: LM,
+        globalObjectKey: HM,
+        instrumentations: sj(hM, MM),
+        internalLoggerLevel: JM,
+        isolate: dM,
+        logArgsSerializer: yM,
+        metas: lM,
+        parseStacktrace: di,
+        paused: EM,
+        preventGlobalExposure: UM,
+        transports: nM,
+        unpatchedConsole: GM,
+        eventDomain: mM,
+        ignoreUrls: [...null !== (PM = MM.ignoreUrls) && void 0 !== PM ? PM : [], ...CM ? [CM] : [], /\/collect(?:\/[\w]*)?$/],
+        sessionTracking: zr(zr(zr({}, QM), MM.sessionTracking), kj({
+          trackGeolocation: MM.trackGeolocation,
+          sessionTracking: MM.sessionTracking
         })),
-        userActionsInstrumentation: WG,
+        userActionsInstrumentation: tM,
         experimental: {
-          trackNavigation: CG
+          trackNavigation: wM
         }
       })
     }
 
-    function aL(GG, bG) {
+    function sj(MM, rM) {
       let {
-        experimental: ZG
-      } = bG;
-      var wG;
-      const SG = null !== (wG = null === ZG || void 0 === ZG ? void 0 : ZG.trackNavigation) && void 0 !== wG && wG;
-      return GG.filter((GG => !("@grafana/faro-web-sdk:instrumentation-navigation" === GG.name && !SG)))
+        experimental: iM
+      } = rM;
+      var OM;
+      const SM = null !== (OM = null === iM || void 0 === iM ? void 0 : iM.trackNavigation) && void 0 !== OM && OM;
+      return MM.filter((MM => !("@grafana/faro-web-sdk:instrumentation-navigation" === MM.name && !SM)))
     }
 
-    function cL(GG) {
-      var bG, ZG, wG;
+    function Dj(MM) {
+      var rM, iM, OM;
       const {
-        page: SG,
-        generatePageId: LG
-      } = null !== (bG = null === GG || void 0 === GG ? void 0 : GG.pageTracking) && void 0 !== bG ? bG : {}, yG = [tS, DS, CL({
-        generatePageId: LG,
-        initialPageMeta: SG
-      }), ...null !== (ZG = GG.metas) && void 0 !== ZG ? ZG : [], OS];
-      return mG(null === (wG = window) || void 0 === wG ? void 0 : wG.k6) ? [...yG, XL] : yG
+        page: SM,
+        generatePageId: jM
+      } = null !== (rM = null === MM || void 0 === MM ? void 0 : MM.pageTracking) && void 0 !== rM ? rM : {}, aM = [KS, qS, tj({
+        generatePageId: jM,
+        initialPageMeta: SM
+      }), ...null !== (iM = MM.metas) && void 0 !== iM ? iM : [], VS];
+      return gM(null === (OM = window) || void 0 === OM ? void 0 : OM.k6) ? [...aM, ej] : aM
     }
 
-    function lL(GG) {
+    function kj(MM) {
       let {
-        trackGeolocation: bG,
-        sessionTracking: ZG
-      } = GG;
-      var wG;
-      const SG = {};
-      return CG(bG) && (SG.geoLocationTrackingEnabled = bG), HG(SG) ? {} : {
-        session: Vb(Vb({}, null !== (wG = null === ZG || void 0 === ZG ? void 0 : ZG.session) && void 0 !== wG ? wG : {}), {}, {
-          overrides: SG
+        trackGeolocation: rM,
+        sessionTracking: iM
+      } = MM;
+      var OM;
+      const SM = {};
+      return wM(rM) && (SM.geoLocationTrackingEnabled = rM), XM(SM) ? {} : {
+        session: zr(zr({}, null !== (OM = null === iM || void 0 === iM ? void 0 : iM.session) && void 0 !== OM ? OM : {}), {}, {
+          overrides: SM
         })
       }
     }
-    const jL = new WeakSet;
+    const Zj = new WeakSet;
 
-    function PL(GG) {
-      return jL.add(GG), GG
+    function oj(MM) {
+      return Zj.add(MM), MM
     }
 
-    function ML(GG, bG) {
-      if (GG.capture) return PL(GG.capture(bG));
-      const ZG = PL(GG.value);
-      return null === bG || void 0 === bG || bG(), ZG
+    function fj(MM, rM) {
+      if (MM.capture) return oj(MM.capture(rM));
+      const iM = oj(MM.value);
+      return null === rM || void 0 === rM || rM(), iM
     }
 
-    function AL(GG) {
-      const bG = `__faroBundleId_${GG}`,
-        ZG = null === VG || void 0 === VG ? void 0 : VG[bG];
-      if ("string" === typeof ZG && "" !== ZG) return ZG;
-      const wG = "undefined" !== typeof window ? window[bG] : void 0;
-      return "string" === typeof wG && "" !== wG ? wG : void 0
+    function Yj(MM) {
+      const rM = `__faroBundleId_${MM}`,
+        iM = null === zM || void 0 === zM ? void 0 : zM[rM];
+      if ("string" === typeof iM && "" !== iM) return iM;
+      const OM = "undefined" !== typeof window ? window[rM] : void 0;
+      return "string" === typeof OM && "" !== OM ? OM : void 0
     }
 
-    function sL(GG) {
-      var bG, ZG;
-      const wG = GG.config.app.name,
-        SG = wG ? function(GG) {
-          return null === VG || void 0 === VG ? void 0 : VG[`__faroGitHash_${GG}`]
-        }(wG) : void 0,
-        LG = {
+    function Nj(MM) {
+      var rM, iM;
+      const OM = MM.config.app.name,
+        SM = OM ? function(MM) {
+          return null === zM || void 0 === zM ? void 0 : zM[`__faroGitHash_${MM}`]
+        }(OM) : void 0,
+        jM = {
           sdk: {
-            version: ZZ,
+            version: ii,
             name: "faro"
           },
-          app: xb({
-            bundleId: wG && AL(wG)
-          }, void 0 !== SG ? {
-            gitHash: SG
+          app: Vr({
+            bundleId: OM && Yj(OM)
+          }, void 0 !== SM ? {
+            gitHash: SM
           } : {})
         },
-        yG = null === (bG = GG.config.sessionTracking) || void 0 === bG ? void 0 : bG.session;
-      yG && GG.api.setSession(yG), GG.config.app && (LG.app = xb(xb({}, GG.config.app), LG.app)), GG.config.user && (LG.user = GG.config.user), GG.config.view && (LG.view = GG.config.view), GG.metas.add(LG, ...null !== (ZG = GG.config.metas) && void 0 !== ZG ? ZG : [])
+        aM = null === (rM = MM.config.sessionTracking) || void 0 === rM ? void 0 : rM.session;
+      aM && MM.api.setSession(aM), MM.config.app && (jM.app = Vr(Vr({}, MM.config.app), jM.app)), MM.config.user && (jM.user = MM.config.user), MM.config.view && (jM.view = MM.config.view), MM.metas.add(jM, ...null !== (iM = MM.config.metas) && void 0 !== iM ? iM : [])
     }
-    var qL = class {
-      constructor(GG, bG) {
-        var ZG, wG;
-        this.signalBuffer = [], this.itemLimit = null !== (ZG = null === bG || void 0 === bG ? void 0 : bG.itemLimit) && void 0 !== ZG ? ZG : 50, this.sendTimeout = null !== (wG = null === bG || void 0 === bG ? void 0 : bG.sendTimeout) && void 0 !== wG ? wG : 250, this.paused = (null === bG || void 0 === bG ? void 0 : bG.paused) || !1, this.sendFn = GG, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
+    var Aj = class {
+      constructor(MM, rM) {
+        var iM, OM;
+        this.signalBuffer = [], this.itemLimit = null !== (iM = null === rM || void 0 === rM ? void 0 : rM.itemLimit) && void 0 !== iM ? iM : 50, this.sendTimeout = null !== (OM = null === rM || void 0 === rM ? void 0 : rM.sendTimeout) && void 0 !== OM ? OM : 250, this.paused = (null === rM || void 0 === rM ? void 0 : rM.paused) || !1, this.sendFn = MM, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.flush()
         }))
       }
-      addItem(GG) {
-        this.paused || (this.signalBuffer.push(GG), this.signalBuffer.length >= this.itemLimit && this.flush())
+      addItem(MM) {
+        this.paused || (this.signalBuffer.push(MM), this.signalBuffer.length >= this.itemLimit && this.flush())
       }
       start() {
         this.paused = !1, this.sendTimeout > 0 && (this.flushInterval = setInterval((() => this.flush()), this.sendTimeout))
@@ -3884,22 +3884,22 @@ export const modules = {
       pause() {
         this.paused = !0, clearInterval(this.flushInterval)
       }
-      groupItems(GG) {
-        const bG = new Map;
-        return GG.forEach((GG => {
-          const ZG = JSON.stringify(GG.meta);
-          let wG = bG.get(ZG);
-          wG = void 0 === wG ? [GG] : [...wG, GG], bG.set(ZG, wG)
-        })), Array.from(bG.values())
+      groupItems(MM) {
+        const rM = new Map;
+        return MM.forEach((MM => {
+          const iM = JSON.stringify(MM.meta);
+          let OM = rM.get(iM);
+          OM = void 0 === OM ? [MM] : [...OM, MM], rM.set(iM, OM)
+        })), Array.from(rM.values())
       }
       flush() {
         if (this.paused || 0 === this.signalBuffer.length) return;
-        const GG = this.signalBuffer;
+        const MM = this.signalBuffer;
         this.signalBuffer = [];
         try {
-          this.groupItems(GG).forEach(this.sendFn)
-        } catch (bG) {
-          throw this.signalBuffer = [...GG, ...this.signalBuffer], this.trimBufferToLimit(), bG
+          this.groupItems(MM).forEach(this.sendFn)
+        } catch (rM) {
+          throw this.signalBuffer = [...MM, ...this.signalBuffer], this.trimBufferToLimit(), rM
         }
       }
       trimBufferToLimit() {
@@ -3907,710 +3907,710 @@ export const modules = {
       }
     };
 
-    function nL(GG, bG, ZG, wG) {
-      var SG;
-      bG.debug("Initializing transports");
-      const LG = [];
-      let yG = [];
-      const kG = GG => {
-        let bG = GG;
-        for (const wG of yG) {
-          const GG = bG.map(wG).filter(Boolean);
-          if (0 === GG.length) return [];
-          bG = gL(GG, ZG)
+    function xj(MM, rM, iM, OM) {
+      var SM;
+      rM.debug("Initializing transports");
+      const jM = [];
+      let aM = [];
+      const PM = MM => {
+        let rM = MM;
+        for (const OM of aM) {
+          const MM = rM.map(OM).filter(Boolean);
+          if (0 === MM.length) return [];
+          rM = vj(MM, iM)
         }
-        return bG
+        return rM
       };
-      let UG;
-      (null === (SG = ZG.batching) || void 0 === SG ? void 0 : SG.enabled) && (UG = new qL((GG => {
-        const ZG = kG(GG);
-        if (0 !== ZG.length)
-          for (const wG of LG) bG.debug(`Transporting item using ${wG.name}\n`, ZG), wG.isBatched() && wG.send(ZG)
+      let nM;
+      (null === (SM = iM.batching) || void 0 === SM ? void 0 : SM.enabled) && (nM = new Aj((MM => {
+        const iM = PM(MM);
+        if (0 !== iM.length)
+          for (const OM of jM) rM.debug(`Transporting item using ${OM.name}\n`, iM), OM.isBatched() && OM.send(iM)
       }), {
-        sendTimeout: ZG.batching.sendTimeout,
-        itemLimit: ZG.batching.itemLimit,
-        paused: ZG.paused
+        sendTimeout: iM.batching.sendTimeout,
+        itemLimit: iM.batching.itemLimit,
+        paused: iM.paused
       }));
       return {
         add: function() {
-          bG.debug("Adding transports");
-          for (var SG = arguments.length, yG = new Array(SG), kG = 0; kG < SG; kG++) yG[kG] = arguments[kG];
-          yG.forEach((SG => {
-            bG.debug(`Adding "${SG.name}" transport`), LG.some((GG => GG === SG)) ? bG.warn(`Transport ${SG.name} is already added`) : (SG.unpatchedConsole = GG, SG.internalLogger = bG, SG.config = ZG, SG.metas = wG, LG.push(SG))
+          rM.debug("Adding transports");
+          for (var SM = arguments.length, aM = new Array(SM), PM = 0; PM < SM; PM++) aM[PM] = arguments[PM];
+          aM.forEach((SM => {
+            rM.debug(`Adding "${SM.name}" transport`), jM.some((MM => MM === SM)) ? rM.warn(`Transport ${SM.name} is already added`) : (SM.unpatchedConsole = MM, SM.internalLogger = rM, SM.config = iM, SM.metas = OM, jM.push(SM))
           }))
         },
         addBeforeSendHooks: function() {
-          bG.debug("Adding beforeSendHooks\n", yG);
-          for (var GG = arguments.length, ZG = new Array(GG), wG = 0; wG < GG; wG++) ZG[wG] = arguments[wG];
-          ZG.forEach((GG => {
-            GG && yG.push(GG)
+          rM.debug("Adding beforeSendHooks\n", aM);
+          for (var MM = arguments.length, iM = new Array(MM), OM = 0; OM < MM; OM++) iM[OM] = arguments[OM];
+          iM.forEach((MM => {
+            MM && aM.push(MM)
           }))
         },
-        getBeforeSendHooks: () => [...yG],
-        execute: GG => {
-          var SG;
-          if (!ZG.paused && qb(wG).shouldCapture()) {
-            if (pG = GG.meta, !jL.has(pG)) {
-              var yG, YG, VG;
-              const bG = null === (yG = wG.value.session) || void 0 === yG ? void 0 : yG.id,
-                SG = ML(wG);
-              if (ZG.paused) return;
-              const LG = xb({}, GG.meta);
-              (null === (YG = LG.session) || void 0 === YG ? void 0 : YG.id) === bG && (null === (VG = SG.session) || void 0 === VG ? void 0 : VG.id) !== bG && (void 0 === SG.session ? delete LG.session : LG.session = SG.session), GG = xb(xb({}, GG), {}, {
-                meta: PL(LG)
+        getBeforeSendHooks: () => [...aM],
+        execute: MM => {
+          var SM;
+          if (!iM.paused && Nr(OM).shouldCapture()) {
+            if (LM = MM.meta, !Zj.has(LM)) {
+              var aM, QM, zM;
+              const rM = null === (aM = OM.value.session) || void 0 === aM ? void 0 : aM.id,
+                SM = fj(OM);
+              if (iM.paused) return;
+              const jM = Vr({}, MM.meta);
+              (null === (QM = jM.session) || void 0 === QM ? void 0 : QM.id) === rM && (null === (zM = SM.session) || void 0 === zM ? void 0 : zM.id) !== rM && (void 0 === SM.session ? delete jM.session : jM.session = SM.session), MM = Vr(Vr({}, MM), {}, {
+                meta: oj(jM)
               })
             }
-            var pG;
-            (null === (SG = ZG.batching) || void 0 === SG ? void 0 : SG.enabled) && (null === UG || void 0 === UG || UG.addItem(GG)), (GG => {
-              var wG;
-              if ((null === (wG = ZG.batching) || void 0 === wG ? void 0 : wG.enabled) && LG.every((GG => GG.isBatched()))) return;
-              const [SG] = kG([GG]);
-              if (void 0 !== SG)
-                for (const kG of LG) {
-                  var yG;
-                  bG.debug(`Transporting item using ${kG.name}\n`, SG), kG.isBatched() ? (null === (yG = ZG.batching) || void 0 === yG ? void 0 : yG.enabled) || kG.send([SG]) : kG.send(SG)
+            var LM;
+            (null === (SM = iM.batching) || void 0 === SM ? void 0 : SM.enabled) && (null === nM || void 0 === nM || nM.addItem(MM)), (MM => {
+              var OM;
+              if ((null === (OM = iM.batching) || void 0 === OM ? void 0 : OM.enabled) && jM.every((MM => MM.isBatched()))) return;
+              const [SM] = PM([MM]);
+              if (void 0 !== SM)
+                for (const PM of jM) {
+                  var aM;
+                  rM.debug(`Transporting item using ${PM.name}\n`, SM), PM.isBatched() ? (null === (aM = iM.batching) || void 0 === aM ? void 0 : aM.enabled) || PM.send([SM]) : PM.send(SM)
                 }
-            })(GG)
+            })(MM)
           }
         },
-        isPaused: () => ZG.paused,
+        isPaused: () => iM.paused,
         pause: () => {
-          bG.debug("Pausing transports"), null === UG || void 0 === UG || UG.pause(), ZG.paused = !0
+          rM.debug("Pausing transports"), null === nM || void 0 === nM || nM.pause(), iM.paused = !0
         },
         remove: function() {
-          bG.debug("Removing transports");
-          for (var GG = arguments.length, ZG = new Array(GG), wG = 0; wG < GG; wG++) ZG[wG] = arguments[wG];
-          ZG.forEach((GG => {
-            bG.debug(`Removing "${GG.name}" transport`);
-            const ZG = LG.indexOf(GG); - 1 !== ZG ? LG.splice(ZG, 1) : bG.warn(`Transport "${GG.name}" is not added`)
+          rM.debug("Removing transports");
+          for (var MM = arguments.length, iM = new Array(MM), OM = 0; OM < MM; OM++) iM[OM] = arguments[OM];
+          iM.forEach((MM => {
+            rM.debug(`Removing "${MM.name}" transport`);
+            const iM = jM.indexOf(MM); - 1 !== iM ? jM.splice(iM, 1) : rM.warn(`Transport "${MM.name}" is not added`)
           }))
         },
         removeBeforeSendHooks: function() {
-          for (var GG = arguments.length, ZG = new Array(GG), wG = 0; wG < GG; wG++) ZG[wG] = arguments[wG];
-          bG.debug("Removing beforeSendHooks"), yG = yG.filter((GG => !ZG.includes(GG)))
+          for (var MM = arguments.length, iM = new Array(MM), OM = 0; OM < MM; OM++) iM[OM] = arguments[OM];
+          rM.debug("Removing beforeSendHooks"), aM = aM.filter((MM => !iM.includes(MM)))
         },
         get transports() {
-          return [...LG]
+          return [...jM]
         },
         unpause: () => {
-          bG.debug("Unpausing transports"), null === UG || void 0 === UG || UG.start(), ZG.paused = !1
+          rM.debug("Unpausing transports"), null === nM || void 0 === nM || nM.start(), iM.paused = !1
         }
       }
     }
 
-    function gL(GG, bG) {
-      if (bG.preserveOriginalError)
-        for (const ZG of GG) "exception" === ZG.type && delete ZG.payload.originalError;
-      return GG
+    function vj(MM, rM) {
+      if (rM.preserveOriginalError)
+        for (const iM of MM) "exception" === iM.type && delete iM.payload.originalError;
+      return MM
     }
-    let eL = Bb;
+    let Fj = cr;
 
-    function RL(GG) {
-      var bG;
-      return eL = null !== (bG = GG.unpatchedConsole) && void 0 !== bG ? bG : eL, eL
+    function Bj(MM) {
+      var rM;
+      return Fj = null !== (rM = MM.unpatchedConsole) && void 0 !== rM ? rM : Fj, Fj
     }
-    let TL, HL = Tb;
+    let Xj, Ij = Br;
 
-    function tL(GG, bG) {
-      return HL = WL(GG, bG.internalLoggerLevel), HL
+    function Kj(MM, rM) {
+      return Ij = gj(MM, rM.internalLoggerLevel), Ij
     }
 
-    function DL(GG) {
+    function qj(MM) {
       let {
-        internalLogger: bG,
-        config: ZG,
-        metas: wG,
-        transports: SG,
-        tracesApi: LG,
-        userActionsApi: yG
-      } = GG;
-      var kG;
-      bG.debug("Initializing exceptions API");
-      let UG = null;
-      TL = null !== (kG = ZG.parseStacktrace) && void 0 !== kG ? kG : TL;
-      const YG = GG => {
-          bG.debug("Changing stacktrace parser"), TL = null !== GG && void 0 !== GG ? GG : TL
+        internalLogger: rM,
+        config: iM,
+        metas: OM,
+        transports: SM,
+        tracesApi: jM,
+        userActionsApi: aM
+      } = MM;
+      var PM;
+      rM.debug("Initializing exceptions API");
+      let nM = null;
+      Xj = null !== (PM = iM.parseStacktrace) && void 0 !== PM ? PM : Xj;
+      const QM = MM => {
+          rM.debug("Changing stacktrace parser"), Xj = null !== MM && void 0 !== MM ? MM : Xj
         },
         {
-          ignoreErrors: VG = [],
-          preserveOriginalError: pG
-        } = ZG;
-      return YG(ZG.parseStacktrace), {
-        changeStacktraceParser: YG,
-        getStacktraceParser: () => TL,
-        pushError: function(GG) {
+          ignoreErrors: zM = [],
+          preserveOriginalError: LM
+        } = iM;
+      return QM(iM.parseStacktrace), {
+        changeStacktraceParser: QM,
+        getStacktraceParser: () => Xj,
+        pushError: function(MM) {
           let {
-            skipDedupe: kG,
-            stackFrames: YG,
-            type: fG,
-            context: QG,
-            spanContext: KG,
-            timestampOverwriteMs: hG,
-            originalError: dG,
-            fingerprint: JG,
-            fatal: rG
+            skipDedupe: PM,
+            stackFrames: QM,
+            type: mM,
+            context: HM,
+            spanContext: hM,
+            timestampOverwriteMs: JM,
+            originalError: dM,
+            fingerprint: yM,
+            fatal: lM
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (! function(GG, bG) {
+          if (! function(MM, rM) {
               const {
-                message: ZG,
-                name: wG,
-                stack: SG
-              } = bG;
-              return LG = GG, yG = ZG + " " + wG + " " + SG, LG.some((GG => XG(GG) ? yG.includes(GG) : !!yG.match(GG)));
-              var LG, yG
-            }(VG, null !== dG && void 0 !== dG ? dG : GG)) try {
-            var zG, EG;
-            if (!qb(wG).shouldCapture()) return;
-            const VG = Pb(xb(xb({}, function(GG) {
-                let bG = GG.cause;
-                MG(bG) ? bG = GG.cause.toString() : null !== bG && (mG(GG.cause) || FG(GG.cause)) ? bG = jb(GG.cause) : null != bG && (bG = GG.cause.toString());
-                return null == bG ? {} : {
-                  cause: bG
+                message: iM,
+                name: OM,
+                stack: SM
+              } = rM;
+              return jM = MM, aM = iM + " " + OM + " " + SM, jM.some((MM => CM(MM) ? aM.includes(MM) : !!aM.match(MM)));
+              var jM, aM
+            }(zM, null !== dM && void 0 !== dM ? dM : MM)) try {
+            var EM, UM;
+            if (!Nr(OM).shouldCapture()) return;
+            const zM = Zr(Vr(Vr({}, function(MM) {
+                let rM = MM.cause;
+                oM(rM) ? rM = MM.cause.toString() : null !== rM && (gM(MM.cause) || RM(MM.cause)) ? rM = kr(MM.cause) : null != rM && (rM = MM.cause.toString());
+                return null == rM ? {} : {
+                  cause: rM
                 }
-              }(null !== dG && void 0 !== dG ? dG : GG)), null !== QG && void 0 !== QG ? QG : {})),
-              XG = xb(xb(xb(xb({
-                type: fG || GG.name || "Error",
-                value: GG.message,
-                timestamp: hG ? hb(hG) : Kb(),
-                trace: KG ? {
-                  trace_id: KG.traceId,
-                  span_id: KG.spanId
-                } : LG.getTraceContext()
-              }, HG(VG) ? {} : {
-                context: VG
-              }), pG ? {
-                originalError: dG
-              } : {}), JG ? {
-                fingerprint: JG
-              } : {}), void 0 !== rG ? {
-                fatal: rG
+              }(null !== dM && void 0 !== dM ? dM : MM)), null !== HM && void 0 !== HM ? HM : {})),
+              CM = Vr(Vr(Vr(Vr({
+                type: mM || MM.name || "Error",
+                value: MM.message,
+                timestamp: JM ? Jr(JM) : hr(),
+                trace: hM ? {
+                  trace_id: hM.traceId,
+                  span_id: hM.spanId
+                } : jM.getTraceContext()
+              }, XM(zM) ? {} : {
+                context: zM
+              }), LM ? {
+                originalError: dM
+              } : {}), yM ? {
+                fingerprint: yM
+              } : {}), void 0 !== lM ? {
+                fatal: lM
               } : {});
-            YG = null !== (zG = YG) && void 0 !== zG ? zG : GG.stack ? null === TL || void 0 === TL ? void 0 : TL(GG).frames : void 0, (null === YG || void 0 === YG ? void 0 : YG.length) && (XG.stacktrace = {
-              frames: YG
+            QM = null !== (EM = QM) && void 0 !== EM ? EM : MM.stack ? null === Xj || void 0 === Xj ? void 0 : Xj(MM).frames : void 0, (null === QM || void 0 === QM ? void 0 : QM.length) && (CM.stacktrace = {
+              frames: QM
             });
-            const uG = {
-              type: XG.type,
-              value: XG.value,
-              stacktrace: XG.stacktrace,
-              context: XG.context,
-              fingerprint: XG.fingerprint,
-              fatal: null !== (EG = XG.fatal) && void 0 !== EG && EG
+            const eM = {
+              type: CM.type,
+              value: CM.value,
+              stacktrace: CM.stacktrace,
+              context: CM.context,
+              fingerprint: CM.fingerprint,
+              fatal: null !== (UM = CM.fatal) && void 0 !== UM && UM
             };
-            if (!kG && ZG.dedupe && !oG(UG) && rb(uG, UG)) return void bG.debug("Skipping error push because it is the same as the last one\n", XG);
-            const iG = UG,
-              CG = ML(wG);
-            if (UG !== iG && !kG && ZG.dedupe && rb(uG, UG)) return;
-            UG = uG;
-            const WG = {
-              meta: CG,
-              payload: XG,
+            if (!PM && iM.dedupe && !GM(nM) && lr(eM, nM)) return void rM.debug("Skipping error push because it is the same as the last one\n", CM);
+            const bM = nM,
+              wM = fj(OM);
+            if (nM !== bM && !PM && iM.dedupe && lr(eM, nM)) return;
+            nM = eM;
+            const tM = {
+              meta: wM,
+              payload: CM,
               type: "exception"
             };
-            bG.debug("Pushing exception\n", WG), uS(yG.getActiveUserAction(), WG) || SG.execute(WG)
-          } catch (uG) {
-            bG.error("Error pushing event", uG)
+            rM.debug("Pushing exception\n", tM), bS(aM.getActiveUserAction(), tM) || SM.execute(tM)
+          } catch (eM) {
+            rM.error("Error pushing event", eM)
           }
         }
       }
     }
 
-    function NL(GG, bG, ZG, wG, SG) {
-      bG.debug("Initializing API");
-      let LG = null;
-      const yG = function(GG) {
+    function Tj(MM, rM, iM, OM, SM) {
+      rM.debug("Initializing API");
+      let jM = null;
+      const aM = function(MM) {
           let {
-            transports: bG,
-            internalLogger: ZG,
-            config: wG,
-            pushEvent: SG
-          } = GG;
-          var LG;
-          const yG = null === (LG = wG.userActionsInstrumentation) || void 0 === LG ? void 0 : LG.excludeItem;
-          let kG;
-          const UG = () => kG;
+            transports: rM,
+            internalLogger: iM,
+            config: OM,
+            pushEvent: SM
+          } = MM;
+          var jM;
+          const aM = null === (jM = OM.userActionsInstrumentation) || void 0 === jM ? void 0 : jM.excludeItem;
+          let PM;
+          const nM = () => PM;
           return {
-            startUserAction: (GG, wG, LG) => {
-              if (void 0 === UG()) {
-                const ZG = new oS({
-                  name: GG,
-                  transports: bG,
-                  attributes: wG,
-                  trigger: (null === LG || void 0 === LG ? void 0 : LG.triggerName) || "faroApiCall",
-                  importance: (null === LG || void 0 === LG ? void 0 : LG.importance) || zS.Normal,
-                  trackUserActionsExcludeItem: yG,
-                  pushEvent: SG
+            startUserAction: (MM, OM, jM) => {
+              if (void 0 === nM()) {
+                const iM = new CS({
+                  name: MM,
+                  transports: rM,
+                  attributes: OM,
+                  trigger: (null === jM || void 0 === jM ? void 0 : jM.triggerName) || "faroApiCall",
+                  importance: (null === jM || void 0 === jM ? void 0 : jM.importance) || US.Normal,
+                  trackUserActionsExcludeItem: aM,
+                  pushEvent: SM
                 });
-                return ZG.filter((GG => [3, 2].includes(GG))).first().subscribe((() => {
-                  kG = void 0
-                })), XS.notify({
-                  type: rS,
-                  userAction: ZG,
-                  initialActivityTimeout: null === LG || void 0 === LG ? void 0 : LG.initialActivityTimeout
-                }), kG = ZG, kG
+                return iM.filter((MM => [3, 2].includes(MM))).first().subscribe((() => {
+                  PM = void 0
+                })), eS.notify({
+                  type: ES,
+                  userAction: iM,
+                  initialActivityTimeout: null === jM || void 0 === jM ? void 0 : jM.initialActivityTimeout
+                }), PM = iM, PM
               }
-              ZG.error("Attempted to create a new user action while one is already running. This is not possible.")
+              iM.error("Attempted to create a new user action while one is already running. This is not possible.")
             },
-            getActiveUserAction: UG
+            getActiveUserAction: nM
           }
         }({
-          transports: SG,
-          config: ZG,
-          internalLogger: bG,
-          pushEvent: (GG, ZG, wG, SG) => {
-            LG ? LG(GG, ZG, wG, SG) : bG.warn("pushEventImpl is not initialized. Event dropped:", {
-              name: GG,
-              attributes: ZG,
-              domain: wG,
-              options: SG
+          transports: SM,
+          config: iM,
+          internalLogger: rM,
+          pushEvent: (MM, iM, OM, SM) => {
+            jM ? jM(MM, iM, OM, SM) : rM.warn("pushEventImpl is not initialized. Event dropped:", {
+              name: MM,
+              attributes: iM,
+              domain: OM,
+              options: SM
             })
           }
         }),
-        kG = function(GG, bG, ZG, wG, SG) {
-          let LG;
-          return bG.debug("Initializing traces API"), {
-            getOTEL: () => LG,
+        PM = function(MM, rM, iM, OM, SM) {
+          let jM;
+          return rM.debug("Initializing traces API"), {
+            getOTEL: () => jM,
             getTraceContext: () => {
-              const GG = null === LG || void 0 === LG ? void 0 : LG.trace.getSpanContext(LG.context.active());
-              return GG ? {
-                trace_id: GG.traceId,
-                span_id: GG.spanId
+              const MM = null === jM || void 0 === jM ? void 0 : jM.trace.getSpanContext(jM.context.active());
+              return MM ? {
+                trace_id: MM.traceId,
+                span_id: MM.spanId
               } : void 0
             },
-            initOTEL: (GG, ZG) => {
-              bG.debug("Initializing OpenTelemetry"), LG = {
-                trace: GG,
-                context: ZG
+            initOTEL: (MM, iM) => {
+              rM.debug("Initializing OpenTelemetry"), jM = {
+                trace: MM,
+                context: iM
               }
             },
-            isOTELInitialized: () => !!LG,
-            pushTraces: GG => {
+            isOTELInitialized: () => !!jM,
+            pushTraces: MM => {
               try {
-                if (!qb(wG).shouldCapture()) return;
-                const ZG = {
+                if (!Nr(OM).shouldCapture()) return;
+                const iM = {
                   type: "trace",
-                  payload: GG,
-                  meta: ML(wG)
+                  payload: MM,
+                  meta: fj(OM)
                 };
-                bG.debug("Pushing trace\n", ZG), SG.execute(ZG)
-              } catch (ZG) {
-                bG.error("Error pushing trace\n", ZG)
+                rM.debug("Pushing trace\n", iM), SM.execute(iM)
+              } catch (iM) {
+                rM.error("Error pushing trace\n", iM)
               }
             }
           }
-        }(0, bG, 0, wG, SG),
-        UG = {
-          unpatchedConsole: GG,
-          internalLogger: bG,
-          userActionsApi: yG,
-          config: ZG,
-          metas: wG,
-          transports: SG,
-          tracesApi: kG
+        }(0, rM, 0, OM, SM),
+        nM = {
+          unpatchedConsole: MM,
+          internalLogger: rM,
+          userActionsApi: aM,
+          config: iM,
+          metas: OM,
+          transports: SM,
+          tracesApi: PM
         },
-        YG = function(GG) {
+        QM = function(MM) {
           let {
-            internalLogger: bG,
-            config: ZG,
-            metas: wG,
-            transports: SG,
-            tracesApi: LG,
-            userActionsApi: yG
-          } = GG, kG = null;
+            internalLogger: rM,
+            config: iM,
+            metas: OM,
+            transports: SM,
+            tracesApi: jM,
+            userActionsApi: aM
+          } = MM, PM = null;
           return {
-            pushEvent: function(GG, UG, YG) {
+            pushEvent: function(MM, nM, QM) {
               let {
-                skipDedupe: VG,
-                spanContext: pG,
-                timestampOverwriteMs: fG,
-                customPayloadTransformer: QG = GG => GG
+                skipDedupe: zM,
+                spanContext: LM,
+                timestampOverwriteMs: mM,
+                customPayloadTransformer: HM = MM => MM
               } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
               try {
-                if (!qb(wG).shouldCapture()) return;
-                const KG = Pb(UG),
-                  hG = QG({
-                    name: GG,
-                    domain: null !== YG && void 0 !== YG ? YG : ZG.eventDomain,
-                    attributes: HG(KG) ? void 0 : KG,
-                    timestamp: fG ? hb(fG) : Kb(),
-                    trace: pG ? {
-                      trace_id: pG.traceId,
-                      span_id: pG.spanId
-                    } : LG.getTraceContext()
+                if (!Nr(OM).shouldCapture()) return;
+                const hM = Zr(nM),
+                  JM = HM({
+                    name: MM,
+                    domain: null !== QM && void 0 !== QM ? QM : iM.eventDomain,
+                    attributes: XM(hM) ? void 0 : hM,
+                    timestamp: mM ? Jr(mM) : hr(),
+                    trace: LM ? {
+                      trace_id: LM.traceId,
+                      span_id: LM.spanId
+                    } : jM.getTraceContext()
                   }),
-                  dG = {
-                    name: hG.name,
-                    attributes: hG.attributes,
-                    domain: hG.domain
+                  dM = {
+                    name: JM.name,
+                    attributes: JM.attributes,
+                    domain: JM.domain
                   };
-                if (!VG && ZG.dedupe && !oG(kG) && rb(dG, kG)) return void bG.debug("Skipping event push because it is the same as the last one\n", hG);
-                const JG = kG,
-                  rG = ML(wG);
-                if (kG !== JG && !VG && ZG.dedupe && rb(dG, kG)) return;
-                kG = dG;
-                const zG = {
-                  meta: rG,
-                  payload: hG,
+                if (!zM && iM.dedupe && !GM(PM) && lr(dM, PM)) return void rM.debug("Skipping event push because it is the same as the last one\n", JM);
+                const yM = PM,
+                  lM = fj(OM);
+                if (PM !== yM && !zM && iM.dedupe && lr(dM, PM)) return;
+                PM = dM;
+                const EM = {
+                  meta: lM,
+                  payload: JM,
                   type: "event"
                 };
-                bG.debug("Pushing event\n", zG), uS(yG.getActiveUserAction(), zG) || SG.execute(zG)
-              } catch (KG) {
-                bG.error("Error pushing event", KG)
+                rM.debug("Pushing event\n", EM), bS(aM.getActiveUserAction(), EM) || SM.execute(EM)
+              } catch (hM) {
+                rM.error("Error pushing event", hM)
               }
             }
           }
-        }(UG);
-      return LG = YG.pushEvent, xb(xb(xb(xb(xb(xb(xb({}, kG), DL(UG)), function(GG) {
-        let bG, ZG, wG, SG, {
-          internalLogger: LG,
-          metas: yG
-        } = GG;
-        LG.debug("Initializing meta API");
-        const kG = GG => {
-            ZG && yG.remove(ZG), ZG = {
-              user: GG
-            }, yG.add(ZG)
+        }(nM);
+      return jM = QM.pushEvent, Vr(Vr(Vr(Vr(Vr(Vr(Vr({}, PM), qj(nM)), function(MM) {
+        let rM, iM, OM, SM, {
+          internalLogger: jM,
+          metas: aM
+        } = MM;
+        jM.debug("Initializing meta API");
+        const PM = MM => {
+            iM && aM.remove(iM), iM = {
+              user: MM
+            }, aM.add(iM)
           },
-          UG = (GG, ZG) => {
-            var wG;
-            const SG = null === ZG || void 0 === ZG ? void 0 : ZG.overrides,
-              LG = SG ? {
-                overrides: xb(xb({}, null === bG || void 0 === bG || null === (wG = bG.session) || void 0 === wG ? void 0 : wG.overrides), SG)
+          nM = (MM, iM) => {
+            var OM;
+            const SM = null === iM || void 0 === iM ? void 0 : iM.overrides,
+              jM = SM ? {
+                overrides: Vr(Vr({}, null === rM || void 0 === rM || null === (OM = rM.session) || void 0 === OM ? void 0 : OM.overrides), SM)
               } : {};
-            bG && yG.remove(bG), bG = {
-              session: xb(xb({}, HG(GG) ? void 0 : GG), LG)
-            }, yG.add(bG)
+            rM && aM.remove(rM), rM = {
+              session: Vr(Vr({}, XM(MM) ? void 0 : MM), jM)
+            }, aM.add(rM)
           },
-          YG = (GG, bG) => {
-            qb(yG).notifySessionUpdate({
+          QM = (MM, rM) => {
+            Nr(aM).notifySessionUpdate({
               type: "replace",
-              session: GG,
-              overrides: null === bG || void 0 === bG ? void 0 : bG.overrides
-            }), UG(GG, bG)
+              session: MM,
+              overrides: null === rM || void 0 === rM ? void 0 : rM.overrides
+            }), nM(MM, rM)
           },
-          VG = () => yG.value.session,
-          pG = () => yG.value.page;
+          zM = () => aM.value.session,
+          LM = () => aM.value.page;
         return {
-          setUser: kG,
-          resetUser: kG,
-          setSession: YG,
-          resetSession: YG,
-          getSession: VG,
-          setView: (GG, bG) => {
-            var ZG;
-            if ((null === bG || void 0 === bG ? void 0 : bG.overrides) && (qb(yG).notifySessionUpdate({
+          setUser: PM,
+          resetUser: PM,
+          setSession: QM,
+          resetSession: QM,
+          getSession: zM,
+          setView: (MM, rM) => {
+            var iM;
+            if ((null === rM || void 0 === rM ? void 0 : rM.overrides) && (Nr(aM).notifySessionUpdate({
                 type: "overrides",
-                overrides: bG.overrides
-              }), UG(VG(), {
-                overrides: bG.overrides
-              })), (null === wG || void 0 === wG || null === (ZG = wG.view) || void 0 === ZG ? void 0 : ZG.name) === (null === GG || void 0 === GG ? void 0 : GG.name)) return;
-            const SG = wG;
-            wG = {
-              view: GG
-            }, yG.add(wG), SG && yG.remove(SG)
+                overrides: rM.overrides
+              }), nM(zM(), {
+                overrides: rM.overrides
+              })), (null === OM || void 0 === OM || null === (iM = OM.view) || void 0 === iM ? void 0 : iM.name) === (null === MM || void 0 === MM ? void 0 : MM.name)) return;
+            const SM = OM;
+            OM = {
+              view: MM
+            }, aM.add(OM), SM && aM.remove(SM)
           },
-          getView: () => yG.value.view,
-          setPage: GG => {
-            var bG;
-            const ZG = XG(GG) ? xb(xb({}, null !== (bG = null === SG || void 0 === SG ? void 0 : SG.page) && void 0 !== bG ? bG : pG()), {}, {
-              id: GG
-            }) : GG;
-            SG && yG.remove(SG), SG = {
-              page: ZG
-            }, yG.add(SG)
+          getView: () => aM.value.view,
+          setPage: MM => {
+            var rM;
+            const iM = CM(MM) ? Vr(Vr({}, null !== (rM = null === SM || void 0 === SM ? void 0 : SM.page) && void 0 !== rM ? rM : LM()), {}, {
+              id: MM
+            }) : MM;
+            SM && aM.remove(SM), SM = {
+              page: iM
+            }, aM.add(SM)
           },
-          getPage: pG
+          getPage: LM
         }
-      }(UG)), function(GG) {
+      }(nM)), function(MM) {
         let {
-          internalLogger: bG,
-          config: ZG,
-          metas: wG,
-          transports: SG,
-          tracesApi: LG,
-          userActionsApi: yG
-        } = GG;
-        var kG;
-        bG.debug("Initializing logs API");
-        let UG = null;
-        const YG = null !== (kG = ZG.logArgsSerializer) && void 0 !== kG ? kG : vZ;
+          internalLogger: rM,
+          config: iM,
+          metas: OM,
+          transports: SM,
+          tracesApi: jM,
+          userActionsApi: aM
+        } = MM;
+        var PM;
+        rM.debug("Initializing logs API");
+        let nM = null;
+        const QM = null !== (PM = iM.logArgsSerializer) && void 0 !== PM ? PM : si;
         return {
-          pushLog: function(GG) {
+          pushLog: function(MM) {
             let {
-              context: kG,
-              level: VG,
-              skipDedupe: pG,
-              spanContext: fG,
-              timestampOverwriteMs: QG
+              context: PM,
+              level: zM,
+              skipDedupe: LM,
+              spanContext: mM,
+              timestampOverwriteMs: HM
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!qb(wG).shouldCapture()) return;
-              const KG = Pb(kG),
-                hG = {
-                  message: YG(GG),
-                  level: null !== VG && void 0 !== VG ? VG : "log",
-                  context: HG(KG) ? void 0 : KG,
-                  timestamp: QG ? hb(QG) : Kb(),
-                  trace: fG ? {
-                    trace_id: fG.traceId,
-                    span_id: fG.spanId
-                  } : LG.getTraceContext()
+              if (!Nr(OM).shouldCapture()) return;
+              const hM = Zr(PM),
+                JM = {
+                  message: QM(MM),
+                  level: null !== zM && void 0 !== zM ? zM : "log",
+                  context: XM(hM) ? void 0 : hM,
+                  timestamp: HM ? Jr(HM) : hr(),
+                  trace: mM ? {
+                    trace_id: mM.traceId,
+                    span_id: mM.spanId
+                  } : jM.getTraceContext()
                 },
-                dG = {
-                  message: hG.message,
-                  level: hG.level,
-                  context: hG.context
+                dM = {
+                  message: JM.message,
+                  level: JM.level,
+                  context: JM.context
                 };
-              if (!pG && ZG.dedupe && !oG(UG) && rb(dG, UG)) return void bG.debug("Skipping log push because it is the same as the last one\n", hG);
-              const JG = UG,
-                rG = ML(wG);
-              if (UG !== JG && !pG && ZG.dedupe && rb(dG, UG)) return;
-              UG = dG;
-              const zG = {
+              if (!LM && iM.dedupe && !GM(nM) && lr(dM, nM)) return void rM.debug("Skipping log push because it is the same as the last one\n", JM);
+              const yM = nM,
+                lM = fj(OM);
+              if (nM !== yM && !LM && iM.dedupe && lr(dM, nM)) return;
+              nM = dM;
+              const EM = {
                 type: "log",
-                payload: hG,
-                meta: rG
+                payload: JM,
+                meta: lM
               };
-              bG.debug("Pushing log\n", zG), uS(yG.getActiveUserAction(), zG) || SG.execute(zG)
-            } catch (KG) {
-              bG.error("Error pushing log\n", KG)
+              rM.debug("Pushing log\n", EM), bS(aM.getActiveUserAction(), EM) || SM.execute(EM)
+            } catch (hM) {
+              rM.error("Error pushing log\n", hM)
             }
           }
         }
-      }(UG)), function(GG) {
+      }(nM)), function(MM) {
         let {
-          internalLogger: bG,
-          config: ZG,
-          metas: wG,
-          transports: SG,
-          tracesApi: LG,
-          userActionsApi: yG
-        } = GG;
-        bG.debug("Initializing measurements API");
-        let kG = null;
+          internalLogger: rM,
+          config: iM,
+          metas: OM,
+          transports: SM,
+          tracesApi: jM,
+          userActionsApi: aM
+        } = MM;
+        rM.debug("Initializing measurements API");
+        let PM = null;
         return {
-          pushMeasurement: function(GG) {
+          pushMeasurement: function(MM) {
             let {
-              skipDedupe: UG,
-              context: YG,
-              spanContext: VG,
-              timestampOverwriteMs: pG
+              skipDedupe: nM,
+              context: QM,
+              spanContext: zM,
+              timestampOverwriteMs: LM
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!qb(wG).shouldCapture()) return;
-              const fG = Pb(YG),
-                QG = xb(xb({}, GG), {}, {
-                  trace: VG ? {
-                    trace_id: VG.traceId,
-                    span_id: VG.spanId
-                  } : LG.getTraceContext(),
-                  timestamp: pG ? hb(pG) : Kb(),
-                  context: HG(fG) ? void 0 : fG
+              if (!Nr(OM).shouldCapture()) return;
+              const mM = Zr(QM),
+                HM = Vr(Vr({}, MM), {}, {
+                  trace: zM ? {
+                    trace_id: zM.traceId,
+                    span_id: zM.spanId
+                  } : jM.getTraceContext(),
+                  timestamp: LM ? Jr(LM) : hr(),
+                  context: XM(mM) ? void 0 : mM
                 }),
-                KG = {
-                  type: QG.type,
-                  values: QG.values,
-                  context: QG.context
+                hM = {
+                  type: HM.type,
+                  values: HM.values,
+                  context: HM.context
                 };
-              if (!UG && ZG.dedupe && !oG(kG) && rb(KG, kG)) return void bG.debug("Skipping measurement push because it is the same as the last one\n", QG);
-              const hG = kG,
-                dG = ML(wG);
-              if (kG !== hG && !UG && ZG.dedupe && rb(KG, kG)) return;
-              kG = KG;
-              const JG = {
+              if (!nM && iM.dedupe && !GM(PM) && lr(hM, PM)) return void rM.debug("Skipping measurement push because it is the same as the last one\n", HM);
+              const JM = PM,
+                dM = fj(OM);
+              if (PM !== JM && !nM && iM.dedupe && lr(hM, PM)) return;
+              PM = hM;
+              const yM = {
                 type: "measurement",
-                payload: QG,
-                meta: dG
+                payload: HM,
+                meta: dM
               };
-              bG.debug("Pushing measurement\n", JG), uS(yG.getActiveUserAction(), JG) || SG.execute(JG)
-            } catch (fG) {
-              bG.error("Error pushing measurement\n", fG)
+              rM.debug("Pushing measurement\n", yM), bS(aM.getActiveUserAction(), yM) || SM.execute(yM)
+            } catch (mM) {
+              rM.error("Error pushing measurement\n", mM)
             }
           }
         }
-      }(UG)), YG), yG)
+      }(nM)), QM), aM)
     }
 
-    function OL(GG) {
-      const bG = RL(GG),
-        ZG = tL(bG, GG);
-      if (KG() && !GG.isolate) return void ZG.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
-      ZG.debug("Initializing");
-      const wG = function(GG, bG) {
-          let ZG, wG = [],
-            SG = [],
-            LG = [],
-            yG = 0,
-            kG = 0;
-          const UG = () => wG.reduce(((GG, bG) => Object.assign(GG, IG(bG) ? bG() : bG)), {}),
-            YG = () => {
-              if (SG.length) {
-                const GG = UG();
-                SG.forEach((bG => bG(GG)))
+    function Vj(MM) {
+      const rM = Bj(MM),
+        iM = Kj(rM, MM);
+      if (hM() && !MM.isolate) return void iM.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
+      iM.debug("Initializing");
+      const OM = function(MM, rM) {
+          let iM, OM = [],
+            SM = [],
+            jM = [],
+            aM = 0,
+            PM = 0;
+          const nM = () => OM.reduce(((MM, rM) => Object.assign(MM, uM(rM) ? rM() : rM)), {}),
+            QM = () => {
+              if (SM.length) {
+                const MM = nM();
+                SM.forEach((rM => rM(MM)))
               }
             };
           return {
             add: function() {
-              for (var GG = arguments.length, ZG = new Array(GG), SG = 0; SG < GG; SG++) ZG[SG] = arguments[SG];
-              bG.debug("Adding metas\n", ZG), wG.push(...ZG), YG()
+              for (var MM = arguments.length, iM = new Array(MM), SM = 0; SM < MM; SM++) iM[SM] = arguments[SM];
+              rM.debug("Adding metas\n", iM), OM.push(...iM), QM()
             },
             remove: function() {
-              for (var GG = arguments.length, ZG = new Array(GG), SG = 0; SG < GG; SG++) ZG[SG] = arguments[SG];
-              bG.debug("Removing metas\n", ZG), wG = wG.filter((GG => !ZG.includes(GG))), YG()
+              for (var MM = arguments.length, iM = new Array(MM), SM = 0; SM < MM; SM++) iM[SM] = arguments[SM];
+              rM.debug("Removing metas\n", iM), OM = OM.filter((MM => !iM.includes(MM))), QM()
             },
-            addListener: GG => {
-              bG.debug("Adding metas listener\n", GG), SG.push(GG)
+            addListener: MM => {
+              rM.debug("Adding metas listener\n", MM), SM.push(MM)
             },
-            removeListener: GG => {
-              bG.debug("Removing metas listener\n", GG), SG = SG.filter((bG => bG !== GG))
+            removeListener: MM => {
+              rM.debug("Removing metas listener\n", MM), SM = SM.filter((rM => rM !== MM))
             },
-            capture: GG => {
-              var bG;
-              const wG = void 0 !== ZG,
-                SG = null !== (bG = ZG) && void 0 !== bG ? bG : LG;
-              wG || (ZG = SG, yG = 0, kG = SG.length);
+            capture: MM => {
+              var rM;
+              const OM = void 0 !== iM,
+                SM = null !== (rM = iM) && void 0 !== rM ? rM : jM;
+              OM || (iM = SM, aM = 0, PM = SM.length);
               try {
-                for (; yG < kG;) {
-                  const GG = SG[yG++];
-                  null === GG || void 0 === GG || GG()
+                for (; aM < PM;) {
+                  const MM = SM[aM++];
+                  null === MM || void 0 === MM || MM()
                 }
-                const bG = PL(UG());
-                return null === GG || void 0 === GG || GG(), bG
+                const rM = oj(nM());
+                return null === MM || void 0 === MM || MM(), rM
               } finally {
-                wG || (ZG = void 0)
+                OM || (iM = void 0)
               }
             },
-            addCaptureListener: GG => {
-              LG.push(GG)
+            addCaptureListener: MM => {
+              jM.push(MM)
             },
-            removeCaptureListener: GG => {
-              LG = LG.filter((bG => bG !== GG))
+            removeCaptureListener: MM => {
+              jM = jM.filter((rM => rM !== MM))
             },
             get value() {
-              return UG()
+              return nM()
             }
           }
-        }(0, ZG),
-        SG = nL(bG, ZG, GG, wG),
-        LG = NL(bG, ZG, GG, wG, SG),
-        yG = function(GG, bG, ZG, wG, SG, LG) {
-          bG.debug("Initializing instrumentations");
-          const yG = [];
+        }(0, iM),
+        SM = xj(rM, iM, MM, OM),
+        jM = Tj(rM, iM, MM, OM, SM),
+        aM = function(MM, rM, iM, OM, SM, jM) {
+          rM.debug("Initializing instrumentations");
+          const aM = [];
           return {
             add: function() {
-              bG.debug("Adding instrumentations");
-              for (var kG = arguments.length, UG = new Array(kG), YG = 0; YG < kG; YG++) UG[YG] = arguments[YG];
-              UG.forEach((kG => {
-                bG.debug(`Adding "${kG.name}" instrumentation`), yG.some((GG => GG.name === kG.name)) ? bG.warn(`Instrumentation ${kG.name} is already added`) : (kG.unpatchedConsole = GG, kG.internalLogger = bG, kG.config = ZG, kG.metas = wG, kG.transports = SG, kG.api = LG, yG.push(kG), kG.initialize())
+              rM.debug("Adding instrumentations");
+              for (var PM = arguments.length, nM = new Array(PM), QM = 0; QM < PM; QM++) nM[QM] = arguments[QM];
+              nM.forEach((PM => {
+                rM.debug(`Adding "${PM.name}" instrumentation`), aM.some((MM => MM.name === PM.name)) ? rM.warn(`Instrumentation ${PM.name} is already added`) : (PM.unpatchedConsole = MM, PM.internalLogger = rM, PM.config = iM, PM.metas = OM, PM.transports = SM, PM.api = jM, aM.push(PM), PM.initialize())
               }))
             },
             get instrumentations() {
-              return [...yG]
+              return [...aM]
             },
             remove: function() {
-              bG.debug("Removing instrumentations");
-              for (var GG = arguments.length, ZG = new Array(GG), wG = 0; wG < GG; wG++) ZG[wG] = arguments[wG];
-              ZG.forEach((GG => {
-                var ZG, wG;
-                bG.debug(`Removing "${GG.name}" instrumentation`);
-                const SG = yG.reduce(((bG, ZG, wG) => null === bG && ZG.name === GG.name ? wG : null), null);
-                null !== SG ? (null === (ZG = (wG = yG[SG]).destroy) || void 0 === ZG || ZG.call(wG), yG.splice(SG, 1)) : bG.warn(`Instrumentation "${GG.name}" is not added`)
+              rM.debug("Removing instrumentations");
+              for (var MM = arguments.length, iM = new Array(MM), OM = 0; OM < MM; OM++) iM[OM] = arguments[OM];
+              iM.forEach((MM => {
+                var iM, OM;
+                rM.debug(`Removing "${MM.name}" instrumentation`);
+                const SM = aM.reduce(((rM, iM, OM) => null === rM && iM.name === MM.name ? OM : null), null);
+                null !== SM ? (null === (iM = (OM = aM[SM]).destroy) || void 0 === iM || iM.call(OM), aM.splice(SM, 1)) : rM.warn(`Instrumentation "${MM.name}" is not added`)
               }))
             }
           }
-        }(bG, ZG, GG, wG, SG, LG),
-        kG = dG(bG, ZG, GG, wG, SG, LG, yG);
-      return sL(kG),
-        function(GG) {
-          GG.transports.add(...GG.config.transports), GG.transports.addBeforeSendHooks(GG.config.beforeSend)
-        }(kG),
-        function(GG) {
-          GG.instrumentations.add(...GG.config.instrumentations)
-        }(kG), kG
+        }(rM, iM, MM, OM, SM, jM),
+        PM = dM(rM, iM, MM, OM, SM, jM, aM);
+      return Nj(PM),
+        function(MM) {
+          MM.transports.add(...MM.config.transports), MM.transports.addBeforeSendHooks(MM.config.beforeSend)
+        }(PM),
+        function(MM) {
+          MM.instrumentations.add(...MM.config.instrumentations)
+        }(PM), PM
     }
 
-    function xL(GG) {
-      const bG = vL(GG);
-      if (bG) return OL(bG)
+    function cj(MM) {
+      const rM = Wj(MM);
+      if (rM) return Vj(rM)
     }
   },
-  6706: function(GG, bG, ZG) {
-    var wG;
-    ! function(SG, LG) {
-      var yG = "function",
-        kG = "undefined",
-        UG = "object",
-        YG = "string",
-        VG = "major",
-        pG = "model",
-        fG = "name",
-        QG = "type",
-        KG = "vendor",
-        hG = "version",
-        dG = "architecture",
-        JG = "console",
-        rG = "mobile",
-        zG = "tablet",
-        EG = "smarttv",
-        oG = "wearable",
-        XG = "embedded",
-        uG = "Amazon",
-        iG = "Apple",
-        CG = "ASUS",
-        WG = "BlackBerry",
-        mG = "Browser",
-        IG = "Chrome",
-        FG = "Firefox",
-        vG = "Google",
-        aG = "Honor",
-        cG = "Huawei",
-        lG = "LG",
-        jG = "Microsoft",
-        PG = "Motorola",
-        MG = "Nvidia",
-        AG = "OnePlus",
-        sG = "Opera",
-        qG = "OPPO",
-        nG = "Samsung",
-        gG = "Sharp",
-        eG = "Sony",
-        RG = "Xiaomi",
-        TG = "Zebra",
-        HG = "Facebook",
-        tG = "Chromium OS",
-        DG = "Mac OS",
-        NG = " Browser",
-        OG = function(GG) {
-          for (var bG = {}, ZG = 0; ZG < GG.length; ZG++) bG[GG[ZG].toUpperCase()] = GG[ZG];
-          return bG
+  7161: function(MM, rM, iM) {
+    var OM;
+    ! function(SM, jM) {
+      var aM = "function",
+        PM = "undefined",
+        nM = "object",
+        QM = "string",
+        zM = "major",
+        LM = "model",
+        mM = "name",
+        HM = "type",
+        hM = "vendor",
+        JM = "version",
+        dM = "architecture",
+        yM = "console",
+        lM = "mobile",
+        EM = "tablet",
+        UM = "smarttv",
+        GM = "wearable",
+        CM = "embedded",
+        eM = "Amazon",
+        bM = "Apple",
+        wM = "ASUS",
+        tM = "BlackBerry",
+        gM = "Browser",
+        uM = "Chrome",
+        RM = "Firefox",
+        pM = "Google",
+        WM = "Honor",
+        sM = "Huawei",
+        DM = "LG",
+        kM = "Microsoft",
+        ZM = "Motorola",
+        oM = "Nvidia",
+        fM = "OnePlus",
+        YM = "Opera",
+        NM = "OPPO",
+        AM = "Samsung",
+        xM = "Sharp",
+        vM = "Sony",
+        FM = "Xiaomi",
+        BM = "Zebra",
+        XM = "Facebook",
+        IM = "Chromium OS",
+        KM = "Mac OS",
+        qM = " Browser",
+        TM = function(MM) {
+          for (var rM = {}, iM = 0; iM < MM.length; iM++) rM[MM[iM].toUpperCase()] = MM[iM];
+          return rM
         },
-        xG = function(GG, bG) {
-          return typeof GG === YG && -1 !== BG(bG).indexOf(BG(GG))
+        VM = function(MM, rM) {
+          return typeof MM === QM && -1 !== cM(rM).indexOf(cM(MM))
         },
-        BG = function(GG) {
-          return GG.toLowerCase()
+        cM = function(MM) {
+          return MM.toLowerCase()
         },
-        Gb = function(GG, bG) {
-          if (typeof GG === YG) return GG = GG.replace(/^\s\s*/, ""), typeof bG === kG ? GG : GG.substring(0, 500)
+        Mr = function(MM, rM) {
+          if (typeof MM === QM) return MM = MM.replace(/^\s\s*/, ""), typeof rM === PM ? MM : MM.substring(0, 500)
         },
-        bb = function(GG, bG) {
-          for (var ZG, wG, SG, kG, YG, VG, pG = 0; pG < bG.length && !YG;) {
-            var fG = bG[pG],
-              QG = bG[pG + 1];
-            for (ZG = wG = 0; ZG < fG.length && !YG && fG[ZG];)
-              if (YG = fG[ZG++].exec(GG))
-                for (SG = 0; SG < QG.length; SG++) VG = YG[++wG], typeof(kG = QG[SG]) === UG && kG.length > 0 ? 2 === kG.length ? typeof kG[1] == yG ? this[kG[0]] = kG[1].call(this, VG) : this[kG[0]] = kG[1] : 3 === kG.length ? typeof kG[1] !== yG || kG[1].exec && kG[1].test ? this[kG[0]] = VG ? VG.replace(kG[1], kG[2]) : LG : this[kG[0]] = VG ? kG[1].call(this, VG, kG[2]) : LG : 4 === kG.length && (this[kG[0]] = VG ? kG[3].call(this, VG.replace(kG[1], kG[2])) : LG) : this[kG] = VG || LG;
-            pG += 2
+        rr = function(MM, rM) {
+          for (var iM, OM, SM, PM, QM, zM, LM = 0; LM < rM.length && !QM;) {
+            var mM = rM[LM],
+              HM = rM[LM + 1];
+            for (iM = OM = 0; iM < mM.length && !QM && mM[iM];)
+              if (QM = mM[iM++].exec(MM))
+                for (SM = 0; SM < HM.length; SM++) zM = QM[++OM], typeof(PM = HM[SM]) === nM && PM.length > 0 ? 2 === PM.length ? typeof PM[1] == aM ? this[PM[0]] = PM[1].call(this, zM) : this[PM[0]] = PM[1] : 3 === PM.length ? typeof PM[1] !== aM || PM[1].exec && PM[1].test ? this[PM[0]] = zM ? zM.replace(PM[1], PM[2]) : jM : this[PM[0]] = zM ? PM[1].call(this, zM, PM[2]) : jM : 4 === PM.length && (this[PM[0]] = zM ? PM[3].call(this, zM.replace(PM[1], PM[2])) : jM) : this[PM] = zM || jM;
+            LM += 2
           }
         },
-        Zb = function(GG, bG) {
-          for (var ZG in bG)
-            if (typeof bG[ZG] === UG && bG[ZG].length > 0) {
-              for (var wG = 0; wG < bG[ZG].length; wG++)
-                if (xG(bG[ZG][wG], GG)) return "?" === ZG ? LG : ZG
-            } else if (xG(bG[ZG], GG)) return "?" === ZG ? LG : ZG;
-          return bG.hasOwnProperty("*") ? bG["*"] : GG
+        ir = function(MM, rM) {
+          for (var iM in rM)
+            if (typeof rM[iM] === nM && rM[iM].length > 0) {
+              for (var OM = 0; OM < rM[iM].length; OM++)
+                if (VM(rM[iM][OM], MM)) return "?" === iM ? jM : iM
+            } else if (VM(rM[iM], MM)) return "?" === iM ? jM : iM;
+          return rM.hasOwnProperty("*") ? rM["*"] : MM
         },
-        wb = {
+        Or = {
           ME: "4.90",
           "NT 3.11": "NT3.51",
           "NT 4.0": "NT4.0",
@@ -4623,110 +4623,110 @@ export const modules = {
           10: ["NT 6.4", "NT 10.0"],
           RT: "ARM"
         },
-        Sb = {
+        Sr = {
           browser: [
             [/\b(?:crmo|crios)\/([\w\.]+)/i],
-            [hG, [fG, "Chrome"]],
+            [JM, [mM, "Chrome"]],
             [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-            [hG, [fG, "Edge"]],
+            [JM, [mM, "Edge"]],
             [/(opera mini)\/([-\w\.]+)/i, /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i, /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i],
-            [fG, hG],
+            [mM, JM],
             [/opios[\/ ]+([\w\.]+)/i],
-            [hG, [fG, sG + " Mini"]],
+            [JM, [mM, YM + " Mini"]],
             [/\bop(?:rg)?x\/([\w\.]+)/i],
-            [hG, [fG, sG + " GX"]],
+            [JM, [mM, YM + " GX"]],
             [/\bopr\/([\w\.]+)/i],
-            [hG, [fG, sG]],
+            [JM, [mM, YM]],
             [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
-            [hG, [fG, "Baidu"]],
+            [JM, [mM, "Baidu"]],
             [/\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i],
-            [hG, [fG, "Maxthon"]],
+            [JM, [mM, "Maxthon"]],
             [/(kindle)\/([\w\.]+)/i, /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i, /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i, /(?:ms|\()(ie) ([\w\.]+)/i, /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon)\/([-\w\.]+)/i, /(heytap|ovi|115)browser\/([\d\.]+)/i, /(weibo)__([\d\.]+)/i],
-            [fG, hG],
+            [mM, JM],
             [/quark(?:pc)?\/([-\w\.]+)/i],
-            [hG, [fG, "Quark"]],
+            [JM, [mM, "Quark"]],
             [/\bddg\/([\w\.]+)/i],
-            [hG, [fG, "DuckDuckGo"]],
+            [JM, [mM, "DuckDuckGo"]],
             [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-            [hG, [fG, "UC" + mG]],
+            [JM, [mM, "UC" + gM]],
             [/microm.+\bqbcore\/([\w\.]+)/i, /\bqbcore\/([\w\.]+).+microm/i, /micromessenger\/([\w\.]+)/i],
-            [hG, [fG, "WeChat"]],
+            [JM, [mM, "WeChat"]],
             [/konqueror\/([\w\.]+)/i],
-            [hG, [fG, "Konqueror"]],
+            [JM, [mM, "Konqueror"]],
             [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-            [hG, [fG, "IE"]],
+            [JM, [mM, "IE"]],
             [/ya(?:search)?browser\/([\w\.]+)/i],
-            [hG, [fG, "Yandex"]],
+            [JM, [mM, "Yandex"]],
             [/slbrowser\/([\w\.]+)/i],
-            [hG, [fG, "Smart Lenovo " + mG]],
+            [JM, [mM, "Smart Lenovo " + gM]],
             [/(avast|avg)\/([\w\.]+)/i],
             [
-              [fG, /(.+)/, "$1 Secure " + mG], hG
+              [mM, /(.+)/, "$1 Secure " + gM], JM
             ],
             [/\bfocus\/([\w\.]+)/i],
-            [hG, [fG, FG + " Focus"]],
+            [JM, [mM, RM + " Focus"]],
             [/\bopt\/([\w\.]+)/i],
-            [hG, [fG, sG + " Touch"]],
+            [JM, [mM, YM + " Touch"]],
             [/coc_coc\w+\/([\w\.]+)/i],
-            [hG, [fG, "Coc Coc"]],
+            [JM, [mM, "Coc Coc"]],
             [/dolfin\/([\w\.]+)/i],
-            [hG, [fG, "Dolphin"]],
+            [JM, [mM, "Dolphin"]],
             [/coast\/([\w\.]+)/i],
-            [hG, [fG, sG + " Coast"]],
+            [JM, [mM, YM + " Coast"]],
             [/miuibrowser\/([\w\.]+)/i],
-            [hG, [fG, "MIUI" + NG]],
+            [JM, [mM, "MIUI" + qM]],
             [/fxios\/([\w\.-]+)/i],
-            [hG, [fG, FG]],
+            [JM, [mM, RM]],
             [/\bqihoobrowser\/?([\w\.]*)/i],
-            [hG, [fG, "360"]],
+            [JM, [mM, "360"]],
             [/\b(qq)\/([\w\.]+)/i],
             [
-              [fG, /(.+)/, "$1Browser"], hG
+              [mM, /(.+)/, "$1Browser"], JM
             ],
             [/(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i],
             [
-              [fG, /(.+)/, "$1" + NG], hG
+              [mM, /(.+)/, "$1" + qM], JM
             ],
             [/samsungbrowser\/([\w\.]+)/i],
-            [hG, [fG, nG + " Internet"]],
+            [JM, [mM, AM + " Internet"]],
             [/metasr[\/ ]?([\d\.]+)/i],
-            [hG, [fG, "Sogou Explorer"]],
+            [JM, [mM, "Sogou Explorer"]],
             [/(sogou)mo\w+\/([\d\.]+)/i],
             [
-              [fG, "Sogou Mobile"], hG
+              [mM, "Sogou Mobile"], JM
             ],
             [/(electron)\/([\w\.]+) safari/i, /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i, /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i],
-            [fG, hG],
+            [mM, JM],
             [/(lbbrowser|rekonq)/i, /\[(linkedin)app\]/i],
-            [fG],
+            [mM],
             [/ome\/([\w\.]+) \w* ?(iron) saf/i, /ome\/([\w\.]+).+qihu (360)[es]e/i],
-            [hG, fG],
+            [JM, mM],
             [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
             [
-              [fG, HG], hG
+              [mM, XM], JM
             ],
             [/(Klarna)\/([\w\.]+)/i, /(kakao(?:talk|story))[\/ ]([\w\.]+)/i, /(naver)\(.*?(\d+\.[\w\.]+).*\)/i, /(daum)apps[\/ ]([\w\.]+)/i, /safari (line)\/([\w\.]+)/i, /\b(line)\/([\w\.]+)\/iab/i, /(alipay)client\/([\w\.]+)/i, /(twitter)(?:and| f.+e\/([\w\.]+))/i, /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i],
-            [fG, hG],
+            [mM, JM],
             [/\bgsa\/([\w\.]+) .*safari\//i],
-            [hG, [fG, "GSA"]],
+            [JM, [mM, "GSA"]],
             [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
-            [hG, [fG, "TikTok"]],
+            [JM, [mM, "TikTok"]],
             [/headlesschrome(?:\/([\w\.]+)| )/i],
-            [hG, [fG, IG + " Headless"]],
+            [JM, [mM, uM + " Headless"]],
             [/ wv\).+(chrome)\/([\w\.]+)/i],
             [
-              [fG, IG + " WebView"], hG
+              [mM, uM + " WebView"], JM
             ],
             [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-            [hG, [fG, "Android " + mG]],
+            [JM, [mM, "Android " + gM]],
             [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-            [fG, hG],
+            [mM, JM],
             [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
-            [hG, [fG, "Mobile Safari"]],
+            [JM, [mM, "Mobile Safari"]],
             [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
-            [hG, fG],
+            [JM, mM],
             [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-            [fG, [hG, Zb, {
+            [mM, [JM, ir, {
               "1.0": "/8",
               1.2: "/1",
               1.3: "/3",
@@ -4737,642 +4737,642 @@ export const modules = {
               "?": "/"
             }]],
             [/(webkit|khtml)\/([\w\.]+)/i],
-            [fG, hG],
+            [mM, JM],
             [/(navigator|netscape\d?)\/([-\w\.]+)/i],
             [
-              [fG, "Netscape"], hG
+              [mM, "Netscape"], JM
             ],
             [/(wolvic|librewolf)\/([\w\.]+)/i],
-            [fG, hG],
+            [mM, JM],
             [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-            [hG, [fG, FG + " Reality"]],
+            [JM, [mM, RM + " Reality"]],
             [/ekiohf.+(flow)\/([\w\.]+)/i, /(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror)[\/ ]?([\w\.\+]+)/i, /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i, /(firefox)\/([\w\.]+)/i, /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i, /(amaya|dillo|doris|icab|ladybird|lynx|mosaic|netsurf|obigo|polaris|w3m|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i, /\b(links) \(([\w\.]+)/i],
-            [fG, [hG, /_/g, "."]],
+            [mM, [JM, /_/g, "."]],
             [/(cobalt)\/([\w\.]+)/i],
-            [fG, [hG, /master.|lts./, ""]]
+            [mM, [JM, /master.|lts./, ""]]
           ],
           cpu: [
             [/\b((amd|x|x86[-_]?|wow|win)64)\b/i],
             [
-              [dG, "amd64"]
+              [dM, "amd64"]
             ],
             [/(ia32(?=;))/i, /\b((i[346]|x)86)(pc)?\b/i],
             [
-              [dG, "ia32"]
+              [dM, "ia32"]
             ],
             [/\b(aarch64|arm(v?[89]e?l?|_?64))\b/i],
             [
-              [dG, "arm64"]
+              [dM, "arm64"]
             ],
             [/\b(arm(v[67])?ht?n?[fl]p?)\b/i],
             [
-              [dG, "armhf"]
+              [dM, "armhf"]
             ],
             [/( (ce|mobile); ppc;|\/[\w\.]+arm\b)/i],
             [
-              [dG, "arm"]
+              [dM, "arm"]
             ],
             [/((ppc|powerpc)(64)?)( mac|;|\))/i],
             [
-              [dG, /ower/, "", BG]
+              [dM, /ower/, "", cM]
             ],
             [/ sun4\w[;\)]/i],
             [
-              [dG, "sparc"]
+              [dM, "sparc"]
             ],
             [/\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i],
             [
-              [dG, BG]
+              [dM, cM]
             ]
           ],
           device: [
             [/\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i],
-            [pG, [KG, nG],
-              [QG, zG]
+            [LM, [hM, AM],
+              [HM, EM]
             ],
             [/\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i, /samsung[- ]((?!sm-[lr])[-\w]+)/i, /sec-(sgh\w+)/i],
-            [pG, [KG, nG],
-              [QG, rG]
+            [LM, [hM, AM],
+              [HM, lM]
             ],
             [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
-            [pG, [KG, iG],
-              [QG, rG]
+            [LM, [hM, bM],
+              [HM, lM]
             ],
             [/\((ipad);[-\w\),; ]+apple/i, /applecoremedia\/[\w\.]+ \((ipad)/i, /\b(ipad)\d\d?,\d\d?[;\]].+ios/i],
-            [pG, [KG, iG],
-              [QG, zG]
+            [LM, [hM, bM],
+              [HM, EM]
             ],
             [/(macintosh);/i],
-            [pG, [KG, iG]],
+            [LM, [hM, bM]],
             [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-            [pG, [KG, gG],
-              [QG, rG]
+            [LM, [hM, xM],
+              [HM, lM]
             ],
             [/\b((?:brt|eln|hey2?|gdi|jdn)-a?[lnw]09|(?:ag[rm]3?|jdn2|kob2)-a?[lw]0[09]hn)(?: bui|\)|;)/i],
-            [pG, [KG, aG],
-              [QG, zG]
+            [LM, [hM, WM],
+              [HM, EM]
             ],
             [/honor([-\w ]+)[;\)]/i],
-            [pG, [KG, aG],
-              [QG, rG]
+            [LM, [hM, WM],
+              [HM, lM]
             ],
             [/\b((?:ag[rs][2356]?k?|bah[234]?|bg[2o]|bt[kv]|cmr|cpn|db[ry]2?|jdn2|got|kob2?k?|mon|pce|scm|sht?|[tw]gr|vrd)-[ad]?[lw][0125][09]b?|605hw|bg2-u03|(?:gem|fdr|m2|ple|t1)-[7a]0[1-4][lu]|t1-a2[13][lw]|mediapad[\w\. ]*(?= bui|\)))\b(?!.+d\/s)/i],
-            [pG, [KG, cG],
-              [QG, zG]
+            [LM, [hM, sM],
+              [HM, EM]
             ],
             [/(?:huawei)([-\w ]+)[;\)]/i, /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i],
-            [pG, [KG, cG],
-              [QG, rG]
+            [LM, [hM, sM],
+              [HM, lM]
             ],
             [/oid[^\)]+; (2[\dbc]{4}(182|283|rp\w{2})[cgl]|m2105k81a?c)(?: bui|\))/i, /\b((?:red)?mi[-_ ]?pad[\w- ]*)(?: bui|\))/i],
             [
-              [pG, /_/g, " "],
-              [KG, RG],
-              [QG, zG]
+              [LM, /_/g, " "],
+              [hM, FM],
+              [HM, EM]
             ],
             [/\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i, /\b; (\w+) build\/hm\1/i, /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i, /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i, /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i, /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite|pro)?)(?: bui|\))/i, / ([\w ]+) miui\/v?\d/i],
             [
-              [pG, /_/g, " "],
-              [KG, RG],
-              [QG, rG]
+              [LM, /_/g, " "],
+              [hM, FM],
+              [HM, lM]
             ],
             [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
-            [pG, [KG, qG],
-              [QG, rG]
+            [LM, [hM, NM],
+              [HM, lM]
             ],
             [/\b(opd2(\d{3}a?))(?: bui|\))/i],
-            [pG, [KG, Zb, {
+            [LM, [hM, ir, {
                 OnePlus: ["304", "403", "203"],
-                "*": qG
+                "*": NM
               }],
-              [QG, zG]
+              [HM, EM]
             ],
             [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-            [pG, [KG, "Vivo"],
-              [QG, rG]
+            [LM, [hM, "Vivo"],
+              [HM, lM]
             ],
             [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
-            [pG, [KG, "Realme"],
-              [QG, rG]
+            [LM, [hM, "Realme"],
+              [HM, lM]
             ],
             [/\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i, /\bmot(?:orola)?[- ](\w*)/i, /((?:moto(?! 360)[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i],
-            [pG, [KG, PG],
-              [QG, rG]
+            [LM, [hM, ZM],
+              [HM, lM]
             ],
             [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-            [pG, [KG, PG],
-              [QG, zG]
+            [LM, [hM, ZM],
+              [HM, EM]
             ],
             [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-            [pG, [KG, lG],
-              [QG, zG]
+            [LM, [hM, DM],
+              [HM, EM]
             ],
             [/(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i, /\blg[-e;\/ ]+((?!browser|netcast|android tv|watch)\w+)/i, /\blg-?([\d\w]+) bui/i],
-            [pG, [KG, lG],
-              [QG, rG]
+            [LM, [hM, DM],
+              [HM, lM]
             ],
             [/(ideatab[-\w ]+|602lv|d-42a|a101lv|a2109a|a3500-hv|s[56]000|pb-6505[my]|tb-?x?\d{3,4}(?:f[cu]|xu|[av])|yt\d?-[jx]?\d+[lfmx])( bui|;|\)|\/)/i, /lenovo ?(b[68]0[08]0-?[hf]?|tab(?:[\w- ]+?)|tb[\w-]{6,7})( bui|;|\)|\/)/i],
-            [pG, [KG, "Lenovo"],
-              [QG, zG]
+            [LM, [hM, "Lenovo"],
+              [HM, EM]
             ],
             [/(nokia) (t[12][01])/i],
-            [KG, pG, [QG, zG]],
+            [hM, LM, [HM, EM]],
             [/(?:maemo|nokia).*(n900|lumia \d+|rm-\d+)/i, /nokia[-_ ]?(([-\w\. ]*))/i],
             [
-              [pG, /_/g, " "],
-              [QG, rG],
-              [KG, "Nokia"]
+              [LM, /_/g, " "],
+              [HM, lM],
+              [hM, "Nokia"]
             ],
             [/(pixel (c|tablet))\b/i],
-            [pG, [KG, vG],
-              [QG, zG]
+            [LM, [hM, pM],
+              [HM, EM]
             ],
             [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-            [pG, [KG, vG],
-              [QG, rG]
+            [LM, [hM, pM],
+              [HM, lM]
             ],
             [/droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
-            [pG, [KG, eG],
-              [QG, rG]
+            [LM, [hM, vM],
+              [HM, lM]
             ],
             [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
             [
-              [pG, "Xperia Tablet"],
-              [KG, eG],
-              [QG, zG]
+              [LM, "Xperia Tablet"],
+              [hM, vM],
+              [HM, EM]
             ],
             [/ (kb2005|in20[12]5|be20[12][59])\b/i, /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i],
-            [pG, [KG, AG],
-              [QG, rG]
+            [LM, [hM, fM],
+              [HM, lM]
             ],
             [/(alexa)webm/i, /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i, /(kf[a-z]+)( bui|\)).+silk\//i],
-            [pG, [KG, uG],
-              [QG, zG]
+            [LM, [hM, eM],
+              [HM, EM]
             ],
             [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
             [
-              [pG, /(.+)/g, "Fire Phone $1"],
-              [KG, uG],
-              [QG, rG]
+              [LM, /(.+)/g, "Fire Phone $1"],
+              [hM, eM],
+              [HM, lM]
             ],
             [/(playbook);[-\w\),; ]+(rim)/i],
-            [pG, KG, [QG, zG]],
+            [LM, hM, [HM, EM]],
             [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-            [pG, [KG, WG],
-              [QG, rG]
+            [LM, [hM, tM],
+              [HM, lM]
             ],
             [/(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i],
-            [pG, [KG, CG],
-              [QG, zG]
+            [LM, [hM, wM],
+              [HM, EM]
             ],
             [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-            [pG, [KG, CG],
-              [QG, rG]
+            [LM, [hM, wM],
+              [HM, lM]
             ],
             [/(nexus 9)/i],
-            [pG, [KG, "HTC"],
-              [QG, zG]
+            [LM, [hM, "HTC"],
+              [HM, EM]
             ],
             [/(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i, /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i, /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i],
-            [KG, [pG, /_/g, " "],
-              [QG, rG]
+            [hM, [LM, /_/g, " "],
+              [HM, lM]
             ],
             [/droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])\w*(\)| bui)/i],
-            [pG, [KG, "TCL"],
-              [QG, zG]
+            [LM, [hM, "TCL"],
+              [HM, EM]
             ],
             [/(itel) ((\w+))/i],
             [
-              [KG, BG], pG, [QG, Zb, {
+              [hM, cM], LM, [HM, ir, {
                 tablet: ["p10001l", "w7001"],
                 "*": "mobile"
               }]
             ],
             [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-            [pG, [KG, "Acer"],
-              [QG, zG]
+            [LM, [hM, "Acer"],
+              [HM, EM]
             ],
             [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-            [pG, [KG, "Meizu"],
-              [QG, rG]
+            [LM, [hM, "Meizu"],
+              [HM, lM]
             ],
             [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
-            [pG, [KG, "Ulefone"],
-              [QG, rG]
+            [LM, [hM, "Ulefone"],
+              [HM, lM]
             ],
             [/; (energy ?\w+)(?: bui|\))/i, /; energizer ([\w ]+)(?: bui|\))/i],
-            [pG, [KG, "Energizer"],
-              [QG, rG]
+            [LM, [hM, "Energizer"],
+              [HM, lM]
             ],
             [/; cat (b35);/i, /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i],
-            [pG, [KG, "Cat"],
-              [QG, rG]
+            [LM, [hM, "Cat"],
+              [HM, lM]
             ],
             [/((?:new )?andromax[\w- ]+)(?: bui|\))/i],
-            [pG, [KG, "Smartfren"],
-              [QG, rG]
+            [LM, [hM, "Smartfren"],
+              [HM, lM]
             ],
             [/droid.+; (a(?:015|06[35]|142p?))/i],
-            [pG, [KG, "Nothing"],
-              [QG, rG]
+            [LM, [hM, "Nothing"],
+              [HM, lM]
             ],
             [/; (x67 5g|tikeasy \w+|ac[1789]\d\w+)( b|\))/i, /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d+[\w ]*)( b|\))/i],
-            [pG, [KG, "Archos"],
-              [QG, zG]
+            [LM, [hM, "Archos"],
+              [HM, EM]
             ],
             [/archos ([\w ]+)( b|\))/i, /; (ac[3-6]\d\w{2,8})( b|\))/i],
-            [pG, [KG, "Archos"],
-              [QG, rG]
+            [LM, [hM, "Archos"],
+              [HM, lM]
             ],
             [/(imo) (tab \w+)/i, /(infinix) (x1101b?)/i],
-            [KG, pG, [QG, zG]],
+            [hM, LM, [HM, EM]],
             [/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i, /; (hmd|imo) ([\w ]+?)(?: bui|\))/i, /(hp) ([\w ]+\w)/i, /(microsoft); (lumia[\w ]+)/i, /(lenovo)[-_ ]?([-\w ]+?)(?: bui|\)|\/)/i, /(oppo) ?([\w ]+) bui/i],
-            [KG, pG, [QG, rG]],
+            [hM, LM, [HM, lM]],
             [/(kobo)\s(ereader|touch)/i, /(hp).+(touchpad(?!.+tablet)|tablet)/i, /(kindle)\/([\w\.]+)/i, /(nook)[\w ]+build\/(\w+)/i, /(dell) (strea[kpr\d ]*[\dko])/i, /(le[- ]+pan)[- ]+(\w{1,9}) bui/i, /(trinity)[- ]*(t\d{3}) bui/i, /(gigaset)[- ]+(q\w{1,9}) bui/i, /(vodafone) ([\w ]+)(?:\)| bui)/i],
-            [KG, pG, [QG, zG]],
+            [hM, LM, [HM, EM]],
             [/(surface duo)/i],
-            [pG, [KG, jG],
-              [QG, zG]
+            [LM, [hM, kM],
+              [HM, EM]
             ],
             [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-            [pG, [KG, "Fairphone"],
-              [QG, rG]
+            [LM, [hM, "Fairphone"],
+              [HM, lM]
             ],
             [/(u304aa)/i],
-            [pG, [KG, "AT&T"],
-              [QG, rG]
+            [LM, [hM, "AT&T"],
+              [HM, lM]
             ],
             [/\bsie-(\w*)/i],
-            [pG, [KG, "Siemens"],
-              [QG, rG]
+            [LM, [hM, "Siemens"],
+              [HM, lM]
             ],
             [/\b(rct\w+) b/i],
-            [pG, [KG, "RCA"],
-              [QG, zG]
+            [LM, [hM, "RCA"],
+              [HM, EM]
             ],
             [/\b(venue[\d ]{2,7}) b/i],
-            [pG, [KG, "Dell"],
-              [QG, zG]
+            [LM, [hM, "Dell"],
+              [HM, EM]
             ],
             [/\b(q(?:mv|ta)\w+) b/i],
-            [pG, [KG, "Verizon"],
-              [QG, zG]
+            [LM, [hM, "Verizon"],
+              [HM, EM]
             ],
             [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
-            [pG, [KG, "Barnes & Noble"],
-              [QG, zG]
+            [LM, [hM, "Barnes & Noble"],
+              [HM, EM]
             ],
             [/\b(tm\d{3}\w+) b/i],
-            [pG, [KG, "NuVision"],
-              [QG, zG]
+            [LM, [hM, "NuVision"],
+              [HM, EM]
             ],
             [/\b(k88) b/i],
-            [pG, [KG, "ZTE"],
-              [QG, zG]
+            [LM, [hM, "ZTE"],
+              [HM, EM]
             ],
             [/\b(nx\d{3}j) b/i],
-            [pG, [KG, "ZTE"],
-              [QG, rG]
+            [LM, [hM, "ZTE"],
+              [HM, lM]
             ],
             [/\b(gen\d{3}) b.+49h/i],
-            [pG, [KG, "Swiss"],
-              [QG, rG]
+            [LM, [hM, "Swiss"],
+              [HM, lM]
             ],
             [/\b(zur\d{3}) b/i],
-            [pG, [KG, "Swiss"],
-              [QG, zG]
+            [LM, [hM, "Swiss"],
+              [HM, EM]
             ],
             [/\b((zeki)?tb.*\b) b/i],
-            [pG, [KG, "Zeki"],
-              [QG, zG]
+            [LM, [hM, "Zeki"],
+              [HM, EM]
             ],
             [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
             [
-              [KG, "Dragon Touch"], pG, [QG, zG]
+              [hM, "Dragon Touch"], LM, [HM, EM]
             ],
             [/\b(ns-?\w{0,9}) b/i],
-            [pG, [KG, "Insignia"],
-              [QG, zG]
+            [LM, [hM, "Insignia"],
+              [HM, EM]
             ],
             [/\b((nxa|next)-?\w{0,9}) b/i],
-            [pG, [KG, "NextBook"],
-              [QG, zG]
+            [LM, [hM, "NextBook"],
+              [HM, EM]
             ],
             [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
             [
-              [KG, "Voice"], pG, [QG, rG]
+              [hM, "Voice"], LM, [HM, lM]
             ],
             [/\b(lvtel\-)?(v1[12]) b/i],
             [
-              [KG, "LvTel"], pG, [QG, rG]
+              [hM, "LvTel"], LM, [HM, lM]
             ],
             [/\b(ph-1) /i],
-            [pG, [KG, "Essential"],
-              [QG, rG]
+            [LM, [hM, "Essential"],
+              [HM, lM]
             ],
             [/\b(v(100md|700na|7011|917g).*\b) b/i],
-            [pG, [KG, "Envizen"],
-              [QG, zG]
+            [LM, [hM, "Envizen"],
+              [HM, EM]
             ],
             [/\b(trio[-\w\. ]+) b/i],
-            [pG, [KG, "MachSpeed"],
-              [QG, zG]
+            [LM, [hM, "MachSpeed"],
+              [HM, EM]
             ],
             [/\btu_(1491) b/i],
-            [pG, [KG, "Rotor"],
-              [QG, zG]
+            [LM, [hM, "Rotor"],
+              [HM, EM]
             ],
             [/((?:tegranote|shield t(?!.+d tv))[\w- ]*?)(?: b|\))/i],
-            [pG, [KG, MG],
-              [QG, zG]
+            [LM, [hM, oM],
+              [HM, EM]
             ],
             [/(sprint) (\w+)/i],
-            [KG, pG, [QG, rG]],
+            [hM, LM, [HM, lM]],
             [/(kin\.[onetw]{3})/i],
             [
-              [pG, /\./g, " "],
-              [KG, jG],
-              [QG, rG]
+              [LM, /\./g, " "],
+              [hM, kM],
+              [HM, lM]
             ],
             [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-            [pG, [KG, TG],
-              [QG, zG]
+            [LM, [hM, BM],
+              [HM, EM]
             ],
             [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-            [pG, [KG, TG],
-              [QG, rG]
+            [LM, [hM, BM],
+              [HM, lM]
             ],
             [/smart-tv.+(samsung)/i],
-            [KG, [QG, EG]],
+            [hM, [HM, UM]],
             [/hbbtv.+maple;(\d+)/i],
             [
-              [pG, /^/, "SmartTV"],
-              [KG, nG],
-              [QG, EG]
+              [LM, /^/, "SmartTV"],
+              [hM, AM],
+              [HM, UM]
             ],
             [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
             [
-              [KG, lG],
-              [QG, EG]
+              [hM, DM],
+              [HM, UM]
             ],
             [/(apple) ?tv/i],
-            [KG, [pG, iG + " TV"],
-              [QG, EG]
+            [hM, [LM, bM + " TV"],
+              [HM, UM]
             ],
             [/crkey/i],
             [
-              [pG, IG + "cast"],
-              [KG, vG],
-              [QG, EG]
+              [LM, uM + "cast"],
+              [hM, pM],
+              [HM, UM]
             ],
             [/droid.+aft(\w+)( bui|\))/i],
-            [pG, [KG, uG],
-              [QG, EG]
+            [LM, [hM, eM],
+              [HM, UM]
             ],
             [/(shield \w+ tv)/i],
-            [pG, [KG, MG],
-              [QG, EG]
+            [LM, [hM, oM],
+              [HM, UM]
             ],
             [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
-            [pG, [KG, gG],
-              [QG, EG]
+            [LM, [hM, xM],
+              [HM, UM]
             ],
             [/(bravia[\w ]+)( bui|\))/i],
-            [pG, [KG, eG],
-              [QG, EG]
+            [LM, [hM, vM],
+              [HM, UM]
             ],
             [/(mi(tv|box)-?\w+) bui/i],
-            [pG, [KG, RG],
-              [QG, EG]
+            [LM, [hM, FM],
+              [HM, UM]
             ],
             [/Hbbtv.*(technisat) (.*);/i],
-            [KG, pG, [QG, EG]],
+            [hM, LM, [HM, UM]],
             [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
             [
-              [KG, Gb],
-              [pG, Gb],
-              [QG, EG]
+              [hM, Mr],
+              [LM, Mr],
+              [HM, UM]
             ],
             [/droid.+; ([\w- ]+) (?:android tv|smart[- ]?tv)/i],
-            [pG, [QG, EG]],
+            [LM, [HM, UM]],
             [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
             [
-              [QG, EG]
+              [HM, UM]
             ],
             [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
-            [KG, pG, [QG, JG]],
+            [hM, LM, [HM, yM]],
             [/droid.+; (shield)( bui|\))/i],
-            [pG, [KG, MG],
-              [QG, JG]
+            [LM, [hM, oM],
+              [HM, yM]
             ],
             [/(playstation \w+)/i],
-            [pG, [KG, eG],
-              [QG, JG]
+            [LM, [hM, vM],
+              [HM, yM]
             ],
             [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-            [pG, [KG, jG],
-              [QG, JG]
+            [LM, [hM, kM],
+              [HM, yM]
             ],
             [/\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i],
-            [pG, [KG, nG],
-              [QG, oG]
+            [LM, [hM, AM],
+              [HM, GM]
             ],
             [/((pebble))app/i, /(asus|google|lg|oppo) ((pixel |zen)?watch[\w ]*)( bui|\))/i],
-            [KG, pG, [QG, oG]],
+            [hM, LM, [HM, GM]],
             [/(ow(?:19|20)?we?[1-3]{1,3})/i],
-            [pG, [KG, qG],
-              [QG, oG]
+            [LM, [hM, NM],
+              [HM, GM]
             ],
             [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-            [pG, [KG, iG],
-              [QG, oG]
+            [LM, [hM, bM],
+              [HM, GM]
             ],
             [/(opwwe\d{3})/i],
-            [pG, [KG, AG],
-              [QG, oG]
+            [LM, [hM, fM],
+              [HM, GM]
             ],
             [/(moto 360)/i],
-            [pG, [KG, PG],
-              [QG, oG]
+            [LM, [hM, ZM],
+              [HM, GM]
             ],
             [/(smartwatch 3)/i],
-            [pG, [KG, eG],
-              [QG, oG]
+            [LM, [hM, vM],
+              [HM, GM]
             ],
             [/(g watch r)/i],
-            [pG, [KG, lG],
-              [QG, oG]
+            [LM, [hM, DM],
+              [HM, GM]
             ],
             [/droid.+; (wt63?0{2,3})\)/i],
-            [pG, [KG, TG],
-              [QG, oG]
+            [LM, [hM, BM],
+              [HM, GM]
             ],
             [/droid.+; (glass) \d/i],
-            [pG, [KG, vG],
-              [QG, oG]
+            [LM, [hM, pM],
+              [HM, GM]
             ],
             [/(pico) (4|neo3(?: link|pro)?)/i],
-            [KG, pG, [QG, oG]],
+            [hM, LM, [HM, GM]],
             [/; (quest( \d| pro)?)/i],
-            [pG, [KG, HG],
-              [QG, oG]
+            [LM, [hM, XM],
+              [HM, GM]
             ],
             [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
-            [KG, [QG, XG]],
+            [hM, [HM, CM]],
             [/(aeobc)\b/i],
-            [pG, [KG, uG],
-              [QG, XG]
+            [LM, [hM, eM],
+              [HM, CM]
             ],
             [/(homepod).+mac os/i],
-            [pG, [KG, iG],
-              [QG, XG]
+            [LM, [hM, bM],
+              [HM, CM]
             ],
             [/windows iot/i],
             [
-              [QG, XG]
+              [HM, CM]
             ],
             [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i],
-            [pG, [QG, rG]],
+            [LM, [HM, lM]],
             [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
-            [pG, [QG, zG]],
+            [LM, [HM, EM]],
             [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
             [
-              [QG, zG]
+              [HM, EM]
             ],
             [/(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i],
             [
-              [QG, rG]
+              [HM, lM]
             ],
             [/droid .+?; ([\w\. -]+)( bui|\))/i],
-            [pG, [KG, "Generic"]]
+            [LM, [hM, "Generic"]]
           ],
           engine: [
             [/windows.+ edge\/([\w\.]+)/i],
-            [hG, [fG, "EdgeHTML"]],
+            [JM, [mM, "EdgeHTML"]],
             [/(arkweb)\/([\w\.]+)/i],
-            [fG, hG],
+            [mM, JM],
             [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
-            [hG, [fG, "Blink"]],
+            [JM, [mM, "Blink"]],
             [/(presto)\/([\w\.]+)/i, /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, /ekioh(flow)\/([\w\.]+)/i, /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i, /(icab)[\/ ]([23]\.[\d\.]+)/i, /\b(libweb)/i],
-            [fG, hG],
+            [mM, JM],
             [/ladybird\//i],
             [
-              [fG, "LibWeb"]
+              [mM, "LibWeb"]
             ],
             [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
-            [hG, fG]
+            [JM, mM]
           ],
           os: [
             [/microsoft (windows) (vista|xp)/i],
-            [fG, hG],
+            [mM, JM],
             [/(windows (?:phone(?: os)?|mobile|iot))[\/ ]?([\d\.\w ]*)/i],
-            [fG, [hG, Zb, wb]],
+            [mM, [JM, ir, Or]],
             [/windows nt 6\.2; (arm)/i, /windows[\/ ]([ntce\d\. ]+\w)(?!.+xbox)/i, /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
             [
-              [hG, Zb, wb],
-              [fG, "Windows"]
+              [JM, ir, Or],
+              [mM, "Windows"]
             ],
             [/[adehimnop]{4,7}\b(?:.*os ([\w]+) like mac|; opera)/i, /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i, /cfnetwork\/.+darwin/i],
             [
-              [hG, /_/g, "."],
-              [fG, "iOS"]
+              [JM, /_/g, "."],
+              [mM, "iOS"]
             ],
             [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+haiku)/i],
             [
-              [fG, DG],
-              [hG, /_/g, "."]
+              [mM, KM],
+              [JM, /_/g, "."]
             ],
             [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
-            [hG, fG],
+            [JM, mM],
             [/(ubuntu) ([\w\.]+) like android/i],
             [
-              [fG, /(.+)/, "$1 Touch"], hG
+              [mM, /(.+)/, "$1 Touch"], JM
             ],
             [/(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/; ]?([\d\.]*)/i],
-            [fG, hG],
+            [mM, JM],
             [/\(bb(10);/i],
-            [hG, [fG, WG]],
+            [JM, [mM, tM]],
             [/(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i],
-            [hG, [fG, "Symbian"]],
+            [JM, [mM, "Symbian"]],
             [/mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i],
-            [hG, [fG, FG + " OS"]],
+            [JM, [mM, RM + " OS"]],
             [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
-            [hG, [fG, "webOS"]],
+            [JM, [mM, "webOS"]],
             [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
-            [hG, [fG, "watchOS"]],
+            [JM, [mM, "watchOS"]],
             [/crkey\/([\d\.]+)/i],
-            [hG, [fG, IG + "cast"]],
+            [JM, [mM, uM + "cast"]],
             [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
             [
-              [fG, tG], hG
+              [mM, IM], JM
             ],
             [/panasonic;(viera)/i, /(netrange)mmh/i, /(nettv)\/(\d+\.[\w\.]+)/i, /(nintendo|playstation) ([wids345portablevuch]+)/i, /(xbox); +xbox ([^\);]+)/i, /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i, /(mint)[\/\(\) ]?(\w*)/i, /(mageia|vectorlinux)[; ]/i, /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i, /(hurd|linux)(?: arm\w*| x86\w*| ?)([\w\.]*)/i, /(gnu) ?([\w\.]*)/i, /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i, /(haiku) (\w+)/i],
-            [fG, hG],
+            [mM, JM],
             [/(sunos) ?([\w\.\d]*)/i],
             [
-              [fG, "Solaris"], hG
+              [mM, "Solaris"], JM
             ],
             [/((?:open)?solaris)[-\/ ]?([\w\.]*)/i, /(aix) ((\d)(?=\.|\)| )[\w\.])*/i, /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux|serenityos)/i, /(unix) ?([\w\.]*)/i],
-            [fG, hG]
+            [mM, JM]
           ]
         },
-        Lb = function(GG, bG) {
-          if (typeof GG === UG && (bG = GG, GG = LG), !(this instanceof Lb)) return new Lb(GG, bG).getResult();
-          var ZG = typeof SG !== kG && SG.navigator ? SG.navigator : LG,
-            wG = GG || (ZG && ZG.userAgent ? ZG.userAgent : ""),
-            JG = ZG && ZG.userAgentData ? ZG.userAgentData : LG,
-            EG = bG ? function(GG, bG) {
-              var ZG = {};
-              for (var wG in GG) bG[wG] && bG[wG].length % 2 === 0 ? ZG[wG] = bG[wG].concat(GG[wG]) : ZG[wG] = GG[wG];
-              return ZG
-            }(Sb, bG) : Sb,
-            oG = ZG && ZG.userAgent == wG;
+        jr = function(MM, rM) {
+          if (typeof MM === nM && (rM = MM, MM = jM), !(this instanceof jr)) return new jr(MM, rM).getResult();
+          var iM = typeof SM !== PM && SM.navigator ? SM.navigator : jM,
+            OM = MM || (iM && iM.userAgent ? iM.userAgent : ""),
+            yM = iM && iM.userAgentData ? iM.userAgentData : jM,
+            UM = rM ? function(MM, rM) {
+              var iM = {};
+              for (var OM in MM) rM[OM] && rM[OM].length % 2 === 0 ? iM[OM] = rM[OM].concat(MM[OM]) : iM[OM] = MM[OM];
+              return iM
+            }(Sr, rM) : Sr,
+            GM = iM && iM.userAgent == OM;
           return this.getBrowser = function() {
-            var GG, bG = {};
-            return bG[fG] = LG, bG[hG] = LG, bb.call(bG, wG, EG.browser), bG[VG] = typeof(GG = bG[hG]) === YG ? GG.replace(/[^\d\.]/g, "").split(".")[0] : LG, oG && ZG && ZG.brave && typeof ZG.brave.isBrave == yG && (bG[fG] = "Brave"), bG
+            var MM, rM = {};
+            return rM[mM] = jM, rM[JM] = jM, rr.call(rM, OM, UM.browser), rM[zM] = typeof(MM = rM[JM]) === QM ? MM.replace(/[^\d\.]/g, "").split(".")[0] : jM, GM && iM && iM.brave && typeof iM.brave.isBrave == aM && (rM[mM] = "Brave"), rM
           }, this.getCPU = function() {
-            var GG = {};
-            return GG[dG] = LG, bb.call(GG, wG, EG.cpu), GG
+            var MM = {};
+            return MM[dM] = jM, rr.call(MM, OM, UM.cpu), MM
           }, this.getDevice = function() {
-            var GG = {};
-            return GG[KG] = LG, GG[pG] = LG, GG[QG] = LG, bb.call(GG, wG, EG.device), oG && !GG[QG] && JG && JG.mobile && (GG[QG] = rG), oG && "Macintosh" == GG[pG] && ZG && typeof ZG.standalone !== kG && ZG.maxTouchPoints && ZG.maxTouchPoints > 2 && (GG[pG] = "iPad", GG[QG] = zG), GG
-          }, this.CK = function() {
-            var GG = {};
-            return GG[fG] = LG, GG[hG] = LG, bb.call(GG, wG, EG.engine), GG
+            var MM = {};
+            return MM[hM] = jM, MM[LM] = jM, MM[HM] = jM, rr.call(MM, OM, UM.device), GM && !MM[HM] && yM && yM.mobile && (MM[HM] = lM), GM && "Macintosh" == MM[LM] && iM && typeof iM.standalone !== PM && iM.maxTouchPoints && iM.maxTouchPoints > 2 && (MM[LM] = "iPad", MM[HM] = EM), MM
+          }, this.ph = function() {
+            var MM = {};
+            return MM[mM] = jM, MM[JM] = jM, rr.call(MM, OM, UM.engine), MM
           }, this.getOS = function() {
-            var GG = {};
-            return GG[fG] = LG, GG[hG] = LG, bb.call(GG, wG, EG.os), oG && !GG[fG] && JG && JG.platform && "Unknown" != JG.platform && (GG[fG] = JG.platform.replace(/chrome os/i, tG).replace(/macos/i, DG)), GG
+            var MM = {};
+            return MM[mM] = jM, MM[JM] = jM, rr.call(MM, OM, UM.os), GM && !MM[mM] && yM && yM.platform && "Unknown" != yM.platform && (MM[mM] = yM.platform.replace(/chrome os/i, IM).replace(/macos/i, KM)), MM
           }, this.getResult = function() {
             return {
               ua: this.getUA(),
               browser: this.getBrowser(),
-              engine: this.CK(),
+              engine: this.ph(),
               os: this.getOS(),
               device: this.getDevice(),
               cpu: this.getCPU()
             }
           }, this.getUA = function() {
-            return wG
-          }, this.setUA = function(GG) {
-            return wG = typeof GG === YG && GG.length > 500 ? Gb(GG, 500) : GG, this
-          }, this.setUA(wG), this
+            return OM
+          }, this.setUA = function(MM) {
+            return OM = typeof MM === QM && MM.length > 500 ? Mr(MM, 500) : MM, this
+          }, this.setUA(OM), this
         };
-      Lb.VERSION = "1.0.41", Lb.BROWSER = OG([fG, hG, VG]), Lb.CPU = OG([dG]), Lb.DEVICE = OG([pG, KG, QG, JG, rG, EG, zG, oG, XG]), Lb.ENGINE = Lb.OS = OG([fG, hG]), typeof bG !== kG ? (GG.exports && (bG = GG.exports = Lb), bG.UAParser = Lb) : ZG.amdO ? (wG = function() {
-        return Lb
-      }.call(bG, ZG, bG, GG)) === LG || (GG.exports = wG) : typeof SG !== kG && (SG.UAParser = Lb);
-      var yb = typeof SG !== kG && (SG.jQuery || SG.Zepto);
-      if (yb && !yb.ua) {
-        var kb = new Lb;
-        yb.ua = kb.getResult(), yb.ua.get = function() {
-          return kb.getUA()
-        }, yb.ua.set = function(GG) {
-          kb.setUA(GG);
-          var bG = kb.getResult();
-          for (var ZG in bG) yb.ua[ZG] = bG[ZG]
+      jr.VERSION = "1.0.41", jr.BROWSER = TM([mM, JM, zM]), jr.CPU = TM([dM]), jr.DEVICE = TM([LM, hM, HM, yM, lM, UM, EM, GM, CM]), jr.ENGINE = jr.OS = TM([mM, JM]), typeof rM !== PM ? (MM.exports && (rM = MM.exports = jr), rM.UAParser = jr) : iM.amdO ? (OM = function() {
+        return jr
+      }.call(rM, iM, rM, MM)) === jM || (MM.exports = OM) : typeof SM !== PM && (SM.UAParser = jr);
+      var ar = typeof SM !== PM && (SM.jQuery || SM.Zepto);
+      if (ar && !ar.ua) {
+        var Pr = new jr;
+        ar.ua = Pr.getResult(), ar.ua.get = function() {
+          return Pr.getUA()
+        }, ar.ua.set = function(MM) {
+          Pr.setUA(MM);
+          var rM = Pr.getResult();
+          for (var iM in rM) ar.ua[iM] = rM[iM]
         }
       }
     }("object" === typeof window ? window : this)
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

@@ -1,210 +1,276 @@
 export const id = 159;
 export const ids = [159];
 export const modules = {
-  36955: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => LG,
-      f: () => hG,
-      h: () => dG,
-      j: () => kG,
-      k: () => fG,
-      m: () => JG,
-      p: () => pG,
-      r: () => zG,
-      t: () => KG,
-      x: () => rG
+  7180: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      BloxdDiscordActivitySdk: () => EM
     });
-    var wG = ZG(17),
-      SG = ZG(19);
-    const LG = "clientGameInventoryButtonsChanged",
-      yG = new Map;
-
-    function kG() {
-      return [...yG.values()].sort(((GG, bG) => {
-        var ZG, wG;
-        return (null !== (ZG = GG.order) && void 0 !== ZG ? ZG : 0) - (null !== (wG = bG.order) && void 0 !== wG ? wG : 0)
-      }))
-    }
-    let UG = null;
-
-    function YG(GG) {
-      UG = GG
-    }
-    let VG = !1;
-
-    function pG(GG) {
-      VG = !0;
-      try {
-        GG.onClick()
-      } finally {
-        VG = !1
-      }
-      GG.panel && "clientGame" === wG.e.get("openInGameMenuName") && YG(GG.id)
-    }
-
-    function fG() {
-      return VG
-    }
-
-    function QG() {
-      return kG().filter((GG => GG.panel && !GG.disabled))
-    }
-
-    function KG(GG) {
-      const bG = QG(),
-        ZG = bG.findIndex((GG => GG.id === UG));
-      return !(ZG < 0 || bG.length < 2) && (pG(bG[(ZG + GG + bG.length) % bG.length]), !0)
-    }
-
-    function hG() {
-      return null !== UG && QG().length > 1
-    }
-
-    function dG() {
-      YG(null)
-    }
-
-    function JG() {
-      "inventory" !== wG.e.get("openInGameMenuName") && YG(null)
-    }
-
-    function rG() {
-      const GG = UG;
-      return YG(null), GG
-    }
-
-    function zG(GG) {
-      return yG.set(GG.id, GG), SG.l.xh(LG, kG(), !0), () => {
-        yG.get(GG.id) === GG && (yG.delete(GG.id), SG.l.xh(LG, kG()))
-      }
-    }
-  },
-  36951: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => kG,
-      f: () => dG,
-      i: () => JG,
-      j: () => fG,
-      l: () => YG,
-      m: () => hG,
-      n: () => QG,
-      q: () => VG
-    });
-    var wG = ZG(17),
-      SG = ZG(19),
-      LG = ZG(1251),
-      yG = ZG(36955);
-    const kG = "clientGameUiChanged";
-    let UG = null;
-
-    function YG() {
-      return UG
-    }
-
-    function VG(GG, bG) {
-      const ZG = {
-        content: GG,
-        menu: bG
+    var OM = iM(7185),
+      SM = iM(1232),
+      jM = iM(1188),
+      aM = iM(625),
+      PM = iM(1258),
+      nM = iM(1830),
+      QM = iM(1373),
+      zM = iM(821),
+      LM = iM(19),
+      mM = iM(1211),
+      HM = iM(2482),
+      hM = function(MM) {
+        return MM.APPLICATION_COMMANDS = "applications.commands", MM.IDENTIFY = "identify", MM.EMAIL = "email", MM.GUILDS = "guilds", MM.READ_DM_CHANNELS = "dm_channels.read", MM.WRITE_ACTIVITIES = "rpc.activities.write", MM
+      }(hM || {}),
+      JM = function(MM) {
+        return MM[MM.CLOSE_NORMAL = 1e3] = "CLOSE_NORMAL", MM[MM.CLOSE_UNSUPPORTED = 1003] = "CLOSE_UNSUPPORTED", MM[MM.CLOSE_ABNORMAL = 1006] = "CLOSE_ABNORMAL", MM[MM.INVALID_CLIENTID = 4e3] = "INVALID_CLIENTID", MM[MM.INVALID_ORIGIN = 4001] = "INVALID_ORIGIN", MM[MM.RATELIMITED = 4002] = "RATELIMITED", MM[MM.TOKEN_REVOKED = 4003] = "TOKEN_REVOKED", MM[MM.INVALID_VERSION = 4004] = "INVALID_VERSION", MM[MM.INVALID_ENCODING = 4005] = "INVALID_ENCODING", MM
+      }(JM || {}),
+      dM = function(MM) {
+        return MM[MM.PLAYING = 0] = "PLAYING", MM[MM.STREAMING = 1] = "STREAMING", MM[MM.LISTENING = 2] = "LISTENING", MM[MM.WATCHING = 3] = "WATCHING", MM[MM.CUSTOM = 4] = "CUSTOM", MM[MM.COMPETING = 5] = "COMPETING", MM
+      }(dM || {});
+    const yM = {
+        Minigames: "Playing",
+        Puzzle: "Solving",
+        Escape: "Escaping",
+        Parkour: "Parkouring",
+        "Cool Parkour": "Parkouring",
+        "Two Player Parkour": "Parkouring",
+        "Clutch Parkour": "Parkouring",
+        "Challenging Parkour": "Parkouring",
+        "Progressive Parkour": "Parkouring",
+        "Themed Parkour": "Parkouring",
+        Obby: "Parkouring",
+        Tower: "Climbing",
+        Roleplay: "Roleplaying",
+        Arena: "Battling",
+        Duels: "Duelling",
+        Shooting: "Shooting",
+        Survival: "Surviving",
+        Simulator: "Grinding",
+        Tycoon: "Building",
+        Clicker: "Clicking",
+        PvE: "Battling",
+        Building: "Building",
+        Horror: "Surviving",
+        "Lucky Block": "Battling",
+        Racing: "Racing",
+        Driving: "Driving",
+        "Cool Build": "Building",
+        Adventure: "Adventuring",
+        Other: "Being mischievous"
+      },
+      lM = {
+        goalRush: "Playing",
+        heroesvbrainrots: "Battling",
+        hideseek: "Playing",
+        bingo: "Playing"
       };
-      return UG = ZG, SG.l.xh(kG, UG, !0), () => {
-        UG === ZG && (UG = null, KG = !1, dG(), SG.l.xh(kG, null))
+    class EM {
+      constructor(MM) {
+        this.discordSdk = MM, this.guildNameCache = {}, this.startTime = Date.now(), this.cachedAccessToken = null, this.activityUpdateId = 0
+      }
+      static async setup() {
+        console.log("Setting up Discord SDK with client id", mM.e.discordClientID);
+        const MM = new OM.b(mM.e.discordClientID);
+        let rM = !1;
+        setTimeout((() => {
+          rM || (console.warn("Discord SDK took too long to initialize"), (0, nM.reloadBloxd)())
+        }), 15e3), await MM.ready(), rM = !0;
+        try {
+          const {
+            enabled: rM
+          } = await MM.commands.encourageHardwareAcceleration();
+          rM || console.warn("Hardware acceleration not enabled in the Discord client")
+        } catch (SM) {
+          console.error("Failed to encourage hardware acceleration in the Discord client", SM)
+        }
+        const iM = new EM(MM);
+        return iM.isMobilePlatform() && (iM.applyDiscordSafeAreaNotch(), window.addEventListener("resize", (() => {
+          iM.applyDiscordSafeAreaNotch()
+        }))), iM
+      }
+      async updateActivityDescription(MM) {
+        const rM = ++this.activityUpdateId;
+        let iM, OM;
+        switch (MM) {
+          case "homePage":
+            iM = "Chilling in the Main Menu";
+            break;
+          case "inGame": {
+            const MM = await this.getInGameDescriptions();
+            iM = MM.primary, OM = MM.secondary;
+            break
+          }
+        }
+        rM === this.activityUpdateId && await this.discordSdk.commands.setActivity({
+          activity: {
+            type: dM.PLAYING,
+            details: iM,
+            state: OM,
+            assets: {
+              large_image: "icon",
+              large_text: iM
+            },
+            timestamps: {
+              start: this.startTime
+            }
+          }
+        }).catch((MM => {
+          console.error(`Failed to update Discord activity rich presence with description="${iM}":`, MM)
+        }))
+      }
+      async getInGameDescriptions() {
+        const MM = (0, QM.e)(),
+          {
+            verb: rM,
+            title: iM
+          } = await this.getGameVerbAndTitle(MM.requestedGameNameWithVariation);
+        if ((0, QM.k)(MM)) return {
+          primary: `${rM} in a Discord World`
+        };
+        const OM = `${rM} in ${iM}`;
+        return (0, aM.J)(MM.lobbyName) ? {
+          primary: OM
+        } : {
+          primary: OM,
+          secondary: `Lobby ${MM.lobbyName}`
+        }
+      }
+      async getGameVerbAndTitle(MM) {
+        var rM;
+        const iM = "Playing";
+        if ((0, aM.J)(MM)) return {
+          verb: iM,
+          title: "Bloxd"
+        };
+        const OM = (0, zM.m)(MM);
+        var SM;
+        if (null !== OM) return {
+          verb: null !== (SM = lM[MM]) && void 0 !== SM ? SM : yM[OM.type],
+          title: await (0, jM.y)(PM.c.ENGLISH, OM.title)
+        };
+        const nM = await (0, HM.d)(MM);
+        return {
+          verb: null !== (rM = nM && yM[nM.gameCategory]) && void 0 !== rM ? rM : iM,
+          title: (null === nM || void 0 === nM ? void 0 : nM.name) || "a Custom World"
+        }
+      }
+      getCurrentChannelType() {
+        const {
+          channelId: MM,
+          guildId: rM
+        } = this.getCurrentChannelAndGuild();
+        return null !== rM ? SM.c.GUILD : null !== MM ? SM.c.DM : null
+      }
+      getRequiredScopeForCurrentChannel() {
+        const MM = this.getCurrentChannelType(),
+          rM = [hM.APPLICATION_COMMANDS, hM.IDENTIFY, hM.EMAIL, hM.GUILDS, hM.WRITE_ACTIVITIES];
+        switch (MM) {
+          case SM.c.DM:
+          case SM.c.GUILD:
+            return [...rM];
+          default:
+            throw new Error(`Unknown Discord channel type: ${MM}`)
+        }
+      }
+      getCurrentChannelAndGuild() {
+        const {
+          channelId: MM,
+          guildId: rM
+        } = this.discordSdk;
+        return {
+          channelId: null !== MM && void 0 !== MM ? MM : null,
+          guildId: null !== rM && void 0 !== rM ? rM : null
+        }
+      }
+      getInstanceId() {
+        return this.discordSdk.instanceId
+      }
+      async askDiscordUserForAuthorization() {
+        const MM = this.getRequiredScopeForCurrentChannel(),
+          {
+            code: rM
+          } = await this.discordSdk.commands.authorize({
+            client_id: mM.e.discordClientID,
+            response_type: "code",
+            state: "",
+            prompt: "none",
+            scope: MM
+          });
+        return rM
+      }
+      getCachedAccessToken() {
+        return this.cachedAccessToken
+      }
+      setCachedAccessToken(MM) {
+        this.cachedAccessToken = MM
+      }
+      registerGuild(MM, rM) {
+        this.guildNameCache[MM] = rM
+      }
+      async authenticate(MM) {
+        return this.discordSdk.commands.authenticate({
+          access_token: MM
+        }).then((MM => null !== MM))
+      }
+      async getUserLocale() {
+        try {
+          const {
+            locale: MM
+          } = await this.discordSdk.commands.userSettingsGetLocale();
+          return MM
+        } catch (MM) {
+          return console.error("Failed to get user locale from Discord:", MM.stack), null
+        }
+      }
+      async getChannelName(MM) {
+        return this.discordSdk.commands.getChannel({
+          channel_id: MM
+        }).then((MM => MM.name)).catch((MM => "Your Current Discord Chat"))
+      }
+      async getDiscordContextFromChannelId(MM) {
+        const rM = await this.getChannelName(MM);
+        return SM.i.from({
+          type: SM.c.DM,
+          channelId: MM,
+          channelName: rM
+        })
+      }
+      getDiscordContextFromGuildId(MM) {
+        const rM = this.guildNameCache[MM];
+        return (0, aM.J)(rM) ? null : SM.e.from({
+          type: SM.c.GUILD,
+          guildId: MM,
+          guildName: rM
+        })
+      }
+      async getCurrentDiscordContext() {
+        const {
+          channelId: MM,
+          guildId: rM
+        } = this.getCurrentChannelAndGuild();
+        return null !== rM ? this.getDiscordContextFromGuildId(rM) : null !== MM ? this.getDiscordContextFromChannelId(MM) : null
+      }
+      exit(MM) {
+        console.log("Exiting Discord Activity:", MM), this.discordSdk.close(JM.CLOSE_NORMAL, MM)
+      }
+      isMobilePlatform() {
+        return this.discordSdk.platform === OM.e.MOBILE
+      }
+      applyDiscordSafeAreaNotch() {
+        const MM = getComputedStyle(document.documentElement),
+          rM = (rM, iM) => {
+            const OM = parseFloat(MM.getPropertyValue(`--discord-safe-area-inset-${rM}`));
+            return isNaN(OM) || 0 === iM ? 0 : OM / iM * 100
+          };
+        LM.d.set({
+          notchSize: {
+            top: rM("top", window.innerHeight),
+            right: Math.max(rM("right", window.innerWidth), 7),
+            bottom: 0,
+            left: rM("left", window.innerWidth)
+          }
+        })
       }
     }
-    let pG = null;
-
-    function fG() {
-      return pG
-    }
-
-    function QG(GG) {
-      return pG = GG, () => {
-        pG === GG && (pG = null)
-      }
-    }
-    let KG = !1;
-
-    function hG() {
-      const GG = wG.e.get("openInGameMenuName");
-      "clientGame" !== GG && (KG = "inventory" === GG), (0, yG.k)() || (0, yG.h)(), (0, LG.z)(LG.e), wG.e.set({
-        openInGameMenuName: "clientGame",
-        openEverythingMenuName: null
-      })
-    }
-
-    function dG() {
-      rG(!1)
-    }
-
-    function JG() {
-      rG(KG)
-    }
-
-    function rG(GG) {
-      "clientGame" === wG.e.get("openInGameMenuName") && wG.e.set({
-        openInGameMenuName: GG ? "inventory" : null
-      }), GG || (0, yG.h)(), KG = !1
-    }
-  },
-  8825: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => yG
-    });
-    var wG = ZG(8830),
-      SG = ZG(604),
-      LG = ZG(116);
-
-    function yG(GG) {
-      var bG, ZG;
-      if ((0, SG.L)(GG)) return !0;
-      const yG = null !== (bG = null === (ZG = LG.siteUsedData[LG.siteUsed]) || void 0 === ZG ? void 0 : ZG.adConfig.showRewardedAds) && void 0 !== bG && bG;
-      for (const SG in GG) {
-        const bG = GG[SG];
-        if (null !== bG && void 0 !== bG && bG.items)
-          for (const GG in bG.items)
-            if ((0, wG.m)(bG.items[GG], yG)) return !1
-      }
-      return !0
-    }
-  },
-  61136: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      getClientGameMapKey: () => wG.j,
-      shopIsEmpty: () => SG.b
-    });
-    var wG = ZG(36951),
-      SG = ZG(8825)
-  },
-  8830: (GG, bG, ZG) => {
-    function wG(GG, bG) {
-      return !GG.hidden && (bG || !GG.isRewardedAd)
-    }
-
-    function SG(GG) {
-      return "object" === typeof GG ? GG.option : GG
-    }
-
-    function LG(GG, bG) {
-      var ZG;
-      if ("dropdown" === (null === (ZG = GG.userInput) || void 0 === ZG ? void 0 : ZG.type) && "object" === typeof GG.userInput.dropdownOptions[0]) {
-        for (const ZG of GG.userInput.dropdownOptions)
-          if (SG(ZG) === bG) return "object" === typeof ZG ? ZG.cost : GG.cost;
-        console.error("Didn't find matching option for dropdown item. Item:", GG, "input:", bG)
-      }
-      return GG.cost
-    }
-
-    function yG(GG, bG, ZG) {
-      var wG;
-      const SG = null !== (wG = ZG.excludedPlayers) && void 0 !== wG ? wG : [bG];
-      return GG.filter((GG => !SG.includes(GG)))
-    }
-    ZG.d(bG, {
-      d: () => LG,
-      h: () => SG,
-      k: () => yG,
-      m: () => wG
-    })
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

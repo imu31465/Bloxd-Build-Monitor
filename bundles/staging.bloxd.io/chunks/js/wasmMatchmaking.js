@@ -1,30 +1,30 @@
-/*! For license information please see wp3j0a.wasmMatchmaking.5509a63b.chunk.js.LICENSE.txt */
-export const id = 63;
-export const ids = [63];
+/*! For license information please see fo1voe.wasmMatchmaking.eb11e22c.chunk.js.LICENSE.txt */
+export const id = 74;
+export const ids = [74];
 export const modules = {
-  36874: (GG, bG) => {
-    function ZG(GG) {
-      if (GG && "object" === typeof GG) {
-        var bG = GG.which || GG.keyCode || GG.charCode;
-        bG && (GG = bG)
+  37484: (MM, rM) => {
+    function iM(MM) {
+      if (MM && "object" === typeof MM) {
+        var rM = MM.which || MM.keyCode || MM.charCode;
+        rM && (MM = rM)
       }
-      if ("number" === typeof GG) return yG[GG];
-      var ZG, LG = String(GG);
-      return (ZG = wG[LG.toLowerCase()]) ? ZG : (ZG = SG[LG.toLowerCase()]) || (1 === LG.length ? LG.charCodeAt(0) : void 0)
+      if ("number" === typeof MM) return aM[MM];
+      var iM, jM = String(MM);
+      return (iM = OM[jM.toLowerCase()]) ? iM : (iM = SM[jM.toLowerCase()]) || (1 === jM.length ? jM.charCodeAt(0) : void 0)
     }
-    ZG.isEventKey = function(GG, bG) {
-      if (GG && "object" === typeof GG) {
-        var ZG = GG.which || GG.keyCode || GG.charCode;
-        if (null === ZG || void 0 === ZG) return !1;
-        if ("string" === typeof bG) {
-          var LG;
-          if (LG = wG[bG.toLowerCase()]) return LG === ZG;
-          if (LG = SG[bG.toLowerCase()]) return LG === ZG
-        } else if ("number" === typeof bG) return bG === ZG;
+    iM.isEventKey = function(MM, rM) {
+      if (MM && "object" === typeof MM) {
+        var iM = MM.which || MM.keyCode || MM.charCode;
+        if (null === iM || void 0 === iM) return !1;
+        if ("string" === typeof rM) {
+          var jM;
+          if (jM = OM[rM.toLowerCase()]) return jM === iM;
+          if (jM = SM[rM.toLowerCase()]) return jM === iM
+        } else if ("number" === typeof rM) return rM === iM;
         return !1
       }
     };
-    var wG = (bG = GG.exports = ZG).code = bG.codes = {
+    var OM = (rM = MM.exports = iM).code = rM.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      SG = bG.aliases = {
+      SM = rM.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (LG = 97; LG < 123; LG++) wG[String.fromCharCode(LG)] = LG - 32;
-    for (var LG = 48; LG < 58; LG++) wG[LG - 48] = LG;
-    for (LG = 1; LG < 13; LG++) wG["f" + LG] = LG + 111;
-    for (LG = 0; LG < 10; LG++) wG["numpad " + LG] = LG + 96;
-    var yG = bG.names = bG.title = {};
-    for (LG in wG) yG[wG[LG]] = LG;
-    for (var kG in SG) wG[kG] = SG[kG]
+    for (jM = 97; jM < 123; jM++) OM[String.fromCharCode(jM)] = jM - 32;
+    for (var jM = 48; jM < 58; jM++) OM[jM - 48] = jM;
+    for (jM = 1; jM < 13; jM++) OM["f" + jM] = jM + 111;
+    for (jM = 0; jM < 10; jM++) OM["numpad " + jM] = jM + 96;
+    var aM = rM.names = rM.title = {};
+    for (jM in OM) aM[OM[jM]] = jM;
+    for (var PM in SM) OM[PM] = SM[PM]
   },
-  37052: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => yG
+  37640: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => aM
     });
-    var wG = ZG(51);
-    const SG = wG.useLayoutEffect;
-    const LG = function(GG) {
-      var bG = (0, wG.useRef)(GG);
-      return SG((function() {
-        bG.current = GG
-      })), bG
+    var OM = iM(44);
+    const SM = OM.useLayoutEffect;
+    const jM = function(MM) {
+      var rM = (0, OM.useRef)(MM);
+      return SM((function() {
+        rM.current = MM
+      })), rM
     };
-    var yG = function(GG) {
-      var bG = LG(GG);
-      (0, wG.useEffect)((function() {
-        var GG = function(GG) {
-          var ZG;
-          if (null != bG.current && (ZG = bG.current(GG)), GG.defaultPrevented && (GG.returnValue = ""), "string" === typeof ZG) return GG.returnValue = ZG, ZG
+    var aM = function(MM) {
+      var rM = jM(MM);
+      (0, OM.useEffect)((function() {
+        var MM = function(MM) {
+          var iM;
+          if (null != rM.current && (iM = rM.current(MM)), MM.defaultPrevented && (MM.returnValue = ""), "string" === typeof iM) return MM.returnValue = iM, iM
         };
-        return window.addEventListener("beforeunload", GG),
+        return window.addEventListener("beforeunload", MM),
           function() {
-            window.removeEventListener("beforeunload", GG)
+            window.removeEventListener("beforeunload", MM)
           }
       }), [])
     }
   },
-  36932: GG => {
-    var bG, ZG = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      wG = /OS X/.test(ZG),
-      SG = /Opera/.test(ZG),
-      LG = !/like Gecko/.test(ZG) && !SG,
-      yG = GG.exports = {
-        0: wG ? "<menu>" : "<UNK>",
+  37517: MM => {
+    var rM, iM = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      OM = /OS X/.test(iM),
+      SM = /Opera/.test(iM),
+      jM = !/like Gecko/.test(iM) && !SM,
+      aM = MM.exports = {
+        0: OM ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: wG ? "<meta>" : "<menu>",
+        93: OM ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: wG && LG ? "-" : "<volume-mute>",
+        173: OM && jM ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: SG ? "`" : "<unicode>",
+        231: SM ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,322 +234,409 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (bG = 58; bG < 65; ++bG) yG[bG] = String.fromCharCode(bG);
-    for (bG = 48; bG < 58; ++bG) yG[bG] = bG - 48 + "";
-    for (bG = 65; bG < 91; ++bG) yG[bG] = String.fromCharCode(bG);
-    for (bG = 96; bG < 106; ++bG) yG[bG] = "<num-" + (bG - 96) + ">";
-    for (bG = 112; bG < 136; ++bG) yG[bG] = "F" + (bG - 111)
+    for (rM = 58; rM < 65; ++rM) aM[rM] = String.fromCharCode(rM);
+    for (rM = 48; rM < 58; ++rM) aM[rM] = rM - 48 + "";
+    for (rM = 65; rM < 91; ++rM) aM[rM] = String.fromCharCode(rM);
+    for (rM = 96; rM < 106; ++rM) aM[rM] = "<num-" + (rM - 96) + ">";
+    for (rM = 112; rM < 136; ++rM) aM[rM] = "F" + (rM - 111)
   },
-  8967: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => LG,
-      g: () => SG
+  37538: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => HM,
+      i: () => hM,
+      m: () => mM,
+      p: () => LM
     });
-    let wG = !1;
+    var OM = iM(35017),
+      SM = iM(37542),
+      jM = iM(37544),
+      aM = iM(9328),
+      PM = iM(1516),
+      nM = iM(44),
+      QM = iM(65),
+      zM = iM(1303);
 
-    function SG() {
-      wG = !0
+    function LM() {
+      var MM;
+      return (0, PM.e)(SM.e, (0, SM.t)()), (0, zM.jsx)(zM.Fragment, {
+        children: null === (MM = (0, SM.t)()) || void 0 === MM ? void 0 : MM.content
+      })
     }
 
-    function LG() {
-      return wG
+    function mM(MM) {
+      var rM;
+      let {
+        show: iM
+      } = MM;
+      (0, PM.e)(SM.e, (0, SM.t)());
+      const QM = null === (rM = (0, SM.t)()) || void 0 === rM ? void 0 : rM.menu;
+      return (0, nM.useEffect)((() => {
+        var MM;
+        iM || (null === QM || void 0 === QM || null === (MM = QM.onClose) || void 0 === MM || MM.call(QM), (0, jM.q)())
+      }), [iM, QM]), (0, nM.useEffect)((() => iM ? (0, aM.e)(jM.y, jM.f) : void 0), [iM]), (0, zM.jsx)(OM.e, {
+        showing: iM,
+        globallyUniqueKey: "clientGameMenu",
+        children: null === QM || void 0 === QM ? void 0 : QM.content
+      })
+    }
+
+    function HM(MM) {
+      let {
+        placement: rM = "bottom"
+      } = MM;
+      return (0, zM.jsx)("div", {
+        id: `clientGameHud-${rM}`,
+        style: {
+          display: "contents"
+        }
+      })
+    }
+
+    function hM(MM) {
+      let {
+        children: rM,
+        placement: iM = "bottom"
+      } = MM;
+      const [OM, SM] = (0, nM.useState)(null);
+      return (0, nM.useEffect)((() => {
+        SM(document.getElementById(`clientGameHud-${iM}`))
+      }), [iM]), OM ? (0, QM.createPortal)(rM, OM) : null
     }
   },
-  36784: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      InGameUi: () => oG.e,
-      LobbyLeaderboard: () => XG.b,
-      loadCharacterCustomisationUI: () => uG,
-      loadCharacterPreview: () => iG,
-      matchmakeAndPlay: () => IG,
-      matchmakeForAhead: () => kG.e,
-      setUpGame: () => CG
+  9328: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => jM,
+      e: () => SM
     });
-    var wG = ZG(1202),
-      SG = ZG(140),
-      LG = ZG(17),
-      yG = ZG(36793),
-      kG = ZG(36795),
-      UG = ZG(1923),
-      YG = ZG(36833);
+    let OM = null;
+    const SM = function(MM) {
+        const rM = {
+          cycle: MM,
+          canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
+        };
+        return OM = rM, () => {
+          OM === rM && (OM = null)
+        }
+      },
+      jM = () => {
+        var MM;
+        return null !== (MM = OM) && void 0 !== MM && MM.canCycle() ? OM.cycle : null
+      }
+  },
+  9517: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => jM,
+      e: () => SM
+    });
+    let OM = !1;
 
-    function VG() {
-      return !1 !== UG.c.get("canCustomiseChar")
+    function SM() {
+      OM = !0
     }
-    let pG = !1;
-    var fG = ZG(1287),
-      QG = ZG(1204),
-      KG = ZG(252),
-      hG = ZG(3559),
-      dG = ZG(8967),
-      JG = ZG(8960);
 
-    function rG() {
-      (0, dG.c)() || (0, JG.c)().catch((GG => {
-        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", GG)
+    function jM() {
+      return OM
+    }
+  },
+  37397: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      InGameUi: () => GM.e,
+      LobbyLeaderboard: () => CM.c,
+      loadCharacterCustomisationUI: () => eM,
+      loadCharacterPreview: () => bM,
+      matchmakeAndPlay: () => uM,
+      matchmakeForAhead: () => PM.h,
+      setUpGame: () => wM
+    });
+    var OM = iM(1251),
+      SM = iM(143),
+      jM = iM(19),
+      aM = iM(37402),
+      PM = iM(37407),
+      nM = iM(2067),
+      QM = iM(37440);
+
+    function zM() {
+      return !1 !== nM.d.get("canCustomiseChar")
+    }
+    let LM = !1;
+    var mM = iM(1373),
+      HM = iM(1258),
+      hM = iM(222),
+      JM = iM(2562),
+      dM = iM(9517),
+      yM = iM(9514);
+
+    function lM() {
+      (0, dM.b)() || (0, yM.e)().catch((MM => {
+        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", MM)
       }))
     }
-    var zG = ZG(3423),
-      EG = ZG(1729);
-    var oG = ZG(36838),
-      XG = ZG(37374);
+    var EM = iM(3839),
+      UM = iM(1851);
+    var GM = iM(37442),
+      CM = iM(37944);
 
-    function uG() {
-      return ZG.e(220).then((() => ZG(41704)))
+    function eM() {
+      return iM.e(239).then((() => iM(43954)))
     }
 
-    function iG() {
-      return ZG.e(296).then((() => ZG(41710)))
+    function bM() {
+      return iM.e(601).then((() => iM(43956)))
     }
 
-    function CG() {
-      return (0, JG.i)()
+    function wM() {
+      return (0, yM.h)()
     }
-    pG || (pG = !0, document.addEventListener("keydown", (GG => {
-        (0, YG.e)(GG, VG)
+    LM || (LM = !0, document.addEventListener("keydown", (MM => {
+        (0, QM.e)(MM, zM)
       }))),
-      function(GG) {
-        var bG;
-        return !0 !== (null === GG || void 0 === GG ? void 0 : GG.saveData) && !/2g$/.test(null !== (bG = null === GG || void 0 === GG ? void 0 : GG.effectiveType) && void 0 !== bG ? bG : "")
-      }(navigator.connection) && (0, hG.c)((() => {
-        (0, dG.c)() || Promise.all([ZG.e(78), ZG.e(90), ZG.e(215), ZG.e(214), ZG.e(137), ZG.e(140), ZG.e(59)]).then((() => ZG(41444))).then((async GG => {
-          (0, dG.c)() || (await GG.startLoadAheadOfJoin({
-            joinStarted: dG.c,
-            language: QG.d.get().getCurrentLanguageCode()
-          }), (0, KG.b)(rG))
-        }), (GG => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", GG)
+      function(MM) {
+        var rM;
+        return !0 !== (null === MM || void 0 === MM ? void 0 : MM.saveData) && !/2g$/.test(null !== (rM = null === MM || void 0 === MM ? void 0 : MM.effectiveType) && void 0 !== rM ? rM : "")
+      }(navigator.connection) && (0, JM.f)((() => {
+        (0, dM.b)() || Promise.all([iM.e(89), iM.e(103), iM.e(233), iM.e(232), iM.e(150), iM.e(153), iM.e(70)]).then((() => iM(42162))).then((async MM => {
+          if ((0, dM.b)()) return;
+          const rM = MM.startLoadAheadOfJoin({
+            joinStarted: dM.b,
+            language: HM.e.get().getCurrentLanguageCode()
+          });
+          (0, hM.d)((() => {
+            (0, dM.b)() || MM.probeWebgl2AheadOfJoin()
+          })), await rM, (0, hM.d)(lM)
+        }), (MM => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", MM)
         }))
       }));
-    const WG = LG.e.get("router");
-    null === WG ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function GG(bG) {
-      if ((0, EG.b)(bG.state.location.pathname)) return void(0, JG.e)().catch((() => {}));
-      const ZG = bG.subscribe((wG => {
-        (0, EG.b)(wG.location.pathname) && (ZG(), (0, zG.e)().then((() => {
-          GG(bG)
+    const tM = jM.d.get("router");
+    null === tM ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function MM(rM) {
+      if ((0, UM.e)(rM.state.location.pathname)) return void(0, yM.f)().catch((() => {}));
+      const iM = rM.subscribe((OM => {
+        (0, UM.e)(OM.location.pathname) && (iM(), (0, EM.e)().then((() => {
+          MM(rM)
         })))
       }))
-    }(WG), (0, yG.e)();
-    const mG = (0, kG.d)((async function(GG, bG) {
+    }(tM), (0, aM.b)();
+    const gM = (0, PM.e)((async function(MM, rM) {
       let {
-        place: ZG,
-        userContext: LG,
-        direct: yG,
-        matchedAt: kG,
-        rematch: UG
-      } = GG;
-      const YG = yG ? 1 / 0 : kG;
-      let VG;
+        place: iM,
+        userContext: jM,
+        direct: aM,
+        matchedAt: PM,
+        rematch: nM
+      } = MM;
+      const QM = aM ? 1 / 0 : PM;
+      let zM;
       try {
-        VG = await (0, JG.e)()
-      } catch (pG) {
-        return console.error("The wasm client did not load:", pG), (0, fG.q)({
+        zM = await (0, yM.f)()
+      } catch (LM) {
+        return console.error("The wasm client did not load:", LM), (0, mM.p)({
           websocketUrl: null
-        }), wG.d.errorWithCode(String(pG), SG.h.CONNECT_TO_GAME_SERVER, {
-          error: pG,
-          severity: bG.aborted ? "low" : "medium",
-          RZ: bG.aborted
+        }), OM.b.errorWithCode(String(LM), SM.n.CONNECT_TO_GAME_SERVER, {
+          error: LM,
+          severity: rM.aborted ? "low" : "medium",
+          Ti: rM.aborted
         })
       }
-      return VG.playWasmGame({
-        userContext: LG,
-        place: ZG,
-        matchedAt: YG,
-        rematch: UG
-      }, bG)
+      return zM.playWasmGame({
+        userContext: jM,
+        place: iM,
+        matchedAt: QM,
+        rematch: nM
+      }, rM)
     }));
 
-    function IG() {
-      return (0, JG.e)().catch((() => {})), mG(...arguments)
+    function uM() {
+      return (0, yM.f)().catch((() => {})), gM(...arguments)
     }
   },
-  8960: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => QG,
-      e: () => fG,
-      i: () => KG
+  9514: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => HM,
+      f: () => mM,
+      h: () => hM
     });
-    var wG = ZG(3135),
-      SG = ZG(2290),
-      LG = ZG(2128),
-      yG = ZG(4670),
-      kG = ZG(3481),
-      UG = ZG(8967);
-    let YG = null;
+    var OM = iM(3563),
+      SM = iM(2414),
+      jM = iM(2257),
+      aM = iM(5022),
+      PM = iM(3902),
+      nM = iM(9517);
+    let QM = null;
 
-    function VG() {
-      return Promise.all([ZG.e(75), ZG.e(78), ZG.e(90), ZG.e(215), ZG.e(214), ZG.e(160), ZG.e(137), ZG.e(198), ZG.e(140), ZG.e(88), ZG.e(275), ZG.e(64)]).then((() => ZG(41048)))
+    function zM() {
+      return Promise.all([iM.e(86), iM.e(89), iM.e(103), iM.e(233), iM.e(232), iM.e(174), iM.e(222), iM.e(150), iM.e(153), iM.e(101), iM.e(298), iM.e(75)]).then((() => iM(41755)))
     }
 
-    function pG() {
-      Promise.all([ZG.e(73), ZG.e(76), ZG.e(75), ZG.e(74), ZG.e(90), ZG.e(87), ZG.e(273), ZG.e(191), ZG.e(228), ZG.e(252), ZG.e(275), ZG.e(47)]).then((() => ZG(41395))).catch((() => {}))
+    function LM() {
+      Promise.all([iM.e(84), iM.e(87), iM.e(85), iM.e(86), iM.e(103), iM.e(100), iM.e(296), iM.e(205), iM.e(246), iM.e(272), iM.e(298), iM.e(53)]).then((() => iM(42102))).catch((() => {}))
     }
 
-    function fG() {
-      return yG.d.cancelDownloadForJoin(), (0, kG.e)(), (0, SG.g)(), (0, UG.g)(), (0, LG.j)(), pG(), Promise.all([ZG.e(78), ZG.e(90), ZG.e(215), ZG.e(214), ZG.e(137), ZG.e(140), ZG.e(59)]).then((() => ZG(41444))).then((GG => {
+    function mM() {
+      return aM.e.cancelDownloadForJoin(), (0, PM.b)(), (0, SM.c)(), (0, nM.e)(), (0, jM.j)(), LM(), Promise.all([iM.e(89), iM.e(103), iM.e(233), iM.e(232), iM.e(150), iM.e(153), iM.e(70)]).then((() => iM(42162))).then((MM => {
         let {
-          startJoinLoad: bG
-        } = GG;
-        bG()
-      }), (() => {})), YG ??= VG().then((GG => (GG.startWasmPlay(), GG.followPageUiPack((GG => {
-        wG.e.showGamePack(GG)
-      })), GG)), (GG => {
-        throw YG = null, GG
-      })), YG
+          startJoinLoad: rM
+        } = MM;
+        rM()
+      }), (() => {})), QM ??= zM().then((MM => (MM.startWasmPlay(), MM.followPageUiPack((MM => {
+        OM.e.showGamePack(MM)
+      })), MM)), (MM => {
+        throw QM = null, MM
+      })), QM
     }
 
-    function QG() {
-      return pG(), ZG.e(276).then((() => ZG(41447))).catch((() => {})), VG().then((() => {}))
+    function HM() {
+      return LM(), iM.e(299).then((() => iM(42165))).catch((() => {})), zM().then((() => {}))
     }
 
-    function KG() {
-      return VG().then((GG => {
-        GG.startWasmPreviews(), GG.prefetchWasmPreviews()
+    function hM() {
+      return zM().then((MM => {
+        MM.startWasmPreviews(), MM.prefetchWasmPreviews()
       }))
     }
   },
-  36808: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => fG,
-      f: () => VG,
-      g: () => QG,
-      h: () => pG
+  37416: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => mM,
+      e: () => zM,
+      g: () => HM,
+      k: () => LM
     });
-    var wG = ZG(352),
-      SG = ZG(641),
-      LG = ZG(655),
-      yG = ZG(29);
-    const kG = {
+    var OM = iM(332),
+      SM = iM(670),
+      jM = iM(680),
+      aM = iM(30);
+    const PM = {
         idStorageKey: "playSessionId",
         lastActivityStorageKey: "playSessionLastActivityMs",
         expiryMs: 3e5
       },
-      UG = "playSessionGameNameWithVariation",
-      YG = "wasMatchmakePlayer";
+      nM = "playSessionGameNameWithVariation",
+      QM = "wasMatchmakePlayer";
 
-    function VG() {
-      let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yG.l;
-      (0, LG.j)(GG, kG)
+    function zM() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k;
+      (0, jM.k)(MM, PM)
     }
 
-    function pG() {
-      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yG.l).setItem(YG, !0)
+    function LM() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k).setItem(QM, !0)
     }
 
-    function fG() {
-      let GG = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yG.l;
-      return (0, LG.e)(GG, kG)
+    function mM() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k;
+      return (0, jM.e)(MM, PM)
     }
 
-    function QG(GG) {
-      let bG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yG.l;
-      const ZG = (0, LG.e)(bG, kG),
-        VG = function(GG) {
-          const bG = GG.getItem(UG);
-          return "string" !== typeof bG ? null : bG
-        }(bG),
-        pG = function() {
-          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yG.l).getItem(YG)
-        }(bG);
-      let fG;
-      return fG = null !== ZG && null !== VG && (0, LG.f)(bG, kG) && function(GG, bG, ZG) {
-          const SG = (0, wG.Yb)(GG),
-            LG = (0, wG.Yb)(bG),
-            yG = (0, wG.Vb)(GG),
-            kG = (0, wG.Vb)(bG);
-          return !(SG !== LG || !ZG) || SG === LG && yG === kG
-        }(VG, GG, pG) ? ZG : (0, SG.d)(), (0, LG.n)(bG, kG, fG), bG.setItem(UG, GG),
+    function HM(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aM.k;
+      const iM = (0, jM.e)(rM, PM),
+        zM = function(MM) {
+          const rM = MM.getItem(nM);
+          return "string" !== typeof rM ? null : rM
+        }(rM),
+        LM = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k).getItem(QM)
+        }(rM);
+      let mM;
+      return mM = null !== iM && null !== zM && (0, jM.g)(rM, PM) && function(MM, rM, iM) {
+          const SM = (0, OM.Mb)(MM),
+            jM = (0, OM.Mb)(rM),
+            aM = (0, OM.Jb)(MM),
+            PM = (0, OM.Jb)(rM);
+          return !(SM !== jM || !iM) || SM === jM && aM === PM
+        }(zM, MM, LM) ? iM : (0, SM.e)(), (0, jM.o)(rM, PM, mM), rM.setItem(nM, MM),
         function() {
-          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yG.l).removeItem(YG)
-        }(bG), fG
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k).removeItem(QM)
+        }(rM), mM
     }
   },
-  36801: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => oG,
-      g: () => XG
+  37414: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => GM,
+      f: () => CM
     });
-    var wG = ZG(982),
-      SG = ZG(200),
-      LG = ZG(346),
-      yG = ZG(612),
-      kG = ZG(352),
-      UG = ZG(984),
-      YG = ZG(631),
-      VG = ZG(666),
-      pG = ZG(4537),
-      fG = ZG(80),
-      QG = ZG(116),
-      KG = ZG(1702),
-      hG = ZG(95),
-      dG = ZG(36808),
-      JG = ZG(29),
-      rG = ZG(647),
-      zG = ZG(617),
-      EG = ZG(36810);
+    var OM = iM(1073),
+      SM = iM(187),
+      jM = iM(327),
+      aM = iM(632),
+      PM = iM(332),
+      nM = iM(1081),
+      QM = iM(656),
+      zM = iM(694),
+      LM = iM(4906),
+      mM = iM(83),
+      HM = iM(119),
+      hM = iM(1830),
+      JM = iM(103),
+      dM = iM(37416),
+      yM = iM(30),
+      lM = iM(673),
+      EM = iM(637),
+      UM = iM(37422);
 
-    function oG() {
-      var GG, bG;
-      return [...null !== (GG = navigator.languages) && void 0 !== GG ? GG : [null !== (bG = navigator.language) && void 0 !== bG ? bG : "none"], "en-Gb"]
+    function GM() {
+      var MM, rM;
+      return [...null !== (MM = navigator.languages) && void 0 !== MM ? MM : [null !== (rM = navigator.language) && void 0 !== rM ? rM : "none"], "en-Gb"]
     }
 
-    function XG(GG, bG, ZG, XG, uG) {
-      const iG = (0, wG.h)(bG) ? (0, wG.j)(bG) : null,
-        CG = GG.isLoggedIn() && void 0 !== (0, SG.c)(LG.l, QG.siteUsed) ? (0, zG.e)() : null,
-        WG = {
-          cookies: (0, KG.getAllCookiesForGameNameWithVariation)(bG),
-          isMobile: (0, fG.isMobile)(),
-          isUsingCustomGameTexturePack: null !== iG && uG(iG),
+    function CM(MM, rM, iM, CM, eM) {
+      const bM = (0, OM.m)(rM) ? (0, OM.p)(rM) : null,
+        wM = MM.isLoggedIn() && void 0 !== (0, SM.d)(jM.g, HM.siteUsed) ? (0, EM.h)() : null,
+        tM = {
+          cookies: (0, hM.getAllCookiesForGameNameWithVariation)(rM),
+          isMobile: (0, mM.isMobile)(),
+          isUsingCustomGameTexturePack: null !== bM && eM(bM),
           generalCookies: {
-            joinDiscord: !!JG.h.getItem("DiscordPressed"),
-            newGo: pG.c,
-            ...GG.getMetricsCookies(),
-            trafficCode: XG,
-            compliance: fG.compliance
+            joinDiscord: !!yM.g.getItem("DiscordPressed"),
+            newGo: LM.c,
+            ...MM.getMetricsCookies(),
+            trafficCode: CM,
+            compliance: mM.compliance
           },
           browserInfo: {
             ua: window.navigator.userAgent,
-            name: (0, fG.getBrowserName)(),
-            version: (0, fG.getBrowserVersion)(),
+            name: (0, mM.getBrowserName)(),
+            version: (0, mM.getBrowserVersion)(),
             platform: navigator.platform,
-            platformType: (0, fG.getPlatformType)(),
-            deviceType: (0, hG.d)()
+            platformType: (0, mM.getPlatformType)(),
+            deviceType: (0, JM.c)()
           },
-          isLoggedIn: GG.isLoggedIn(),
-          lobbyName: ZG,
-          languages: oG(),
-          version: yG.e,
-          siteUsed: QG.siteUsed,
-          subsiteUsed: QG.subsiteUsed,
-          playSessionId: (0, dG.g)(bG),
-          visitSessionId: (0, rG.f)(),
-          clientReason: YG.s.reason,
-          budgetBasis: (0, EG.j)(),
-          ...null !== VG.o && {
-            diagClaim: VG.o.claimId
+          isLoggedIn: MM.isLoggedIn(),
+          lobbyName: iM,
+          languages: GM(),
+          version: aM.c,
+          siteUsed: HM.siteUsed,
+          subsiteUsed: HM.subsiteUsed,
+          playSessionId: (0, dM.g)(rM),
+          visitSessionId: (0, lM.e)(),
+          clientReason: QM.x.reason,
+          budgetBasis: (0, UM.f)(),
+          ...null !== zM.m && {
+            diagClaim: zM.m.claimId
           },
-          ...null !== CG && {
-            webGpuLoss: CG
+          ...null !== wM && {
+            webGpuLoss: wM
           }
         };
-      return null !== iG && (0, kG.Oc)(iG) ? (WG.lobbyName = (0, wG.g)(iG, (0, wG.i)(bG), ZG), {
-        roomName: `classic_${UG.e}`,
-        joinOptions: WG
+      return null !== bM && (0, PM.Dc)(bM) ? (tM.lobbyName = (0, OM.i)(bM, (0, OM.o)(rM), iM), {
+        roomName: `classic_${nM.g}`,
+        joinOptions: tM
       }) : {
-        roomName: bG,
-        joinOptions: WG
+        roomName: rM,
+        joinOptions: tM
       }
     }
   },
-  9356: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => SG,
-      f: () => LG
+  9918: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => SM,
+      e: () => jM
     });
-    var wG = ZG(9303);
-    const SG = "Air",
-      LG = Object.freeze(new wG.h(SG, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var OM = iM(9863);
+    const SM = "Air",
+      jM = Object.freeze(new OM.c(SM, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

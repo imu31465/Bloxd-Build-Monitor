@@ -1,40 +1,123 @@
 export const id = 164;
 export const ids = [164];
 export const modules = {
-  9004: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      pageBody: () => wG
+  7206: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      AdMobSdkAdaptor: () => zM
     });
-    const wG = {
-      whatIs: ["Your gear is completely random, and only one player makes it out of the madness. Bloxd Lucky Towers is a last-player-standing PvP mode where everyone spawns on their own pillar. Rounds are quick, chaotic and pretty unpredictable. There are no Lucky Blocks to open here, which is the big difference from Lucky Blocks Battlegrounds. Your items just turn up every 3 seconds."],
-      howToPlay: ["Up to 15 players spawn on pillars spaced out across the map. You start in a glass cage for 3 seconds. After that, everyone gets a random item every 3 seconds. It could be blocks, food, a weapon, armour, a potion or something that explodes. Build bridges over to your rivals, knock them off their pillars and be the last one alive.", "Keep an eye on the announcements, because random events can flip a whole fight. A chest might drop with a guaranteed weapon and armour inside. Jump Boost lets everyone jump higher for a bit, and Double Speed makes items spawn twice as fast. During Lava Rise the ground starts creeping up beneath you. If a Bombardment is announced, get under cover fast. Holding a Respawn Totem saves you from a fall into the void. Knocked out? You can still spectate the rest of the match."],
-      features: ["Up to 15 Players per Match", "A Random Item Every 3 Seconds", "Weapons, Armour, Potions, Arrows and Explosives", "Special Items Like Updraft, SnowDash, Steal Ball, Bouncy Bomb and Chaos Potion", "Respawn Totems for an Extra Life", "Five Random Events, From Chest Drops to Bombardment", "Craft Sticks, Reinforced Pebbles, Floor Creators and More", "Maps: The OG, Desert, Icy, Space and Forest, Plus Seasonal Spooky and Holiday Maps"],
-      tips: ["Use your first few blocks to wall up your pillar", "Hang on to explosives for breaking your rivals' bridges", "If a chest drops, race for it. There's a guaranteed weapon and two pieces of armour inside", "When the ground starts rising, build upwards", "Get under cover the moment a Bombardment is announced", "Hold a Respawn Totem whenever you might fall, because it puts you back on your pillar", "The pillars on the Icy map are further apart, since jumps on ice go further"],
-      similarGames: ["skywars", "luckyBedwars", "luckyBattlegrounds", "bedwars"],
-      faq: [{
-        question: "What is Lucky Towers?",
-        answer: "A fast PvP mode for up to 15 players. Everyone starts on their own pillar, gets a random item every 3 seconds and fights to be the last one standing."
-      }, {
-        question: "How do you win in Bloxd Lucky Towers?",
-        answer: "Be the last player alive. Use whatever random items you get to knock rivals off their pillars or take them out. If you're eliminated, you can spectate untill the match ends."
-      }, {
-        question: "How often do you get items in Lucky Towers?",
-        answer: "Every 3 seconds. During the Double Speed event they spawn twice as fast for a short while."
-      }, {
-        question: "What items can you get in Lucky Towers?",
-        answer: "Blocks, seedlings, beds, food, potions, weapons, arrows, armour and explosives. There are special items too, like the Bouncy Bomb, Respawn Totem, Floor Creator, SnowDash, Updraft, Steal Ball, Chaos Potion and Moonstone Remote Explosive."
-      }, {
-        question: "Which random events can happen in Lucky Towers?",
-        answer: "Chest Drop, Jump Boost, Double Speed, Lava Rise and Bombardment. You'll get an announcement when each one starts."
-      }, {
-        question: "Which maps are in Lucky Towers?",
-        answer: "The OG, Desert, Icy, Space and Forest. There's also a Spooky map in October and a Holiday map in December and January."
-      }, {
-        question: "How is Lucky Towers different from Lucky Blocks Battlegrounds?",
-        answer: "Lucky Towers is last player standing. Items arrive on their own, and once you're knocked out you spectate. Lucky Blocks Battlegrounds is a kills race in a shared arena where you open Lucky Blocks, and the top player wins when it resets."
-      }]
+    var OM = iM(1367),
+      SM = iM(19),
+      jM = iM(1771),
+      aM = iM(119),
+      PM = iM(3868),
+      nM = iM(332);
+    const QM = {
+      mobileAndroid: {
+        banners: {
+          leaderboard_1: "ca-app-pub-5991928098122027/7081016880",
+          leaderboard_4: "ca-app-pub-5991928098122027/6301601920",
+          leaderboard_5: "ca-app-pub-5991928098122027/7592152779",
+          skyscraper_1: "ca-app-pub-5991928098122027/1026744422",
+          skyscraper_2: "ca-app-pub-5991928098122027/3483866894",
+          square_1: "ca-app-pub-5991928098122027/6381115670"
+        },
+        rewarded: "ca-app-pub-5991928098122027/5726886857",
+        interstitial: "ca-app-pub-5991928098122027/1979213537"
+      },
+      mobileIos: {
+        banners: {
+          leaderboard_1: "ca-app-pub-5991928098122027/4652945503",
+          leaderboard_4: "ca-app-pub-5991928098122027/2921518285",
+          leaderboard_5: "ca-app-pub-5991928098122027/7518781992",
+          skyscraper_1: "ca-app-pub-5991928098122027/8344778507",
+          skyscraper_2: "ca-app-pub-5991928098122027/3781201590",
+          square_1: "ca-app-pub-5991928098122027/2468119924"
+        },
+        rewarded: "ca-app-pub-5991928098122027/5014392212",
+        interstitial: "ca-app-pub-5991928098122027/4405533493"
+      }
+    };
+    class zM extends OM.d {
+      constructor(MM) {
+        super(), this.name = "admob", this.bannerAutoRefresh = "alwaysOn", this.adUnitIds = void 0, this.bannerPlacementByBloxdId = new Map, this.bannerFirstResponseSeen = new Set, this.fullScreenAdsInFlight = 0, this.adUnitIds = QM[MM], jM.e.on("ads.bannerStatus", (MM => {
+          let {
+            placementId: rM,
+            shown: iM,
+            error: OM
+          } = MM;
+          const SM = !this.bannerFirstResponseSeen.has(rM);
+          this.bannerFirstResponseSeen.add(rM), SM ? iM ? console.log(`AD ${rM}: AdMob banner loaded`) : console.warn(`AD ${rM}: AdMob banner failed to load: ${OM}`) : iM || console.warn(`AD ${rM}: AdMob banner refresh failed: ${OM}`)
+        }))
+      }
+      static async setup() {
+        const MM = "mobileIos" === aM.siteUsed ? "mobileIos" : "mobileAndroid";
+        return console.log(`AD: AdMobSDK initialised for ${MM}`), new zM(MM)
+      }
+      muteGameDuring(MM) {
+        return this.fullScreenAdsInFlight++, SM.d.set({
+          soundOnFromAd: !1
+        }), MM.finally((() => {
+          this.fullScreenAdsInFlight--, 0 === this.fullScreenAdsInFlight && SM.d.set({
+            soundOnFromAd: !0
+          })
+        }))
+      }
+      playRewarded(MM, rM) {
+        const iM = this.adUnitIds.rewarded;
+        this.muteGameDuring(jM.e.request("ads.showRewarded", {
+          placementId: iM
+        })).then((iM => {
+          let {
+            rewarded: OM
+          } = iM;
+          OM ? MM() : rM()
+        }), (MM => {
+          console.warn(`AD ${iM}: AdMob rewarded failed:`, MM), rM()
+        }))
+      }
+      playVideoAd(MM, rM) {
+        const iM = this.adUnitIds.interstitial;
+        this.muteGameDuring(jM.e.request("ads.showInterstitial", {
+          placementId: iM
+        })).then((() => {
+          MM()
+        }), (rM => {
+          console.warn(`AD ${iM}: AdMob interstitial failed:`, rM), MM()
+        }))
+      }
+      renderBanner(MM) {
+        const rM = (0, PM.b)(MM),
+          iM = this.adUnitIds.banners[rM];
+        if (void 0 === iM) return;
+        const OM = document.getElementById(MM.divId);
+        if (!OM) return void console.warn(`AD ${rM}: AdMob renderBanner called but div ${MM.divId} is not in DOM`);
+        const SM = OM.getBoundingClientRect(),
+          aM = window.innerWidth,
+          QM = window.innerHeight;
+        if (0 === aM || 0 === QM) return void console.warn(`AD ${rM}: AdMob renderBanner skipped \u2014 viewport has zero dimension`);
+        const zM = {
+          x1: nM.d.clamp(SM.left / aM * 100, 0, 100),
+          y1: nM.d.clamp(SM.top / QM * 100, 0, 100),
+          x2: nM.d.clamp(SM.right / aM * 100, 0, 100),
+          y2: nM.d.clamp(SM.bottom / QM * 100, 0, 100)
+        };
+        this.bannerPlacementByBloxdId.set(rM, iM), console.log(`AD ${rM}: AdMob renderBanner placementId=${iM} box=`, zM), jM.e.emit("ads.showBanner", {
+          placementId: iM,
+          ...zM
+        })
+      }
+      clearBanner(MM) {
+        const rM = (0, PM.b)(MM),
+          iM = this.bannerPlacementByBloxdId.get(rM);
+        void 0 !== iM && (this.bannerPlacementByBloxdId.delete(rM), this.bannerFirstResponseSeen.delete(iM), console.log(`AD ${rM}: AdMob clearBanner placementId=${iM}`), jM.e.emit("ads.hideBanner", {
+          placementId: iM
+        }))
+      }
+      canShowBloxdAd(MM) {
+        return !1
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

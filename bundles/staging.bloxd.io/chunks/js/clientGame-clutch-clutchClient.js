@@ -1,22 +1,22 @@
-export const id = 13;
-export const ids = [13];
+export const id = 14;
+export const ids = [14];
 export const modules = {
-  39714: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      default: () => wG
+  40383: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      default: () => OM
     });
-    const wG = function(GG, bG, ZG) {
-      let wG;
+    const OM = function(MM, rM, iM) {
+      let OM;
       return {
-        onCreate: GG => {
-          wG = GG
+        onCreate: MM => {
+          OM = MM
         },
-        onPlayerAltAction: (GG, bG, ZG, SG, LG, yG) => {
-          yG && "Mesh" === wG.getEntityType(yG) && "Quartermaster" === wG.getEntityName(yG) && wG.openShop(GG, !1, "Armoury")
+        onPlayerAltAction: (MM, rM, iM, SM, jM, aM) => {
+          aM && "Mesh" === OM.getEntityType(aM) && "Quartermaster" === OM.getEntityName(aM) && OM.openShop(MM, !1, "Armoury")
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

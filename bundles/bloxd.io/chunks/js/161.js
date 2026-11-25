@@ -1,46 +1,214 @@
 export const id = 161;
 export const ids = [161];
 export const modules = {
-  8987: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      pageBody: () => wG
+  7190: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      BloxdMsnAccountSdk: () => LM,
+      MsnSdkAdaptor: () => JM
     });
-    const wG = {
-      whatIs: ["Protect your bed, destroy theirs. That's the whole idea of Bedwars, the team PvP strategy mode that's free to play online. Every team starts on its own floating island with a bed to protect. Collect resources, buy gear and team upgrades, then bridge across to the other islands and destroy their beds. Once a team's bed is gone they can't respawn. The last team standing wins. Want every item to come from a Lucky Block instead of the shop? Try Lucky Bedwars."],
-      howToPlay: ["Play Bedwars Solos, Duos, Trios, 4v4, 4v4v4v4 or 1v1. Generators on your island drop Coal, Iron Bars and Diamond. Spend them at the Item Shop on blocks, weapons, armour and tools, or at the Upgrades shopkeeper on team upgrades like Protection, Damage, Feather Falling, Health Regeneration and an Alarm. The generators in the centre of the map drop Diamond and Moonstone for the most powerful items.", "As the match goes on, bed defences are unfortified, the Diamond and Moonstone generators level up, and eventually every bed is destroyed. Then the arena shrinks until only one team is left."],
-      features: ["Solos, Duos, Trios, 4v4v4v4 and 4v4", "Ranked Bedwars Lobby", "Team Upgrades: Protection, Damage, Feather Falling, Health Regeneration and Alarm", "Match Modifiers like Lucky Chaos, Weapon Roulette, Treasure Guardians and Specialists", "Dozens of Maps", "Leaderboards"],
-      tips: ["Rush other teams' beds before they can upgrade their defences", "Split up attack and defence with your team", "Upgrade your gear in the shop before leaving your island", "Bridging backwards is faster than ez bridging", "Fight for the centre generators, because Diamond and Moonstone buy the best gear", "Buy an Alarm so you know when enemies reach your base"],
-      similarGames: ["luckyBedwars", "skywars", "luckyTowers"],
-      faq: [{
-        question: "What is Bedwars?",
-        answer: "Bedwars is a team PvP strategy game where you protect your bed and destroy everyone else's. Bloxd's version adds team upgrades, match modifiers and a Ranked lobby."
-      }, {
-        question: "How do you win Bedwars?",
-        answer: "Be the last team standing. Destroy the other teams' beds so they can't respawn, then eliminate them before the arena shrinks."
-      }, {
-        question: "What happens after your bed is destroyed?",
-        answer: "You can't respawn. If you die after your bed is gone, you become a spectator."
-      }, {
-        question: "What do the Bedwars generators do?",
-        answer: "Your island's generators drop Coal, Iron Bars and Diamond for items and upgrades. The generators in the centre drop Diamond and Moonstone for the most powerful items."
-      }, {
-        question: "What modes can I play in Bloxd Bedwars?",
-        answer: "Solos, Duos, Trios, 4v4, 4v4v4v4 and 1v1. There's also a Ranked Bedwars lobby if you want to climb the leaderboards."
-      }, {
-        question: "What are match modifiers?",
-        answer: "Some matches add a twist. In Supercharged, every generator starts at Level 2. In Boom, explosives are half price. Weapon Roulette gives you a new random weapon every respawn, and in Specialists you pick a role with special perks."
-      }, {
-        question: "Can I attack my teammates?",
-        answer: "No, you can't attack players on your own team."
-      }, {
-        question: "How many Bedwars maps are there?",
-        answer: "Dozens, including Scary Hollow, Wood Factory, Ahoy!, Colosseum and Rooftops."
-      }, {
-        question: "What's the difference between Bedwars and Lucky Bedwars?",
-        answer: "In Bedwars you collect Coal, Iron Bars, Diamond and Moonstone from generators and choose what to buy. Lucky Bedwars hands out gear through Lucky Blocks instead, so no two matches play out the same."
-      }]
+    var OM = iM(1367),
+      SM = iM(1177),
+      jM = iM(3868),
+      aM = iM(625),
+      PM = iM(1821);
+    const nM = "https://assets.msn.com/staticsb/statics/latest/msstart-games-sdk/msstart-v1.0.0-rc.23.min.js";
+    let QM = null;
+
+    function zM() {
+      return QM ??= async function() {
+        await (0, SM.d)(nM, {}, !1);
+        for (let MM = 0; MM < 50 && !window.$msstart; MM++) await (0, aM.Q)(100)
+      }(), QM
+    }
+    class LM {
+      constructor() {}
+      static async setup() {
+        if (null !== (0, PM.b)()) return new LM;
+        try {
+          await Promise.race([zM(), (0, aM.Q)(1e4).then((() => {
+            throw new Error("Not loaded after 10000ms")
+          }))])
+        } catch (MM) {
+          return console.error("MSN Play SDK failed to load, so MSN Play accounts are unavailable:", MM), null
+        }
+        return window.$msstart ? new LM : (console.error("MSN Play SDK script loaded but window.$msstart is missing, so MSN Play accounts are unavailable"), null)
+      }
+      async getSignedInUser() {
+        const MM = (0, PM.b)();
+        if (null !== MM) return MM;
+        try {
+          return await Promise.race([window.$msstart.getSignedInUserAsync(), (0, aM.Q)(1e4).then((() => {
+            throw new Error("No answer after 10000ms")
+          }))])
+        } catch (rM) {
+          return "USER_NOT_CONSENTED" !== (null === rM || void 0 === rM ? void 0 : rM.code) && console.error("Failed to get the signed-in MSN Play player:", rM), null
+        }
+      }
+      async signIn() {
+        var MM;
+        return null !== (MM = (0, PM.b)()) && void 0 !== MM ? MM : await window.$msstart.signInAsync()
+      }
+    }
+    const mM = 20,
+      HM = {
+        top: [{
+          width: 970,
+          height: 250
+        }, {
+          width: 728,
+          height: 90
+        }, {
+          width: 320,
+          height: 50
+        }],
+        right: [{
+          width: 300,
+          height: 600
+        }, {
+          width: 160,
+          height: 600
+        }, {
+          width: 300,
+          height: 250
+        }, {
+          width: 320,
+          height: 50
+        }],
+        left: [{
+          width: 300,
+          height: 600
+        }, {
+          width: 160,
+          height: 600
+        }, {
+          width: 300,
+          height: 250
+        }, {
+          width: 320,
+          height: 50
+        }]
+      },
+      hM = {
+        leaderboard: {
+          1: ["right", "left"],
+          5: ["top", "left"]
+        },
+        square: {
+          1: []
+        },
+        skyscraper: {
+          2: []
+        }
+      };
+    class JM extends OM.d {
+      constructor() {
+        super(), this.name = "msn", this.currentlyShowingBannerPlacement = null, this.isCurrentlyClearingAllBanners = !1
+      }
+      static async setup() {
+        return await zM(), new JM
+      }
+      playVideoAd(MM, rM) {
+        this.playVideoOrRewarded("video", MM, MM)
+      }
+      playRewarded(MM, rM) {
+        this.playVideoOrRewarded("rewarded", MM, rM)
+      }
+      canShowBloxdAd(MM) {
+        for (const rM in hM)
+          if (MM.adId in hM[rM]) return !1;
+        return !0
+      }
+      async renderBanner(MM) {
+        if (null !== this.currentlyShowingBannerPlacement) return void console.log(`AD ${(0,jM.b)(MM)}: msn placement is already showing so not requesting`);
+        const rM = hM[MM.adType][MM.adId];
+        if ((0, aM.J)(rM)) return void console.warn(`AD ${(0,jM.b)(MM)}: no msn placement is configured for this bloxd placement so not showing any ad`);
+        const iM = [];
+        for (const OM of rM)
+          for (const MM of HM[OM])
+            if (MM.width <= window.innerWidth - 40 && MM.height <= window.innerHeight - 40) {
+              const rM = {
+                placement: OM,
+                width: MM.width,
+                height: MM.height
+              };
+              if (!iM.some((MM => yM(rM, MM)))) {
+                iM.push(rM);
+                break
+              }
+            } if (iM.length > 0) {
+          console.log(`AD ${(0,jM.b)(MM)}: Attempting to show msn units: `, iM);
+          const rM = iM.map((MM => `${MM.placement}:${MM.width}x${MM.height}`));
+          this.currentlyShowingBannerPlacement = {
+            placementId: (0, jM.b)(MM),
+            renderPromise: window.$msstart.showDisplayAdsAsync(rM).then((() => {
+              console.log(`AD ${(0,jM.b)(MM)}: Successfully request msn banner ad`)
+            })).catch((rM => {
+              console.log(`AD ${(0,jM.b)(MM)}: Error while requesting msn banner ad`, rM)
+            }))
+          }
+        } else console.warn(`AD ${(0,jM.b)(MM)}: couldn't find an msn unit that fit screen size`)
+      }
+      async clearBanner(MM) {
+        null !== this.currentlyShowingBannerPlacement && (0, jM.b)(MM) === this.currentlyShowingBannerPlacement.placementId && (console.log(`AD ${(0,jM.b)(MM)}: Attempting to clear msn banner ads for banner`, MM), await this.clearAllBannerAds())
+      }
+      async clearAllBannerAds() {
+        try {
+          if (this.isCurrentlyClearingAllBanners) return;
+          this.isCurrentlyClearingAllBanners = !0, null !== this.currentlyShowingBannerPlacement && await this.currentlyShowingBannerPlacement.renderPromise, await window.$msstart.hideDisplayAdsAsync(), console.log("AD: Successfully cleared all msn banner ads")
+        } catch (MM) {
+          console.log("AD: Error while clearing all msn banner ads", MM)
+        } finally {
+          this.currentlyShowingBannerPlacement = null, this.isCurrentlyClearingAllBanners = !1
+        }
+      }
+      playVideoOrRewarded(MM, rM, iM) {
+        const OM = rM => {
+          console.error(`AD: Error while playing MSN ${MM} ad: `, rM), document.getElementById("GenericVideoWrapper").style.display = "none", window.adCompleteSoResume(), iM()
+        };
+        if (window.$msstart) {
+          console.log(`AD: Attempting to play MSN ${MM} ad`), document.getElementById("GenericVideoWrapper").style.display = "flex";
+          const iM = async () => {
+            try {
+              const iM = await window.$msstart.loadAdsAsync("rewarded" === MM),
+                OM = await window.$msstart.showAdsAsync(iM.instanceId);
+              this.clearAllBannerAds(), await OM.showAdsCompletedAsync, console.log(`AD: Successfully finished MSN ${MM} ad`), document.getElementById("GenericVideoWrapper").style.display = "none", window.adCompleteSoResume(), rM()
+            } catch (iM) {
+              OM(iM)
+            }
+          };
+          window.adStartSoPause(null, {
+            preventMovement: !0
+          }), iM()
+        } else OM(`AD: Can't play MSN ${MM} ad because sdk is not loaded`)
+      }
+    }
+
+    function dM(MM) {
+      let rM, iM;
+      switch (MM.placement) {
+        case "top":
+          rM = (window.innerWidth - MM.width) / 2, iM = mM;
+          break;
+        case "right":
+          rM = window.innerWidth - MM.width - mM, iM = window.innerHeight / 2 - MM.height / 2 - 10;
+          break;
+        case "left":
+          rM = mM, iM = window.innerHeight / 2 - MM.height / 2 - 10
+      }
+      return {
+        x1: rM,
+        y1: iM,
+        x2: rM + MM.width,
+        y2: iM + MM.height
+      }
+    }
+
+    function yM(MM, rM) {
+      const iM = dM(MM),
+        OM = dM(rM);
+      return !(iM.x2 <= OM.x1 || OM.x2 <= iM.x1 || iM.y2 <= OM.y1 || OM.y2 <= iM.y1)
     }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

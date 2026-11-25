@@ -1,293 +1,382 @@
 export const id = 203;
 export const ids = [203];
 export const modules = {
-  41948: (GG, bG, ZG) => {
-    ZG.r(bG), ZG.d(bG, {
-      MobPreview: () => pG
-    });
-    var wG = ZG(51),
-      SG = ZG(1006),
-      LG = ZG.n(SG),
-      yG = ZG(41956),
-      kG = ZG(34515),
-      UG = ZG(41960),
-      YG = ZG(1067);
+  38710: (MM, rM, iM) => {
+    var OM = iM(38716);
 
-    function VG(GG) {
-      return kG.d.openMob(GG)
+    function SM(MM) {
+      for (var rM, iM, SM = 0, jM = MM.length, aM = 0; aM < MM.length;) {
+        for (rM = MM[aM], iM = 0; aM < jM && MM[aM] === rM;) ++aM, ++iM;
+        SM += OM.log2(iM) / 7 | 0, SM += OM.log2(rM >>> 0) / 7 | 0, SM += 2
+      }
+      return SM
     }
-    const pG = (0, wG.memo)((function(GG) {
-      let {
-        mobType: bG,
-        variation: ZG = null,
-        animation: SG = UG.g,
-        className: kG
-      } = GG;
-      const pG = (0, wG.useRef)(null),
-        fG = (0, wG.useMemo)((() => ({
-          mobType: bG,
-          variation: ZG,
-          animation: SG
-        })), [bG, ZG, SG]);
-      return (0, yG.b)(pG, VG, fG), (0, YG.jsx)("div", {
-        className: LG()("MobPreview", kG),
-        ref: pG
-      })
-    }))
-  },
-  41956: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => LG
-    });
-    var wG = ZG(51),
-      SG = ZG(2732);
-
-    function LG(GG, bG, ZG) {
-      const LG = (0, wG.useRef)(null),
-        {
-          width: yG,
-          height: kG
-        } = (0, SG.d)(GG);
-      (0, wG.useEffect)((() => {
-        const ZG = bG(GG.current);
-        return LG.current = ZG, () => {
-          ZG.close(), LG.current = null
-        }
-      }), [GG, bG]), (0, wG.useEffect)((() => {
-        yG <= 0 || kG <= 0 || LG.current.resize(yG, kG)
-      }), [yG, kG]), (0, wG.useEffect)((() => {
-        LG.current.show(ZG)
-      }), [ZG])
+    rM.size = SM, rM.encode = function(MM, rM) {
+      rM || (rM = new Uint8Array(SM(MM)));
+      for (var iM, OM, jM = 0, aM = rM.length, PM = 0; PM < MM.length;) {
+        for (iM = MM[PM], OM = 0; PM < MM.length && MM[PM] === iM;) ++PM, ++OM;
+        for (; jM < aM && OM >= 128;) rM[jM++] = 128 + (127 & OM), OM >>>= 7;
+        if (jM >= aM) throw new Error("RLE buffer overflow");
+        for (rM[jM++] = OM, iM >>>= 0; jM < aM && iM >= 128;) rM[jM++] = 128 + (127 & iM), iM >>>= 7;
+        if (jM >= aM) throw new Error("RLE buffer overflow");
+        rM[jM++] = iM
+      }
+      return rM
+    }, rM.decode = function(MM, rM) {
+      for (var iM, OM, SM, jM, aM = rM.length, PM = MM.length, nM = 0, QM = 0; QM < PM;) {
+        for (iM = 0, OM = 0; QM < PM && MM[QM] >= 128;) iM += (127 & MM[QM++]) << OM, OM += 7;
+        if (iM += MM[QM++] << OM, QM >= PM) throw new Error("RLE buffer underrun");
+        if (nM + iM > aM) throw new Error("Chunk buffer overflow");
+        for (SM = 0, OM = 0; QM < PM && MM[QM] >= 128;) SM += (127 & MM[QM++]) << OM, OM += 7;
+        if (QM >= PM) throw new Error("RLE buffer underrun");
+        for (SM += MM[QM++] << OM, jM = 0; jM < iM; ++jM) rM[nM++] = SM
+      }
+      return rM
     }
   },
-  41960: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => fG,
-      e: () => pG,
-      g: () => UG
-    });
-    var wG = ZG(37503),
-      SG = ZG(39061);
-
-    function LG(GG, bG) {
-      let [ZG, wG, SG] = GG;
-      return [0, .5, 1].map((GG => ({
-        timeFraction: GG,
-        rotation: {
-          Bw: "catmull-rom-spline",
-          point: [ZG, wG, SG + (.5 === GG ? bG : 0)]
-        }
-      })))
+  38716: (MM, rM) => {
+    function iM(MM) {
+      var rM = 32;
+      return (MM &= -MM) && rM--, 65535 & MM && (rM -= 16), 16711935 & MM && (rM -= 8), 252645135 & MM && (rM -= 4), 858993459 & MM && (rM -= 2), 1431655765 & MM && (rM -= 1), rM
     }
-
-    function yG(GG, bG, ZG) {
-      return {
-        tw: 3200,
-        loop: !0,
-        Nw: {
-          Root: {
-            timeline: [0, .5, 1].map((GG => ({
-              timeFraction: GG,
-              position: {
-                Bw: "catmull-rom-spline",
-                point: [0, .5 === GG ? .18 : 0, 0]
-              }
-            })))
-          },
-          HeadMesh: {
-            timeline: [0, .25, .75, 1].map((GG => ({
-              timeFraction: GG,
-              rotation: {
-                Bw: "catmull-rom-spline",
-                point: [0, .25 === GG ? .12 : .75 === GG ? -.12 : 0, 0]
-              }
-            })))
-          },
-          ArmLeftMesh: {
-            timeline: LG(GG, ZG)
-          },
-          ArmRightMesh: {
-            timeline: LG(bG, -ZG)
+    rM.INT_BITS = 32, rM.INT_MAX = 2147483647, rM.INT_MIN = -1 << 31, rM.sign = function(MM) {
+      return (MM > 0) - (MM < 0)
+    }, rM.abs = function(MM) {
+      var rM = MM >> 31;
+      return (MM ^ rM) - rM
+    }, rM.min = function(MM, rM) {
+      return rM ^ (MM ^ rM) & -(MM < rM)
+    }, rM.max = function(MM, rM) {
+      return MM ^ (MM ^ rM) & -(MM < rM)
+    }, rM.isPow2 = function(MM) {
+      return !(MM & MM - 1) && !!MM
+    }, rM.log2 = function(MM) {
+      var rM, iM;
+      return rM = (MM > 65535) << 4, rM |= iM = ((MM >>>= rM) > 255) << 3, rM |= iM = ((MM >>>= iM) > 15) << 2, (rM |= iM = ((MM >>>= iM) > 3) << 1) | (MM >>>= iM) >> 1
+    }, rM.log10 = function(MM) {
+      return MM >= 1e9 ? 9 : MM >= 1e8 ? 8 : MM >= 1e7 ? 7 : MM >= 1e6 ? 6 : MM >= 1e5 ? 5 : MM >= 1e4 ? 4 : MM >= 1e3 ? 3 : MM >= 100 ? 2 : MM >= 10 ? 1 : 0
+    }, rM.popCount = function(MM) {
+      return 16843009 * ((MM = (858993459 & (MM -= MM >>> 1 & 1431655765)) + (MM >>> 2 & 858993459)) + (MM >>> 4) & 252645135) >>> 24
+    }, rM.countTrailingZeros = iM, rM.nextPow2 = function(MM) {
+      return MM += 0 === MM, --MM, MM |= MM >>> 1, MM |= MM >>> 2, MM |= MM >>> 4, MM |= MM >>> 8, (MM |= MM >>> 16) + 1
+    }, rM.prevPow2 = function(MM) {
+      return MM |= MM >>> 1, MM |= MM >>> 2, MM |= MM >>> 4, MM |= MM >>> 8, (MM |= MM >>> 16) - (MM >>> 1)
+    }, rM.parity = function(MM) {
+      return MM ^= MM >>> 16, MM ^= MM >>> 8, MM ^= MM >>> 4, 27030 >>> (MM &= 15) & 1
+    };
+    var OM = new Array(256);
+    ! function(MM) {
+      for (var rM = 0; rM < 256; ++rM) {
+        var iM = rM,
+          OM = rM,
+          SM = 7;
+        for (iM >>>= 1; iM; iM >>>= 1) OM <<= 1, OM |= 1 & iM, --SM;
+        MM[rM] = OM << SM & 255
+      }
+    }(OM), rM.reverse = function(MM) {
+      return OM[255 & MM] << 24 | OM[MM >>> 8 & 255] << 16 | OM[MM >>> 16 & 255] << 8 | OM[MM >>> 24 & 255]
+    }, rM.interleave2 = function(MM, rM) {
+      return (MM = 1431655765 & ((MM = 858993459 & ((MM = 252645135 & ((MM = 16711935 & ((MM &= 65535) | MM << 8)) | MM << 4)) | MM << 2)) | MM << 1)) | (rM = 1431655765 & ((rM = 858993459 & ((rM = 252645135 & ((rM = 16711935 & ((rM &= 65535) | rM << 8)) | rM << 4)) | rM << 2)) | rM << 1)) << 1
+    }, rM.deinterleave2 = function(MM, rM) {
+      return (MM = 65535 & ((MM = 16711935 & ((MM = 252645135 & ((MM = 858993459 & ((MM = MM >>> rM & 1431655765) | MM >>> 1)) | MM >>> 2)) | MM >>> 4)) | MM >>> 16)) << 16 >> 16
+    }, rM.interleave3 = function(MM, rM, iM) {
+      return MM = 1227133513 & ((MM = 3272356035 & ((MM = 251719695 & ((MM = 4278190335 & ((MM &= 1023) | MM << 16)) | MM << 8)) | MM << 4)) | MM << 2), (MM |= (rM = 1227133513 & ((rM = 3272356035 & ((rM = 251719695 & ((rM = 4278190335 & ((rM &= 1023) | rM << 16)) | rM << 8)) | rM << 4)) | rM << 2)) << 1) | (iM = 1227133513 & ((iM = 3272356035 & ((iM = 251719695 & ((iM = 4278190335 & ((iM &= 1023) | iM << 16)) | iM << 8)) | iM << 4)) | iM << 2)) << 2
+    }, rM.deinterleave3 = function(MM, rM) {
+      return (MM = 1023 & ((MM = 4278190335 & ((MM = 251719695 & ((MM = 3272356035 & ((MM = MM >>> rM & 1227133513) | MM >>> 2)) | MM >>> 4)) | MM >>> 8)) | MM >>> 16)) << 22 >> 22
+    }, rM.nextCombination = function(MM) {
+      var rM = MM | MM - 1;
+      return rM + 1 | (~rM & -~rM) - 1 >>> iM(MM) + 1
+    }
+  },
+  40924: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      emptyColumnHeight: () => EM,
+      loadHeatmapSchematic: () => UM,
+      readSchematicBlocks: () => GM
+    });
+    var OM = iM(4136),
+      SM = iM.n(OM),
+      jM = iM(4118),
+      aM = iM(38710),
+      PM = iM(181),
+      nM = iM(9816),
+      QM = iM(40543);
+    const zM = [{
+        name: "x",
+        type: "int"
+      }, {
+        name: "y",
+        type: "int"
+      }, {
+        name: "z",
+        type: "int"
+      }],
+      LM = [{
+        name: "name",
+        type: "string"
+      }, {
+        name: "startOffset",
+        type: {
+          type: "record",
+          fields: zM
+        }
+      }, {
+        name: "dimensions",
+        type: {
+          type: "record",
+          fields: zM
+        }
+      }, {
+        name: "chunkData",
+        type: {
+          type: "array",
+          items: {
+            type: "record",
+            fields: [...zM, {
+              name: "rle",
+              type: "bytes"
+            }]
           }
         }
-      }
-    }
-    const kG = yG([0, 0, 0], [0, 0, 0], .07),
-      UG = (0, SG.c)((0, wG.i)(kG), "mobIdle"),
-      YG = yG([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
-      VG = yG([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
-      pG = (0, SG.c)((0, wG.i)(YG), "gunReady"),
-      fG = (0, SG.c)((0, wG.i)(VG), "gunAimed")
-  },
-  34519: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => yG,
-      e: () => SG,
-      f: () => VG
-    });
-    var wG = ZG(1509);
-
-    function SG(GG) {
-      var bG;
+      }],
+      mM = SM().Type.forSchema({
+        type: "record",
+        fields: LM
+      }),
+      HM = SM().Type.forSchema({
+        type: "record",
+        fields: [...LM, {
+          name: "blockData",
+          type: {
+            type: "array",
+            items: {
+              type: "record",
+              fields: [...zM, {
+                name: "data",
+                type: "bytes"
+              }]
+            }
+          }
+        }, {
+          name: "pasteOffset",
+          type: {
+            type: "record",
+            fields: zM
+          }
+        }]
+      }),
+      hM = 2,
+      JM = 6,
+      dM = 16,
+      yM = 4096,
+      lM = PM.f.HL,
+      EM = -2147483648;
+    async function UM(MM) {
+      const rM = await (0, QM.b)(),
+        iM = await GM(new Uint8Array(await MM.arrayBuffer()), (MM => rM.get(MM)));
       return {
-        ...yG.store,
-        yaw: yG.store.yaw + (null !== (bG = wG.d[GG].previewYaw) && void 0 !== bG ? bG : 0)
+        surface: iM.surface,
+        topDown: eM(iM.columnTops)
       }
     }
-    const LG = {
-        yaw: .61 * Math.PI,
-        pitch: Math.PI / 2.05,
-        radius: 30,
-        target: [0, 0, 0]
-      },
-      yG = {
-        player: LG,
-        store: {
-          ...LG,
-          radius: 33,
-          target: [0, 3.9, 0]
-        }
-      };
+    async function GM(MM, rM) {
+      var iM;
+      if (MM.byteLength < 4) throw new Error("The file is too short to be a schematic.");
+      const OM = new DataView(MM.buffer, MM.byteOffset, MM.byteLength).getUint32(0, !0);
+      if (OM > JM) throw new Error("The file isn't a schematic this version of Bloxd can read.");
+      const SM = (OM >= hM ? HM : mM).decode(jM.Vz.from(MM.subarray(4)), 0).value;
+      if (!SM) throw new Error("The file isn't a schematic.");
+      if (0 === SM.chunkData.length) throw new Error("The schematic has no blocks in it.");
+      const PM = null !== (iM = SM.pasteOffset) && void 0 !== iM ? iM : {
+          x: 0,
+          y: 0,
+          z: 0
+        },
+        nM = [PM.x, PM.y, PM.z].map((MM => Math.floor(MM / lM))),
+        QM = SM.chunkData.map((MM => ({
+          x: MM.x + nM[0],
+          y: MM.y + nM[1],
+          z: MM.z + nM[2],
+          rle: MM.rle
+        }))),
+        zM = new Map;
+      for (const [jM, mM] of QM.entries()) {
+        const MM = new Uint16Array(lM ** 3);
+        aM.decode(mM.rle, MM), zM.set(`${mM.x},${mM.y},${mM.z}`, MM), jM % dM === dM - 1 && await bM()
+      }
+      const LM = (MM, rM, iM) => MM * lM * lM + rM * lM + iM,
+        yM = (MM, rM, iM) => {
+          var OM, SM;
+          const jM = Math.floor(MM / lM),
+            aM = Math.floor(rM / lM),
+            PM = Math.floor(iM / lM);
+          return null !== (OM = null === (SM = zM.get(`${jM},${aM},${PM}`)) || void 0 === SM ? void 0 : SM[LM(MM - jM * lM, rM - aM * lM, iM - PM * lM)]) && void 0 !== OM ? OM : 0
+        },
+        UM = new Map,
+        GM = [],
+        eM = [];
+      for (const [jM, aM] of QM.entries()) {
+        const MM = zM.get(`${aM.x},${aM.y},${aM.z}`),
+          iM = [aM.x * lM, aM.y * lM, aM.z * lM],
+          OM = (rM, OM, SM) => rM < 0 || OM < 0 || SM < 0 || rM >= lM || OM >= lM || SM >= lM ? yM(iM[0] + rM, iM[1] + OM, iM[2] + SM) : MM[LM(rM, OM, SM)],
+          SM = `${aM.x},${aM.z}`;
+        let PM = UM.get(SM);
+        void 0 === PM && (PM = {
+          chunkX: aM.x,
+          chunkZ: aM.z,
+          heights: new Int32Array(lM * lM).fill(EM),
+          colours: new Uint8Array(lM * lM * 3)
+        }, UM.set(SM, PM));
+        for (let jM = 0; jM < lM; jM++)
+          for (let SM = 0; SM < lM; SM++)
+            for (let aM = 0; aM < lM; aM++) {
+              const nM = MM[LM(jM, SM, aM)];
+              if (0 === nM) continue;
+              const QM = iM[0] + jM,
+                zM = iM[1] + SM,
+                mM = iM[2] + aM,
+                HM = rM(nM);
+              if (null === HM) continue;
+              const hM = aM * lM + jM;
+              zM > PM.heights[hM] && (PM.heights[hM] = zM, PM.colours.set(HM, 3 * hM));
+              !CM(nM) && (CM(OM(jM + 1, SM, aM)) || CM(OM(jM - 1, SM, aM)) || CM(OM(jM, SM + 1, aM)) || CM(OM(jM, SM - 1, aM)) || CM(OM(jM, SM, aM + 1)) || CM(OM(jM, SM, aM - 1))) && (GM.push(QM, zM, mM), eM.push(HM[0], HM[1], HM[2]))
+            }
+        jM % dM === dM - 1 && await bM()
+      }
+      if (0 === GM.length) throw new Error("The schematic has no blocks in it.");
+      return {
+        name: SM.name,
+        surface: {
+          positions: Int32Array.from(GM),
+          colours: Uint8Array.from(eM),
+          count: GM.length / 3
+        },
+        columnTops: [...UM.values()]
+      }
+    }
 
-    function kG(GG, bG) {
-      GG instanceof Promise ? GG.then(bG).catch((GG => {
-        console.error("Couldn't open the preview", GG)
-      })) : bG(GG)
+    function CM(MM) {
+      if (0 === MM) return !0;
+      const rM = nM.k[MM];
+      return void 0 === rM || rM.CH || rM.transTex || !1 === rM.solid
     }
-    class UG {
-      constructor(GG) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, kG(GG, (GG => {
-          this.closed ? GG.close() : (this.opened = GG, null !== this.size && GG.resize(this.size.width, this.size.height), null !== this.view && GG.show(this.view))
-        }))
-      }
-      show(GG) {
-        var bG;
-        this.view = GG, null === (bG = this.opened) || void 0 === bG || bG.show(GG)
-      }
-      resize(GG, bG) {
-        var ZG;
-        this.size = {
-          width: GG,
-          height: bG
-        }, null === (ZG = this.opened) || void 0 === ZG || ZG.resize(GG, bG)
-      }
-      close() {
-        var GG;
-        this.closed = !0, null === (GG = this.opened) || void 0 === GG || GG.close(), this.opened = null
-      }
-    }
-    class YG {
-      constructor(GG) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(GG).then((GG => GG.ready)), kG(GG, (GG => {
-          this.closed ? GG.close() : (this.opened = GG, null !== this.size && GG.resize(this.size.width, this.size.height))
-        }))
-      }
-      get dev() {
-        return this.opened.dev
-      }
-      isReady() {
-        var GG, bG;
-        return null !== (GG = null === (bG = this.opened) || void 0 === bG ? void 0 : bG.isReady()) && void 0 !== GG && GG
-      }
-      setCosmetic(GG, bG) {
-        var ZG;
-        null === (ZG = this.opened) || void 0 === ZG || ZG.setCosmetic(GG, bG)
-      }
-      playEmote(GG) {
-        var bG;
-        null === (bG = this.opened) || void 0 === bG || bG.playEmote(GG)
-      }
-      setOrbit(GG) {
-        var bG;
-        null === (bG = this.opened) || void 0 === bG || bG.setOrbit(GG)
-      }
-      resetCamera() {
-        var GG;
-        null === (GG = this.opened) || void 0 === GG || GG.resetCamera()
-      }
-      async untilDrawn(GG) {
-        var bG;
-        await this.ready, await (null === (bG = this.opened) || void 0 === bG ? void 0 : bG.untilDrawn(GG))
-      }
-      resize(GG, bG) {
-        var ZG;
-        this.size = {
-          width: GG,
-          height: bG
-        }, null === (ZG = this.opened) || void 0 === ZG || ZG.resize(GG, bG)
-      }
-      close() {
-        var GG;
-        this.closed = !0, null === (GG = this.opened) || void 0 === GG || GG.close(), this.opened = null
-      }
-    }
-    const VG = new class {
-      constructor() {
-        this.host = null, this.makeDefault = null
-      }
-      setHost(GG) {
-        this.host = GG
-      }
-      setDefaultHost(GG) {
-        this.makeDefault = GG
-      }
-      current() {
-        if (null === this.host) {
-          if (null === this.makeDefault) throw new Error("no preview host");
-          this.host = this.makeDefault()
+
+    function eM(MM) {
+      let rM = 1 / 0,
+        iM = -1 / 0,
+        OM = 1 / 0,
+        SM = -1 / 0;
+      for (const {
+          chunkX: hM,
+          chunkZ: JM,
+          heights: dM
         }
-        return this.host
+        of MM) dM.forEach(((MM, jM) => {
+        if (MM === EM) return;
+        const aM = hM * lM + jM % lM,
+          PM = JM * lM + Math.floor(jM / lM);
+        rM = Math.min(rM, aM), iM = Math.max(iM, aM), OM = Math.min(OM, PM), SM = Math.max(SM, PM)
+      }));
+      const jM = iM - rM + 1,
+        aM = SM - OM + 1,
+        PM = Math.max(1, Math.ceil(jM / yM), Math.ceil(aM / yM)),
+        nM = Math.ceil(jM / PM),
+        QM = Math.ceil(aM / PM),
+        zM = document.createElement("canvas");
+      zM.width = nM, zM.height = QM;
+      const LM = zM.getContext("2d");
+      if (!LM) throw new Error("Couldn't draw the schematic from above.");
+      const mM = LM.createImageData(nM, QM),
+        HM = new Int32Array(nM * QM).fill(EM);
+      for (const {
+          chunkX: hM,
+          chunkZ: JM,
+          heights: dM,
+          colours: yM
+        }
+        of MM) dM.forEach(((MM, rM) => {
+        const SM = hM * lM + rM % lM,
+          jM = JM * lM + Math.floor(rM / lM),
+          aM = Math.floor((jM - OM) / PM) * nM + Math.floor((iM - SM) / PM);
+        MM === EM || MM <= HM[aM] || (HM[aM] = MM, mM.data.set(yM.subarray(3 * rM, 3 * rM + 3), 4 * aM), mM.data[4 * aM + 3] = 255)
+      }));
+      return LM.putImageData(mM, 0, 0), {
+        maxX: iM,
+        minZ: OM,
+        width: nM * PM,
+        depth: QM * PM,
+        canvas: zM
       }
-      openMob(GG) {
-        return new UG(this.current().openMob(GG))
+    }
+
+    function bM() {
+      return new Promise((MM => {
+        setTimeout(MM, 0)
+      }))
+    }
+  },
+  40543: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => SM
+    });
+    var OM = iM(40551);
+    async function SM() {
+      const {
+        averageColors: MM
+      } = await iM.e(231).then((() => iM(35131)));
+      return new OM.c(MM)
+    }
+  },
+  40551: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => PM,
+      g: () => aM
+    });
+    var OM = iM(9816);
+    const SM = {
+        Water: [63, 118, 228],
+        Lava: [232, 110, 30]
+      },
+      jM = [150, 150, 150],
+      aM = -2147483648;
+    class PM {
+      constructor(MM) {
+        this.averages = MM, this.byId = new Map
       }
-      openPet(GG) {
-        return new UG(this.current().openPet(GG))
+      get(MM) {
+        var rM, iM, aM, PM, nM;
+        const QM = this.byId.get(MM);
+        if (void 0 !== QM) return QM;
+        const zM = null !== (rM = null === (iM = OM.k[MM]) || void 0 === iM ? void 0 : iM.name) && void 0 !== rM ? rM : "",
+          LM = zM.split("|")[0],
+          mM = null !== (aM = this.averages[zM]) && void 0 !== aM ? aM : this.averages[LM],
+          HM = null !== (PM = null !== (nM = null === mM || void 0 === mM ? void 0 : mM[0]) && void 0 !== nM ? nM : SM[LM]) && void 0 !== PM ? PM : 0 === (null === mM || void 0 === mM ? void 0 : mM.length) ? null : jM;
+        return this.byId.set(MM, HM), HM
       }
-      openMobLineup(GG) {
-        return new UG(this.current().openMobLineup(GG))
+      getDrawnIds() {
+        const MM = new Uint8Array(65536);
+        for (let rM = 1; rM < 65536; rM++) void 0 !== OM.k[rM] && null !== this.get(rM) && (MM[rM] = 1);
+        return MM
       }
-      openCharacter(GG, bG) {
-        return new YG(this.current().openCharacter(GG, bG))
+      drawPixel(MM, rM, iM, OM, SM, jM) {
+        const PM = function(MM, rM, iM) {
+            const OM = MM - rM + (MM - iM);
+            return Math.max(.65, Math.min(1.2, .97 + .055 * OM))
+          }(OM, SM === aM ? OM : SM, jM === aM ? OM : jM),
+          nM = this.get(iM);
+        MM[rM] = nM[0] * PM, MM[rM + 1] = nM[1] * PM, MM[rM + 2] = nM[2] * PM, MM[rM + 3] = 255
       }
     }
   },
-  34515: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => wG.b,
-      c: () => wG.e,
-      d: () => wG.f
+  9918: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => SM,
+      e: () => jM
     });
-    var wG = ZG(34519);
-    class SG {
-      constructor(GG) {
-        this.load = GG, this.loaded = null, this.loading = null
-      }
-      run(GG) {
-        return null !== this.loaded ? GG(this.loaded) : (this.loading ??= this.load().then((GG => (this.loaded = GG, GG)), (GG => {
-          throw this.loading = null, GG
-        })), this.loading.then(GG))
-      }
-    }
-    class LG {
-      constructor() {
-        this.mobScene = new SG((() => Promise.all([ZG.e(73), ZG.e(237), ZG.e(236), ZG.e(258), ZG.e(98), ZG.e(259), ZG.e(76), ZG.e(75), ZG.e(256), ZG.e(74), ZG.e(266), ZG.e(260), ZG.e(265), ZG.e(263), ZG.e(255), ZG.e(279), ZG.e(233), ZG.e(249), ZG.e(261), ZG.e(264), ZG.e(78), ZG.e(188), ZG.e(227), ZG.e(97), ZG.e(239), ZG.e(230), ZG.e(246), ZG.e(121), ZG.e(247), ZG.e(77), ZG.e(251)]).then((() => ZG(41472))))), this.characterScene = new SG((() => Promise.all([ZG.e(73), ZG.e(237), ZG.e(236), ZG.e(258), ZG.e(98), ZG.e(259), ZG.e(76), ZG.e(75), ZG.e(256), ZG.e(74), ZG.e(266), ZG.e(260), ZG.e(265), ZG.e(263), ZG.e(255), ZG.e(279), ZG.e(233), ZG.e(249), ZG.e(261), ZG.e(264), ZG.e(78), ZG.e(188), ZG.e(227), ZG.e(97), ZG.e(239), ZG.e(230), ZG.e(246), ZG.e(121), ZG.e(247), ZG.e(77), ZG.e(250)]).then((() => ZG(41579)))))
-      }
-      openMob(GG) {
-        return this.mobScene.run((bG => bG.openMobPreview(GG)))
-      }
-      openPet(GG) {
-        return this.mobScene.run((bG => bG.openPetPreview(GG)))
-      }
-      openMobLineup(GG) {
-        return this.mobScene.run((bG => bG.openMobLineupPreview(GG)))
-      }
-      openCharacter(GG, bG) {
-        return this.characterScene.run((ZG => ZG.openCharacterPreview(GG, bG)))
-      }
-    }
-    wG.f.setDefaultHost((() => new LG))
+    var OM = iM(9863);
+    const SM = "Air",
+      jM = Object.freeze(new OM.c(SM, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);

@@ -1,860 +1,442 @@
 export const id = 228;
 export const ids = [228];
 export const modules = {
-  40021: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => wG,
-      i: () => SG
+  35103: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => SM,
+      e: () => jM
     });
-    const wG = "The world isn't loaded, so no blocks can be seen.",
-      SG = "The world isn't loaded, so nothing in it can be seen."
-  },
-  39519: (GG, bG, ZG) => {
-    function wG(GG) {
-      return !(!GG.lobbyLeaderboardInfo && !GG.lobbyManage)
-    }
-    ZG.d(bG, {
-      b: () => wG
-    })
-  },
-  37167: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      b: () => LG,
-      c: () => SG
-    });
-    let wG = () => null;
+    var OM = iM(3657);
 
-    function SG(GG) {
-      wG = GG
+    function SM() {
+      if ("undefined" === typeof BroadcastChannel) return null;
+      const MM = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      try {
+        const rM = new BroadcastChannel(OM.i);
+        rM.postMessage({
+          stored: MM
+        }), rM.close()
+      } catch {
+        return null
+      }
+      return MM
     }
 
-    function LG(GG, bG) {
-      return wG(GG, bG)
+    function jM(MM) {
+      const rM = "object" === typeof MM && null !== MM ? MM.stored : null;
+      return "string" === typeof rM ? rM : null
     }
   },
-  40984: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => hG,
-      d: () => zG,
-      e: () => rG,
-      g: () => dG
+  35100: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => aM,
+      f: () => SM,
+      g: () => jM
     });
-    var wG = ZG(19),
-      SG = ZG(40986),
-      LG = ZG(40971),
-      yG = ZG(40989),
-      kG = ZG(40976),
-      UG = ZG(40993),
-      YG = ZG(41012);
-
-    function VG(GG) {
-      var bG, ZG;
-      const wG = (0, LG.f)();
-      return wG ? null === (bG = (0, SG.d)(wG.api, GG[0], GG[1], GG[2])) || void 0 === bG || null === (ZG = bG.persisted) || void 0 === ZG ? void 0 : ZG.shared : void 0
+    var OM = iM(3657);
+    async function SM(MM, rM, iM) {
+      let SM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const jM = aM(await MM.getItem(OM.e, rM));
+      if (null === jM || SM()) return null;
+      const PM = await MM.getItem(OM.f, rM);
+      return SM() ? null : (await async function(MM) {
+        await Promise.all([MM.removeItem(OM.e), MM.removeItem(OM.f)])
+      }(MM).catch(iM), {
+        pack: jM,
+        source: "string" === typeof PM ? PM : null
+      })
     }
 
-    function pG(GG) {
-      return `${GG[0]},${GG[1]},${GG[2]}`
-    }
-    const fG = new Map;
-    let QG = null,
-      KG = 0;
-
-    function hG() {
-      return KG
+    function jM(MM) {
+      return (0, OM.n)() ? Promise.resolve(null) : SM(MM, !1, (MM => {
+        console.error("Error removing temporary texture pack: ", MM)
+      }), OM.n)
     }
 
-    function dG(GG) {
-      const bG = null !== QG && QG.key === pG(GG.pos) ? QG.type : null;
-      if (null === bG) return GG;
-      let ZG = null;
-      if ("Iron" === bG) {
+    function aM(MM) {
+      if ("object" !== typeof MM || null === MM) return null;
+      const rM = MM.metaData;
+      return "object" !== typeof rM || null === rM || "string" !== typeof rM.id ? null : MM
+    }
+  },
+  53774: (MM, rM, iM) => {
+    function OM(MM) {
+      return null === MM.gameSource ? "player" : "customGame"
+    }
+    iM.d(rM, {
+      c: () => jM,
+      g: () => JM,
+      h: () => hM,
+      j: () => OM
+    });
+    const SM = /^data:[\w.+/-]*;base64,[A-Za-z0-9+/]*={0,2}$/;
+
+    function jM(MM) {
+      return "" === MM || "string" === typeof MM && SM.test(MM)
+    }
+
+    function aM(MM) {
+      return "object" === typeof MM && null !== MM && ("earth" === MM.type || Object.entries(MM).every((MM => {
+        let [rM, iM] = MM;
+        return "type" === rM || jM(iM)
+      })))
+    }
+    const PM = /(?:src|image|image-set|cross-fade)\(/i,
+      nM = /url\(\s*(?:"(?<doubleQuoted>[^"]*)"|'(?<singleQuoted>[^']*)'|(?<unquoted>[^"'()\s]*))\s*\)/gi,
+      QM = /url\(/gi,
+      zM = ["https://bloxd.invalid/", "http://bloxd.invalid/"],
+      LM = new Set([...zM.map((MM => new URL(MM).origin)), "https://fonts.gstatic.com"]),
+      mM = new Set(["https://i.imgur.com/MEcjBFQ.png"]);
+
+    function HM(MM) {
+      var rM, iM;
+      if (MM.includes("\\") || PM.test(MM)) return !0;
+      const OM = [...MM.matchAll(nM)];
+      return OM.length !== (null !== (rM = null === (iM = MM.match(QM)) || void 0 === iM ? void 0 : iM.length) && void 0 !== rM ? rM : 0) || !OM.every((MM => {
+        var rM, iM, OM;
+        let {
+          groups: SM
+        } = MM;
+        return function(MM) {
+          try {
+            return zM.every((rM => {
+              const iM = new URL(MM, rM);
+              return "data:" === iM.protocol || LM.has(iM.origin) || mM.has(iM.href)
+            }))
+          } catch {
+            return !1
+          }
+        }(null !== (rM = null !== (iM = null !== (OM = null === SM || void 0 === SM ? void 0 : SM.doubleQuoted) && void 0 !== OM ? OM : null === SM || void 0 === SM ? void 0 : SM.singleQuoted) && void 0 !== iM ? iM : null === SM || void 0 === SM ? void 0 : SM.unquoted) && void 0 !== rM ? rM : "")
+      }))
+    }
+
+    function hM(MM) {
+      var rM, iM, OM, SM, PM, nM, QM;
+      const zM = [...Object.values(null !== (rM = MM.textureOverrides) && void 0 !== rM ? rM : {}), ...Object.values(null !== (iM = MM.modelOverrides) && void 0 !== iM ? iM : {})],
+        LM = [...Object.values(null !== (OM = null === (SM = MM.customCss) || void 0 === SM ? void 0 : SM.fontFaces) && void 0 !== OM ? OM : {}), ...Object.values(null !== (PM = null === (nM = MM.customCss) || void 0 === nM ? void 0 : nM.classStyles) && void 0 !== PM ? PM : {})].flatMap((MM => Object.values(null !== MM && void 0 !== MM ? MM : {})));
+      return !zM.every(jM) || !Object.values(null !== (QM = MM.skyBoxes) && void 0 !== QM ? QM : {}).every(aM) || LM.some((MM => "string" === typeof MM && HM(MM)))
+    }
+
+    function JM(MM, rM) {
+      if (null === MM || "player" === rM || !hM(MM)) return MM;
+      const iM = {
+        ...MM
+      };
+      return MM.textureOverrides && (iM.textureOverrides = yM(MM.textureOverrides, jM, "texture")), MM.modelOverrides && (iM.modelOverrides = yM(MM.modelOverrides, jM, "model")), MM.skyBoxes && (iM.skyBoxes = yM(MM.skyBoxes, aM, "sky")), MM.customCss && (iM.customCss = function(MM) {
+        const rM = MM => yM(MM, (MM => "string" === typeof MM && !HM(MM)), "CSS"),
+          {
+            fontFaces: iM,
+            classStyles: OM
+          } = dM(MM) ? MM : {},
+          SM = {};
+        for (const [jM, aM] of Object.entries(dM(OM) ? OM : {})) SM[jM] = rM(aM);
+        return {
+          fontFaces: (Array.isArray(iM) ? iM : []).map(rM),
+          classStyles: SM
+        }
+      }(MM.customCss)), iM
+    }
+
+    function dM(MM) {
+      return "object" === typeof MM && null !== MM && !Array.isArray(MM)
+    }
+
+    function yM(MM, rM, iM) {
+      const OM = Object.entries(dM(MM) ? MM : {}),
+        SM = OM.filter((MM => {
+          let [, iM] = MM;
+          return !rM(iM)
+        }));
+      if (SM.length > 0) {
+        const MM = SM.map((MM => {
+          let [rM] = MM;
+          return rM
+        }));
+        console.warn(`Ignoring a custom game texture pack's ${iM} files that name another site: ${MM.join(", ")}`)
+      }
+      return Object.fromEntries(OM.filter((MM => {
+        let [, iM] = MM;
+        return rM(iM)
+      })))
+    }
+  },
+  53778: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => hM,
+      f: () => EM,
+      i: () => lM
+    });
+    var OM = iM(1073),
+      SM = iM(2263),
+      jM = iM(3647),
+      aM = iM(3657),
+      PM = iM(35103),
+      nM = iM(35100),
+      QM = iM(53774),
+      zM = iM(42090),
+      LM = iM(42065),
+      mM = iM(5463);
+    const HM = {
+      pack: null,
+      gameSource: null
+    };
+    class hM {
+      constructor(MM) {
+        this.host = MM, this.ready = void 0, this.state = HM, this.playerPack = null, this.onGamePack = !1, this.confirmGamePack = null, this.skippedKey = null, this.ownAnnouncements = new Set, this.listeners = new Map, this.ownListeners = new Set, this.changes = 0, this.picks = 0, this.playerPicked = !1, this.ownChanges = 0, this.dh = !1, (0, aM.j)(), this.ready = this.readStored()
+      }
+      readyWithin(MM) {
+        return Promise.race([this.ready, new Promise((rM => {
+          setTimeout(rM, MM)
+        }))])
+      }
+      current() {
+        return this.state
+      }
+      playerState() {
+        return {
+          pack: this.playerPack,
+          gameSource: null
+        }
+      }
+      onPlayerPackChange(MM) {
+        return this.ownListeners.add(MM), () => {
+          this.ownListeners.delete(MM)
+        }
+      }
+      isUsingCustomGameTexturePack(MM) {
+        return (0, LM.c)(this.state, MM)
+      }
+      setGamePackConfirm(MM) {
+        this.confirmGamePack = MM
+      }
+      subscribe(MM) {
+        return this.listeners.set(MM, null), this.ready.then((() => {
+          this.deliver(MM)
+        })), () => {
+          this.listeners.delete(MM)
+        }
+      }
+      async setPlayerPack(MM) {
+        const rM = dM(MM) ? null : MM;
+        this.picks++, this.playerPicked = !0, this.ownChanges++, this.setOwn(rM), this.change({
+          pack: rM,
+          gameSource: null
+        }, !1);
+        const iM = await this.storePlayerPack(rM);
+        return iM && this.announce(), iM
+      }
+      async packForGame(MM, rM, iM) {
+        await this.readyWithin(Math.max(0, (null !== iM && void 0 !== iM ? iM : performance.now() + zM.d) - performance.now()));
+        const SM = ++this.picks,
+          jM = (0, OM.m)(MM) ? (0, OM.p)(MM) : null;
+        if (null === jM) return void this.usePlayerPack();
+        let aM;
+        const PM = function(MM) {
+          let rM;
+          const iM = new Promise(((iM, OM) => {
+            rM = setTimeout((() => {
+              OM(new Error(`no answer in ${MM} ms`))
+            }), MM)
+          }));
+          return iM.catch((() => {})), {
+            passed: iM,
+            clear: () => {
+              clearTimeout(rM)
+            }
+          }
+        }(2e4);
+        try {
+          const MM = await Promise.race([rM.packKey(jM), PM.passed]);
+          if (null !== MM && this.onGamePack && this.state.gameSource === MM) return;
+          if (null !== MM && MM === this.skippedKey) return void(this.dh || this.picks !== SM || this.usePlayerPack());
+          aM = null === MM ? null : await Promise.race([JM(jM, MM, rM), PM.passed])
+        } catch (LM) {
+          const MM = !this.dh && this.picks === SM && this.holdsOtherGamePack(jM);
+          return this.host.warn(`the texture pack of ${jM} didn't load: ${MM?"the player's own shows":"the pack in play stays"}`, LM), void(MM && this.usePlayerPack())
+        } finally {
+          PM.clear()
+        }
+        if (this.dh || this.picks !== SM) return;
+        null !== aM && (0, QM.h)(aM.pack) && (this.host.warn(`the texture pack of ${jM} names files on other sites: the player's own shows`, null), aM = null);
+        const nM = null === aM || await this.confirmed(aM.pack, jM) ? null : aM.key;
+        this.dh || this.picks !== SM || (null !== nM && (this.skippedKey = nM, aM = null), null === aM ? this.usePlayerPack() : (this.onGamePack = !0, this.change({
+          pack: aM.pack,
+          gameSource: aM.key
+        }, !0)))
+      }
+      endGamePack() {
+        this.picks++, this.usePlayerPack()
+      }
+      holdsOtherGamePack(MM) {
+        return this.onGamePack && "" !== this.state.gameSource && !this.isUsingCustomGameTexturePack(MM)
+      }
+      async confirmed(MM, rM) {
+        const iM = this.confirmGamePack;
+        if (null === iM) return !0;
+        try {
+          return await iM(MM, rM)
+        } catch (OM) {
+          return this.host.warn(`the texture pack prompt of ${rM} failed: the pack is skipped`, OM), !1
+        }
+      }
+      async readPlayerPack() {
+        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        if (null !== MM && this.ownAnnouncements.delete(MM)) return;
+        await this.ready;
+        const rM = this.ownChanges;
+        let iM;
+        try {
+          iM = await this.host.store.getItem(aM.b, !0)
+        } catch (SM) {
+          return void this.host.warn("the stored texture pack didn't read again: the pack in play stays", SM)
+        }
+        if (this.dh || this.ownChanges !== rM) return;
+        const OM = yM(iM);
+        (0, mM.d)(OM, this.playerPack) || (this.ownChanges++, this.setOwn(OM), this.onGamePack || this.change({
+          pack: OM,
+          gameSource: null
+        }, !1))
+      }
+      joinedWithout() {
+        this.picks++
+      }
+      dispose() {
+        this.dh = !0, this.listeners.clear()
+      }
+      async readStored() {
         const {
-          cachedPasskey: bG,
-          ...wG
-        } = JG(GG.pos);
-        ZG = {
-          Wk: null !== bG && void 0 !== bG ? bG : [0, 0, 0, 0],
-          ...wG
-        }
+          store: MM,
+          warn: rM
+        } = this.host;
+        await Promise.all([!1 === this.host.oneShot ? void 0 : (0, nM.f)(MM, !0, (MM => {
+          rM("the custom game's texture pack wasn't removed from storage", MM)
+        })).then((MM => {
+          this.takeOneShot(MM)
+        }), (MM => {
+          rM("the custom game's texture pack didn't read: the player's own shows", MM)
+        })), MM.getItem(aM.b, !0).then((MM => {
+          this.takeStoredOwn(MM)
+        }), (MM => {
+          rM("the stored texture pack didn't read: the default pack shows", MM), this.takeStoredOwn(null)
+        }))]), this.update()
       }
-      return {
-        ...GG,
-        type: bG,
-        ironChest: ZG
-      }
-    }
-
-    function JG(GG) {
-      const bG = VG(GG),
-        ZG = null === bG || void 0 === bG ? void 0 : bG.ownerDbId,
-        wG = function(GG) {
-          var bG;
-          let ZG = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : VG(GG);
-          const wG = pG(GG),
-            SG = fG.get(wG);
-          return SG ? SG.lastOpened < (null !== (bG = null === ZG || void 0 === ZG ? void 0 : ZG.passkeyLastUpdated) && void 0 !== bG ? bG : 0) ? (fG.delete(wG), null) : [...SG.Wk] : null
-        }(GG, bG);
-      return void 0 === ZG ? {
-        cachedPasskey: wG
-      } : {
-        ownerDbId: ZG,
-        cachedPasskey: wG
-      }
-    }(0, YG.l)(yG.c, (GG => {
-      const bG = (0, UG.f)(yG.c, GG);
-      if (!(0, UG.d)(bG) || bG.HS) return;
-      if (KG++, !bG.qS || null === bG.eS) return void(QG = null);
-      const ZG = pG(bG.eS);
-      QG = {
-        key: ZG,
-        type: bG.gS
-      }, null !== bG.RS && fG.set(ZG, {
-        Wk: [...bG.RS],
-        lastOpened: Date.now()
-      })
-    })), (0, YG.f)((() => {
-      fG.clear(), QG = null, KG++
-    })), (0, YG.j)((() => {
-      null !== QG && (QG = null, KG++, wG.l.xh("chestToggleFromServer", !1, !0))
-    }));
-    const rG = {
-        boardEditRequested: {
-          watch: GG => (0, wG.p)("EditBoard", (bG => {
-            let {
-              pos: ZG
-            } = bG;
-            if (null === ZG) return void GG(null);
-            const wG = (0, LG.f)(),
-              SG = (0, LG.q)();
-            wG && SG && GG(SG.readBoardToEdit(wG.api, wG.chunks, ZG))
-          }))
-        },
-        ironChestOpenRequested: {
-          watch: GG => (0, wG.p)("OpenIronChest", (bG => {
-            let {
-              pos: ZG
-            } = bG;
-            GG(function(GG) {
-              return {
-                pos: GG,
-                ...JG(GG)
-              }
-            }(ZG))
-          }))
-        }
-      },
-      zG = {
-        writeOnBoard(GG) {
-          var bG;
-          let {
-            pos: ZG,
-            text: wG,
-            textSize: SG
-          } = GG;
-          null === (bG = (0, LG.f)()) || void 0 === bG || bG.send(kG.b.UpdateBoard, (0, kG.cb)({
-            uU: ZG,
-            iU: wG,
-            CU: SG
-          }))
-        },
-        writeBook(GG) {
-          var bG;
-          let {
-            pages: ZG,
-            title: wG,
-            published: SG
-          } = GG;
-          null === (bG = (0, LG.f)()) || void 0 === bG || bG.send(kG.b.UpdateBook, (0, kG.db)({
-            Dy: ZG,
-            Ny: wG,
-            Oy: SG
-          }))
-        },
-        writeNameTag(GG) {
-          var bG;
-          null === (bG = (0, LG.f)()) || void 0 === bG || bG.send(kG.b.UpdateNameTag, GG)
-        },
-        setCustomLobbyBlock(GG) {
-          let {
-            pos: bG,
-            blockName: ZG
-          } = GG;
-          const wG = (0, LG.q)(),
-            SG = (0, LG.f)();
-          wG && SG && SG.send(kG.b.SetCustomLobbyBlock, (0, kG.P)({
-            Gk: wG.blockIdOf(ZG),
-            xy: bG
-          }))
-        }
-      }
-  },
-  41027: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      e: () => UG,
-      i: () => yG,
-      l: () => kG
-    });
-    var wG = ZG(40954),
-      SG = ZG(4800),
-      LG = ZG(40971);
-
-    function yG() {
-      var GG;
-      const bG = null === (GG = (0, LG.f)()) || void 0 === GG ? void 0 : GG.api.localId;
-      return void 0 === bG || bG === wG.Wc ? null : String(bG)
-    }
-
-    function kG(GG) {
-      const bG = (0, LG.f)();
-      if (null !== bG) return GG(bG);
-      let ZG = null;
-      const wG = (0, SG.r)((() => {
-        const bG = (0, LG.f)();
-        null !== bG && null === ZG && (wG(), ZG = GG(bG))
-      }));
-      return () => {
-        var GG;
-        wG(), null === (GG = ZG) || void 0 === GG || GG()
-      }
-    }
-
-    function UG(GG, bG, ZG) {
-      return {
-        current: () => {
-          const ZG = (0, LG.f)();
-          return null === ZG ? bG : GG(ZG)()
-        },
-        watch: bG => kG((wG => {
-          const SG = GG(wG);
-          let LG = SG();
-          return bG(LG), ZG((() => {
-            const GG = SG();
-            GG !== LG && (LG = GG, bG(GG))
-          }))
+      takeOneShot(MM) {
+        var rM;
+        null === MM || this.dh || this.changes > 0 || this.picks > 0 || ((0, QM.h)(MM.pack) ? this.host.warn("the custom game's texture pack names files on other sites: the player's own shows", null) : (this.onGamePack = !0, this.state = {
+          pack: MM.pack,
+          gameSource: null !== (rM = MM.source) && void 0 !== rM ? rM : ""
         }))
       }
-    }
-  },
-  41020: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => YG
-    });
-    var wG = ZG(40971),
-      SG = ZG(41027),
-      LG = ZG(41031);
-
-    function yG() {
-      var GG, bG;
-      return null !== (GG = null === (bG = (0, wG.f)()) || void 0 === bG ? void 0 : bG.itemBridgeSources) && void 0 !== GG ? GG : LG.d
-    }
-
-    function kG(GG) {
-      return {
-        current: () => yG().states[GG].current(),
-        watch: bG => (0, SG.l)((ZG => {
-          const wG = ZG.itemBridgeSources.states[GG];
-          return bG(wG.current()), wG.watch(bG)
-        }))
-      }
-    }
-
-    function UG(GG) {
-      return {
-        watch: bG => (0, SG.l)((ZG => ZG.itemBridgeSources.events[GG].watch(bG)))
-      }
-    }
-    const YG = {
-      states: {
-        inventory: kG("inventory"),
-        hotbar: kG("hotbar"),
-        crafting: kG("crafting"),
-        heldItemAim: kG("heldItemAim")
-      },
-      events: {
-        hotbarSlotRequested: UG("hotbarSlotRequested"),
-        hotbarScrolled: UG("hotbarScrolled"),
-        numberKeyPressed: UG("numberKeyPressed"),
-        inventoryDropRequested: UG("inventoryDropRequested"),
-        chestToggled: UG("chestToggled"),
-        chestRefreshed: UG("chestRefreshed"),
-        inventorySynced: UG("inventorySynced"),
-        enchantingTableOpened: UG("enchantingTableOpened")
-      },
-      commands: {
-        selectHotbarSlot: GG => yG().commands.selectHotbarSlot(GG),
-        removeInventoryItem: GG => yG().commands.removeInventoryItem(GG),
-        swapInventorySlots: GG => yG().commands.swapInventorySlots(GG),
-        moveInventoryItem: GG => yG().commands.moveInventoryItem(GG),
-        quickMoveInventoryItem: GG => yG().commands.quickMoveInventoryItem(GG),
-        closeChest: GG => yG().commands.closeChest(GG),
-        focusCrafting: GG => yG().commands.focusCrafting(GG),
-        craftRecipe: GG => yG().commands.craftRecipe(GG),
-        salvageItem: GG => yG().commands.salvageItem(GG),
-        enchantItem: GG => yG().commands.enchantItem(GG)
-      },
-      queries: {
-        enchantingOffer: GG => yG().queries.enchantingOffer(GG)
-      }
-    }
-  },
-  41031: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => kG
-    });
-    var wG = ZG(40021);
-
-    function SG(GG) {
-      return {
-        current: () => GG,
-        watch: () => () => {}
-      }
-    }
-
-    function LG() {}
-    const yG = Object.freeze([0, 0, 0]),
-      kG = {
-        states: {
-          health: SG({
-            health: null,
-            maxHealth: null,
-            shield: null,
-            maxShield: null
-          }),
-          inventory: SG({
-            player: [],
-            chestOrCreative: [],
-            chest: null,
-            creative: !1,
-            selectedSlot: 0,
-            freeSlots: 0
-          }),
-          hotbar: SG({
-            items: [],
-            ammo: 0,
-            selectedSlot: null
-          }),
-          stationItems: SG({
-            enchantable: {},
-            salvageable: {}
-          }),
-          itemInfo: SG({}),
-          creativeVisibility: SG({
-            publicLobby: !1,
-            shownInGame: {}
-          }),
-          aura: SG(null),
-          heldItemAim: SG({
-            gun: !1,
-            aimable: !1,
-            chargeName: null
-          }),
-          crouching: SG(!1),
-          gliderBoostFuel: SG(0),
-          flight: SG({
-            canFly: !1,
-            flying: !1
-          }),
-          crafting: SG({
-            focus: null,
-            recipes: [],
-            detail: null
-          }),
-          players: SG({
-            ids: [],
-            byId: {},
-            localId: null
-          }),
-          lobbyLeaderboardRows: SG({}),
-          fullInventory: SG(!1),
-          crosshairTarget: SG({
-            interactPrompt: null,
-            blockText: null,
-            neededTool: null
-          }),
-          localPlayerAlive: SG(!0),
-          freeCamera: SG({
-            allowed: !1,
-            movesFly: !1
-          }),
-          replay: SG(null),
-          replayEdits: SG(null),
-          replayRecorder: SG({
-            recording: !1,
-            clipping: !1,
-            hasClipBuffer: !1,
-            seconds: 0
-          }),
-          replayVideoExporting: SG(!1)
-        },
-        events: {
-          hotbarSlotRequested: {
-            watch: () => () => {}
-          },
-          hotbarScrolled: {
-            watch: () => () => {}
-          },
-          hotbarDropRequested: {
-            watch: () => () => {}
-          },
-          inventoryDropRequested: {
-            watch: () => () => {}
-          },
-          numberKeyPressed: {
-            watch: () => () => {}
-          },
-          chestToggled: {
-            watch: () => () => {}
-          },
-          chestRefreshed: {
-            watch: () => () => {}
-          },
-          inventorySynced: {
-            watch: () => () => {}
-          },
-          enchantingTableOpened: {
-            watch: () => () => {}
-          },
-          cosmeticsUpdated: {
-            watch: () => () => {}
-          },
-          shotDamageToShow: {
-            watch: () => () => {}
-          },
-          boardEditRequested: {
-            watch: () => () => {}
-          },
-          kill: {
-            watch: () => () => {}
-          },
-          chatReceived: {
-            watch: () => () => {}
-          },
-          ironChestOpenRequested: {
-            watch: () => () => {}
-          },
-          localEffectUpdated: {
-            watch: () => () => {}
-          },
-          localPlayerAliveSet: {
-            watch: () => () => {}
-          },
-          replayUiActionRequested: {
-            watch: () => () => {}
-          },
-          replayViewerRequested: {
-            watch: () => () => {}
-          }
-        },
-        commands: {
-          selectHotbarSlot: LG,
-          removeInventoryItem: () => !1,
-          swapInventorySlots: () => !1,
-          moveInventoryItem: () => !1,
-          quickMoveInventoryItem: () => null,
-          closeChest: LG,
-          setInventoryOpen: LG,
-          changeIronChestPasskey: LG,
-          dragReplayCamera: LG,
-          applyTemporaryThirdPerson: LG,
-          holdEmoteWheel: LG,
-          recordFlyingMiddleText: LG,
-          focusCrafting: LG,
-          craftRecipe: () => ({
-            uV: 0,
-            ZU: null,
-            amountAddedToSlot: 0
-          }),
-          salvageItem: () => !1,
-          enchantItem: LG,
-          setShopOpen: LG,
-          buyShopItem: LG,
-          lobbyManage: LG,
-          sendChatMessage: LG,
-          ignorePlayer: LG,
-          reportPlayer: LG,
-          reportWorldCodeChat: LG,
-          requestDiscordReportKey: LG,
-          reportLobbyOrGame: LG,
-          playEmote: LG,
-          updateMyCosmetic: LG,
-          writeOnBoard: LG,
-          writeBook: LG,
-          writeNameTag: LG,
-          setCustomLobbyBlock: LG,
-          openIronChest: LG,
-          sendCodeCollab: LG,
-          clickCodeBlock: LG,
-          bindCustomButtonKeys: LG,
-          pressCustomButton: LG,
-          moveReplayFreecam: LG,
-          holdReplayFreecamVertical: LG,
-          respawn: LG,
-          wakeUp: LG,
-          requestLeaderboard: LG,
-          completeTask: LG,
-          setServerCookie: LG,
-          answerUiRequest: LG,
-          chooseRewardedAd: LG,
-          setCameraZoom: LG,
-          setFreeCameraMovesFly: LG,
-          setBlockHighlight: LG,
-          setCrosshairInteractPrompt: LG,
-          setLookSensitivity: LG,
-          replayAction: LG,
-          setReplayPlaying: LG,
-          seekReplay: LG,
-          setReplayCameraMode: LG,
-          syncReplayCameraMode: LG,
-          setReplayCameraKeyframe: LG,
-          moveReplayCameraKeyframe: LG,
-          deleteReplayCameraKeyframes: LG,
-          setReplayPlaybackMark: LG,
-          cropReplay: () => !1,
-          holdReplayForShaderPackFailure: LG,
-          exportReplayVideo: LG,
-          toggleRecording: LG,
-          saveClip: LG,
-          setRecorderPrefs: LG,
-          setReplayViewerOpen: LG
-        },
-        queries: {
-          enchantingOffer: () => ({
-            perks: [],
-            options: []
-          }),
-          worldCodeAiChunk: () => wG.e,
-          worldCodeAiGameState: () => wG.i
-        },
-        lookups: {
-          localPos: () => yG,
-          targetedBlockPos: () => null,
-          blockAtViewPoint: () => null,
-          momentumFrac: () => 0,
-          screenPos: () => ({
-            x: 0,
-            y: 0
-          }),
-          cameraZoom: () => 0,
-          freeCameraPos: () => null,
-          blocksStandingOn: () => [],
-          dropAhead: () => !1,
-          replayCamera: () => null,
-          leaveGameReloadsPage: () => !1,
-          codeBlockClickable: () => !1
-        }
-      }
-  },
-  40963: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => CG,
-      g: () => iG,
-      i: () => WG,
-      l: () => uG,
-      n: () => oG
-    });
-    var wG = ZG(39657),
-      SG = ZG(1177),
-      LG = ZG(1923),
-      yG = ZG(1939),
-      kG = ZG(3267),
-      UG = ZG(37167),
-      YG = ZG(1287),
-      VG = ZG(40971),
-      pG = ZG(4842),
-      fG = ZG(2380),
-      QG = ZG(40976),
-      KG = ZG(40984),
-      hG = ZG(41020);
-    let dG = null;
-
-    function JG(GG) {
-      const bG = new Map,
-        ZG = ZG => {
-          if ("string" !== typeof ZG) return;
-          let wG = bG.get(ZG);
-          return void 0 === wG && (wG = GG(ZG), void 0 !== wG && bG.set(ZG, wG)), wG
+      takeStoredOwn(MM) {
+        if (this.playerPicked || this.dh) return;
+        if (this.ownChanges++, this.setOwn(yM(MM)), this.onGamePack) return;
+        const rM = {
+          pack: this.playerPack,
+          gameSource: null
         };
-      return new Proxy({}, {
-        get: (GG, bG) => ZG(bG),
-        has: (GG, bG) => void 0 !== ZG(bG)
-      })
-    }
-
-    function rG(GG) {
-      const bG = (0, kG.c)(GG);
-      return void 0 !== bG && (0, kG.f)(bG) === GG
-    }
-
-    function zG(GG) {
-      var bG;
-      const ZG = null === (bG = (0, VG.f)()) || void 0 === bG ? void 0 : bG.tables;
-      if (void 0 === ZG || !rG(GG)) return;
-      const wG = {
-          displayName: ZG.getDisplayName(GG)
-        },
-        SG = ZG.getItemStat(GG, "description");
-      void 0 !== SG && null !== SG && (wG.description = SG);
-      const {
-        rootName: LG
-      } = ZG.getMetaInfo(GG);
-      LG !== GG && (wG.rootName = LG);
-      const yG = ZG.getItemStat(GG, "armourReduction");
-      return void 0 !== yG && null !== yG && (wG.armourReduction = yG), wG
-    }(0, VG.r)((GG => {
-      dG = GG
-    }));
-    const EG = (0, yG.h)("DisplayName", "Description");
-
-    function oG() {
-      return Boolean(LG.c.get("useInventory") && LG.c.get("useFullInventory"))
-    }
-    let XG = null;
-    const uG = {
-        inventory: function() {
-          const GG = hG.c.states.inventory;
-          let bG = null;
-          const ZG = GG => {
-            var ZG;
-            return null === GG.chest ? GG : ((null === (ZG = bG) || void 0 === ZG ? void 0 : ZG.from) === GG && bG.chestVersion === (0, KG.c)() || (bG = {
-              from: GG,
-              chestVersion: (0, KG.c)(),
-              view: {
-                ...GG,
-                chest: (0, KG.g)(GG.chest)
-              }
-            }), bG.view)
-          };
-          return {
-            current: () => ZG(GG.current()),
-            watch: bG => GG.watch((GG => {
-              bG(ZG(GG))
-            }))
-          }
-        }(),
-        crafting: hG.c.states.crafting,
-        stationItems: {
-          current() {
-            var GG;
-            return (null === (GG = XG) || void 0 === GG ? void 0 : GG.namesVersion) !== (0, kG.j)() && (XG = {
-              namesVersion: (0, kG.j)(),
-              items: {
-                enchantable: JG((GG => {
-                  const bG = (0, kG.c)(GG);
-                  return void 0 !== bG && null !== dG && dG.enchantmentPerksOf(bG).length > 0 || void 0
-                })),
-                salvageable: JG((GG => !(!rG(GG) || null === (0, UG.b)(GG)) || void 0))
-              }
-            }), XG.items
-          },
-          watch: () => () => {}
-        },
-        itemInfo: function() {
-          let GG = null;
-          const bG = () => {
-            var bG;
-            return (null === (bG = GG) || void 0 === bG ? void 0 : bG.namesVersion) !== (0, kG.j)() && (GG = {
-              namesVersion: (0, kG.j)(),
-              infos: JG(zG)
-            }), GG.infos
-          };
-          return {
-            current: bG,
-            watch: ZG => (0, yG.q)((wG => {
-              wG.some(EG) && (GG = null, ZG(bG()))
-            }))
-          }
-        }(),
-        creativeVisibility: (0, yG.l)((function() {
-          const GG = {};
-          for (const SG of null !== (bG = null === (ZG = dG) || void 0 === ZG ? void 0 : ZG.creativeItemIds()) && void 0 !== bG ? bG : []) {
-            var bG, ZG, yG, UG;
-            const YG = (0, kG.f)(SG);
-            if (void 0 === YG) continue;
-            const VG = null !== (yG = LG.c.get((0, wG.i)(YG, "showInCreativeInven"))) && void 0 !== yG ? yG : null === (UG = dG) || void 0 === UG ? void 0 : UG.showInCreativeInvenOf(SG);
-            "boolean" === typeof VG && (GG[YG] = VG)
-          }
-          return {
-            publicLobby: (0, SG.K)((0, YG.d)().lobbyName),
-            shownInGame: GG
-          }
-        }), ["connectedGameChanged"], (0, yG.h)("ShowInCreativeInven")),
-        fullInventory: (0, yG.l)(oG, [], (0, yG.i)("useInventory", "useFullInventory"))
-      },
-      iG = {
-        inventoryDropRequested: hG.c.events.inventoryDropRequested,
-        chestToggled: hG.c.events.chestToggled,
-        chestRefreshed: hG.c.events.chestRefreshed,
-        inventorySynced: hG.c.events.inventorySynced,
-        enchantingTableOpened: hG.c.events.enchantingTableOpened
-      },
-      CG = {
-        removeInventoryItem: hG.c.commands.removeInventoryItem,
-        swapInventorySlots: hG.c.commands.swapInventorySlots,
-        moveInventoryItem: hG.c.commands.moveInventoryItem,
-        quickMoveInventoryItem: hG.c.commands.quickMoveInventoryItem,
-        closeChest: hG.c.commands.closeChest,
-        setInventoryOpen(GG) {
-          (0, pG.j)(fG.t.InventoryOpen, GG ? fG.t.InventoryOpen : 0)
-        },
-        focusCrafting: hG.c.commands.focusCrafting,
-        craftRecipe: hG.c.commands.craftRecipe,
-        salvageItem: hG.c.commands.salvageItem,
-        enchantItem: hG.c.commands.enchantItem,
-        changeIronChestPasskey(GG) {
-          var bG;
-          let {
-            pos: ZG,
-            Wk: wG
-          } = GG;
-          null === (bG = (0, VG.f)()) || void 0 === bG || bG.send(QG.b.ChangeIronChestPasskey, (0, QG.i)({
-            eS: ZG,
-            Wk: wG
-          }))
-        },
-        openIronChest(GG) {
-          var bG;
-          let {
-            pos: ZG,
-            Wk: wG
-          } = GG;
-          null === (bG = (0, VG.f)()) || void 0 === bG || bG.send(QG.b.OpenIronChest, (0, QG.E)({
-            eS: ZG,
-            Wk: wG
-          }))
+        0 === this.changes ? this.state = rM : this.change(rM, !1)
+      }
+      async update() {
+        const MM = this.playerPack,
+          rM = null === MM || void 0 === MM ? void 0 : MM.metaData.id;
+        if (!MM || !rM || !this.host.fetchLatest || rM === SM.b || rM === SM.o.CUSTOM) return;
+        const iM = SM.s[rM];
+        if (void 0 === iM || MM.metaData.version >= iM) return;
+        let OM;
+        try {
+          OM = yM(await this.host.fetchLatest(rM))
+        } catch (jM) {
+          return void this.host.warn(`texture pack ${rM} didn't update to version ${iM}`, jM)
         }
-      },
-      WG = {
-        enchantingOffer: hG.c.queries.enchantingOffer
+        null === OM || this.dh || this.playerPack !== MM || (this.ownChanges++, this.setOwn(OM), this.onGamePack || this.change({
+          pack: OM,
+          gameSource: null
+        }, !1), await this.storePlayerPack(OM) && this.announce())
       }
-  },
-  41018: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      c: () => wG,
-      e: () => VG,
-      h: () => yG,
-      j: () => SG,
-      n: () => kG,
-      o: () => YG
-    });
-    class wG extends Error {
-      constructor() {
-        super(...arguments), this.name = "CoreCorruption"
+      announce() {
+        const MM = (0, PM.d)();
+        null !== MM && this.ownAnnouncements.add(MM)
       }
-    }
-
-    function SG(GG) {
-      return GG instanceof RangeError && /call stack/i.test(GG.message) || GG instanceof Error && "InternalError" === GG.name && /recursion/i.test(GG.message)
-    }
-    const LG = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
-
-    function yG(GG) {
-      var bG;
-      return GG instanceof WebAssembly.RuntimeError || GG instanceof wG || SG(GG) && LG.test(null !== (bG = GG.stack) && void 0 !== bG ? bG : "")
-    }
-
-    function kG(GG, bG) {
-      if (yG(GG)) throw GG;
-      console.error(bG, GG)
-    }
-
-    function UG(GG, bG, ZG, SG, LG) {
-      if (bG % SG !== 0 || bG + ZG > GG.byteLength) throw new wG(`${LG}: ${ZG} bytes at ${bG}, ${SG}-aligned, outside ${GG.byteLength} bytes of memory`)
-    }
-
-    function YG(GG, bG, ZG, wG, SG) {
-      return 0 === ZG ? null : (UG(bG, ZG, wG * GG.BYTES_PER_ELEMENT, GG.BYTES_PER_ELEMENT, SG), new GG(bG, ZG, wG))
-    }
-
-    function VG(GG, bG, ZG, wG, SG) {
-      return 0 === bG ? null : (UG(GG, bG, ZG, wG, SG), new DataView(GG, bG, ZG))
-    }
-  },
-  40971: (GG, bG, ZG) => {
-    ZG.d(bG, {
-      d: () => wG,
-      e: () => JG,
-      f: () => hG,
-      g: () => dG,
-      k: () => fG,
-      o: () => QG,
-      q: () => VG,
-      r: () => pG,
-      v: () => KG
-    });
-    class wG extends Error {
-      constructor(GG) {
-        super(`the join's code did not load: ${GG instanceof Error?GG.message:String(GG)}`, {
-          cause: GG
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === GG || void 0 === GG ? void 0 : GG.request
+      setOwn(MM) {
+        this.playerPack = MM;
+        for (const iM of [...this.ownListeners]) try {
+          iM()
+        } catch (rM) {
+          this.host.warn("a texture pack listener threw", rM)
+        }
+      }
+      usePlayerPack() {
+        this.onGamePack && this.change({
+          pack: this.playerPack,
+          gameSource: null
+        }, !1)
+      }
+      async storePlayerPack(MM) {
+        try {
+          return null === MM ? (await this.host.store.removeItem(aM.b), !0) : await this.host.store.setItem(aM.b, MM)
+        } catch (rM) {
+          return this.host.warn("the texture pack wasn't stored: it shows until the page reloads", rM), !1
+        }
+      }
+      change(MM, rM) {
+        if (!this.dh) {
+          this.changes++, this.onGamePack = rM, this.state = MM;
+          for (const MM of [...this.listeners.keys()]) this.deliver(MM)
+        }
+      }
+      deliver(MM) {
+        if (!this.dh && this.listeners.has(MM) && this.listeners.get(MM) !== this.state) {
+          this.listeners.set(MM, this.state);
+          try {
+            MM(this.state)
+          } catch (rM) {
+            this.host.warn("a texture pack listener threw", rM)
+          }
+        }
       }
     }
-    let SG = null,
-      LG = null,
-      yG = null;
-    const kG = [];
-    let UG = null;
-
-    function YG(GG, bG) {
-      try {
-        GG(bG)
-      } catch (ZG) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", ZG)
+    async function JM(MM, rM, iM) {
+      const OM = (0, nM.d)(await iM.fetchPack(rM));
+      if (null !== OM) return {
+        pack: OM,
+        key: rM
+      };
+      const SM = await iM.packKey(MM);
+      if (null === SM) return null;
+      const jM = (0, nM.d)(await iM.fetchPack(SM));
+      if (null === jM) throw new Error(`no texture pack at ${SM}`);
+      return {
+        pack: jM,
+        key: SM
       }
     }
 
-    function VG() {
-      return UG
+    function dM(MM) {
+      return null === MM || MM.metaData.id === SM.b
     }
 
-    function pG(GG) {
-      kG.push(GG), null !== UG && YG(GG, UG)
+    function yM(MM) {
+      const rM = (0, nM.d)(MM);
+      return dM(rM) ? null : rM
+    }
+    async function lM(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jM.c;
+      if (null === MM.pack) return null;
+      const {
+        packAssets: OM
+      } = await Promise.all([iM.e(230), iM.e(51)]).then((() => iM(64133)));
+      return OM(MM, rM)
     }
 
-    function fG(GG) {
-      return SG ??= Promise.all([ZG.e(73), ZG.e(98), ZG.e(226), ZG.e(78), ZG.e(227), ZG.e(201), ZG.e(97), ZG.e(246), ZG.e(273), ZG.e(199), ZG.e(214), ZG.e(191), ZG.e(198), ZG.e(193), ZG.e(144), ZG.e(88), ZG.e(122), ZG.e(252), ZG.e(57)]).then((() => ZG(43025))).then((bG => {
-        bG.loadAudio(GG), UG = bG;
-        for (const GG of kG) YG(GG, bG);
-        return bG
-      })).catch((GG => {
-        throw SG = null, GG
-      })), SG
-    }
-    async function QG(GG, bG) {
-      try {
-        const ZG = await fG(GG);
-        await ZG.loadClientGame(bG)
-      } catch (ZG) {
-        throw new wG(ZG)
-      }
-    }
-
-    function KG(GG, bG) {
-      LG = {
-        running: GG,
-        shell: bG
-      }
-    }
-
-    function hG() {
-      return yG
-    }
-    async function dG(GG) {
-      const bG = LG;
-      if ((null === bG || void 0 === bG ? void 0 : bG.running) !== GG) throw new Error("the core's session has ended");
-      const ZG = await fG(bG.shell.audio).catch((GG => {
-        throw new wG(GG)
-      }));
-      if (null !== yG) return yG;
-      if (LG !== bG || GG.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (yG = ZG.startGameHost(GG, bG.shell), null === yG) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return yG
-    }
-
-    function JG() {
-      null !== yG && (null !== UG ? UG.endGameHost(yG) : yG.closeGame()), yG = null, LG = null
+    function EM(MM) {
+      const rM = (0, aM.o)();
+      return null === rM ? () => {} : (rM.onmessage = rM => {
+        MM.readPlayerPack((0, PM.e)(rM.data))
+      }, () => {
+        rM.close()
+      })
     }
   }
 };
 Object.freeze(modules);
-for (const GG in modules) Object.freeze(modules[GG]);
+for (const MM in modules) Object.freeze(modules[MM]);
