@@ -1,186 +1,186 @@
 export const id = 115;
 export const ids = [115, 118, 138, 139];
 export const modules = {
-  5216: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ot.k,
-      g: () => qt,
-      h: () => Ot.s
+  5204: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => TB.j,
+      d: () => JB,
+      g: () => TB.o
     });
-    var Ot = Vt(5223);
-    const qt = [!1, !0].flatMap((tt => ["terrain", "liquid", "model"].map((et => ({
-      strict: tt,
-      program: et
+    var TB = ZB(5210);
+    const JB = [!1, !0].flatMap((BB => ["terrain", "liquid", "model"].map((IB => ({
+      strict: BB,
+      program: IB
     })))))
   },
-  40682: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Qt,
-      installListedShaderPack: () => Xt
+  40541: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => hB,
+      installListedShaderPack: () => nB
     });
-    var Ot = Vt(6756),
-      qt = Vt(5223),
-      Dt = Vt(1293),
-      mt = Vt(6816),
-      dt = Vt(5216),
-      jt = Vt(6866),
-      Ht = Vt(6857);
-    async function Xt(tt) {
-      const et = await (0, mt.loadPageShaderPackCompiler)();
-      if (null === et) return {
+    var TB = ZB(6731),
+      JB = ZB(5210),
+      oB = ZB(1258),
+      GB = ZB(6763),
+      vB = ZB(5204),
+      kB = ZB(6800),
+      cB = ZB(6792);
+    async function nB(BB) {
+      const IB = await (0, GB.loadPageShaderPackCompiler)();
+      if (null === IB) return {
         kind: "failed",
         reason: "compiler"
       };
-      const Vt = await Qt(tt, et);
-      return "failed" === Vt.kind ? Vt : await (0, jt.saveShaderPack)(Vt.stored, et) ? ((0, jt.markShaderPackChangePending)(), Vt) : {
+      const ZB = await hB(BB, IB);
+      return "failed" === ZB.kind ? ZB : await (0, kB.saveShaderPack)(ZB.stored, IB) ? ((0, kB.markShaderPackChangePending)(), ZB) : {
         kind: "failed",
         reason: "save"
       }
     }
-    async function Qt(tt, et) {
-      const Vt = await async function(tt) {
+    async function hB(BB, IB) {
+      const ZB = await async function(BB) {
         let {
-          packId: et,
-          sourceHash: Vt
-        } = tt;
+          packId: IB,
+          sourceHash: ZB
+        } = BB;
         try {
-          const tt = await fetch(`${Dt.clientSideServerUrls.s3Url}/${(0,Ot.K)(et,Vt)}`, {
+          const BB = await fetch(`${oB.clientSideServerUrls.s3Url}/${(0,TB.O)(IB,ZB)}`, {
             headers: {
               Accept: "application/json"
             }
           });
-          if (!tt.ok) return console.error(`Failed to download shader pack ${et} (${tt.status})`), null;
-          const qt = await tt.json();
-          return "object" !== typeof qt || null === qt ? (console.error(`Shader pack ${et}'s source isn't an object`), null) : qt
-        } catch (qt) {
-          return console.error(`Failed to download shader pack ${et}`, qt), null
+          if (!BB.ok) return console.error(`Failed to download shader pack ${IB} (${BB.status})`), null;
+          const JB = await BB.json();
+          return "object" !== typeof JB || null === JB ? (console.error(`Shader pack ${IB}'s source isn't an object`), null) : JB
+        } catch (JB) {
+          return console.error(`Failed to download shader pack ${IB}`, JB), null
         }
-      }(tt);
-      if (null === Vt) return {
+      }(BB);
+      if (null === ZB) return {
         kind: "failed",
         reason: "download"
       };
-      if (!(0, dt.h)(Vt.apiVersion)) return {
+      if (!(0, vB.g)(ZB.apiVersion)) return {
         kind: "failed",
         reason: "apiVersion"
       };
-      const mt = (0, qt.y)(Vt.files);
-      if ("string" === typeof mt) return console.error(`A listed shader pack breaks the pack rules: ${mt}`), {
+      const GB = (0, JB.u)(ZB.files);
+      if ("string" === typeof GB) return console.error(`A listed shader pack breaks the pack rules: ${GB}`), {
         kind: "failed",
         reason: "invalid"
       };
-      const Xt = await (0, Ht.f)(et, mt);
-      if (!1 === (null === Xt || void 0 === Xt ? void 0 : Xt.ok)) return {
+      const nB = await (0, cB.h)(IB, GB);
+      if (!1 === (null === nB || void 0 === nB ? void 0 : nB.ok)) return {
         kind: "failed",
         reason: "errors"
       };
-      const Qt = {
+      const hB = {
         manifest: {
-          apiVersion: Vt.apiVersion,
-          name: tt.name,
-          author: tt.ownerName,
-          description: tt.description || null,
-          keepCircleShadows: !0 === Vt.keepCircleShadows
+          apiVersion: ZB.apiVersion,
+          name: BB.name,
+          author: BB.ownerName,
+          description: BB.description || null,
+          keepCircleShadows: !0 === ZB.keepCircleShadows
         },
-        files: mt
+        files: GB
       };
       return {
         kind: "loaded",
-        stored: (0, jt.toStoredShaderPack)(Qt, Xt, {
-          packId: tt.packId,
-          sourceHash: tt.sourceHash
+        stored: (0, kB.toStoredShaderPack)(hB, nB, {
+          packId: BB.packId,
+          sourceHash: BB.sourceHash
         })
       }
     }
   },
-  6866: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      forgetShaderPackActiveHint: () => ct,
-      isOtherApiVersion: () => ht,
-      isShaderPackActive: () => Jt,
-      isShaderPackChangePending: () => Kt,
-      markShaderPackChangePending: () => ut,
-      pageShaderPackValidationVersion: () => vt,
-      reconcileStoredShaderPackHint: () => St,
-      removeShaderPack: () => bt,
-      replaceShaderPack: () => yt,
-      saveShaderPack: () => wt,
-      shaderPackNeedsCheck: () => Wt,
-      storedPackOutcome: () => Ct,
-      storedShaderPackFiles: () => lt,
-      toStoredShaderPack: () => Qt
+  6800: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      forgetShaderPackActiveHint: () => pB,
+      isOtherApiVersion: () => wB,
+      isShaderPackActive: () => dB,
+      isShaderPackChangePending: () => sB,
+      markShaderPackChangePending: () => QB,
+      pageShaderPackValidationVersion: () => OB,
+      reconcileStoredShaderPackHint: () => iB,
+      removeShaderPack: () => WB,
+      replaceShaderPack: () => qB,
+      saveShaderPack: () => gB,
+      shaderPackNeedsCheck: () => YB,
+      storedPackOutcome: () => CB,
+      storedShaderPackFiles: () => zB,
+      toStoredShaderPack: () => hB
     });
-    var Ot = Vt(5223),
-      qt = Vt(5216),
-      Dt = Vt(39),
-      mt = Vt(3524),
-      dt = Vt(6873),
-      jt = Vt(6830);
-    const Ht = "shaderPackChangePending";
-    let Xt = null;
+    var TB = ZB(5210),
+      JB = ZB(5204),
+      oB = ZB(36),
+      GB = ZB(3640),
+      vB = ZB(6808),
+      kB = ZB(6778);
+    const cB = "shaderPackChangePending";
+    let nB = null;
 
-    function Qt(tt, et, Vt) {
+    function hB(BB, IB, ZB) {
       return {
-        manifest: tt.manifest,
-        files: (0, Ot.C)(tt.files),
-        validation: et,
-        ...Vt && {
-          listing: Vt
+        manifest: BB.manifest,
+        files: (0, TB.y)(BB.files),
+        validation: IB,
+        ...ZB && {
+          listing: ZB
         }
       }
     }
 
-    function lt(tt) {
-      return Object.keys(tt.files).map((et => ({
-        path: et,
-        source: tt.files[et]
+    function zB(BB) {
+      return Object.keys(BB.files).map((IB => ({
+        path: IB,
+        source: BB.files[IB]
       })))
     }
-    let Et = Promise.resolve();
+    let FB = Promise.resolve();
 
-    function ft(tt) {
-      const et = Et.then(tt);
-      return Et = et.catch((() => {})), et
-    }
-
-    function wt(tt, et) {
-      return ft((() => Nt(tt, et)))
+    function NB(BB) {
+      const IB = FB.then(BB);
+      return FB = IB.catch((() => {})), IB
     }
 
-    function yt(tt, et, Vt) {
-      return ft((async () => JSON.stringify(await (0, dt.g)()) === JSON.stringify(tt) && (null === et ? (await Mt(), !0) : Nt(et, Vt))))
-    }
-    async function Nt(tt, et) {
-      const Vt = await Dt.c.setItem(dt.e, tt);
-      return Vt && Rt(tt, et), Vt
-    }
-    async function Mt() {
-      await Dt.c.removeItem(dt.e), Dt.e.removeItem(mt.e)
+    function gB(BB, IB) {
+      return NB((() => yB(BB, IB)))
     }
 
-    function bt() {
-      return ft(Mt)
+    function qB(BB, IB, ZB) {
+      return NB((async () => JSON.stringify(await (0, vB.i)()) === JSON.stringify(BB) && (null === IB ? (await UB(), !0) : yB(IB, ZB))))
+    }
+    async function yB(BB, IB) {
+      const ZB = await oB.i.setItem(vB.e, BB);
+      return ZB && aB(BB, IB), ZB
+    }
+    async function UB() {
+      await oB.i.removeItem(vB.e), oB.m.removeItem(GB.e)
     }
 
-    function Jt(tt, et) {
-      return "active" === Ct(tt, et).kind
+    function WB() {
+      return NB(UB)
     }
 
-    function Ct(tt, et) {
-      var Vt;
-      return null === tt ? {
+    function dB(BB, IB) {
+      return "active" === CB(BB, IB).kind
+    }
+
+    function CB(BB, IB) {
+      var ZB;
+      return null === BB ? {
         kind: "none",
         reason: "nothingStored"
-      } : ht(tt) ? {
+      } : wB(BB) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (Vt = tt.validation) || void 0 === Vt ? void 0 : Vt.ok) || tt.validation.fromRecheck ? null === et ? {
+      } : !1 !== (null === (ZB = BB.validation) || void 0 === ZB ? void 0 : ZB.ok) || BB.validation.fromRecheck ? null === IB ? {
         kind: "none",
         reason: "noCompiler"
-      } : Wt(tt, et) ? {
+      } : YB(BB, IB) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : tt.validation.ok ? {
+      } : BB.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -191,331 +191,331 @@ export const modules = {
       }
     }
 
-    function ut() {
-      Dt.h.setItem(Ht, performance.timeOrigin)
+    function QB() {
+      oB.n.setItem(cB, performance.timeOrigin)
     }
 
-    function Kt() {
-      return Dt.h.getItem(Ht) === performance.timeOrigin
+    function sB() {
+      return oB.n.getItem(cB) === performance.timeOrigin
     }
 
-    function ht(tt) {
-      return !(0, qt.h)(tt.manifest.apiVersion)
+    function wB(BB) {
+      return !(0, JB.g)(BB.manifest.apiVersion)
     }
 
-    function vt(tt) {
-      return Xt ??= tt.yI((0, jt.shaderPackTextures)()), Xt
+    function OB(BB) {
+      return nB ??= BB.rM((0, kB.shaderPackTextures)()), nB
     }
 
-    function Wt(tt, et) {
-      var Vt;
-      return (null === (Vt = tt.validation) || void 0 === Vt ? void 0 : Vt.headerVersion) !== vt(et)
+    function YB(BB, IB) {
+      var ZB;
+      return (null === (ZB = BB.validation) || void 0 === ZB ? void 0 : ZB.headerVersion) !== OB(IB)
     }
 
-    function St(tt) {
-      return ft((async () => {
-        Rt(await (0, dt.g)(!0), tt)
+    function iB(BB) {
+      return NB((async () => {
+        aB(await (0, vB.i)(!0), BB)
       }))
     }
 
-    function ct() {
-      return ft((async () => {
-        Dt.e.removeItem(mt.e)
+    function pB() {
+      return NB((async () => {
+        oB.m.removeItem(GB.e)
       }))
     }
 
-    function Rt(tt, et) {
-      Jt(tt, et) ? Dt.e.setItem(mt.e, !0) : Dt.e.removeItem(mt.e)
+    function aB(BB, IB) {
+      dB(BB, IB) ? oB.m.setItem(GB.e, !0) : oB.m.removeItem(GB.e)
     }
   },
-  6830: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      loadShaderPackTextures: () => mt,
-      shaderPackTextures: () => dt
+  6778: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      loadShaderPackTextures: () => GB,
+      shaderPackTextures: () => vB
     });
-    var Ot = Vt(5223);
-    let qt = null,
-      Dt = null;
+    var TB = ZB(5210);
+    let JB = null,
+      oB = null;
 
-    function mt() {
-      return Dt ??= Promise.all([Vt.e(73), Vt.e(190)]).then((() => Vt(40674))).then((tt => {
+    function GB() {
+      return oB ??= Promise.all([ZB.e(73), ZB.e(190)]).then((() => ZB(40534))).then((BB => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: et,
-          textureNameToIndex: Vt,
-          textureAnimationData: Dt
-        } = tt;
-        return qt ??= (0, Ot.m)(Vt, Dt, et), qt
-      })), Dt
+          FORMER_BLOCK_IMAGE_NAMES: IB,
+          textureNameToIndex: ZB,
+          textureAnimationData: oB
+        } = BB;
+        return JB ??= (0, TB.l)(ZB, oB, IB), JB
+      })), oB
     }
 
-    function dt() {
-      if (null === qt) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return qt
+    function vB() {
+      if (null === JB) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return JB
     }
   },
-  6857: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => jt,
-      f: () => dt
+  6792: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => kB,
+      h: () => vB
     });
-    var Ot = Vt(6866),
-      qt = Vt(6830),
-      Dt = Vt(133);
-    const mt = 100;
-    async function dt(tt, et) {
-      var Vt;
-      let Ot = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (Vt = navigator.gpu) && void 0 !== Vt ? Vt : null;
-      const mt = tt.mtt(et, (0, qt.shaderPackTextures)());
-      if (mt.errors.length > 0) return Ht(tt, mt.errors, mt.offInStrict);
-      const dt = await async function(tt) {
-        if (!tt) return null;
+    var TB = ZB(6800),
+      JB = ZB(6778),
+      oB = ZB(129);
+    const GB = 100;
+    async function vB(BB, IB) {
+      var ZB;
+      let TB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (ZB = navigator.gpu) && void 0 !== ZB ? ZB : null;
+      const GB = BB.yBB(IB, (0, JB.shaderPackTextures)());
+      if (GB.errors.length > 0) return cB(BB, GB.errors, GB.offInStrict);
+      const vB = await async function(BB) {
+        if (!BB) return null;
         try {
-          const et = await (0, Dt.t)(tt);
-          return et ? await et.requestDevice() : null
-        } catch (et) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", et), null
+          const IB = await (0, oB.w)(BB);
+          return IB ? await IB.requestDevice() : null
+        } catch (IB) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", IB), null
         }
-      }(Ot);
-      if (!dt) return null;
-      let jt = !1;
-      dt.lost.then((() => {
-        jt = !0
+      }(TB);
+      if (!vB) return null;
+      let kB = !1;
+      vB.lost.then((() => {
+        kB = !0
       }));
       try {
-        const et = await Promise.all(mt.validationModules.map((et => async function(tt, et, Vt) {
-          et.pushErrorScope("validation");
-          const Ot = et.createShaderModule({
-              code: Vt.code
+        const IB = await Promise.all(GB.validationModules.map((IB => async function(BB, IB, ZB) {
+          IB.pushErrorScope("validation");
+          const TB = IB.createShaderModule({
+              code: ZB.code
             }),
-            qt = et.popErrorScope(),
+            JB = IB.popErrorScope(),
             {
-              messages: Dt
-            } = await Ot.getCompilationInfo(),
-            mt = Dt.filter((tt => "error" === tt.type)).map((et => tt.mapValidationMessage(Vt, et))),
-            dt = await qt;
-          dt && 0 === mt.length && mt.push({
+              messages: oB
+            } = await TB.getCompilationInfo(),
+            GB = oB.filter((BB => "error" === BB.type)).map((IB => BB.mapValidationMessage(ZB, IB))),
+            vB = await JB;
+          vB && 0 === GB.length && GB.push({
             file: null,
             line: 0,
-            message: dt.message,
-            variants: [Vt.key]
+            message: vB.message,
+            variants: [ZB.key]
           });
-          return mt
-        }(tt, dt, et))));
-        return jt ? null : Ht(tt, tt.uOt(et.flat()), mt.offInStrict)
-      } catch (Xt) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", Xt), null
+          return GB
+        }(BB, vB, IB))));
+        return kB ? null : cB(BB, BB.qTB(IB.flat()), GB.offInStrict)
+      } catch (nB) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", nB), null
       } finally {
-        dt.destroy()
+        vB.destroy()
       }
     }
-    async function jt(tt, et) {
-      var Vt;
-      if (!(0, Ot.shaderPackNeedsCheck)(tt, et) || (0, Ot.isOtherApiVersion)(tt)) return tt;
-      const qt = await dt(et, (0, Ot.storedShaderPackFiles)(tt));
-      if (!qt) return tt;
-      const Dt = !1 === (null === (Vt = tt.validation) || void 0 === Vt ? void 0 : Vt.ok) && !tt.validation.fromRecheck,
-        mt = {
-          ...tt,
-          validation: Dt ? qt : {
-            ...qt,
+    async function kB(BB, IB) {
+      var ZB;
+      if (!(0, TB.shaderPackNeedsCheck)(BB, IB) || (0, TB.isOtherApiVersion)(BB)) return BB;
+      const JB = await vB(IB, (0, TB.storedShaderPackFiles)(BB));
+      if (!JB) return BB;
+      const oB = !1 === (null === (ZB = BB.validation) || void 0 === ZB ? void 0 : ZB.ok) && !BB.validation.fromRecheck,
+        GB = {
+          ...BB,
+          validation: oB ? JB : {
+            ...JB,
             fromRecheck: !0
           }
         };
-      return await (0, Ot.replaceShaderPack)(tt, mt, et) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), mt
+      return await (0, TB.replaceShaderPack)(BB, GB, IB) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), GB
     }
 
-    function Ht(tt, et, Vt) {
+    function cB(BB, IB, ZB) {
       return {
-        headerVersion: (0, Ot.pageShaderPackValidationVersion)(tt),
-        ok: 0 === et.length,
-        errors: et.slice(0, mt),
-        moreErrors: Math.max(0, et.length - mt),
-        offInStrict: Vt
+        headerVersion: (0, TB.pageShaderPackValidationVersion)(BB),
+        ok: 0 === IB.length,
+        errors: IB.slice(0, GB),
+        moreErrors: Math.max(0, IB.length - GB),
+        offInStrict: ZB
       }
     }
   },
-  5223: (tt, et, Vt) => {
-    Vt.d(et, {
-      C: () => Xt,
-      E: () => lt,
-      e: () => dt,
-      h: () => mt,
-      k: () => Ot,
-      m: () => wt,
-      p: () => Qt,
-      s: () => qt,
-      u: () => Dt,
-      y: () => Ht
+  5210: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      B: () => zB,
+      d: () => vB,
+      g: () => GB,
+      j: () => TB,
+      l: () => gB,
+      m: () => hB,
+      o: () => JB,
+      q: () => oB,
+      u: () => cB,
+      y: () => nB
     });
-    const Ot = 5;
+    const TB = 5;
 
-    function qt(tt) {
-      return tt === Ot
+    function JB(BB) {
+      return BB === TB
     }
 
-    function Dt(tt) {
-      return [...tt.features]
+    function oB(BB) {
+      return [...BB.features]
     }
-    const mt = 262144,
-      dt = 256,
-      jt = 256;
+    const GB = 262144,
+      vB = 256,
+      kB = 256;
 
-    function Ht(tt) {
-      if ("object" !== typeof tt || null === tt || Array.isArray(tt)) return "The pack has no files.";
-      const et = [];
-      for (const [Vt, Ot] of Object.entries(tt)) {
-        if ("string" !== typeof Ot) return `${Vt} isn't text.`;
-        et.push({
-          path: Vt,
-          source: Ot
+    function cB(BB) {
+      if ("object" !== typeof BB || null === BB || Array.isArray(BB)) return "The pack has no files.";
+      const IB = [];
+      for (const [ZB, TB] of Object.entries(BB)) {
+        if ("string" !== typeof TB) return `${ZB} isn't text.`;
+        IB.push({
+          path: ZB,
+          source: TB
         })
       }
-      return et.sort(((tt, et) => Qt(tt.path, et.path))),
-        function(tt) {
-          if (0 === tt.length) return "The pack has no .wgsl files.";
-          if (tt.length > dt) return `The pack has more than ${dt} .wgsl files.`;
-          const et = new Set;
+      return IB.sort(((BB, IB) => hB(BB.path, IB.path))),
+        function(BB) {
+          if (0 === BB.length) return "The pack has no .wgsl files.";
+          if (BB.length > vB) return `The pack has more than ${vB} .wgsl files.`;
+          const IB = new Set;
           for (const {
-              path: Vt
+              path: ZB
             }
-            of tt) {
-            const tt = Et(Vt);
-            if (null !== tt) return tt;
-            if (et.has(Vt)) return `The pack has two files at ${Vt}.`;
-            et.add(Vt)
+            of BB) {
+            const BB = FB(ZB);
+            if (null !== BB) return BB;
+            if (IB.has(ZB)) return `The pack has two files at ${ZB}.`;
+            IB.add(ZB)
           }
-          return lt(tt) > mt ? `The pack's .wgsl files are over ${mt/1024} KB in total.` : null
-        }(et) ?? et
+          return zB(BB) > GB ? `The pack's .wgsl files are over ${GB/1024} KB in total.` : null
+        }(IB) ?? IB
     }
 
-    function Xt(tt) {
-      const et = {};
-      for (const Vt of tt) et[Vt.path] = Vt.source;
-      return et
+    function nB(BB) {
+      const IB = {};
+      for (const ZB of BB) IB[ZB.path] = ZB.source;
+      return IB
     }
 
-    function Qt(tt, et) {
-      return tt < et ? -1 : tt > et ? 1 : 0
+    function hB(BB, IB) {
+      return BB < IB ? -1 : BB > IB ? 1 : 0
     }
 
-    function lt(tt) {
-      const et = new TextEncoder;
-      let Vt = 0;
+    function zB(BB) {
+      const IB = new TextEncoder;
+      let ZB = 0;
       for (const {
-          source: Ot
+          source: TB
         }
-        of tt) Vt += et.encode(Ot).byteLength;
-      return Vt
+        of BB) ZB += IB.encode(TB).byteLength;
+      return ZB
     }
 
-    function Et(tt) {
-      if (!tt.toLowerCase().endsWith(".wgsl")) return `${tt} isn't a .wgsl file.`;
-      if (tt.length > jt) return `A file path is over ${jt} characters.`;
-      if (tt.includes("\\") || /[\u0000-\u001f]/.test(tt)) return `${tt} isn't a valid file path.`;
-      return tt.split("/").some((tt => "" === tt || "." === tt || ".." === tt)) ? `${tt} isn't a valid file path.` : null
+    function FB(BB) {
+      if (!BB.toLowerCase().endsWith(".wgsl")) return `${BB} isn't a .wgsl file.`;
+      if (BB.length > kB) return `A file path is over ${kB} characters.`;
+      if (BB.includes("\\") || /[\u0000-\u001f]/.test(BB)) return `${BB} isn't a valid file path.`;
+      return BB.split("/").some((BB => "" === BB || "." === BB || ".." === BB)) ? `${BB} isn't a valid file path.` : null
     }
-    const ft = /^(.*)\[rot\[([1-4])$/;
+    const NB = /^(.*)\[rot\[([1-4])$/;
 
-    function wt(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const Ot = new Map;
-      et.forEach(((tt, et) => {
+    function gB(BB, IB) {
+      let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const TB = new Map;
+      IB.forEach(((BB, IB) => {
         let {
-          numAnimStates: Vt,
-          animStartIdx: qt
-        } = tt;
-        for (let Dt = 1; Dt < Vt; Dt++) Ot.set(qt + Dt - 1, et)
+          numAnimStates: ZB,
+          animStartIdx: JB
+        } = BB;
+        for (let oB = 1; oB < ZB; oB++) TB.set(JB + oB - 1, IB)
       }));
-      const qt = Object.entries(tt),
-        Dt = new Map;
-      for (const [wt, yt] of qt) {
-        const tt = ft.exec(wt);
-        "1" === tt?.[2] && Dt.set(tt[1], yt + 1)
+      const JB = Object.entries(BB),
+        oB = new Map;
+      for (const [gB, qB] of JB) {
+        const BB = NB.exec(gB);
+        "1" === BB?.[2] && oB.set(BB[1], qB + 1)
       }
-      const mt = tt => {
-          const et = ft.exec(tt);
-          return et && Dt.has(et[1]) ? {
-            root: et[1],
-            rotation: Number(et[2]) - 1
+      const GB = BB => {
+          const IB = NB.exec(BB);
+          return IB && oB.has(IB[1]) ? {
+            root: IB[1],
+            rotation: Number(IB[2]) - 1
           } : null
         },
-        dt = new Set(qt.map((tt => {
-          let [et] = tt;
-          return mt(et)?.root ?? et
+        vB = new Set(JB.map((BB => {
+          let [IB] = BB;
+          return GB(IB)?.root ?? IB
         }))),
-        jt = (tt, Vt) => {
-          const Ot = tt.replace(/_?0$/, "");
-          return (et[Vt]?.numAnimStates ?? 0) > 1 && !dt.has(Ot) ? Ot : tt
+        kB = (BB, ZB) => {
+          const TB = BB.replace(/_?0$/, "");
+          return (IB[ZB]?.numAnimStates ?? 0) > 1 && !vB.has(TB) ? TB : BB
         },
-        Ht = new Map;
-      for (const [ft, wt] of qt) Ht.set(wt, jt(mt(ft)?.root ?? ft, wt));
-      const Xt = qt.reduce(((tt, et) => {
-          let [, Vt] = et;
-          return Math.max(tt, Vt + 1)
+        cB = new Map;
+      for (const [NB, gB] of JB) cB.set(gB, kB(GB(NB)?.root ?? NB, gB));
+      const nB = JB.reduce(((BB, IB) => {
+          let [, ZB] = IB;
+          return Math.max(BB, ZB + 1)
         }), 0),
-        Qt = Array.from({
-          length: Xt
-        }, ((tt, et) => ({
-          id: et + 1,
+        hB = Array.from({
+          length: nB
+        }, ((BB, IB) => ({
+          id: IB + 1,
           rotation: 0
         }))),
-        lt = new Map,
-        Et = new Map;
-      for (const [ft, wt] of qt) {
-        const tt = mt(ft),
-          et = Ot.get(wt);
-        if (void 0 !== et) {
-          const Vt = Ht.get(et);
-          Et.set(ft, {
-            name: ft,
-            texture: Vt,
+        zB = new Map,
+        FB = new Map;
+      for (const [NB, gB] of JB) {
+        const BB = GB(NB),
+          IB = TB.get(gB);
+        if (void 0 !== IB) {
+          const ZB = cB.get(IB);
+          FB.set(NB, {
+            name: NB,
+            texture: ZB,
             kind: "frame"
-          }), tt && !Et.has(tt.root) && Et.set(tt.root, {
-            name: tt.root,
-            texture: Vt,
+          }), BB && !FB.has(BB.root) && FB.set(BB.root, {
+            name: BB.root,
+            texture: ZB,
             kind: "frame"
           });
           continue
         }
-        const Vt = Ht.get(wt),
-          qt = tt?.root ?? ft;
-        if (Vt !== qt && Et.set(qt, {
-            name: qt,
-            texture: Vt,
+        const ZB = cB.get(gB),
+          JB = BB?.root ?? NB;
+        if (ZB !== JB && FB.set(JB, {
+            name: JB,
+            texture: ZB,
             kind: "frame"
-          }), tt) {
-          const et = Dt.get(tt.root);
-          Qt[wt] = {
-            id: et,
-            rotation: tt.rotation
-          }, lt.set(Vt, et), Et.set(ft, {
-            name: ft,
-            texture: Vt,
+          }), BB) {
+          const IB = oB.get(BB.root);
+          hB[gB] = {
+            id: IB,
+            rotation: BB.rotation
+          }, zB.set(ZB, IB), FB.set(NB, {
+            name: NB,
+            texture: ZB,
             kind: "rotation"
           })
-        } else lt.set(Vt, wt + 1)
+        } else zB.set(ZB, gB + 1)
       }
-      for (const ft of lt.keys()) Et.delete(ft);
-      for (const [ft, wt] of Vt) {
-        const tt = lt.get(wt);
-        void 0 === tt || lt.has(ft) || (lt.set(ft, tt), Et.delete(ft))
+      for (const NB of zB.keys()) FB.delete(NB);
+      for (const [NB, gB] of ZB) {
+        const BB = zB.get(gB);
+        void 0 === BB || zB.has(NB) || (zB.set(NB, BB), FB.delete(NB))
       }
       return {
-        named: [...lt].sort(((tt, et) => {
-          let [Vt] = tt, [Ot] = et;
-          return Vt < Ot ? -1 : Vt > Ot ? 1 : 0
-        })).map((tt => {
-          let [et, Vt] = tt;
+        named: [...zB].sort(((BB, IB) => {
+          let [ZB] = BB, [TB] = IB;
+          return ZB < TB ? -1 : ZB > TB ? 1 : 0
+        })).map((BB => {
+          let [IB, ZB] = BB;
           return {
-            name: et,
-            id: Vt
+            name: IB,
+            id: ZB
           }
         })),
-        aliases: [...Et.values()],
-        layers: Qt
+        aliases: [...FB.values()],
+        layers: hB
       }
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const BB in modules) Object.freeze(modules[BB]);

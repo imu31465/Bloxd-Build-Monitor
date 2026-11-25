@@ -1,262 +1,262 @@
 export const id = 59;
 export const ids = [59];
 export const modules = {
-  37021: (tt, et, Vt) => {
-    async function Ot(tt) {
-      const et = await fetch(tt, {
+  36821: (BB, IB, ZB) => {
+    async function TB(BB) {
+      const IB = await fetch(BB, {
         priority: "low"
       });
-      if (!et.ok) throw new Error(`Fetching ${tt} failed: HTTP ${et.status}`);
-      const Vt = et.body.getReader();
-      for (; !(await Vt.read()).done;);
+      if (!IB.ok) throw new Error(`Fetching ${BB} failed: HTTP ${IB.status}`);
+      const ZB = IB.body.getReader();
+      for (; !(await ZB.read()).done;);
     }
-    Vt.d(et, {
-      c: () => Ot
+    ZB.d(IB, {
+      e: () => TB
     })
   },
-  39263: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => jt
+  39126: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => kB
     });
-    var Ot = Vt(9133),
-      qt = Vt(36738),
-      Dt = Vt(39271);
-    const mt = {
+    var TB = ZB(9011),
+      JB = ZB(36516),
+      oB = ZB(39129);
+    const GB = {
         seat: "seat_timeout",
         socket_unopened: "socket_timeout_unopened",
         socket: "socket_timeout"
       },
-      dt = {
+      vB = {
         seat: "seat_lost",
         socket_unopened: "socket_unopened",
         socket: "socket_closed"
       };
 
-    function jt(tt, et) {
-      if (tt instanceof qt.c) return {
-        at: mt[et],
+    function kB(BB, IB) {
+      if (BB instanceof JB.f) return {
+        at: GB[IB],
         code: 0
       };
-      const Vt = (0, Ot.i)(tt),
-        jt = "number" === typeof Vt ? Vt : 0;
-      return null !== (0, Dt.l)(jt).name ? {
+      const ZB = (0, TB.h)(BB),
+        kB = "number" === typeof ZB ? ZB : 0;
+      return null !== (0, oB.f)(kB).name ? {
         at: "refused",
-        code: jt
+        code: kB
       } : {
-        at: dt[et],
-        code: jt
+        at: vB[IB],
+        code: kB
       }
     }
   },
-  9133: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Dt,
-      i: () => mt,
-      j: () => dt,
-      k: () => Ht,
-      n: () => jt
+  9011: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => oB,
+      h: () => GB,
+      i: () => vB,
+      k: () => cB,
+      l: () => kB
     });
-    var Ot = Vt(229),
-      qt = Vt(4771);
+    var TB = ZB(201),
+      JB = ZB(4802);
 
-    function Dt(tt) {
-      return mt(tt) === Ot.b.gameOrPluginOnPlayerAuthRejected.code
+    function oB(BB) {
+      return GB(BB) === TB.c.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function mt(tt) {
-      return "object" === typeof tt && null !== tt ? tt.code : void 0
+    function GB(BB) {
+      return "object" === typeof BB && null !== BB ? BB.code : void 0
     }
 
-    function dt(tt) {
-      var et;
-      return null !== (et = Object.keys(qt.e).find((et => qt.e[et] === tt))) && void 0 !== et ? et : null
+    function vB(BB) {
+      var IB;
+      return null !== (IB = Object.keys(JB.c).find((IB => JB.c[IB] === BB))) && void 0 !== IB ? IB : null
     }
 
-    function jt(tt) {
-      return "notWhitelisted" === tt ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function kB(BB) {
+      return "notWhitelisted" === BB ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const Ht = {
+    const cB = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  41248: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      prefetchWasmClient: () => ut,
-      startJoinLoad: () => Mt,
-      startLoadAheadOfJoin: () => Jt
+  41074: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      prefetchWasmClient: () => QB,
+      startJoinLoad: () => UB,
+      startLoadAheadOfJoin: () => dB
     });
-    var Ot = Vt(2961),
-      qt = Vt(36535),
-      Dt = Vt(41057),
-      mt = Vt(1167),
-      dt = Vt(40905),
-      jt = (Vt(40960), Vt(37021)),
-      Ht = Vt(40903),
-      Xt = Vt(41167),
-      Qt = Vt(41037);
-    const lt = "[bloxd-wasm-client]";
-    let Et = null,
-      ft = null,
-      wt = null,
-      yt = null,
-      Nt = null;
+    var TB = ZB(3036),
+      JB = ZB(36330),
+      oB = ZB(40884),
+      GB = ZB(1125),
+      vB = ZB(40759),
+      kB = (ZB(40804), ZB(36821)),
+      cB = ZB(40751),
+      nB = ZB(41008),
+      hB = ZB(40876);
+    const zB = "[bloxd-wasm-client]";
+    let FB = null,
+      NB = null,
+      gB = null,
+      qB = null,
+      yB = null;
 
-    function Mt() {
-      return yt ??= (async () => {
+    function UB() {
+      return qB ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const tt = await (0, Ht.Q)();
-        if (null === tt) return;
-        if ((0, dt.l)(tt)) return (0, Ht.S)("none"), void bt("none");
-        (0, Ht.S)(tt.backend);
-        const et = await tt.load();
-        bt(et.name);
-        const Vt = "unloaded" === (0, Ot.D)();
-        if (Vt && (0, Ht.o)(), !await (0, Xt.e)(et)) return void console.warn(`${lt} the join's early wasm load failed: the boot loads the client itself`);
-        if (!Vt) return;
-        const Dt = (0, qt.k)(et.name);
-        void 0 !== Dt ? (0, mt.logClientMeasurement)("wasm_join_compile", {
-          ms: Math.round(Dt.ms)
+        const BB = await (0, cB.T)();
+        if (null === BB) return;
+        if ((0, vB.o)(BB)) return (0, cB.X)("none"), void WB("none");
+        (0, cB.X)(BB.backend);
+        const IB = await BB.load();
+        WB(IB.name);
+        const ZB = "unloaded" === (0, TB.u)();
+        if (ZB && (0, cB.m)(), !await (0, nB.b)(IB)) return void console.warn(`${zB} the join's early wasm load failed: the boot loads the client itself`);
+        if (!ZB) return;
+        const oB = (0, JB.e)(IB.name);
+        void 0 !== oB ? (0, GB.logClientMeasurement)("wasm_join_compile", {
+          ms: Math.round(oB.ms)
         }, {
-          path: Dt.path,
-          build: et.name
-        }) : console.warn(`${lt} the join's wasm load left no record of how it compiled ${et.name}`)
-      })().catch((tt => {
-        console.warn(`${lt} the join's early wasm load did not start: the boot loads the client itself`, tt)
-      })), yt
+          path: oB.path,
+          build: IB.name
+        }) : console.warn(`${zB} the join's wasm load left no record of how it compiled ${IB.name}`)
+      })().catch((BB => {
+        console.warn(`${zB} the join's early wasm load did not start: the boot loads the client itself`, BB)
+      })), qB
     }
 
-    function bt(tt) {
-      null !== Nt && (0, mt.logClientMeasurement)("wasm_compile_ahead", {
-        hit: Nt === tt ? 1 : 0
+    function WB(BB) {
+      null !== yB && (0, GB.logClientMeasurement)("wasm_compile_ahead", {
+        hit: yB === BB ? 1 : 0
       }, {
-        guessed: Nt,
-        loaded: tt
+        guessed: yB,
+        loaded: BB
       })
     }
 
-    function Jt() {
-      let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      if (null === wt) {
-        var et;
-        const Vt = null !== (et = tt.joinStarted) && void 0 !== et ? et : () => !1;
-        wt = Promise.all([ut(tt), Ct(Vt)]).then((() => {}))
+    function dB() {
+      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      if (null === gB) {
+        var IB;
+        const ZB = null !== (IB = BB.joinStarted) && void 0 !== IB ? IB : () => !1;
+        gB = Promise.all([QB(BB), CB(ZB)]).then((() => {}))
       }
-      return wt
+      return gB
     }
 
-    function Ct(tt) {
-      return ft ??= (async () => {
+    function CB(BB) {
+      return NB ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const et = await (0, Ht.k)();
-        null === et || tt() || "unloaded" !== (0, Ot.D)() || (Nt = et.name, await (0, qt.d)([et, Dt.d], "low"))
-      })().catch((tt => {
-        console.warn(`${lt} the compile ahead of the join did not start: the join loads the client itself`, tt)
-      })), ft
+        const IB = await (0, cB.g)();
+        null === IB || BB() || "unloaded" !== (0, TB.u)() || (yB = IB.name, await (0, JB.b)([IB, oB.h], "low"))
+      })().catch((BB => {
+        console.warn(`${zB} the compile ahead of the join did not start: the join loads the client itself`, BB)
+      })), NB
     }
 
-    function ut() {
+    function QB() {
       let {
-        joinStarted: tt = () => !1,
-        language: et = ""
+        joinStarted: BB = () => !1,
+        language: IB = ""
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return Et ??= async function(tt, et) {
-        if (!await async function(tt) {
-            if (tt()) return !1;
-            let et;
+      return FB ??= async function(BB, IB) {
+        if (!await async function(BB) {
+            if (BB()) return !1;
+            let IB;
             try {
-              var Ot;
-              const tt = await fetch(`${Vt.p}static/js/igzsf.wasmJoinFiles.json`, {
+              var TB;
+              const BB = await fetch(`${ZB.p}static/js/c6gaap.wasmJoinFiles.json`, {
                 priority: "low",
                 cache: "no-cache"
               });
-              if (!tt.ok) throw new Error(`HTTP ${tt.status}`);
-              if (/\bno-store\b/.test(null !== (Ot = tt.headers.get("Cache-Control")) && void 0 !== Ot ? Ot : "")) return !1;
-              const qt = await tt.json();
-              if (!Array.isArray(qt)) throw new Error("not a list");
-              et = qt
-            } catch (Dt) {
-              return console.warn(`${lt} the join's chunk list did not load: the join downloads its chunks itself`, Dt), !tt()
+              if (!BB.ok) throw new Error(`HTTP ${BB.status}`);
+              if (/\bno-store\b/.test(null !== (TB = BB.headers.get("Cache-Control")) && void 0 !== TB ? TB : "")) return !1;
+              const JB = await BB.json();
+              if (!Array.isArray(JB)) throw new Error("not a list");
+              IB = JB
+            } catch (oB) {
+              return console.warn(`${zB} the join's chunk list did not load: the join downloads its chunks itself`, oB), !BB()
             }
-            if (tt()) return !1;
-            const qt = document.createElement("link").relList.supports("prefetch");
-            for (const mt of et) {
-              const tt = `${Vt.p}${mt}`;
-              qt ? Kt(tt) : (0, jt.c)(tt).catch((et => {
-                console.warn(`${lt} prefetching ${tt} failed`, et)
+            if (BB()) return !1;
+            const JB = document.createElement("link").relList.supports("prefetch");
+            for (const GB of IB) {
+              const BB = `${ZB.p}${GB}`;
+              JB ? sB(BB) : (0, kB.e)(BB).catch((IB => {
+                console.warn(`${zB} prefetching ${BB} failed`, IB)
               }))
             }
             return !0
-          }(tt)) return;
-        const Ot = [(0, jt.c)((0, Qt.d)())];
-        (0, Qt.c)(et) && Ot.push((0, jt.c)((0, Qt.g)()));
-        await Promise.all(Ot)
-      }(tt, et).catch((tt => {
-        console.warn(`${lt} the prefetch failed: the join downloads the client itself`, tt)
-      })), Et
+          }(BB)) return;
+        const TB = [(0, kB.e)((0, hB.e)())];
+        (0, hB.c)(IB) && TB.push((0, kB.e)((0, hB.h)()));
+        await Promise.all(TB)
+      }(BB, IB).catch((BB => {
+        console.warn(`${zB} the prefetch failed: the join downloads the client itself`, BB)
+      })), FB
     }
 
-    function Kt(tt) {
-      const et = document.createElement("link");
-      et.rel = "prefetch", et.href = tt, tt.endsWith(".js") && (et.crossOrigin = "anonymous"), document.head.appendChild(et)
+    function sB(BB) {
+      const IB = document.createElement("link");
+      IB.rel = "prefetch", IB.href = BB, BB.endsWith(".js") && (IB.crossOrigin = "anonymous"), document.head.appendChild(IB)
     }
   },
-  39271: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => qt,
-      f: () => Dt,
-      j: () => dt,
-      l: () => Xt,
-      p: () => jt,
-      q: () => mt
+  39129: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => JB,
+      c: () => oB,
+      e: () => vB,
+      f: () => nB,
+      j: () => kB,
+      l: () => GB
     });
-    var Ot = Vt(229);
-    const qt = 3e3,
-      Dt = 15e3;
+    var TB = ZB(201);
+    const JB = 3e3,
+      oB = 15e3;
 
-    function mt(tt) {
-      const et = tt.endsWith(Ot.l);
+    function GB(BB) {
+      const IB = BB.endsWith(TB.k);
       return {
-        text: (et ? tt.slice(0, -Ot.l.length) : tt) || null,
-        dropsCache: et
+        text: (IB ? BB.slice(0, -TB.k.length) : BB) || null,
+        dropsCache: IB
       }
     }
-    const dt = "Either your internet isn't working or this is a bug.";
+    const vB = "Either your internet isn't working or this is a bug.";
 
-    function jt(tt, et) {
-      const Vt = Xt(tt);
-      return null !== Vt.name && "" === Ot.b[Vt.name].text && null !== et ? et : Vt.reason
+    function kB(BB, IB) {
+      const ZB = nB(BB);
+      return null !== ZB.name && "" === TB.c[ZB.name].text && null !== IB ? IB : ZB.reason
     }
-    const Ht = "You were removed from the game.";
+    const cB = "You were removed from the game.";
 
-    function Xt(tt) {
-      var et;
-      let Vt = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const qt = null !== (et = Object.keys(Ot.b).find((et => Ot.b[et].code === tt))) && void 0 !== et ? et : null;
-      if (null === qt) return {
-        code: tt,
-        name: qt,
-        reason: null !== Vt && void 0 !== Vt ? Vt : `${dt}\nCode: ${tt}`,
+    function nB(BB) {
+      var IB;
+      let ZB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const JB = null !== (IB = Object.keys(TB.c).find((IB => TB.c[IB].code === BB))) && void 0 !== IB ? IB : null;
+      if (null === JB) return {
+        code: BB,
+        name: JB,
+        reason: null !== ZB && void 0 !== ZB ? ZB : `${vB}\nCode: ${BB}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: Dt,
-        canReconnect: mt = !1
-      } = Ot.b[qt], jt = tt === Ot.b.outdatedVersion.code || tt === Ot.b.loadRecaptchaError.code;
+        text: oB,
+        canReconnect: GB = !1
+      } = TB.c[JB], kB = BB === TB.c.outdatedVersion.code || BB === TB.c.loadRecaptchaError.code;
       return {
-        code: tt,
-        name: qt,
-        reason: "" !== Dt ? Dt : null !== Vt && void 0 !== Vt ? Vt : tt === Ot.b.gameOrPluginKick.code ? Ht : `Code: ${tt}`,
-        canReconnect: mt,
-        automaticallyReconnect: tt === Ot.b.customGameUpdated.code || tt === Ot.b.duplicateLobbyNameError.code,
-        requiresRefresh: jt
+        code: BB,
+        name: JB,
+        reason: "" !== oB ? oB : null !== ZB && void 0 !== ZB ? ZB : BB === TB.c.gameOrPluginKick.code ? cB : `Code: ${BB}`,
+        canReconnect: GB,
+        automaticallyReconnect: BB === TB.c.customGameUpdated.code || BB === TB.c.duplicateLobbyNameError.code,
+        requiresRefresh: kB
       }
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const BB in modules) Object.freeze(modules[BB]);

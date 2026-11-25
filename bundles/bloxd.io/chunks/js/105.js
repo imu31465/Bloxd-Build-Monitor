@@ -1,462 +1,462 @@
 export const id = 105;
 export const ids = [105];
 export const modules = {
-  5081: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => lt
+  5057: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => zB
     });
-    var Ot = Vt(1140),
-      qt = Vt.n(Ot),
-      Dt = Vt(1152),
-      mt = Vt(1436),
-      dt = Vt(3564),
-      jt = Vt(153),
-      Ht = Vt(3613),
-      Xt = Vt(3597),
-      Qt = Vt(1188);
+    var TB = ZB(1091),
+      JB = ZB.n(TB),
+      oB = ZB(1102),
+      GB = ZB(1397),
+      vB = ZB(3676),
+      kB = ZB(140),
+      cB = ZB(3706),
+      nB = ZB(3698),
+      hB = ZB(1153);
 
-    function lt(tt) {
+    function zB(BB) {
       let {
-        game: et
-      } = tt;
-      const Vt = (0, jt.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        Ot = (0, Ht.h)(et, Vt),
-        lt = (0, dt.g)(Ot),
-        Et = void 0 !== lt.blurhash;
-      return (0, Qt.jsxs)("div", {
+        game: IB
+      } = BB;
+      const ZB = (0, kB.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        TB = (0, cB.c)(IB, ZB),
+        zB = (0, vB.c)(TB),
+        FB = void 0 !== zB.blurhash;
+      return (0, hB.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [lt.isLoading && !Et && (0, Qt.jsx)(mt.b, {
+        children: [zB.isLoading && !FB && (0, hB.jsx)(GB.d, {
           loaderType: "Secondary"
-        }), !lt.failed && (null !== lt.src || Et) && (0, Qt.jsx)("div", {
-          className: qt()("SchematicImage", Xt.j, {
-            SchematicImageFadeIn: lt.fadeIn && !Et
+        }), !zB.failed && (null !== zB.src || FB) && (0, hB.jsx)("div", {
+          className: JB()("SchematicImage", nB.h, {
+            SchematicImageFadeIn: zB.fadeIn && !FB
           }),
-          style: (0, Xt.h)(lt),
-          children: (0, Qt.jsx)(Xt.e, {
-            image: lt
+          style: (0, nB.f)(zB),
+          children: (0, hB.jsx)(nB.d, {
+            image: zB
           })
-        }), lt.failed && (0, Qt.jsx)("div", {
+        }), zB.failed && (0, hB.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, Qt.jsx)(Dt.b, {
+          children: (0, hB.jsx)(oB.d, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  5200: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => yt
+  5189: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => qB
     });
-    var Ot = Vt(63),
-      qt = Vt(1140),
-      Dt = Vt.n(qt),
-      mt = Vt(5124),
-      dt = Vt(1436),
-      jt = Vt(1286),
-      Ht = Vt(3219),
-      Xt = Vt(3353),
-      Qt = Vt(1152),
-      lt = Vt(3223),
-      Et = Vt(5208),
-      ft = Vt(5228),
-      wt = Vt(1188);
+    var TB = ZB(63),
+      JB = ZB(1091),
+      oB = ZB.n(JB),
+      GB = ZB(5112),
+      vB = ZB(1397),
+      kB = ZB(1248),
+      cB = ZB(3324),
+      nB = ZB(3478),
+      hB = ZB(1102),
+      zB = ZB(3332),
+      FB = ZB(5198),
+      NB = ZB(5214),
+      gB = ZB(1153);
 
-    function yt(tt) {
+    function qB(BB) {
       let {
-        folderName: et,
-        onTexturePackUpdated: qt,
-        disabled: yt = !1,
-        maxFileSizeMb: Nt,
-        packOwner: Mt
-      } = tt;
+        folderName: IB,
+        onTexturePackUpdated: JB,
+        disabled: qB = !1,
+        maxFileSizeMb: yB,
+        packOwner: UB
+      } = BB;
       const {
-        t: bt
-      } = (0, jt.H)(), [Jt, Ct] = (0, Ot.useState)(!1), [ut, Kt] = (0, Ot.useState)(null), [ht, vt] = (0, Ot.useState)(null), Wt = (0, Ot.useRef)(null);
-      async function St(tt) {
-        Ct(!0);
+        t: WB
+      } = (0, kB.G)(), [dB, CB] = (0, TB.useState)(!1), [QB, sB] = (0, TB.useState)(null), [wB, OB] = (0, TB.useState)(null), YB = (0, TB.useRef)(null);
+      async function iB(BB) {
+        CB(!0);
         try {
-          const et = await (0, Ht.t)(tt);
-          if ("customGame" === Mt && (0, Xt.j)(et)) return void Kt(bt(Xt.e));
-          if (void 0 !== Nt) {
-            const tt = JSON.stringify(et).length / 1048576;
-            if (tt > Nt) return void Kt(bt("customTexturePack:packTooBig", {
-              size: tt.toFixed(1),
-              max: Nt
+          const IB = await (0, cB.u)(BB);
+          if ("customGame" === UB && (0, nB.k)(IB)) return void sB(WB(nB.c));
+          if (void 0 !== yB) {
+            const BB = JSON.stringify(IB).length / 1048576;
+            if (BB > yB) return void sB(WB("customTexturePack:packTooBig", {
+              size: BB.toFixed(1),
+              max: yB
             }))
           }
-          Kt(null), vt(null), qt(et), Wt.current = et,
-            function(tt, et) {
-              const Ot = tt.modelOverrides;
-              Ot && Promise.all([Vt.e(206), Vt.e(205)]).then((() => Vt(34452))).then((Vt => {
+          sB(null), OB(null), JB(IB), YB.current = IB,
+            function(BB, IB) {
+              const TB = BB.modelOverrides;
+              TB && Promise.all([ZB.e(206), ZB.e(205)]).then((() => ZB(34256))).then((ZB => {
                 let {
-                  packDisplayName: qt,
-                  refusedPackModels: Dt,
-                  packModelSummary: mt
-                } = Vt;
-                const dt = qt(tt.metaData);
-                et(mt(dt, Dt(dt, Ot, !1)))
-              })).catch((tt => {
-                console.error("Checking the texture pack's models failed:", tt)
+                  packDisplayName: JB,
+                  refusedPackModels: oB,
+                  packModelSummary: GB
+                } = ZB;
+                const vB = JB(BB.metaData);
+                IB(GB(vB, oB(vB, TB, !1)))
+              })).catch((BB => {
+                console.error("Checking the texture pack's models failed:", BB)
               }))
-            }(et, (tt => {
-              Wt.current === et && vt(tt)
+            }(IB, (BB => {
+              YB.current === IB && OB(BB)
             }))
-        } catch (et) {
-          if (et instanceof lt.d) {
-            const tt = "customTexturePack:invalidPack" !== et.translationKey || (0, ft.g)() ? et.translationKey : "customTexturePack:invalidPackZip";
-            Kt((0, Et.j)(bt, tt, et.params))
-          } else console.error("Couldn't read the texture pack", et), Kt(bt("customTexturePack:errorTitle"))
+        } catch (IB) {
+          if (IB instanceof zB.d) {
+            const BB = "customTexturePack:invalidPack" !== IB.translationKey || (0, NB.g)() ? IB.translationKey : "customTexturePack:invalidPackZip";
+            sB((0, FB.h)(WB, BB, IB.params))
+          } else console.error("Couldn't read the texture pack", IB), sB(WB("customTexturePack:errorTitle"))
         } finally {
-          Ct(!1)
+          CB(!1)
         }
       }
       const {
-        getRootProps: ct,
-        getInputProps: Rt,
-        isDragActive: It,
-        open: Pt
-      } = (0, mt.e)({
-        onDrop: St,
+        getRootProps: pB,
+        getInputProps: aB,
+        isDragActive: HB,
+        open: MB
+      } = (0, GB.d)({
+        onDrop: iB,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: yt
+        disabled: qB
       });
-      return (0, wt.jsxs)("div", {
+      return (0, gB.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, wt.jsxs)("div", {
+        children: [(0, gB.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [bt("settingsMenu:customTextureWarning"), ".", (0, wt.jsx)("br", {}), bt("settingsMenu:viewDocumentation"), ":", " ", (0, wt.jsx)("a", {
+          children: [WB("settingsMenu:customTextureWarning"), ".", (0, gB.jsx)("br", {}), WB("settingsMenu:viewDocumentation"), ":", " ", (0, gB.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), ut && (0, wt.jsxs)("div", {
+        }), QB && (0, gB.jsxs)("div", {
           className: "CustomTextureError",
-          children: [bt("general:error"), ": ", ut]
-        }), ht && (0, wt.jsx)("div", {
+          children: [WB("general:error"), ": ", QB]
+        }), wB && (0, gB.jsx)("div", {
           className: "CustomTextureError",
-          children: ht
-        }), (0, wt.jsxs)("div", {
-          ...ct({
-            className: Dt()("CustomTextureFolderUpload", {
-              ActiveDrag: It,
-              Disabled: yt
+          children: wB
+        }), (0, gB.jsxs)("div", {
+          ...pB({
+            className: oB()("CustomTextureFolderUpload", {
+              ActiveDrag: HB,
+              Disabled: qB
             })
           }),
-          children: [(0, wt.jsx)("input", {
-            ...Rt({
+          children: [(0, gB.jsx)("input", {
+            ...aB({
               webkitdirectory: "true"
             })
-          }), Jt && (0, wt.jsx)("div", {
+          }), dB && (0, gB.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, wt.jsx)(dt.b, {})
-          }), !Jt && !It && et && (0, wt.jsxs)(wt.Fragment, {
-            children: [(0, wt.jsx)("div", {
+            children: (0, gB.jsx)(vB.d, {})
+          }), !dB && !HB && IB && (0, gB.jsxs)(gB.Fragment, {
+            children: [(0, gB.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, wt.jsx)(Qt.b, {
+              children: (0, gB.jsx)(hB.d, {
                 name: "folder-image"
               })
-            }), (0, wt.jsx)("div", {
+            }), (0, gB.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: et
+              children: IB
             })]
-          }), !Jt && (It || !et) && (0, wt.jsxs)(wt.Fragment, {
-            children: [(0, wt.jsx)("div", {
+          }), !dB && (HB || !IB) && (0, gB.jsxs)(gB.Fragment, {
+            children: [(0, gB.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, wt.jsx)(Qt.b, {
+              children: (0, gB.jsx)(hB.d, {
                 name: "up-from-bracket"
               })
-            }), (0, wt.jsx)("div", {
+            }), (0, gB.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
-              children: bt((0, ft.g)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
+              children: WB((0, NB.g)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
             })]
-          }), !Jt && (0, wt.jsx)(ft.d, {
-            disabled: yt,
-            openFolderPicker: Pt,
-            onFiles: tt => {
-              St(tt)
+          }), !dB && (0, gB.jsx)(NB.e, {
+            disabled: qB,
+            openFolderPicker: MB,
+            onFiles: BB => {
+              iB(BB)
             }
           })]
         })]
       })
     }
   },
-  5228: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Xt,
-      g: () => Ht
+  5214: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => nB,
+      g: () => cB
     });
-    var Ot = Vt(63),
-      qt = Vt(1556),
-      Dt = Vt(1286),
-      mt = Vt(106),
-      dt = Vt(3207),
-      jt = Vt(1188);
+    var TB = ZB(63),
+      JB = ZB(1516),
+      oB = ZB(1248),
+      GB = ZB(105),
+      vB = ZB(3306),
+      kB = ZB(1153);
 
-    function Ht() {
-      return !(0, mt.isMobile)()
+    function cB() {
+      return !(0, GB.isMobile)()
     }
 
-    function Xt(tt) {
+    function nB(BB) {
       let {
-        disabled: et,
-        openFolderPicker: Vt,
-        onFiles: mt
-      } = tt;
+        disabled: IB,
+        openFolderPicker: ZB,
+        onFiles: GB
+      } = BB;
       const {
-        t: Xt
-      } = (0, Dt.H)(), Qt = (0, Ot.useRef)(null);
-      return (0, jt.jsxs)("div", {
+        t: nB
+      } = (0, oB.G)(), hB = (0, TB.useRef)(null);
+      return (0, kB.jsxs)("div", {
         className: "PackPickButtons",
         "data-pad-mouse-only": !0,
-        children: [(0, jt.jsx)("input", {
-          ref: Qt,
+        children: [(0, kB.jsx)("input", {
+          ref: hB,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(tt) {
-            const et = Array.from(tt.target.files);
-            tt.target.value = "", mt(et)
+          onChange: function(BB) {
+            const IB = Array.from(BB.target.files);
+            BB.target.value = "", GB(IB)
           }
-        }), Ht() && (0, jt.jsx)(qt.f, {
-          disabled: et,
-          onClick: Vt,
-          children: Xt("general:chooseFolder")
-        }), (0, jt.jsx)(qt.f, {
-          disabled: et,
+        }), cB() && (0, kB.jsx)(JB.g, {
+          disabled: IB,
+          onClick: ZB,
+          children: nB("general:chooseFolder")
+        }), (0, kB.jsx)(JB.g, {
+          disabled: IB,
           onClick: () => {
-            (0, dt.f)(Qt.current)
+            (0, vB.i)(hB.current)
           },
-          children: Xt("general:chooseZip")
+          children: nB("general:chooseZip")
         })]
       })
     }
   },
-  5155: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => ft,
-      e: () => bt,
-      f: () => wt,
-      j: () => Mt
+  5143: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => NB,
+      h: () => WB,
+      j: () => gB,
+      m: () => UB
     });
-    var Ot = Vt(63),
-      qt = Vt(5162),
-      Dt = Vt(4475),
-      mt = Vt(1464),
-      dt = Vt(5186),
-      jt = Vt(1140),
-      Ht = Vt.n(jt),
-      Xt = Vt(1450),
-      Qt = Vt(1826),
-      lt = Vt(5194),
-      Et = Vt(1188);
+    var TB = ZB(63),
+      JB = ZB(5150),
+      oB = ZB(4545),
+      GB = ZB(1421),
+      vB = ZB(5177),
+      kB = ZB(1091),
+      cB = ZB.n(kB),
+      nB = ZB(1403),
+      hB = ZB(1805),
+      zB = ZB(5186),
+      FB = ZB(1153);
 
-    function ft(tt) {
+    function NB(BB) {
       let {
-        label: et,
-        onClick: Vt,
-        checked: Ot,
-        circleInfoText: qt,
-        className: dt,
-        disabled: jt,
-        note: Xt
-      } = tt;
-      return (0, Et.jsxs)("div", {
-        "aria-disabled": jt || void 0,
+        label: IB,
+        onClick: ZB,
+        checked: TB,
+        circleInfoText: JB,
+        className: vB,
+        disabled: kB,
+        note: nB
+      } = BB;
+      return (0, FB.jsxs)("div", {
+        "aria-disabled": kB || void 0,
         "data-pad-focusable": !0,
-        className: Ht()("SettingBox CheckboxContainer", {
-          [dt]: dt,
-          SettingBoxDisabled: jt
+        className: cB()("SettingBox CheckboxContainer", {
+          [vB]: vB,
+          SettingBoxDisabled: kB
         }),
         onClick: () => {
-          jt || Vt(!Ot)
+          kB || ZB(!TB)
         },
-        children: [(0, Et.jsxs)("div", {
+        children: [(0, FB.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, Et.jsx)("label", {
+          children: [(0, FB.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, Et.jsx)(Dt.b, {
+            children: (0, FB.jsx)(oB.d, {
               className: "SettingsCheckbox",
-              checked: Ot,
-              disabled: jt,
+              checked: TB,
+              disabled: kB,
               onChange: () => {}
             })
-          }), (0, Et.jsxs)("div", {
+          }), (0, FB.jsxs)("div", {
             className: "CheckboxText",
-            children: [et, qt && (0, Et.jsx)("span", {
-              onClick: tt => tt.stopPropagation(),
-              children: (0, Et.jsx)(mt.c, {
+            children: [IB, JB && (0, FB.jsx)("span", {
+              onClick: BB => BB.stopPropagation(),
+              children: (0, FB.jsx)(GB.d, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: qt
+                hoverInfo: JB
               })
             })]
           })]
-        }), Xt && (0, Et.jsx)("div", {
+        }), nB && (0, FB.jsx)("div", {
           className: "SettingNote",
-          children: Xt
+          children: nB
         })]
       })
     }
 
-    function wt(tt) {
+    function gB(BB) {
       let {
-        name: et,
-        onChange: Vt,
-        min: qt,
-        max: Dt,
-        step: dt,
-        initValue: jt,
-        circleInfoText: Xt,
-        format: Qt,
-        className: lt,
-        padStep: ft,
-        disabled: wt = !1,
-        selectableMax: yt,
-        cappedNote: Mt,
-        onChangeComplete: bt
-      } = tt;
-      const [Jt, Ct] = (0, Ot.useState)(jt), ut = (0, Ot.useRef)(jt);
-      (0, Ot.useEffect)((() => {
-        ut.current = jt, Ct(jt)
-      }), [jt]);
-      const Kt = void 0 !== yt && yt < Dt,
-        ht = Kt ? {
-          "--slider-selectable": (yt - qt) / (Dt - qt)
+        name: IB,
+        onChange: ZB,
+        min: JB,
+        max: oB,
+        step: vB,
+        initValue: kB,
+        circleInfoText: nB,
+        format: hB,
+        className: zB,
+        padStep: NB,
+        disabled: gB = !1,
+        selectableMax: qB,
+        cappedNote: UB,
+        onChangeComplete: WB
+      } = BB;
+      const [dB, CB] = (0, TB.useState)(kB), QB = (0, TB.useRef)(kB);
+      (0, TB.useEffect)((() => {
+        QB.current = kB, CB(kB)
+      }), [kB]);
+      const sB = void 0 !== qB && qB < oB,
+        wB = sB ? {
+          "--slider-selectable": (qB - JB) / (oB - JB)
         } : void 0;
-      return (0, Et.jsxs)("div", {
-        className: Ht()("SettingBox SettingsSliderDiv", {
-          [lt]: lt,
-          SettingBoxDisabled: wt,
-          SliderCapped: Kt
+      return (0, FB.jsxs)("div", {
+        className: cB()("SettingBox SettingsSliderDiv", {
+          [zB]: zB,
+          SettingBoxDisabled: gB,
+          SliderCapped: sB
         }),
-        style: ht,
-        children: [(0, Et.jsxs)("div", {
+        style: wB,
+        children: [(0, FB.jsxs)("div", {
           className: "SliderText",
-          children: [`${et}: ${Qt?Qt(Jt):Jt}`, Xt && (0, Et.jsx)(mt.c, {
+          children: [`${IB}: ${hB?hB(dB):dB}`, nB && (0, FB.jsx)(GB.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Xt
+            hoverInfo: nB
           })]
-        }), (0, Et.jsx)("div", {
+        }), (0, FB.jsx)("div", {
           className: "SliderDiv",
-          children: (0, Et.jsx)(Nt, {
-            value: Jt,
-            min: qt,
-            max: Dt,
-            step: dt,
-            onChange: tt => {
-              if (Kt && tt >= yt && Jt === yt) return;
-              const et = Kt ? Math.min(tt, yt) : tt;
-              ut.current = et, Ct(et), Vt(et)
+          children: (0, FB.jsx)(yB, {
+            value: dB,
+            min: JB,
+            max: oB,
+            step: vB,
+            onChange: BB => {
+              if (sB && BB >= qB && dB === qB) return;
+              const IB = sB ? Math.min(BB, qB) : BB;
+              QB.current = IB, CB(IB), ZB(IB)
             },
-            onChangeComplete: bt && (() => {
-              bt(ut.current)
+            onChangeComplete: WB && (() => {
+              WB(QB.current)
             }),
-            format: Qt,
-            padStep: ft,
-            disabled: wt
+            format: hB,
+            padStep: NB,
+            disabled: gB
           })
-        }), Kt && Mt && (0, Et.jsx)("div", {
+        }), sB && UB && (0, FB.jsx)("div", {
           className: "SettingNote",
-          children: Mt
+          children: UB
         })]
       })
     }
-    const yt = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const qB = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function Nt(tt) {
-      var et;
+    function yB(BB) {
+      var IB;
       let {
-        value: Vt,
-        min: Dt,
-        max: mt,
-        step: dt,
-        onChange: jt,
-        orientation: Ht,
-        reverse: Xt,
-        setIsChanging: Qt,
-        tooltip: ft,
-        labels: wt,
-        handleLabel: Nt,
-        format: Mt,
-        onChangeStart: bt,
-        onChangeComplete: Jt,
-        padStep: Ct,
-        disabled: ut = !1
-      } = tt;
-      const Kt = (0, Ot.useRef)(null),
-        ht = (0, Ot.useRef)(null);
-      (0, Ot.useLayoutEffect)((() => {
-        var tt, et, Vt;
-        const Ot = null !== (tt = null === (et = Kt.current) || void 0 === et ? void 0 : et.querySelector(".rangeslider")) && void 0 !== tt ? tt : null;
-        null === Ot || void 0 === Ot || Ot.setAttribute("data-pad-slider", ""), null === Ot || void 0 === Ot || Ot.setAttribute("data-pad-focusable", ""), null === Ot || void 0 === Ot || null === (Vt = Ot.querySelector(".rangeslider__handle")) || void 0 === Vt || Vt.setAttribute("data-pad-slider-handle", ""), ht.current = Ot
-      }), []), (0, Ot.useLayoutEffect)((() => {
-        var tt, et;
-        ut ? null === (tt = ht.current) || void 0 === tt || tt.setAttribute("aria-disabled", "true") : null === (et = ht.current) || void 0 === et || et.removeAttribute("aria-disabled")
-      }), [ut]);
-      const vt = (null !== (et = String(dt).split(".")[1]) && void 0 !== et ? et : "").length,
-        Wt = tt => {
-          const et = Number((Math.round((tt - Dt) / dt) * dt + Dt).toFixed(vt));
-          return Math.min(mt, Math.max(Dt, et))
+        value: ZB,
+        min: oB,
+        max: GB,
+        step: vB,
+        onChange: kB,
+        orientation: cB,
+        reverse: nB,
+        setIsChanging: hB,
+        tooltip: NB,
+        labels: gB,
+        handleLabel: yB,
+        format: UB,
+        onChangeStart: WB,
+        onChangeComplete: dB,
+        padStep: CB,
+        disabled: QB = !1
+      } = BB;
+      const sB = (0, TB.useRef)(null),
+        wB = (0, TB.useRef)(null);
+      (0, TB.useLayoutEffect)((() => {
+        var BB, IB, ZB;
+        const TB = null !== (BB = null === (IB = sB.current) || void 0 === IB ? void 0 : IB.querySelector(".rangeslider")) && void 0 !== BB ? BB : null;
+        null === TB || void 0 === TB || TB.setAttribute("data-pad-slider", ""), null === TB || void 0 === TB || TB.setAttribute("data-pad-focusable", ""), null === TB || void 0 === TB || null === (ZB = TB.querySelector(".rangeslider__handle")) || void 0 === ZB || ZB.setAttribute("data-pad-slider-handle", ""), wB.current = TB
+      }), []), (0, TB.useLayoutEffect)((() => {
+        var BB, IB;
+        QB ? null === (BB = wB.current) || void 0 === BB || BB.setAttribute("aria-disabled", "true") : null === (IB = wB.current) || void 0 === IB || IB.removeAttribute("aria-disabled")
+      }), [QB]);
+      const OB = (null !== (IB = String(vB).split(".")[1]) && void 0 !== IB ? IB : "").length,
+        YB = BB => {
+          const IB = Number((Math.round((BB - oB) / vB) * vB + oB).toFixed(OB));
+          return Math.min(GB, Math.max(oB, IB))
         },
-        St = (0, Ot.useRef)(Jt);
-      St.current = Jt, (0, Ot.useEffect)((() => {
-        const tt = Kt.current;
-        if (!tt) return;
-        const et = tt => {
-          var et;
-          yt.has(tt.key) && (null === (et = St.current) || void 0 === et || et.call(St))
+        iB = (0, TB.useRef)(dB);
+      iB.current = dB, (0, TB.useEffect)((() => {
+        const BB = sB.current;
+        if (!BB) return;
+        const IB = BB => {
+          var IB;
+          qB.has(BB.key) && (null === (IB = iB.current) || void 0 === IB || IB.call(iB))
         };
-        return tt.addEventListener("keyup", et), () => {
-          tt.removeEventListener("keyup", et)
+        return BB.addEventListener("keyup", IB), () => {
+          BB.removeEventListener("keyup", IB)
         }
       }), []);
-      const ct = (0, Ot.useRef)(!1);
-      return (0, lt.i)(ht, {
-        adjust: tt => {
-          if (ut) return;
-          const et = null !== Ct && void 0 !== Ct ? Ct : Math.max(dt, Math.round((mt - Dt) / 20 / dt) * dt),
-            Ot = Wt(Vt + tt * et * (Xt ? -1 : 1));
-          Ot !== Vt && (null === bt || void 0 === bt || bt(), jt(Ot), null === Jt || void 0 === Jt || Jt())
+      const pB = (0, TB.useRef)(!1);
+      return (0, zB.f)(wB, {
+        adjust: BB => {
+          if (QB) return;
+          const IB = null !== CB && void 0 !== CB ? CB : Math.max(vB, Math.round((GB - oB) / 20 / vB) * vB),
+            TB = YB(ZB + BB * IB * (nB ? -1 : 1));
+          TB !== ZB && (null === WB || void 0 === WB || WB(), kB(TB), null === dB || void 0 === dB || dB())
         },
-        setFraction: tt => {
-          if (ut) return;
-          const et = Wt(Dt + (Xt ? 1 - tt : tt) * (mt - Dt));
-          et !== Vt && (ct.current || (ct.current = !0, null === bt || void 0 === bt || bt()), jt(et))
+        setFraction: BB => {
+          if (QB) return;
+          const IB = YB(oB + (nB ? 1 - BB : BB) * (GB - oB));
+          IB !== ZB && (pB.current || (pB.current = !0, null === WB || void 0 === WB || WB()), kB(IB))
         },
         endDrag: () => {
-          ct.current && (ct.current = !1, null === Jt || void 0 === Jt || Jt())
+          pB.current && (pB.current = !1, null === dB || void 0 === dB || dB())
         }
-      }), (0, Et.jsx)("div", {
-        ref: Kt,
+      }), (0, FB.jsx)("div", {
+        ref: sB,
         style: {
           display: "contents"
         },
-        children: (0, Et.jsx)(qt.d, {
-          value: Vt,
-          min: Dt,
-          max: mt,
-          step: dt,
-          onChange: jt,
-          orientation: Ht,
-          reverse: Xt,
-          tooltip: ft,
-          labels: wt,
-          handleLabel: Nt,
-          format: Mt,
+        children: (0, FB.jsx)(JB.d, {
+          value: ZB,
+          min: oB,
+          max: GB,
+          step: vB,
+          onChange: kB,
+          orientation: cB,
+          reverse: nB,
+          tooltip: NB,
+          labels: gB,
+          handleLabel: yB,
+          format: UB,
           onChangeStart: () => {
-            null === bt || void 0 === bt || bt(), null === Qt || void 0 === Qt || Qt(!0)
+            null === WB || void 0 === WB || WB(), null === hB || void 0 === hB || hB(!0)
           },
           onChangeComplete: () => {
-            null === Qt || void 0 === Qt || Qt(!1), null === Jt || void 0 === Jt || Jt()
+            null === hB || void 0 === hB || hB(!1), null === dB || void 0 === dB || dB()
           }
         })
       })
     }
-    async function Mt() {
-      const tt = Xt.NotificationProvider.showPromptPopup({
+    async function UB() {
+      const BB = nB.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
@@ -464,75 +464,75 @@ export const modules = {
         cancelText: "general:cancel",
         cancelTooltip: ""
       });
-      !0 === await tt.getResult() && (0, Qt.reloadBloxd)()
+      !0 === await BB.getResult() && (0, hB.reloadBloxd)()
     }
 
-    function bt(tt) {
+    function WB(BB) {
       let {
-        label: et,
-        options: Vt,
-        value: Ot,
-        onChange: qt,
-        circleInfoText: Dt
-      } = tt;
-      return (0, Et.jsxs)("div", {
+        label: IB,
+        options: ZB,
+        value: TB,
+        onChange: JB,
+        circleInfoText: oB
+      } = BB;
+      return (0, FB.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, Et.jsxs)("div", {
+        children: [(0, FB.jsxs)("div", {
           className: "SliderText",
-          children: [et, Dt && (0, Et.jsx)(mt.c, {
+          children: [IB, oB && (0, FB.jsx)(GB.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Dt
+            hoverInfo: oB
           })]
-        }), (0, Et.jsx)(dt.c, {
-          ariaLabel: et,
-          options: Vt,
-          value: Ot,
-          onChange: qt
+        }), (0, FB.jsx)(vB.d, {
+          ariaLabel: IB,
+          options: ZB,
+          value: TB,
+          onChange: JB
         })]
       })
     }
   },
-  5150: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => yt,
-      g: () => Nt
+  5140: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => qB,
+      f: () => yB
     });
-    var Ot = Vt(3219),
-      qt = Vt(2219),
-      Dt = Vt(63),
-      mt = Vt(1140),
-      dt = Vt.n(mt),
-      jt = Vt(1436),
-      Ht = Vt(3217),
-      Xt = Vt(1450),
-      Qt = Vt(5155),
-      lt = Vt(5200),
-      Et = Vt(725),
-      ft = Vt(5235),
-      wt = Vt(1188);
+    var TB = ZB(3324),
+      JB = ZB(2236),
+      oB = ZB(63),
+      GB = ZB(1091),
+      vB = ZB.n(GB),
+      kB = ZB(1397),
+      cB = ZB(3316),
+      nB = ZB(1403),
+      hB = ZB(5143),
+      zB = ZB(5189),
+      FB = ZB(684),
+      NB = ZB(5223),
+      gB = ZB(1153);
 
-    function yt(tt) {
-      var et;
+    function qB(BB) {
+      var IB;
       let {
-        setApplySettingsCallback: Vt
-      } = tt;
-      const [, mt] = (0, Dt.useReducer)((tt => tt + 1), 0), dt = (0, Dt.useRef)(!1), jt = (0, Dt.useRef)(null);
+        setApplySettingsCallback: ZB
+      } = BB;
+      const [, GB] = (0, oB.useReducer)((BB => BB + 1), 0), vB = (0, oB.useRef)(!1), kB = (0, oB.useRef)(null);
 
-      function yt(tt, et) {
-        Ht.e.setFromJson(tt, "player");
-        const Ot = Ht.e.saveTexturePack();
-        if (Et.K) {
-          const tt = Ht.e.toJson();
-          Ot.then((et => {
-            et && (0, ft.d)(tt)
+      function qB(BB, IB) {
+        cB.e.setFromJson(BB, "player");
+        const TB = cB.e.saveTexturePack();
+        if (FB.B) {
+          const BB = cB.e.toJson();
+          TB.then((IB => {
+            IB && (0, NB.c)(BB)
           }))
-        } else dt.current ||= et, jt.current !== Ht.e.getId() || Ht.e.getId() === qt.p.CUSTOM && dt.current ? Vt((() => Qt.j)) : Vt(null);
-        mt()
+        } else vB.current ||= IB, kB.current !== cB.e.getId() || cB.e.getId() === JB.q.CUSTOM && vB.current ? ZB((() => hB.m)) : ZB(null);
+        GB()
       }
-      async function Mt(tt) {
-        if (Ht.e.getId() !== tt.metaData.id) {
-          if (Ht.e.getId() === qt.p.CUSTOM && Ht.e.getFromFolderName()) {
-            const tt = Xt.NotificationProvider.showPromptPopup({
+      async function UB(BB) {
+        if (cB.e.getId() !== BB.metaData.id) {
+          if (cB.e.getId() === JB.q.CUSTOM && cB.e.getFromFolderName()) {
+            const BB = nB.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -541,29 +541,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await tt.getResult()) return
+            if (!0 !== await BB.getResult()) return
           }
-          yt(tt, !1)
+          qB(BB, !1)
         }
-      }(0, Dt.useEffect)((() => {
-        jt.current = Ht.e.getId()
+      }(0, oB.useEffect)((() => {
+        kB.current = cB.e.getId()
       }), []);
-      const bt = Ot.e,
-        Jt = [bt, ...Object.values(qt.p).filter((tt => tt !== bt))];
-      return (0, wt.jsx)(wt.Fragment, {
-        children: (0, wt.jsxs)("div", {
+      const WB = TB.e,
+        dB = [WB, ...Object.values(JB.q).filter((BB => BB !== WB))];
+      return (0, gB.jsx)(gB.Fragment, {
+        children: (0, gB.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, wt.jsx)("div", {
+          children: [(0, gB.jsx)("div", {
             className: "TexturePackList",
-            children: Jt.map((tt => (0, wt.jsx)(Nt, {
-              id: tt,
-              isSelected: tt === Ht.e.getId(),
-              setSelected: Mt
-            }, tt)))
-          }), Ht.e.getId() === qt.p.CUSTOM && (0, wt.jsx)(lt.c, {
-            folderName: null !== (et = Ht.e.getFromFolderName()) && void 0 !== et ? et : null,
-            onTexturePackUpdated: function(tt) {
-              yt(tt, !0)
+            children: dB.map((BB => (0, gB.jsx)(yB, {
+              id: BB,
+              isSelected: BB === cB.e.getId(),
+              setSelected: UB
+            }, BB)))
+          }), cB.e.getId() === JB.q.CUSTOM && (0, gB.jsx)(zB.b, {
+            folderName: null !== (IB = cB.e.getFromFolderName()) && void 0 !== IB ? IB : null,
+            onTexturePackUpdated: function(BB) {
+              qB(BB, !0)
             },
             packOwner: "player"
           })]
@@ -571,417 +571,417 @@ export const modules = {
       })
     }
 
-    function Nt(tt) {
+    function yB(BB) {
       let {
-        id: et,
-        isSelected: Vt,
-        setSelected: mt,
-        disabled: Ht = !1
-      } = tt;
-      const [Xt, Qt] = (0, Dt.useState)(!0), [lt, Et] = (0, Dt.useState)(""), [ft, yt] = (0, Dt.useState)(""), [Nt, Mt] = (0, Dt.useState)(""), bt = (0, Dt.useRef)({});
-      return (0, Dt.useEffect)((() => {
-        (0, Ot.q)(et).then((tt => {
-          var et;
-          tt && (bt.current = tt, Qt(!1), Et(bt.current.metaData.name), yt(bt.current.metaData.author), Mt(null !== (et = bt.current.metaData.previewImage) && void 0 !== et ? et : ""))
-        })).catch((tt => {
-          console.warn(`Failed to fetch texture pack ${et}`, tt)
+        id: IB,
+        isSelected: ZB,
+        setSelected: GB,
+        disabled: cB = !1
+      } = BB;
+      const [nB, hB] = (0, oB.useState)(!0), [zB, FB] = (0, oB.useState)(""), [NB, qB] = (0, oB.useState)(""), [yB, UB] = (0, oB.useState)(""), WB = (0, oB.useRef)({});
+      return (0, oB.useEffect)((() => {
+        (0, TB.r)(IB).then((BB => {
+          var IB;
+          BB && (WB.current = BB, hB(!1), FB(WB.current.metaData.name), qB(WB.current.metaData.author), UB(null !== (IB = WB.current.metaData.previewImage) && void 0 !== IB ? IB : ""))
+        })).catch((BB => {
+          console.warn(`Failed to fetch texture pack ${IB}`, BB)
         }))
-      }), [et]), (0, wt.jsxs)("div", {
+      }), [IB]), (0, gB.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": Ht || void 0,
-        className: dt()("TexturePack", {
-          Selected: Vt,
-          Custom: et === qt.p.CUSTOM,
-          Disabled: Ht
+        "aria-disabled": cB || void 0,
+        className: vB()("TexturePack", {
+          Selected: ZB,
+          Custom: IB === JB.q.CUSTOM,
+          Disabled: cB
         }),
         onClick: () => {
-          Xt || Ht || mt(bt.current)
+          nB || cB || GB(WB.current)
         },
-        children: [(0, wt.jsx)("div", {
+        children: [(0, gB.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: Nt ? `url(${Nt})` : void 0
+            backgroundImage: yB ? `url(${yB})` : void 0
           }
-        }), Xt && (0, wt.jsx)("div", {
+        }), nB && (0, gB.jsx)("div", {
           className: "TexturePackName",
-          children: (0, wt.jsx)(jt.b, {})
-        }), !Xt && lt && (0, wt.jsx)("div", {
+          children: (0, gB.jsx)(kB.d, {})
+        }), !nB && zB && (0, gB.jsx)("div", {
           className: "TexturePackName",
-          children: lt
-        }), !Xt && ft && (0, wt.jsx)("div", {
+          children: zB
+        }), !nB && NB && (0, gB.jsx)("div", {
           className: "TexturePackAuthor",
-          children: ft
+          children: NB
         })]
       })
     }
   },
-  5208: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => dt,
-      f: () => mt,
-      j: () => Dt
+  5198: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => vB,
+      g: () => GB,
+      h: () => oB
     });
-    var Ot = Vt(5216);
-    const qt = [tt => tt.strict ? "strict" : "nonStrict", tt => tt.program];
+    var TB = ZB(5204);
+    const JB = [BB => BB.strict ? "strict" : "nonStrict", BB => BB.program];
 
-    function Dt(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Ot = {};
-      for (const qt in Vt) Ot[qt] = `\0${qt}\0`;
-      return tt(et, Ot).replace(/\0(\w+)\0/g, ((tt, et) => Vt[et]))
+    function oB(BB, IB) {
+      let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const TB = {};
+      for (const JB in ZB) TB[JB] = `\0${JB}\0`;
+      return BB(IB, TB).replace(/\0(\w+)\0/g, ((BB, IB) => ZB[IB]))
     }
 
-    function mt(tt) {
-      return null === tt.file ? null : tt.line > 0 ? `${tt.file}:${tt.line}` : tt.file
+    function GB(BB) {
+      return null === BB.file ? null : BB.line > 0 ? `${BB.file}:${BB.line}` : BB.file
     }
 
-    function dt(tt) {
-      const et = new Map(tt.map((tt => [jt(tt).join("."), tt])));
-      if (0 === et.size) return [];
-      const Vt = Xt([...et.values()]);
-      return 0 === Vt[0].length ? [] : Vt
+    function vB(BB) {
+      const IB = new Map(BB.map((BB => [kB(BB).join("."), BB])));
+      if (0 === IB.size) return [];
+      const ZB = nB([...IB.values()]);
+      return 0 === ZB[0].length ? [] : ZB
     }
 
-    function jt(tt) {
-      return qt.map((et => et(tt)))
+    function kB(BB) {
+      return JB.map((IB => IB(BB)))
     }
-    const Ht = qt.map((tt => new Set(Ot.g.map(tt)).size));
+    const cB = JB.map((BB => new Set(TB.d.map(BB)).size));
 
-    function Xt(tt) {
-      const et = qt.map((et => new Set(tt.map(et)))),
-        Vt = et.reduce(((tt, et) => tt * et.size), 1),
-        Ot = et.every(((tt, et) => 1 === tt.size || tt.size === Ht[et]));
-      if (Vt === tt.length && Ot) return [qt.filter(((tt, Vt) => 1 === et[Vt].size)).map((et => et(tt[0])))];
-      let Dt = null;
-      for (let mt = 0; mt < qt.length; mt++) {
-        if (1 === et[mt].size) continue;
-        const Vt = Qt(tt, qt[mt]).flatMap(Xt);
-        (null === Dt || Vt.length < Dt.length) && (Dt = Vt)
+    function nB(BB) {
+      const IB = JB.map((IB => new Set(BB.map(IB)))),
+        ZB = IB.reduce(((BB, IB) => BB * IB.size), 1),
+        TB = IB.every(((BB, IB) => 1 === BB.size || BB.size === cB[IB]));
+      if (ZB === BB.length && TB) return [JB.filter(((BB, ZB) => 1 === IB[ZB].size)).map((IB => IB(BB[0])))];
+      let oB = null;
+      for (let GB = 0; GB < JB.length; GB++) {
+        if (1 === IB[GB].size) continue;
+        const ZB = hB(BB, JB[GB]).flatMap(nB);
+        (null === oB || ZB.length < oB.length) && (oB = ZB)
       }
-      return Dt
+      return oB
     }
 
-    function Qt(tt, et) {
-      const Vt = new Map;
-      for (const qt of tt) {
-        var Ot;
-        const tt = et(qt);
-        Vt.set(tt, [...null !== (Ot = Vt.get(tt)) && void 0 !== Ot ? Ot : [], qt])
+    function hB(BB, IB) {
+      const ZB = new Map;
+      for (const JB of BB) {
+        var TB;
+        const BB = IB(JB);
+        ZB.set(BB, [...null !== (TB = ZB.get(BB)) && void 0 !== TB ? TB : [], JB])
       }
-      return [...Vt.values()]
+      return [...ZB.values()]
     }
   },
-  5186: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => mt
+  5177: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => GB
     });
-    var Ot = Vt(1140),
-      qt = Vt.n(Ot),
-      Dt = Vt(1188);
+    var TB = ZB(1091),
+      JB = ZB.n(TB),
+      oB = ZB(1153);
 
-    function mt(tt) {
+    function GB(BB) {
       let {
-        options: et,
-        value: Vt,
-        onChange: Ot,
-        ariaLabel: mt,
-        className: dt,
-        reselectable: jt = !1,
-        keepsFocus: Ht = !1,
-        padTabs: Xt
-      } = tt;
-      const Qt = void 0 !== Xt;
-      return (0, Dt.jsx)("div", {
-        className: qt()("SegmentedToggle", dt),
+        options: IB,
+        value: ZB,
+        onChange: TB,
+        ariaLabel: GB,
+        className: vB,
+        reselectable: kB = !1,
+        keepsFocus: cB = !1,
+        padTabs: nB
+      } = BB;
+      const hB = void 0 !== nB;
+      return (0, oB.jsx)("div", {
+        className: JB()("SegmentedToggle", vB),
         role: "group",
-        "aria-label": mt,
-        "data-pad-tabs": Xt,
-        children: et.map((tt => {
-          const et = tt.value === Vt;
-          return (0, Dt.jsx)("button", {
+        "aria-label": GB,
+        "data-pad-tabs": nB,
+        children: IB.map((BB => {
+          const IB = BB.value === ZB;
+          return (0, oB.jsx)("button", {
             type: "button",
-            "aria-pressed": et,
-            "data-pad-tab": Qt || void 0,
-            "data-pad-selected": Qt && et ? "true" : void 0,
-            "data-pad-default-focus": Qt && et || void 0,
-            "aria-label": tt.ariaLabel,
-            title: tt.ariaLabel,
-            className: qt()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: et
+            "aria-pressed": IB,
+            "data-pad-tab": hB || void 0,
+            "data-pad-selected": hB && IB ? "true" : void 0,
+            "data-pad-default-focus": hB && IB || void 0,
+            "aria-label": BB.ariaLabel,
+            title: BB.ariaLabel,
+            className: JB()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: IB
             }),
-            onMouseDown: Ht ? tt => {
-              tt.preventDefault()
+            onMouseDown: cB ? BB => {
+              BB.preventDefault()
             } : void 0,
             onClick: () => {
-              et && !jt || Ot(tt.value)
+              IB && !kB || TB(BB.value)
             },
-            children: tt.label
-          }, tt.value)
+            children: BB.label
+          }, BB.value)
         }))
       })
     }
   },
-  5194: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Dt,
-      i: () => mt
+  5186: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => oB,
+      f: () => GB
     });
-    var Ot = Vt(63);
-    const qt = new WeakMap,
-      Dt = tt => {
-        var et;
-        const Vt = tt.closest("[data-pad-slider]");
-        return Vt && null !== (et = qt.get(Vt)) && void 0 !== et ? et : null
+    var TB = ZB(63);
+    const JB = new WeakMap,
+      oB = BB => {
+        var IB;
+        const ZB = BB.closest("[data-pad-slider]");
+        return ZB && null !== (IB = JB.get(ZB)) && void 0 !== IB ? IB : null
       },
-      mt = (tt, et) => {
-        const Vt = (0, Ot.useRef)(et);
-        Vt.current = et, (0, Ot.useEffect)((() => {
-          if (tt.current) return ((tt, et) => (qt.set(tt, et), () => {
-            qt.get(tt) === et && qt.delete(tt)
-          }))(tt.current, {
-            adjust: tt => {
-              Vt.current.adjust(tt)
+      GB = (BB, IB) => {
+        const ZB = (0, TB.useRef)(IB);
+        ZB.current = IB, (0, TB.useEffect)((() => {
+          if (BB.current) return ((BB, IB) => (JB.set(BB, IB), () => {
+            JB.get(BB) === IB && JB.delete(BB)
+          }))(BB.current, {
+            adjust: BB => {
+              ZB.current.adjust(BB)
             },
-            setFraction: tt => {
-              Vt.current.setFraction(tt)
+            setFraction: BB => {
+              ZB.current.setFraction(BB)
             },
             endDrag: () => {
-              Vt.current.endDrag()
+              ZB.current.endDrag()
             }
           })
-        }), [tt])
+        }), [BB])
       }
   },
-  5216: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ot.k,
-      g: () => qt,
-      h: () => Ot.s
+  5204: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => TB.j,
+      d: () => JB,
+      g: () => TB.o
     });
-    var Ot = Vt(5223);
-    const qt = [!1, !0].flatMap((tt => ["terrain", "liquid", "model"].map((et => ({
-      strict: tt,
-      program: et
+    var TB = ZB(5210);
+    const JB = [!1, !0].flatMap((BB => ["terrain", "liquid", "model"].map((IB => ({
+      strict: BB,
+      program: IB
     })))))
   },
-  5243: (tt, et, Vt) => {
-    function Ot(tt, et) {
-      return qt(tt, et)
+  5226: (BB, IB, ZB) => {
+    function TB(BB, IB) {
+      return JB(BB, IB)
     }
 
-    function qt(tt, et) {
-      if (tt === et) return !0;
-      if ("object" !== typeof tt || "object" !== typeof et || null === tt || null === et || Array.isArray(tt) !== Array.isArray(et)) return !1;
-      const Vt = tt,
-        Ot = et,
-        Dt = Object.keys(Vt);
-      return Dt.length === Object.keys(Ot).length && Dt.every((tt => Object.prototype.hasOwnProperty.call(Ot, tt) && qt(Vt[tt], Ot[tt])))
+    function JB(BB, IB) {
+      if (BB === IB) return !0;
+      if ("object" !== typeof BB || "object" !== typeof IB || null === BB || null === IB || Array.isArray(BB) !== Array.isArray(IB)) return !1;
+      const ZB = BB,
+        TB = IB,
+        oB = Object.keys(ZB);
+      return oB.length === Object.keys(TB).length && oB.every((BB => Object.prototype.hasOwnProperty.call(TB, BB) && JB(ZB[BB], TB[BB])))
     }
-    Vt.d(et, {
-      e: () => Ot
+    ZB.d(IB, {
+      d: () => TB
     })
   },
-  5235: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => mt,
-      f: () => dt
+  5223: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => GB,
+      d: () => vB
     });
-    var Ot = Vt(2219),
-      qt = Vt(5243);
-    let Dt = null;
+    var TB = ZB(2236),
+      JB = ZB(5226);
+    let oB = null;
 
-    function mt(tt) {
-      Dt = {
-        pack: tt.metaData.id === Ot.d ? null : tt
+    function GB(BB) {
+      oB = {
+        pack: BB.metaData.id === TB.e ? null : BB
       }
     }
 
-    function dt(tt) {
-      return !(null === Dt || !(0, qt.e)(Dt.pack, tt)) && (Dt = null, !0)
+    function vB(BB) {
+      return !(null === oB || !(0, JB.d)(oB.pack, BB)) && (oB = null, !0)
     }
   },
-  5223: (tt, et, Vt) => {
-    Vt.d(et, {
-      C: () => Xt,
-      E: () => lt,
-      e: () => dt,
-      h: () => mt,
-      k: () => Ot,
-      m: () => wt,
-      p: () => Qt,
-      s: () => qt,
-      u: () => Dt,
-      y: () => Ht
+  5210: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      B: () => zB,
+      d: () => vB,
+      g: () => GB,
+      j: () => TB,
+      l: () => gB,
+      m: () => hB,
+      o: () => JB,
+      q: () => oB,
+      u: () => cB,
+      y: () => nB
     });
-    const Ot = 5;
+    const TB = 5;
 
-    function qt(tt) {
-      return tt === Ot
+    function JB(BB) {
+      return BB === TB
     }
 
-    function Dt(tt) {
-      return [...tt.features]
+    function oB(BB) {
+      return [...BB.features]
     }
-    const mt = 262144,
-      dt = 256,
-      jt = 256;
+    const GB = 262144,
+      vB = 256,
+      kB = 256;
 
-    function Ht(tt) {
-      if ("object" !== typeof tt || null === tt || Array.isArray(tt)) return "The pack has no files.";
-      const et = [];
-      for (const [Vt, Ot] of Object.entries(tt)) {
-        if ("string" !== typeof Ot) return `${Vt} isn't text.`;
-        et.push({
-          path: Vt,
-          source: Ot
+    function cB(BB) {
+      if ("object" !== typeof BB || null === BB || Array.isArray(BB)) return "The pack has no files.";
+      const IB = [];
+      for (const [ZB, TB] of Object.entries(BB)) {
+        if ("string" !== typeof TB) return `${ZB} isn't text.`;
+        IB.push({
+          path: ZB,
+          source: TB
         })
       }
-      return et.sort(((tt, et) => Qt(tt.path, et.path))),
-        function(tt) {
-          if (0 === tt.length) return "The pack has no .wgsl files.";
-          if (tt.length > dt) return `The pack has more than ${dt} .wgsl files.`;
-          const et = new Set;
+      return IB.sort(((BB, IB) => hB(BB.path, IB.path))),
+        function(BB) {
+          if (0 === BB.length) return "The pack has no .wgsl files.";
+          if (BB.length > vB) return `The pack has more than ${vB} .wgsl files.`;
+          const IB = new Set;
           for (const {
-              path: Vt
+              path: ZB
             }
-            of tt) {
-            const tt = Et(Vt);
-            if (null !== tt) return tt;
-            if (et.has(Vt)) return `The pack has two files at ${Vt}.`;
-            et.add(Vt)
+            of BB) {
+            const BB = FB(ZB);
+            if (null !== BB) return BB;
+            if (IB.has(ZB)) return `The pack has two files at ${ZB}.`;
+            IB.add(ZB)
           }
-          return lt(tt) > mt ? `The pack's .wgsl files are over ${mt/1024} KB in total.` : null
-        }(et) ?? et
+          return zB(BB) > GB ? `The pack's .wgsl files are over ${GB/1024} KB in total.` : null
+        }(IB) ?? IB
     }
 
-    function Xt(tt) {
-      const et = {};
-      for (const Vt of tt) et[Vt.path] = Vt.source;
-      return et
+    function nB(BB) {
+      const IB = {};
+      for (const ZB of BB) IB[ZB.path] = ZB.source;
+      return IB
     }
 
-    function Qt(tt, et) {
-      return tt < et ? -1 : tt > et ? 1 : 0
+    function hB(BB, IB) {
+      return BB < IB ? -1 : BB > IB ? 1 : 0
     }
 
-    function lt(tt) {
-      const et = new TextEncoder;
-      let Vt = 0;
+    function zB(BB) {
+      const IB = new TextEncoder;
+      let ZB = 0;
       for (const {
-          source: Ot
+          source: TB
         }
-        of tt) Vt += et.encode(Ot).byteLength;
-      return Vt
+        of BB) ZB += IB.encode(TB).byteLength;
+      return ZB
     }
 
-    function Et(tt) {
-      if (!tt.toLowerCase().endsWith(".wgsl")) return `${tt} isn't a .wgsl file.`;
-      if (tt.length > jt) return `A file path is over ${jt} characters.`;
-      if (tt.includes("\\") || /[\u0000-\u001f]/.test(tt)) return `${tt} isn't a valid file path.`;
-      return tt.split("/").some((tt => "" === tt || "." === tt || ".." === tt)) ? `${tt} isn't a valid file path.` : null
+    function FB(BB) {
+      if (!BB.toLowerCase().endsWith(".wgsl")) return `${BB} isn't a .wgsl file.`;
+      if (BB.length > kB) return `A file path is over ${kB} characters.`;
+      if (BB.includes("\\") || /[\u0000-\u001f]/.test(BB)) return `${BB} isn't a valid file path.`;
+      return BB.split("/").some((BB => "" === BB || "." === BB || ".." === BB)) ? `${BB} isn't a valid file path.` : null
     }
-    const ft = /^(.*)\[rot\[([1-4])$/;
+    const NB = /^(.*)\[rot\[([1-4])$/;
 
-    function wt(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const Ot = new Map;
-      et.forEach(((tt, et) => {
+    function gB(BB, IB) {
+      let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const TB = new Map;
+      IB.forEach(((BB, IB) => {
         let {
-          numAnimStates: Vt,
-          animStartIdx: qt
-        } = tt;
-        for (let Dt = 1; Dt < Vt; Dt++) Ot.set(qt + Dt - 1, et)
+          numAnimStates: ZB,
+          animStartIdx: JB
+        } = BB;
+        for (let oB = 1; oB < ZB; oB++) TB.set(JB + oB - 1, IB)
       }));
-      const qt = Object.entries(tt),
-        Dt = new Map;
-      for (const [wt, yt] of qt) {
-        const tt = ft.exec(wt);
-        "1" === tt?.[2] && Dt.set(tt[1], yt + 1)
+      const JB = Object.entries(BB),
+        oB = new Map;
+      for (const [gB, qB] of JB) {
+        const BB = NB.exec(gB);
+        "1" === BB?.[2] && oB.set(BB[1], qB + 1)
       }
-      const mt = tt => {
-          const et = ft.exec(tt);
-          return et && Dt.has(et[1]) ? {
-            root: et[1],
-            rotation: Number(et[2]) - 1
+      const GB = BB => {
+          const IB = NB.exec(BB);
+          return IB && oB.has(IB[1]) ? {
+            root: IB[1],
+            rotation: Number(IB[2]) - 1
           } : null
         },
-        dt = new Set(qt.map((tt => {
-          let [et] = tt;
-          return mt(et)?.root ?? et
+        vB = new Set(JB.map((BB => {
+          let [IB] = BB;
+          return GB(IB)?.root ?? IB
         }))),
-        jt = (tt, Vt) => {
-          const Ot = tt.replace(/_?0$/, "");
-          return (et[Vt]?.numAnimStates ?? 0) > 1 && !dt.has(Ot) ? Ot : tt
+        kB = (BB, ZB) => {
+          const TB = BB.replace(/_?0$/, "");
+          return (IB[ZB]?.numAnimStates ?? 0) > 1 && !vB.has(TB) ? TB : BB
         },
-        Ht = new Map;
-      for (const [ft, wt] of qt) Ht.set(wt, jt(mt(ft)?.root ?? ft, wt));
-      const Xt = qt.reduce(((tt, et) => {
-          let [, Vt] = et;
-          return Math.max(tt, Vt + 1)
+        cB = new Map;
+      for (const [NB, gB] of JB) cB.set(gB, kB(GB(NB)?.root ?? NB, gB));
+      const nB = JB.reduce(((BB, IB) => {
+          let [, ZB] = IB;
+          return Math.max(BB, ZB + 1)
         }), 0),
-        Qt = Array.from({
-          length: Xt
-        }, ((tt, et) => ({
-          id: et + 1,
+        hB = Array.from({
+          length: nB
+        }, ((BB, IB) => ({
+          id: IB + 1,
           rotation: 0
         }))),
-        lt = new Map,
-        Et = new Map;
-      for (const [ft, wt] of qt) {
-        const tt = mt(ft),
-          et = Ot.get(wt);
-        if (void 0 !== et) {
-          const Vt = Ht.get(et);
-          Et.set(ft, {
-            name: ft,
-            texture: Vt,
+        zB = new Map,
+        FB = new Map;
+      for (const [NB, gB] of JB) {
+        const BB = GB(NB),
+          IB = TB.get(gB);
+        if (void 0 !== IB) {
+          const ZB = cB.get(IB);
+          FB.set(NB, {
+            name: NB,
+            texture: ZB,
             kind: "frame"
-          }), tt && !Et.has(tt.root) && Et.set(tt.root, {
-            name: tt.root,
-            texture: Vt,
+          }), BB && !FB.has(BB.root) && FB.set(BB.root, {
+            name: BB.root,
+            texture: ZB,
             kind: "frame"
           });
           continue
         }
-        const Vt = Ht.get(wt),
-          qt = tt?.root ?? ft;
-        if (Vt !== qt && Et.set(qt, {
-            name: qt,
-            texture: Vt,
+        const ZB = cB.get(gB),
+          JB = BB?.root ?? NB;
+        if (ZB !== JB && FB.set(JB, {
+            name: JB,
+            texture: ZB,
             kind: "frame"
-          }), tt) {
-          const et = Dt.get(tt.root);
-          Qt[wt] = {
-            id: et,
-            rotation: tt.rotation
-          }, lt.set(Vt, et), Et.set(ft, {
-            name: ft,
-            texture: Vt,
+          }), BB) {
+          const IB = oB.get(BB.root);
+          hB[gB] = {
+            id: IB,
+            rotation: BB.rotation
+          }, zB.set(ZB, IB), FB.set(NB, {
+            name: NB,
+            texture: ZB,
             kind: "rotation"
           })
-        } else lt.set(Vt, wt + 1)
+        } else zB.set(ZB, gB + 1)
       }
-      for (const ft of lt.keys()) Et.delete(ft);
-      for (const [ft, wt] of Vt) {
-        const tt = lt.get(wt);
-        void 0 === tt || lt.has(ft) || (lt.set(ft, tt), Et.delete(ft))
+      for (const NB of zB.keys()) FB.delete(NB);
+      for (const [NB, gB] of ZB) {
+        const BB = zB.get(gB);
+        void 0 === BB || zB.has(NB) || (zB.set(NB, BB), FB.delete(NB))
       }
       return {
-        named: [...lt].sort(((tt, et) => {
-          let [Vt] = tt, [Ot] = et;
-          return Vt < Ot ? -1 : Vt > Ot ? 1 : 0
-        })).map((tt => {
-          let [et, Vt] = tt;
+        named: [...zB].sort(((BB, IB) => {
+          let [ZB] = BB, [TB] = IB;
+          return ZB < TB ? -1 : ZB > TB ? 1 : 0
+        })).map((BB => {
+          let [IB, ZB] = BB;
           return {
-            name: et,
-            id: Vt
+            name: IB,
+            id: ZB
           }
         })),
-        aliases: [...Et.values()],
-        layers: Qt
+        aliases: [...FB.values()],
+        layers: hB
       }
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,132 +1,132 @@
 export const id = 141;
 export const ids = [141];
 export const modules = {
-  6839: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Jt,
-      i: () => Ct,
-      j: () => Mt,
-      n: () => Nt
+  6780: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => dB,
+      e: () => CB,
+      h: () => UB,
+      i: () => yB
     });
-    var Ot = Vt(6848);
-    const qt = 6,
-      Dt = 3,
-      mt = 1,
-      dt = 2,
-      jt = 4,
-      Ht = 8,
-      Xt = 16,
-      Qt = 32,
-      lt = 64,
-      Et = 128,
-      ft = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var TB = ZB(6784);
+    const JB = 6,
+      oB = 3,
+      GB = 1,
+      vB = 2,
+      kB = 4,
+      cB = 8,
+      nB = 16,
+      hB = 32,
+      zB = 64,
+      FB = 128,
+      NB = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function wt(tt) {
-      if (!tt) return 0;
-      const et = ft.indexOf(tt);
-      if (et <= 0) throw new Error(`"${tt}" is not a shader pack hook function`);
-      return et
+    function gB(BB) {
+      if (!BB) return 0;
+      const IB = NB.indexOf(BB);
+      if (IB <= 0) throw new Error(`"${BB}" is not a shader pack hook function`);
+      return IB
     }
 
-    function yt(tt) {
-      if (0 === tt) return null;
-      const et = ft[tt];
-      if (void 0 === et) throw new Error(`${tt} is not a shader pack hook function id`);
-      return et
+    function qB(BB) {
+      if (0 === BB) return null;
+      const IB = NB[BB];
+      if (void 0 === IB) throw new Error(`${BB} is not a shader pack hook function id`);
+      return IB
     }
 
-    function Nt(tt) {
-      const et = Ot.b.length;
+    function yB(BB) {
+      const IB = TB.e.length;
       return {
-        strict: tt >= et,
-        program: Ot.b[tt % et]
+        strict: BB >= IB,
+        program: TB.e[BB % IB]
       }
     }
 
-    function Mt(tt) {
-      return Number(tt.strict) * Ot.b.length + Ot.b.indexOf(tt.program)
+    function UB(BB) {
+      return Number(BB.strict) * TB.e.length + TB.e.indexOf(BB.program)
     }
 
-    function bt(tt) {
-      return "" === tt ? [] : tt.split(" ")
+    function WB(BB) {
+      return "" === BB ? [] : BB.split(" ")
     }
 
-    function Jt(tt) {
-      const et = {
-        variantFlags: new Uint8Array(qt),
-        hooks: new Uint8Array(qt * Dt),
-        moduleCodes: Array(qt).fill(""),
-        reads: Array(2 * qt).fill("")
+    function dB(BB) {
+      const IB = {
+        variantFlags: new Uint8Array(JB),
+        hooks: new Uint8Array(JB * oB),
+        moduleCodes: Array(JB).fill(""),
+        reads: Array(2 * JB).fill("")
       };
-      for (const Vt of tt) {
-        const tt = Mt(Vt.key),
-          Ot = (tt, et) => null === Vt.hooks.surface || Vt.reads.fragment.includes(tt) ? 0 : et;
-        et.variantFlags[tt] = (Vt.sceneDepth ? mt : 0) | (Vt.movesVertices ? dt : 0) | (Vt.sunShadow ? jt : 0) | (Vt.airShadow ? Ht : 0) | (Vt.discards ? Xt : 0) | Ot("localPosition", Qt) | Ot("enchantSpeed", lt) | Ot("enchantTier", Et), et.hooks[tt * Dt] = wt(Vt.hooks.vertex), et.hooks[tt * Dt + 1] = wt(Vt.hooks.surface), et.hooks[tt * Dt + 2] = wt(Vt.hooks.light), et.moduleCodes[tt] = Vt.moduleCode, et.reads[2 * tt] = Vt.reads.vertex.join(" "), et.reads[2 * tt + 1] = Vt.reads.fragment.join(" ")
+      for (const ZB of BB) {
+        const BB = UB(ZB.key),
+          TB = (BB, IB) => null === ZB.hooks.surface || ZB.reads.fragment.includes(BB) ? 0 : IB;
+        IB.variantFlags[BB] = (ZB.sceneDepth ? GB : 0) | (ZB.movesVertices ? vB : 0) | (ZB.sunShadow ? kB : 0) | (ZB.airShadow ? cB : 0) | (ZB.discards ? nB : 0) | TB("localPosition", hB) | TB("enchantSpeed", zB) | TB("enchantTier", FB), IB.hooks[BB * oB] = gB(ZB.hooks.vertex), IB.hooks[BB * oB + 1] = gB(ZB.hooks.surface), IB.hooks[BB * oB + 2] = gB(ZB.hooks.light), IB.moduleCodes[BB] = ZB.moduleCode, IB.reads[2 * BB] = ZB.reads.vertex.join(" "), IB.reads[2 * BB + 1] = ZB.reads.fragment.join(" ")
       }
-      return et
+      return IB
     }
 
-    function Ct(tt) {
+    function CB(BB) {
       const {
-        hooks: et,
-        moduleCodes: Vt,
-        reads: Ot
-      } = tt;
-      return Array.from(tt.variantFlags, ((tt, qt) => {
-        const Qt = qt * Dt;
+        hooks: IB,
+        moduleCodes: ZB,
+        reads: TB
+      } = BB;
+      return Array.from(BB.variantFlags, ((BB, JB) => {
+        const hB = JB * oB;
         return {
-          key: Nt(qt),
+          key: yB(JB),
           hooks: {
-            vertex: yt(et[Qt]),
-            surface: yt(et[Qt + 1]),
-            light: yt(et[Qt + 2])
+            vertex: qB(IB[hB]),
+            surface: qB(IB[hB + 1]),
+            light: qB(IB[hB + 2])
           },
-          moduleCode: Vt[qt],
-          sceneDepth: 0 !== (tt & mt),
-          sunShadow: 0 !== (tt & jt),
-          airShadow: 0 !== (tt & Ht),
-          movesVertices: 0 !== (tt & dt),
-          discards: 0 !== (tt & Xt),
+          moduleCode: ZB[JB],
+          sceneDepth: 0 !== (BB & GB),
+          sunShadow: 0 !== (BB & kB),
+          airShadow: 0 !== (BB & cB),
+          movesVertices: 0 !== (BB & vB),
+          discards: 0 !== (BB & nB),
           reads: {
-            vertex: bt(Ot[2 * qt]),
-            fragment: bt(Ot[2 * qt + 1])
+            vertex: WB(TB[2 * JB]),
+            fragment: WB(TB[2 * JB + 1])
           }
         }
       }))
     }
   },
-  40892: (tt, et, Vt) => {
-    Vt.d(et, {
-      A: () => Et,
-      E: () => ft,
-      e: () => qt,
-      f: () => Ot,
-      i: () => lt,
-      k: () => Xt,
-      n: () => yt,
-      q: () => Dt,
-      s: () => dt,
-      t: () => jt,
-      v: () => mt,
-      w: () => wt
+  40741: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      A: () => gB,
+      B: () => FB,
+      D: () => NB,
+      e: () => JB,
+      f: () => TB,
+      i: () => zB,
+      m: () => nB,
+      p: () => qB,
+      q: () => oB,
+      s: () => vB,
+      u: () => kB,
+      w: () => GB
     });
-    const Ot = 3,
-      qt = 0,
-      Dt = 1,
-      mt = 2,
-      dt = {
+    const TB = 3,
+      JB = 0,
+      oB = 1,
+      GB = 2,
+      vB = {
         uniform: 3,
-        hl: 4,
+        mz: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      jt = 10,
-      Ht = "BloxdPackInputs",
-      Xt = "bloxdPackInputs",
-      Qt = [{
+      kB = 10,
+      cB = "BloxdPackInputs",
+      nB = "bloxdPackInputs",
+      hB = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -151,99 +151,99 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      lt = 80;
+      zB = 80;
 
-    function Et() {
-      const tt = Qt.map((tt => {
+    function FB() {
+      const BB = hB.map((BB => {
         let {
-          name: et,
-          type: Vt
-        } = tt;
-        return `    ${et}: ${Vt},\n`
+          name: IB,
+          type: ZB
+        } = BB;
+        return `    ${IB}: ${ZB},\n`
       })).join("");
-      return `struct ${Ht} {\n${tt}}\n@group(${Ot}) @binding(${qt}) var<uniform> ${Xt}: ${Ht};\n`
+      return `struct ${cB} {\n${BB}}\n@group(${TB}) @binding(${JB}) var<uniform> ${nB}: ${cB};\n`
     }
 
-    function ft(tt, et) {
-      const Vt = new DataView(tt, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, lt),
-        [Ot, qt, Dt, mt, dt, jt] = Qt;
-      Vt.setFloat32(Ot.offset, et.seconds, !0), Vt.setUint32(qt.offset, et.lit ? 1 : 0, !0);
-      for (let Ht = 0; Ht < 3; Ht++) Vt.setInt32(Dt.offset + 4 * Ht, et.renderOffset[Ht], !0), Vt.setFloat32(mt.offset + 4 * Ht, et.jtt[Ht], !0), Vt.setFloat32(dt.offset + 4 * Ht, et.eyePosition[Ht], !0), Vt.setFloat32(jt.offset + 4 * Ht, et.shadowDirection[Ht], !0)
+    function NB(BB, IB) {
+      const ZB = new DataView(BB, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, zB),
+        [TB, JB, oB, GB, vB, kB] = hB;
+      ZB.setFloat32(TB.offset, IB.seconds, !0), ZB.setUint32(JB.offset, IB.lit ? 1 : 0, !0);
+      for (let cB = 0; cB < 3; cB++) ZB.setInt32(oB.offset + 4 * cB, IB.renderOffset[cB], !0), ZB.setFloat32(GB.offset + 4 * cB, IB.WBB[cB], !0), ZB.setFloat32(vB.offset + 4 * cB, IB.eyePosition[cB], !0), ZB.setFloat32(kB.offset + 4 * cB, IB.shadowDirection[cB], !0)
     }
 
-    function wt(tt) {
-      const et = new Uint32Array(Math.max(1, tt.length));
-      return tt.forEach(((tt, Vt) => {
+    function gB(BB) {
+      const IB = new Uint32Array(Math.max(1, BB.length));
+      return BB.forEach(((BB, ZB) => {
         let {
-          id: Ot,
-          rotation: qt
-        } = tt;
-        et[Vt] = 65535 & Ot | (3 & qt) << 16
-      })), et
+          id: TB,
+          rotation: JB
+        } = BB;
+        IB[ZB] = 65535 & TB | (3 & JB) << 16
+      })), IB
     }
-    const yt = {
+    const qB = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  6848: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Ot,
-      f: () => mt,
-      i: () => dt,
-      j: () => qt,
-      m: () => Dt
+  6784: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => TB,
+      i: () => GB,
+      l: () => vB,
+      o: () => JB,
+      s: () => oB
     });
-    const Ot = ["terrain", "liquid", "model"];
+    const TB = ["terrain", "liquid", "model"];
 
-    function qt() {
-      const tt = [];
-      for (const et of [!1, !0])
-        for (const Vt of Ot) tt.push({
-          strict: et,
-          program: Vt
+    function JB() {
+      const BB = [];
+      for (const IB of [!1, !0])
+        for (const ZB of TB) BB.push({
+          strict: IB,
+          program: ZB
         });
-      return tt
+      return BB
     }
 
-    function Dt(tt) {
-      return `${tt.strict?"strict":"allow"}.${tt.program}`
+    function oB(BB) {
+      return `${BB.strict?"strict":"allow"}.${BB.program}`
     }
 
-    function mt(tt) {
-      return !tt.hooks.vertex && !tt.hooks.surface && !tt.hooks.light
+    function GB(BB) {
+      return !BB.hooks.vertex && !BB.hooks.surface && !BB.hooks.light
     }
 
-    function dt(tt, et) {
-      return "off" !== et && (null === tt || tt.some((tt => tt.key.strict === ("strict" === et) && !mt(tt))))
+    function vB(BB, IB) {
+      return "off" !== IB && (null === BB || BB.some((BB => BB.key.strict === ("strict" === IB) && !GB(BB))))
     }
   },
-  41503: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      SHADER_PACK_INPUTS_BINDING: () => Dt.e,
-      SHADER_PACK_INPUTS_GROUP: () => Dt.f,
-      SHADER_PACK_INPUTS_SIZE: () => Dt.i,
-      SHADER_PACK_INPUTS_VAR: () => Dt.k,
-      SHADER_PACK_MODES: () => Dt.n,
-      SHADER_PACK_PROGRAMS: () => Ot.b,
-      SHADER_PACK_SCENE_DEPTH_BINDING: () => Dt.q,
-      SHADER_PACK_SUN_SHADOW_BINDINGS: () => Dt.s,
-      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => Dt.t,
-      SHADER_PACK_TEXTURES_BINDING: () => Dt.v,
-      encodeTextureLayers: () => Dt.w,
-      flattenVariants: () => qt.e,
-      isVariantOff: () => Ot.f,
-      packRunsIn: () => Ot.i,
-      shaderPackInputsWgsl: () => Dt.A,
-      shaderPackVariantKeys: () => Ot.j,
-      variantKeyId: () => Ot.m,
-      writeShaderPackInputs: () => Dt.E
+  41308: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      SHADER_PACK_INPUTS_BINDING: () => oB.e,
+      SHADER_PACK_INPUTS_GROUP: () => oB.f,
+      SHADER_PACK_INPUTS_SIZE: () => oB.i,
+      SHADER_PACK_INPUTS_VAR: () => oB.m,
+      SHADER_PACK_MODES: () => oB.p,
+      SHADER_PACK_PROGRAMS: () => TB.e,
+      SHADER_PACK_SCENE_DEPTH_BINDING: () => oB.q,
+      SHADER_PACK_SUN_SHADOW_BINDINGS: () => oB.s,
+      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => oB.u,
+      SHADER_PACK_TEXTURES_BINDING: () => oB.w,
+      encodeTextureLayers: () => oB.A,
+      flattenVariants: () => JB.c,
+      isVariantOff: () => TB.i,
+      packRunsIn: () => TB.l,
+      shaderPackInputsWgsl: () => oB.B,
+      shaderPackVariantKeys: () => TB.o,
+      variantKeyId: () => TB.s,
+      writeShaderPackInputs: () => oB.D
     });
-    var Ot = Vt(6848),
-      qt = Vt(6839),
-      Dt = Vt(40892)
+    var TB = ZB(6784),
+      JB = ZB(6780),
+      oB = ZB(40741)
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,114 +1,114 @@
-/*! For license information please see igzsf.272.5d393359.chunk.js.LICENSE.txt */
+/*! For license information please see c6gaap.272.71428ee2.chunk.js.LICENSE.txt */
 export const id = 272;
 export const ids = [272];
 export const modules = {
-    40715: (tt, et, Vt) => {
-        Vt.r(et), Vt.d(et, {
-          ActionCodeOperation: () => lt,
-          ActionCodeURL: () => se,
-          AuthCredential: () => ze,
-          AuthErrorCodes: () => Nt,
-          EmailAuthCredential: () => Be,
-          EmailAuthProvider: () => tV,
-          FacebookAuthProvider: () => qV,
-          FactorId: () => jt,
-          GithubAuthProvider: () => mV,
-          GoogleAuthProvider: () => DV,
-          OAuthCredential: () => xe,
-          OAuthProvider: () => OV,
-          OperationType: () => Qt,
-          PhoneAuthCredential: () => ge,
-          PhoneAuthProvider: () => Vq,
-          PhoneMultiFactorGenerator: () => eD,
-          ProviderId: () => Ht,
-          RecaptchaVerifier: () => xO,
-          SAMLAuthProvider: () => jV,
-          SignInMethod: () => Xt,
-          TotpMultiFactorGenerator: () => VD,
-          TotpSecret: () => qD,
-          TwitterAuthProvider: () => HV,
-          applyActionCode: () => PV,
-          beforeAuthStateChanged: () => DO,
-          browserLocalPersistence: () => bO,
-          browserPopupRedirectResolver: () => sq,
-          browserSessionPersistence: () => CO,
-          checkActionCode: () => ZV,
-          confirmPasswordReset: () => IV,
-          connectAuthEmulator: () => Fe,
-          createUserWithEmailAndPassword: () => FV,
-          debugErrorMap: () => ft,
-          deleteUser: () => XO,
-          fetchSignInMethodsForEmail: () => rV,
-          getAdditionalUserInfo: () => eO,
-          getAuth: () => lD,
-          getIdToken: () => Bt,
-          getIdTokenResult: () => pt,
-          getMultiFactorResolver: () => EO,
-          getRedirectResult: () => Kq,
-          inMemoryPersistence: () => je,
-          indexedDBLocalPersistence: () => GO,
-          initializeAuth: () => Le,
-          initializeRecaptchaConfig: () => OO,
-          isSignInWithEmailLink: () => zV,
-          linkWithCredential: () => uV,
-          linkWithPhoneNumber: () => sO,
-          linkWithPopup: () => lq,
-          linkWithRedirect: () => uq,
-          multiFactor: () => yO,
-          onAuthStateChanged: () => mO,
-          onIdTokenChanged: () => qO,
-          parseActionCodeURL: () => ne,
-          prodErrorMap: () => wt,
-          reauthenticateWithCredential: () => KV,
-          reauthenticateWithPhoneNumber: () => nO,
-          reauthenticateWithPopup: () => Qq,
-          reauthenticateWithRedirect: () => Cq,
-          reload: () => ee,
-          sendEmailVerification: () => UV,
-          sendPasswordResetEmail: () => RV,
-          sendSignInLinkToEmail: () => GV,
-          setPersistence: () => VO,
-          signInAnonymously: () => EV,
-          signInWithCredential: () => CV,
-          signInWithCustomToken: () => hV,
-          signInWithEmailAndPassword: () => kV,
-          signInWithEmailLink: () => oV,
-          signInWithPhoneNumber: () => gO,
-          signInWithPopup: () => Xq,
-          signInWithRedirect: () => Jq,
-          signOut: () => HO,
-          unlink: () => NV,
-          updateCurrentUser: () => jO,
-          updateEmail: () => YV,
-          updatePassword: () => BV,
-          updatePhoneNumber: () => eq,
-          updateProfile: () => iV,
-          useDeviceLanguage: () => dO,
-          verifyBeforeUpdateEmail: () => AV,
-          verifyPasswordResetCode: () => LV
+    40583: (BB, IB, ZB) => {
+        ZB.r(IB), ZB.d(IB, {
+          ActionCodeOperation: () => zB,
+          ActionCodeURL: () => KI,
+          AuthCredential: () => XI,
+          AuthErrorCodes: () => yB,
+          EmailAuthCredential: () => tI,
+          EmailAuthProvider: () => SI,
+          FacebookAuthProvider: () => TZ,
+          FactorId: () => kB,
+          GithubAuthProvider: () => oZ,
+          GoogleAuthProvider: () => JZ,
+          OAuthCredential: () => xI,
+          OAuthProvider: () => ZZ,
+          OperationType: () => hB,
+          PhoneAuthCredential: () => DI,
+          PhoneAuthProvider: () => IJ,
+          PhoneMultiFactorGenerator: () => Bo,
+          ProviderId: () => cB,
+          RecaptchaVerifier: () => xT,
+          SAMLAuthProvider: () => vZ,
+          SignInMethod: () => nB,
+          TotpMultiFactorGenerator: () => Io,
+          TotpSecret: () => To,
+          TwitterAuthProvider: () => kZ,
+          applyActionCode: () => MZ,
+          beforeAuthStateChanged: () => JT,
+          browserLocalPersistence: () => WT,
+          browserPopupRedirectResolver: () => KJ,
+          browserSessionPersistence: () => CT,
+          checkActionCode: () => jZ,
+          confirmPasswordReset: () => HZ,
+          connectAuthEmulator: () => RI,
+          createUserWithEmailAndPassword: () => RZ,
+          debugErrorMap: () => NB,
+          deleteUser: () => cT,
+          fetchSignInMethodsForEmail: () => eZ,
+          getAdditionalUserInfo: () => BT,
+          getAuth: () => ho,
+          getIdToken: () => tB,
+          getIdTokenResult: () => bB,
+          getMultiFactorResolver: () => zT,
+          getRedirectResult: () => sJ,
+          inMemoryPersistence: () => vI,
+          indexedDBLocalPersistence: () => mT,
+          initializeAuth: () => PI,
+          initializeRecaptchaConfig: () => ZT,
+          isSignInWithEmailLink: () => XZ,
+          linkWithCredential: () => QZ,
+          linkWithPhoneNumber: () => KT,
+          linkWithPopup: () => hJ,
+          linkWithRedirect: () => QJ,
+          multiFactor: () => gT,
+          onAuthStateChanged: () => oT,
+          onIdTokenChanged: () => TT,
+          parseActionCodeURL: () => VI,
+          prodErrorMap: () => gB,
+          reauthenticateWithCredential: () => sZ,
+          reauthenticateWithPhoneNumber: () => VT,
+          reauthenticateWithPopup: () => nJ,
+          reauthenticateWithRedirect: () => CJ,
+          reload: () => BI,
+          sendEmailVerification: () => uZ,
+          sendPasswordResetEmail: () => aZ,
+          sendSignInLinkToEmail: () => mZ,
+          setPersistence: () => IT,
+          signInAnonymously: () => zZ,
+          signInWithCredential: () => CZ,
+          signInWithCustomToken: () => wZ,
+          signInWithEmailAndPassword: () => rZ,
+          signInWithEmailLink: () => LZ,
+          signInWithPhoneNumber: () => DT,
+          signInWithPopup: () => cJ,
+          signInWithRedirect: () => dJ,
+          signOut: () => kT,
+          unlink: () => qZ,
+          updateCurrentUser: () => vT,
+          updateEmail: () => AZ,
+          updatePassword: () => tZ,
+          updatePhoneNumber: () => BJ,
+          updateProfile: () => lZ,
+          useDeviceLanguage: () => GT,
+          verifyBeforeUpdateEmail: () => fZ,
+          verifyPasswordResetCode: () => PZ
         });
-        var Ot = Vt(40701),
-          qt = Vt(40692);
+        var TB = ZB(40562),
+          JB = ZB(40551);
 
-        function Dt(tt, et) {
-          var Vt = {};
-          for (var Ot in tt) Object.prototype.hasOwnProperty.call(tt, Ot) && et.indexOf(Ot) < 0 && (Vt[Ot] = tt[Ot]);
-          if (null != tt && "function" === typeof Object.getOwnPropertySymbols) {
-            var qt = 0;
-            for (Ot = Object.getOwnPropertySymbols(tt); qt < Ot.length; qt++) et.indexOf(Ot[qt]) < 0 && Object.prototype.propertyIsEnumerable.call(tt, Ot[qt]) && (Vt[Ot[qt]] = tt[Ot[qt]])
+        function oB(BB, IB) {
+          var ZB = {};
+          for (var TB in BB) Object.prototype.hasOwnProperty.call(BB, TB) && IB.indexOf(TB) < 0 && (ZB[TB] = BB[TB]);
+          if (null != BB && "function" === typeof Object.getOwnPropertySymbols) {
+            var JB = 0;
+            for (TB = Object.getOwnPropertySymbols(BB); JB < TB.length; JB++) IB.indexOf(TB[JB]) < 0 && Object.prototype.propertyIsEnumerable.call(BB, TB[JB]) && (ZB[TB[JB]] = BB[TB[JB]])
           }
-          return Vt
+          return ZB
         }
         Object.create;
         Object.create;
         "function" === typeof SuppressedError && SuppressedError;
-        var mt = Vt(40708),
-          dt = Vt(40699);
-        const jt = {
+        var GB = ZB(40568),
+          vB = ZB(40559);
+        const kB = {
             PHONE: "phone",
             TOTP: "totp"
           },
-          Ht = {
+          cB = {
             FACEBOOK: "facebook.com",
             GITHUB: "github.com",
             GOOGLE: "google.com",
@@ -116,7 +116,7 @@ export const modules = {
             PHONE: "phone",
             TWITTER: "twitter.com"
           },
-          Xt = {
+          nB = {
             EMAIL_LINK: "emailLink",
             EMAIL_PASSWORD: "password",
             FACEBOOK: "facebook.com",
@@ -125,12 +125,12 @@ export const modules = {
             PHONE: "phone",
             TWITTER: "twitter.com"
           },
-          Qt = {
+          hB = {
             LINK: "link",
             REAUTHENTICATE: "reauthenticate",
             SIGN_IN: "signIn"
           },
-          lt = {
+          zB = {
             EMAIL_SIGNIN: "EMAIL_SIGNIN",
             PASSWORD_RESET: "PASSWORD_RESET",
             RECOVER_EMAIL: "RECOVER_EMAIL",
@@ -139,12 +139,12 @@ export const modules = {
             VERIFY_EMAIL: "VERIFY_EMAIL"
           };
 
-        function Et() {
+        function FB() {
           return {
             "dependent-sdk-initialized-before-auth": "Another Firebase SDK was initialized and is trying to use Auth before Auth is initialized. Please be sure to call `initializeAuth` or `getAuth` before starting any other Firebase SDK."
           }
         }
-        const ft = function() {
+        const NB = function() {
             return {
               "admin-restricted-operation": "This operation is restricted to administrators only.",
               "argument-error": "",
@@ -253,11 +253,11 @@ export const modules = {
               "invalid-recaptcha-version": "The reCAPTCHA version is invalid when sending request to the backend."
             }
           },
-          wt = Et,
-          yt = new Ot.e("auth", "Firebase", {
+          gB = FB,
+          qB = new TB.h("auth", "Firebase", {
             "dependent-sdk-initialized-before-auth": "Another Firebase SDK was initialized and is trying to use Auth before Auth is initialized. Please be sure to call `initializeAuth` or `getAuth` before starting any other Firebase SDK."
           }),
-          Nt = {
+          yB = {
             ADMIN_ONLY_OPERATION: "auth/admin-restricted-operation",
             ARGUMENT_ERROR: "auth/argument-error",
             APP_NOT_AUTHORIZED: "auth/app-not-authorized",
@@ -362,108 +362,108 @@ export const modules = {
             INVALID_RECAPTCHA_VERSION: "auth/invalid-recaptcha-version",
             INVALID_REQ_TYPE: "auth/invalid-req-type"
           },
-          Mt = new mt.f("@firebase/auth");
+          UB = new GB.g("@firebase/auth");
 
-        function bt(tt) {
-          if (Mt.logLevel <= mt.e.ERROR) {
-            for (var et = arguments.length, Vt = new Array(et > 1 ? et - 1 : 0), Ot = 1; Ot < et; Ot++) Vt[Ot - 1] = arguments[Ot];
-            Mt.error(`Auth (${qt.g}): ${tt}`, ...Vt)
+        function WB(BB) {
+          if (UB.logLevel <= GB.d.ERROR) {
+            for (var IB = arguments.length, ZB = new Array(IB > 1 ? IB - 1 : 0), TB = 1; TB < IB; TB++) ZB[TB - 1] = arguments[TB];
+            UB.error(`Auth (${JB.f}): ${BB}`, ...ZB)
           }
         }
 
-        function Jt(tt) {
-          for (var et = arguments.length, Vt = new Array(et > 1 ? et - 1 : 0), Ot = 1; Ot < et; Ot++) Vt[Ot - 1] = arguments[Ot];
-          throw ht(tt, ...Vt)
+        function dB(BB) {
+          for (var IB = arguments.length, ZB = new Array(IB > 1 ? IB - 1 : 0), TB = 1; TB < IB; TB++) ZB[TB - 1] = arguments[TB];
+          throw wB(BB, ...ZB)
         }
 
-        function Ct(tt) {
-          for (var et = arguments.length, Vt = new Array(et > 1 ? et - 1 : 0), Ot = 1; Ot < et; Ot++) Vt[Ot - 1] = arguments[Ot];
-          return ht(tt, ...Vt)
+        function CB(BB) {
+          for (var IB = arguments.length, ZB = new Array(IB > 1 ? IB - 1 : 0), TB = 1; TB < IB; TB++) ZB[TB - 1] = arguments[TB];
+          return wB(BB, ...ZB)
         }
 
-        function ut(tt, et, Vt) {
-          const qt = Object.assign(Object.assign({}, wt()), {
-            [et]: Vt
+        function QB(BB, IB, ZB) {
+          const JB = Object.assign(Object.assign({}, gB()), {
+            [IB]: ZB
           });
-          return new Ot.e("auth", "Firebase", qt).create(et, {
-            appName: tt.name
+          return new TB.h("auth", "Firebase", JB).create(IB, {
+            appName: BB.name
           })
         }
 
-        function Kt(tt, et, Vt) {
-          if (!(et instanceof Vt)) throw Vt.name !== et.constructor.name && Jt(tt, "argument-error"), ut(tt, "argument-error", `Type of ${et.constructor.name} does not match expected instance.Did you pass a reference from a different Auth SDK?`)
+        function sB(BB, IB, ZB) {
+          if (!(IB instanceof ZB)) throw ZB.name !== IB.constructor.name && dB(BB, "argument-error"), QB(BB, "argument-error", `Type of ${IB.constructor.name} does not match expected instance.Did you pass a reference from a different Auth SDK?`)
         }
 
-        function ht(tt) {
-          for (var et = arguments.length, Vt = new Array(et > 1 ? et - 1 : 0), Ot = 1; Ot < et; Ot++) Vt[Ot - 1] = arguments[Ot];
-          if ("string" !== typeof tt) {
-            const et = Vt[0],
-              Ot = [...Vt.slice(1)];
-            return Ot[0] && (Ot[0].appName = tt.name), tt._errorFactory.create(et, ...Ot)
+        function wB(BB) {
+          for (var IB = arguments.length, ZB = new Array(IB > 1 ? IB - 1 : 0), TB = 1; TB < IB; TB++) ZB[TB - 1] = arguments[TB];
+          if ("string" !== typeof BB) {
+            const IB = ZB[0],
+              TB = [...ZB.slice(1)];
+            return TB[0] && (TB[0].appName = BB.name), BB._errorFactory.create(IB, ...TB)
           }
-          return yt.create(tt, ...Vt)
+          return qB.create(BB, ...ZB)
         }
 
-        function vt(tt, et) {
-          if (!tt) {
-            for (var Vt = arguments.length, Ot = new Array(Vt > 2 ? Vt - 2 : 0), qt = 2; qt < Vt; qt++) Ot[qt - 2] = arguments[qt];
-            throw ht(et, ...Ot)
+        function OB(BB, IB) {
+          if (!BB) {
+            for (var ZB = arguments.length, TB = new Array(ZB > 2 ? ZB - 2 : 0), JB = 2; JB < ZB; JB++) TB[JB - 2] = arguments[JB];
+            throw wB(IB, ...TB)
           }
         }
 
-        function Wt(tt) {
-          const et = "INTERNAL ASSERTION FAILED: " + tt;
-          throw bt(et), new Error(et)
+        function YB(BB) {
+          const IB = "INTERNAL ASSERTION FAILED: " + BB;
+          throw WB(IB), new Error(IB)
         }
 
-        function St(tt, et) {
-          tt || Wt(et)
+        function iB(BB, IB) {
+          BB || YB(IB)
         }
 
-        function ct() {
-          var tt;
-          return "undefined" !== typeof self && (null === (tt = self.location) || void 0 === tt ? void 0 : tt.href) || ""
+        function pB() {
+          var BB;
+          return "undefined" !== typeof self && (null === (BB = self.location) || void 0 === BB ? void 0 : BB.href) || ""
         }
 
-        function Rt() {
-          return "http:" === It() || "https:" === It()
+        function aB() {
+          return "http:" === HB() || "https:" === HB()
         }
 
-        function It() {
-          var tt;
-          return "undefined" !== typeof self && (null === (tt = self.location) || void 0 === tt ? void 0 : tt.protocol) || null
+        function HB() {
+          var BB;
+          return "undefined" !== typeof self && (null === (BB = self.location) || void 0 === BB ? void 0 : BB.protocol) || null
         }
-        class Pt {
-          constructor(tt, et) {
-            this.shortDelay = tt, this.longDelay = et, St(et > tt, "Short delay should be less than long delay!"), this.isMobile = (0, Ot.$)() || (0, Ot.db)()
+        class MB {
+          constructor(BB, IB) {
+            this.shortDelay = BB, this.longDelay = IB, iB(IB > BB, "Short delay should be less than long delay!"), this.isMobile = (0, TB.Z)() || (0, TB.ab)()
           }
           get() {
-            return "undefined" !== typeof navigator && navigator && "onLine" in navigator && "boolean" === typeof navigator.onLine && (Rt() || (0, Ot.P)() || "connection" in navigator) && !navigator.onLine ? Math.min(5e3, this.shortDelay) : this.isMobile ? this.longDelay : this.shortDelay
+            return "undefined" !== typeof navigator && navigator && "onLine" in navigator && "boolean" === typeof navigator.onLine && (aB() || (0, TB.T)() || "connection" in navigator) && !navigator.onLine ? Math.min(5e3, this.shortDelay) : this.isMobile ? this.longDelay : this.shortDelay
           }
         }
 
-        function Zt(tt, et) {
-          St(tt.emulator, "Emulator should always be set here");
+        function jB(BB, IB) {
+          iB(BB.emulator, "Emulator should always be set here");
           const {
-            url: Vt
-          } = tt.emulator;
-          return et ? `${Vt}${et.startsWith("/")?et.slice(1):et}` : Vt
+            url: ZB
+          } = BB.emulator;
+          return IB ? `${ZB}${IB.startsWith("/")?IB.slice(1):IB}` : ZB
         }
-        class Lt {
-          static initialize(tt, et, Vt) {
-            this.fetchImpl = tt, et && (this.headersImpl = et), Vt && (this.responseImpl = Vt)
+        class PB {
+          static initialize(BB, IB, ZB) {
+            this.fetchImpl = BB, IB && (this.headersImpl = IB), ZB && (this.responseImpl = ZB)
           }
           static fetch() {
-            return this.fetchImpl ? this.fetchImpl : "undefined" !== typeof self && "fetch" in self ? self.fetch : void Wt("Could not find fetch implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.fetchImpl ? this.fetchImpl : "undefined" !== typeof self && "fetch" in self ? self.fetch : void YB("Could not find fetch implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
           static headers() {
-            return this.headersImpl ? this.headersImpl : "undefined" !== typeof self && "Headers" in self ? self.Headers : void Wt("Could not find Headers implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.headersImpl ? this.headersImpl : "undefined" !== typeof self && "Headers" in self ? self.Headers : void YB("Could not find Headers implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
           static response() {
-            return this.responseImpl ? this.responseImpl : "undefined" !== typeof self && "Response" in self ? self.Response : void Wt("Could not find Response implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.responseImpl ? this.responseImpl : "undefined" !== typeof self && "Response" in self ? self.Response : void YB("Could not find Response implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
         }
-        const Ft = {
+        const RB = {
             CREDENTIAL_MISMATCH: "custom-token-mismatch",
             MISSING_CUSTOM_TOKEN: "internal-error",
             INVALID_IDENTIFIER: "invalid-email",
@@ -511,74 +511,74 @@ export const modules = {
             INVALID_RECAPTCHA_VERSION: "invalid-recaptcha-version",
             INVALID_REQ_TYPE: "invalid-req-type"
           },
-          kt = new Pt(3e4, 6e4);
+          rB = new MB(3e4, 6e4);
 
-        function Gt(tt, et) {
-          return tt.tenantId && !et.tenantId ? Object.assign(Object.assign({}, et), {
-            tenantId: tt.tenantId
-          }) : et
+        function mB(BB, IB) {
+          return BB.tenantId && !IB.tenantId ? Object.assign(Object.assign({}, IB), {
+            tenantId: BB.tenantId
+          }) : IB
         }
-        async function zt(tt, et, Vt, qt) {
-          return ot(tt, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, (async () => {
-            let Dt = {},
-              mt = {};
-            qt && ("GET" === et ? mt = qt : Dt = {
-              body: JSON.stringify(qt)
+        async function XB(BB, IB, ZB, JB) {
+          return LB(BB, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, (async () => {
+            let oB = {},
+              GB = {};
+            JB && ("GET" === IB ? GB = JB : oB = {
+              body: JSON.stringify(JB)
             });
-            const dt = (0, Ot.kb)(Object.assign({
-                key: tt.config.apiKey
-              }, mt)).slice(1),
-              jt = await tt._getAdditionalHeaders();
-            return jt["Content-Type"] = "application/json", tt.languageCode && (jt["X-Firebase-Locale"] = tt.languageCode), Lt.fetch()(Ut(tt, tt.config.apiHost, Vt, dt), Object.assign({
-              method: et,
-              headers: jt,
+            const vB = (0, TB.db)(Object.assign({
+                key: BB.config.apiKey
+              }, GB)).slice(1),
+              kB = await BB._getAdditionalHeaders();
+            return kB["Content-Type"] = "application/json", BB.languageCode && (kB["X-Firebase-Locale"] = BB.languageCode), PB.fetch()(uB(BB, BB.config.apiHost, ZB, vB), Object.assign({
+              method: IB,
+              headers: kB,
               referrerPolicy: "no-referrer"
-            }, Dt))
+            }, oB))
           }))
         }
-        async function ot(tt, et, Vt) {
-          tt._canInitEmulator = !1;
-          const qt = Object.assign(Object.assign({}, Ft), et);
+        async function LB(BB, IB, ZB) {
+          BB._canInitEmulator = !1;
+          const JB = Object.assign(Object.assign({}, RB), IB);
           try {
-            const et = new At(tt),
-              Ot = await Promise.race([Vt(), et.promise]);
-            et.clearNetworkTimeout();
-            const Dt = await Ot.json();
-            if ("needConfirmation" in Dt) throw it(tt, "account-exists-with-different-credential", Dt);
-            if (Ot.ok && !("errorMessage" in Dt)) return Dt;
+            const IB = new fB(BB),
+              TB = await Promise.race([ZB(), IB.promise]);
+            IB.clearNetworkTimeout();
+            const oB = await TB.json();
+            if ("needConfirmation" in oB) throw lB(BB, "account-exists-with-different-credential", oB);
+            if (TB.ok && !("errorMessage" in oB)) return oB;
             {
-              const et = Ot.ok ? Dt.errorMessage : Dt.error.message,
-                [Vt, mt] = et.split(" : ");
-              if ("FEDERATED_USER_ID_ALREADY_LINKED" === Vt) throw it(tt, "credential-already-in-use", Dt);
-              if ("EMAIL_EXISTS" === Vt) throw it(tt, "email-already-in-use", Dt);
-              if ("USER_DISABLED" === Vt) throw it(tt, "user-disabled", Dt);
-              const dt = qt[Vt] || Vt.toLowerCase().replace(/[_\s]+/g, "-");
-              if (mt) throw ut(tt, dt, mt);
-              Jt(tt, dt)
+              const IB = TB.ok ? oB.errorMessage : oB.error.message,
+                [ZB, GB] = IB.split(" : ");
+              if ("FEDERATED_USER_ID_ALREADY_LINKED" === ZB) throw lB(BB, "credential-already-in-use", oB);
+              if ("EMAIL_EXISTS" === ZB) throw lB(BB, "email-already-in-use", oB);
+              if ("USER_DISABLED" === ZB) throw lB(BB, "user-disabled", oB);
+              const vB = JB[ZB] || ZB.toLowerCase().replace(/[_\s]+/g, "-");
+              if (GB) throw QB(BB, vB, GB);
+              dB(BB, vB)
             }
-          } catch (Dt) {
-            if (Dt instanceof Ot.g) throw Dt;
-            Jt(tt, "network-request-failed", {
-              message: String(Dt)
+          } catch (oB) {
+            if (oB instanceof TB.j) throw oB;
+            dB(BB, "network-request-failed", {
+              message: String(oB)
             })
           }
         }
-        async function rt(tt, et, Vt, Ot) {
-          let qt = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-          const Dt = await zt(tt, et, Vt, Ot, qt);
-          return "mfaPendingCredential" in Dt && Jt(tt, "multi-factor-auth-required", {
-            _serverResponse: Dt
-          }), Dt
+        async function eB(BB, IB, ZB, TB) {
+          let JB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+          const oB = await XB(BB, IB, ZB, TB, JB);
+          return "mfaPendingCredential" in oB && dB(BB, "multi-factor-auth-required", {
+            _serverResponse: oB
+          }), oB
         }
 
-        function Ut(tt, et, Vt, Ot) {
-          const qt = `${et}${Vt}?${Ot}`;
-          return tt.config.emulator ? Zt(tt.config, qt) : `${tt.config.apiScheme}://${qt}`
+        function uB(BB, IB, ZB, TB) {
+          const JB = `${IB}${ZB}?${TB}`;
+          return BB.config.emulator ? jB(BB.config, JB) : `${BB.config.apiScheme}://${JB}`
         }
-        class At {
-          constructor(tt) {
-            this.auth = tt, this.timer = null, this.promise = new Promise(((tt, et) => {
-              this.timer = setTimeout((() => et(Ct(this.auth, "network-request-failed"))), kt.get())
+        class fB {
+          constructor(BB) {
+            this.auth = BB, this.timer = null, this.promise = new Promise(((BB, IB) => {
+              this.timer = setTimeout((() => IB(CB(this.auth, "network-request-failed"))), rB.get())
             }))
           }
           clearNetworkTimeout() {
@@ -586,75 +586,75 @@ export const modules = {
           }
         }
 
-        function it(tt, et, Vt) {
-          const Ot = {
-            appName: tt.name
+        function lB(BB, IB, ZB) {
+          const TB = {
+            appName: BB.name
           };
-          Vt.email && (Ot.email = Vt.email), Vt.phoneNumber && (Ot.phoneNumber = Vt.phoneNumber);
-          const qt = Ct(tt, et, Ot);
-          return qt.customData._tokenResponse = Vt, qt
+          ZB.email && (TB.email = ZB.email), ZB.phoneNumber && (TB.phoneNumber = ZB.phoneNumber);
+          const JB = CB(BB, IB, TB);
+          return JB.customData._tokenResponse = ZB, JB
         }
 
-        function Yt(tt) {
-          if (tt) try {
-            const et = new Date(Number(tt));
-            if (!isNaN(et.getTime())) return et.toUTCString()
-          } catch (et) {}
+        function AB(BB) {
+          if (BB) try {
+            const IB = new Date(Number(BB));
+            if (!isNaN(IB.getTime())) return IB.toUTCString()
+          } catch (IB) {}
         }
 
-        function Bt(tt) {
-          let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return (0, Ot.L)(tt).getIdToken(et)
+        function tB(BB) {
+          let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return (0, TB.N)(BB).getIdToken(IB)
         }
-        async function pt(tt) {
-          let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          const Vt = (0, Ot.L)(tt),
-            qt = await Vt.getIdToken(et),
-            Dt = Tt(qt);
-          vt(Dt && Dt.exp && Dt.auth_time && Dt.iat, Vt.auth, "internal-error");
-          const mt = "object" === typeof Dt.firebase ? Dt.firebase : void 0,
-            dt = null === mt || void 0 === mt ? void 0 : mt.sign_in_provider;
+        async function bB(BB) {
+          let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          const ZB = (0, TB.N)(BB),
+            JB = await ZB.getIdToken(IB),
+            oB = EB(JB);
+          OB(oB && oB.exp && oB.auth_time && oB.iat, ZB.auth, "internal-error");
+          const GB = "object" === typeof oB.firebase ? oB.firebase : void 0,
+            vB = null === GB || void 0 === GB ? void 0 : GB.sign_in_provider;
           return {
-            claims: Dt,
-            token: qt,
-            authTime: Yt(xt(Dt.auth_time)),
-            issuedAtTime: Yt(xt(Dt.iat)),
-            expirationTime: Yt(xt(Dt.exp)),
-            signInProvider: dt || null,
-            signInSecondFactor: (null === mt || void 0 === mt ? void 0 : mt.sign_in_second_factor) || null
+            claims: oB,
+            token: JB,
+            authTime: AB(xB(oB.auth_time)),
+            issuedAtTime: AB(xB(oB.iat)),
+            expirationTime: AB(xB(oB.exp)),
+            signInProvider: vB || null,
+            signInSecondFactor: (null === GB || void 0 === GB ? void 0 : GB.sign_in_second_factor) || null
           }
         }
 
-        function xt(tt) {
-          return 1e3 * Number(tt)
+        function xB(BB) {
+          return 1e3 * Number(BB)
         }
 
-        function Tt(tt) {
-          const [et, Vt, qt] = tt.split(".");
-          if (void 0 === et || void 0 === Vt || void 0 === qt) return bt("JWT malformed, contained fewer than 3 sections"), null;
+        function EB(BB) {
+          const [IB, ZB, JB] = BB.split(".");
+          if (void 0 === IB || void 0 === ZB || void 0 === JB) return WB("JWT malformed, contained fewer than 3 sections"), null;
           try {
-            const tt = (0, Ot.m)(Vt);
-            return tt ? JSON.parse(tt) : (bt("Failed to decode base64 JWT payload"), null)
-          } catch (Dt) {
-            return bt("Caught error parsing JWT payload as JSON", null === Dt || void 0 === Dt ? void 0 : Dt.toString()), null
+            const BB = (0, TB.p)(ZB);
+            return BB ? JSON.parse(BB) : (WB("Failed to decode base64 JWT payload"), null)
+          } catch (oB) {
+            return WB("Caught error parsing JWT payload as JSON", null === oB || void 0 === oB ? void 0 : oB.toString()), null
           }
         }
-        async function gt(tt, et) {
-          if (arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) return et;
+        async function DB(BB, IB) {
+          if (arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) return IB;
           try {
-            return await et
-          } catch (Vt) {
-            throw Vt instanceof Ot.g && function(tt) {
+            return await IB
+          } catch (ZB) {
+            throw ZB instanceof TB.j && function(BB) {
               let {
-                code: et
-              } = tt;
-              return "auth/user-disabled" === et || "auth/user-token-expired" === et
-            }(Vt) && tt.auth.currentUser === tt && await tt.auth.signOut(), Vt
+                code: IB
+              } = BB;
+              return "auth/user-disabled" === IB || "auth/user-token-expired" === IB
+            }(ZB) && BB.auth.currentUser === BB && await BB.auth.signOut(), ZB
           }
         }
-        class st {
-          constructor(tt) {
-            this.user = tt, this.isRunning = !1, this.timerId = null, this.errorBackoff = 3e4
+        class KB {
+          constructor(BB) {
+            this.user = BB, this.isRunning = !1, this.timerId = null, this.errorBackoff = 3e4
           }
           _start() {
             this.isRunning || (this.isRunning = !0, this.schedule())
@@ -662,43 +662,43 @@ export const modules = {
           _stop() {
             this.isRunning && (this.isRunning = !1, null !== this.timerId && clearTimeout(this.timerId))
           }
-          getInterval(tt) {
-            var et;
-            if (tt) {
-              const tt = this.errorBackoff;
-              return this.errorBackoff = Math.min(2 * this.errorBackoff, 96e4), tt
+          getInterval(BB) {
+            var IB;
+            if (BB) {
+              const BB = this.errorBackoff;
+              return this.errorBackoff = Math.min(2 * this.errorBackoff, 96e4), BB
             } {
               this.errorBackoff = 3e4;
-              const tt = (null !== (et = this.user.stsTokenManager.expirationTime) && void 0 !== et ? et : 0) - Date.now() - 3e5;
-              return Math.max(0, tt)
+              const BB = (null !== (IB = this.user.stsTokenManager.expirationTime) && void 0 !== IB ? IB : 0) - Date.now() - 3e5;
+              return Math.max(0, BB)
             }
           }
           schedule() {
-            let tt = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            let BB = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
             if (!this.isRunning) return;
-            const et = this.getInterval(tt);
+            const IB = this.getInterval(BB);
             this.timerId = setTimeout((async () => {
               await this.iteration()
-            }), et)
+            }), IB)
           }
           async iteration() {
             try {
               await this.user.getIdToken(!0)
-            } catch (tt) {
-              return void("auth/network-request-failed" === (null === tt || void 0 === tt ? void 0 : tt.code) && this.schedule(!0))
+            } catch (BB) {
+              return void("auth/network-request-failed" === (null === BB || void 0 === BB ? void 0 : BB.code) && this.schedule(!0))
             }
             this.schedule()
           }
         }
-        class nt {
-          constructor(tt, et) {
-            this.createdAt = tt, this.lastLoginAt = et, this._initializeTime()
+        class VB {
+          constructor(BB, IB) {
+            this.createdAt = BB, this.lastLoginAt = IB, this._initializeTime()
           }
           _initializeTime() {
-            this.lastSignInTime = Yt(this.lastLoginAt), this.creationTime = Yt(this.createdAt)
+            this.lastSignInTime = AB(this.lastLoginAt), this.creationTime = AB(this.createdAt)
           }
-          _copy(tt) {
-            this.createdAt = tt.createdAt, this.lastLoginAt = tt.lastLoginAt, this._initializeTime()
+          _copy(BB) {
+            this.createdAt = BB.createdAt, this.lastLoginAt = BB.lastLoginAt, this._initializeTime()
           }
           toJSON() {
             return {
@@ -707,123 +707,123 @@ export const modules = {
             }
           }
         }
-        async function te(tt) {
-          var et;
-          const Vt = tt.auth,
-            Ot = await tt.getIdToken(),
-            qt = await gt(tt, async function(tt, et) {
-              return zt(tt, "POST", "/v1/accounts:lookup", et)
-            }(Vt, {
-              idToken: Ot
+        async function SB(BB) {
+          var IB;
+          const ZB = BB.auth,
+            TB = await BB.getIdToken(),
+            JB = await DB(BB, async function(BB, IB) {
+              return XB(BB, "POST", "/v1/accounts:lookup", IB)
+            }(ZB, {
+              idToken: TB
             }));
-          vt(null === qt || void 0 === qt ? void 0 : qt.users.length, Vt, "internal-error");
-          const mt = qt.users[0];
-          tt._notifyReloadListener(mt);
-          const dt = (null === (et = mt.providerUserInfo) || void 0 === et ? void 0 : et.length) ? mt.providerUserInfo.map((tt => {
+          OB(null === JB || void 0 === JB ? void 0 : JB.users.length, ZB, "internal-error");
+          const GB = JB.users[0];
+          BB._notifyReloadListener(GB);
+          const vB = (null === (IB = GB.providerUserInfo) || void 0 === IB ? void 0 : IB.length) ? GB.providerUserInfo.map((BB => {
             var {
-              providerId: et
-            } = tt, Vt = Dt(tt, ["providerId"]);
+              providerId: IB
+            } = BB, ZB = oB(BB, ["providerId"]);
             return {
-              providerId: et,
-              uid: Vt.rawId || "",
-              displayName: Vt.displayName || null,
-              email: Vt.email || null,
-              phoneNumber: Vt.phoneNumber || null,
-              photoURL: Vt.photoUrl || null
+              providerId: IB,
+              uid: ZB.rawId || "",
+              displayName: ZB.displayName || null,
+              email: ZB.email || null,
+              phoneNumber: ZB.phoneNumber || null,
+              photoURL: ZB.photoUrl || null
             }
           })) : [];
-          const jt = (Ht = tt.providerData, Xt = dt, [...Ht.filter((tt => !Xt.some((et => et.providerId === tt.providerId)))), ...Xt]);
-          var Ht, Xt;
-          const Qt = tt.isAnonymous,
-            lt = !(tt.email && mt.passwordHash) && !(null === jt || void 0 === jt ? void 0 : jt.length),
-            Et = !!Qt && lt,
-            ft = {
-              uid: mt.localId,
-              displayName: mt.displayName || null,
-              photoURL: mt.photoUrl || null,
-              email: mt.email || null,
-              emailVerified: mt.emailVerified || !1,
-              phoneNumber: mt.phoneNumber || null,
-              tenantId: mt.tenantId || null,
-              providerData: jt,
-              metadata: new nt(mt.createdAt, mt.lastLoginAt),
-              isAnonymous: Et
+          const kB = (cB = BB.providerData, nB = vB, [...cB.filter((BB => !nB.some((IB => IB.providerId === BB.providerId)))), ...nB]);
+          var cB, nB;
+          const hB = BB.isAnonymous,
+            zB = !(BB.email && GB.passwordHash) && !(null === kB || void 0 === kB ? void 0 : kB.length),
+            FB = !!hB && zB,
+            NB = {
+              uid: GB.localId,
+              displayName: GB.displayName || null,
+              photoURL: GB.photoUrl || null,
+              email: GB.email || null,
+              emailVerified: GB.emailVerified || !1,
+              phoneNumber: GB.phoneNumber || null,
+              tenantId: GB.tenantId || null,
+              providerData: kB,
+              metadata: new VB(GB.createdAt, GB.lastLoginAt),
+              isAnonymous: FB
             };
-          Object.assign(tt, ft)
+          Object.assign(BB, NB)
         }
-        async function ee(tt) {
-          const et = (0, Ot.L)(tt);
-          await te(et), await et.auth._persistUserIfCurrent(et), et.auth._notifyListenersIfCurrent(et)
+        async function BI(BB) {
+          const IB = (0, TB.N)(BB);
+          await SB(IB), await IB.auth._persistUserIfCurrent(IB), IB.auth._notifyListenersIfCurrent(IB)
         }
-        class Ve {
+        class II {
           constructor() {
             this.refreshToken = null, this.accessToken = null, this.expirationTime = null
           }
           get isExpired() {
             return !this.expirationTime || Date.now() > this.expirationTime - 3e4
           }
-          updateFromServerResponse(tt) {
-            vt(tt.idToken, "internal-error"), vt("undefined" !== typeof tt.idToken, "internal-error"), vt("undefined" !== typeof tt.refreshToken, "internal-error");
-            const et = "expiresIn" in tt && "undefined" !== typeof tt.expiresIn ? Number(tt.expiresIn) : function(tt) {
-              const et = Tt(tt);
-              return vt(et, "internal-error"), vt("undefined" !== typeof et.exp, "internal-error"), vt("undefined" !== typeof et.iat, "internal-error"), Number(et.exp) - Number(et.iat)
-            }(tt.idToken);
-            this.updateTokensAndExpiration(tt.idToken, tt.refreshToken, et)
+          updateFromServerResponse(BB) {
+            OB(BB.idToken, "internal-error"), OB("undefined" !== typeof BB.idToken, "internal-error"), OB("undefined" !== typeof BB.refreshToken, "internal-error");
+            const IB = "expiresIn" in BB && "undefined" !== typeof BB.expiresIn ? Number(BB.expiresIn) : function(BB) {
+              const IB = EB(BB);
+              return OB(IB, "internal-error"), OB("undefined" !== typeof IB.exp, "internal-error"), OB("undefined" !== typeof IB.iat, "internal-error"), Number(IB.exp) - Number(IB.iat)
+            }(BB.idToken);
+            this.updateTokensAndExpiration(BB.idToken, BB.refreshToken, IB)
           }
-          async getToken(tt) {
-            let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            return vt(!this.accessToken || this.refreshToken, tt, "user-token-expired"), et || !this.accessToken || this.isExpired ? this.refreshToken ? (await this.refresh(tt, this.refreshToken), this.accessToken) : null : this.accessToken
+          async getToken(BB) {
+            let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            return OB(!this.accessToken || this.refreshToken, BB, "user-token-expired"), IB || !this.accessToken || this.isExpired ? this.refreshToken ? (await this.refresh(BB, this.refreshToken), this.accessToken) : null : this.accessToken
           }
           clearRefreshToken() {
             this.refreshToken = null
           }
-          async refresh(tt, et) {
+          async refresh(BB, IB) {
             const {
-              accessToken: Vt,
-              refreshToken: qt,
-              expiresIn: Dt
-            } = await async function(tt, et) {
-              const Vt = await ot(tt, {}, (async () => {
-                const Vt = (0, Ot.kb)({
+              accessToken: ZB,
+              refreshToken: JB,
+              expiresIn: oB
+            } = await async function(BB, IB) {
+              const ZB = await LB(BB, {}, (async () => {
+                const ZB = (0, TB.db)({
                     grant_type: "refresh_token",
-                    refresh_token: et
+                    refresh_token: IB
                   }).slice(1),
                   {
-                    tokenApiHost: qt,
-                    apiKey: Dt
-                  } = tt.config,
-                  mt = Ut(tt, qt, "/v1/token", `key=${Dt}`),
-                  dt = await tt._getAdditionalHeaders();
-                return dt["Content-Type"] = "application/x-www-form-urlencoded", Lt.fetch()(mt, {
+                    tokenApiHost: JB,
+                    apiKey: oB
+                  } = BB.config,
+                  GB = uB(BB, JB, "/v1/token", `key=${oB}`),
+                  vB = await BB._getAdditionalHeaders();
+                return vB["Content-Type"] = "application/x-www-form-urlencoded", PB.fetch()(GB, {
                   method: "POST",
-                  headers: dt,
-                  body: Vt
+                  headers: vB,
+                  body: ZB
                 })
               }));
               return {
-                accessToken: Vt.access_token,
-                expiresIn: Vt.expires_in,
-                refreshToken: Vt.refresh_token
+                accessToken: ZB.access_token,
+                expiresIn: ZB.expires_in,
+                refreshToken: ZB.refresh_token
               }
-            }(tt, et);
-            this.updateTokensAndExpiration(Vt, qt, Number(Dt))
+            }(BB, IB);
+            this.updateTokensAndExpiration(ZB, JB, Number(oB))
           }
-          updateTokensAndExpiration(tt, et, Vt) {
-            this.refreshToken = et || null, this.accessToken = tt || null, this.expirationTime = Date.now() + 1e3 * Vt
+          updateTokensAndExpiration(BB, IB, ZB) {
+            this.refreshToken = IB || null, this.accessToken = BB || null, this.expirationTime = Date.now() + 1e3 * ZB
           }
-          static fromJSON(tt, et) {
+          static fromJSON(BB, IB) {
             const {
-              refreshToken: Vt,
-              accessToken: Ot,
-              expirationTime: qt
-            } = et, Dt = new Ve;
-            return Vt && (vt("string" === typeof Vt, "internal-error", {
-              appName: tt
-            }), Dt.refreshToken = Vt), Ot && (vt("string" === typeof Ot, "internal-error", {
-              appName: tt
-            }), Dt.accessToken = Ot), qt && (vt("number" === typeof qt, "internal-error", {
-              appName: tt
-            }), Dt.expirationTime = qt), Dt
+              refreshToken: ZB,
+              accessToken: TB,
+              expirationTime: JB
+            } = IB, oB = new II;
+            return ZB && (OB("string" === typeof ZB, "internal-error", {
+              appName: BB
+            }), oB.refreshToken = ZB), TB && (OB("string" === typeof TB, "internal-error", {
+              appName: BB
+            }), oB.accessToken = TB), JB && (OB("number" === typeof JB, "internal-error", {
+              appName: BB
+            }), oB.expirationTime = JB), oB
           }
           toJSON() {
             return {
@@ -832,56 +832,56 @@ export const modules = {
               expirationTime: this.expirationTime
             }
           }
-          _assign(tt) {
-            this.accessToken = tt.accessToken, this.refreshToken = tt.refreshToken, this.expirationTime = tt.expirationTime
+          _assign(BB) {
+            this.accessToken = BB.accessToken, this.refreshToken = BB.refreshToken, this.expirationTime = BB.expirationTime
           }
           _clone() {
-            return Object.assign(new Ve, this.toJSON())
+            return Object.assign(new II, this.toJSON())
           }
           _performRefresh() {
-            return Wt("not implemented")
+            return YB("not implemented")
           }
         }
 
-        function Oe(tt, et) {
-          vt("string" === typeof tt || "undefined" === typeof tt, "internal-error", {
-            appName: et
+        function ZI(BB, IB) {
+          OB("string" === typeof BB || "undefined" === typeof BB, "internal-error", {
+            appName: IB
           })
         }
-        class qe {
-          constructor(tt) {
+        class TI {
+          constructor(BB) {
             var {
-              uid: et,
-              auth: Vt,
-              stsTokenManager: Ot
-            } = tt, qt = Dt(tt, ["uid", "auth", "stsTokenManager"]);
-            this.providerId = "firebase", this.proactiveRefresh = new st(this), this.reloadUserInfo = null, this.reloadListener = null, this.uid = et, this.auth = Vt, this.stsTokenManager = Ot, this.accessToken = Ot.accessToken, this.displayName = qt.displayName || null, this.email = qt.email || null, this.emailVerified = qt.emailVerified || !1, this.phoneNumber = qt.phoneNumber || null, this.photoURL = qt.photoURL || null, this.isAnonymous = qt.isAnonymous || !1, this.tenantId = qt.tenantId || null, this.providerData = qt.providerData ? [...qt.providerData] : [], this.metadata = new nt(qt.createdAt || void 0, qt.lastLoginAt || void 0)
+              uid: IB,
+              auth: ZB,
+              stsTokenManager: TB
+            } = BB, JB = oB(BB, ["uid", "auth", "stsTokenManager"]);
+            this.providerId = "firebase", this.proactiveRefresh = new KB(this), this.reloadUserInfo = null, this.reloadListener = null, this.uid = IB, this.auth = ZB, this.stsTokenManager = TB, this.accessToken = TB.accessToken, this.displayName = JB.displayName || null, this.email = JB.email || null, this.emailVerified = JB.emailVerified || !1, this.phoneNumber = JB.phoneNumber || null, this.photoURL = JB.photoURL || null, this.isAnonymous = JB.isAnonymous || !1, this.tenantId = JB.tenantId || null, this.providerData = JB.providerData ? [...JB.providerData] : [], this.metadata = new VB(JB.createdAt || void 0, JB.lastLoginAt || void 0)
           }
-          async getIdToken(tt) {
-            const et = await gt(this, this.stsTokenManager.getToken(this.auth, tt));
-            return vt(et, this.auth, "internal-error"), this.accessToken !== et && (this.accessToken = et, await this.auth._persistUserIfCurrent(this), this.auth._notifyListenersIfCurrent(this)), et
+          async getIdToken(BB) {
+            const IB = await DB(this, this.stsTokenManager.getToken(this.auth, BB));
+            return OB(IB, this.auth, "internal-error"), this.accessToken !== IB && (this.accessToken = IB, await this.auth._persistUserIfCurrent(this), this.auth._notifyListenersIfCurrent(this)), IB
           }
-          getIdTokenResult(tt) {
-            return pt(this, tt)
+          getIdTokenResult(BB) {
+            return bB(this, BB)
           }
           reload() {
-            return ee(this)
+            return BI(this)
           }
-          _assign(tt) {
-            this !== tt && (vt(this.uid === tt.uid, this.auth, "internal-error"), this.displayName = tt.displayName, this.photoURL = tt.photoURL, this.email = tt.email, this.emailVerified = tt.emailVerified, this.phoneNumber = tt.phoneNumber, this.isAnonymous = tt.isAnonymous, this.tenantId = tt.tenantId, this.providerData = tt.providerData.map((tt => Object.assign({}, tt))), this.metadata._copy(tt.metadata), this.stsTokenManager._assign(tt.stsTokenManager))
+          _assign(BB) {
+            this !== BB && (OB(this.uid === BB.uid, this.auth, "internal-error"), this.displayName = BB.displayName, this.photoURL = BB.photoURL, this.email = BB.email, this.emailVerified = BB.emailVerified, this.phoneNumber = BB.phoneNumber, this.isAnonymous = BB.isAnonymous, this.tenantId = BB.tenantId, this.providerData = BB.providerData.map((BB => Object.assign({}, BB))), this.metadata._copy(BB.metadata), this.stsTokenManager._assign(BB.stsTokenManager))
           }
-          _clone(tt) {
-            const et = new qe(Object.assign(Object.assign({}, this), {
-              auth: tt,
+          _clone(BB) {
+            const IB = new TI(Object.assign(Object.assign({}, this), {
+              auth: BB,
               stsTokenManager: this.stsTokenManager._clone()
             }));
-            return et.metadata._copy(this.metadata), et
+            return IB.metadata._copy(this.metadata), IB
           }
-          _onReload(tt) {
-            vt(!this.reloadListener, this.auth, "internal-error"), this.reloadListener = tt, this.reloadUserInfo && (this._notifyReloadListener(this.reloadUserInfo), this.reloadUserInfo = null)
+          _onReload(BB) {
+            OB(!this.reloadListener, this.auth, "internal-error"), this.reloadListener = BB, this.reloadUserInfo && (this._notifyReloadListener(this.reloadUserInfo), this.reloadUserInfo = null)
           }
-          _notifyReloadListener(tt) {
-            this.reloadListener ? this.reloadListener(tt) : this.reloadUserInfo = tt
+          _notifyReloadListener(BB) {
+            this.reloadListener ? this.reloadListener(BB) : this.reloadUserInfo = BB
           }
           _startProactiveRefresh() {
             this.proactiveRefresh._start()
@@ -889,17 +889,17 @@ export const modules = {
           _stopProactiveRefresh() {
             this.proactiveRefresh._stop()
           }
-          async _updateTokensIfNecessary(tt) {
-            let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              Vt = !1;
-            tt.idToken && tt.idToken !== this.stsTokenManager.accessToken && (this.stsTokenManager.updateFromServerResponse(tt), Vt = !0), et && await te(this), await this.auth._persistUserIfCurrent(this), Vt && this.auth._notifyListenersIfCurrent(this)
+          async _updateTokensIfNecessary(BB) {
+            let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              ZB = !1;
+            BB.idToken && BB.idToken !== this.stsTokenManager.accessToken && (this.stsTokenManager.updateFromServerResponse(BB), ZB = !0), IB && await SB(this), await this.auth._persistUserIfCurrent(this), ZB && this.auth._notifyListenersIfCurrent(this)
           }
           async delete() {
-            const tt = await this.getIdToken();
-            return await gt(this, async function(tt, et) {
-              return zt(tt, "POST", "/v1/accounts:delete", et)
+            const BB = await this.getIdToken();
+            return await DB(this, async function(BB, IB) {
+              return XB(BB, "POST", "/v1/accounts:delete", IB)
             }(this.auth, {
-              idToken: tt
+              idToken: BB
             })), this.stsTokenManager.clearRefreshToken(), this.auth.signOut()
           }
           toJSON() {
@@ -912,7 +912,7 @@ export const modules = {
               photoURL: this.photoURL || void 0,
               phoneNumber: this.phoneNumber || void 0,
               tenantId: this.tenantId || void 0,
-              providerData: this.providerData.map((tt => Object.assign({}, tt))),
+              providerData: this.providerData.map((BB => Object.assign({}, BB))),
               stsTokenManager: this.stsTokenManager.toJSON(),
               _redirectEventId: this._redirectEventId
             }, this.metadata.toJSON()), {
@@ -923,103 +923,103 @@ export const modules = {
           get refreshToken() {
             return this.stsTokenManager.refreshToken || ""
           }
-          static _fromJSON(tt, et) {
-            var Vt, Ot, qt, Dt, mt, dt, jt, Ht;
-            const Xt = null !== (Vt = et.displayName) && void 0 !== Vt ? Vt : void 0,
-              Qt = null !== (Ot = et.email) && void 0 !== Ot ? Ot : void 0,
-              lt = null !== (qt = et.phoneNumber) && void 0 !== qt ? qt : void 0,
-              Et = null !== (Dt = et.photoURL) && void 0 !== Dt ? Dt : void 0,
-              ft = null !== (mt = et.tenantId) && void 0 !== mt ? mt : void 0,
-              wt = null !== (dt = et._redirectEventId) && void 0 !== dt ? dt : void 0,
-              yt = null !== (jt = et.createdAt) && void 0 !== jt ? jt : void 0,
-              Nt = null !== (Ht = et.lastLoginAt) && void 0 !== Ht ? Ht : void 0,
+          static _fromJSON(BB, IB) {
+            var ZB, TB, JB, oB, GB, vB, kB, cB;
+            const nB = null !== (ZB = IB.displayName) && void 0 !== ZB ? ZB : void 0,
+              hB = null !== (TB = IB.email) && void 0 !== TB ? TB : void 0,
+              zB = null !== (JB = IB.phoneNumber) && void 0 !== JB ? JB : void 0,
+              FB = null !== (oB = IB.photoURL) && void 0 !== oB ? oB : void 0,
+              NB = null !== (GB = IB.tenantId) && void 0 !== GB ? GB : void 0,
+              gB = null !== (vB = IB._redirectEventId) && void 0 !== vB ? vB : void 0,
+              qB = null !== (kB = IB.createdAt) && void 0 !== kB ? kB : void 0,
+              yB = null !== (cB = IB.lastLoginAt) && void 0 !== cB ? cB : void 0,
               {
-                uid: Mt,
-                emailVerified: bt,
-                isAnonymous: Jt,
-                providerData: Ct,
-                stsTokenManager: ut
-              } = et;
-            vt(Mt && ut, tt, "internal-error");
-            const Kt = Ve.fromJSON(this.name, ut);
-            vt("string" === typeof Mt, tt, "internal-error"), Oe(Xt, tt.name), Oe(Qt, tt.name), vt("boolean" === typeof bt, tt, "internal-error"), vt("boolean" === typeof Jt, tt, "internal-error"), Oe(lt, tt.name), Oe(Et, tt.name), Oe(ft, tt.name), Oe(wt, tt.name), Oe(yt, tt.name), Oe(Nt, tt.name);
-            const ht = new qe({
-              uid: Mt,
-              auth: tt,
-              email: Qt,
-              emailVerified: bt,
-              displayName: Xt,
-              isAnonymous: Jt,
-              photoURL: Et,
-              phoneNumber: lt,
-              tenantId: ft,
-              stsTokenManager: Kt,
-              createdAt: yt,
-              lastLoginAt: Nt
+                uid: UB,
+                emailVerified: WB,
+                isAnonymous: dB,
+                providerData: CB,
+                stsTokenManager: QB
+              } = IB;
+            OB(UB && QB, BB, "internal-error");
+            const sB = II.fromJSON(this.name, QB);
+            OB("string" === typeof UB, BB, "internal-error"), ZI(nB, BB.name), ZI(hB, BB.name), OB("boolean" === typeof WB, BB, "internal-error"), OB("boolean" === typeof dB, BB, "internal-error"), ZI(zB, BB.name), ZI(FB, BB.name), ZI(NB, BB.name), ZI(gB, BB.name), ZI(qB, BB.name), ZI(yB, BB.name);
+            const wB = new TI({
+              uid: UB,
+              auth: BB,
+              email: hB,
+              emailVerified: WB,
+              displayName: nB,
+              isAnonymous: dB,
+              photoURL: FB,
+              phoneNumber: zB,
+              tenantId: NB,
+              stsTokenManager: sB,
+              createdAt: qB,
+              lastLoginAt: yB
             });
-            return Ct && Array.isArray(Ct) && (ht.providerData = Ct.map((tt => Object.assign({}, tt)))), wt && (ht._redirectEventId = wt), ht
+            return CB && Array.isArray(CB) && (wB.providerData = CB.map((BB => Object.assign({}, BB)))), gB && (wB._redirectEventId = gB), wB
           }
-          static async _fromIdTokenResponse(tt, et) {
-            let Vt = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-            const Ot = new Ve;
-            Ot.updateFromServerResponse(et);
-            const qt = new qe({
-              uid: et.localId,
-              auth: tt,
-              stsTokenManager: Ot,
-              isAnonymous: Vt
+          static async _fromIdTokenResponse(BB, IB) {
+            let ZB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+            const TB = new II;
+            TB.updateFromServerResponse(IB);
+            const JB = new TI({
+              uid: IB.localId,
+              auth: BB,
+              stsTokenManager: TB,
+              isAnonymous: ZB
             });
-            return await te(qt), qt
+            return await SB(JB), JB
           }
         }
-        const De = new Map;
+        const JI = new Map;
 
-        function me(tt) {
-          St(tt instanceof Function, "Expected a class definition");
-          let et = De.get(tt);
-          return et ? (St(et instanceof tt, "Instance stored in cache mismatched with class"), et) : (et = new tt, De.set(tt, et), et)
+        function oI(BB) {
+          iB(BB instanceof Function, "Expected a class definition");
+          let IB = JI.get(BB);
+          return IB ? (iB(IB instanceof BB, "Instance stored in cache mismatched with class"), IB) : (IB = new BB, JI.set(BB, IB), IB)
         }
-        class de {
+        class GI {
           constructor() {
             this.type = "NONE", this.storage = {}
           }
           async _isAvailable() {
             return !0
           }
-          async _set(tt, et) {
-            this.storage[tt] = et
+          async _set(BB, IB) {
+            this.storage[BB] = IB
           }
-          async _get(tt) {
-            const et = this.storage[tt];
-            return void 0 === et ? null : et
+          async _get(BB) {
+            const IB = this.storage[BB];
+            return void 0 === IB ? null : IB
           }
-          async _remove(tt) {
-            delete this.storage[tt]
+          async _remove(BB) {
+            delete this.storage[BB]
           }
-          _addListener(tt, et) {}
-          _removeListener(tt, et) {}
+          _addListener(BB, IB) {}
+          _removeListener(BB, IB) {}
         }
-        de.type = "NONE";
-        const je = de;
+        GI.type = "NONE";
+        const vI = GI;
 
-        function He(tt, et, Vt) {
-          return `firebase:${tt}:${et}:${Vt}`
+        function kI(BB, IB, ZB) {
+          return `firebase:${BB}:${IB}:${ZB}`
         }
-        class Xe {
-          constructor(tt, et, Vt) {
-            this.persistence = tt, this.auth = et, this.userKey = Vt;
+        class cI {
+          constructor(BB, IB, ZB) {
+            this.persistence = BB, this.auth = IB, this.userKey = ZB;
             const {
-              config: Ot,
-              name: qt
+              config: TB,
+              name: JB
             } = this.auth;
-            this.fullUserKey = He(this.userKey, Ot.apiKey, qt), this.fullPersistenceKey = He("persistence", Ot.apiKey, qt), this.boundEventHandler = et._onStorageEvent.bind(et), this.persistence._addListener(this.fullUserKey, this.boundEventHandler)
+            this.fullUserKey = kI(this.userKey, TB.apiKey, JB), this.fullPersistenceKey = kI("persistence", TB.apiKey, JB), this.boundEventHandler = IB._onStorageEvent.bind(IB), this.persistence._addListener(this.fullUserKey, this.boundEventHandler)
           }
-          setCurrentUser(tt) {
-            return this.persistence._set(this.fullUserKey, tt.toJSON())
+          setCurrentUser(BB) {
+            return this.persistence._set(this.fullUserKey, BB.toJSON())
           }
           async getCurrentUser() {
-            const tt = await this.persistence._get(this.fullUserKey);
-            return tt ? qe._fromJSON(this.auth, tt) : null
+            const BB = await this.persistence._get(this.fullUserKey);
+            return BB ? TI._fromJSON(this.auth, BB) : null
           }
           removeCurrentUser() {
             return this.persistence._remove(this.fullUserKey)
@@ -1027,364 +1027,364 @@ export const modules = {
           savePersistenceForRedirect() {
             return this.persistence._set(this.fullPersistenceKey, this.persistence.type)
           }
-          async setPersistence(tt) {
-            if (this.persistence === tt) return;
-            const et = await this.getCurrentUser();
-            return await this.removeCurrentUser(), this.persistence = tt, et ? this.setCurrentUser(et) : void 0
+          async setPersistence(BB) {
+            if (this.persistence === BB) return;
+            const IB = await this.getCurrentUser();
+            return await this.removeCurrentUser(), this.persistence = BB, IB ? this.setCurrentUser(IB) : void 0
           }
           delete() {
             this.persistence._removeListener(this.fullUserKey, this.boundEventHandler)
           }
-          static async create(tt, et) {
-            let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "authUser";
-            if (!et.length) return new Xe(me(je), tt, Vt);
-            const Ot = (await Promise.all(et.map((async tt => {
-              if (await tt._isAvailable()) return tt
-            })))).filter((tt => tt));
-            let qt = Ot[0] || me(je);
-            const Dt = He(Vt, tt.config.apiKey, tt.name);
-            let mt = null;
-            for (const Ht of et) try {
-              const et = await Ht._get(Dt);
-              if (et) {
-                const Vt = qe._fromJSON(tt, et);
-                Ht !== qt && (mt = Vt), qt = Ht;
+          static async create(BB, IB) {
+            let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "authUser";
+            if (!IB.length) return new cI(oI(vI), BB, ZB);
+            const TB = (await Promise.all(IB.map((async BB => {
+              if (await BB._isAvailable()) return BB
+            })))).filter((BB => BB));
+            let JB = TB[0] || oI(vI);
+            const oB = kI(ZB, BB.config.apiKey, BB.name);
+            let GB = null;
+            for (const cB of IB) try {
+              const IB = await cB._get(oB);
+              if (IB) {
+                const ZB = TI._fromJSON(BB, IB);
+                cB !== JB && (GB = ZB), JB = cB;
                 break
               }
-            } catch (jt) {}
-            const dt = Ot.filter((tt => tt._shouldAllowMigration));
-            return qt._shouldAllowMigration && dt.length ? (qt = dt[0], mt && await qt._set(Dt, mt.toJSON()), await Promise.all(et.map((async tt => {
-              if (tt !== qt) try {
-                await tt._remove(Dt)
-              } catch (jt) {}
-            }))), new Xe(qt, tt, Vt)) : new Xe(qt, tt, Vt)
+            } catch (kB) {}
+            const vB = TB.filter((BB => BB._shouldAllowMigration));
+            return JB._shouldAllowMigration && vB.length ? (JB = vB[0], GB && await JB._set(oB, GB.toJSON()), await Promise.all(IB.map((async BB => {
+              if (BB !== JB) try {
+                await BB._remove(oB)
+              } catch (kB) {}
+            }))), new cI(JB, BB, ZB)) : new cI(JB, BB, ZB)
           }
         }
 
-        function Qe(tt) {
-          const et = tt.toLowerCase();
-          if (et.includes("opera/") || et.includes("opr/") || et.includes("opios/")) return "Opera";
-          if (we(et)) return "IEMobile";
-          if (et.includes("msie") || et.includes("trident/")) return "IE";
-          if (et.includes("edge/")) return "Edge";
-          if (le(et)) return "Firefox";
-          if (et.includes("silk/")) return "Silk";
-          if (Ne(et)) return "Blackberry";
-          if (ae(et)) return "Webos";
-          if (Ee(et)) return "Safari";
-          if ((et.includes("chrome/") || fe(et)) && !et.includes("edge/")) return "Chrome";
-          if (ye(et)) return "Android";
+        function nI(BB) {
+          const IB = BB.toLowerCase();
+          if (IB.includes("opera/") || IB.includes("opr/") || IB.includes("opios/")) return "Opera";
+          if (NI(IB)) return "IEMobile";
+          if (IB.includes("msie") || IB.includes("trident/")) return "IE";
+          if (IB.includes("edge/")) return "Edge";
+          if (hI(IB)) return "Firefox";
+          if (IB.includes("silk/")) return "Silk";
+          if (qI(IB)) return "Blackberry";
+          if (yI(IB)) return "Webos";
+          if (zI(IB)) return "Safari";
+          if ((IB.includes("chrome/") || FI(IB)) && !IB.includes("edge/")) return "Chrome";
+          if (gI(IB)) return "Android";
           {
-            const et = /([a-zA-Z\d\.]+)\/[a-zA-Z\d\.]*$/,
-              Vt = tt.match(et);
-            if (2 === (null === Vt || void 0 === Vt ? void 0 : Vt.length)) return Vt[1]
+            const IB = /([a-zA-Z\d\.]+)\/[a-zA-Z\d\.]*$/,
+              ZB = BB.match(IB);
+            if (2 === (null === ZB || void 0 === ZB ? void 0 : ZB.length)) return ZB[1]
           }
           return "Other"
         }
 
-        function le() {
-          let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Ot.M)();
-          return /firefox\//i.test(tt)
+        function hI() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)();
+          return /firefox\//i.test(BB)
         }
 
-        function Ee() {
-          const tt = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Ot.M)()).toLowerCase();
-          return tt.includes("safari/") && !tt.includes("chrome/") && !tt.includes("crios/") && !tt.includes("android")
+        function zI() {
+          const BB = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)()).toLowerCase();
+          return BB.includes("safari/") && !BB.includes("chrome/") && !BB.includes("crios/") && !BB.includes("android")
         }
 
-        function fe() {
-          let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Ot.M)();
-          return /crios\//i.test(tt)
+        function FI() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)();
+          return /crios\//i.test(BB)
         }
 
-        function we() {
-          let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Ot.M)();
-          return /iemobile/i.test(tt)
+        function NI() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)();
+          return /iemobile/i.test(BB)
         }
 
-        function ye() {
-          let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Ot.M)();
-          return /android/i.test(tt)
+        function gI() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)();
+          return /android/i.test(BB)
         }
 
-        function Ne() {
-          let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Ot.M)();
-          return /blackberry/i.test(tt)
+        function qI() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)();
+          return /blackberry/i.test(BB)
         }
 
-        function ae() {
-          let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Ot.M)();
-          return /webos/i.test(tt)
+        function yI() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)();
+          return /webos/i.test(BB)
         }
 
-        function Me() {
-          let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Ot.M)();
-          return /iphone|ipad|ipod/i.test(tt) || /macintosh/i.test(tt) && /mobile/i.test(tt)
+        function UI() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)();
+          return /iphone|ipad|ipod/i.test(BB) || /macintosh/i.test(BB) && /mobile/i.test(BB)
         }
 
-        function be() {
-          let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Ot.M)();
-          return Me(tt) || ye(tt) || ae(tt) || Ne(tt) || /windows phone/i.test(tt) || we(tt)
+        function WI() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)();
+          return UI(BB) || gI(BB) || yI(BB) || qI(BB) || /windows phone/i.test(BB) || NI(BB)
         }
 
-        function Je(tt) {
-          let et, Vt = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-          switch (tt) {
+        function dI(BB) {
+          let IB, ZB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+          switch (BB) {
             case "Browser":
-              et = Qe((0, Ot.M)());
+              IB = nI((0, TB.P)());
               break;
             case "Worker":
-              et = `${Qe((0,Ot.M)())}-${tt}`;
+              IB = `${nI((0,TB.P)())}-${BB}`;
               break;
             default:
-              et = tt
+              IB = BB
           }
-          const Dt = Vt.length ? Vt.join(",") : "FirebaseCore-web";
-          return `${et}/JsCore/${qt.g}/${Dt}`
+          const oB = ZB.length ? ZB.join(",") : "FirebaseCore-web";
+          return `${IB}/JsCore/${JB.f}/${oB}`
         }
-        async function Ce(tt, et) {
-          return zt(tt, "GET", "/v2/recaptchaConfig", Gt(tt, et))
-        }
-
-        function ue(tt) {
-          return void 0 !== tt && void 0 !== tt.getResponse
+        async function CI(BB, IB) {
+          return XB(BB, "GET", "/v2/recaptchaConfig", mB(BB, IB))
         }
 
-        function Ke(tt) {
-          return void 0 !== tt && void 0 !== tt.enterprise
+        function QI(BB) {
+          return void 0 !== BB && void 0 !== BB.getResponse
         }
-        class he {
-          constructor(tt) {
-            if (this.siteKey = "", this.emailPasswordEnabled = !1, void 0 === tt.recaptchaKey) throw new Error("recaptchaKey undefined");
-            this.siteKey = tt.recaptchaKey.split("/")[3], this.emailPasswordEnabled = tt.recaptchaEnforcementState.some((tt => "EMAIL_PASSWORD_PROVIDER" === tt.provider && "OFF" !== tt.enforcementState))
+
+        function sI(BB) {
+          return void 0 !== BB && void 0 !== BB.enterprise
+        }
+        class wI {
+          constructor(BB) {
+            if (this.siteKey = "", this.emailPasswordEnabled = !1, void 0 === BB.recaptchaKey) throw new Error("recaptchaKey undefined");
+            this.siteKey = BB.recaptchaKey.split("/")[3], this.emailPasswordEnabled = BB.recaptchaEnforcementState.some((BB => "EMAIL_PASSWORD_PROVIDER" === BB.provider && "OFF" !== BB.enforcementState))
           }
         }
 
-        function ve(tt) {
-          return new Promise(((et, Vt) => {
-            const Ot = document.createElement("script");
-            Ot.setAttribute("src", tt), Ot.onload = et, Ot.onerror = tt => {
-                const et = Ct("internal-error");
-                et.customData = tt, Vt(et)
-              }, Ot.type = "text/javascript", Ot.charset = "UTF-8",
+        function OI(BB) {
+          return new Promise(((IB, ZB) => {
+            const TB = document.createElement("script");
+            TB.setAttribute("src", BB), TB.onload = IB, TB.onerror = BB => {
+                const IB = CB("internal-error");
+                IB.customData = BB, ZB(IB)
+              }, TB.type = "text/javascript", TB.charset = "UTF-8",
               function() {
-                var tt, et;
-                return null !== (et = null === (tt = document.getElementsByTagName("head")) || void 0 === tt ? void 0 : tt[0]) && void 0 !== et ? et : document
-              }().appendChild(Ot)
+                var BB, IB;
+                return null !== (IB = null === (BB = document.getElementsByTagName("head")) || void 0 === BB ? void 0 : BB[0]) && void 0 !== IB ? IB : document
+              }().appendChild(TB)
           }))
         }
 
-        function We(tt) {
-          return `__${tt}${Math.floor(1e6*Math.random())}`
+        function YI(BB) {
+          return `__${BB}${Math.floor(1e6*Math.random())}`
         }
-        class Se {
-          constructor(tt) {
-            this.type = "recaptcha-enterprise", this.auth = Pe(tt)
+        class iI {
+          constructor(BB) {
+            this.type = "recaptcha-enterprise", this.auth = MI(BB)
           }
           async verify() {
-            let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "verify",
-              et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "verify",
+              IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
 
-            function Vt(et, Vt, Ot) {
-              const qt = window.grecaptcha;
-              Ke(qt) ? qt.enterprise.ready((() => {
-                qt.enterprise.execute(et, {
-                  action: tt
-                }).then((tt => {
-                  Vt(tt)
+            function ZB(IB, ZB, TB) {
+              const JB = window.grecaptcha;
+              sI(JB) ? JB.enterprise.ready((() => {
+                JB.enterprise.execute(IB, {
+                  action: BB
+                }).then((BB => {
+                  ZB(BB)
                 })).catch((() => {
-                  Vt("NO_RECAPTCHA")
+                  ZB("NO_RECAPTCHA")
                 }))
-              })) : Ot(Error("No reCAPTCHA enterprise script loaded."))
+              })) : TB(Error("No reCAPTCHA enterprise script loaded."))
             }
-            return new Promise(((tt, Ot) => {
-              (async function(tt) {
-                if (!et) {
-                  if (null == tt.tenantId && null != tt._agentRecaptchaConfig) return tt._agentRecaptchaConfig.siteKey;
-                  if (null != tt.tenantId && void 0 !== tt._tenantRecaptchaConfigs[tt.tenantId]) return tt._tenantRecaptchaConfigs[tt.tenantId].siteKey
+            return new Promise(((BB, TB) => {
+              (async function(BB) {
+                if (!IB) {
+                  if (null == BB.tenantId && null != BB._agentRecaptchaConfig) return BB._agentRecaptchaConfig.siteKey;
+                  if (null != BB.tenantId && void 0 !== BB._tenantRecaptchaConfigs[BB.tenantId]) return BB._tenantRecaptchaConfigs[BB.tenantId].siteKey
                 }
-                return new Promise((async (et, Vt) => {
-                  Ce(tt, {
+                return new Promise((async (IB, ZB) => {
+                  CI(BB, {
                     clientType: "CLIENT_TYPE_WEB",
                     version: "RECAPTCHA_ENTERPRISE"
-                  }).then((Ot => {
-                    if (void 0 !== Ot.recaptchaKey) {
-                      const Vt = new he(Ot);
-                      return null == tt.tenantId ? tt._agentRecaptchaConfig = Vt : tt._tenantRecaptchaConfigs[tt.tenantId] = Vt, et(Vt.siteKey)
+                  }).then((TB => {
+                    if (void 0 !== TB.recaptchaKey) {
+                      const ZB = new wI(TB);
+                      return null == BB.tenantId ? BB._agentRecaptchaConfig = ZB : BB._tenantRecaptchaConfigs[BB.tenantId] = ZB, IB(ZB.siteKey)
                     }
-                    Vt(new Error("recaptcha Enterprise site key undefined"))
-                  })).catch((tt => {
-                    Vt(tt)
+                    ZB(new Error("recaptcha Enterprise site key undefined"))
+                  })).catch((BB => {
+                    ZB(BB)
                   }))
                 }))
-              })(this.auth).then((qt => {
-                if (!et && Ke(window.grecaptcha)) Vt(qt, tt, Ot);
+              })(this.auth).then((JB => {
+                if (!IB && sI(window.grecaptcha)) ZB(JB, BB, TB);
                 else {
-                  if ("undefined" === typeof window) return void Ot(new Error("RecaptchaVerifier is only supported in browser"));
-                  ve("https://www.google.com/recaptcha/enterprise.js?render=" + qt).then((() => {
-                    Vt(qt, tt, Ot)
-                  })).catch((tt => {
-                    Ot(tt)
+                  if ("undefined" === typeof window) return void TB(new Error("RecaptchaVerifier is only supported in browser"));
+                  OI("https://www.google.com/recaptcha/enterprise.js?render=" + JB).then((() => {
+                    ZB(JB, BB, TB)
+                  })).catch((BB => {
+                    TB(BB)
                   }))
                 }
-              })).catch((tt => {
-                Ot(tt)
+              })).catch((BB => {
+                TB(BB)
               }))
             }))
           }
         }
-        async function ce(tt, et, Vt) {
-          let Ot = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-          const qt = new Se(tt);
-          let Dt;
+        async function pI(BB, IB, ZB) {
+          let TB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+          const JB = new iI(BB);
+          let oB;
           try {
-            Dt = await qt.verify(Vt)
-          } catch (dt) {
-            Dt = await qt.verify(Vt, !0)
+            oB = await JB.verify(ZB)
+          } catch (vB) {
+            oB = await JB.verify(ZB, !0)
           }
-          const mt = Object.assign({}, et);
-          return Ot ? Object.assign(mt, {
-            captchaResp: Dt
-          }) : Object.assign(mt, {
-            captchaResponse: Dt
-          }), Object.assign(mt, {
+          const GB = Object.assign({}, IB);
+          return TB ? Object.assign(GB, {
+            captchaResp: oB
+          }) : Object.assign(GB, {
+            captchaResponse: oB
+          }), Object.assign(GB, {
             clientType: "CLIENT_TYPE_WEB"
-          }), Object.assign(mt, {
+          }), Object.assign(GB, {
             recaptchaVersion: "RECAPTCHA_ENTERPRISE"
-          }), mt
+          }), GB
         }
-        class Re {
-          constructor(tt) {
-            this.auth = tt, this.queue = []
+        class aI {
+          constructor(BB) {
+            this.auth = BB, this.queue = []
           }
-          pushCallback(tt, et) {
-            const Vt = et => new Promise(((Vt, Ot) => {
+          pushCallback(BB, IB) {
+            const ZB = IB => new Promise(((ZB, TB) => {
               try {
-                Vt(tt(et))
-              } catch (qt) {
-                Ot(qt)
+                ZB(BB(IB))
+              } catch (JB) {
+                TB(JB)
               }
             }));
-            Vt.onAbort = et, this.queue.push(Vt);
-            const Ot = this.queue.length - 1;
+            ZB.onAbort = IB, this.queue.push(ZB);
+            const TB = this.queue.length - 1;
             return () => {
-              this.queue[Ot] = () => Promise.resolve()
+              this.queue[TB] = () => Promise.resolve()
             }
           }
-          async runMiddleware(tt) {
-            if (this.auth.currentUser === tt) return;
-            const et = [];
+          async runMiddleware(BB) {
+            if (this.auth.currentUser === BB) return;
+            const IB = [];
             try {
-              for (const Vt of this.queue) await Vt(tt), Vt.onAbort && et.push(Vt.onAbort)
-            } catch (Vt) {
-              et.reverse();
-              for (const tt of et) try {
-                tt()
-              } catch (Ot) {}
+              for (const ZB of this.queue) await ZB(BB), ZB.onAbort && IB.push(ZB.onAbort)
+            } catch (ZB) {
+              IB.reverse();
+              for (const BB of IB) try {
+                BB()
+              } catch (TB) {}
               throw this.auth._errorFactory.create("login-blocked", {
-                originalMessage: null === Vt || void 0 === Vt ? void 0 : Vt.message
+                originalMessage: null === ZB || void 0 === ZB ? void 0 : ZB.message
               })
             }
           }
         }
-        class Ie {
-          constructor(tt, et, Vt, Ot) {
-            this.app = tt, this.heartbeatServiceProvider = et, this.appCheckServiceProvider = Vt, this.config = Ot, this.currentUser = null, this.emulatorConfig = null, this.operations = Promise.resolve(), this.authStateSubscription = new Ze(this), this.idTokenSubscription = new Ze(this), this.beforeStateQueue = new Re(this), this.redirectUser = null, this.isProactiveRefreshEnabled = !1, this._canInitEmulator = !0, this._isInitialized = !1, this._deleted = !1, this._initializationPromise = null, this._popupRedirectResolver = null, this._errorFactory = yt, this._agentRecaptchaConfig = null, this._tenantRecaptchaConfigs = {}, this.lastNotifiedUid = void 0, this.languageCode = null, this.tenantId = null, this.settings = {
+        class HI {
+          constructor(BB, IB, ZB, TB) {
+            this.app = BB, this.heartbeatServiceProvider = IB, this.appCheckServiceProvider = ZB, this.config = TB, this.currentUser = null, this.emulatorConfig = null, this.operations = Promise.resolve(), this.authStateSubscription = new jI(this), this.idTokenSubscription = new jI(this), this.beforeStateQueue = new aI(this), this.redirectUser = null, this.isProactiveRefreshEnabled = !1, this._canInitEmulator = !0, this._isInitialized = !1, this._deleted = !1, this._initializationPromise = null, this._popupRedirectResolver = null, this._errorFactory = qB, this._agentRecaptchaConfig = null, this._tenantRecaptchaConfigs = {}, this.lastNotifiedUid = void 0, this.languageCode = null, this.tenantId = null, this.settings = {
               appVerificationDisabledForTesting: !1
-            }, this.frameworks = [], this.name = tt.name, this.clientVersion = Ot.sdkClientVersion
+            }, this.frameworks = [], this.name = BB.name, this.clientVersion = TB.sdkClientVersion
           }
-          _initializeWithPersistence(tt, et) {
-            return et && (this._popupRedirectResolver = me(et)), this._initializationPromise = this.queue((async () => {
-              var Vt, Ot;
-              if (!this._deleted && (this.persistenceManager = await Xe.create(this, tt), !this._deleted)) {
-                if (null === (Vt = this._popupRedirectResolver) || void 0 === Vt ? void 0 : Vt._shouldInitProactively) try {
+          _initializeWithPersistence(BB, IB) {
+            return IB && (this._popupRedirectResolver = oI(IB)), this._initializationPromise = this.queue((async () => {
+              var ZB, TB;
+              if (!this._deleted && (this.persistenceManager = await cI.create(this, BB), !this._deleted)) {
+                if (null === (ZB = this._popupRedirectResolver) || void 0 === ZB ? void 0 : ZB._shouldInitProactively) try {
                   await this._popupRedirectResolver._initialize(this)
-                } catch (qt) {}
-                await this.initializeCurrentUser(et), this.lastNotifiedUid = (null === (Ot = this.currentUser) || void 0 === Ot ? void 0 : Ot.uid) || null, this._deleted || (this._isInitialized = !0)
+                } catch (JB) {}
+                await this.initializeCurrentUser(IB), this.lastNotifiedUid = (null === (TB = this.currentUser) || void 0 === TB ? void 0 : TB.uid) || null, this._deleted || (this._isInitialized = !0)
               }
             })), this._initializationPromise
           }
           async _onStorageEvent() {
             if (this._deleted) return;
-            const tt = await this.assertedPersistence.getCurrentUser();
-            return this.currentUser || tt ? this.currentUser && tt && this.currentUser.uid === tt.uid ? (this._currentUser._assign(tt), void await this.currentUser.getIdToken()) : void await this._updateCurrentUser(tt, !0) : void 0
+            const BB = await this.assertedPersistence.getCurrentUser();
+            return this.currentUser || BB ? this.currentUser && BB && this.currentUser.uid === BB.uid ? (this._currentUser._assign(BB), void await this.currentUser.getIdToken()) : void await this._updateCurrentUser(BB, !0) : void 0
           }
-          async initializeCurrentUser(tt) {
-            var et;
-            const Vt = await this.assertedPersistence.getCurrentUser();
-            let Ot = Vt,
-              qt = !1;
-            if (tt && this.config.authDomain) {
+          async initializeCurrentUser(BB) {
+            var IB;
+            const ZB = await this.assertedPersistence.getCurrentUser();
+            let TB = ZB,
+              JB = !1;
+            if (BB && this.config.authDomain) {
               await this.getOrInitRedirectPersistenceManager();
-              const Vt = null === (et = this.redirectUser) || void 0 === et ? void 0 : et._redirectEventId,
-                Dt = null === Ot || void 0 === Ot ? void 0 : Ot._redirectEventId,
-                mt = await this.tryRedirectSignIn(tt);
-              Vt && Vt !== Dt || !(null === mt || void 0 === mt ? void 0 : mt.user) || (Ot = mt.user, qt = !0)
+              const ZB = null === (IB = this.redirectUser) || void 0 === IB ? void 0 : IB._redirectEventId,
+                oB = null === TB || void 0 === TB ? void 0 : TB._redirectEventId,
+                GB = await this.tryRedirectSignIn(BB);
+              ZB && ZB !== oB || !(null === GB || void 0 === GB ? void 0 : GB.user) || (TB = GB.user, JB = !0)
             }
-            if (!Ot) return this.directlySetCurrentUser(null);
-            if (!Ot._redirectEventId) {
-              if (qt) try {
-                await this.beforeStateQueue.runMiddleware(Ot)
-              } catch (Dt) {
-                Ot = Vt, this._popupRedirectResolver._overrideRedirectResult(this, (() => Promise.reject(Dt)))
+            if (!TB) return this.directlySetCurrentUser(null);
+            if (!TB._redirectEventId) {
+              if (JB) try {
+                await this.beforeStateQueue.runMiddleware(TB)
+              } catch (oB) {
+                TB = ZB, this._popupRedirectResolver._overrideRedirectResult(this, (() => Promise.reject(oB)))
               }
-              return Ot ? this.reloadAndSetCurrentUserOrClear(Ot) : this.directlySetCurrentUser(null)
+              return TB ? this.reloadAndSetCurrentUserOrClear(TB) : this.directlySetCurrentUser(null)
             }
-            return vt(this._popupRedirectResolver, this, "argument-error"), await this.getOrInitRedirectPersistenceManager(), this.redirectUser && this.redirectUser._redirectEventId === Ot._redirectEventId ? this.directlySetCurrentUser(Ot) : this.reloadAndSetCurrentUserOrClear(Ot)
+            return OB(this._popupRedirectResolver, this, "argument-error"), await this.getOrInitRedirectPersistenceManager(), this.redirectUser && this.redirectUser._redirectEventId === TB._redirectEventId ? this.directlySetCurrentUser(TB) : this.reloadAndSetCurrentUserOrClear(TB)
           }
-          async tryRedirectSignIn(tt) {
-            let et = null;
+          async tryRedirectSignIn(BB) {
+            let IB = null;
             try {
-              et = await this._popupRedirectResolver._completeRedirectFn(this, tt, !0)
-            } catch (Vt) {
+              IB = await this._popupRedirectResolver._completeRedirectFn(this, BB, !0)
+            } catch (ZB) {
               await this._setRedirectUser(null)
             }
-            return et
+            return IB
           }
-          async reloadAndSetCurrentUserOrClear(tt) {
+          async reloadAndSetCurrentUserOrClear(BB) {
             try {
-              await te(tt)
-            } catch (et) {
-              if ("auth/network-request-failed" !== (null === et || void 0 === et ? void 0 : et.code)) return this.directlySetCurrentUser(null)
+              await SB(BB)
+            } catch (IB) {
+              if ("auth/network-request-failed" !== (null === IB || void 0 === IB ? void 0 : IB.code)) return this.directlySetCurrentUser(null)
             }
-            return this.directlySetCurrentUser(tt)
+            return this.directlySetCurrentUser(BB)
           }
           useDeviceLanguage() {
             this.languageCode = function() {
               if ("undefined" === typeof navigator) return null;
-              const tt = navigator;
-              return tt.languages && tt.languages[0] || tt.language || null
+              const BB = navigator;
+              return BB.languages && BB.languages[0] || BB.language || null
             }()
           }
           async _delete() {
             this._deleted = !0
           }
-          async updateCurrentUser(tt) {
-            const et = tt ? (0, Ot.L)(tt) : null;
-            return et && vt(et.auth.config.apiKey === this.config.apiKey, this, "invalid-user-token"), this._updateCurrentUser(et && et._clone(this))
+          async updateCurrentUser(BB) {
+            const IB = BB ? (0, TB.N)(BB) : null;
+            return IB && OB(IB.auth.config.apiKey === this.config.apiKey, this, "invalid-user-token"), this._updateCurrentUser(IB && IB._clone(this))
           }
-          async _updateCurrentUser(tt) {
-            let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (!this._deleted) return tt && vt(this.tenantId === tt.tenantId, this, "tenant-id-mismatch"), et || await this.beforeStateQueue.runMiddleware(tt), this.queue((async () => {
-              await this.directlySetCurrentUser(tt), this.notifyAuthListeners()
+          async _updateCurrentUser(BB) {
+            let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (!this._deleted) return BB && OB(this.tenantId === BB.tenantId, this, "tenant-id-mismatch"), IB || await this.beforeStateQueue.runMiddleware(BB), this.queue((async () => {
+              await this.directlySetCurrentUser(BB), this.notifyAuthListeners()
             }))
           }
           async signOut() {
             return await this.beforeStateQueue.runMiddleware(null), (this.redirectPersistenceManager || this._popupRedirectResolver) && await this._setRedirectUser(null), this._updateCurrentUser(null, !0)
           }
-          setPersistence(tt) {
+          setPersistence(BB) {
             return this.queue((async () => {
-              await this.assertedPersistence.setPersistence(me(tt))
+              await this.assertedPersistence.setPersistence(oI(BB))
             }))
           }
           async initializeRecaptchaConfig() {
-            const tt = await Ce(this, {
+            const BB = await CI(this, {
                 clientType: "CLIENT_TYPE_WEB",
                 version: "RECAPTCHA_ENTERPRISE"
               }),
-              et = new he(tt);
-            if (null == this.tenantId ? this._agentRecaptchaConfig = et : this._tenantRecaptchaConfigs[this.tenantId] = et, et.emailPasswordEnabled) {
-              new Se(this).verify()
+              IB = new wI(BB);
+            if (null == this.tenantId ? this._agentRecaptchaConfig = IB : this._tenantRecaptchaConfigs[this.tenantId] = IB, IB.emailPasswordEnabled) {
+              new iI(this).verify()
             }
           }
           _getRecaptchaConfig() {
@@ -1393,47 +1393,47 @@ export const modules = {
           _getPersistence() {
             return this.assertedPersistence.persistence.type
           }
-          _updateErrorMap(tt) {
-            this._errorFactory = new Ot.e("auth", "Firebase", tt())
+          _updateErrorMap(BB) {
+            this._errorFactory = new TB.h("auth", "Firebase", BB())
           }
-          onAuthStateChanged(tt, et, Vt) {
-            return this.registerStateListener(this.authStateSubscription, tt, et, Vt)
+          onAuthStateChanged(BB, IB, ZB) {
+            return this.registerStateListener(this.authStateSubscription, BB, IB, ZB)
           }
-          beforeAuthStateChanged(tt, et) {
-            return this.beforeStateQueue.pushCallback(tt, et)
+          beforeAuthStateChanged(BB, IB) {
+            return this.beforeStateQueue.pushCallback(BB, IB)
           }
-          onIdTokenChanged(tt, et, Vt) {
-            return this.registerStateListener(this.idTokenSubscription, tt, et, Vt)
+          onIdTokenChanged(BB, IB, ZB) {
+            return this.registerStateListener(this.idTokenSubscription, BB, IB, ZB)
           }
           toJSON() {
-            var tt;
+            var BB;
             return {
               apiKey: this.config.apiKey,
               authDomain: this.config.authDomain,
               appName: this.name,
-              currentUser: null === (tt = this._currentUser) || void 0 === tt ? void 0 : tt.toJSON()
+              currentUser: null === (BB = this._currentUser) || void 0 === BB ? void 0 : BB.toJSON()
             }
           }
-          async _setRedirectUser(tt, et) {
-            const Vt = await this.getOrInitRedirectPersistenceManager(et);
-            return null === tt ? Vt.removeCurrentUser() : Vt.setCurrentUser(tt)
+          async _setRedirectUser(BB, IB) {
+            const ZB = await this.getOrInitRedirectPersistenceManager(IB);
+            return null === BB ? ZB.removeCurrentUser() : ZB.setCurrentUser(BB)
           }
-          async getOrInitRedirectPersistenceManager(tt) {
+          async getOrInitRedirectPersistenceManager(BB) {
             if (!this.redirectPersistenceManager) {
-              const et = tt && me(tt) || this._popupRedirectResolver;
-              vt(et, this, "argument-error"), this.redirectPersistenceManager = await Xe.create(this, [me(et._redirectPersistence)], "redirectUser"), this.redirectUser = await this.redirectPersistenceManager.getCurrentUser()
+              const IB = BB && oI(BB) || this._popupRedirectResolver;
+              OB(IB, this, "argument-error"), this.redirectPersistenceManager = await cI.create(this, [oI(IB._redirectPersistence)], "redirectUser"), this.redirectUser = await this.redirectPersistenceManager.getCurrentUser()
             }
             return this.redirectPersistenceManager
           }
-          async _redirectUserForId(tt) {
-            var et, Vt;
-            return this._isInitialized && await this.queue((async () => {})), (null === (et = this._currentUser) || void 0 === et ? void 0 : et._redirectEventId) === tt ? this._currentUser : (null === (Vt = this.redirectUser) || void 0 === Vt ? void 0 : Vt._redirectEventId) === tt ? this.redirectUser : null
+          async _redirectUserForId(BB) {
+            var IB, ZB;
+            return this._isInitialized && await this.queue((async () => {})), (null === (IB = this._currentUser) || void 0 === IB ? void 0 : IB._redirectEventId) === BB ? this._currentUser : (null === (ZB = this.redirectUser) || void 0 === ZB ? void 0 : ZB._redirectEventId) === BB ? this.redirectUser : null
           }
-          async _persistUserIfCurrent(tt) {
-            if (tt === this.currentUser) return this.queue((async () => this.directlySetCurrentUser(tt)))
+          async _persistUserIfCurrent(BB) {
+            if (BB === this.currentUser) return this.queue((async () => this.directlySetCurrentUser(BB)))
           }
-          _notifyListenersIfCurrent(tt) {
-            tt === this.currentUser && this.notifyAuthListeners()
+          _notifyListenersIfCurrent(BB) {
+            BB === this.currentUser && this.notifyAuthListeners()
           }
           _key() {
             return `${this.config.authDomain}:${this.config.apiKey}:${this.name}`
@@ -1448,192 +1448,192 @@ export const modules = {
             return this.currentUser
           }
           notifyAuthListeners() {
-            var tt, et;
+            var BB, IB;
             if (!this._isInitialized) return;
             this.idTokenSubscription.next(this.currentUser);
-            const Vt = null !== (et = null === (tt = this.currentUser) || void 0 === tt ? void 0 : tt.uid) && void 0 !== et ? et : null;
-            this.lastNotifiedUid !== Vt && (this.lastNotifiedUid = Vt, this.authStateSubscription.next(this.currentUser))
+            const ZB = null !== (IB = null === (BB = this.currentUser) || void 0 === BB ? void 0 : BB.uid) && void 0 !== IB ? IB : null;
+            this.lastNotifiedUid !== ZB && (this.lastNotifiedUid = ZB, this.authStateSubscription.next(this.currentUser))
           }
-          registerStateListener(tt, et, Vt, Ot) {
+          registerStateListener(BB, IB, ZB, TB) {
             if (this._deleted) return () => {};
-            const qt = "function" === typeof et ? et : et.next.bind(et),
-              Dt = this._isInitialized ? Promise.resolve() : this._initializationPromise;
-            return vt(Dt, this, "internal-error"), Dt.then((() => qt(this.currentUser))), "function" === typeof et ? tt.addObserver(et, Vt, Ot) : tt.addObserver(et)
+            const JB = "function" === typeof IB ? IB : IB.next.bind(IB),
+              oB = this._isInitialized ? Promise.resolve() : this._initializationPromise;
+            return OB(oB, this, "internal-error"), oB.then((() => JB(this.currentUser))), "function" === typeof IB ? BB.addObserver(IB, ZB, TB) : BB.addObserver(IB)
           }
-          async directlySetCurrentUser(tt) {
-            this.currentUser && this.currentUser !== tt && this._currentUser._stopProactiveRefresh(), tt && this.isProactiveRefreshEnabled && tt._startProactiveRefresh(), this.currentUser = tt, tt ? await this.assertedPersistence.setCurrentUser(tt) : await this.assertedPersistence.removeCurrentUser()
+          async directlySetCurrentUser(BB) {
+            this.currentUser && this.currentUser !== BB && this._currentUser._stopProactiveRefresh(), BB && this.isProactiveRefreshEnabled && BB._startProactiveRefresh(), this.currentUser = BB, BB ? await this.assertedPersistence.setCurrentUser(BB) : await this.assertedPersistence.removeCurrentUser()
           }
-          queue(tt) {
-            return this.operations = this.operations.then(tt, tt), this.operations
+          queue(BB) {
+            return this.operations = this.operations.then(BB, BB), this.operations
           }
           get assertedPersistence() {
-            return vt(this.persistenceManager, this, "internal-error"), this.persistenceManager
+            return OB(this.persistenceManager, this, "internal-error"), this.persistenceManager
           }
-          _logFramework(tt) {
-            tt && !this.frameworks.includes(tt) && (this.frameworks.push(tt), this.frameworks.sort(), this.clientVersion = Je(this.config.clientPlatform, this._getFrameworks()))
+          _logFramework(BB) {
+            BB && !this.frameworks.includes(BB) && (this.frameworks.push(BB), this.frameworks.sort(), this.clientVersion = dI(this.config.clientPlatform, this._getFrameworks()))
           }
           _getFrameworks() {
             return this.frameworks
           }
           async _getAdditionalHeaders() {
-            var tt;
-            const et = {
+            var BB;
+            const IB = {
               "X-Client-Version": this.clientVersion
             };
-            this.app.options.appId && (et["X-Firebase-gmpid"] = this.app.options.appId);
-            const Vt = await (null === (tt = this.heartbeatServiceProvider.getImmediate({
+            this.app.options.appId && (IB["X-Firebase-gmpid"] = this.app.options.appId);
+            const ZB = await (null === (BB = this.heartbeatServiceProvider.getImmediate({
               optional: !0
-            })) || void 0 === tt ? void 0 : tt.getHeartbeatsHeader());
-            Vt && (et["X-Firebase-Client"] = Vt);
-            const Ot = await this._getAppCheckToken();
-            return Ot && (et["X-Firebase-AppCheck"] = Ot), et
+            })) || void 0 === BB ? void 0 : BB.getHeartbeatsHeader());
+            ZB && (IB["X-Firebase-Client"] = ZB);
+            const TB = await this._getAppCheckToken();
+            return TB && (IB["X-Firebase-AppCheck"] = TB), IB
           }
           async _getAppCheckToken() {
-            var tt;
-            const et = await (null === (tt = this.appCheckServiceProvider.getImmediate({
+            var BB;
+            const IB = await (null === (BB = this.appCheckServiceProvider.getImmediate({
               optional: !0
-            })) || void 0 === tt ? void 0 : tt.getToken());
-            return (null === et || void 0 === et ? void 0 : et.error) && function(tt) {
-              if (Mt.logLevel <= mt.e.WARN) {
-                for (var et = arguments.length, Vt = new Array(et > 1 ? et - 1 : 0), Ot = 1; Ot < et; Ot++) Vt[Ot - 1] = arguments[Ot];
-                Mt.warn(`Auth (${qt.g}): ${tt}`, ...Vt)
+            })) || void 0 === BB ? void 0 : BB.getToken());
+            return (null === IB || void 0 === IB ? void 0 : IB.error) && function(BB) {
+              if (UB.logLevel <= GB.d.WARN) {
+                for (var IB = arguments.length, ZB = new Array(IB > 1 ? IB - 1 : 0), TB = 1; TB < IB; TB++) ZB[TB - 1] = arguments[TB];
+                UB.warn(`Auth (${JB.f}): ${BB}`, ...ZB)
               }
-            }(`Error while retrieving App Check token: ${et.error}`), null === et || void 0 === et ? void 0 : et.token
+            }(`Error while retrieving App Check token: ${IB.error}`), null === IB || void 0 === IB ? void 0 : IB.token
           }
         }
 
-        function Pe(tt) {
-          return (0, Ot.L)(tt)
+        function MI(BB) {
+          return (0, TB.N)(BB)
         }
-        class Ze {
-          constructor(tt) {
-            this.auth = tt, this.observer = null, this.addObserver = (0, Ot.v)((tt => this.observer = tt))
+        class jI {
+          constructor(BB) {
+            this.auth = BB, this.observer = null, this.addObserver = (0, TB.x)((BB => this.observer = BB))
           }
           get next() {
-            return vt(this.observer, this.auth, "internal-error"), this.observer.next.bind(this.observer)
+            return OB(this.observer, this.auth, "internal-error"), this.observer.next.bind(this.observer)
           }
         }
 
-        function Le(tt, et) {
-          const Vt = (0, qt.z)(tt, "auth");
-          if (Vt.isInitialized()) {
-            const tt = Vt.getImmediate(),
-              qt = Vt.getOptions();
-            if ((0, Ot.x)(qt, null !== et && void 0 !== et ? et : {})) return tt;
-            Jt(tt, "already-initialized")
+        function PI(BB, IB) {
+          const ZB = (0, JB.w)(BB, "auth");
+          if (ZB.isInitialized()) {
+            const BB = ZB.getImmediate(),
+              JB = ZB.getOptions();
+            if ((0, TB.B)(JB, null !== IB && void 0 !== IB ? IB : {})) return BB;
+            dB(BB, "already-initialized")
           }
-          return Vt.initialize({
-            options: et
+          return ZB.initialize({
+            options: IB
           })
         }
 
-        function Fe(tt, et, Vt) {
-          const Ot = Pe(tt);
-          vt(Ot._canInitEmulator, Ot, "emulator-config-failed"), vt(/^https?:\/\//.test(et), Ot, "invalid-emulator-scheme");
-          const qt = !!(null === Vt || void 0 === Vt ? void 0 : Vt.disableWarnings),
-            Dt = ke(et),
+        function RI(BB, IB, ZB) {
+          const TB = MI(BB);
+          OB(TB._canInitEmulator, TB, "emulator-config-failed"), OB(/^https?:\/\//.test(IB), TB, "invalid-emulator-scheme");
+          const JB = !!(null === ZB || void 0 === ZB ? void 0 : ZB.disableWarnings),
+            oB = rI(IB),
             {
-              host: mt,
-              port: dt
-            } = function(tt) {
-              const et = ke(tt),
-                Vt = /(\/\/)?([^?#/]+)/.exec(tt.substr(et.length));
-              if (!Vt) return {
+              host: GB,
+              port: vB
+            } = function(BB) {
+              const IB = rI(BB),
+                ZB = /(\/\/)?([^?#/]+)/.exec(BB.substr(IB.length));
+              if (!ZB) return {
                 host: "",
                 port: null
               };
-              const Ot = Vt[2].split("@").pop() || "",
-                qt = /^(\[[^\]]+\])(:|$)/.exec(Ot);
-              if (qt) {
-                const tt = qt[1];
+              const TB = ZB[2].split("@").pop() || "",
+                JB = /^(\[[^\]]+\])(:|$)/.exec(TB);
+              if (JB) {
+                const BB = JB[1];
                 return {
-                  host: tt,
-                  port: Ge(Ot.substr(tt.length + 1))
+                  host: BB,
+                  port: mI(TB.substr(BB.length + 1))
                 }
               } {
-                const [tt, et] = Ot.split(":");
+                const [BB, IB] = TB.split(":");
                 return {
-                  host: tt,
-                  port: Ge(et)
+                  host: BB,
+                  port: mI(IB)
                 }
               }
-            }(et),
-            jt = null === dt ? "" : `:${dt}`;
-          Ot.config.emulator = {
-            url: `${Dt}//${mt}${jt}/`
-          }, Ot.settings.appVerificationDisabledForTesting = !0, Ot.emulatorConfig = Object.freeze({
-            host: mt,
-            port: dt,
-            protocol: Dt.replace(":", ""),
+            }(IB),
+            kB = null === vB ? "" : `:${vB}`;
+          TB.config.emulator = {
+            url: `${oB}//${GB}${kB}/`
+          }, TB.settings.appVerificationDisabledForTesting = !0, TB.emulatorConfig = Object.freeze({
+            host: GB,
+            port: vB,
+            protocol: oB.replace(":", ""),
             options: Object.freeze({
-              disableWarnings: qt
+              disableWarnings: JB
             })
-          }), qt || function() {
-            function tt() {
-              const tt = document.createElement("p"),
-                et = tt.style;
-              tt.innerText = "Running in emulator mode. Do not use with production credentials.", et.position = "fixed", et.width = "100%", et.backgroundColor = "#ffffff", et.border = ".1em solid #000000", et.color = "#b50000", et.bottom = "0px", et.left = "0px", et.margin = "0px", et.zIndex = "10000", et.textAlign = "center", tt.classList.add("firebase-emulator-warning"), document.body.appendChild(tt)
+          }), JB || function() {
+            function BB() {
+              const BB = document.createElement("p"),
+                IB = BB.style;
+              BB.innerText = "Running in emulator mode. Do not use with production credentials.", IB.position = "fixed", IB.width = "100%", IB.backgroundColor = "#ffffff", IB.border = ".1em solid #000000", IB.color = "#b50000", IB.bottom = "0px", IB.left = "0px", IB.margin = "0px", IB.zIndex = "10000", IB.textAlign = "center", BB.classList.add("firebase-emulator-warning"), document.body.appendChild(BB)
             }
             "undefined" !== typeof console && "function" === typeof console.info && console.info("WARNING: You are using the Auth Emulator, which is intended for local testing only.  Do not use with production credentials.");
-            "undefined" !== typeof window && "undefined" !== typeof document && ("loading" === document.readyState ? window.addEventListener("DOMContentLoaded", tt) : tt())
+            "undefined" !== typeof window && "undefined" !== typeof document && ("loading" === document.readyState ? window.addEventListener("DOMContentLoaded", BB) : BB())
           }()
         }
 
-        function ke(tt) {
-          const et = tt.indexOf(":");
-          return et < 0 ? "" : tt.substr(0, et + 1)
+        function rI(BB) {
+          const IB = BB.indexOf(":");
+          return IB < 0 ? "" : BB.substr(0, IB + 1)
         }
 
-        function Ge(tt) {
-          if (!tt) return null;
-          const et = Number(tt);
-          return isNaN(et) ? null : et
+        function mI(BB) {
+          if (!BB) return null;
+          const IB = Number(BB);
+          return isNaN(IB) ? null : IB
         }
-        class ze {
-          constructor(tt, et) {
-            this.providerId = tt, this.signInMethod = et
+        class XI {
+          constructor(BB, IB) {
+            this.providerId = BB, this.signInMethod = IB
           }
           toJSON() {
-            return Wt("not implemented")
+            return YB("not implemented")
           }
-          _getIdTokenResponse(tt) {
-            return Wt("not implemented")
+          _getIdTokenResponse(BB) {
+            return YB("not implemented")
           }
-          _linkToIdToken(tt, et) {
-            return Wt("not implemented")
+          _linkToIdToken(BB, IB) {
+            return YB("not implemented")
           }
-          _getReauthenticationResolver(tt) {
-            return Wt("not implemented")
+          _getReauthenticationResolver(BB) {
+            return YB("not implemented")
           }
         }
-        async function oe(tt, et) {
-          return zt(tt, "POST", "/v1/accounts:resetPassword", Gt(tt, et))
+        async function LI(BB, IB) {
+          return XB(BB, "POST", "/v1/accounts:resetPassword", mB(BB, IB))
         }
-        async function re(tt, et) {
-          return zt(tt, "POST", "/v1/accounts:update", et)
+        async function eI(BB, IB) {
+          return XB(BB, "POST", "/v1/accounts:update", IB)
         }
-        async function Ue(tt, et) {
-          return rt(tt, "POST", "/v1/accounts:signInWithPassword", Gt(tt, et))
+        async function uI(BB, IB) {
+          return eB(BB, "POST", "/v1/accounts:signInWithPassword", mB(BB, IB))
         }
-        async function Ae(tt, et) {
-          return zt(tt, "POST", "/v1/accounts:sendOobCode", Gt(tt, et))
+        async function fI(BB, IB) {
+          return XB(BB, "POST", "/v1/accounts:sendOobCode", mB(BB, IB))
         }
-        async function ie(tt, et) {
-          return Ae(tt, et)
+        async function lI(BB, IB) {
+          return fI(BB, IB)
         }
-        async function Ye(tt, et) {
-          return Ae(tt, et)
+        async function AI(BB, IB) {
+          return fI(BB, IB)
         }
-        class Be extends ze {
-          constructor(tt, et, Vt) {
-            let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-            super("password", Vt), this._email = tt, this._password = et, this._tenantId = Ot
+        class tI extends XI {
+          constructor(BB, IB, ZB) {
+            let TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+            super("password", ZB), this._email = BB, this._password = IB, this._tenantId = TB
           }
-          static _fromEmailAndPassword(tt, et) {
-            return new Be(tt, et, "password")
+          static _fromEmailAndPassword(BB, IB) {
+            return new tI(BB, IB, "password")
           }
-          static _fromEmailAndCode(tt, et) {
-            return new Be(tt, et, "emailLink", arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
+          static _fromEmailAndCode(BB, IB) {
+            return new tI(BB, IB, "emailLink", arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
           }
           toJSON() {
             return {
@@ -1643,82 +1643,82 @@ export const modules = {
               tenantId: this._tenantId
             }
           }
-          static fromJSON(tt) {
-            const et = "string" === typeof tt ? JSON.parse(tt) : tt;
-            if ((null === et || void 0 === et ? void 0 : et.email) && (null === et || void 0 === et ? void 0 : et.password)) {
-              if ("password" === et.signInMethod) return this._fromEmailAndPassword(et.email, et.password);
-              if ("emailLink" === et.signInMethod) return this._fromEmailAndCode(et.email, et.password, et.tenantId)
+          static fromJSON(BB) {
+            const IB = "string" === typeof BB ? JSON.parse(BB) : BB;
+            if ((null === IB || void 0 === IB ? void 0 : IB.email) && (null === IB || void 0 === IB ? void 0 : IB.password)) {
+              if ("password" === IB.signInMethod) return this._fromEmailAndPassword(IB.email, IB.password);
+              if ("emailLink" === IB.signInMethod) return this._fromEmailAndCode(IB.email, IB.password, IB.tenantId)
             }
             return null
           }
-          async _getIdTokenResponse(tt) {
-            var et;
+          async _getIdTokenResponse(BB) {
+            var IB;
             switch (this.signInMethod) {
               case "password":
-                const Vt = {
+                const ZB = {
                   returnSecureToken: !0,
                   email: this._email,
                   password: this._password,
                   clientType: "CLIENT_TYPE_WEB"
                 };
-                if (null === (et = tt._getRecaptchaConfig()) || void 0 === et ? void 0 : et.emailPasswordEnabled) {
-                  const et = await ce(tt, Vt, "signInWithPassword");
-                  return Ue(tt, et)
+                if (null === (IB = BB._getRecaptchaConfig()) || void 0 === IB ? void 0 : IB.emailPasswordEnabled) {
+                  const IB = await pI(BB, ZB, "signInWithPassword");
+                  return uI(BB, IB)
                 }
-                return Ue(tt, Vt).catch((async et => {
-                  if ("auth/missing-recaptcha-token" === et.code) {
+                return uI(BB, ZB).catch((async IB => {
+                  if ("auth/missing-recaptcha-token" === IB.code) {
                     console.log("Sign-in with email address and password is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-in flow.");
-                    const et = await ce(tt, Vt, "signInWithPassword");
-                    return Ue(tt, et)
+                    const IB = await pI(BB, ZB, "signInWithPassword");
+                    return uI(BB, IB)
                   }
-                  return Promise.reject(et)
+                  return Promise.reject(IB)
                 }));
               case "emailLink":
-                return async function(tt, et) {
-                  return rt(tt, "POST", "/v1/accounts:signInWithEmailLink", Gt(tt, et))
-                }(tt, {
+                return async function(BB, IB) {
+                  return eB(BB, "POST", "/v1/accounts:signInWithEmailLink", mB(BB, IB))
+                }(BB, {
                   email: this._email,
                   oobCode: this._password
                 });
               default:
-                Jt(tt, "internal-error")
+                dB(BB, "internal-error")
             }
           }
-          async _linkToIdToken(tt, et) {
+          async _linkToIdToken(BB, IB) {
             switch (this.signInMethod) {
               case "password":
-                return re(tt, {
-                  idToken: et,
+                return eI(BB, {
+                  idToken: IB,
                   returnSecureToken: !0,
                   email: this._email,
                   password: this._password
                 });
               case "emailLink":
-                return async function(tt, et) {
-                  return rt(tt, "POST", "/v1/accounts:signInWithEmailLink", Gt(tt, et))
-                }(tt, {
-                  idToken: et,
+                return async function(BB, IB) {
+                  return eB(BB, "POST", "/v1/accounts:signInWithEmailLink", mB(BB, IB))
+                }(BB, {
+                  idToken: IB,
                   email: this._email,
                   oobCode: this._password
                 });
               default:
-                Jt(tt, "internal-error")
+                dB(BB, "internal-error")
             }
           }
-          _getReauthenticationResolver(tt) {
-            return this._getIdTokenResponse(tt)
+          _getReauthenticationResolver(BB) {
+            return this._getIdTokenResponse(BB)
           }
         }
-        async function pe(tt, et) {
-          return rt(tt, "POST", "/v1/accounts:signInWithIdp", Gt(tt, et))
+        async function bI(BB, IB) {
+          return eB(BB, "POST", "/v1/accounts:signInWithIdp", mB(BB, IB))
         }
-        class xe extends ze {
+        class xI extends XI {
           constructor() {
             super(...arguments), this.pendingToken = null
           }
-          static _fromParams(tt) {
-            const et = new xe(tt.providerId, tt.signInMethod);
-            return tt.idToken || tt.accessToken ? (tt.idToken && (et.idToken = tt.idToken), tt.accessToken && (et.accessToken = tt.accessToken), tt.nonce && !tt.pendingToken && (et.nonce = tt.nonce), tt.pendingToken && (et.pendingToken = tt.pendingToken)) : tt.oauthToken && tt.oauthTokenSecret ? (et.accessToken = tt.oauthToken, et.secret = tt.oauthTokenSecret) : Jt("argument-error"), et
+          static _fromParams(BB) {
+            const IB = new xI(BB.providerId, BB.signInMethod);
+            return BB.idToken || BB.accessToken ? (BB.idToken && (IB.idToken = BB.idToken), BB.accessToken && (IB.accessToken = BB.accessToken), BB.nonce && !BB.pendingToken && (IB.nonce = BB.nonce), BB.pendingToken && (IB.pendingToken = BB.pendingToken)) : BB.oauthToken && BB.oauthTokenSecret ? (IB.accessToken = BB.oauthToken, IB.secret = BB.oauthTokenSecret) : dB("argument-error"), IB
           }
           toJSON() {
             return {
@@ -1731,126 +1731,126 @@ export const modules = {
               signInMethod: this.signInMethod
             }
           }
-          static fromJSON(tt) {
-            const et = "string" === typeof tt ? JSON.parse(tt) : tt,
+          static fromJSON(BB) {
+            const IB = "string" === typeof BB ? JSON.parse(BB) : BB,
               {
-                providerId: Vt,
-                signInMethod: Ot
-              } = et,
-              qt = Dt(et, ["providerId", "signInMethod"]);
-            if (!Vt || !Ot) return null;
-            const mt = new xe(Vt, Ot);
-            return mt.idToken = qt.idToken || void 0, mt.accessToken = qt.accessToken || void 0, mt.secret = qt.secret, mt.nonce = qt.nonce, mt.pendingToken = qt.pendingToken || null, mt
+                providerId: ZB,
+                signInMethod: TB
+              } = IB,
+              JB = oB(IB, ["providerId", "signInMethod"]);
+            if (!ZB || !TB) return null;
+            const GB = new xI(ZB, TB);
+            return GB.idToken = JB.idToken || void 0, GB.accessToken = JB.accessToken || void 0, GB.secret = JB.secret, GB.nonce = JB.nonce, GB.pendingToken = JB.pendingToken || null, GB
           }
-          _getIdTokenResponse(tt) {
-            return pe(tt, this.buildRequest())
+          _getIdTokenResponse(BB) {
+            return bI(BB, this.buildRequest())
           }
-          _linkToIdToken(tt, et) {
-            const Vt = this.buildRequest();
-            return Vt.idToken = et, pe(tt, Vt)
+          _linkToIdToken(BB, IB) {
+            const ZB = this.buildRequest();
+            return ZB.idToken = IB, bI(BB, ZB)
           }
-          _getReauthenticationResolver(tt) {
-            const et = this.buildRequest();
-            return et.autoCreate = !1, pe(tt, et)
+          _getReauthenticationResolver(BB) {
+            const IB = this.buildRequest();
+            return IB.autoCreate = !1, bI(BB, IB)
           }
           buildRequest() {
-            const tt = {
+            const BB = {
               requestUri: "http://localhost",
               returnSecureToken: !0
             };
-            if (this.pendingToken) tt.pendingToken = this.pendingToken;
+            if (this.pendingToken) BB.pendingToken = this.pendingToken;
             else {
-              const et = {};
-              this.idToken && (et.id_token = this.idToken), this.accessToken && (et.access_token = this.accessToken), this.secret && (et.oauth_token_secret = this.secret), et.providerId = this.providerId, this.nonce && !this.pendingToken && (et.nonce = this.nonce), tt.postBody = (0, Ot.kb)(et)
+              const IB = {};
+              this.idToken && (IB.id_token = this.idToken), this.accessToken && (IB.access_token = this.accessToken), this.secret && (IB.oauth_token_secret = this.secret), IB.providerId = this.providerId, this.nonce && !this.pendingToken && (IB.nonce = this.nonce), BB.postBody = (0, TB.db)(IB)
             }
-            return tt
+            return BB
           }
         }
-        const Te = {
+        const EI = {
           USER_NOT_FOUND: "user-not-found"
         };
-        class ge extends ze {
-          constructor(tt) {
-            super("phone", "phone"), this.params = tt
+        class DI extends XI {
+          constructor(BB) {
+            super("phone", "phone"), this.params = BB
           }
-          static _fromVerification(tt, et) {
-            return new ge({
-              verificationId: tt,
-              verificationCode: et
+          static _fromVerification(BB, IB) {
+            return new DI({
+              verificationId: BB,
+              verificationCode: IB
             })
           }
-          static _fromTokenResponse(tt, et) {
-            return new ge({
-              phoneNumber: tt,
-              temporaryProof: et
+          static _fromTokenResponse(BB, IB) {
+            return new DI({
+              phoneNumber: BB,
+              temporaryProof: IB
             })
           }
-          _getIdTokenResponse(tt) {
-            return async function(tt, et) {
-              return rt(tt, "POST", "/v1/accounts:signInWithPhoneNumber", Gt(tt, et))
-            }(tt, this._makeVerificationRequest())
+          _getIdTokenResponse(BB) {
+            return async function(BB, IB) {
+              return eB(BB, "POST", "/v1/accounts:signInWithPhoneNumber", mB(BB, IB))
+            }(BB, this._makeVerificationRequest())
           }
-          _linkToIdToken(tt, et) {
-            return async function(tt, et) {
-              const Vt = await rt(tt, "POST", "/v1/accounts:signInWithPhoneNumber", Gt(tt, et));
-              if (Vt.temporaryProof) throw it(tt, "account-exists-with-different-credential", Vt);
-              return Vt
-            }(tt, Object.assign({
-              idToken: et
+          _linkToIdToken(BB, IB) {
+            return async function(BB, IB) {
+              const ZB = await eB(BB, "POST", "/v1/accounts:signInWithPhoneNumber", mB(BB, IB));
+              if (ZB.temporaryProof) throw lB(BB, "account-exists-with-different-credential", ZB);
+              return ZB
+            }(BB, Object.assign({
+              idToken: IB
             }, this._makeVerificationRequest()))
           }
-          _getReauthenticationResolver(tt) {
-            return async function(tt, et) {
-              return rt(tt, "POST", "/v1/accounts:signInWithPhoneNumber", Gt(tt, Object.assign(Object.assign({}, et), {
+          _getReauthenticationResolver(BB) {
+            return async function(BB, IB) {
+              return eB(BB, "POST", "/v1/accounts:signInWithPhoneNumber", mB(BB, Object.assign(Object.assign({}, IB), {
                 operation: "REAUTH"
-              })), Te)
-            }(tt, this._makeVerificationRequest())
+              })), EI)
+            }(BB, this._makeVerificationRequest())
           }
           _makeVerificationRequest() {
             const {
-              temporaryProof: tt,
-              phoneNumber: et,
-              verificationId: Vt,
-              verificationCode: Ot
+              temporaryProof: BB,
+              phoneNumber: IB,
+              verificationId: ZB,
+              verificationCode: TB
             } = this.params;
-            return tt && et ? {
-              temporaryProof: tt,
-              phoneNumber: et
+            return BB && IB ? {
+              temporaryProof: BB,
+              phoneNumber: IB
             } : {
-              sessionInfo: Vt,
-              code: Ot
+              sessionInfo: ZB,
+              code: TB
             }
           }
           toJSON() {
-            const tt = {
+            const BB = {
               providerId: this.providerId
             };
-            return this.params.phoneNumber && (tt.phoneNumber = this.params.phoneNumber), this.params.temporaryProof && (tt.temporaryProof = this.params.temporaryProof), this.params.verificationCode && (tt.verificationCode = this.params.verificationCode), this.params.verificationId && (tt.verificationId = this.params.verificationId), tt
+            return this.params.phoneNumber && (BB.phoneNumber = this.params.phoneNumber), this.params.temporaryProof && (BB.temporaryProof = this.params.temporaryProof), this.params.verificationCode && (BB.verificationCode = this.params.verificationCode), this.params.verificationId && (BB.verificationId = this.params.verificationId), BB
           }
-          static fromJSON(tt) {
-            "string" === typeof tt && (tt = JSON.parse(tt));
+          static fromJSON(BB) {
+            "string" === typeof BB && (BB = JSON.parse(BB));
             const {
-              verificationId: et,
-              verificationCode: Vt,
-              phoneNumber: Ot,
-              temporaryProof: qt
-            } = tt;
-            return Vt || et || Ot || qt ? new ge({
-              verificationId: et,
-              verificationCode: Vt,
-              phoneNumber: Ot,
-              temporaryProof: qt
+              verificationId: IB,
+              verificationCode: ZB,
+              phoneNumber: TB,
+              temporaryProof: JB
+            } = BB;
+            return ZB || IB || TB || JB ? new DI({
+              verificationId: IB,
+              verificationCode: ZB,
+              phoneNumber: TB,
+              temporaryProof: JB
             }) : null
           }
         }
-        class se {
-          constructor(tt) {
-            var et, Vt, qt, Dt, mt, dt;
-            const jt = (0, Ot.gb)((0, Ot.A)(tt)),
-              Ht = null !== (et = jt.apiKey) && void 0 !== et ? et : null,
-              Xt = null !== (Vt = jt.oobCode) && void 0 !== Vt ? Vt : null,
-              Qt = function(tt) {
-                switch (tt) {
+        class KI {
+          constructor(BB) {
+            var IB, ZB, JB, oB, GB, vB;
+            const kB = (0, TB.cb)((0, TB.F)(BB)),
+              cB = null !== (IB = kB.apiKey) && void 0 !== IB ? IB : null,
+              nB = null !== (ZB = kB.oobCode) && void 0 !== ZB ? ZB : null,
+              hB = function(BB) {
+                switch (BB) {
                   case "recoverEmail":
                     return "RECOVER_EMAIL";
                   case "resetPassword":
@@ -1866,226 +1866,226 @@ export const modules = {
                   default:
                     return null
                 }
-              }(null !== (qt = jt.mode) && void 0 !== qt ? qt : null);
-            vt(Ht && Xt && Qt, "argument-error"), this.apiKey = Ht, this.operation = Qt, this.code = Xt, this.continueUrl = null !== (Dt = jt.continueUrl) && void 0 !== Dt ? Dt : null, this.languageCode = null !== (mt = jt.languageCode) && void 0 !== mt ? mt : null, this.tenantId = null !== (dt = jt.tenantId) && void 0 !== dt ? dt : null
+              }(null !== (JB = kB.mode) && void 0 !== JB ? JB : null);
+            OB(cB && nB && hB, "argument-error"), this.apiKey = cB, this.operation = hB, this.code = nB, this.continueUrl = null !== (oB = kB.continueUrl) && void 0 !== oB ? oB : null, this.languageCode = null !== (GB = kB.languageCode) && void 0 !== GB ? GB : null, this.tenantId = null !== (vB = kB.tenantId) && void 0 !== vB ? vB : null
           }
-          static parseLink(tt) {
-            const et = function(tt) {
-              const et = (0, Ot.gb)((0, Ot.A)(tt)).link,
-                Vt = et ? (0, Ot.gb)((0, Ot.A)(et)).deep_link_id : null,
-                qt = (0, Ot.gb)((0, Ot.A)(tt)).deep_link_id;
-              return (qt ? (0, Ot.gb)((0, Ot.A)(qt)).link : null) || qt || Vt || et || tt
-            }(tt);
+          static parseLink(BB) {
+            const IB = function(BB) {
+              const IB = (0, TB.cb)((0, TB.F)(BB)).link,
+                ZB = IB ? (0, TB.cb)((0, TB.F)(IB)).deep_link_id : null,
+                JB = (0, TB.cb)((0, TB.F)(BB)).deep_link_id;
+              return (JB ? (0, TB.cb)((0, TB.F)(JB)).link : null) || JB || ZB || IB || BB
+            }(BB);
             try {
-              return new se(et)
-            } catch (Vt) {
+              return new KI(IB)
+            } catch (ZB) {
               return null
             }
           }
         }
 
-        function ne(tt) {
-          return se.parseLink(tt)
+        function VI(BB) {
+          return KI.parseLink(BB)
         }
-        class tV {
+        class SI {
           constructor() {
-            this.providerId = tV.PROVIDER_ID
+            this.providerId = SI.PROVIDER_ID
           }
-          static credential(tt, et) {
-            return Be._fromEmailAndPassword(tt, et)
+          static credential(BB, IB) {
+            return tI._fromEmailAndPassword(BB, IB)
           }
-          static credentialWithLink(tt, et) {
-            const Vt = se.parseLink(et);
-            return vt(Vt, "argument-error"), Be._fromEmailAndCode(tt, Vt.code, Vt.tenantId)
+          static credentialWithLink(BB, IB) {
+            const ZB = KI.parseLink(IB);
+            return OB(ZB, "argument-error"), tI._fromEmailAndCode(BB, ZB.code, ZB.tenantId)
           }
         }
-        tV.PROVIDER_ID = "password", tV.EMAIL_PASSWORD_SIGN_IN_METHOD = "password", tV.EMAIL_LINK_SIGN_IN_METHOD = "emailLink";
-        class eV {
-          constructor(tt) {
-            this.providerId = tt, this.defaultLanguageCode = null, this.customParameters = {}
+        SI.PROVIDER_ID = "password", SI.EMAIL_PASSWORD_SIGN_IN_METHOD = "password", SI.EMAIL_LINK_SIGN_IN_METHOD = "emailLink";
+        class BZ {
+          constructor(BB) {
+            this.providerId = BB, this.defaultLanguageCode = null, this.customParameters = {}
           }
-          setDefaultLanguage(tt) {
-            this.defaultLanguageCode = tt
+          setDefaultLanguage(BB) {
+            this.defaultLanguageCode = BB
           }
-          setCustomParameters(tt) {
-            return this.customParameters = tt, this
+          setCustomParameters(BB) {
+            return this.customParameters = BB, this
           }
           getCustomParameters() {
             return this.customParameters
           }
         }
-        class VV extends eV {
+        class IZ extends BZ {
           constructor() {
             super(...arguments), this.scopes = []
           }
-          addScope(tt) {
-            return this.scopes.includes(tt) || this.scopes.push(tt), this
+          addScope(BB) {
+            return this.scopes.includes(BB) || this.scopes.push(BB), this
           }
           getScopes() {
             return [...this.scopes]
           }
         }
-        class OV extends VV {
-          static credentialFromJSON(tt) {
-            const et = "string" === typeof tt ? JSON.parse(tt) : tt;
-            return vt("providerId" in et && "signInMethod" in et, "argument-error"), xe._fromParams(et)
+        class ZZ extends IZ {
+          static credentialFromJSON(BB) {
+            const IB = "string" === typeof BB ? JSON.parse(BB) : BB;
+            return OB("providerId" in IB && "signInMethod" in IB, "argument-error"), xI._fromParams(IB)
           }
-          credential(tt) {
-            return this._credential(Object.assign(Object.assign({}, tt), {
-              nonce: tt.rawNonce
+          credential(BB) {
+            return this._credential(Object.assign(Object.assign({}, BB), {
+              nonce: BB.rawNonce
             }))
           }
-          _credential(tt) {
-            return vt(tt.idToken || tt.accessToken, "argument-error"), xe._fromParams(Object.assign(Object.assign({}, tt), {
+          _credential(BB) {
+            return OB(BB.idToken || BB.accessToken, "argument-error"), xI._fromParams(Object.assign(Object.assign({}, BB), {
               providerId: this.providerId,
               signInMethod: this.providerId
             }))
           }
-          static credentialFromResult(tt) {
-            return OV.oauthCredentialFromTaggedObject(tt)
+          static credentialFromResult(BB) {
+            return ZZ.oauthCredentialFromTaggedObject(BB)
           }
-          static credentialFromError(tt) {
-            return OV.oauthCredentialFromTaggedObject(tt.customData || {})
+          static credentialFromError(BB) {
+            return ZZ.oauthCredentialFromTaggedObject(BB.customData || {})
           }
-          static oauthCredentialFromTaggedObject(tt) {
+          static oauthCredentialFromTaggedObject(BB) {
             let {
-              _tokenResponse: et
-            } = tt;
-            if (!et) return null;
+              _tokenResponse: IB
+            } = BB;
+            if (!IB) return null;
             const {
-              oauthIdToken: Vt,
-              oauthAccessToken: Ot,
-              oauthTokenSecret: qt,
-              pendingToken: Dt,
-              nonce: mt,
-              providerId: dt
-            } = et;
-            if (!Ot && !qt && !Vt && !Dt) return null;
-            if (!dt) return null;
+              oauthIdToken: ZB,
+              oauthAccessToken: TB,
+              oauthTokenSecret: JB,
+              pendingToken: oB,
+              nonce: GB,
+              providerId: vB
+            } = IB;
+            if (!TB && !JB && !ZB && !oB) return null;
+            if (!vB) return null;
             try {
-              return new OV(dt)._credential({
-                idToken: Vt,
-                accessToken: Ot,
-                nonce: mt,
-                pendingToken: Dt
+              return new ZZ(vB)._credential({
+                idToken: ZB,
+                accessToken: TB,
+                nonce: GB,
+                pendingToken: oB
               })
-            } catch (jt) {
+            } catch (kB) {
               return null
             }
           }
         }
-        class qV extends VV {
+        class TZ extends IZ {
           constructor() {
             super("facebook.com")
           }
-          static credential(tt) {
-            return xe._fromParams({
-              providerId: qV.PROVIDER_ID,
-              signInMethod: qV.FACEBOOK_SIGN_IN_METHOD,
-              accessToken: tt
+          static credential(BB) {
+            return xI._fromParams({
+              providerId: TZ.PROVIDER_ID,
+              signInMethod: TZ.FACEBOOK_SIGN_IN_METHOD,
+              accessToken: BB
             })
           }
-          static credentialFromResult(tt) {
-            return qV.credentialFromTaggedObject(tt)
+          static credentialFromResult(BB) {
+            return TZ.credentialFromTaggedObject(BB)
           }
-          static credentialFromError(tt) {
-            return qV.credentialFromTaggedObject(tt.customData || {})
+          static credentialFromError(BB) {
+            return TZ.credentialFromTaggedObject(BB.customData || {})
           }
-          static credentialFromTaggedObject(tt) {
+          static credentialFromTaggedObject(BB) {
             let {
-              _tokenResponse: et
-            } = tt;
-            if (!et || !("oauthAccessToken" in et)) return null;
-            if (!et.oauthAccessToken) return null;
+              _tokenResponse: IB
+            } = BB;
+            if (!IB || !("oauthAccessToken" in IB)) return null;
+            if (!IB.oauthAccessToken) return null;
             try {
-              return qV.credential(et.oauthAccessToken)
-            } catch (Vt) {
+              return TZ.credential(IB.oauthAccessToken)
+            } catch (ZB) {
               return null
             }
           }
         }
-        qV.FACEBOOK_SIGN_IN_METHOD = "facebook.com", qV.PROVIDER_ID = "facebook.com";
-        class DV extends VV {
+        TZ.FACEBOOK_SIGN_IN_METHOD = "facebook.com", TZ.PROVIDER_ID = "facebook.com";
+        class JZ extends IZ {
           constructor() {
             super("google.com"), this.addScope("profile")
           }
-          static credential(tt, et) {
-            return xe._fromParams({
-              providerId: DV.PROVIDER_ID,
-              signInMethod: DV.GOOGLE_SIGN_IN_METHOD,
-              idToken: tt,
-              accessToken: et
+          static credential(BB, IB) {
+            return xI._fromParams({
+              providerId: JZ.PROVIDER_ID,
+              signInMethod: JZ.GOOGLE_SIGN_IN_METHOD,
+              idToken: BB,
+              accessToken: IB
             })
           }
-          static credentialFromResult(tt) {
-            return DV.credentialFromTaggedObject(tt)
+          static credentialFromResult(BB) {
+            return JZ.credentialFromTaggedObject(BB)
           }
-          static credentialFromError(tt) {
-            return DV.credentialFromTaggedObject(tt.customData || {})
+          static credentialFromError(BB) {
+            return JZ.credentialFromTaggedObject(BB.customData || {})
           }
-          static credentialFromTaggedObject(tt) {
+          static credentialFromTaggedObject(BB) {
             let {
-              _tokenResponse: et
-            } = tt;
-            if (!et) return null;
+              _tokenResponse: IB
+            } = BB;
+            if (!IB) return null;
             const {
-              oauthIdToken: Vt,
-              oauthAccessToken: Ot
-            } = et;
-            if (!Vt && !Ot) return null;
+              oauthIdToken: ZB,
+              oauthAccessToken: TB
+            } = IB;
+            if (!ZB && !TB) return null;
             try {
-              return DV.credential(Vt, Ot)
-            } catch (qt) {
+              return JZ.credential(ZB, TB)
+            } catch (JB) {
               return null
             }
           }
         }
-        DV.GOOGLE_SIGN_IN_METHOD = "google.com", DV.PROVIDER_ID = "google.com";
-        class mV extends VV {
+        JZ.GOOGLE_SIGN_IN_METHOD = "google.com", JZ.PROVIDER_ID = "google.com";
+        class oZ extends IZ {
           constructor() {
             super("github.com")
           }
-          static credential(tt) {
-            return xe._fromParams({
-              providerId: mV.PROVIDER_ID,
-              signInMethod: mV.GITHUB_SIGN_IN_METHOD,
-              accessToken: tt
+          static credential(BB) {
+            return xI._fromParams({
+              providerId: oZ.PROVIDER_ID,
+              signInMethod: oZ.GITHUB_SIGN_IN_METHOD,
+              accessToken: BB
             })
           }
-          static credentialFromResult(tt) {
-            return mV.credentialFromTaggedObject(tt)
+          static credentialFromResult(BB) {
+            return oZ.credentialFromTaggedObject(BB)
           }
-          static credentialFromError(tt) {
-            return mV.credentialFromTaggedObject(tt.customData || {})
+          static credentialFromError(BB) {
+            return oZ.credentialFromTaggedObject(BB.customData || {})
           }
-          static credentialFromTaggedObject(tt) {
+          static credentialFromTaggedObject(BB) {
             let {
-              _tokenResponse: et
-            } = tt;
-            if (!et || !("oauthAccessToken" in et)) return null;
-            if (!et.oauthAccessToken) return null;
+              _tokenResponse: IB
+            } = BB;
+            if (!IB || !("oauthAccessToken" in IB)) return null;
+            if (!IB.oauthAccessToken) return null;
             try {
-              return mV.credential(et.oauthAccessToken)
-            } catch (Vt) {
+              return oZ.credential(IB.oauthAccessToken)
+            } catch (ZB) {
               return null
             }
           }
         }
-        mV.GITHUB_SIGN_IN_METHOD = "github.com", mV.PROVIDER_ID = "github.com";
-        class dV extends ze {
-          constructor(tt, et) {
-            super(tt, tt), this.pendingToken = et
+        oZ.GITHUB_SIGN_IN_METHOD = "github.com", oZ.PROVIDER_ID = "github.com";
+        class GZ extends XI {
+          constructor(BB, IB) {
+            super(BB, BB), this.pendingToken = IB
           }
-          _getIdTokenResponse(tt) {
-            return pe(tt, this.buildRequest())
+          _getIdTokenResponse(BB) {
+            return bI(BB, this.buildRequest())
           }
-          _linkToIdToken(tt, et) {
-            const Vt = this.buildRequest();
-            return Vt.idToken = et, pe(tt, Vt)
+          _linkToIdToken(BB, IB) {
+            const ZB = this.buildRequest();
+            return ZB.idToken = IB, bI(BB, ZB)
           }
-          _getReauthenticationResolver(tt) {
-            const et = this.buildRequest();
-            return et.autoCreate = !1, pe(tt, et)
+          _getReauthenticationResolver(BB) {
+            const IB = this.buildRequest();
+            return IB.autoCreate = !1, bI(BB, IB)
           }
           toJSON() {
             return {
@@ -2094,17 +2094,17 @@ export const modules = {
               pendingToken: this.pendingToken
             }
           }
-          static fromJSON(tt) {
-            const et = "string" === typeof tt ? JSON.parse(tt) : tt,
+          static fromJSON(BB) {
+            const IB = "string" === typeof BB ? JSON.parse(BB) : BB,
               {
-                providerId: Vt,
-                signInMethod: Ot,
-                pendingToken: qt
-              } = et;
-            return Vt && Ot && qt && Vt === Ot ? new dV(Vt, qt) : null
+                providerId: ZB,
+                signInMethod: TB,
+                pendingToken: JB
+              } = IB;
+            return ZB && TB && JB && ZB === TB ? new GZ(ZB, JB) : null
           }
-          static _create(tt, et) {
-            return new dV(tt, et)
+          static _create(BB, IB) {
+            return new GZ(BB, IB)
           }
           buildRequest() {
             return {
@@ -2114,753 +2114,753 @@ export const modules = {
             }
           }
         }
-        class jV extends eV {
-          constructor(tt) {
-            vt(tt.startsWith("saml."), "argument-error"), super(tt)
+        class vZ extends BZ {
+          constructor(BB) {
+            OB(BB.startsWith("saml."), "argument-error"), super(BB)
           }
-          static credentialFromResult(tt) {
-            return jV.samlCredentialFromTaggedObject(tt)
+          static credentialFromResult(BB) {
+            return vZ.samlCredentialFromTaggedObject(BB)
           }
-          static credentialFromError(tt) {
-            return jV.samlCredentialFromTaggedObject(tt.customData || {})
+          static credentialFromError(BB) {
+            return vZ.samlCredentialFromTaggedObject(BB.customData || {})
           }
-          static credentialFromJSON(tt) {
-            const et = dV.fromJSON(tt);
-            return vt(et, "argument-error"), et
+          static credentialFromJSON(BB) {
+            const IB = GZ.fromJSON(BB);
+            return OB(IB, "argument-error"), IB
           }
-          static samlCredentialFromTaggedObject(tt) {
+          static samlCredentialFromTaggedObject(BB) {
             let {
-              _tokenResponse: et
-            } = tt;
-            if (!et) return null;
+              _tokenResponse: IB
+            } = BB;
+            if (!IB) return null;
             const {
-              pendingToken: Vt,
-              providerId: Ot
-            } = et;
-            if (!Vt || !Ot) return null;
+              pendingToken: ZB,
+              providerId: TB
+            } = IB;
+            if (!ZB || !TB) return null;
             try {
-              return dV._create(Ot, Vt)
-            } catch (qt) {
+              return GZ._create(TB, ZB)
+            } catch (JB) {
               return null
             }
           }
         }
-        class HV extends VV {
+        class kZ extends IZ {
           constructor() {
             super("twitter.com")
           }
-          static credential(tt, et) {
-            return xe._fromParams({
-              providerId: HV.PROVIDER_ID,
-              signInMethod: HV.TWITTER_SIGN_IN_METHOD,
-              oauthToken: tt,
-              oauthTokenSecret: et
+          static credential(BB, IB) {
+            return xI._fromParams({
+              providerId: kZ.PROVIDER_ID,
+              signInMethod: kZ.TWITTER_SIGN_IN_METHOD,
+              oauthToken: BB,
+              oauthTokenSecret: IB
             })
           }
-          static credentialFromResult(tt) {
-            return HV.credentialFromTaggedObject(tt)
+          static credentialFromResult(BB) {
+            return kZ.credentialFromTaggedObject(BB)
           }
-          static credentialFromError(tt) {
-            return HV.credentialFromTaggedObject(tt.customData || {})
+          static credentialFromError(BB) {
+            return kZ.credentialFromTaggedObject(BB.customData || {})
           }
-          static credentialFromTaggedObject(tt) {
+          static credentialFromTaggedObject(BB) {
             let {
-              _tokenResponse: et
-            } = tt;
-            if (!et) return null;
+              _tokenResponse: IB
+            } = BB;
+            if (!IB) return null;
             const {
-              oauthAccessToken: Vt,
-              oauthTokenSecret: Ot
-            } = et;
-            if (!Vt || !Ot) return null;
+              oauthAccessToken: ZB,
+              oauthTokenSecret: TB
+            } = IB;
+            if (!ZB || !TB) return null;
             try {
-              return HV.credential(Vt, Ot)
-            } catch (qt) {
+              return kZ.credential(ZB, TB)
+            } catch (JB) {
               return null
             }
           }
         }
-        async function XV(tt, et) {
-          return rt(tt, "POST", "/v1/accounts:signUp", Gt(tt, et))
+        async function cZ(BB, IB) {
+          return eB(BB, "POST", "/v1/accounts:signUp", mB(BB, IB))
         }
-        HV.TWITTER_SIGN_IN_METHOD = "twitter.com", HV.PROVIDER_ID = "twitter.com";
-        class QV {
-          constructor(tt) {
-            this.user = tt.user, this.providerId = tt.providerId, this._tokenResponse = tt._tokenResponse, this.operationType = tt.operationType
+        kZ.TWITTER_SIGN_IN_METHOD = "twitter.com", kZ.PROVIDER_ID = "twitter.com";
+        class nZ {
+          constructor(BB) {
+            this.user = BB.user, this.providerId = BB.providerId, this._tokenResponse = BB._tokenResponse, this.operationType = BB.operationType
           }
-          static async _fromIdTokenResponse(tt, et, Vt) {
-            let Ot = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-            const qt = await qe._fromIdTokenResponse(tt, Vt, Ot),
-              Dt = lV(Vt);
-            return new QV({
-              user: qt,
-              providerId: Dt,
-              _tokenResponse: Vt,
-              operationType: et
+          static async _fromIdTokenResponse(BB, IB, ZB) {
+            let TB = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+            const JB = await TI._fromIdTokenResponse(BB, ZB, TB),
+              oB = hZ(ZB);
+            return new nZ({
+              user: JB,
+              providerId: oB,
+              _tokenResponse: ZB,
+              operationType: IB
             })
           }
-          static async _forOperation(tt, et, Vt) {
-            await tt._updateTokensIfNecessary(Vt, !0);
-            const Ot = lV(Vt);
-            return new QV({
-              user: tt,
-              providerId: Ot,
-              _tokenResponse: Vt,
-              operationType: et
+          static async _forOperation(BB, IB, ZB) {
+            await BB._updateTokensIfNecessary(ZB, !0);
+            const TB = hZ(ZB);
+            return new nZ({
+              user: BB,
+              providerId: TB,
+              _tokenResponse: ZB,
+              operationType: IB
             })
           }
         }
 
-        function lV(tt) {
-          return tt.providerId ? tt.providerId : "phoneNumber" in tt ? "phone" : null
+        function hZ(BB) {
+          return BB.providerId ? BB.providerId : "phoneNumber" in BB ? "phone" : null
         }
-        async function EV(tt) {
-          var et;
-          const Vt = Pe(tt);
-          if (await Vt._initializationPromise, null === (et = Vt.currentUser) || void 0 === et ? void 0 : et.isAnonymous) return new QV({
-            user: Vt.currentUser,
+        async function zZ(BB) {
+          var IB;
+          const ZB = MI(BB);
+          if (await ZB._initializationPromise, null === (IB = ZB.currentUser) || void 0 === IB ? void 0 : IB.isAnonymous) return new nZ({
+            user: ZB.currentUser,
             providerId: null,
             operationType: "signIn"
           });
-          const Ot = await XV(Vt, {
+          const TB = await cZ(ZB, {
               returnSecureToken: !0
             }),
-            qt = await QV._fromIdTokenResponse(Vt, "signIn", Ot, !0);
-          return await Vt._updateCurrentUser(qt.user), qt
+            JB = await nZ._fromIdTokenResponse(ZB, "signIn", TB, !0);
+          return await ZB._updateCurrentUser(JB.user), JB
         }
-        class fV extends Ot.g {
-          constructor(tt, et, Vt, Ot) {
-            var qt;
-            super(et.code, et.message), this.operationType = Vt, this.user = Ot, Object.setPrototypeOf(this, fV.prototype), this.customData = {
-              appName: tt.name,
-              tenantId: null !== (qt = tt.tenantId) && void 0 !== qt ? qt : void 0,
-              _serverResponse: et.customData._serverResponse,
-              operationType: Vt
+        class FZ extends TB.j {
+          constructor(BB, IB, ZB, TB) {
+            var JB;
+            super(IB.code, IB.message), this.operationType = ZB, this.user = TB, Object.setPrototypeOf(this, FZ.prototype), this.customData = {
+              appName: BB.name,
+              tenantId: null !== (JB = BB.tenantId) && void 0 !== JB ? JB : void 0,
+              _serverResponse: IB.customData._serverResponse,
+              operationType: ZB
             }
           }
-          static _fromErrorAndOperation(tt, et, Vt, Ot) {
-            return new fV(tt, et, Vt, Ot)
+          static _fromErrorAndOperation(BB, IB, ZB, TB) {
+            return new FZ(BB, IB, ZB, TB)
           }
         }
 
-        function wV(tt, et, Vt, Ot) {
-          return ("reauthenticate" === et ? Vt._getReauthenticationResolver(tt) : Vt._getIdTokenResponse(tt)).catch((Vt => {
-            if ("auth/multi-factor-auth-required" === Vt.code) throw fV._fromErrorAndOperation(tt, Vt, et, Ot);
-            throw Vt
+        function NZ(BB, IB, ZB, TB) {
+          return ("reauthenticate" === IB ? ZB._getReauthenticationResolver(BB) : ZB._getIdTokenResponse(BB)).catch((ZB => {
+            if ("auth/multi-factor-auth-required" === ZB.code) throw FZ._fromErrorAndOperation(BB, ZB, IB, TB);
+            throw ZB
           }))
         }
 
-        function yV(tt) {
-          return new Set(tt.map((tt => {
+        function gZ(BB) {
+          return new Set(BB.map((BB => {
             let {
-              providerId: et
-            } = tt;
-            return et
-          })).filter((tt => !!tt)))
+              providerId: IB
+            } = BB;
+            return IB
+          })).filter((BB => !!BB)))
         }
-        async function NV(tt, et) {
-          const Vt = (0, Ot.L)(tt);
-          await MV(!0, Vt, et);
+        async function qZ(BB, IB) {
+          const ZB = (0, TB.N)(BB);
+          await UZ(!0, ZB, IB);
           const {
-            providerUserInfo: qt
-          } = await async function(tt, et) {
-            return zt(tt, "POST", "/v1/accounts:update", et)
-          }(Vt.auth, {
-            idToken: await Vt.getIdToken(),
-            deleteProvider: [et]
-          }), Dt = yV(qt || []);
-          return Vt.providerData = Vt.providerData.filter((tt => Dt.has(tt.providerId))), Dt.has("phone") || (Vt.phoneNumber = null), await Vt.auth._persistUserIfCurrent(Vt), Vt
+            providerUserInfo: JB
+          } = await async function(BB, IB) {
+            return XB(BB, "POST", "/v1/accounts:update", IB)
+          }(ZB.auth, {
+            idToken: await ZB.getIdToken(),
+            deleteProvider: [IB]
+          }), oB = gZ(JB || []);
+          return ZB.providerData = ZB.providerData.filter((BB => oB.has(BB.providerId))), oB.has("phone") || (ZB.phoneNumber = null), await ZB.auth._persistUserIfCurrent(ZB), ZB
         }
-        async function aV(tt, et) {
-          let Vt = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const Ot = await gt(tt, et._linkToIdToken(tt.auth, await tt.getIdToken()), Vt);
-          return QV._forOperation(tt, "link", Ot)
+        async function yZ(BB, IB) {
+          let ZB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const TB = await DB(BB, IB._linkToIdToken(BB.auth, await BB.getIdToken()), ZB);
+          return nZ._forOperation(BB, "link", TB)
         }
-        async function MV(tt, et, Vt) {
-          await te(et);
-          const Ot = !1 === tt ? "provider-already-linked" : "no-such-provider";
-          vt(yV(et.providerData).has(Vt) === tt, et.auth, Ot)
+        async function UZ(BB, IB, ZB) {
+          await SB(IB);
+          const TB = !1 === BB ? "provider-already-linked" : "no-such-provider";
+          OB(gZ(IB.providerData).has(ZB) === BB, IB.auth, TB)
         }
-        async function bV(tt, et) {
-          let Vt = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        async function WZ(BB, IB) {
+          let ZB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            auth: Ot
-          } = tt, qt = "reauthenticate";
+            auth: TB
+          } = BB, JB = "reauthenticate";
           try {
-            const Dt = await gt(tt, wV(Ot, qt, et, tt), Vt);
-            vt(Dt.idToken, Ot, "internal-error");
-            const mt = Tt(Dt.idToken);
-            vt(mt, Ot, "internal-error");
+            const oB = await DB(BB, NZ(TB, JB, IB, BB), ZB);
+            OB(oB.idToken, TB, "internal-error");
+            const GB = EB(oB.idToken);
+            OB(GB, TB, "internal-error");
             const {
-              sub: dt
-            } = mt;
-            return vt(tt.uid === dt, Ot, "user-mismatch"), QV._forOperation(tt, qt, Dt)
-          } catch (Dt) {
-            throw "auth/user-not-found" === (null === Dt || void 0 === Dt ? void 0 : Dt.code) && Jt(Ot, "user-mismatch"), Dt
+              sub: vB
+            } = GB;
+            return OB(BB.uid === vB, TB, "user-mismatch"), nZ._forOperation(BB, JB, oB)
+          } catch (oB) {
+            throw "auth/user-not-found" === (null === oB || void 0 === oB ? void 0 : oB.code) && dB(TB, "user-mismatch"), oB
           }
         }
-        async function JV(tt, et) {
-          let Vt = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const Ot = "signIn",
-            qt = await wV(tt, Ot, et),
-            Dt = await QV._fromIdTokenResponse(tt, Ot, qt);
-          return Vt || await tt._updateCurrentUser(Dt.user), Dt
+        async function dZ(BB, IB) {
+          let ZB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const TB = "signIn",
+            JB = await NZ(BB, TB, IB),
+            oB = await nZ._fromIdTokenResponse(BB, TB, JB);
+          return ZB || await BB._updateCurrentUser(oB.user), oB
         }
-        async function CV(tt, et) {
-          return JV(Pe(tt), et)
+        async function CZ(BB, IB) {
+          return dZ(MI(BB), IB)
         }
-        async function uV(tt, et) {
-          const Vt = (0, Ot.L)(tt);
-          return await MV(!1, Vt, et.providerId), aV(Vt, et)
+        async function QZ(BB, IB) {
+          const ZB = (0, TB.N)(BB);
+          return await UZ(!1, ZB, IB.providerId), yZ(ZB, IB)
         }
-        async function KV(tt, et) {
-          return bV((0, Ot.L)(tt), et)
+        async function sZ(BB, IB) {
+          return WZ((0, TB.N)(BB), IB)
         }
-        async function hV(tt, et) {
-          const Vt = Pe(tt),
-            Ot = await async function(tt, et) {
-              return rt(tt, "POST", "/v1/accounts:signInWithCustomToken", Gt(tt, et))
-            }(Vt, {
-              token: et,
+        async function wZ(BB, IB) {
+          const ZB = MI(BB),
+            TB = await async function(BB, IB) {
+              return eB(BB, "POST", "/v1/accounts:signInWithCustomToken", mB(BB, IB))
+            }(ZB, {
+              token: IB,
               returnSecureToken: !0
-            }), qt = await QV._fromIdTokenResponse(Vt, "signIn", Ot);
-          return await Vt._updateCurrentUser(qt.user), qt
+            }), JB = await nZ._fromIdTokenResponse(ZB, "signIn", TB);
+          return await ZB._updateCurrentUser(JB.user), JB
         }
-        class vV {
-          constructor(tt, et) {
-            this.factorId = tt, this.uid = et.mfaEnrollmentId, this.enrollmentTime = new Date(et.enrolledAt).toUTCString(), this.displayName = et.displayName
+        class OZ {
+          constructor(BB, IB) {
+            this.factorId = BB, this.uid = IB.mfaEnrollmentId, this.enrollmentTime = new Date(IB.enrolledAt).toUTCString(), this.displayName = IB.displayName
           }
-          static _fromServerResponse(tt, et) {
-            return "phoneInfo" in et ? WV._fromServerResponse(tt, et) : "totpInfo" in et ? SV._fromServerResponse(tt, et) : Jt(tt, "internal-error")
-          }
-        }
-        class WV extends vV {
-          constructor(tt) {
-            super("phone", tt), this.phoneNumber = tt.phoneInfo
-          }
-          static _fromServerResponse(tt, et) {
-            return new WV(et)
+          static _fromServerResponse(BB, IB) {
+            return "phoneInfo" in IB ? YZ._fromServerResponse(BB, IB) : "totpInfo" in IB ? iZ._fromServerResponse(BB, IB) : dB(BB, "internal-error")
           }
         }
-        class SV extends vV {
-          constructor(tt) {
-            super("totp", tt)
+        class YZ extends OZ {
+          constructor(BB) {
+            super("phone", BB), this.phoneNumber = BB.phoneInfo
           }
-          static _fromServerResponse(tt, et) {
-            return new SV(et)
+          static _fromServerResponse(BB, IB) {
+            return new YZ(IB)
+          }
+        }
+        class iZ extends OZ {
+          constructor(BB) {
+            super("totp", BB)
+          }
+          static _fromServerResponse(BB, IB) {
+            return new iZ(IB)
           }
         }
 
-        function cV(tt, et, Vt) {
-          var Ot;
-          vt((null === (Ot = Vt.url) || void 0 === Ot ? void 0 : Ot.length) > 0, tt, "invalid-continue-uri"), vt("undefined" === typeof Vt.dynamicLinkDomain || Vt.dynamicLinkDomain.length > 0, tt, "invalid-dynamic-link-domain"), et.continueUrl = Vt.url, et.dynamicLinkDomain = Vt.dynamicLinkDomain, et.canHandleCodeInApp = Vt.handleCodeInApp, Vt.iOS && (vt(Vt.iOS.bundleId.length > 0, tt, "missing-ios-bundle-id"), et.iOSBundleId = Vt.iOS.bundleId), Vt.android && (vt(Vt.android.packageName.length > 0, tt, "missing-android-pkg-name"), et.androidInstallApp = Vt.android.installApp, et.androidMinimumVersionCode = Vt.android.minimumVersion, et.androidPackageName = Vt.android.packageName)
+        function pZ(BB, IB, ZB) {
+          var TB;
+          OB((null === (TB = ZB.url) || void 0 === TB ? void 0 : TB.length) > 0, BB, "invalid-continue-uri"), OB("undefined" === typeof ZB.dynamicLinkDomain || ZB.dynamicLinkDomain.length > 0, BB, "invalid-dynamic-link-domain"), IB.continueUrl = ZB.url, IB.dynamicLinkDomain = ZB.dynamicLinkDomain, IB.canHandleCodeInApp = ZB.handleCodeInApp, ZB.iOS && (OB(ZB.iOS.bundleId.length > 0, BB, "missing-ios-bundle-id"), IB.iOSBundleId = ZB.iOS.bundleId), ZB.android && (OB(ZB.android.packageName.length > 0, BB, "missing-android-pkg-name"), IB.androidInstallApp = ZB.android.installApp, IB.androidMinimumVersionCode = ZB.android.minimumVersion, IB.androidPackageName = ZB.android.packageName)
         }
-        async function RV(tt, et, Vt) {
-          var Ot;
-          const qt = Pe(tt),
-            Dt = {
+        async function aZ(BB, IB, ZB) {
+          var TB;
+          const JB = MI(BB),
+            oB = {
               requestType: "PASSWORD_RESET",
-              email: et,
+              email: IB,
               clientType: "CLIENT_TYPE_WEB"
             };
-          if (null === (Ot = qt._getRecaptchaConfig()) || void 0 === Ot ? void 0 : Ot.emailPasswordEnabled) {
-            const tt = await ce(qt, Dt, "getOobCode", !0);
-            Vt && cV(qt, tt, Vt), await ie(qt, tt)
-          } else Vt && cV(qt, Dt, Vt), await ie(qt, Dt).catch((async tt => {
-            if ("auth/missing-recaptcha-token" !== tt.code) return Promise.reject(tt);
+          if (null === (TB = JB._getRecaptchaConfig()) || void 0 === TB ? void 0 : TB.emailPasswordEnabled) {
+            const BB = await pI(JB, oB, "getOobCode", !0);
+            ZB && pZ(JB, BB, ZB), await lI(JB, BB)
+          } else ZB && pZ(JB, oB, ZB), await lI(JB, oB).catch((async BB => {
+            if ("auth/missing-recaptcha-token" !== BB.code) return Promise.reject(BB);
             {
               console.log("Password resets are protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the password reset flow.");
-              const tt = await ce(qt, Dt, "getOobCode", !0);
-              Vt && cV(qt, tt, Vt), await ie(qt, tt)
+              const BB = await pI(JB, oB, "getOobCode", !0);
+              ZB && pZ(JB, BB, ZB), await lI(JB, BB)
             }
           }))
         }
-        async function IV(tt, et, Vt) {
-          await oe((0, Ot.L)(tt), {
-            oobCode: et,
-            newPassword: Vt
+        async function HZ(BB, IB, ZB) {
+          await LI((0, TB.N)(BB), {
+            oobCode: IB,
+            newPassword: ZB
           })
         }
-        async function PV(tt, et) {
-          await async function(tt, et) {
-            return zt(tt, "POST", "/v1/accounts:update", Gt(tt, et))
-          }((0, Ot.L)(tt), {
-            oobCode: et
+        async function MZ(BB, IB) {
+          await async function(BB, IB) {
+            return XB(BB, "POST", "/v1/accounts:update", mB(BB, IB))
+          }((0, TB.N)(BB), {
+            oobCode: IB
           })
         }
-        async function ZV(tt, et) {
-          const Vt = (0, Ot.L)(tt),
-            qt = await oe(Vt, {
-              oobCode: et
+        async function jZ(BB, IB) {
+          const ZB = (0, TB.N)(BB),
+            JB = await LI(ZB, {
+              oobCode: IB
             }),
-            Dt = qt.requestType;
-          switch (vt(Dt, Vt, "internal-error"), Dt) {
+            oB = JB.requestType;
+          switch (OB(oB, ZB, "internal-error"), oB) {
             case "EMAIL_SIGNIN":
               break;
             case "VERIFY_AND_CHANGE_EMAIL":
-              vt(qt.newEmail, Vt, "internal-error");
+              OB(JB.newEmail, ZB, "internal-error");
               break;
             case "REVERT_SECOND_FACTOR_ADDITION":
-              vt(qt.mfaInfo, Vt, "internal-error");
+              OB(JB.mfaInfo, ZB, "internal-error");
             default:
-              vt(qt.email, Vt, "internal-error")
+              OB(JB.email, ZB, "internal-error")
           }
-          let mt = null;
-          return qt.mfaInfo && (mt = vV._fromServerResponse(Pe(Vt), qt.mfaInfo)), {
+          let GB = null;
+          return JB.mfaInfo && (GB = OZ._fromServerResponse(MI(ZB), JB.mfaInfo)), {
             data: {
-              email: ("VERIFY_AND_CHANGE_EMAIL" === qt.requestType ? qt.newEmail : qt.email) || null,
-              previousEmail: ("VERIFY_AND_CHANGE_EMAIL" === qt.requestType ? qt.email : qt.newEmail) || null,
-              multiFactorInfo: mt
+              email: ("VERIFY_AND_CHANGE_EMAIL" === JB.requestType ? JB.newEmail : JB.email) || null,
+              previousEmail: ("VERIFY_AND_CHANGE_EMAIL" === JB.requestType ? JB.email : JB.newEmail) || null,
+              multiFactorInfo: GB
             },
-            operation: Dt
+            operation: oB
           }
         }
-        async function LV(tt, et) {
+        async function PZ(BB, IB) {
           const {
-            data: Vt
-          } = await ZV((0, Ot.L)(tt), et);
-          return Vt.email
+            data: ZB
+          } = await jZ((0, TB.N)(BB), IB);
+          return ZB.email
         }
-        async function FV(tt, et, Vt) {
-          var Ot;
-          const qt = Pe(tt),
-            Dt = {
+        async function RZ(BB, IB, ZB) {
+          var TB;
+          const JB = MI(BB),
+            oB = {
               returnSecureToken: !0,
-              email: et,
-              password: Vt,
+              email: IB,
+              password: ZB,
               clientType: "CLIENT_TYPE_WEB"
             };
-          let mt;
-          if (null === (Ot = qt._getRecaptchaConfig()) || void 0 === Ot ? void 0 : Ot.emailPasswordEnabled) {
-            const tt = await ce(qt, Dt, "signUpPassword");
-            mt = XV(qt, tt)
-          } else mt = XV(qt, Dt).catch((async tt => {
-            if ("auth/missing-recaptcha-token" === tt.code) {
+          let GB;
+          if (null === (TB = JB._getRecaptchaConfig()) || void 0 === TB ? void 0 : TB.emailPasswordEnabled) {
+            const BB = await pI(JB, oB, "signUpPassword");
+            GB = cZ(JB, BB)
+          } else GB = cZ(JB, oB).catch((async BB => {
+            if ("auth/missing-recaptcha-token" === BB.code) {
               console.log("Sign-up is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-up flow.");
-              const tt = await ce(qt, Dt, "signUpPassword");
-              return XV(qt, tt)
+              const BB = await pI(JB, oB, "signUpPassword");
+              return cZ(JB, BB)
             }
-            return Promise.reject(tt)
+            return Promise.reject(BB)
           }));
-          const dt = await mt.catch((tt => Promise.reject(tt))),
-            jt = await QV._fromIdTokenResponse(qt, "signIn", dt);
-          return await qt._updateCurrentUser(jt.user), jt
+          const vB = await GB.catch((BB => Promise.reject(BB))),
+            kB = await nZ._fromIdTokenResponse(JB, "signIn", vB);
+          return await JB._updateCurrentUser(kB.user), kB
         }
 
-        function kV(tt, et, Vt) {
-          return CV((0, Ot.L)(tt), tV.credential(et, Vt))
+        function rZ(BB, IB, ZB) {
+          return CZ((0, TB.N)(BB), SI.credential(IB, ZB))
         }
-        async function GV(tt, et, Vt) {
-          var Ot;
-          const qt = Pe(tt),
-            Dt = {
+        async function mZ(BB, IB, ZB) {
+          var TB;
+          const JB = MI(BB),
+            oB = {
               requestType: "EMAIL_SIGNIN",
-              email: et,
+              email: IB,
               clientType: "CLIENT_TYPE_WEB"
             };
 
-          function mt(tt, et) {
-            vt(et.handleCodeInApp, qt, "argument-error"), et && cV(qt, tt, et)
+          function GB(BB, IB) {
+            OB(IB.handleCodeInApp, JB, "argument-error"), IB && pZ(JB, BB, IB)
           }
-          if (null === (Ot = qt._getRecaptchaConfig()) || void 0 === Ot ? void 0 : Ot.emailPasswordEnabled) {
-            const tt = await ce(qt, Dt, "getOobCode", !0);
-            mt(tt, Vt), await Ye(qt, tt)
-          } else mt(Dt, Vt), await Ye(qt, Dt).catch((async tt => {
-            if ("auth/missing-recaptcha-token" !== tt.code) return Promise.reject(tt);
+          if (null === (TB = JB._getRecaptchaConfig()) || void 0 === TB ? void 0 : TB.emailPasswordEnabled) {
+            const BB = await pI(JB, oB, "getOobCode", !0);
+            GB(BB, ZB), await AI(JB, BB)
+          } else GB(oB, ZB), await AI(JB, oB).catch((async BB => {
+            if ("auth/missing-recaptcha-token" !== BB.code) return Promise.reject(BB);
             {
               console.log("Email link sign-in is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-in flow.");
-              const tt = await ce(qt, Dt, "getOobCode", !0);
-              mt(tt, Vt), await Ye(qt, tt)
+              const BB = await pI(JB, oB, "getOobCode", !0);
+              GB(BB, ZB), await AI(JB, BB)
             }
           }))
         }
 
-        function zV(tt, et) {
-          const Vt = se.parseLink(et);
-          return "EMAIL_SIGNIN" === (null === Vt || void 0 === Vt ? void 0 : Vt.operation)
+        function XZ(BB, IB) {
+          const ZB = KI.parseLink(IB);
+          return "EMAIL_SIGNIN" === (null === ZB || void 0 === ZB ? void 0 : ZB.operation)
         }
-        async function oV(tt, et, Vt) {
-          const qt = (0, Ot.L)(tt),
-            Dt = tV.credentialWithLink(et, Vt || ct());
-          return vt(Dt._tenantId === (qt.tenantId || null), qt, "tenant-id-mismatch"), CV(qt, Dt)
+        async function LZ(BB, IB, ZB) {
+          const JB = (0, TB.N)(BB),
+            oB = SI.credentialWithLink(IB, ZB || pB());
+          return OB(oB._tenantId === (JB.tenantId || null), JB, "tenant-id-mismatch"), CZ(JB, oB)
         }
-        async function rV(tt, et) {
-          const Vt = {
-              identifier: et,
-              continueUri: Rt() ? ct() : "http://localhost"
+        async function eZ(BB, IB) {
+          const ZB = {
+              identifier: IB,
+              continueUri: aB() ? pB() : "http://localhost"
             },
             {
-              signinMethods: qt
-            } = await async function(tt, et) {
-              return zt(tt, "POST", "/v1/accounts:createAuthUri", Gt(tt, et))
-            }((0, Ot.L)(tt), Vt);
-          return qt || []
+              signinMethods: JB
+            } = await async function(BB, IB) {
+              return XB(BB, "POST", "/v1/accounts:createAuthUri", mB(BB, IB))
+            }((0, TB.N)(BB), ZB);
+          return JB || []
         }
-        async function UV(tt, et) {
-          const Vt = (0, Ot.L)(tt),
-            qt = {
+        async function uZ(BB, IB) {
+          const ZB = (0, TB.N)(BB),
+            JB = {
               requestType: "VERIFY_EMAIL",
-              idToken: await tt.getIdToken()
+              idToken: await BB.getIdToken()
             };
-          et && cV(Vt.auth, qt, et);
+          IB && pZ(ZB.auth, JB, IB);
           const {
-            email: Dt
-          } = await async function(tt, et) {
-            return Ae(tt, et)
-          }(Vt.auth, qt);
-          Dt !== tt.email && await tt.reload()
+            email: oB
+          } = await async function(BB, IB) {
+            return fI(BB, IB)
+          }(ZB.auth, JB);
+          oB !== BB.email && await BB.reload()
         }
-        async function AV(tt, et, Vt) {
-          const qt = (0, Ot.L)(tt),
-            Dt = {
+        async function fZ(BB, IB, ZB) {
+          const JB = (0, TB.N)(BB),
+            oB = {
               requestType: "VERIFY_AND_CHANGE_EMAIL",
-              idToken: await tt.getIdToken(),
-              newEmail: et
+              idToken: await BB.getIdToken(),
+              newEmail: IB
             };
-          Vt && cV(qt.auth, Dt, Vt);
+          ZB && pZ(JB.auth, oB, ZB);
           const {
-            email: mt
-          } = await async function(tt, et) {
-            return Ae(tt, et)
-          }(qt.auth, Dt);
-          mt !== tt.email && await tt.reload()
+            email: GB
+          } = await async function(BB, IB) {
+            return fI(BB, IB)
+          }(JB.auth, oB);
+          GB !== BB.email && await BB.reload()
         }
-        async function iV(tt, et) {
+        async function lZ(BB, IB) {
           let {
-            displayName: Vt,
-            photoURL: qt
-          } = et;
-          if (void 0 === Vt && void 0 === qt) return;
-          const Dt = (0, Ot.L)(tt),
-            mt = {
-              idToken: await Dt.getIdToken(),
-              displayName: Vt,
-              photoUrl: qt,
+            displayName: ZB,
+            photoURL: JB
+          } = IB;
+          if (void 0 === ZB && void 0 === JB) return;
+          const oB = (0, TB.N)(BB),
+            GB = {
+              idToken: await oB.getIdToken(),
+              displayName: ZB,
+              photoUrl: JB,
               returnSecureToken: !0
             },
-            dt = await gt(Dt, async function(tt, et) {
-              return zt(tt, "POST", "/v1/accounts:update", et)
-            }(Dt.auth, mt));
-          Dt.displayName = dt.displayName || null, Dt.photoURL = dt.photoUrl || null;
-          const jt = Dt.providerData.find((tt => {
+            vB = await DB(oB, async function(BB, IB) {
+              return XB(BB, "POST", "/v1/accounts:update", IB)
+            }(oB.auth, GB));
+          oB.displayName = vB.displayName || null, oB.photoURL = vB.photoUrl || null;
+          const kB = oB.providerData.find((BB => {
             let {
-              providerId: et
-            } = tt;
-            return "password" === et
+              providerId: IB
+            } = BB;
+            return "password" === IB
           }));
-          jt && (jt.displayName = Dt.displayName, jt.photoURL = Dt.photoURL), await Dt._updateTokensIfNecessary(dt)
+          kB && (kB.displayName = oB.displayName, kB.photoURL = oB.photoURL), await oB._updateTokensIfNecessary(vB)
         }
 
-        function YV(tt, et) {
-          return pV((0, Ot.L)(tt), et, null)
+        function AZ(BB, IB) {
+          return bZ((0, TB.N)(BB), IB, null)
         }
 
-        function BV(tt, et) {
-          return pV((0, Ot.L)(tt), null, et)
+        function tZ(BB, IB) {
+          return bZ((0, TB.N)(BB), null, IB)
         }
-        async function pV(tt, et, Vt) {
+        async function bZ(BB, IB, ZB) {
           const {
-            auth: Ot
-          } = tt, qt = {
-            idToken: await tt.getIdToken(),
+            auth: TB
+          } = BB, JB = {
+            idToken: await BB.getIdToken(),
             returnSecureToken: !0
           };
-          et && (qt.email = et), Vt && (qt.password = Vt);
-          const Dt = await gt(tt, re(Ot, qt));
-          await tt._updateTokensIfNecessary(Dt, !0)
+          IB && (JB.email = IB), ZB && (JB.password = ZB);
+          const oB = await DB(BB, eI(TB, JB));
+          await BB._updateTokensIfNecessary(oB, !0)
         }
-        class xV {
-          constructor(tt, et) {
-            let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-            this.isNewUser = tt, this.providerId = et, this.profile = Vt
+        class xZ {
+          constructor(BB, IB) {
+            let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+            this.isNewUser = BB, this.providerId = IB, this.profile = ZB
           }
         }
-        class TV extends xV {
-          constructor(tt, et, Vt, Ot) {
-            super(tt, et, Vt), this.username = Ot
+        class EZ extends xZ {
+          constructor(BB, IB, ZB, TB) {
+            super(BB, IB, ZB), this.username = TB
           }
         }
-        class gV extends xV {
-          constructor(tt, et) {
-            super(tt, "facebook.com", et)
+        class DZ extends xZ {
+          constructor(BB, IB) {
+            super(BB, "facebook.com", IB)
           }
         }
-        class sV extends TV {
-          constructor(tt, et) {
-            super(tt, "github.com", et, "string" === typeof(null === et || void 0 === et ? void 0 : et.login) ? null === et || void 0 === et ? void 0 : et.login : null)
+        class KZ extends EZ {
+          constructor(BB, IB) {
+            super(BB, "github.com", IB, "string" === typeof(null === IB || void 0 === IB ? void 0 : IB.login) ? null === IB || void 0 === IB ? void 0 : IB.login : null)
           }
         }
-        class nV extends xV {
-          constructor(tt, et) {
-            super(tt, "google.com", et)
+        class VZ extends xZ {
+          constructor(BB, IB) {
+            super(BB, "google.com", IB)
           }
         }
-        class tO extends TV {
-          constructor(tt, et, Vt) {
-            super(tt, "twitter.com", et, Vt)
+        class SZ extends EZ {
+          constructor(BB, IB, ZB) {
+            super(BB, "twitter.com", IB, ZB)
           }
         }
 
-        function eO(tt) {
+        function BT(BB) {
           const {
-            user: et,
-            _tokenResponse: Vt
-          } = tt;
-          return et.isAnonymous && !Vt ? {
+            user: IB,
+            _tokenResponse: ZB
+          } = BB;
+          return IB.isAnonymous && !ZB ? {
             providerId: null,
             isNewUser: !1,
             profile: null
-          } : function(tt) {
-            var et, Vt;
-            if (!tt) return null;
+          } : function(BB) {
+            var IB, ZB;
+            if (!BB) return null;
             const {
-              providerId: Ot
-            } = tt, qt = tt.rawUserInfo ? JSON.parse(tt.rawUserInfo) : {}, Dt = tt.isNewUser || "identitytoolkit#SignupNewUserResponse" === tt.kind;
-            if (!Ot && (null === tt || void 0 === tt ? void 0 : tt.idToken)) {
-              const Ot = null === (Vt = null === (et = Tt(tt.idToken)) || void 0 === et ? void 0 : et.firebase) || void 0 === Vt ? void 0 : Vt.sign_in_provider;
-              if (Ot) return new xV(Dt, "anonymous" !== Ot && "custom" !== Ot ? Ot : null)
+              providerId: TB
+            } = BB, JB = BB.rawUserInfo ? JSON.parse(BB.rawUserInfo) : {}, oB = BB.isNewUser || "identitytoolkit#SignupNewUserResponse" === BB.kind;
+            if (!TB && (null === BB || void 0 === BB ? void 0 : BB.idToken)) {
+              const TB = null === (ZB = null === (IB = EB(BB.idToken)) || void 0 === IB ? void 0 : IB.firebase) || void 0 === ZB ? void 0 : ZB.sign_in_provider;
+              if (TB) return new xZ(oB, "anonymous" !== TB && "custom" !== TB ? TB : null)
             }
-            if (!Ot) return null;
-            switch (Ot) {
+            if (!TB) return null;
+            switch (TB) {
               case "facebook.com":
-                return new gV(Dt, qt);
+                return new DZ(oB, JB);
               case "github.com":
-                return new sV(Dt, qt);
+                return new KZ(oB, JB);
               case "google.com":
-                return new nV(Dt, qt);
+                return new VZ(oB, JB);
               case "twitter.com":
-                return new tO(Dt, qt, tt.screenName || null);
+                return new SZ(oB, JB, BB.screenName || null);
               case "custom":
               case "anonymous":
-                return new xV(Dt, null);
+                return new xZ(oB, null);
               default:
-                return new xV(Dt, Ot, qt)
+                return new xZ(oB, TB, JB)
             }
-          }(Vt)
+          }(ZB)
         }
 
-        function VO(tt, et) {
-          return (0, Ot.L)(tt).setPersistence(et)
+        function IT(BB, IB) {
+          return (0, TB.N)(BB).setPersistence(IB)
         }
 
-        function OO(tt) {
-          return Pe(tt).initializeRecaptchaConfig()
+        function ZT(BB) {
+          return MI(BB).initializeRecaptchaConfig()
         }
 
-        function qO(tt, et, Vt, qt) {
-          return (0, Ot.L)(tt).onIdTokenChanged(et, Vt, qt)
+        function TT(BB, IB, ZB, JB) {
+          return (0, TB.N)(BB).onIdTokenChanged(IB, ZB, JB)
         }
 
-        function DO(tt, et, Vt) {
-          return (0, Ot.L)(tt).beforeAuthStateChanged(et, Vt)
+        function JT(BB, IB, ZB) {
+          return (0, TB.N)(BB).beforeAuthStateChanged(IB, ZB)
         }
 
-        function mO(tt, et, Vt, qt) {
-          return (0, Ot.L)(tt).onAuthStateChanged(et, Vt, qt)
+        function oT(BB, IB, ZB, JB) {
+          return (0, TB.N)(BB).onAuthStateChanged(IB, ZB, JB)
         }
 
-        function dO(tt) {
-          (0, Ot.L)(tt).useDeviceLanguage()
+        function GT(BB) {
+          (0, TB.N)(BB).useDeviceLanguage()
         }
 
-        function jO(tt, et) {
-          return (0, Ot.L)(tt).updateCurrentUser(et)
+        function vT(BB, IB) {
+          return (0, TB.N)(BB).updateCurrentUser(IB)
         }
 
-        function HO(tt) {
-          return (0, Ot.L)(tt).signOut()
+        function kT(BB) {
+          return (0, TB.N)(BB).signOut()
         }
-        async function XO(tt) {
-          return (0, Ot.L)(tt).delete()
+        async function cT(BB) {
+          return (0, TB.N)(BB).delete()
         }
-        class QO {
-          constructor(tt, et, Vt) {
-            this.type = tt, this.credential = et, this.auth = Vt
+        class nT {
+          constructor(BB, IB, ZB) {
+            this.type = BB, this.credential = IB, this.auth = ZB
           }
-          static _fromIdtoken(tt, et) {
-            return new QO("enroll", tt, et)
+          static _fromIdtoken(BB, IB) {
+            return new nT("enroll", BB, IB)
           }
-          static _fromMfaPendingCredential(tt) {
-            return new QO("signin", tt)
+          static _fromMfaPendingCredential(BB) {
+            return new nT("signin", BB)
           }
           toJSON() {
-            const tt = "enroll" === this.type ? "idToken" : "pendingCredential";
+            const BB = "enroll" === this.type ? "idToken" : "pendingCredential";
             return {
               multiFactorSession: {
-                [tt]: this.credential
+                [BB]: this.credential
               }
             }
           }
-          static fromJSON(tt) {
-            var et, Vt;
-            if (null === tt || void 0 === tt ? void 0 : tt.multiFactorSession) {
-              if (null === (et = tt.multiFactorSession) || void 0 === et ? void 0 : et.pendingCredential) return QO._fromMfaPendingCredential(tt.multiFactorSession.pendingCredential);
-              if (null === (Vt = tt.multiFactorSession) || void 0 === Vt ? void 0 : Vt.idToken) return QO._fromIdtoken(tt.multiFactorSession.idToken)
+          static fromJSON(BB) {
+            var IB, ZB;
+            if (null === BB || void 0 === BB ? void 0 : BB.multiFactorSession) {
+              if (null === (IB = BB.multiFactorSession) || void 0 === IB ? void 0 : IB.pendingCredential) return nT._fromMfaPendingCredential(BB.multiFactorSession.pendingCredential);
+              if (null === (ZB = BB.multiFactorSession) || void 0 === ZB ? void 0 : ZB.idToken) return nT._fromIdtoken(BB.multiFactorSession.idToken)
             }
             return null
           }
         }
-        class lO {
-          constructor(tt, et, Vt) {
-            this.session = tt, this.hints = et, this.signInResolver = Vt
+        class hT {
+          constructor(BB, IB, ZB) {
+            this.session = BB, this.hints = IB, this.signInResolver = ZB
           }
-          static _fromError(tt, et) {
-            const Vt = Pe(tt),
-              Ot = et.customData._serverResponse,
-              qt = (Ot.mfaInfo || []).map((tt => vV._fromServerResponse(Vt, tt)));
-            vt(Ot.mfaPendingCredential, Vt, "internal-error");
-            const Dt = QO._fromMfaPendingCredential(Ot.mfaPendingCredential);
-            return new lO(Dt, qt, (async tt => {
-              const qt = await tt._process(Vt, Dt);
-              delete Ot.mfaInfo, delete Ot.mfaPendingCredential;
-              const mt = Object.assign(Object.assign({}, Ot), {
-                idToken: qt.idToken,
-                refreshToken: qt.refreshToken
+          static _fromError(BB, IB) {
+            const ZB = MI(BB),
+              TB = IB.customData._serverResponse,
+              JB = (TB.mfaInfo || []).map((BB => OZ._fromServerResponse(ZB, BB)));
+            OB(TB.mfaPendingCredential, ZB, "internal-error");
+            const oB = nT._fromMfaPendingCredential(TB.mfaPendingCredential);
+            return new hT(oB, JB, (async BB => {
+              const JB = await BB._process(ZB, oB);
+              delete TB.mfaInfo, delete TB.mfaPendingCredential;
+              const GB = Object.assign(Object.assign({}, TB), {
+                idToken: JB.idToken,
+                refreshToken: JB.refreshToken
               });
-              switch (et.operationType) {
+              switch (IB.operationType) {
                 case "signIn":
-                  const tt = await QV._fromIdTokenResponse(Vt, et.operationType, mt);
-                  return await Vt._updateCurrentUser(tt.user), tt;
+                  const BB = await nZ._fromIdTokenResponse(ZB, IB.operationType, GB);
+                  return await ZB._updateCurrentUser(BB.user), BB;
                 case "reauthenticate":
-                  return vt(et.user, Vt, "internal-error"), QV._forOperation(et.user, et.operationType, mt);
+                  return OB(IB.user, ZB, "internal-error"), nZ._forOperation(IB.user, IB.operationType, GB);
                 default:
-                  Jt(Vt, "internal-error")
+                  dB(ZB, "internal-error")
               }
             }))
           }
-          async resolveSignIn(tt) {
-            const et = tt;
-            return this.signInResolver(et)
+          async resolveSignIn(BB) {
+            const IB = BB;
+            return this.signInResolver(IB)
           }
         }
 
-        function EO(tt, et) {
-          var Vt;
-          const qt = (0, Ot.L)(tt),
-            Dt = et;
-          return vt(et.customData.operationType, qt, "argument-error"), vt(null === (Vt = Dt.customData._serverResponse) || void 0 === Vt ? void 0 : Vt.mfaPendingCredential, qt, "argument-error"), lO._fromError(qt, Dt)
+        function zT(BB, IB) {
+          var ZB;
+          const JB = (0, TB.N)(BB),
+            oB = IB;
+          return OB(IB.customData.operationType, JB, "argument-error"), OB(null === (ZB = oB.customData._serverResponse) || void 0 === ZB ? void 0 : ZB.mfaPendingCredential, JB, "argument-error"), hT._fromError(JB, oB)
         }
-        class fO {
-          constructor(tt) {
-            this.user = tt, this.enrolledFactors = [], tt._onReload((et => {
-              et.mfaInfo && (this.enrolledFactors = et.mfaInfo.map((et => vV._fromServerResponse(tt.auth, et))))
+        class FT {
+          constructor(BB) {
+            this.user = BB, this.enrolledFactors = [], BB._onReload((IB => {
+              IB.mfaInfo && (this.enrolledFactors = IB.mfaInfo.map((IB => OZ._fromServerResponse(BB.auth, IB))))
             }))
           }
-          static _fromUser(tt) {
-            return new fO(tt)
+          static _fromUser(BB) {
+            return new FT(BB)
           }
           async getSession() {
-            return QO._fromIdtoken(await this.user.getIdToken(), this.user.auth)
+            return nT._fromIdtoken(await this.user.getIdToken(), this.user.auth)
           }
-          async enroll(tt, et) {
-            const Vt = tt,
-              Ot = await this.getSession(),
-              qt = await gt(this.user, Vt._process(this.user.auth, Ot, et));
-            return await this.user._updateTokensIfNecessary(qt), this.user.reload()
+          async enroll(BB, IB) {
+            const ZB = BB,
+              TB = await this.getSession(),
+              JB = await DB(this.user, ZB._process(this.user.auth, TB, IB));
+            return await this.user._updateTokensIfNecessary(JB), this.user.reload()
           }
-          async unenroll(tt) {
-            const et = "string" === typeof tt ? tt : tt.uid,
-              Vt = await this.user.getIdToken();
+          async unenroll(BB) {
+            const IB = "string" === typeof BB ? BB : BB.uid,
+              ZB = await this.user.getIdToken();
             try {
-              const tt = await gt(this.user, (Ot = this.user.auth, qt = {
-                idToken: Vt,
-                mfaEnrollmentId: et
-              }, zt(Ot, "POST", "/v2/accounts/mfaEnrollment:withdraw", Gt(Ot, qt))));
-              this.enrolledFactors = this.enrolledFactors.filter((tt => {
+              const BB = await DB(this.user, (TB = this.user.auth, JB = {
+                idToken: ZB,
+                mfaEnrollmentId: IB
+              }, XB(TB, "POST", "/v2/accounts/mfaEnrollment:withdraw", mB(TB, JB))));
+              this.enrolledFactors = this.enrolledFactors.filter((BB => {
                 let {
-                  uid: Vt
-                } = tt;
-                return Vt !== et
-              })), await this.user._updateTokensIfNecessary(tt), await this.user.reload()
-            } catch (Dt) {
-              throw Dt
+                  uid: ZB
+                } = BB;
+                return ZB !== IB
+              })), await this.user._updateTokensIfNecessary(BB), await this.user.reload()
+            } catch (oB) {
+              throw oB
             }
-            var Ot, qt
+            var TB, JB
           }
         }
-        const wO = new WeakMap;
+        const NT = new WeakMap;
 
-        function yO(tt) {
-          const et = (0, Ot.L)(tt);
-          return wO.has(et) || wO.set(et, fO._fromUser(et)), wO.get(et)
+        function gT(BB) {
+          const IB = (0, TB.N)(BB);
+          return NT.has(IB) || NT.set(IB, FT._fromUser(IB)), NT.get(IB)
         }
-        const NO = "__sak";
-        class aO {
-          constructor(tt, et) {
-            this.storageRetriever = tt, this.type = et
+        const qT = "__sak";
+        class yT {
+          constructor(BB, IB) {
+            this.storageRetriever = BB, this.type = IB
           }
           _isAvailable() {
             try {
-              return this.storage ? (this.storage.setItem(NO, "1"), this.storage.removeItem(NO), Promise.resolve(!0)) : Promise.resolve(!1)
-            } catch (tt) {
+              return this.storage ? (this.storage.setItem(qT, "1"), this.storage.removeItem(qT), Promise.resolve(!0)) : Promise.resolve(!1)
+            } catch (BB) {
               return Promise.resolve(!1)
             }
           }
-          _set(tt, et) {
-            return this.storage.setItem(tt, JSON.stringify(et)), Promise.resolve()
+          _set(BB, IB) {
+            return this.storage.setItem(BB, JSON.stringify(IB)), Promise.resolve()
           }
-          _get(tt) {
-            const et = this.storage.getItem(tt);
-            return Promise.resolve(et ? JSON.parse(et) : null)
+          _get(BB) {
+            const IB = this.storage.getItem(BB);
+            return Promise.resolve(IB ? JSON.parse(IB) : null)
           }
-          _remove(tt) {
-            return this.storage.removeItem(tt), Promise.resolve()
+          _remove(BB) {
+            return this.storage.removeItem(BB), Promise.resolve()
           }
           get storage() {
             return this.storageRetriever()
           }
         }
-        class MO extends aO {
+        class UT extends yT {
           constructor() {
-            super((() => window.localStorage), "LOCAL"), this.boundEventHandler = (tt, et) => this.onStorageEvent(tt, et), this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.safariLocalStorageNotSynced = function() {
-              const tt = (0, Ot.M)();
-              return Ee(tt) || Me(tt)
+            super((() => window.localStorage), "LOCAL"), this.boundEventHandler = (BB, IB) => this.onStorageEvent(BB, IB), this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.safariLocalStorageNotSynced = function() {
+              const BB = (0, TB.P)();
+              return zI(BB) || UI(BB)
             }() && function() {
               try {
                 return !(!window || window === window.top)
-              } catch (tt) {
+              } catch (BB) {
                 return !1
               }
-            }(), this.fallbackToPolling = be(), this._shouldAllowMigration = !0
+            }(), this.fallbackToPolling = WI(), this._shouldAllowMigration = !0
           }
-          forAllChangedKeys(tt) {
-            for (const et of Object.keys(this.listeners)) {
-              const Vt = this.storage.getItem(et),
-                Ot = this.localCache[et];
-              Vt !== Ot && tt(et, Ot, Vt)
+          forAllChangedKeys(BB) {
+            for (const IB of Object.keys(this.listeners)) {
+              const ZB = this.storage.getItem(IB),
+                TB = this.localCache[IB];
+              ZB !== TB && BB(IB, TB, ZB)
             }
           }
-          onStorageEvent(tt) {
-            let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (!tt.key) return void this.forAllChangedKeys(((tt, et, Vt) => {
-              this.notifyListeners(tt, Vt)
+          onStorageEvent(BB) {
+            let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (!BB.key) return void this.forAllChangedKeys(((BB, IB, ZB) => {
+              this.notifyListeners(BB, ZB)
             }));
-            const Vt = tt.key;
-            if (et ? this.detachListener() : this.stopPolling(), this.safariLocalStorageNotSynced) {
-              const Ot = this.storage.getItem(Vt);
-              if (tt.newValue !== Ot) null !== tt.newValue ? this.storage.setItem(Vt, tt.newValue) : this.storage.removeItem(Vt);
-              else if (this.localCache[Vt] === tt.newValue && !et) return
+            const ZB = BB.key;
+            if (IB ? this.detachListener() : this.stopPolling(), this.safariLocalStorageNotSynced) {
+              const TB = this.storage.getItem(ZB);
+              if (BB.newValue !== TB) null !== BB.newValue ? this.storage.setItem(ZB, BB.newValue) : this.storage.removeItem(ZB);
+              else if (this.localCache[ZB] === BB.newValue && !IB) return
             }
-            const qt = () => {
-                const tt = this.storage.getItem(Vt);
-                (et || this.localCache[Vt] !== tt) && this.notifyListeners(Vt, tt)
+            const JB = () => {
+                const BB = this.storage.getItem(ZB);
+                (IB || this.localCache[ZB] !== BB) && this.notifyListeners(ZB, BB)
               },
-              Dt = this.storage.getItem(Vt);
-            (0, Ot.W)() && 10 === document.documentMode && Dt !== tt.newValue && tt.newValue !== tt.oldValue ? setTimeout(qt, 10) : qt()
+              oB = this.storage.getItem(ZB);
+            (0, TB.W)() && 10 === document.documentMode && oB !== BB.newValue && BB.newValue !== BB.oldValue ? setTimeout(JB, 10) : JB()
           }
-          notifyListeners(tt, et) {
-            this.localCache[tt] = et;
-            const Vt = this.listeners[tt];
-            if (Vt)
-              for (const Ot of Array.from(Vt)) Ot(et ? JSON.parse(et) : et)
+          notifyListeners(BB, IB) {
+            this.localCache[BB] = IB;
+            const ZB = this.listeners[BB];
+            if (ZB)
+              for (const TB of Array.from(ZB)) TB(IB ? JSON.parse(IB) : IB)
           }
           startPolling() {
             this.stopPolling(), this.pollTimer = setInterval((() => {
-              this.forAllChangedKeys(((tt, et, Vt) => {
+              this.forAllChangedKeys(((BB, IB, ZB) => {
                 this.onStorageEvent(new StorageEvent("storage", {
-                  key: tt,
-                  oldValue: et,
-                  newValue: Vt
+                  key: BB,
+                  oldValue: IB,
+                  newValue: ZB
                 }), !0)
               }))
             }), 1e3)
@@ -2874,313 +2874,313 @@ export const modules = {
           detachListener() {
             window.removeEventListener("storage", this.boundEventHandler)
           }
-          _addListener(tt, et) {
-            0 === Object.keys(this.listeners).length && (this.fallbackToPolling ? this.startPolling() : this.attachListener()), this.listeners[tt] || (this.listeners[tt] = new Set, this.localCache[tt] = this.storage.getItem(tt)), this.listeners[tt].add(et)
+          _addListener(BB, IB) {
+            0 === Object.keys(this.listeners).length && (this.fallbackToPolling ? this.startPolling() : this.attachListener()), this.listeners[BB] || (this.listeners[BB] = new Set, this.localCache[BB] = this.storage.getItem(BB)), this.listeners[BB].add(IB)
           }
-          _removeListener(tt, et) {
-            this.listeners[tt] && (this.listeners[tt].delete(et), 0 === this.listeners[tt].size && delete this.listeners[tt]), 0 === Object.keys(this.listeners).length && (this.detachListener(), this.stopPolling())
+          _removeListener(BB, IB) {
+            this.listeners[BB] && (this.listeners[BB].delete(IB), 0 === this.listeners[BB].size && delete this.listeners[BB]), 0 === Object.keys(this.listeners).length && (this.detachListener(), this.stopPolling())
           }
-          async _set(tt, et) {
-            await super._set(tt, et), this.localCache[tt] = JSON.stringify(et)
+          async _set(BB, IB) {
+            await super._set(BB, IB), this.localCache[BB] = JSON.stringify(IB)
           }
-          async _get(tt) {
-            const et = await super._get(tt);
-            return this.localCache[tt] = JSON.stringify(et), et
+          async _get(BB) {
+            const IB = await super._get(BB);
+            return this.localCache[BB] = JSON.stringify(IB), IB
           }
-          async _remove(tt) {
-            await super._remove(tt), delete this.localCache[tt]
+          async _remove(BB) {
+            await super._remove(BB), delete this.localCache[BB]
           }
         }
-        MO.type = "LOCAL";
-        const bO = MO;
-        class JO extends aO {
+        UT.type = "LOCAL";
+        const WT = UT;
+        class dT extends yT {
           constructor() {
             super((() => window.sessionStorage), "SESSION")
           }
-          _addListener(tt, et) {}
-          _removeListener(tt, et) {}
+          _addListener(BB, IB) {}
+          _removeListener(BB, IB) {}
         }
-        JO.type = "SESSION";
-        const CO = JO;
-        class uO {
-          constructor(tt) {
-            this.eventTarget = tt, this.handlersMap = {}, this.boundEventHandler = this.handleEvent.bind(this)
+        dT.type = "SESSION";
+        const CT = dT;
+        class QT {
+          constructor(BB) {
+            this.eventTarget = BB, this.handlersMap = {}, this.boundEventHandler = this.handleEvent.bind(this)
           }
-          static _getInstance(tt) {
-            const et = this.receivers.find((et => et.isListeningto(tt)));
-            if (et) return et;
-            const Vt = new uO(tt);
-            return this.receivers.push(Vt), Vt
+          static _getInstance(BB) {
+            const IB = this.receivers.find((IB => IB.isListeningto(BB)));
+            if (IB) return IB;
+            const ZB = new QT(BB);
+            return this.receivers.push(ZB), ZB
           }
-          isListeningto(tt) {
-            return this.eventTarget === tt
+          isListeningto(BB) {
+            return this.eventTarget === BB
           }
-          async handleEvent(tt) {
-            const et = tt,
+          async handleEvent(BB) {
+            const IB = BB,
               {
-                eventId: Vt,
-                eventType: Ot,
-                data: qt
-              } = et.data,
-              Dt = this.handlersMap[Ot];
-            if (!(null === Dt || void 0 === Dt ? void 0 : Dt.size)) return;
-            et.ports[0].postMessage({
+                eventId: ZB,
+                eventType: TB,
+                data: JB
+              } = IB.data,
+              oB = this.handlersMap[TB];
+            if (!(null === oB || void 0 === oB ? void 0 : oB.size)) return;
+            IB.ports[0].postMessage({
               status: "ack",
-              eventId: Vt,
-              eventType: Ot
+              eventId: ZB,
+              eventType: TB
             });
-            const mt = Array.from(Dt).map((async tt => tt(et.origin, qt))),
-              dt = await
-            function(tt) {
-              return Promise.all(tt.map((async tt => {
+            const GB = Array.from(oB).map((async BB => BB(IB.origin, JB))),
+              vB = await
+            function(BB) {
+              return Promise.all(BB.map((async BB => {
                 try {
                   return {
                     fulfilled: !0,
-                    value: await tt
+                    value: await BB
                   }
-                } catch (et) {
+                } catch (IB) {
                   return {
                     fulfilled: !1,
-                    reason: et
+                    reason: IB
                   }
                 }
               })))
-            }(mt);
-            et.ports[0].postMessage({
+            }(GB);
+            IB.ports[0].postMessage({
               status: "done",
-              eventId: Vt,
-              eventType: Ot,
-              response: dt
+              eventId: ZB,
+              eventType: TB,
+              response: vB
             })
           }
-          _subscribe(tt, et) {
-            0 === Object.keys(this.handlersMap).length && this.eventTarget.addEventListener("message", this.boundEventHandler), this.handlersMap[tt] || (this.handlersMap[tt] = new Set), this.handlersMap[tt].add(et)
+          _subscribe(BB, IB) {
+            0 === Object.keys(this.handlersMap).length && this.eventTarget.addEventListener("message", this.boundEventHandler), this.handlersMap[BB] || (this.handlersMap[BB] = new Set), this.handlersMap[BB].add(IB)
           }
-          _unsubscribe(tt, et) {
-            this.handlersMap[tt] && et && this.handlersMap[tt].delete(et), et && 0 !== this.handlersMap[tt].size || delete this.handlersMap[tt], 0 === Object.keys(this.handlersMap).length && this.eventTarget.removeEventListener("message", this.boundEventHandler)
+          _unsubscribe(BB, IB) {
+            this.handlersMap[BB] && IB && this.handlersMap[BB].delete(IB), IB && 0 !== this.handlersMap[BB].size || delete this.handlersMap[BB], 0 === Object.keys(this.handlersMap).length && this.eventTarget.removeEventListener("message", this.boundEventHandler)
           }
         }
 
-        function KO() {
-          let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-            et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
-            Vt = "";
-          for (let Ot = 0; Ot < et; Ot++) Vt += Math.floor(10 * Math.random());
-          return tt + Vt
+        function sT() {
+          let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
+            IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
+            ZB = "";
+          for (let TB = 0; TB < IB; TB++) ZB += Math.floor(10 * Math.random());
+          return BB + ZB
         }
-        uO.receivers = [];
-        class hO {
-          constructor(tt) {
-            this.target = tt, this.handlers = new Set
+        QT.receivers = [];
+        class wT {
+          constructor(BB) {
+            this.target = BB, this.handlers = new Set
           }
-          removeMessageHandler(tt) {
-            tt.messageChannel && (tt.messageChannel.port1.removeEventListener("message", tt.gM), tt.messageChannel.port1.close()), this.handlers.delete(tt)
+          removeMessageHandler(BB) {
+            BB.messageChannel && (BB.messageChannel.port1.removeEventListener("message", BB.rU), BB.messageChannel.port1.close()), this.handlers.delete(BB)
           }
-          async _send(tt, et) {
-            let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 50;
-            const Ot = "undefined" !== typeof MessageChannel ? new MessageChannel : null;
-            if (!Ot) throw new Error("connection_unavailable");
-            let qt, Dt;
-            return new Promise(((mt, dt) => {
-              const jt = KO("", 20);
-              Ot.port1.start();
-              const Ht = setTimeout((() => {
-                dt(new Error("unsupported_event"))
-              }), Vt);
-              Dt = {
-                messageChannel: Ot,
-                gM(tt) {
-                  const et = tt;
-                  if (et.data.eventId === jt) switch (et.data.status) {
+          async _send(BB, IB) {
+            let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 50;
+            const TB = "undefined" !== typeof MessageChannel ? new MessageChannel : null;
+            if (!TB) throw new Error("connection_unavailable");
+            let JB, oB;
+            return new Promise(((GB, vB) => {
+              const kB = sT("", 20);
+              TB.port1.start();
+              const cB = setTimeout((() => {
+                vB(new Error("unsupported_event"))
+              }), ZB);
+              oB = {
+                messageChannel: TB,
+                rU(BB) {
+                  const IB = BB;
+                  if (IB.data.eventId === kB) switch (IB.data.status) {
                     case "ack":
-                      clearTimeout(Ht), qt = setTimeout((() => {
-                        dt(new Error("timeout"))
+                      clearTimeout(cB), JB = setTimeout((() => {
+                        vB(new Error("timeout"))
                       }), 3e3);
                       break;
                     case "done":
-                      clearTimeout(qt), mt(et.data.response);
+                      clearTimeout(JB), GB(IB.data.response);
                       break;
                     default:
-                      clearTimeout(Ht), clearTimeout(qt), dt(new Error("invalid_response"))
+                      clearTimeout(cB), clearTimeout(JB), vB(new Error("invalid_response"))
                   }
                 }
-              }, this.handlers.add(Dt), Ot.port1.addEventListener("message", Dt.gM), this.target.postMessage({
-                eventType: tt,
-                eventId: jt,
-                data: et
-              }, [Ot.port2])
+              }, this.handlers.add(oB), TB.port1.addEventListener("message", oB.rU), this.target.postMessage({
+                eventType: BB,
+                eventId: kB,
+                data: IB
+              }, [TB.port2])
             })).finally((() => {
-              Dt && this.removeMessageHandler(Dt)
+              oB && this.removeMessageHandler(oB)
             }))
           }
         }
 
-        function vO() {
+        function OT() {
           return window
         }
 
-        function WO() {
-          return "undefined" !== typeof vO().WorkerGlobalScope && "function" === typeof vO().importScripts
+        function YT() {
+          return "undefined" !== typeof OT().WorkerGlobalScope && "function" === typeof OT().importScripts
         }
-        const SO = "firebaseLocalStorageDb",
-          cO = "firebaseLocalStorage",
-          RO = "fbase_key";
-        class IO {
-          constructor(tt) {
-            this.request = tt
+        const iT = "firebaseLocalStorageDb",
+          pT = "firebaseLocalStorage",
+          aT = "fbase_key";
+        class HT {
+          constructor(BB) {
+            this.request = BB
           }
           toPromise() {
-            return new Promise(((tt, et) => {
+            return new Promise(((BB, IB) => {
               this.request.addEventListener("success", (() => {
-                tt(this.request.result)
+                BB(this.request.result)
               })), this.request.addEventListener("error", (() => {
-                et(this.request.error)
+                IB(this.request.error)
               }))
             }))
           }
         }
 
-        function PO(tt, et) {
-          return tt.transaction([cO], et ? "readwrite" : "readonly").objectStore(cO)
+        function MT(BB, IB) {
+          return BB.transaction([pT], IB ? "readwrite" : "readonly").objectStore(pT)
         }
 
-        function ZO() {
-          const tt = indexedDB.open(SO, 1);
-          return new Promise(((et, Vt) => {
-            tt.addEventListener("error", (() => {
-              Vt(tt.error)
-            })), tt.addEventListener("upgradeneeded", (() => {
-              const et = tt.result;
+        function jT() {
+          const BB = indexedDB.open(iT, 1);
+          return new Promise(((IB, ZB) => {
+            BB.addEventListener("error", (() => {
+              ZB(BB.error)
+            })), BB.addEventListener("upgradeneeded", (() => {
+              const IB = BB.result;
               try {
-                et.createObjectStore(cO, {
-                  keyPath: RO
+                IB.createObjectStore(pT, {
+                  keyPath: aT
                 })
-              } catch (Ot) {
-                Vt(Ot)
+              } catch (TB) {
+                ZB(TB)
               }
-            })), tt.addEventListener("success", (async () => {
-              const Vt = tt.result;
-              Vt.objectStoreNames.contains(cO) ? et(Vt) : (Vt.close(), await
+            })), BB.addEventListener("success", (async () => {
+              const ZB = BB.result;
+              ZB.objectStoreNames.contains(pT) ? IB(ZB) : (ZB.close(), await
                 function() {
-                  const tt = indexedDB.deleteDatabase(SO);
-                  return new IO(tt).toPromise()
-                }(), et(await ZO()))
+                  const BB = indexedDB.deleteDatabase(iT);
+                  return new HT(BB).toPromise()
+                }(), IB(await jT()))
             }))
           }))
         }
-        async function LO(tt, et, Vt) {
-          const Ot = PO(tt, !0).put({
-            [RO]: et,
-            value: Vt
+        async function PT(BB, IB, ZB) {
+          const TB = MT(BB, !0).put({
+            [aT]: IB,
+            value: ZB
           });
-          return new IO(Ot).toPromise()
+          return new HT(TB).toPromise()
         }
 
-        function FO(tt, et) {
-          const Vt = PO(tt, !0).delete(et);
-          return new IO(Vt).toPromise()
+        function RT(BB, IB) {
+          const ZB = MT(BB, !0).delete(IB);
+          return new HT(ZB).toPromise()
         }
-        class kO {
+        class rT {
           constructor() {
             this.type = "LOCAL", this._shouldAllowMigration = !0, this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.pendingWrites = 0, this.receiver = null, this.sender = null, this.serviceWorkerReceiverAvailable = !1, this.activeServiceWorker = null, this._workerInitializationPromise = this.initializeServiceWorkerMessaging().then((() => {}), (() => {}))
           }
           async _openDb() {
-            return this.db || (this.db = await ZO()), this.db
+            return this.db || (this.db = await jT()), this.db
           }
-          async _withRetries(tt) {
-            let et = 0;
+          async _withRetries(BB) {
+            let IB = 0;
             for (;;) try {
-              const et = await this._openDb();
-              return await tt(et)
-            } catch (Vt) {
-              if (et++ > 3) throw Vt;
+              const IB = await this._openDb();
+              return await BB(IB)
+            } catch (ZB) {
+              if (IB++ > 3) throw ZB;
               this.db && (this.db.close(), this.db = void 0)
             }
           }
           async initializeServiceWorkerMessaging() {
-            return WO() ? this.initializeReceiver() : this.initializeSender()
+            return YT() ? this.initializeReceiver() : this.initializeSender()
           }
           async initializeReceiver() {
-            this.receiver = uO._getInstance(WO() ? self : null), this.receiver._subscribe("keyChanged", (async (tt, et) => ({
-              keyProcessed: (await this._poll()).includes(et.key)
-            }))), this.receiver._subscribe("ping", (async (tt, et) => ["keyChanged"]))
+            this.receiver = QT._getInstance(YT() ? self : null), this.receiver._subscribe("keyChanged", (async (BB, IB) => ({
+              keyProcessed: (await this._poll()).includes(IB.key)
+            }))), this.receiver._subscribe("ping", (async (BB, IB) => ["keyChanged"]))
           }
           async initializeSender() {
-            var tt, et;
+            var BB, IB;
             if (this.activeServiceWorker = await async function() {
                 if (!(null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker)) return null;
                 try {
                   return (await navigator.serviceWorker.ready).active
-                } catch (tt) {
+                } catch (BB) {
                   return null
                 }
               }(), !this.activeServiceWorker) return;
-            this.sender = new hO(this.activeServiceWorker);
-            const Vt = await this.sender._send("ping", {}, 800);
-            Vt && (null === (tt = Vt[0]) || void 0 === tt ? void 0 : tt.fulfilled) && (null === (et = Vt[0]) || void 0 === et ? void 0 : et.value.includes("keyChanged")) && (this.serviceWorkerReceiverAvailable = !0)
+            this.sender = new wT(this.activeServiceWorker);
+            const ZB = await this.sender._send("ping", {}, 800);
+            ZB && (null === (BB = ZB[0]) || void 0 === BB ? void 0 : BB.fulfilled) && (null === (IB = ZB[0]) || void 0 === IB ? void 0 : IB.value.includes("keyChanged")) && (this.serviceWorkerReceiverAvailable = !0)
           }
-          async notifyServiceWorker(tt) {
+          async notifyServiceWorker(BB) {
             if (this.sender && this.activeServiceWorker && function() {
-                var tt;
-                return (null === (tt = null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker) || void 0 === tt ? void 0 : tt.controller) || null
+                var BB;
+                return (null === (BB = null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker) || void 0 === BB ? void 0 : BB.controller) || null
               }() === this.activeServiceWorker) try {
               await this.sender._send("keyChanged", {
-                key: tt
+                key: BB
               }, this.serviceWorkerReceiverAvailable ? 800 : 50)
-            } catch (et) {}
+            } catch (IB) {}
           }
           async _isAvailable() {
             try {
               if (!indexedDB) return !1;
-              const tt = await ZO();
-              return await LO(tt, NO, "1"), await FO(tt, NO), !0
-            } catch (tt) {}
+              const BB = await jT();
+              return await PT(BB, qT, "1"), await RT(BB, qT), !0
+            } catch (BB) {}
             return !1
           }
-          async _withPendingWrite(tt) {
+          async _withPendingWrite(BB) {
             this.pendingWrites++;
             try {
-              await tt()
+              await BB()
             } finally {
               this.pendingWrites--
             }
           }
-          async _set(tt, et) {
-            return this._withPendingWrite((async () => (await this._withRetries((Vt => LO(Vt, tt, et))), this.localCache[tt] = et, this.notifyServiceWorker(tt))))
+          async _set(BB, IB) {
+            return this._withPendingWrite((async () => (await this._withRetries((ZB => PT(ZB, BB, IB))), this.localCache[BB] = IB, this.notifyServiceWorker(BB))))
           }
-          async _get(tt) {
-            const et = await this._withRetries((et => async function(tt, et) {
-              const Vt = PO(tt, !1).get(et),
-                Ot = await new IO(Vt).toPromise();
-              return void 0 === Ot ? null : Ot.value
-            }(et, tt)));
-            return this.localCache[tt] = et, et
+          async _get(BB) {
+            const IB = await this._withRetries((IB => async function(BB, IB) {
+              const ZB = MT(BB, !1).get(IB),
+                TB = await new HT(ZB).toPromise();
+              return void 0 === TB ? null : TB.value
+            }(IB, BB)));
+            return this.localCache[BB] = IB, IB
           }
-          async _remove(tt) {
-            return this._withPendingWrite((async () => (await this._withRetries((et => FO(et, tt))), delete this.localCache[tt], this.notifyServiceWorker(tt))))
+          async _remove(BB) {
+            return this._withPendingWrite((async () => (await this._withRetries((IB => RT(IB, BB))), delete this.localCache[BB], this.notifyServiceWorker(BB))))
           }
           async _poll() {
-            const tt = await this._withRetries((tt => {
-              const et = PO(tt, !1).getAll();
-              return new IO(et).toPromise()
+            const BB = await this._withRetries((BB => {
+              const IB = MT(BB, !1).getAll();
+              return new HT(IB).toPromise()
             }));
-            if (!tt) return [];
+            if (!BB) return [];
             if (0 !== this.pendingWrites) return [];
-            const et = [],
-              Vt = new Set;
+            const IB = [],
+              ZB = new Set;
             for (const {
-                fbase_key: Ot,
-                value: qt
+                fbase_key: TB,
+                value: JB
               }
-              of tt) Vt.add(Ot), JSON.stringify(this.localCache[Ot]) !== JSON.stringify(qt) && (this.notifyListeners(Ot, qt), et.push(Ot));
-            for (const Ot of Object.keys(this.localCache)) this.localCache[Ot] && !Vt.has(Ot) && (this.notifyListeners(Ot, null), et.push(Ot));
-            return et
+              of BB) ZB.add(TB), JSON.stringify(this.localCache[TB]) !== JSON.stringify(JB) && (this.notifyListeners(TB, JB), IB.push(TB));
+            for (const TB of Object.keys(this.localCache)) this.localCache[TB] && !ZB.has(TB) && (this.notifyListeners(TB, null), IB.push(TB));
+            return IB
           }
-          notifyListeners(tt, et) {
-            this.localCache[tt] = et;
-            const Vt = this.listeners[tt];
-            if (Vt)
-              for (const Ot of Array.from(Vt)) Ot(et)
+          notifyListeners(BB, IB) {
+            this.localCache[BB] = IB;
+            const ZB = this.listeners[BB];
+            if (ZB)
+              for (const TB of Array.from(ZB)) TB(IB)
           }
           startPolling() {
             this.stopPolling(), this.pollTimer = setInterval((async () => this._poll()), 800)
@@ -3188,49 +3188,49 @@ export const modules = {
           stopPolling() {
             this.pollTimer && (clearInterval(this.pollTimer), this.pollTimer = null)
           }
-          _addListener(tt, et) {
-            0 === Object.keys(this.listeners).length && this.startPolling(), this.listeners[tt] || (this.listeners[tt] = new Set, this._get(tt)), this.listeners[tt].add(et)
+          _addListener(BB, IB) {
+            0 === Object.keys(this.listeners).length && this.startPolling(), this.listeners[BB] || (this.listeners[BB] = new Set, this._get(BB)), this.listeners[BB].add(IB)
           }
-          _removeListener(tt, et) {
-            this.listeners[tt] && (this.listeners[tt].delete(et), 0 === this.listeners[tt].size && delete this.listeners[tt]), 0 === Object.keys(this.listeners).length && this.stopPolling()
-          }
-        }
-        kO.type = "LOCAL";
-        const GO = kO;
-        const zO = 1e12;
-        class oO {
-          constructor(tt) {
-            this.auth = tt, this.counter = zO, this._widgets = new Map
-          }
-          render(tt, et) {
-            const Vt = this.counter;
-            return this._widgets.set(Vt, new rO(tt, this.auth.name, et || {})), this.counter++, Vt
-          }
-          reset(tt) {
-            var et;
-            const Vt = tt || zO;
-            null === (et = this._widgets.get(Vt)) || void 0 === et || et.delete(), this._widgets.delete(Vt)
-          }
-          getResponse(tt) {
-            var et;
-            const Vt = tt || zO;
-            return (null === (et = this._widgets.get(Vt)) || void 0 === et ? void 0 : et.getResponse()) || ""
-          }
-          async execute(tt) {
-            var et;
-            const Vt = tt || zO;
-            return null === (et = this._widgets.get(Vt)) || void 0 === et || et.execute(), ""
+          _removeListener(BB, IB) {
+            this.listeners[BB] && (this.listeners[BB].delete(IB), 0 === this.listeners[BB].size && delete this.listeners[BB]), 0 === Object.keys(this.listeners).length && this.stopPolling()
           }
         }
-        class rO {
-          constructor(tt, et, Vt) {
-            this.params = Vt, this.timerId = null, this.deleted = !1, this.responseToken = null, this.clickHandler = () => {
+        rT.type = "LOCAL";
+        const mT = rT;
+        const XT = 1e12;
+        class LT {
+          constructor(BB) {
+            this.auth = BB, this.counter = XT, this._widgets = new Map
+          }
+          render(BB, IB) {
+            const ZB = this.counter;
+            return this._widgets.set(ZB, new eT(BB, this.auth.name, IB || {})), this.counter++, ZB
+          }
+          reset(BB) {
+            var IB;
+            const ZB = BB || XT;
+            null === (IB = this._widgets.get(ZB)) || void 0 === IB || IB.delete(), this._widgets.delete(ZB)
+          }
+          getResponse(BB) {
+            var IB;
+            const ZB = BB || XT;
+            return (null === (IB = this._widgets.get(ZB)) || void 0 === IB ? void 0 : IB.getResponse()) || ""
+          }
+          async execute(BB) {
+            var IB;
+            const ZB = BB || XT;
+            return null === (IB = this._widgets.get(ZB)) || void 0 === IB || IB.execute(), ""
+          }
+        }
+        class eT {
+          constructor(BB, IB, ZB) {
+            this.params = ZB, this.timerId = null, this.deleted = !1, this.responseToken = null, this.clickHandler = () => {
               this.execute()
             };
-            const Ot = "string" === typeof tt ? document.getElementById(tt) : tt;
-            vt(Ot, "argument-error", {
-              appName: et
-            }), this.container = Ot, this.isVisible = "invisible" !== this.params.size, this.isVisible ? this.execute() : this.container.addEventListener("click", this.clickHandler)
+            const TB = "string" === typeof BB ? document.getElementById(BB) : BB;
+            OB(TB, "argument-error", {
+              appName: IB
+            }), this.container = TB, this.isVisible = "invisible" !== this.params.size, this.isVisible ? this.execute() : this.container.addEventListener("click", this.clickHandler)
           }
           getResponse() {
             return this.checkIfDeleted(), this.responseToken
@@ -3240,23 +3240,23 @@ export const modules = {
           }
           execute() {
             this.checkIfDeleted(), this.timerId || (this.timerId = window.setTimeout((() => {
-              this.responseToken = function(tt) {
-                const et = [],
-                  Vt = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-                for (let Ot = 0; Ot < tt; Ot++) et.push(Vt.charAt(Math.floor(Math.random() * Vt.length)));
-                return et.join("")
+              this.responseToken = function(BB) {
+                const IB = [],
+                  ZB = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                for (let TB = 0; TB < BB; TB++) IB.push(ZB.charAt(Math.floor(Math.random() * ZB.length)));
+                return IB.join("")
               }(50);
               const {
-                callback: tt,
-                "expired-callback": et
+                callback: BB,
+                "expired-callback": IB
               } = this.params;
-              if (tt) try {
-                tt(this.responseToken)
-              } catch (Vt) {}
+              if (BB) try {
+                BB(this.responseToken)
+              } catch (ZB) {}
               this.timerId = window.setTimeout((() => {
-                if (this.timerId = null, this.responseToken = null, et) try {
-                  et()
-                } catch (Vt) {}
+                if (this.timerId = null, this.responseToken = null, IB) try {
+                  IB()
+                } catch (ZB) {}
                 this.isVisible && this.execute()
               }), 6e4)
             }), 500))
@@ -3265,268 +3265,268 @@ export const modules = {
             if (this.deleted) throw new Error("reCAPTCHA mock was already deleted!")
           }
         }
-        const UO = We("rcb"),
-          AO = new Pt(3e4, 6e4);
-        class iO {
+        const uT = YI("rcb"),
+          fT = new MB(3e4, 6e4);
+        class lT {
           constructor() {
-            var tt;
-            this.hostLanguage = "", this.counter = 0, this.librarySeparatelyLoaded = !!(null === (tt = vO().grecaptcha) || void 0 === tt ? void 0 : tt.render)
+            var BB;
+            this.hostLanguage = "", this.counter = 0, this.librarySeparatelyLoaded = !!(null === (BB = OT().grecaptcha) || void 0 === BB ? void 0 : BB.render)
           }
-          load(tt) {
-            let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-            return vt(function(tt) {
-              return tt.length <= 6 && /^\s*[a-zA-Z0-9\-]*\s*$/.test(tt)
-            }(et), tt, "argument-error"), this.shouldResolveImmediately(et) && ue(vO().grecaptcha) ? Promise.resolve(vO().grecaptcha) : new Promise(((Vt, qt) => {
-              const Dt = vO().setTimeout((() => {
-                qt(Ct(tt, "network-request-failed"))
-              }), AO.get());
-              vO()[UO] = () => {
-                vO().clearTimeout(Dt), delete vO()[UO];
-                const Ot = vO().grecaptcha;
-                if (!Ot || !ue(Ot)) return void qt(Ct(tt, "internal-error"));
-                const mt = Ot.render;
-                Ot.render = (tt, et) => {
-                  const Vt = mt(tt, et);
-                  return this.counter++, Vt
-                }, this.hostLanguage = et, Vt(Ot)
+          load(BB) {
+            let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+            return OB(function(BB) {
+              return BB.length <= 6 && /^\s*[a-zA-Z0-9\-]*\s*$/.test(BB)
+            }(IB), BB, "argument-error"), this.shouldResolveImmediately(IB) && QI(OT().grecaptcha) ? Promise.resolve(OT().grecaptcha) : new Promise(((ZB, JB) => {
+              const oB = OT().setTimeout((() => {
+                JB(CB(BB, "network-request-failed"))
+              }), fT.get());
+              OT()[uT] = () => {
+                OT().clearTimeout(oB), delete OT()[uT];
+                const TB = OT().grecaptcha;
+                if (!TB || !QI(TB)) return void JB(CB(BB, "internal-error"));
+                const GB = TB.render;
+                TB.render = (BB, IB) => {
+                  const ZB = GB(BB, IB);
+                  return this.counter++, ZB
+                }, this.hostLanguage = IB, ZB(TB)
               };
-              ve(`https://www.google.com/recaptcha/api.js??${(0,Ot.kb)({onload:UO,render:"explicit",hl:et})}`).catch((() => {
-                clearTimeout(Dt), qt(Ct(tt, "internal-error"))
+              OI(`https://www.google.com/recaptcha/api.js??${(0,TB.db)({onload:uT,render:"explicit",hl:IB})}`).catch((() => {
+                clearTimeout(oB), JB(CB(BB, "internal-error"))
               }))
             }))
           }
           clearedOneInstance() {
             this.counter--
           }
-          shouldResolveImmediately(tt) {
-            var et;
-            return !!(null === (et = vO().grecaptcha) || void 0 === et ? void 0 : et.render) && (tt === this.hostLanguage || this.counter > 0 || this.librarySeparatelyLoaded)
+          shouldResolveImmediately(BB) {
+            var IB;
+            return !!(null === (IB = OT().grecaptcha) || void 0 === IB ? void 0 : IB.render) && (BB === this.hostLanguage || this.counter > 0 || this.librarySeparatelyLoaded)
           }
         }
-        class YO {
-          async load(tt) {
-            return new oO(tt)
+        class AT {
+          async load(BB) {
+            return new LT(BB)
           }
           clearedOneInstance() {}
         }
-        const BO = "recaptcha",
-          pO = {
+        const tT = "recaptcha",
+          bT = {
             theme: "light",
             type: "image"
           };
-        class xO {
-          constructor(tt) {
-            let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.assign({}, pO),
-              Vt = arguments.length > 2 ? arguments[2] : void 0;
-            this.parameters = et, this.type = BO, this.destroyed = !1, this.widgetId = null, this.tokenChangeListeners = new Set, this.renderPromise = null, this.recaptcha = null, this.auth = Pe(Vt), this.isInvisible = "invisible" === this.parameters.size, vt("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment");
-            const Ot = "string" === typeof tt ? document.getElementById(tt) : tt;
-            vt(Ot, this.auth, "argument-error"), this.container = Ot, this.parameters.callback = this.makeTokenCallback(this.parameters.callback), this._recaptchaLoader = this.auth.settings.appVerificationDisabledForTesting ? new YO : new iO, this.validateStartingState()
+        class xT {
+          constructor(BB) {
+            let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.assign({}, bT),
+              ZB = arguments.length > 2 ? arguments[2] : void 0;
+            this.parameters = IB, this.type = tT, this.destroyed = !1, this.widgetId = null, this.tokenChangeListeners = new Set, this.renderPromise = null, this.recaptcha = null, this.auth = MI(ZB), this.isInvisible = "invisible" === this.parameters.size, OB("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment");
+            const TB = "string" === typeof BB ? document.getElementById(BB) : BB;
+            OB(TB, this.auth, "argument-error"), this.container = TB, this.parameters.callback = this.makeTokenCallback(this.parameters.callback), this._recaptchaLoader = this.auth.settings.appVerificationDisabledForTesting ? new AT : new lT, this.validateStartingState()
           }
           async verify() {
             this.assertNotDestroyed();
-            const tt = await this.render(),
-              et = this.getAssertedRecaptcha(),
-              Vt = et.getResponse(tt);
-            return Vt || new Promise((Vt => {
-              const Ot = tt => {
-                tt && (this.tokenChangeListeners.delete(Ot), Vt(tt))
+            const BB = await this.render(),
+              IB = this.getAssertedRecaptcha(),
+              ZB = IB.getResponse(BB);
+            return ZB || new Promise((ZB => {
+              const TB = BB => {
+                BB && (this.tokenChangeListeners.delete(TB), ZB(BB))
               };
-              this.tokenChangeListeners.add(Ot), this.isInvisible && et.execute(tt)
+              this.tokenChangeListeners.add(TB), this.isInvisible && IB.execute(BB)
             }))
           }
           render() {
             try {
               this.assertNotDestroyed()
-            } catch (tt) {
-              return Promise.reject(tt)
+            } catch (BB) {
+              return Promise.reject(BB)
             }
-            return this.renderPromise || (this.renderPromise = this.makeRenderPromise().catch((tt => {
-              throw this.renderPromise = null, tt
+            return this.renderPromise || (this.renderPromise = this.makeRenderPromise().catch((BB => {
+              throw this.renderPromise = null, BB
             }))), this.renderPromise
           }
           _reset() {
             this.assertNotDestroyed(), null !== this.widgetId && this.getAssertedRecaptcha().reset(this.widgetId)
           }
           clear() {
-            this.assertNotDestroyed(), this.destroyed = !0, this._recaptchaLoader.clearedOneInstance(), this.isInvisible || this.container.childNodes.forEach((tt => {
-              this.container.removeChild(tt)
+            this.assertNotDestroyed(), this.destroyed = !0, this._recaptchaLoader.clearedOneInstance(), this.isInvisible || this.container.childNodes.forEach((BB => {
+              this.container.removeChild(BB)
             }))
           }
           validateStartingState() {
-            vt(!this.parameters.sitekey, this.auth, "argument-error"), vt(this.isInvisible || !this.container.hasChildNodes(), this.auth, "argument-error"), vt("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment")
+            OB(!this.parameters.sitekey, this.auth, "argument-error"), OB(this.isInvisible || !this.container.hasChildNodes(), this.auth, "argument-error"), OB("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment")
           }
-          makeTokenCallback(tt) {
-            return et => {
-              if (this.tokenChangeListeners.forEach((tt => tt(et))), "function" === typeof tt) tt(et);
-              else if ("string" === typeof tt) {
-                const Vt = vO()[tt];
-                "function" === typeof Vt && Vt(et)
+          makeTokenCallback(BB) {
+            return IB => {
+              if (this.tokenChangeListeners.forEach((BB => BB(IB))), "function" === typeof BB) BB(IB);
+              else if ("string" === typeof BB) {
+                const ZB = OT()[BB];
+                "function" === typeof ZB && ZB(IB)
               }
             }
           }
           assertNotDestroyed() {
-            vt(!this.destroyed, this.auth, "internal-error")
+            OB(!this.destroyed, this.auth, "internal-error")
           }
           async makeRenderPromise() {
             if (await this.init(), !this.widgetId) {
-              let tt = this.container;
+              let BB = this.container;
               if (!this.isInvisible) {
-                const et = document.createElement("div");
-                tt.appendChild(et), tt = et
+                const IB = document.createElement("div");
+                BB.appendChild(IB), BB = IB
               }
-              this.widgetId = this.getAssertedRecaptcha().render(tt, this.parameters)
+              this.widgetId = this.getAssertedRecaptcha().render(BB, this.parameters)
             }
             return this.widgetId
           }
           async init() {
-            vt(Rt() && !WO(), this.auth, "internal-error"), await
+            OB(aB() && !YT(), this.auth, "internal-error"), await
             function() {
-              let tt = null;
-              return new Promise((et => {
-                "complete" !== document.readyState ? (tt = () => et(), window.addEventListener("load", tt)) : et()
-              })).catch((et => {
-                throw tt && window.removeEventListener("load", tt), et
+              let BB = null;
+              return new Promise((IB => {
+                "complete" !== document.readyState ? (BB = () => IB(), window.addEventListener("load", BB)) : IB()
+              })).catch((IB => {
+                throw BB && window.removeEventListener("load", BB), IB
               }))
             }(), this.recaptcha = await this._recaptchaLoader.load(this.auth, this.auth.languageCode || void 0);
-            const tt = await async function(tt) {
-              return (await zt(tt, "GET", "/v1/recaptchaParams")).recaptchaSiteKey || ""
+            const BB = await async function(BB) {
+              return (await XB(BB, "GET", "/v1/recaptchaParams")).recaptchaSiteKey || ""
             }(this.auth);
-            vt(tt, this.auth, "internal-error"), this.parameters.sitekey = tt
+            OB(BB, this.auth, "internal-error"), this.parameters.sitekey = BB
           }
           getAssertedRecaptcha() {
-            return vt(this.recaptcha, this.auth, "internal-error"), this.recaptcha
+            return OB(this.recaptcha, this.auth, "internal-error"), this.recaptcha
           }
         }
-        class TO {
-          constructor(tt, et) {
-            this.verificationId = tt, this.onConfirmation = et
+        class ET {
+          constructor(BB, IB) {
+            this.verificationId = BB, this.onConfirmation = IB
           }
-          confirm(tt) {
-            const et = ge._fromVerification(this.verificationId, tt);
-            return this.onConfirmation(et)
+          confirm(BB) {
+            const IB = DI._fromVerification(this.verificationId, BB);
+            return this.onConfirmation(IB)
           }
         }
-        async function gO(tt, et, Vt) {
-          const qt = Pe(tt),
-            Dt = await tq(qt, et, (0, Ot.L)(Vt));
-          return new TO(Dt, (tt => CV(qt, tt)))
+        async function DT(BB, IB, ZB) {
+          const JB = MI(BB),
+            oB = await ST(JB, IB, (0, TB.N)(ZB));
+          return new ET(oB, (BB => CZ(JB, BB)))
         }
-        async function sO(tt, et, Vt) {
-          const qt = (0, Ot.L)(tt);
-          await MV(!1, qt, "phone");
-          const Dt = await tq(qt.auth, et, (0, Ot.L)(Vt));
-          return new TO(Dt, (tt => uV(qt, tt)))
+        async function KT(BB, IB, ZB) {
+          const JB = (0, TB.N)(BB);
+          await UZ(!1, JB, "phone");
+          const oB = await ST(JB.auth, IB, (0, TB.N)(ZB));
+          return new ET(oB, (BB => QZ(JB, BB)))
         }
-        async function nO(tt, et, Vt) {
-          const qt = (0, Ot.L)(tt),
-            Dt = await tq(qt.auth, et, (0, Ot.L)(Vt));
-          return new TO(Dt, (tt => KV(qt, tt)))
+        async function VT(BB, IB, ZB) {
+          const JB = (0, TB.N)(BB),
+            oB = await ST(JB.auth, IB, (0, TB.N)(ZB));
+          return new ET(oB, (BB => sZ(JB, BB)))
         }
-        async function tq(tt, et, Vt) {
-          var Ot;
-          const qt = await Vt.verify();
+        async function ST(BB, IB, ZB) {
+          var TB;
+          const JB = await ZB.verify();
           try {
-            let Dt;
-            if (vt("string" === typeof qt, tt, "argument-error"), vt(Vt.type === BO, tt, "argument-error"), Dt = "string" === typeof et ? {
-                phoneNumber: et
-              } : et, "session" in Dt) {
-              const et = Dt.session;
-              if ("phoneNumber" in Dt) {
-                vt("enroll" === et.type, tt, "internal-error");
-                const Vt = await
-                function(tt, et) {
-                  return zt(tt, "POST", "/v2/accounts/mfaEnrollment:start", Gt(tt, et))
-                }(tt, {
-                  idToken: et.credential,
+            let oB;
+            if (OB("string" === typeof JB, BB, "argument-error"), OB(ZB.type === tT, BB, "argument-error"), oB = "string" === typeof IB ? {
+                phoneNumber: IB
+              } : IB, "session" in oB) {
+              const IB = oB.session;
+              if ("phoneNumber" in oB) {
+                OB("enroll" === IB.type, BB, "internal-error");
+                const ZB = await
+                function(BB, IB) {
+                  return XB(BB, "POST", "/v2/accounts/mfaEnrollment:start", mB(BB, IB))
+                }(BB, {
+                  idToken: IB.credential,
                   phoneEnrollmentInfo: {
-                    phoneNumber: Dt.phoneNumber,
-                    recaptchaToken: qt
+                    phoneNumber: oB.phoneNumber,
+                    recaptchaToken: JB
                   }
                 });
-                return Vt.phoneSessionInfo.sessionInfo
+                return ZB.phoneSessionInfo.sessionInfo
               } {
-                vt("signin" === et.type, tt, "internal-error");
-                const Vt = (null === (Ot = Dt.multiFactorHint) || void 0 === Ot ? void 0 : Ot.uid) || Dt.multiFactorUid;
-                vt(Vt, tt, "missing-multi-factor-info");
-                const mt = await
-                function(tt, et) {
-                  return zt(tt, "POST", "/v2/accounts/mfaSignIn:start", Gt(tt, et))
-                }(tt, {
-                  mfaPendingCredential: et.credential,
-                  mfaEnrollmentId: Vt,
+                OB("signin" === IB.type, BB, "internal-error");
+                const ZB = (null === (TB = oB.multiFactorHint) || void 0 === TB ? void 0 : TB.uid) || oB.multiFactorUid;
+                OB(ZB, BB, "missing-multi-factor-info");
+                const GB = await
+                function(BB, IB) {
+                  return XB(BB, "POST", "/v2/accounts/mfaSignIn:start", mB(BB, IB))
+                }(BB, {
+                  mfaPendingCredential: IB.credential,
+                  mfaEnrollmentId: ZB,
                   phoneSignInInfo: {
-                    recaptchaToken: qt
+                    recaptchaToken: JB
                   }
                 });
-                return mt.phoneResponseInfo.sessionInfo
+                return GB.phoneResponseInfo.sessionInfo
               }
             } {
               const {
-                sessionInfo: et
-              } = await async function(tt, et) {
-                return zt(tt, "POST", "/v1/accounts:sendVerificationCode", Gt(tt, et))
-              }(tt, {
-                phoneNumber: Dt.phoneNumber,
-                recaptchaToken: qt
+                sessionInfo: IB
+              } = await async function(BB, IB) {
+                return XB(BB, "POST", "/v1/accounts:sendVerificationCode", mB(BB, IB))
+              }(BB, {
+                phoneNumber: oB.phoneNumber,
+                recaptchaToken: JB
               });
-              return et
+              return IB
             }
           } finally {
-            Vt._reset()
+            ZB._reset()
           }
         }
-        async function eq(tt, et) {
-          await aV((0, Ot.L)(tt), et)
+        async function BJ(BB, IB) {
+          await yZ((0, TB.N)(BB), IB)
         }
-        class Vq {
-          constructor(tt) {
-            this.providerId = Vq.PROVIDER_ID, this.auth = Pe(tt)
+        class IJ {
+          constructor(BB) {
+            this.providerId = IJ.PROVIDER_ID, this.auth = MI(BB)
           }
-          verifyPhoneNumber(tt, et) {
-            return tq(this.auth, tt, (0, Ot.L)(et))
+          verifyPhoneNumber(BB, IB) {
+            return ST(this.auth, BB, (0, TB.N)(IB))
           }
-          static credential(tt, et) {
-            return ge._fromVerification(tt, et)
+          static credential(BB, IB) {
+            return DI._fromVerification(BB, IB)
           }
-          static credentialFromResult(tt) {
-            const et = tt;
-            return Vq.credentialFromTaggedObject(et)
+          static credentialFromResult(BB) {
+            const IB = BB;
+            return IJ.credentialFromTaggedObject(IB)
           }
-          static credentialFromError(tt) {
-            return Vq.credentialFromTaggedObject(tt.customData || {})
+          static credentialFromError(BB) {
+            return IJ.credentialFromTaggedObject(BB.customData || {})
           }
-          static credentialFromTaggedObject(tt) {
+          static credentialFromTaggedObject(BB) {
             let {
-              _tokenResponse: et
-            } = tt;
-            if (!et) return null;
+              _tokenResponse: IB
+            } = BB;
+            if (!IB) return null;
             const {
-              phoneNumber: Vt,
-              temporaryProof: Ot
-            } = et;
-            return Vt && Ot ? ge._fromTokenResponse(Vt, Ot) : null
+              phoneNumber: ZB,
+              temporaryProof: TB
+            } = IB;
+            return ZB && TB ? DI._fromTokenResponse(ZB, TB) : null
           }
         }
 
-        function Oq(tt, et) {
-          return et ? me(et) : (vt(tt._popupRedirectResolver, tt, "argument-error"), tt._popupRedirectResolver)
+        function ZJ(BB, IB) {
+          return IB ? oI(IB) : (OB(BB._popupRedirectResolver, BB, "argument-error"), BB._popupRedirectResolver)
         }
-        Vq.PROVIDER_ID = "phone", Vq.PHONE_SIGN_IN_METHOD = "phone";
-        class qq extends ze {
-          constructor(tt) {
-            super("custom", "custom"), this.params = tt
+        IJ.PROVIDER_ID = "phone", IJ.PHONE_SIGN_IN_METHOD = "phone";
+        class TJ extends XI {
+          constructor(BB) {
+            super("custom", "custom"), this.params = BB
           }
-          _getIdTokenResponse(tt) {
-            return pe(tt, this._buildIdpRequest())
+          _getIdTokenResponse(BB) {
+            return bI(BB, this._buildIdpRequest())
           }
-          _linkToIdToken(tt, et) {
-            return pe(tt, this._buildIdpRequest(et))
+          _linkToIdToken(BB, IB) {
+            return bI(BB, this._buildIdpRequest(IB))
           }
-          _getReauthenticationResolver(tt) {
-            return pe(tt, this._buildIdpRequest())
+          _getReauthenticationResolver(BB) {
+            return bI(BB, this._buildIdpRequest())
           }
-          _buildIdpRequest(tt) {
-            const et = {
+          _buildIdpRequest(BB) {
+            const IB = {
               requestUri: this.params.requestUri,
               sessionId: this.params.sessionId,
               postBody: this.params.postBody,
@@ -3535,187 +3535,187 @@ export const modules = {
               returnSecureToken: !0,
               returnIdpCredential: !0
             };
-            return tt && (et.idToken = tt), et
+            return BB && (IB.idToken = BB), IB
           }
         }
 
-        function Dq(tt) {
-          return JV(tt.auth, new qq(tt), tt.bypassAuthState)
+        function JJ(BB) {
+          return dZ(BB.auth, new TJ(BB), BB.bypassAuthState)
         }
 
-        function mq(tt) {
+        function oJ(BB) {
           const {
-            auth: et,
-            user: Vt
-          } = tt;
-          return vt(Vt, et, "internal-error"), bV(Vt, new qq(tt), tt.bypassAuthState)
+            auth: IB,
+            user: ZB
+          } = BB;
+          return OB(ZB, IB, "internal-error"), WZ(ZB, new TJ(BB), BB.bypassAuthState)
         }
-        async function dq(tt) {
+        async function GJ(BB) {
           const {
-            auth: et,
-            user: Vt
-          } = tt;
-          return vt(Vt, et, "internal-error"), aV(Vt, new qq(tt), tt.bypassAuthState)
+            auth: IB,
+            user: ZB
+          } = BB;
+          return OB(ZB, IB, "internal-error"), yZ(ZB, new TJ(BB), BB.bypassAuthState)
         }
-        class jq {
-          constructor(tt, et, Vt, Ot) {
-            let qt = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-            this.auth = tt, this.resolver = Vt, this.user = Ot, this.bypassAuthState = qt, this.pendingPromise = null, this.eventManager = null, this.filter = Array.isArray(et) ? et : [et]
+        class vJ {
+          constructor(BB, IB, ZB, TB) {
+            let JB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+            this.auth = BB, this.resolver = ZB, this.user = TB, this.bypassAuthState = JB, this.pendingPromise = null, this.eventManager = null, this.filter = Array.isArray(IB) ? IB : [IB]
           }
           execute() {
-            return new Promise((async (tt, et) => {
+            return new Promise((async (BB, IB) => {
               this.pendingPromise = {
-                resolve: tt,
-                reject: et
+                resolve: BB,
+                reject: IB
               };
               try {
                 this.eventManager = await this.resolver._initialize(this.auth), await this.onExecution(), this.eventManager.registerConsumer(this)
-              } catch (Vt) {
-                this.reject(Vt)
+              } catch (ZB) {
+                this.reject(ZB)
               }
             }))
           }
-          async onAuthEvent(tt) {
+          async onAuthEvent(BB) {
             const {
-              urlResponse: et,
-              sessionId: Vt,
-              postBody: Ot,
-              tenantId: qt,
-              error: Dt,
-              type: mt
-            } = tt;
-            if (Dt) return void this.reject(Dt);
-            const dt = {
+              urlResponse: IB,
+              sessionId: ZB,
+              postBody: TB,
+              tenantId: JB,
+              error: oB,
+              type: GB
+            } = BB;
+            if (oB) return void this.reject(oB);
+            const vB = {
               auth: this.auth,
-              requestUri: et,
-              sessionId: Vt,
-              tenantId: qt || void 0,
-              postBody: Ot || void 0,
+              requestUri: IB,
+              sessionId: ZB,
+              tenantId: JB || void 0,
+              postBody: TB || void 0,
               user: this.user,
               bypassAuthState: this.bypassAuthState
             };
             try {
-              this.resolve(await this.getIdpTask(mt)(dt))
-            } catch (jt) {
-              this.reject(jt)
+              this.resolve(await this.getIdpTask(GB)(vB))
+            } catch (kB) {
+              this.reject(kB)
             }
           }
-          onError(tt) {
-            this.reject(tt)
+          onError(BB) {
+            this.reject(BB)
           }
-          getIdpTask(tt) {
-            switch (tt) {
+          getIdpTask(BB) {
+            switch (BB) {
               case "signInViaPopup":
               case "signInViaRedirect":
-                return Dq;
+                return JJ;
               case "linkViaPopup":
               case "linkViaRedirect":
-                return dq;
+                return GJ;
               case "reauthViaPopup":
               case "reauthViaRedirect":
-                return mq;
+                return oJ;
               default:
-                Jt(this.auth, "internal-error")
+                dB(this.auth, "internal-error")
             }
           }
-          resolve(tt) {
-            St(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.resolve(tt), this.unregisterAndCleanUp()
+          resolve(BB) {
+            iB(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.resolve(BB), this.unregisterAndCleanUp()
           }
-          reject(tt) {
-            St(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.reject(tt), this.unregisterAndCleanUp()
+          reject(BB) {
+            iB(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.reject(BB), this.unregisterAndCleanUp()
           }
           unregisterAndCleanUp() {
             this.eventManager && this.eventManager.unregisterConsumer(this), this.pendingPromise = null, this.cleanUp()
           }
         }
-        const Hq = new Pt(2e3, 1e4);
-        async function Xq(tt, et, Vt) {
-          const Ot = Pe(tt);
-          Kt(tt, et, eV);
-          const qt = Oq(Ot, Vt);
-          return new Eq(Ot, "signInViaPopup", et, qt).executeNotNull()
+        const kJ = new MB(2e3, 1e4);
+        async function cJ(BB, IB, ZB) {
+          const TB = MI(BB);
+          sB(BB, IB, BZ);
+          const JB = ZJ(TB, ZB);
+          return new zJ(TB, "signInViaPopup", IB, JB).executeNotNull()
         }
-        async function Qq(tt, et, Vt) {
-          const qt = (0, Ot.L)(tt);
-          Kt(qt.auth, et, eV);
-          const Dt = Oq(qt.auth, Vt);
-          return new Eq(qt.auth, "reauthViaPopup", et, Dt, qt).executeNotNull()
+        async function nJ(BB, IB, ZB) {
+          const JB = (0, TB.N)(BB);
+          sB(JB.auth, IB, BZ);
+          const oB = ZJ(JB.auth, ZB);
+          return new zJ(JB.auth, "reauthViaPopup", IB, oB, JB).executeNotNull()
         }
-        async function lq(tt, et, Vt) {
-          const qt = (0, Ot.L)(tt);
-          Kt(qt.auth, et, eV);
-          const Dt = Oq(qt.auth, Vt);
-          return new Eq(qt.auth, "linkViaPopup", et, Dt, qt).executeNotNull()
+        async function hJ(BB, IB, ZB) {
+          const JB = (0, TB.N)(BB);
+          sB(JB.auth, IB, BZ);
+          const oB = ZJ(JB.auth, ZB);
+          return new zJ(JB.auth, "linkViaPopup", IB, oB, JB).executeNotNull()
         }
-        class Eq extends jq {
-          constructor(tt, et, Vt, Ot, qt) {
-            super(tt, et, Ot, qt), this.provider = Vt, this.authWindow = null, this.pollId = null, Eq.currentPopupAction && Eq.currentPopupAction.cancel(), Eq.currentPopupAction = this
+        class zJ extends vJ {
+          constructor(BB, IB, ZB, TB, JB) {
+            super(BB, IB, TB, JB), this.provider = ZB, this.authWindow = null, this.pollId = null, zJ.currentPopupAction && zJ.currentPopupAction.cancel(), zJ.currentPopupAction = this
           }
           async executeNotNull() {
-            const tt = await this.execute();
-            return vt(tt, this.auth, "internal-error"), tt
+            const BB = await this.execute();
+            return OB(BB, this.auth, "internal-error"), BB
           }
           async onExecution() {
-            St(1 === this.filter.length, "Popup operations only handle one event");
-            const tt = KO();
-            this.authWindow = await this.resolver._openPopup(this.auth, this.provider, this.filter[0], tt), this.authWindow.associatedEvent = tt, this.resolver._originValidation(this.auth).catch((tt => {
-              this.reject(tt)
-            })), this.resolver._isIframeWebStorageSupported(this.auth, (tt => {
-              tt || this.reject(Ct(this.auth, "web-storage-unsupported"))
+            iB(1 === this.filter.length, "Popup operations only handle one event");
+            const BB = sT();
+            this.authWindow = await this.resolver._openPopup(this.auth, this.provider, this.filter[0], BB), this.authWindow.associatedEvent = BB, this.resolver._originValidation(this.auth).catch((BB => {
+              this.reject(BB)
+            })), this.resolver._isIframeWebStorageSupported(this.auth, (BB => {
+              BB || this.reject(CB(this.auth, "web-storage-unsupported"))
             })), this.pollUserCancellation()
           }
           get eventId() {
-            var tt;
-            return (null === (tt = this.authWindow) || void 0 === tt ? void 0 : tt.associatedEvent) || null
+            var BB;
+            return (null === (BB = this.authWindow) || void 0 === BB ? void 0 : BB.associatedEvent) || null
           }
           cancel() {
-            this.reject(Ct(this.auth, "cancelled-popup-request"))
+            this.reject(CB(this.auth, "cancelled-popup-request"))
           }
           cleanUp() {
-            this.authWindow && this.authWindow.close(), this.pollId && window.clearTimeout(this.pollId), this.authWindow = null, this.pollId = null, Eq.currentPopupAction = null
+            this.authWindow && this.authWindow.close(), this.pollId && window.clearTimeout(this.pollId), this.authWindow = null, this.pollId = null, zJ.currentPopupAction = null
           }
           pollUserCancellation() {
-            const tt = () => {
-              var et, Vt;
-              (null === (Vt = null === (et = this.authWindow) || void 0 === et ? void 0 : et.window) || void 0 === Vt ? void 0 : Vt.closed) ? this.pollId = window.setTimeout((() => {
-                this.pollId = null, this.reject(Ct(this.auth, "popup-closed-by-user"))
-              }), 8e3): this.pollId = window.setTimeout(tt, Hq.get())
+            const BB = () => {
+              var IB, ZB;
+              (null === (ZB = null === (IB = this.authWindow) || void 0 === IB ? void 0 : IB.window) || void 0 === ZB ? void 0 : ZB.closed) ? this.pollId = window.setTimeout((() => {
+                this.pollId = null, this.reject(CB(this.auth, "popup-closed-by-user"))
+              }), 8e3): this.pollId = window.setTimeout(BB, kJ.get())
             };
-            tt()
+            BB()
           }
         }
-        Eq.currentPopupAction = null;
-        const fq = "pendingRedirect",
-          wq = new Map;
-        class yq extends jq {
-          constructor(tt, et) {
-            super(tt, ["signInViaRedirect", "linkViaRedirect", "reauthViaRedirect", "unknown"], et, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.eventId = null
+        zJ.currentPopupAction = null;
+        const FJ = "pendingRedirect",
+          NJ = new Map;
+        class gJ extends vJ {
+          constructor(BB, IB) {
+            super(BB, ["signInViaRedirect", "linkViaRedirect", "reauthViaRedirect", "unknown"], IB, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.eventId = null
           }
           async execute() {
-            let tt = wq.get(this.auth._key());
-            if (!tt) {
+            let BB = NJ.get(this.auth._key());
+            if (!BB) {
               try {
-                const et = await async function(tt, et) {
-                  const Vt = bq(et),
-                    Ot = Mq(tt);
-                  if (!await Ot._isAvailable()) return !1;
-                  const qt = "true" === await Ot._get(Vt);
-                  return await Ot._remove(Vt), qt
+                const IB = await async function(BB, IB) {
+                  const ZB = WJ(IB),
+                    TB = UJ(BB);
+                  if (!await TB._isAvailable()) return !1;
+                  const JB = "true" === await TB._get(ZB);
+                  return await TB._remove(ZB), JB
                 }(this.resolver, this.auth) ? await super.execute() : null;
-                tt = () => Promise.resolve(et)
-              } catch (et) {
-                tt = () => Promise.reject(et)
+                BB = () => Promise.resolve(IB)
+              } catch (IB) {
+                BB = () => Promise.reject(IB)
               }
-              wq.set(this.auth._key(), tt)
+              NJ.set(this.auth._key(), BB)
             }
-            return this.bypassAuthState || wq.set(this.auth._key(), (() => Promise.resolve(null))), tt()
+            return this.bypassAuthState || NJ.set(this.auth._key(), (() => Promise.resolve(null))), BB()
           }
-          async onAuthEvent(tt) {
-            if ("signInViaRedirect" === tt.type) return super.onAuthEvent(tt);
-            if ("unknown" !== tt.type) {
-              if (tt.eventId) {
-                const et = await this.auth._redirectUserForId(tt.eventId);
-                if (et) return this.user = et, super.onAuthEvent(tt);
+          async onAuthEvent(BB) {
+            if ("signInViaRedirect" === BB.type) return super.onAuthEvent(BB);
+            if ("unknown" !== BB.type) {
+              if (BB.eventId) {
+                const IB = await this.auth._redirectUserForId(BB.eventId);
+                if (IB) return this.user = IB, super.onAuthEvent(BB);
                 this.resolve(null)
               }
             } else this.resolve(null)
@@ -3723,199 +3723,199 @@ export const modules = {
           async onExecution() {}
           cleanUp() {}
         }
-        async function Nq(tt, et) {
-          return Mq(tt)._set(bq(et), "true")
+        async function qJ(BB, IB) {
+          return UJ(BB)._set(WJ(IB), "true")
         }
 
-        function aq(tt, et) {
-          wq.set(tt._key(), et)
+        function yJ(BB, IB) {
+          NJ.set(BB._key(), IB)
         }
 
-        function Mq(tt) {
-          return me(tt._redirectPersistence)
+        function UJ(BB) {
+          return oI(BB._redirectPersistence)
         }
 
-        function bq(tt) {
-          return He(fq, tt.config.apiKey, tt.name)
+        function WJ(BB) {
+          return kI(FJ, BB.config.apiKey, BB.name)
         }
 
-        function Jq(tt, et, Vt) {
-          return async function(tt, et, Vt) {
-            const Ot = Pe(tt);
-            Kt(tt, et, eV), await Ot._initializationPromise;
-            const qt = Oq(Ot, Vt);
-            return await Nq(qt, Ot), qt._openRedirect(Ot, et, "signInViaRedirect")
-          }(tt, et, Vt)
+        function dJ(BB, IB, ZB) {
+          return async function(BB, IB, ZB) {
+            const TB = MI(BB);
+            sB(BB, IB, BZ), await TB._initializationPromise;
+            const JB = ZJ(TB, ZB);
+            return await qJ(JB, TB), JB._openRedirect(TB, IB, "signInViaRedirect")
+          }(BB, IB, ZB)
         }
 
-        function Cq(tt, et, Vt) {
-          return async function(tt, et, Vt) {
-            const qt = (0, Ot.L)(tt);
-            Kt(qt.auth, et, eV), await qt.auth._initializationPromise;
-            const Dt = Oq(qt.auth, Vt);
-            await Nq(Dt, qt.auth);
-            const mt = await vq(qt);
-            return Dt._openRedirect(qt.auth, et, "reauthViaRedirect", mt)
-          }(tt, et, Vt)
+        function CJ(BB, IB, ZB) {
+          return async function(BB, IB, ZB) {
+            const JB = (0, TB.N)(BB);
+            sB(JB.auth, IB, BZ), await JB.auth._initializationPromise;
+            const oB = ZJ(JB.auth, ZB);
+            await qJ(oB, JB.auth);
+            const GB = await OJ(JB);
+            return oB._openRedirect(JB.auth, IB, "reauthViaRedirect", GB)
+          }(BB, IB, ZB)
         }
 
-        function uq(tt, et, Vt) {
-          return async function(tt, et, Vt) {
-            const qt = (0, Ot.L)(tt);
-            Kt(qt.auth, et, eV), await qt.auth._initializationPromise;
-            const Dt = Oq(qt.auth, Vt);
-            await MV(!1, qt, et.providerId), await Nq(Dt, qt.auth);
-            const mt = await vq(qt);
-            return Dt._openRedirect(qt.auth, et, "linkViaRedirect", mt)
-          }(tt, et, Vt)
+        function QJ(BB, IB, ZB) {
+          return async function(BB, IB, ZB) {
+            const JB = (0, TB.N)(BB);
+            sB(JB.auth, IB, BZ), await JB.auth._initializationPromise;
+            const oB = ZJ(JB.auth, ZB);
+            await UZ(!1, JB, IB.providerId), await qJ(oB, JB.auth);
+            const GB = await OJ(JB);
+            return oB._openRedirect(JB.auth, IB, "linkViaRedirect", GB)
+          }(BB, IB, ZB)
         }
-        async function Kq(tt, et) {
-          return await Pe(tt)._initializationPromise, hq(tt, et, !1)
+        async function sJ(BB, IB) {
+          return await MI(BB)._initializationPromise, wJ(BB, IB, !1)
         }
-        async function hq(tt, et) {
-          let Vt = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const Ot = Pe(tt),
-            qt = Oq(Ot, et),
-            Dt = new yq(Ot, qt, Vt),
-            mt = await Dt.execute();
-          return mt && !Vt && (delete mt.user._redirectEventId, await Ot._persistUserIfCurrent(mt.user), await Ot._setRedirectUser(null, et)), mt
+        async function wJ(BB, IB) {
+          let ZB = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const TB = MI(BB),
+            JB = ZJ(TB, IB),
+            oB = new gJ(TB, JB, ZB),
+            GB = await oB.execute();
+          return GB && !ZB && (delete GB.user._redirectEventId, await TB._persistUserIfCurrent(GB.user), await TB._setRedirectUser(null, IB)), GB
         }
-        async function vq(tt) {
-          const et = KO(`${tt.uid}:::`);
-          return tt._redirectEventId = et, await tt.auth._setRedirectUser(tt), await tt.auth._persistUserIfCurrent(tt), et
+        async function OJ(BB) {
+          const IB = sT(`${BB.uid}:::`);
+          return BB._redirectEventId = IB, await BB.auth._setRedirectUser(BB), await BB.auth._persistUserIfCurrent(BB), IB
         }
-        class Wq {
-          constructor(tt) {
-            this.auth = tt, this.cachedEventUids = new Set, this.consumers = new Set, this.queuedRedirectEvent = null, this.hasHandledPotentialRedirect = !1, this.lastProcessedEventTime = Date.now()
+        class YJ {
+          constructor(BB) {
+            this.auth = BB, this.cachedEventUids = new Set, this.consumers = new Set, this.queuedRedirectEvent = null, this.hasHandledPotentialRedirect = !1, this.lastProcessedEventTime = Date.now()
           }
-          registerConsumer(tt) {
-            this.consumers.add(tt), this.queuedRedirectEvent && this.isEventForConsumer(this.queuedRedirectEvent, tt) && (this.sendToConsumer(this.queuedRedirectEvent, tt), this.saveEventToCache(this.queuedRedirectEvent), this.queuedRedirectEvent = null)
+          registerConsumer(BB) {
+            this.consumers.add(BB), this.queuedRedirectEvent && this.isEventForConsumer(this.queuedRedirectEvent, BB) && (this.sendToConsumer(this.queuedRedirectEvent, BB), this.saveEventToCache(this.queuedRedirectEvent), this.queuedRedirectEvent = null)
           }
-          unregisterConsumer(tt) {
-            this.consumers.delete(tt)
+          unregisterConsumer(BB) {
+            this.consumers.delete(BB)
           }
-          onEvent(tt) {
-            if (this.hasEventBeenHandled(tt)) return !1;
-            let et = !1;
-            return this.consumers.forEach((Vt => {
-              this.isEventForConsumer(tt, Vt) && (et = !0, this.sendToConsumer(tt, Vt), this.saveEventToCache(tt))
-            })), this.hasHandledPotentialRedirect || ! function(tt) {
-              switch (tt.type) {
+          onEvent(BB) {
+            if (this.hasEventBeenHandled(BB)) return !1;
+            let IB = !1;
+            return this.consumers.forEach((ZB => {
+              this.isEventForConsumer(BB, ZB) && (IB = !0, this.sendToConsumer(BB, ZB), this.saveEventToCache(BB))
+            })), this.hasHandledPotentialRedirect || ! function(BB) {
+              switch (BB.type) {
                 case "signInViaRedirect":
                 case "linkViaRedirect":
                 case "reauthViaRedirect":
                   return !0;
                 case "unknown":
-                  return cq(tt);
+                  return pJ(BB);
                 default:
                   return !1
               }
-            }(tt) || (this.hasHandledPotentialRedirect = !0, et || (this.queuedRedirectEvent = tt, et = !0)), et
+            }(BB) || (this.hasHandledPotentialRedirect = !0, IB || (this.queuedRedirectEvent = BB, IB = !0)), IB
           }
-          sendToConsumer(tt, et) {
-            var Vt;
-            if (tt.error && !cq(tt)) {
-              const Ot = (null === (Vt = tt.error.code) || void 0 === Vt ? void 0 : Vt.split("auth/")[1]) || "internal-error";
-              et.onError(Ct(this.auth, Ot))
-            } else et.onAuthEvent(tt)
+          sendToConsumer(BB, IB) {
+            var ZB;
+            if (BB.error && !pJ(BB)) {
+              const TB = (null === (ZB = BB.error.code) || void 0 === ZB ? void 0 : ZB.split("auth/")[1]) || "internal-error";
+              IB.onError(CB(this.auth, TB))
+            } else IB.onAuthEvent(BB)
           }
-          isEventForConsumer(tt, et) {
-            const Vt = null === et.eventId || !!tt.eventId && tt.eventId === et.eventId;
-            return et.filter.includes(tt.type) && Vt
+          isEventForConsumer(BB, IB) {
+            const ZB = null === IB.eventId || !!BB.eventId && BB.eventId === IB.eventId;
+            return IB.filter.includes(BB.type) && ZB
           }
-          hasEventBeenHandled(tt) {
-            return Date.now() - this.lastProcessedEventTime >= 6e5 && this.cachedEventUids.clear(), this.cachedEventUids.has(Sq(tt))
+          hasEventBeenHandled(BB) {
+            return Date.now() - this.lastProcessedEventTime >= 6e5 && this.cachedEventUids.clear(), this.cachedEventUids.has(iJ(BB))
           }
-          saveEventToCache(tt) {
-            this.cachedEventUids.add(Sq(tt)), this.lastProcessedEventTime = Date.now()
+          saveEventToCache(BB) {
+            this.cachedEventUids.add(iJ(BB)), this.lastProcessedEventTime = Date.now()
           }
         }
 
-        function Sq(tt) {
-          return [tt.type, tt.eventId, tt.sessionId, tt.tenantId].filter((tt => tt)).join("-")
+        function iJ(BB) {
+          return [BB.type, BB.eventId, BB.sessionId, BB.tenantId].filter((BB => BB)).join("-")
         }
 
-        function cq(tt) {
+        function pJ(BB) {
           let {
-            type: et,
-            error: Vt
-          } = tt;
-          return "unknown" === et && "auth/no-auth-event" === (null === Vt || void 0 === Vt ? void 0 : Vt.code)
+            type: IB,
+            error: ZB
+          } = BB;
+          return "unknown" === IB && "auth/no-auth-event" === (null === ZB || void 0 === ZB ? void 0 : ZB.code)
         }
-        const Rq = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/,
-          Iq = /^https?/;
-        async function Pq(tt) {
-          if (tt.config.emulator) return;
+        const aJ = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/,
+          HJ = /^https?/;
+        async function MJ(BB) {
+          if (BB.config.emulator) return;
           const {
-            authorizedDomains: et
-          } = await async function(tt) {
-            return zt(tt, "GET", "/v1/projects", arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
-          }(tt);
-          for (const Ot of et) try {
-            if (Zq(Ot)) return
-          } catch (Vt) {}
-          Jt(tt, "unauthorized-domain")
+            authorizedDomains: IB
+          } = await async function(BB) {
+            return XB(BB, "GET", "/v1/projects", arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+          }(BB);
+          for (const TB of IB) try {
+            if (jJ(TB)) return
+          } catch (ZB) {}
+          dB(BB, "unauthorized-domain")
         }
 
-        function Zq(tt) {
-          const et = ct(),
+        function jJ(BB) {
+          const IB = pB(),
             {
-              protocol: Vt,
-              hostname: Ot
-            } = new URL(et);
-          if (tt.startsWith("chrome-extension://")) {
-            const qt = new URL(tt);
-            return "" === qt.hostname && "" === Ot ? "chrome-extension:" === Vt && tt.replace("chrome-extension://", "") === et.replace("chrome-extension://", "") : "chrome-extension:" === Vt && qt.hostname === Ot
+              protocol: ZB,
+              hostname: TB
+            } = new URL(IB);
+          if (BB.startsWith("chrome-extension://")) {
+            const JB = new URL(BB);
+            return "" === JB.hostname && "" === TB ? "chrome-extension:" === ZB && BB.replace("chrome-extension://", "") === IB.replace("chrome-extension://", "") : "chrome-extension:" === ZB && JB.hostname === TB
           }
-          if (!Iq.test(Vt)) return !1;
-          if (Rq.test(tt)) return Ot === tt;
-          const qt = tt.replace(/\./g, "\\.");
-          return new RegExp("^(.+\\." + qt + "|" + qt + ")$", "i").test(Ot)
+          if (!HJ.test(ZB)) return !1;
+          if (aJ.test(BB)) return TB === BB;
+          const JB = BB.replace(/\./g, "\\.");
+          return new RegExp("^(.+\\." + JB + "|" + JB + ")$", "i").test(TB)
         }
-        const Lq = new Pt(3e4, 6e4);
+        const PJ = new MB(3e4, 6e4);
 
-        function Fq() {
-          const tt = vO().___jsl;
-          if (null === tt || void 0 === tt ? void 0 : tt.H)
-            for (const et of Object.keys(tt.H))
-              if (tt.H[et].r = tt.H[et].r || [], tt.H[et].L = tt.H[et].L || [], tt.H[et].r = [...tt.H[et].L], tt.CP)
-                for (let Vt = 0; Vt < tt.CP.length; Vt++) tt.CP[Vt] = null
+        function RJ() {
+          const BB = OT().___jsl;
+          if (null === BB || void 0 === BB ? void 0 : BB.H)
+            for (const IB of Object.keys(BB.H))
+              if (BB.H[IB].r = BB.H[IB].r || [], BB.H[IB].L = BB.H[IB].L || [], BB.H[IB].r = [...BB.H[IB].L], BB.CP)
+                for (let ZB = 0; ZB < BB.CP.length; ZB++) BB.CP[ZB] = null
         }
-        let kq = null;
+        let rJ = null;
 
-        function Gq(tt) {
-          return kq = kq || function(tt) {
-            return new Promise(((et, Vt) => {
-              var Ot, qt, Dt;
+        function mJ(BB) {
+          return rJ = rJ || function(BB) {
+            return new Promise(((IB, ZB) => {
+              var TB, JB, oB;
 
-              function mt() {
-                Fq(), gapi.load("gapi.iframes", {
+              function GB() {
+                RJ(), gapi.load("gapi.iframes", {
                   callback: () => {
-                    et(gapi.iframes.getContext())
+                    IB(gapi.iframes.getContext())
                   },
                   ontimeout: () => {
-                    Fq(), Vt(Ct(tt, "network-request-failed"))
+                    RJ(), ZB(CB(BB, "network-request-failed"))
                   },
-                  timeout: Lq.get()
+                  timeout: PJ.get()
                 })
               }
-              if (null === (qt = null === (Ot = vO().gapi) || void 0 === Ot ? void 0 : Ot.iframes) || void 0 === qt ? void 0 : qt.Iframe) et(gapi.iframes.getContext());
+              if (null === (JB = null === (TB = OT().gapi) || void 0 === TB ? void 0 : TB.iframes) || void 0 === JB ? void 0 : JB.Iframe) IB(gapi.iframes.getContext());
               else {
-                if (!(null === (Dt = vO().gapi) || void 0 === Dt ? void 0 : Dt.load)) {
-                  const et = We("iframefcb");
-                  return vO()[et] = () => {
-                    gapi.load ? mt() : Vt(Ct(tt, "network-request-failed"))
-                  }, ve(`https://apis.google.com/js/api.js?onload=${et}`).catch((tt => Vt(tt)))
+                if (!(null === (oB = OT().gapi) || void 0 === oB ? void 0 : oB.load)) {
+                  const IB = YI("iframefcb");
+                  return OT()[IB] = () => {
+                    gapi.load ? GB() : ZB(CB(BB, "network-request-failed"))
+                  }, OI(`https://apis.google.com/js/api.js?onload=${IB}`).catch((BB => ZB(BB)))
                 }
-                mt()
+                GB()
               }
-            })).catch((tt => {
-              throw kq = null, tt
+            })).catch((BB => {
+              throw rJ = null, BB
             }))
-          }(tt), kq
+          }(BB), rJ
         }
-        const zq = new Pt(5e3, 15e3),
-          oq = {
+        const XJ = new MB(5e3, 15e3),
+          LJ = {
             style: {
               position: "absolute",
               top: "-100px",
@@ -3925,102 +3925,102 @@ export const modules = {
             "aria-hidden": "true",
             tabindex: "-1"
           },
-          rq = new Map([
+          eJ = new Map([
             ["identitytoolkit.googleapis.com", "p"],
             ["staging-identitytoolkit.sandbox.googleapis.com", "s"],
             ["test-identitytoolkit.sandbox.googleapis.com", "t"]
           ]);
 
-        function Uq(tt) {
-          const et = tt.config;
-          vt(et.authDomain, tt, "auth-domain-config-required");
-          const Vt = et.emulator ? Zt(et, "emulator/auth/iframe") : `https://${tt.config.authDomain}/__/auth/iframe`,
-            Dt = {
-              apiKey: et.apiKey,
-              appName: tt.name,
-              v: qt.g
+        function uJ(BB) {
+          const IB = BB.config;
+          OB(IB.authDomain, BB, "auth-domain-config-required");
+          const ZB = IB.emulator ? jB(IB, "emulator/auth/iframe") : `https://${BB.config.authDomain}/__/auth/iframe`,
+            oB = {
+              apiKey: IB.apiKey,
+              appName: BB.name,
+              v: JB.f
             },
-            mt = rq.get(tt.config.apiHost);
-          mt && (Dt.eid = mt);
-          const dt = tt._getFrameworks();
-          return dt.length && (Dt.fw = dt.join(",")), `${Vt}?${(0,Ot.kb)(Dt).slice(1)}`
+            GB = eJ.get(BB.config.apiHost);
+          GB && (oB.eid = GB);
+          const vB = BB._getFrameworks();
+          return vB.length && (oB.fw = vB.join(",")), `${ZB}?${(0,TB.db)(oB).slice(1)}`
         }
-        const Aq = {
+        const fJ = {
           location: "yes",
           resizable: "yes",
           statusbar: "yes",
           toolbar: "no"
         };
-        class iq {
-          constructor(tt) {
-            this.window = tt, this.associatedEvent = null
+        class lJ {
+          constructor(BB) {
+            this.window = BB, this.associatedEvent = null
           }
           close() {
             if (this.window) try {
               this.window.close()
-            } catch (tt) {}
+            } catch (BB) {}
           }
         }
 
-        function Yq(tt, et, Vt) {
-          let qt = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 500,
-            Dt = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 600;
-          const mt = Math.max((window.screen.availHeight - Dt) / 2, 0).toString(),
-            dt = Math.max((window.screen.availWidth - qt) / 2, 0).toString();
-          let jt = "";
-          const Ht = Object.assign(Object.assign({}, Aq), {
-              width: qt.toString(),
-              height: Dt.toString(),
-              top: mt,
-              left: dt
+        function AJ(BB, IB, ZB) {
+          let JB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 500,
+            oB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 600;
+          const GB = Math.max((window.screen.availHeight - oB) / 2, 0).toString(),
+            vB = Math.max((window.screen.availWidth - JB) / 2, 0).toString();
+          let kB = "";
+          const cB = Object.assign(Object.assign({}, fJ), {
+              width: JB.toString(),
+              height: oB.toString(),
+              top: GB,
+              left: vB
             }),
-            Xt = (0, Ot.M)().toLowerCase();
-          Vt && (jt = fe(Xt) ? "_blank" : Vt), le(Xt) && (et = et || "http://localhost", Ht.scrollbars = "yes");
-          const Qt = Object.entries(Ht).reduce(((tt, et) => {
-            let [Vt, Ot] = et;
-            return `${tt}${Vt}=${Ot},`
+            nB = (0, TB.P)().toLowerCase();
+          ZB && (kB = FI(nB) ? "_blank" : ZB), hI(nB) && (IB = IB || "http://localhost", cB.scrollbars = "yes");
+          const hB = Object.entries(cB).reduce(((BB, IB) => {
+            let [ZB, TB] = IB;
+            return `${BB}${ZB}=${TB},`
           }), "");
           if (function() {
-              var tt;
-              return Me(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Ot.M)()) && !!(null === (tt = window.navigator) || void 0 === tt ? void 0 : tt.standalone)
-            }(Xt) && "_self" !== jt) return function(tt, et) {
-            const Vt = document.createElement("a");
-            Vt.href = tt, Vt.target = et;
-            const Ot = document.createEvent("MouseEvent");
-            Ot.initMouseEvent("click", !0, !0, window, 1, 0, 0, 0, 0, !1, !1, !1, !1, 1, null), Vt.dispatchEvent(Ot)
-          }(et || "", jt), new iq(null);
-          const lt = window.open(et || "", jt, Qt);
-          vt(lt, tt, "popup-blocked");
+              var BB;
+              return UI(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, TB.P)()) && !!(null === (BB = window.navigator) || void 0 === BB ? void 0 : BB.standalone)
+            }(nB) && "_self" !== kB) return function(BB, IB) {
+            const ZB = document.createElement("a");
+            ZB.href = BB, ZB.target = IB;
+            const TB = document.createEvent("MouseEvent");
+            TB.initMouseEvent("click", !0, !0, window, 1, 0, 0, 0, 0, !1, !1, !1, !1, 1, null), ZB.dispatchEvent(TB)
+          }(IB || "", kB), new lJ(null);
+          const zB = window.open(IB || "", kB, hB);
+          OB(zB, BB, "popup-blocked");
           try {
-            lt.focus()
-          } catch (Et) {}
-          return new iq(lt)
+            zB.focus()
+          } catch (FB) {}
+          return new lJ(zB)
         }
-        const Bq = "__/auth/handler",
-          pq = "emulator/auth/handler",
-          xq = encodeURIComponent("fac");
-        async function Tq(tt, et, Vt, Dt, mt, dt) {
-            vt(tt.config.authDomain, tt, "auth-domain-config-required"), vt(tt.config.apiKey, tt, "invalid-api-key");
-            const jt = {
-              apiKey: tt.config.apiKey,
-              appName: tt.name,
-              authType: Vt,
-              redirectUrl: Dt,
-              v: qt.g,
-              eventId: mt
+        const tJ = "__/auth/handler",
+          bJ = "emulator/auth/handler",
+          xJ = encodeURIComponent("fac");
+        async function EJ(BB, IB, ZB, oB, GB, vB) {
+            OB(BB.config.authDomain, BB, "auth-domain-config-required"), OB(BB.config.apiKey, BB, "invalid-api-key");
+            const kB = {
+              apiKey: BB.config.apiKey,
+              appName: BB.name,
+              authType: ZB,
+              redirectUrl: oB,
+              v: JB.f,
+              eventId: GB
             };
-            if (et instanceof eV) {
-              et.setDefaultLanguage(tt.languageCode), jt.providerId = et.providerId || "", (0, Ot.S)(et.getCustomParameters()) || (jt.customParameters = JSON.stringify(et.getCustomParameters()));
-              for (const [tt, et] of Object.entries(dt || {})) jt[tt] = et
+            if (IB instanceof BZ) {
+              IB.setDefaultLanguage(BB.languageCode), kB.providerId = IB.providerId || "", (0, TB.V)(IB.getCustomParameters()) || (kB.customParameters = JSON.stringify(IB.getCustomParameters()));
+              for (const [BB, IB] of Object.entries(vB || {})) kB[BB] = IB
             }
-            if (et instanceof VV) {
-              const tt = et.getScopes().filter((tt => "" !== tt));
-              tt.length > 0 && (jt.scopes = tt.join(","))
+            if (IB instanceof IZ) {
+              const BB = IB.getScopes().filter((BB => "" !== BB));
+              BB.length > 0 && (kB.scopes = BB.join(","))
             }
-            tt.tenantId && (jt.tid = tt.tenantId);
-            const Ht = jt;
-            for (const Ot of Object.keys(Ht)) void 0 === Ht[Ot] && delete Ht[Ot];
-            const Xt = await tt._getAppCheckToken(),
-              Qt = Xt ? `#${xq}=${encodeURIComponent(Xt)}` : "";
-            return `${function(tt){let{config:et}=tt;if(!et.emulator)return`
-            https: //${et.authDomain}/${Bq}`;return Zt(et,pq)}(tt)}?${(0,Ot.kb)(Ht).slice(1)}${Qt}`}const gq="webStorageSupport";const sq=class{constructor(){this.eventManagers={},this.iframes={},this.originValidationPromises={},this._redirectPersistence=CO,this._completeRedirectFn=hq,this._overrideRedirectResult=aq}async _openPopup(tt,et,Vt,Ot){var qt;St(null===(qt=this.eventManagers[tt._key()])||void 0===qt?void 0:qt.manager,"_initialize() not called before _openPopup()");return Yq(tt,await Tq(tt,et,Vt,ct(),Ot),KO())}async _openRedirect(tt,et,Vt,Ot){await this._originValidation(tt);return function(tt){vO().location.href=tt}(await Tq(tt,et,Vt,ct(),Ot)),new Promise((()=>{}))}_initialize(tt){const et=tt._key();if(this.eventManagers[et]){const{manager:tt,promise:Vt}=this.eventManagers[et];return tt?Promise.resolve(tt):(St(Vt,"If manager is not set, promise should be"),Vt)}const Vt=this.initAndGetManager(tt);return this.eventManagers[et]={promise:Vt},Vt.catch((()=>{delete this.eventManagers[et]})),Vt}async initAndGetManager(tt){const et=await async function(tt){const et=await Gq(tt),Vt=vO().gapi;return vt(Vt,tt,"internal-error"),et.open({where:document.body,url:Uq(tt),messageHandlersFilter:Vt.iframes.CROSS_ORIGIN_IFRAMES_FILTER,attributes:oq,dontclear:!0},(et=>new Promise((async(Vt,Ot)=>{await et.restyle({setHideOnLeave:!1});const qt=Ct(tt,"network-request-failed"),Dt=vO().setTimeout((()=>{Ot(qt)}),zq.get());function mt(){vO().clearTimeout(Dt),Vt(et)}et.ping(mt).then(mt,(()=>{Ot(qt)}))}))))}(tt),Vt=new Wq(tt);return et.register("authEvent",(et=>{vt(null===et||void 0===et?void 0:et.authEvent,tt,"invalid-auth-event");return{status:Vt.onEvent(et.authEvent)?"ACK":"ERROR"}}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER),this.eventManagers[tt._key()]={manager:Vt},this.iframes[tt._key()]=et,Vt}_isIframeWebStorageSupported(tt,et){this.iframes[tt._key()].send(gq,{type:gq},(Vt=>{var Ot;const qt=null===(Ot=null===Vt||void 0===Vt?void 0:Vt[0])||void 0===Ot?void 0:Ot[gq];void 0!==qt&&et(!!qt),Jt(tt,"internal-error")}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER)}_originValidation(tt){const et=tt._key();return this.originValidationPromises[et]||(this.originValidationPromises[et]=Pq(tt)),this.originValidationPromises[et]}get _shouldInitProactively(){return be()||Ee()||Me()}};class nq{constructor(tt){this.factorId=tt}_process(tt,et,Vt){switch(et.type){case"enroll":return this._finalizeEnroll(tt,et.credential,Vt);case"signin":return this._finalizeSignIn(tt,et.credential);default:return Wt("unexpected MultiFactorSessionType")}}}class tD extends nq{constructor(tt){super("phone"),this.credential=tt}static _fromCredential(tt){return new tD(tt)}_finalizeEnroll(tt,et,Vt){return function(tt,et){return zt(tt,"POST","/v2/accounts/mfaEnrollment:finalize",Gt(tt,et))}(tt,{idToken:et,displayName:Vt,phoneVerificationInfo:this.credential._makeVerificationRequest()})}_finalizeSignIn(tt,et){return function(tt,et){return zt(tt,"POST","/v2/accounts/mfaSignIn:finalize",Gt(tt,et))}(tt,{mfaPendingCredential:et,phoneVerificationInfo:this.credential._makeVerificationRequest()})}}class eD{constructor(){}static assertion(tt){return tD._fromCredential(tt)}}eD.FACTOR_ID="phone";class VD{static assertionForEnrollment(tt,et){return OD._fromSecret(tt,et)}static assertionForSignIn(tt,et){return OD._fromEnrollmentId(tt,et)}static async generateSecret(tt){const et=tt;vt("undefined"!==typeof et.auth,"internal-error");const Vt=await(Ot=et.auth,qt={idToken:et.credential,totpEnrollmentInfo:{}},zt(Ot,"POST","/v2/accounts/mfaEnrollment:start",Gt(Ot,qt)));var Ot,qt;return qD._fromStartTotpMfaEnrollmentResponse(Vt,et.auth)}}VD.FACTOR_ID="totp";class OD extends nq{constructor(tt,et,Vt){super("totp"),this.otp=tt,this.enrollmentId=et,this.secret=Vt}static _fromSecret(tt,et){return new OD(et,void 0,tt)}static _fromEnrollmentId(tt,et){return new OD(et,tt)}async _finalizeEnroll(tt,et,Vt){return vt("undefined"!==typeof this.secret,tt,"argument-error"),function(tt,et){return zt(tt,"POST","/v2/accounts/mfaEnrollment:finalize",Gt(tt,et))}(tt,{idToken:et,displayName:Vt,totpVerificationInfo:this.secret._makeTotpVerificationInfo(this.otp)})}async _finalizeSignIn(tt,et){vt(void 0!==this.enrollmentId&&void 0!==this.otp,tt,"argument-error");const Vt={verificationCode:this.otp};return function(tt,et){return zt(tt,"POST","/v2/accounts/mfaSignIn:finalize",Gt(tt,et))}(tt,{mfaPendingCredential:et,mfaEnrollmentId:this.enrollmentId,totpVerificationInfo:Vt})}}class qD{constructor(tt,et,Vt,Ot,qt,Dt,mt){this.sessionInfo=Dt,this.auth=mt,this.secretKey=tt,this.hashingAlgorithm=et,this.codeLength=Vt,this.codeIntervalSeconds=Ot,this.enrollmentCompletionDeadline=qt}static _fromStartTotpMfaEnrollmentResponse(tt,et){return new qD(tt.totpSessionInfo.sharedSecretKey,tt.totpSessionInfo.hashingAlgorithm,tt.totpSessionInfo.verificationCodeLength,tt.totpSessionInfo.periodSec,new Date(tt.totpSessionInfo.finalizeEnrollmentTime).toUTCString(),tt.totpSessionInfo.sessionInfo,et)}_makeTotpVerificationInfo(tt){return{sessionInfo:this.sessionInfo,verificationCode:tt}}generateQrCodeUrl(tt,et){var Vt;let Ot=!1;return(DD(tt)||DD(et))&&(Ot=!0),Ot&&(DD(tt)&&(tt=(null===(Vt=this.auth.currentUser)||void 0===Vt?void 0:Vt.email)||"unknownuser"),DD(et)&&(et=this.auth.name)),`otpauth://totp/${et}:${tt}?secret=${this.secretKey}&issuer=${et}&algorithm=${this.hashingAlgorithm}&digits=${this.codeLength}`}}function DD(tt){return"undefined"===typeof tt||0===(null===tt||void 0===tt?void 0:tt.length)}var mD="@firebase/auth",dD="0.23.2";class jD{constructor(tt){this.auth=tt,this.internalListeners=new Map}getUid(){var tt;return this.assertAuthConfigured(),(null===(tt=this.auth.currentUser)||void 0===tt?void 0:tt.uid)||null}async getToken(tt){if(this.assertAuthConfigured(),await this.auth._initializationPromise,!this.auth.currentUser)return null;return{accessToken:await this.auth.currentUser.getIdToken(tt)}}addAuthTokenListener(tt){if(this.assertAuthConfigured(),this.internalListeners.has(tt))return;const et=this.auth.onIdTokenChanged((et=>{tt((null===et||void 0===et?void 0:et.stsTokenManager.accessToken)||null)}));this.internalListeners.set(tt,et),this.updateProactiveRefresh()}removeAuthTokenListener(tt){this.assertAuthConfigured();const et=this.internalListeners.get(tt);et&&(this.internalListeners.delete(tt),et(),this.updateProactiveRefresh())}assertAuthConfigured(){vt(this.auth._initializationPromise,"dependent-sdk-initialized-before-auth")}updateProactiveRefresh(){this.internalListeners.size>0?this.auth._startProactiveRefresh():this.auth._stopProactiveRefresh()}}const HD=(0,Ot.H)("authIdTokenMaxAge")||300;let XD=null;const QD=tt=>async et=>{const Vt=et&&await et.getIdTokenResult(),Ot=Vt&&((new Date).getTime()-Date.parse(Vt.issuedAtTime))/1e3;if(Ot&&Ot>HD)return;const qt=null===Vt||void 0===Vt?void 0:Vt.token;XD!==qt&&(XD=qt,await fetch(tt,{method:qt?"POST":"DELETE",headers:qt?{Authorization:`Bearer ${qt}`}:{}}))};function lD(){let tt=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,qt.P)();const et=(0,qt.z)(tt,"auth");if(et.isInitialized())return et.getImmediate();const Vt=Le(tt,{popupRedirectResolver:sq,persistence:[GO,bO,CO]}),Dt=(0,Ot.H)("authTokenSyncURL");if(Dt){const tt=QD(Dt);DO(Vt,tt,(()=>tt(Vt.currentUser))),qO(Vt,(et=>tt(et)))}const mt=(0,Ot.E)("auth");return mt&&Fe(Vt,`http://${mt}`),Vt}var ED;ED="Browser",(0,qt.B)(new dt.d("auth",((tt,et)=>{let{options:Vt}=et;const Ot=tt.getProvider("app").getImmediate(),qt=tt.getProvider("heartbeat"),Dt=tt.getProvider("app-check-internal"),{apiKey:mt,authDomain:dt}=Ot.options;vt(mt&&!mt.includes(":"),"invalid-api-key",{appName:Ot.name});const jt={apiKey:mt,authDomain:dt,clientPlatform:ED,apiHost:"identitytoolkit.googleapis.com",tokenApiHost:"securetoken.googleapis.com",apiScheme:"https",sdkClientVersion:Je(ED)},Ht=new Ie(Ot,qt,Dt,jt);return function(tt,et){const Vt=(null===et||void 0===et?void 0:et.persistence)||[],Ot=(Array.isArray(Vt)?Vt:[Vt]).map(me);(null===et||void 0===et?void 0:et.errorMap)&&tt._updateErrorMap(et.errorMap),tt._initializeWithPersistence(Ot,null===et||void 0===et?void 0:et.popupRedirectResolver)}(Ht,Vt),Ht}),"PUBLIC").setInstantiationMode("EXPLICIT").setInstanceCreatedCallback(((tt,et,Vt)=>{tt.getProvider("auth-internal").initialize()}))),(0,qt.B)(new dt.d("auth-internal",(tt=>(tt=>new jD(tt))(Pe(tt.getProvider("auth").getImmediate()))),"PRIVATE").setInstantiationMode("EXPLICIT")),(0,qt._)(mD,dD,function(tt){switch(tt){case"Node":return"node";case"ReactNative":return"rn";case"Worker":return"webworker";case"Cordova":return"cordova";default:return}}(ED)),(0,qt._)(mD,dD,"esm2017")}};Object.freeze(modules);for(const tt in modules)Object.freeze(modules[tt]);
+            BB.tenantId && (kB.tid = BB.tenantId);
+            const cB = kB;
+            for (const TB of Object.keys(cB)) void 0 === cB[TB] && delete cB[TB];
+            const nB = await BB._getAppCheckToken(),
+              hB = nB ? `#${xJ}=${encodeURIComponent(nB)}` : "";
+            return `${function(BB){let{config:IB}=BB;if(!IB.emulator)return`
+            https: //${IB.authDomain}/${tJ}`;return jB(IB,bJ)}(BB)}?${(0,TB.db)(cB).slice(1)}${hB}`}const DJ="webStorageSupport";const KJ=class{constructor(){this.eventManagers={},this.iframes={},this.originValidationPromises={},this._redirectPersistence=CT,this._completeRedirectFn=wJ,this._overrideRedirectResult=yJ}async _openPopup(BB,IB,ZB,TB){var JB;iB(null===(JB=this.eventManagers[BB._key()])||void 0===JB?void 0:JB.manager,"_initialize() not called before _openPopup()");return AJ(BB,await EJ(BB,IB,ZB,pB(),TB),sT())}async _openRedirect(BB,IB,ZB,TB){await this._originValidation(BB);return function(BB){OT().location.href=BB}(await EJ(BB,IB,ZB,pB(),TB)),new Promise((()=>{}))}_initialize(BB){const IB=BB._key();if(this.eventManagers[IB]){const{manager:BB,promise:ZB}=this.eventManagers[IB];return BB?Promise.resolve(BB):(iB(ZB,"If manager is not set, promise should be"),ZB)}const ZB=this.initAndGetManager(BB);return this.eventManagers[IB]={promise:ZB},ZB.catch((()=>{delete this.eventManagers[IB]})),ZB}async initAndGetManager(BB){const IB=await async function(BB){const IB=await mJ(BB),ZB=OT().gapi;return OB(ZB,BB,"internal-error"),IB.open({where:document.body,url:uJ(BB),messageHandlersFilter:ZB.iframes.CROSS_ORIGIN_IFRAMES_FILTER,attributes:LJ,dontclear:!0},(IB=>new Promise((async(ZB,TB)=>{await IB.restyle({setHideOnLeave:!1});const JB=CB(BB,"network-request-failed"),oB=OT().setTimeout((()=>{TB(JB)}),XJ.get());function GB(){OT().clearTimeout(oB),ZB(IB)}IB.ping(GB).then(GB,(()=>{TB(JB)}))}))))}(BB),ZB=new YJ(BB);return IB.register("authEvent",(IB=>{OB(null===IB||void 0===IB?void 0:IB.authEvent,BB,"invalid-auth-event");return{status:ZB.onEvent(IB.authEvent)?"ACK":"ERROR"}}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER),this.eventManagers[BB._key()]={manager:ZB},this.iframes[BB._key()]=IB,ZB}_isIframeWebStorageSupported(BB,IB){this.iframes[BB._key()].send(DJ,{type:DJ},(ZB=>{var TB;const JB=null===(TB=null===ZB||void 0===ZB?void 0:ZB[0])||void 0===TB?void 0:TB[DJ];void 0!==JB&&IB(!!JB),dB(BB,"internal-error")}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER)}_originValidation(BB){const IB=BB._key();return this.originValidationPromises[IB]||(this.originValidationPromises[IB]=MJ(BB)),this.originValidationPromises[IB]}get _shouldInitProactively(){return WI()||zI()||UI()}};class VJ{constructor(BB){this.factorId=BB}_process(BB,IB,ZB){switch(IB.type){case"enroll":return this._finalizeEnroll(BB,IB.credential,ZB);case"signin":return this._finalizeSignIn(BB,IB.credential);default:return YB("unexpected MultiFactorSessionType")}}}class SJ extends VJ{constructor(BB){super("phone"),this.credential=BB}static _fromCredential(BB){return new SJ(BB)}_finalizeEnroll(BB,IB,ZB){return function(BB,IB){return XB(BB,"POST","/v2/accounts/mfaEnrollment:finalize",mB(BB,IB))}(BB,{idToken:IB,displayName:ZB,phoneVerificationInfo:this.credential._makeVerificationRequest()})}_finalizeSignIn(BB,IB){return function(BB,IB){return XB(BB,"POST","/v2/accounts/mfaSignIn:finalize",mB(BB,IB))}(BB,{mfaPendingCredential:IB,phoneVerificationInfo:this.credential._makeVerificationRequest()})}}class Bo{constructor(){}static assertion(BB){return SJ._fromCredential(BB)}}Bo.FACTOR_ID="phone";class Io{static assertionForEnrollment(BB,IB){return Zo._fromSecret(BB,IB)}static assertionForSignIn(BB,IB){return Zo._fromEnrollmentId(BB,IB)}static async generateSecret(BB){const IB=BB;OB("undefined"!==typeof IB.auth,"internal-error");const ZB=await(TB=IB.auth,JB={idToken:IB.credential,totpEnrollmentInfo:{}},XB(TB,"POST","/v2/accounts/mfaEnrollment:start",mB(TB,JB)));var TB,JB;return To._fromStartTotpMfaEnrollmentResponse(ZB,IB.auth)}}Io.FACTOR_ID="totp";class Zo extends VJ{constructor(BB,IB,ZB){super("totp"),this.otp=BB,this.enrollmentId=IB,this.secret=ZB}static _fromSecret(BB,IB){return new Zo(IB,void 0,BB)}static _fromEnrollmentId(BB,IB){return new Zo(IB,BB)}async _finalizeEnroll(BB,IB,ZB){return OB("undefined"!==typeof this.secret,BB,"argument-error"),function(BB,IB){return XB(BB,"POST","/v2/accounts/mfaEnrollment:finalize",mB(BB,IB))}(BB,{idToken:IB,displayName:ZB,totpVerificationInfo:this.secret._makeTotpVerificationInfo(this.otp)})}async _finalizeSignIn(BB,IB){OB(void 0!==this.enrollmentId&&void 0!==this.otp,BB,"argument-error");const ZB={verificationCode:this.otp};return function(BB,IB){return XB(BB,"POST","/v2/accounts/mfaSignIn:finalize",mB(BB,IB))}(BB,{mfaPendingCredential:IB,mfaEnrollmentId:this.enrollmentId,totpVerificationInfo:ZB})}}class To{constructor(BB,IB,ZB,TB,JB,oB,GB){this.sessionInfo=oB,this.auth=GB,this.secretKey=BB,this.hashingAlgorithm=IB,this.codeLength=ZB,this.codeIntervalSeconds=TB,this.enrollmentCompletionDeadline=JB}static _fromStartTotpMfaEnrollmentResponse(BB,IB){return new To(BB.totpSessionInfo.sharedSecretKey,BB.totpSessionInfo.hashingAlgorithm,BB.totpSessionInfo.verificationCodeLength,BB.totpSessionInfo.periodSec,new Date(BB.totpSessionInfo.finalizeEnrollmentTime).toUTCString(),BB.totpSessionInfo.sessionInfo,IB)}_makeTotpVerificationInfo(BB){return{sessionInfo:this.sessionInfo,verificationCode:BB}}generateQrCodeUrl(BB,IB){var ZB;let TB=!1;return(Jo(BB)||Jo(IB))&&(TB=!0),TB&&(Jo(BB)&&(BB=(null===(ZB=this.auth.currentUser)||void 0===ZB?void 0:ZB.email)||"unknownuser"),Jo(IB)&&(IB=this.auth.name)),`otpauth://totp/${IB}:${BB}?secret=${this.secretKey}&issuer=${IB}&algorithm=${this.hashingAlgorithm}&digits=${this.codeLength}`}}function Jo(BB){return"undefined"===typeof BB||0===(null===BB||void 0===BB?void 0:BB.length)}var oo="@firebase/auth",Go="0.23.2";class vo{constructor(BB){this.auth=BB,this.internalListeners=new Map}getUid(){var BB;return this.assertAuthConfigured(),(null===(BB=this.auth.currentUser)||void 0===BB?void 0:BB.uid)||null}async getToken(BB){if(this.assertAuthConfigured(),await this.auth._initializationPromise,!this.auth.currentUser)return null;return{accessToken:await this.auth.currentUser.getIdToken(BB)}}addAuthTokenListener(BB){if(this.assertAuthConfigured(),this.internalListeners.has(BB))return;const IB=this.auth.onIdTokenChanged((IB=>{BB((null===IB||void 0===IB?void 0:IB.stsTokenManager.accessToken)||null)}));this.internalListeners.set(BB,IB),this.updateProactiveRefresh()}removeAuthTokenListener(BB){this.assertAuthConfigured();const IB=this.internalListeners.get(BB);IB&&(this.internalListeners.delete(BB),IB(),this.updateProactiveRefresh())}assertAuthConfigured(){OB(this.auth._initializationPromise,"dependent-sdk-initialized-before-auth")}updateProactiveRefresh(){this.internalListeners.size>0?this.auth._startProactiveRefresh():this.auth._stopProactiveRefresh()}}const ko=(0,TB.K)("authIdTokenMaxAge")||300;let co=null;const no=BB=>async IB=>{const ZB=IB&&await IB.getIdTokenResult(),TB=ZB&&((new Date).getTime()-Date.parse(ZB.issuedAtTime))/1e3;if(TB&&TB>ko)return;const JB=null===ZB||void 0===ZB?void 0:ZB.token;co!==JB&&(co=JB,await fetch(BB,{method:JB?"POST":"DELETE",headers:JB?{Authorization:`Bearer ${JB}`}:{}}))};function ho(){let BB=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,JB.I)();const IB=(0,JB.w)(BB,"auth");if(IB.isInitialized())return IB.getImmediate();const ZB=PI(BB,{popupRedirectResolver:KJ,persistence:[mT,WT,CT]}),oB=(0,TB.K)("authTokenSyncURL");if(oB){const BB=no(oB);JT(ZB,BB,(()=>BB(ZB.currentUser))),TT(ZB,(IB=>BB(IB)))}const GB=(0,TB.I)("auth");return GB&&RI(ZB,`http://${GB}`),ZB}var zo;zo="Browser",(0,JB.y)(new vB.e("auth",((BB,IB)=>{let{options:ZB}=IB;const TB=BB.getProvider("app").getImmediate(),JB=BB.getProvider("heartbeat"),oB=BB.getProvider("app-check-internal"),{apiKey:GB,authDomain:vB}=TB.options;OB(GB&&!GB.includes(":"),"invalid-api-key",{appName:TB.name});const kB={apiKey:GB,authDomain:vB,clientPlatform:zo,apiHost:"identitytoolkit.googleapis.com",tokenApiHost:"securetoken.googleapis.com",apiScheme:"https",sdkClientVersion:dI(zo)},cB=new HI(TB,JB,oB,kB);return function(BB,IB){const ZB=(null===IB||void 0===IB?void 0:IB.persistence)||[],TB=(Array.isArray(ZB)?ZB:[ZB]).map(oI);(null===IB||void 0===IB?void 0:IB.errorMap)&&BB._updateErrorMap(IB.errorMap),BB._initializeWithPersistence(TB,null===IB||void 0===IB?void 0:IB.popupRedirectResolver)}(cB,ZB),cB}),"PUBLIC").setInstantiationMode("EXPLICIT").setInstanceCreatedCallback(((BB,IB,ZB)=>{BB.getProvider("auth-internal").initialize()}))),(0,JB.y)(new vB.e("auth-internal",(BB=>(BB=>new vo(BB))(MI(BB.getProvider("auth").getImmediate()))),"PRIVATE").setInstantiationMode("EXPLICIT")),(0,JB.R)(oo,Go,function(BB){switch(BB){case"Node":return"node";case"ReactNative":return"rn";case"Worker":return"webworker";case"Cordova":return"cordova";default:return}}(zo)),(0,JB.R)(oo,Go,"esm2017")}};Object.freeze(modules);for(const BB in modules)Object.freeze(modules[BB]);

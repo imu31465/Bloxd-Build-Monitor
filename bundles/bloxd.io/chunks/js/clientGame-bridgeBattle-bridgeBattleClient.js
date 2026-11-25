@@ -1,22 +1,22 @@
 export const id = 10;
 export const ids = [10];
 export const modules = {
-  39483: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      default: () => Ot
+  39346: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      default: () => TB
     });
-    const Ot = function(tt, et, Vt) {
-      let Ot;
+    const TB = function(BB, IB, ZB) {
+      let TB;
       return {
-        onCreate: tt => {
-          Ot = tt
+        onCreate: BB => {
+          TB = BB
         },
-        onPlayerAltAction: (tt, et, Vt, qt, Dt, mt) => {
-          mt && "Mesh" === Ot.getEntityType(mt) && ("Permanent Upgrades" === Ot.getEntityName(mt) ? Ot.openShop(tt, !1, "Upgrades") : "Items" === Ot.getEntityName(mt) ? Ot.openShop(tt, !1, "Items") : "Prestige" === Ot.getEntityName(mt) && Ot.openShop(tt, !1, "Prestige"))
+        onPlayerAltAction: (BB, IB, ZB, JB, oB, GB) => {
+          GB && "Mesh" === TB.getEntityType(GB) && ("Permanent Upgrades" === TB.getEntityName(GB) ? TB.openShop(BB, !1, "Upgrades") : "Items" === TB.getEntityName(GB) ? TB.openShop(BB, !1, "Items") : "Prestige" === TB.getEntityName(GB) && TB.openShop(BB, !1, "Prestige"))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,52 +1,52 @@
 export const id = 254;
 export const ids = [254];
 export const modules = {
-  40019: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      default: () => xt
+  39870: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      default: () => xB
     });
-    Vt(6648);
-    var Ot = Vt(63),
-      qt = Vt(40023),
-      Dt = Vt(40289),
-      mt = Vt(40397),
-      dt = Vt(40433),
-      jt = Vt(40452),
-      Ht = Vt(37510),
-      Xt = Vt(37331),
-      Qt = Vt(40595),
-      lt = Vt(40644),
-      Et = (Vt(40669), Vt(1308)),
-      ft = Vt(229),
-      wt = Vt(1286),
-      yt = Vt(26),
-      Nt = Vt(2821),
-      Mt = Vt(1556),
-      bt = Vt(1152),
-      Jt = Vt(6645),
-      Ct = Vt(6656),
-      ut = Vt(4584),
-      Kt = Vt(1188);
-    const ht = 1.2,
-      vt = .2,
-      Wt = .0066 * Math.PI / 180,
-      St = new Set(["Escape", "KeyG"]),
-      ct = {
+    ZB(6619);
+    var TB = ZB(63),
+      JB = ZB(39872),
+      oB = ZB(40143),
+      GB = ZB(40253),
+      vB = ZB(40297),
+      kB = ZB(40318),
+      cB = ZB(37304),
+      nB = ZB(37113),
+      hB = ZB(40446),
+      zB = ZB(40501),
+      FB = (ZB(40528), ZB(1281)),
+      NB = ZB(201),
+      gB = ZB(1248),
+      qB = ZB(20),
+      yB = ZB(2896),
+      UB = ZB(1516),
+      WB = ZB(1102),
+      dB = ZB(6610),
+      CB = ZB(6624),
+      QB = ZB(4632),
+      sB = ZB(1153);
+    const wB = 1.2,
+      OB = .2,
+      YB = .0066 * Math.PI / 180,
+      iB = new Set(["Escape", "KeyG"]),
+      pB = {
         ArrowLeft: -1,
         ArrowRight: 1
       },
-      Rt = "ArrowUp",
-      It = new Set([...Object.keys(ct), Rt, "ArrowDown"]),
-      Pt = 32,
-      Zt = 1,
-      Lt = 10,
-      Ft = "F4",
-      kt = "Period",
-      Gt = Math.PI / 2 - .001,
-      zt = Math.PI / 6,
-      ot = Math.PI / 6,
-      rt = 1.08,
-      Ut = [{
+      aB = "ArrowUp",
+      HB = new Set([...Object.keys(pB), aB, "ArrowDown"]),
+      MB = 32,
+      jB = 1,
+      PB = 10,
+      RB = "F4",
+      rB = "Period",
+      mB = Math.PI / 2 - .001,
+      XB = Math.PI / 6,
+      LB = Math.PI / 6,
+      eB = 1.08,
+      uB = [{
         name: "X",
         direction: [1, 0, 0],
         colour: "#e5534b"
@@ -59,387 +59,387 @@ export const modules = {
         direction: [0, 0, 1],
         colour: "#539bf5"
       }],
-      At = 24,
-      it = 7,
-      Yt = 4,
-      Bt = .01,
-      pt = 4;
+      fB = 24,
+      lB = 7,
+      AB = 4,
+      tB = .01,
+      bB = 4;
 
-    function xt(tt) {
+    function xB(BB) {
       let {
-        heatmap: et,
-        scale: Vt,
-        fullyOpaqueFrom: Zt,
-        bounds: zt,
-        fitBounds: ot,
-        schematic: rt,
-        controls: Ut,
-        onStepTime: At,
-        onShowAllTime: it,
-        onTogglePlaying: Yt,
-        getReadout: pt = null
-      } = tt;
+        heatmap: IB,
+        scale: ZB,
+        fullyOpaqueFrom: jB,
+        bounds: XB,
+        fitBounds: LB,
+        schematic: eB,
+        controls: uB,
+        onStepTime: fB,
+        onShowAllTime: lB,
+        onTogglePlaying: AB,
+        getReadout: bB = null
+      } = BB;
       const {
-        t: xt
-      } = (0, wt.H)(), {
-        clientEscMenuOptions: me
-      } = (0, yt.k)(["clientEscMenuOptions"]), He = (0, Ot.useRef)(null), Xe = (0, Ot.useRef)(null), Qe = (0, Ot.useRef)(null), le = (0, Nt.d)(He), [Ee, fe] = (0, Ot.useState)(!1), [we, ye] = (0, Ot.useState)(!1), [Ne, ae] = (0, Ot.useState)(!0), Me = (0, Ot.useRef)(!1), [be, Je] = (0, Ot.useState)(!1), Ce = we || !Ne && be, [ue, Ke] = (0, Ot.useState)(!1), [he, ve] = (0, Ot.useState)(!0), [We, Se] = (0, Ot.useState)(null), ce = zt.min, [Re, Ie] = (0, Ot.useState)(ce);
-      Re[0] === ce[0] && Re[1] === ce[1] && Re[2] === ce[2] || (Ie(ce), null !== We && Se({
-        ...We,
-        position: de(We.position, de(Re, je(ce, -1)))
+        t: xB
+      } = (0, gB.G)(), {
+        clientEscMenuOptions: oI
+      } = (0, qB.o)(["clientEscMenuOptions"]), kI = (0, TB.useRef)(null), cI = (0, TB.useRef)(null), nI = (0, TB.useRef)(null), hI = (0, yB.e)(kI), [zI, FI] = (0, TB.useState)(!1), [NI, gI] = (0, TB.useState)(!1), [qI, yI] = (0, TB.useState)(!0), UI = (0, TB.useRef)(!1), [WI, dI] = (0, TB.useState)(!1), CI = NI || !qI && WI, [QI, sI] = (0, TB.useState)(!1), [wI, OI] = (0, TB.useState)(!0), [YI, iI] = (0, TB.useState)(null), pI = XB.min, [aI, HI] = (0, TB.useState)(pI);
+      aI[0] === pI[0] && aI[1] === pI[1] && aI[2] === pI[2] || (HI(pI), null !== YI && iI({
+        ...YI,
+        position: GI(YI.position, GI(aI, vI(pI, -1)))
       }));
-      const Pe = (0, Ot.useMemo)((() => function(tt) {
-          return [tt.max[0] - tt.min[0] + 1, tt.max[1] - tt.min[1] + 1, tt.max[2] - tt.min[2] + 1]
-        }(zt)), [zt]),
-        Ze = (0, Ot.useMemo)((() => function(tt, et) {
-          const Vt = [],
-            Ot = [];
-          for (const [qt, Dt] of Object.entries(tt.frequencies)) {
-            const tt = Number(qt);
-            for (const [qt, mt] of Object.entries(Dt)) {
-              const Dt = Number(qt);
-              for (const [qt, dt] of Object.entries(mt)) dt <= 0 || (Vt.push(tt - et[0], Dt - et[1], Number(qt) - et[2]), Ot.push(dt))
+      const MI = (0, TB.useMemo)((() => function(BB) {
+          return [BB.max[0] - BB.min[0] + 1, BB.max[1] - BB.min[1] + 1, BB.max[2] - BB.min[2] + 1]
+        }(XB)), [XB]),
+        jI = (0, TB.useMemo)((() => function(BB, IB) {
+          const ZB = [],
+            TB = [];
+          for (const [JB, oB] of Object.entries(BB.frequencies)) {
+            const BB = Number(JB);
+            for (const [JB, GB] of Object.entries(oB)) {
+              const oB = Number(JB);
+              for (const [JB, vB] of Object.entries(GB)) vB <= 0 || (ZB.push(BB - IB[0], oB - IB[1], Number(JB) - IB[2]), TB.push(vB))
             }
           }
           return {
-            positions: Int32Array.from(Vt),
-            values: Float64Array.from(Ot),
-            count: Ot.length
+            positions: Int32Array.from(ZB),
+            values: Float64Array.from(TB),
+            count: TB.length
           }
-        }(et, ce)), [et, ce]),
-        Le = ht * me.cameraFOV / 100,
-        Fe = le.height > 0 ? le.width / le.height : 1,
-        ke = (0, Ot.useMemo)((() => function(tt, et) {
+        }(IB, pI)), [IB, pI]),
+        PI = wB * oI.cameraFOV / 100,
+        RI = hI.height > 0 ? hI.width / hI.height : 1,
+        rI = (0, TB.useMemo)((() => function(BB, IB) {
           return {
-            min: [tt.min[0] - et[0], tt.min[1] - et[1], tt.min[2] - et[2]],
-            max: [tt.max[0] - et[0] + 1, tt.max[1] - et[1] + 1, tt.max[2] - et[2] + 1]
+            min: [BB.min[0] - IB[0], BB.min[1] - IB[1], BB.min[2] - IB[2]],
+            max: [BB.max[0] - IB[0] + 1, BB.max[1] - IB[1] + 1, BB.max[2] - IB[2] + 1]
           }
-        }(ot, ce)), [ot, ce]),
-        Ge = Oe(ke, Fe, Le),
-        ze = null !== We && void 0 !== We ? We : Ge,
-        oe = (0, Ot.useRef)({
-          fittedView: Ge,
-          fieldOfView: Le,
-          mouseSensitivity: me.mouseSensitivity,
-          canLock: Ne
+        }(LB, pI)), [LB, pI]),
+        mI = ZI(rI, RI, PI),
+        XI = null !== YI && void 0 !== YI ? YI : mI,
+        LI = (0, TB.useRef)({
+          fittedView: mI,
+          fieldOfView: PI,
+          mouseSensitivity: oI.mouseSensitivity,
+          canLock: qI
         });
-      oe.current = {
-        fittedView: Ge,
-        fieldOfView: Le,
-        mouseSensitivity: me.mouseSensitivity,
-        canLock: Ne
+      LI.current = {
+        fittedView: mI,
+        fieldOfView: PI,
+        mouseSensitivity: oI.mouseSensitivity,
+        canLock: qI
       };
-      const re = (0, Ot.useMemo)((() => {
-          if (!Ce) return null;
-          const tt = (tt, Vt, Ot) => {
-              var qt, Dt, mt;
-              return null !== (qt = null === (Dt = et.frequencies[tt + ce[0]]) || void 0 === Dt || null === (mt = Dt[Vt + ce[1]]) || void 0 === mt ? void 0 : mt[Ot + ce[2]]) && void 0 !== qt ? qt : 0
+      const eI = (0, TB.useMemo)((() => {
+          if (!CI) return null;
+          const BB = (BB, ZB, TB) => {
+              var JB, oB, GB;
+              return null !== (JB = null === (oB = IB.frequencies[BB + pI[0]]) || void 0 === oB || null === (GB = oB[ZB + pI[1]]) || void 0 === GB ? void 0 : GB[TB + pI[2]]) && void 0 !== JB ? JB : 0
             },
-            Ot = function(tt, et, Vt, Ot) {
-              let qt = 0,
-                Dt = 1 / 0;
-              for (const Qt of [0, 1, 2]) {
-                if (0 === et[Qt]) {
-                  if (tt[Qt] < 0 || tt[Qt] > Vt[Qt]) return null;
+            TB = function(BB, IB, ZB, TB) {
+              let JB = 0,
+                oB = 1 / 0;
+              for (const hB of [0, 1, 2]) {
+                if (0 === IB[hB]) {
+                  if (BB[hB] < 0 || BB[hB] > ZB[hB]) return null;
                   continue
                 }
-                const Ot = (0 - tt[Qt]) / et[Qt],
-                  mt = (Vt[Qt] - tt[Qt]) / et[Qt];
-                qt = Math.max(qt, Math.min(Ot, mt)), Dt = Math.min(Dt, Math.max(Ot, mt))
+                const TB = (0 - BB[hB]) / IB[hB],
+                  GB = (ZB[hB] - BB[hB]) / IB[hB];
+                JB = Math.max(JB, Math.min(TB, GB)), oB = Math.min(oB, Math.max(TB, GB))
               }
-              if (qt > Dt) return null;
-              const mt = [0, 1, 2].map((Ot => Math.min(Vt[Ot] - 1, Math.max(0, Math.floor(tt[Ot] + et[Ot] * qt))))),
-                dt = [0, 1, 2].map((tt => Math.sign(et[tt]))),
-                jt = [0, 1, 2].map((Vt => {
-                  if (0 === dt[Vt]) return 1 / 0;
-                  return ((dt[Vt] > 0 ? mt[Vt] + 1 : mt[Vt]) - tt[Vt]) / et[Vt]
+              if (JB > oB) return null;
+              const GB = [0, 1, 2].map((TB => Math.min(ZB[TB] - 1, Math.max(0, Math.floor(BB[TB] + IB[TB] * JB))))),
+                vB = [0, 1, 2].map((BB => Math.sign(IB[BB]))),
+                kB = [0, 1, 2].map((ZB => {
+                  if (0 === vB[ZB]) return 1 / 0;
+                  return ((vB[ZB] > 0 ? GB[ZB] + 1 : GB[ZB]) - BB[ZB]) / IB[ZB]
                 })),
-                Ht = [0, 1, 2].map((tt => 0 === dt[tt] ? 1 / 0 : Math.abs(1 / et[tt])));
-              let Xt = null;
+                cB = [0, 1, 2].map((BB => 0 === vB[BB] ? 1 / 0 : Math.abs(1 / IB[BB])));
+              let nB = null;
               for (;;) {
-                const tt = Ot(mt[0], mt[1], mt[2]);
-                if (tt >= 1) return mt;
-                tt > 0 && (Xt = [mt[0], mt[1], mt[2]]);
-                const et = jt[0] < jt[1] ? jt[0] < jt[2] ? 0 : 2 : jt[1] < jt[2] ? 1 : 2;
-                if (jt[et] > Dt) return Xt;
-                if (mt[et] += dt[et], jt[et] += Ht[et], mt[et] < 0 || mt[et] >= Vt[et]) return Xt
+                const BB = TB(GB[0], GB[1], GB[2]);
+                if (BB >= 1) return GB;
+                BB > 0 && (nB = [GB[0], GB[1], GB[2]]);
+                const IB = kB[0] < kB[1] ? kB[0] < kB[2] ? 0 : 2 : kB[1] < kB[2] ? 1 : 2;
+                if (kB[IB] > oB) return nB;
+                if (GB[IB] += vB[IB], kB[IB] += cB[IB], GB[IB] < 0 || GB[IB] >= ZB[IB]) return nB
               }
-            }(ze.position, ee(ze), Pe, ((et, Ot, qt) => (0, Jt.x)(tt(et, Ot, qt), Vt, Zt)));
-          return null === Ot ? null : {
-            x: Ot[0] + ce[0],
-            y: Ot[1] + ce[1],
-            z: Ot[2] + ce[2],
-            value: tt(Ot[0], Ot[1], Ot[2])
+            }(XI.position, BI(XI), MI, ((IB, TB, JB) => (0, dB.t)(BB(IB, TB, JB), ZB, jB)));
+          return null === TB ? null : {
+            x: TB[0] + pI[0],
+            y: TB[1] + pI[1],
+            z: TB[2] + pI[2],
+            value: BB(TB[0], TB[1], TB[2])
           }
-        }), [Ce, et, ce, ze, Pe, Vt, Zt]),
+        }), [CI, IB, pI, XI, MI, ZB, jB]),
         {
-          keyHandlers: Ue
-        } = (0, Ct.f)({
-          isEnabled: Ce,
-          claimedKeyCodes: It,
-          Ql: tt => {
-            Se((et => function(tt, et) {
-              const Vt = [Math.sin(tt.heading), 0, Math.cos(tt.heading)],
-                Ot = de(de(je(Vt, et.forward), je(Ve(tt.heading), et.right)), [0, et.up, 0]);
+          keyHandlers: uI
+        } = (0, CB.f)({
+          isEnabled: CI,
+          claimedKeyCodes: HB,
+          Cz: BB => {
+            iI((IB => function(BB, IB) {
+              const ZB = [Math.sin(BB.heading), 0, Math.cos(BB.heading)],
+                TB = GI(GI(vI(ZB, IB.forward), vI(II(BB.heading), IB.right)), [0, IB.up, 0]);
               return {
-                ...tt,
-                position: de(tt.position, Ot)
+                ...BB,
+                position: GI(BB.position, TB)
               }
-            }(null !== et && void 0 !== et ? et : oe.current.fittedView, tt)))
+            }(null !== IB && void 0 !== IB ? IB : LI.current.fittedView, BB)))
           },
-          onZoomChange: Ke
+          onZoomChange: sI
         });
-      (0, Ot.useEffect)((() => {
-        const tt = Xe.current;
-        if (!tt) return;
-        let et;
+      (0, TB.useEffect)((() => {
+        const BB = cI.current;
+        if (!BB) return;
+        let IB;
         try {
-          et = function(tt, et) {
-            const Vt = new qt.e(tt, !0, {
+          IB = function(BB, IB) {
+            const ZB = new JB.e(BB, !0, {
                 stencil: !1
               }, !0),
-              Ot = new Dt.c(Vt),
-              [Et, ft, wt] = Jt.T;
-            Ot.clearColor = new Ht.e(Et / 255, ft / 255, wt / 255, 1);
-            const yt = new mt.c("Heatmap3DCamera", Xt.uf.Zero(), Ot);
-            yt.fov = et, yt.minZ = .05;
-            const Nt = new dt.c("Heatmap3DLight", new Xt.uf(.4, 1, -.6), Ot);
-            Nt.diffuse = Ht.Color3.White(), Nt.groundColor = Ht.Color3.Black(), Nt.specular = Ht.Color3.Black();
-            const Mt = new jt.StandardMaterial("Heatmap3DCellMaterial", Ot);
-            Mt.diffuseColor = new Ht.Color3(.4, .4, .4), Mt.emissiveColor = new Ht.Color3(.62, .62, .62), Mt.specularColor = Ht.Color3.Black();
-            const bt = (0, Qt.e)("Heatmap3DCells", {
+              TB = new oB.b(ZB),
+              [FB, NB, gB] = dB.M;
+            TB.clearColor = new cB.e(FB / 255, NB / 255, gB / 255, 1);
+            const qB = new GB.e("Heatmap3DCamera", nB.rN.Zero(), TB);
+            qB.fov = IB, qB.minZ = .05;
+            const yB = new vB.d("Heatmap3DLight", new nB.rN(.4, 1, -.6), TB);
+            yB.diffuse = cB.Color3.White(), yB.groundColor = cB.Color3.Black(), yB.specular = cB.Color3.Black();
+            const UB = new kB.StandardMaterial("Heatmap3DCellMaterial", TB);
+            UB.diffuseColor = new cB.Color3(.4, .4, .4), UB.emissiveColor = new cB.Color3(.62, .62, .62), UB.specularColor = cB.Color3.Black();
+            const WB = (0, hB.c)("Heatmap3DCells", {
               size: 1
-            }, Ot);
-            bt.material = Mt, bt.Gw = !1, bt.Cf = !0, bt.isVisible = !1;
-            const Ct = (0, Qt.e)("Heatmap3DTranslucentCells", {
+            }, TB);
+            WB.material = UB, WB.tg = !1, WB.RN = !0, WB.isVisible = !1;
+            const CB = (0, hB.c)("Heatmap3DTranslucentCells", {
               size: 1
-            }, Ot);
-            Ct.material = Mt, Ct.hasVertexAlpha = !0, Ct.Gw = !1, Ct.Cf = !0, Ct.isVisible = !1;
-            const ut = new jt.StandardMaterial("Heatmap3DSchematicMaterial", Ot);
-            ut.diffuseColor = new Ht.Color3(.6, .6, .6), ut.emissiveColor = new Ht.Color3(.4, .4, .4), ut.specularColor = Ht.Color3.Black();
-            const Kt = (0, Qt.e)("Heatmap3DSchematicBlocks", {
+            }, TB);
+            CB.material = UB, CB.hasVertexAlpha = !0, CB.tg = !1, CB.RN = !0, CB.isVisible = !1;
+            const QB = new kB.StandardMaterial("Heatmap3DSchematicMaterial", TB);
+            QB.diffuseColor = new cB.Color3(.6, .6, .6), QB.emissiveColor = new cB.Color3(.4, .4, .4), QB.specularColor = cB.Color3.Black();
+            const sB = (0, hB.c)("Heatmap3DSchematicBlocks", {
               size: 1
-            }, Ot);
-            Kt.material = ut, Kt.Gw = !1, Kt.Cf = !0, Kt.isVisible = !1;
-            const ht = (0, lt.c)("Heatmap3DTarget", {
-              lines: te([-.52, -.52, -.52], [.52, .52, .52])
-            }, Ot);
-            return ht.color = new Ht.Color3(.06, .14, .23), ht.renderingGroupId = 1, ht.Gw = !1, ht.isVisible = !1, {
-              engine: Vt,
-              Fw: Ot,
-              camera: yt,
-              cells: bt,
-              translucentCells: Ct,
+            }, TB);
+            sB.material = QB, sB.tg = !1, sB.RN = !0, sB.isVisible = !1;
+            const wB = (0, zB.e)("Heatmap3DTarget", {
+              lines: SB([-.52, -.52, -.52], [.52, .52, .52])
+            }, TB);
+            return wB.color = new cB.Color3(.06, .14, .23), wB.renderingGroupId = 1, wB.tg = !1, wB.isVisible = !1, {
+              engine: ZB,
+              lg: TB,
+              camera: qB,
+              cells: WB,
+              translucentCells: CB,
               translucent: {
-                Of: new Float32Array(0),
+                pg: new Float32Array(0),
                 colours: new Float32Array(0),
                 count: 0
               },
               translucentSortedFrom: null,
-              schematicBlocks: Kt,
-              targetOutline: ht,
+              schematicBlocks: sB,
+              targetOutline: wB,
               chunkGrid: null,
               chunkGridCentre: null,
               chunkGridOrigin: null,
-              targetFieldOfView: et,
+              targetFieldOfView: IB,
               needsRender: !0
             }
-          }(tt, oe.current.fieldOfView)
-        } catch (Vt) {
-          return console.error("Failed to start the 3D heatmap", Vt), void fe(!0)
+          }(BB, LI.current.fieldOfView)
+        } catch (ZB) {
+          return console.error("Failed to start the 3D heatmap", ZB), void FI(!0)
         }
-        return Qe.current = et, et.engine.runRenderLoop((() => {
-          const tt = et.camera;
-          tt.fov !== et.targetFieldOfView && (tt.fov += (et.targetFieldOfView - tt.fov) * (tt.fov > et.targetFieldOfView ? .3 : .2), Math.abs(et.targetFieldOfView - tt.fov) < 5e-4 && (tt.fov = et.targetFieldOfView), et.needsRender = !0), et.needsRender && (et.Fw.render(), et.needsRender = !et.Fw.isReady() || !et.engine.areAllEffectsReady())
+        return nI.current = IB, IB.engine.runRenderLoop((() => {
+          const BB = IB.camera;
+          BB.fov !== IB.targetFieldOfView && (BB.fov += (IB.targetFieldOfView - BB.fov) * (BB.fov > IB.targetFieldOfView ? .3 : .2), Math.abs(IB.targetFieldOfView - BB.fov) < 5e-4 && (BB.fov = IB.targetFieldOfView), IB.needsRender = !0), IB.needsRender && (IB.lg.render(), IB.needsRender = !IB.lg.isReady() || !IB.engine.areAllEffectsReady())
         })), () => {
-          Qe.current = null, et.engine.dispose()
+          nI.current = null, IB.engine.dispose()
         }
-      }), []), (0, Ot.useEffect)((() => {
-        const tt = Xe.current;
-        if (!tt) return;
-        const et = () => {
-            Me.current = !1, ye(document.pointerLockElement === tt)
+      }), []), (0, TB.useEffect)((() => {
+        const BB = cI.current;
+        if (!BB) return;
+        const IB = () => {
+            UI.current = !1, gI(document.pointerLockElement === BB)
           },
-          Vt = () => {
-            Me.current && (Me.current = !1, ae(!1))
+          ZB = () => {
+            UI.current && (UI.current = !1, yI(!1))
           },
-          Ot = et => {
-            const Vt = !oe.current.canLock && document.activeElement === tt && 0 !== (1 & et.buttons);
-            if (document.pointerLockElement !== tt && !Vt) return;
-            const Ot = oe.current.mouseSensitivity * Wt;
-            Se((tt => function(tt, et, Vt) {
-              const Ot = 2 * Math.PI;
+          TB = IB => {
+            const ZB = !LI.current.canLock && document.activeElement === BB && 0 !== (1 & IB.buttons);
+            if (document.pointerLockElement !== BB && !ZB) return;
+            const TB = LI.current.mouseSensitivity * YB;
+            iI((BB => function(BB, IB, ZB) {
+              const TB = 2 * Math.PI;
               return {
-                ...tt,
-                heading: ((tt.heading + et) % Ot + Ot) % Ot,
-                pitch: Math.max(-Gt, Math.min(Gt, tt.pitch + Vt))
+                ...BB,
+                heading: ((BB.heading + IB) % TB + TB) % TB,
+                pitch: Math.max(-mB, Math.min(mB, BB.pitch + ZB))
               }
-            }(null !== tt && void 0 !== tt ? tt : oe.current.fittedView, et.movementX * Ot, et.movementY * Ot)))
+            }(null !== BB && void 0 !== BB ? BB : LI.current.fittedView, IB.movementX * TB, IB.movementY * TB)))
           };
-        return document.addEventListener("pointerlockchange", et), document.addEventListener("pointerlockerror", Vt), document.addEventListener("pointermove", Ot), () => {
-          document.removeEventListener("pointerlockchange", et), document.removeEventListener("pointerlockerror", Vt), document.removeEventListener("pointermove", Ot), document.pointerLockElement === tt && (0, ut.c)()
+        return document.addEventListener("pointerlockchange", IB), document.addEventListener("pointerlockerror", ZB), document.addEventListener("pointermove", TB), () => {
+          document.removeEventListener("pointerlockchange", IB), document.removeEventListener("pointerlockerror", ZB), document.removeEventListener("pointermove", TB), document.pointerLockElement === BB && (0, QB.c)()
         }
-      }), []), (0, Ot.useEffect)((() => {
-        const tt = Qe.current;
-        null !== tt && 0 !== le.width && 0 !== le.height && (tt.engine.resize(), tt.needsRender = !0)
-      }), [le.width, le.height]), (0, Ot.useEffect)((() => {
-        const tt = Qe.current;
-        null !== tt && (tt.targetFieldOfView = Le * (ue ? vt : 1))
-      }), [Le, ue]), (0, Ot.useEffect)((() => {
-        const tt = Qe.current;
-        null !== tt && function(tt, et, Vt, Ot) {
-          const qt = [],
-            Dt = [],
-            mt = [],
-            dt = [];
-          for (let jt = 0; jt < et.count; jt++) {
-            const tt = et.values[jt],
-              Ht = (0, Jt.x)(tt, Vt, Ot);
-            if (Ht <= 0) continue;
-            const [Xt, Qt, lt] = (0, Jt.m)((0, Jt.K)(tt, Vt)), Et = Ht >= 1;
-            (Et ? qt : mt).push(et.positions[3 * jt] + .5, et.positions[3 * jt + 1] + .5, et.positions[3 * jt + 2] + .5), (Et ? Dt : dt).push(Xt / 255, Qt / 255, lt / 255, Ht)
+      }), []), (0, TB.useEffect)((() => {
+        const BB = nI.current;
+        null !== BB && 0 !== hI.width && 0 !== hI.height && (BB.engine.resize(), BB.needsRender = !0)
+      }), [hI.width, hI.height]), (0, TB.useEffect)((() => {
+        const BB = nI.current;
+        null !== BB && (BB.targetFieldOfView = PI * (QI ? OB : 1))
+      }), [PI, QI]), (0, TB.useEffect)((() => {
+        const BB = nI.current;
+        null !== BB && function(BB, IB, ZB, TB) {
+          const JB = [],
+            oB = [],
+            GB = [],
+            vB = [];
+          for (let kB = 0; kB < IB.count; kB++) {
+            const BB = IB.values[kB],
+              cB = (0, dB.t)(BB, ZB, TB);
+            if (cB <= 0) continue;
+            const [nB, hB, zB] = (0, dB.m)((0, dB.F)(BB, ZB)), FB = cB >= 1;
+            (FB ? JB : GB).push(IB.positions[3 * kB] + .5, IB.positions[3 * kB + 1] + .5, IB.positions[3 * kB + 2] + .5), (FB ? oB : vB).push(nB / 255, hB / 255, zB / 255, cB)
           }
-          st(tt.cells, Float32Array.from(qt), Float32Array.from(Dt), Dt.length / 4), tt.translucent = {
-            Of: Float32Array.from(mt),
-            colours: Float32Array.from(dt),
-            count: dt.length / 4
-          }, tt.translucentSortedFrom = null, nt(tt), tt.needsRender = !0
-        }(tt, Ze, Vt, Zt)
-      }), [Ze, Vt, Zt]), (0, Ot.useEffect)((() => {
-        const tt = Qe.current;
-        null !== tt && function(tt, et) {
-          tt.chunkGridOrigin = et, tt.chunkGridCentre = null, gt(tt)
-        }(tt, zt.min)
-      }), [zt]), (0, Ot.useEffect)((() => {
-        const tt = Qe.current;
-        null !== tt && function(tt, et, Vt) {
-          const Ot = [],
-            qt = [];
-          if (null !== et) {
+          KB(BB.cells, Float32Array.from(JB), Float32Array.from(oB), oB.length / 4), BB.translucent = {
+            pg: Float32Array.from(GB),
+            colours: Float32Array.from(vB),
+            count: vB.length / 4
+          }, BB.translucentSortedFrom = null, VB(BB), BB.needsRender = !0
+        }(BB, jI, ZB, jB)
+      }), [jI, ZB, jB]), (0, TB.useEffect)((() => {
+        const BB = nI.current;
+        null !== BB && function(BB, IB) {
+          BB.chunkGridOrigin = IB, BB.chunkGridCentre = null, DB(BB)
+        }(BB, XB.min)
+      }), [XB]), (0, TB.useEffect)((() => {
+        const BB = nI.current;
+        null !== BB && function(BB, IB, ZB) {
+          const TB = [],
+            JB = [];
+          if (null !== IB) {
             const {
-              positions: tt,
-              colours: Dt,
-              count: mt
-            } = et.surface;
-            for (let et = 0; et < mt; et++) {
-              const mt = [tt[3 * et], tt[3 * et + 1], tt[3 * et + 2]];
-              [0, 1, 2].every((tt => mt[tt] >= Vt.min[tt] - Pt && mt[tt] <= Vt.max[tt] + Pt)) && (Ot.push(mt[0] - Vt.min[0] + .5, mt[1] - Vt.min[1] + .5, mt[2] - Vt.min[2] + .5), qt.push(Dt[3 * et] / 255, Dt[3 * et + 1] / 255, Dt[3 * et + 2] / 255, 1))
+              positions: BB,
+              colours: oB,
+              count: GB
+            } = IB.surface;
+            for (let IB = 0; IB < GB; IB++) {
+              const GB = [BB[3 * IB], BB[3 * IB + 1], BB[3 * IB + 2]];
+              [0, 1, 2].every((BB => GB[BB] >= ZB.min[BB] - MB && GB[BB] <= ZB.max[BB] + MB)) && (TB.push(GB[0] - ZB.min[0] + .5, GB[1] - ZB.min[1] + .5, GB[2] - ZB.min[2] + .5), JB.push(oB[3 * IB] / 255, oB[3 * IB + 1] / 255, oB[3 * IB + 2] / 255, 1))
             }
           }
-          st(tt.schematicBlocks, Float32Array.from(Ot), Float32Array.from(qt), qt.length / 4), tt.needsRender = !0
-        }(tt, rt, zt)
-      }), [rt, zt]), (0, Ot.useEffect)((() => {
-        const tt = Qe.current;
-        null !== tt && null !== tt.chunkGrid && (tt.chunkGrid.isVisible = he, tt.needsRender = !0)
-      }), [he, zt]), (0, Ot.useEffect)((() => {
-        const tt = Qe.current;
-        null !== tt && function(tt, et, Vt) {
+          KB(BB.schematicBlocks, Float32Array.from(TB), Float32Array.from(JB), JB.length / 4), BB.needsRender = !0
+        }(BB, eB, XB)
+      }), [eB, XB]), (0, TB.useEffect)((() => {
+        const BB = nI.current;
+        null !== BB && null !== BB.chunkGrid && (BB.chunkGrid.isVisible = wI, BB.needsRender = !0)
+      }), [wI, XB]), (0, TB.useEffect)((() => {
+        const BB = nI.current;
+        null !== BB && function(BB, IB, ZB) {
           const {
-            camera: Ot
-          } = tt;
-          Ot.position.set(et.position[0], et.position[1], et.position[2]), Ot.rotation.set(et.pitch, et.heading, 0);
-          const qt = (Lt + 1) * ft.e.ff * Math.sqrt(3);
-          Ot.maxZ = Math.max(qt, Math.hypot(...de(et.position, je(De({
+            camera: TB
+          } = BB;
+          TB.position.set(IB.position[0], IB.position[1], IB.position[2]), TB.rotation.set(IB.pitch, IB.heading, 0);
+          const JB = (PB + 1) * NB.f.YN * Math.sqrt(3);
+          TB.maxZ = Math.max(JB, Math.hypot(...GI(IB.position, vI(JI({
             min: [0, 0, 0],
-            max: Vt
-          }), -1))) + 2 * Math.hypot(...Vt)), gt(tt), nt(tt), tt.needsRender = !0
-        }(tt, ze, Pe)
-      }), [ze, Pe]), (0, Ot.useEffect)((() => {
-        const tt = Qe.current;
-        null !== tt && (tt.targetOutline.isVisible = null !== re, null !== re && tt.targetOutline.position.set(re.x - ce[0] + .5, re.y - ce[1] + .5, re.z - ce[2] + .5), tt.needsRender = !0)
-      }), [re, ce]);
-      return (0, Kt.jsxs)("div", {
+            max: ZB
+          }), -1))) + 2 * Math.hypot(...ZB)), DB(BB), VB(BB), BB.needsRender = !0
+        }(BB, XI, MI)
+      }), [XI, MI]), (0, TB.useEffect)((() => {
+        const BB = nI.current;
+        null !== BB && (BB.targetOutline.isVisible = null !== eI, null !== eI && BB.targetOutline.position.set(eI.x - pI[0] + .5, eI.y - pI[1] + .5, eI.z - pI[2] + .5), BB.needsRender = !0)
+      }), [eI, pI]);
+      return (0, sB.jsxs)("div", {
         className: "StudioHeatmapMap StudioHeatmap3D",
-        ref: He,
-        children: [(0, Kt.jsx)("canvas", {
+        ref: kI,
+        children: [(0, sB.jsx)("canvas", {
           className: "StudioHeatmapMapCanvas",
-          ref: Xe,
+          ref: cI,
           style: {
-            width: `${le.width}px`,
-            height: `${le.height}px`
+            width: `${hI.width}px`,
+            height: `${hI.height}px`
           },
           tabIndex: 0,
-          "aria-label": xt("3D heatmap"),
+          "aria-label": xB("3D heatmap"),
           onClick: () => {
-            const tt = Xe.current;
-            if (null === tt) return;
-            if (tt.focus({
+            const BB = cI.current;
+            if (null === BB) return;
+            if (BB.focus({
                 preventScroll: !0
-              }), we || !Ne) return;
-            const et = tt.requestPointerLock();
-            et instanceof Promise ? et.catch((tt => {
-              tt instanceof DOMException && ("WrongDocumentError" === tt.name || "NotSupportedError" === tt.name) && ae(!1)
-            })) : Me.current = !0
+              }), NI || !qI) return;
+            const IB = BB.requestPointerLock();
+            IB instanceof Promise ? IB.catch((BB => {
+              BB instanceof DOMException && ("WrongDocumentError" === BB.name || "NotSupportedError" === BB.name) && yI(!1)
+            })) : UI.current = !0
           },
-          ...Ue,
-          onKeyDown: tt => {
-            if (Ce && St.has(tt.code)) return tt.preventDefault(), void(() => {
-              const tt = Xe.current;
-              null !== tt && document.pointerLockElement === tt ? (0, ut.c)() : null === tt || void 0 === tt || tt.blur()
+          ...uI,
+          onKeyDown: BB => {
+            if (CI && iB.has(BB.code)) return BB.preventDefault(), void(() => {
+              const BB = cI.current;
+              null !== BB && document.pointerLockElement === BB ? (0, QB.c)() : null === BB || void 0 === BB || BB.blur()
             })();
-            const et = ct[tt.code];
-            return Ce && void 0 !== et ? (tt.preventDefault(), void At(et)) : Ce && (0, Ct.b)("replayPlayPause", tt.code) && !(0, Ct.b)("Zoom", tt.code) ? (tt.preventDefault(), void(tt.repeat || Yt())) : Ce && tt.code === Rt ? (tt.preventDefault(), void it()) : Ce && tt.code === kt ? (tt.preventDefault(), void Se(null)) : Ce && tt.code === Ft ? (tt.preventDefault(), void ve((tt => !tt))) : void Ue.onKeyDown(tt)
+            const IB = pB[BB.code];
+            return CI && void 0 !== IB ? (BB.preventDefault(), void fB(IB)) : CI && (0, CB.b)("replayPlayPause", BB.code) && !(0, CB.b)("Zoom", BB.code) ? (BB.preventDefault(), void(BB.repeat || AB())) : CI && BB.code === aB ? (BB.preventDefault(), void lB()) : CI && BB.code === rB ? (BB.preventDefault(), void iI(null)) : CI && BB.code === RB ? (BB.preventDefault(), void OI((BB => !BB))) : void uI.onKeyDown(BB)
           },
           onFocus: () => {
-            Je(!0)
+            dI(!0)
           },
           onBlur: () => {
-            Je(!1), Ue.onBlur()
+            dI(!1), uI.onBlur()
           }
-        }), Ee && (0, Kt.jsx)("div", {
+        }), zI && (0, sB.jsx)("div", {
           className: "StudioHeatmap3DUnavailable SmallTextLight",
-          children: xt("3D view isn't available in this browser.")
-        }), Ce && (0, Kt.jsx)("div", {
+          children: xB("3D view isn't available in this browser.")
+        }), CI && (0, sB.jsx)("div", {
           className: "StudioHeatmap3DCrosshair"
-        }), (0, Kt.jsx)("div", {
+        }), (0, sB.jsx)("div", {
           className: "StudioHeatmap3DCoordinates SmallTextLight",
-          children: ze.position.map(((tt, et) => (tt + ce[et]).toFixed(2))).join(" ")
-        }), he && (0, Kt.jsx)(Tt, {
-          heading: ze.heading,
-          pitch: ze.pitch,
-          onViewFrom: tt => {
-            const et = je(tt, -1),
-              Vt = 0 === et[1] ? {
-                heading: Math.atan2(et[0], et[2]),
+          children: XI.position.map(((BB, IB) => (BB + pI[IB]).toFixed(2))).join(" ")
+        }), wI && (0, sB.jsx)(EB, {
+          heading: XI.heading,
+          pitch: XI.pitch,
+          onViewFrom: BB => {
+            const IB = vI(BB, -1),
+              ZB = 0 === IB[1] ? {
+                heading: Math.atan2(IB[0], IB[2]),
                 pitch: 0
               } : {
-                heading: ze.heading,
-                pitch: et[1] < 0 ? Gt : -Gt
+                heading: XI.heading,
+                pitch: IB[1] < 0 ? mB : -mB
               };
-            Se(Oe(ke, Fe, Le, Vt))
+            iI(ZI(rI, RI, PI, ZB))
           },
-          onTurn: (tt, et) => {
-            Se((Vt => function(tt, et, Vt, Ot) {
-              return qe(tt, et, {
-                heading: tt.heading + Vt * Bt,
-                pitch: Math.max(-Gt, Math.min(Gt, tt.pitch + Ot * Bt))
+          onTurn: (BB, IB) => {
+            iI((ZB => function(BB, IB, ZB, TB) {
+              return TI(BB, IB, {
+                heading: BB.heading + ZB * tB,
+                pitch: Math.max(-mB, Math.min(mB, BB.pitch + TB * tB))
               })
-            }(null !== Vt && void 0 !== Vt ? Vt : oe.current.fittedView, De(ke), tt, et)))
+            }(null !== ZB && void 0 !== ZB ? ZB : LI.current.fittedView, JI(rI), BB, IB)))
           },
           onFlip: () => {
-            Se((tt => function(tt, et) {
-              return qe(tt, et, {
-                heading: tt.heading + Math.PI,
-                pitch: -tt.pitch
+            iI((BB => function(BB, IB) {
+              return TI(BB, IB, {
+                heading: BB.heading + Math.PI,
+                pitch: -BB.pitch
               })
-            }(null !== tt && void 0 !== tt ? tt : oe.current.fittedView, De(ke))))
+            }(null !== BB && void 0 !== BB ? BB : LI.current.fittedView, JI(rI))))
           }
-        }), null !== re && (0, Kt.jsx)("div", {
+        }), null !== eI && (0, sB.jsx)("div", {
           className: "StudioHeatmapMapReadout SmallTextLight",
-          children: null === pt ? xt("studio:heatmapBlockReadout", {
-            x: re.x,
-            y: re.y,
-            z: re.z,
-            count: (0, Et.S)(re.value)
-          }) : pt(re.x, re.y, re.z, re.value)
-        }), (0, Kt.jsxs)("div", {
+          children: null === bB ? xB("studio:heatmapBlockReadout", {
+            x: eI.x,
+            y: eI.y,
+            z: eI.z,
+            count: (0, FB.J)(eI.value)
+          }) : bB(eI.x, eI.y, eI.z, eI.value)
+        }), (0, sB.jsxs)("div", {
           className: "StudioHeatmapMapControls",
-          children: [Ut, (0, Kt.jsx)(Mt.Q, {
-            active: null === We,
+          children: [uB, (0, sB.jsx)(UB.V, {
+            active: null === YI,
             onClick: () => {
-              Se(null)
+              iI(null)
             },
-            children: (0, Kt.jsx)(bt.b, {
+            children: (0, sB.jsx)(WB.d, {
               name: "eye"
             })
           })]
@@ -447,255 +447,255 @@ export const modules = {
       })
     }
 
-    function Tt(tt) {
+    function EB(BB) {
       let {
-        heading: et,
-        pitch: Vt,
-        onViewFrom: qt,
-        onTurn: Dt,
-        onFlip: mt
-      } = tt;
+        heading: IB,
+        pitch: ZB,
+        onViewFrom: JB,
+        onTurn: oB,
+        onFlip: GB
+      } = BB;
       const {
-        t: dt
-      } = (0, wt.H)(), jt = (0, Ot.useRef)(null), Ht = ee({
-        heading: et,
-        pitch: Vt
-      }), Xt = Ve(et), Qt = Xe(Ht, Xt), lt = At + it + 2, Et = Ut.flatMap((tt => [1, -1].map((et => {
-        const Vt = je(tt.direction, et);
+        t: vB
+      } = (0, gB.G)(), kB = (0, TB.useRef)(null), cB = BI({
+        heading: IB,
+        pitch: ZB
+      }), nB = II(IB), hB = cI(cB, nB), zB = fB + lB + 2, FB = uB.flatMap((BB => [1, -1].map((IB => {
+        const ZB = vI(BB.direction, IB);
         return {
-          ...tt,
-          sign: et,
-          direction: Vt,
-          endX: lt + He(Vt, Xt) * At,
-          endY: lt - He(Vt, Qt) * At,
-          depth: He(Vt, Ht)
+          ...BB,
+          sign: IB,
+          direction: ZB,
+          endX: zB + kI(ZB, nB) * fB,
+          endY: zB - kI(ZB, hB) * fB,
+          depth: kI(ZB, cB)
         }
-      })))).sort(((tt, et) => et.depth - tt.depth));
-      return (0, Kt.jsxs)("svg", {
+      })))).sort(((BB, IB) => IB.depth - BB.depth));
+      return (0, sB.jsxs)("svg", {
         className: "StudioHeatmap3DGizmo",
-        width: 2 * lt,
-        height: 2 * lt,
+        width: 2 * zB,
+        height: 2 * zB,
         "aria-hidden": !0,
-        onPointerDown: tt => {
-          var et, Vt;
-          tt.currentTarget.setPointerCapture(tt.pointerId);
-          const Ot = tt.target,
-            qt = Ot.getAttribute("data-end");
-          jt.current = {
-            pointerId: tt.pointerId,
-            x: tt.clientX,
-            y: tt.clientY,
+        onPointerDown: BB => {
+          var IB, ZB;
+          BB.currentTarget.setPointerCapture(BB.pointerId);
+          const TB = BB.target,
+            JB = TB.getAttribute("data-end");
+          kB.current = {
+            pointerId: BB.pointerId,
+            x: BB.clientX,
+            y: BB.clientY,
             travel: 0,
-            side: null === qt ? null : null !== (et = null === (Vt = Et[Number(qt)]) || void 0 === Vt ? void 0 : Vt.direction) && void 0 !== et ? et : null,
-            isOnMiddle: Ot.hasAttribute("data-middle")
+            side: null === JB ? null : null !== (IB = null === (ZB = FB[Number(JB)]) || void 0 === ZB ? void 0 : ZB.direction) && void 0 !== IB ? IB : null,
+            isOnMiddle: TB.hasAttribute("data-middle")
           }
         },
-        onPointerMove: tt => {
-          const et = jt.current;
-          if (null === et || et.pointerId !== tt.pointerId) return;
-          const Vt = tt.clientX - et.x,
-            Ot = tt.clientY - et.y;
-          et.x = tt.clientX, et.y = tt.clientY, et.travel += Math.abs(Vt) + Math.abs(Ot), et.travel >= pt && Dt(Vt, Ot)
+        onPointerMove: BB => {
+          const IB = kB.current;
+          if (null === IB || IB.pointerId !== BB.pointerId) return;
+          const ZB = BB.clientX - IB.x,
+            TB = BB.clientY - IB.y;
+          IB.x = BB.clientX, IB.y = BB.clientY, IB.travel += Math.abs(ZB) + Math.abs(TB), IB.travel >= bB && oB(ZB, TB)
         },
-        onPointerUp: tt => {
-          const et = jt.current;
-          jt.current = null, null === et || et.pointerId !== tt.pointerId || et.travel >= pt || (null !== et.side ? qt(et.side) : et.isOnMiddle && mt())
+        onPointerUp: BB => {
+          const IB = kB.current;
+          kB.current = null, null === IB || IB.pointerId !== BB.pointerId || IB.travel >= bB || (null !== IB.side ? JB(IB.side) : IB.isOnMiddle && GB())
         },
         onPointerCancel: () => {
-          jt.current = null
+          kB.current = null
         },
-        children: [Et.map(((tt, et) => {
-          const Vt = tt.sign > 0;
-          return (0, Kt.jsxs)("g", {
-            children: [(0, Kt.jsx)("line", {
-              x1: lt,
-              y1: lt,
-              x2: tt.endX,
-              y2: tt.endY,
-              stroke: tt.colour,
-              strokeOpacity: Vt ? 1 : .5,
+        children: [FB.map(((BB, IB) => {
+          const ZB = BB.sign > 0;
+          return (0, sB.jsxs)("g", {
+            children: [(0, sB.jsx)("line", {
+              x1: zB,
+              y1: zB,
+              x2: BB.endX,
+              y2: BB.endY,
+              stroke: BB.colour,
+              strokeOpacity: ZB ? 1 : .5,
               strokeWidth: 2,
               strokeLinecap: "round"
-            }), (0, Kt.jsx)("circle", {
+            }), (0, sB.jsx)("circle", {
               className: "StudioHeatmap3DGizmoEnd",
-              "data-end": et,
-              cx: tt.endX,
-              cy: tt.endY,
-              r: Vt ? it : it - 1,
-              fill: tt.colour,
-              fillOpacity: Vt ? 1 : .3,
-              stroke: tt.colour,
-              strokeWidth: Vt ? 0 : 1.5,
-              children: (0, Kt.jsx)("title", {
-                children: `${dt("View from")} ${Vt?"+":"\u2212"}${tt.name}`
+              "data-end": IB,
+              cx: BB.endX,
+              cy: BB.endY,
+              r: ZB ? lB : lB - 1,
+              fill: BB.colour,
+              fillOpacity: ZB ? 1 : .3,
+              stroke: BB.colour,
+              strokeWidth: ZB ? 0 : 1.5,
+              children: (0, sB.jsx)("title", {
+                children: `${vB("View from")} ${ZB?"+":"\u2212"}${BB.name}`
               })
-            }), Vt && (0, Kt.jsx)("text", {
+            }), ZB && (0, sB.jsx)("text", {
               pointerEvents: "none",
-              x: tt.endX,
-              y: tt.endY,
+              x: BB.endX,
+              y: BB.endY,
               fill: "#151515",
               fontSize: 9,
               fontWeight: "bold",
               textAnchor: "middle",
               dominantBaseline: "central",
-              children: tt.name
+              children: BB.name
             })]
-          }, `${Vt?"+":"-"}${tt.name}`)
-        })), (0, Kt.jsx)("circle", {
+          }, `${ZB?"+":"-"}${BB.name}`)
+        })), (0, sB.jsx)("circle", {
           className: "StudioHeatmap3DGizmoEnd",
           "data-middle": !0,
-          cx: lt,
-          cy: lt,
-          r: Yt,
+          cx: zB,
+          cy: zB,
+          r: AB,
           fill: "#d0d0d0",
           fillOpacity: .85,
-          children: (0, Kt.jsx)("title", {
-            children: dt("View from the opposite side")
+          children: (0, sB.jsx)("title", {
+            children: vB("View from the opposite side")
           })
         })]
       })
     }
 
-    function gt(tt) {
-      var et, Vt, Ot;
+    function DB(BB) {
+      var IB, ZB, TB;
       const {
-        chunkGridOrigin: qt,
-        camera: Dt
-      } = tt;
-      if (null === qt) return;
-      const mt = [Dt.position.x, Dt.position.y, Dt.position.z],
-        dt = [0, 2].map((tt => Math.floor((mt[tt] + qt[tt]) / ft.e.ff))),
-        jt = tt.chunkGridCentre;
-      if (null !== jt && jt.every(((tt, et) => tt === dt[et]))) return;
-      const Qt = null === (et = null === (Vt = tt.chunkGrid) || void 0 === Vt ? void 0 : Vt.isVisible) || void 0 === et || et;
-      null === (Ot = tt.chunkGrid) || void 0 === Ot || Ot.dispose();
-      const [Et, wt] = [0, 2].map(((tt, et) => {
-        const Vt = [];
-        for (let Ot = dt[et] - Lt; Ot <= dt[et] + Lt + 1; Ot++) Vt.push(Ot * ft.e.ff - qt[tt]);
-        return Vt
-      })), yt = -qt[1], Nt = [];
-      for (const Ht of wt) Nt.push([new Xt.uf(Et[0], yt, Ht), new Xt.uf(Et[Et.length - 1], yt, Ht)]);
-      for (const Ht of Et) Nt.push([new Xt.uf(Ht, yt, wt[0]), new Xt.uf(Ht, yt, wt[wt.length - 1])]);
-      const Mt = (0, lt.c)("Heatmap3DChunkGrid", {
-        lines: Nt
-      }, tt.Fw);
-      Mt.color = new Ht.Color3(.45, .6, .78), Mt.Gw = !1, Mt.isVisible = Qt, tt.chunkGrid = Mt, tt.chunkGridCentre = dt, tt.needsRender = !0
+        chunkGridOrigin: JB,
+        camera: oB
+      } = BB;
+      if (null === JB) return;
+      const GB = [oB.position.x, oB.position.y, oB.position.z],
+        vB = [0, 2].map((BB => Math.floor((GB[BB] + JB[BB]) / NB.f.YN))),
+        kB = BB.chunkGridCentre;
+      if (null !== kB && kB.every(((BB, IB) => BB === vB[IB]))) return;
+      const hB = null === (IB = null === (ZB = BB.chunkGrid) || void 0 === ZB ? void 0 : ZB.isVisible) || void 0 === IB || IB;
+      null === (TB = BB.chunkGrid) || void 0 === TB || TB.dispose();
+      const [FB, gB] = [0, 2].map(((BB, IB) => {
+        const ZB = [];
+        for (let TB = vB[IB] - PB; TB <= vB[IB] + PB + 1; TB++) ZB.push(TB * NB.f.YN - JB[BB]);
+        return ZB
+      })), qB = -JB[1], yB = [];
+      for (const cB of gB) yB.push([new nB.rN(FB[0], qB, cB), new nB.rN(FB[FB.length - 1], qB, cB)]);
+      for (const cB of FB) yB.push([new nB.rN(cB, qB, gB[0]), new nB.rN(cB, qB, gB[gB.length - 1])]);
+      const UB = (0, zB.e)("Heatmap3DChunkGrid", {
+        lines: yB
+      }, BB.lg);
+      UB.color = new cB.Color3(.45, .6, .78), UB.tg = !1, UB.isVisible = hB, BB.chunkGrid = UB, BB.chunkGridCentre = vB, BB.needsRender = !0
     }
 
-    function st(tt, et, Vt, Ot) {
-      tt.A4("matrix", function(tt, et) {
-        const Vt = new Float32Array(16 * et);
-        for (let Ot = 0; Ot < et; Ot++) {
-          const et = 16 * Ot;
-          Vt[et] = 1, Vt[et + 5] = 1, Vt[et + 10] = 1, Vt[et + 12] = tt[3 * Ot], Vt[et + 13] = tt[3 * Ot + 1], Vt[et + 14] = tt[3 * Ot + 2], Vt[et + 15] = 1
+    function KB(BB, IB, ZB, TB) {
+      BB.ZBB("matrix", function(BB, IB) {
+        const ZB = new Float32Array(16 * IB);
+        for (let TB = 0; TB < IB; TB++) {
+          const IB = 16 * TB;
+          ZB[IB] = 1, ZB[IB + 5] = 1, ZB[IB + 10] = 1, ZB[IB + 12] = BB[3 * TB], ZB[IB + 13] = BB[3 * TB + 1], ZB[IB + 14] = BB[3 * TB + 2], ZB[IB + 15] = 1
         }
-        return Vt
-      }(et, Ot), 16, !0), tt.A4("color", Vt, 4, !0), tt.isVisible = Ot > 0
+        return ZB
+      }(IB, TB), 16, !0), BB.ZBB("color", ZB, 4, !0), BB.isVisible = TB > 0
     }
 
-    function nt(tt) {
+    function VB(BB) {
       const {
-        camera: et,
-        translucent: Vt
-      } = tt, Ot = [et.position.x, et.position.y, et.position.z], qt = tt.translucentSortedFrom;
-      if (null !== qt && Math.hypot(Ot[0] - qt[0], Ot[1] - qt[1], Ot[2] - qt[2]) < Zt) return;
-      tt.translucentSortedFrom = Ot;
-      const Dt = new Float64Array(Vt.count),
-        mt = new Uint32Array(Vt.count);
-      for (let Ht = 0; Ht < Vt.count; Ht++) {
-        const tt = Vt.Of[3 * Ht] - Ot[0],
-          et = Vt.Of[3 * Ht + 1] - Ot[1],
-          qt = Vt.Of[3 * Ht + 2] - Ot[2];
-        Dt[Ht] = tt * tt + et * et + qt * qt, mt[Ht] = Ht
+        camera: IB,
+        translucent: ZB
+      } = BB, TB = [IB.position.x, IB.position.y, IB.position.z], JB = BB.translucentSortedFrom;
+      if (null !== JB && Math.hypot(TB[0] - JB[0], TB[1] - JB[1], TB[2] - JB[2]) < jB) return;
+      BB.translucentSortedFrom = TB;
+      const oB = new Float64Array(ZB.count),
+        GB = new Uint32Array(ZB.count);
+      for (let cB = 0; cB < ZB.count; cB++) {
+        const BB = ZB.pg[3 * cB] - TB[0],
+          IB = ZB.pg[3 * cB + 1] - TB[1],
+          JB = ZB.pg[3 * cB + 2] - TB[2];
+        oB[cB] = BB * BB + IB * IB + JB * JB, GB[cB] = cB
       }
-      mt.sort(((tt, et) => Dt[et] - Dt[tt]));
-      const dt = new Float32Array(3 * Vt.count),
-        jt = new Float32Array(4 * Vt.count);
-      mt.forEach(((tt, et) => {
-        dt.set(Vt.Of.subarray(3 * tt, 3 * tt + 3), 3 * et), jt.set(Vt.colours.subarray(4 * tt, 4 * tt + 4), 4 * et)
-      })), st(tt.translucentCells, dt, jt, Vt.count), tt.needsRender = !0
+      GB.sort(((BB, IB) => oB[IB] - oB[BB]));
+      const vB = new Float32Array(3 * ZB.count),
+        kB = new Float32Array(4 * ZB.count);
+      GB.forEach(((BB, IB) => {
+        vB.set(ZB.pg.subarray(3 * BB, 3 * BB + 3), 3 * IB), kB.set(ZB.colours.subarray(4 * BB, 4 * BB + 4), 4 * IB)
+      })), KB(BB.translucentCells, vB, kB, ZB.count), BB.needsRender = !0
     }
 
-    function te(tt, et) {
-      const Vt = (Vt, Ot, qt) => new Xt.uf(0 === Vt ? tt[0] : et[0], 0 === Ot ? tt[1] : et[1], 0 === qt ? tt[2] : et[2]),
-        Ot = [];
-      for (const qt of [0, 1])
-        for (const tt of [0, 1]) Ot.push([Vt(0, qt, tt), Vt(1, qt, tt)], [Vt(qt, 0, tt), Vt(qt, 1, tt)], [Vt(qt, tt, 0), Vt(qt, tt, 1)]);
-      return Ot
+    function SB(BB, IB) {
+      const ZB = (ZB, TB, JB) => new nB.rN(0 === ZB ? BB[0] : IB[0], 0 === TB ? BB[1] : IB[1], 0 === JB ? BB[2] : IB[2]),
+        TB = [];
+      for (const JB of [0, 1])
+        for (const BB of [0, 1]) TB.push([ZB(0, JB, BB), ZB(1, JB, BB)], [ZB(JB, 0, BB), ZB(JB, 1, BB)], [ZB(JB, BB, 0), ZB(JB, BB, 1)]);
+      return TB
     }
 
-    function ee(tt) {
-      return [Math.sin(tt.heading) * Math.cos(tt.pitch), -Math.sin(tt.pitch), Math.cos(tt.heading) * Math.cos(tt.pitch)]
+    function BI(BB) {
+      return [Math.sin(BB.heading) * Math.cos(BB.pitch), -Math.sin(BB.pitch), Math.cos(BB.heading) * Math.cos(BB.pitch)]
     }
 
-    function Ve(tt) {
-      return [Math.cos(tt), 0, -Math.sin(tt)]
+    function II(BB) {
+      return [Math.cos(BB), 0, -Math.sin(BB)]
     }
 
-    function Oe(tt, et, Vt) {
-      let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
-        heading: zt,
-        pitch: ot
+    function ZI(BB, IB, ZB) {
+      let TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+        heading: XB,
+        pitch: LB
       };
-      const qt = [tt.max[0] - tt.min[0], tt.max[1] - tt.min[1], tt.max[2] - tt.min[2]],
-        Dt = ee(Ot),
-        mt = Ve(Ot.heading),
-        dt = Xe(Dt, mt),
-        jt = Math.tan(Vt / 2),
-        Ht = jt * et;
-      let Xt = 1;
-      for (const Qt of [-qt[0] / 2, qt[0] / 2])
-        for (const tt of [-qt[1] / 2, qt[1] / 2])
-          for (const et of [-qt[2] / 2, qt[2] / 2]) {
-            const Vt = [Qt, tt, et],
-              Ot = He(Vt, Dt);
-            Xt = Math.max(Xt, Math.abs(He(Vt, mt)) / Ht - Ot, Math.abs(He(Vt, dt)) / jt - Ot)
+      const JB = [BB.max[0] - BB.min[0], BB.max[1] - BB.min[1], BB.max[2] - BB.min[2]],
+        oB = BI(TB),
+        GB = II(TB.heading),
+        vB = cI(oB, GB),
+        kB = Math.tan(ZB / 2),
+        cB = kB * IB;
+      let nB = 1;
+      for (const hB of [-JB[0] / 2, JB[0] / 2])
+        for (const BB of [-JB[1] / 2, JB[1] / 2])
+          for (const IB of [-JB[2] / 2, JB[2] / 2]) {
+            const ZB = [hB, BB, IB],
+              TB = kI(ZB, oB);
+            nB = Math.max(nB, Math.abs(kI(ZB, GB)) / cB - TB, Math.abs(kI(ZB, vB)) / kB - TB)
           }
       return {
-        position: de([tt.min[0] + qt[0] / 2, tt.min[1] + qt[1] / 2, tt.min[2] + qt[2] / 2], je(Dt, -Xt * rt)),
-        heading: Ot.heading,
-        pitch: Ot.pitch
+        position: GI([BB.min[0] + JB[0] / 2, BB.min[1] + JB[1] / 2, BB.min[2] + JB[2] / 2], vI(oB, -nB * eB)),
+        heading: TB.heading,
+        pitch: TB.pitch
       }
     }
 
-    function qe(tt, et, Vt) {
-      const Ot = me(tt),
-        qt = me(Vt),
-        Dt = de(tt.position, je(et, -1)),
-        mt = [0, 1, 2].reduce(((tt, et) => de(tt, je(qt[et], He(Dt, Ot[et])))), [0, 0, 0]);
+    function TI(BB, IB, ZB) {
+      const TB = oI(BB),
+        JB = oI(ZB),
+        oB = GI(BB.position, vI(IB, -1)),
+        GB = [0, 1, 2].reduce(((BB, IB) => GI(BB, vI(JB[IB], kI(oB, TB[IB])))), [0, 0, 0]);
       return {
-        position: de(et, mt),
-        heading: Vt.heading,
-        pitch: Vt.pitch
+        position: GI(IB, GB),
+        heading: ZB.heading,
+        pitch: ZB.pitch
       }
     }
 
-    function De(tt) {
-      return je(de(tt.min, tt.max), .5)
+    function JI(BB) {
+      return vI(GI(BB.min, BB.max), .5)
     }
 
-    function me(tt) {
-      const et = ee(tt),
-        Vt = Ve(tt.heading);
-      return [et, Vt, Xe(et, Vt)]
+    function oI(BB) {
+      const IB = BI(BB),
+        ZB = II(BB.heading);
+      return [IB, ZB, cI(IB, ZB)]
     }
 
-    function de(tt, et) {
-      return [tt[0] + et[0], tt[1] + et[1], tt[2] + et[2]]
+    function GI(BB, IB) {
+      return [BB[0] + IB[0], BB[1] + IB[1], BB[2] + IB[2]]
     }
 
-    function je(tt, et) {
-      return [tt[0] * et, tt[1] * et, tt[2] * et]
+    function vI(BB, IB) {
+      return [BB[0] * IB, BB[1] * IB, BB[2] * IB]
     }
 
-    function He(tt, et) {
-      return tt[0] * et[0] + tt[1] * et[1] + tt[2] * et[2]
+    function kI(BB, IB) {
+      return BB[0] * IB[0] + BB[1] * IB[1] + BB[2] * IB[2]
     }
 
-    function Xe(tt, et) {
-      return [tt[1] * et[2] - tt[2] * et[1], tt[2] * et[0] - tt[0] * et[2], tt[0] * et[1] - tt[1] * et[0]]
+    function cI(BB, IB) {
+      return [BB[1] * IB[2] - BB[2] * IB[1], BB[2] * IB[0] - BB[0] * IB[2], BB[0] * IB[1] - BB[1] * IB[0]]
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const BB in modules) Object.freeze(modules[BB]);

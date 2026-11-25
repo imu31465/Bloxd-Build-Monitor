@@ -1,12 +1,12 @@
 # WASM module: `bloxd_wasm_textures_bg`
 
-> environment **bloxd.io** · build `igzsf.a0b73a5f` · analyzed 2026-11-25T08:36:21+09:00
-> source: https://bloxd.io/static/media/bloxd_wasm_textures_bg.52666f4d79ce0a0e58bc.wasm
-> 226,106 bytes (220.8 KB) · sha256 `4becc450031cb788…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **bloxd.io** · build `c6gaap.4d6587ec` · analyzed 2026-11-25T09:11:16+09:00
+> source: https://bloxd.io/static/media/bloxd_wasm_textures_bg.c720ac65d1f7e522cb7e.wasm
+> 226,106 bytes (220.8 KB) · sha256 `24c39accf0c81e5a…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
 
 ## Changes since the previous archived build
 
-- name-section module id `5eeb64e06a966461.1150` → `bce365dd37ee5bda.1150` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- name-section module id `bce365dd37ee5bda.1150` → `5eeb64e06a966461.1150` (numeric version suffix unchanged — same module version, re-randomized prefix)
 - export identifiers rotated by the obfuscator: 1/39 names kept (identifier names are randomly assigned per build; compare signatures instead)
 
 ## Overview
@@ -21,7 +21,7 @@
 | Data segments / bytes | 20 / 20,352 |
 | Element segments / entries | 1 / 113 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `bce365dd37ee5bda.1150` |
+| name-section module id | `5eeb64e06a966461.1150` |
 | Sections | 12 |
 
 ## Sections
@@ -51,9 +51,9 @@
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `ZGGn.EMaZ` | func | `(i32 i32) -> ()` |
-| 1 | `ZGGn.YCYp` | func | `(i32 i32) -> ()` |
-| 2 | `ZGGn.D3YW` | func | `(i32 i32) -> (i32)` |
+| 0 | `SkTQ.PtGU` | func | `(i32 i32) -> ()` |
+| 1 | `SkTQ.CnSt` | func | `(i32 i32) -> ()` |
+| 2 | `SkTQ.Gxq2` | func | `(i32 i32) -> (i32)` |
 
 ## Exports
 
@@ -61,45 +61,45 @@
 
 | name | kind | index | type |
 |---|---|---:|---|
-| `eVEQ` | func | 254 | `(i32 i32 i32) -> ()` |
-| `EqSn` | func | 168 | `(i32) -> (i32)` |
-| `tcgm` | func | 230 | `(i32) -> (i32 i32)` |
-| `SVbd` | func | 185 | `(i32) -> (i32)` |
-| `ZuBK` | func | 239 | `(i32) -> (i32 i32)` |
-| `DBHW` | func | 233 | `(i32) -> (i32 i32)` |
-| `jL2O` | func | 237 | `(i32) -> (i32 i32)` |
+| `eFDf` | func | 128 | `(i32 i32) -> (i32)` |
+| `GYTP` | func | 219 | `(i32 i32 i32 i32 i32) -> (i32 i32)` |
+| `aTD7` | func | 234 | `(i32) -> (i32 i32)` |
+| `YJRO` | func | 157 | `(i32) -> (i32)` |
+| `dwQ2` | func | 232 | `(i32) -> (i32 i32)` |
+| `xveD` | func | 238 | `(i32) -> (i32 i32)` |
+| `n7Hi` | func | 231 | `(i32) -> (i32 i32)` |
+| `zHmv` | func | 182 | `(i32) -> (i32)` |
+| `F3aE` | func | 211 | `(i32 i32 i32 i32) -> (i32)` |
+| `fLTy` | func | 208 | `(i32 i32) -> (i32)` |
+| `p7II` | func | 184 | `(i32) -> (i32)` |
+| `rAOd` | func | 215 | `(i32 i32) -> (i32 i32 i32 i32)` |
+| `vcVe` | func | 159 | `(i32) -> (i32)` |
+| `onyU` | func | 109 | `(i32) -> ()` |
+| `xGz0` | func | 227 | `(i32 i32 i32) -> (i32 i32)` |
+| `MdIT` | func | 254 | `(i32 i32 i32) -> ()` |
+| `WXvK` | func | 129 | `(i32 i32) -> (i32)` |
 | `memory` | memory | 0 | `` |
-| `V2J5` | func | 228 | `(i32 i32) -> (i32 i32)` |
-| `hr5f` | func | 167 | `(i32) -> (i32)` |
-| `hvBR` | func | 293 | `() -> ()` |
-| `bUbF` | func | 208 | `(i32 i32) -> (i32)` |
-| `sxHh` | func | 211 | `(i32 i32 i32 i32) -> (i32)` |
-| `LaYj` | func | 127 | `(i32 i32 i32) -> (i32)` |
-| `dvOt` | func | 109 | `(i32) -> ()` |
-| `fGTM` | func | 159 | `(i32) -> (i32)` |
-| `egfe` | func | 293 | `() -> ()` |
-| `Rf4e` | func | 236 | `(i32) -> (i32 i32)` |
-| `Crzl` | func | 182 | `(i32) -> (i32)` |
-| `iJnM` | func | 226 | `(i32 i32 i32) -> (i32 i32)` |
-| `dmY9` | global | 2 | `` |
-| `Nktz` | func | 152 | `(i32) -> (i32)` |
-| `wJTs` | func | 157 | `(i32) -> (i32)` |
-| `z1R6` | func | 232 | `(i32) -> (i32 i32)` |
-| `oskj` | global | 1 | `` |
-| `Ff82` | func | 184 | `(i32) -> (i32)` |
-| `O2u1` | func | 198 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32)` |
-| `okYL` | func | 135 | `(i32 i32) -> ()` |
-| `tOeV` | func | 219 | `(i32 i32 i32 i32 i32) -> (i32 i32)` |
-| `r41u` | func | 129 | `(i32 i32) -> (i32)` |
-| `itMg` | func | 95 | `(i32) -> ()` |
-| `SKg8` | func | 238 | `(i32) -> (i32 i32)` |
-| `tbli` | func | 235 | `(i32) -> (i32 i32)` |
-| `mWPD` | func | 183 | `(i32) -> (i32)` |
-| `Z6Cr` | func | 231 | `(i32) -> (i32 i32)` |
-| `RvYu` | func | 234 | `(i32) -> (i32 i32)` |
-| `U8Go` | func | 128 | `(i32 i32) -> (i32)` |
-| `XzIH` | func | 215 | `(i32 i32) -> (i32 i32 i32 i32)` |
-| `vzTO` | func | 227 | `(i32 i32 i32) -> (i32 i32)` |
+| `RnwM` | func | 198 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32)` |
+| `W2T4` | func | 185 | `(i32) -> (i32)` |
+| `lcMn` | func | 135 | `(i32 i32) -> ()` |
+| `idf7` | func | 127 | `(i32 i32 i32) -> (i32)` |
+| `QU0K` | func | 95 | `(i32) -> ()` |
+| `fZbF` | global | 2 | `` |
+| `z6EG` | func | 293 | `() -> ()` |
+| `bLVp` | func | 226 | `(i32 i32 i32) -> (i32 i32)` |
+| `jCeQ` | func | 183 | `(i32) -> (i32)` |
+| `RYTR` | global | 1 | `` |
+| `cMGP` | func | 239 | `(i32) -> (i32 i32)` |
+| `iNHY` | func | 168 | `(i32) -> (i32)` |
+| `xMzi` | func | 167 | `(i32) -> (i32)` |
+| `mAEe` | func | 235 | `(i32) -> (i32 i32)` |
+| `gt3i` | func | 236 | `(i32) -> (i32 i32)` |
+| `oWJb` | func | 237 | `(i32) -> (i32 i32)` |
+| `gjfi` | func | 233 | `(i32) -> (i32 i32)` |
+| `Vqpd` | func | 230 | `(i32) -> (i32 i32)` |
+| `WDud` | func | 228 | `(i32 i32) -> (i32 i32)` |
+| `Zkt1` | func | 293 | `() -> ()` |
+| `GZsE` | func | 152 | `(i32) -> (i32)` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 

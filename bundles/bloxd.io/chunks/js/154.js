@@ -1,110 +1,110 @@
 export const id = 154;
 export const ids = [154];
 export const modules = {
-  8352: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Ht
+  8256: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => cB
     });
-    var Ot = Vt(2990);
-    const qt = [1, 8, 9],
-      Dt = 5,
-      mt = 200,
-      dt = 150;
+    var TB = ZB(3088);
+    const JB = [1, 8, 9],
+      oB = 5,
+      GB = 200,
+      vB = 150;
 
-    function jt(tt, et) {
-      let Vt = 0;
-      tt("addEventListener", 2, ((tt, mt) => {
-        if (!mt) return void console.warn("TCF CMP couldn't report a consent event, so our consent defaults stand");
-        const dt = function(tt) {
-          const et = "useractioncomplete" === tt.eventStatus || "tcloaded" === tt.eventStatus && !!tt.tcString;
-          return tt.gdprApplies && et ? qt.every((et => !0 === tt.purpose.consents[et])) : null
-        }(tt);
-        if (null === dt) return;
-        const jt = ++Vt;
-        if (!dt) return void(0, Ot.updateAnalyticsConsent)(!1);
-        if ("nitro" === et) return void(0, Ot.updateAnalyticsConsent)(!0);
-        const Ht = window.__tcfapi;
-        Ht ? Ht("getNonIABVendorConsents", 2, ((tt, et) => {
-          var qt;
-          jt === Vt && (0, Ot.updateAnalyticsConsent)(et && !0 === (null === (qt = tt.nonIabVendorConsents) || void 0 === qt ? void 0 : qt[Dt]))
+    function kB(BB, IB) {
+      let ZB = 0;
+      BB("addEventListener", 2, ((BB, GB) => {
+        if (!GB) return void console.warn("TCF CMP couldn't report a consent event, so our consent defaults stand");
+        const vB = function(BB) {
+          const IB = "useractioncomplete" === BB.eventStatus || "tcloaded" === BB.eventStatus && !!BB.tcString;
+          return BB.gdprApplies && IB ? JB.every((IB => !0 === BB.purpose.consents[IB])) : null
+        }(BB);
+        if (null === vB) return;
+        const kB = ++ZB;
+        if (!vB) return void(0, TB.updateAnalyticsConsent)(!1);
+        if ("nitro" === IB) return void(0, TB.updateAnalyticsConsent)(!0);
+        const cB = window.__tcfapi;
+        cB ? cB("getNonIABVendorConsents", 2, ((BB, IB) => {
+          var JB;
+          kB === ZB && (0, TB.updateAnalyticsConsent)(IB && !0 === (null === (JB = BB.nonIabVendorConsents) || void 0 === JB ? void 0 : JB[oB]))
         })) : console.warn("TCF CMP reported a choice but its __tcfapi is gone, so our consent defaults stand")
       }))
     }
 
-    function Ht(tt) {
-      if (window.__tcfapi) return void jt(window.__tcfapi, tt);
-      let et = 0;
-      const Vt = window.setInterval((() => {
-        et++;
-        const Ot = window.__tcfapi;
-        Ot ? (window.clearInterval(Vt), jt(Ot, tt)) : et >= dt && window.clearInterval(Vt)
-      }), mt)
+    function cB(BB) {
+      if (window.__tcfapi) return void kB(window.__tcfapi, BB);
+      let IB = 0;
+      const ZB = window.setInterval((() => {
+        IB++;
+        const TB = window.__tcfapi;
+        TB ? (window.clearInterval(ZB), kB(TB, BB)) : IB >= vB && window.clearInterval(ZB)
+      }), GB)
     }
   },
-  8350: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      AdinPlaySdkAdaptor: () => Ht
+  8251: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      AdinPlaySdkAdaptor: () => cB
     });
-    var Ot = Vt(1419),
-      qt = Vt(1275),
-      Dt = Vt(268),
-      mt = Vt(8352),
-      dt = Vt(2990);
-    const jt = ["CN", "VN", "IN", "PK", "ID", "EG", "BD", "SV", "DZ", "EC", "VE", "UA", "MA", "LK", "NG", "BO", "KE", "TN", "RU", "NP", "IQ", "MM", "HN", "UY", "JO", "PY", "PS", "ET", "GH", "JM", "CM", "AS", "SY", "BY", "AO", "MN", "GY", "LB", "MV", "BW", "UG"];
-    class Ht extends Ot.e {
+    var TB = ZB(1379),
+      JB = ZB(1241),
+      oB = ZB(233),
+      GB = ZB(8256),
+      vB = ZB(3088);
+    const kB = ["CN", "VN", "IN", "PK", "ID", "EG", "BD", "SV", "DZ", "EC", "VE", "UA", "MA", "LK", "NG", "BO", "KE", "TN", "RU", "NP", "IQ", "MM", "HN", "UY", "JO", "PY", "PS", "ET", "GH", "JM", "CM", "AS", "SY", "BY", "AO", "MN", "GY", "LB", "MV", "BW", "UG"];
+    class cB extends TB.d {
       constructor() {
-        super(), this.name = "adinplay", this.bannerAutoRefresh = "disableable", this.noAdCountries = jt
+        super(), this.name = "adinplay", this.bannerAutoRefresh = "disableable", this.noAdCountries = kB
       }
       static async setup() {
-        return (0, Dt.canonicaliseZonesWhenIdle)(jt), (0, dt.setUpGtag)(), await (0, qt.d)("https://api.adinplay.com/libs/aiptag/pub/RBN/bloxd.io/tag.min.js"), (0, mt.e)("inMobi"), new Ht
+        return (0, oB.canonicaliseZonesWhenIdle)(kB), (0, vB.setUpGtag)(), await (0, JB.c)("https://api.adinplay.com/libs/aiptag/pub/RBN/bloxd.io/tag.min.js"), (0, GB.c)("inMobi"), new cB
       }
-      playRewarded(tt, et) {
+      playRewarded(BB, IB) {
         if ("undefined" !== typeof window.aiptag.adplayer) {
           console.log("AD: Requesting AdInPlay preroll ad for rewarded placement");
-          const Vt = "video_reward";
+          const ZB = "video_reward";
           window.aiptag.cmd.player.push((function() {
             window.aiptag.adplayer.startPreRoll({
-              alias: Vt
+              alias: ZB
             })
-          })), window.adStartSoPause(tt, {
-            onFailCb: et
+          })), window.adStartSoPause(BB, {
+            onFailCb: IB
           })
-        } else console.log("AD: AIP ad lib not loaded, no rewarded ad playing"), et()
+        } else console.log("AD: AIP ad lib not loaded, no rewarded ad playing"), IB()
       }
-      playVideoAd(tt, et) {
-        "undefined" !== typeof window.aiptag.adplayer ? (console.log("AD: Requesting AdInPlay video ad" + (et ? ` (alias: ${et})` : "")), window.aiptag.cmd.player.push((function() {
+      playVideoAd(BB, IB) {
+        "undefined" !== typeof window.aiptag.adplayer ? (console.log("AD: Requesting AdInPlay video ad" + (IB ? ` (alias: ${IB})` : "")), window.aiptag.cmd.player.push((function() {
           window.aiptag.adplayer.startPreRoll({
-            alias: et
+            alias: IB
           })
-        })), window.adStartSoPause(tt)) : (tt(), console.error("AIP ad lib not loaded, no ad playing"))
+        })), window.adStartSoPause(BB)) : (BB(), console.error("AIP ad lib not loaded, no ad playing"))
       }
-      renderBanner(tt) {
+      renderBanner(BB) {
         if ("undefined" === typeof window.aiptag.adplayer) return void console.log("AD: User has adblock, not requesting new banners");
         const {
-          divId: et,
-          alias: Vt
-        } = tt;
+          divId: IB,
+          alias: ZB
+        } = BB;
         window.aiptag.cmd.display.push((function() {
           window.aipDisplayTag.display({
-            adUnitName: et,
-            alias: Vt
+            adUnitName: IB,
+            alias: ZB
           })
-        })), console.log("AD: Requested aip banner", document.getElementById(tt.divId), Vt ? `(alias: ${Vt})` : "")
+        })), console.log("AD: Requested aip banner", document.getElementById(BB.divId), ZB ? `(alias: ${ZB})` : "")
       }
-      clearBanner(tt) {
+      clearBanner(BB) {
         "undefined" !== typeof window.aiptag.adplayer ? (window.aiptag.cmd.display.push((function() {
-          window.aipDisplayTag.destroy(tt.divId)
-        })), console.log(`AD: Clearing aip banner ad ${tt.divId}`)) : console.log("AD: User has adblock, not requesting new banners")
+          window.aipDisplayTag.destroy(BB.divId)
+        })), console.log(`AD: Clearing aip banner ad ${BB.divId}`)) : console.log("AD: User has adblock, not requesting new banners")
       }
-      setBannerAutoRefreshEnabled(tt, et) {
+      setBannerAutoRefreshEnabled(BB, IB) {
         window.aiptag.cmd.display.push((function() {
-          window.aipDisplayTag.setAutoRefresh(tt.divId, et)
+          window.aipDisplayTag.setAutoRefresh(BB.divId, IB)
         }))
       }
       newPageSession() {
         console.log("AD: Requesting new page session"), window.aiptag.cmd.display.push((function() {
-          window.__VM.push((function(tt, et) {
-            et.Instances.pageManager.newPageSession(!1)
+          window.__VM.push((function(BB, IB) {
+            IB.Instances.pageManager.newPageSession(!1)
           }))
         }))
       }
@@ -112,4 +112,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const BB in modules) Object.freeze(modules[BB]);

@@ -1,58 +1,58 @@
 export const id = 91;
 export const ids = [91];
 export const modules = {
-  36616: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Xt,
-      g: () => dt,
-      j: () => Ht,
-      k: () => jt,
-      o: () => bt
+  36398: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => nB,
+      h: () => vB,
+      j: () => cB,
+      k: () => kB,
+      o: () => WB
     });
-    var Ot = Vt(712),
-      qt = Vt(1842),
-      Dt = Vt(4963);
-    class mt {
-      constructor(tt, et) {
-        this.width = tt, this.uQ = et, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(tt * et)
+    var TB = ZB(671),
+      JB = ZB(1821),
+      oB = ZB(4975);
+    class GB {
+      constructor(BB, IB) {
+        this.width = BB, this.ah = IB, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(BB * IB)
       }
-      push(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const Vt = this.data,
-          Ot = this.next * this.width;
-        for (let qt = 0; qt < this.width; qt++) Vt[Ot + qt] = tt[et + qt];
-        this.next = (this.next + 1) % this.uQ, this.size = Math.min(this.size + 1, this.uQ)
+      push(BB) {
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const ZB = this.data,
+          TB = this.next * this.width;
+        for (let JB = 0; JB < this.width; JB++) ZB[TB + JB] = BB[IB + JB];
+        this.next = (this.next + 1) % this.ah, this.size = Math.min(this.size + 1, this.ah)
       }
       rows() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
-        const Vt = [],
-          Ot = (this.next - this.size + this.uQ) % this.uQ;
-        for (let qt = 0; qt < this.size; qt++) {
-          const Dt = (Ot + qt) % this.uQ * this.width;
-          this.data[Dt + tt] >= et && Vt.push(Array.from(this.data.subarray(Dt, Dt + this.width)))
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
+        const ZB = [],
+          TB = (this.next - this.size + this.ah) % this.ah;
+        for (let JB = 0; JB < this.size; JB++) {
+          const oB = (TB + JB) % this.ah * this.width;
+          this.data[oB + BB] >= IB && ZB.push(Array.from(this.data.subarray(oB, oB + this.width)))
         }
-        return Vt
+        return ZB
       }
       lines() {
-        return this.rows().map((tt => tt.join(",")))
+        return this.rows().map((BB => BB.join(",")))
       }
     }
-    const dt = 10,
-      jt = {
+    const vB = 10,
+      kB = {
         idle: 0,
-        hE: 1,
-        qI: 2,
-        mI: 3,
-        my: 4
+        XF: 1,
+        gM: 2,
+        YM: 3,
+        Fq: 4
       },
-      Ht = {
+      cB = {
         none: 0,
         skipped: 1,
         paced: 2,
         drawn: 3
       },
-      Xt = {
+      nB = {
         lockGained: 1,
         lockLost: 2,
         lockError: 3,
@@ -66,91 +66,91 @@ export const modules = {
         stepsLost: 11,
         cameraSetsLost: 12
       },
-      Qt = 12e3,
-      lt = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
-      Et = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
-      ft = ["nowMs", "dtMs", "heading", "pitch", "kind"],
-      wt = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
-      yt = ["nowMs", "change", "count"];
+      hB = 12e3,
+      zB = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
+      FB = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
+      NB = ["nowMs", "dtMs", "heading", "pitch", "kind"],
+      gB = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
+      qB = ["nowMs", "change", "count"];
 
-    function Nt(tt) {
-      return "js" === tt ? Xt.jsClient : Xt.wasmClient
+    function yB(BB) {
+      return "js" === BB ? nB.jsClient : nB.wasmClient
     }
-    class Mt {
+    class UB {
       constructor() {
-        this.steps = new mt(dt, Qt), this.events = new mt(Et.length, Qt), this.frames = new mt(ft.length, Qt), this.cameraSets = new mt(Dt.e, 256), this.changes = new mt(yt.length, 256)
+        this.steps = new GB(vB, hB), this.events = new GB(FB.length, hB), this.frames = new GB(NB.length, hB), this.cameraSets = new GB(oB.f, 256), this.changes = new GB(qB.length, 256)
       }
     }
-    const bt = new class {
+    const WB = new class {
       constructor() {
-        this.rings = null, this.sample = new Float64Array(Et.length), this.startedClient = null, this.startedAtMs = 0
+        this.rings = null, this.sample = new Float64Array(FB.length), this.startedClient = null, this.startedAtMs = 0
       }
       get client() {
         return this.startedClient
       }
-      start(tt, et) {
-        this.startedClient = tt, this.startedAtMs = performance.now(), null !== this.rings ? this.change(Nt(tt)) : et && this.allocate()
+      start(BB, IB) {
+        this.startedClient = BB, this.startedAtMs = performance.now(), null !== this.rings ? this.change(yB(BB)) : IB && this.allocate()
       }
       lockGained() {
-        this.allocate(), this.change(Xt.lockGained)
+        this.allocate(), this.change(nB.lockGained)
       }
       allocate() {
-        null === this.rings && (this.rings = new Mt, null !== this.startedClient && this.changeAt(this.startedAtMs, Nt(this.startedClient), 1))
+        null === this.rings && (this.rings = new UB, null !== this.startedClient && this.changeAt(this.startedAtMs, yB(this.startedClient), 1))
       }
-      step(tt, et) {
-        var Vt;
-        tt[et + 6] !== jt.my && (null === (Vt = this.rings) || void 0 === Vt || Vt.steps.push(tt, et))
+      step(BB, IB) {
+        var ZB;
+        BB[IB + 6] !== kB.Fq && (null === (ZB = this.rings) || void 0 === ZB || ZB.steps.push(BB, IB))
       }
-      cameraSet(tt, et) {
-        var Vt;
-        null === (Vt = this.rings) || void 0 === Vt || Vt.cameraSets.push(tt, et)
+      cameraSet(BB, IB) {
+        var ZB;
+        null === (ZB = this.rings) || void 0 === ZB || ZB.cameraSets.push(BB, IB)
       }
-      mouseMove(tt, et) {
-        const Vt = this.rings;
-        if (null === Vt) return;
-        const Ot = this.sample;
-        Ot[0] = tt.timeStamp, Ot[1] = performance.now(), Ot[2] = tt.movementX, Ot[3] = tt.movementY, Ot[4] = et ? 1 : 0, Vt.events.push(Ot)
+      mouseMove(BB, IB) {
+        const ZB = this.rings;
+        if (null === ZB) return;
+        const TB = this.sample;
+        TB[0] = BB.timeStamp, TB[1] = performance.now(), TB[2] = BB.movementX, TB[3] = BB.movementY, TB[4] = IB ? 1 : 0, ZB.events.push(TB)
       }
-      frame(tt, et, Vt, Ot) {
-        const qt = this.rings;
-        if (null === qt || Ot === Ht.none) return;
-        const Dt = this.sample;
-        Dt[0] = performance.now(), Dt[1] = tt, Dt[2] = et, Dt[3] = Vt, Dt[4] = Ot, qt.frames.push(Dt)
+      frame(BB, IB, ZB, TB) {
+        const JB = this.rings;
+        if (null === JB || TB === cB.none) return;
+        const oB = this.sample;
+        oB[0] = performance.now(), oB[1] = BB, oB[2] = IB, oB[3] = ZB, oB[4] = TB, JB.frames.push(oB)
       }
-      change(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.changeAt(performance.now(), tt, et)
+      change(BB) {
+        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.changeAt(performance.now(), BB, IB)
       }
-      changeAt(tt, et, Vt) {
-        const Ot = this.rings;
-        if (null === Ot) return;
-        const qt = this.sample;
-        qt[0] = tt, qt[1] = et, qt[2] = Vt, Ot.changes.push(qt)
+      changeAt(BB, IB, ZB) {
+        const TB = this.rings;
+        if (null === TB) return;
+        const JB = this.sample;
+        JB[0] = BB, JB[1] = IB, JB[2] = ZB, TB.changes.push(JB)
       }
       dumpText() {
-        var tt, et;
-        const Vt = this.rings;
-        return [`look records (${this.startedClient}): ${lt.join(",")}`, ...null !== (tt = null === Vt || void 0 === Vt ? void 0 : Vt.steps.lines()) && void 0 !== tt ? tt : [], `mousemove events: ${Et.join(",")}`, ...null !== (et = null === Vt || void 0 === Vt ? void 0 : Vt.events.lines()) && void 0 !== et ? et : []].join("\n")
+        var BB, IB;
+        const ZB = this.rings;
+        return [`look records (${this.startedClient}): ${zB.join(",")}`, ...null !== (BB = null === ZB || void 0 === ZB ? void 0 : ZB.steps.lines()) && void 0 !== BB ? BB : [], `mousemove events: ${FB.join(",")}`, ...null !== (IB = null === ZB || void 0 === ZB ? void 0 : ZB.events.lines()) && void 0 !== IB ? IB : []].join("\n")
       }
-      toJson(tt, et) {
-        var Vt;
-        const qt = tt - 6e4,
-          Dt = this.rings,
-          mt = function(tt, et) {
-            var Vt;
-            let Ot = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-            const Dt = null !== (Vt = null === tt || void 0 === tt ? void 0 : tt.rows(Ot, qt)) && void 0 !== Vt ? Vt : [];
+      toJson(BB, IB) {
+        var ZB;
+        const JB = BB - 6e4,
+          oB = this.rings,
+          GB = function(BB, IB) {
+            var ZB;
+            let TB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+            const oB = null !== (ZB = null === BB || void 0 === BB ? void 0 : BB.rows(TB, JB)) && void 0 !== ZB ? ZB : [];
             return {
-              columns: et,
-              fromMs: 0 === Dt.length ? null : Dt[0][Ot],
-              rows: Dt
+              columns: IB,
+              fromMs: 0 === oB.length ? null : oB[0][TB],
+              rows: oB
             }
           };
         return {
-          version: Ot.d,
-          client: null !== (Vt = this.startedClient) && void 0 !== Vt ? Vt : "not started",
+          version: TB.b,
+          client: null !== (ZB = this.startedClient) && void 0 !== ZB ? ZB : "not started",
           savedAt: (new Date).toISOString(),
-          savedAtMs: tt,
+          savedAtMs: BB,
           keptMs: 6e4,
           page: window.location.href,
           userAgent: navigator.userAgent,
@@ -159,260 +159,260 @@ export const modules = {
             width: window.screen.width,
             height: window.screen.height
           },
-          zy: null !== document.pointerLockElement,
+          mq: null !== document.pointerLockElement,
           visibility: document.visibilityState,
-          ...et,
-          outcomes: jt,
-          frameKinds: Ht,
-          changes: Xt,
-          lookSteps: mt(null === Dt || void 0 === Dt ? void 0 : Dt.steps, lt),
-          mouseMoves: mt(null === Dt || void 0 === Dt ? void 0 : Dt.events, Et, 1),
-          frames: mt(null === Dt || void 0 === Dt ? void 0 : Dt.frames, ft),
-          cameraSets: mt(null === Dt || void 0 === Dt ? void 0 : Dt.cameraSets, wt),
-          pageChanges: mt(null === Dt || void 0 === Dt ? void 0 : Dt.changes, yt)
+          ...IB,
+          outcomes: kB,
+          frameKinds: cB,
+          changes: nB,
+          lookSteps: GB(null === oB || void 0 === oB ? void 0 : oB.steps, zB),
+          mouseMoves: GB(null === oB || void 0 === oB ? void 0 : oB.events, FB, 1),
+          frames: GB(null === oB || void 0 === oB ? void 0 : oB.frames, NB),
+          cameraSets: GB(null === oB || void 0 === oB ? void 0 : oB.cameraSets, gB),
+          pageChanges: GB(null === oB || void 0 === oB ? void 0 : oB.changes, qB)
         }
       }
-      save(tt) {
-        const et = JSON.stringify(this.toJson(performance.now(), tt));
-        (0, qt.c)(new Blob([et], {
+      save(BB) {
+        const IB = JSON.stringify(this.toJson(performance.now(), BB));
+        (0, JB.d)(new Blob([IB], {
           type: "application/json"
         }), `bloxd-mouse-look-${(new Date).toISOString().replace(/[:.]/g,"-")}.json`)
       }
     }
   },
-  36610: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      LOOK_DEBUG_HEADER: () => Xt,
-      endLookDebugTake: () => Nt,
-      noteLookDroppedCopy: () => Mt,
-      saveLookCapture: () => bt,
-      startLookDebug: () => yt
+  36396: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      LOOK_DEBUG_HEADER: () => nB,
+      endLookDebugTake: () => yB,
+      noteLookDroppedCopy: () => UB,
+      saveLookCapture: () => WB,
+      startLookDebug: () => qB
     });
-    var Ot = Vt(4963),
-      qt = Vt(2902),
-      Dt = Vt(1993);
-    const mt = new Map(Object.entries(Ot.k).map((tt => {
-      let [et, Vt] = tt;
-      return [Vt, et]
+    var TB = ZB(4975),
+      JB = ZB(2973),
+      oB = ZB(1956);
+    const GB = new Map(Object.entries(TB.m).map((BB => {
+      let [IB, ZB] = BB;
+      return [ZB, IB]
     })));
 
-    function dt(tt) {
-      return (0, Dt.G)(tt).toFixed(1)
+    function vB(BB) {
+      return (0, oB.K)(BB).toFixed(1)
     }
 
-    function jt(tt, et) {
-      return `camera set by ${mt.get(tt[et+1])}: heading ${`${dt(tt[et+2])} -> ${dt(tt[et+4])}`} deg, pitch ${`${dt(tt[et+3])} -> ${dt(tt[et+5])}`} deg, at ${tt[et].toFixed(1)} ms`
+    function kB(BB, IB) {
+      return `camera set by ${GB.get(BB[IB+1])}: heading ${`${vB(BB[IB+2])} -> ${vB(BB[IB+4])}`} deg, pitch ${`${vB(BB[IB+3])} -> ${vB(BB[IB+5])}`} deg, at ${BB[IB].toFixed(1)} ms`
     }
-    var Ht = Vt(36616);
-    const Xt = 2;
+    var cB = ZB(36398);
+    const nB = 2;
 
-    function Qt(tt) {
-      return Number.isFinite(tt) ? String(Math.round(10 * tt) / 10) : String(tt)
+    function hB(BB) {
+      return Number.isFinite(BB) ? String(Math.round(10 * BB) / 10) : String(BB)
     }
 
-    function lt(tt) {
-      return Number.isFinite(tt) ? tt.toFixed(1) : String(tt)
+    function zB(BB) {
+      return Number.isFinite(BB) ? BB.toFixed(1) : String(BB)
     }
-    class Et {
+    class FB {
       constructor() {
-        this.frames = 0, this.looked = 0, this.idle = 0, this.qI = 0, this.pastLimit = 0, this.lockSkips = 0, this.my = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.cameraSets = 0, this.cameraSetsLost = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
+        this.frames = 0, this.looked = 0, this.idle = 0, this.gM = 0, this.pastLimit = 0, this.lockSkips = 0, this.Fq = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.cameraSets = 0, this.cameraSetsLost = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
       }
       moved() {
-        return this.events > 0 || 0 !== this.raw[0] || 0 !== this.raw[1] || this.lockSkips > 0 || this.qI > 0 || this.dropped > 0 || this.cameraSets > 0
+        return this.events > 0 || 0 !== this.raw[0] || 0 !== this.raw[1] || this.lockSkips > 0 || this.gM > 0 || this.dropped > 0 || this.cameraSets > 0
       }
       hasEvent() {
-        return this.qI > 0 || this.pastLimit > 0 || this.bigEvents > 0 || this.dropped > 0 || this.cameraSets > 0
+        return this.gM > 0 || this.pastLimit > 0 || this.bigEvents > 0 || this.dropped > 0 || this.cameraSets > 0
       }
     }
-    class ft {
+    class NB {
       constructor() {
-        var tt = this;
-        this.topicOn = (0, qt.v)("look"), this.remote = (0, qt.x)(), this.tally = new Et, this.takes = null, this.started = !1, this.record = function(et) {
-          let Vt = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-          if (Ht.o.step(et, Vt), !tt.topicOn) return;
-          const Ot = et[Vt],
-            qt = et[Vt + 1],
-            Dt = et[Vt + 2],
-            mt = et[Vt + 3],
-            dt = et[Vt + 4],
-            jt = et[Vt + 5],
-            Xt = et[Vt + 6],
-            Et = et[Vt + 7],
-            ft = et[Vt + 8],
-            wt = et[Vt + 9],
-            yt = tt.tally;
-          switch (yt.frames++, Xt) {
-            case Ht.k.idle:
-              return void yt.idle++;
-            case Ht.k.my:
-              return void yt.my++;
-            case Ht.k.mI:
-              return yt.lockSkips++, void(0 === Dt && 0 === mt || tt.outlier(`lock skip dropped raw (${Qt(Dt)}, ${Qt(mt)}) at ${lt(Ot)} ms`))
+        var BB = this;
+        this.topicOn = (0, JB.t)("look"), this.remote = (0, JB.u)(), this.tally = new FB, this.takes = null, this.started = !1, this.record = function(IB) {
+          let ZB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+          if (cB.o.step(IB, ZB), !BB.topicOn) return;
+          const TB = IB[ZB],
+            JB = IB[ZB + 1],
+            oB = IB[ZB + 2],
+            GB = IB[ZB + 3],
+            vB = IB[ZB + 4],
+            kB = IB[ZB + 5],
+            nB = IB[ZB + 6],
+            FB = IB[ZB + 7],
+            NB = IB[ZB + 8],
+            gB = IB[ZB + 9],
+            qB = BB.tally;
+          switch (qB.frames++, nB) {
+            case cB.k.idle:
+              return void qB.idle++;
+            case cB.k.Fq:
+              return void qB.Fq++;
+            case cB.k.YM:
+              return qB.lockSkips++, void(0 === oB && 0 === GB || BB.outlier(`lock skip dropped raw (${hB(oB)}, ${hB(GB)}) at ${zB(TB)} ms`))
           }
-          yt.looked++, Number.isFinite(qt) && (yt.dtMin = Math.min(yt.dtMin, qt), yt.dtMax = Math.max(yt.dtMax, qt), yt.dtSum += qt, qt > 0 && (yt.peakRate = Math.max(yt.peakRate, Math.hypot(dt, jt) / qt))), yt.raw[0] += Dt, yt.raw[1] += mt, yt.turned[0] += dt, yt.turned[1] += jt;
-          const Nt = Math.abs(Dt) > wt || Math.abs(mt) > wt,
-            Mt = `raw (${Qt(Dt)}, ${Qt(mt)}) over ${lt(qt)} ms, limit ${Qt(wt)}, filter v (${Et.toFixed(3)}, ${ft.toFixed(3)}) px/ms, at ${lt(Ot)} ms`;
-          Xt === Ht.k.qI ? (yt.qI++, tt.outlier(`spike put right: ${Mt} -> turned (${Qt(dt)}, ${Qt(jt)})`)) : Nt ? (yt.pastLimit++, tt.outlier(`kept past limit: ${Mt}`)) : qt > 50 && (yt.longFrames++, tt.remote || tt.outlier(`long frame: ${Mt}, turned in full`))
-        }, this.onMouseMove = tt => {
-          const et = null !== document.pointerLockElement;
-          if (Ht.o.mouseMove(tt, et), !this.topicOn) return;
-          const Vt = this.tally,
+          qB.looked++, Number.isFinite(JB) && (qB.dtMin = Math.min(qB.dtMin, JB), qB.dtMax = Math.max(qB.dtMax, JB), qB.dtSum += JB, JB > 0 && (qB.peakRate = Math.max(qB.peakRate, Math.hypot(vB, kB) / JB))), qB.raw[0] += oB, qB.raw[1] += GB, qB.turned[0] += vB, qB.turned[1] += kB;
+          const yB = Math.abs(oB) > gB || Math.abs(GB) > gB,
+            UB = `raw (${hB(oB)}, ${hB(GB)}) over ${zB(JB)} ms, limit ${hB(gB)}, filter v (${FB.toFixed(3)}, ${NB.toFixed(3)}) px/ms, at ${zB(TB)} ms`;
+          nB === cB.k.gM ? (qB.gM++, BB.outlier(`spike put right: ${UB} -> turned (${hB(vB)}, ${hB(kB)})`)) : yB ? (qB.pastLimit++, BB.outlier(`kept past limit: ${UB}`)) : JB > 50 && (qB.longFrames++, BB.remote || BB.outlier(`long frame: ${UB}, turned in full`))
+        }, this.onMouseMove = BB => {
+          const IB = null !== document.pointerLockElement;
+          if (cB.o.mouseMove(BB, IB), !this.topicOn) return;
+          const ZB = this.tally,
             {
-              movementX: Ot,
-              movementY: qt
-            } = tt;
-          Vt.events++;
-          const Dt = Math.max(Math.abs(Ot), Math.abs(qt));
-          Vt.eventMax = Math.max(Vt.eventMax, Dt), Dt >= 200 && (Vt.bigEvents++, this.eventOutlier(`big mousemove (${Ot}, ${qt}) at ${lt(tt.timeStamp)} ms, lock ${et?"Pd":"free"}`))
+              movementX: TB,
+              movementY: JB
+            } = BB;
+          ZB.events++;
+          const oB = Math.max(Math.abs(TB), Math.abs(JB));
+          ZB.eventMax = Math.max(ZB.eventMax, oB), oB >= 200 && (ZB.bigEvents++, this.eventOutlier(`big mousemove (${TB}, ${JB}) at ${zB(BB.timeStamp)} ms, lock ${IB?"sv":"free"}`))
         }, this.onLockChange = () => {
-          const tt = document.pointerLockElement;
-          tt ? Ht.o.lockGained() : Ht.o.change(Ht.e.lockLost), this.topicOn && (0, qt.n)("look", `pointer lock ${tt?`gained (${tt.tagName.toLowerCase()})`:"lost"} at ${lt(performance.now())} ms`)
+          const BB = document.pointerLockElement;
+          BB ? cB.o.lockGained() : cB.o.change(cB.d.lockLost), this.topicOn && (0, JB.o)("look", `pointer lock ${BB?`gained (${BB.tagName.toLowerCase()})`:"lost"} at ${zB(performance.now())} ms`)
         }, this.onLockError = () => {
-          Ht.o.change(Ht.e.lockError), this.topicOn && (0, qt.n)("look", `pointer lock request failed at ${lt(performance.now())} ms`)
+          cB.o.change(cB.d.lockError), this.topicOn && (0, JB.o)("look", `pointer lock request failed at ${zB(performance.now())} ms`)
         }, this.onVisibility = () => {
-          Ht.o.change("hidden" === document.visibilityState ? Ht.e.hidden : Ht.e.visible), this.topicOn && (0, qt.n)("look", `page ${document.visibilityState} at ${lt(performance.now())} ms`)
+          cB.o.change("hidden" === document.visibilityState ? cB.d.hidden : cB.d.visible), this.topicOn && (0, JB.o)("look", `page ${document.visibilityState} at ${zB(performance.now())} ms`)
         }, this.onFocus = () => {
-          Ht.o.change(Ht.e.focus)
+          cB.o.change(cB.d.focus)
         }, this.onBlur = () => {
-          Ht.o.change(Ht.e.blur)
+          cB.o.change(cB.d.blur)
         }, this.flush = () => {
           if (this.takeRecords(), !this.topicOn) return;
-          const tt = this.tally;
-          if (this.tally = new Et, !tt.moved() || this.remote && !tt.hasEvent()) return;
-          const et = tt.looked > 0 ? tt.dtSum / tt.looked : NaN,
-            Vt = [`${tt.frames} frames (${tt.looked} looked, ${tt.idle} idle${"wasm"===Ht.o.client?`, ${tt.my} carried`:""})`, `dt avg ${lt(et)} min ${lt(tt.dtMin)} max ${lt(tt.dtMax)}, ${tt.longFrames} long`, `${tt.events} mousemoves (max ${Qt(tt.eventMax)} px, ${tt.bigEvents} big)`, `raw (${Qt(tt.raw[0])}, ${Qt(tt.raw[1])}) turned (${Qt(tt.turned[0])}, ${Qt(tt.turned[1])})`, `peak ${tt.peakRate.toFixed(2)} px/ms`, `put right ${tt.qI}, past limit ${tt.pastLimit}, lock skips ${tt.lockSkips}`, "lock " + (document.pointerLockElement ? "Pd" : "free")];
-          tt.dropped > 0 && Vt.push(`${tt.dropped} doubled spike copies dropped`), tt.cameraSets > 0 && Vt.push(`${tt.cameraSets} camera sets`), tt.cameraSetsLost > 0 && Vt.push(`${tt.cameraSetsLost} camera set records lost`), tt.lost > 0 && Vt.push(`${tt.lost} records lost`), tt.suppressed > 0 && Vt.push(`${tt.suppressed} outlier lines not shown`), (0, qt.n)("look", `1s: ${Vt.join("; ")}`)
+          const BB = this.tally;
+          if (this.tally = new FB, !BB.moved() || this.remote && !BB.hasEvent()) return;
+          const IB = BB.looked > 0 ? BB.dtSum / BB.looked : NaN,
+            ZB = [`${BB.frames} frames (${BB.looked} looked, ${BB.idle} idle${"wasm"===cB.o.client?`, ${BB.Fq} carried`:""})`, `dt avg ${zB(IB)} min ${zB(BB.dtMin)} max ${zB(BB.dtMax)}, ${BB.longFrames} long`, `${BB.events} mousemoves (max ${hB(BB.eventMax)} px, ${BB.bigEvents} big)`, `raw (${hB(BB.raw[0])}, ${hB(BB.raw[1])}) turned (${hB(BB.turned[0])}, ${hB(BB.turned[1])})`, `peak ${BB.peakRate.toFixed(2)} px/ms`, `put right ${BB.gM}, past limit ${BB.pastLimit}, lock skips ${BB.lockSkips}`, "lock " + (document.pointerLockElement ? "sv" : "free")];
+          BB.dropped > 0 && ZB.push(`${BB.dropped} doubled spike copies dropped`), BB.cameraSets > 0 && ZB.push(`${BB.cameraSets} camera sets`), BB.cameraSetsLost > 0 && ZB.push(`${BB.cameraSetsLost} camera set records lost`), BB.lost > 0 && ZB.push(`${BB.lost} records lost`), BB.suppressed > 0 && ZB.push(`${BB.suppressed} outlier lines not shown`), (0, JB.o)("look", `1s: ${ZB.join("; ")}`)
         }
       }
-      start(tt, et) {
-        if (Ht.o.start(tt, null !== document.pointerLockElement), this.takes = et, this.topicOn) {
+      start(BB, IB) {
+        if (cB.o.start(BB, null !== document.pointerLockElement), this.takes = IB, this.topicOn) {
           const {
-            screen: et
+            screen: IB
           } = window;
-          (0, qt.n)("look", `start: ${tt} client, dpr ${window.devicePixelRatio}, screen ${et.width}x${et.height}, pointer lock ${document.pointerLockElement?"Pd":"free"}`)
+          (0, JB.o)("look", `start: ${BB} client, dpr ${window.devicePixelRatio}, screen ${IB.width}x${IB.height}, pointer lock ${document.pointerLockElement?"sv":"free"}`)
         }
         this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
           capture: !0,
           passive: !0
-        }), window.addEventListener("focus", this.onFocus), window.addEventListener("blur", this.onBlur), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), this.topicOn && !this.remote && (0, qt.j)("look", (() => Ht.o.dumpText())))
+        }), window.addEventListener("focus", this.onFocus), window.addEventListener("blur", this.onBlur), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), this.topicOn && !this.remote && (0, JB.l)("look", (() => cB.o.dumpText())))
       }
-      outlier(tt) {
-        const et = this.tally;
-        et.outliers >= 20 ? et.suppressed++ : (et.outliers++, (0, qt.n)("look", tt))
+      outlier(BB) {
+        const IB = this.tally;
+        IB.outliers >= 20 ? IB.suppressed++ : (IB.outliers++, (0, JB.o)("look", BB))
       }
-      eventOutlier(tt) {
-        const et = this.tally;
-        et.eventLines >= 10 ? et.suppressed++ : (et.eventLines++, (0, qt.n)("look", tt))
+      eventOutlier(BB) {
+        const IB = this.tally;
+        IB.eventLines >= 10 ? IB.suppressed++ : (IB.eventLines++, (0, JB.o)("look", BB))
       }
       takeRecords() {
         if (null === this.takes) return;
-        const tt = this.takes.look();
-        if (tt.length >= Xt) {
-          this.counted(Ht.e.stepsLost, tt[0]), this.counted(Ht.e.droppedCopies, tt[1]);
-          for (let et = Xt; et + Ht.g <= tt.length; et += Ht.g) this.record(tt, et)
+        const BB = this.takes.look();
+        if (BB.length >= nB) {
+          this.counted(cB.d.stepsLost, BB[0]), this.counted(cB.d.droppedCopies, BB[1]);
+          for (let IB = nB; IB + cB.h <= BB.length; IB += cB.h) this.record(BB, IB)
         }
-        const et = this.takes.cameraSets();
-        if (et.length >= Ot.d) {
-          this.counted(Ht.e.cameraSetsLost, et[0]);
-          for (let tt = Ot.d; tt + Ot.e <= et.length; tt += Ot.e) Ht.o.cameraSet(et, tt), this.topicOn && (this.tally.cameraSets++, this.outlier(jt(et, tt)))
+        const IB = this.takes.cameraSets();
+        if (IB.length >= TB.c) {
+          this.counted(cB.d.cameraSetsLost, IB[0]);
+          for (let BB = TB.c; BB + TB.f <= IB.length; BB += TB.f) cB.o.cameraSet(IB, BB), this.topicOn && (this.tally.cameraSets++, this.outlier(kB(IB, BB)))
         }
       }
       droppedCopy() {
-        this.counted(Ht.e.droppedCopies, 1)
+        this.counted(cB.d.droppedCopies, 1)
       }
-      counted(tt, et) {
-        if (0 === et) return;
-        if (Ht.o.change(tt, et), !this.topicOn) return;
-        const Vt = this.tally;
-        tt === Ht.e.droppedCopies ? Vt.dropped += et : tt === Ht.e.stepsLost ? Vt.lost += et : Vt.cameraSetsLost += et
+      counted(BB, IB) {
+        if (0 === IB) return;
+        if (cB.o.change(BB, IB), !this.topicOn) return;
+        const ZB = this.tally;
+        BB === cB.d.droppedCopies ? ZB.dropped += IB : BB === cB.d.stepsLost ? ZB.lost += IB : ZB.cameraSetsLost += IB
       }
       endTake() {
         this.takeRecords(), this.takes = null
       }
     }
-    let wt = null;
+    let gB = null;
 
-    function yt(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      return wt ??= new ft, wt.start(tt, et), wt.record
+    function qB(BB) {
+      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      return gB ??= new NB, gB.start(BB, IB), gB.record
     }
 
-    function Nt() {
-      var tt;
-      null === (tt = wt) || void 0 === tt || tt.endTake()
+    function yB() {
+      var BB;
+      null === (BB = gB) || void 0 === BB || BB.endTake()
     }
 
-    function Mt() {
-      var tt;
-      null === (tt = wt) || void 0 === tt || tt.droppedCopy()
+    function UB() {
+      var BB;
+      null === (BB = gB) || void 0 === BB || BB.droppedCopy()
     }
-    async function bt(tt) {
-      var et;
-      null === (et = wt) || void 0 === et || et.takeRecords();
+    async function WB(BB) {
+      var IB;
+      null === (IB = gB) || void 0 === IB || IB.takeRecords();
       const {
-        clientHintsRead: Ot,
-        debugDeviceLines: qt
-      } = await Vt.e(29).then((() => Vt(34239)));
-      await Ot, Ht.o.save({
-        ...tt,
-        device: qt()
+        clientHintsRead: TB,
+        debugDeviceLines: JB
+      } = await ZB.e(29).then((() => ZB(34050)));
+      await TB, cB.o.save({
+        ...BB,
+        device: JB()
       })
     }
   },
-  4963: (tt, et, Vt) => {
-    Vt.d(et, {
-      $: () => Ct,
-      Cb: () => kt,
-      D: () => dt,
-      Eb: () => yt,
-      G: () => Ot,
-      Hb: () => ct,
-      J: () => Dt,
-      L: () => Jt,
-      Lb: () => St,
-      M: () => nt,
-      Nb: () => Gt,
-      Ob: () => Yt,
-      Q: () => Qt,
-      S: () => lt,
-      Sb: () => ot,
-      Vb: () => Ut,
-      W: () => Xt,
-      X: () => Ht,
-      Zb: () => At,
-      _b: () => vt,
-      bb: () => jt,
-      bc: () => Wt,
-      d: () => Mt,
-      db: () => wt,
-      e: () => Nt,
-      ec: () => pt,
-      fb: () => ft,
-      fc: () => qt,
-      g: () => gt,
-      gc: () => st,
-      hb: () => Rt,
-      ib: () => Pt,
-      jb: () => Zt,
-      k: () => bt,
-      l: () => Tt,
-      lb: () => It,
-      m: () => Et,
-      mb: () => Lt,
-      o: () => ht,
-      ob: () => Bt,
-      q: () => xt,
-      sb: () => it,
-      u: () => Kt,
-      vb: () => rt,
-      w: () => ut,
-      wb: () => Ft,
-      yb: () => zt,
-      z: () => mt
+  4975: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      $: () => gB,
+      B: () => QB,
+      Bb: () => XB,
+      D: () => GB,
+      E: () => vB,
+      Fb: () => rB,
+      G: () => TB,
+      Ib: () => qB,
+      J: () => oB,
+      L: () => dB,
+      Lb: () => pB,
+      N: () => VB,
+      P: () => hB,
+      Pb: () => iB,
+      S: () => zB,
+      Tb: () => mB,
+      V: () => nB,
+      Vb: () => AB,
+      W: () => cB,
+      Yb: () => LB,
+      Z: () => CB,
+      _: () => kB,
+      _b: () => uB,
+      ab: () => NB,
+      bb: () => aB,
+      bc: () => fB,
+      c: () => UB,
+      cc: () => OB,
+      eb: () => MB,
+      f: () => yB,
+      fc: () => YB,
+      gc: () => bB,
+      hb: () => jB,
+      i: () => DB,
+      kb: () => HB,
+      kc: () => JB,
+      lb: () => PB,
+      m: () => WB,
+      n: () => EB,
+      nc: () => KB,
+      pb: () => tB,
+      qb: () => lB,
+      r: () => FB,
+      t: () => wB,
+      tb: () => eB,
+      w: () => xB,
+      xb: () => RB,
+      y: () => sB
     });
-    const Ot = 32,
-      qt = 33.333333333333336,
-      Dt = {
+    const TB = 32,
+      JB = 33.333333333333336,
+      oB = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -446,36 +446,36 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      mt = {
+      GB = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      dt = {
+      vB = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      jt = {
+      kB = {
         AheadMask: 15,
         Defaulted: 128,
         LagsShift: 8,
         CountMask: 4095
       },
-      Ht = {
+      cB = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      Xt = {
+      nB = {
         PlayerBound: 32,
         JoinPreload: 64
       },
-      Qt = 14,
-      lt = {
+      hB = 14,
+      zB = {
         ChunksReceived: 0,
         ChunksStored: 1,
         JobsSent: 2,
@@ -491,14 +491,14 @@ export const modules = {
         FirstViewGaps: 12,
         FirstViewGapMs: 13
       },
-      Et = {
+      FB = {
         Look: 0,
         Remesh: 1,
         CameraSet: 2
       },
-      ft = 8,
-      wt = 1,
-      yt = {
+      NB = 8,
+      gB = 1,
+      qB = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -507,16 +507,16 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      Nt = 6,
-      Mt = 1,
-      bt = {
+      yB = 6,
+      UB = 1,
+      WB = {
         SetCamDir: 0,
         Forced: 1,
         ScriptedTake: 2,
         ScriptedPose: 3,
         ScriptedRelease: 4
       },
-      Jt = {
+      dB = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -544,12 +544,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      Ct = {
+      CB = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      ut = {
+      QB = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -602,7 +602,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      Kt = {
+      sB = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -612,10 +612,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      ht = 4,
-      vt = 4,
-      Wt = 65535,
-      St = {
+      wB = 4,
+      OB = 4,
+      YB = 65535,
+      iB = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -628,7 +628,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      ct = {
+      pB = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -636,12 +636,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      Rt = 88,
-      It = 0,
-      Pt = 24,
-      Zt = 48,
-      Lt = 80,
-      Ft = {
+      aB = 88,
+      HB = 0,
+      MB = 24,
+      jB = 48,
+      PB = 80,
+      RB = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -652,18 +652,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      kt = {
+      rB = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      Gt = {
+      mB = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      zt = {
+      XB = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -681,34 +681,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      ot = {
+      LB = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      rt = 65535,
-      Ut = {
+      eB = 65535,
+      uB = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      At = {
+      fB = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      it = 2,
-      Yt = {
+      lB = 2,
+      AB = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      Bt = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      pt = {
+      tB = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      bB = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -722,7 +722,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      xt = {
+      xB = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -749,7 +749,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      Tt = {
+      EB = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -907,8 +907,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      gt = 8,
-      st = {
+      DB = 8,
+      KB = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -933,8 +933,8 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      nt = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      VB = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const BB in modules) Object.freeze(modules[BB]);

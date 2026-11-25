@@ -1,53 +1,53 @@
 export const id = 87;
 export const ids = [87];
 export const modules = {
-  4948: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Jt,
-      h: () => Nt
+  4952: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => dB,
+      g: () => yB
     });
-    var Ot = Vt(1404),
-      qt = Vt(31);
-    var Dt = Vt(391);
-    var mt = Vt(710);
-    var dt = Vt(2458),
-      jt = Vt(4951),
-      Ht = Vt(4971),
-      Xt = Vt(4980);
-    class Qt {
-      constructor(tt, et, Vt, Ot, qt, Dt) {
-        this.id = tt, this.type = et, this.parameters = Vt, this.tearDownNotification = Ot, this.onDonePromise = qt, this.resolveRequest = Dt
+    var TB = ZB(1368),
+      JB = ZB(24);
+    var oB = ZB(360);
+    var GB = ZB(665);
+    var vB = ZB(2481),
+      kB = ZB(4958),
+      cB = ZB(4978),
+      nB = ZB(4990);
+    class hB {
+      constructor(BB, IB, ZB, TB, JB, oB) {
+        this.id = BB, this.type = IB, this.parameters = ZB, this.tearDownNotification = TB, this.onDonePromise = JB, this.resolveRequest = oB
       }
     }
-    const lt = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
-    class Et {
-      constructor(tt, et, Vt, Ot, qt, Dt) {
-        this.id = tt, this.type = et, this.parameters = Vt, this.resolveRequest = Ot, this.onDonePromise = qt, this.tearDownNotification = Dt, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
-        const mt = Nt[et];
-        if (!mt) throw console.error(`No QTE implementation registered for type: ${et}`), new Error(`No QTE implementation registered for type: ${et}`);
-        this.implementation = new mt(Vt, (tt => {
-          this.isCompleted = !0, this.resolveRequest(tt)
+    const zB = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
+    class FB {
+      constructor(BB, IB, ZB, TB, JB, oB) {
+        this.id = BB, this.type = IB, this.parameters = ZB, this.resolveRequest = TB, this.onDonePromise = JB, this.tearDownNotification = oB, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
+        const GB = yB[IB];
+        if (!GB) throw console.error(`No QTE implementation registered for type: ${IB}`), new Error(`No QTE implementation registered for type: ${IB}`);
+        this.implementation = new GB(ZB, (BB => {
+          this.isCompleted = !0, this.resolveRequest(BB)
         }), this.tearDownNotification), this.setupInputHandlers()
       }
       setupInputHandlers() {
-        this.mouseSub = qt.j.subscribe("QTEMouseState", (tt => {
+        this.mouseSub = JB.l.subscribe("QTEMouseState", (BB => {
           let {
-            isDown: et
-          } = tt;
-          this.isCompleted || this.implementation.handleMouseInput(et)
-        })), this.stopInputActions = (0, Ht.i)((tt => {
-          this.isCompleted || !lt.has(tt.action) && !(0, Ht.e)(tt) || this.implementation.handleMouseInput(tt.down)
-        })), this.tickSub = qt.j.subscribe("noaTick", (tt => {
+            isDown: IB
+          } = BB;
+          this.isCompleted || this.implementation.handleMouseInput(IB)
+        })), this.stopInputActions = (0, cB.e)((BB => {
+          this.isCompleted || !zB.has(BB.action) && !(0, cB.c)(BB) || this.implementation.handleMouseInput(BB.down)
+        })), this.tickSub = JB.l.subscribe("noaTick", (BB => {
           if (this.isCompleted) return;
-          const et = tt / 1e3;
-          this.implementation.handleTick(et)
-        })), this.stopShellTicks = (0, jt.p)((() => {
-          this.isCompleted || this.implementation.handleTick(dt.q / 1e3)
+          const IB = BB / 1e3;
+          this.implementation.handleTick(IB)
+        })), this.stopShellTicks = (0, kB.u)((() => {
+          this.isCompleted || this.implementation.handleTick(vB.j / 1e3)
         }))
       }
       cleanup() {
-        var tt, et;
-        this.mouseSub && (qt.j.unsubscribe(this.mouseSub), this.mouseSub = null), null === (tt = this.stopInputActions) || void 0 === tt || tt.call(this), this.stopInputActions = null, null === (et = this.stopShellTicks) || void 0 === et || et.call(this), this.stopShellTicks = null, this.tickSub && (qt.j.unsubscribe(this.tickSub), this.tickSub = null)
+        var BB, IB;
+        this.mouseSub && (JB.l.unsubscribe(this.mouseSub), this.mouseSub = null), null === (BB = this.stopInputActions) || void 0 === BB || BB.call(this), this.stopInputActions = null, null === (IB = this.stopShellTicks) || void 0 === IB || IB.call(this), this.stopShellTicks = null, this.tickSub && (JB.l.unsubscribe(this.tickSub), this.tickSub = null)
       }
       async waitUntilDone() {
         await this.onDonePromise
@@ -59,28 +59,28 @@ export const modules = {
         this.isCompleted = !0, this.cleanup(), this.implementation.tearDown()
       }
     }
-    const ft = new Ot.d,
-      wt = new Map;
-    let yt = null;
-    const Nt = {
+    const NB = new TB.c,
+      gB = new Map;
+    let qB = null;
+    const yB = {
       progressBar: class {
-        constructor(tt, et, Vt) {
-          var Ot, qt, Dt, mt;
-          this.resolveRequest = et, this.tearDownNotification = Vt, this.progress = 0, this.Oe = void 0, this.qe = void 0, this.De = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
-          const dt = tt;
-          this.Oe = null !== (Ot = dt.Oe) && void 0 !== Ot ? Ot : .075, this.qe = null !== (qt = dt.qe) && void 0 !== qt ? qt : 1, this.progress = null !== (Dt = dt.Ve) && void 0 !== Dt ? Dt : 30, this.De = null !== (mt = dt.De) && void 0 !== mt && mt, this.parameters = dt
+        constructor(BB, IB, ZB) {
+          var TB, JB, oB, GB;
+          this.resolveRequest = IB, this.tearDownNotification = ZB, this.progress = 0, this.VB = void 0, this.SB = void 0, this.BI = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
+          const vB = BB;
+          this.VB = null !== (TB = vB.VB) && void 0 !== TB ? TB : .075, this.SB = null !== (JB = vB.SB) && void 0 !== JB ? JB : 1, this.progress = null !== (oB = vB.DB) && void 0 !== oB ? oB : 30, this.BI = null !== (GB = vB.BI) && void 0 !== GB && GB, this.parameters = vB
         }
-        handleMouseInput(tt) {
-          tt && !this.isCompleted && (this.clickCount++, this.progress += this.qe, this.progress >= 100 && this.complete(!0))
+        handleMouseInput(BB) {
+          BB && !this.isCompleted && (this.clickCount++, this.progress += this.SB, this.progress >= 100 && this.complete(!0))
         }
         handleTick() {
           if (!this.isCompleted)
-            if (this.progress -= this.Oe, this.De && this.progress <= 0) this.complete(!1);
+            if (this.progress -= this.VB, this.BI && this.progress <= 0) this.complete(!1);
             else if (this.progress <= 0) this.progress = 0;
           else if (this.progress >= 100) return void this.complete(!0)
         }
-        complete(tt) {
-          this.isCompleted = !0, this.resolveRequest(tt)
+        complete(BB) {
+          this.isCompleted = !0, this.resolveRequest(BB)
         }
         getState() {
           return {
@@ -98,30 +98,30 @@ export const modules = {
         }
       },
       timedClick: class {
-        constructor(tt, et, Vt) {
-          var Ot;
-          this.resolveRequest = et, this.tearDownNotification = Vt, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = tt, this.timeWindowMs = null !== (Ot = this.parameters.Qe) && void 0 !== Ot ? Ot : 3e3, this.startTime = Date.now()
+        constructor(BB, IB, ZB) {
+          var TB;
+          this.resolveRequest = IB, this.tearDownNotification = ZB, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = BB, this.timeWindowMs = null !== (TB = this.parameters.oI) && void 0 !== TB ? TB : 3e3, this.startTime = Date.now()
         }
-        handleMouseInput(tt) {
-          if (!tt || this.isCompleted) return;
+        handleMouseInput(BB) {
+          if (!BB || this.isCompleted) return;
           Date.now() - this.startTime <= this.timeWindowMs && this.complete(!0)
         }
         handleTick() {
           if (this.isCompleted) return;
           Date.now() - this.startTime > this.timeWindowMs && this.complete(!1)
         }
-        complete(tt) {
-          this.isCompleted = !0, this.resolveRequest(tt)
+        complete(BB) {
+          this.isCompleted = !0, this.resolveRequest(BB)
         }
         getState() {
-          const tt = Date.now() - this.startTime,
-            et = Math.max(0, this.timeWindowMs - tt);
+          const BB = Date.now() - this.startTime,
+            IB = Math.max(0, this.timeWindowMs - BB);
           return {
             type: this.type,
             parameters: this.parameters,
             state: {
-              timeRemaining: et,
-              Qe: this.timeWindowMs
+              timeRemaining: IB,
+              oI: this.timeWindowMs
             },
             isActive: !0
           }
@@ -131,49 +131,49 @@ export const modules = {
         }
       },
       gravityBar: class {
-        constructor(tt, et, Vt) {
-          var Ot;
-          this.resolveRequest = et, this.tearDownNotification = Vt, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
-          const qt = tt;
+        constructor(BB, IB, ZB) {
+          var TB;
+          this.resolveRequest = IB, this.tearDownNotification = ZB, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
+          const JB = BB;
           this.parameters = {
-            ...qt,
-            ye: Dt.e.clamp(qt.ye, .05, 1)
-          }, this.progress = null !== (Ot = qt.Ve) && void 0 !== Ot ? Ot : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+            ...JB,
+            cI: oB.e.clamp(JB.cI, .05, 1)
+          }, this.progress = null !== (TB = JB.DB) && void 0 !== TB ? TB : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
-        handleMouseInput(tt) {
-          this.isMouseDown = tt
+        handleMouseInput(BB) {
+          this.isMouseDown = BB
         }
-        handleTick(tt) {
-          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(tt))
+        handleTick(BB) {
+          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(BB))
         }
         updateMover() {
           this.ticksUntilDirectionChange--, (this.ticksUntilDirectionChange <= 0 || Math.abs(this.moverPosition - this.moverTarget) < .02) && this.pickNewMoverTarget();
-          const tt = Math.sign(this.moverTarget - this.moverPosition);
-          this.moverPosition += tt * this.parameters.Ne * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
+          const BB = Math.sign(this.moverTarget - this.moverPosition);
+          this.moverPosition += BB * this.parameters.nI * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
         }
         pickNewMoverTarget() {
           this.moverTarget = Math.random(), this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
         randomNumTicksUntilDirectionChange() {
-          const tt = Dt.e.clamp(1 - .7 * this.parameters.ae, 0, 1.4);
-          return Math.floor(60 * tt + 40 * Math.random())
+          const BB = oB.e.clamp(1 - .7 * this.parameters.hI, 0, 1.4);
+          return Math.floor(60 * BB + 40 * Math.random())
         }
         updateCatchZone() {
-          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.Me : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = Dt.e.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
-          const tt = this.parameters.ye / 2,
-            et = tt,
-            Vt = 1 - tt;
-          this.catchZonePosition <= et ? (this.catchZonePosition = et, this.catchZoneVelocity = 0) : this.catchZonePosition >= Vt && (this.catchZonePosition = Vt, this.catchZoneVelocity = 0)
+          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.zI : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = oB.e.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
+          const BB = this.parameters.cI / 2,
+            IB = BB,
+            ZB = 1 - BB;
+          this.catchZonePosition <= IB ? (this.catchZonePosition = IB, this.catchZoneVelocity = 0) : this.catchZonePosition >= ZB && (this.catchZonePosition = ZB, this.catchZoneVelocity = 0)
         }
         isMoverInCatchZone() {
-          const tt = this.parameters.ye / 2;
-          return this.moverPosition >= this.catchZonePosition - tt && this.moverPosition <= this.catchZonePosition + tt
+          const BB = this.parameters.cI / 2;
+          return this.moverPosition >= this.catchZonePosition - BB && this.moverPosition <= this.catchZonePosition + BB
         }
-        updateProgress(tt) {
-          this.isMoverInCatchZone() ? this.progress += this.parameters.Je * tt : this.progress -= this.parameters.Ce * tt, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.De && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
+        updateProgress(BB) {
+          this.isMoverInCatchZone() ? this.progress += this.parameters.FI * BB : this.progress -= this.parameters.NI * BB, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.BI && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
         }
-        complete(tt) {
-          this.isCompleted = !0, this.resolveRequest(tt)
+        complete(BB) {
+          this.isCompleted = !0, this.resolveRequest(BB)
         }
         getState() {
           return {
@@ -181,7 +181,7 @@ export const modules = {
             parameters: this.parameters,
             state: {
               catchZonePosition: this.catchZonePosition,
-              ye: this.parameters.ye,
+              cI: this.parameters.cI,
               moverPosition: this.moverPosition,
               progress: this.progress,
               isCatching: this.isMoverInCatchZone()
@@ -194,38 +194,38 @@ export const modules = {
         }
       },
       precisionBar: class {
-        constructor(tt, et, Vt) {
-          var Ot, qt, mt, dt, jt;
-          this.resolveRequest = et, this.tearDownNotification = Vt, this.startTime = void 0, this.speed = void 0, this.Ke = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
-          const Ht = tt;
+        constructor(BB, IB, ZB) {
+          var TB, JB, GB, vB, kB;
+          this.resolveRequest = IB, this.tearDownNotification = ZB, this.startTime = void 0, this.speed = void 0, this.qI = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
+          const cB = BB;
           this.parameters = {
-            ...Ht,
-            speed: null !== (Ot = Ht.speed) && void 0 !== Ot ? Ot : .5,
-            Ke: Dt.e.clamp(Ht.Ke, .05, 1),
-            label: null !== (qt = Ht.label) && void 0 !== qt ? qt : [{
+            ...cB,
+            speed: null !== (TB = cB.speed) && void 0 !== TB ? TB : .5,
+            qI: oB.e.clamp(cB.qI, .05, 1),
+            label: null !== (JB = cB.label) && void 0 !== JB ? JB : [{
               str: "Click when the marker is within the green zone."
             }],
-            icon: null !== (mt = Ht.icon) && void 0 !== mt ? mt : null,
-            scale: null !== (dt = Ht.scale) && void 0 !== dt ? dt : 1,
-            rotation: null !== (jt = Ht.rotation) && void 0 !== jt ? jt : 0
-          }, this.speed = this.parameters.speed, this.Ke = this.parameters.Ke, this.startTime = Date.now()
+            icon: null !== (GB = cB.icon) && void 0 !== GB ? GB : null,
+            scale: null !== (vB = cB.scale) && void 0 !== vB ? vB : 1,
+            rotation: null !== (kB = cB.rotation) && void 0 !== kB ? kB : 0
+          }, this.speed = this.parameters.speed, this.qI = this.parameters.qI, this.startTime = Date.now()
         }
-        handleMouseInput(tt) {
-          if (tt) {
+        handleMouseInput(BB) {
+          if (BB) {
             this.updateMarkerPosition();
-            const tt = Math.abs(this.markerPosition - .5) <= this.Ke / 2;
-            this.complete(tt)
+            const BB = Math.abs(this.markerPosition - .5) <= this.qI / 2;
+            this.complete(BB)
           }
         }
         handleTick() {
           this.isCompleted || this.updateMarkerPosition()
         }
         updateMarkerPosition() {
-          const tt = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
-          this.markerPosition = tt <= .5 ? 2 * tt : 2 - 2 * tt
+          const BB = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
+          this.markerPosition = BB <= .5 ? 2 * BB : 2 - 2 * BB
         }
-        complete(tt) {
-          this.isCompleted = !0, this.resolveRequest(tt)
+        complete(BB) {
+          this.isCompleted = !0, this.resolveRequest(BB)
         }
         getState() {
           return this.updateMarkerPosition(), {
@@ -242,29 +242,29 @@ export const modules = {
         }
       },
       rhythmClick: class {
-        constructor(tt, et, Vt) {
-          this.resolveRequest = et, this.tearDownNotification = Vt, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = tt, this.shrinkStartTime = Date.now()
+        constructor(BB, IB, ZB) {
+          this.resolveRequest = IB, this.tearDownNotification = ZB, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = BB, this.shrinkStartTime = Date.now()
         }
-        handleMouseInput(tt) {
-          if (!tt || this.isCompleted) return;
-          const et = this.getOuterCircleProgress();
-          if (et <= this.parameters.ce && et >= -this.parameters.ce) {
-            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.ve) return void this.complete(!0)
+        handleMouseInput(BB) {
+          if (!BB || this.isCompleted) return;
+          const IB = this.getOuterCircleProgress();
+          if (IB <= this.parameters.dI && IB >= -this.parameters.dI) {
+            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.UI) return void this.complete(!0)
           } else this.handleMiss();
           this.shrinkStartTime = Date.now()
         }
         handleMiss() {
-          this.misses++, this.lastClickResult = !1, !(0, mt.B)(this.parameters.Ie) && this.misses > this.parameters.Ie ? this.complete(!1) : this.shrinkStartTime = Date.now()
+          this.misses++, this.lastClickResult = !1, !(0, GB.L)(this.parameters.CI) && this.misses > this.parameters.CI ? this.complete(!1) : this.shrinkStartTime = Date.now()
         }
         handleTick() {
           if (this.isCompleted) return;
-          this.getOuterCircleProgress() < -this.parameters.ce && this.handleMiss()
+          this.getOuterCircleProgress() < -this.parameters.dI && this.handleMiss()
         }
         getOuterCircleProgress() {
-          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.Se
+          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.WI
         }
-        complete(tt) {
-          this.isCompleted = !0, this.resolveRequest(tt)
+        complete(BB) {
+          this.isCompleted = !0, this.resolveRequest(BB)
         }
         getState() {
           return {
@@ -273,7 +273,7 @@ export const modules = {
             state: {
               outerCircleProgress: this.getOuterCircleProgress(),
               successes: this.successes,
-              ve: this.parameters.ve,
+              UI: this.parameters.UI,
               misses: this.misses,
               lastClickResult: this.lastClickResult
             },
@@ -286,61 +286,61 @@ export const modules = {
       }
     };
 
-    function Mt() {
-      (0, Xt.g)(dt.u.Qte, yt ? dt.u.Qte : 0), yt ? qt.j.sw("qteStateUpdated", yt.getState()) : qt.j.sw("qteStateUpdated", {
+    function UB() {
+      (0, nB.f)(vB.o.Qte, qB ? vB.o.Qte : 0), qB ? JB.l.Gq("qteStateUpdated", qB.getState()) : JB.l.Gq("qteStateUpdated", {
         type: null,
         typeSpecificParameters: null,
         isActive: !1
       })
     }
-    class bt {
-      constructor(tt, et) {
-        this.resultPromise = tt, this.tearDownQTE = et
+    class WB {
+      constructor(BB, IB) {
+        this.resultPromise = BB, this.tearDownQTE = IB
       }
-      static create(tt, et, Vt) {
-        const Ot = Promise.race([tt, et]);
-        return new bt(Ot, Vt)
+      static create(BB, IB, ZB) {
+        const TB = Promise.race([BB, IB]);
+        return new WB(TB, ZB)
       }
       async getResult() {
         return await this.resultPromise
       }
     }
-    class Jt {
-      static queueQTE(tt, et, Vt) {
-        let Ot, qt;
-        const Dt = new Promise((tt => {
-            Ot = tt
+    class dB {
+      static queueQTE(BB, IB, ZB) {
+        let TB, JB;
+        const oB = new Promise((BB => {
+            TB = BB
           })),
-          mt = new Promise((tt => {
-            qt = () => {
-              tt("qteTornDown")
+          GB = new Promise((BB => {
+            JB = () => {
+              BB("qteTornDown")
             }
           })),
-          dt = Promise.race([Dt, mt]).then((() => {})),
-          jt = new Qt(tt, et, Vt, qt, dt, Ot);
-        return wt.set(tt, jt), ft.enqueue(jt), yt || this.processNextQTE(), bt.create(Dt, mt, qt)
+          vB = Promise.race([oB, GB]).then((() => {})),
+          kB = new hB(BB, IB, ZB, JB, vB, TB);
+        return gB.set(BB, kB), NB.enqueue(kB), qB || this.processNextQTE(), WB.create(oB, GB, JB)
       }
       static async processNextQTE() {
-        if (yt || ft.sE()) return void(ft.sE() && yt && (yt = null, Mt()));
-        const tt = await ft.dequeue();
-        if (!wt.has(tt.id)) return void await this.processNextQTE();
-        wt.delete(tt.id);
-        const et = new Et(tt.id, tt.type, tt.parameters, tt.resolveRequest, tt.onDonePromise, tt.tearDownNotification);
-        yt = et, Mt();
+        if (qB || NB.hN()) return void(NB.hN() && qB && (qB = null, UB()));
+        const BB = await NB.dequeue();
+        if (!gB.has(BB.id)) return void await this.processNextQTE();
+        gB.delete(BB.id);
+        const IB = new FB(BB.id, BB.type, BB.parameters, BB.resolveRequest, BB.onDonePromise, BB.tearDownNotification);
+        qB = IB, UB();
         try {
-          await et.waitUntilDone()
-        } catch (Vt) {
-          console.error("Error while waiting for QTE to resolve:", Vt.stack)
+          await IB.waitUntilDone()
+        } catch (ZB) {
+          console.error("Error while waiting for QTE to resolve:", ZB.stack)
         }
-        yt === et && (yt.cleanup(), yt = null, Mt()), await this.processNextQTE()
+        qB === IB && (qB.cleanup(), qB = null, UB()), await this.processNextQTE()
       }
-      static cancelQTE(tt) {
-        if (yt && yt.id === tt) return yt.tearDown(), yt = null, Mt(), void this.processNextQTE();
-        const et = wt.get(tt);
-        et && (wt.delete(tt), et.tearDownNotification())
+      static cancelQTE(BB) {
+        if (qB && qB.id === BB) return qB.tearDown(), qB = null, UB(), void this.processNextQTE();
+        const IB = gB.get(BB);
+        IB && (gB.delete(BB), IB.tearDownNotification())
       }
       static getCurrentState() {
-        return yt ? yt.getState() : {
+        return qB ? qB.getState() : {
           type: null,
           parameters: null,
           state: null,
@@ -348,209 +348,209 @@ export const modules = {
         }
       }
       static reset() {
-        yt && (yt.tearDown(), yt = null), wt.forEach(((tt, et) => {
-          this.cancelQTE(et)
-        })), ft.emptyQueue(), wt.clear(), Mt()
+        qB && (qB.tearDown(), qB = null), gB.forEach(((BB, IB) => {
+          this.cancelQTE(IB)
+        })), NB.emptyQueue(), gB.clear(), UB()
       }
     }
   },
-  4951: (tt, et, Vt) => {
-    Vt.d(et, {
-      A: () => mt,
-      C: () => dt,
-      E: () => vt,
-      c: () => ht,
-      d: () => Jt,
-      h: () => It,
-      i: () => Rt,
-      j: () => Nt,
-      k: () => ut,
-      m: () => bt,
-      o: () => Ct,
-      p: () => Wt,
-      t: () => St,
-      x: () => ct,
-      z: () => Mt
+  4958: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      A: () => pB,
+      B: () => UB,
+      E: () => GB,
+      H: () => vB,
+      I: () => OB,
+      b: () => wB,
+      e: () => dB,
+      f: () => HB,
+      g: () => aB,
+      j: () => yB,
+      n: () => QB,
+      p: () => WB,
+      s: () => CB,
+      u: () => YB,
+      y: () => iB
     });
-    var Ot = Vt(4958);
-    const qt = {
+    var TB = ZB(4960);
+    const JB = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let Dt = qt;
+    let oB = JB;
 
-    function mt(tt) {
-      Dt = null !== tt && void 0 !== tt ? tt : qt
+    function GB(BB) {
+      oB = null !== BB && void 0 !== BB ? BB : JB
     }
 
-    function dt() {
-      return Dt
+    function vB() {
+      return oB
     }
-    const jt = new Set,
-      Ht = new Set;
-    let Xt = -1;
-    const Qt = new Set,
-      lt = new Set;
-    let Et = 0,
-      ft = 0;
-    const wt = new Set,
-      yt = new Set;
+    const kB = new Set,
+      cB = new Set;
+    let nB = -1;
+    const hB = new Set,
+      zB = new Set;
+    let FB = 0,
+      NB = 0;
+    const gB = new Set,
+      qB = new Set;
 
-    function Nt(tt) {
-      return jt.add(tt), () => {
-        jt.delete(tt)
+    function yB(BB) {
+      return kB.add(BB), () => {
+        kB.delete(BB)
       }
     }
 
-    function Mt(tt, et) {
-      for (const Ot of jt) try {
-        Ot(tt)
-      } catch (Vt) {
-        et(Vt)
+    function UB(BB, IB) {
+      for (const TB of kB) try {
+        TB(BB)
+      } catch (ZB) {
+        IB(ZB)
       }
     }
 
-    function bt(tt) {
-      return Ht.add(tt), () => {
-        Ht.delete(tt)
+    function WB(BB) {
+      return cB.add(BB), () => {
+        cB.delete(BB)
       }
     }
 
-    function Jt(tt, et) {
-      const Vt = Xt < 0 ? 0 : tt - Xt;
-      Xt = tt;
-      for (const qt of Ht) try {
-        qt(Vt)
-      } catch (Ot) {
-        et(Ot)
+    function dB(BB, IB) {
+      const ZB = nB < 0 ? 0 : BB - nB;
+      nB = BB;
+      for (const JB of cB) try {
+        JB(ZB)
+      } catch (TB) {
+        IB(TB)
       }
     }
 
-    function Ct(tt) {
-      return Qt.add(tt), () => {
-        Qt.delete(tt)
+    function CB(BB) {
+      return hB.add(BB), () => {
+        hB.delete(BB)
       }
     }
 
-    function ut(tt) {
-      return lt.add(tt), () => {
-        lt.delete(tt)
+    function QB(BB) {
+      return zB.add(BB), () => {
+        zB.delete(BB)
       }
     }
-    let Kt = 0;
+    let sB = 0;
 
-    function ht(tt) {
-      Kt += tt
+    function wB(BB) {
+      sB += BB
     }
 
-    function vt() {
-      const tt = Kt;
-      return Kt = 0, tt
+    function OB() {
+      const BB = sB;
+      return sB = 0, BB
     }
 
-    function Wt(tt) {
-      return wt.add(tt), () => {
-        wt.delete(tt)
-      }
-    }
-
-    function St(tt) {
-      return yt.add(tt), () => {
-        yt.delete(tt)
+    function YB(BB) {
+      return gB.add(BB), () => {
+        gB.delete(BB)
       }
     }
 
-    function ct() {
-      Et = 0, ft = 0, Xt = -1
+    function iB(BB) {
+      return qB.add(BB), () => {
+        qB.delete(BB)
+      }
     }
 
-    function Rt(tt, et) {
-      if ("paced" === tt) return ft += et, null;
-      if ("drawn" !== tt && "skipped" !== tt) return null;
-      const Vt = et + ft;
-      return ft = 0, Vt
+    function pB() {
+      FB = 0, NB = 0, nB = -1
     }
 
-    function It(tt, et, Vt, qt) {
-      const Dt = (0, Ot.f)(et),
-        mt = tt > 0 ? performance.now() : 0;
-      for (let Ot = 0; Ot < tt; Ot++)
-        for (const tt of wt) try {
-          tt()
-        } catch (dt) {
-          qt(dt)
+    function aB(BB, IB) {
+      if ("paced" === BB) return NB += IB, null;
+      if ("drawn" !== BB && "skipped" !== BB) return null;
+      const ZB = IB + NB;
+      return NB = 0, ZB
+    }
+
+    function HB(BB, IB, ZB, JB) {
+      const oB = (0, TB.j)(IB),
+        GB = BB > 0 ? performance.now() : 0;
+      for (let TB = 0; TB < BB; TB++)
+        for (const BB of gB) try {
+          BB()
+        } catch (vB) {
+          JB(vB)
         }
-      if (tt > 0 && ht(performance.now() - mt), null !== Vt) {
-        for (const tt of Qt) try {
-          tt(Vt)
-        } catch (dt) {
-          qt(dt)
+      if (BB > 0 && wB(performance.now() - GB), null !== ZB) {
+        for (const BB of hB) try {
+          BB(ZB)
+        } catch (vB) {
+          JB(vB)
         }
-        Et += Vt
+        FB += ZB
       }
-      if ("drawn" === et) {
-        const tt = Et;
-        Et = 0;
-        for (const et of lt) try {
-          et(tt)
-        } catch (dt) {
-          qt(dt)
+      if ("drawn" === IB) {
+        const BB = FB;
+        FB = 0;
+        for (const IB of zB) try {
+          IB(BB)
+        } catch (vB) {
+          JB(vB)
         }
       }
-      for (const Ot of yt) try {
-        Ot(tt, Dt)
-      } catch (dt) {
-        qt(dt)
+      for (const TB of qB) try {
+        TB(BB, oB)
+      } catch (vB) {
+        JB(vB)
       }
     }
   },
-  4971: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => jt,
-      e: () => Dt,
-      i: () => dt
+  4978: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => kB,
+      c: () => oB,
+      e: () => vB
     });
-    var Ot = Vt(2458),
-      qt = Vt(4974);
+    var TB = ZB(2481),
+      JB = ZB(4983);
 
-    function Dt(tt) {
+    function oB(BB) {
       let {
-        action: et,
-        flags: Vt
-      } = tt;
-      return "mid-fire" === et && 0 !== (Vt & Ot.b.AltLeftClick)
+        action: IB,
+        flags: ZB
+      } = BB;
+      return "mid-fire" === IB && 0 !== (ZB & TB.b.AltLeftClick)
     }
-    const mt = new Set;
+    const GB = new Set;
 
-    function dt(tt) {
-      return mt.add(tt), () => {
-        mt.delete(tt)
+    function vB(BB) {
+      return GB.add(BB), () => {
+        GB.delete(BB)
       }
     }
 
-    function jt(tt) {
-      const et = qt.c[255 & tt];
-      if (void 0 === et) return;
-      const Vt = tt >>> 8 & 255,
-        Dt = {
-          action: et,
-          down: 0 !== (Vt & Ot.b.Down),
-          flags: Vt,
-          press: tt >>> 16
+    function kB(BB) {
+      const IB = JB.d[255 & BB];
+      if (void 0 === IB) return;
+      const ZB = BB >>> 8 & 255,
+        oB = {
+          action: IB,
+          down: 0 !== (ZB & TB.b.Down),
+          flags: ZB,
+          press: BB >>> 16
         };
-      for (const Ot of mt) Ot(Dt)
+      for (const TB of GB) TB(oB)
     }
   },
-  4974: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => qt,
-      e: () => Dt,
-      g: () => mt,
-      h: () => Ot,
-      i: () => dt
+  4983: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => JB,
+      f: () => oB,
+      h: () => GB,
+      i: () => TB,
+      k: () => vB
     });
-    const Ot = {
+    const TB = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -747,8 +747,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      qt = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      Dt = {
+      JB = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      oB = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -811,63 +811,63 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      mt = {
+      GB = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      dt = [16]
+      vB = [16]
   },
-  4980: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => dt,
-      f: () => mt,
-      g: () => Ht
+  4990: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => vB,
+      d: () => GB,
+      f: () => cB
     });
-    var Ot = Vt(2458),
-      qt = Vt(2465);
-    const Dt = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var TB = ZB(2481),
+      JB = ZB(2489);
+    const oB = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function mt(tt) {
-      return tt instanceof HTMLElement && (!!(tt.isContentEditable || tt instanceof HTMLTextAreaElement || tt instanceof HTMLSelectElement) || tt instanceof HTMLInputElement && !Dt.has(tt.type))
+    function GB(BB) {
+      return BB instanceof HTMLElement && (!!(BB.isContentEditable || BB instanceof HTMLTextAreaElement || BB instanceof HTMLSelectElement) || BB instanceof HTMLInputElement && !oB.has(BB.type))
     }
 
-    function dt(tt) {
-      let et = null;
-      const Vt = Vt => {
-          const qt = mt(Vt);
-          qt !== et && (et = qt, tt(Ot.g.UiCapture, Ot.u.Keyboard, 0, 0, qt ? Ot.u.Keyboard : 0))
+    function vB(BB) {
+      let IB = null;
+      const ZB = ZB => {
+          const JB = GB(ZB);
+          JB !== IB && (IB = JB, BB(TB.d.UiCapture, TB.o.Keyboard, 0, 0, JB ? TB.o.Keyboard : 0))
         },
-        qt = tt => {
-          Vt(tt.target)
+        JB = BB => {
+          ZB(BB.target)
         },
-        Dt = tt => {
-          Vt(tt.relatedTarget)
+        oB = BB => {
+          ZB(BB.relatedTarget)
         },
-        dt = () => {
-          Vt(document.activeElement)
+        vB = () => {
+          ZB(document.activeElement)
         },
-        jt = {
+        kB = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", qt, jt), document.addEventListener("focusout", Dt, jt), document.addEventListener("keydown", dt, jt), Vt(document.activeElement), () => {
-        document.removeEventListener("focusin", qt, jt), document.removeEventListener("focusout", Dt, jt), document.removeEventListener("keydown", dt, jt)
+      return document.addEventListener("focusin", JB, kB), document.addEventListener("focusout", oB, kB), document.addEventListener("keydown", vB, kB), ZB(document.activeElement), () => {
+        document.removeEventListener("focusin", JB, kB), document.removeEventListener("focusout", oB, kB), document.removeEventListener("keydown", vB, kB)
       }
     }
-    const jt = new Map;
+    const kB = new Map;
 
-    function Ht(tt, et) {
-      var Vt;
-      let Ot = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      jt.set(Ot, (null !== (Vt = jt.get(Ot)) && void 0 !== Vt ? Vt : 0) & ~tt | et & tt);
-      let Dt = 0;
-      for (const qt of jt.values()) Dt |= qt;
-      return (0, qt.A)(tt, Dt & tt)
+    function cB(BB, IB) {
+      var ZB;
+      let TB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      kB.set(TB, (null !== (ZB = kB.get(TB)) && void 0 !== ZB ? ZB : 0) & ~BB | IB & BB);
+      let oB = 0;
+      for (const JB of kB.values()) oB |= JB;
+      return (0, JB.D)(BB, oB & BB)
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const BB in modules) Object.freeze(modules[BB]);

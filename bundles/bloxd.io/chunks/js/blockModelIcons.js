@@ -1,92 +1,92 @@
 export const id = 4;
 export const ids = [4];
 export const modules = {
-  36646: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      getBlockModelIconUrl: () => lt,
-      hasBlockModelIcon: () => Ht
+  36433: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      getBlockModelIconUrl: () => zB,
+      hasBlockModelIcon: () => cB
     });
-    var Ot = Vt(36635),
-      qt = Vt(36632);
-    const Dt = Vt(36653),
-      mt = new Map(Dt.keys().filter((tt => tt.startsWith("./"))).map((tt => [tt.slice(2, -5), tt]))),
-      dt = new Map,
-      jt = new Map;
+    var TB = ZB(36422),
+      JB = ZB(36416);
+    const oB = ZB(36437),
+      GB = new Map(oB.keys().filter((BB => BB.startsWith("./"))).map((BB => [BB.slice(2, -5), BB]))),
+      vB = new Map,
+      kB = new Map;
 
-    function Ht(tt) {
-      return mt.has(tt)
+    function cB(BB) {
+      return GB.has(BB)
     }
 
-    function Xt(tt) {
-      return Dt(mt.get(tt))
+    function nB(BB) {
+      return oB(GB.get(BB))
     }
-    async function Qt(tt, et, Vt) {
+    async function hB(BB, IB, ZB) {
       const {
-        data: Ot,
-        texture: Dt
+        data: TB,
+        texture: oB
       } = await
-      function(tt) {
-        let et = dt.get(tt);
-        return et || (et = Xt(tt).then((async tt => {
-          const et = new Image;
-          et.src = tt.texture, await et.decode();
-          const Vt = document.createElement("canvas");
-          Vt.width = et.width, Vt.height = et.height;
-          const Ot = Vt.getContext("2d");
-          return Ot.drawImage(et, 0, 0), {
-            data: tt,
+      function(BB) {
+        let IB = vB.get(BB);
+        return IB || (IB = nB(BB).then((async BB => {
+          const IB = new Image;
+          IB.src = BB.texture, await IB.decode();
+          const ZB = document.createElement("canvas");
+          ZB.width = IB.width, ZB.height = IB.height;
+          const TB = ZB.getContext("2d");
+          return TB.drawImage(IB, 0, 0), {
+            data: BB,
             texture: {
-              width: et.width,
-              height: et.height,
-              pixels: Ot.getImageData(0, 0, et.width, et.height).data
+              width: IB.width,
+              height: IB.height,
+              pixels: TB.getImageData(0, 0, IB.width, IB.height).data
             }
           }
-        })), et.catch((() => {
-          dt.delete(tt)
-        })), dt.set(tt, et)), et
-      }(tt), mt = document.createElement("canvas");
-      return mt.width = et, mt.height = et, mt.getContext("2d").putImageData(new ImageData((0, qt.s)(Ot, Dt, et, Vt), et, et), 0, 0), mt.toDataURL()
+        })), IB.catch((() => {
+          vB.delete(BB)
+        })), vB.set(BB, IB)), IB
+      }(BB), GB = document.createElement("canvas");
+      return GB.width = IB, GB.height = IB, GB.getContext("2d").putImageData(new ImageData((0, JB.o)(TB, oB, IB, ZB), IB, IB), 0, 0), GB.toDataURL()
     }
 
-    function lt(tt, et, Vt) {
-      const qt = `${et}|${Vt}|${tt}`;
-      let Dt = jt.get(qt);
-      return Dt || (Dt = (0, Ot.e)(tt, (() => Xt(tt)), et, Vt).then((Ot => null !== Ot && void 0 !== Ot ? Ot : Qt(tt, et, Vt))), Dt.catch((() => {
-        jt.delete(qt)
-      })), jt.set(qt, Dt)), Dt
+    function zB(BB, IB, ZB) {
+      const JB = `${IB}|${ZB}|${BB}`;
+      let oB = kB.get(JB);
+      return oB || (oB = (0, TB.g)(BB, (() => nB(BB)), IB, ZB).then((TB => null !== TB && void 0 !== TB ? TB : hB(BB, IB, ZB))), oB.catch((() => {
+        kB.delete(JB)
+      })), kB.set(JB, oB)), oB
     }
   },
-  36653: (tt, et, Vt) => {
-    var Ot = {
-      "./Artisan Bench.json": [41399, 280],
-      "./Aspen Item Pedestal.json": [41407, 281],
-      "./Cedar Item Pedestal.json": [41412, 282],
-      "./Cherry Item Pedestal.json": [41419, 283],
-      "./Furnace.json": [41428, 284],
-      "./Jungle Item Pedestal.json": [41434, 285],
-      "./Mango Item Pedestal.json": [41442, 286],
-      "./Palm Item Pedestal.json": [41449, 287],
-      "./Pear Item Pedestal.json": [41454, 288],
-      "./Pine Item Pedestal.json": [41460, 289],
-      "./Plum Item Pedestal.json": [41462, 290],
-      "./Potion Table.json": [41471, 291],
-      "./Salvaging Table.json": [41473, 292],
-      "./Showcase.json": [41480, 293],
-      "./Spectral Item Pedestal.json": [41483, 294],
-      "./Workbench.json": [41490, 295]
+  36437: (BB, IB, ZB) => {
+    var TB = {
+      "./Artisan Bench.json": [41211, 280],
+      "./Aspen Item Pedestal.json": [41219, 281],
+      "./Cedar Item Pedestal.json": [41226, 282],
+      "./Cherry Item Pedestal.json": [41231, 283],
+      "./Furnace.json": [41237, 284],
+      "./Jungle Item Pedestal.json": [41240, 285],
+      "./Mango Item Pedestal.json": [41248, 286],
+      "./Palm Item Pedestal.json": [41257, 287],
+      "./Pear Item Pedestal.json": [41266, 288],
+      "./Pine Item Pedestal.json": [41274, 289],
+      "./Plum Item Pedestal.json": [41279, 290],
+      "./Potion Table.json": [41281, 291],
+      "./Salvaging Table.json": [41288, 292],
+      "./Showcase.json": [41292, 293],
+      "./Spectral Item Pedestal.json": [41296, 294],
+      "./Workbench.json": [41299, 295]
     };
 
-    function qt(tt) {
-      if (!Vt.o(Ot, tt)) return Promise.resolve().then((() => {
-        var et = new Error("Cannot find module '" + tt + "'");
-        throw et.code = "MODULE_NOT_FOUND", et
+    function JB(BB) {
+      if (!ZB.o(TB, BB)) return Promise.resolve().then((() => {
+        var IB = new Error("Cannot find module '" + BB + "'");
+        throw IB.code = "MODULE_NOT_FOUND", IB
       }));
-      var et = Ot[tt],
-        qt = et[0];
-      return Vt.e(et[1]).then((() => Vt(qt)))
+      var IB = TB[BB],
+        JB = IB[0];
+      return ZB.e(IB[1]).then((() => ZB(JB)))
     }
-    qt.keys = () => Object.keys(Ot), qt.id = 36653, tt.exports = qt
+    JB.keys = () => Object.keys(TB), JB.id = 36437, BB.exports = JB
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const BB in modules) Object.freeze(modules[BB]);

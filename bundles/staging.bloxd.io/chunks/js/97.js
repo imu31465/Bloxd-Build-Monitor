@@ -1,511 +1,511 @@
 export const id = 97;
 export const ids = [95, 96, 97];
 export const modules = {
-  36872: (tt, et, Vt) => {
-    function Ot(tt, et, Vt, Ot) {
-      return !(Vt && !tt.aimable) && (!et || tt.gun && "head" !== Ot)
+  36636: (BB, IB, ZB) => {
+    function TB(BB, IB, ZB, TB) {
+      return !(ZB && !BB.aimable) && (!IB || BB.gun && "head" !== TB)
     }
 
-    function qt(tt) {
-      return Math.max(.1 * tt, 1)
+    function JB(BB) {
+      return Math.max(.1 * BB, 1)
     }
 
-    function Dt(tt, et) {
-      return !tt && et
+    function oB(BB, IB) {
+      return !BB && IB
     }
-    Vt.d(et, {
-      b: () => Dt,
-      c: () => qt,
-      d: () => Ot
+    ZB.d(IB, {
+      d: () => oB,
+      f: () => JB,
+      g: () => TB
     })
   },
-  36880: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => dt,
-      h: () => mt
+  36642: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => vB,
+      d: () => GB
     });
-    let Ot = null;
-    const qt = {
+    let TB = null;
+    const JB = {
         crosshairAccuracy: [],
         turnDamageIndicators: []
       },
-      Dt = {
-        crosshairAccuracy: tt => {
-          const et = qt.crosshairAccuracy.at(-1);
-          et ? et.hook(tt) : Ot = tt
+      oB = {
+        crosshairAccuracy: BB => {
+          const IB = JB.crosshairAccuracy.at(-1);
+          IB ? IB.hook(BB) : TB = BB
         },
-        turnDamageIndicators: tt => {
-          var et;
-          null === (et = qt.turnDamageIndicators.at(-1)) || void 0 === et || et.hook(tt)
+        turnDamageIndicators: BB => {
+          var IB;
+          null === (IB = JB.turnDamageIndicators.at(-1)) || void 0 === IB || IB.hook(BB)
         }
       };
 
-    function mt(tt, et) {
-      const Vt = {
-          hook: et
+    function GB(BB, IB) {
+      const ZB = {
+          hook: IB
         },
-        mt = qt[tt];
-      if (mt.push(Vt), "crosshairAccuracy" === tt && null !== Ot) {
-        const tt = Ot;
-        Ot = null, Dt.crosshairAccuracy(tt)
+        GB = JB[BB];
+      if (GB.push(ZB), "crosshairAccuracy" === BB && null !== TB) {
+        const BB = TB;
+        TB = null, oB.crosshairAccuracy(BB)
       }
       return () => {
-        const tt = mt.indexOf(Vt); - 1 !== tt && mt.splice(tt, 1)
+        const BB = GB.indexOf(ZB); - 1 !== BB && GB.splice(BB, 1)
       }
     }
 
-    function dt() {
-      return Dt
+    function vB() {
+      return oB
     }
   },
-  36685: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      countDecodesAs: () => Qt,
-      decodedAudio: () => lt
+  36464: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      countDecodesAs: () => hB,
+      decodedAudio: () => zB
     });
-    var Ot = Vt(3320),
-      qt = Vt(5030);
-    const Dt = qt.Howler,
-      mt = new Map;
-    let dt = 0;
-    const jt = {
+    var TB = ZB(3428),
+      JB = ZB(5028);
+    const oB = JB.Howler,
+      GB = new Map;
+    let vB = 0;
+    const kB = {
         song: 0,
         sheet: 0
       },
-      Ht = new WeakMap,
-      Xt = new WeakSet;
+      cB = new WeakMap,
+      nB = new WeakSet;
 
-    function Qt(tt, et) {
-      return Ht.set(tt, et), tt
+    function hB(BB, IB) {
+      return cB.set(BB, IB), BB
     }
 
-    function lt() {
+    function zB() {
       return {
-        bytes: dt,
-        songsDecoded: jt.song,
-        sheetsDecoded: jt.sheet
+        bytes: vB,
+        songsDecoded: kB.song,
+        sheetsDecoded: kB.sheet
       }
     }
 
-    function Et(tt) {
-      if (Xt.has(tt)) return;
-      Xt.add(tt);
-      const et = 1 === tt.decodeAudioData.length,
-        Vt = tt.decodeAudioData.bind(tt);
-      tt.decodeAudioData = (tt, Ot, qt) => {
-        const Xt = tt => {
-          const et = Dt._howls.filter((tt => "loaded" !== tt._state));
+    function FB(BB) {
+      if (nB.has(BB)) return;
+      nB.add(BB);
+      const IB = 1 === BB.decodeAudioData.length,
+        ZB = BB.decodeAudioData.bind(BB);
+      BB.decodeAudioData = (BB, TB, JB) => {
+        const nB = BB => {
+          const IB = oB._howls.filter((BB => "loaded" !== BB._state));
           try {
-            null === Ot || void 0 === Ot || Ot(tt)
+            null === TB || void 0 === TB || TB(BB)
           } finally {
-            const Vt = et.find((tt => "loaded" === tt._state));
-            void 0 !== Vt && "string" === typeof Vt._src && function(tt, et, Vt) {
-              var Ot;
-              dt += Vt - (null !== (Ot = mt.get(et)) && void 0 !== Ot ? Ot : 0), mt.set(et, Vt);
-              const qt = Ht.get(tt);
-              void 0 !== qt && jt[qt]++
-            }(Vt, Vt._src, tt.length * tt.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
+            const ZB = IB.find((BB => "loaded" === BB._state));
+            void 0 !== ZB && "string" === typeof ZB._src && function(BB, IB, ZB) {
+              var TB;
+              vB += ZB - (null !== (TB = GB.get(IB)) && void 0 !== TB ? TB : 0), GB.set(IB, ZB);
+              const JB = cB.get(BB);
+              void 0 !== JB && kB[JB]++
+            }(ZB, ZB._src, BB.length * BB.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
           }
-          return tt
+          return BB
         };
-        if (!et) return Vt(tt, Xt, qt);
-        const Qt = Vt(tt).then(Xt);
-        return Qt.catch((tt => {
-          null === qt || void 0 === qt || qt(tt)
-        })), Qt
+        if (!IB) return ZB(BB, nB, JB);
+        const hB = ZB(BB).then(nB);
+        return hB.catch((BB => {
+          null === JB || void 0 === JB || JB(BB)
+        })), hB
       }
-    }(0, Ot.h)(lt);
-    const ft = qt.Howl.prototype,
-      wt = ft.init;
-    ft.init = function(tt) {
-      return qt.Howler.volume(), Dt.ctx && Et(Dt.ctx), wt.call(this, tt)
+    }(0, TB.e)(zB);
+    const NB = JB.Howl.prototype,
+      gB = NB.init;
+    NB.init = function(BB) {
+      return JB.Howler.volume(), oB.ctx && FB(oB.ctx), gB.call(this, BB)
     };
-    const yt = ft.unload;
-    ft.unload = function() {
-      const tt = this._src,
-        et = yt.call(this);
-      if ("string" !== typeof tt) return et;
-      const Vt = mt.get(tt);
-      return void 0 !== Vt && function(tt) {
-        return !Dt._howls.some((et => et._src === tt || "string" === typeof et._src && tt.indexOf(et._src) >= 0))
-      }(tt) && (mt.delete(tt), dt -= Vt), et
+    const qB = NB.unload;
+    NB.unload = function() {
+      const BB = this._src,
+        IB = qB.call(this);
+      if ("string" !== typeof BB) return IB;
+      const ZB = GB.get(BB);
+      return void 0 !== ZB && function(BB) {
+        return !oB._howls.some((IB => IB._src === BB || "string" === typeof IB._src && BB.indexOf(IB._src) >= 0))
+      }(BB) && (GB.delete(BB), vB -= ZB), IB
     }
   },
-  37014: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => jt
+  36812: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => kB
     });
-    var Ot = Vt(26),
-      qt = Vt(36996),
-      Dt = Vt(4445),
-      mt = Vt(37021),
-      dt = Vt(5030);
-    const jt = function(tt) {
-      const et = new Set;
-      return Vt => {
-        var Ot;
-        const Dt = null === (Ot = [...qt.c].find((tt => {
-          let [, et] = tt;
-          return et.includes(Vt)
-        }))) || void 0 === Ot ? void 0 : Ot[0];
-        if (void 0 === Dt || et.has(Dt)) return;
-        et.add(Dt);
-        ! function(tt, et) {
+    var TB = ZB(20),
+      JB = ZB(36783),
+      oB = ZB(4518),
+      GB = ZB(36821),
+      vB = ZB(5028);
+    const kB = function(BB) {
+      const IB = new Set;
+      return ZB => {
+        var TB;
+        const oB = null === (TB = [...JB.c].find((BB => {
+          let [, IB] = BB;
+          return IB.includes(ZB)
+        }))) || void 0 === TB ? void 0 : TB[0];
+        if (void 0 === oB || IB.has(oB)) return;
+        IB.add(oB);
+        ! function(BB, IB) {
           let {
-            afterJoin: Vt,
-            joining: Ot,
-            idle: qt,
-            fetchFile: Dt
-          } = et;
-          const mt = et => {
-            et >= tt.length || Vt((() => {
-              qt((() => {
-                Ot() ? mt(et) : Dt(tt[et]).catch((() => {})).finally((() => {
-                  mt(et + 1)
+            afterJoin: ZB,
+            joining: TB,
+            idle: JB,
+            fetchFile: oB
+          } = IB;
+          const GB = IB => {
+            IB >= BB.length || ZB((() => {
+              JB((() => {
+                TB() ? GB(IB) : oB(BB[IB]).catch((() => {})).finally((() => {
+                  GB(IB + 1)
                 }))
               }))
             }))
           };
-          mt(0)
-        }(qt.c.get(Dt).filter((tt => tt !== Vt)).flatMap((et => {
-          const Vt = (Ot = (0, qt.k)(et).src, Dt = tt.canPlay, Ot.find((tt => {
-            var et;
-            const Vt = null === (et = /\.([^.]+)$/.exec(tt.split("?", 1)[0])) || void 0 === et ? void 0 : et[1];
-            return void 0 !== Vt && Dt(Vt.toLowerCase())
+          GB(0)
+        }(JB.c.get(oB).filter((BB => BB !== ZB)).flatMap((IB => {
+          const ZB = (TB = (0, JB.g)(IB).src, oB = BB.canPlay, TB.find((BB => {
+            var IB;
+            const ZB = null === (IB = /\.([^.]+)$/.exec(BB.split("?", 1)[0])) || void 0 === IB ? void 0 : IB[1];
+            return void 0 !== ZB && oB(ZB.toLowerCase())
           })));
-          var Ot, Dt;
-          return void 0 === Vt ? [] : [Vt]
-        })), tt)
+          var TB, oB;
+          return void 0 === ZB ? [] : [ZB]
+        })), BB)
       }
     }({
-      afterJoin: tt => {
-        (0, Dt.e)(Ot.b.get("gameState"), tt)
+      afterJoin: BB => {
+        (0, oB.e)(TB.d.get("gameState"), BB)
       },
-      joining: () => (0, Dt.h)(Ot.b.get("gameState")),
-      idle: Vt(287).c,
-      fetchFile: mt.c,
-      canPlay: tt => !!dt.Howler.codecs(tt)
+      joining: () => (0, oB.f)(TB.d.get("gameState")),
+      idle: ZB(256).c,
+      fetchFile: GB.e,
+      canPlay: BB => !!vB.Howler.codecs(BB)
     })
   },
-  37021: (tt, et, Vt) => {
-    async function Ot(tt) {
-      const et = await fetch(tt, {
+  36821: (BB, IB, ZB) => {
+    async function TB(BB) {
+      const IB = await fetch(BB, {
         priority: "low"
       });
-      if (!et.ok) throw new Error(`Fetching ${tt} failed: HTTP ${et.status}`);
-      const Vt = et.body.getReader();
-      for (; !(await Vt.read()).done;);
+      if (!IB.ok) throw new Error(`Fetching ${BB} failed: HTTP ${IB.status}`);
+      const ZB = IB.body.getReader();
+      for (; !(await ZB.read()).done;);
     }
-    Vt.d(et, {
-      c: () => Ot
+    ZB.d(IB, {
+      e: () => TB
     })
   },
-  36999: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => qt
+  36789: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => JB
     });
-    const Ot = ["end", "stop", "playerror"];
+    const TB = ["end", "stop", "playerror"];
 
-    function qt(tt, et) {
-      const Vt = () => {
-        if (function(tt) {
-            return "loaded" === tt.state() && !tt.playing() && !tt._playLock
-          }(tt)) {
-          for (const et of Ot) tt.off(et, Vt);
-          tt.unload(), et()
+    function JB(BB, IB) {
+      const ZB = () => {
+        if (function(BB) {
+            return "loaded" === BB.state() && !BB.playing() && !BB._playLock
+          }(BB)) {
+          for (const IB of TB) BB.off(IB, ZB);
+          BB.unload(), IB()
         }
       };
-      for (const qt of Ot) tt.on(qt, Vt);
-      Vt()
+      for (const JB of TB) BB.on(JB, ZB);
+      ZB()
     }
   },
-  5030: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      Howl: () => qt.Howl,
-      Howler: () => qt.Howler,
-      musicOutput: () => yt,
-      readyAudioContext: () => Nt
+  5028: (BB, IB, ZB) => {
+    ZB.r(IB), ZB.d(IB, {
+      Howl: () => JB.Howl,
+      Howler: () => JB.Howler,
+      musicOutput: () => qB,
+      readyAudioContext: () => yB
     });
-    var Ot, qt = Vt(5036),
-      Dt = Vt(3510),
-      mt = Vt(4796);
-    const dt = qt.Howler;
+    var TB, JB = ZB(5031),
+      oB = ZB(3625),
+      GB = ZB(4824);
+    const vB = JB.Howler;
 
-    function jt() {
-      var tt, et;
-      if (dt.ctx || !dt.usingWebAudio || "undefined" === typeof AudioContext || !(0, mt.e)()) return;
-      const Vt = navigator.audioSession;
-      let Ot;
-      "auto" === (null === Vt || void 0 === Vt ? void 0 : Vt.type) && (Vt.type = "ambient");
+    function kB() {
+      var BB, IB;
+      if (vB.ctx || !vB.usingWebAudio || "undefined" === typeof AudioContext || !(0, GB.i)()) return;
+      const ZB = navigator.audioSession;
+      let TB;
+      "auto" === (null === ZB || void 0 === ZB ? void 0 : ZB.type) && (ZB.type = "ambient");
       try {
-        Ot = new AudioContext({
+        TB = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const qt = Ot.createGain();
-      qt.gain.setValueAtTime(dt._muted ? 0 : null !== (tt = dt._volume) && void 0 !== tt ? tt : 1, Ot.currentTime), qt.connect(Ot.destination), dt.ctx = Ot, dt.masterGain = qt, null === (et = dt._setup) || void 0 === et || et.call(dt)
+      const JB = TB.createGain();
+      JB.gain.setValueAtTime(vB._muted ? 0 : null !== (BB = vB._volume) && void 0 !== BB ? BB : 1, TB.currentTime), JB.connect(TB.destination), vB.ctx = TB, vB.masterGain = JB, null === (IB = vB._setup) || void 0 === IB || IB.call(vB)
     }
-    dt._mobileUnloaded = !0;
-    const Ht = dt.volume.bind(qt.Howler);
-    dt.volume = function() {
-      return jt(), Ht(...arguments)
+    vB._mobileUnloaded = !0;
+    const cB = vB.volume.bind(JB.Howler);
+    vB.volume = function() {
+      return kB(), cB(...arguments)
     };
-    const Xt = dt.mute.bind(qt.Howler);
-    dt.mute = tt => (jt(), Xt(tt));
-    const Qt = qt.Howl.prototype,
-      lt = Qt.init;
+    const nB = vB.mute.bind(JB.Howler);
+    vB.mute = BB => (kB(), nB(BB));
+    const hB = JB.Howl.prototype,
+      zB = hB.init;
 
-    function Et() {
-      for (; dt._html5AudioPool.length < dt.html5PoolSize;) {
-        const tt = new Audio;
-        tt._unlocked = !0, dt._releaseHtml5Audio(tt)
+    function FB() {
+      for (; vB._html5AudioPool.length < vB.html5PoolSize;) {
+        const BB = new Audio;
+        BB._unlocked = !0, vB._releaseHtml5Audio(BB)
       }
-      for (const et of dt._howls)
-        if (!et._webAudio)
-          for (const Vt of et._getSoundIds()) {
-            var tt;
-            const Ot = null === (tt = et._soundById(Vt)) || void 0 === tt ? void 0 : tt._node;
-            Ot && !Ot._unlocked && (Ot._unlocked = !0, Ot.load())
+      for (const IB of vB._howls)
+        if (!IB._webAudio)
+          for (const ZB of IB._getSoundIds()) {
+            var BB;
+            const TB = null === (BB = IB._soundById(ZB)) || void 0 === BB ? void 0 : BB._node;
+            TB && !TB._unlocked && (TB._unlocked = !0, TB.load())
           }
     }
-    Qt.init = function(tt) {
-      return jt(), lt.call(this, tt)
-    }, (0, mt.e)() && (dt._unlockAudio = () => {
-      const tt = dt.ctx;
-      if (dt._audioUnlocked || !tt) return;
-      dt.autoUnlock = !1;
-      const et = tt.createBuffer(1, 1, 22050);
-      dt._scratchBuffer = et;
-      const Vt = new AbortController;
-      let Ot = "afterPaint";
-      const qt = () => {
-          var Ot;
-          if (dt._audioUnlocked) return;
-          null === (Ot = dt._autoResume) || void 0 === Ot || Ot.call(dt);
-          const qt = tt.createBufferSource();
-          qt.buffer = et, qt.connect(tt.destination), qt.start(0), tt.resume().catch((() => {})), qt.onended = () => {
-            qt.disconnect(0), dt._audioUnlocked = !0, Vt.abort();
-            for (const tt of dt._howls) tt._emit("unlock")
+    hB.init = function(BB) {
+      return kB(), zB.call(this, BB)
+    }, (0, GB.i)() && (vB._unlockAudio = () => {
+      const BB = vB.ctx;
+      if (vB._audioUnlocked || !BB) return;
+      vB.autoUnlock = !1;
+      const IB = BB.createBuffer(1, 1, 22050);
+      vB._scratchBuffer = IB;
+      const ZB = new AbortController;
+      let TB = "afterPaint";
+      const JB = () => {
+          var TB;
+          if (vB._audioUnlocked) return;
+          null === (TB = vB._autoResume) || void 0 === TB || TB.call(vB);
+          const JB = BB.createBufferSource();
+          JB.buffer = IB, JB.connect(BB.destination), JB.start(0), BB.resume().catch((() => {})), JB.onended = () => {
+            JB.disconnect(0), vB._audioUnlocked = !0, ZB.abort();
+            for (const BB of vB._howls) BB._emit("unlock")
           }
         },
-        jt = () => {
-          Et(), qt()
+        kB = () => {
+          FB(), JB()
         },
-        Ht = et => {
-          if (Et(), "inTap" === Ot) {
-            if ("running" === tt.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), qt()
-          } else "afterPaint" === Ot && (Ot = "queued", (0, Dt.d)(et.timeStamp, (() => {
-            Ot = "inTap", qt()
+        cB = IB => {
+          if (FB(), "inTap" === TB) {
+            if ("running" === BB.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), JB()
+          } else "afterPaint" === TB && (TB = "queued", (0, oB.d)(IB.timeStamp, (() => {
+            TB = "inTap", JB()
           })))
         };
-      for (const Dt of ["touchstart", "touchend"]) document.addEventListener(Dt, jt, {
+      for (const oB of ["touchstart", "touchend"]) document.addEventListener(oB, kB, {
         capture: !0,
-        signal: Vt.signal
+        signal: ZB.signal
       });
-      for (const Dt of mt.b) document.addEventListener(Dt, Ht, {
+      for (const oB of GB.e) document.addEventListener(oB, cB, {
         capture: !0,
-        signal: Vt.signal
+        signal: ZB.signal
       })
     });
-    let ft = 0;
-    const wt = null === (Ot = dt._autoSuspend) || void 0 === Ot ? void 0 : Ot.bind(qt.Howler);
+    let NB = 0;
+    const gB = null === (TB = vB._autoSuspend) || void 0 === TB ? void 0 : TB.bind(JB.Howler);
 
-    function yt() {
-      Nt();
+    function qB() {
+      yB();
       const {
-        ctx: tt,
-        masterGain: et
-      } = dt;
-      return tt && et ? {
-        ctx: tt,
-        destination: et,
-        holdAwake: tt => {
-          var et, Vt;
-          (ft += tt ? 1 : -1, tt) ? null === (et = dt._autoResume) || void 0 === et || et.call(dt): null === (Vt = dt._autoSuspend) || void 0 === Vt || Vt.call(dt)
+        ctx: BB,
+        masterGain: IB
+      } = vB;
+      return BB && IB ? {
+        ctx: BB,
+        destination: IB,
+        holdAwake: BB => {
+          var IB, ZB;
+          (NB += BB ? 1 : -1, BB) ? null === (IB = vB._autoResume) || void 0 === IB || IB.call(vB): null === (ZB = vB._autoSuspend) || void 0 === ZB || ZB.call(vB)
         },
         wake: () => {
-          var et;
-          "running" !== tt.state && (null === (et = dt._autoResume) || void 0 === et || et.call(dt), tt.resume().catch((() => {})))
+          var IB;
+          "running" !== BB.state && (null === (IB = vB._autoResume) || void 0 === IB || IB.call(vB), BB.resume().catch((() => {})))
         }
       } : null
     }
 
-    function Nt() {
-      var tt;
-      (dt.volume(), dt.ctx && dt.autoUnlock) && (null === (tt = dt._unlockAudio) || void 0 === tt || tt.call(dt))
+    function yB() {
+      var BB;
+      (vB.volume(), vB.ctx && vB.autoUnlock) && (null === (BB = vB._unlockAudio) || void 0 === BB || BB.call(vB))
     }
-    wt && (dt._autoSuspend = () => ft > 0 ? qt.Howler : wt())
+    gB && (vB._autoSuspend = () => NB > 0 ? JB.Howler : gB())
   },
-  37008: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Ot
+  36807: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => TB
     });
-    const Ot = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
+    const TB = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
   },
-  37004: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => mt,
-      e: () => qt,
-      i: () => Ot
+  36800: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      b: () => GB,
+      f: () => JB,
+      j: () => TB
     });
 
-    function Ot(tt) {
-      return tt.replace(/[_\-\s]*\d+$/, "") || tt
+    function TB(BB) {
+      return BB.replace(/[_\-\s]*\d+$/, "") || BB
     }
 
-    function qt(tt, et, Vt) {
-      return Vt <= 0 ? 0 : tt * Vt / Math.max(et, Vt)
+    function JB(BB, IB, ZB) {
+      return ZB <= 0 ? 0 : BB * ZB / Math.max(IB, ZB)
     }
 
-    function Dt(tt, et) {
-      const Vt = tt.getDurationMs();
-      return Vt > 0 ? tt.loudness * Math.max(0, 1 - (et - tt.startMs) / Vt) : 0
+    function oB(BB, IB) {
+      const ZB = BB.getDurationMs();
+      return ZB > 0 ? BB.loudness * Math.max(0, 1 - (IB - BB.startMs) / ZB) : 0
     }
-    class mt {
+    class GB {
       constructor() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = tt, this.maxPerGroup = et, this.voices = []
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = BB, this.maxPerGroup = IB, this.voices = []
       }
-      admit(tt) {
-        if (this.voices = this.voices.filter((tt => tt.isAlive())), null !== tt.group) {
-          const et = this.voices.filter((et => et.group === tt.group));
-          if (et.length >= this.maxPerGroup && !this.dropLeastWorth(et, tt)) return !1
+      admit(BB) {
+        if (this.voices = this.voices.filter((BB => BB.isAlive())), null !== BB.group) {
+          const IB = this.voices.filter((IB => IB.group === BB.group));
+          if (IB.length >= this.maxPerGroup && !this.dropLeastWorth(IB, BB)) return !1
         }
-        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, tt)) && (this.voices.push(tt), !0)
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, BB)) && (this.voices.push(BB), !0)
       }
-      dropLeastWorth(tt, et) {
-        let Vt = null,
-          Ot = 1 / 0;
-        for (const qt of tt) {
-          if (!qt.canStop()) continue;
-          const tt = Dt(qt, et.startMs);
-          tt < Ot && (Vt = qt, Ot = tt)
+      dropLeastWorth(BB, IB) {
+        let ZB = null,
+          TB = 1 / 0;
+        for (const JB of BB) {
+          if (!JB.canStop()) continue;
+          const BB = oB(JB, IB.startMs);
+          BB < TB && (ZB = JB, TB = BB)
         }
-        return !(!Vt || et.loudness < Ot) && (this.voices.splice(this.voices.indexOf(Vt), 1), Vt.stop(), !0)
+        return !(!ZB || IB.loudness < TB) && (this.voices.splice(this.voices.indexOf(ZB), 1), ZB.stop(), !0)
       }
     }
   },
-  36844: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => qt,
-      h: () => mt,
-      i: () => dt
+  36609: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => JB,
+      h: () => GB,
+      i: () => vB
     });
-    var Ot = Vt(31);
-    const qt = "touchSprintChanged";
-    let Dt = !0;
+    var TB = ZB(24);
+    const JB = "touchSprintChanged";
+    let oB = !0;
 
-    function mt() {
-      return Dt
+    function GB() {
+      return oB
     }
 
-    function dt(tt) {
-      tt !== Dt && (Dt = tt, Ot.j.sw(qt, tt))
+    function vB(BB) {
+      BB !== oB && (oB = BB, TB.l.Gq(JB, BB))
     }
   },
-  37032: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Dt,
-      f: () => mt,
-      g: () => Ot
+  36829: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => oB,
+      h: () => GB,
+      k: () => TB
     });
-    class Ot {
-      constructor(tt) {
-        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = tt
+    class TB {
+      constructor(BB) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = BB
       }
-      setMultiplierType(tt, et) {
-        var Vt;
-        this.multipliers[tt] = et, null === (Vt = this._onUpdate) || void 0 === Vt || Vt.call(this)
+      setMultiplierType(BB, IB) {
+        var ZB;
+        this.multipliers[BB] = IB, null === (ZB = this._onUpdate) || void 0 === ZB || ZB.call(this)
       }
-      removeMultiplier(tt) {
-        var et;
-        delete this.multipliers[tt], null === (et = this._onUpdate) || void 0 === et || et.call(this)
+      removeMultiplier(BB) {
+        var IB;
+        delete this.multipliers[BB], null === (IB = this._onUpdate) || void 0 === IB || IB.call(this)
       }
-      getMultiplierType(tt) {
-        return this.multipliers[tt]
+      getMultiplierType(BB) {
+        return this.multipliers[BB]
       }
       getTotalMultipliedVal() {
-        let tt = 1;
-        for (const et in this.multipliers) tt *= this.multipliers[et];
-        return tt
+        let BB = 1;
+        for (const IB in this.multipliers) BB *= this.multipliers[IB];
+        return BB
       }
     }
-    class qt {
+    class JB {
       constructor() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = tt
+        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = BB
       }
-      setBooleanType(tt, et) {
-        const Vt = this._getTotalBooleanVal();
-        this.booleans[tt] = !!et;
-        const Ot = this.getTotalBooleanVal();
-        var qt;
-        Ot !== Vt && (null === (qt = this._onUpdate) || void 0 === qt || qt.call(this, Ot, this.booleans));
-        return Ot
+      setBooleanType(BB, IB) {
+        const ZB = this._getTotalBooleanVal();
+        this.booleans[BB] = !!IB;
+        const TB = this.getTotalBooleanVal();
+        var JB;
+        TB !== ZB && (null === (JB = this._onUpdate) || void 0 === JB || JB.call(this, TB, this.booleans));
+        return TB
       }
-      removeBoolean(tt) {
-        const et = this._getTotalBooleanVal();
-        delete this.booleans[tt];
-        const Vt = this._getTotalBooleanVal();
-        var Ot;
-        null !== Vt && Vt !== et && (null === (Ot = this._onUpdate) || void 0 === Ot || Ot.call(this, Vt, this.booleans));
-        return null !== Vt && void 0 !== Vt && Vt
+      removeBoolean(BB) {
+        const IB = this._getTotalBooleanVal();
+        delete this.booleans[BB];
+        const ZB = this._getTotalBooleanVal();
+        var TB;
+        null !== ZB && ZB !== IB && (null === (TB = this._onUpdate) || void 0 === TB || TB.call(this, ZB, this.booleans));
+        return null !== ZB && void 0 !== ZB && ZB
       }
-      getBooleanType(tt) {
-        return this.booleans[tt]
+      getBooleanType(BB) {
+        return this.booleans[BB]
       }
       getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
       forceUpdate() {
-        var tt;
-        null === (tt = this._onUpdate) || void 0 === tt || tt.call(this, this.getTotalBooleanVal(), this.booleans)
+        var BB;
+        null === (BB = this._onUpdate) || void 0 === BB || BB.call(this, this.getTotalBooleanVal(), this.booleans)
       }
       _getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
     }
-    class Dt extends qt {
+    class oB extends JB {
       getTotalBooleanVal() {
-        const tt = this._getTotalBooleanVal();
-        if (null === tt) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return tt
+        const BB = this._getTotalBooleanVal();
+        if (null === BB) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return BB
       }
       _getTotalBooleanVal() {
-        let tt = !1,
-          et = !0;
-        for (const Vt in this.booleans) tt = !0, et &&= this.booleans[Vt];
-        return tt ? et : null
+        let BB = !1,
+          IB = !0;
+        for (const ZB in this.booleans) BB = !0, IB &&= this.booleans[ZB];
+        return BB ? IB : null
       }
     }
-    class mt extends qt {
+    class GB extends JB {
       getTotalBooleanVal() {
-        const tt = this._getTotalBooleanVal();
-        if (null === tt) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return tt
+        const BB = this._getTotalBooleanVal();
+        if (null === BB) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return BB
       }
       _getTotalBooleanVal() {
-        let tt = !1,
-          et = !1;
-        for (const Vt in this.booleans) tt = !0, et ||= this.booleans[Vt];
-        return tt ? et : null
+        let BB = !1,
+          IB = !1;
+        for (const ZB in this.booleans) BB = !0, IB ||= this.booleans[ZB];
+        return BB ? IB : null
       }
     }
   },
-  37028: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Dt,
-      c: () => Ot,
-      f: () => qt
+  36827: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => oB,
+      g: () => TB,
+      h: () => JB
     });
-    const Ot = 15,
-      qt = 3,
-      Dt = 30
+    const TB = 15,
+      JB = 3,
+      oB = 30
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const BB in modules) Object.freeze(modules[BB]);

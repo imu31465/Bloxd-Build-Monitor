@@ -1,156 +1,156 @@
 export const id = 191;
 export const ids = [191];
 export const modules = {
-  40804: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => jt,
-      h: () => dt,
-      k: () => mt
+  40675: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => kB,
+      e: () => vB,
+      f: () => GB
     });
-    var Ot = Vt(40812),
-      qt = Vt(4960),
-      Dt = Vt(40816);
+    var TB = ZB(40682),
+      JB = ZB(4969),
+      oB = ZB(40684);
 
-    function mt(tt) {
-      return tt.payloadKind === qt.wc.Msgpack ? (0, Ot.c)(tt.payload) : void 0
+    function GB(BB) {
+      return BB.payloadKind === JB.nc.Msgpack ? (0, TB.e)(BB.payload) : void 0
     }
 
-    function dt(tt, et) {
-      if (et.payloadKind === qt.wc.Bytes || et.payloadKind === qt.wc.MsgpackBin) return (0, Dt.c)(tt, et.payload)
+    function vB(BB, IB) {
+      if (IB.payloadKind === JB.nc.Bytes || IB.payloadKind === JB.nc.MsgpackBin) return (0, oB.e)(BB, IB.payload)
     }
 
-    function jt(tt) {
-      return null !== tt && "object" === typeof tt
+    function kB(BB) {
+      return null !== BB && "object" === typeof BB
     }
   },
-  40824: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Qt,
-      f: () => lt,
-      g: () => Et,
-      j: () => Xt,
-      m: () => yt
+  40692: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => hB,
+      g: () => zB,
+      j: () => FB,
+      l: () => nB,
+      p: () => qB
     });
-    var Ot = Vt(4960),
-      qt = Vt(40831);
-    const Dt = new Map,
-      mt = new Set,
-      dt = new Set;
-    let jt = 0,
-      Ht = 0;
+    var TB = ZB(4969),
+      JB = ZB(40701);
+    const oB = new Map,
+      GB = new Set,
+      vB = new Set;
+    let kB = 0,
+      cB = 0;
 
-    function Xt(tt, et) {
-      let Vt = Dt.get(tt);
-      return Vt || (Vt = new Set, Dt.set(tt, Vt)), Vt.add(et), () => {
-        Vt.delete(et)
+    function nB(BB, IB) {
+      let ZB = oB.get(BB);
+      return ZB || (ZB = new Set, oB.set(BB, ZB)), ZB.add(IB), () => {
+        ZB.delete(IB)
       }
     }
 
-    function Qt() {
-      return 0 !== jt
+    function hB() {
+      return 0 !== kB
     }
 
-    function lt(tt) {
-      return mt.add(tt), () => {
-        mt.delete(tt)
+    function zB(BB) {
+      return GB.add(BB), () => {
+        GB.delete(BB)
       }
     }
 
-    function Et(tt) {
-      return dt.add(tt), () => {
-        dt.delete(tt)
+    function FB(BB) {
+      return vB.add(BB), () => {
+        vB.delete(BB)
       }
     }
-    const ft = "A raw message listener threw";
+    const NB = "A raw message listener threw";
 
-    function wt(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mt;
-      for (const Ot of et) try {
-        Ot()
-      } catch (Vt) {
-        tt ? (0, qt.n)(Vt, ft) : console.error(ft, Vt)
+    function gB(BB) {
+      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : GB;
+      for (const TB of IB) try {
+        TB()
+      } catch (ZB) {
+        BB ? (0, JB.r)(ZB, NB) : console.error(NB, ZB)
       }
     }
-    const yt = {
-      fire: function(tt) {
-        if ("connection" === tt.type) {
-          const et = tt.phase === Ot.H.Activated && tt.conn !== jt && tt.conn > Ht,
-            Vt = (tt.phase === Ot.H.Left || tt.phase === Ot.H.Closed) && tt.conn === jt;
-          return void(et || Vt ? (jt = et ? tt.conn : 0, wt(!0)) : tt.phase === Ot.H.Resumed && 0 !== jt && tt.conn > Ht && (jt = tt.conn, wt(!0, dt)))
+    const qB = {
+      fire: function(BB) {
+        if ("connection" === BB.type) {
+          const IB = BB.phase === TB.G.Activated && BB.conn !== kB && BB.conn > cB,
+            ZB = (BB.phase === TB.G.Left || BB.phase === TB.G.Closed) && BB.conn === kB;
+          return void(IB || ZB ? (kB = IB ? BB.conn : 0, gB(!0)) : BB.phase === TB.G.Resumed && 0 !== kB && BB.conn > cB && (kB = BB.conn, gB(!0, vB)))
         }
-        const et = Dt.get(tt.kX);
-        if (et && tt.conn === jt && 0 !== jt)
-          for (const Ot of et) try {
-            Ot(tt)
-          } catch (Vt) {
-            (0, qt.n)(Vt, ft)
+        const IB = oB.get(BB.Xn);
+        if (IB && BB.conn === kB && 0 !== kB)
+          for (const TB of IB) try {
+            TB(BB)
+          } catch (ZB) {
+            (0, JB.r)(ZB, NB)
           }
       },
-      close: function(tt) {
-        Ht = Math.max(Ht, tt, jt), 0 !== jt && (jt = 0, wt(!1))
+      close: function(BB) {
+        cB = Math.max(cB, BB, kB), 0 !== kB && (kB = 0, gB(!1))
       }
     }
   },
-  40792: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ht,
-      g: () => jt,
-      h: () => dt
+  40664: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => cB,
+      h: () => kB,
+      k: () => vB
     });
-    var Ot = Vt(1363),
-      qt = Vt(40761);
-    const Dt = new TextDecoder,
-      mt = new TextEncoder;
+    var TB = ZB(1333),
+      JB = ZB(40633);
+    const oB = new TextDecoder,
+      GB = new TextEncoder;
 
-    function dt(tt, et) {
-      const Vt = tt.queries.entityName(et);
-      if (Vt === qt.Qc) return;
-      const mt = tt.memoryData(tt.scratch(), 4 + Vt, 4, "entity_name's answer");
-      if (!mt) return;
-      const dt = mt.getUint32(0, !0),
-        jt = Dt.decode(new Uint8Array(mt.buffer, mt.byteOffset + 4, Vt));
-      return (0, Ot.e)(jt, !1, dt === qt.de ? null : dt)
+    function vB(BB, IB) {
+      const ZB = BB.queries.entityName(IB);
+      if (ZB === JB.Bc) return;
+      const GB = BB.memoryData(BB.scratch(), 4 + ZB, 4, "entity_name's answer");
+      if (!GB) return;
+      const vB = GB.getUint32(0, !0),
+        kB = oB.decode(new Uint8Array(GB.buffer, GB.byteOffset + 4, ZB));
+      return (0, TB.c)(kB, !1, vB === JB.Qd ? null : vB)
     }
 
-    function jt(tt, et, Vt) {
-      const Ot = mt.encode(Vt);
-      if (Ot.length > qt.Fb) return !1;
-      const Dt = tt.memoryView(Uint8Array, tt.scratch(), Ot.length, "has_effect's name");
-      return !!Dt && (Dt.set(Ot), 1 === tt.queries.hasEffect(et, Ot.length))
+    function kB(BB, IB, ZB) {
+      const TB = GB.encode(ZB);
+      if (TB.length > JB.sb) return !1;
+      const oB = BB.memoryView(Uint8Array, BB.scratch(), TB.length, "has_effect's name");
+      return !!oB && (oB.set(TB), 1 === BB.queries.hasEffect(IB, TB.length))
     }
 
-    function Ht(tt, et, Vt, Ot) {
-      const mt = tt.queries.blockData(et, Vt, Ot);
-      if (mt === qt.Qc) return;
-      const dt = tt.memoryView(Uint8Array, tt.scratch(), mt, "block_data's answer");
-      return dt ? JSON.parse(Dt.decode(dt)) : void 0
+    function cB(BB, IB, ZB, TB) {
+      const GB = BB.queries.blockData(IB, ZB, TB);
+      if (GB === JB.Bc) return;
+      const vB = BB.memoryView(Uint8Array, BB.scratch(), GB, "block_data's answer");
+      return vB ? JSON.parse(oB.decode(vB)) : void 0
     }
   },
-  40812: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => qt,
-      g: () => Xt
+  40682: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => JB,
+      i: () => nB
     });
-    const Ot = new TextDecoder;
+    const TB = new TextDecoder;
 
-    function qt(tt) {
-      const et = new Dt(tt),
-        Vt = et.value();
-      if (et.at !== tt.length) throw new Error(`msgpack: ${tt.length-et.at} bytes after the value`);
-      return Vt
+    function JB(BB) {
+      const IB = new oB(BB),
+        ZB = IB.value();
+      if (IB.at !== BB.length) throw new Error(`msgpack: ${BB.length-IB.at} bytes after the value`);
+      return ZB
     }
-    class Dt {
-      constructor(tt) {
-        this.bytes = tt, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(tt.buffer, tt.byteOffset, tt.byteLength)
+    class oB {
+      constructor(BB) {
+        this.bytes = BB, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(BB.buffer, BB.byteOffset, BB.byteLength)
       }
       value() {
-        const tt = this.u8();
-        if (tt <= 127) return tt;
-        if (tt >= 224) return tt - 256;
-        if (tt >= 128 && tt <= 143) return this.map(15 & tt);
-        if (tt >= 144 && tt <= 159) return this.array(15 & tt);
-        if (tt >= 160 && tt <= 191) return this.str(31 & tt);
-        switch (tt) {
+        const BB = this.u8();
+        if (BB <= 127) return BB;
+        if (BB >= 224) return BB - 256;
+        if (BB >= 128 && BB <= 143) return this.map(15 & BB);
+        if (BB >= 144 && BB <= 159) return this.array(15 & BB);
+        if (BB >= 160 && BB <= 191) return this.str(31 & BB);
+        switch (BB) {
           case 192:
             return null;
           case 194:
@@ -214,13 +214,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${tt.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${BB.toString(16)} at ${this.at-1}`)
         }
       }
-      take(tt) {
-        const et = this.at;
-        if (et + tt > this.bytes.length) throw new Error(`msgpack: ${tt} bytes past the end at ${et}`);
-        return this.at = et + tt, et
+      take(BB) {
+        const IB = this.at;
+        if (IB + BB > this.bytes.length) throw new Error(`msgpack: ${BB} bytes past the end at ${IB}`);
+        return this.at = IB + BB, IB
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -231,958 +231,958 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(tt) {
-        const et = this.take(8);
-        return tt ? this.view.getBigInt64(et, !1) : this.view.getBigUint64(et, !1)
+      int64(BB) {
+        const IB = this.take(8);
+        return BB ? this.view.getBigInt64(IB, !1) : this.view.getBigUint64(IB, !1)
       }
-      str(tt) {
-        const et = this.take(tt),
-          Vt = this.bytes;
-        if (tt < 16) {
-          let qt = "";
-          for (let Dt = et; Dt < et + tt; Dt++) {
-            const mt = Vt[Dt];
-            if (mt >= 128) return Ot.decode(Vt.subarray(et, et + tt));
-            qt += String.fromCharCode(mt)
+      str(BB) {
+        const IB = this.take(BB),
+          ZB = this.bytes;
+        if (BB < 16) {
+          let JB = "";
+          for (let oB = IB; oB < IB + BB; oB++) {
+            const GB = ZB[oB];
+            if (GB >= 128) return TB.decode(ZB.subarray(IB, IB + BB));
+            JB += String.fromCharCode(GB)
           }
-          return qt
+          return JB
         }
-        return Ot.decode(Vt.subarray(et, et + tt))
+        return TB.decode(ZB.subarray(IB, IB + BB))
       }
-      bin(tt) {
-        const et = this.take(tt);
-        return this.bytes.subarray(et, et + tt)
+      bin(BB) {
+        const IB = this.take(BB);
+        return this.bytes.subarray(IB, IB + BB)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(tt) {
+      array(BB) {
         this.enter();
-        const et = [];
-        for (let Vt = 0; Vt < tt; Vt++) et.push(this.value());
-        return this.depth--, et
+        const IB = [];
+        for (let ZB = 0; ZB < BB; ZB++) IB.push(this.value());
+        return this.depth--, IB
       }
-      map(tt) {
+      map(BB) {
         this.enter();
-        const et = {};
-        for (let Vt = 0; Vt < tt; Vt++) {
-          const tt = this.value(),
-            Vt = this.value();
-          et["__proto__" === tt ? "__proto_" : String(tt)] = Vt
+        const IB = {};
+        for (let ZB = 0; ZB < BB; ZB++) {
+          const BB = this.value(),
+            ZB = this.value();
+          IB["__proto__" === BB ? "__proto_" : String(BB)] = ZB
         }
-        return this.depth--, et
+        return this.depth--, IB
       }
-      ext(tt) {
-        const et = this.view.getInt8(this.take(1)),
-          Vt = this.take(tt);
-        if (0 !== et) {
-          if (-1 === et) {
-            if (1 === tt) return new Date(NaN);
-            if (4 === tt) return new Date(1e3 * this.view.getUint32(Vt, !1));
-            if (8 === tt) {
-              const tt = this.view.getUint32(Vt, !1),
-                et = tt >>> 2,
-                Ot = 4294967296 * (3 & tt) + this.view.getUint32(Vt + 4, !1);
-              return new Date(1e3 * Ot + et / 1e6)
+      ext(BB) {
+        const IB = this.view.getInt8(this.take(1)),
+          ZB = this.take(BB);
+        if (0 !== IB) {
+          if (-1 === IB) {
+            if (1 === BB) return new Date(NaN);
+            if (4 === BB) return new Date(1e3 * this.view.getUint32(ZB, !1));
+            if (8 === BB) {
+              const BB = this.view.getUint32(ZB, !1),
+                IB = BB >>> 2,
+                TB = 4294967296 * (3 & BB) + this.view.getUint32(ZB + 4, !1);
+              return new Date(1e3 * TB + IB / 1e6)
             }
-            if (12 === tt) {
-              const tt = this.view.getUint32(Vt, !1),
-                et = 4294967296 * this.view.getInt32(Vt + 4, !1) + this.view.getUint32(Vt + 8, !1);
-              return new Date(1e3 * et + tt / 1e6)
+            if (12 === BB) {
+              const BB = this.view.getUint32(ZB, !1),
+                IB = 4294967296 * this.view.getInt32(ZB + 4, !1) + this.view.getUint32(ZB + 8, !1);
+              return new Date(1e3 * IB + BB / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${et} of ${tt} bytes`)
+          throw new Error(`msgpack: ext type ${IB} of ${BB} bytes`)
         }
       }
     }
-    const mt = new TextEncoder,
-      dt = -(2n ** 63n),
-      jt = 2n ** 63n - 1n,
-      Ht = 2n ** 64n - 1n;
+    const GB = new TextEncoder,
+      vB = -(2n ** 63n),
+      kB = 2n ** 63n - 1n,
+      cB = 2n ** 64n - 1n;
 
-    function Xt(tt) {
-      const et = new Qt;
-      return et.value(tt, 0), et.bytes()
+    function nB(BB) {
+      const IB = new hB;
+      return IB.value(BB, 0), IB.bytes()
     }
-    class Qt {
+    class hB {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(tt, et) {
-        if (et > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof tt) {
+      value(BB, IB) {
+        if (IB > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof BB) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(tt ? 195 : 194);
+            return void this.u8(BB ? 195 : 194);
           case "number":
-            return void this.number(tt);
+            return void this.number(BB);
           case "bigint":
-            return void this.bigint(tt);
+            return void this.bigint(BB);
           case "string":
-            return void this.string(tt);
+            return void this.string(BB);
           case "object":
-            if (null === tt) this.u8(192);
-            else if (tt instanceof Uint8Array) this.head(tt.length, 196, -1, 197, 198), this.room(tt.length), this.buf.set(tt, this.at), this.at += tt.length;
-            else if (Array.isArray(tt)) {
-              this.head(tt.length, 220, 144, 220, 221);
-              for (const Vt of tt) this.value(Vt, et + 1)
+            if (null === BB) this.u8(192);
+            else if (BB instanceof Uint8Array) this.head(BB.length, 196, -1, 197, 198), this.room(BB.length), this.buf.set(BB, this.at), this.at += BB.length;
+            else if (Array.isArray(BB)) {
+              this.head(BB.length, 220, 144, 220, 221);
+              for (const ZB of BB) this.value(ZB, IB + 1)
             } else {
-              var Vt, Ot;
-              if (Object.getPrototypeOf(tt) !== Object.prototype && null !== Object.getPrototypeOf(tt)) throw new Error(`msgpack: can't encode a ${null!==(Vt=null===(Ot=tt.constructor)||void 0===Ot?void 0:Ot.name)&&void 0!==Vt?Vt:"object"}`);
+              var ZB, TB;
+              if (Object.getPrototypeOf(BB) !== Object.prototype && null !== Object.getPrototypeOf(BB)) throw new Error(`msgpack: can't encode a ${null!==(ZB=null===(TB=BB.constructor)||void 0===TB?void 0:TB.name)&&void 0!==ZB?ZB:"object"}`);
               {
-                const Vt = Object.keys(tt);
-                this.head(Vt.length, 222, 128, 222, 223);
-                for (const Ot of Vt) this.string(Ot), this.value(tt[Ot], et + 1)
+                const ZB = Object.keys(BB);
+                this.head(ZB.length, 222, 128, 222, 223);
+                for (const TB of ZB) this.string(TB), this.value(BB[TB], IB + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof tt)
+            throw new Error("msgpack: can't encode a " + typeof BB)
         }
       }
-      number(tt) {
-        Number.isInteger(tt) && tt >= -2147483648 && tt <= 4294967295 ? tt >= 0 ? tt < 128 ? this.u8(tt) : tt < 256 ? (this.u8(204), this.u8(tt)) : tt < 65536 ? (this.u8(205), this.u16(tt)) : (this.u8(206), this.u32(tt)) : tt >= -32 ? this.u8(tt + 256) : tt >= -128 ? (this.u8(208), this.u8(tt + 256)) : tt >= -32768 ? (this.u8(209), this.u16(tt + 65536)) : (this.u8(210), this.u32(tt >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, tt, !1), this.at += 8)
+      number(BB) {
+        Number.isInteger(BB) && BB >= -2147483648 && BB <= 4294967295 ? BB >= 0 ? BB < 128 ? this.u8(BB) : BB < 256 ? (this.u8(204), this.u8(BB)) : BB < 65536 ? (this.u8(205), this.u16(BB)) : (this.u8(206), this.u32(BB)) : BB >= -32 ? this.u8(BB + 256) : BB >= -128 ? (this.u8(208), this.u8(BB + 256)) : BB >= -32768 ? (this.u8(209), this.u16(BB + 65536)) : (this.u8(210), this.u32(BB >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, BB, !1), this.at += 8)
       }
-      bigint(tt) {
-        const et = tt >= dt && tt <= jt;
-        if (!et && (tt < 0n || tt > Ht)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(et ? 211 : 207), this.room(8), et ? this.view.setBigInt64(this.at, tt, !1) : this.view.setBigUint64(this.at, tt, !1), this.at += 8
+      bigint(BB) {
+        const IB = BB >= vB && BB <= kB;
+        if (!IB && (BB < 0n || BB > cB)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(IB ? 211 : 207), this.room(8), IB ? this.view.setBigInt64(this.at, BB, !1) : this.view.setBigUint64(this.at, BB, !1), this.at += 8
       }
-      string(tt) {
-        const et = mt.encode(tt);
-        this.head(et.length, 217, 160, 218, 219), this.room(et.length), this.buf.set(et, this.at), this.at += et.length
+      string(BB) {
+        const IB = GB.encode(BB);
+        this.head(IB.length, 217, 160, 218, 219), this.room(IB.length), this.buf.set(IB, this.at), this.at += IB.length
       }
-      head(tt, et, Vt, Ot, qt) {
-        Vt >= 0 && tt < (160 === Vt ? 32 : 16) ? this.u8(Vt | tt) : et !== Ot && tt < 256 ? (this.u8(et), this.u8(tt)) : tt < 65536 ? (this.u8(Ot), this.u16(tt)) : (this.u8(qt), this.u32(tt))
+      head(BB, IB, ZB, TB, JB) {
+        ZB >= 0 && BB < (160 === ZB ? 32 : 16) ? this.u8(ZB | BB) : IB !== TB && BB < 256 ? (this.u8(IB), this.u8(BB)) : BB < 65536 ? (this.u8(TB), this.u16(BB)) : (this.u8(JB), this.u32(BB))
       }
-      room(tt) {
-        if (this.at + tt <= this.buf.length) return;
-        let et = 2 * this.buf.length;
-        for (; et < this.at + tt;) et *= 2;
-        const Vt = new Uint8Array(et);
-        Vt.set(this.buf.subarray(0, this.at)), this.buf = Vt, this.view = new DataView(Vt.buffer)
+      room(BB) {
+        if (this.at + BB <= this.buf.length) return;
+        let IB = 2 * this.buf.length;
+        for (; IB < this.at + BB;) IB *= 2;
+        const ZB = new Uint8Array(IB);
+        ZB.set(this.buf.subarray(0, this.at)), this.buf = ZB, this.view = new DataView(ZB.buffer)
       }
-      u8(tt) {
-        this.room(1), this.buf[this.at++] = tt
+      u8(BB) {
+        this.room(1), this.buf[this.at++] = BB
       }
-      u16(tt) {
-        this.room(2), this.view.setUint16(this.at, tt, !1), this.at += 2
+      u16(BB) {
+        this.room(2), this.view.setUint16(this.at, BB, !1), this.at += 2
       }
-      u32(tt) {
-        this.room(4), this.view.setUint32(this.at, tt, !1), this.at += 4
+      u32(BB) {
+        this.room(4), this.view.setUint32(this.at, BB, !1), this.at += 4
       }
     }
   },
-  40816: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => mt
+  40684: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      e: () => GB
     });
-    var Ot = Vt(40797);
-    const qt = new TextDecoder("utf-8", {
+    var TB = ZB(40666);
+    const JB = new TextDecoder("utf-8", {
       ignoreBOM: !0
     });
-    class Dt {
-      constructor(tt) {
-        this.buf = tt, this.at = 0, this.view = null
+    class oB {
+      constructor(BB) {
+        this.buf = BB, this.at = 0, this.view = null
       }
       bool() {
         return 0 !== this.u8()
       }
       long() {
-        let tt = this.u8(),
-          et = 127 & tt,
-          Vt = 128;
-        for (; 128 & tt;) {
-          if (Vt > 2 ** 63) throw new RangeError("avro: varint too long");
-          tt = this.u8(), et += (127 & tt) * Vt, Vt *= 128
+        let BB = this.u8(),
+          IB = 127 & BB,
+          ZB = 128;
+        for (; 128 & BB;) {
+          if (ZB > 2 ** 63) throw new RangeError("avro: varint too long");
+          BB = this.u8(), IB += (127 & BB) * ZB, ZB *= 128
         }
-        return et % 2 === 1 ? -(et + 1) / 2 : et / 2
+        return IB % 2 === 1 ? -(IB + 1) / 2 : IB / 2
       }
       float() {
-        const tt = this.take(4);
-        return this.floats().getFloat32(tt, !0)
+        const BB = this.take(4);
+        return this.floats().getFloat32(BB, !0)
       }
       double() {
-        const tt = this.take(8);
-        return this.floats().getFloat64(tt, !0)
+        const BB = this.take(8);
+        return this.floats().getFloat64(BB, !0)
       }
       str() {
-        const tt = this.size(),
-          et = this.take(tt),
-          Vt = et + tt;
-        if (tt <= 32) {
-          let tt = "";
-          for (let Ot = et; Ot < Vt; Ot++) {
-            const Dt = this.buf[Ot];
-            if (Dt >= 128) return qt.decode(this.buf.subarray(et, Vt));
-            tt += String.fromCharCode(Dt)
+        const BB = this.size(),
+          IB = this.take(BB),
+          ZB = IB + BB;
+        if (BB <= 32) {
+          let BB = "";
+          for (let TB = IB; TB < ZB; TB++) {
+            const oB = this.buf[TB];
+            if (oB >= 128) return JB.decode(this.buf.subarray(IB, ZB));
+            BB += String.fromCharCode(oB)
           }
-          return tt
+          return BB
         }
-        return qt.decode(this.buf.subarray(et, Vt))
+        return JB.decode(this.buf.subarray(IB, ZB))
       }
       bytes() {
         return this.fixed(this.size())
       }
-      fixed(tt) {
-        const et = this.take(tt);
-        return this.buf.slice(et, et + tt)
+      fixed(BB) {
+        const IB = this.take(BB);
+        return this.buf.slice(IB, IB + BB)
       }
-      index(tt) {
-        const et = this.long();
-        if (!(et >= 0 && et < tt)) throw new RangeError(`avro: index ${et} of ${tt}`);
-        return et
+      index(BB) {
+        const IB = this.long();
+        if (!(IB >= 0 && IB < BB)) throw new RangeError(`avro: index ${IB} of ${BB}`);
+        return IB
       }
-      jf(tt) {
-        const et = [];
-        for (let Vt = this.long(); 0 !== Vt; Vt = this.long()) {
-          Vt = this.block(Vt);
-          for (let Ot = 0; Ot < Vt; Ot++) et.push(tt(this))
+      dN(BB) {
+        const IB = [];
+        for (let ZB = this.long(); 0 !== ZB; ZB = this.long()) {
+          ZB = this.block(ZB);
+          for (let TB = 0; TB < ZB; TB++) IB.push(BB(this))
         }
-        return et
+        return IB
       }
-      map(tt) {
-        const et = {};
-        for (let Vt = this.long(); 0 !== Vt; Vt = this.long()) {
-          Vt = this.block(Vt);
-          for (let Ot = 0; Ot < Vt; Ot++) {
-            et[this.str()] = tt(this)
+      map(BB) {
+        const IB = {};
+        for (let ZB = this.long(); 0 !== ZB; ZB = this.long()) {
+          ZB = this.block(ZB);
+          for (let TB = 0; TB < ZB; TB++) {
+            IB[this.str()] = BB(this)
           }
         }
-        return et
+        return IB
       }
       end() {
         if (this.at !== this.buf.length) throw new RangeError(`avro: ${this.buf.length-this.at} bytes after the value`)
       }
-      block(tt) {
-        let et = tt;
-        if (et < 0 && (et = -et, this.long()), et > this.buf.length - this.at) throw new RangeError(`avro: block of ${et} items in ${this.buf.length-this.at} bytes`);
-        return et
+      block(BB) {
+        let IB = BB;
+        if (IB < 0 && (IB = -IB, this.long()), IB > this.buf.length - this.at) throw new RangeError(`avro: block of ${IB} items in ${this.buf.length-this.at} bytes`);
+        return IB
       }
       floats() {
         return this.view ??= new DataView(this.buf.buffer, this.buf.byteOffset, this.buf.byteLength), this.view
       }
       size() {
-        const tt = this.long();
-        if (tt < 0) throw new RangeError(`avro: length ${tt}`);
-        return tt
+        const BB = this.long();
+        if (BB < 0) throw new RangeError(`avro: length ${BB}`);
+        return BB
       }
       u8() {
-        const tt = this.buf[this.at];
-        if (void 0 === tt) throw new RangeError("avro: truncated");
-        return this.at++, tt
+        const BB = this.buf[this.at];
+        if (void 0 === BB) throw new RangeError("avro: truncated");
+        return this.at++, BB
       }
-      take(tt) {
-        const et = this.at;
-        if (tt > this.buf.length - et) throw new RangeError("avro: truncated");
-        return this.at = et + tt, et
+      take(BB) {
+        const IB = this.at;
+        if (BB > this.buf.length - IB) throw new RangeError("avro: truncated");
+        return this.at = IB + BB, IB
       }
     }
 
-    function mt(tt, et) {
-      const Vt = new Dt(et),
-        qt = (0, Ot.fb)(tt, Vt);
-      return Vt.end(), qt
+    function GB(BB, IB) {
+      const ZB = new oB(IB),
+        JB = (0, TB.ab)(BB, ZB);
+      return ZB.end(), JB
     }
   },
-  40797: (tt, et, Vt) => {
-    Vt.d(et, {
-      C: () => mt,
-      D: () => St,
-      E: () => qt,
-      H: () => dt,
-      J: () => Et,
-      K: () => vt,
-      O: () => ht,
-      Q: () => ut,
-      T: () => Xt,
-      V: () => Qt,
-      X: () => Wt,
-      Y: () => ft,
-      _: () => bt,
-      bb: () => wt,
-      d: () => Ct,
-      e: () => yt,
-      eb: () => jt,
-      f: () => Nt,
-      fb: () => ct,
-      h: () => Mt,
-      l: () => Kt,
-      o: () => Ot,
-      p: () => Dt,
-      s: () => Jt,
-      v: () => lt,
-      z: () => Ht
+  40666: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      A: () => JB,
+      C: () => vB,
+      E: () => FB,
+      F: () => OB,
+      H: () => wB,
+      I: () => QB,
+      J: () => nB,
+      L: () => hB,
+      O: () => YB,
+      R: () => NB,
+      U: () => WB,
+      W: () => gB,
+      Z: () => kB,
+      ab: () => pB,
+      c: () => CB,
+      f: () => qB,
+      h: () => yB,
+      k: () => UB,
+      n: () => sB,
+      o: () => TB,
+      p: () => oB,
+      q: () => dB,
+      t: () => zB,
+      u: () => cB,
+      v: () => GB,
+      y: () => iB
     });
-    const Ot = 2,
-      qt = 12,
-      Dt = 27,
-      mt = 40,
-      dt = 52,
-      jt = 59,
-      Ht = 63,
-      Xt = 83,
-      Qt = 84,
-      lt = 89,
-      Et = 91,
-      ft = 93,
-      wt = 94,
-      yt = 95,
-      Nt = 97,
-      Mt = 101,
-      bt = 102,
-      Jt = 73,
-      Ct = 16,
-      ut = 86,
-      Kt = 60,
-      ht = 17,
-      vt = 56,
-      Wt = 100,
-      St = 81;
+    const TB = 2,
+      JB = 12,
+      oB = 27,
+      GB = 40,
+      vB = 52,
+      kB = 59,
+      cB = 63,
+      nB = 83,
+      hB = 84,
+      zB = 89,
+      FB = 91,
+      NB = 93,
+      gB = 94,
+      qB = 95,
+      yB = 97,
+      UB = 101,
+      WB = 102,
+      dB = 73,
+      CB = 16,
+      QB = 86,
+      sB = 60,
+      wB = 17,
+      OB = 56,
+      YB = 100,
+      iB = 81;
 
-    function ct(tt, et) {
-      switch (tt) {
-        case Ot:
-          return function(tt) {
+    function pB(BB, IB) {
+      switch (BB) {
+        case TB:
+          return function(BB) {
             return {
-              zD: Tt(tt),
-              oD: tt.float(),
-              rD: tt.long()
+              jo: EB(BB),
+              Po: BB.float(),
+              Ro: BB.long()
             }
-          }(et);
-        case qt:
-          return function(tt) {
+          }(IB);
+        case JB:
+          return function(BB) {
             return {
-              iq: Lt(tt),
-              Yq: Lt(tt)
+              jJ: PB(BB),
+              PJ: PB(BB)
             }
-          }(et);
-        case Dt:
-          return function(tt) {
+          }(IB);
+        case oB:
+          return function(BB) {
             return {
-              jt: tt.bool(),
-              Ht: Lt(tt)
+              vB: BB.bool(),
+              kB: PB(BB)
             }
-          }(et);
-        case mt:
-          return et.str();
-        case dt:
-          return function(tt) {
+          }(IB);
+        case GB:
+          return IB.str();
+        case vB:
+          return function(BB) {
             return {
-              id: tt.long(),
-              gt: de(tt)
+              id: BB.long(),
+              tB: GI(BB)
             }
-          }(et);
-        case jt:
-          return function(tt) {
+          }(IB);
+        case kB:
+          return function(BB) {
             return {
-              Dm: Lt(tt),
-              dm: He(tt)
+              IG: PB(BB),
+              ZG: kI(BB)
             }
-          }(et);
-        case Ht:
-          return et.str();
-        case Xt:
-        case Qt:
-          return et.long();
-        case lt:
-          return function(tt) {
+          }(IB);
+        case cB:
+          return IB.str();
+        case nB:
+        case hB:
+          return IB.long();
+        case zB:
+          return function(BB) {
             return {
-              zq: tt.long(),
-              oq: tt.bool(),
-              rq: tt.float()
+              iJ: BB.long(),
+              pJ: BB.bool(),
+              aJ: BB.float()
             }
-          }(et);
-        case Et:
-          return et.long();
-        case ft:
-          return function(tt) {
+          }(IB);
+        case FB:
+          return IB.long();
+        case NB:
+          return function(BB) {
             return {
-              ne: tt.bool(),
-              St: le(tt)
+              uI: BB.bool(),
+              YB: hI(BB)
             }
-          }(et);
-        case wt:
-          return function(tt) {
+          }(IB);
+        case gB:
+          return function(BB) {
             return {
-              id: tt.str(),
-              position: Qe(tt),
-              Ae: Ee(tt),
-              style: rt(tt),
-              Ye: tt.bool()
+              id: BB.str(),
+              position: nI(BB),
+              MI: zI(BB),
+              style: eB(BB),
+              RI: BB.bool()
             }
-          }(et);
-        case yt:
-          return function(tt) {
+          }(IB);
+        case qB:
+          return function(BB) {
             return {
-              id: Lt(tt)
+              id: PB(BB)
             }
-          }(et);
-        case Nt:
-          return function(tt) {
+          }(IB);
+        case yB:
+          return function(BB) {
             return {
-              mD: tt.long(),
-              dD: tt.str(),
-              jD: De(tt),
-              HD: De(tt),
-              XD: Lt(tt),
-              QD: Lt(tt),
-              lD: Lt(tt),
-              ED: Lt(tt),
-              fD: Lt(tt),
-              wD: De(tt),
-              yD: De(tt),
-              ND: Lt(tt),
-              aD: Lt(tt),
-              MD: Lt(tt)
+              bJ: BB.long(),
+              xJ: BB.str(),
+              EJ: JI(BB),
+              DJ: JI(BB),
+              KJ: PB(BB),
+              VJ: PB(BB),
+              SJ: PB(BB),
+              Bo: PB(BB),
+              Io: PB(BB),
+              Zo: JI(BB),
+              Jo: JI(BB),
+              oo: PB(BB),
+              Go: PB(BB),
+              vo: PB(BB)
             }
-          }(et);
-        case Mt:
-          return et.str();
-        case bt:
-          return et.long();
-        case Jt:
-          return function(tt) {
+          }(IB);
+        case UB:
+          return IB.str();
+        case WB:
+          return IB.long();
+        case dB:
+          return function(BB) {
             return {
-              vV: tt.long(),
-              WV: tt.str(),
-              SV: tt.float()
+              qZ: BB.long(),
+              yZ: BB.str(),
+              UZ: BB.float()
             }
-          }(et);
-        case Ct:
-          return function(tt) {
+          }(IB);
+        case CB:
+          return function(BB) {
             return {
-              Bq: tt.bool(),
-              pq: Lt(tt),
-              xq: tt.str(),
-              Tq: we(tt),
-              nq: we(tt),
-              tD: tt.bool(),
-              eD: tt.long(),
-              VD: ye(tt)
+              RJ: BB.bool(),
+              rJ: PB(BB),
+              mJ: BB.str(),
+              XJ: NI(BB),
+              LJ: NI(BB),
+              eJ: BB.bool(),
+              uJ: BB.long(),
+              fJ: gI(BB)
             }
-          }(et);
-        case ut:
-          return function(tt) {
+          }(IB);
+        case QB:
+          return function(BB) {
             return {
-              Gq: Lt(tt)
+              YJ: PB(BB)
             }
-          }(et);
-        case Kt:
-          return function(tt) {
+          }(IB);
+        case sB:
+          return function(BB) {
             return {
-              Ft: tt.str(),
-              kt: tt.str(),
-              Gt: Ne(tt),
-              tV: tt.str(),
-              eV: nt(tt),
-              VV: tt.float()
+              PB: BB.str(),
+              RB: BB.str(),
+              rB: qI(BB),
+              fI: BB.str(),
+              lI: VB(BB),
+              AI: BB.float()
             }
-          }(et);
-        case ht:
-          return function(tt) {
+          }(IB);
+        case wB:
+          return function(BB) {
             return {
-              Ft: tt.str(),
-              kt: tt.str(),
-              Gt: Ne(tt)
+              PB: BB.str(),
+              RB: BB.str(),
+              rB: qI(BB)
             }
-          }(et);
-        case vt:
-          return function(tt) {
-            return tt.jf(ae)
-          }(et);
-        case Wt:
-          return function(tt) {
+          }(IB);
+        case OB:
+          return function(BB) {
+            return BB.dN(yI)
+          }(IB);
+        case YB:
+          return function(BB) {
             return {
-              zt: be(tt),
-              Bt: it(tt)
+              mB: WI(BB),
+              fB: lB(BB)
             }
-          }(et);
-        case St:
-          return function(tt) {
+          }(IB);
+        case iB:
+          return function(BB) {
             return {
-              OO: tt.bool(),
-              qO: Lt(tt),
-              DO: Ce(tt),
-              dO: Ge(tt)
+              bZ: BB.bool(),
+              xZ: PB(BB),
+              EZ: CI(BB),
+              KZ: mI(BB)
             }
-          }(et);
+          }(IB);
         default:
-          throw new Error(`no reader for to-client message ${tt}`)
+          throw new Error(`no reader for to-client message ${BB}`)
       }
     }
 
-    function Rt(tt) {
+    function aB(BB) {
       return {
-        entityName: tt.str()
+        entityName: BB.str()
       }
     }
 
-    function It(tt) {
-      const et = tt.index(4);
-      return 0 === et ? tt.str() : 1 === et ? tt.long() : 2 === et ? tt.bool() : Rt(tt)
+    function HB(BB) {
+      const IB = BB.index(4);
+      return 0 === IB ? BB.str() : 1 === IB ? BB.long() : 2 === IB ? BB.bool() : aB(BB)
     }
 
-    function Pt(tt) {
-      return 0 === tt.index(2) ? null : function(tt) {
-        return tt.map(It)
-      }(tt)
+    function MB(BB) {
+      return 0 === BB.index(2) ? null : function(BB) {
+        return BB.map(HB)
+      }(BB)
     }
 
-    function Zt(tt) {
+    function jB(BB) {
       return {
-        translationKey: tt.str(),
-        params: Pt(tt)
+        translationKey: BB.str(),
+        params: MB(BB)
       }
     }
 
-    function Lt(tt) {
-      return 0 === tt.index(2) ? null : tt.str()
+    function PB(BB) {
+      return 0 === BB.index(2) ? null : BB.str()
     }
 
-    function Ft(tt) {
-      return 0 === tt.index(2) ? null : function(tt) {
+    function RB(BB) {
+      return 0 === BB.index(2) ? null : function(BB) {
         return {
-          color: Lt(tt),
-          colour: Lt(tt),
-          fontSize: Lt(tt)
+          color: PB(BB),
+          colour: PB(BB),
+          fontSize: PB(BB)
         }
-      }(tt)
+      }(BB)
     }
 
-    function kt(tt) {
+    function rB(BB) {
       return {
-        icon: tt.str(),
-        style: Ft(tt)
+        icon: BB.str(),
+        style: RB(BB)
       }
     }
 
-    function Gt(tt) {
-      const et = tt.index(3);
-      return 0 === et ? {
-        string: tt.str()
-      } : 1 === et ? {
-        styledEntityName: Rt(tt)
+    function mB(BB) {
+      const IB = BB.index(3);
+      return 0 === IB ? {
+        string: BB.str()
+      } : 1 === IB ? {
+        styledEntityName: aB(BB)
       } : {
-        styledTranslatedText: Zt(tt)
+        styledTranslatedText: jB(BB)
       }
     }
 
-    function zt(tt) {
-      const et = tt.index(3);
-      return 0 === et ? null : 1 === et ? tt.str() : tt.long()
+    function XB(BB) {
+      const IB = BB.index(3);
+      return 0 === IB ? null : 1 === IB ? BB.str() : BB.long()
     }
 
-    function ot(tt) {
-      return 0 === tt.index(2) ? null : tt.float()
+    function LB(BB) {
+      return 0 === BB.index(2) ? null : BB.float()
     }
 
-    function rt(tt) {
-      return 0 === tt.index(2) ? null : function(tt) {
+    function eB(BB) {
+      return 0 === BB.index(2) ? null : function(BB) {
         return {
-          color: Lt(tt),
-          colour: Lt(tt),
-          fontWeight: zt(tt),
-          fontStyle: Lt(tt),
-          fontSize: Lt(tt),
-          opacity: ot(tt)
+          color: PB(BB),
+          colour: PB(BB),
+          fontWeight: XB(BB),
+          fontStyle: PB(BB),
+          fontSize: PB(BB),
+          opacity: LB(BB)
         }
-      }(tt)
+      }(BB)
     }
 
-    function Ut(tt) {
+    function uB(BB) {
       return {
-        str: Gt(tt),
-        style: rt(tt),
-        clickableUrl: Lt(tt)
+        str: mB(BB),
+        style: eB(BB),
+        clickableUrl: PB(BB)
       }
     }
 
-    function At(tt) {
-      return tt.str()
+    function fB(BB) {
+      return BB.str()
     }
 
-    function it(tt) {
-      return tt.jf(At)
+    function lB(BB) {
+      return BB.dN(fB)
     }
 
-    function Yt(tt) {
-      return 0 === tt.index(2) ? null : it(tt)
+    function AB(BB) {
+      return 0 === BB.index(2) ? null : lB(BB)
     }
 
-    function Bt(tt) {
+    function tB(BB) {
       return {
-        type: tt.str(),
-        progress: tt.float(),
-        width: Lt(tt),
-        height: Lt(tt),
-        colours: Yt(tt),
-        backgroundColour: Lt(tt)
+        type: BB.str(),
+        progress: BB.float(),
+        width: PB(BB),
+        height: PB(BB),
+        colours: AB(BB),
+        backgroundColour: PB(BB)
       }
     }
 
-    function pt(tt) {
+    function bB(BB) {
       return {
-        type: tt.str(),
-        action: tt.str(),
-        style: rt(tt)
+        type: BB.str(),
+        action: BB.str(),
+        style: eB(BB)
       }
     }
 
-    function xt(tt) {
-      const et = tt.index(7);
-      return 0 === et ? {
-        string: tt.str()
-      } : 1 === et ? {
-        entityName: Rt(tt)
-      } : 2 === et ? {
-        translatedText: Zt(tt)
-      } : 3 === et ? {
-        styledIcon: kt(tt)
-      } : 4 === et ? {
-        de: Ut(tt)
-      } : 5 === et ? {
-        styledProgressBar: Bt(tt)
+    function xB(BB) {
+      const IB = BB.index(7);
+      return 0 === IB ? {
+        string: BB.str()
+      } : 1 === IB ? {
+        entityName: aB(BB)
+      } : 2 === IB ? {
+        translatedText: jB(BB)
+      } : 3 === IB ? {
+        styledIcon: rB(BB)
+      } : 4 === IB ? {
+        II: uB(BB)
+      } : 5 === IB ? {
+        styledProgressBar: tB(BB)
       } : {
-        styledKeyBinding: pt(tt)
+        styledKeyBinding: bB(BB)
       }
     }
 
-    function Tt(tt) {
-      return tt.jf(xt)
+    function EB(BB) {
+      return BB.dN(xB)
     }
-    const gt = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
+    const DB = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
 
-    function st(tt) {
-      return gt[tt.index(5)]
-    }
-
-    function nt(tt) {
-      return 0 === tt.index(2) ? null : tt.double()
+    function KB(BB) {
+      return DB[BB.index(5)]
     }
 
-    function te(tt) {
-      return 0 === tt.index(2) ? null : function(tt) {
+    function VB(BB) {
+      return 0 === BB.index(2) ? null : BB.double()
+    }
+
+    function SB(BB) {
+      return 0 === BB.index(2) ? null : function(BB) {
         return {
-          Ve: nt(tt),
-          Oe: tt.double(),
-          qe: tt.double(),
-          De: tt.bool(),
-          description: Tt(tt),
-          He: tt.str(),
-          scale: nt(tt),
-          rotation: nt(tt)
+          DB: VB(BB),
+          VB: BB.double(),
+          SB: BB.double(),
+          BI: BB.bool(),
+          description: EB(BB),
+          TI: BB.str(),
+          scale: VB(BB),
+          rotation: VB(BB)
         }
-      }(tt)
+      }(BB)
     }
 
-    function ee(tt) {
-      return 0 === tt.index(2) ? null : tt.bool()
+    function BI(BB) {
+      return 0 === BB.index(2) ? null : BB.bool()
     }
 
-    function Ve(tt) {
-      return 0 === tt.index(2) ? null : function(tt) {
+    function II(BB) {
+      return 0 === BB.index(2) ? null : function(BB) {
         return {
-          Qe: tt.double(),
-          icon: tt.str(),
-          label: Tt(tt),
-          le: tt.bool(),
-          scale: nt(tt),
-          rotation: nt(tt),
-          Ee: ee(tt)
+          oI: BB.double(),
+          icon: BB.str(),
+          label: EB(BB),
+          GI: BB.bool(),
+          scale: VB(BB),
+          rotation: VB(BB),
+          vI: BI(BB)
         }
-      }(tt)
+      }(BB)
     }
 
-    function Oe(tt) {
-      return 0 === tt.index(2) ? null : function(tt) {
+    function ZI(BB) {
+      return 0 === BB.index(2) ? null : function(BB) {
         return {
-          Ve: nt(tt),
-          ye: tt.double(),
-          Ne: tt.double(),
-          ae: tt.double(),
-          gravity: tt.double(),
-          Me: tt.double(),
-          Je: tt.double(),
-          Ce: tt.double(),
-          De: tt.bool(),
-          description: Tt(tt),
-          icon: Lt(tt)
+          DB: VB(BB),
+          cI: BB.double(),
+          nI: BB.double(),
+          hI: BB.double(),
+          gravity: BB.double(),
+          zI: BB.double(),
+          FI: BB.double(),
+          NI: BB.double(),
+          BI: BB.bool(),
+          description: EB(BB),
+          icon: PB(BB)
         }
-      }(tt)
+      }(BB)
     }
 
-    function qe(tt) {
-      return 0 === tt.index(2) ? null : function(tt) {
+    function TI(BB) {
+      return 0 === BB.index(2) ? null : function(BB) {
         return {
-          speed: tt.double(),
-          Ke: tt.double(),
-          label: Tt(tt),
-          icon: Lt(tt),
-          scale: nt(tt),
-          rotation: nt(tt)
+          speed: BB.double(),
+          qI: BB.double(),
+          label: EB(BB),
+          icon: PB(BB),
+          scale: VB(BB),
+          rotation: VB(BB)
         }
-      }(tt)
+      }(BB)
     }
 
-    function De(tt) {
-      return 0 === tt.index(2) ? null : tt.long()
+    function JI(BB) {
+      return 0 === BB.index(2) ? null : BB.long()
     }
 
-    function me(tt) {
-      return 0 === tt.index(2) ? null : function(tt) {
+    function oI(BB) {
+      return 0 === BB.index(2) ? null : function(BB) {
         return {
-          ve: tt.long(),
-          Se: tt.double(),
-          ce: tt.double(),
-          Ie: De(tt),
-          label: Tt(tt),
-          icon: Lt(tt)
+          UI: BB.long(),
+          WI: BB.double(),
+          dI: BB.double(),
+          CI: JI(BB),
+          label: EB(BB),
+          icon: PB(BB)
         }
-      }(tt)
+      }(BB)
     }
 
-    function de(tt) {
+    function GI(BB) {
       return {
-        type: st(tt),
-        progressBar: te(tt),
-        timedClick: Ve(tt),
-        gravityBar: Oe(tt),
-        precisionBar: qe(tt),
-        rhythmClick: me(tt)
+        type: KB(BB),
+        progressBar: SB(BB),
+        timedClick: II(BB),
+        gravityBar: ZI(BB),
+        precisionBar: TI(BB),
+        rhythmClick: oI(BB)
       }
     }
-    const je = ["playerGone", "rateLimited"];
+    const vI = ["playerGone", "rateLimited"];
 
-    function He(tt) {
-      return 0 === tt.index(2) ? null : function(tt) {
-        return je[tt.index(2)]
-      }(tt)
+    function kI(BB) {
+      return 0 === BB.index(2) ? null : function(BB) {
+        return vI[BB.index(2)]
+      }(BB)
     }
 
-    function Xe(tt) {
-      return tt.float()
+    function cI(BB) {
+      return BB.float()
     }
 
-    function Qe(tt) {
-      return tt.jf(Xe)
+    function nI(BB) {
+      return BB.dN(cI)
     }
 
-    function le(tt) {
-      return 0 === tt.index(2) ? null : Qe(tt)
+    function hI(BB) {
+      return 0 === BB.index(2) ? null : nI(BB)
     }
 
-    function Ee(tt) {
-      return 0 === tt.index(2) ? null : Tt(tt)
+    function zI(BB) {
+      return 0 === BB.index(2) ? null : EB(BB)
     }
 
-    function fe(tt) {
-      return tt.long()
+    function FI(BB) {
+      return BB.long()
     }
 
-    function we(tt) {
-      return 0 === tt.index(2) ? null : function(tt) {
-        return tt.jf(fe)
-      }(tt)
+    function NI(BB) {
+      return 0 === BB.index(2) ? null : function(BB) {
+        return BB.dN(FI)
+      }(BB)
     }
 
-    function ye(tt) {
-      return 0 === tt.index(2) ? null : function(tt) {
+    function gI(BB) {
+      return 0 === BB.index(2) ? null : function(BB) {
         return {
-          qD: tt.str(),
-          DD: tt.long()
+          AJ: BB.str(),
+          tJ: BB.long()
         }
-      }(tt)
+      }(BB)
     }
 
-    function Ne(tt) {
-      const et = tt.index(3);
-      return 0 === et ? null : 1 === et ? tt.str() : Zt(tt)
+    function qI(BB) {
+      const IB = BB.index(3);
+      return 0 === IB ? null : 1 === IB ? BB.str() : jB(BB)
     }
 
-    function ae(tt) {
+    function yI(BB) {
       return {
-        FD: tt.str(),
-        kD: tt.str(),
-        GD: tt.str()
+        ao: BB.str(),
+        Ho: BB.str(),
+        Mo: BB.str()
       }
     }
 
-    function Me(tt) {
+    function UI(BB) {
       return {
-        ot: tt.str(),
-        rt: Lt(tt),
-        Ut: Lt(tt),
-        Yt: it(tt)
+        XB: BB.str(),
+        LB: PB(BB),
+        eB: PB(BB),
+        uB: lB(BB)
       }
     }
 
-    function be(tt) {
-      return tt.jf(Me)
+    function WI(BB) {
+      return BB.dN(UI)
     }
 
-    function Je(tt) {
+    function dI(BB) {
       return {
-        mO: tt.str(),
-        x: tt.long(),
-        y: tt.long(),
-        z: tt.long()
+        DZ: BB.str(),
+        x: BB.long(),
+        y: BB.long(),
+        z: BB.long()
       }
     }
 
-    function Ce(tt) {
-      return tt.jf(Je)
+    function CI(BB) {
+      return BB.dN(dI)
     }
 
-    function ue(tt) {
-      return 0 === tt.index(2) ? null : function(tt) {
+    function QI(BB) {
+      return 0 === BB.index(2) ? null : function(BB) {
         return {
-          WO: tt.float(),
-          SO: tt.long(),
-          cO: tt.long()
+          yT: BB.float(),
+          UT: BB.long(),
+          WT: BB.long()
         }
-      }(tt)
+      }(BB)
     }
 
-    function Ke(tt) {
+    function sI(BB) {
       return {
-        blockName: tt.str(),
-        MO: tt.bool(),
-        bO: tt.bool(),
-        JO: tt.bool(),
-        CO: tt.float(),
-        uO: tt.float(),
-        KO: tt.long(),
-        hO: ue(tt)
+        blockName: BB.str(),
+        cT: BB.bool(),
+        nT: BB.bool(),
+        hT: BB.bool(),
+        zT: BB.float(),
+        FT: BB.float(),
+        NT: BB.long(),
+        gT: QI(BB)
       }
     }
 
-    function he(tt) {
-      return 0 === tt.index(2) ? null : function(tt) {
-        return tt.jf(Ke)
-      }(tt)
+    function wI(BB) {
+      return 0 === BB.index(2) ? null : function(BB) {
+        return BB.dN(sI)
+      }(BB)
     }
 
-    function ve(tt) {
+    function OI(BB) {
       return {
-        yO: tt.str(),
-        NO: he(tt)
+        GT: BB.str(),
+        vT: wI(BB)
       }
     }
 
-    function We(tt) {
+    function YI(BB) {
       return {
-        blockName: tt.str(),
-        frequency: tt.float()
+        blockName: BB.str(),
+        frequency: BB.float()
       }
     }
 
-    function Se(tt) {
-      return tt.jf(We)
+    function iI(BB) {
+      return BB.dN(YI)
     }
 
-    function ce(tt) {
+    function pI(BB) {
       return {
-        PO: tt.str(),
-        ZO: tt.str(),
-        frequency: tt.float(),
-        LO: Se(tt)
+        QT: BB.str(),
+        sT: BB.str(),
+        frequency: BB.float(),
+        wT: iI(BB)
       }
     }
 
-    function Re(tt) {
-      return tt.jf(ce)
+    function aI(BB) {
+      return BB.dN(pI)
     }
 
-    function Ie(tt) {
+    function HI(BB) {
       return {
-        blockName: tt.str(),
-        radius: tt.long(),
-        zO: tt.long(),
-        XO: tt.long(),
-        QO: tt.long(),
-        oO: tt.float()
+        blockName: BB.str(),
+        radius: BB.long(),
+        pT: BB.long(),
+        BT: BB.long(),
+        IT: BB.long(),
+        aT: BB.float()
       }
     }
 
-    function Pe(tt) {
-      return tt.jf(Ie)
+    function MI(BB) {
+      return BB.dN(HI)
     }
 
-    function Ze(tt) {
+    function jI(BB) {
       return {
-        XO: tt.long(),
-        QO: tt.long(),
-        lO: tt.long(),
-        EO: tt.bool(),
-        fO: ve(tt),
-        RO: Re(tt),
-        kO: Pe(tt)
+        BT: BB.long(),
+        IT: BB.long(),
+        ZT: BB.long(),
+        TT: BB.bool(),
+        JT: OI(BB),
+        dT: aI(BB),
+        YT: MI(BB)
       }
     }
 
-    function Le(tt) {
-      return tt.jf(Ze)
+    function PI(BB) {
+      return BB.dN(jI)
     }
 
-    function Fe(tt) {
-      return 0 === tt.index(2) ? null : function(tt) {
+    function RI(BB) {
+      return 0 === BB.index(2) ? null : function(BB) {
         return {
-          name: tt.str(),
-          YO: Lt(tt)
+          name: BB.str(),
+          PT: PB(BB)
         }
-      }(tt)
+      }(BB)
     }
 
-    function ke(tt) {
-      return 0 === tt.index(2) ? null : function(tt) {
+    function rI(BB) {
+      return 0 === BB.index(2) ? null : function(BB) {
         return {
-          terrain: Fe(tt),
-          BO: Pe(tt)
+          terrain: RI(BB),
+          RT: MI(BB)
         }
-      }(tt)
+      }(BB)
     }
 
-    function Ge(tt) {
-      return 0 === tt.index(2) ? null : function(tt) {
+    function mI(BB) {
+      return 0 === BB.index(2) ? null : function(BB) {
         return {
-          layers: Le(tt),
-          rO: ke(tt)
+          layers: PI(BB),
+          HT: rI(BB)
         }
-      }(tt)
+      }(BB)
     }
   },
-  40777: (tt, et, Vt) => {
-    Vt.d(et, {
-      D: () => Jt,
-      F: () => Ct,
-      I: () => yt,
-      J: () => Wt,
-      N: () => Pt,
-      P: () => ft,
-      Q: () => Lt,
-      S: () => Mt,
-      T: () => Nt,
-      W: () => bt,
-      _: () => ut,
-      c: () => qt,
-      f: () => Zt,
-      j: () => It,
-      l: () => Et,
-      n: () => wt,
-      o: () => ct,
-      q: () => ht,
-      s: () => St,
-      t: () => vt,
-      w: () => Kt,
-      z: () => Rt
+  40649: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      A: () => dB,
+      B: () => CB,
+      D: () => qB,
+      G: () => YB,
+      H: () => MB,
+      K: () => NB,
+      L: () => PB,
+      M: () => UB,
+      N: () => yB,
+      R: () => WB,
+      T: () => QB,
+      e: () => JB,
+      i: () => jB,
+      k: () => HB,
+      l: () => FB,
+      m: () => gB,
+      o: () => pB,
+      q: () => wB,
+      s: () => iB,
+      t: () => OB,
+      v: () => sB,
+      y: () => aB
     });
-    var Ot = Vt(3064);
-    const qt = {
+    var TB = ZB(3159);
+    const JB = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -1211,160 +1211,160 @@ export const modules = {
       LobbyManage: 96
     };
 
-    function Dt(tt, et) {
-      return !ArrayBuffer.isView(tt) || tt instanceof DataView ? Array.isArray(tt) ? tt.map((tt => et(tt))) : tt : Array.from(tt, (tt => et(tt)))
+    function oB(BB, IB) {
+      return !ArrayBuffer.isView(BB) || BB instanceof DataView ? Array.isArray(BB) ? BB.map((BB => IB(BB))) : BB : Array.from(BB, (BB => IB(BB)))
     }
 
-    function mt(tt) {
-      if ("string" !== typeof tt) return tt;
-      for (let et = 0; et < tt.length; et++) {
-        const Vt = tt.charCodeAt(et);
-        if (Vt >= 55296 && Vt <= 57343) return jt.decode(dt.encode(tt))
+    function GB(BB) {
+      if ("string" !== typeof BB) return BB;
+      for (let IB = 0; IB < BB.length; IB++) {
+        const ZB = BB.charCodeAt(IB);
+        if (ZB >= 55296 && ZB <= 57343) return kB.decode(vB.encode(BB))
       }
-      return tt
+      return BB
     }
-    const dt = new TextEncoder,
-      jt = new TextDecoder;
+    const vB = new TextEncoder,
+      kB = new TextDecoder;
 
-    function Ht(tt) {
-      return tt
+    function cB(BB) {
+      return BB
     }
-    let Xt;
+    let nB;
 
-    function Qt(tt) {
-      return null === tt || "object" !== typeof tt ? tt : [mt(tt.Ed), mt(tt.fd)]
-    }
-
-    function lt(tt) {
-      return null === tt || "object" !== typeof tt ? tt : [Dt(tt.Tq, Ht), Dt(tt.Rd, Ht)]
+    function hB(BB) {
+      return null === BB || "object" !== typeof BB ? BB : [GB(BB.ov), GB(BB.Gv)]
     }
 
-    function Et(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [mt(et.kX), mt(et.GX)];
-      var et
+    function zB(BB) {
+      return null === BB || "object" !== typeof BB ? BB : [oB(BB.XJ, cB), oB(BB.Cv, cB)]
     }
 
-    function ft(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [et.id, et.KX];
-      var et
+    function FB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [GB(IB.Xn), GB(IB.Ln)];
+      var IB
     }
 
-    function wt(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [et.mD, mt(et.dD), et.jD, mt(et.QD), et.wD, et.yD, et.ZX, mt(et.LX), mt(et.FX)];
-      var et
+    function NB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [IB.id, IB.Cn];
+      var IB
     }
 
-    function yt(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [Dt(et.Od, Ht), et.qd];
-      var et
+    function gB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [IB.bJ, GB(IB.xJ), IB.EJ, GB(IB.VJ), IB.Zo, IB.Jo, IB.Rn, GB(IB.rn), GB(IB.mn)];
+      var IB
     }
 
-    function Nt(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [Dt(et.nm, (tt => mt(tt))), mt(et.td), et.Vd];
-      var et
+    function qB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [oB(IB.DG, cB), IB.KG];
+      var IB
     }
 
-    function Mt(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [Dt(et.Rj, Ht), mt(et.Ij), et.Pj];
-      var et
+    function yB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [oB(IB.bG, (BB => GB(BB))), GB(IB.xG), IB.EG];
+      var IB
     }
 
-    function bt(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [mt(et.kD), mt(et.GD)];
-      var et
+    function UB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [oB(IB.Wk, cB), GB(IB.Ck), IB.Qk];
+      var IB
     }
 
-    function Jt(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [mt(et.rd)];
-      var et
+    function WB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [GB(IB.Ho), GB(IB.Mo)];
+      var IB
     }
 
-    function Ct(tt) {
-      return mt(tt)
+    function dB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [GB(IB.Mv)];
+      var IB
     }
 
-    function ut(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [mt(et.JX), mt(et.CX), mt(et.Ed), mt(et.fd)];
-      var et
+    function CB(BB) {
+      return GB(BB)
     }
 
-    function Kt(tt) {
-      return Qt(tt)
+    function QB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [GB(IB.Un), GB(IB.Wn), GB(IB.ov), GB(IB.Gv)];
+      var IB
     }
 
-    function ht(tt) {
-      return Qt(tt)
+    function sB(BB) {
+      return hB(BB)
     }
 
-    function vt(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [mt(et.Jj)];
-      var et
+    function wB(BB) {
+      return hB(BB)
     }
 
-    function Wt(tt) {
-      return tt
+    function OB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [GB(IB.hk)];
+      var IB
     }
 
-    function St(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [mt(et.Qd), mt(et.ld)];
-      var et
+    function YB(BB) {
+      return BB
     }
 
-    function ct(tt) {
-      return mt(tt)
+    function iB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [GB(IB.Tv), GB(IB.Jv)];
+      var IB
     }
 
-    function Rt(tt) {
-      return lt(tt)
+    function pB(BB) {
+      return GB(BB)
     }
 
-    function It(tt) {
-      return lt(tt)
+    function aB(BB) {
+      return zB(BB)
     }
 
-    function Pt(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [mt(et.Zj)];
-      var et
+    function HB(BB) {
+      return zB(BB)
     }
 
-    function Zt(tt) {
-      return (Xt ??= (0, Ot.e)().map((tt => tt.name)), Xt).map((et => {
-        return "string" === typeof(Vt = tt[et]) ? mt(Vt) : Dt(Vt, Ht);
-        var Vt
+    function MB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [GB(IB.sk)];
+      var IB
+    }
+
+    function jB(BB) {
+      return (nB ??= (0, TB.d)().map((BB => BB.name)), nB).map((IB => {
+        return "string" === typeof(ZB = BB[IB]) ? GB(ZB) : oB(ZB, cB);
+        var ZB
       }))
     }
 
-    function Lt(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [et.aj, et.Mj, et.bj];
-      var et
+    function PB(BB) {
+      return null === (IB = BB) || "object" !== typeof IB ? IB : [IB.vk, IB.kk, IB.nk];
+      var IB
     }
   },
-  9512: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => qt,
-      e: () => Dt
+  9388: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      c: () => JB,
+      d: () => oB
     });
-    var Ot = Vt(9466);
-    const qt = "Air",
-      Dt = Object.freeze(new Ot.d(qt, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var TB = ZB(9340);
+    const JB = "Air",
+      oB = Object.freeze(new TB.i(JB, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  39441: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Dt,
-      h: () => dt
+  39308: (BB, IB, ZB) => {
+    ZB.d(IB, {
+      d: () => oB,
+      g: () => vB
     });
-    var Ot = Vt(391),
-      qt = Vt(4599);
-    const Dt = new Set(qt.o),
-      mt = new Map;
+    var TB = ZB(360),
+      JB = ZB(4643);
+    const oB = new Set(JB.m),
+      GB = new Map;
 
-    function dt(tt, et) {
-      let Vt = mt.get(et);
-      void 0 === Vt && (Vt = new Map, mt.set(et, Vt));
-      let qt = Vt.get(tt);
-      return void 0 === qt && (qt = `${tt}${(0,Ot.F)(et)}`, Vt.set(tt, qt)), qt
+    function vB(BB, IB) {
+      let ZB = GB.get(IB);
+      void 0 === ZB && (ZB = new Map, GB.set(IB, ZB));
+      let JB = ZB.get(BB);
+      return void 0 === JB && (JB = `${BB}${(0,TB.F)(IB)}`, ZB.set(BB, JB)), JB
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const BB in modules) Object.freeze(modules[BB]);

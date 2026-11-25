@@ -1,8 +1,8 @@
 export const id = 226;
 export const ids = [226];
 export const modules = {
-  36897: tt => {
-    tt.exports = {
+  36655: BB => {
+    BB.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
       aqua: [0, 255, 255],
@@ -153,363 +153,363 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  36889: (tt, et, Vt) => {
-    var Ot = Vt(36897),
-      qt = Vt(36902),
-      Dt = Object.hasOwnProperty,
-      mt = Object.create(null);
-    for (var dt in Ot) Dt.call(Ot, dt) && (mt[Ot[dt]] = dt);
-    var jt = tt.exports = {
+  36652: (BB, IB, ZB) => {
+    var TB = ZB(36655),
+      JB = ZB(36658),
+      oB = Object.hasOwnProperty,
+      GB = Object.create(null);
+    for (var vB in TB) oB.call(TB, vB) && (GB[TB[vB]] = vB);
+    var kB = BB.exports = {
       to: {},
       get: {}
     };
 
-    function Ht(tt, et, Vt) {
-      return Math.min(Math.max(et, tt), Vt)
+    function cB(BB, IB, ZB) {
+      return Math.min(Math.max(IB, BB), ZB)
     }
 
-    function Xt(tt) {
-      var et = Math.round(tt).toString(16).toUpperCase();
-      return et.length < 2 ? "0" + et : et
+    function nB(BB) {
+      var IB = Math.round(BB).toString(16).toUpperCase();
+      return IB.length < 2 ? "0" + IB : IB
     }
-    jt.get = function(tt) {
-      var et, Vt;
-      switch (tt.substring(0, 3).toLowerCase()) {
+    kB.get = function(BB) {
+      var IB, ZB;
+      switch (BB.substring(0, 3).toLowerCase()) {
         case "hsl":
-          et = jt.get.hsl(tt), Vt = "hsl";
+          IB = kB.get.hsl(BB), ZB = "hsl";
           break;
         case "hwb":
-          et = jt.get.hwb(tt), Vt = "hwb";
+          IB = kB.get.hwb(BB), ZB = "hwb";
           break;
         default:
-          et = jt.get.rgb(tt), Vt = "rgb"
+          IB = kB.get.rgb(BB), ZB = "rgb"
       }
-      return et ? {
-        model: Vt,
-        value: et
+      return IB ? {
+        model: ZB,
+        value: IB
       } : null
-    }, jt.get.rgb = function(tt) {
-      if (!tt) return null;
-      var et, Vt, qt, mt = [0, 0, 0, 1];
-      if (et = tt.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
-        for (qt = et[2], et = et[1], Vt = 0; Vt < 3; Vt++) {
-          var dt = 2 * Vt;
-          mt[Vt] = parseInt(et.slice(dt, dt + 2), 16)
+    }, kB.get.rgb = function(BB) {
+      if (!BB) return null;
+      var IB, ZB, JB, GB = [0, 0, 0, 1];
+      if (IB = BB.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
+        for (JB = IB[2], IB = IB[1], ZB = 0; ZB < 3; ZB++) {
+          var vB = 2 * ZB;
+          GB[ZB] = parseInt(IB.slice(vB, vB + 2), 16)
         }
-        qt && (mt[3] = parseInt(qt, 16) / 255)
-      } else if (et = tt.match(/^#([a-f0-9]{3,4})$/i)) {
-        for (qt = (et = et[1])[3], Vt = 0; Vt < 3; Vt++) mt[Vt] = parseInt(et[Vt] + et[Vt], 16);
-        qt && (mt[3] = parseInt(qt + qt, 16) / 255)
-      } else if (et = tt.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
-        for (Vt = 0; Vt < 3; Vt++) mt[Vt] = parseInt(et[Vt + 1], 0);
-        et[4] && (et[5] ? mt[3] = .01 * parseFloat(et[4]) : mt[3] = parseFloat(et[4]))
+        JB && (GB[3] = parseInt(JB, 16) / 255)
+      } else if (IB = BB.match(/^#([a-f0-9]{3,4})$/i)) {
+        for (JB = (IB = IB[1])[3], ZB = 0; ZB < 3; ZB++) GB[ZB] = parseInt(IB[ZB] + IB[ZB], 16);
+        JB && (GB[3] = parseInt(JB + JB, 16) / 255)
+      } else if (IB = BB.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
+        for (ZB = 0; ZB < 3; ZB++) GB[ZB] = parseInt(IB[ZB + 1], 0);
+        IB[4] && (IB[5] ? GB[3] = .01 * parseFloat(IB[4]) : GB[3] = parseFloat(IB[4]))
       } else {
-        if (!(et = tt.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (et = tt.match(/^(\w+)$/)) ? "transparent" === et[1] ? [0, 0, 0, 0] : Dt.call(Ot, et[1]) ? ((mt = Ot[et[1]])[3] = 1, mt) : null : null;
-        for (Vt = 0; Vt < 3; Vt++) mt[Vt] = Math.round(2.55 * parseFloat(et[Vt + 1]));
-        et[4] && (et[5] ? mt[3] = .01 * parseFloat(et[4]) : mt[3] = parseFloat(et[4]))
+        if (!(IB = BB.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (IB = BB.match(/^(\w+)$/)) ? "transparent" === IB[1] ? [0, 0, 0, 0] : oB.call(TB, IB[1]) ? ((GB = TB[IB[1]])[3] = 1, GB) : null : null;
+        for (ZB = 0; ZB < 3; ZB++) GB[ZB] = Math.round(2.55 * parseFloat(IB[ZB + 1]));
+        IB[4] && (IB[5] ? GB[3] = .01 * parseFloat(IB[4]) : GB[3] = parseFloat(IB[4]))
       }
-      for (Vt = 0; Vt < 3; Vt++) mt[Vt] = Ht(mt[Vt], 0, 255);
-      return mt[3] = Ht(mt[3], 0, 1), mt
-    }, jt.get.hsl = function(tt) {
-      if (!tt) return null;
-      var et = tt.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (et) {
-        var Vt = parseFloat(et[4]);
-        return [(parseFloat(et[1]) % 360 + 360) % 360, Ht(parseFloat(et[2]), 0, 100), Ht(parseFloat(et[3]), 0, 100), Ht(isNaN(Vt) ? 1 : Vt, 0, 1)]
-      }
-      return null
-    }, jt.get.hwb = function(tt) {
-      if (!tt) return null;
-      var et = tt.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (et) {
-        var Vt = parseFloat(et[4]);
-        return [(parseFloat(et[1]) % 360 + 360) % 360, Ht(parseFloat(et[2]), 0, 100), Ht(parseFloat(et[3]), 0, 100), Ht(isNaN(Vt) ? 1 : Vt, 0, 1)]
+      for (ZB = 0; ZB < 3; ZB++) GB[ZB] = cB(GB[ZB], 0, 255);
+      return GB[3] = cB(GB[3], 0, 1), GB
+    }, kB.get.hsl = function(BB) {
+      if (!BB) return null;
+      var IB = BB.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (IB) {
+        var ZB = parseFloat(IB[4]);
+        return [(parseFloat(IB[1]) % 360 + 360) % 360, cB(parseFloat(IB[2]), 0, 100), cB(parseFloat(IB[3]), 0, 100), cB(isNaN(ZB) ? 1 : ZB, 0, 1)]
       }
       return null
-    }, jt.to.hex = function() {
-      var tt = qt(arguments);
-      return "#" + Xt(tt[0]) + Xt(tt[1]) + Xt(tt[2]) + (tt[3] < 1 ? Xt(Math.round(255 * tt[3])) : "")
-    }, jt.to.rgb = function() {
-      var tt = qt(arguments);
-      return tt.length < 4 || 1 === tt[3] ? "rgb(" + Math.round(tt[0]) + ", " + Math.round(tt[1]) + ", " + Math.round(tt[2]) + ")" : "rgba(" + Math.round(tt[0]) + ", " + Math.round(tt[1]) + ", " + Math.round(tt[2]) + ", " + tt[3] + ")"
-    }, jt.to.rgb.percent = function() {
-      var tt = qt(arguments),
-        et = Math.round(tt[0] / 255 * 100),
-        Vt = Math.round(tt[1] / 255 * 100),
-        Ot = Math.round(tt[2] / 255 * 100);
-      return tt.length < 4 || 1 === tt[3] ? "rgb(" + et + "%, " + Vt + "%, " + Ot + "%)" : "rgba(" + et + "%, " + Vt + "%, " + Ot + "%, " + tt[3] + ")"
-    }, jt.to.hsl = function() {
-      var tt = qt(arguments);
-      return tt.length < 4 || 1 === tt[3] ? "hsl(" + tt[0] + ", " + tt[1] + "%, " + tt[2] + "%)" : "hsla(" + tt[0] + ", " + tt[1] + "%, " + tt[2] + "%, " + tt[3] + ")"
-    }, jt.to.hwb = function() {
-      var tt = qt(arguments),
-        et = "";
-      return tt.length >= 4 && 1 !== tt[3] && (et = ", " + tt[3]), "hwb(" + tt[0] + ", " + tt[1] + "%, " + tt[2] + "%" + et + ")"
-    }, jt.to.keyword = function(tt) {
-      return mt[tt.slice(0, 3)]
+    }, kB.get.hwb = function(BB) {
+      if (!BB) return null;
+      var IB = BB.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (IB) {
+        var ZB = parseFloat(IB[4]);
+        return [(parseFloat(IB[1]) % 360 + 360) % 360, cB(parseFloat(IB[2]), 0, 100), cB(parseFloat(IB[3]), 0, 100), cB(isNaN(ZB) ? 1 : ZB, 0, 1)]
+      }
+      return null
+    }, kB.to.hex = function() {
+      var BB = JB(arguments);
+      return "#" + nB(BB[0]) + nB(BB[1]) + nB(BB[2]) + (BB[3] < 1 ? nB(Math.round(255 * BB[3])) : "")
+    }, kB.to.rgb = function() {
+      var BB = JB(arguments);
+      return BB.length < 4 || 1 === BB[3] ? "rgb(" + Math.round(BB[0]) + ", " + Math.round(BB[1]) + ", " + Math.round(BB[2]) + ")" : "rgba(" + Math.round(BB[0]) + ", " + Math.round(BB[1]) + ", " + Math.round(BB[2]) + ", " + BB[3] + ")"
+    }, kB.to.rgb.percent = function() {
+      var BB = JB(arguments),
+        IB = Math.round(BB[0] / 255 * 100),
+        ZB = Math.round(BB[1] / 255 * 100),
+        TB = Math.round(BB[2] / 255 * 100);
+      return BB.length < 4 || 1 === BB[3] ? "rgb(" + IB + "%, " + ZB + "%, " + TB + "%)" : "rgba(" + IB + "%, " + ZB + "%, " + TB + "%, " + BB[3] + ")"
+    }, kB.to.hsl = function() {
+      var BB = JB(arguments);
+      return BB.length < 4 || 1 === BB[3] ? "hsl(" + BB[0] + ", " + BB[1] + "%, " + BB[2] + "%)" : "hsla(" + BB[0] + ", " + BB[1] + "%, " + BB[2] + "%, " + BB[3] + ")"
+    }, kB.to.hwb = function() {
+      var BB = JB(arguments),
+        IB = "";
+      return BB.length >= 4 && 1 !== BB[3] && (IB = ", " + BB[3]), "hwb(" + BB[0] + ", " + BB[1] + "%, " + BB[2] + "%" + IB + ")"
+    }, kB.to.keyword = function(BB) {
+      return GB[BB.slice(0, 3)]
     }
   },
-  36885: (tt, et, Vt) => {
-    const Ot = Vt(36889),
-      qt = Vt(36913),
-      Dt = ["keyword", "gray", "hex"],
-      mt = {};
-    for (const Et of Object.keys(qt)) mt[[...qt[Et].labels].sort().join("")] = Et;
-    const dt = {};
+  36649: (BB, IB, ZB) => {
+    const TB = ZB(36652),
+      JB = ZB(36676),
+      oB = ["keyword", "gray", "hex"],
+      GB = {};
+    for (const FB of Object.keys(JB)) GB[[...JB[FB].labels].sort().join("")] = FB;
+    const vB = {};
 
-    function jt(tt, et) {
-      if (!(this instanceof jt)) return new jt(tt, et);
-      if (et && et in Dt && (et = null), et && !(et in qt)) throw new Error("Unknown model: " + et);
-      let Vt, Ht;
-      if (null == tt) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
-      else if (tt instanceof jt) this.model = tt.model, this.color = [...tt.color], this.valpha = tt.valpha;
-      else if ("string" === typeof tt) {
-        const et = Ot.get(tt);
-        if (null === et) throw new Error("Unable to parse color from string: " + tt);
-        this.model = et.model, Ht = qt[this.model].channels, this.color = et.value.slice(0, Ht), this.valpha = "number" === typeof et.value[Ht] ? et.value[Ht] : 1
-      } else if (tt.length > 0) {
-        this.model = et || "rgb", Ht = qt[this.model].channels;
-        const Vt = Array.prototype.slice.call(tt, 0, Ht);
-        this.color = lt(Vt, Ht), this.valpha = "number" === typeof tt[Ht] ? tt[Ht] : 1
-      } else if ("number" === typeof tt) this.model = "rgb", this.color = [tt >> 16 & 255, tt >> 8 & 255, 255 & tt], this.valpha = 1;
+    function kB(BB, IB) {
+      if (!(this instanceof kB)) return new kB(BB, IB);
+      if (IB && IB in oB && (IB = null), IB && !(IB in JB)) throw new Error("Unknown model: " + IB);
+      let ZB, cB;
+      if (null == BB) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
+      else if (BB instanceof kB) this.model = BB.model, this.color = [...BB.color], this.valpha = BB.valpha;
+      else if ("string" === typeof BB) {
+        const IB = TB.get(BB);
+        if (null === IB) throw new Error("Unable to parse color from string: " + BB);
+        this.model = IB.model, cB = JB[this.model].channels, this.color = IB.value.slice(0, cB), this.valpha = "number" === typeof IB.value[cB] ? IB.value[cB] : 1
+      } else if (BB.length > 0) {
+        this.model = IB || "rgb", cB = JB[this.model].channels;
+        const ZB = Array.prototype.slice.call(BB, 0, cB);
+        this.color = zB(ZB, cB), this.valpha = "number" === typeof BB[cB] ? BB[cB] : 1
+      } else if ("number" === typeof BB) this.model = "rgb", this.color = [BB >> 16 & 255, BB >> 8 & 255, 255 & BB], this.valpha = 1;
       else {
         this.valpha = 1;
-        const et = Object.keys(tt);
-        "alpha" in tt && (et.splice(et.indexOf("alpha"), 1), this.valpha = "number" === typeof tt.alpha ? tt.alpha : 0);
-        const Ot = et.sort().join("");
-        if (!(Ot in mt)) throw new Error("Unable to parse color from object: " + JSON.stringify(tt));
-        this.model = mt[Ot];
+        const IB = Object.keys(BB);
+        "alpha" in BB && (IB.splice(IB.indexOf("alpha"), 1), this.valpha = "number" === typeof BB.alpha ? BB.alpha : 0);
+        const TB = IB.sort().join("");
+        if (!(TB in GB)) throw new Error("Unable to parse color from object: " + JSON.stringify(BB));
+        this.model = GB[TB];
         const {
-          labels: Dt
-        } = qt[this.model], dt = [];
-        for (Vt = 0; Vt < Dt.length; Vt++) dt.push(tt[Dt[Vt]]);
-        this.color = lt(dt)
+          labels: oB
+        } = JB[this.model], vB = [];
+        for (ZB = 0; ZB < oB.length; ZB++) vB.push(BB[oB[ZB]]);
+        this.color = zB(vB)
       }
-      if (dt[this.model])
-        for (Ht = qt[this.model].channels, Vt = 0; Vt < Ht; Vt++) {
-          const tt = dt[this.model][Vt];
-          tt && (this.color[Vt] = tt(this.color[Vt]))
+      if (vB[this.model])
+        for (cB = JB[this.model].channels, ZB = 0; ZB < cB; ZB++) {
+          const BB = vB[this.model][ZB];
+          BB && (this.color[ZB] = BB(this.color[ZB]))
         }
       this.valpha = Math.max(0, Math.min(1, this.valpha)), Object.freeze && Object.freeze(this)
     }
-    jt.prototype = {
+    kB.prototype = {
       toString() {
         return this.string()
       },
       toJSON() {
         return this[this.model]()
       },
-      string(tt) {
-        let et = this.model in Ot.to ? this : this.rgb();
-        et = et.round("number" === typeof tt ? tt : 1);
-        const Vt = 1 === et.valpha ? et.color : [...et.color, this.valpha];
-        return Ot.to[et.model](Vt)
+      string(BB) {
+        let IB = this.model in TB.to ? this : this.rgb();
+        IB = IB.round("number" === typeof BB ? BB : 1);
+        const ZB = 1 === IB.valpha ? IB.color : [...IB.color, this.valpha];
+        return TB.to[IB.model](ZB)
       },
-      percentString(tt) {
-        const et = this.rgb().round("number" === typeof tt ? tt : 1),
-          Vt = 1 === et.valpha ? et.color : [...et.color, this.valpha];
-        return Ot.to.rgb.percent(Vt)
+      percentString(BB) {
+        const IB = this.rgb().round("number" === typeof BB ? BB : 1),
+          ZB = 1 === IB.valpha ? IB.color : [...IB.color, this.valpha];
+        return TB.to.rgb.percent(ZB)
       },
       array() {
         return 1 === this.valpha ? [...this.color] : [...this.color, this.valpha]
       },
       object() {
-        const tt = {},
+        const BB = {},
           {
-            channels: et
-          } = qt[this.model],
+            channels: IB
+          } = JB[this.model],
           {
-            labels: Vt
-          } = qt[this.model];
-        for (let Ot = 0; Ot < et; Ot++) tt[Vt[Ot]] = this.color[Ot];
-        return 1 !== this.valpha && (tt.alpha = this.valpha), tt
+            labels: ZB
+          } = JB[this.model];
+        for (let TB = 0; TB < IB; TB++) BB[ZB[TB]] = this.color[TB];
+        return 1 !== this.valpha && (BB.alpha = this.valpha), BB
       },
       unitArray() {
-        const tt = this.rgb().color;
-        return tt[0] /= 255, tt[1] /= 255, tt[2] /= 255, 1 !== this.valpha && tt.push(this.valpha), tt
+        const BB = this.rgb().color;
+        return BB[0] /= 255, BB[1] /= 255, BB[2] /= 255, 1 !== this.valpha && BB.push(this.valpha), BB
       },
       unitObject() {
-        const tt = this.rgb().object();
-        return tt.r /= 255, tt.g /= 255, tt.b /= 255, 1 !== this.valpha && (tt.alpha = this.valpha), tt
+        const BB = this.rgb().object();
+        return BB.r /= 255, BB.g /= 255, BB.b /= 255, 1 !== this.valpha && (BB.alpha = this.valpha), BB
       },
-      round(tt) {
-        return tt = Math.max(tt || 0, 0), new jt([...this.color.map(Ht(tt)), this.valpha], this.model)
+      round(BB) {
+        return BB = Math.max(BB || 0, 0), new kB([...this.color.map(cB(BB)), this.valpha], this.model)
       },
-      alpha(tt) {
-        return void 0 !== tt ? new jt([...this.color, Math.max(0, Math.min(1, tt))], this.model) : this.valpha
+      alpha(BB) {
+        return void 0 !== BB ? new kB([...this.color, Math.max(0, Math.min(1, BB))], this.model) : this.valpha
       },
-      red: Xt("rgb", 0, Qt(255)),
-      green: Xt("rgb", 1, Qt(255)),
-      blue: Xt("rgb", 2, Qt(255)),
-      hue: Xt(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (tt => (tt % 360 + 360) % 360)),
-      saturationl: Xt("hsl", 1, Qt(100)),
-      lightness: Xt("hsl", 2, Qt(100)),
-      saturationv: Xt("hsv", 1, Qt(100)),
-      value: Xt("hsv", 2, Qt(100)),
-      chroma: Xt("hcg", 1, Qt(100)),
-      gray: Xt("hcg", 2, Qt(100)),
-      white: Xt("hwb", 1, Qt(100)),
-      wblack: Xt("hwb", 2, Qt(100)),
-      cyan: Xt("cmyk", 0, Qt(100)),
-      magenta: Xt("cmyk", 1, Qt(100)),
-      yellow: Xt("cmyk", 2, Qt(100)),
-      black: Xt("cmyk", 3, Qt(100)),
-      x: Xt("xyz", 0, Qt(95.047)),
-      y: Xt("xyz", 1, Qt(100)),
-      z: Xt("xyz", 2, Qt(108.833)),
-      l: Xt("lab", 0, Qt(100)),
-      a: Xt("lab", 1),
-      b: Xt("lab", 2),
-      keyword(tt) {
-        return void 0 !== tt ? new jt(tt) : qt[this.model].keyword(this.color)
+      red: nB("rgb", 0, hB(255)),
+      green: nB("rgb", 1, hB(255)),
+      blue: nB("rgb", 2, hB(255)),
+      hue: nB(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (BB => (BB % 360 + 360) % 360)),
+      saturationl: nB("hsl", 1, hB(100)),
+      lightness: nB("hsl", 2, hB(100)),
+      saturationv: nB("hsv", 1, hB(100)),
+      value: nB("hsv", 2, hB(100)),
+      chroma: nB("hcg", 1, hB(100)),
+      gray: nB("hcg", 2, hB(100)),
+      white: nB("hwb", 1, hB(100)),
+      wblack: nB("hwb", 2, hB(100)),
+      cyan: nB("cmyk", 0, hB(100)),
+      magenta: nB("cmyk", 1, hB(100)),
+      yellow: nB("cmyk", 2, hB(100)),
+      black: nB("cmyk", 3, hB(100)),
+      x: nB("xyz", 0, hB(95.047)),
+      y: nB("xyz", 1, hB(100)),
+      z: nB("xyz", 2, hB(108.833)),
+      l: nB("lab", 0, hB(100)),
+      a: nB("lab", 1),
+      b: nB("lab", 2),
+      keyword(BB) {
+        return void 0 !== BB ? new kB(BB) : JB[this.model].keyword(this.color)
       },
-      hex(tt) {
-        return void 0 !== tt ? new jt(tt) : Ot.to.hex(this.rgb().round().color)
+      hex(BB) {
+        return void 0 !== BB ? new kB(BB) : TB.to.hex(this.rgb().round().color)
       },
-      hexa(tt) {
-        if (void 0 !== tt) return new jt(tt);
-        const et = this.rgb().round().color;
-        let Vt = Math.round(255 * this.valpha).toString(16).toUpperCase();
-        return 1 === Vt.length && (Vt = "0" + Vt), Ot.to.hex(et) + Vt
+      hexa(BB) {
+        if (void 0 !== BB) return new kB(BB);
+        const IB = this.rgb().round().color;
+        let ZB = Math.round(255 * this.valpha).toString(16).toUpperCase();
+        return 1 === ZB.length && (ZB = "0" + ZB), TB.to.hex(IB) + ZB
       },
       rgbNumber() {
-        const tt = this.rgb().color;
-        return (255 & tt[0]) << 16 | (255 & tt[1]) << 8 | 255 & tt[2]
+        const BB = this.rgb().color;
+        return (255 & BB[0]) << 16 | (255 & BB[1]) << 8 | 255 & BB[2]
       },
       luminosity() {
-        const tt = this.rgb().color,
-          et = [];
-        for (const [Vt, Ot] of tt.entries()) {
-          const tt = Ot / 255;
-          et[Vt] = tt <= .04045 ? tt / 12.92 : ((tt + .055) / 1.055) ** 2.4
+        const BB = this.rgb().color,
+          IB = [];
+        for (const [ZB, TB] of BB.entries()) {
+          const BB = TB / 255;
+          IB[ZB] = BB <= .04045 ? BB / 12.92 : ((BB + .055) / 1.055) ** 2.4
         }
-        return .2126 * et[0] + .7152 * et[1] + .0722 * et[2]
+        return .2126 * IB[0] + .7152 * IB[1] + .0722 * IB[2]
       },
-      contrast(tt) {
-        const et = this.luminosity(),
-          Vt = tt.luminosity();
-        return et > Vt ? (et + .05) / (Vt + .05) : (Vt + .05) / (et + .05)
+      contrast(BB) {
+        const IB = this.luminosity(),
+          ZB = BB.luminosity();
+        return IB > ZB ? (IB + .05) / (ZB + .05) : (ZB + .05) / (IB + .05)
       },
-      level(tt) {
-        const et = this.contrast(tt);
-        return et >= 7 ? "AAA" : et >= 4.5 ? "AA" : ""
+      level(BB) {
+        const IB = this.contrast(BB);
+        return IB >= 7 ? "AAA" : IB >= 4.5 ? "AA" : ""
       },
       isDark() {
-        const tt = this.rgb().color;
-        return (2126 * tt[0] + 7152 * tt[1] + 722 * tt[2]) / 1e4 < 128
+        const BB = this.rgb().color;
+        return (2126 * BB[0] + 7152 * BB[1] + 722 * BB[2]) / 1e4 < 128
       },
       isLight() {
         return !this.isDark()
       },
-      gq() {
-        const tt = this.rgb();
-        for (let et = 0; et < 3; et++) tt.color[et] = 255 - tt.color[et];
-        return tt
+      dv() {
+        const BB = this.rgb();
+        for (let IB = 0; IB < 3; IB++) BB.color[IB] = 255 - BB.color[IB];
+        return BB
       },
-      lighten(tt) {
-        const et = this.hsl();
-        return et.color[2] += et.color[2] * tt, et
+      lighten(BB) {
+        const IB = this.hsl();
+        return IB.color[2] += IB.color[2] * BB, IB
       },
-      darken(tt) {
-        const et = this.hsl();
-        return et.color[2] -= et.color[2] * tt, et
+      darken(BB) {
+        const IB = this.hsl();
+        return IB.color[2] -= IB.color[2] * BB, IB
       },
-      saturate(tt) {
-        const et = this.hsl();
-        return et.color[1] += et.color[1] * tt, et
+      saturate(BB) {
+        const IB = this.hsl();
+        return IB.color[1] += IB.color[1] * BB, IB
       },
-      desaturate(tt) {
-        const et = this.hsl();
-        return et.color[1] -= et.color[1] * tt, et
+      desaturate(BB) {
+        const IB = this.hsl();
+        return IB.color[1] -= IB.color[1] * BB, IB
       },
-      whiten(tt) {
-        const et = this.hwb();
-        return et.color[1] += et.color[1] * tt, et
+      whiten(BB) {
+        const IB = this.hwb();
+        return IB.color[1] += IB.color[1] * BB, IB
       },
-      blacken(tt) {
-        const et = this.hwb();
-        return et.color[2] += et.color[2] * tt, et
+      blacken(BB) {
+        const IB = this.hwb();
+        return IB.color[2] += IB.color[2] * BB, IB
       },
       grayscale() {
-        const tt = this.rgb().color,
-          et = .3 * tt[0] + .59 * tt[1] + .11 * tt[2];
-        return jt.rgb(et, et, et)
+        const BB = this.rgb().color,
+          IB = .3 * BB[0] + .59 * BB[1] + .11 * BB[2];
+        return kB.rgb(IB, IB, IB)
       },
-      fade(tt) {
-        return this.alpha(this.valpha - this.valpha * tt)
+      fade(BB) {
+        return this.alpha(this.valpha - this.valpha * BB)
       },
-      opaquer(tt) {
-        return this.alpha(this.valpha + this.valpha * tt)
+      opaquer(BB) {
+        return this.alpha(this.valpha + this.valpha * BB)
       },
-      rotate(tt) {
-        const et = this.hsl();
-        let Vt = et.color[0];
-        return Vt = (Vt + tt) % 360, Vt = Vt < 0 ? 360 + Vt : Vt, et.color[0] = Vt, et
+      rotate(BB) {
+        const IB = this.hsl();
+        let ZB = IB.color[0];
+        return ZB = (ZB + BB) % 360, ZB = ZB < 0 ? 360 + ZB : ZB, IB.color[0] = ZB, IB
       },
-      mix(tt, et) {
-        if (!tt || !tt.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof tt);
-        const Vt = tt.rgb(),
-          Ot = this.rgb(),
-          qt = void 0 === et ? .5 : et,
-          Dt = 2 * qt - 1,
-          mt = Vt.alpha() - Ot.alpha(),
-          dt = ((Dt * mt === -1 ? Dt : (Dt + mt) / (1 + Dt * mt)) + 1) / 2,
-          Ht = 1 - dt;
-        return jt.rgb(dt * Vt.red() + Ht * Ot.red(), dt * Vt.green() + Ht * Ot.green(), dt * Vt.blue() + Ht * Ot.blue(), Vt.alpha() * qt + Ot.alpha() * (1 - qt))
+      mix(BB, IB) {
+        if (!BB || !BB.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof BB);
+        const ZB = BB.rgb(),
+          TB = this.rgb(),
+          JB = void 0 === IB ? .5 : IB,
+          oB = 2 * JB - 1,
+          GB = ZB.alpha() - TB.alpha(),
+          vB = ((oB * GB === -1 ? oB : (oB + GB) / (1 + oB * GB)) + 1) / 2,
+          cB = 1 - vB;
+        return kB.rgb(vB * ZB.red() + cB * TB.red(), vB * ZB.green() + cB * TB.green(), vB * ZB.blue() + cB * TB.blue(), ZB.alpha() * JB + TB.alpha() * (1 - JB))
       }
     };
-    for (const Et of Object.keys(qt)) {
-      if (Dt.includes(Et)) continue;
+    for (const FB of Object.keys(JB)) {
+      if (oB.includes(FB)) continue;
       const {
-        channels: tt
-      } = qt[Et];
-      jt.prototype[Et] = function() {
-        if (this.model === Et) return new jt(this);
-        for (var tt = arguments.length, et = new Array(tt), Vt = 0; Vt < tt; Vt++) et[Vt] = arguments[Vt];
-        return et.length > 0 ? new jt(et, Et) : new jt([...(Ot = qt[this.model][Et].raw(this.color), Array.isArray(Ot) ? Ot : [Ot]), this.valpha], Et);
-        var Ot
-      }, jt[Et] = function() {
-        for (var et = arguments.length, Vt = new Array(et), Ot = 0; Ot < et; Ot++) Vt[Ot] = arguments[Ot];
-        let qt = Vt[0];
-        return "number" === typeof qt && (qt = lt(Vt, tt)), new jt(qt, Et)
+        channels: BB
+      } = JB[FB];
+      kB.prototype[FB] = function() {
+        if (this.model === FB) return new kB(this);
+        for (var BB = arguments.length, IB = new Array(BB), ZB = 0; ZB < BB; ZB++) IB[ZB] = arguments[ZB];
+        return IB.length > 0 ? new kB(IB, FB) : new kB([...(TB = JB[this.model][FB].raw(this.color), Array.isArray(TB) ? TB : [TB]), this.valpha], FB);
+        var TB
+      }, kB[FB] = function() {
+        for (var IB = arguments.length, ZB = new Array(IB), TB = 0; TB < IB; TB++) ZB[TB] = arguments[TB];
+        let JB = ZB[0];
+        return "number" === typeof JB && (JB = zB(ZB, BB)), new kB(JB, FB)
       }
     }
 
-    function Ht(tt) {
-      return function(et) {
-        return function(tt, et) {
-          return Number(tt.toFixed(et))
-        }(et, tt)
+    function cB(BB) {
+      return function(IB) {
+        return function(BB, IB) {
+          return Number(BB.toFixed(IB))
+        }(IB, BB)
       }
     }
 
-    function Xt(tt, et, Vt) {
-      tt = Array.isArray(tt) ? tt : [tt];
-      for (const Ot of tt)(dt[Ot] || (dt[Ot] = []))[et] = Vt;
-      return tt = tt[0],
-        function(Ot) {
-          let qt;
-          return void 0 !== Ot ? (Vt && (Ot = Vt(Ot)), qt = this[tt](), qt.color[et] = Ot, qt) : (qt = this[tt]().color[et], Vt && (qt = Vt(qt)), qt)
+    function nB(BB, IB, ZB) {
+      BB = Array.isArray(BB) ? BB : [BB];
+      for (const TB of BB)(vB[TB] || (vB[TB] = []))[IB] = ZB;
+      return BB = BB[0],
+        function(TB) {
+          let JB;
+          return void 0 !== TB ? (ZB && (TB = ZB(TB)), JB = this[BB](), JB.color[IB] = TB, JB) : (JB = this[BB]().color[IB], ZB && (JB = ZB(JB)), JB)
         }
     }
 
-    function Qt(tt) {
-      return function(et) {
-        return Math.max(0, Math.min(tt, et))
+    function hB(BB) {
+      return function(IB) {
+        return Math.max(0, Math.min(BB, IB))
       }
     }
 
-    function lt(tt, et) {
-      for (let Vt = 0; Vt < et; Vt++) "number" !== typeof tt[Vt] && (tt[Vt] = 0);
-      return tt
+    function zB(BB, IB) {
+      for (let ZB = 0; ZB < IB; ZB++) "number" !== typeof BB[ZB] && (BB[ZB] = 0);
+      return BB
     }
-    tt.exports = jt
+    BB.exports = kB
   },
-  36918: (tt, et, Vt) => {
-    const Ot = Vt(36921),
-      qt = {};
-    for (const mt of Object.keys(Ot)) qt[Ot[mt]] = mt;
-    const Dt = {
+  36684: (BB, IB, ZB) => {
+    const TB = ZB(36689),
+      JB = {};
+    for (const GB of Object.keys(TB)) JB[TB[GB]] = GB;
+    const oB = {
       rgb: {
         channels: 3,
         labels: "rgb"
@@ -571,422 +571,422 @@ export const modules = {
         labels: ["gray"]
       }
     };
-    tt.exports = Dt;
-    for (const mt of Object.keys(Dt)) {
-      if (!("channels" in Dt[mt])) throw new Error("missing channels property: " + mt);
-      if (!("labels" in Dt[mt])) throw new Error("missing channel labels property: " + mt);
-      if (Dt[mt].labels.length !== Dt[mt].channels) throw new Error("channel and label counts mismatch: " + mt);
+    BB.exports = oB;
+    for (const GB of Object.keys(oB)) {
+      if (!("channels" in oB[GB])) throw new Error("missing channels property: " + GB);
+      if (!("labels" in oB[GB])) throw new Error("missing channel labels property: " + GB);
+      if (oB[GB].labels.length !== oB[GB].channels) throw new Error("channel and label counts mismatch: " + GB);
       const {
-        channels: tt,
-        labels: et
-      } = Dt[mt];
-      delete Dt[mt].channels, delete Dt[mt].labels, Object.defineProperty(Dt[mt], "channels", {
-        value: tt
-      }), Object.defineProperty(Dt[mt], "labels", {
-        value: et
+        channels: BB,
+        labels: IB
+      } = oB[GB];
+      delete oB[GB].channels, delete oB[GB].labels, Object.defineProperty(oB[GB], "channels", {
+        value: BB
+      }), Object.defineProperty(oB[GB], "labels", {
+        value: IB
       })
     }
-    Dt.rgb.hsl = function(tt) {
-      const et = tt[0] / 255,
-        Vt = tt[1] / 255,
-        Ot = tt[2] / 255,
-        qt = Math.min(et, Vt, Ot),
-        Dt = Math.max(et, Vt, Ot),
-        mt = Dt - qt;
-      let dt, jt;
-      Dt === qt ? dt = 0 : et === Dt ? dt = (Vt - Ot) / mt : Vt === Dt ? dt = 2 + (Ot - et) / mt : Ot === Dt && (dt = 4 + (et - Vt) / mt), dt = Math.min(60 * dt, 360), dt < 0 && (dt += 360);
-      const Ht = (qt + Dt) / 2;
-      return jt = Dt === qt ? 0 : Ht <= .5 ? mt / (Dt + qt) : mt / (2 - Dt - qt), [dt, 100 * jt, 100 * Ht]
-    }, Dt.rgb.hsv = function(tt) {
-      let et, Vt, Ot, qt, Dt;
-      const mt = tt[0] / 255,
-        dt = tt[1] / 255,
-        jt = tt[2] / 255,
-        Ht = Math.max(mt, dt, jt),
-        Xt = Ht - Math.min(mt, dt, jt),
-        Qt = function(tt) {
-          return (Ht - tt) / 6 / Xt + .5
+    oB.rgb.hsl = function(BB) {
+      const IB = BB[0] / 255,
+        ZB = BB[1] / 255,
+        TB = BB[2] / 255,
+        JB = Math.min(IB, ZB, TB),
+        oB = Math.max(IB, ZB, TB),
+        GB = oB - JB;
+      let vB, kB;
+      oB === JB ? vB = 0 : IB === oB ? vB = (ZB - TB) / GB : ZB === oB ? vB = 2 + (TB - IB) / GB : TB === oB && (vB = 4 + (IB - ZB) / GB), vB = Math.min(60 * vB, 360), vB < 0 && (vB += 360);
+      const cB = (JB + oB) / 2;
+      return kB = oB === JB ? 0 : cB <= .5 ? GB / (oB + JB) : GB / (2 - oB - JB), [vB, 100 * kB, 100 * cB]
+    }, oB.rgb.hsv = function(BB) {
+      let IB, ZB, TB, JB, oB;
+      const GB = BB[0] / 255,
+        vB = BB[1] / 255,
+        kB = BB[2] / 255,
+        cB = Math.max(GB, vB, kB),
+        nB = cB - Math.min(GB, vB, kB),
+        hB = function(BB) {
+          return (cB - BB) / 6 / nB + .5
         };
-      return 0 === Xt ? (qt = 0, Dt = 0) : (Dt = Xt / Ht, et = Qt(mt), Vt = Qt(dt), Ot = Qt(jt), mt === Ht ? qt = Ot - Vt : dt === Ht ? qt = 1 / 3 + et - Ot : jt === Ht && (qt = 2 / 3 + Vt - et), qt < 0 ? qt += 1 : qt > 1 && (qt -= 1)), [360 * qt, 100 * Dt, 100 * Ht]
-    }, Dt.rgb.hwb = function(tt) {
-      const et = tt[0],
-        Vt = tt[1];
-      let Ot = tt[2];
-      const qt = Dt.rgb.hsl(tt)[0],
-        mt = 1 / 255 * Math.min(et, Math.min(Vt, Ot));
-      return Ot = 1 - 1 / 255 * Math.max(et, Math.max(Vt, Ot)), [qt, 100 * mt, 100 * Ot]
-    }, Dt.rgb.cmyk = function(tt) {
-      const et = tt[0] / 255,
-        Vt = tt[1] / 255,
-        Ot = tt[2] / 255,
-        qt = Math.min(1 - et, 1 - Vt, 1 - Ot);
-      return [100 * ((1 - et - qt) / (1 - qt) || 0), 100 * ((1 - Vt - qt) / (1 - qt) || 0), 100 * ((1 - Ot - qt) / (1 - qt) || 0), 100 * qt]
-    }, Dt.rgb.keyword = function(tt) {
-      const et = qt[tt];
-      if (et) return et;
-      let Vt, Dt = 1 / 0;
-      for (const qt of Object.keys(Ot)) {
-        const et = Ot[qt],
-          jt = (dt = et, ((mt = tt)[0] - dt[0]) ** 2 + (mt[1] - dt[1]) ** 2 + (mt[2] - dt[2]) ** 2);
-        jt < Dt && (Dt = jt, Vt = qt)
+      return 0 === nB ? (JB = 0, oB = 0) : (oB = nB / cB, IB = hB(GB), ZB = hB(vB), TB = hB(kB), GB === cB ? JB = TB - ZB : vB === cB ? JB = 1 / 3 + IB - TB : kB === cB && (JB = 2 / 3 + ZB - IB), JB < 0 ? JB += 1 : JB > 1 && (JB -= 1)), [360 * JB, 100 * oB, 100 * cB]
+    }, oB.rgb.hwb = function(BB) {
+      const IB = BB[0],
+        ZB = BB[1];
+      let TB = BB[2];
+      const JB = oB.rgb.hsl(BB)[0],
+        GB = 1 / 255 * Math.min(IB, Math.min(ZB, TB));
+      return TB = 1 - 1 / 255 * Math.max(IB, Math.max(ZB, TB)), [JB, 100 * GB, 100 * TB]
+    }, oB.rgb.cmyk = function(BB) {
+      const IB = BB[0] / 255,
+        ZB = BB[1] / 255,
+        TB = BB[2] / 255,
+        JB = Math.min(1 - IB, 1 - ZB, 1 - TB);
+      return [100 * ((1 - IB - JB) / (1 - JB) || 0), 100 * ((1 - ZB - JB) / (1 - JB) || 0), 100 * ((1 - TB - JB) / (1 - JB) || 0), 100 * JB]
+    }, oB.rgb.keyword = function(BB) {
+      const IB = JB[BB];
+      if (IB) return IB;
+      let ZB, oB = 1 / 0;
+      for (const JB of Object.keys(TB)) {
+        const IB = TB[JB],
+          kB = (vB = IB, ((GB = BB)[0] - vB[0]) ** 2 + (GB[1] - vB[1]) ** 2 + (GB[2] - vB[2]) ** 2);
+        kB < oB && (oB = kB, ZB = JB)
       }
-      var mt, dt;
-      return Vt
-    }, Dt.keyword.rgb = function(tt) {
-      return Ot[tt]
-    }, Dt.rgb.xyz = function(tt) {
-      let et = tt[0] / 255,
-        Vt = tt[1] / 255,
-        Ot = tt[2] / 255;
-      et = et > .04045 ? ((et + .055) / 1.055) ** 2.4 : et / 12.92, Vt = Vt > .04045 ? ((Vt + .055) / 1.055) ** 2.4 : Vt / 12.92, Ot = Ot > .04045 ? ((Ot + .055) / 1.055) ** 2.4 : Ot / 12.92;
-      return [100 * (.4124 * et + .3576 * Vt + .1805 * Ot), 100 * (.2126 * et + .7152 * Vt + .0722 * Ot), 100 * (.0193 * et + .1192 * Vt + .9505 * Ot)]
-    }, Dt.rgb.lab = function(tt) {
-      const et = Dt.rgb.xyz(tt);
-      let Vt = et[0],
-        Ot = et[1],
-        qt = et[2];
-      Vt /= 95.047, Ot /= 100, qt /= 108.883, Vt = Vt > .008856 ? Vt ** (1 / 3) : 7.787 * Vt + 16 / 116, Ot = Ot > .008856 ? Ot ** (1 / 3) : 7.787 * Ot + 16 / 116, qt = qt > .008856 ? qt ** (1 / 3) : 7.787 * qt + 16 / 116;
-      return [116 * Ot - 16, 500 * (Vt - Ot), 200 * (Ot - qt)]
-    }, Dt.hsl.rgb = function(tt) {
-      const et = tt[0] / 360,
-        Vt = tt[1] / 100,
-        Ot = tt[2] / 100;
-      let qt, Dt, mt;
-      if (0 === Vt) return mt = 255 * Ot, [mt, mt, mt];
-      qt = Ot < .5 ? Ot * (1 + Vt) : Ot + Vt - Ot * Vt;
-      const dt = 2 * Ot - qt,
-        jt = [0, 0, 0];
-      for (let Ht = 0; Ht < 3; Ht++) Dt = et + 1 / 3 * -(Ht - 1), Dt < 0 && Dt++, Dt > 1 && Dt--, mt = 6 * Dt < 1 ? dt + 6 * (qt - dt) * Dt : 2 * Dt < 1 ? qt : 3 * Dt < 2 ? dt + (qt - dt) * (2 / 3 - Dt) * 6 : dt, jt[Ht] = 255 * mt;
-      return jt
-    }, Dt.hsl.hsv = function(tt) {
-      const et = tt[0];
-      let Vt = tt[1] / 100,
-        Ot = tt[2] / 100,
-        qt = Vt;
-      const Dt = Math.max(Ot, .01);
-      Ot *= 2, Vt *= Ot <= 1 ? Ot : 2 - Ot, qt *= Dt <= 1 ? Dt : 2 - Dt;
-      return [et, 100 * (0 === Ot ? 2 * qt / (Dt + qt) : 2 * Vt / (Ot + Vt)), 100 * ((Ot + Vt) / 2)]
-    }, Dt.hsv.rgb = function(tt) {
-      const et = tt[0] / 60,
-        Vt = tt[1] / 100;
-      let Ot = tt[2] / 100;
-      const qt = Math.floor(et) % 6,
-        Dt = et - Math.floor(et),
-        mt = 255 * Ot * (1 - Vt),
-        dt = 255 * Ot * (1 - Vt * Dt),
-        jt = 255 * Ot * (1 - Vt * (1 - Dt));
-      switch (Ot *= 255, qt) {
+      var GB, vB;
+      return ZB
+    }, oB.keyword.rgb = function(BB) {
+      return TB[BB]
+    }, oB.rgb.xyz = function(BB) {
+      let IB = BB[0] / 255,
+        ZB = BB[1] / 255,
+        TB = BB[2] / 255;
+      IB = IB > .04045 ? ((IB + .055) / 1.055) ** 2.4 : IB / 12.92, ZB = ZB > .04045 ? ((ZB + .055) / 1.055) ** 2.4 : ZB / 12.92, TB = TB > .04045 ? ((TB + .055) / 1.055) ** 2.4 : TB / 12.92;
+      return [100 * (.4124 * IB + .3576 * ZB + .1805 * TB), 100 * (.2126 * IB + .7152 * ZB + .0722 * TB), 100 * (.0193 * IB + .1192 * ZB + .9505 * TB)]
+    }, oB.rgb.lab = function(BB) {
+      const IB = oB.rgb.xyz(BB);
+      let ZB = IB[0],
+        TB = IB[1],
+        JB = IB[2];
+      ZB /= 95.047, TB /= 100, JB /= 108.883, ZB = ZB > .008856 ? ZB ** (1 / 3) : 7.787 * ZB + 16 / 116, TB = TB > .008856 ? TB ** (1 / 3) : 7.787 * TB + 16 / 116, JB = JB > .008856 ? JB ** (1 / 3) : 7.787 * JB + 16 / 116;
+      return [116 * TB - 16, 500 * (ZB - TB), 200 * (TB - JB)]
+    }, oB.hsl.rgb = function(BB) {
+      const IB = BB[0] / 360,
+        ZB = BB[1] / 100,
+        TB = BB[2] / 100;
+      let JB, oB, GB;
+      if (0 === ZB) return GB = 255 * TB, [GB, GB, GB];
+      JB = TB < .5 ? TB * (1 + ZB) : TB + ZB - TB * ZB;
+      const vB = 2 * TB - JB,
+        kB = [0, 0, 0];
+      for (let cB = 0; cB < 3; cB++) oB = IB + 1 / 3 * -(cB - 1), oB < 0 && oB++, oB > 1 && oB--, GB = 6 * oB < 1 ? vB + 6 * (JB - vB) * oB : 2 * oB < 1 ? JB : 3 * oB < 2 ? vB + (JB - vB) * (2 / 3 - oB) * 6 : vB, kB[cB] = 255 * GB;
+      return kB
+    }, oB.hsl.hsv = function(BB) {
+      const IB = BB[0];
+      let ZB = BB[1] / 100,
+        TB = BB[2] / 100,
+        JB = ZB;
+      const oB = Math.max(TB, .01);
+      TB *= 2, ZB *= TB <= 1 ? TB : 2 - TB, JB *= oB <= 1 ? oB : 2 - oB;
+      return [IB, 100 * (0 === TB ? 2 * JB / (oB + JB) : 2 * ZB / (TB + ZB)), 100 * ((TB + ZB) / 2)]
+    }, oB.hsv.rgb = function(BB) {
+      const IB = BB[0] / 60,
+        ZB = BB[1] / 100;
+      let TB = BB[2] / 100;
+      const JB = Math.floor(IB) % 6,
+        oB = IB - Math.floor(IB),
+        GB = 255 * TB * (1 - ZB),
+        vB = 255 * TB * (1 - ZB * oB),
+        kB = 255 * TB * (1 - ZB * (1 - oB));
+      switch (TB *= 255, JB) {
         case 0:
-          return [Ot, jt, mt];
+          return [TB, kB, GB];
         case 1:
-          return [dt, Ot, mt];
+          return [vB, TB, GB];
         case 2:
-          return [mt, Ot, jt];
+          return [GB, TB, kB];
         case 3:
-          return [mt, dt, Ot];
+          return [GB, vB, TB];
         case 4:
-          return [jt, mt, Ot];
+          return [kB, GB, TB];
         case 5:
-          return [Ot, mt, dt]
+          return [TB, GB, vB]
       }
-    }, Dt.hsv.hsl = function(tt) {
-      const et = tt[0],
-        Vt = tt[1] / 100,
-        Ot = tt[2] / 100,
-        qt = Math.max(Ot, .01);
-      let Dt, mt;
-      mt = (2 - Vt) * Ot;
-      const dt = (2 - Vt) * qt;
-      return Dt = Vt * qt, Dt /= dt <= 1 ? dt : 2 - dt, Dt = Dt || 0, mt /= 2, [et, 100 * Dt, 100 * mt]
-    }, Dt.hwb.rgb = function(tt) {
-      const et = tt[0] / 360;
-      let Vt = tt[1] / 100,
-        Ot = tt[2] / 100;
-      const qt = Vt + Ot;
-      let Dt;
-      qt > 1 && (Vt /= qt, Ot /= qt);
-      const mt = Math.floor(6 * et),
-        dt = 1 - Ot;
-      Dt = 6 * et - mt, 0 !== (1 & mt) && (Dt = 1 - Dt);
-      const jt = Vt + Dt * (dt - Vt);
-      let Ht, Xt, Qt;
-      switch (mt) {
+    }, oB.hsv.hsl = function(BB) {
+      const IB = BB[0],
+        ZB = BB[1] / 100,
+        TB = BB[2] / 100,
+        JB = Math.max(TB, .01);
+      let oB, GB;
+      GB = (2 - ZB) * TB;
+      const vB = (2 - ZB) * JB;
+      return oB = ZB * JB, oB /= vB <= 1 ? vB : 2 - vB, oB = oB || 0, GB /= 2, [IB, 100 * oB, 100 * GB]
+    }, oB.hwb.rgb = function(BB) {
+      const IB = BB[0] / 360;
+      let ZB = BB[1] / 100,
+        TB = BB[2] / 100;
+      const JB = ZB + TB;
+      let oB;
+      JB > 1 && (ZB /= JB, TB /= JB);
+      const GB = Math.floor(6 * IB),
+        vB = 1 - TB;
+      oB = 6 * IB - GB, 0 !== (1 & GB) && (oB = 1 - oB);
+      const kB = ZB + oB * (vB - ZB);
+      let cB, nB, hB;
+      switch (GB) {
         default:
         case 6:
         case 0:
-          Ht = dt, Xt = jt, Qt = Vt;
+          cB = vB, nB = kB, hB = ZB;
           break;
         case 1:
-          Ht = jt, Xt = dt, Qt = Vt;
+          cB = kB, nB = vB, hB = ZB;
           break;
         case 2:
-          Ht = Vt, Xt = dt, Qt = jt;
+          cB = ZB, nB = vB, hB = kB;
           break;
         case 3:
-          Ht = Vt, Xt = jt, Qt = dt;
+          cB = ZB, nB = kB, hB = vB;
           break;
         case 4:
-          Ht = jt, Xt = Vt, Qt = dt;
+          cB = kB, nB = ZB, hB = vB;
           break;
         case 5:
-          Ht = dt, Xt = Vt, Qt = jt
+          cB = vB, nB = ZB, hB = kB
       }
-      return [255 * Ht, 255 * Xt, 255 * Qt]
-    }, Dt.cmyk.rgb = function(tt) {
-      const et = tt[0] / 100,
-        Vt = tt[1] / 100,
-        Ot = tt[2] / 100,
-        qt = tt[3] / 100;
-      return [255 * (1 - Math.min(1, et * (1 - qt) + qt)), 255 * (1 - Math.min(1, Vt * (1 - qt) + qt)), 255 * (1 - Math.min(1, Ot * (1 - qt) + qt))]
-    }, Dt.xyz.rgb = function(tt) {
-      const et = tt[0] / 100,
-        Vt = tt[1] / 100,
-        Ot = tt[2] / 100;
-      let qt, Dt, mt;
-      return qt = 3.2406 * et + -1.5372 * Vt + -.4986 * Ot, Dt = -.9689 * et + 1.8758 * Vt + .0415 * Ot, mt = .0557 * et + -.204 * Vt + 1.057 * Ot, qt = qt > .0031308 ? 1.055 * qt ** (1 / 2.4) - .055 : 12.92 * qt, Dt = Dt > .0031308 ? 1.055 * Dt ** (1 / 2.4) - .055 : 12.92 * Dt, mt = mt > .0031308 ? 1.055 * mt ** (1 / 2.4) - .055 : 12.92 * mt, qt = Math.min(Math.max(0, qt), 1), Dt = Math.min(Math.max(0, Dt), 1), mt = Math.min(Math.max(0, mt), 1), [255 * qt, 255 * Dt, 255 * mt]
-    }, Dt.xyz.lab = function(tt) {
-      let et = tt[0],
-        Vt = tt[1],
-        Ot = tt[2];
-      et /= 95.047, Vt /= 100, Ot /= 108.883, et = et > .008856 ? et ** (1 / 3) : 7.787 * et + 16 / 116, Vt = Vt > .008856 ? Vt ** (1 / 3) : 7.787 * Vt + 16 / 116, Ot = Ot > .008856 ? Ot ** (1 / 3) : 7.787 * Ot + 16 / 116;
-      return [116 * Vt - 16, 500 * (et - Vt), 200 * (Vt - Ot)]
-    }, Dt.lab.xyz = function(tt) {
-      let et, Vt, Ot;
-      Vt = (tt[0] + 16) / 116, et = tt[1] / 500 + Vt, Ot = Vt - tt[2] / 200;
-      const qt = Vt ** 3,
-        Dt = et ** 3,
-        mt = Ot ** 3;
-      return Vt = qt > .008856 ? qt : (Vt - 16 / 116) / 7.787, et = Dt > .008856 ? Dt : (et - 16 / 116) / 7.787, Ot = mt > .008856 ? mt : (Ot - 16 / 116) / 7.787, et *= 95.047, Vt *= 100, Ot *= 108.883, [et, Vt, Ot]
-    }, Dt.lab.lch = function(tt) {
-      const et = tt[0],
-        Vt = tt[1],
-        Ot = tt[2];
-      let qt;
-      qt = 360 * Math.atan2(Ot, Vt) / 2 / Math.PI, qt < 0 && (qt += 360);
-      return [et, Math.sqrt(Vt * Vt + Ot * Ot), qt]
-    }, Dt.lch.lab = function(tt) {
-      const et = tt[0],
-        Vt = tt[1],
-        Ot = tt[2] / 360 * 2 * Math.PI;
-      return [et, Vt * Math.cos(Ot), Vt * Math.sin(Ot)]
-    }, Dt.rgb.ansi16 = function(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const [Vt, Ot, qt] = tt;
-      let mt = null === et ? Dt.rgb.hsv(tt)[2] : et;
-      if (mt = Math.round(mt / 50), 0 === mt) return 30;
-      let dt = 30 + (Math.round(qt / 255) << 2 | Math.round(Ot / 255) << 1 | Math.round(Vt / 255));
-      return 2 === mt && (dt += 60), dt
-    }, Dt.hsv.ansi16 = function(tt) {
-      return Dt.rgb.ansi16(Dt.hsv.rgb(tt), tt[2])
-    }, Dt.rgb.ansi256 = function(tt) {
-      const et = tt[0],
-        Vt = tt[1],
-        Ot = tt[2];
-      if (et === Vt && Vt === Ot) return et < 8 ? 16 : et > 248 ? 231 : Math.round((et - 8) / 247 * 24) + 232;
-      return 16 + 36 * Math.round(et / 255 * 5) + 6 * Math.round(Vt / 255 * 5) + Math.round(Ot / 255 * 5)
-    }, Dt.ansi16.rgb = function(tt) {
-      let et = tt % 10;
-      if (0 === et || 7 === et) return tt > 50 && (et += 3.5), et = et / 10.5 * 255, [et, et, et];
-      const Vt = .5 * (1 + ~~(tt > 50));
-      return [(1 & et) * Vt * 255, (et >> 1 & 1) * Vt * 255, (et >> 2 & 1) * Vt * 255]
-    }, Dt.ansi256.rgb = function(tt) {
-      if (tt >= 232) {
-        const et = 10 * (tt - 232) + 8;
-        return [et, et, et]
+      return [255 * cB, 255 * nB, 255 * hB]
+    }, oB.cmyk.rgb = function(BB) {
+      const IB = BB[0] / 100,
+        ZB = BB[1] / 100,
+        TB = BB[2] / 100,
+        JB = BB[3] / 100;
+      return [255 * (1 - Math.min(1, IB * (1 - JB) + JB)), 255 * (1 - Math.min(1, ZB * (1 - JB) + JB)), 255 * (1 - Math.min(1, TB * (1 - JB) + JB))]
+    }, oB.xyz.rgb = function(BB) {
+      const IB = BB[0] / 100,
+        ZB = BB[1] / 100,
+        TB = BB[2] / 100;
+      let JB, oB, GB;
+      return JB = 3.2406 * IB + -1.5372 * ZB + -.4986 * TB, oB = -.9689 * IB + 1.8758 * ZB + .0415 * TB, GB = .0557 * IB + -.204 * ZB + 1.057 * TB, JB = JB > .0031308 ? 1.055 * JB ** (1 / 2.4) - .055 : 12.92 * JB, oB = oB > .0031308 ? 1.055 * oB ** (1 / 2.4) - .055 : 12.92 * oB, GB = GB > .0031308 ? 1.055 * GB ** (1 / 2.4) - .055 : 12.92 * GB, JB = Math.min(Math.max(0, JB), 1), oB = Math.min(Math.max(0, oB), 1), GB = Math.min(Math.max(0, GB), 1), [255 * JB, 255 * oB, 255 * GB]
+    }, oB.xyz.lab = function(BB) {
+      let IB = BB[0],
+        ZB = BB[1],
+        TB = BB[2];
+      IB /= 95.047, ZB /= 100, TB /= 108.883, IB = IB > .008856 ? IB ** (1 / 3) : 7.787 * IB + 16 / 116, ZB = ZB > .008856 ? ZB ** (1 / 3) : 7.787 * ZB + 16 / 116, TB = TB > .008856 ? TB ** (1 / 3) : 7.787 * TB + 16 / 116;
+      return [116 * ZB - 16, 500 * (IB - ZB), 200 * (ZB - TB)]
+    }, oB.lab.xyz = function(BB) {
+      let IB, ZB, TB;
+      ZB = (BB[0] + 16) / 116, IB = BB[1] / 500 + ZB, TB = ZB - BB[2] / 200;
+      const JB = ZB ** 3,
+        oB = IB ** 3,
+        GB = TB ** 3;
+      return ZB = JB > .008856 ? JB : (ZB - 16 / 116) / 7.787, IB = oB > .008856 ? oB : (IB - 16 / 116) / 7.787, TB = GB > .008856 ? GB : (TB - 16 / 116) / 7.787, IB *= 95.047, ZB *= 100, TB *= 108.883, [IB, ZB, TB]
+    }, oB.lab.lch = function(BB) {
+      const IB = BB[0],
+        ZB = BB[1],
+        TB = BB[2];
+      let JB;
+      JB = 360 * Math.atan2(TB, ZB) / 2 / Math.PI, JB < 0 && (JB += 360);
+      return [IB, Math.sqrt(ZB * ZB + TB * TB), JB]
+    }, oB.lch.lab = function(BB) {
+      const IB = BB[0],
+        ZB = BB[1],
+        TB = BB[2] / 360 * 2 * Math.PI;
+      return [IB, ZB * Math.cos(TB), ZB * Math.sin(TB)]
+    }, oB.rgb.ansi16 = function(BB) {
+      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const [ZB, TB, JB] = BB;
+      let GB = null === IB ? oB.rgb.hsv(BB)[2] : IB;
+      if (GB = Math.round(GB / 50), 0 === GB) return 30;
+      let vB = 30 + (Math.round(JB / 255) << 2 | Math.round(TB / 255) << 1 | Math.round(ZB / 255));
+      return 2 === GB && (vB += 60), vB
+    }, oB.hsv.ansi16 = function(BB) {
+      return oB.rgb.ansi16(oB.hsv.rgb(BB), BB[2])
+    }, oB.rgb.ansi256 = function(BB) {
+      const IB = BB[0],
+        ZB = BB[1],
+        TB = BB[2];
+      if (IB === ZB && ZB === TB) return IB < 8 ? 16 : IB > 248 ? 231 : Math.round((IB - 8) / 247 * 24) + 232;
+      return 16 + 36 * Math.round(IB / 255 * 5) + 6 * Math.round(ZB / 255 * 5) + Math.round(TB / 255 * 5)
+    }, oB.ansi16.rgb = function(BB) {
+      let IB = BB % 10;
+      if (0 === IB || 7 === IB) return BB > 50 && (IB += 3.5), IB = IB / 10.5 * 255, [IB, IB, IB];
+      const ZB = .5 * (1 + ~~(BB > 50));
+      return [(1 & IB) * ZB * 255, (IB >> 1 & 1) * ZB * 255, (IB >> 2 & 1) * ZB * 255]
+    }, oB.ansi256.rgb = function(BB) {
+      if (BB >= 232) {
+        const IB = 10 * (BB - 232) + 8;
+        return [IB, IB, IB]
       }
-      let et;
-      tt -= 16;
-      return [Math.floor(tt / 36) / 5 * 255, Math.floor((et = tt % 36) / 6) / 5 * 255, et % 6 / 5 * 255]
-    }, Dt.rgb.hex = function(tt) {
-      const et = (((255 & Math.round(tt[0])) << 16) + ((255 & Math.round(tt[1])) << 8) + (255 & Math.round(tt[2]))).toString(16).toUpperCase();
-      return "000000".substring(et.length) + et
-    }, Dt.hex.rgb = function(tt) {
-      const et = tt.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
-      if (!et) return [0, 0, 0];
-      let Vt = et[0];
-      3 === et[0].length && (Vt = Vt.split("").map((tt => tt + tt)).join(""));
-      const Ot = parseInt(Vt, 16);
-      return [Ot >> 16 & 255, Ot >> 8 & 255, 255 & Ot]
-    }, Dt.rgb.hcg = function(tt) {
-      const et = tt[0] / 255,
-        Vt = tt[1] / 255,
-        Ot = tt[2] / 255,
-        qt = Math.max(Math.max(et, Vt), Ot),
-        Dt = Math.min(Math.min(et, Vt), Ot),
-        mt = qt - Dt;
-      let dt, jt;
-      return dt = mt < 1 ? Dt / (1 - mt) : 0, jt = mt <= 0 ? 0 : qt === et ? (Vt - Ot) / mt % 6 : qt === Vt ? 2 + (Ot - et) / mt : 4 + (et - Vt) / mt, jt /= 6, jt %= 1, [360 * jt, 100 * mt, 100 * dt]
-    }, Dt.hsl.hcg = function(tt) {
-      const et = tt[1] / 100,
-        Vt = tt[2] / 100,
-        Ot = Vt < .5 ? 2 * et * Vt : 2 * et * (1 - Vt);
-      let qt = 0;
-      return Ot < 1 && (qt = (Vt - .5 * Ot) / (1 - Ot)), [tt[0], 100 * Ot, 100 * qt]
-    }, Dt.hsv.hcg = function(tt) {
-      const et = tt[1] / 100,
-        Vt = tt[2] / 100,
-        Ot = et * Vt;
-      let qt = 0;
-      return Ot < 1 && (qt = (Vt - Ot) / (1 - Ot)), [tt[0], 100 * Ot, 100 * qt]
-    }, Dt.hcg.rgb = function(tt) {
-      const et = tt[0] / 360,
-        Vt = tt[1] / 100,
-        Ot = tt[2] / 100;
-      if (0 === Vt) return [255 * Ot, 255 * Ot, 255 * Ot];
-      const qt = [0, 0, 0],
-        Dt = et % 1 * 6,
-        mt = Dt % 1,
-        dt = 1 - mt;
-      let jt = 0;
-      switch (Math.floor(Dt)) {
+      let IB;
+      BB -= 16;
+      return [Math.floor(BB / 36) / 5 * 255, Math.floor((IB = BB % 36) / 6) / 5 * 255, IB % 6 / 5 * 255]
+    }, oB.rgb.hex = function(BB) {
+      const IB = (((255 & Math.round(BB[0])) << 16) + ((255 & Math.round(BB[1])) << 8) + (255 & Math.round(BB[2]))).toString(16).toUpperCase();
+      return "000000".substring(IB.length) + IB
+    }, oB.hex.rgb = function(BB) {
+      const IB = BB.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+      if (!IB) return [0, 0, 0];
+      let ZB = IB[0];
+      3 === IB[0].length && (ZB = ZB.split("").map((BB => BB + BB)).join(""));
+      const TB = parseInt(ZB, 16);
+      return [TB >> 16 & 255, TB >> 8 & 255, 255 & TB]
+    }, oB.rgb.hcg = function(BB) {
+      const IB = BB[0] / 255,
+        ZB = BB[1] / 255,
+        TB = BB[2] / 255,
+        JB = Math.max(Math.max(IB, ZB), TB),
+        oB = Math.min(Math.min(IB, ZB), TB),
+        GB = JB - oB;
+      let vB, kB;
+      return vB = GB < 1 ? oB / (1 - GB) : 0, kB = GB <= 0 ? 0 : JB === IB ? (ZB - TB) / GB % 6 : JB === ZB ? 2 + (TB - IB) / GB : 4 + (IB - ZB) / GB, kB /= 6, kB %= 1, [360 * kB, 100 * GB, 100 * vB]
+    }, oB.hsl.hcg = function(BB) {
+      const IB = BB[1] / 100,
+        ZB = BB[2] / 100,
+        TB = ZB < .5 ? 2 * IB * ZB : 2 * IB * (1 - ZB);
+      let JB = 0;
+      return TB < 1 && (JB = (ZB - .5 * TB) / (1 - TB)), [BB[0], 100 * TB, 100 * JB]
+    }, oB.hsv.hcg = function(BB) {
+      const IB = BB[1] / 100,
+        ZB = BB[2] / 100,
+        TB = IB * ZB;
+      let JB = 0;
+      return TB < 1 && (JB = (ZB - TB) / (1 - TB)), [BB[0], 100 * TB, 100 * JB]
+    }, oB.hcg.rgb = function(BB) {
+      const IB = BB[0] / 360,
+        ZB = BB[1] / 100,
+        TB = BB[2] / 100;
+      if (0 === ZB) return [255 * TB, 255 * TB, 255 * TB];
+      const JB = [0, 0, 0],
+        oB = IB % 1 * 6,
+        GB = oB % 1,
+        vB = 1 - GB;
+      let kB = 0;
+      switch (Math.floor(oB)) {
         case 0:
-          qt[0] = 1, qt[1] = mt, qt[2] = 0;
+          JB[0] = 1, JB[1] = GB, JB[2] = 0;
           break;
         case 1:
-          qt[0] = dt, qt[1] = 1, qt[2] = 0;
+          JB[0] = vB, JB[1] = 1, JB[2] = 0;
           break;
         case 2:
-          qt[0] = 0, qt[1] = 1, qt[2] = mt;
+          JB[0] = 0, JB[1] = 1, JB[2] = GB;
           break;
         case 3:
-          qt[0] = 0, qt[1] = dt, qt[2] = 1;
+          JB[0] = 0, JB[1] = vB, JB[2] = 1;
           break;
         case 4:
-          qt[0] = mt, qt[1] = 0, qt[2] = 1;
+          JB[0] = GB, JB[1] = 0, JB[2] = 1;
           break;
         default:
-          qt[0] = 1, qt[1] = 0, qt[2] = dt
+          JB[0] = 1, JB[1] = 0, JB[2] = vB
       }
-      return jt = (1 - Vt) * Ot, [255 * (Vt * qt[0] + jt), 255 * (Vt * qt[1] + jt), 255 * (Vt * qt[2] + jt)]
-    }, Dt.hcg.hsv = function(tt) {
-      const et = tt[1] / 100,
-        Vt = et + tt[2] / 100 * (1 - et);
-      let Ot = 0;
-      return Vt > 0 && (Ot = et / Vt), [tt[0], 100 * Ot, 100 * Vt]
-    }, Dt.hcg.hsl = function(tt) {
-      const et = tt[1] / 100,
-        Vt = tt[2] / 100 * (1 - et) + .5 * et;
-      let Ot = 0;
-      return Vt > 0 && Vt < .5 ? Ot = et / (2 * Vt) : Vt >= .5 && Vt < 1 && (Ot = et / (2 * (1 - Vt))), [tt[0], 100 * Ot, 100 * Vt]
-    }, Dt.hcg.hwb = function(tt) {
-      const et = tt[1] / 100,
-        Vt = et + tt[2] / 100 * (1 - et);
-      return [tt[0], 100 * (Vt - et), 100 * (1 - Vt)]
-    }, Dt.hwb.hcg = function(tt) {
-      const et = tt[1] / 100,
-        Vt = 1 - tt[2] / 100,
-        Ot = Vt - et;
-      let qt = 0;
-      return Ot < 1 && (qt = (Vt - Ot) / (1 - Ot)), [tt[0], 100 * Ot, 100 * qt]
-    }, Dt.apple.rgb = function(tt) {
-      return [tt[0] / 65535 * 255, tt[1] / 65535 * 255, tt[2] / 65535 * 255]
-    }, Dt.rgb.apple = function(tt) {
-      return [tt[0] / 255 * 65535, tt[1] / 255 * 65535, tt[2] / 255 * 65535]
-    }, Dt.gray.rgb = function(tt) {
-      return [tt[0] / 100 * 255, tt[0] / 100 * 255, tt[0] / 100 * 255]
-    }, Dt.gray.hsl = function(tt) {
-      return [0, 0, tt[0]]
-    }, Dt.gray.hsv = Dt.gray.hsl, Dt.gray.hwb = function(tt) {
-      return [0, 100, tt[0]]
-    }, Dt.gray.cmyk = function(tt) {
-      return [0, 0, 0, tt[0]]
-    }, Dt.gray.lab = function(tt) {
-      return [tt[0], 0, 0]
-    }, Dt.gray.hex = function(tt) {
-      const et = 255 & Math.round(tt[0] / 100 * 255),
-        Vt = ((et << 16) + (et << 8) + et).toString(16).toUpperCase();
-      return "000000".substring(Vt.length) + Vt
-    }, Dt.rgb.gray = function(tt) {
-      return [(tt[0] + tt[1] + tt[2]) / 3 / 255 * 100]
+      return kB = (1 - ZB) * TB, [255 * (ZB * JB[0] + kB), 255 * (ZB * JB[1] + kB), 255 * (ZB * JB[2] + kB)]
+    }, oB.hcg.hsv = function(BB) {
+      const IB = BB[1] / 100,
+        ZB = IB + BB[2] / 100 * (1 - IB);
+      let TB = 0;
+      return ZB > 0 && (TB = IB / ZB), [BB[0], 100 * TB, 100 * ZB]
+    }, oB.hcg.hsl = function(BB) {
+      const IB = BB[1] / 100,
+        ZB = BB[2] / 100 * (1 - IB) + .5 * IB;
+      let TB = 0;
+      return ZB > 0 && ZB < .5 ? TB = IB / (2 * ZB) : ZB >= .5 && ZB < 1 && (TB = IB / (2 * (1 - ZB))), [BB[0], 100 * TB, 100 * ZB]
+    }, oB.hcg.hwb = function(BB) {
+      const IB = BB[1] / 100,
+        ZB = IB + BB[2] / 100 * (1 - IB);
+      return [BB[0], 100 * (ZB - IB), 100 * (1 - ZB)]
+    }, oB.hwb.hcg = function(BB) {
+      const IB = BB[1] / 100,
+        ZB = 1 - BB[2] / 100,
+        TB = ZB - IB;
+      let JB = 0;
+      return TB < 1 && (JB = (ZB - TB) / (1 - TB)), [BB[0], 100 * TB, 100 * JB]
+    }, oB.apple.rgb = function(BB) {
+      return [BB[0] / 65535 * 255, BB[1] / 65535 * 255, BB[2] / 65535 * 255]
+    }, oB.rgb.apple = function(BB) {
+      return [BB[0] / 255 * 65535, BB[1] / 255 * 65535, BB[2] / 255 * 65535]
+    }, oB.gray.rgb = function(BB) {
+      return [BB[0] / 100 * 255, BB[0] / 100 * 255, BB[0] / 100 * 255]
+    }, oB.gray.hsl = function(BB) {
+      return [0, 0, BB[0]]
+    }, oB.gray.hsv = oB.gray.hsl, oB.gray.hwb = function(BB) {
+      return [0, 100, BB[0]]
+    }, oB.gray.cmyk = function(BB) {
+      return [0, 0, 0, BB[0]]
+    }, oB.gray.lab = function(BB) {
+      return [BB[0], 0, 0]
+    }, oB.gray.hex = function(BB) {
+      const IB = 255 & Math.round(BB[0] / 100 * 255),
+        ZB = ((IB << 16) + (IB << 8) + IB).toString(16).toUpperCase();
+      return "000000".substring(ZB.length) + ZB
+    }, oB.rgb.gray = function(BB) {
+      return [(BB[0] + BB[1] + BB[2]) / 3 / 255 * 100]
     }
   },
-  36913: (tt, et, Vt) => {
-    const Ot = Vt(36918),
-      qt = Vt(36923),
-      Dt = {};
-    Object.keys(Ot).forEach((tt => {
-      Dt[tt] = {}, Object.defineProperty(Dt[tt], "channels", {
-        value: Ot[tt].channels
-      }), Object.defineProperty(Dt[tt], "labels", {
-        value: Ot[tt].labels
+  36676: (BB, IB, ZB) => {
+    const TB = ZB(36684),
+      JB = ZB(36693),
+      oB = {};
+    Object.keys(TB).forEach((BB => {
+      oB[BB] = {}, Object.defineProperty(oB[BB], "channels", {
+        value: TB[BB].channels
+      }), Object.defineProperty(oB[BB], "labels", {
+        value: TB[BB].labels
       });
-      const et = qt(tt);
-      Object.keys(et).forEach((Vt => {
-        const Ot = et[Vt];
-        Dt[tt][Vt] = function(tt) {
-          const et = function() {
-            for (var et = arguments.length, Vt = new Array(et), Ot = 0; Ot < et; Ot++) Vt[Ot] = arguments[Ot];
-            const qt = Vt[0];
-            if (void 0 === qt || null === qt) return qt;
-            qt.length > 1 && (Vt = qt);
-            const Dt = tt(Vt);
-            if ("object" === typeof Dt)
-              for (let tt = Dt.length, mt = 0; mt < tt; mt++) Dt[mt] = Math.round(Dt[mt]);
-            return Dt
+      const IB = JB(BB);
+      Object.keys(IB).forEach((ZB => {
+        const TB = IB[ZB];
+        oB[BB][ZB] = function(BB) {
+          const IB = function() {
+            for (var IB = arguments.length, ZB = new Array(IB), TB = 0; TB < IB; TB++) ZB[TB] = arguments[TB];
+            const JB = ZB[0];
+            if (void 0 === JB || null === JB) return JB;
+            JB.length > 1 && (ZB = JB);
+            const oB = BB(ZB);
+            if ("object" === typeof oB)
+              for (let BB = oB.length, GB = 0; GB < BB; GB++) oB[GB] = Math.round(oB[GB]);
+            return oB
           };
-          return "conversion" in tt && (et.conversion = tt.conversion), et
-        }(Ot), Dt[tt][Vt].raw = function(tt) {
-          const et = function() {
-            for (var et = arguments.length, Vt = new Array(et), Ot = 0; Ot < et; Ot++) Vt[Ot] = arguments[Ot];
-            const qt = Vt[0];
-            return void 0 === qt || null === qt ? qt : (qt.length > 1 && (Vt = qt), tt(Vt))
+          return "conversion" in BB && (IB.conversion = BB.conversion), IB
+        }(TB), oB[BB][ZB].raw = function(BB) {
+          const IB = function() {
+            for (var IB = arguments.length, ZB = new Array(IB), TB = 0; TB < IB; TB++) ZB[TB] = arguments[TB];
+            const JB = ZB[0];
+            return void 0 === JB || null === JB ? JB : (JB.length > 1 && (ZB = JB), BB(ZB))
           };
-          return "conversion" in tt && (et.conversion = tt.conversion), et
-        }(Ot)
+          return "conversion" in BB && (IB.conversion = BB.conversion), IB
+        }(TB)
       }))
-    })), tt.exports = Dt
+    })), BB.exports = oB
   },
-  36923: (tt, et, Vt) => {
-    const Ot = Vt(36918);
+  36693: (BB, IB, ZB) => {
+    const TB = ZB(36684);
 
-    function qt(tt) {
-      const et = function() {
-          const tt = {},
-            et = Object.keys(Ot);
-          for (let Vt = et.length, Ot = 0; Ot < Vt; Ot++) tt[et[Ot]] = {
+    function JB(BB) {
+      const IB = function() {
+          const BB = {},
+            IB = Object.keys(TB);
+          for (let ZB = IB.length, TB = 0; TB < ZB; TB++) BB[IB[TB]] = {
             distance: -1,
             parent: null
           };
-          return tt
+          return BB
         }(),
-        Vt = [tt];
-      for (et[tt].distance = 0; Vt.length;) {
-        const tt = Vt.pop(),
-          qt = Object.keys(Ot[tt]);
-        for (let Ot = qt.length, Dt = 0; Dt < Ot; Dt++) {
-          const Ot = qt[Dt],
-            mt = et[Ot]; - 1 === mt.distance && (mt.distance = et[tt].distance + 1, mt.parent = tt, Vt.unshift(Ot))
+        ZB = [BB];
+      for (IB[BB].distance = 0; ZB.length;) {
+        const BB = ZB.pop(),
+          JB = Object.keys(TB[BB]);
+        for (let TB = JB.length, oB = 0; oB < TB; oB++) {
+          const TB = JB[oB],
+            GB = IB[TB]; - 1 === GB.distance && (GB.distance = IB[BB].distance + 1, GB.parent = BB, ZB.unshift(TB))
         }
       }
-      return et
+      return IB
     }
 
-    function Dt(tt, et) {
-      return function(Vt) {
-        return et(tt(Vt))
+    function oB(BB, IB) {
+      return function(ZB) {
+        return IB(BB(ZB))
       }
     }
 
-    function mt(tt, et) {
-      const Vt = [et[tt].parent, tt];
-      let qt = Ot[et[tt].parent][tt],
-        mt = et[tt].parent;
-      for (; et[mt].parent;) Vt.unshift(et[mt].parent), qt = Dt(Ot[et[mt].parent][mt], qt), mt = et[mt].parent;
-      return qt.conversion = Vt, qt
+    function GB(BB, IB) {
+      const ZB = [IB[BB].parent, BB];
+      let JB = TB[IB[BB].parent][BB],
+        GB = IB[BB].parent;
+      for (; IB[GB].parent;) ZB.unshift(IB[GB].parent), JB = oB(TB[IB[GB].parent][GB], JB), GB = IB[GB].parent;
+      return JB.conversion = ZB, JB
     }
-    tt.exports = function(tt) {
-      const et = qt(tt),
-        Vt = {},
-        Ot = Object.keys(et);
-      for (let qt = Ot.length, Dt = 0; Dt < qt; Dt++) {
-        const tt = Ot[Dt];
-        null !== et[tt].parent && (Vt[tt] = mt(tt, et))
+    BB.exports = function(BB) {
+      const IB = JB(BB),
+        ZB = {},
+        TB = Object.keys(IB);
+      for (let JB = TB.length, oB = 0; oB < JB; oB++) {
+        const BB = TB[oB];
+        null !== IB[BB].parent && (ZB[BB] = GB(BB, IB))
       }
-      return Vt
+      return ZB
     }
   },
-  36921: tt => {
-    tt.exports = {
+  36689: BB => {
+    BB.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
       aqua: [0, 255, 255],
@@ -1137,28 +1137,28 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  36902: (tt, et, Vt) => {
-    var Ot = Vt(36905),
-      qt = Array.prototype.concat,
-      Dt = Array.prototype.slice,
-      mt = tt.exports = function(tt) {
-        for (var et = [], Vt = 0, mt = tt.length; Vt < mt; Vt++) {
-          var dt = tt[Vt];
-          Ot(dt) ? et = qt.call(et, Dt.call(dt)) : et.push(dt)
+  36658: (BB, IB, ZB) => {
+    var TB = ZB(36667),
+      JB = Array.prototype.concat,
+      oB = Array.prototype.slice,
+      GB = BB.exports = function(BB) {
+        for (var IB = [], ZB = 0, GB = BB.length; ZB < GB; ZB++) {
+          var vB = BB[ZB];
+          TB(vB) ? IB = JB.call(IB, oB.call(vB)) : IB.push(vB)
         }
-        return et
+        return IB
       };
-    mt.wrap = function(tt) {
+    GB.wrap = function(BB) {
       return function() {
-        return tt(mt(arguments))
+        return BB(GB(arguments))
       }
     }
   },
-  36905: tt => {
-    tt.exports = function(tt) {
-      return !(!tt || "string" === typeof tt) && (tt instanceof Array || Array.isArray(tt) || tt.length >= 0 && (tt.splice instanceof Function || Object.getOwnPropertyDescriptor(tt, tt.length - 1) && "String" !== tt.constructor.name))
+  36667: BB => {
+    BB.exports = function(BB) {
+      return !(!BB || "string" === typeof BB) && (BB instanceof Array || Array.isArray(BB) || BB.length >= 0 && (BB.splice instanceof Function || Object.getOwnPropertyDescriptor(BB, BB.length - 1) && "String" !== BB.constructor.name))
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const BB in modules) Object.freeze(modules[BB]);
