@@ -1,22 +1,22 @@
 export const id = 17;
 export const ids = [17];
 export const modules = {
-  39707: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      default: () => wQ
+  40511: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      default: () => OM
     });
-    const wQ = function(QQ, WQ, XQ) {
-      let wQ;
+    const OM = function(MM, rM, iM) {
+      let OM;
       return {
-        onCreate: QQ => {
-          wQ = QQ
+        onCreate: MM => {
+          OM = MM
         },
-        onPlayerAltAction: (QQ, WQ, XQ, qQ, TQ, zQ) => {
-          zQ && "Mesh" === wQ.getEntityType(zQ) && wQ.openShop(QQ, !0)
+        onPlayerAltAction: (MM, rM, iM, SM, jM, aM) => {
+          aM && "Mesh" === OM.getEntityType(aM) && OM.openShop(MM, !0)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

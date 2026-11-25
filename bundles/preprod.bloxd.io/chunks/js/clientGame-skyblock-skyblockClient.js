@@ -1,602 +1,370 @@
-export const id = 26;
-export const ids = [26];
+export const id = 30;
+export const ids = [30];
 export const modules = {
-  36891: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => IQ,
-      g: () => jQ,
-      k: () => rQ,
-      o: () => JQ
+  5233: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => dM,
+      e: () => yM
     });
-    var wQ = XQ(34500),
-      qQ = XQ(36900),
-      TQ = XQ(36906),
-      zQ = XQ(9099),
-      sQ = XQ(1498),
-      FQ = XQ(61),
-      PQ = XQ(78),
-      gQ = XQ(1145);
+    var OM = iM(1116),
+      SM = iM.n(OM),
+      jM = iM(44),
+      aM = iM(1188),
+      PM = iM(5242),
+      nM = iM(2006),
+      QM = iM(2640),
+      zM = iM(5248),
+      LM = iM(1303);
+    const mM = new WeakMap;
+    let HM = 0;
 
-    function JQ() {
-      var QQ;
-      return (0, sQ.j)(qQ.c, (0, qQ.s)()), (0, gQ.jsx)(gQ.Fragment, {
-        children: null === (QQ = (0, qQ.s)()) || void 0 === QQ ? void 0 : QQ.content
-      })
+    function hM(MM) {
+      let rM = mM.get(MM);
+      return void 0 === rM && (rM = HM++, mM.set(MM, rM)), rM
     }
 
-    function rQ(QQ) {
-      var WQ;
+    function JM(MM) {
       let {
-        show: XQ
-      } = QQ;
-      (0, sQ.j)(qQ.c, (0, qQ.s)());
-      const PQ = null === (WQ = (0, qQ.s)()) || void 0 === WQ ? void 0 : WQ.menu;
-      return (0, FQ.useEffect)((() => {
-        var QQ;
-        XQ || (null === PQ || void 0 === PQ || null === (QQ = PQ.onClose) || void 0 === QQ || QQ.call(PQ), (0, TQ.r)())
-      }), [XQ, PQ]), (0, FQ.useEffect)((() => XQ ? (0, zQ.e)(TQ.y, TQ.f) : void 0), [XQ]), (0, gQ.jsx)(wQ.c, {
-        showing: XQ,
-        globallyUniqueKey: "clientGameMenu",
-        children: null === PQ || void 0 === PQ ? void 0 : PQ.content
-      })
-    }
-
-    function IQ(QQ) {
-      let {
-        placement: WQ = "bottom"
-      } = QQ;
-      return (0, gQ.jsx)("div", {
-        id: `clientGameHud-${WQ}`,
-        style: {
-          display: "contents"
-        }
-      })
-    }
-
-    function jQ(QQ) {
-      let {
-        children: WQ,
-        placement: XQ = "bottom"
-      } = QQ;
-      const [wQ, qQ] = (0, FQ.useState)(null);
-      return (0, FQ.useEffect)((() => {
-        qQ(document.getElementById(`clientGameHud-${XQ}`))
-      }), [XQ]), wQ ? (0, PQ.createPortal)(WQ, wQ) : null
-    }
-  },
-  5178: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => yQ,
-      f: () => VQ
-    });
-    var wQ = XQ(1081),
-      qQ = XQ.n(wQ),
-      TQ = XQ(61),
-      zQ = XQ(1226),
-      sQ = XQ(5181),
-      FQ = XQ(1975),
-      PQ = XQ(2535),
-      gQ = XQ(5187),
-      JQ = XQ(1145);
-    const rQ = new WeakMap;
-    let IQ = 0;
-
-    function jQ(QQ) {
-      let WQ = rQ.get(QQ);
-      return void 0 === WQ && (WQ = IQ++, rQ.set(QQ, WQ)), WQ
-    }
-
-    function BQ(QQ) {
-      let {
-        piece: WQ
-      } = QQ;
-      return "space" === WQ.kind ? (0, JQ.jsx)(JQ.Fragment, {
-        children: WQ.text
-      }) : (0, JQ.jsx)("span", {
+        piece: rM
+      } = MM;
+      return "space" === rM.kind ? (0, LM.jsx)(LM.Fragment, {
+        children: rM.text
+      }) : (0, LM.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${WQ.delayMs}ms`
+          "--word-delay": `${rM.delayMs}ms`
         },
-        children: (0, JQ.jsx)(sQ.e, {
-          text: "icon" === WQ.kind ? `[[${WQ.icon}]]` : WQ.text
+        children: (0, LM.jsx)(PM.c, {
+          text: "icon" === rM.kind ? `[[${rM.icon}]]` : rM.text
         })
       })
     }
 
-    function yQ(QQ) {
+    function dM(MM) {
       let {
-        display: WQ
-      } = QQ;
+        display: rM
+      } = MM;
       const {
-        selectedLanguage: XQ
-      } = (0, zQ.C)(), wQ = (0, TQ.useMemo)((() => (0, gQ.c)((0, gQ.f)(WQ).plan.pieces)), [WQ, XQ.code]);
-      return (0, JQ.jsxs)("div", {
-        className: qQ()("Dialogue", {
-          DialogueAnimateIn: !1 !== WQ.animateIn
+        selectedLanguage: iM
+      } = (0, aM.A)(), OM = (0, jM.useMemo)((() => (0, zM.e)((0, zM.i)(rM).plan.pieces)), [rM, iM.code]);
+      return (0, LM.jsxs)("div", {
+        className: SM()("Dialogue", {
+          DialogueAnimateIn: !1 !== rM.animateIn
         }),
-        children: [WQ.speakerName && (0, JQ.jsx)(FQ.e, {
-          text: WQ.speakerName,
+        children: [rM.speakerName && (0, LM.jsx)(nM.b, {
+          text: rM.speakerName,
           className: "DialogueSpeaker"
-        }), (0, JQ.jsx)("p", {
+        }), (0, LM.jsx)("p", {
           className: "DialogueLine",
-          children: wQ.map(((QQ, WQ) => 1 === QQ.length && "space" === QQ[0].kind ? QQ[0].text : (0, JQ.jsx)("span", {
+          children: OM.map(((MM, rM) => 1 === MM.length && "space" === MM[0].kind ? MM[0].text : (0, LM.jsx)("span", {
             className: "DialogueGlue",
-            children: QQ.map(((QQ, WQ) => (0, JQ.jsx)(BQ, {
-              piece: QQ
-            }, WQ)))
-          }, WQ)))
+            children: MM.map(((MM, rM) => (0, LM.jsx)(JM, {
+              piece: MM
+            }, rM)))
+          }, rM)))
         })]
       })
     }
-    const VQ = (0, TQ.memo)((function() {
-      const QQ = (0, PQ.g)("dialogue");
-      return (0, JQ.jsx)("div", {
+    const yM = (0, jM.memo)((function() {
+      const MM = (0, QM.f)("dialogue");
+      return (0, LM.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: QQ && (0, JQ.jsx)(yQ, {
-          display: QQ
-        }, jQ(QQ))
+        children: MM && (0, LM.jsx)(dM, {
+          display: MM
+        }, hM(MM))
       })
     }))
   },
-  5181: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => sQ
+  5242: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => PM
     });
-    var wQ = XQ(61),
-      qQ = XQ(382),
-      TQ = XQ(1988),
-      zQ = XQ(1145);
+    var OM = iM(44),
+      SM = iM(313),
+      jM = iM(2026),
+      aM = iM(1303);
 
-    function sQ(QQ) {
+    function PM(MM) {
       let {
-        text: WQ
-      } = QQ;
-      const XQ = [];
-      let sQ = "";
-      return (0, qQ.gc)(WQ).forEach(((QQ, WQ) => {
-        if ("string" === typeof QQ || !(0, TQ.e)(QQ.icon)) return void(sQ += "string" === typeof QQ ? QQ : QQ.icon);
-        const qQ = Math.max(0, sQ.trimEnd().search(/\S{1,12}$/));
-        XQ.push((0, zQ.jsxs)(wQ.Fragment, {
-          children: [sQ.slice(0, qQ), (0, zQ.jsxs)("span", {
+        text: rM
+      } = MM;
+      const iM = [];
+      let PM = "";
+      return (0, SM.bc)(rM).forEach(((MM, rM) => {
+        if ("string" === typeof MM || !(0, jM.d)(MM.icon)) return void(PM += "string" === typeof MM ? MM : MM.icon);
+        const SM = Math.max(0, PM.trimEnd().search(/\S{1,12}$/));
+        iM.push((0, aM.jsxs)(OM.Fragment, {
+          children: [PM.slice(0, SM), (0, aM.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [sQ.slice(qQ), (0, zQ.jsx)("span", {
+            children: [PM.slice(SM), (0, aM.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": QQ.icon,
-              children: (0, zQ.jsx)(TQ.d, {
-                itemName: QQ.icon,
+              "aria-label": MM.icon,
+              children: (0, aM.jsx)(jM.b, {
+                itemName: MM.icon,
                 amount: 0
               })
             })]
           })]
-        }, WQ)), sQ = ""
-      })), XQ.push(sQ), (0, zQ.jsx)(zQ.Fragment, {
-        children: XQ
+        }, rM)), PM = ""
+      })), iM.push(PM), (0, aM.jsx)(aM.Fragment, {
+        children: iM
       })
     }
   },
-  34500: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => TQ
+  35017: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => jM
     });
-    var wQ = XQ(4859),
-      qQ = XQ(4863);
+    var OM = iM(4919),
+      SM = iM(4923);
 
-    function TQ(QQ) {
+    function jM(MM) {
       let {
-        children: WQ,
-        showing: XQ,
-        globallyUniqueKey: TQ,
-        alwaysMountChildren: zQ = !1,
-        doGameplayStartStopOnShow: sQ = !0,
-        keepsMovement: FQ = !1
-      } = QQ;
-      return (0, qQ.c)(!0, XQ, TQ, FQ), (0, wQ.c)(sQ, XQ), XQ || zQ ? WQ : null
+        children: rM,
+        showing: iM,
+        globallyUniqueKey: jM,
+        alwaysMountChildren: aM = !1,
+        doGameplayStartStopOnShow: PM = !0,
+        keepsMovement: nM = !1
+      } = MM;
+      return (0, SM.c)(!0, iM, jM, nM), (0, OM.c)(PM, iM), iM || aM ? rM : null
     }
   },
-  5187: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => EQ,
-      f: () => RQ
+  5248: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => DM,
+      i: () => sM
     });
-    var wQ = XQ(5196),
-      qQ = XQ(382);
-    const TQ = 120,
-      zQ = 260,
-      sQ = 1.15,
-      FQ = 1.2,
-      PQ = 2,
-      gQ = 1.08,
-      JQ = .8,
-      rQ = .95,
-      IQ = 8,
-      jQ = "[\"')\\]\u300d\u300f\uff09]*",
-      BQ = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${jQ}$`),
-      yQ = new RegExp(`[?\uff1f]${jQ}$`),
-      VQ = new RegExp(`[!\uff01]${jQ}$`),
-      DQ = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      pQ = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      GQ = new RegExp(`[${pQ}]`),
-      UQ = new RegExp(`[${pQ}]|[^${pQ}]+`, "g"),
-      bQ = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var OM = iM(5251),
+      SM = iM(313);
+    const jM = 120,
+      aM = 260,
+      PM = 1.15,
+      nM = 1.2,
+      QM = 2,
+      zM = 1.08,
+      LM = .8,
+      mM = .95,
+      HM = 8,
+      hM = "[\"')\\]\u300d\u300f\uff09]*",
+      JM = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${hM}$`),
+      dM = new RegExp(`[?\uff1f]${hM}$`),
+      yM = new RegExp(`[!\uff01]${hM}$`),
+      lM = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      EM = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      UM = new RegExp(`[${EM}]`),
+      GM = new RegExp(`[${EM}]|[^${EM}]+`, "g"),
+      CM = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function vQ(QQ) {
-      let WQ = 2166136261;
-      for (let XQ = 0; XQ < QQ.length; XQ++) WQ ^= QQ.charCodeAt(XQ), WQ = Math.imul(WQ, 16777619);
-      return (WQ >>> 0) / 4294967295 * 2 - 1
+    function eM(MM) {
+      let rM = 2166136261;
+      for (let iM = 0; iM < MM.length; iM++) rM ^= MM.charCodeAt(iM), rM = Math.imul(rM, 16777619);
+      return (rM >>> 0) / 4294967295 * 2 - 1
     }
 
-    function dQ(QQ) {
-      var WQ;
-      if (GQ.test(QQ)) return 1;
-      const XQ = QQ.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        wQ = XQ.replace(/[^0-9]/g, "");
-      if (wQ.length > 0 && !/\p{L}/u.test(XQ)) return Math.min(wQ.length, 4);
-      const qQ = null !== (WQ = XQ.match(bQ)) && void 0 !== WQ ? WQ : [];
-      if (0 === qQ.length) {
-        var TQ, zQ;
-        const QQ = null !== (TQ = null === (zQ = XQ.match(/\p{L}/gu)) || void 0 === zQ ? void 0 : zQ.length) && void 0 !== TQ ? TQ : 0;
-        return 0 === QQ ? 0 : Math.min(Math.max(1, Math.round(QQ / 2.5)), IQ)
+    function bM(MM) {
+      var rM;
+      if (UM.test(MM)) return 1;
+      const iM = MM.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        OM = iM.replace(/[^0-9]/g, "");
+      if (OM.length > 0 && !/\p{L}/u.test(iM)) return Math.min(OM.length, 4);
+      const SM = null !== (rM = iM.match(CM)) && void 0 !== rM ? rM : [];
+      if (0 === SM.length) {
+        var jM, aM;
+        const MM = null !== (jM = null === (aM = iM.match(/\p{L}/gu)) || void 0 === aM ? void 0 : aM.length) && void 0 !== jM ? jM : 0;
+        return 0 === MM ? 0 : Math.min(Math.max(1, Math.round(MM / 2.5)), HM)
       }
-      const sQ = XQ.replace(/[^\p{L}]/gu, ""),
-        FQ = qQ.length > 1 && "e" === qQ.at(-1) && sQ.endsWith("e") && !sQ.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(QQ.replace(/[^\p{L}]/gu, ""));
-      return Math.min(qQ.length - (FQ ? 1 : 0), IQ)
+      const PM = iM.replace(/[^\p{L}]/gu, ""),
+        nM = SM.length > 1 && "e" === SM.at(-1) && PM.endsWith("e") && !PM.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(MM.replace(/[^\p{L}]/gu, ""));
+      return Math.min(SM.length - (nM ? 1 : 0), HM)
     }
 
-    function HQ(QQ) {
-      return QQ.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function wM(MM) {
+      return MM.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function aQ(QQ) {
-      const WQ = QQ.replace(/[^\p{L}]/gu, "");
-      return WQ.length >= 2 && WQ === WQ.toUpperCase() && WQ !== WQ.toLowerCase()
+    function tM(MM) {
+      const rM = MM.replace(/[^\p{L}]/gu, "");
+      return rM.length >= 2 && rM === rM.toUpperCase() && rM !== rM.toLowerCase()
     }
 
-    function lQ(QQ, WQ) {
-      var XQ;
-      const IQ = WQ && (0, wQ.l)(WQ),
-        jQ = null !== (XQ = null === IQ || void 0 === IQ ? void 0 : IQ.syllableMs) && void 0 !== XQ ? XQ : wQ.d,
-        pQ = function(QQ) {
-          const WQ = [];
-          for (const wQ of (0, qQ.gc)(QQ))
-            if ("string" === typeof wQ)
-              for (const QQ of wQ.split(/(\s+)/)) {
-                if ("" === QQ) continue;
-                if (/^\s+$/.test(QQ)) {
-                  WQ.push({
+    function gM(MM, rM) {
+      var iM;
+      const HM = rM && (0, OM.p)(rM),
+        hM = null !== (iM = null === HM || void 0 === HM ? void 0 : HM.syllableMs) && void 0 !== iM ? iM : OM.d,
+        EM = function(MM) {
+          const rM = [];
+          for (const OM of (0, SM.bc)(MM))
+            if ("string" === typeof OM)
+              for (const MM of OM.split(/(\s+)/)) {
+                if ("" === MM) continue;
+                if (/^\s+$/.test(MM)) {
+                  rM.push({
                     kind: "space",
-                    text: QQ
+                    text: MM
                   });
                   continue
                 }
-                if (!GQ.test(QQ)) {
-                  WQ.push({
+                if (!UM.test(MM)) {
+                  rM.push({
                     kind: "word",
-                    text: QQ,
+                    text: MM,
                     delayMs: 0
                   });
                   continue
                 }
-                let wQ = !0;
-                for (const qQ of null !== (XQ = QQ.match(UQ)) && void 0 !== XQ ? XQ : []) {
-                  var XQ;
-                  const QQ = WQ.at(-1);
-                  wQ || "word" !== (null === QQ || void 0 === QQ ? void 0 : QQ.kind) || GQ.test(qQ) || /[\p{L}\p{N}]/u.test(qQ) ? (wQ || WQ.push({
+                let OM = !0;
+                for (const SM of null !== (iM = MM.match(GM)) && void 0 !== iM ? iM : []) {
+                  var iM;
+                  const MM = rM.at(-1);
+                  OM || "word" !== (null === MM || void 0 === MM ? void 0 : MM.kind) || UM.test(SM) || /[\p{L}\p{N}]/u.test(SM) ? (OM || rM.push({
                     kind: "space",
                     text: "\u200b"
-                  }), WQ.push({
+                  }), rM.push({
                     kind: "word",
-                    text: qQ,
+                    text: SM,
                     delayMs: 0
-                  }), wQ = !1) : QQ.text += qQ
+                  }), OM = !1) : MM.text += SM
                 }
-              } else WQ.push({
+              } else rM.push({
                 kind: "icon",
-                text: wQ.icon,
+                text: OM.icon,
                 delayMs: 0
               });
-          return WQ
-        }(QQ),
-        bQ = [];
-      let lQ = [];
-      for (const wQ of pQ) "space" !== wQ.kind && (lQ.push(wQ), BQ.test(wQ.text) && (bQ.push(lQ), lQ = []));
-      bQ.push(lQ);
-      const hQ = [];
-      let iQ = 0;
-      for (const wQ of bQ) {
-        var cQ, AQ;
-        const QQ = null !== (cQ = null === (AQ = wQ.at(-1)) || void 0 === AQ ? void 0 : AQ.text) && void 0 !== cQ ? cQ : "",
-          WQ = yQ.test(QQ),
-          XQ = VQ.test(QQ),
-          qQ = wQ.map((QQ => "word" === QQ.kind ? dQ(QQ.text) : 1)),
-          pQ = qQ.findLastIndex((QQ => QQ > 0));
-        for (const [yQ, VQ] of wQ.entries()) {
-          const QQ = "word" === VQ.kind,
-            wQ = qQ[yQ];
-          VQ.delayMs = iQ;
-          for (let qQ = 0; IQ && qQ < wQ; qQ++) {
+          return rM
+        }(MM),
+        CM = [];
+      let gM = [];
+      for (const OM of EM) "space" !== OM.kind && (gM.push(OM), JM.test(OM.text) && (CM.push(gM), gM = []));
+      CM.push(gM);
+      const uM = [];
+      let RM = 0;
+      for (const OM of CM) {
+        var pM, WM;
+        const MM = null !== (pM = null === (WM = OM.at(-1)) || void 0 === WM ? void 0 : WM.text) && void 0 !== pM ? pM : "",
+          rM = dM.test(MM),
+          iM = yM.test(MM),
+          SM = OM.map((MM => "word" === MM.kind ? bM(MM.text) : 1)),
+          EM = SM.findLastIndex((MM => MM > 0));
+        for (const [dM, yM] of OM.entries()) {
+          const MM = "word" === yM.kind,
+            OM = SM[dM];
+          yM.delayMs = RM;
+          for (let SM = 0; HM && SM < OM; SM++) {
             const {
-              intonation: TQ
-            } = IQ;
-            let zQ = pQ > 0 ? -TQ.declineSemitones * (yQ / pQ) : 0;
-            zQ += vQ(`${HQ(VQ.text)}|${qQ}`) * TQ.variationSemitones;
-            const BQ = Math.min(1, TQ.variationSemitones);
-            let DQ = IQ.glideSemitones,
-              GQ = 1;
-            XQ && (zQ += TQ.exclaimLiftSemitones, GQ *= sQ), WQ && yQ === pQ && (zQ += TQ.questionRiseSemitones * (wQ > 1 ? .5 + .5 * qQ / (wQ - 1) : 1), qQ === wQ - 1 && (DQ = Math.abs(DQ) + TQ.questionRiseSemitones / 2)), QQ && aQ(VQ.text) && (zQ += PQ * BQ, GQ *= FQ), wQ > 1 && 0 === qQ && (zQ += JQ * BQ, GQ *= gQ), hQ.push({
-              atMs: iQ + qQ * jQ,
-              semitones: zQ,
-              glideSemitones: DQ,
-              durationMs: qQ < wQ - 1 ? Math.min(IQ.durationMs, jQ * rQ) : IQ.durationMs,
-              level: GQ
+              intonation: jM
+            } = HM;
+            let aM = EM > 0 ? -jM.declineSemitones * (dM / EM) : 0;
+            aM += eM(`${wM(yM.text)}|${SM}`) * jM.variationSemitones;
+            const JM = Math.min(1, jM.variationSemitones);
+            let lM = HM.glideSemitones,
+              UM = 1;
+            iM && (aM += jM.exclaimLiftSemitones, UM *= PM), rM && dM === EM && (aM += jM.questionRiseSemitones * (OM > 1 ? .5 + .5 * SM / (OM - 1) : 1), SM === OM - 1 && (lM = Math.abs(lM) + jM.questionRiseSemitones / 2)), MM && tM(yM.text) && (aM += QM * JM, UM *= nM), OM > 1 && 0 === SM && (aM += LM * JM, UM *= zM), uM.push({
+              atMs: RM + SM * hM,
+              semitones: aM,
+              glideSemitones: lM,
+              durationMs: SM < OM - 1 ? Math.min(HM.durationMs, hM * mM) : HM.durationMs,
+              level: UM
             })
           }
-          iQ += wQ * jQ + (BQ.test(VQ.text) ? zQ : DQ.test(VQ.text) ? TQ : 0)
+          RM += OM * hM + (JM.test(yM.text) ? aM : lM.test(yM.text) ? jM : 0)
         }
       }
       return {
-        pieces: pQ.map((QQ => "space" === QQ.kind ? QQ : "icon" === QQ.kind ? {
+        pieces: EM.map((MM => "space" === MM.kind ? MM : "icon" === MM.kind ? {
           kind: "icon",
-          icon: QQ.text,
-          delayMs: QQ.delayMs
+          icon: MM.text,
+          delayMs: MM.delayMs
         } : {
           kind: "word",
-          text: QQ.text,
-          delayMs: QQ.delayMs
+          text: MM.text,
+          delayMs: MM.delayMs
         })),
-        blips: hQ
+        blips: uM
       }
     }
-    var hQ = XQ(1226),
-      iQ = XQ(1285),
-      cQ = XQ(2010);
+    var uM = iM(1188),
+      RM = iM(1258),
+      pM = iM(2045);
 
-    function AQ(QQ) {
-      if ("string" === typeof QQ) return QQ;
-      const WQ = iQ.h.get().getCurrentLanguageCode();
-      return (0, hQ.t)(WQ, QQ.translationKey, (0, hQ.r)(QQ.params, cQ.e.shown))
+    function WM(MM) {
+      if ("string" === typeof MM) return MM;
+      const rM = RM.e.get().getCurrentLanguageCode();
+      return (0, uM.r)(rM, MM.translationKey, (0, uM.o)(MM.params, pM.c.shown))
     }
 
-    function RQ(QQ) {
-      const WQ = void 0 === QQ.voice ? null : (0, wQ.p)(QQ.voice),
-        XQ = WQ && (0, wQ.l)(WQ);
+    function sM(MM) {
+      const rM = void 0 === MM.voice ? null : (0, OM.r)(MM.voice),
+        iM = rM && (0, OM.p)(rM);
       return {
-        plan: lQ(AQ(QQ.line), XQ),
-        synth: XQ
+        plan: gM(WM(MM.line), iM),
+        synth: iM
       }
     }
 
-    function EQ(QQ) {
-      const WQ = [];
-      let XQ = [];
-      for (const [qQ, TQ] of QQ.entries()) {
-        var wQ;
-        "space" === TQ.kind && (" " !== TQ.text || "icon" !== (null === (wQ = QQ[qQ + 1]) || void 0 === wQ ? void 0 : wQ.kind)) ? (XQ.length > 0 && WQ.push(XQ), WQ.push([TQ]), XQ = []) : XQ.push(TQ)
+    function DM(MM) {
+      const rM = [];
+      let iM = [];
+      for (const [SM, jM] of MM.entries()) {
+        var OM;
+        "space" === jM.kind && (" " !== jM.text || "icon" !== (null === (OM = MM[SM + 1]) || void 0 === OM ? void 0 : OM.kind)) ? (iM.length > 0 && rM.push(iM), rM.push([jM]), iM = []) : iM.push(jM)
       }
-      return XQ.length > 0 && WQ.push(XQ), WQ
+      return iM.length > 0 && rM.push(iM), rM
     }
   },
-  9099: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => TQ,
-      e: () => qQ
-    });
-    let wQ = null;
-    const qQ = function(QQ) {
-        const WQ = {
-          cycle: QQ,
-          canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
-        };
-        return wQ = WQ, () => {
-          wQ === WQ && (wQ = null)
-        }
-      },
-      TQ = () => {
-        var QQ;
-        return null !== (QQ = wQ) && void 0 !== QQ && QQ.canCycle() ? wQ.cycle : null
-      }
-  },
-  36906: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      B: () => DQ,
-      b: () => TQ,
-      f: () => BQ,
-      h: () => yQ,
-      j: () => sQ,
-      n: () => rQ,
-      r: () => VQ,
-      t: () => JQ,
-      u: () => pQ,
-      y: () => jQ
-    });
-    var wQ = XQ(26),
-      qQ = XQ(31);
-    const TQ = "clientGameInventoryButtonsChanged",
-      zQ = new Map;
-
-    function sQ() {
-      return [...zQ.values()].sort(((QQ, WQ) => {
-        var XQ, wQ;
-        return (null !== (XQ = QQ.order) && void 0 !== XQ ? XQ : 0) - (null !== (wQ = WQ.order) && void 0 !== wQ ? wQ : 0)
-      }))
-    }
-    let FQ = null;
-
-    function PQ(QQ) {
-      FQ = QQ
-    }
-    let gQ = !1;
-
-    function JQ(QQ) {
-      gQ = !0;
-      try {
-        QQ.onClick()
-      } finally {
-        gQ = !1
-      }
-      QQ.panel && "clientGame" === wQ.b.get("openInGameMenuName") && PQ(QQ.id)
-    }
-
-    function rQ() {
-      return gQ
-    }
-
-    function IQ() {
-      return sQ().filter((QQ => QQ.panel && !QQ.disabled))
-    }
-
-    function jQ(QQ) {
-      const WQ = IQ(),
-        XQ = WQ.findIndex((QQ => QQ.id === FQ));
-      return !(XQ < 0 || WQ.length < 2) && (JQ(WQ[(XQ + QQ + WQ.length) % WQ.length]), !0)
-    }
-
-    function BQ() {
-      return null !== FQ && IQ().length > 1
-    }
-
-    function yQ() {
-      PQ(null)
-    }
-
-    function VQ() {
-      "inventory" !== wQ.b.get("openInGameMenuName") && PQ(null)
-    }
-
-    function DQ() {
-      const QQ = FQ;
-      return PQ(null), QQ
-    }
-
-    function pQ(QQ) {
-      return zQ.set(QQ.id, QQ), qQ.k.mB(TQ, sQ(), !0), () => {
-        zQ.get(QQ.id) === QQ && (zQ.delete(QQ.id), qQ.k.mB(TQ, sQ()))
-      }
-    }
-  },
-  36900: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      A: () => gQ,
-      c: () => sQ,
-      g: () => DQ,
-      j: () => yQ,
-      n: () => VQ,
-      q: () => rQ,
-      s: () => PQ,
-      u: () => BQ,
-      y: () => IQ
-    });
-    var wQ = XQ(26),
-      qQ = XQ(31),
-      TQ = XQ(1335),
-      zQ = XQ(36906);
-    const sQ = "clientGameUiChanged";
-    let FQ = null;
-
-    function PQ() {
-      return FQ
-    }
-
-    function gQ(QQ, WQ) {
-      const XQ = {
-        content: QQ,
-        menu: WQ
-      };
-      return FQ = XQ, qQ.k.mB(sQ, FQ, !0), () => {
-        FQ === XQ && (FQ = null, jQ = !1, yQ(), qQ.k.mB(sQ, null))
-      }
-    }
-    let JQ = null;
-
-    function rQ() {
-      return JQ
-    }
-
-    function IQ(QQ) {
-      return JQ = QQ, () => {
-        JQ === QQ && (JQ = null)
-      }
-    }
-    let jQ = !1;
-
-    function BQ() {
-      const QQ = wQ.b.get("openInGameMenuName");
-      "clientGame" !== QQ && (jQ = "inventory" === QQ), (0, zQ.n)() || (0, zQ.h)(), (0, TQ.z)(TQ.e), wQ.b.set({
-        openInGameMenuName: "clientGame",
-        openEverythingMenuName: null
-      })
-    }
-
-    function yQ() {
-      pQ(!1)
-    }
-
-    function VQ() {
-      pQ(jQ)
-    }
-
-    function DQ() {
-      jQ && pQ(!1)
-    }
-
-    function pQ(QQ) {
-      "clientGame" === wQ.b.get("openInGameMenuName") && wQ.b.set({
-        openInGameMenuName: QQ ? "inventory" : null
-      }), QQ || (0, zQ.h)(), jQ = !1
-    }
-  },
-  38797: (QQ, WQ, XQ) => {
-    function wQ(QQ, WQ, XQ) {
-      const wQ = new Set,
-        qQ = new ResizeObserver(XQ),
-        TQ = () => {
-          const WQ = new Set(document.querySelectorAll(QQ));
-          let TQ = !1;
-          for (const QQ of wQ) WQ.has(QQ) || (qQ.unobserve(QQ), wQ.delete(QQ), TQ = !0);
-          for (const QQ of WQ) wQ.has(QQ) || (qQ.observe(QQ), zQ.observe(QQ, {
+  39509: (MM, rM, iM) => {
+    function OM(MM, rM, iM) {
+      const OM = new Set,
+        SM = new ResizeObserver(iM),
+        jM = () => {
+          const rM = new Set(document.querySelectorAll(MM));
+          let jM = !1;
+          for (const MM of OM) rM.has(MM) || (SM.unobserve(MM), OM.delete(MM), jM = !0);
+          for (const MM of rM) OM.has(MM) || (SM.observe(MM), aM.observe(MM, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), wQ.add(QQ));
-          TQ && XQ()
+          }), OM.add(MM));
+          jM && iM()
         },
-        zQ = new MutationObserver((WQ => {
-          WQ.some((QQ => "attributes" === QQ.type)) && XQ(), WQ.some((WQ => function(QQ, WQ, XQ) {
-            if ("childList" !== QQ.type) return !1;
-            for (const wQ of QQ.addedNodes)
-              if (wQ instanceof Element && (wQ.matches(WQ) || wQ.querySelector(WQ))) return !0;
-            for (const wQ of QQ.removedNodes)
-              if (wQ instanceof Element)
-                for (const QQ of XQ)
-                  if (wQ.contains(QQ)) return !0;
+        aM = new MutationObserver((rM => {
+          rM.some((MM => "attributes" === MM.type)) && iM(), rM.some((rM => function(MM, rM, iM) {
+            if ("childList" !== MM.type) return !1;
+            for (const OM of MM.addedNodes)
+              if (OM instanceof Element && (OM.matches(rM) || OM.querySelector(rM))) return !0;
+            for (const OM of MM.removedNodes)
+              if (OM instanceof Element)
+                for (const MM of iM)
+                  if (OM.contains(MM)) return !0;
             return !1
-          }(WQ, QQ, wQ))) && TQ()
+          }(rM, MM, OM))) && jM()
         }));
-      zQ.observe(document.body, {
+      aM.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const sQ of WQ) qQ.observe(sQ);
-      return window.addEventListener("resize", XQ), TQ(), XQ(), () => {
-        qQ.disconnect(), zQ.disconnect(), window.removeEventListener("resize", XQ)
+      for (const PM of rM) SM.observe(PM);
+      return window.addEventListener("resize", iM), jM(), iM(), () => {
+        SM.disconnect(), aM.disconnect(), window.removeEventListener("resize", iM)
       }
     }
-    XQ.d(WQ, {
-      c: () => wQ
+    iM.d(rM, {
+      b: () => OM
     })
   },
-  9246: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => sQ,
-      e: () => FQ
+  9467: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => PM,
+      e: () => nM
     });
-    var wQ = XQ(26),
-      qQ = XQ(1376),
-      TQ = XQ(105);
-    const zQ = {
+    var OM = iM(19),
+      SM = iM(1373),
+      jM = iM(83);
+    const aM = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -639,41 +407,41 @@ export const modules = {
       }
     };
 
-    function sQ() {
-      return (0, TQ.isMobile)() && "function" === typeof navigator.vibrate
+    function PM() {
+      return (0, jM.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const FQ = new class {
-      constructor(QQ) {
-        this.deps = QQ, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const nM = new class {
+      constructor(MM) {
+        this.deps = MM, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(QQ, WQ) {
-        var XQ;
+      play(MM, rM) {
+        var iM;
         if (!this.deps.enabled()) return;
-        const wQ = zQ[QQ],
-          qQ = null !== WQ && void 0 !== WQ ? WQ : wQ.pattern;
-        if (null === qQ) return void console.warn("No vibration pattern for", QQ);
-        const TQ = this.deps.now();
-        TQ - this.lastAnyAt < 40 && wQ.priority < this.playingPriority || TQ - (null !== (XQ = this.lastAt.get(QQ)) && void 0 !== XQ ? XQ : -1 / 0) < wQ.minGapMs || TQ < this.playingUntil && wQ.priority < this.playingPriority || (this.lastAt.set(QQ, TQ), this.lastAnyAt = TQ, this.playingUntil = TQ + qQ.reduce(((QQ, WQ) => QQ + WQ), 0), this.playingPriority = wQ.priority, this.deps.vibrate(qQ))
+        const OM = aM[MM],
+          SM = null !== rM && void 0 !== rM ? rM : OM.pattern;
+        if (null === SM) return void console.warn("No vibration pattern for", MM);
+        const jM = this.deps.now();
+        jM - this.lastAnyAt < 40 && OM.priority < this.playingPriority || jM - (null !== (iM = this.lastAt.get(MM)) && void 0 !== iM ? iM : -1 / 0) < OM.minGapMs || jM < this.playingUntil && OM.priority < this.playingPriority || (this.lastAt.set(MM, jM), this.lastAnyAt = jM, this.playingUntil = jM + SM.reduce(((MM, rM) => MM + rM), 0), this.playingPriority = OM.priority, this.deps.vibrate(SM))
       }
     }({
-      vibrate: QQ => {
-        navigator.vibrate([...QQ])
+      vibrate: MM => {
+        navigator.vibrate([...MM])
       },
       now: () => performance.now(),
-      enabled: () => sQ() && wQ.b.get("isTouchScreen") && wQ.b.get("clientEscMenuOptions").vibration && !(0, qQ.i)()
+      enabled: () => PM() && OM.d.get("isTouchScreen") && OM.d.get("clientEscMenuOptions").vibration && !(0, SM.i)()
     })
   },
-  5196: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => qQ,
-      f: () => wQ,
-      h: () => TQ,
-      l: () => FQ,
-      p: () => zQ
+  5251: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => SM,
+      h: () => OM,
+      l: () => jM,
+      p: () => nM,
+      r: () => aM
     });
-    const wQ = ["sine", "triangle", "square", "sawtooth"],
-      qQ = 55,
-      TQ = {
+    const OM = ["sine", "triangle", "square", "sawtooth"],
+      SM = 55,
+      jM = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -812,39 +580,39 @@ export const modules = {
         }
       };
 
-    function zQ(QQ) {
-      return "string" !== typeof QQ ? QQ : Object.hasOwn(TQ, QQ) ? TQ[QQ] : null
+    function aM(MM) {
+      return "string" !== typeof MM ? MM : Object.hasOwn(jM, MM) ? jM[MM] : null
     }
 
-    function sQ(QQ, WQ, XQ) {
-      return Math.min(XQ, Math.max(WQ, QQ))
+    function PM(MM, rM, iM) {
+      return Math.min(iM, Math.max(rM, MM))
     }
 
-    function FQ(QQ) {
-      const WQ = sQ(QQ.durationMs, 10, 500),
-        XQ = sQ(QQ.attackMs, 0, WQ),
+    function nM(MM) {
+      const rM = PM(MM.durationMs, 10, 500),
+        iM = PM(MM.attackMs, 0, rM),
         {
-          intonation: qQ
-        } = QQ;
+          intonation: SM
+        } = MM;
       return {
-        waveform: wQ.includes(QQ.waveform) ? QQ.waveform : "sine",
-        pitchHz: sQ(QQ.pitchHz, 20, 4e3),
-        glideSemitones: sQ(QQ.glideSemitones, -24, 24),
-        durationMs: WQ,
-        attackMs: XQ,
-        releaseMs: sQ(QQ.releaseMs, 0, WQ - XQ),
-        lowpassHz: null === QQ.lowpassHz ? null : sQ(QQ.lowpassHz, 20, 2e4),
-        volume: sQ(QQ.volume, 0, 2),
+        waveform: OM.includes(MM.waveform) ? MM.waveform : "sine",
+        pitchHz: PM(MM.pitchHz, 20, 4e3),
+        glideSemitones: PM(MM.glideSemitones, -24, 24),
+        durationMs: rM,
+        attackMs: iM,
+        releaseMs: PM(MM.releaseMs, 0, rM - iM),
+        lowpassHz: null === MM.lowpassHz ? null : PM(MM.lowpassHz, 20, 2e4),
+        volume: PM(MM.volume, 0, 2),
         intonation: {
-          variationSemitones: sQ(qQ.variationSemitones, 0, 6),
-          declineSemitones: sQ(qQ.declineSemitones, 0, 12),
-          questionRiseSemitones: sQ(qQ.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: sQ(qQ.exclaimLiftSemitones, 0, 12)
+          variationSemitones: PM(SM.variationSemitones, 0, 6),
+          declineSemitones: PM(SM.declineSemitones, 0, 12),
+          questionRiseSemitones: PM(SM.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: PM(SM.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: sQ(QQ.syllableMs, 25, 200)
+        syllableMs: PM(MM.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

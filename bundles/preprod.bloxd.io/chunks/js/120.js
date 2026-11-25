@@ -1,213 +1,364 @@
 export const id = 120;
-export const ids = [120, 140];
+export const ids = [120];
 export const modules = {
-  7002: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      loadShaderPackTextures: () => zQ,
-      shaderPackTextures: () => sQ
+  37303: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => nM
     });
-    var wQ = XQ(5396);
-    let qQ = null,
-      TQ = null;
+    var OM = iM(1116),
+      SM = iM.n(OM),
+      jM = iM(44),
+      aM = iM(4950),
+      PM = iM(1303);
 
-    function zQ() {
-      return TQ ??= Promise.all([XQ.e(75), XQ.e(192)]).then((() => XQ(40738))).then((QQ => {
-        let {
-          FORMER_BLOCK_IMAGE_NAMES: WQ,
-          textureNameToIndex: XQ,
-          textureAnimationData: TQ
-        } = QQ;
-        return qQ ??= (0, wQ.l)(XQ, TQ, WQ), qQ
-      })), TQ
-    }
-
-    function sQ() {
-      if (null === qQ) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return qQ
+    function nM(MM) {
+      let {
+        locked: rM,
+        children: iM
+      } = MM;
+      const OM = (0, jM.useRef)(null),
+        nM = (0, aM.e)(OM, "y");
+      return (0, PM.jsx)("div", {
+        ref: OM,
+        className: SM()("CreateCustomLobbyBody", {
+          CreateCustomLobbyBodyMoreAbove: nM.before,
+          CreateCustomLobbyBodyMoreBelow: nM.after
+        }),
+        "data-pad-ignore": rM || void 0,
+        children: iM
+      })
     }
   },
-  5396: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => sQ,
-      f: () => zQ,
-      i: () => wQ,
-      l: () => BQ,
-      m: () => JQ,
-      n: () => qQ,
-      r: () => TQ,
-      t: () => PQ,
-      w: () => gQ,
-      z: () => rQ
+  37384: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      showFirstWorldSetupPopup: () => JM
     });
-    const wQ = 5;
+    iM(5348), iM(37287);
+    var OM = iM(5003),
+      SM = iM(44),
+      jM = iM(4961),
+      aM = iM(1188),
+      PM = iM(1429),
+      nM = iM(37303),
+      QM = iM(5356),
+      zM = iM(1520),
+      LM = iM(3881),
+      mM = iM(37298),
+      HM = iM(4996),
+      hM = iM(1303);
 
-    function qQ(QQ) {
-      return QQ === wQ
+    function JM(MM) {
+      const rM = {
+        requested: !1,
+        closed: !1
+      };
+      PM.NotificationProvider.showCustomPopup({
+        body: iM => (0, hM.jsx)(dM, {
+          flow: rM,
+          close: iM,
+          ...MM
+        }),
+        middleScreenPopupClassName: "CreateCustomLobbyPopup",
+        onClose: () => {
+          rM.closed = !0, rM.requested || (0, HM.g)()
+        }
+      })
     }
 
-    function TQ(QQ) {
-      return [...QQ.features]
-    }
-    const zQ = 262144,
-      sQ = 256,
-      FQ = 256;
-
-    function PQ(QQ) {
-      if ("object" !== typeof QQ || null === QQ || Array.isArray(QQ)) return "The pack has no files.";
-      const WQ = [];
-      for (const [XQ, wQ] of Object.entries(QQ)) {
-        if ("string" !== typeof wQ) return `${XQ} isn't text.`;
-        WQ.push({
-          path: XQ,
-          source: wQ
-        })
-      }
-      return WQ.sort(((QQ, WQ) => JQ(QQ.path, WQ.path))),
-        function(QQ) {
-          if (0 === QQ.length) return "The pack has no .wgsl files.";
-          if (QQ.length > sQ) return `The pack has more than ${sQ} .wgsl files.`;
-          const WQ = new Set;
-          for (const {
-              path: XQ
+    function dM(MM) {
+      let {
+        flow: rM,
+        close: iM,
+        onCreating: PM,
+        onCreated: JM,
+        onFailedClosed: dM,
+        join: yM
+      } = MM;
+      const {
+        t: lM
+      } = (0, aM.A)(), [EM, UM] = (0, SM.useState)(OM.u), [GM, CM] = (0, SM.useState)(!1), [eM, bM] = (0, SM.useState)(""), wM = (0, LM.b)();
+      (0, SM.useEffect)((() => {
+        (0, HM.n)()
+      }), []);
+      const tM = MM => ({
+        isEnabled: () => EM.plugins[MM],
+        kR: rM => {
+          (0, HM.i)({
+            plugin: MM,
+            enabled: rM
+          }), UM({
+            ...EM,
+            plugins: {
+              ...EM.plugins,
+              [MM]: rM
             }
-            of QQ) {
-            const QQ = IQ(XQ);
-            if (null !== QQ) return QQ;
-            if (WQ.has(XQ)) return `The pack has two files at ${XQ}.`;
-            WQ.add(XQ)
-          }
-          return rQ(QQ) > zQ ? `The pack's .wgsl files are over ${zQ/1024} KB in total.` : null
-        }(WQ) ?? WQ
-    }
-
-    function gQ(QQ) {
-      const WQ = {};
-      for (const XQ of QQ) WQ[XQ.path] = XQ.source;
-      return WQ
-    }
-
-    function JQ(QQ, WQ) {
-      return QQ < WQ ? -1 : QQ > WQ ? 1 : 0
-    }
-
-    function rQ(QQ) {
-      const WQ = new TextEncoder;
-      let XQ = 0;
-      for (const {
-          source: wQ
-        }
-        of QQ) XQ += WQ.encode(wQ).byteLength;
-      return XQ
-    }
-
-    function IQ(QQ) {
-      if (!QQ.toLowerCase().endsWith(".wgsl")) return `${QQ} isn't a .wgsl file.`;
-      if (QQ.length > FQ) return `A file path is over ${FQ} characters.`;
-      if (QQ.includes("\\") || /[\u0000-\u001f]/.test(QQ)) return `${QQ} isn't a valid file path.`;
-      return QQ.split("/").some((QQ => "" === QQ || "." === QQ || ".." === QQ)) ? `${QQ} isn't a valid file path.` : null
-    }
-    const jQ = /^(.*)\[rot\[([1-4])$/;
-
-    function BQ(QQ, WQ) {
-      let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const wQ = new Map;
-      WQ.forEach(((QQ, WQ) => {
-        let {
-          numAnimStates: XQ,
-          animStartIdx: qQ
-        } = QQ;
-        for (let TQ = 1; TQ < XQ; TQ++) wQ.set(qQ + TQ - 1, WQ)
-      }));
-      const qQ = Object.entries(QQ),
-        TQ = new Map;
-      for (const [BQ, yQ] of qQ) {
-        const QQ = jQ.exec(BQ);
-        "1" === QQ?.[2] && TQ.set(QQ[1], yQ + 1)
-      }
-      const zQ = QQ => {
-          const WQ = jQ.exec(QQ);
-          return WQ && TQ.has(WQ[1]) ? {
-            root: WQ[1],
-            rotation: Number(WQ[2]) - 1
-          } : null
-        },
-        sQ = new Set(qQ.map((QQ => {
-          let [WQ] = QQ;
-          return zQ(WQ)?.root ?? WQ
-        }))),
-        FQ = (QQ, XQ) => {
-          const wQ = QQ.replace(/_?0$/, "");
-          return (WQ[XQ]?.numAnimStates ?? 0) > 1 && !sQ.has(wQ) ? wQ : QQ
-        },
-        PQ = new Map;
-      for (const [jQ, BQ] of qQ) PQ.set(BQ, FQ(zQ(jQ)?.root ?? jQ, BQ));
-      const gQ = qQ.reduce(((QQ, WQ) => {
-          let [, XQ] = WQ;
-          return Math.max(QQ, XQ + 1)
-        }), 0),
-        JQ = Array.from({
-          length: gQ
-        }, ((QQ, WQ) => ({
-          id: WQ + 1,
-          rotation: 0
-        }))),
-        rQ = new Map,
-        IQ = new Map;
-      for (const [jQ, BQ] of qQ) {
-        const QQ = zQ(jQ),
-          WQ = wQ.get(BQ);
-        if (void 0 !== WQ) {
-          const XQ = PQ.get(WQ);
-          IQ.set(jQ, {
-            name: jQ,
-            texture: XQ,
-            kind: "frame"
-          }), QQ && !IQ.has(QQ.root) && IQ.set(QQ.root, {
-            name: QQ.root,
-            texture: XQ,
-            kind: "frame"
-          });
-          continue
-        }
-        const XQ = PQ.get(BQ),
-          qQ = QQ?.root ?? jQ;
-        if (XQ !== qQ && IQ.set(qQ, {
-            name: qQ,
-            texture: XQ,
-            kind: "frame"
-          }), QQ) {
-          const WQ = TQ.get(QQ.root);
-          JQ[BQ] = {
-            id: WQ,
-            rotation: QQ.rotation
-          }, rQ.set(XQ, WQ), IQ.set(jQ, {
-            name: jQ,
-            texture: XQ,
-            kind: "rotation"
           })
-        } else rQ.set(XQ, BQ + 1)
-      }
-      for (const jQ of rQ.keys()) IQ.delete(jQ);
-      for (const [jQ, BQ] of XQ) {
-        const QQ = rQ.get(BQ);
-        void 0 === QQ || rQ.has(jQ) || (rQ.set(jQ, QQ), IQ.delete(jQ))
-      }
-      return {
-        named: [...rQ].sort(((QQ, WQ) => {
-          let [XQ] = QQ, [wQ] = WQ;
-          return XQ < wQ ? -1 : XQ > wQ ? 1 : 0
-        })).map((QQ => {
-          let [WQ, XQ] = QQ;
-          return {
-            name: WQ,
-            id: XQ
-          }
-        })),
-        aliases: [...IQ.values()],
-        layers: JQ
-      }
+        }
+      });
+      return (0, hM.jsxs)("div", {
+        className: "CreateCustomLobby",
+        children: [(0, hM.jsx)("div", {
+          className: "CreateCustomLobbyTitleContainer",
+          children: (0, hM.jsx)("div", {
+            className: "CreateCustomLobbyTitle",
+            children: lM("homePage:myWorld")
+          })
+        }), (0, hM.jsx)(nM.d, {
+          locked: GM,
+          children: (0, hM.jsxs)("div", {
+            className: "CreateCustomLobbyFields",
+            children: [(0, hM.jsx)(mM.c, {
+              value: EM.defaultGamemode,
+              onChange: MM => {
+                (0, OM.x)(MM) && MM !== EM.defaultGamemode && ((0, HM.i)({
+                  defaultGamemode: MM
+                }), UM({
+                  ...EM,
+                  defaultGamemode: MM
+                }))
+              },
+              showAll: !1,
+              disabled: GM
+            }), (0, hM.jsx)(mM.e, {
+              mapTypes: OM.j,
+              value: EM.mapType,
+              onChange: MM => {
+                (0, OM.y)(MM) && MM !== EM.mapType && ((0, HM.i)({
+                  mapType: MM
+                }), UM({
+                  ...EM,
+                  mapType: MM
+                }))
+              },
+              showAll: !1,
+              disabled: GM
+            }), (0, hM.jsx)(QM.b, {
+              callbacks: {
+                dayNight: tM("dayNight"),
+                fallDamage: tM("fallDamage"),
+                survivalGuns: tM("survivalGuns")
+              },
+              disabled: GM,
+              advancedMode: !1
+            })]
+          })
+        }), (0, hM.jsxs)("div", {
+          className: "CreateCustomLobbyFooter",
+          children: [(0, hM.jsx)(zM.p, {
+            className: "CreateCustomLobbyButton",
+            padDefaultFocus: !0,
+            loading: GM,
+            onClick: () => {
+              rM.requested = !0, CM(!0), PM(!0), bM(""), (0, HM.k)(EM), jM.b.createPersonalWorld(EM).then((MM => {
+                PM(!1);
+                const OM = JM(MM);
+                !rM.closed && wM.current ? (iM(), yM(MM)) : OM || (0, HM.g)()
+              }), (MM => {
+                if (console.error("Failed to create personal world:", MM), PM(!1), rM.requested = !1, rM.closed || !wM.current) return (0, HM.g)(), void dM(MM);
+                bM(MM.message), CM(!1)
+              }))
+            },
+            children: lM("general:play")
+          }), eM && (0, hM.jsx)("div", {
+            className: "CreateCustomLobbyError AnimFadeInScaleUp",
+            children: eM
+          })]
+        })]
+      })
     }
-  }
+  },
+  5356: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => QM
+    });
+    var OM = iM(1116),
+      SM = iM.n(OM),
+      jM = iM(5003),
+      aM = iM(1188),
+      PM = iM(1303);
+    const nM = [...jM.m, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+
+    function QM(MM) {
+      const {
+        disabled: rM,
+        hideWrapper: iM
+      } = MM, {
+        t: OM
+      } = (0, aM.A)(), QM = MM.advancedMode ? nM.map((rM => [rM, MM.callbacks[rM]])) : jM.m.map((rM => [rM, MM.callbacks[rM]])), LM = (0, PM.jsx)("div", {
+        className: SM()("PluginsGrid", {
+          SectionBody: !iM
+        }),
+        children: QM.map((MM => {
+          let [iM, OM] = MM;
+          return (0, PM.jsx)(zM, {
+            plugin: iM,
+            callbacks: OM,
+            disabled: rM
+          }, iM)
+        }))
+      });
+      return iM ? LM : (0, PM.jsxs)("div", {
+        className: "BloxdForm",
+        children: [(0, PM.jsx)("div", {
+          className: "SectionTitle",
+          children: OM("worldBuilder:pluginsSection")
+        }), LM]
+      })
+    }
+
+    function zM(MM) {
+      let {
+        plugin: rM,
+        callbacks: {
+          isEnabled: iM,
+          kR: OM
+        },
+        disabled: jM
+      } = MM;
+      const {
+        t: nM
+      } = (0, aM.A)(), QM = iM();
+      return (0, PM.jsxs)("div", {
+        className: SM()("PluginCard", {
+          PluginCardEnabled: QM,
+          PluginCardDisabledForm: jM
+        }),
+        "data-pad-focusable": !0,
+        "aria-disabled": jM || void 0,
+        onClick: () => {
+          jM || OM(!QM)
+        },
+        children: [(0, PM.jsx)("div", {
+          className: "PluginCardIcon",
+          children: (0, PM.jsx)("img", {
+            src: `/textures/games/classic/customGames/${rM}.png`,
+            alt: rM
+          })
+        }), (0, PM.jsxs)("div", {
+          className: "PluginCardBody",
+          children: [(0, PM.jsx)("div", {
+            className: "PluginCardTitle",
+            children: nM(LM[rM])
+          }), (0, PM.jsx)("div", {
+            className: "PluginCardDescription",
+            children: nM(mM[rM])
+          })]
+        }), (0, PM.jsx)("span", {
+          className: "PluginCardToggleLabel",
+          children: nM(QM ? "general:on" : "general:off")
+        })]
+      })
+    }
+    const LM = {
+        fallDamage: "classic:enableFallDamage",
+        tpRequests: "classic:enableTpRequests",
+        spawnProtection: "classic:enableSpawnProtection",
+        spawnReset: "classic:enableSpawnReset",
+        smpMarketplace: "classic:enableSmpMarketplace",
+        survivalGuns: "classic:enableSurvivalGuns",
+        dayNight: "classic:enableDayNight"
+      },
+      mM = {
+        fallDamage: "classic:enableFallDamageDescription",
+        tpRequests: "classic:enableTpRequestsDescription",
+        spawnProtection: "classic:enableSpawnProtectionDescription",
+        spawnReset: "classic:enableSpawnResetDescription",
+        smpMarketplace: "classic:enableSmpMarketplaceDescription",
+        survivalGuns: "classic:enableSurvivalGunsDescription",
+        dayNight: "classic:enableDayNightDescription"
+      }
+  },
+  37298: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => QM,
+      e: () => zM
+    });
+    iM(44);
+    var OM = iM(1116),
+      SM = iM.n(OM),
+      jM = iM(5003),
+      aM = iM(313),
+      PM = iM(1188),
+      nM = iM(1303);
+
+    function QM(MM) {
+      let {
+        value: rM,
+        onChange: iM,
+        showAll: OM,
+        disabled: QM = !1
+      } = MM;
+      const {
+        t: zM
+      } = (0, PM.A)();
+      return (0, nM.jsxs)("div", {
+        className: SM()("BloxdForm GamemodeForm", {
+          BasicOptions: !OM
+        }),
+        children: [(0, nM.jsx)("div", {
+          className: "SectionTitle",
+          children: zM("classic:defaultGamemode")
+        }), (0, nM.jsx)("div", {
+          className: "SectionBody",
+          children: jM.C.map((MM => OM || (0, jM.x)(MM) ? (0, nM.jsx)("button", {
+            type: "button",
+            className: SM()("WorldGamemode", {
+              Selected: rM === MM
+            }),
+            disabled: QM,
+            onClick: () => {
+              iM(MM)
+            },
+            style: {
+              "--background-image": `url(${aM.s[MM]})`
+            },
+            children: aM.p[MM]
+          }, MM) : null))
+        })]
+      })
+    }
+
+    function zM(MM) {
+      let {
+        mapTypes: rM,
+        value: iM,
+        onChange: OM,
+        showAll: QM,
+        disabled: zM = !1,
+        children: LM
+      } = MM;
+      const {
+        t: mM
+      } = (0, PM.A)();
+      return (0, nM.jsxs)("div", {
+        className: SM()("BloxdForm MapTypeForm", {
+          BasicOptions: !QM
+        }),
+        children: [(0, nM.jsx)("div", {
+          className: "SectionTitle",
+          children: mM("customLobby:mapType")
+        }), (0, nM.jsx)("div", {
+          className: "SectionBody",
+          children: rM.map((MM => QM || (0, jM.y)(MM) ? (0, nM.jsx)("button", {
+            type: "button",
+            className: SM()("MapType", {
+              Selected: iM === MM
+            }),
+            disabled: zM,
+            onClick: () => {
+              OM(MM)
+            },
+            style: {
+              "--background-image": `url(${aM.j[MM]})`
+            },
+            children: aM.i[MM]
+          }, MM) : null))
+        }), LM]
+      })
+    }
+  },
+  5348: () => {},
+  37287: () => {}
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

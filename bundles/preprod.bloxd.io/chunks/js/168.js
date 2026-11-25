@@ -1,43 +1,84 @@
 export const id = 168;
 export const ids = [168];
 export const modules = {
-  9333: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      pageBody: () => wQ
+  7230: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      AditudeSdkAdaptor: () => aM
     });
-    const wQ = {
-      whatIs: ["Mine, craft and survive in a huge block world that keeps running even when you log off. Bloxd Survival is an online multiplayer SMP. You explore, dig for ores, craft tools and armour, and build a base alongside everyone else on the server. It's free and runs straight in your browser. Fight monsters, loot other players and protect your land, or set up your own private server. This is the full-danger version. If you'd rather build in peace, Peaceful is the calmer option."],
-      howToPlay: ["Gather some resources and craft your first tools. Then dig deeper for iron, gold, diamonds and moonstone to make better gear. Keep an eye out for mobs. Draugr Zombies, Skeletons and Knights, Frost Zombies and Skeletons, Cave Golems and Frost Golems all roam the world. You'll also run into wolves, bears, deer, gorillas, horses and camels.", "Other players can fight you, raid your chests and break your builds, so you'll want to protect your base. Craft a Protector from diamonds and other players can't change blocks or open chests in that chunk. In a tribe? A Tribe Protector shares that protection with your friends. And build well away from spawn, because the blocks near it reset every few hours."],
-      features: ["Persistent SMP Worlds That Save Your Progress", "Mining, Crafting and Base Building", "PvP, Looting and Raiding", "Land Protection with Protectors and Tribe Protectors", "Draugr, Golems, Frost Mobs and Wild Animals to Battle", "Free Private Servers with Owner Commands"],
-      tips: ["Build away from spawn, or your base will get reset", "Get a Protector crafted from diamonds as soon as you can, to keep griefers out", "Don't log out mid-fight. If you're under 80 health and a player hit you in the last 8 seconds, you'll lose your items", "Log in to an account so your progress is saved for good", "Check in on your base at least once a month, because Protectors vanish after 30 days away", "Only let players you trust into your base", "Type /help in chat to see a list of useful commands"],
-      similarGames: ["classic_smp2", "classic_survivalDayNight", "classic_survivalGuns", "survivalFactory", "skyblock", "classic"],
-      faq: [{
-        question: "What is Bloxd Survival?",
-        answer: "A multiplayer survival game on Bloxd.io. You mine, craft, build and fight to survive in a shared block world that carries on while you're away."
-      }, {
-        question: "How do I protect my base in Bloxd Survival?",
-        answer: "Craft a Protector from diamonds and place it in your base. Other players then can't change blocks or open chests in that chunk. Tribes can use Tribe Protectors instead. Protectors disappear if you're away for more than 30 days."
-      }, {
-        question: "Why did my build disappear?",
-        answer: "Blocks near spawn reset every few hours, so build outside that area. Private lobbies reset only if their owner turns on Enable Spawn Reset."
-      }, {
-        question: "Is stealing and griefing allowed in Bloxd Survival?",
-        answer: "It is. Raiding, stealing and griefing are all part of the game, so protect your chests and only share your base with people you trust."
-      }, {
-        question: "Can I make a private server in Bloxd Survival?",
-        answer: "Yes. You can make a private server for free, invite your friends and use owner commands to run it however you like."
-      }, {
-        question: "What happens if I log out during a fight?",
-        answer: "Log out with less than 80 health within 8 seconds of being hit by a player and you'll lose your items. Get somewhere safe and heal up before you leave."
-      }, {
-        question: "Will my world still be there tomorrow?",
-        answer: "Yes. Survival worlds are persistent and keep running while you're gone. Signing in to an account keeps your progress safe even if your browser data gets cleared."
-      }, {
-        question: "Which Bloxd survival mode should I play?",
-        answer: "Survival is the classic one, with mobs, PvP and raiding. Peaceful is much calmer: no hostile mobs, no PvP and no health bar. Day & Night Survival is all about the day-night cycle and a Days Survived leaderboard. Survival with Guns adds craftable guns and armed mobs."
-      }]
+    var OM = iM(1367),
+      SM = iM(1177);
+    const jM = {
+      video: "pb-slot-interstitial-video",
+      rewarded: "pb-slot-rewarded-video"
+    };
+    class aM extends OM.d {
+      constructor() {
+        super(), this.name = "aditude"
+      }
+      static async setup() {
+        return window.tude = window.tude || {
+          cmd: []
+        }, await (0, SM.d)("https://edge.aditude.io/site/bloxd-Jf9xJheMSn/bloxd-longform/bloxd.io/prod/load.js"), new aM
+      }
+      playVideoAd(MM, rM) {
+        this.playVideoOrRewarded("video", MM, MM)
+      }
+      playRewarded(MM, rM) {
+        this.playVideoOrRewarded("rewarded", MM, rM)
+      }
+      renderBanner(MM) {
+        const rM = this.getBaseDivId(MM.adId, MM.width, MM.height);
+        window.tude.cmd.push((function() {
+          window.tude.refreshAdsViaDivMappings([{
+            divId: MM.divId,
+            baseDivId: rM
+          }])
+        }))
+      }
+      getBaseDivId(MM, rM, iM) {
+        return `pb-slot-bloxdio-${rM}-${iM}${MM>1?`-${MM}`:""}`
+      }
+      playVideoOrRewarded(MM, rM, iM) {
+        var OM;
+        let SM = !1;
+        const aM = () => {
+            document.getElementById("GenericVideoWrapper").style.display = "none", SM = !0
+          },
+          PM = (MM, rM) => {
+            console.error(`AD: Error while playing Aditude video ad: ${MM}:`, rM), aM(), iM()
+          };
+        if (console.log(`AD: Requesting Aditude ${MM} ad`), void 0 === (null === (OM = window.tude) || void 0 === OM ? void 0 : OM.requestInstreamPlayer)) return console.log(`AD: Aditude ad lib not loaded, no ${MM} ad playing`), void PM("Aditude ad lib not loaded", null);
+        document.getElementById("GenericVideoWrapper").style.display = "flex", document.getElementById("GenericVideoInner").classList.add("AditudeVideo"), window.tude.cmd.push((function() {
+          console.log("AD: Inside Aditude window.tude.cmd.push");
+          try {
+            window.tude.requestInstreamPlayer({
+              code: jM[MM],
+              divId: "GenericVideoInner",
+              mode: "adOnly"
+            }).then((iM => {
+              console.log("AD: Inside Aditude window.tude.requestInstreamPlayer.then"), iM.on("playerClose", ((iM, OM) => {
+                console.log("AD: Inside Aditude player.on playerClose"), console.log(`AD: Successfully finished Aditude ${MM} ad`), aM(), rM()
+              })).on("adPrefetchError", ((MM, rM) => {
+                console.log("AD: Inside Aditude player.on adPrefetchError"), PM("Prefetch error", rM)
+              })).on("adError", ((MM, rM) => {
+                console.log("AD: Inside Aditude player.on adError"), PM("Generic error", rM)
+              }));
+              const OM = MM => {
+                setTimeout((() => {
+                  SM || iM.setVideoVolume(.5)
+                }), MM)
+              };
+              OM(500), OM(1e3), OM(1500), OM(2e3)
+            })).catch((MM => {
+              PM("Error occurred while requesting instream player", MM)
+            }))
+          } catch (iM) {
+            PM("Failed to request instream player", iM)
+          }
+        }))
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

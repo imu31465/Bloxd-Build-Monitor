@@ -1,249 +1,444 @@
 export const id = 143;
 export const ids = [143];
 export const modules = {
-  7007: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => GQ,
-      i: () => UQ,
-      k: () => DQ,
-      n: () => VQ
+  7061: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => PM
     });
-    var wQ = XQ(7015);
-    const qQ = 6,
-      TQ = 3,
-      zQ = 1,
-      sQ = 2,
-      FQ = 4,
-      PQ = 8,
-      gQ = 16,
-      JQ = 32,
-      rQ = 64,
-      IQ = 128,
-      jQ = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var OM = iM(1116),
+      SM = iM.n(OM),
+      jM = iM(1188),
+      aM = iM(1303);
 
-    function BQ(QQ) {
-      if (!QQ) return 0;
-      const WQ = jQ.indexOf(QQ);
-      if (WQ <= 0) throw new Error(`"${QQ}" is not a shader pack hook function`);
-      return WQ
-    }
-
-    function yQ(QQ) {
-      if (0 === QQ) return null;
-      const WQ = jQ[QQ];
-      if (void 0 === WQ) throw new Error(`${QQ} is not a shader pack hook function id`);
-      return WQ
-    }
-
-    function VQ(QQ) {
-      const WQ = wQ.d.length;
-      return {
-        strict: QQ >= WQ,
-        program: wQ.d[QQ % WQ]
-      }
-    }
-
-    function DQ(QQ) {
-      return Number(QQ.strict) * wQ.d.length + wQ.d.indexOf(QQ.program)
-    }
-
-    function pQ(QQ) {
-      return "" === QQ ? [] : QQ.split(" ")
-    }
-
-    function GQ(QQ) {
-      const WQ = {
-        variantFlags: new Uint8Array(qQ),
-        hooks: new Uint8Array(qQ * TQ),
-        moduleCodes: Array(qQ).fill(""),
-        reads: Array(2 * qQ).fill("")
-      };
-      for (const XQ of QQ) {
-        const QQ = DQ(XQ.key),
-          wQ = (QQ, WQ) => null === XQ.hooks.surface || XQ.reads.fragment.includes(QQ) ? 0 : WQ;
-        WQ.variantFlags[QQ] = (XQ.sceneDepth ? zQ : 0) | (XQ.movesVertices ? sQ : 0) | (XQ.sunShadow ? FQ : 0) | (XQ.airShadow ? PQ : 0) | (XQ.discards ? gQ : 0) | wQ("localPosition", JQ) | wQ("enchantSpeed", rQ) | wQ("enchantTier", IQ), WQ.hooks[QQ * TQ] = BQ(XQ.hooks.vertex), WQ.hooks[QQ * TQ + 1] = BQ(XQ.hooks.surface), WQ.hooks[QQ * TQ + 2] = BQ(XQ.hooks.light), WQ.moduleCodes[QQ] = XQ.moduleCode, WQ.reads[2 * QQ] = XQ.reads.vertex.join(" "), WQ.reads[2 * QQ + 1] = XQ.reads.fragment.join(" ")
-      }
-      return WQ
-    }
-
-    function UQ(QQ) {
+    function PM(MM) {
+      let {
+        item: rM,
+        className: iM
+      } = MM;
       const {
-        hooks: WQ,
-        moduleCodes: XQ,
-        reads: wQ
-      } = QQ;
-      return Array.from(QQ.variantFlags, ((QQ, qQ) => {
-        const JQ = qQ * TQ;
-        return {
-          key: VQ(qQ),
-          hooks: {
-            vertex: yQ(WQ[JQ]),
-            surface: yQ(WQ[JQ + 1]),
-            light: yQ(WQ[JQ + 2])
-          },
-          moduleCode: XQ[qQ],
-          sceneDepth: 0 !== (QQ & zQ),
-          sunShadow: 0 !== (QQ & FQ),
-          airShadow: 0 !== (QQ & PQ),
-          movesVertices: 0 !== (QQ & sQ),
-          discards: 0 !== (QQ & gQ),
-          reads: {
-            vertex: pQ(wQ[2 * qQ]),
-            fragment: pQ(wQ[2 * qQ + 1])
-          }
+        t: OM
+      } = (0, jM.A)();
+      return null === rM.renderId || rM.previewsOutdated ? (0, aM.jsx)("div", {
+        className: SM()("ShaderPackPreviewsNotice", iM),
+        children: (0, aM.jsx)("span", {
+          children: OM(null === rM.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
+        })
+      }) : null
+    }
+  },
+  7081: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => QM
+    });
+    var OM = iM(1116),
+      SM = iM.n(OM),
+      jM = iM(7054),
+      aM = iM(1188),
+      PM = iM(7051),
+      nM = iM(1303);
+
+    function QM(MM) {
+      let {
+        selected: rM,
+        onSelect: iM,
+        imageUrl: OM
+      } = MM;
+      const {
+        t: QM
+      } = (0, aM.A)();
+      return (0, nM.jsx)("div", {
+        className: "ShaderPackViewPicker",
+        children: jM.E.map((MM => {
+          const jM = OM(MM);
+          return (0, nM.jsxs)("button", {
+            type: "button",
+            "aria-pressed": MM === rM,
+            className: SM()("ShaderPackViewOption", {
+              Selected: MM === rM
+            }),
+            onClick: () => {
+              iM(MM)
+            },
+            children: [null !== jM && (0, nM.jsx)("img", {
+              src: jM,
+              alt: "",
+              loading: "lazy",
+              draggable: !1
+            }), (0, nM.jsx)("span", {
+              className: "SmallTextBold",
+              children: QM(PM.db[MM])
+            })]
+          }, MM)
+        }))
+      })
+    }
+  },
+  7068: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => mM,
+      e: () => HM,
+      h: () => LM,
+      l: () => hM
+    });
+    var OM = iM(44),
+      SM = iM(7054),
+      jM = iM(1573),
+      aM = iM(7051),
+      PM = iM(7077),
+      nM = iM(1142);
+    const QM = "shaderPackListingView",
+      zM = "shaderPackListingFilterOpen";
+
+    function LM() {
+      var MM;
+      const [rM, iM] = (0, PM.e)(QM, SM.E[0]);
+      return [null !== (MM = SM.E.find((MM => MM === rM))) && void 0 !== MM ? MM : SM.E[0], iM]
+    }
+
+    function mM() {
+      (0, OM.useEffect)((() => () => {
+        window.location.pathname.startsWith(aM.P) || (0, aM.h)()
+      }), [])
+    }
+
+    function HM() {
+      return (0, PM.e)(zM, !1)
+    }
+
+    function hM() {
+      const {
+        userContext: MM,
+        isUserContextUpdating: rM
+      } = (0, nM.b)(), [iM, SM] = (0, OM.useState)(null), aM = (0, OM.useRef)(new Set);
+
+      function PM(MM, rM) {
+        SM((iM => {
+          const OM = new Set(iM);
+          return rM ? OM.add(MM) : OM.delete(MM), OM
+        }))
+      }
+      return (0, OM.useEffect)((() => {
+        if (rM) return;
+        let iM = !1;
+        return jM.c.getFavouriteShaderPacks(MM).then((MM => {
+          iM || SM(new Set(MM))
+        })).catch((MM => {
+          console.error("Failed to get favourite shader packs", MM), iM || SM(new Set)
+        })), () => {
+          iM = !0
         }
-      }))
+      }), [MM, rM]), {
+        isFavourite: MM => null === iM ? null : iM.has(MM),
+        toggle: function(rM) {
+          if (null === iM || aM.current.has(rM)) return;
+          aM.current.add(rM);
+          const OM = !iM.has(rM);
+          PM(rM, OM), (OM ? jM.c.favouriteShaderPack(MM, rM) : jM.c.unfavouriteShaderPack(MM, rM)).catch((MM => {
+            console.error("Failed to change a favourite shader pack", MM), PM(rM, !OM)
+          })).finally((() => {
+            aM.current.delete(rM)
+          }))
+        }
+      }
     }
   },
-  40917: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      A: () => jQ,
-      b: () => qQ,
-      d: () => wQ,
-      h: () => rQ,
-      i: () => gQ,
-      k: () => yQ,
-      n: () => TQ,
-      p: () => sQ,
-      r: () => FQ,
-      t: () => zQ,
-      w: () => BQ,
-      z: () => IQ
+  7051: (MM, rM, iM) => {
+    iM.d(rM, {
+      $: () => DM,
+      B: () => zM,
+      F: () => RM,
+      I: () => JM,
+      K: () => fM,
+      N: () => ZM,
+      P: () => aM,
+      S: () => oM,
+      W: () => nM,
+      Y: () => PM,
+      c: () => lM,
+      d: () => wM,
+      db: () => kM,
+      fb: () => EM,
+      g: () => dM,
+      h: () => mM,
+      j: () => LM,
+      jb: () => uM,
+      n: () => pM,
+      q: () => HM,
+      r: () => WM,
+      u: () => YM,
+      w: () => hM,
+      x: () => yM,
+      z: () => gM
     });
-    const wQ = 3,
-      qQ = 0,
-      TQ = 1,
-      zQ = 2,
-      sQ = {
-        uniform: 3,
-        Gr: 4,
-        special: 5,
-        volume: 6,
-        sampler: 7,
-        entities: 8,
-        entityGrids: 9
+    var OM = iM(7054),
+      SM = iM(143),
+      jM = iM(4937);
+    const aM = "/shader-packs",
+      PM = `${aM}/publish`;
+
+    function nM(MM) {
+      return `${aM}/${encodeURIComponent(MM)}`
+    }
+    let QM = null;
+
+    function zM(MM) {
+      QM = MM
+    }
+
+    function LM() {
+      return QM
+    }
+
+    function mM() {
+      QM = null
+    }
+
+    function HM(MM) {
+      return MM.playerHasRank("developer") || MM.playerHasRank("admin")
+    }
+    const hM = ["terrain", "water", "models", "sunShadows", "strict"],
+      JM = {
+        terrain: "shaderPackListing:filterTerrain",
+        water: "shaderPackListing:filterWater",
+        models: "shaderPackListing:filterModels",
+        sunShadows: "shaderPackListing:filterShadows",
+        strict: "shaderPackListing:filterAllGames"
+      };
+
+    function dM(MM, rM) {
+      return MM.withFeatures.includes(rM) ? "with" : MM.withoutFeatures.includes(rM) ? "without" : null
+    }
+
+    function yM(MM) {
+      return null === MM ? "with" : "with" === MM ? "without" : null
+    }
+
+    function lM(MM) {
+      return "with" === MM ? "only" : null === MM ? "include" : void 0
+    }
+
+    function EM(MM, rM) {
+      const iM = dM(MM, rM),
+        OM = MM => MM.filter((MM => MM !== rM));
+      return {
+        withFeatures: null === iM ? [...MM.withFeatures, rM] : OM(MM.withFeatures),
+        withoutFeatures: "with" === iM ? [...MM.withoutFeatures, rM] : OM(MM.withoutFeatures)
+      }
+    }
+    const UM = "section",
+      GM = "sort",
+      CM = "filters",
+      eM = "q",
+      bM = "banned",
+      wM = "popular",
+      tM = "strict";
+
+    function gM(MM) {
+      var rM, iM, SM;
+      const aM = MM.get(UM),
+        PM = (null !== (rM = MM.get(CM)) && void 0 !== rM ? rM : tM).split(","),
+        nM = MM.get(bM);
+      return {
+        section: "favourites" === aM || "mine" === aM ? aM : "explore",
+        sort: null !== (iM = OM.y.find((rM => rM === MM.get(GM)))) && void 0 !== iM ? iM : wM,
+        withFeatures: hM.filter((MM => PM.includes(MM) && !PM.includes(`-${MM}`))),
+        withoutFeatures: hM.filter((MM => PM.includes(`-${MM}`))),
+        searchQuery: (null === (SM = MM.get(eM)) || void 0 === SM ? void 0 : SM.slice(0, OM.M)) || null,
+        pageNumber: (0, jM.d)(MM.get(jM.c)),
+        banned: "only" === nM ? "with" : "include" === nM ? null : "without"
+      }
+    }
+
+    function uM(MM, rM) {
+      var iM;
+      const OM = sM(rM);
+      (0, jM.f)(MM, UM, "explore" === rM.section ? null : rM.section), (0, jM.f)(MM, GM, rM.sort === wM ? null : rM.sort), (0, jM.f)(MM, CM, OM === tM ? null : OM), (0, jM.f)(MM, eM, rM.searchQuery), (0, jM.f)(MM, bM, null !== (iM = lM(rM.banned)) && void 0 !== iM ? iM : null), (0, jM.h)(MM, rM.pageNumber)
+    }
+
+    function RM(MM) {
+      const rM = new URLSearchParams;
+      return uM(rM, {
+        section: "explore",
+        sort: wM,
+        withFeatures: "strict" === MM ? [MM] : [MM, "strict"],
+        withoutFeatures: [],
+        searchQuery: null,
+        pageNumber: 1,
+        banned: "without"
+      }), `${aM}?${rM.toString()}`
+    }
+
+    function pM(MM) {
+      return sM(MM) === tM
+    }
+
+    function WM(MM) {
+      return null !== MM.searchQuery || "with" === MM.banned || sM(MM) !== tM
+    }
+
+    function sM(MM) {
+      return hM.flatMap((rM => {
+        const iM = dM(MM, rM);
+        return "with" === iM ? [rM] : "without" === iM ? [`-${rM}`] : []
+      })).join(",")
+    }
+    const DM = {
+        popular: "shaderPackListing:sortPopular",
+        updated: "shaderPackListing:sortUpdated",
+        newest: "shaderPackListing:sortNewest"
       },
-      FQ = 10,
-      PQ = "BloxdPackInputs",
-      gQ = "bloxdPackInputs",
-      JQ = [{
-        name: "seconds",
-        type: "f32",
-        offset: 0
-      }, {
-        name: "lit",
-        type: "u32",
-        offset: 4
-      }, {
-        name: "renderOffset",
-        type: "vec3i",
-        offset: 16
-      }, {
-        name: "sunDirection",
-        type: "vec3f",
-        offset: 32
-      }, {
-        name: "eyePosition",
-        type: "vec3f",
-        offset: 48
-      }, {
-        name: "shadowDirection",
-        type: "vec3f",
-        offset: 64
-      }],
-      rQ = 80;
+      kM = {
+        forest: "shaderPackListing:viewForest",
+        desert: "shaderPackListing:viewDesert",
+        water: "shaderPackListing:viewWater",
+        night: "shaderPackListing:viewNight",
+        cave: "shaderPackListing:viewCave"
+      };
 
-    function IQ() {
-      const QQ = JQ.map((QQ => {
-        let {
-          name: WQ,
-          type: XQ
-        } = QQ;
-        return `    ${WQ}: ${XQ},\n`
-      })).join("");
-      return `struct ${PQ} {\n${QQ}}\n@group(${wQ}) @binding(${qQ}) var<uniform> ${gQ}: ${PQ};\n`
+    function ZM(MM) {
+      return Math.round(100 * Math.max(0, 1 - 1 / MM))
     }
 
-    function jQ(QQ, WQ) {
-      const XQ = new DataView(QQ, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, rQ),
-        [wQ, qQ, TQ, zQ, sQ, FQ] = JQ;
-      XQ.setFloat32(wQ.offset, WQ.seconds, !0), XQ.setUint32(qQ.offset, WQ.lit ? 1 : 0, !0);
-      for (let PQ = 0; PQ < 3; PQ++) XQ.setInt32(TQ.offset + 4 * PQ, WQ.renderOffset[PQ], !0), XQ.setFloat32(zQ.offset + 4 * PQ, WQ.IQQ[PQ], !0), XQ.setFloat32(sQ.offset + 4 * PQ, WQ.eyePosition[PQ], !0), XQ.setFloat32(FQ.offset + 4 * PQ, WQ.shadowDirection[PQ], !0)
+    function oM(MM, rM, iM, SM) {
+      const jM = [];
+      MM.isBanned && jM.push({
+        tone: "warning",
+        text: SM("shaderPackListing:ownerBanned"),
+        detail: null
+      });
+      const {
+        pending: aM
+      } = MM;
+      if (null === MM.brokenError || aM && !aM.error || jM.push({
+          tone: "warning",
+          text: SM("shaderPackListing:ownerBroken"),
+          detail: MM.brokenError
+        }), null !== aM && void 0 !== aM && aM.error) jM.push({
+        tone: "warning",
+        text: SM(rM ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, OM.m)(aM.error) ? null : aM.error
+      });
+      else if (aM) {
+        const MM = null === aM.renderNotBefore ? 0 : aM.renderNotBefore - iM,
+          OM = String(Math.ceil(MM / 6e4)),
+          PM = SM(rM ? MM > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : MM > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: OM
+          });
+        jM.push({
+          tone: "info",
+          text: PM,
+          detail: null
+        })
+      }
+      return MM.listed || jM.push({
+        tone: "info",
+        text: SM("shaderPackListing:ownerUnlisted"),
+        detail: null
+      }), jM
     }
 
-    function BQ(QQ) {
-      const WQ = new Uint32Array(Math.max(1, QQ.length));
-      return QQ.forEach(((QQ, XQ) => {
-        let {
-          id: wQ,
-          rotation: qQ
-        } = QQ;
-        WQ[XQ] = 65535 & wQ | (3 & qQ) << 16
-      })), WQ
+    function fM(MM) {
+      return Math.max(1, Math.round(MM / 1024))
     }
-    const yQ = {
-      off: 0,
-      strict: 1,
-      allow: 2
+
+    function YM(MM, rM, iM) {
+      return MM instanceof SM.e && MM.errorMessageForUser ? MM.errorMessageForUser : rM(iM)
     }
   },
-  7015: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => wQ,
-      h: () => zQ,
-      i: () => sQ,
-      m: () => qQ,
-      n: () => TQ
+  7077: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => jM
     });
-    const wQ = ["terrain", "liquid", "model"];
+    var OM = iM(44),
+      SM = iM(30);
 
-    function qQ() {
-      const QQ = [];
-      for (const WQ of [!1, !0])
-        for (const XQ of wQ) QQ.push({
-          strict: WQ,
-          program: XQ
-        });
-      return QQ
-    }
-
-    function TQ(QQ) {
-      return `${QQ.strict?"strict":"allow"}.${QQ.program}`
-    }
-
-    function zQ(QQ) {
-      return !QQ.hooks.vertex && !QQ.hooks.surface && !QQ.hooks.light
-    }
-
-    function sQ(QQ, WQ) {
-      return "off" !== WQ && (null === QQ || QQ.some((QQ => QQ.key.strict === ("strict" === WQ) && !zQ(QQ))))
+    function jM(MM, rM) {
+      var iM;
+      const [jM, aM] = (0, OM.useState)(null !== (iM = SM.g.getItem(MM)) && void 0 !== iM ? iM : rM);
+      return [jM, rM => {
+        SM.g.setItem(MM, rM), aM(rM)
+      }]
     }
   },
-  41513: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      SHADER_PACK_INPUTS_BINDING: () => TQ.b,
-      SHADER_PACK_INPUTS_GROUP: () => TQ.d,
-      SHADER_PACK_INPUTS_SIZE: () => TQ.h,
-      SHADER_PACK_INPUTS_VAR: () => TQ.i,
-      SHADER_PACK_MODES: () => TQ.k,
-      SHADER_PACK_PROGRAMS: () => wQ.d,
-      SHADER_PACK_SCENE_DEPTH_BINDING: () => TQ.n,
-      SHADER_PACK_SUN_SHADOW_BINDINGS: () => TQ.p,
-      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => TQ.r,
-      SHADER_PACK_TEXTURES_BINDING: () => TQ.t,
-      encodeTextureLayers: () => TQ.w,
-      flattenVariants: () => qQ.e,
-      isVariantOff: () => wQ.h,
-      packRunsIn: () => wQ.i,
-      shaderPackInputsWgsl: () => TQ.z,
-      shaderPackVariantKeys: () => wQ.m,
-      variantKeyId: () => wQ.n,
-      writeShaderPackInputs: () => TQ.A
+  7054: (MM, rM, iM) => {
+    iM.d(rM, {
+      D: () => aM,
+      E: () => OM,
+      I: () => mM,
+      M: () => zM,
+      Q: () => UM,
+      U: () => LM,
+      V: () => QM,
+      b: () => hM,
+      e: () => dM,
+      g: () => JM,
+      k: () => HM,
+      m: () => EM,
+      q: () => CM,
+      t: () => nM,
+      v: () => SM,
+      w: () => GM,
+      y: () => jM,
+      z: () => PM
     });
-    var wQ = XQ(7015),
-      qQ = XQ(7007),
-      TQ = XQ(40917)
+    const OM = ["forest", "desert", "water", "night", "cave"];
+    const SM = {
+        full: {
+          width: 3840,
+          height: 2160
+        },
+        large: {
+          width: 1920,
+          height: 1080
+        },
+        thumb: {
+          width: 640,
+          height: 360
+        }
+      },
+      jM = ["popular", "updated", "newest"],
+      aM = 3,
+      PM = 32,
+      nM = 300;
+
+    function QM(MM, rM) {
+      return MM.slice(0, rM).replace(/[\uD800-\uDBFF]$/, "")
+    }
+    const zM = 64,
+      LM = 512,
+      mM = 18e5;
+
+    function HM(MM) {
+      const rM = MM,
+        iM = null === rM || void 0 === rM ? void 0 : rM.files;
+      return "number" === typeof(null === rM || void 0 === rM ? void 0 : rM.apiVersion) && "string" === typeof rM.name && (null === rM.author || "string" === typeof rM.author) && (void 0 === rM.keepCircleShadows || "boolean" === typeof rM.keepCircleShadows) && "object" === typeof iM && null !== iM && Object.values(iM).every((MM => "string" === typeof MM))
+    }
+    const hM = "Bloxdhub",
+      JM = "https://bloxdhub.com/shaders";
+
+    function dM(MM) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(MM)}`
+    }
+    const yM = "Screenshot generation failed.",
+      lM = "Its screenshots couldn't be generated:";
+
+    function EM(MM) {
+      var rM;
+      return MM === yM || null !== (rM = null === MM || void 0 === MM ? void 0 : MM.startsWith(lM)) && void 0 !== rM && rM
+    }
+
+    function UM(MM, rM) {
+      return `shaderPacks/${MM}/${rM}.json`
+    }
+
+    function GM(MM, rM, iM, OM) {
+      return null === rM.renderId ? CM(MM, rM.baselineVersion, iM, OM) : `${MM}/${function(MM,rM,iM,OM){return`shaderPacks/${MM}/${rM}/${iM}-${OM}.webp`}(rM.packId,rM.renderId,iM,OM)}`
+    }
+
+    function CM(MM, rM, iM, OM) {
+      return `${MM}/${function(MM,rM,iM){return`shaderPacks/baseline/${MM}/${rM}-${iM}.webp`}(rM,iM,OM)}`
+    }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

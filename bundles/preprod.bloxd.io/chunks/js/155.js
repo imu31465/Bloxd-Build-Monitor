@@ -1,123 +1,273 @@
 export const id = 155;
 export const ids = [155];
 export const modules = {
-  8493: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      AdMobSdkAdaptor: () => gQ
+  44389: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      compilePagePack: () => QM,
+      prefetchCompiler: () => PM,
+      reconcileHint: () => nM
     });
-    var wQ = XQ(1368),
-      qQ = XQ(26),
-      TQ = XQ(1747),
-      zQ = XQ(158),
-      sQ = XQ(3727),
-      FQ = XQ(402);
-    const PQ = {
-      mobileAndroid: {
-        banners: {
-          leaderboard_1: "ca-app-pub-5991928098122027/7081016880",
-          leaderboard_4: "ca-app-pub-5991928098122027/6301601920",
-          leaderboard_5: "ca-app-pub-5991928098122027/7592152779",
-          skyscraper_1: "ca-app-pub-5991928098122027/1026744422",
-          skyscraper_2: "ca-app-pub-5991928098122027/3483866894",
-          square_1: "ca-app-pub-5991928098122027/6381115670"
-        },
-        rewarded: "ca-app-pub-5991928098122027/5726886857",
-        interstitial: "ca-app-pub-5991928098122027/1979213537"
-      },
-      mobileIos: {
-        banners: {
-          leaderboard_1: "ca-app-pub-5991928098122027/4652945503",
-          leaderboard_4: "ca-app-pub-5991928098122027/2921518285",
-          leaderboard_5: "ca-app-pub-5991928098122027/7518781992",
-          skyscraper_1: "ca-app-pub-5991928098122027/8344778507",
-          skyscraper_2: "ca-app-pub-5991928098122027/3781201590",
-          square_1: "ca-app-pub-5991928098122027/2468119924"
-        },
-        rewarded: "ca-app-pub-5991928098122027/5014392212",
-        interstitial: "ca-app-pub-5991928098122027/4405533493"
+    var OM = iM(7111),
+      SM = iM(7142),
+      jM = iM(7120),
+      aM = iM(7134);
+
+    function PM() {
+      (0, OM.loadPageShaderPackCompiler)()
+    }
+    async function nM() {
+      const MM = await (0, OM.loadPageShaderPackCompiler)();
+      await (MM ? (0, SM.reconcileStoredShaderPackHint)(MM) : (0, SM.forgetShaderPackActiveHint)())
+    }
+    async function QM(MM) {
+      const rM = await (0, OM.loadPageShaderPackCompiler)();
+      if (!rM) return {
+        status: "none"
+      };
+      const iM = await (0, aM.e)(MM, rM),
+        PM = (0, SM.storedPackOutcome)(iM, rM);
+      if ("none" === PM.kind) return {
+        status: "none"
+      };
+      const nM = rM.zMM((0, SM.storedShaderPackFiles)(iM), (0, jM.shaderPackTextures)());
+      if ("blocked" === PM.kind) return {
+        status: "blocked",
+        messageKey: PM.messageKey,
+        variants: 0 === nM.errors.length ? nM.variants : null
+      };
+      if (nM.errors.length > 0) return console.error("Shader pack failed to compile after passing validation", nM.errors), {
+        status: "none"
+      };
+      const {
+        name: QM,
+        keepCircleShadows: zM
+      } = iM.manifest;
+      return {
+        status: "active",
+        pack: {
+          name: QM,
+          variants: nM.variants,
+          keepCircleShadows: !0 === zM
+        }
       }
-    };
-    class gQ extends wQ.c {
-      constructor(QQ) {
-        super(), this.name = "admob", this.bannerAutoRefresh = "alwaysOn", this.adUnitIds = void 0, this.bannerPlacementByBloxdId = new Map, this.bannerFirstResponseSeen = new Set, this.fullScreenAdsInFlight = 0, this.adUnitIds = PQ[QQ], TQ.e.on("ads.bannerStatus", (QQ => {
-          let {
-            placementId: WQ,
-            shown: XQ,
-            error: wQ
-          } = QQ;
-          const qQ = !this.bannerFirstResponseSeen.has(WQ);
-          this.bannerFirstResponseSeen.add(WQ), qQ ? XQ ? console.log(`AD ${WQ}: AdMob banner loaded`) : console.warn(`AD ${WQ}: AdMob banner failed to load: ${wQ}`) : XQ || console.warn(`AD ${WQ}: AdMob banner refresh failed: ${wQ}`)
-        }))
+    }
+  },
+  7142: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      forgetShaderPackActiveHint: () => uM,
+      isOtherApiVersion: () => bM,
+      isShaderPackActive: () => UM,
+      isShaderPackChangePending: () => eM,
+      markShaderPackChangePending: () => CM,
+      pageShaderPackValidationVersion: () => wM,
+      reconcileStoredShaderPackHint: () => gM,
+      removeShaderPack: () => EM,
+      replaceShaderPack: () => dM,
+      saveShaderPack: () => JM,
+      shaderPackNeedsCheck: () => tM,
+      storedPackOutcome: () => GM,
+      storedShaderPackFiles: () => mM,
+      toStoredShaderPack: () => LM
+    });
+    var OM = iM(5442),
+      SM = iM(5435),
+      jM = iM(30),
+      aM = iM(3855),
+      PM = iM(7148),
+      nM = iM(7120);
+    const QM = "shaderPackChangePending";
+    let zM = null;
+
+    function LM(MM, rM, iM) {
+      return {
+        manifest: MM.manifest,
+        files: (0, OM.w)(MM.files),
+        validation: rM,
+        ...iM && {
+          listing: iM
+        }
       }
-      static async setup() {
-        const QQ = "mobileIos" === zQ.siteUsed ? "mobileIos" : "mobileAndroid";
-        return console.log(`AD: AdMobSDK initialised for ${QQ}`), new gQ(QQ)
+    }
+
+    function mM(MM) {
+      return Object.keys(MM.files).map((rM => ({
+        path: rM,
+        source: MM.files[rM]
+      })))
+    }
+    let HM = Promise.resolve();
+
+    function hM(MM) {
+      const rM = HM.then(MM);
+      return HM = rM.catch((() => {})), rM
+    }
+
+    function JM(MM, rM) {
+      return hM((() => yM(MM, rM)))
+    }
+
+    function dM(MM, rM, iM) {
+      return hM((async () => JSON.stringify(await (0, PM.d)()) === JSON.stringify(MM) && (null === rM ? (await lM(), !0) : yM(rM, iM))))
+    }
+    async function yM(MM, rM) {
+      const iM = await jM.f.setItem(PM.b, MM);
+      return iM && RM(MM, rM), iM
+    }
+    async function lM() {
+      await jM.f.removeItem(PM.b), jM.g.removeItem(aM.c)
+    }
+
+    function EM() {
+      return hM(lM)
+    }
+
+    function UM(MM, rM) {
+      return "active" === GM(MM, rM).kind
+    }
+
+    function GM(MM, rM) {
+      var iM;
+      return null === MM ? {
+        kind: "none",
+        reason: "nothingStored"
+      } : bM(MM) ? {
+        kind: "none",
+        reason: "otherApiVersion"
+      } : !1 !== (null === (iM = MM.validation) || void 0 === iM ? void 0 : iM.ok) || MM.validation.fromRecheck ? null === rM ? {
+        kind: "none",
+        reason: "noCompiler"
+      } : tM(MM, rM) ? {
+        kind: "blocked",
+        messageKey: "shaderPack:failedUnchecked"
+      } : MM.validation.ok ? {
+        kind: "active"
+      } : {
+        kind: "blocked",
+        messageKey: "shaderPack:failedValidation"
+      } : {
+        kind: "none",
+        reason: "failedWhenLoaded"
       }
-      muteGameDuring(QQ) {
-        return this.fullScreenAdsInFlight++, qQ.b.set({
-          soundOnFromAd: !1
-        }), QQ.finally((() => {
-          this.fullScreenAdsInFlight--, 0 === this.fullScreenAdsInFlight && qQ.b.set({
-            soundOnFromAd: !0
-          })
-        }))
+    }
+
+    function CM() {
+      jM.k.setItem(QM, performance.timeOrigin)
+    }
+
+    function eM() {
+      return jM.k.getItem(QM) === performance.timeOrigin
+    }
+
+    function bM(MM) {
+      return !(0, SM.k)(MM.manifest.apiVersion)
+    }
+
+    function wM(MM) {
+      return zM ??= MM.KD((0, nM.shaderPackTextures)()), zM
+    }
+
+    function tM(MM, rM) {
+      var iM;
+      return (null === (iM = MM.validation) || void 0 === iM ? void 0 : iM.headerVersion) !== wM(rM)
+    }
+
+    function gM(MM) {
+      return hM((async () => {
+        RM(await (0, PM.d)(!0), MM)
+      }))
+    }
+
+    function uM() {
+      return hM((async () => {
+        jM.g.removeItem(aM.c)
+      }))
+    }
+
+    function RM(MM, rM) {
+      UM(MM, rM) ? jM.g.setItem(aM.c, !0) : jM.g.removeItem(aM.c)
+    }
+  },
+  7134: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => nM,
+      f: () => PM
+    });
+    var OM = iM(7142),
+      SM = iM(7120),
+      jM = iM(106);
+    const aM = 100;
+    async function PM(MM, rM) {
+      var iM;
+      let OM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (iM = navigator.gpu) && void 0 !== iM ? iM : null;
+      const aM = MM.zMM(rM, (0, SM.shaderPackTextures)());
+      if (aM.errors.length > 0) return QM(MM, aM.errors, aM.offInStrict);
+      const PM = await async function(MM) {
+        if (!MM) return null;
+        try {
+          const rM = await (0, jM.z)(MM);
+          return rM ? await rM.requestDevice() : null
+        } catch (rM) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", rM), null
+        }
+      }(OM);
+      if (!PM) return null;
+      let nM = !1;
+      PM.lost.then((() => {
+        nM = !0
+      }));
+      try {
+        const rM = await Promise.all(aM.validationModules.map((rM => async function(MM, rM, iM) {
+          rM.pushErrorScope("validation");
+          const OM = rM.createShaderModule({
+              code: iM.code
+            }),
+            SM = rM.popErrorScope(),
+            {
+              messages: jM
+            } = await OM.getCompilationInfo(),
+            aM = jM.filter((MM => "error" === MM.type)).map((rM => MM.mapValidationMessage(iM, rM))),
+            PM = await SM;
+          PM && 0 === aM.length && aM.push({
+            file: null,
+            line: 0,
+            message: PM.message,
+            variants: [iM.key]
+          });
+          return aM
+        }(MM, PM, rM))));
+        return nM ? null : QM(MM, MM.ciM(rM.flat()), aM.offInStrict)
+      } catch (zM) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", zM), null
+      } finally {
+        PM.destroy()
       }
-      playRewarded(QQ, WQ) {
-        const XQ = this.adUnitIds.rewarded;
-        this.muteGameDuring(TQ.e.request("ads.showRewarded", {
-          placementId: XQ
-        })).then((XQ => {
-          let {
-            rewarded: wQ
-          } = XQ;
-          wQ ? QQ() : WQ()
-        }), (QQ => {
-          console.warn(`AD ${XQ}: AdMob rewarded failed:`, QQ), WQ()
-        }))
-      }
-      playVideoAd(QQ, WQ) {
-        const XQ = this.adUnitIds.interstitial;
-        this.muteGameDuring(TQ.e.request("ads.showInterstitial", {
-          placementId: XQ
-        })).then((() => {
-          QQ()
-        }), (WQ => {
-          console.warn(`AD ${XQ}: AdMob interstitial failed:`, WQ), QQ()
-        }))
-      }
-      renderBanner(QQ) {
-        const WQ = (0, sQ.b)(QQ),
-          XQ = this.adUnitIds.banners[WQ];
-        if (void 0 === XQ) return;
-        const wQ = document.getElementById(QQ.divId);
-        if (!wQ) return void console.warn(`AD ${WQ}: AdMob renderBanner called but div ${QQ.divId} is not in DOM`);
-        const qQ = wQ.getBoundingClientRect(),
-          zQ = window.innerWidth,
-          PQ = window.innerHeight;
-        if (0 === zQ || 0 === PQ) return void console.warn(`AD ${WQ}: AdMob renderBanner skipped \u2014 viewport has zero dimension`);
-        const gQ = {
-          x1: FQ.b.clamp(qQ.left / zQ * 100, 0, 100),
-          y1: FQ.b.clamp(qQ.top / PQ * 100, 0, 100),
-          x2: FQ.b.clamp(qQ.right / zQ * 100, 0, 100),
-          y2: FQ.b.clamp(qQ.bottom / PQ * 100, 0, 100)
+    }
+    async function nM(MM, rM) {
+      var iM;
+      if (!(0, OM.shaderPackNeedsCheck)(MM, rM) || (0, OM.isOtherApiVersion)(MM)) return MM;
+      const SM = await PM(rM, (0, OM.storedShaderPackFiles)(MM));
+      if (!SM) return MM;
+      const jM = !1 === (null === (iM = MM.validation) || void 0 === iM ? void 0 : iM.ok) && !MM.validation.fromRecheck,
+        aM = {
+          ...MM,
+          validation: jM ? SM : {
+            ...SM,
+            fromRecheck: !0
+          }
         };
-        this.bannerPlacementByBloxdId.set(WQ, XQ), console.log(`AD ${WQ}: AdMob renderBanner placementId=${XQ} box=`, gQ), TQ.e.emit("ads.showBanner", {
-          placementId: XQ,
-          ...gQ
-        })
-      }
-      clearBanner(QQ) {
-        const WQ = (0, sQ.b)(QQ),
-          XQ = this.bannerPlacementByBloxdId.get(WQ);
-        void 0 !== XQ && (this.bannerPlacementByBloxdId.delete(WQ), this.bannerFirstResponseSeen.delete(XQ), console.log(`AD ${WQ}: AdMob clearBanner placementId=${XQ}`), TQ.e.emit("ads.hideBanner", {
-          placementId: XQ
-        }))
-      }
-      canShowBloxdAd(QQ) {
-        return !1
+      return await (0, OM.replaceShaderPack)(MM, aM, rM) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), aM
+    }
+
+    function QM(MM, rM, iM) {
+      return {
+        headerVersion: (0, OM.pageShaderPackValidationVersion)(MM),
+        ok: 0 === rM.length,
+        errors: rM.slice(0, aM),
+        moreErrors: Math.max(0, rM.length - aM),
+        offInStrict: iM
       }
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

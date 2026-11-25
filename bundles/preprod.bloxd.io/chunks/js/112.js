@@ -1,803 +1,547 @@
 export const id = 112;
 export const ids = [112];
 export const modules = {
-  5359: (QQ, WQ, XQ) => {
-    function wQ(QQ) {
-      return wQ = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(QQ) {
-        return typeof QQ
-      } : function(QQ) {
-        return QQ && "function" == typeof Symbol && QQ.constructor === Symbol && QQ !== Symbol.prototype ? "symbol" : typeof QQ
-      }, wQ(QQ)
-    }
-    Object.defineProperty(WQ, "__esModule", {
-      value: !0
-    }), WQ.default = void 0;
-    var qQ = JQ(XQ(1081)),
-      TQ = function(QQ, WQ) {
-        if (!WQ && QQ && QQ.__esModule) return QQ;
-        if (null === QQ || "object" !== wQ(QQ) && "function" !== typeof QQ) return {
-          default: QQ
-        };
-        var XQ = gQ(WQ);
-        if (XQ && XQ.has(QQ)) return XQ.get(QQ);
-        var qQ = {},
-          TQ = Object.defineProperty && Object.getOwnPropertyDescriptor;
-        for (var zQ in QQ)
-          if ("default" !== zQ && Object.prototype.hasOwnProperty.call(QQ, zQ)) {
-            var sQ = TQ ? Object.getOwnPropertyDescriptor(QQ, zQ) : null;
-            sQ && (sQ.get || sQ.set) ? Object.defineProperty(qQ, zQ, sQ) : qQ[zQ] = QQ[zQ]
-          } qQ.default = QQ, XQ && XQ.set(QQ, qQ);
-        return qQ
-      }(XQ(61)),
-      zQ = JQ(XQ(5318)),
-      sQ = JQ(XQ(5368)),
-      FQ = XQ(5373),
-      PQ = XQ(1145);
+  5278: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      default: () => vM
+    });
+    var OM = iM(44),
+      SM = iM(1608),
+      jM = iM(332),
+      aM = iM(1240),
+      PM = iM(1694),
+      nM = iM(1279),
+      QM = iM(1630),
+      zM = iM(1573),
+      LM = iM(2896);
+    const mM = {
+      retries: 2,
+      minTimeout: 2e3
+    };
+    var HM = iM(1130),
+      hM = iM(1685),
+      JM = iM(1142),
+      dM = iM(2006),
+      yM = iM(1188),
+      lM = iM(1229),
+      EM = iM(3875),
+      UM = iM(1396),
+      GM = iM(1520),
+      CM = iM(1591),
+      eM = iM(2834),
+      bM = iM(2847),
+      wM = iM(5280),
+      tM = iM(2280),
+      gM = iM(1116),
+      uM = iM.n(gM),
+      RM = iM(1398),
+      pM = iM(5282),
+      WM = iM(19),
+      sM = iM(2039),
+      DM = iM(4004),
+      kM = iM(2137),
+      ZM = iM(3981),
+      oM = iM(83),
+      fM = iM(4934),
+      YM = iM(1303);
+    const NM = [wM];
 
-    function gQ(QQ) {
-      if ("function" !== typeof WeakMap) return null;
-      var WQ = new WeakMap,
-        XQ = new WeakMap;
-      return (gQ = function(QQ) {
-        return QQ ? XQ : WQ
-      })(QQ)
+    function AM(MM) {
+      let {
+        icon: rM,
+        label: iM,
+        value: OM
+      } = MM;
+      return (0, YM.jsxs)("div", {
+        className: "PlayerProfileStat",
+        children: [(0, YM.jsx)(RM.b, {
+          name: rM,
+          className: "PlayerProfileStatIcon"
+        }), (0, YM.jsxs)("div", {
+          className: "PlayerProfileStatText",
+          children: [(0, YM.jsx)("div", {
+            className: "PlayerProfileStatLabel SmallTextLight",
+            children: iM
+          }), (0, YM.jsx)("div", {
+            className: "PlayerProfileStatValue",
+            children: OM
+          })]
+        })]
+      })
     }
 
-    function JQ(QQ) {
-      return QQ && QQ.__esModule ? QQ : {
-        default: QQ
+    function xM(MM) {
+      let {
+        profile: rM
+      } = MM;
+      const {
+        t: iM,
+        selectedLanguage: OM
+      } = (0, yM.A)();
+      let SM = iM("homePage:profileUnknown");
+      if (rM.lastOnline) {
+        const MM = (0, yM.n)(OM.code, "homePage:profileTimeAgo");
+        SM = iM("homePage:profileTimeAgo", {
+          time: (0, jM.db)(MM, rM.lastOnline, Date.now())
+        })
       }
+      let aM = iM("homePage:profileUnknown");
+      return rM.accountCreatedAt && (aM = new Date(rM.accountCreatedAt).toLocaleDateString(void 0, {
+        year: "numeric",
+        month: "short",
+        day: "numeric"
+      })), (0, YM.jsxs)("div", {
+        className: "PlayerProfileStats",
+        children: [(0, YM.jsx)(AM, {
+          icon: "hourglass",
+          label: iM("homePage:profileTimePlayed"),
+          value: (0, DM.b)(rM.totalPlayMinutes)
+        }), (0, YM.jsx)(AM, {
+          icon: "wifi",
+          label: iM("homePage:profileLastOnline"),
+          value: SM
+        }), (0, YM.jsx)(AM, {
+          icon: "calendar",
+          label: iM("homePage:profileJoined"),
+          value: aM
+        })]
+      })
     }
 
-    function rQ(QQ, WQ) {
-      var XQ = "undefined" !== typeof Symbol && QQ[Symbol.iterator] || QQ["@@iterator"];
-      if (!XQ) {
-        if (Array.isArray(QQ) || (XQ = function(QQ, WQ) {
-            if (!QQ) return;
-            if ("string" === typeof QQ) return IQ(QQ, WQ);
-            var XQ = Object.prototype.toString.call(QQ).slice(8, -1);
-            "Object" === XQ && QQ.constructor && (XQ = QQ.constructor.name);
-            if ("Map" === XQ || "Set" === XQ) return Array.from(QQ);
-            if ("Arguments" === XQ || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(XQ)) return IQ(QQ, WQ)
-          }(QQ)) || WQ && QQ && "number" === typeof QQ.length) {
-          XQ && (QQ = XQ);
-          var wQ = 0,
-            qQ = function() {};
-          return {
-            s: qQ,
-            n: function() {
-              return wQ >= QQ.length ? {
-                done: !0
-              } : {
-                done: !1,
-                value: QQ[wQ++]
-              }
-            },
-            e: function(QQ) {
-              throw QQ
-            },
-            f: qQ
-          }
+    function vM() {
+      const {
+        t: MM
+      } = (0, yM.A)(), rM = (0, CM.useNavigatePreserveSearch)(), iM = (0, HM.i)(), {
+        playerName: wM,
+        playerUrlName: gM
+      } = (0, SM.D)(), DM = (0, SM.u)(), AM = (0, aM.c)(DM.pathname), vM = AM && ("urlId" in AM ? `urlId:${AM.urlId}` : `name:${AM.lowerCaseName}`), FM = (0, OM.useRef)(vM);
+      FM.current = vM;
+      const {
+        userContext: BM,
+        isUserContextUpdating: XM
+      } = (0, JM.b)(), IM = (0, OM.useRef)(null), KM = (0, OM.useRef)(null), qM = (0, OM.useRef)(null), TM = (0, OM.useRef)(!1), VM = (0, OM.useRef)((0, jM.ac)(NM)), [cM, Mr] = (0, OM.useState)((() => {
+        const MM = AM && bM.e.peek(BM, AM);
+        return MM ? {
+          status: "loaded",
+          profile: MM,
+          playerKey: vM
+        } : {
+          status: "loading"
         }
-        throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
-      }
-      var TQ, zQ = !0,
-        sQ = !1;
-      return {
-        s: function() {
-          XQ = XQ.call(QQ)
-        },
-        n: function() {
-          var QQ = XQ.next();
-          return zQ = QQ.done, QQ
-        },
-        e: function(QQ) {
-          sQ = !0, TQ = QQ
-        },
-        f: function() {
+      })), [rr, ir] = (0, OM.useState)(0);
+      (0, OM.useEffect)(eM.e, []), (0, OM.useEffect)((() => {
+        sM.gameBridge.send("leaveGame", {
+          reloadPath: null
+        }), WM.d.set({
+          gameState: "landingPage",
+          openEverythingMenuName: null,
+          openInGameMenuName: null
+        })
+      }), [DM.key]);
+      const Or = () => {
+        const MM = (0, CM.getPreviousLocation)();
+        null === MM || MM.startsWith("/play") ? (0, CM.navigateToHomePage)() : rM(-1)
+      };
+      (0, fM.e)(Or), (0, OM.useEffect)((() => {
+        var MM;
+        if (XM) return;
+        if (!AM) return void Mr({
+          status: "notFound",
+          playerKey: vM
+        });
+        const rM = "urlId" in AM && (null === (MM = KM.current) || void 0 === MM ? void 0 : MM.urlId) === AM.urlId && qM.current === BM;
+        if (rM && TM.current) return;
+        const iM = rM ? null : bM.e.peek(BM, AM);
+        let OM = !1;
+        const SM = MM => "loaded" === MM.status && (MM.playerKey === vM || "urlId" in AM && MM.profile.urlId === AM.urlId);
+        return iM ? (qM.current = BM, TM.current = !1, Mr({
+          status: "loaded",
+          profile: iM,
+          playerKey: vM
+        }), bM.e.invalidate(AM)) : Mr((MM => SM(MM) ? MM : {
+          status: "loading"
+        })), async function(MM, rM) {
+          if ("lowerCaseName" in rM && rM.lowerCaseName.length > nM.g) return {
+            status: "notFound"
+          };
           try {
-            zQ || null == XQ.return || XQ.return()
-          } finally {
-            if (sQ) throw TQ
-          }
-        }
-      }
-    }
-
-    function IQ(QQ, WQ) {
-      (null == WQ || WQ > QQ.length) && (WQ = QQ.length);
-      for (var XQ = 0, wQ = new Array(WQ); XQ < WQ; XQ++) wQ[XQ] = QQ[XQ];
-      return wQ
-    }
-
-    function jQ(QQ, WQ) {
-      for (var XQ = 0; XQ < WQ.length; XQ++) {
-        var wQ = WQ[XQ];
-        wQ.enumerable = wQ.enumerable || !1, wQ.configurable = !0, "value" in wQ && (wQ.writable = !0), Object.defineProperty(QQ, wQ.key, wQ)
-      }
-    }
-
-    function BQ(QQ, WQ) {
-      return BQ = Object.setPrototypeOf || function(QQ, WQ) {
-        return QQ.__proto__ = WQ, QQ
-      }, BQ(QQ, WQ)
-    }
-
-    function yQ(QQ) {
-      var WQ = function() {
-        if ("undefined" === typeof Reflect || !Reflect.construct) return !1;
-        if (Reflect.construct.sham) return !1;
-        if ("function" === typeof Proxy) return !0;
-        try {
-          return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {}))), !0
-        } catch (QQ) {
-          return !1
-        }
-      }();
-      return function() {
-        var XQ, qQ = DQ(QQ);
-        if (WQ) {
-          var TQ = DQ(this).constructor;
-          XQ = Reflect.construct(qQ, arguments, TQ)
-        } else XQ = qQ.apply(this, arguments);
-        return function(QQ, WQ) {
-          if (WQ && ("object" === wQ(WQ) || "function" === typeof WQ)) return WQ;
-          if (void 0 !== WQ) throw new TypeError("Derived constructors may only return object or undefined");
-          return VQ(QQ)
-        }(this, XQ)
-      }
-    }
-
-    function VQ(QQ) {
-      if (void 0 === QQ) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      return QQ
-    }
-
-    function DQ(QQ) {
-      return DQ = Object.setPrototypeOf ? Object.getPrototypeOf : function(QQ) {
-        return QQ.__proto__ || Object.getPrototypeOf(QQ)
-      }, DQ(QQ)
-    }
-
-    function pQ(QQ, WQ, XQ) {
-      return WQ in QQ ? Object.defineProperty(QQ, WQ, {
-        value: XQ,
-        enumerable: !0,
-        configurable: !0,
-        writable: !0
-      }) : QQ[WQ] = XQ, QQ
-    }
-    var GQ = {
-        orientation: {
-          horizontal: {
-            dimension: "width",
-            direction: "left",
-            reverseDirection: "right",
-            coordinate: "x"
-          },
-          vertical: {
-            dimension: "height",
-            direction: "top",
-            reverseDirection: "bottom",
-            coordinate: "y"
-          }
-        }
-      },
-      UQ = function(QQ) {
-        ! function(QQ, WQ) {
-          if ("function" !== typeof WQ && null !== WQ) throw new TypeError("Super expression must either be null or a function");
-          Object.defineProperty(QQ, "prototype", {
-            value: Object.create(WQ && WQ.prototype, {
-              constructor: {
-                value: QQ,
-                writable: !0,
-                configurable: !0
-              }
-            }),
-            writable: !1
-          }), WQ && BQ(QQ, WQ)
-        }(zQ, QQ);
-        var WQ, XQ, wQ, TQ = yQ(zQ);
-
-        function zQ(QQ, WQ) {
-          var XQ;
-          return function(QQ, WQ) {
-            if (!(QQ instanceof WQ)) throw new TypeError("Cannot call a class as a function")
-          }(this, zQ), pQ(VQ(XQ = TQ.call(this, QQ, WQ)), "handleFormat", (function(QQ) {
-            var WQ = XQ.props.format;
-            return WQ ? WQ(QQ) : QQ
-          })), pQ(VQ(XQ), "handleUpdate", (function() {
-            if (XQ.slider) {
-              var QQ = XQ.props.orientation,
-                WQ = (0, FQ.capitalize)(GQ.orientation[QQ].dimension),
-                wQ = XQ.slider["offset".concat(WQ)],
-                qQ = XQ.handle["offset".concat(WQ)];
-              XQ.setState({
-                limit: wQ - qQ,
-                grab: qQ / 2
-              })
-            }
-          })), pQ(VQ(XQ), "handleStart", (function(QQ) {
-            var WQ = XQ.props.onChangeStart;
-            document.addEventListener("mousemove", XQ.handleDrag), document.addEventListener("mouseup", XQ.handleEnd), XQ.setState({
-              active: !0
-            }, (function() {
-              WQ && WQ(QQ)
-            }))
-          })), pQ(VQ(XQ), "handleDrag", (function(QQ) {
-            QQ.stopPropagation();
-            var WQ = XQ.props.onChange,
-              wQ = QQ.target,
-              qQ = wQ.className,
-              TQ = wQ.classList,
-              zQ = wQ.dataset;
-            if (WQ && "rangeslider__labels" !== qQ) {
-              var sQ = XQ.position(QQ);
-              TQ && TQ.contains("rangeslider__label-item") && zQ.value && (sQ = parseFloat(zQ.value)), WQ && WQ(sQ, QQ)
-            }
-          })), pQ(VQ(XQ), "handleEnd", (function(QQ) {
-            var WQ = XQ.props.onChangeComplete;
-            XQ.setState({
-              active: !1
-            }, (function() {
-              WQ && WQ(QQ)
-            })), document.removeEventListener("mousemove", XQ.handleDrag), document.removeEventListener("mouseup", XQ.handleEnd)
-          })), pQ(VQ(XQ), "handleKeyDown", (function(QQ) {
-            QQ.preventDefault();
-            var WQ, wQ = QQ.keyCode,
-              qQ = XQ.props,
-              TQ = qQ.value,
-              zQ = qQ.min,
-              sQ = qQ.max,
-              FQ = qQ.step,
-              PQ = qQ.onChange;
-            switch (wQ) {
-              case 38:
-              case 39:
-                WQ = TQ + FQ > sQ ? sQ : TQ + FQ, PQ && PQ(WQ, QQ);
-                break;
-              case 37:
-              case 40:
-                WQ = TQ - FQ < zQ ? zQ : TQ - FQ, PQ && PQ(WQ, QQ)
-            }
-          })), pQ(VQ(XQ), "getPositionFromValue", (function(QQ) {
-            var WQ = XQ.state.limit,
-              wQ = XQ.props,
-              qQ = wQ.min,
-              TQ = (QQ - qQ) / (wQ.max - qQ);
-            return Math.round(TQ * WQ)
-          })), pQ(VQ(XQ), "getValueFromPosition", (function(QQ) {
-            var WQ = XQ.state.limit,
-              wQ = XQ.props,
-              qQ = wQ.orientation,
-              TQ = wQ.min,
-              zQ = wQ.max,
-              sQ = wQ.step,
-              PQ = (0, FQ.clamp)(QQ, 0, WQ) / (WQ || 1),
-              gQ = sQ * Math.round(PQ * (zQ - TQ) / sQ),
-              JQ = "horizontal" === qQ ? gQ + TQ : zQ - gQ;
-            return (0, FQ.clamp)(JQ, TQ, zQ)
-          })), pQ(VQ(XQ), "position", (function(QQ) {
-            var WQ = XQ.state.grab,
-              wQ = XQ.props,
-              qQ = wQ.orientation,
-              TQ = wQ.reverse,
-              zQ = XQ.slider,
-              sQ = GQ.orientation[qQ].coordinate,
-              PQ = TQ ? GQ.orientation[qQ].reverseDirection : GQ.orientation[qQ].direction,
-              gQ = "client".concat((0, FQ.capitalize)(sQ)),
-              JQ = QQ.touches ? QQ.touches[0][gQ] : QQ[gQ],
-              rQ = zQ.getBoundingClientRect()[PQ],
-              IQ = TQ ? rQ - JQ - WQ : JQ - rQ - WQ;
-            return XQ.getValueFromPosition(IQ)
-          })), pQ(VQ(XQ), "coordinates", (function(QQ) {
-            var WQ = XQ.state,
-              wQ = WQ.limit,
-              qQ = WQ.grab,
-              TQ = XQ.props.orientation,
-              zQ = XQ.getValueFromPosition(QQ),
-              sQ = XQ.getPositionFromValue(zQ),
-              FQ = "horizontal" === TQ ? sQ + qQ : sQ;
             return {
-              fill: "horizontal" === TQ ? FQ : wQ - FQ,
-              handle: FQ,
-              label: FQ
+              status: "loaded",
+              profile: await zM.c.getPlayerProfile(MM, rM, mM)
             }
-          })), pQ(VQ(XQ), "renderLabels", (function(QQ) {
-            return (0, PQ.jsx)("ul", {
-              ref: function(QQ) {
-                XQ.labels = QQ
-              },
-              className: (0, qQ.default)("rangeslider__labels"),
-              children: QQ
-            })
-          })), XQ.state = {
-            active: !1,
-            limit: 0,
-            grab: 0
-          }, XQ
-        }
-        return WQ = zQ, (XQ = [{
-          key: "componentDidMount",
-          value: function() {
-            this.handleUpdate(), new sQ.default(this.handleUpdate).observe(this.slider)
-          }
-        }, {
-          key: "render",
-          value: function() {
-            var QQ = this,
-              WQ = this.props,
-              XQ = WQ.value,
-              wQ = WQ.orientation,
-              TQ = WQ.className,
-              zQ = WQ.tooltip,
-              sQ = WQ.reverse,
-              FQ = WQ.labels,
-              gQ = WQ.min,
-              JQ = WQ.max,
-              IQ = WQ.handleLabel,
-              jQ = this.state.active,
-              BQ = GQ.orientation[wQ].dimension,
-              yQ = sQ ? GQ.orientation[wQ].reverseDirection : GQ.orientation[wQ].direction,
-              VQ = this.getPositionFromValue(XQ),
-              DQ = this.coordinates(VQ),
-              UQ = pQ({}, BQ, "".concat(DQ.fill, "px")),
-              bQ = pQ({}, yQ, "".concat(DQ.handle, "px")),
-              vQ = zQ && jQ,
-              dQ = [],
-              HQ = Object.keys(FQ);
-            if (HQ.length > 0) {
-              var aQ, lQ = rQ(HQ = HQ.sort((function(QQ, WQ) {
-                return sQ ? QQ - WQ : WQ - QQ
-              })));
-              try {
-                for (lQ.s(); !(aQ = lQ.n()).done;) {
-                  var hQ = aQ.value,
-                    iQ = this.getPositionFromValue(hQ),
-                    cQ = this.coordinates(iQ),
-                    AQ = pQ({}, yQ, "".concat(cQ.label, "px"));
-                  dQ.push((0, PQ.jsx)("li", {
-                    className: (0, qQ.default)("rangeslider__label-item"),
-                    "data-value": hQ,
-                    onMouseDown: this.handleDrag,
-                    onTouchStart: this.handleStart,
-                    onTouchEnd: this.handleEnd,
-                    style: AQ,
-                    children: this.props.labels[hQ]
-                  }, hQ))
-                }
-              } catch (RQ) {
-                lQ.e(RQ)
-              } finally {
-                lQ.f()
-              }
-            }
-            return (0, PQ.jsxs)("div", {
-              ref: function(WQ) {
-                QQ.slider = WQ
-              },
-              className: (0, qQ.default)("rangeslider", "rangeslider-".concat(wQ), {
-                "rangeslider-reverse": sQ
-              }, TQ),
-              onMouseDown: this.handleDrag,
-              onMouseUp: this.handleEnd,
-              onTouchStart: this.handleStart,
-              onTouchEnd: this.handleEnd,
-              "aria-valuemin": gQ,
-              "aria-valuemax": JQ,
-              "aria-valuenow": XQ,
-              "aria-orientation": wQ,
-              children: [(0, PQ.jsx)("div", {
-                className: "rangeslider__fill",
-                style: UQ
-              }), (0, PQ.jsxs)("div", {
-                ref: function(WQ) {
-                  QQ.handle = WQ
-                },
-                className: "rangeslider__handle",
-                onMouseDown: this.handleStart,
-                onTouchMove: this.handleDrag,
-                onTouchEnd: this.handleEnd,
-                onKeyDown: this.handleKeyDown,
-                style: bQ,
-                tabIndex: 0,
-                children: [vQ && (0, PQ.jsx)("div", {
-                  ref: function(WQ) {
-                    QQ.tooltip = WQ
-                  },
-                  className: "rangeslider__handle-tooltip",
-                  children: (0, PQ.jsx)("span", {
-                    children: this.handleFormat(XQ)
-                  })
-                }), (0, PQ.jsx)("div", {
-                  className: "rangeslider__handle-label",
-                  children: IQ
-                })]
-              }), FQ && this.renderLabels(dQ)]
+          } catch (iM) {
+            return (0, LM.c)(iM) ? {
+              status: "notFound"
+            } : (console.error("Failed to load user profile", iM), {
+              status: "failed"
             })
           }
-        }]) && jQ(WQ.prototype, XQ), wQ && jQ(WQ, wQ), Object.defineProperty(WQ, "prototype", {
-          writable: !1
-        }), zQ
-      }(TQ.Component);
-    pQ(UQ, "propTypes", {
-      min: zQ.default.number,
-      max: zQ.default.number,
-      step: zQ.default.number,
-      value: zQ.default.number,
-      orientation: zQ.default.string,
-      tooltip: zQ.default.bool,
-      reverse: zQ.default.bool,
-      labels: zQ.default.object,
-      handleLabel: zQ.default.string,
-      format: zQ.default.func,
-      onChangeStart: zQ.default.func,
-      onChange: zQ.default.func,
-      onChangeComplete: zQ.default.func
-    }), pQ(UQ, "defaultProps", {
-      min: 0,
-      max: 100,
-      step: 1,
-      value: 0,
-      orientation: "horizontal",
-      tooltip: !0,
-      reverse: !1,
-      labels: {},
-      handleLabel: ""
-    });
-    var bQ = UQ;
-    WQ.default = bQ
-  },
-  5351: (QQ, WQ, XQ) => {
-    var wQ;
-    WQ.c = void 0;
-    var qQ = ((wQ = XQ(5359)) && wQ.__esModule ? wQ : {
-      default: wQ
-    }).default;
-    WQ.c = qQ
-  },
-  5373: (QQ, WQ) => {
-    Object.defineProperty(WQ, "__esModule", {
-      value: !0
-    }), WQ.capitalize = function(QQ) {
-      return QQ.charAt(0).toUpperCase() + QQ.substr(1)
-    }, WQ.clamp = function(QQ, WQ, XQ) {
-      return Math.min(Math.max(QQ, WQ), XQ)
-    }
-  },
-  5320: (QQ, WQ, XQ) => {
-    var wQ = XQ(5328);
-
-    function qQ() {}
-
-    function TQ() {}
-    TQ.resetWarningCache = qQ, QQ.exports = function() {
-      function QQ(QQ, WQ, XQ, qQ, TQ, zQ) {
-        if (zQ !== wQ) {
-          var sQ = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw sQ.name = "Invariant Violation", sQ
+        }(BM, AM).then((MM => {
+          OM || ("loaded" === MM.status && (qM.current = BM, TM.current = !0), Mr((rM => "failed" === MM.status && SM(rM) ? rM : {
+            ...MM,
+            playerKey: vM
+          })))
+        })), () => {
+          OM = !0
         }
-      }
-
-      function WQ() {
-        return QQ
-      }
-      QQ.isRequired = QQ;
-      var XQ = {
-        array: QQ,
-        bigint: QQ,
-        bool: QQ,
-        func: QQ,
-        number: QQ,
-        object: QQ,
-        string: QQ,
-        symbol: QQ,
-        any: QQ,
-        arrayOf: WQ,
-        element: QQ,
-        elementType: QQ,
-        instanceOf: WQ,
-        node: QQ,
-        objectOf: WQ,
-        oneOf: WQ,
-        oneOfType: WQ,
-        shape: WQ,
-        exact: WQ,
-        checkPropTypes: TQ,
-        resetWarningCache: qQ
-      };
-      return XQ.PropTypes = XQ, XQ
-    }
-  },
-  5318: (QQ, WQ, XQ) => {
-    QQ.exports = XQ(5320)()
-  },
-  5328: QQ => {
-    QQ.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
-  },
-  5368: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      default: () => dQ
-    });
-    var wQ = function() {
-        if ("undefined" !== typeof Map) return Map;
-
-        function QQ(QQ, WQ) {
-          var XQ = -1;
-          return QQ.some((function(QQ, wQ) {
-            return QQ[0] === WQ && (XQ = wQ, !0)
-          })), XQ
-        }
-        return function() {
-          function WQ() {
-            this.__entries__ = []
+      }), [XM, vM, BM, rr]);
+      const Sr = "loading" === cM.status || cM.playerKey === vM || "loaded" === cM.status && !!AM && "urlId" in AM && cM.profile.urlId === AM.urlId ? cM : {
+          status: "loading"
+        },
+        jr = "loaded" === Sr.status ? Sr.profile : null,
+        ar = "loading" === Sr.status ? null : function(MM) {
+          if ("loaded" === MM.status) {
+            const {
+              profile: rM
+            } = MM;
+            return (0, QM.S)({
+              urlId: rM.urlId,
+              name: rM.player.name,
+              ranks: rM.player.ranks,
+              socialLinks: rM.socialLinks
+            })
           }
-          return Object.defineProperty(WQ.prototype, "size", {
-            get: function() {
-              return this.__entries__.length
+          return "notFound" === MM.status ? (0, QM.ab)() : null
+        }(Sr),
+        Pr = null !== jr && void 0 !== jr && jr.urlId ? (0, aM.f)({
+          urlId: jr.urlId,
+          name: jr.player.name
+        }) : null;
+      (0, hM.g)(Pr);
+      const nr = null !== jr && void 0 !== jr && jr.player.cosmetics.profileEffect ? tM.f[jr.player.cosmetics.profileEffect] : void 0,
+        Qr = null !== jr && !XM && BM.getPlayerName().toLowerCase() === jr.player.name.toLowerCase(),
+        zr = (0, kM.c)(null === jr || void 0 === jr ? void 0 : jr.player.name),
+        Lr = Qr && BM.playerHasRank("youtuber");
+      KM.current = jr;
+      const mr = (0, OM.useCallback)((() => {
+          AM && (bM.e.invalidate(AM), bM.e.get(BM, AM).then((MM => {
+            FM.current === vM && (TM.current = !0, Mr({
+              status: "loaded",
+              profile: MM,
+              playerKey: vM
+            }))
+          })).catch((MM => {
+            console.error("Failed to refresh user profile", MM)
+          })))
+        }), [vM, BM]),
+        Hr = (0, OM.useCallback)((() => {
+          var MM;
+          const rM = KM.current;
+          return !(!rM || null === (MM = IM.current) || void 0 === MM || !MM.isReady()) && (IM.current.setAllCosmetics(rM.player.cosmetics), !0)
+        }), []);
+      return (0, OM.useEffect)((() => {
+        if (!jr) return;
+        let MM, rM = !1;
+        const iM = () => {
+          rM || Hr() || (MM = setTimeout(iM, 100))
+        };
+        return iM(), () => {
+          rM = !0, clearTimeout(MM)
+        }
+      }), [jr, Hr]), (0, YM.jsxs)("div", {
+        className: uM()("PlayerProfile", {
+          PlayerProfilePortrait: iM
+        }),
+        children: [ar && (0, YM.jsx)(PM.c, {
+          meta: ar
+        }), (0, YM.jsxs)("div", {
+          className: "PlayerProfileBackgroundContainer",
+          children: [nr && (0, YM.jsx)(nr, {}), !nr && (0, YM.jsx)("div", {
+            className: "PlayerProfileBackground",
+            style: {
+              backgroundImage: `url(${VM.current})`
+            }
+          })]
+        }), (0, YM.jsxs)("div", {
+          className: "PlayerProfileHeader",
+          children: [(0, YM.jsx)(GM.c, {
+            onClick: Or,
+            children: MM("general:back")
+          }), jr && !XM && !Qr && oM.featureFlags.useSocialFeatures && (0, YM.jsx)("div", {
+            className: "PlayerProfileExclusionActions",
+            children: (0, YM.jsx)(ZM.d, {
+              playerName: jr.player.name,
+              className: "SmallTextLight"
+            })
+          })]
+        }), "loading" === Sr.status && (0, YM.jsx)("div", {
+          className: "PlayerProfileCentredMessage",
+          children: (0, YM.jsx)(UM.d, {})
+        }), ("notFound" === Sr.status || "failed" === Sr.status) && (0, YM.jsxs)("div", {
+          className: "PlayerProfileCentredMessage PlayerProfileError",
+          children: [(0, YM.jsx)(RM.b, {
+            name: "face-dizzy"
+          }), (0, YM.jsx)("div", {
+            className: "PlayerProfileErrorText",
+            children: "notFound" === Sr.status ? MM("socialBar:playerNotFound", {
+              playerName: null !== gM && void 0 !== gM ? gM : wM
+            }) : MM("playerProfile:loadFailed")
+          }), "failed" === Sr.status && (0, YM.jsx)(GM.e, {
+            onClick: () => {
+              ir((MM => MM + 1))
             },
-            enumerable: !0,
-            configurable: !0
-          }), WQ.prototype.get = function(WQ) {
-            var XQ = QQ(this.__entries__, WQ),
-              wQ = this.__entries__[XQ];
-            return wQ && wQ[1]
-          }, WQ.prototype.set = function(WQ, XQ) {
-            var wQ = QQ(this.__entries__, WQ);
-            ~wQ ? this.__entries__[wQ][1] = XQ : this.__entries__.push([WQ, XQ])
-          }, WQ.prototype.delete = function(WQ) {
-            var XQ = this.__entries__,
-              wQ = QQ(XQ, WQ);
-            ~wQ && XQ.splice(wQ, 1)
-          }, WQ.prototype.has = function(WQ) {
-            return !!~QQ(this.__entries__, WQ)
-          }, WQ.prototype.clear = function() {
-            this.__entries__.splice(0)
-          }, WQ.prototype.forEach = function(QQ, WQ) {
-            void 0 === WQ && (WQ = null);
-            for (var XQ = 0, wQ = this.__entries__; XQ < wQ.length; XQ++) {
-              var qQ = wQ[XQ];
-              QQ.call(WQ, qQ[1], qQ[0])
-            }
-          }, WQ
-        }()
-      }(),
-      qQ = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
-      TQ = "undefined" !== typeof XQ.g && XQ.g.Math === Math ? XQ.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
-      zQ = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(TQ) : function(QQ) {
-        return setTimeout((function() {
-          return QQ(Date.now())
-        }), 1e3 / 60)
-      };
-    var sQ = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
-      FQ = "undefined" !== typeof MutationObserver,
-      PQ = function() {
-        function QQ() {
-          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(QQ, WQ) {
-            var XQ = !1,
-              wQ = !1,
-              qQ = 0;
-
-            function TQ() {
-              XQ && (XQ = !1, QQ()), wQ && FQ()
-            }
-
-            function sQ() {
-              zQ(TQ)
-            }
-
-            function FQ() {
-              var QQ = Date.now();
-              if (XQ) {
-                if (QQ - qQ < 2) return;
-                wQ = !0
-              } else XQ = !0, wQ = !1, setTimeout(sQ, WQ);
-              qQ = QQ
-            }
-            return FQ
-          }(this.refresh.bind(this), 20)
-        }
-        return QQ.prototype.addObserver = function(QQ) {
-          ~this.observers_.indexOf(QQ) || this.observers_.push(QQ), this.connected_ || this.connect_()
-        }, QQ.prototype.removeObserver = function(QQ) {
-          var WQ = this.observers_,
-            XQ = WQ.indexOf(QQ);
-          ~XQ && WQ.splice(XQ, 1), !WQ.length && this.connected_ && this.disconnect_()
-        }, QQ.prototype.refresh = function() {
-          this.updateObservers_() && this.refresh()
-        }, QQ.prototype.updateObservers_ = function() {
-          var QQ = this.observers_.filter((function(QQ) {
-            return QQ.gatherActive(), QQ.hasActive()
-          }));
-          return QQ.forEach((function(QQ) {
-            return QQ.broadcastActive()
-          })), QQ.length > 0
-        }, QQ.prototype.connect_ = function() {
-          qQ && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), FQ ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
-            attributes: !0,
-            childList: !0,
-            characterData: !0,
-            subtree: !0
-          })) : (document.addEventListener("DOMSubtreeModified", this.refresh), this.mutationEventsAdded_ = !0), this.connected_ = !0)
-        }, QQ.prototype.disconnect_ = function() {
-          qQ && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
-        }, QQ.prototype.onTransitionEnd_ = function(QQ) {
-          var WQ = QQ.propertyName,
-            XQ = void 0 === WQ ? "" : WQ;
-          sQ.some((function(QQ) {
-            return !!~XQ.indexOf(QQ)
-          })) && this.refresh()
-        }, QQ.getInstance = function() {
-          return this.instance_ || (this.instance_ = new QQ), this.instance_
-        }, QQ.instance_ = null, QQ
-      }(),
-      gQ = function(QQ, WQ) {
-        for (var XQ = 0, wQ = Object.keys(WQ); XQ < wQ.length; XQ++) {
-          var qQ = wQ[XQ];
-          Object.defineProperty(QQ, qQ, {
-            value: WQ[qQ],
-            enumerable: !1,
-            writable: !1,
-            configurable: !0
-          })
-        }
-        return QQ
-      },
-      JQ = function(QQ) {
-        return QQ && QQ.ownerDocument && QQ.ownerDocument.defaultView || TQ
-      },
-      rQ = DQ(0, 0, 0, 0);
-
-    function IQ(QQ) {
-      return parseFloat(QQ) || 0
+            children: MM("general:tryAgain")
+          })]
+        }), jr && (0, YM.jsxs)("div", {
+          className: "PlayerProfileContent",
+          children: [(0, YM.jsxs)("div", {
+            className: "PlayerProfileLeft",
+            children: [(0, YM.jsx)("div", {
+              className: "PlayerProfileName FullyFancyText",
+              children: (0, YM.jsx)(dM.b, {
+                text: (0, lM.y)(jr.player.ranks, jr.player.name, jr.player.nameColour),
+                friendBadgeFor: zr ? jr.player.name : void 0
+              })
+            }), (0, YM.jsx)("div", {
+              className: "PlayerProfileModel",
+              children: (0, YM.jsx)(OM.Suspense, {
+                fallback: (0, YM.jsx)("div", {
+                  className: "PlayerProfileModelLoading",
+                  children: (0, YM.jsx)(UM.d, {})
+                }),
+                children: (0, YM.jsx)(eM.c, {
+                  ref: IM,
+                  onReady: () => {
+                    Hr()
+                  }
+                })
+              })
+            })]
+          }), (0, YM.jsxs)("div", {
+            className: "PlayerProfileRight",
+            children: [(0, YM.jsx)(xM, {
+              profile: jr
+            }), (jr.socialLinks.length > 0 || Lr) && (0, YM.jsx)(pM.b, {
+              socialLinks: jr.socialLinks,
+              editable: Lr,
+              userContext: BM,
+              onLinksUpdated: mr
+            }), (0, YM.jsxs)("div", {
+              className: "PlayerProfileGames",
+              children: [(0, YM.jsx)("div", {
+                className: "PlayerProfileGamesTitle SmallTextBold",
+                children: MM("homePage:profileReleasedGames")
+              }), 0 === jr.releasedGames.length && (0, YM.jsx)("div", {
+                className: "PlayerProfileNoGames",
+                children: MM("homePage:profileNoReleasedGames")
+              }), jr.releasedGames.length > 0 && (0, YM.jsx)("div", {
+                className: "PlayerProfileGamesGrid",
+                children: jr.releasedGames.map((MM => (0, YM.jsx)(EM.h, {
+                  source: {
+                    type: "preview",
+                    preview: MM
+                  },
+                  gameWidth: "100%",
+                  useLongRatio: !0,
+                  hideFavourites: !0,
+                  entrySource: "other"
+                }, MM.schematicId)))
+              })]
+            })]
+          })]
+        })]
+      })
     }
-
-    function jQ(QQ) {
-      for (var WQ = [], XQ = 1; XQ < arguments.length; XQ++) WQ[XQ - 1] = arguments[XQ];
-      return WQ.reduce((function(WQ, XQ) {
-        return WQ + IQ(QQ["border-" + XQ + "-width"])
-      }), 0)
-    }
-
-    function BQ(QQ) {
-      var WQ = QQ.clientWidth,
-        XQ = QQ.clientHeight;
-      if (!WQ && !XQ) return rQ;
-      var wQ = JQ(QQ).getComputedStyle(QQ),
-        qQ = function(QQ) {
-          for (var WQ = {}, XQ = 0, wQ = ["top", "right", "bottom", "left"]; XQ < wQ.length; XQ++) {
-            var qQ = wQ[XQ],
-              TQ = QQ["padding-" + qQ];
-            WQ[qQ] = IQ(TQ)
-          }
-          return WQ
-        }(wQ),
-        TQ = qQ.left + qQ.right,
-        zQ = qQ.top + qQ.bottom,
-        sQ = IQ(wQ.width),
-        FQ = IQ(wQ.height);
-      if ("border-box" === wQ.boxSizing && (Math.round(sQ + TQ) !== WQ && (sQ -= jQ(wQ, "left", "right") + TQ), Math.round(FQ + zQ) !== XQ && (FQ -= jQ(wQ, "top", "bottom") + zQ)), ! function(QQ) {
-          return QQ === JQ(QQ).document.documentElement
-        }(QQ)) {
-        var PQ = Math.round(sQ + TQ) - WQ,
-          gQ = Math.round(FQ + zQ) - XQ;
-        1 !== Math.abs(PQ) && (sQ -= PQ), 1 !== Math.abs(gQ) && (FQ -= gQ)
+  },
+  5282: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => dM
+    });
+    var OM = iM(1116),
+      SM = iM.n(OM),
+      jM = iM(5011),
+      aM = iM(1188),
+      PM = iM(1398),
+      nM = iM(1520),
+      QM = iM(1573),
+      zM = iM(1429),
+      LM = iM(2709),
+      mM = iM(1303);
+    const HM = {
+      youtube: {
+        icon: "youtube",
+        color: "#FF0033",
+        name: "YouTube"
+      },
+      tiktok: {
+        icon: "tiktok",
+        color: "#0F0F0F",
+        name: "TikTok"
+      },
+      instagram: {
+        icon: "instagram",
+        color: "#E1306C",
+        name: "Instagram"
+      },
+      twitter: {
+        icon: "x-twitter",
+        color: "#0F0F0F",
+        name: "X"
+      },
+      twitch: {
+        icon: "twitch",
+        color: "#9146FF",
+        name: "Twitch"
       }
-      return DQ(qQ.left, qQ.top, sQ, FQ)
-    }
-    var yQ = "undefined" !== typeof SVGGraphicsElement ? function(QQ) {
-      return QQ instanceof JQ(QQ).SVGGraphicsElement
-    } : function(QQ) {
-      return QQ instanceof JQ(QQ).SVGElement && "function" === typeof QQ.getBBox
     };
 
-    function VQ(QQ) {
-      return qQ ? yQ(QQ) ? function(QQ) {
-        var WQ = QQ.getBBox();
-        return DQ(0, 0, WQ.width, WQ.height)
-      }(QQ) : BQ(QQ) : rQ
+    function hM(MM) {
+      let {
+        platform: rM
+      } = MM;
+      const iM = "youtube" === rM;
+      return (0, mM.jsxs)("span", {
+        className: SM()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: iM
+        }),
+        children: [iM && (0, mM.jsx)(LM.d, {
+          variant: "white"
+        }), !iM && (0, mM.jsx)(PM.b, {
+          name: HM[rM].icon,
+          kit: "brands"
+        })]
+      })
     }
 
-    function DQ(QQ, WQ, XQ, wQ) {
-      return {
-        x: QQ,
-        y: WQ,
-        width: XQ,
-        height: wQ
+    function JM(MM) {
+      let {
+        platform: rM,
+        link: iM,
+        editable: OM,
+        userContext: SM,
+        onLinksUpdated: LM
+      } = MM;
+      const {
+        t: JM
+      } = (0, aM.A)(), dM = HM[rM];
+      if (!iM && !OM) return null;
+
+      function yM() {
+        var MM;
+        if (!SM || !LM) return;
+        zM.NotificationProvider.showInputPopup({
+          title: "homePage:profileSocialLinkEditTitle",
+          textOpts: {
+            title: {
+              platform: dM.name
+            }
+          },
+          prefixText: jM.t[rM],
+          placeholderText: "playBloxd",
+          initialValue: null !== (MM = null === iM || void 0 === iM ? void 0 : iM.handle) && void 0 !== MM ? MM : "",
+          maxLength: 30,
+          submitText: "general:save",
+          secondaryButtonText: iM ? "general:remove" : void 0
+        }).getResult().then((async MM => {
+          if ("notificationTornDown" !== MM && null !== MM) try {
+            "submit" === MM.type ? await QM.c.setSocialLink(SM, rM, MM.value) : await QM.c.clearSocialLink(SM, rM), LM()
+          } catch (iM) {
+            console.error("Failed to update social link", iM), zM.NotificationProvider.showAlertPopup({
+              title: iM.errorMessageForUser,
+              confirmText: "general:ok"
+            })
+          }
+        }))
       }
-    }
-    var pQ = function() {
-        function QQ(QQ) {
-          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = DQ(0, 0, 0, 0), this.target = QQ
-        }
-        return QQ.prototype.isActive = function() {
-          var QQ = VQ(this.target);
-          return this.contentRect_ = QQ, QQ.width !== this.broadcastWidth || QQ.height !== this.broadcastHeight
-        }, QQ.prototype.broadcastRect = function() {
-          var QQ = this.contentRect_;
-          return this.broadcastWidth = QQ.width, this.broadcastHeight = QQ.height, QQ
-        }, QQ
-      }(),
-      GQ = function(QQ, WQ) {
-        var XQ = function(QQ) {
-          var WQ = QQ.x,
-            XQ = QQ.y,
-            wQ = QQ.width,
-            qQ = QQ.height,
-            TQ = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
-            zQ = Object.create(TQ.prototype);
-          return gQ(zQ, {
-            x: WQ,
-            y: XQ,
-            width: wQ,
-            height: qQ,
-            top: XQ,
-            right: WQ + wQ,
-            bottom: qQ + XQ,
-            left: WQ
-          }), zQ
-        }(WQ);
-        gQ(this, {
-          target: QQ,
-          contentRect: XQ
+      if (iM) {
+        const MM = `@${iM.handle}`;
+        return (0, mM.jsxs)("a", {
+          className: "PlayerProfileSocialLink",
+          style: {
+            background: dM.color
+          },
+          href: iM.profileUrl,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          children: [(0, mM.jsxs)("div", {
+            className: "PlayerProfileSocialLinkMain",
+            children: [(0, mM.jsx)(hM, {
+              platform: rM
+            }), (0, mM.jsx)("span", {
+              className: "PlayerProfileSocialLinkText",
+              children: (0, mM.jsx)("span", {
+                className: "PlayerProfileSocialLinkName SmallTextBold",
+                children: MM
+              })
+            })]
+          }), OM && (0, mM.jsx)("button", {
+            type: "button",
+            className: "PlayerProfileSocialLinkEditButton",
+            ...(0, nM.fb)({
+              stopPropagation: !0
+            }),
+            onClick: MM => {
+              MM.stopPropagation(), MM.preventDefault(), yM()
+            },
+            children: (0, mM.jsx)(PM.b, {
+              name: "pen-to-square"
+            })
+          }), !OM && (0, mM.jsx)("span", {
+            className: "PlayerProfileSocialLinkArrow",
+            children: (0, mM.jsx)(PM.b, {
+              name: "arrow-up-right-from-square"
+            })
+          })]
         })
-      },
-      UQ = function() {
-        function QQ(QQ, WQ, XQ) {
-          if (this.activeObservations_ = [], this.observations_ = new wQ, "function" !== typeof QQ) throw new TypeError("The callback provided as parameter 1 is not a function.");
-          this.callback_ = QQ, this.controller_ = WQ, this.callbackCtx_ = XQ
-        }
-        return QQ.prototype.observe = function(QQ) {
-          if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
-          if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(QQ instanceof JQ(QQ).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var WQ = this.observations_;
-            WQ.has(QQ) || (WQ.set(QQ, new pQ(QQ)), this.controller_.addObserver(this), this.controller_.refresh())
-          }
-        }, QQ.prototype.unobserve = function(QQ) {
-          if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
-          if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(QQ instanceof JQ(QQ).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var WQ = this.observations_;
-            WQ.has(QQ) && (WQ.delete(QQ), WQ.size || this.controller_.removeObserver(this))
-          }
-        }, QQ.prototype.disconnect = function() {
-          this.clearActive(), this.observations_.clear(), this.controller_.removeObserver(this)
-        }, QQ.prototype.gatherActive = function() {
-          var QQ = this;
-          this.clearActive(), this.observations_.forEach((function(WQ) {
-            WQ.isActive() && QQ.activeObservations_.push(WQ)
-          }))
-        }, QQ.prototype.broadcastActive = function() {
-          if (this.hasActive()) {
-            var QQ = this.callbackCtx_,
-              WQ = this.activeObservations_.map((function(QQ) {
-                return new GQ(QQ.target, QQ.broadcastRect())
-              }));
-            this.callback_.call(QQ, WQ, QQ), this.clearActive()
-          }
-        }, QQ.prototype.clearActive = function() {
-          this.activeObservations_.splice(0)
-        }, QQ.prototype.hasActive = function() {
-          return this.activeObservations_.length > 0
-        }, QQ
-      }(),
-      bQ = "undefined" !== typeof WeakMap ? new WeakMap : new wQ,
-      vQ = function QQ(WQ) {
-        if (!(this instanceof QQ)) throw new TypeError("Cannot call a class as a function.");
-        if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
-        var XQ = PQ.getInstance(),
-          wQ = new UQ(WQ, XQ, this);
-        bQ.set(this, wQ)
-      };
-    ["observe", "unobserve", "disconnect"].forEach((function(QQ) {
-      vQ.prototype[QQ] = function() {
-        var WQ;
-        return (WQ = bQ.get(this))[QQ].apply(WQ, arguments)
       }
-    }));
-    const dQ = "undefined" !== typeof TQ.ResizeObserver ? TQ.ResizeObserver : vQ
+      return (0, mM.jsxs)("button", {
+        type: "button",
+        className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
+        style: {
+          background: dM.color
+        },
+        ...(0, nM.fb)(),
+        onClick: () => {
+          yM()
+        },
+        children: [(0, mM.jsx)(hM, {
+          platform: rM
+        }), (0, mM.jsxs)("span", {
+          className: "PlayerProfileSocialLinkText",
+          children: [(0, mM.jsx)("span", {
+            className: "PlayerProfileSocialLinkName SmallTextBold",
+            children: dM.name
+          }), (0, mM.jsx)("span", {
+            className: "PlayerProfileSocialLinkCount SmallTextLight",
+            children: JM("homePage:profileSocialLinkAdd")
+          })]
+        }), (0, mM.jsx)("span", {
+          className: "PlayerProfileSocialLinkEditButton",
+          children: (0, mM.jsx)(PM.b, {
+            name: "pen-to-square"
+          })
+        })]
+      })
+    }
+
+    function dM(MM) {
+      let {
+        socialLinks: rM,
+        editable: iM = !1,
+        userContext: OM,
+        onLinksUpdated: SM
+      } = MM;
+      if (!iM && 0 === rM.length) return null;
+      const aM = new Map(rM.map((MM => [MM.platform, MM]))),
+        PM = iM ? jM.s : rM.map((MM => MM.platform));
+      return (0, mM.jsx)("div", {
+        className: "PlayerProfileSocialLinks",
+        children: (0, mM.jsx)("div", {
+          className: "PlayerProfileSocialLinksList",
+          children: PM.map((MM => (0, mM.jsx)(JM, {
+            platform: MM,
+            link: aM.get(MM),
+            editable: iM,
+            userContext: OM,
+            onLinksUpdated: SM
+          }, MM)))
+        })
+      })
+    }
+  },
+  5280: MM => {
+    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

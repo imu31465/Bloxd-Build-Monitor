@@ -1,37 +1,37 @@
 export const id = 188;
 export const ids = [188];
 export const modules = {
-  9458: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      pageBody: () => wQ
+  9621: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      pageBody: () => OM
     });
-    const wQ = {
-      whatIs: ["You might not be the only one checking in. Bloxd Horror Hotel sends you down an infinite hallway of hotel rooms, collecting items so you can level up and decorate a room of your own. Anyone can play for free, straight from a browser tab. Just be careful what's waiting behind the doors..."],
-      howToPlay: ["Your stay starts in a tiny room, so first things first: go and complain to the manager. The first upgrade is free. After that, upgrades cost items, beginning with a red bed you'll have to \"borrow\" from someone else's room. Head down the corridor to find what you need. Some doors open into bedrooms with strange guests. Others lead to forests, mines, mazes and buried treasure.", "Got the items? Use the home button on the left to fast travel back. You can keep upgrading all the way to level 22, change your room colours and invite friends round. You also get to decide whether PvP, visitors and editors are allowed in your room. Play nicely, though. Take down too many players in a row and the Angry Hotel Manager steps in, and you won't like what happens next. Oh, and if you hear a sudden spooky sound, there might be a skinwalker close by."],
-      features: ["An Infinite Hallway of Hotel Rooms to Explore", "Forest, Mining, Maze and Buried Treasure Rooms", "Quirky Guests Who Need Your Help", "Upgrade Your Room All the Way to Level 22", "Pick from a Range of Room Colours", "Invite Friends and Control PvP, Visitors and Editors", "A Creepy Skinwalker and a Secret Room to Find"],
-      tips: ["Talk to the manager first and grab your free room upgrade", "Check what your next upgrade costs, then go looking for those items in other rooms", "Help guests with their requests, like the thirsty guest in the desert room", "Use the home button on the left to fast travel back to your room", "Friends need a high enough room level before you can invite them", "Don't go on a streak of attacking other players, or the Angry Hotel Manager will definately step in", "Keep exploring. There's always another room further down the hall"],
-      similarGames: ["ninetyNineNights", "containmentBreach", "backrooms", "murderMystery"],
+    const OM = {
+      whatIs: ["Claim an island, grab the loot and fight for every diamond you can get. Bloxd Sky Islands is a scored PvP match across floating islands, where you explore, mine resources and battle for diamonds and glory. Each phase brings better loot, and whoever has the highest score at the end wins. Don't let the name fool you, it isn't an island-growing game like Skyblock or One Block. There is a PvE mode, though, if you'd rather fight mobs."],
+      howToPlay: ["Place your Protector on an island to claim it. Other players can't change blocks or open chests there, and you'll always respawn on it. You only get one island at a time, but you can release it and claim another later. Then off you go to explore, mine and grab loot as it spawns on the islands.", "Every match has 4 phases. It starts with Gather, when resources and tools spawn. Arms Race comes next with bows and armour. Then Escalation adds explosives and diamond gear, and finally Chaos turns up with guns and rockets. Your score is your kills plus the diamonds you're holding (diamond blocks count as several diamonds). Get knocked out and you'll drop some of your diamonds and items, though you do get a short bit of spawn protection when you come back."],
+      features: ["Solo, Teams, Blitz and PvE Modes", "Claim Your Own Island with a Protector", "4 Phases: Gather, Arms Race, Escalation and Chaos", "Bows, Explosives, Guns, Rockets and Diamond Gear", "Loot Drops, Diamond Surges and Diamond Bounties", "Quests, Perks and Buried Treasure", "Gold, Iron and Wood Helmets for the Top 3 Next Round"],
+      tips: ["Claim an island early so you've got a safe base to respawn on", "Grab tools and resources during Gather, before the big fights kick off", "Hang on to your diamonds. They count towards your score", "Watch the loot timer and get to new drops first", "Don't camp on the diamond island while you're in the lead, or you'll get a bounty and hunters will be able to see you", "Stay for the next round and you get to pick a bonus to start with", "Stuck? Use the shop to teleport to a random island"],
+      similarGames: ["skywars", "bedwars", "skyblock", "oneBlock"],
       faq: [{
-        question: "What is Bloxd Horror Hotel?",
-        answer: "A spooky exploration game. You wander an endless hotel, collect items from other rooms and use them to upgrade and decorate your own."
+        question: "What is Bloxd Sky Islands?",
+        answer: "A round-based PvP mode. You claim a floating island, gear up through four phases and battle other players for the top score."
       }, {
-        question: "Does Horror Hotel really have infinite rooms?",
-        answer: "It does. The hallway just keeps going, with bedrooms, forests, mines, mazes and buried treasure rooms to find. There's even a secret room hidden somewhere."
+        question: "How is the winner decided in Bloxd Sky Islands?",
+        answer: "Whoever has the highest score when time runs out. Score is your kills plus the diamonds you're holding, and in Teams the highest-scoring team takes it."
       }, {
-        question: "How do I upgrade my room in Horror Hotel?",
-        answer: "Talk to the manager. The first upgrade's free, then each level costs items you find around the hotel, starting with a red bed."
+        question: "How do I claim an island in Sky Islands?",
+        answer: "Put your Protector down on an island. Nobody else can change its blocks or open its chests, and you'll always respawn there."
       }, {
-        question: "What is the max room level in Horror Hotel?",
-        answer: "Level 22. Once you hit it, your room is maxed out."
+        question: "Which modes does Sky Islands have?",
+        answer: "Solo, Teams, Blitz (a faster match) and PvE. In PvE your score comes from mob kills instead of player kills, so you claim an island and go after mobs."
       }, {
-        question: "Can friends visit my hotel room?",
-        answer: "Yes, as long as their room level is high enough. You can also choose whether to allow visitors, editors and PvP."
+        question: "Where do you find diamonds in Sky Islands?",
+        answer: "Mine them, grab them from loot drops and Diamond Surges, or win fights for them. Players drop some of their diamonds when they're knocked out."
       }, {
-        question: "Is Horror Hotel scary?",
-        answer: "A bit! It's spooky, with odd guests, eerie sounds and a skinwalker lurking about. It's creepy rather than gory, and you can explore at your own pace."
+        question: "What is a diamond bounty?",
+        answer: "If you're one of the top three scorers and you stay on the diamond island too long, you get a bounty and hunters can see you. Move to another island to get rid of it."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

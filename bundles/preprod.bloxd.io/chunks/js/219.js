@@ -1,561 +1,1341 @@
 export const id = 219;
-export const ids = [219];
+export const ids = [218, 219];
 export const modules = {
-  36795: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => zQ,
-      f: () => qQ,
-      g: () => TQ
+  34877: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      CAPPED_COUNTS_VISIT_CAP: () => jM,
+      reportCappedWasmFailure: () => nM,
+      reportUncappedWasmFailure: () => PM,
+      reportWasmCrash: () => SM,
+      reportWasmFailure: () => aM
     });
-    var wQ = XQ(1854);
-    class qQ extends Error {
-      constructor(QQ) {
-        super("The game server didn't answer in time"), this.leg = QQ, this.name = "SeatRequestTimedOut"
-      }
+    var OM = iM(3258);
+
+    function SM(MM) {
+      (0, OM.reportClientError)("wasm_load", MM.message, MM.code)
     }
-    const TQ = new class {
-      constructor() {
-        this.count = 0, this.answers = 0, this.waiting = new Set
-      }
-      get answered() {
-        return this.answers
-      }
-      answer() {
-        this.answers++
-      }
-      add() {
-        this.count++;
-        for (const QQ of this.waiting) QQ()
-      }
-      remove() {
-        this.count--
-      }
-      whenSlow(QQ) {
-        return this.count > 0 || QQ.aborted ? Promise.resolve(!QQ.aborted) : new Promise((WQ => {
-          const XQ = () => {
-            this.waiting.delete(XQ), WQ(!QQ.aborted)
-          };
-          this.waiting.add(XQ), QQ.addEventListener("abort", XQ, {
-            once: !0
-          })
-        }))
-      }
-    };
-    class zQ {
-      constructor(QQ) {
-        this.timeout = void 0, this.slow = void 0, this.countedSlow = !1, this.timeout = new wQ.e(45e3, QQ), this.slow = new wQ.e(8e3, (() => {
-          this.countedSlow = !0, TQ.add()
-        }))
-      }
-      restart() {
-        TQ.answer(), this.uncountSlow(), this.timeout.restart(), this.slow.restart()
-      }
-      stop() {
-        this.timeout.stop(), this.slow.stop(), this.uncountSlow()
-      }
-      answered() {
-        this.stop(), TQ.answer()
-      }
-      socketOpened() {
-        this.slow.stop(), this.uncountSlow(), TQ.answer()
-      }
-      uncountSlow() {
-        this.countedSlow && (this.countedSlow = !1, TQ.remove())
-      }
+    const jM = OM.MAX_ERRORS_PER_VISIT - 4;
+
+    function aM(MM, rM, iM, SM) {
+      (0, OM.reportClientError)(MM, rM, iM, !1, OM.MAX_ERRORS_PER_VISIT, {
+        context: SM
+      })
+    }
+
+    function PM(MM, rM, iM, SM) {
+      (0, OM.reportClientError)(MM, rM, iM, !1, 1 / 0, {
+        context: SM
+      })
+    }
+
+    function nM(MM, rM, iM, SM) {
+      (0, OM.reportClientError)(MM, rM, iM, !1, jM, {
+        context: SM
+      })
     }
   },
-  36559: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => wQ,
-      g: () => qQ,
-      j: () => TQ,
-      n: () => zQ
+  37215: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => GM,
+      e: () => bM,
+      i: () => wM,
+      j: () => CM
     });
-    const wQ = 1024,
-      qQ = 1024 * wQ;
+    var OM = iM(37233),
+      SM = iM(3185),
+      jM = iM(37244),
+      aM = iM(3188),
+      PM = iM(34877),
+      nM = iM(3248),
+      QM = iM(3632),
+      zM = iM(3629),
+      LM = iM(37218),
+      mM = iM(3258),
+      HM = iM(37223),
+      hM = iM(37229),
+      JM = iM(4088);
+    let dM = !1;
+    const yM = 40;
+    var lM = iM(2562);
+    const EM = "bloxdWasmFailureReported";
 
-    function TQ(QQ) {
-      return 2 ** Math.floor(Math.log2(Math.max(1, QQ / qQ)))
+    function UM() {
+      return "undefined" === typeof WebAssembly
     }
 
-    function zQ(QQ) {
-      return (QQ / qQ).toFixed(1)
-    }
-  },
-  36785: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => TQ,
-      f: () => FQ,
-      h: () => sQ,
-      i: () => zQ,
-      l: () => PQ,
-      o: () => gQ,
-      s: () => rQ
-    });
-    var wQ = XQ(231);
-    const qQ = 32 * XQ(36559).g,
-      TQ = 6144,
-      zQ = 4608,
-      sQ = 512,
-      FQ = function() {
-        const QQ = rQ(wQ.h.maxChunkHorizAddDistance + 1, wQ.h.maxChunkVertAddDistance + 1);
-        let WQ = QQ;
-        for (; JQ(WQ) < QQ;) WQ++;
-        return WQ
-      }();
-
-    function PQ(QQ) {
-      return Math.floor(qQ * QQ / TQ)
+    function GM() {
+      return (0, OM.h)()
     }
 
-    function gQ(QQ) {
-      const WQ = JQ(QQ);
-      let XQ = wQ.h.maxChunkHorizAddDistance,
-        qQ = wQ.h.maxChunkVertAddDistance;
-      if (rQ(XQ + 1, qQ + 1) <= WQ) return null;
-      for (; rQ(XQ + 1, qQ + 1) > WQ && (XQ > 0 || qQ > 0);) XQ > qQ ? XQ-- : qQ--;
-      return {
-        horizontal: XQ,
-        vertical: qQ
-      }
+    function CM() {
+      if (UM()) return "this browser has no WebAssembly";
+      const MM = (0, SM.t)();
+      return "compile" === MM || "instantiate" === MM ? `the core wasm didn't load here (${(0,SM.j)()})` : null
+    }
+    async function eM(MM) {
+      return await (0, jM.i)(jM.e, void 0, MM)
     }
 
-    function JQ(QQ) {
-      return QQ - Math.floor(QQ / 6)
+    function bM() {
+      UM() || (0, lM.f)((() => {
+        eM()
+      }))
     }
 
-    function rQ(QQ, WQ) {
-      const XQ = Math.max(QQ, WQ);
-      let wQ = 0;
-      for (let qQ = -XQ; qQ <= XQ; qQ++)
-        for (let TQ = -XQ; TQ <= XQ; TQ++)
-          for (let zQ = -XQ; zQ <= XQ; zQ++) IQ(QQ, WQ, qQ, TQ, zQ) && wQ++;
-      return wQ
-    }
-
-    function IQ(QQ, WQ, XQ, wQ, qQ) {
-      const TQ = XQ * XQ + qQ * qQ;
-      return QQ === WQ ? TQ + wQ * wQ <= QQ * QQ : QQ > WQ ? Math.abs(wQ) <= WQ && TQ + wQ * wQ <= QQ * QQ : TQ <= QQ * QQ && TQ + wQ * wQ <= WQ * WQ
-    }
-  },
-  36777: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => bQ,
-      f: () => RQ,
-      i: () => AQ,
-      j: () => cQ,
-      m: () => iQ
-    });
-    var wQ = XQ(231),
-      qQ = XQ(105),
-      TQ = XQ(158),
-      zQ = XQ(333),
-      sQ = XQ(4703),
-      FQ = XQ(693),
-      PQ = XQ(4710),
-      gQ = XQ(36785),
-      JQ = XQ(36788);
-    const rQ = 1048576,
-      IQ = 1024 * rQ,
-      jQ = 400 * rQ,
-      BQ = 147456,
-      yQ = .5,
-      VQ = 2048,
-      DQ = 1.5 * IQ,
-      pQ = 768 * rQ;
-
-    function GQ(QQ) {
-      const {
-        os: WQ,
-        deviceMemory: XQ
-      } = QQ;
-      if ("ios" === WQ) switch ((0, zQ.i)(QQ)) {
-        case "ipad_m":
-          return {
-            footprintBytes: UQ(gQ.d), basis: "ipad-m", namesLimit: !1
-          };
-        case "ipad":
-          return {
-            footprintBytes: pQ, basis: "ipad", namesLimit: !0
-          };
-        case "iphone_6gb":
-          return {
-            footprintBytes: DQ, basis: "iphone-6gb", namesLimit: !0
-          };
-        case "iphone":
-          return {
-            footprintBytes: pQ, basis: "iphone", namesLimit: !0
-          }
-      }
-      return "number" === typeof XQ && Number.isFinite(XQ) && XQ > 0 ? {
-        footprintBytes: XQ * IQ * yQ,
-        basis: `memory-${XQ}`,
-        namesLimit: !0
-      } : "android" === WQ ? {
-        footprintBytes: pQ,
-        basis: "android",
-        namesLimit: !0
-      } : {
-        footprintBytes: UQ(gQ.i),
-        basis: "unreported",
-        namesLimit: !1
-      }
-    }
-
-    function UQ(QQ) {
-      return jQ + QQ * BQ
-    }
-
-    function bQ() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : lQ(),
-        WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : TQ.siteUsed;
-      if ("android" !== QQ.os || "mobileAndroid" === WQ) return !0;
-      const {
-        footprintBytes: XQ,
-        basis: wQ
-      } = GQ(QQ);
-      return "android" === wQ || XQ > 2 * IQ
-    }
-
-    function vQ(QQ, WQ, XQ) {
-      var qQ, TQ, zQ;
-      let {
-        footprintBytes: sQ,
-        basis: FQ,
-        namesLimit: JQ
-      } = GQ(QQ);
-      if (XQ) {
-        const QQ = Math.min(sQ, UQ(gQ.d));
-        sQ = jQ + Math.max(0, QQ - jQ) / 2, FQ += "+killed", JQ = !0
-      }
-      null !== WQ && UQ(WQ) < sQ && (sQ = UQ(WQ), FQ += "+learned", JQ = !0), FQ += (0, PQ.u)(null !== (qQ = QQ.x32) && void 0 !== qQ ? qQ : null), "fix" === QQ.x32 && UQ(VQ) < sQ && (sQ = UQ(VQ), JQ = !0);
-      const rQ = function(QQ) {
-          const WQ = Math.floor((QQ - jQ) / BQ);
-          return Math.min(gQ.d, Math.max(gQ.h, WQ))
-        }(sQ),
-        IQ = JQ && rQ < gQ.d ? Math.min(rQ, gQ.f) : rQ,
-        yQ = (0, gQ.o)(IQ);
-      return {
-        footprintBytes: sQ,
-        shedFootprintBytes: JQ ? Math.max(sQ, UQ(IQ)) : null,
-        chunkCap: IQ,
-        maxHorizDistance: null !== (TQ = null === yQ || void 0 === yQ ? void 0 : yQ.horizontal) && void 0 !== TQ ? TQ : wQ.h.maxChunkHorizAddDistance,
-        maxVertDistance: null !== (zQ = null === yQ || void 0 === yQ ? void 0 : yQ.vertical) && void 0 !== zQ ? zQ : wQ.h.maxChunkVertAddDistance,
-        basis: FQ
-      }
-    }
-    let dQ = null,
-      HQ = null,
-      aQ = null;
-
-    function lQ() {
-      var QQ;
-      return dQ ??= {
-        os: (0, qQ.getOperatingSystem)(),
-        deviceMemory: navigator.deviceMemory,
-        ...(0, zQ.m)()
-      }, {
-        ...dQ,
-        x32: null !== (QQ = (0, PQ.r)()) && void 0 !== QQ ? QQ : void 0
-      }
-    }
-
-    function hQ() {
-      return vQ(lQ(), (0, sQ.e)(), (0, FQ.I)("wasm").length > 0)
-    }
-
-    function iQ() {
-      return aQ ??= (0, JQ.o)(vQ(lQ(), null, !1).chunkCap), aQ
-    }
-
-    function cQ() {
-      return HQ ??= hQ(), HQ
-    }
-
-    function AQ() {
-      var QQ;
-      return (null !== (QQ = HQ) && void 0 !== QQ ? QQ : hQ()).basis
-    }
-
-    function RQ(QQ, WQ) {
-      return QQ.setChunkCap(WQ.chunkCap)
-    }
-  },
-  36788: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      b: () => aQ,
-      e: () => UQ,
-      g: () => JQ,
-      k: () => bQ,
-      o: () => DQ,
-      q: () => dQ,
-      v: () => HQ,
-      z: () => rQ
-    });
-    var wQ = XQ(36559),
-      qQ = XQ(36785);
-    const TQ = 64 * wQ.d,
-      zQ = 40 * wQ.g,
-      sQ = 36 * wQ.g,
-      FQ = 20 * wQ.g,
-      PQ = 2 * wQ.g,
-      gQ = 5 * wQ.g;
-
-    function JQ(QQ) {
-      return "footprint" !== QQ && "gcPressure" !== QQ
-    }
-
-    function rQ(QQ) {
-      return JQ(QQ) ? "wasm memory was refused" : "gcPressure" === QQ ? "the page's full GCs ran high" : "the tab's footprint reached its budget"
-    }
-    const IQ = 2 * wQ.g,
-      jQ = 4 * wQ.g,
-      BQ = 35 * wQ.g + IQ + jQ,
-      yQ = 6.5 * wQ.g,
-      VQ = 132.5 * wQ.d;
-
-    function DQ(QQ) {
-      const WQ = yQ + (0, qQ.l)(QQ) + QQ * VQ;
-      return Math.ceil((2 * BQ + WQ) / TQ) * TQ
-    }
-    DQ(qQ.d), wQ.g, wQ.g, wQ.g;
-    const pQ = {
-        targetBytes: zQ,
-        leastBytes: FQ
-      },
-      GQ = {
-        targetBytes: sQ,
-        leastBytes: FQ
+    function wM() {
+      if (UM()) return async () => ((0, nM.l)("unsupported", 0), tM("unsupported", "This browser has no WebAssembly"), !1);
+      const MM = {
+        reloadFailedDownload: !0
       };
+      return eM(MM), async () => {
+        var rM;
+        const iM = performance.now();
+        await eM(MM);
+        const OM = (performance.now() - iM) / 1e3;
+        if ((0, SM.R)()) return (0, nM.l)("ready", OM), dM || (dM = !0, (0, SM.W)((() => {
+          if ("call" !== (0, SM.t)()) return;
+          const MM = (0, SM.p)(),
+            rM = (0, LM.k)(MM, SM.I, SM.ab),
+            iM = (0, SM.y)().buffer.byteLength,
+            OM = (0, LM.f)(rM.kind, rM.refusedBytes),
+            jM = OM ? "alloc_failed" : rM.kind,
+            aM = (0, HM.h)(iM),
+            PM = OM ? `_r${Math.floor(Math.log2(rM.refusedBytes))}` : "",
+            nM = (0, JM.e)();
+          null === nM && console.warn("A JS client wasm call turned wasm off without naming its site: call markWasmFailedAt, not markBloxdWasmFailed");
+          const QM = new Error((0, hM.e)(MM, iM, rM));
+          if (MM instanceof Error && void 0 !== MM.stack) {
+            const rM = MM.stack.split("\n"),
+              iM = rM.length > yM ? [...rM.slice(0, yM / 2), ...rM.slice(-yM / 2)] : rM;
+            QM.stack = iM.join("\n")
+          }(0, mM.reportClientError)("wasm_load", QM, `wasm_call_${jM}_${null!==nM&&void 0!==nM?nM:"unnamed"}_m${aM}${PM}`)
+        }))), (0, aM.Q)(jM.e.url()) && (0, PM.reportCappedWasmFailure)("wasm_load", QM.d.message, QM.d.code), !0;
+        const lM = zM.e[null !== (rM = (0, SM.t)()) && void 0 !== rM ? rM : "call"];
+        return (0, nM.l)(lM, OM), tM(lM, (0, SM.j)()), !1
+      }
+    }
 
-    function UQ(QQ) {
+    function tM(MM, rM) {
+      (0, zM.i)(EM, `Bloxd wasm ${MM}, so the game can't start: ${rM}`, rM, MM)
+    }
+  },
+  37229: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => PM,
+      f: () => QM,
+      j: () => aM,
+      k: () => LM
+    });
+    var OM = iM(37218),
+      SM = iM(10);
+    const jM = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
+
+    function aM(MM) {
+      if (MM instanceof WebAssembly.RuntimeError) return !0;
+      const rM = MM instanceof Error ? MM.stack : void 0;
+      return "string" === typeof rM && jM.test(rM)
+    }
+
+    function PM(MM, rM, iM) {
+      var SM;
+      const aM = MM instanceof Error ? MM.name : "thrown",
+        PM = (MM instanceof Error && null !== (SM = MM.stack) && void 0 !== SM ? SM : "").split("\n").filter((MM => jM.test(MM))).slice(0, 8).map((MM => MM.trim())),
+        nM = null === rM ? "wasm memory unknown" : `wasm memory ${Math.round(rM/2**20)} MB`,
+        QM = null === iM.panic ? "" : `, panic: ${(0,OM.i)(iM.panic)}`,
+        zM = `${aM}: ${MM instanceof Error?MM.message:String(MM)}`;
+      return `${(0,OM.o)(iM.kind,iM.refusedBytes)} ${zM} (${nM})${QM}${PM.length>0?` | ${PM.join(" < ")}`:""}`
+    }
+    const nM = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
+
+    function QM(MM) {
+      var rM;
+      let iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
+      if (!(MM instanceof Error) || !nM.test(MM.message)) return {};
+      if (!("detached" in iM)) return {
+        arrayBufferDetached: "absent"
+      };
       return {
-        targetBytes: QQ,
-        leastBytes: 0
+        arrayBufferDetached: (0, SM.V)(null === (rM = (0, SM.M)(iM, "detached")) || void 0 === rM ? void 0 : rM.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
       }
     }
+    const zM = 500;
 
-    function bQ(QQ) {
-      return QQ >= qQ.d ? pQ : GQ
+    function LM(MM) {
+      let rM = "[object Object]";
+      try {
+        rM = String(MM)
+      } catch {}
+      if ("[object Object]" !== rM) return rM;
+      try {
+        var iM, OM;
+        return null !== (iM = null === (OM = JSON.stringify(MM)) || void 0 === OM ? void 0 : OM.slice(0, zM)) && void 0 !== iM ? iM : rM
+      } catch {
+        return rM
+      }
     }
-    const vQ = 2 * TQ;
-
-    function dQ(QQ, WQ, XQ) {
-      return QQ + WQ + vQ > XQ
+  },
+  37266: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/bloxd_wasm_bg.5656165110e66edd3713.wasm"
+  },
+  37242: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/bloxd_wasm_textures_bg.3e0bb5a054f9d6224a0d.wasm"
+  },
+  37253: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      Or: () => OM,
+      EnvelopeKind: () => SM,
+      NO: () => jM,
+      PhysicsEngine: () => aM,
+      TO: () => PM,
+      PS: () => nM,
+      ES: () => QM,
+      US: () => zM,
+      AS: () => LM,
+      IS: () => mM,
+      Za: () => HM,
+      VP: () => hM,
+      en: () => JM,
+      PQ: () => dM,
+      default: () => er,
+      initSync: () => Cr,
+      HQ: () => yM,
+      XQ: () => lM,
+      SL: () => EM,
+      RL: () => UM,
+      pL: () => GM,
+      WL: () => CM,
+      sL: () => eM,
+      DL: () => bM,
+      kL: () => wM,
+      ZL: () => tM,
+      oL: () => gM,
+      fL: () => uM,
+      YL: () => RM,
+      NL: () => pM,
+      AL: () => WM
+    });
+    class OM {
+      __destroy_into_raw() {
+        const MM = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, DM.unregister(this), MM
+      }
+      free() {
+        const MM = this.__destroy_into_raw();
+        Er.A1cn(MM, 0)
+      }
+      xL() {
+        const MM = Er.kifZ(this.__wbg_ptr);
+        if (MM[2]) throw mr(MM[1]);
+        return MM[0] >>> 0
+      }
+      vL() {
+        return Er.vSJ1(this.__wbg_ptr) >>> 0
+      }
+      constructor() {
+        const MM = Er.iNcw();
+        return this.__wbg_ptr = MM, DM.register(this, this.__wbg_ptr, this), this
+      }
+      FL() {
+        return Er.SOGr(this.__wbg_ptr) >>> 0
+      }
+      BL(MM) {
+        const rM = Er.ACUx(this.__wbg_ptr, MM);
+        if (rM[2]) throw mr(rM[1]);
+        return rM[0] >>> 0
+      }
+      XL(MM) {
+        const rM = Er.j3pd(this.__wbg_ptr, MM);
+        if (rM[2]) throw mr(rM[1]);
+        return rM[0] >>> 0
+      }
     }
-    const HQ = {
-      now: () => performance.now(),
-      requestIdle: "function" === typeof requestIdleCallback ? QQ => {
-        requestIdleCallback(QQ)
-      } : null
-    };
-    class aQ {
-      constructor(QQ, WQ, XQ) {
-        let wQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : HQ;
-        this.memory = QQ, this.readPeakStoredChunks = WQ, this.onError = XQ, this.clock = wQ, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.gcSheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
-          reserves: 0,
-          allocations: 0
-        }, this.joinReserveTaken = null, this.ceilingBytes = null, this.ballastCheckAt = -1 / 0, this.ballastPeakBytes = 0, this.distanceInUse = null, this.footprint = null, this.gcPressure = null
+    Symbol.dispose && (OM.prototype[Symbol.dispose] = OM.prototype.free);
+    const SM = Object.freeze({
+      Js: 0,
+      0: "Js",
+      Error: 1,
+      1: "Error",
+      LeaveRoom: 2,
+      2: "LeaveRoom",
+      RoomState: 3,
+      3: "RoomState",
+      RoomStatePatch: 4,
+      4: "RoomStatePatch",
+      RoomDataNone: 5,
+      5: "RoomDataNone",
+      RoomDataBin: 6,
+      6: "RoomDataBin",
+      RoomDataBytes: 7,
+      7: "RoomDataBytes",
+      Ignored: 8,
+      8: "Ignored",
+      StringType: 16,
+      16: "StringType"
+    });
+    class jM {
+      __destroy_into_raw() {
+        const MM = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, kM.unregister(this), MM
       }
-      setShed(QQ, WQ, XQ) {
-        this.shedding = {
-          shed: QQ,
-          nI: WQ,
-          readDistanceInUse: XQ
-        }
+      free() {
+        const MM = this.__destroy_into_raw();
+        Er.Kc06(MM, 0)
       }
-      shedDistanceInUse() {
-        return this.distanceInUse
+      qL(MM, rM) {
+        const iM = Er.IzVN(this.__wbg_ptr, MM, rM);
+        if (iM[2]) throw mr(iM[1]);
+        return iM[0] >>> 0
       }
-      setFootprint(QQ) {
-        this.footprint = QQ
+      TL(MM) {
+        const rM = Er.qFXB(this.__wbg_ptr, MM);
+        if (rM[2]) throw mr(rM[1]);
+        return rM[0] >>> 0
       }
-      setGcPressure(QQ) {
-        this.gcPressure = {
-          highEpisode: QQ,
-          shedEpisode: null,
-          nextAt: null
-        }
+      VL() {
+        Er.Iakf(this.__wbg_ptr)
       }
-      setCeiling(QQ) {
-        this.ceilingBytes = QQ, this.call((() => {
-          this.memory.setCeiling(QQ)
-        }), void 0)
+      static cL() {
+        return Er.OiCh() >>> 0
       }
-      ceilingMayRefuse(QQ, WQ) {
-        var XQ;
-        return dQ(this.memory.memoryBytes(), QQ, null !== (XQ = this.ceilingBytes) && void 0 !== XQ ? XQ : WQ)
+      Mm() {
+        return Er.w8GT(this.__wbg_ptr) >>> 0
       }
-      reserveAtJoin(QQ) {
-        let {
-          targetBytes: WQ,
-          leastBytes: XQ
-        } = QQ;
-        const wQ = this.memory.memoryBytes(),
-          qQ = wQ + XQ,
-          TQ = Math.max(WQ + (this.ballastOn() ? gQ : 0), qQ),
-          zQ = this.call((() => this.memory.reserveUpFront(TQ) ? "target" : TQ > qQ && this.memory.reserveUpFront(qQ) ? "least" : "none"), "none");
-        if (this.stopped) return !1;
-        if ("target" !== zQ) {
-          const QQ = "least" === zQ ? `took ${qQ} bytes instead` : "frames grow it in steps";
-          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${TQ} bytes was refused at ${wQ} bytes; ${QQ}`)
-        }
-        return this.joinReserveTaken = zQ, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== zQ && this.shedFor("joinReserve"), "none" !== zQ
+      rm() {
+        const MM = Er.fZho(this.__wbg_ptr);
+        return 0 === MM[0] ? void 0 : MM[1]
       }
-      afterFrame() {
-        if (this.stopped) return;
-        const QQ = this.clock.now(),
-          WQ = null !== this.stepsHeldUntil && QQ >= this.stepsHeldUntil;
-        if (WQ && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
-        if (null === this.stepsHeldUntil && QQ >= this.ballastCheckAt && (this.takeBallast(QQ), this.stopped)) return;
-        const XQ = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
-          wQ = WQ && "now" === XQ ? "none" : XQ,
-          {
-            requestIdle: qQ
-          } = this.clock;
-        "now" === wQ || null !== this.pendingSince && QQ - this.pendingSince >= 500 ? this.step() : "idle" === wQ && null === this.pendingSince && (null === qQ ? this.step() : (this.pendingSince = QQ, qQ((() => {
-          null !== this.pendingSince && this.step()
-        })))), QQ - this.statsAt >= 1e3 && (this.statsAt = QQ, this.refreshStats(), this.checkFootprint(), this.checkGcPressure(QQ))
+      im() {
+        return Er.ccWa(this.__wbg_ptr) >>> 0
       }
-      refreshStats() {
-        this.call((() => {
-          var QQ, WQ;
-          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (WQ = this.shedding.readDistanceInUse()) && void 0 !== WQ ? WQ : this.distanceInUse);
-          null === (QQ = this.footprint) || void 0 === QQ || QQ.read(this.memory.memoryBytes() + this.workersMemoryBytes())
-        }), void 0)
+      Om() {
+        return Er.DMAE(this.__wbg_ptr) >>> 0
       }
-      stop() {
-        this.stopped = !0, this.pendingSince = null
+      static KL() {
+        return Er.OyQn() >>> 0
       }
-      noteMeshWorker(QQ, WQ) {
-        this.noteWorker(`Mesh${QQ}`, WQ)
+      constructor() {
+        const MM = Er.qiDZ();
+        return this.__wbg_ptr = MM, kM.register(this, this.__wbg_ptr, this), this
       }
-      meshWorkerGone(QQ) {
-        this.workerGone(`Mesh${QQ}`)
+      Sm() {
+        return Er.C29Q(this.__wbg_ptr) >>> 0
       }
-      noteWorldgen(QQ) {
-        this.noteWorker("Worldgen", QQ)
+      jm() {
+        return Er.OOHq(this.__wbg_ptr) >>> 0
       }
-      worldgenGone() {
-        this.workerGone("Worldgen")
+      am() {
+        return Er.Dq6j(this.__wbg_ptr) >>> 0
       }
-      noteWorker(QQ, WQ) {
-        const XQ = this.workers.get(QQ);
-        null !== XQ && void 0 !== XQ && XQ.gone && (this.replacedRefusals.reserves += XQ.stats.reservesRefused, this.replacedRefusals.allocations += XQ.stats.allocationsRefused), this.workers.set(QQ, {
-          stats: WQ,
-          gone: !1
-        })
+      IL(MM) {
+        return Er.xYZj(this.__wbg_ptr, MM) >>> 0
       }
-      workerGone(QQ) {
-        const WQ = this.workers.get(QQ);
-        WQ && (WQ.gone = !0)
+      reserve(MM, rM) {
+        const iM = Er.H6q9(this.__wbg_ptr, MM, rM);
+        if (iM[1]) throw mr(iM[0])
       }
-      details() {
-        var QQ, WQ;
-        const XQ = this.memory.memoryBytes(),
-          qQ = {
-            wasmMemoryNow: `${(0,wQ.n)(XQ)} MiB`,
-            wasmMemoryMiB: String(Math.floor(XQ / wQ.g))
-          };
-        null !== this.joinReserveTaken && (qQ.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (qQ.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
-        const TQ = this.main;
-        if (TQ) {
-          qQ.wasmMemoryMain = lQ(TQ);
-          const QQ = Math.max(0, TQ.peakLiveBytes - this.ballastPeakBytes),
-            WQ = 0 === this.peakStoredChunks ? "-" : (QQ / this.peakStoredChunks / wQ.d).toFixed(1);
-          qQ.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${WQ} KiB`
-        }
-        for (const [wQ, {
-            stats: sQ,
-            gone: FQ
-          }] of this.workers) qQ[`wasmMemory${wQ}`] = lQ(sQ) + (FQ ? " (gone)" : "");
-        const zQ = null !== (QQ = null === (WQ = this.footprint) || void 0 === WQ ? void 0 : WQ.describe()) && void 0 !== QQ ? QQ : null;
-        return null !== zQ && (qQ.wasmMemoryFootprint = zQ), qQ
+      Qm(MM, rM) {
+        const iM = nr(MM, Er.GR8u),
+          OM = Ur;
+        Er.osw8(this.__wbg_ptr, iM, OM, rM)
       }
-      pageKillSnapshot() {
-        var QQ, WQ, XQ, qQ, TQ;
-        let zQ = (null !== (QQ = null === (WQ = this.main) || void 0 === WQ ? void 0 : WQ.reservesRefused) && void 0 !== QQ ? QQ : 0) + this.replacedRefusals.reserves,
-          sQ = (null !== (XQ = null === (qQ = this.main) || void 0 === qQ ? void 0 : qQ.allocationsRefused) && void 0 !== XQ ? XQ : 0) + this.replacedRefusals.allocations;
-        for (const {
-            stats: wQ
-          }
-          of this.workers.values()) zQ += wQ.reservesRefused, sQ += wQ.allocationsRefused;
-        return {
-          wasmMainMiB: Number((0, wQ.n)(this.memory.memoryBytes())),
-          wasmWorkersMiB: Number((0, wQ.n)(this.workersMemoryBytes())),
-          peakStoredChunks: this.peakStoredChunks,
-          refusedReserves: zQ,
-          refusedAllocations: sQ,
-          sheds: this.sheds,
-          ...null === (TQ = this.footprint) || void 0 === TQ ? void 0 : TQ.snapshot()
-        }
-      }
-      workersMemoryBytes() {
-        let QQ = 0;
-        for (const {
-            stats: WQ,
-            gone: XQ
-          }
-          of this.workers.values()) QQ += XQ ? 0 : WQ.memoryBytes;
-        return QQ
-      }
-      checkFootprint() {
-        null === this.footprint || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil || this.footprint.takeShed() && this.shedFor("footprint")
-      }
-      checkGcPressure(QQ) {
-        const WQ = this.gcPressure;
-        if (null === WQ) return;
-        if (null !== WQ.nextAt || "undefined" !== typeof document && document.hidden || (WQ.nextAt = QQ + 6e4), null === WQ.nextAt || QQ < WQ.nextAt) return;
-        if (this.stopped || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil) return;
-        const XQ = WQ.highEpisode();
-        null !== XQ && XQ !== WQ.shedEpisode && (WQ.shedEpisode = XQ, WQ.nextAt = QQ + 3e4, this.shedFor("gcPressure"))
-      }
-      step() {
-        this.pendingSince = null, this.call((() => this.memory.reserveAhead(PQ)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
-      }
-      ballastOn() {
-        return null !== this.shedding
-      }
-      takeBallast(QQ) {
-        if (!this.ballastOn() || null === this.joinReserveTaken) return;
-        this.ballastCheckAt = QQ + 1e3;
-        const WQ = this.call((() => this.memory.takeBallast()), 0);
-        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, WQ)
-      }
-      takePressure() {
-        return this.ballastOn() && this.call((() => this.memory.takePressure()), !1)
-      }
-      stopSteps(QQ) {
-        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${QQ}: frames grow on demand from here`)
-      }
-      shedFor(QQ) {
-        const {
-          shedding: WQ
-        } = this;
-        if (null === WQ) return;
-        this.pendingSince = null;
-        const XQ = this.call((() => WQ.shed(QQ)), null);
-        if (this.stopped) return;
-        if (null === XQ) return void(JQ(QQ) && this.stopSteps("nothing is left to shed"));
-        this.sheds++, this.shedCap = XQ, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats();
-        const wQ = "gcPressure" === QQ ? ++this.gcSheds : this.sheds - this.gcSheds;
-        WQ.nI(QQ, wQ, this.details())
-      }
-      call(QQ, WQ) {
-        if (this.stopped) return WQ;
+      text() {
+        let MM, rM;
         try {
-          return QQ()
-        } catch (XQ) {
-          return this.stop(), this.onError(XQ), WQ
+          const iM = Er.cdEF(this.__wbg_ptr);
+          return MM = iM[0], rM = iM[1], TM(iM[0], iM[1])
+        } finally {
+          Er.SWNS(MM, rM, 1)
         }
       }
     }
+    Symbol.dispose && (jM.prototype[Symbol.dispose] = jM.prototype.free);
+    class aM {
+      __destroy_into_raw() {
+        const MM = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, ZM.unregister(this), MM
+      }
+      free() {
+        const MM = this.__destroy_into_raw();
+        Er.gQek(MM, 0)
+      }
+      Lm(MM, rM) {
+        vM(rM, OM);
+        const iM = Er.RaGm(this.__wbg_ptr, MM, rM.__wbg_ptr);
+        if (iM[2]) throw mr(iM[1]);
+        return iM[0] >>> 0
+      }
+      Hm() {
+        const MM = Er.inSK(this.__wbg_ptr);
+        if (MM[1]) throw mr(MM[0])
+      }
+      ym(MM, rM, iM, OM, SM, jM, aM, nM, QM, zM, LM) {
+        vM(MM, PM);
+        const mM = Er.LrrD(this.__wbg_ptr, MM.__wbg_ptr, rM, iM, OM, SM, jM, aM, nM, QM, zM, LM);
+        if (mM[2]) throw mr(mM[1]);
+        return mM[0]
+      }
+      lm() {
+        const MM = Er.VUXo(this.__wbg_ptr);
+        var rM = FM(MM[0], MM[1]).slice();
+        return Er.SWNS(MM[0], 8 * MM[1], 8), rM
+      }
+      Em() {
+        return Er.j7si(this.__wbg_ptr) >>> 0
+      }
+      Um() {
+        return Er.o5ZN(this.__wbg_ptr) >>> 0
+      }
+      Gm() {
+        return Er.HN1N(this.__wbg_ptr) >>> 0
+      }
+      constructor(MM, rM, iM, OM, SM, jM, aM, PM) {
+        const nM = Er.FxC3(MM, rM, iM, OM, SM, jM, aM, PM);
+        if (nM[2]) throw mr(nM[1]);
+        return this.__wbg_ptr = nM[0], ZM.register(this, this.__wbg_ptr, this), this
+      }
+      wm(MM) {
+        vM(MM, OM);
+        const rM = Er.Arqk(this.__wbg_ptr, MM.__wbg_ptr);
+        if (rM[2]) throw mr(rM[1]);
+        return rM[0] >>> 0
+      }
+      gm(MM) {
+        const rM = Er.q8Ma(this.__wbg_ptr, MM);
+        if (rM[1]) throw mr(rM[0])
+      }
+      um() {
+        return Er.cHTK(this.__wbg_ptr) >>> 0
+      }
+      resume(MM, rM) {
+        vM(MM, PM), vM(rM, OM);
+        const iM = Er.UiQy(this.__wbg_ptr, MM.__wbg_ptr, rM.__wbg_ptr);
+        if (iM[2]) throw mr(iM[1]);
+        return iM[0] >>> 0
+      }
+      Dm(MM) {
+        const rM = Er.Ftvx(this.__wbg_ptr, MM);
+        if (rM[1]) throw mr(rM[0])
+      }
+      om(MM, rM) {
+        vM(rM, OM);
+        const iM = Er.cd9B(this.__wbg_ptr, MM, rM.__wbg_ptr);
+        if (iM[1]) throw mr(iM[0])
+      }
+      Nm(MM) {
+        const rM = zr(MM, Er.GR8u),
+          iM = Ur,
+          OM = Er.eSoQ(this.__wbg_ptr, rM, iM);
+        if (OM[1]) throw mr(OM[0])
+      }
+      Jm(MM, rM, iM, OM, SM, jM) {
+        const aM = Er.q62T(this.__wbg_ptr, MM, rM, iM, OM, SM, jM);
+        if (aM[1]) throw mr(aM[0])
+      }
+      dm(MM, rM, iM, OM) {
+        const SM = nr(MM, Er.GR8u),
+          jM = Ur,
+          aM = zr(rM, Er.GR8u),
+          PM = Ur,
+          nM = zr(iM, Er.GR8u),
+          QM = Ur,
+          zM = zr(OM, Er.GR8u),
+          LM = Ur,
+          mM = Er.tcHL(this.__wbg_ptr, SM, jM, aM, PM, nM, QM, zM, LM);
+        if (mM[1]) throw mr(mM[0])
+      }
+      xm(MM, rM) {
+        vM(rM, OM);
+        const iM = Er.UP1Y(this.__wbg_ptr, MM, rM.__wbg_ptr);
+        if (iM[1]) throw mr(iM[0])
+      }
+      bm(MM, rM, iM) {
+        const OM = Er.c5lY(this.__wbg_ptr, MM, rM, iM);
+        if (OM[1]) throw mr(OM[0])
+      }
+      Bm(MM, rM, iM, OM, SM, jM, aM, nM, QM, zM) {
+        vM(MM, PM);
+        return Er.fpYK(this.__wbg_ptr, MM.__wbg_ptr, rM, iM, OM, SM, jM, aM, nM, QM, zM)
+      }
+    }
+    Symbol.dispose && (aM.prototype[Symbol.dispose] = aM.prototype.free);
+    class PM {
+      static __wrap(MM) {
+        const rM = Object.create(PM.prototype);
+        return rM.__wbg_ptr = MM, oM.register(rM, rM.__wbg_ptr, rM), rM
+      }
+      __destroy_into_raw() {
+        const MM = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, oM.unregister(this), MM
+      }
+      free() {
+        const MM = this.__destroy_into_raw();
+        Er.qijW(MM, 0)
+      }
+      Im(MM) {
+        const rM = Er.iCeU(this.__wbg_ptr, MM);
+        if (rM[2]) throw mr(rM[1]);
+        return rM[0] >>> 0
+      }
+      Km(MM, rM, iM) {
+        return Er.CtTE(this.__wbg_ptr, MM, rM, iM)
+      }
+      qm(MM, rM, iM) {
+        return Er.ppAH(this.__wbg_ptr, MM, rM, iM) >>> 0
+      }
+      Tm(MM, rM, iM, OM) {
+        return 0 !== Er.uzVq(this.__wbg_ptr, MM, rM, iM, OM)
+      }
+      Vm() {
+        Er.dilY(this.__wbg_ptr)
+      }
+      MH(MM) {
+        const rM = Er.Jevj(this.__wbg_ptr, MM);
+        if (rM[3]) throw mr(rM[2]);
+        var iM = XM(rM[0], rM[1]).slice();
+        return Er.SWNS(rM[0], 1 * rM[1], 1), iM
+      }
+      evict(MM, rM) {
+        return Er.en5R(this.__wbg_ptr, MM, rM) >>> 0
+      }
+      rH() {
+        Er.KreM(this.__wbg_ptr)
+      }
+      iH(MM, rM, iM) {
+        Er.RR7v(this.__wbg_ptr, MM, rM, iM)
+      }
+      OH(MM) {
+        const rM = Er.Z5I9(this.__wbg_ptr, MM);
+        if (rM[1]) throw mr(rM[0])
+      }
+      SH() {
+        return Er.i4zF(this.__wbg_ptr) >>> 0
+      }
+      jH() {
+        return Er.r9X8(this.__wbg_ptr) >>> 0
+      }
+      aH(MM, rM, iM) {
+        Er.uOWv(this.__wbg_ptr, MM, rM, iM)
+      }
+      PH(MM, rM, iM) {
+        Er.D4VZ(this.__wbg_ptr, MM, rM, iM)
+      }
+      nH() {
+        return Er.qXwL(this.__wbg_ptr) >>> 0
+      }
+      QH() {
+        return Er.E4b8(this.__wbg_ptr) >>> 0
+      }
+      constructor() {
+        const MM = Er.k4S3();
+        return this.__wbg_ptr = MM, oM.register(this, this.__wbg_ptr, this), this
+      }
+      static zH() {
+        const MM = Er.nO3E();
+        return PM.__wrap(MM)
+      }
+      LH() {
+        return Er.V6YQ(this.__wbg_ptr) >>> 0
+      }
+      mH() {
+        return Er.L9u3(this.__wbg_ptr) >>> 0
+      }
+      HH(MM, rM, iM, OM) {
+        const SM = Er.Atfp(this.__wbg_ptr, MM, rM, iM, OM);
+        if (SM[1]) throw mr(SM[0])
+      }
+      hH() {
+        return Er.qpth(this.__wbg_ptr) >>> 0
+      }
+      JH() {
+        return Er.UolJ(this.__wbg_ptr) >>> 0
+      }
+      dH(MM, rM, iM, OM) {
+        Er.wyYy(this.__wbg_ptr, MM, rM, iM, OM)
+      }
+      yH(MM) {
+        Er.OxV5(this.__wbg_ptr, MM)
+      }
+      EH(MM, rM, iM, OM, SM) {
+        const jM = Qr(rM, Er.GR8u),
+          aM = Ur,
+          PM = nr(iM, Er.GR8u),
+          nM = Ur,
+          QM = zr(OM, Er.GR8u),
+          zM = Ur,
+          LM = Er.Cm8M(this.__wbg_ptr, MM, jM, aM, PM, nM, QM, zM, SM);
+        if (LM[1]) throw mr(LM[0])
+      }
+      lH(MM, rM, iM, OM) {
+        const SM = Qr(MM, Er.GR8u),
+          jM = Ur,
+          aM = nr(rM, Er.GR8u),
+          PM = Ur,
+          nM = zr(iM, Er.GR8u),
+          QM = Ur,
+          zM = Qr(OM, Er.GR8u),
+          LM = Ur,
+          mM = Er.fz9L(this.__wbg_ptr, SM, jM, aM, PM, nM, QM, zM, LM);
+        if (mM[1]) throw mr(mM[0])
+      }
+      bH(MM) {
+        const rM = Qr(MM, Er.GR8u),
+          iM = Ur,
+          OM = Er.Jdrq(this.__wbg_ptr, rM, iM);
+        if (OM[1]) throw mr(OM[0])
+      }
+      wH() {
+        return Er.xfN9(this.__wbg_ptr) >>> 0
+      }
+      tH(MM) {
+        const rM = Er.kJpK(this.__wbg_ptr, MM);
+        if (rM[2]) throw mr(rM[1]);
+        return rM[0] >>> 0
+      }
+      steer() {
+        return Er.ZaID(this.__wbg_ptr) >>> 0
+      }
+      gH() {
+        const MM = Er.ee7d(this.__wbg_ptr);
+        var rM = FM(MM[0], MM[1]).slice();
+        return Er.SWNS(MM[0], 8 * MM[1], 8), rM
+      }
+      uH() {
+        return Er.qOkc(this.__wbg_ptr) >>> 0
+      }
+      pm() {
+        const MM = Er.oeR9(this.__wbg_ptr);
+        var rM, iM, OM = (rM = MM[0], iM = MM[1], rM >>>= 0, (null !== qM && 0 !== qM.byteLength || (qM = new Int32Array(Er.memory.buffer)), qM).subarray(rM / 4, rM / 4 + iM)).slice();
+        return Er.SWNS(MM[0], 4 * MM[1], 4), OM
+      }
+    }
+    Symbol.dispose && (PM.prototype[Symbol.dispose] = PM.prototype.free);
+    class nM {
+      __destroy_into_raw() {
+        const MM = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, fM.unregister(this), MM
+      }
+      free() {
+        const MM = this.__destroy_into_raw();
+        Er.nTwo(MM, 0)
+      }
+      JL(MM) {
+        const rM = nr(MM, Er.GR8u),
+          iM = Ur,
+          OM = Er.o8jR(this.__wbg_ptr, rM, iM);
+        if (OM[1]) throw mr(OM[0])
+      }
+      RH() {
+        return Er.C4NB(this.__wbg_ptr) >>> 0
+      }
+      pH() {
+        return Er.ajuN(this.__wbg_ptr) >>> 0
+      }
+      constructor() {
+        const MM = Er.q3Nd();
+        return this.__wbg_ptr = MM, fM.register(this, this.__wbg_ptr, this), this
+      }
+      run(MM, rM) {
+        vM(MM, PM);
+        const iM = Er.PVbs(this.__wbg_ptr, MM.__wbg_ptr, rM);
+        if (iM[2]) throw mr(iM[1]);
+        return iM[0] >>> 0
+      }
+      WH(MM) {
+        const rM = nr(MM, Er.GR8u),
+          iM = Ur;
+        Er.LpYp(this.__wbg_ptr, rM, iM)
+      }
+      sH(MM) {
+        const rM = nr(MM, Er.GR8u),
+          iM = Ur;
+        Er.uhNL(this.__wbg_ptr, rM, iM)
+      }
+    }
+    Symbol.dispose && (nM.prototype[Symbol.dispose] = nM.prototype.free);
+    class QM {
+      __destroy_into_raw() {
+        const MM = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, YM.unregister(this), MM
+      }
+      free() {
+        const MM = this.__destroy_into_raw();
+        Er.IFNF(MM, 0)
+      }
+      kH(MM, rM) {
+        const iM = Qr(MM, Er.GR8u),
+          OM = Ur;
+        return Er.Pb4y(this.__wbg_ptr, iM, OM, rM) >>> 0
+      }
+      ZH(MM, rM, iM) {
+        vM(MM, PM);
+        const OM = Qr(iM, Er.GR8u),
+          SM = Ur,
+          jM = Er.I5Yx(this.__wbg_ptr, MM.__wbg_ptr, rM, OM, SM);
+        if (jM[2]) throw mr(jM[1]);
+        return jM[0] >>> 0
+      }
+      DH(MM) {
+        return Er.bZtZ(this.__wbg_ptr, MM) >>> 0
+      }
+      constructor() {
+        const MM = Er.gbaE();
+        return this.__wbg_ptr = MM, YM.register(this, this.__wbg_ptr, this), this
+      }
+      scan(MM, rM) {
+        vM(MM, PM);
+        const iM = Er.FEGW(this.__wbg_ptr, MM.__wbg_ptr, rM);
+        if (iM[2]) throw mr(iM[1]);
+        return iM[0] >>> 0
+      }
+      YH(MM) {
+        const rM = Qr(MM, Er.GR8u),
+          iM = Ur;
+        Er.nxYx(this.__wbg_ptr, rM, iM)
+      }
+      fH() {
+        return Er.q3RP(this.__wbg_ptr) >>> 0
+      }
+      oH() {
+        return Er.X1dl(this.__wbg_ptr) >>> 0
+      }
+    }
+    Symbol.dispose && (QM.prototype[Symbol.dispose] = QM.prototype.free);
+    class zM {
+      __destroy_into_raw() {
+        const MM = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, NM.unregister(this), MM
+      }
+      free() {
+        const MM = this.__destroy_into_raw();
+        Er.jrCE(MM, 0)
+      }
+      AH(MM) {
+        const rM = Er.PWpb(this.__wbg_ptr, MM);
+        if (rM[2]) throw mr(rM[1]);
+        return rM[0] >>> 0
+      }
+      compute(MM, rM, iM, OM) {
+        var SM = ar(OM) ? 0 : Lr(OM, Er.GR8u, Er.idyS),
+          jM = Ur;
+        const aM = Er.DpDR(this.__wbg_ptr, MM, ar(rM) ? Number.MAX_SAFE_INTEGER : rM | 0, iM, SM, jM);
+        if (aM[2]) throw mr(aM[1]);
+        return aM[0] >>> 0
+      }
+      vH(MM) {
+        const rM = Lr(MM, Er.GR8u, Er.idyS),
+          iM = Ur;
+        Er.G5Ej(this.__wbg_ptr, rM, iM)
+      }
+      FH() {
+        return Er.lMxp(this.__wbg_ptr)
+      }
+      BH(MM) {
+        return Er.Hqhm(this.__wbg_ptr, MM) >>> 0
+      }
+      XH() {
+        return Er.fDOT(this.__wbg_ptr) >>> 0
+      }
+      IH() {
+        return Er.HtbL(this.__wbg_ptr) >>> 0
+      }
+      KH(MM, rM) {
+        const iM = Er.Qxsg(this.__wbg_ptr, MM, rM);
+        if (iM[1]) throw mr(iM[0])
+      }
+      qH() {
+        return Er.Y3k9(this.__wbg_ptr) >>> 0
+      }
+      TH() {
+        return Er.nVoc(this.__wbg_ptr) >>> 0
+      }
+      VH() {
+        return Er.SHBJ(this.__wbg_ptr) >>> 0
+      }
+      xH(MM, rM, iM) {
+        const OM = nr(MM, Er.GR8u),
+          SM = Ur,
+          jM = nr(rM, Er.GR8u),
+          aM = Ur,
+          PM = Er.AROh(this.__wbg_ptr, OM, SM, jM, aM, iM);
+        if (PM[1]) throw mr(PM[0])
+      }
+      Mh() {
+        return Er.kYWj(this.__wbg_ptr) >>> 0
+      }
+      mesh(MM, rM, iM, OM, SM) {
+        const jM = Er.nsoP(this.__wbg_ptr, MM, rM, iM, OM, SM);
+        if (jM[2]) throw mr(jM[1]);
+        return jM[0] >>> 0
+      }
+      constructor(MM, rM, iM, OM, SM, jM, aM, PM, nM, QM, zM, LM, mM, HM, hM, JM, dM, yM, lM, EM) {
+        const UM = Pr(MM, Er.GR8u),
+          GM = Ur,
+          CM = zr(rM, Er.GR8u),
+          eM = Ur,
+          bM = nr(iM, Er.GR8u),
+          wM = Ur,
+          tM = Qr(OM, Er.GR8u),
+          gM = Ur,
+          uM = Qr(SM, Er.GR8u),
+          RM = Ur,
+          pM = nr(jM, Er.GR8u),
+          WM = Ur,
+          sM = nr(aM, Er.GR8u),
+          DM = Ur,
+          kM = zr(PM, Er.GR8u),
+          ZM = Ur,
+          oM = zr(nM, Er.GR8u),
+          fM = Ur,
+          YM = Qr(QM, Er.GR8u),
+          AM = Ur;
+        var xM = ar(zM) ? 0 : Pr(zM, Er.GR8u),
+          vM = Ur;
+        const FM = nr(LM, Er.GR8u),
+          BM = Ur,
+          XM = Qr(mM, Er.GR8u),
+          IM = Ur;
+        var KM = ar(HM) ? 0 : Qr(HM, Er.GR8u),
+          qM = Ur;
+        const TM = zr(hM, Er.GR8u),
+          VM = Ur,
+          cM = Er.E9qx(UM, GM, CM, eM, bM, wM, tM, gM, uM, RM, pM, WM, sM, DM, kM, ZM, oM, fM, YM, AM, xM, vM, FM, BM, XM, IM, KM, qM, TM, VM, JM, dM, yM, lM, EM);
+        if (cM[2]) throw mr(cM[1]);
+        return this.__wbg_ptr = cM[0], NM.register(this, this.__wbg_ptr, this), this
+      }
+      cH(MM, rM) {
+        const iM = nr(MM, Er.GR8u),
+          OM = Ur,
+          SM = Er.Z1ud(this.__wbg_ptr, iM, OM, rM);
+        if (SM[3]) throw mr(SM[2]);
+        var jM = XM(SM[0], SM[1]).slice();
+        return Er.SWNS(SM[0], 1 * SM[1], 1), jM
+      }
+      rh(MM) {
+        Er.TWvQ(this.__wbg_ptr, ar(MM) ? 16777215 : MM)
+      }
+      ih(MM) {
+        return Er.n4UF(this.__wbg_ptr, MM) >>> 0
+      }
+      Sh() {
+        return Er.IQeB(this.__wbg_ptr) >>> 0
+      }
+      Oh() {
+        const MM = Er.XrMU(this.__wbg_ptr);
+        if (MM[2]) throw mr(MM[1]);
+        return 0 !== MM[0]
+      }
+      jh() {
+        return Er.Tw9n(this.__wbg_ptr) >>> 0
+      }
+      ah() {
+        return Er.dFom(this.__wbg_ptr) >>> 0
+      }
+    }
+    Symbol.dispose && (zM.prototype[Symbol.dispose] = zM.prototype.free);
+    class LM {
+      __destroy_into_raw() {
+        const MM = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, AM.unregister(this), MM
+      }
+      free() {
+        const MM = this.__destroy_into_raw();
+        Er.mG84(MM, 0)
+      }
+      compute(MM, rM, iM, OM) {
+        var SM = ar(OM) ? 0 : Lr(OM, Er.GR8u, Er.idyS),
+          jM = Ur;
+        const aM = Er.PRZ0(this.__wbg_ptr, MM, ar(rM) ? Number.MAX_SAFE_INTEGER : rM | 0, iM, SM, jM);
+        if (aM[2]) throw mr(aM[1]);
+        return aM[0] >>> 0
+      }
+      vH(MM) {
+        const rM = Lr(MM, Er.GR8u, Er.idyS),
+          iM = Ur;
+        Er.rSTV(this.__wbg_ptr, rM, iM)
+      }
+      TH() {
+        return Er.lbVF(this.__wbg_ptr) >>> 0
+      }
+      VH() {
+        return Er.vdlM(this.__wbg_ptr) >>> 0
+      }
+      Ph(MM) {
+        const rM = Er.m09q(this.__wbg_ptr, MM);
+        if (rM[2]) throw mr(rM[1]);
+        return rM[0] >>> 0
+      }
+      constructor(MM, rM, iM, OM, SM, jM) {
+        const aM = Pr(MM, Er.GR8u),
+          PM = Ur,
+          nM = zr(rM, Er.GR8u),
+          QM = Ur,
+          zM = nr(iM, Er.GR8u),
+          LM = Ur,
+          mM = Qr(OM, Er.GR8u),
+          HM = Ur,
+          hM = Er.k4zN(aM, PM, nM, QM, zM, LM, mM, HM, SM, jM);
+        if (hM[2]) throw mr(hM[1]);
+        return this.__wbg_ptr = hM[0], AM.register(this, this.__wbg_ptr, this), this
+      }
+      Sh() {
+        return Er.HlXQ(this.__wbg_ptr) >>> 0
+      }
+      Oh() {
+        const MM = Er.FJ9P(this.__wbg_ptr);
+        if (MM[2]) throw mr(MM[1]);
+        return 0 !== MM[0]
+      }
+      jh() {
+        return Er.we1W(this.__wbg_ptr) >>> 0
+      }
+    }
 
-    function lQ(QQ) {
-      const WQ = (QQ, WQ) => `${QQ}/${(0,wQ.n)(WQ)}`;
-      return `memory ${(0,wQ.n)(QQ.memoryBytes)} live ${(0,wQ.n)(QQ.liveBytes)} peak ${(0,wQ.n)(QQ.peakLiveBytes)} unused ${(0,wQ.n)(QQ.unusedBytes)} ceiling ${(0,wQ.n)(QQ.ceilingBytes)} MiB; grows upFront ${WQ(QQ.grows.upFront,QQ.grownBytes.upFront)} ahead ${WQ(QQ.grows.ahead,QQ.grownBytes.ahead)} inFrame ${WQ(QQ.grows.onDemandInFrame,QQ.grownBytes.onDemandInFrame)} other ${WQ(QQ.grows.onDemand,QQ.grownBytes.onDemand)}; refused reserves ${QQ.reservesRefused} allocations ${QQ.allocationsRefused}`
+    function mM() {
+      const MM = Er.XhAF();
+      var rM = BM(MM[0], MM[1]).slice();
+      return Er.SWNS(MM[0], 4 * MM[1], 4), rM
+    }
+
+    function HM(MM, rM) {
+      let iM, OM;
+      try {
+        const SM = Pr(MM, Er.GR8u),
+          jM = Ur,
+          aM = Lr(rM, Er.GR8u, Er.idyS),
+          PM = Ur,
+          nM = Er.fWEg(SM, jM, aM, PM);
+        return iM = nM[0], OM = nM[1], TM(nM[0], nM[1])
+      } finally {
+        Er.SWNS(iM, OM, 1)
+      }
+    }
+
+    function hM() {
+      const MM = Er.aq0i();
+      var rM = BM(MM[0], MM[1]).slice();
+      return Er.SWNS(MM[0], 4 * MM[1], 4), rM
+    }
+
+    function JM(MM) {
+      return 0 !== Er.f1AT(MM)
+    }
+
+    function dM(MM, rM) {
+      const iM = Lr(MM, Er.GR8u, Er.idyS),
+        OM = Ur,
+        SM = Er.ef2O(iM, OM, rM);
+      if (SM[1]) throw mr(SM[0])
+    }
+
+    function yM() {
+      Er.QOF5()
+    }
+
+    function lM() {
+      return Er.agAh() >>> 0
+    }
+
+    function EM(MM) {
+      return 0 !== Er.Q5FA(MM)
+    }
+
+    function UM(MM) {
+      return 0 !== Er.Mpy6(MM)
+    }
+
+    function GM(MM) {
+      Er.sNfK(MM)
+    }
+
+    function CM() {
+      return Er.pOXN() >>> 0
+    }
+
+    function eM() {
+      return Er.UBY5() >>> 0
+    }
+
+    function bM() {
+      return 0 !== Er.zH1c()
+    }
+
+    function wM() {
+      const MM = Er.OoQb();
+      var rM = BM(MM[0], MM[1]).slice();
+      return Er.SWNS(MM[0], 4 * MM[1], 4), rM
+    }
+
+    function tM() {
+      const MM = Er.A8ZZ();
+      var rM = BM(MM[0], MM[1]).slice();
+      return Er.SWNS(MM[0], 4 * MM[1], 4), rM
+    }
+
+    function gM() {
+      const MM = Er.GOao();
+      var rM = BM(MM[0], MM[1]).slice();
+      return Er.SWNS(MM[0], 4 * MM[1], 4), rM
+    }
+
+    function uM() {
+      return Er.ez7e() >>> 0
+    }
+
+    function RM() {
+      Er.jY6g()
+    }
+
+    function pM() {
+      let MM, rM;
+      try {
+        const iM = Er.Hx3D();
+        return MM = iM[0], rM = iM[1], TM(iM[0], iM[1])
+      } finally {
+        Er.SWNS(MM, rM, 1)
+      }
+    }
+
+    function WM(MM) {
+      Er.GJHO(xM(MM))
+    }
+
+    function sM() {
+      return {
+        __proto__: null,
+        chc3: {
+          __proto__: null,
+          BOhm: function(MM, rM) {
+            return xM(Error(TM(MM, rM)))
+          },
+          qvwV: function(MM, rM) {
+            throw new Error(TM(MM, rM))
+          },
+          dWpt: function(MM) {
+            Or(MM).call()
+          },
+          pC17: function(MM, rM) {
+            console.error(TM(MM, rM))
+          },
+          dzOJ: function() {
+            return performance.now()
+          },
+          J20d: function(MM) {
+            mr(MM)
+          }
+        }
+      }
+    }
+    Symbol.dispose && (LM.prototype[Symbol.dispose] = LM.prototype.free);
+    const DM = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((MM => Er.A1cn(MM, 1))),
+      kM = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((MM => Er.Kc06(MM, 1))),
+      ZM = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((MM => Er.gQek(MM, 1))),
+      oM = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((MM => Er.qijW(MM, 1))),
+      fM = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((MM => Er.nTwo(MM, 1))),
+      YM = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((MM => Er.IFNF(MM, 1))),
+      NM = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((MM => Er.jrCE(MM, 1))),
+      AM = "undefined" === typeof FinalizationRegistry ? {
+        register: () => {},
+        unregister: () => {}
+      } : new FinalizationRegistry((MM => Er.mG84(MM, 1)));
+
+    function xM(MM) {
+      jr === Sr.length && Sr.push(Sr.length + 1);
+      const rM = jr;
+      return jr = Sr[rM], Sr[rM] = MM, rM
+    }
+
+    function vM(MM, rM) {
+      if (!(MM instanceof rM)) throw new Error(`expected instance of ${rM.name}`)
+    }
+
+    function FM(MM, rM) {
+      return MM >>>= 0, KM().subarray(MM / 8, MM / 8 + rM)
+    }
+
+    function BM(MM, rM) {
+      return MM >>>= 0, Mr().subarray(MM / 4, MM / 4 + rM)
+    }
+
+    function XM(MM, rM) {
+      return MM >>>= 0, ir().subarray(MM / 1, MM / 1 + rM)
+    }
+    let IM = null;
+
+    function KM() {
+      return null !== IM && 0 !== IM.byteLength || (IM = new Float64Array(Er.memory.buffer)), IM
+    }
+    let qM = null;
+
+    function TM(MM, rM) {
+      return function(MM, rM) {
+        Jr += rM, Jr >= hr && (Hr = new TextDecoder("utf-8", {
+          ignoreBOM: !0,
+          fatal: !0
+        }), Hr.decode(), Jr = rM);
+        return Hr.decode(ir().subarray(MM, MM + rM))
+      }(MM >>> 0, rM)
+    }
+    let VM = null;
+    let cM = null;
+
+    function Mr() {
+      return null !== cM && 0 !== cM.byteLength || (cM = new Uint32Array(Er.memory.buffer)), cM
+    }
+    let rr = null;
+
+    function ir() {
+      return null !== rr && 0 !== rr.byteLength || (rr = new Uint8Array(Er.memory.buffer)), rr
+    }
+
+    function Or(MM) {
+      return Sr[MM]
+    }
+    let Sr = new Array(1024).fill(void 0);
+    Sr.push(void 0, null, !0, !1);
+    let jr = Sr.length;
+
+    function ar(MM) {
+      return void 0 === MM || null === MM
+    }
+
+    function Pr(MM, rM) {
+      const iM = rM(2 * MM.length, 2) >>> 0;
+      return (null !== VM && 0 !== VM.byteLength || (VM = new Uint16Array(Er.memory.buffer)), VM).set(MM, iM / 2), Ur = MM.length, iM
+    }
+
+    function nr(MM, rM) {
+      const iM = rM(4 * MM.length, 4) >>> 0;
+      return Mr().set(MM, iM / 4), Ur = MM.length, iM
+    }
+
+    function Qr(MM, rM) {
+      const iM = rM(1 * MM.length, 1) >>> 0;
+      return ir().set(MM, iM / 1), Ur = MM.length, iM
+    }
+
+    function zr(MM, rM) {
+      const iM = rM(8 * MM.length, 8) >>> 0;
+      return KM().set(MM, iM / 8), Ur = MM.length, iM
+    }
+
+    function Lr(MM, rM, iM) {
+      if (void 0 === iM) {
+        const iM = dr.encode(MM),
+          OM = rM(iM.length, 1) >>> 0;
+        return ir().subarray(OM, OM + iM.length).set(iM), Ur = iM.length, OM
+      }
+      let OM = MM.length,
+        SM = rM(OM, 1) >>> 0;
+      const jM = ir();
+      let aM = 0;
+      for (; aM < OM; aM++) {
+        const rM = MM.charCodeAt(aM);
+        if (rM > 127) break;
+        jM[SM + aM] = rM
+      }
+      if (aM !== OM) {
+        0 !== aM && (MM = MM.slice(aM)), SM = iM(SM, OM, OM = aM + 3 * MM.length, 1) >>> 0;
+        const rM = ir().subarray(SM + aM, SM + OM);
+        aM += dr.encodeInto(MM, rM).written, SM = iM(SM, OM, aM, 1) >>> 0
+      }
+      return Ur = aM, SM
+    }
+
+    function mr(MM) {
+      const rM = Or(MM);
+      return function(MM) {
+        MM < 1028 || (Sr[MM] = jr, jr = MM)
+      }(MM), rM
+    }
+    let Hr = new TextDecoder("utf-8", {
+      ignoreBOM: !0,
+      fatal: !0
+    });
+    Hr.decode();
+    const hr = 2146435072;
+    let Jr = 0;
+    const dr = new TextEncoder;
+    "encodeInto" in dr || (dr.encodeInto = function(MM, rM) {
+      const iM = dr.encode(MM);
+      return rM.set(iM), {
+        read: MM.length,
+        written: iM.length
+      }
+    });
+    let yr, lr, Er, Ur = 0;
+
+    function Gr(MM, rM) {
+      return lr = MM, Er = MM.exports, yr = rM, IM = null, qM = null, VM = null, cM = null, rr = null, Er.crmU(), Er
+    }
+
+    function Cr(MM) {
+      if (void 0 !== Er) return Er;
+      void 0 !== MM && (Object.getPrototypeOf(MM) === Object.prototype ? ({
+        module: MM
+      } = MM) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const rM = sM();
+      MM instanceof WebAssembly.Module || (MM = new WebAssembly.Module(MM));
+      return Gr(new WebAssembly.Instance(MM, rM), MM)
+    }
+    async function er(MM) {
+      if (void 0 !== Er) return Er;
+      void 0 !== MM && (Object.getPrototypeOf(MM) === Object.prototype ? ({
+        module_or_path: MM
+      } = MM) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const rM = sM();
+      ("string" === typeof MM || "function" === typeof Request && MM instanceof Request || "function" === typeof URL && MM instanceof URL) && (MM = fetch(MM));
+      const {
+        instance: iM,
+        module: OM
+      } = await async function(MM, rM) {
+        if ("function" === typeof Response && MM instanceof Response) {
+          if (!MM.ok) throw new Error(`failed to fetch Wasm: ${MM.status} ${MM.statusText} fetching '${MM.url}'`);
+          if ("function" === typeof WebAssembly.instantiateStreaming) try {
+            return await WebAssembly.instantiateStreaming(MM, rM)
+          } catch (iM) {
+            if (! function(MM) {
+                switch (MM) {
+                  case "basic":
+                  case "cors":
+                  case "default":
+                    return !0
+                }
+                return !1
+              }(MM.type) || "application/wasm" === MM.headers.get("Content-Type")) throw iM;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", iM)
+          }
+          const OM = await MM.arrayBuffer();
+          return await WebAssembly.instantiate(OM, rM)
+        } {
+          const iM = await WebAssembly.instantiate(MM, rM);
+          return iM instanceof WebAssembly.Instance ? {
+            instance: iM,
+            module: MM
+          } : iM
+        }
+      }(await MM, rM);
+      return Gr(iM, OM)
+    }
+  },
+  37244: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => aM,
+      i: () => PM,
+      m: () => nM
+    });
+    var OM = iM(37253),
+      SM = iM(3185),
+      jM = iM(37257);
+    const aM = {
+      name: SM.e,
+      url: () => new iM.U(iM(37266)),
+      init: OM.default,
+      bindings: OM
+    };
+
+    function PM() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM,
+        rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aM,
+        iM = arguments.length > 2 ? arguments[2] : void 0;
+      return (0, jM.k)(MM, rM, iM)
+    }
+
+    function nM(MM) {
+      return (0, SM.M)((() => MM), OM, aM)
+    }
+  },
+  37238: (MM, rM, iM) => {
+    function OM(MM, rM) {
+      return new Error(`${MM}: ${rM instanceof Error?`${rM.name}: ${rM.message}`:String(rM)}`, {
+        cause: rM
+      })
+    }
+    iM.d(rM, {
+      e: () => OM
+    })
+  },
+  37233: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => aM,
+      h: () => nM
+    });
+    var OM = iM(3188),
+      SM = iM(7116),
+      jM = iM(37238);
+
+    function aM() {
+      return new URL(new iM.U(iM(37242)).href, globalThis.location?.href).href
+    }
+    let PM = null;
+
+    function nM() {
+      return PM ??= (async () => (0, OM.E)(new URL(aM()), (0, SM.b)("bloxd_wasm_textures")))().catch((MM => {
+        throw (0, jM.e)((0, OM.J)(MM), MM)
+      })), PM
+    }
+  },
+  37218: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => OM,
+      f: () => jM,
+      i: () => nM,
+      k: () => aM,
+      o: () => SM
+    });
+    const OM = /^alloc_failed (\d+) bytes$/;
+
+    function SM(MM, rM) {
+      return jM(MM, rM) ? `trap=alloc_failed ${rM} bytes` : `trap=${MM}`
+    }
+
+    function jM(MM, rM) {
+      return "unreachable" === MM && rM > 0
+    }
+
+    function aM(MM, rM, iM) {
+      const OM = function(MM) {
+        return MM instanceof WebAssembly.RuntimeError ? /unreachable/i.test(MM.message) ? "unreachable" : /out of bounds/i.test(MM.message) ? "out_of_bounds" : "runtime_error" : (MM instanceof RangeError || MM instanceof Error && "InternalError" === MM.name) && /call stack|recursion/i.test(MM.message) ? "stack_overflow" : "js_error"
+      }(MM);
+      if ("unreachable" !== OM) return {
+        kind: OM,
+        panic: null,
+        refusedBytes: 0
+      };
+      const SM = rM(),
+        jM = iM();
+      return {
+        kind: OM,
+        panic: jM > 0 ? null : SM,
+        refusedBytes: jM
+      }
+    }
+    const PM = 300;
+
+    function nM(MM) {
+      return MM.replace(/\s*\n\s*/g, " / ").slice(0, PM)
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

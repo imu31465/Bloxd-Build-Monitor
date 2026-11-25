@@ -1,909 +1,805 @@
 export const id = 255;
 export const ids = [255];
 export const modules = {
-  41294: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      openMobLineupPreview: () => SQ,
-      openMobPreview: () => fQ,
-      openPetPreview: () => tQ
+  38173: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => LM,
+      h: () => mM,
+      i: () => JM,
+      j: () => HM
     });
-    var wQ = XQ(40089),
-      qQ = XQ(40349),
-      TQ = XQ(41298),
-      zQ = XQ(37539),
-      sQ = XQ(37367),
-      FQ = XQ(40517),
-      PQ = XQ(41320),
-      gQ = XQ(38756),
-      JQ = XQ(37451),
-      rQ = XQ(37428),
-      IQ = XQ(37358),
-      jQ = XQ(38654),
-      BQ = XQ(38647),
-      yQ = XQ(38385),
-      VQ = XQ(38438),
-      DQ = XQ(38415),
-      pQ = XQ(38057),
-      GQ = XQ(2997),
-      UQ = XQ(37888);
-    XQ(41326), XQ(40732), XQ(41335);
-    const bQ = 22,
-      vQ = 13,
-      dQ = Math.PI - Math.PI / 16,
-      HQ = 6,
-      aQ = Math.PI / 4;
-    let lQ = null;
-    const hQ = {},
-      iQ = new Map;
+    var OM = iM(38048),
+      SM = iM(38044),
+      jM = iM(38074),
+      aM = iM(38085);
 
-    function cQ() {
-      if (null !== lQ) return lQ;
-      const QQ = document.createElement("canvas");
-      QQ.classList.add("MobPreviewCanvas");
-      const WQ = new wQ.b(QQ, !0, {
-        preserveDrawingBuffer: !0
-      });
-      WQ.vwQ = (0, GQ.f)().nj.engine.vwQ;
-      const XQ = new qQ.c(WQ);
-      XQ.clearColor = new zQ.d(0, 0, 0, 0), XQ.ambientColor = new zQ.Color3(1, 1, 1);
-      const PQ = new TQ.d("ky", Math.PI / 2, Math.PI / 2, bQ, sQ.vj.Zero(), XQ),
-        gQ = new FQ.c("light", new sQ.vj(-.1, 1, -.3), XQ);
-      return gQ.diffuse = new zQ.Color3(1, 1, 1), gQ.specular = new zQ.Color3(1, 1, 1), gQ.groundColor = new zQ.Color3(.5, .5, .5), lQ = {
-        engine: WQ,
-        cB: XQ,
-        canvas: QQ,
-        camera: PQ
-      }, lQ
+    function PM(MM) {
+      return Math.pow(MM, SM.h)
     }
 
-    function AQ(QQ) {
-      return hQ[QQ] ??= (0, yQ.x)(QQ, cQ().cB, !0).catch((WQ => {
-        throw delete hQ[QQ], WQ
-      })), hQ[QQ]
+    function nM(MM) {
+      return MM <= .04045 ? .0773993808 * MM : Math.pow(.947867299 * (MM + .055), 2.4)
     }
 
-    function RQ(QQ) {
-      let WQ = iQ.get(QQ);
-      return WQ || (WQ = pQ.z[QQ].loadModel(cQ().cB, !1).then((QQ => (QQ.UH(!1), QQ)), (WQ => {
-        throw iQ.delete(QQ), WQ
-      })), iQ.set(QQ, WQ)), WQ
+    function QM(MM) {
+      return Math.pow(MM, SM.f)
     }
 
-    function EQ(QQ) {
-      var WQ, XQ, wQ;
-      let {
-        mobType: qQ,
-        variation: TQ,
-        animation: zQ
-      } = QQ, FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, bQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const HQ = null !== (WQ = null === FQ || void 0 === FQ ? void 0 : FQ.size) && void 0 !== WQ ? WQ : 1,
-        aQ = null !== (XQ = null === FQ || void 0 === FQ ? void 0 : FQ.cosmetics) && void 0 !== XQ ? XQ : [],
-        lQ = null !== (wQ = null === FQ || void 0 === FQ ? void 0 : FQ.Qp) && void 0 !== wQ ? wQ : null;
-      let hQ = !1,
-        iQ = null,
-        EQ = null;
-      const {
-        engine: CQ,
-        cB: uQ
-      } = cQ(), LQ = uQ.onBeforeRenderObservable.add((() => {
-        var QQ;
-        null === (QQ = EQ) || void 0 === QQ || QQ.render(CQ.getDeltaTime())
-      })), kQ = null === lQ ? null : RQ(lQ).catch((QQ => (console.error(`Mob preview: could not load ${lQ}`, QQ), null)));
-      return Promise.all([AQ(qQ), kQ]).then((QQ => {
-        var WQ, XQ, wQ;
-        let [FQ, AQ] = QQ;
-        if (hQ) return;
-        const RQ = (0, GQ.f)().nj.aE,
-          {
-            hitBoxDimensions: CQ
-          } = (0, gQ.c)(qQ),
-          uQ = vQ / Math.max(CQ.height, CQ.width);
-        if (iQ = (0, yQ.l)(qQ, uQ * HQ, !0, !0), RQ.setPosition(iQ, bQ, -CQ.height * uQ / 2, 0), RQ.setRotationEulerY(iQ, dQ), FQ.meshApi instanceof DQ.b && aQ.length > 0)
-          for (const [qQ, TQ] of aQ) FQ.meshApi.updatePlayerCosmetic(null, iQ, qQ, TQ, !0);
-        else FQ.meshApi.updateVariation(iQ, qQ, null !== TQ && void 0 !== TQ ? TQ : "default");
-        null !== lQ && null !== AQ && function(QQ, WQ, XQ, wQ) {
-          var qQ;
-          const TQ = pQ.z[QQ],
-            zQ = (0, jQ.l)();
-          (0, jQ.f)(TQ, null === (qQ = (0, VQ.c)(XQ).meshMetadata.heldItemPositionParams) || void 0 === qQ ? void 0 : qQ.itemOffset, zQ);
-          const FQ = UQ.e * zQ.oB.y,
-            gQ = zQ.usesQuaternion ? zQ.quaternion : sQ.Quaternion.FromEulerVector(zQ.rotation),
-            JQ = new PQ.b(`${WQ.name}Hand`, cQ().cB);
-          JQ.position.WH((0, BQ.c)(zQ.position, gQ, FQ, TQ.heldModelOffsetY())), JQ.rotationQuaternion = gQ, JQ.oB.set(zQ.oB.x, FQ, zQ.oB.z), WQ.clone(`${WQ.name}Held`, JQ).UH(!0);
-          const rQ = (0, GQ.f)().nj.aE;
-          rQ.attachTransformNode(JQ, wQ, rQ.getNamedNode(wQ, "ArmRightMesh"))
-        }(lQ, AQ, qQ, iQ), RQ.set(iQ, "aOpacity", 1);
-        const LQ = null !== (WQ = (0, VQ.c)(qQ).meshMetadata.lifeformTypeForModelOverride) && void 0 !== WQ ? WQ : qQ;
-        EQ = new IQ.AnimatorState, EQ.thinInstMgr = RQ, EQ.lE = iQ, EQ.xXQ = RQ.dwQ(iQ, 0), EQ.modelLifeformType = LQ, EQ.nodeNameAliases = null !== (XQ = null === (wQ = (0, JQ.d)(LQ)) || void 0 === wQ ? void 0 : wQ.nodeNameAliases) && void 0 !== XQ ? XQ : null, EQ.startAnimation(zQ, rQ.g.Movement)
-      })).catch((QQ => {
-        console.error(`Mob preview: could not load ${qQ}`, QQ)
-      })), () => {
-        hQ = !0, uQ.onBeforeRenderObservable.remove(LQ), null !== iQ && (0, GQ.f)().nj.aE.delete(iQ)
+    function zM(MM) {
+      return MM <= .0031308 ? 12.92 * MM : 1.055 * Math.pow(MM, .41666) - .055
+    }
+    class LM {
+      constructor() {
+        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.r = MM, this.g = rM, this.b = iM
+      }
+      toString() {
+        return "{R: " + this.r + " G:" + this.g + " B:" + this.b + "}"
+      }
+      getClassName() {
+        return "Color3"
+      }
+      getHashCode() {
+        let MM = 255 * this.r | 0;
+        return MM = 397 * MM ^ 255 * this.g, MM = 397 * MM ^ 255 * this.b, MM
+      }
+      toArray(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return MM[rM] = this.r, MM[rM + 1] = this.g, MM[rM + 2] = this.b, this
+      }
+      cz(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return LM.FromArrayToRef(MM, rM, this), this
+      }
+      toColor4() {
+        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        return new mM(this.r, this.g, this.b, MM)
+      }
+      HOM() {
+        return [this.r, this.g, this.b]
+      }
+      toLuminance() {
+        return .3 * this.r + .59 * this.g + .11 * this.b
+      }
+      multiply(MM) {
+        return new LM(this.r * MM.r, this.g * MM.g, this.b * MM.b)
+      }
+      multiplyToRef(MM, rM) {
+        return rM.r = this.r * MM.r, rM.g = this.g * MM.g, rM.b = this.b * MM.b, rM
+      }
+      multiplyInPlace(MM) {
+        return this.r *= MM.r, this.g *= MM.g, this.b *= MM.b, this
+      }
+      multiplyByFloats(MM, rM, iM) {
+        return new LM(this.r * MM, this.g * rM, this.b * iM)
+      }
+      divide(MM) {
+        throw new ReferenceError("Can not divide a color")
+      }
+      divideToRef(MM, rM) {
+        throw new ReferenceError("Can not divide a color")
+      }
+      divideInPlace(MM) {
+        throw new ReferenceError("Can not divide a color")
+      }
+      minimizeInPlace(MM) {
+        return this.minimizeInPlaceFromFloats(MM.r, MM.g, MM.b)
+      }
+      maximizeInPlace(MM) {
+        return this.maximizeInPlaceFromFloats(MM.r, MM.g, MM.b)
+      }
+      minimizeInPlaceFromFloats(MM, rM, iM) {
+        return this.r = Math.min(MM, this.r), this.g = Math.min(rM, this.g), this.b = Math.min(iM, this.b), this
+      }
+      maximizeInPlaceFromFloats(MM, rM, iM) {
+        return this.r = Math.max(MM, this.r), this.g = Math.max(rM, this.g), this.b = Math.max(iM, this.b), this
+      }
+      floorToRef(MM) {
+        throw new ReferenceError("Can not floor a color")
+      }
+      floor() {
+        throw new ReferenceError("Can not floor a color")
+      }
+      fractToRef(MM) {
+        throw new ReferenceError("Can not fract a color")
+      }
+      fract() {
+        throw new ReferenceError("Can not fract a color")
+      }
+      equals(MM) {
+        return MM && this.r === MM.r && this.g === MM.g && this.b === MM.b
+      }
+      equalsFloats(MM, rM, iM) {
+        return this.IaM(MM, rM, iM)
+      }
+      IaM(MM, rM, iM) {
+        return this.r === MM && this.g === rM && this.b === iM
+      }
+      equalsWithEpsilon(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SM.d;
+        return (0, jM.WithinEpsilon)(this.r, MM.r, rM) && (0, jM.WithinEpsilon)(this.g, MM.g, rM) && (0, jM.WithinEpsilon)(this.b, MM.b, rM)
+      }
+      VJ() {
+        throw new ReferenceError("Can not negate a color")
+      }
+      negateInPlace() {
+        throw new ReferenceError("Can not negate a color")
+      }
+      negateToRef(MM) {
+        throw new ReferenceError("Can not negate a color")
+      }
+      scale(MM) {
+        return new LM(this.r * MM, this.g * MM, this.b * MM)
+      }
+      scaleInPlace(MM) {
+        return this.r *= MM, this.g *= MM, this.b *= MM, this
+      }
+      scaleToRef(MM, rM) {
+        return rM.r = this.r * MM, rM.g = this.g * MM, rM.b = this.b * MM, rM
+      }
+      scaleAndAddToRef(MM, rM) {
+        return rM.r += this.r * MM, rM.g += this.g * MM, rM.b += this.b * MM, rM
+      }
+      clampToRef() {
+        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          iM = arguments.length > 2 ? arguments[2] : void 0;
+        return iM.r = (0, jM.Clamp)(this.r, MM, rM), iM.g = (0, jM.Clamp)(this.g, MM, rM), iM.b = (0, jM.Clamp)(this.b, MM, rM), iM
+      }
+      add(MM) {
+        return new LM(this.r + MM.r, this.g + MM.g, this.b + MM.b)
+      }
+      addInPlace(MM) {
+        return this.r += MM.r, this.g += MM.g, this.b += MM.b, this
+      }
+      addInPlaceFromFloats(MM, rM, iM) {
+        return this.r += MM, this.g += rM, this.b += iM, this
+      }
+      addToRef(MM, rM) {
+        return rM.r = this.r + MM.r, rM.g = this.g + MM.g, rM.b = this.b + MM.b, rM
+      }
+      subtract(MM) {
+        return new LM(this.r - MM.r, this.g - MM.g, this.b - MM.b)
+      }
+      subtractToRef(MM, rM) {
+        return rM.r = this.r - MM.r, rM.g = this.g - MM.g, rM.b = this.b - MM.b, rM
+      }
+      kOM(MM) {
+        return this.r -= MM.r, this.g -= MM.g, this.b -= MM.b, this
+      }
+      subtractFromFloats(MM, rM, iM) {
+        return new LM(this.r - MM, this.g - rM, this.b - iM)
+      }
+      subtractFromFloatsToRef(MM, rM, iM, OM) {
+        return OM.r = this.r - MM, OM.g = this.g - rM, OM.b = this.b - iM, OM
+      }
+      clone() {
+        return new LM(this.r, this.g, this.b)
+      }
+      jR(MM) {
+        return this.r = MM.r, this.g = MM.g, this.b = MM.b, this
+      }
+      iMM(MM, rM, iM) {
+        return this.r = MM, this.g = rM, this.b = iM, this
+      }
+      set(MM, rM, iM) {
+        return this.iMM(MM, rM, iM)
+      }
+      P_(MM) {
+        return this.r = this.g = this.b = MM, this
+      }
+      toHexString() {
+        const MM = Math.round(255 * this.r),
+          rM = Math.round(255 * this.g),
+          iM = Math.round(255 * this.b);
+        return "#" + (0, jM.ToHex)(MM) + (0, jM.ToHex)(rM) + (0, jM.ToHex)(iM)
+      }
+      fromHexString(MM) {
+        return "#" !== MM.substring(0, 1) || 7 !== MM.length || (this.r = parseInt(MM.substring(1, 3), 16) / 255, this.g = parseInt(MM.substring(3, 5), 16) / 255, this.b = parseInt(MM.substring(5, 7), 16) / 255), this
+      }
+      toHSV() {
+        return this.toHSVToRef(new LM)
+      }
+      toHSVToRef(MM) {
+        const rM = this.r,
+          iM = this.g,
+          OM = this.b,
+          SM = Math.max(rM, iM, OM),
+          jM = Math.min(rM, iM, OM);
+        let aM = 0,
+          PM = 0;
+        const nM = SM,
+          QM = SM - jM;
+        return 0 !== SM && (PM = QM / SM), SM != jM && (SM == rM ? (aM = (iM - OM) / QM, iM < OM && (aM += 6)) : SM == iM ? aM = (OM - rM) / QM + 2 : SM == OM && (aM = (rM - iM) / QM + 4), aM *= 60), MM.r = aM, MM.g = PM, MM.b = nM, MM
+      }
+      toLinearSpace() {
+        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const rM = new LM;
+        return this.toLinearSpaceToRef(rM, MM), rM
+      }
+      toLinearSpaceToRef(MM) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (MM.r = nM(this.r), MM.g = nM(this.g), MM.b = nM(this.b)) : (MM.r = PM(this.r), MM.g = PM(this.g), MM.b = PM(this.b)), this
+      }
+      toGammaSpace() {
+        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const rM = new LM;
+        return this.toGammaSpaceToRef(rM, MM), rM
+      }
+      toGammaSpaceToRef(MM) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (MM.r = zM(this.r), MM.g = zM(this.g), MM.b = zM(this.b)) : (MM.r = QM(this.r), MM.g = QM(this.g), MM.b = QM(this.b)), this
+      }
+      static HSVtoRGBToRef(MM, rM, iM, OM) {
+        const SM = iM * rM,
+          jM = MM / 60,
+          aM = SM * (1 - Math.abs(jM % 2 - 1));
+        let PM = 0,
+          nM = 0,
+          QM = 0;
+        jM >= 0 && jM <= 1 ? (PM = SM, nM = aM) : jM >= 1 && jM <= 2 ? (PM = aM, nM = SM) : jM >= 2 && jM <= 3 ? (nM = SM, QM = aM) : jM >= 3 && jM <= 4 ? (nM = aM, QM = SM) : jM >= 4 && jM <= 5 ? (PM = aM, QM = SM) : jM >= 5 && jM <= 6 && (PM = SM, QM = aM);
+        const zM = iM - SM;
+        return OM.r = PM + zM, OM.g = nM + zM, OM.b = QM + zM, OM
+      }
+      static FromHSV(MM, rM, iM) {
+        const OM = new LM(0, 0, 0);
+        return LM.HSVtoRGBToRef(MM, rM, iM, OM), OM
+      }
+      static FromHexString(MM) {
+        return new LM(0, 0, 0).fromHexString(MM)
+      }
+      static FromArray(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new LM(MM[rM], MM[rM + 1], MM[rM + 2])
+      }
+      static FromArrayToRef(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          iM = arguments.length > 2 ? arguments[2] : void 0;
+        iM.r = MM[rM], iM.g = MM[rM + 1], iM.b = MM[rM + 2]
+      }
+      static FromInts(MM, rM, iM) {
+        return new LM(MM / 255, rM / 255, iM / 255)
+      }
+      static Lerp(MM, rM, iM) {
+        const OM = new LM(0, 0, 0);
+        return LM.LerpToRef(MM, rM, iM, OM), OM
+      }
+      static LerpToRef(MM, rM, iM, OM) {
+        OM.r = MM.r + (rM.r - MM.r) * iM, OM.g = MM.g + (rM.g - MM.g) * iM, OM.b = MM.b + (rM.b - MM.b) * iM
+      }
+      static Hermite(MM, rM, iM, OM, SM) {
+        const jM = SM * SM,
+          aM = SM * jM,
+          PM = 2 * aM - 3 * jM + 1,
+          nM = -2 * aM + 3 * jM,
+          QM = aM - 2 * jM + SM,
+          zM = aM - jM,
+          mM = MM.r * PM + iM.r * nM + rM.r * QM + OM.r * zM,
+          HM = MM.g * PM + iM.g * nM + rM.g * QM + OM.g * zM,
+          hM = MM.b * PM + iM.b * nM + rM.b * QM + OM.b * zM;
+        return new LM(mM, HM, hM)
+      }
+      static Hermite1stDerivative(MM, rM, iM, OM, SM) {
+        const jM = LM.Black();
+        return this.Hermite1stDerivativeToRef(MM, rM, iM, OM, SM, jM), jM
+      }
+      static Hermite1stDerivativeToRef(MM, rM, iM, OM, SM, jM) {
+        const aM = SM * SM;
+        jM.r = 6 * (aM - SM) * MM.r + (3 * aM - 4 * SM + 1) * rM.r + 6 * (-aM + SM) * iM.r + (3 * aM - 2 * SM) * OM.r, jM.g = 6 * (aM - SM) * MM.g + (3 * aM - 4 * SM + 1) * rM.g + 6 * (-aM + SM) * iM.g + (3 * aM - 2 * SM) * OM.g, jM.b = 6 * (aM - SM) * MM.b + (3 * aM - 4 * SM + 1) * rM.b + 6 * (-aM + SM) * iM.b + (3 * aM - 2 * SM) * OM.b
+      }
+      static Red() {
+        return new LM(1, 0, 0)
+      }
+      static Green() {
+        return new LM(0, 1, 0)
+      }
+      static Blue() {
+        return new LM(0, 0, 1)
+      }
+      static Black() {
+        return new LM(0, 0, 0)
+      }
+      static get BlackReadOnly() {
+        return LM._BlackReadOnly
+      }
+      static White() {
+        return new LM(1, 1, 1)
+      }
+      static Purple() {
+        return new LM(.5, 0, .5)
+      }
+      static Magenta() {
+        return new LM(1, 0, 1)
+      }
+      static Yellow() {
+        return new LM(1, 1, 0)
+      }
+      static Gray() {
+        return new LM(.5, .5, .5)
+      }
+      static Teal() {
+        return new LM(0, 1, 1)
+      }
+      static Random() {
+        return new LM(Math.random(), Math.random(), Math.random())
       }
     }
-
-    function CQ(QQ, WQ) {
-      return EQ({
-        mobType: "NPC",
-        variation: null,
-        animation: QQ.animation
-      }, QQ, WQ)
-    }
-
-    function uQ(QQ) {
-      let {
-        mobType: WQ,
-        variation: XQ,
-        metaInfo: wQ,
-        tamed: qQ
-      } = QQ, TQ = !1, zQ = null, sQ = 0;
-      const FQ = (0, GQ.f)(),
-        PQ = FQ.nj.aE,
-        gQ = QQ => {
-          sQ += aQ * (QQ / 1e3) % (2 * Math.PI), PQ.setRotationEulerY(zQ, sQ)
-        };
-      return AQ(WQ).then((QQ => {
-        if (TQ) return;
-        zQ = (0, yQ.l)(WQ, HQ, !0, !0), PQ.setPosition(zQ, 0, -HQ, 0), QQ.meshApi.updateVariation(zQ, WQ, XQ);
-        const sQ = {
-          wool: "Sheared" !== wQ,
-          saddle: "Saddled" === wQ,
-          antlers: "Antlers" === wQ,
-          collar: qQ
-        };
-        for (const [WQ, XQ] of Object.entries(sQ)) PQ.hasGroup(zQ, WQ) && QQ.meshApi.setMeshGroupVisibility(zQ, WQ, XQ);
-        PQ.set(zQ, "aOpacity", 1), FQ.on("renderTickBegin", gQ)
-      })).catch((QQ => {
-        console.error(`Pet preview: could not load ${WQ}`, QQ)
-      })), () => {
-        TQ = !0, FQ.off("renderTickBegin", gQ), null !== zQ && PQ.delete(zQ)
+    LM._V8PerformanceHack = new LM(.5, .5, .5), LM._BlackReadOnly = LM.Black();
+    class mM {
+      constructor() {
+        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this.r = MM, this.g = rM, this.b = iM, this.a = OM
       }
-    }
-    class LQ {
-      constructor(QQ, WQ) {
-        this.place = WQ, this.remove = null;
-        const {
-          engine: XQ,
-          cB: wQ,
-          canvas: qQ
-        } = cQ();
-        QQ.appendChild(qQ), XQ.resize(), XQ.runRenderLoop((() => {
-          wQ.render()
-        }))
+      HOM() {
+        return [this.r, this.g, this.b, this.a]
       }
-      show(QQ) {
-        var WQ;
-        null === (WQ = this.remove) || void 0 === WQ || WQ.call(this), this.remove = this.place(QQ)
+      toArray(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return MM[rM] = this.r, MM[rM + 1] = this.g, MM[rM + 2] = this.b, MM[rM + 3] = this.a, this
       }
-      resize(QQ, WQ) {
-        const {
-          engine: XQ,
-          canvas: wQ
-        } = cQ();
-        wQ.width = QQ, wQ.height = WQ, XQ.resize()
+      cz(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.r = MM[rM], this.g = MM[rM + 1], this.b = MM[rM + 2], this.a = MM[rM + 3], this
       }
-      close() {
-        var QQ;
-        cQ().engine.stopRenderLoop(), null === (QQ = this.remove) || void 0 === QQ || QQ.call(this), this.remove = null
+      equals(MM) {
+        return MM && this.r === MM.r && this.g === MM.g && this.b === MM.b && this.a === MM.a
       }
-    }
-    class kQ {
-      constructor(QQ) {
-        this.preview = void 0, this.view = {
-          figures: [],
-          shown: []
-        }, this.aspect = 1, this.placed = [], this.preview = new LQ(QQ, (() => () => {}))
+      add(MM) {
+        return new mM(this.r + MM.r, this.g + MM.g, this.b + MM.b, this.a + MM.a)
       }
-      show(QQ) {
-        QQ.figures !== this.view.figures && this.preload(QQ.figures), this.view = QQ, this.place()
+      addToRef(MM, rM) {
+        return rM.r = this.r + MM.r, rM.g = this.g + MM.g, rM.b = this.b + MM.b, rM.a = this.a + MM.a, rM
       }
-      resize(QQ, WQ) {
-        this.preview.resize(QQ, WQ), this.aspect = QQ / WQ, this.place()
+      addInPlace(MM) {
+        return this.r += MM.r, this.g += MM.g, this.b += MM.b, this.a += MM.a, this
       }
-      close() {
-        this.preview.close();
-        for (const QQ of this.placed) null === QQ || void 0 === QQ || QQ.remove();
-        this.placed = []
+      addInPlaceFromFloats(MM, rM, iM, OM) {
+        return this.r += MM, this.g += rM, this.b += iM, this.a += OM, this
       }
-      preload(QQ) {
-        const WQ = () => {};
-        AQ("NPC").catch(WQ);
-        for (const {
-            Qp: XQ
+      subtract(MM) {
+        return new mM(this.r - MM.r, this.g - MM.g, this.b - MM.b, this.a - MM.a)
+      }
+      subtractToRef(MM, rM) {
+        return rM.r = this.r - MM.r, rM.g = this.g - MM.g, rM.b = this.b - MM.b, rM.a = this.a - MM.a, rM
+      }
+      kOM(MM) {
+        return this.r -= MM.r, this.g -= MM.g, this.b -= MM.b, this.a -= MM.a, this
+      }
+      subtractFromFloats(MM, rM, iM, OM) {
+        return new mM(this.r - MM, this.g - rM, this.b - iM, this.a - OM)
+      }
+      subtractFromFloatsToRef(MM, rM, iM, OM, SM) {
+        return SM.r = this.r - MM, SM.g = this.g - rM, SM.b = this.b - iM, SM.a = this.a - OM, SM
+      }
+      scale(MM) {
+        return new mM(this.r * MM, this.g * MM, this.b * MM, this.a * MM)
+      }
+      scaleInPlace(MM) {
+        return this.r *= MM, this.g *= MM, this.b *= MM, this.a *= MM, this
+      }
+      scaleToRef(MM, rM) {
+        return rM.r = this.r * MM, rM.g = this.g * MM, rM.b = this.b * MM, rM.a = this.a * MM, rM
+      }
+      scaleAndAddToRef(MM, rM) {
+        return rM.r += this.r * MM, rM.g += this.g * MM, rM.b += this.b * MM, rM.a += this.a * MM, rM
+      }
+      clampToRef() {
+        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          iM = arguments.length > 2 ? arguments[2] : void 0;
+        return iM.r = (0, jM.Clamp)(this.r, MM, rM), iM.g = (0, jM.Clamp)(this.g, MM, rM), iM.b = (0, jM.Clamp)(this.b, MM, rM), iM.a = (0, jM.Clamp)(this.a, MM, rM), iM
+      }
+      multiply(MM) {
+        return new mM(this.r * MM.r, this.g * MM.g, this.b * MM.b, this.a * MM.a)
+      }
+      multiplyToRef(MM, rM) {
+        return rM.r = this.r * MM.r, rM.g = this.g * MM.g, rM.b = this.b * MM.b, rM.a = this.a * MM.a, rM
+      }
+      multiplyInPlace(MM) {
+        return this.r *= MM.r, this.g *= MM.g, this.b *= MM.b, this.a *= MM.a, this
+      }
+      multiplyByFloats(MM, rM, iM, OM) {
+        return new mM(this.r * MM, this.g * rM, this.b * iM, this.a * OM)
+      }
+      divide(MM) {
+        throw new ReferenceError("Can not divide a color")
+      }
+      divideToRef(MM, rM) {
+        throw new ReferenceError("Can not divide a color")
+      }
+      divideInPlace(MM) {
+        throw new ReferenceError("Can not divide a color")
+      }
+      minimizeInPlace(MM) {
+        return this.r = Math.min(this.r, MM.r), this.g = Math.min(this.g, MM.g), this.b = Math.min(this.b, MM.b), this.a = Math.min(this.a, MM.a), this
+      }
+      maximizeInPlace(MM) {
+        return this.r = Math.max(this.r, MM.r), this.g = Math.max(this.g, MM.g), this.b = Math.max(this.b, MM.b), this.a = Math.max(this.a, MM.a), this
+      }
+      minimizeInPlaceFromFloats(MM, rM, iM, OM) {
+        return this.r = Math.min(MM, this.r), this.g = Math.min(rM, this.g), this.b = Math.min(iM, this.b), this.a = Math.min(OM, this.a), this
+      }
+      maximizeInPlaceFromFloats(MM, rM, iM, OM) {
+        return this.r = Math.max(MM, this.r), this.g = Math.max(rM, this.g), this.b = Math.max(iM, this.b), this.a = Math.max(OM, this.a), this
+      }
+      floorToRef(MM) {
+        throw new ReferenceError("Can not floor a color")
+      }
+      floor() {
+        throw new ReferenceError("Can not floor a color")
+      }
+      fractToRef(MM) {
+        throw new ReferenceError("Can not fract a color")
+      }
+      fract() {
+        throw new ReferenceError("Can not fract a color")
+      }
+      VJ() {
+        throw new ReferenceError("Can not negate a color")
+      }
+      negateInPlace() {
+        throw new ReferenceError("Can not negate a color")
+      }
+      negateToRef(MM) {
+        throw new ReferenceError("Can not negate a color")
+      }
+      equalsWithEpsilon(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SM.d;
+        return (0, jM.WithinEpsilon)(this.r, MM.r, rM) && (0, jM.WithinEpsilon)(this.g, MM.g, rM) && (0, jM.WithinEpsilon)(this.b, MM.b, rM) && (0, jM.WithinEpsilon)(this.a, MM.a, rM)
+      }
+      IaM(MM, rM, iM, OM) {
+        return this.r === MM && this.g === rM && this.b === iM && this.a === OM
+      }
+      toString() {
+        return "{R: " + this.r + " G:" + this.g + " B:" + this.b + " A:" + this.a + "}"
+      }
+      getClassName() {
+        return "Color4"
+      }
+      getHashCode() {
+        let MM = 255 * this.r | 0;
+        return MM = 397 * MM ^ 255 * this.g, MM = 397 * MM ^ 255 * this.b, MM = 397 * MM ^ 255 * this.a, MM
+      }
+      clone() {
+        return (new mM).jR(this)
+      }
+      jR(MM) {
+        return this.r = MM.r, this.g = MM.g, this.b = MM.b, this.a = MM.a, this
+      }
+      iMM(MM, rM, iM, OM) {
+        return this.r = MM, this.g = rM, this.b = iM, this.a = OM, this
+      }
+      set(MM, rM, iM, OM) {
+        return this.iMM(MM, rM, iM, OM)
+      }
+      P_(MM) {
+        return this.r = this.g = this.b = this.a = MM, this
+      }
+      toHexString() {
+        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const rM = Math.round(255 * this.r),
+          iM = Math.round(255 * this.g),
+          OM = Math.round(255 * this.b);
+        if (MM) return "#" + (0, jM.ToHex)(rM) + (0, jM.ToHex)(iM) + (0, jM.ToHex)(OM);
+        const SM = Math.round(255 * this.a);
+        return "#" + (0, jM.ToHex)(rM) + (0, jM.ToHex)(iM) + (0, jM.ToHex)(OM) + (0, jM.ToHex)(SM)
+      }
+      fromHexString(MM) {
+        return "#" !== MM.substring(0, 1) || 9 !== MM.length && 7 !== MM.length || (this.r = parseInt(MM.substring(1, 3), 16) / 255, this.g = parseInt(MM.substring(3, 5), 16) / 255, this.b = parseInt(MM.substring(5, 7), 16) / 255, 9 === MM.length && (this.a = parseInt(MM.substring(7, 9), 16) / 255)), this
+      }
+      toLinearSpace() {
+        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const rM = new mM;
+        return this.toLinearSpaceToRef(rM, MM), rM
+      }
+      toLinearSpaceToRef(MM) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (MM.r = nM(this.r), MM.g = nM(this.g), MM.b = nM(this.b)) : (MM.r = PM(this.r), MM.g = PM(this.g), MM.b = PM(this.b)), MM.a = this.a, this
+      }
+      toGammaSpace() {
+        let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const rM = new mM;
+        return this.toGammaSpaceToRef(rM, MM), rM
+      }
+      toGammaSpaceToRef(MM) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (MM.r = zM(this.r), MM.g = zM(this.g), MM.b = zM(this.b)) : (MM.r = QM(this.r), MM.g = QM(this.g), MM.b = QM(this.b)), MM.a = this.a, this
+      }
+      static FromHexString(MM) {
+        return "#" !== MM.substring(0, 1) || 9 !== MM.length && 7 !== MM.length ? new mM(0, 0, 0, 0) : new mM(0, 0, 0, 1).fromHexString(MM)
+      }
+      static Lerp(MM, rM, iM) {
+        return mM.LerpToRef(MM, rM, iM, new mM)
+      }
+      static LerpToRef(MM, rM, iM, OM) {
+        return OM.r = MM.r + (rM.r - MM.r) * iM, OM.g = MM.g + (rM.g - MM.g) * iM, OM.b = MM.b + (rM.b - MM.b) * iM, OM.a = MM.a + (rM.a - MM.a) * iM, OM
+      }
+      static Hermite(MM, rM, iM, OM, SM) {
+        const jM = SM * SM,
+          aM = SM * jM,
+          PM = 2 * aM - 3 * jM + 1,
+          nM = -2 * aM + 3 * jM,
+          QM = aM - 2 * jM + SM,
+          zM = aM - jM,
+          LM = MM.r * PM + iM.r * nM + rM.r * QM + OM.r * zM,
+          HM = MM.g * PM + iM.g * nM + rM.g * QM + OM.g * zM,
+          hM = MM.b * PM + iM.b * nM + rM.b * QM + OM.b * zM,
+          JM = MM.a * PM + iM.a * nM + rM.a * QM + OM.a * zM;
+        return new mM(LM, HM, hM, JM)
+      }
+      static Hermite1stDerivative(MM, rM, iM, OM, SM) {
+        const jM = new mM;
+        return this.Hermite1stDerivativeToRef(MM, rM, iM, OM, SM, jM), jM
+      }
+      static Hermite1stDerivativeToRef(MM, rM, iM, OM, SM, jM) {
+        const aM = SM * SM;
+        jM.r = 6 * (aM - SM) * MM.r + (3 * aM - 4 * SM + 1) * rM.r + 6 * (-aM + SM) * iM.r + (3 * aM - 2 * SM) * OM.r, jM.g = 6 * (aM - SM) * MM.g + (3 * aM - 4 * SM + 1) * rM.g + 6 * (-aM + SM) * iM.g + (3 * aM - 2 * SM) * OM.g, jM.b = 6 * (aM - SM) * MM.b + (3 * aM - 4 * SM + 1) * rM.b + 6 * (-aM + SM) * iM.b + (3 * aM - 2 * SM) * OM.b, jM.a = 6 * (aM - SM) * MM.a + (3 * aM - 4 * SM + 1) * rM.a + 6 * (-aM + SM) * iM.a + (3 * aM - 2 * SM) * OM.a
+      }
+      static FromColor3(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new mM(MM.r, MM.g, MM.b, rM)
+      }
+      static FromArray(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new mM(MM[rM], MM[rM + 1], MM[rM + 2], MM[rM + 3])
+      }
+      static FromArrayToRef(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          iM = arguments.length > 2 ? arguments[2] : void 0;
+        iM.r = MM[rM], iM.g = MM[rM + 1], iM.b = MM[rM + 2], iM.a = MM[rM + 3]
+      }
+      static FromInts(MM, rM, iM, OM) {
+        return new mM(MM / 255, rM / 255, iM / 255, OM / 255)
+      }
+      static CheckColors4(MM, rM) {
+        if (MM.length === 3 * rM) {
+          const rM = [];
+          for (let iM = 0; iM < MM.length; iM += 3) {
+            const OM = iM / 3 * 4;
+            rM[OM] = MM[iM], rM[OM + 1] = MM[iM + 1], rM[OM + 2] = MM[iM + 2], rM[OM + 3] = 1
           }
-          of QQ) null !== XQ && RQ(XQ).catch(WQ)
-      }
-      place() {
-        const {
-          figures: QQ,
-          shown: WQ
-        } = this.view, XQ = QQ.map(((XQ, wQ) => {
-          var qQ;
-          const TQ = null !== (qQ = this.placed[wQ]) && void 0 !== qQ ? qQ : null;
-          if (!WQ[wQ]) return null === TQ || void 0 === TQ || TQ.remove(), null;
-          const zQ = (sQ = (wQ + .5) / QQ.length, FQ = this.aspect, (.5 - sQ) * (2 * bQ * Math.tan(cQ().camera.fov / 2)) * FQ);
-          var sQ, FQ;
-          return null !== TQ && TQ.figure === XQ && TQ.x === zQ ? TQ : (null === TQ || void 0 === TQ || TQ.remove(), {
-            figure: XQ,
-            x: zQ,
-            remove: CQ(XQ, zQ)
-          })
-        }));
-        for (const wQ of this.placed.slice(QQ.length)) null === wQ || void 0 === wQ || wQ.remove();
-        this.placed = XQ
+          return rM
+        }
+        return MM
       }
     }
+    mM._V8PerformanceHack = new mM(.5, .5, .5, .5);
+    class HM {}
+    HM.Color3 = (0, OM.c)(3, LM.Black), HM.Color4 = (0, OM.c)(3, (() => new mM(0, 0, 0, 0)));
+    let hM = !1;
 
-    function fQ(QQ) {
-      return new LQ(QQ, EQ)
-    }
-
-    function SQ(QQ) {
-      return new kQ(QQ)
-    }
-
-    function tQ(QQ) {
-      return new LQ(QQ, uQ)
+    function JM() {
+      hM || (hM = !0, Object.defineProperties(LM.prototype, {
+        dimension: {
+          value: [3]
+        },
+        rank: {
+          value: 1
+        }
+      }), Object.defineProperties(mM.prototype, {
+        dimension: {
+          value: [4]
+        },
+        rank: {
+          value: 1
+        }
+      }), (0, aM.e)("BABYLON.Color3", LM), (0, aM.e)("BABYLON.Color4", mM))
     }
   },
-  39081: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => rQ
+  38044: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => jM,
+      f: () => OM,
+      h: () => SM
     });
-    var wQ = XQ(37462),
-      qQ = XQ(37472),
-      TQ = XQ(37715),
-      zQ = XQ(37477),
-      sQ = XQ(37468);
-
-    function FQ(QQ) {
-      return `\n\t\t\t\t${(0,sQ.v)(QQ,"mat2","rotate",[{name:"ang",type:"float"}],`\
-      n\ t\ t\ t\ t\ t$ {
-        (0, sQ.A)(QQ, "float", "s", "sin(ang)")
-      }\
-      n\ t\ t\ t\ t\ t$ {
-        (0, sQ.A)(QQ, "float", "c", "cos(ang)")
-      }\
-      n\ t\ t\ t\ t\ treturn $ {
-        (0, sQ.l)(QQ, "mat2", "c", "s", "-s", "c")
-      };\
-      n\ t\ t\ t\ t`)}\n\t\t\t`
-    }
-
-    function PQ(QQ, WQ) {
-      let XQ = (0, sQ.Jb)(QQ, "skele" + (WQ - 1));
-      for (let qQ = WQ - 2; qQ >= 0; qQ--) XQ = (0, sQ.wb)(QQ, `boneIdx == ${qQ}`, (0, sQ.Jb)(QQ, `skele${qQ}`), XQ);
-      const wQ = "bone.yz + rotate(bone.x) * pivot - pivot";
-      return `\n\t\t\t\t${(0,sQ.A)(QQ,"int","boneIdx",(0,sQ.Eb)(QQ,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,sQ.A)(QQ,"vec3","bone",XQ)}\n\t\t\t\t${(0,sQ.A)(QQ,"vec2","pivot",(0,sQ.l)(QQ,"vec2","0.0",`${(0,sQ.Sb)(QQ,"position")}.z`))}\n\t\t\t\t${(0,sQ.$)(QQ)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${wQ}));`:`positionUpdated.yz += ${wQ};`}\n\t\t`
-    }
-
-    function gQ(QQ) {
-      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,sQ.l)(QQ,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
-    }
-    const JQ = {
-        x: 0,
-        y: 0,
-        z: 0,
-        gXQ(QQ, WQ) {
-          return this.x = QQ[WQ], this.y = QQ[WQ + 1], this.z = QQ[WQ + 2], this
-        }
-      },
-      rQ = {
-        name: "Cape",
-        className: "CapeMaterialPlugin",
-        priority: 200,
-        defines: (QQ, WQ) => ({
-          ...(0, wQ.b)("CAPE"),
-          BLOXD_CAPE_BONES: `${QQ}`,
-          BLOXD_CAPE_MAX_Y: (0, qQ.ob)(WQ)
-        }),
-        getUniforms(QQ) {
-          return (0, TQ.d)(function(QQ) {
-            const WQ = [];
-            for (let XQ = 0; XQ < QQ; XQ++) WQ.push({
-              name: `skele${XQ}`,
-              type: "highp vec3"
-            });
-            return WQ
-          }(this.skeleLen), "vertex", QQ)
-        },
-        bind(QQ) {
-          for (let WQ = 0; WQ < this.skeleLen; WQ++) QQ.updateVector3(`skele${WQ}`, JQ.gXQ(this.skele, 3 * WQ))
-        },
-        uniformsVersion() {
-          return this.bonesVersion
-        },
-        getCustomCode(QQ, WQ) {
-          return "vertex" !== QQ ? null : {
-            CUSTOM_VERTEX_DEFINITIONS: FQ(WQ),
-            CUSTOM_VERTEX_UPDATE_POSITION: PQ(WQ, this.skeleLen),
-            CUSTOM_VERTEX_UPDATE_NORMAL: gQ(WQ)
-          }
-        }
-      };
-    (0, zQ.i)(rQ)
+    const OM = 1 / 2.2,
+      SM = 2.2;
+    Math.sqrt(5);
+    let jM = .001
   },
-  38966: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => gQ,
-      e: () => JQ
-    });
-    var wQ = XQ(37462),
-      qQ = XQ(37715),
-      TQ = XQ(37468),
-      zQ = XQ(37477);
-    const sQ = "bloxdTextLodBias",
-      FQ = [{
-        name: sQ,
-        type: "float"
-      }],
-      PQ = "bloxdTextSample",
-      gQ = {
-        planes: -.5,
-        boards: -.5
-      },
-      JQ = {
-        name: "TextSampler",
-        className: "TextSamplerMaterialPlugin",
-        priority: 60,
-        defines: () => (0, wQ.b)("TEXT_SAMPLER"),
-        getUniforms: QQ => (0, qQ.d)(FQ, "fragment", QQ),
-        bind(QQ) {
-          QQ.updateFloat(sQ, this.lodBias)
-        },
-        uniformsVersion: () => 0,
-        getCustomCode(QQ, WQ) {
-          if ("fragment" !== QQ) return null;
-          const XQ = (0, TQ.H)(WQ, `vec4 ${PQ}(sampler2D s, vec2 uv, float bias)`, `fn ${PQ}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
-            wQ = (0, TQ.H)(WQ, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
-            qQ = `${(0,TQ.T)(WQ,"vDiffuseUV")} + uvOffset`,
-            zQ = (0, TQ.H)(WQ, `${PQ}(diffuseSampler, ${qQ}, ${(0,TQ.Jb)(WQ,sQ)})`, `${PQ}(diffuseSampler, diffuseSamplerSampler, ${qQ}, ${(0,TQ.Jb)(WQ,sQ)})`);
-          return {
-            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${XQ} {\n\t\t\t\t\t${(0,TQ.A)(WQ,"vec4","texel",wQ)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,TQ.l)(WQ,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,TQ.l)(WQ,"vec3","0.0")}, ${(0,TQ.l)(WQ,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
-            [(0, TQ.C)(WQ)]: `baseColor = ${zQ};`
-          }
-        }
-      };
-    (0, zQ.i)(JQ)
-  },
-  41335: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      CapeMaterialPlugin: () => GQ,
-      HueTintMaterialPlugin: () => UQ,
-      LifeformMaterialPlugin: () => bQ,
-      OverlayMaterialPlugin: () => vQ
-    });
-    var wQ = XQ(41344),
-      qQ = XQ(38293);
-    class TQ extends((0, wQ.i)(qQ.d)) {}(0, wQ.l)(qQ.d, TQ);
-    var zQ = XQ(37456);
-    class sQ extends((0, wQ.i)(zQ.e)) {}(0, wQ.l)(zQ.e, sQ);
-    var FQ = XQ(38129);
-    class PQ extends((0, wQ.i)(FQ.d)) {}(0, wQ.l)(FQ.d, PQ);
-    var gQ = XQ(37698),
-      JQ = XQ(40530),
-      rQ = XQ(37696);
-    class IQ extends((0, wQ.i)(rQ.h)) {
-      constructor(QQ, WQ, XQ) {
-        super(QQ, WQ, XQ), (0, gQ.j)(QQ)
-      }
-      dispose(QQ) {
-        (0, gQ.n)(this._material), super.dispose(QQ)
-      }
-    }(0, wQ.l)(rQ.h, IQ), (0, rQ.i)({
-      disableUnusedSpecularTerm: wQ.e,
-      isLightingDisabled: QQ => QQ instanceof JQ.StandardMaterial && QQ.disableLighting
-    });
-    var jQ = XQ(38966);
-    class BQ extends((0, wQ.i)(jQ.e)) {}(0, wQ.l)(jQ.e, BQ);
-    var yQ = XQ(39081),
-      VQ = XQ(37555),
-      DQ = XQ(38427),
-      pQ = XQ(37500);
-    class GQ extends((0, wQ.i)(yQ.c)) {}(0, wQ.l)(yQ.c, GQ);
-    class UQ extends((0, wQ.i)(VQ.d)) {}(0, wQ.l)(VQ.d, UQ);
-    class bQ extends((0, wQ.i)(DQ.m)) {}(0, wQ.l)(DQ.m, bQ);
-    class vQ extends((0, wQ.i)(pQ.c)) {}(0, wQ.l)(pQ.c, vQ)
-  },
-  41344: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => tQ,
-      i: () => DQ,
-      l: () => NQ
-    });
-    var wQ = XQ(40530),
-      qQ = XQ(41348),
-      TQ = XQ(41394),
-      zQ = XQ(41354),
-      sQ = XQ(38094),
-      FQ = XQ(38107),
-      PQ = XQ(38114),
-      gQ = XQ(38116),
-      JQ = XQ(37490),
-      rQ = XQ(37492),
-      IQ = XQ(41357),
-      jQ = XQ(37477),
-      BQ = XQ(37480),
-      yQ = XQ(37468);
-
-    function VQ(QQ, WQ) {
-      return Object.assign((function(QQ, XQ, wQ, qQ) {
-        return WQ(this.featureState, QQ, XQ, wQ, qQ)
-      }), {
-        NI: QQ
-      })
+  38074: (MM, rM, iM) => {
+    function OM(MM) {
+      return parseInt(MM.toString().replace(/\W/g, ""))
     }
 
-    function DQ(QQ) {
-      const WQ = class extends IQ.b {
-          constructor(WQ, XQ) {
-            const wQ = (0, BQ._)(WQ),
-              qQ = wQ && (0, BQ.u)(wQ, QQ.name);
-            for (var TQ = arguments.length, zQ = new Array(TQ > 2 ? TQ - 2 : 0), sQ = 2; sQ < TQ; sQ++) zQ[sQ - 2] = arguments[sQ];
-            super(WQ, QQ.name, QQ.priority, qQ ? qQ.defines : QQ.defines(...zQ), !1), this.featureState = void 0, this.featureState = XQ, this._pluginManager._addPlugin(this), this._enable(!0), (0, BQ.y)(this._material, QQ, this.featureState, this._pluginDefineNames)
-          }
-          getClassName() {
-            return QQ.className
-          }
-          isCompatible(QQ) {
-            return QQ === yQ.b.GLSL || QQ === yQ.b.WGSL
-          }
-        },
-        XQ = (0, jQ.g)(QQ);
-      for (const [wQ, qQ] of Object.entries(jQ.d)) {
-        const TQ = QQ[wQ];
-        if (TQ) {
-          const QQ = XQ[wQ];
-          Object.defineProperty(WQ.prototype, qQ, {
-            value: VQ(TQ, QQ),
-            writable: !0,
-            configurable: !0
-          })
-        }
-      }
-      return WQ
-    }
-    class pQ extends(DQ(sQ.d)) {}
-    var GQ = XQ(40089),
-      UQ = XQ(41364),
-      bQ = XQ(41366);
-
-    function vQ(QQ, WQ, XQ) {
-      return (0, bQ.f)(XQ, WQ.urls, (() => async function(QQ, WQ, XQ) {
-        const {
-          width: wQ
-        } = QQ[0].getSize(), qQ = QQ.map(((QQ, XQ) => {
-          var qQ;
-          const TQ = Math.round(QQ.getSize().height / wQ),
-            zQ = null === WQ || void 0 === WQ ? void 0 : WQ[XQ];
-          return {
-            pixels: zQ && zQ.byteLength === wQ * wQ * TQ * 4 ? zQ : null !== (qQ = dQ.get(QQ.getInternalTexture())) && void 0 !== qQ ? qQ : QQ._readPixelsSync(),
-            layers: TQ
-          }
-        })), TQ = XQ.Uj().getCaps().texture2DArrayMaxLayerCount, sQ = (0, bQ.b)(qQ, wQ, TQ).map((QQ => {
-          let {
-            pixels: WQ,
-            layers: qQ
-          } = QQ;
-          return {
-            atlas: new UQ.d(WQ, wQ, wQ, qQ, GQ.b.TEXTUREFORMAT_RGBA, XQ, !0, !1, zQ.e.NEAREST_NEAREST_MIPLINEAR),
-            layers: qQ
-          }
-        }));
-        return QQ.forEach(((QQ, WQ) => {
-          const wQ = QQ.getInternalTexture();
-          dQ.has(wQ) || (! function(QQ, WQ) {
-            const XQ = WQ.createRawTexture(new Uint8Array(4), 1, 1, GQ.b.TEXTUREFORMAT_RGBA, !1, !1, zQ.e.NEAREST_SAMPLINGMODE);
-            QQ._hardwareTexture.release(), WQ.unbindAllTextures(), XQ._swapAndDie(QQ, !1)
-          }(wQ, XQ.Uj()), dQ.set(wQ, qQ[WQ].pixels))
-        })), sQ
-      }(QQ, WQ.pixels, XQ)))
-    }
-    const dQ = new WeakMap;
-    var HQ = XQ(38125);
-    class aQ extends(DQ(FQ.h)) {
-      constructor(QQ, WQ) {
-        super(QQ, WQ), this.loaded = new Set, this.mirrors = void 0, this.mirrors = WQ.textures.map((QQ => QQ.mirror)), this.mirrors.forEach(((QQ, WQ) => {
-          QQ.onLoadObservable.add((QQ => {
-            this.setTextureArrayData(QQ, WQ).catch((QQ => {
-              console.error(`Failed to build the texture arrays, at atlas ${WQ}`, QQ)
-            }))
-          }))
-        })), (0, HQ.j)(WQ, QQ.shaderLanguage)
-      }
-      async setTextureArrayData(QQ, WQ) {
-        const XQ = this.featureState,
-          {
-            width: wQ,
-            height: qQ
-          } = QQ.getSize(),
-          TQ = this._material.shaderLanguage;
-        if (!XQ.useWebGL2) return void(0, HQ.g)(this._material, XQ, WQ, wQ, Math.round(qQ / wQ), TQ);
-        if (this.loaded.add(WQ), this.loaded.size < this.mirrors.length) return;
-        const zQ = await vQ(this.mirrors, XQ.sources, this._material.sE());
-        (0, HQ.d)(this._material, XQ, zQ, wQ, TQ)
-      }
-    }
-    var lQ = XQ(41373),
-      hQ = XQ(40561),
-      iQ = XQ(37367),
-      cQ = XQ(41379),
-      AQ = XQ(40661),
-      RQ = XQ(40555),
-      EQ = XQ(41320),
-      CQ = XQ(37855),
-      uQ = XQ(41386);
-    class LQ extends lQ.b {
-      getData() {
-        return null
-      }
-      _rebuild() {}
-      restore() {
-        super._rebuild()
-      }
-    }
-    const kQ = {
-      Mesh: cQ.b,
-      TransformNode: EQ.b,
-      Tj: lQ.b,
-      VertexBuffer: lQ.f,
-      BoundingInfo: hQ.e,
-      vj: iQ.vj,
-      ArenaBuffer: LQ,
-      SubMesh: RQ.b,
-      VertexData: AQ.e,
-      MirroredGeometry: uQ.b,
-      meshFromArrays: uQ.f,
-      plainMeshFromArrays: uQ.h
-    };
-    (0, CQ.f)(kQ);
-    var fQ = XQ(37698);
-    class SQ extends(DQ(gQ.k)) {
-      constructor(QQ, WQ) {
-        if (super(QQ, WQ), QQ instanceof wQ.StandardMaterial && WQ.dirLightCount > 0) {
-          const WQ = QQ,
-            XQ = WQ._blockDirtyMechanism;
-          WQ._blockDirtyMechanism = !0, QQ.disableLighting = !0, WQ._blockDirtyMechanism = XQ;
-          const wQ = (0, BQ._)(QQ);
-          wQ && (wQ.disableLighting = !0, (0, BQ.Z)(wQ))
-        }(0, fQ.j)(QQ)
-      }
-      dispose(QQ) {
-        (0, fQ.n)(this._material), super.dispose(QQ)
-      }
+    function SM(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
+      return Math.abs(MM - rM) <= iM
     }
 
-    function tQ(QQ, WQ) {
-      if (!(WQ instanceof wQ.StandardMaterial) || WQ.specularTexture) return;
-      const {
-        r: XQ,
-        g: qQ,
-        b: TQ
-      } = WQ.specularColor;
-      0 === XQ && 0 === qQ && 0 === TQ && (QQ.SPECULARTERM = !1)
-    }(0, gQ.i)({
-      disableUnusedSpecularTerm: tQ
-    });
-    var oQ = XQ(37582),
-      eQ = XQ(37866);
-    const nQ = new RegExp(`^#define ${PQ.d}\\s*$`, "m");
-    class xQ extends(DQ(PQ.i)) {
-      constructor(QQ, WQ) {
-        super(QQ, WQ), this.zj = !1, WQ.ditherOnlyWhileFading && (eQ.e.add(QQ), this.prewarmDitherTwins(QQ))
-      }
-      prewarmDitherTwins(QQ) {
-        const WQ = new WeakSet;
-        QQ.onEffectCreatedObservable.add((XQ => {
-          let {
-            effect: wQ,
-            subMesh: qQ
-          } = XQ;
-          if (this.featureState.prewarmingDither || WQ.has(wQ)) return;
-          WQ.add(wQ);
-          const TQ = null === qQ || void 0 === qQ ? void 0 : qQ.getMesh();
-          TQ && !nQ.test(wQ.defines) && QQ.sE().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(TQ) || WQ.delete(wQ)
-          }))
-        }))
-      }
-      prewarmDither(QQ) {
-        if (this.zj || QQ.rG()) return !1;
-        const WQ = new RQ.b(0, 0, 0, 0, 0, QQ, void 0, !1, !1);
-        this.featureState.prewarmingDither = !0;
-        try {
-          this._material.isReadyForSubMesh(QQ, WQ)
-        } finally {
-          this.featureState.prewarmingDither = !1
-        }
-        return null !== WQ.effect
-      }
-      dispose(QQ) {
-        this.zj = !0, super.dispose(QQ)
-      }
+    function jM(MM, rM, iM) {
+      let OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
+      return MM < rM - OM || MM > iM + OM
     }
-    const YQ = new Map;
 
-    function NQ(QQ, WQ) {
-      YQ.set(QQ, WQ)
+    function aM(MM, rM) {
+      return MM === rM ? MM : Math.random() * (rM - MM) + MM
     }
-    NQ(sQ.d, pQ), NQ(FQ.h, aQ), NQ(PQ.i, xQ), NQ(gQ.k, SQ), (0, JQ.e)({
-      create: (QQ, WQ) => {
-        const XQ = new wQ.StandardMaterial(QQ.name, WQ);
-        return (0, oQ.r)(QQ, XQ), XQ.detailMap._pluginDefineNames
-      },
-      write: (QQ, WQ, XQ) => {
-        (0, oQ._)(QQ.mirror, WQ, XQ)
-      },
-      addFeature: (QQ, WQ, XQ) => {
-        const wQ = YQ.get(WQ.feature);
-        if (!wQ) throw new Error(`${WQ.feature.name} has no plugin class (registerPluginClass)`);
-        new wQ(QQ.mirror, WQ.state, ...XQ)
-      },
-      texture: (QQ, WQ, XQ) => {
-        let {
-          url: wQ,
-          noMipmap: qQ,
-          invertY: TQ,
-          samplingMode: sQ,
-          data: FQ,
-          sets: PQ
-        } = XQ;
-        if (!FQ) {
-          const XQ = new zQ.e(wQ, WQ, qQ, TQ, sQ);
-          return Object.assign(XQ, PQ), void(0, rQ.N)(QQ, XQ)
-        }
-        const gQ = {},
-          JQ = new Promise(((QQ, WQ) => {
-            gQ.onLoad = QQ, gQ.onError = (QQ, XQ) => {
-              WQ(new Error(`${FQ.context}: ${(null===XQ||void 0===XQ?void 0:XQ.message)||QQ||"Failed to load texture"}`))
-            }
-          })),
-          {
-            mimeType: IQ,
-            bytes: jQ,
-            label: BQ
-          } = FQ,
-          yQ = {
-            noMipmap: qQ,
-            invertY: !1,
-            samplingMode: sQ,
-            ...gQ,
-            mimeType: IQ,
-            loaderOptions: void 0,
-            useSRGBBuffer: !1
-          },
-          VQ = new zQ.e(null, WQ, yQ);
-        oQ.u.set(VQ, JQ), Object.assign(VQ, PQ), VQ.updateURL(wQ, jQ);
-        const DQ = VQ.getInternalTexture();
-        DQ && (DQ.label = BQ), QQ.uvSet = VQ.coordinatesIndex, QQ.matrix.set((0, oQ.T)(VQ)), (0, rQ.N)(QQ, VQ)
-      },
-      cube: (QQ, WQ, XQ) => {
-        let {
-          rootUrl: wQ,
-          files: TQ,
-          noMipmap: sQ,
-          luminance: FQ
-        } = XQ;
-        const {
-          samplingMode: PQ
-        } = QQ.sampler, gQ = PQ === (0, rQ.E)(sQ) ? null : () => {
-          (0, oQ.S)(JQ, PQ)
-        }, JQ = new qQ.b(wQ, WQ, null, sQ, TQ, gQ, null, (0, rQ.A)(FQ));
-        JQ.coordinatesMode = zQ.e.SKYBOX_MODE, (0, rQ.N)(QQ, JQ)
-      },
-      canvas: (QQ, WQ, XQ) => {
-        let {
-          width: wQ,
-          height: qQ,
-          mipmaps: sQ,
-          samplingMode: FQ,
-          hasAlpha: PQ = !1,
-          wrap: gQ = zQ.e.CLAMP_ADDRESSMODE
-        } = XQ;
-        const JQ = new TQ.b(WQ, {
-          width: wQ,
-          height: qQ
-        }, QQ, sQ, FQ);
-        JQ.hasAlpha = PQ, JQ.wrapU = gQ, JQ.wrapV = gQ;
-        const rQ = (0, oQ.F)(JQ);
-        return (0, oQ.J)(rQ, JQ), rQ
-      }
+
+    function PM(MM, rM, iM) {
+      return MM + (rM - MM) * iM
+    }
+
+    function nM(MM, rM, iM) {
+      let OM = dM(rM - MM, 360);
+      return OM > 180 && (OM -= 360), MM + OM * mM(iM)
+    }
+
+    function QM(MM, rM, iM) {
+      let OM;
+      return OM = MM != rM ? mM((iM - MM) / (rM - MM)) : 0, OM
+    }
+
+    function zM(MM, rM, iM, OM, SM) {
+      const jM = SM * SM,
+        aM = SM * jM;
+      return MM * (2 * aM - 3 * jM + 1) + iM * (-2 * aM + 3 * jM) + rM * (aM - 2 * jM + SM) + OM * (aM - jM)
+    }
+
+    function LM(MM, rM, iM, OM, SM) {
+      const jM = SM * SM;
+      return 6 * (jM - SM) * MM + (3 * jM - 4 * SM + 1) * rM + 6 * (-jM + SM) * iM + (3 * jM - 2 * SM) * OM
+    }
+
+    function mM(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Math.min(iM, Math.max(rM, MM))
+    }
+
+    function HM(MM) {
+      return MM -= 2 * Math.PI * Math.floor((MM + Math.PI) / (2 * Math.PI))
+    }
+
+    function hM(MM) {
+      const rM = MM.toString(16);
+      return MM <= 15 ? ("0" + rM).toUpperCase() : rM.toUpperCase()
+    }
+
+    function JM(MM) {
+      if (Math.log2) return Math.floor(Math.log2(MM));
+      if (MM < 0) return NaN;
+      if (0 === MM) return -1 / 0;
+      let rM = 0;
+      if (MM < 1) {
+        for (; MM < 1;) rM++, MM *= 2;
+        rM = -rM
+      } else if (MM > 1)
+        for (; MM > 1;) rM++, MM = Math.floor(MM / 2);
+      return rM
+    }
+
+    function dM(MM, rM) {
+      return MM - Math.floor(MM / rM) * rM
+    }
+
+    function yM(MM, rM, iM) {
+      return (MM - rM) / (iM - rM)
+    }
+
+    function lM(MM, rM, iM) {
+      return MM * (iM - rM) + rM
+    }
+
+    function EM(MM, rM) {
+      let iM = dM(rM - MM, 360);
+      return iM > 180 && (iM -= 360), iM
+    }
+
+    function UM(MM, rM) {
+      const iM = dM(MM, 2 * rM);
+      return rM - Math.abs(iM - rM)
+    }
+
+    function GM(MM, rM, iM) {
+      let OM = mM(iM);
+      return OM = -2 * OM * OM * OM + 3 * OM * OM, rM * OM + MM * (1 - OM)
+    }
+
+    function CM(MM, rM, iM) {
+      let OM;
+      return OM = Math.abs(rM - MM) <= iM ? rM : MM + Math.sign(rM - MM) * iM, OM
+    }
+
+    function eM(MM, rM, iM) {
+      const OM = EM(MM, rM);
+      let SM;
+      return SM = -iM < OM && OM < iM ? rM : CM(MM, rM = MM + OM, iM), SM
+    }
+
+    function bM(MM, rM, iM) {
+      return (MM - rM) / (iM - rM)
+    }
+
+    function wM(MM, rM, iM) {
+      return (iM - rM) * MM + rM
+    }
+
+    function tM(MM, rM) {
+      const iM = MM % rM;
+      return 0 === iM ? rM : tM(rM, iM)
+    }
+    iM.r(rM), iM.d(rM, {
+      Clamp: () => mM,
+      DeltaAngle: () => EM,
+      Denormalize: () => lM,
+      ExtractAsInt: () => OM,
+      Hermite: () => zM,
+      Hermite1stDerivative: () => LM,
+      HighestCommonFactor: () => tM,
+      ILog2: () => JM,
+      InverseLerp: () => QM,
+      Lerp: () => PM,
+      LerpAngle: () => nM,
+      MoveTowards: () => CM,
+      MoveTowardsAngle: () => eM,
+      Normalize: () => yM,
+      NormalizeRadians: () => HM,
+      OutsideRange: () => jM,
+      PercentToRange: () => wM,
+      PingPong: () => UM,
+      RandomRange: () => aM,
+      RangeToPercent: () => bM,
+      Repeat: () => dM,
+      SmoothStep: () => GM,
+      ToHex: () => hM,
+      WithinEpsilon: () => SM
     })
   },
-  41386: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      b: () => gQ,
-      f: () => JQ,
-      h: () => rQ
+  38048: (MM, rM, iM) => {
+    function OM(MM, rM) {
+      const iM = [];
+      for (let OM = 0; OM < MM; ++OM) iM.push(rM());
+      return iM
+    }
+
+    function SM(MM, rM) {
+      return OM(MM, rM)
+    }
+    iM.d(rM, {
+      c: () => OM,
+      g: () => SM,
+      j: () => aM
     });
-    var wQ = XQ(41373),
-      qQ = XQ(40331),
-      TQ = XQ(40561),
-      zQ = XQ(40670),
-      sQ = XQ(41379),
-      FQ = XQ(40661),
-      PQ = XQ(37762);
-    class gQ extends zQ.d {
-      constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (QQ, WQ) => {
-          this.releaseUnlessInstanced(WQ)
-        }, this.onLinked = null
-      }
-      link(QQ) {
-        var WQ;
-        (0, PQ.o)(QQ), this.model = QQ, null === (WQ = this.onLinked) || void 0 === WQ || WQ.call(this, QQ)
-      }
-      relink() {
-        this.release();
-        const QQ = [];
-        for (const qQ of Object.values(this._vertexBuffers))
-          if (!qQ.getIsInstanced()) {
-            const {
-              byteOffset: WQ,
-              byteStride: XQ,
-              type: wQ,
-              normalized: TQ
-            } = qQ;
-            QQ.push({
-              kind: qQ.getKind(),
-              data: qQ.getData(),
-              offset: WQ,
-              stride: XQ,
-              components: qQ.getSize(),
-              glType: wQ,
-              isNormalized: TQ
-            })
-          } const WQ = this._indices.length ? this._indices : null,
-          {
-            minimum: XQ,
-            maximum: wQ
-          } = this.extend;
-        this.link(new PQ.g(QQ, WQ, this.getTotalVertices(), new Float64Array(XQ.awQ()), new Float64Array(wQ.awQ())))
-      }
-      copy(QQ) {
-        if (!this.model) return super.copy(QQ);
-        const WQ = new gQ(QQ, this.sE()),
-          XQ = this.lwQ(void 0, !0);
-        XQ && WQ.setIndices(XQ);
-        let zQ = !1;
-        for (const TQ in this._vertexBuffers) {
-          const QQ = this._vertexBuffers[TQ],
-            XQ = QQ.getData();
-          if (!XQ) continue;
-          const sQ = QQ.getSize(),
-            {
-              type: FQ,
-              byteOffset: PQ,
-              byteStride: gQ,
-              normalized: JQ
-            } = QQ;
-          zQ ||= QQ.isUpdatable();
-          const rQ = QQ.getIsInstanced() ? (XQ instanceof Array ? 4 * XQ.length : XQ.byteLength) / gQ : this.getTotalVertices(),
-            IQ = (0, qQ.w)(XQ, sQ, FQ, PQ, gQ, rQ, !0),
-            jQ = {
-              updatable: QQ.isUpdatable(),
-              stride: sQ,
-              type: FQ,
-              normalized: JQ,
-              takeBufferOwnership: !0,
-              instanced: QQ.getIsInstanced()
-            };
-          WQ.setVerticesBuffer(new wQ.f(this.Uj(), IQ, TQ, jQ), rQ)
-        }
-        return WQ._updatable = zQ, WQ._boundingInfo = new TQ.e(this.extend.minimum, this.extend.maximum), WQ.relink(), WQ
-      }
-      static mergeMeshes(QQ, WQ, XQ, wQ, qQ, TQ) {
-        const FQ = QQ[0].sE(),
-          PQ = new sQ.b(QQ[0].name + "_merged", FQ),
-          JQ = new gQ(zQ.d.RandomId(), FQ, void 0, !1, PQ);
-        try {
-          if (!sQ.b.MergeMeshes(QQ, WQ, XQ, PQ, qQ, TQ)) return PQ.dispose(), null
-        } catch (rQ) {
-          throw PQ.dispose(), rQ
-        }
-        return JQ.relink(), PQ
-      }
-      removeVerticesData(QQ) {
-        this.releaseUnlessInstanced(QQ), super.removeVerticesData(QQ)
-      }
-      dispose() {
-        this.release(), super.dispose()
-      }
-      releaseUnlessInstanced(QQ) {
-        var WQ;
-        QQ && null !== (WQ = this.getVertexBuffer(QQ)) && void 0 !== WQ && WQ.getIsInstanced() || this.release()
-      }
-      release() {
-        this.model && ((0, PQ.u)(this.model), this.model = null)
-      }
-    }
+    const jM = ["push", "splice", "pop", "shift", "unshift"];
 
-    function JQ(QQ, WQ, XQ) {
-      let wQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new sQ.b(QQ, XQ);
-      const qQ = (0, PQ.m)(WQ),
-        {
-          positions: TQ,
-          normals: JQ,
-          uvs: rQ,
-          indices: IQ,
-          named: jQ = {}
-        } = WQ,
-        BQ = new FQ.e;
-      BQ.positions = TQ, BQ.normals = null !== JQ && void 0 !== JQ ? JQ : null, BQ.uvs = null !== rQ && void 0 !== rQ ? rQ : null, BQ.indices = IQ;
-      const yQ = new gQ(zQ.d.RandomId(), XQ, BQ, !1, wQ);
-      for (const {
-          kind: zQ,
-          components: sQ
+    function aM(MM, rM) {
+      const iM = jM.map((iM => function(MM, rM, iM) {
+        const OM = MM[rM];
+        if ("function" !== typeof OM) return null;
+        const SM = function() {
+          const OM = MM.length,
+            jM = SM.previous.apply(MM, arguments);
+          return iM(rM, OM), jM
+        };
+        return OM.next = SM, SM.previous = OM, MM[rM] = SM, () => {
+          const iM = SM.previous;
+          if (!iM) return;
+          const OM = SM.next;
+          OM ? (iM.next = OM, OM.previous = iM) : (iM.next = void 0, MM[rM] = iM), SM.next = void 0, SM.previous = void 0
         }
-        of qQ.vertexAttributes) zQ in jQ && wQ.setVerticesData(zQ, jQ[zQ], !1, sQ);
-      return yQ.link(qQ), wQ
-    }
-
-    function rQ(QQ, WQ, XQ) {
-      let wQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const qQ = new sQ.b(QQ, XQ),
-        {
-          positions: TQ,
-          normals: zQ,
-          uvs: PQ,
-          indices: gQ
-        } = WQ;
-      return Object.assign(new FQ.e, {
-        positions: TQ,
-        normals: zQ,
-        uvs: PQ,
-        indices: gQ
-      }).applyToMesh(qQ, wQ), qQ
+      }(MM, iM, rM)));
+      return () => {
+        for (const MM of iM) MM?.()
+      }
     }
   },
-  41366: (QQ, WQ, XQ) => {
-    function wQ(QQ, WQ, XQ) {
-      const wQ = WQ * WQ * 4,
-        qQ = QQ[0].layers,
-        TQ = qQ * (QQ.length - 1) + QQ[QQ.length - 1].layers,
-        zQ = new Uint8Array(TQ * wQ);
-      QQ.forEach(((WQ, XQ) => {
-        const TQ = XQ + 1 < QQ.length ? Math.min(WQ.layers, qQ) : WQ.layers;
-        zQ.set(new Uint8Array(WQ.pixels.buffer, WQ.pixels.byteOffset, TQ * wQ), XQ * qQ * wQ)
-      }));
-      const sQ = Math.max(1, Math.min(TQ, XQ || TQ));
-      if (sQ === TQ) return [{
-        pixels: zQ,
-        layers: TQ
-      }];
-      const FQ = [];
-      for (let PQ = 0; PQ < TQ; PQ += sQ) {
-        const QQ = Math.min(TQ, PQ + sQ);
-        FQ.push({
-          pixels: zQ.slice(PQ * wQ, QQ * wQ),
-          layers: QQ - PQ
-        })
-      }
-      return FQ
-    }
-    XQ.d(WQ, {
-      b: () => wQ,
-      f: () => TQ
+  38085: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => jM,
+      e: () => SM
     });
-    const qQ = new WeakMap;
+    const OM = {};
 
-    function TQ(QQ, WQ, XQ) {
-      var wQ, TQ;
-      const zQ = null !== (wQ = qQ.get(QQ)) && void 0 !== wQ ? wQ : new Map;
-      qQ.set(QQ, zQ);
-      const sQ = null !== (TQ = zQ.get(WQ[0])) && void 0 !== TQ ? TQ : [];
-      zQ.set(WQ[0], sQ);
-      const FQ = sQ.find((QQ => QQ.urls.length === WQ.length && QQ.urls.every(((QQ, XQ) => QQ === WQ[XQ]))));
-      if (FQ) return FQ.built;
-      const PQ = {
-        urls: [...WQ],
-        built: XQ()
-      };
-      return sQ.push(PQ), PQ.built.catch((() => {
-        sQ.splice(sQ.indexOf(PQ), 1)
-      })), PQ.built
+    function SM(MM, rM) {
+      OM[MM] = rM
+    }
+
+    function jM(MM) {
+      return OM[MM]
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

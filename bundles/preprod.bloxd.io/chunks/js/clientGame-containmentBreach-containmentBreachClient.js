@@ -1,62 +1,62 @@
 export const id = 15;
 export const ids = [15];
 export const modules = {
-  39593: (QQ, WQ, XQ) => {
-    var wQ = {
-      "./breach-zero-uncaught.webp": 39597,
-      "./breach-zero.webp": 39605,
-      "./brood-father-uncaught.webp": 39607,
-      "./brood-father.webp": 39613,
-      "./carousel-uncaught.webp": 39615,
-      "./carousel.webp": 39622,
-      "./deadlock-uncaught.webp": 39626,
-      "./deadlock.webp": 39635,
-      "./frost-revenant-uncaught.webp": 39639,
-      "./frost-revenant.webp": 39644,
-      "./hollow-choir-uncaught.webp": 39650,
-      "./hollow-choir.webp": 39653,
-      "./magma-warden-uncaught.webp": 39659,
-      "./magma-warden.webp": 39668,
-      "./patient-zero-uncaught.webp": 39672,
-      "./patient-zero.webp": 39675,
-      "./siege-engine-uncaught.webp": 39681,
-      "./siege-engine.webp": 39684,
-      "./warp-stalker-uncaught.webp": 39691,
-      "./warp-stalker.webp": 39694
+  40393: (MM, rM, iM) => {
+    var OM = {
+      "./breach-zero-uncaught.webp": 40398,
+      "./breach-zero.webp": 40401,
+      "./brood-father-uncaught.webp": 40405,
+      "./brood-father.webp": 40408,
+      "./carousel-uncaught.webp": 40412,
+      "./carousel.webp": 40419,
+      "./deadlock-uncaught.webp": 40427,
+      "./deadlock.webp": 40433,
+      "./frost-revenant-uncaught.webp": 40435,
+      "./frost-revenant.webp": 40443,
+      "./hollow-choir-uncaught.webp": 40445,
+      "./hollow-choir.webp": 40451,
+      "./magma-warden-uncaught.webp": 40459,
+      "./magma-warden.webp": 40464,
+      "./patient-zero-uncaught.webp": 40469,
+      "./patient-zero.webp": 40471,
+      "./siege-engine-uncaught.webp": 40478,
+      "./siege-engine.webp": 40485,
+      "./warp-stalker-uncaught.webp": 40489,
+      "./warp-stalker.webp": 40496
     };
 
-    function qQ(QQ) {
-      var WQ = TQ(QQ);
-      return XQ(WQ)
+    function SM(MM) {
+      var rM = jM(MM);
+      return iM(rM)
     }
 
-    function TQ(QQ) {
-      if (!XQ.o(wQ, QQ)) {
-        var WQ = new Error("Cannot find module '" + QQ + "'");
-        throw WQ.code = "MODULE_NOT_FOUND", WQ
+    function jM(MM) {
+      if (!iM.o(OM, MM)) {
+        var rM = new Error("Cannot find module '" + MM + "'");
+        throw rM.code = "MODULE_NOT_FOUND", rM
       }
-      return wQ[QQ]
+      return OM[MM]
     }
-    qQ.keys = function() {
-      return Object.keys(wQ)
-    }, qQ.resolve = TQ, QQ.exports = qQ, qQ.id = 39593
+    SM.keys = function() {
+      return Object.keys(OM)
+    }, SM.resolve = jM, MM.exports = SM, SM.id = 40393
   },
-  38831: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => zQ
+  39578: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => aM
     });
-    const wQ = 4,
-      qQ = 12e3,
-      TQ = 1e3;
-    class zQ {
+    const OM = 4,
+      SM = 12e3,
+      jM = 1e3;
+    class aM {
       constructor() {
         let {
-          limit: QQ = wQ,
-          windowMs: WQ = qQ,
-          spacingMs: XQ = TQ,
-          now: zQ = Date.now
+          limit: MM = OM,
+          windowMs: rM = SM,
+          spacingMs: iM = jM,
+          now: aM = Date.now
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = QQ, this.windowMs = WQ, this.spacingMs = XQ, this.now = zQ
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = MM, this.windowMs = rM, this.spacingMs = iM, this.now = aM
       }
       isPacing() {
         return !this.canSendPriority() || this.isPriorityWaiting()
@@ -65,61 +65,61 @@ export const modules = {
         return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
       }
       tryStart() {
-        for (const QQ of this.priority) QQ.flush();
+        for (const MM of this.priority) MM.flush();
         return !this.isPacing() && (this.start(), !0)
       }
       start() {
         this.prune();
-        const QQ = this.now();
-        this.sent.push(QQ), this.lastSentAt = QQ, this.schedule(), this.notify()
+        const MM = this.now();
+        this.sent.push(MM), this.lastSentAt = MM, this.schedule(), this.notify()
       }
-      addPriority(QQ) {
-        return this.priority.add(QQ), () => {
-          this.priority.delete(QQ)
+      addPriority(MM) {
+        return this.priority.add(MM), () => {
+          this.priority.delete(MM)
         }
       }
-      subscribe(QQ) {
-        return this.listeners.add(QQ), () => {
-          this.listeners.delete(QQ)
+      subscribe(MM) {
+        return this.listeners.add(MM), () => {
+          this.listeners.delete(MM)
         }
       }
       dispose() {
         this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
       }
       isPriorityWaiting() {
-        for (const QQ of this.priority)
-          if (QQ.waiting()) return !0;
+        for (const MM of this.priority)
+          if (MM.waiting()) return !0;
         return !1
       }
       prune() {
-        const QQ = this.now() - this.windowMs;
-        for (; this.sent.length > 0 && this.sent[0] <= QQ;) this.sent.shift()
+        const MM = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= MM;) this.sent.shift()
       }
       schedule() {
         this.clearTimer();
-        const QQ = this.now(),
-          WQ = this.lastSentAt + this.spacingMs,
-          XQ = Math.min(WQ > QQ ? WQ : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        XQ !== 1 / 0 && (this.timer = setTimeout((() => {
+        const MM = this.now(),
+          rM = this.lastSentAt + this.spacingMs,
+          iM = Math.min(rM > MM ? rM : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        iM !== 1 / 0 && (this.timer = setTimeout((() => {
           this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, XQ - QQ)))
+        }), Math.max(0, iM - MM)))
       }
       notify() {
-        for (const QQ of this.listeners) QQ()
+        for (const MM of this.listeners) MM()
       }
       clearTimer() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null)
       }
     }
   },
-  38813: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => wQ
+  39536: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM
     });
-    class wQ {
-      constructor(QQ, WQ, XQ) {
-        this.mB = QQ, this.beforeOpen = WQ, this.afterClose = XQ, this.open = !1, this.zj = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
-          this.isEnabled() && !this.zj && (this.open = !0, this.beforeOpen(this), this.emit())
+    class OM {
+      constructor(MM, rM, iM) {
+        this.Tz = MM, this.beforeOpen = rM, this.afterClose = iM, this.open = !1, this.dh = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
+          this.isEnabled() && !this.dh && (this.open = !0, this.beforeOpen(this), this.emit())
         }, this.close = () => {
           this.closePanel(!1)
         }, this.dismiss = () => {
@@ -132,234 +132,234 @@ export const modules = {
       showOrRefresh() {
         this.open ? this.emit() : this.show()
       }
-      closePanel(QQ) {
-        this.open = !1, this.onClosed(), this.emit(), this.afterClose(QQ)
+      closePanel(MM) {
+        this.open = !1, this.onClosed(), this.emit(), this.afterClose(MM)
       }
       onClosed() {}
       dispose() {
-        this.open = !1, this.emit(), this.zj = !0
+        this.open = !1, this.emit(), this.dh = !0
       }
       isEnabled() {
         return !0
       }
       emit() {
-        this.zj || (this.snapshot = this.buildSnapshot(), this.mB(this.snapshot))
+        this.dh || (this.snapshot = this.buildSnapshot(), this.Tz(this.snapshot))
       }
     }
   },
-  39587: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      default: () => gX
+  40388: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      default: () => zi
     });
-    var wQ = XQ(61);
-    var qQ = XQ(26),
-      TQ = XQ(1983),
-      zQ = XQ(31),
-      sQ = XQ(36900),
-      FQ = XQ(1081),
-      PQ = XQ.n(FQ),
-      gQ = XQ(1498),
-      JQ = XQ(1226),
-      rQ = XQ(4851),
-      IQ = XQ(1399),
-      jQ = XQ(1507),
-      BQ = XQ(1988),
-      yQ = XQ(1416),
-      VQ = XQ(1975),
-      DQ = XQ(2052),
-      pQ = XQ(243);
-    const GQ = XQ(39593),
-      UQ = Object.fromEntries(GQ.keys().map((QQ => [QQ.replace(/^\.\/(.*)\.webp$/, "$1"), GQ(QQ)]))),
-      bQ = new Set;
+    var OM = iM(44);
+    var SM = iM(19),
+      jM = iM(2022),
+      aM = iM(22),
+      PM = iM(37542),
+      nM = iM(1116),
+      QM = iM.n(nM),
+      zM = iM(1516),
+      LM = iM(1188),
+      mM = iM(4917),
+      HM = iM(1424),
+      hM = iM(1520),
+      JM = iM(2026),
+      dM = iM(1440),
+      yM = iM(2006),
+      lM = iM(2084),
+      EM = iM(187);
+    const UM = iM(40393),
+      GM = Object.fromEntries(UM.keys().map((MM => [MM.replace(/^\.\/(.*)\.webp$/, "$1"), UM(MM)]))),
+      CM = new Set;
 
-    function vQ(QQ, WQ) {
-      const XQ = WQ ? QQ : `${QQ}-uncaught`,
-        wQ = (0, pQ.e)(UQ, XQ);
-      return void 0 !== wQ || bQ.has(XQ) || (bQ.add(XQ), console.warn(`Containment Breach has no mugshot ${XQ}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), wQ
+    function eM(MM, rM) {
+      const iM = rM ? MM : `${MM}-uncaught`,
+        OM = (0, EM.d)(GM, iM);
+      return void 0 !== OM || CM.has(iM) || (CM.add(iM), console.warn(`Containment Breach has no mugshot ${iM}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), OM
     }
-    var dQ = XQ(1145);
-    const HQ = "containmentBreach",
-      aQ = "Gold Coin";
+    var bM = iM(1303);
+    const wM = "containmentBreach",
+      tM = "Gold Coin";
 
-    function lQ(QQ) {
+    function gM(MM) {
       let {
-        open: WQ,
-        onDismiss: XQ,
-        title: wQ,
-        className: qQ,
-        decor: TQ,
-        headerExtra: zQ,
-        status: sQ,
-        statusRefused: FQ = !1,
-        children: gQ
-      } = QQ;
-      const JQ = `${qQ}Title`;
-      return (0, dQ.jsx)(rQ.b, {
-        show: WQ,
-        close: XQ,
+        open: rM,
+        onDismiss: iM,
+        title: OM,
+        className: SM,
+        decor: jM,
+        headerExtra: aM,
+        status: PM,
+        statusRefused: nM = !1,
+        children: zM
+      } = MM;
+      const LM = `${SM}Title`;
+      return (0, bM.jsx)(mM.e, {
+        show: rM,
+        close: iM,
         togglePointerLock: !1,
         className: "ContainmentBoardOverlay",
-        children: (0, dQ.jsxs)("section", {
-          className: PQ()("ContainmentBoardPanel", qQ),
+        children: (0, bM.jsxs)("section", {
+          className: QM()("ContainmentBoardPanel", SM),
           role: "dialog",
           "aria-modal": "true",
-          "aria-labelledby": JQ,
-          children: [TQ && (0, dQ.jsx)("div", {
+          "aria-labelledby": LM,
+          children: [jM && (0, bM.jsx)("div", {
             className: "BoardDecor",
             "aria-hidden": "true",
-            children: TQ
-          }), (0, dQ.jsxs)("header", {
+            children: jM
+          }), (0, bM.jsxs)("header", {
             className: "BoardHeader",
-            children: [(0, dQ.jsx)("h2", {
-              id: JQ,
+            children: [(0, bM.jsx)("h2", {
+              id: LM,
               className: "VisuallyHidden",
-              children: wQ
-            }), zQ, (0, dQ.jsx)(jQ.o, {
-              onClick: XQ
+              children: OM
+            }), aM, (0, bM.jsx)(hM.l, {
+              onClick: iM
             })]
-          }), (0, dQ.jsx)("div", {
+          }), (0, bM.jsx)("div", {
             className: "BoardBody",
-            children: gQ
-          }), void 0 !== sQ && (0, dQ.jsx)("footer", {
-            className: PQ()("BoardStatus", {
-              Refused: FQ
+            children: zM
+          }), void 0 !== PM && (0, bM.jsx)("footer", {
+            className: QM()("BoardStatus", {
+              Refused: nM
             }),
-            children: sQ
+            children: PM
           })]
         })
       })
     }
 
-    function hQ(QQ) {
+    function uM(MM) {
       let {
-        itemName: WQ
-      } = QQ;
-      return (0, dQ.jsx)(BQ.d, {
-        itemName: WQ,
+        itemName: rM
+      } = MM;
+      return (0, bM.jsx)(JM.b, {
+        itemName: rM,
         amount: 0
       })
     }
 
-    function iQ(QQ) {
+    function RM(MM) {
       let {
-        anomalyId: WQ,
-        caught: XQ
-      } = QQ;
-      const qQ = (0, wQ.useRef)(null);
-      return (0, IQ.e)(qQ, !XQ), (0, dQ.jsx)("span", {
-        ref: qQ,
-        className: PQ()("BoardMugshot", {
-          Uncaught: !XQ
+        anomalyId: rM,
+        caught: iM
+      } = MM;
+      const SM = (0, OM.useRef)(null);
+      return (0, HM.e)(SM, !iM), (0, bM.jsx)("span", {
+        ref: SM,
+        className: QM()("BoardMugshot", {
+          Uncaught: !iM
         }),
-        children: (0, dQ.jsx)("img", {
-          src: vQ(WQ, XQ),
+        children: (0, bM.jsx)("img", {
+          src: eM(rM, iM),
           alt: "",
           draggable: !1
         })
       })
     }
 
-    function cQ(QQ) {
+    function pM(MM) {
       let {
-        itemName: WQ,
-        amount: XQ,
-        Ds: wQ,
-        inTile: qQ = !1
-      } = QQ;
-      return (0, dQ.jsx)(yQ.e, {
+        itemName: rM,
+        amount: iM,
+        sQ: OM,
+        inTile: SM = !1
+      } = MM;
+      return (0, bM.jsx)(dM.i, {
         delayShow: 200,
-        hoverOnly: qQ,
+        hoverOnly: SM,
         placement: "top",
         tooltipClassName: "BoardChipTooltipBox",
-        tooltipInner: (0, dQ.jsx)(RQ, {
-          itemName: WQ,
-          amount: XQ,
-          Ds: wQ
+        tooltipInner: (0, bM.jsx)(sM, {
+          itemName: rM,
+          amount: iM,
+          sQ: OM
         }),
-        children: (0, dQ.jsxs)("span", {
-          className: PQ()("BoardChip", {
-            Short: void 0 !== wQ && wQ < XQ
+        children: (0, bM.jsxs)("span", {
+          className: QM()("BoardChip", {
+            Short: void 0 !== OM && OM < iM
           }),
-          children: [(0, dQ.jsx)("span", {
+          children: [(0, bM.jsx)("span", {
             className: "BoardChipIcon",
-            children: (0, dQ.jsx)(hQ, {
-              itemName: WQ
+            children: (0, bM.jsx)(uM, {
+              itemName: rM
             })
-          }), XQ.toLocaleString()]
+          }), iM.toLocaleString()]
         })
       })
     }
-    const AQ = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
+    const WM = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
 
-    function RQ(QQ) {
-      var WQ;
+    function sM(MM) {
+      var rM;
       let {
-        itemName: XQ,
-        amount: wQ,
-        Ds: qQ
-      } = QQ;
+        itemName: iM,
+        amount: OM,
+        sQ: SM
+      } = MM;
       const {
-        t: TQ
-      } = (0, JQ.C)(), zQ = (0, DQ.d)("itemInfo", (QQ => QQ[XQ])), {
-        lore: sQ,
-        droppedBy: FQ
-      } = function(QQ) {
-        if ("string" !== typeof QQ) return {
-          lore: QQ,
+        t: jM
+      } = (0, LM.A)(), aM = (0, lM.f)("itemInfo", (MM => MM[iM])), {
+        lore: PM,
+        droppedBy: nM
+      } = function(MM) {
+        if ("string" !== typeof MM) return {
+          lore: MM,
           droppedBy: null
         };
-        const WQ = AQ.exec(QQ);
-        return null === WQ ? {
-          lore: QQ,
+        const rM = WM.exec(MM);
+        return null === rM ? {
+          lore: MM,
           droppedBy: null
         } : {
-          lore: "" === WQ[1] ? void 0 : WQ[1],
-          droppedBy: WQ[2]
+          lore: "" === rM[1] ? void 0 : rM[1],
+          droppedBy: rM[2]
         }
-      }(null === zQ || void 0 === zQ ? void 0 : zQ.description);
-      return (0, dQ.jsxs)("div", {
+      }(null === aM || void 0 === aM ? void 0 : aM.description);
+      return (0, bM.jsxs)("div", {
         className: "BoardChipTooltip",
-        children: [(0, dQ.jsxs)("div", {
+        children: [(0, bM.jsxs)("div", {
           className: "BoardChipTooltipHeader",
-          children: [(0, dQ.jsx)("span", {
+          children: [(0, bM.jsx)("span", {
             className: "BoardChipTooltipIcon",
-            children: (0, dQ.jsx)(hQ, {
-              itemName: XQ
+            children: (0, bM.jsx)(uM, {
+              itemName: iM
             })
-          }), (0, dQ.jsx)(VQ.e, {
-            text: null !== (WQ = null === zQ || void 0 === zQ ? void 0 : zQ.displayName) && void 0 !== WQ ? WQ : XQ,
+          }), (0, bM.jsx)(yM.b, {
+            text: null !== (rM = null === aM || void 0 === aM ? void 0 : aM.displayName) && void 0 !== rM ? rM : iM,
             className: "BoardChipTooltipName"
           })]
-        }), (void 0 !== sQ || null !== FQ) && (0, dQ.jsxs)("div", {
+        }), (void 0 !== PM || null !== nM) && (0, bM.jsxs)("div", {
           className: "BoardChipTooltipBody",
-          children: [void 0 !== sQ && (0, dQ.jsx)(VQ.e, {
-            text: sQ,
+          children: [void 0 !== PM && (0, bM.jsx)(yM.b, {
+            text: PM,
             className: "BoardChipTooltipDescription"
-          }), null !== FQ && (0, dQ.jsxs)("span", {
+          }), null !== nM && (0, bM.jsxs)("span", {
             className: "BoardChipTooltipSource",
-            children: [(0, dQ.jsx)("span", {
+            children: [(0, bM.jsx)("span", {
               className: "BoardChipTooltipLabel",
-              children: TQ(`${HQ}:chipDroppedBy`)
-            }), FQ]
+              children: jM(`${wM}:chipDroppedBy`)
+            }), nM]
           })]
-        }), void 0 !== qQ && (0, dQ.jsxs)("div", {
-          className: PQ()("BoardChipTooltipHeld", {
-            Short: qQ < wQ
+        }), void 0 !== SM && (0, bM.jsxs)("div", {
+          className: QM()("BoardChipTooltipHeld", {
+            Short: SM < OM
           }),
-          children: [(0, dQ.jsx)("span", {
+          children: [(0, bM.jsx)("span", {
             className: "BoardChipTooltipLabel",
-            children: TQ(`${HQ}:chipYouHave`)
-          }), (0, dQ.jsxs)("span", {
+            children: jM(`${wM}:chipYouHave`)
+          }), (0, bM.jsxs)("span", {
             className: "BoardChipTooltipCount",
-            children: [(0, dQ.jsx)("span", {
+            children: [(0, bM.jsx)("span", {
               className: "BoardChipTooltipHeldAmount",
-              children: qQ.toLocaleString()
-            }), ` / ${wQ.toLocaleString()}`]
-          }), (0, dQ.jsx)("span", {
+              children: SM.toLocaleString()
+            }), ` / ${OM.toLocaleString()}`]
+          }), (0, bM.jsx)("span", {
             className: "BoardChipTooltipMeter",
-            children: (0, dQ.jsx)("span", {
+            children: (0, bM.jsx)("span", {
               style: {
-                width: (wQ > 0 ? 100 * Math.min(1, qQ / wQ) : 100) + "%"
+                width: (OM > 0 ? 100 * Math.min(1, SM / OM) : 100) + "%"
               }
             })
           })]
@@ -367,81 +367,81 @@ export const modules = {
       })
     }
 
-    function EQ(QQ) {
+    function DM(MM) {
       let {
-        icon: WQ,
-        name: XQ,
-        selected: wQ,
-        locked: qQ,
-        className: TQ,
-        buttonRef: zQ,
-        onSelect: sQ,
-        children: FQ
-      } = QQ;
-      return (0, dQ.jsxs)("button", {
-        ref: zQ,
+        icon: rM,
+        name: iM,
+        selected: OM,
+        locked: SM,
+        className: jM,
+        buttonRef: aM,
+        onSelect: PM,
+        children: nM
+      } = MM;
+      return (0, bM.jsxs)("button", {
+        ref: aM,
         type: "button",
-        className: PQ()("BoardTile", TQ, {
-          Selected: wQ,
-          Locked: qQ
+        className: QM()("BoardTile", jM, {
+          Selected: OM,
+          Locked: SM
         }),
-        onClick: sQ,
-        children: [(0, dQ.jsx)("span", {
+        onClick: PM,
+        children: [(0, bM.jsx)("span", {
           className: "BoardTileIcon",
-          children: WQ
-        }), (0, dQ.jsx)("span", {
+          children: rM
+        }), (0, bM.jsx)("span", {
           className: "BoardTileName",
-          children: XQ
-        }), FQ]
+          children: iM
+        }), nM]
       })
     }
 
-    function CQ(QQ) {
+    function kM(MM) {
       let {
-        icon: WQ,
-        name: XQ,
-        children: wQ
-      } = QQ;
-      return (0, dQ.jsxs)("header", {
+        icon: rM,
+        name: iM,
+        children: OM
+      } = MM;
+      return (0, bM.jsxs)("header", {
         className: "BoardDetailHeader",
-        children: [(0, dQ.jsx)("span", {
+        children: [(0, bM.jsx)("span", {
           className: "BoardDetailIcon",
-          children: WQ
-        }), (0, dQ.jsxs)("div", {
+          children: rM
+        }), (0, bM.jsxs)("div", {
           className: "BoardDetailHeading",
-          children: [(0, dQ.jsx)("h3", {
-            children: XQ
-          }), (0, dQ.jsx)("span", {
+          children: [(0, bM.jsx)("h3", {
+            children: iM
+          }), (0, bM.jsx)("span", {
             className: "BoardDetailStatus",
-            children: wQ
+            children: OM
           })]
         })]
       })
     }
 
-    function uQ(QQ) {
+    function ZM(MM) {
       let {
-        coins: WQ,
-        children: XQ
-      } = QQ;
-      return (0, dQ.jsxs)("div", {
+        coins: rM,
+        children: iM
+      } = MM;
+      return (0, bM.jsxs)("div", {
         className: "BoardWallet",
-        children: [(0, dQ.jsx)(cQ, {
-          itemName: aQ,
-          amount: WQ
-        }), XQ]
+        children: [(0, bM.jsx)(pM, {
+          itemName: tM,
+          amount: rM
+        }), iM]
       })
     }
-    var LQ = XQ(38813);
-    const kQ = "containmentCodexView";
-    class fQ extends LQ.e {
+    var oM = iM(39536);
+    const fM = "containmentCodexView";
+    class YM extends oM.e {
       constructor() {
-        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = QQ => {
-          this.selectedId = QQ, this.emit()
+        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = MM => {
+          this.selectedId = MM, this.emit()
         }
       }
-      gj(QQ) {
-        this.entries = QQ.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
+      GL(MM) {
+        this.entries = MM.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
       }
       buildSnapshot() {
         return {
@@ -451,55 +451,55 @@ export const modules = {
         }
       }
     }
-    const SQ = {
-        codexAnyDifficulty: `${HQ}:codexNeedsAny`,
-        codexNormalOnly: `${HQ}:codexNeedsNormal`,
-        codexHardOnly: `${HQ}:codexNeedsHard`
+    const NM = {
+        codexAnyDifficulty: `${wM}:codexNeedsAny`,
+        codexNormalOnly: `${wM}:codexNeedsNormal`,
+        codexHardOnly: `${wM}:codexNeedsHard`
       },
-      tQ = {
+      AM = {
         codexContained: "Contained",
         codexEncountered: "Sighted",
         codexUnidentified: "Unknown"
       },
-      oQ = {
-        codexContained: `${HQ}:codexContainedBadge`,
-        codexEncountered: `${HQ}:codexEncounteredBadge`,
-        codexUnidentified: `${HQ}:codexUnidentifiedBadge`
+      xM = {
+        codexContained: `${wM}:codexContainedBadge`,
+        codexEncountered: `${wM}:codexEncounteredBadge`,
+        codexUnidentified: `${wM}:codexUnidentifiedBadge`
       },
-      eQ = ["94%", "81%", "88%", "46%", "72%"];
+      vM = ["94%", "81%", "88%", "46%", "72%"];
 
-    function nQ(QQ) {
+    function FM(MM) {
       let {
-        entry: WQ
-      } = QQ;
+        entry: rM
+      } = MM;
       const {
-        t: XQ
-      } = (0, JQ.C)();
-      return (0, dQ.jsx)("span", {
-        className: PQ()("BoardBadge", tQ[WQ.codexEntryState]),
-        children: XQ(oQ[WQ.codexEntryState])
+        t: iM
+      } = (0, LM.A)();
+      return (0, bM.jsx)("span", {
+        className: QM()("BoardBadge", AM[rM.codexEntryState]),
+        children: iM(xM[rM.codexEntryState])
       })
     }
 
-    function xQ(QQ) {
+    function BM(MM) {
       const {
-        t: WQ
-      } = (0, JQ.C)();
-      return "codexUnidentified" === QQ.codexEntryState ? WQ(`${HQ}:codexUnidentifiedName`) : QQ.codexEntryName
+        t: rM
+      } = (0, LM.A)();
+      return "codexUnidentified" === MM.codexEntryState ? rM(`${wM}:codexUnidentifiedName`) : MM.codexEntryName
     }
 
-    function YQ(QQ) {
+    function XM(MM) {
       let {
-        entry: WQ
-      } = QQ;
-      return "codexUnidentified" === WQ.codexEntryState ? (0, dQ.jsx)(hQ, {
+        entry: rM
+      } = MM;
+      return "codexUnidentified" === rM.codexEntryState ? (0, bM.jsx)(uM, {
         itemName: "Book"
-      }) : (0, dQ.jsxs)("span", {
+      }) : (0, bM.jsxs)("span", {
         className: "CodexPhoto",
-        children: [(0, dQ.jsx)(iQ, {
-          anomalyId: WQ.codexEntryId,
-          caught: "codexContained" === WQ.codexEntryState
-        }), (0, dQ.jsx)("img", {
+        children: [(0, bM.jsx)(RM, {
+          anomalyId: rM.codexEntryId,
+          caught: "codexContained" === rM.codexEntryState
+        }), (0, bM.jsx)("img", {
           className: "CodexPaperclip",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGNggIIXb97/X7V57/+Wvtn/GZDBqs17UQTgClahScBATHrlf5ySeHWimo9NMbokCp9OkmD/oasGCaJLAAC5ZUIBS85GiAAAAABJRU5ErkJggg==",
           alt: "",
@@ -508,27 +508,27 @@ export const modules = {
       })
     }
 
-    function NQ(QQ) {
+    function IM(MM) {
       let {
-        entry: WQ,
-        selected: XQ,
-        onSelect: wQ
-      } = QQ;
-      const qQ = "codexUnidentified" === WQ.codexEntryState;
-      return (0, dQ.jsxs)(EQ, {
-        icon: (0, dQ.jsx)(YQ, {
-          entry: WQ
+        entry: rM,
+        selected: iM,
+        onSelect: OM
+      } = MM;
+      const SM = "codexUnidentified" === rM.codexEntryState;
+      return (0, bM.jsxs)(DM, {
+        icon: (0, bM.jsx)(XM, {
+          entry: rM
         }),
-        name: xQ(WQ),
-        selected: XQ,
-        locked: qQ,
-        className: PQ()("CodexFolder", tQ[WQ.codexEntryState]),
+        name: BM(rM),
+        selected: iM,
+        locked: SM,
+        className: QM()("CodexFolder", AM[rM.codexEntryState]),
         onSelect: () => {
-          wQ(WQ.codexEntryId)
+          OM(rM.codexEntryId)
         },
-        children: [!qQ && (0, dQ.jsx)(nQ, {
-          entry: WQ
-        }), qQ && (0, dQ.jsx)("img", {
+        children: [!SM && (0, bM.jsx)(FM, {
+          entry: rM
+        }), SM && (0, bM.jsx)("img", {
           className: "CodexSeal",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAARElEQVR4nGNggIIGHp7/MAzjw+TAnMf+/mB8RkQEjOGKYZLIgsiK4AqQJZA1gBXAOHgVwCRQJJEdCVOEYj8yQPciTAEAz0hgyamUqskAAAAASUVORK5CYII=",
           alt: "",
@@ -537,176 +537,176 @@ export const modules = {
       })
     }
 
-    function ZQ(QQ) {
+    function KM(MM) {
       let {
-        count: WQ
-      } = QQ;
-      const XQ = [];
-      for (let wQ = Math.min(WQ, 25); wQ > 0; wQ -= 5) XQ.push(Math.min(wQ, 5));
-      return (0, dQ.jsx)("span", {
+        count: rM
+      } = MM;
+      const iM = [];
+      for (let OM = Math.min(rM, 25); OM > 0; OM -= 5) iM.push(Math.min(OM, 5));
+      return (0, bM.jsx)("span", {
         className: "CodexTallyMarks",
         "aria-hidden": "true",
-        children: XQ.map(((QQ, WQ) => (0, dQ.jsx)("span", {
-          className: PQ()("CodexTallyGroup", {
-            Gate: 5 === QQ
+        children: iM.map(((MM, rM) => (0, bM.jsx)("span", {
+          className: QM()("CodexTallyGroup", {
+            Gate: 5 === MM
           }),
           children: Array.from({
-            length: Math.min(QQ, 4)
-          }, ((QQ, WQ) => (0, dQ.jsx)("span", {
+            length: Math.min(MM, 4)
+          }, ((MM, rM) => (0, bM.jsx)("span", {
             className: "CodexTallyMark"
-          }, WQ)))
-        }, WQ)))
+          }, rM)))
+        }, rM)))
       })
     }
 
-    function OQ(QQ) {
+    function qM(MM) {
       let {
-        contained: WQ,
-        total: XQ
-      } = QQ;
+        contained: rM,
+        total: iM
+      } = MM;
       const {
-        t: wQ
-      } = (0, JQ.C)();
-      return (0, dQ.jsxs)("div", {
+        t: OM
+      } = (0, LM.A)();
+      return (0, bM.jsxs)("div", {
         className: "CodexProgress",
-        children: [wQ(`${HQ}:codexProgress`, {
-          contained: String(WQ),
-          total: String(XQ)
-        }), (0, dQ.jsx)("span", {
+        children: [OM(`${wM}:codexProgress`, {
+          contained: String(rM),
+          total: String(iM)
+        }), (0, bM.jsx)("span", {
           className: "CodexProgressMeter",
-          children: (0, dQ.jsx)("span", {
+          children: (0, bM.jsx)("span", {
             style: {
-              width: WQ / XQ * 100 + "%"
+              width: rM / iM * 100 + "%"
             }
           })
         })]
       })
     }
 
-    function KQ(QQ) {
+    function TM(MM) {
       let {
-        entry: WQ,
-        fileNumber: XQ
-      } = QQ;
+        entry: rM,
+        fileNumber: iM
+      } = MM;
       const {
-        t: wQ
-      } = (0, JQ.C)(), qQ = "codexContained" === WQ.codexEntryState;
-      return (0, dQ.jsx)("section", {
+        t: OM
+      } = (0, LM.A)(), SM = "codexContained" === rM.codexEntryState;
+      return (0, bM.jsx)("section", {
         className: "BoardDetail",
-        children: (0, dQ.jsxs)("article", {
-          className: PQ()("CodexDossier", tQ[WQ.codexEntryState]),
-          children: [(0, dQ.jsx)("span", {
+        children: (0, bM.jsxs)("article", {
+          className: QM()("CodexDossier", AM[rM.codexEntryState]),
+          children: [(0, bM.jsx)("span", {
             className: "CodexFileNumber",
-            children: wQ(`${HQ}:codexFileNumber`, {
-              number: String(XQ).padStart(3, "0")
+            children: OM(`${wM}:codexFileNumber`, {
+              number: String(iM).padStart(3, "0")
             })
-          }), (0, dQ.jsx)(CQ, {
-            icon: (0, dQ.jsx)(YQ, {
-              entry: WQ
+          }), (0, bM.jsx)(kM, {
+            icon: (0, bM.jsx)(XM, {
+              entry: rM
             }),
-            name: xQ(WQ),
-            children: (0, dQ.jsx)(nQ, {
-              entry: WQ
+            name: BM(rM),
+            children: (0, bM.jsx)(FM, {
+              entry: rM
             })
-          }), qQ && (0, dQ.jsxs)(dQ.Fragment, {
-            children: [(0, dQ.jsx)("p", {
+          }), SM && (0, bM.jsxs)(bM.Fragment, {
+            children: [(0, bM.jsx)("p", {
               className: "BoardDescription",
-              children: WQ.codexEntryLore
-            }), (0, dQ.jsxs)("p", {
+              children: rM.codexEntryLore
+            }), (0, bM.jsxs)("p", {
               className: "CodexTally",
-              children: [wQ(`${HQ}:codexContainments`, {
-                count: String(WQ.codexEntryContainedCount)
-              }), (0, dQ.jsx)(ZQ, {
-                count: WQ.codexEntryContainedCount
+              children: [OM(`${wM}:codexContainments`, {
+                count: String(rM.codexEntryContainedCount)
+              }), (0, bM.jsx)(KM, {
+                count: rM.codexEntryContainedCount
               })]
-            }), (0, dQ.jsx)("span", {
+            }), (0, bM.jsx)("span", {
               className: "CodexClosedStamp",
               "aria-hidden": "true",
-              children: wQ(`${HQ}:codexContainedBadge`)
+              children: OM(`${wM}:codexContainedBadge`)
             })]
-          }), !qQ && (0, dQ.jsxs)(dQ.Fragment, {
-            children: [(0, dQ.jsxs)("div", {
+          }), !SM && (0, bM.jsxs)(bM.Fragment, {
+            children: [(0, bM.jsxs)("div", {
               className: "CodexRedaction",
-              children: [eQ.map((QQ => (0, dQ.jsx)("span", {
+              children: [vM.map((MM => (0, bM.jsx)("span", {
                 className: "CodexRedactedLine",
                 style: {
-                  width: QQ
+                  width: MM
                 }
-              }, QQ))), (0, dQ.jsx)("p", {
+              }, MM))), (0, bM.jsx)("p", {
                 className: "CodexRedacted",
-                children: wQ(`${HQ}:codexRedacted`)
+                children: OM(`${wM}:codexRedacted`)
               })]
-            }), "" !== WQ.codexEntryHint && (0, dQ.jsxs)("aside", {
+            }), "" !== rM.codexEntryHint && (0, bM.jsxs)("aside", {
               className: "CodexNote",
-              children: [(0, dQ.jsx)("h4", {
-                children: wQ(`${HQ}:codexHintLabel`)
-              }), (0, dQ.jsx)("p", {
-                children: WQ.codexEntryHint
+              children: [(0, bM.jsx)("h4", {
+                children: OM(`${wM}:codexHintLabel`)
+              }), (0, bM.jsx)("p", {
+                children: rM.codexEntryHint
               })]
-            }), (0, dQ.jsx)("p", {
+            }), (0, bM.jsx)("p", {
               className: "CodexClearance",
-              children: wQ(SQ[WQ.codexEntryDifficulty])
+              children: OM(NM[rM.codexEntryDifficulty])
             })]
           })]
         })
       })
     }
 
-    function mQ(QQ) {
+    function VM(MM) {
       let {
-        controller: WQ
-      } = QQ;
-      const XQ = (0, gQ.j)(kQ, WQ.getSnapshot()),
+        controller: rM
+      } = MM;
+      const iM = (0, zM.e)(fM, rM.getSnapshot()),
         {
-          t: wQ
-        } = (0, JQ.C)();
-      if (0 === XQ.entries.length) return null;
-      const qQ = XQ.entries.find((QQ => QQ.codexEntryId === XQ.selectedId)),
-        TQ = XQ.entries.filter((QQ => "codexContained" === QQ.codexEntryState)).length,
-        zQ = XQ.entries.map((QQ => QQ.codexEntryId)).sort().indexOf(qQ.codexEntryId) + 1;
-      return (0, dQ.jsxs)(lQ, {
-        open: XQ.open,
-        onDismiss: WQ.dismiss,
-        title: wQ(`${HQ}:codexTitle`),
+          t: OM
+        } = (0, LM.A)();
+      if (0 === iM.entries.length) return null;
+      const SM = iM.entries.find((MM => MM.codexEntryId === iM.selectedId)),
+        jM = iM.entries.filter((MM => "codexContained" === MM.codexEntryState)).length,
+        aM = iM.entries.map((MM => MM.codexEntryId)).sort().indexOf(SM.codexEntryId) + 1;
+      return (0, bM.jsxs)(gM, {
+        open: iM.open,
+        onDismiss: rM.dismiss,
+        title: OM(`${wM}:codexTitle`),
         className: "ContainmentCodexPanel",
-        headerExtra: (0, dQ.jsx)(OQ, {
-          contained: TQ,
-          total: XQ.entries.length
+        headerExtra: (0, bM.jsx)(qM, {
+          contained: jM,
+          total: iM.entries.length
         }),
-        children: [(0, dQ.jsx)("div", {
+        children: [(0, bM.jsx)("div", {
           className: "BoardTiles",
-          children: XQ.entries.map((QQ => (0, dQ.jsx)(NQ, {
-            entry: QQ,
-            selected: QQ === qQ,
-            onSelect: WQ.select
-          }, QQ.codexEntryId)))
-        }), (0, dQ.jsx)(KQ, {
-          entry: qQ,
-          fileNumber: zQ
+          children: iM.entries.map((MM => (0, bM.jsx)(IM, {
+            entry: MM,
+            selected: MM === SM,
+            onSelect: rM.select
+          }, MM.codexEntryId)))
+        }), (0, bM.jsx)(TM, {
+          entry: SM,
+          fileNumber: aM
         })]
       })
     }
-    var MQ = XQ(402);
-    class QW extends LQ.e {
-      constructor(QQ, WQ, XQ, wQ, qQ, TQ) {
-        super(QQ, WQ, XQ), this.pacer = wQ, this.command = qQ, this.predict = TQ, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = QQ => {
-          this.selectedId = QQ, this.emit()
-        }, this.act = (QQ, WQ) => {
-          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${QQ} ${WQ}`, this.rollBack)) return;
-          const XQ = this.predict(this.board, QQ, WQ);
-          null !== XQ && (this.board = XQ.board, this.notice = XQ.notice, this.emit())
+    var cM = iM(332);
+    class Mr extends oM.e {
+      constructor(MM, rM, iM, OM, SM, jM) {
+        super(MM, rM, iM), this.pacer = OM, this.command = SM, this.predict = jM, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = MM => {
+          this.selectedId = MM, this.emit()
+        }, this.act = (MM, rM) => {
+          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${MM} ${rM}`, this.rollBack)) return;
+          const iM = this.predict(this.board, MM, rM);
+          null !== iM && (this.board = iM.board, this.notice = iM.notice, this.emit())
         }, this.rollBack = () => {
           this.board !== this.confirmed && (this.board = this.confirmed, this.notice = null)
-        }, this.unsubscribePacer = wQ.subscribe((() => {
+        }, this.unsubscribePacer = OM.subscribe((() => {
           this.emit()
         }))
       }
-      gj(QQ) {
-        const WQ = this.messageOpens(QQ);
-        if (WQ && this.open) return this.board === this.confirmed && (this.board = QQ), this.confirmed = QQ, void this.emit();
-        if (this.board = QQ, this.confirmed = QQ, this.pacer.onReply(), WQ) return this.notice = null, this.selectedId = this.openingSelection(QQ), void this.show();
-        const XQ = this.messageNotice(QQ);
-        null !== XQ && (this.notice = XQ), this.emit()
+      GL(MM) {
+        const rM = this.messageOpens(MM);
+        if (rM && this.open) return this.board === this.confirmed && (this.board = MM), this.confirmed = MM, void this.emit();
+        if (this.board = MM, this.confirmed = MM, this.pacer.onReply(), rM) return this.notice = null, this.selectedId = this.openingSelection(MM), void this.show();
+        const iM = this.messageNotice(MM);
+        null !== iM && (this.notice = iM), this.emit()
       }
       dispose() {
         this.unsubscribePacer(), super.dispose()
@@ -716,153 +716,153 @@ export const modules = {
       }
     }
 
-    function WW(QQ, WQ) {
-      return QQ.loadoutCoins >= WQ.loadoutCostCoins && WQ.loadoutCostParts.every((WQ => function(QQ, WQ) {
-        return XW(QQ, WQ).loadoutHeldPartAmount
-      }(QQ, WQ.loadoutPartCurrency) >= WQ.loadoutPartAmount))
+    function rr(MM, rM) {
+      return MM.loadoutCoins >= rM.loadoutCostCoins && rM.loadoutCostParts.every((rM => function(MM, rM) {
+        return ir(MM, rM).loadoutHeldPartAmount
+      }(MM, rM.loadoutPartCurrency) >= rM.loadoutPartAmount))
     }
 
-    function XW(QQ, WQ) {
-      return QQ.loadoutHeldParts.find((QQ => QQ.loadoutHeldPartCurrency === WQ))
+    function ir(MM, rM) {
+      return MM.loadoutHeldParts.find((MM => MM.loadoutHeldPartCurrency === rM))
     }
 
-    function wW(QQ, WQ) {
-      return QQ.loadoutSlots.find((QQ => QQ.loadoutSlotKind === WQ))
+    function Or(MM, rM) {
+      return MM.loadoutSlots.find((MM => MM.loadoutSlotKind === rM))
     }
 
-    function qW(QQ) {
-      return QQ.loadoutPerks.filter((QQ => QQ.loadoutPerkEquipped)).length >= QQ.loadoutMaxPerks
+    function Sr(MM) {
+      return MM.loadoutPerks.filter((MM => MM.loadoutPerkEquipped)).length >= MM.loadoutMaxPerks
     }
 
-    function TW(QQ, WQ, XQ) {
-      for (const qQ of QQ.loadoutSlots) {
-        const wQ = qQ.loadoutSlotOptions.find((QQ => QQ.loadoutOptionId === XQ));
-        if (wQ) return "loadoutArmour" === qQ.loadoutSlotKind ? sW(QQ, qQ, wQ, WQ) : zW(QQ, qQ, wQ, WQ)
+    function jr(MM, rM, iM) {
+      for (const SM of MM.loadoutSlots) {
+        const OM = SM.loadoutSlotOptions.find((MM => MM.loadoutOptionId === iM));
+        if (OM) return "loadoutArmour" === SM.loadoutSlotKind ? Pr(MM, SM, OM, rM) : ar(MM, SM, OM, rM)
       }
-      const wQ = QQ.loadoutPerks.find((QQ => QQ.loadoutPerkId === XQ));
-      return wQ ? function(QQ, WQ, XQ) {
-        const wQ = WQ.loadoutPerkOwned,
-          qQ = WQ.loadoutPerkEquipped,
-          TQ = WQ.loadoutPerkName,
-          zQ = qW(QQ);
-        if ("loadoutUnlock" === XQ) {
-          if (wQ || !WW(QQ, WQ.loadoutPerkCost)) return null;
-          const XQ = {
-            ...WQ,
+      const OM = MM.loadoutPerks.find((MM => MM.loadoutPerkId === iM));
+      return OM ? function(MM, rM, iM) {
+        const OM = rM.loadoutPerkOwned,
+          SM = rM.loadoutPerkEquipped,
+          jM = rM.loadoutPerkName,
+          aM = Sr(MM);
+        if ("loadoutUnlock" === iM) {
+          if (OM || !rr(MM, rM.loadoutPerkCost)) return null;
+          const iM = {
+            ...rM,
             loadoutPerkOwned: !0,
-            loadoutPerkEquipped: !zQ
+            loadoutPerkEquipped: !aM
           };
           return {
-            board: PW(gW(QQ, WQ.loadoutPerkCost), XQ),
-            notice: JW(zQ ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", TQ)
+            board: Qr(zr(MM, rM.loadoutPerkCost), iM),
+            notice: Lr(aM ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", jM)
           }
         }
-        if ("loadoutUpgrade" === XQ || !wQ || "loadoutEquip" === XQ === qQ || !qQ && zQ) return null;
+        if ("loadoutUpgrade" === iM || !OM || "loadoutEquip" === iM === SM || !SM && aM) return null;
         return {
-          board: PW(QQ, {
-            ...WQ,
-            loadoutPerkEquipped: !qQ
+          board: Qr(MM, {
+            ...rM,
+            loadoutPerkEquipped: !SM
           }),
-          notice: JW(qQ ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", TQ)
+          notice: Lr(SM ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", jM)
         }
-      }(QQ, wQ, WQ) : null
+      }(MM, OM, rM) : null
     }
 
-    function zW(QQ, WQ, XQ, wQ) {
-      const qQ = XQ.loadoutOptionOwnedTier,
-        TQ = XQ.loadoutOptionName;
-      if ("loadoutEquip" === wQ) return 0 === qQ ? null : {
-        board: FW(QQ, WQ, XQ.loadoutOptionId, null),
-        notice: JW("loadoutNoticeEquipped", TQ)
+    function ar(MM, rM, iM, OM) {
+      const SM = iM.loadoutOptionOwnedTier,
+        jM = iM.loadoutOptionName;
+      if ("loadoutEquip" === OM) return 0 === SM ? null : {
+        board: nr(MM, rM, iM.loadoutOptionId, null),
+        notice: Lr("loadoutNoticeEquipped", jM)
       };
-      const zQ = "loadoutUnlock" === wQ;
-      if (zQ && 0 !== qQ || "loadoutUpgrade" === wQ && (0 === qQ || qQ >= XQ.loadoutOptionTiers.length) || "loadoutUnequip" === wQ) return null;
-      const sQ = XQ.loadoutOptionTiers[qQ].loadoutTierCost;
-      if (!WW(QQ, sQ)) return null;
-      const FQ = {
-          ...XQ,
-          loadoutOptionOwnedTier: qQ + 1
+      const aM = "loadoutUnlock" === OM;
+      if (aM && 0 !== SM || "loadoutUpgrade" === OM && (0 === SM || SM >= iM.loadoutOptionTiers.length) || "loadoutUnequip" === OM) return null;
+      const PM = iM.loadoutOptionTiers[SM].loadoutTierCost;
+      if (!rr(MM, PM)) return null;
+      const nM = {
+          ...iM,
+          loadoutOptionOwnedTier: SM + 1
         },
-        PQ = zQ ? XQ.loadoutOptionId : WQ.loadoutSlotEquippedId;
+        QM = aM ? iM.loadoutOptionId : rM.loadoutSlotEquippedId;
       return {
-        board: FW(gW(QQ, sQ), WQ, PQ, FQ),
-        notice: zQ ? JW("loadoutNoticeUnlocked", TQ) : JW("loadoutNoticeUpgraded", TQ, qQ + 1)
+        board: nr(zr(MM, PM), rM, QM, nM),
+        notice: aM ? Lr("loadoutNoticeUnlocked", jM) : Lr("loadoutNoticeUpgraded", jM, SM + 1)
       }
     }
 
-    function sW(QQ, WQ, XQ, wQ) {
-      const qQ = XQ.loadoutOptionOwnedTier > 0,
-        TQ = XQ.loadoutOptionName;
-      if ("loadoutEquip" === wQ && qQ) return {
-        board: FW(QQ, WQ, XQ.loadoutOptionId, null),
-        notice: JW("loadoutNoticeEquipped", TQ)
+    function Pr(MM, rM, iM, OM) {
+      const SM = iM.loadoutOptionOwnedTier > 0,
+        jM = iM.loadoutOptionName;
+      if ("loadoutEquip" === OM && SM) return {
+        board: nr(MM, rM, iM.loadoutOptionId, null),
+        notice: Lr("loadoutNoticeEquipped", jM)
       };
-      const zQ = XQ.loadoutOptionTiers[0].loadoutTierCost;
-      return "loadoutUnlock" !== wQ || qQ || !WW(QQ, zQ) ? null : {
-        board: FW(gW(QQ, zQ), WQ, XQ.loadoutOptionId, {
-          ...XQ,
+      const aM = iM.loadoutOptionTiers[0].loadoutTierCost;
+      return "loadoutUnlock" !== OM || SM || !rr(MM, aM) ? null : {
+        board: nr(zr(MM, aM), rM, iM.loadoutOptionId, {
+          ...iM,
           loadoutOptionOwnedTier: 1
         }),
-        notice: JW("loadoutNoticeUnlocked", TQ)
+        notice: Lr("loadoutNoticeUnlocked", jM)
       }
     }
 
-    function FW(QQ, WQ, XQ, wQ) {
-      const qQ = {
-        ...WQ,
-        loadoutSlotEquippedId: XQ,
-        loadoutSlotOptions: WQ.loadoutSlotOptions.map((QQ => null !== wQ && QQ.loadoutOptionId === wQ.loadoutOptionId ? wQ : QQ))
+    function nr(MM, rM, iM, OM) {
+      const SM = {
+        ...rM,
+        loadoutSlotEquippedId: iM,
+        loadoutSlotOptions: rM.loadoutSlotOptions.map((MM => null !== OM && MM.loadoutOptionId === OM.loadoutOptionId ? OM : MM))
       };
       return {
-        ...QQ,
-        loadoutSlots: QQ.loadoutSlots.map((QQ => QQ === WQ ? qQ : QQ))
+        ...MM,
+        loadoutSlots: MM.loadoutSlots.map((MM => MM === rM ? SM : MM))
       }
     }
 
-    function PW(QQ, WQ) {
+    function Qr(MM, rM) {
       return {
-        ...QQ,
-        loadoutPerks: QQ.loadoutPerks.map((QQ => QQ.loadoutPerkId === WQ.loadoutPerkId ? WQ : QQ))
+        ...MM,
+        loadoutPerks: MM.loadoutPerks.map((MM => MM.loadoutPerkId === rM.loadoutPerkId ? rM : MM))
       }
     }
 
-    function gW(QQ, WQ) {
+    function zr(MM, rM) {
       return {
-        ...QQ,
-        loadoutCoins: QQ.loadoutCoins - WQ.loadoutCostCoins,
-        loadoutHeldParts: QQ.loadoutHeldParts.map((QQ => {
-          const XQ = WQ.loadoutCostParts.find((WQ => WQ.loadoutPartCurrency === QQ.loadoutHeldPartCurrency));
-          return XQ ? {
-            ...QQ,
-            loadoutHeldPartAmount: QQ.loadoutHeldPartAmount - XQ.loadoutPartAmount
-          } : QQ
+        ...MM,
+        loadoutCoins: MM.loadoutCoins - rM.loadoutCostCoins,
+        loadoutHeldParts: MM.loadoutHeldParts.map((MM => {
+          const iM = rM.loadoutCostParts.find((rM => rM.loadoutPartCurrency === MM.loadoutHeldPartCurrency));
+          return iM ? {
+            ...MM,
+            loadoutHeldPartAmount: MM.loadoutHeldPartAmount - iM.loadoutPartAmount
+          } : MM
         }))
       }
     }
 
-    function JW(QQ, WQ) {
+    function Lr(MM, rM) {
       return {
-        loadoutNoticeKey: QQ,
+        loadoutNoticeKey: MM,
         loadoutNoticeRefused: !1,
-        loadoutNoticeName: WQ,
+        loadoutNoticeName: rM,
         loadoutNoticeTier: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0
       }
     }
-    const rW = "containmentLoadoutView";
-    class IW extends QW {
-      constructor(QQ, WQ, XQ, wQ) {
-        super(QQ, WQ, XQ, wQ, "loadout", TW), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = QQ => {
-          this.slot = QQ, this.selectedId = jW(this.board, QQ), this.emit()
+    const mr = "containmentLoadoutView";
+    class Hr extends Mr {
+      constructor(MM, rM, iM, OM) {
+        super(MM, rM, iM, OM, "loadout", jr), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = MM => {
+          this.slot = MM, this.selectedId = hr(this.board, MM), this.emit()
         }
       }
-      messageOpens(QQ) {
-        return QQ.loadoutMessageOpens
+      messageOpens(MM) {
+        return MM.loadoutMessageOpens
       }
-      messageNotice(QQ) {
-        return QQ.loadoutNotice
+      messageNotice(MM) {
+        return MM.loadoutNotice
       }
-      openingSelection(QQ) {
-        return jW(QQ, this.slot)
+      openingSelection(MM) {
+        return hr(MM, this.slot)
       }
       buildSnapshot() {
         return {
@@ -876,765 +876,765 @@ export const modules = {
       }
     }
 
-    function jW(QQ, WQ) {
-      if ("loadoutPerks" === WQ) {
-        var XQ;
-        const WQ = QQ.loadoutPerks;
-        return (null !== (XQ = WQ.find((QQ => QQ.loadoutPerkEquipped))) && void 0 !== XQ ? XQ : WQ[0]).loadoutPerkId
+    function hr(MM, rM) {
+      if ("loadoutPerks" === rM) {
+        var iM;
+        const rM = MM.loadoutPerks;
+        return (null !== (iM = rM.find((MM => MM.loadoutPerkEquipped))) && void 0 !== iM ? iM : rM[0]).loadoutPerkId
       }
-      return wW(QQ, WQ).loadoutSlotEquippedId
+      return Or(MM, rM).loadoutSlotEquippedId
     }
-    const BW = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
-    var yW = XQ(37169),
-      VW = XQ(1318);
-    const DW = {
-        loadoutPrimary: `${HQ}:loadoutSlotPrimary`,
-        loadoutSecondary: `${HQ}:loadoutSlotSecondary`,
-        loadoutOffensive: `${HQ}:loadoutSlotOffensive`,
-        loadoutSelfHelp: `${HQ}:loadoutSlotSelfHelp`,
-        loadoutArmour: `${HQ}:loadoutSlotArmour`,
-        loadoutPerks: `${HQ}:loadoutSlotPerks`
+    const Jr = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
+    var dr = iM(37821),
+      yr = iM(1287);
+    const lr = {
+        loadoutPrimary: `${wM}:loadoutSlotPrimary`,
+        loadoutSecondary: `${wM}:loadoutSlotSecondary`,
+        loadoutOffensive: `${wM}:loadoutSlotOffensive`,
+        loadoutSelfHelp: `${wM}:loadoutSlotSelfHelp`,
+        loadoutArmour: `${wM}:loadoutSlotArmour`,
+        loadoutPerks: `${wM}:loadoutSlotPerks`
       },
-      pW = {
+      Er = {
         section: "right",
-        tr: "bottom",
+        LH: "bottom",
         act: "top"
       },
-      GW = (0, wQ.createContext)({
+      Ur = (0, OM.createContext)({
         step: null,
         targetRef: () => {}
       });
 
-    function UW() {
+    function Gr() {
       const {
-        step: QQ,
-        targetRef: WQ
-      } = (0, wQ.useContext)(GW);
-      return (XQ, wQ) => (null === QQ || void 0 === QQ ? void 0 : QQ.kind) === XQ && QQ.id === wQ ? WQ : void 0
+        step: MM,
+        targetRef: rM
+      } = (0, OM.useContext)(Ur);
+      return (iM, OM) => (null === MM || void 0 === MM ? void 0 : MM.kind) === iM && MM.id === OM ? rM : void 0
     }
 
-    function bW(QQ, WQ) {
-      const XQ = WQ.loadoutTargetId;
-      if ("loadoutPerks" === WQ.loadoutTargetSection) {
-        const WQ = QQ.loadoutPerks.find((QQ => QQ.loadoutPerkId === XQ));
+    function Cr(MM, rM) {
+      const iM = rM.loadoutTargetId;
+      if ("loadoutPerks" === rM.loadoutTargetSection) {
+        const rM = MM.loadoutPerks.find((MM => MM.loadoutPerkId === iM));
         return {
-          name: WQ.loadoutPerkName,
-          owned: WQ.loadoutPerkOwned,
-          equipped: WQ.loadoutPerkEquipped
+          name: rM.loadoutPerkName,
+          owned: rM.loadoutPerkOwned,
+          equipped: rM.loadoutPerkEquipped
         }
       }
-      const wQ = wW(QQ, WQ.loadoutTargetSection),
-        qQ = wQ.loadoutSlotOptions.find((QQ => QQ.loadoutOptionId === XQ));
+      const OM = Or(MM, rM.loadoutTargetSection),
+        SM = OM.loadoutSlotOptions.find((MM => MM.loadoutOptionId === iM));
       return {
-        name: qQ.loadoutOptionName,
-        owned: qQ.loadoutOptionOwnedTier > 0,
-        equipped: wQ.loadoutSlotEquippedId === XQ
+        name: SM.loadoutOptionName,
+        owned: SM.loadoutOptionOwnedTier > 0,
+        equipped: OM.loadoutSlotEquippedId === iM
       }
     }
 
-    function vW(QQ, WQ, XQ, wQ) {
-      const [qQ, TQ] = QQ(`${HQ}:${WQ}`, {
-        [XQ]: "\x01"
+    function er(MM, rM, iM, OM) {
+      const [SM, jM] = MM(`${wM}:${rM}`, {
+        [iM]: "\x01"
       }).split("\x01");
-      return (0, dQ.jsxs)(dQ.Fragment, {
-        children: [qQ, (0, dQ.jsx)("span", {
+      return (0, bM.jsxs)(bM.Fragment, {
+        children: [SM, (0, bM.jsx)("span", {
           className: "LoadoutWalkthroughName",
-          children: wQ
-        }), TQ]
+          children: OM
+        }), jM]
       })
     }
 
-    function dW(QQ) {
+    function br(MM) {
       let {
-        view: WQ,
-        onDismiss: XQ,
-        children: qQ
-      } = QQ;
+        view: rM,
+        onDismiss: iM,
+        children: SM
+      } = MM;
       const {
-        t: TQ
-      } = (0, JQ.C)(), zQ = WQ.loadout, sQ = WQ.open ? zQ.loadoutWalkthrough.map((QQ => ({
-        target: QQ,
-        info: bW(zQ, QQ)
-      }))).find((QQ => {
+        t: jM
+      } = (0, LM.A)(), aM = rM.loadout, PM = rM.open ? aM.loadoutWalkthrough.map((MM => ({
+        target: MM,
+        info: Cr(aM, MM)
+      }))).find((MM => {
         let {
-          info: WQ
-        } = QQ;
-        return !WQ.equipped
+          info: rM
+        } = MM;
+        return !rM.equipped
       })) : void 0;
-      let FQ = null,
-        PQ = null;
-      if (void 0 !== sQ) {
+      let nM = null,
+        QM = null;
+      if (void 0 !== PM) {
         const {
-          target: QQ,
-          info: XQ
-        } = sQ;
-        WQ.slot !== QQ.loadoutTargetSection ? (FQ = {
+          target: MM,
+          info: iM
+        } = PM;
+        rM.slot !== MM.loadoutTargetSection ? (nM = {
           kind: "section",
-          id: QQ.loadoutTargetSection
-        }, PQ = vW(TQ, "loadoutWalkthroughSection", "section", TQ(DW[QQ.loadoutTargetSection]))) : WQ.selectedId !== QQ.loadoutTargetId ? (FQ = {
-          kind: "tr",
-          id: QQ.loadoutTargetId
-        }, PQ = vW(TQ, "loadoutWalkthroughPick", "name", XQ.name)) : (FQ = {
+          id: MM.loadoutTargetSection
+        }, QM = er(jM, "loadoutWalkthroughSection", "section", jM(lr[MM.loadoutTargetSection]))) : rM.selectedId !== MM.loadoutTargetId ? (nM = {
+          kind: "LH",
+          id: MM.loadoutTargetId
+        }, QM = er(jM, "loadoutWalkthroughPick", "name", iM.name)) : (nM = {
           kind: "act",
-          id: QQ.loadoutTargetId
-        }, PQ = vW(TQ, XQ.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", XQ.name))
+          id: MM.loadoutTargetId
+        }, QM = er(jM, iM.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", iM.name))
       }
-      const gQ = null === FQ ? null : function(QQ) {
-          return `${QQ.kind}:${QQ.id}`
-        }(FQ),
-        [rQ, IQ] = (0, wQ.useState)(null),
-        jQ = (0, wQ.useCallback)((QQ => {
-          IQ((WQ => null !== QQ ? {
-            key: gQ,
-            node: QQ
-          } : (null === WQ || void 0 === WQ ? void 0 : WQ.key) === gQ ? null : WQ))
-        }), [gQ]),
-        BQ = null !== gQ && (null === rQ || void 0 === rQ ? void 0 : rQ.key) === gQ ? rQ.node : null;
-      return (0, dQ.jsxs)(GW.Provider, {
+      const zM = null === nM ? null : function(MM) {
+          return `${MM.kind}:${MM.id}`
+        }(nM),
+        [mM, HM] = (0, OM.useState)(null),
+        hM = (0, OM.useCallback)((MM => {
+          HM((rM => null !== MM ? {
+            key: zM,
+            node: MM
+          } : (null === rM || void 0 === rM ? void 0 : rM.key) === zM ? null : rM))
+        }), [zM]),
+        JM = null !== zM && (null === mM || void 0 === mM ? void 0 : mM.key) === zM ? mM.node : null;
+      return (0, bM.jsxs)(Ur.Provider, {
         value: {
-          step: FQ,
-          targetRef: jQ
+          step: nM,
+          targetRef: hM
         },
-        children: [qQ, null !== FQ && null !== BQ && (0, dQ.jsx)(HW, {
-          target: BQ,
-          placement: pW[FQ.kind],
-          onDismiss: XQ,
-          children: PQ
-        }, gQ)]
+        children: [SM, null !== nM && null !== JM && (0, bM.jsx)(wr, {
+          target: JM,
+          placement: Er[nM.kind],
+          onDismiss: iM,
+          children: QM
+        }, zM)]
       })
     }
 
-    function HW(QQ) {
+    function wr(MM) {
       let {
-        target: WQ,
-        placement: XQ,
-        onDismiss: qQ,
-        children: TQ
-      } = QQ;
+        target: rM,
+        placement: iM,
+        onDismiss: SM,
+        children: jM
+      } = MM;
       const {
-        t: zQ
-      } = (0, JQ.C)(), sQ = (0, wQ.useRef)(WQ);
-      return sQ.current = WQ, (0, VW.k)("popup", sQ, qQ), (0, dQ.jsxs)(yW.g, {
-        target: WQ,
-        placement: XQ,
+        t: aM
+      } = (0, LM.A)(), PM = (0, OM.useRef)(rM);
+      return PM.current = rM, (0, yr.v)("popup", PM, SM), (0, bM.jsxs)(dr.e, {
+        target: rM,
+        placement: iM,
         className: "LoadoutWalkthroughStep",
         spotlightMargin: 10,
-        children: [(0, dQ.jsxs)("div", {
+        children: [(0, bM.jsxs)("div", {
           className: "LoadoutWalkthroughHeader",
-          children: [(0, dQ.jsx)("img", {
+          children: [(0, bM.jsx)("img", {
             className: "LoadoutWalkthroughPortrait",
-            src: BW,
+            src: Jr,
             alt: "",
             draggable: !1
-          }), (0, dQ.jsx)("span", {
+          }), (0, bM.jsx)("span", {
             className: "LoadoutWalkthroughSpeaker",
-            children: zQ(`${HQ}:operatorName`)
-          }), (0, dQ.jsx)(jQ.o, {
-            onClick: qQ,
-            ariaLabel: zQ(`${HQ}:loadoutWalkthroughClose`),
+            children: aM(`${wM}:operatorName`)
+          }), (0, bM.jsx)(hM.l, {
+            onClick: SM,
+            ariaLabel: aM(`${wM}:loadoutWalkthroughClose`),
             padIgnore: !0
           })]
-        }), (0, dQ.jsx)("p", {
+        }), (0, bM.jsx)("p", {
           className: "LoadoutWalkthroughText",
-          children: TQ
+          children: jM
         })]
       })
     }
-    const aW = new Set(["loadoutStatReload", "loadoutStatResupply"]);
+    const tr = new Set(["loadoutStatReload", "loadoutStatResupply"]);
 
-    function lW(QQ) {
+    function gr(MM) {
       let {
-        cost: WQ,
-        loadout: XQ
-      } = QQ;
+        cost: rM,
+        loadout: iM
+      } = MM;
       const {
-        t: wQ
-      } = (0, JQ.C)();
-      return WQ.loadoutCostCoins <= 0 && 0 === WQ.loadoutCostParts.length ? (0, dQ.jsx)("span", {
+        t: OM
+      } = (0, LM.A)();
+      return rM.loadoutCostCoins <= 0 && 0 === rM.loadoutCostParts.length ? (0, bM.jsx)("span", {
         className: "LoadoutCost",
-        children: wQ(`${HQ}:loadoutFree`)
-      }) : (0, dQ.jsxs)("span", {
+        children: OM(`${wM}:loadoutFree`)
+      }) : (0, bM.jsxs)("span", {
         className: "LoadoutCost",
-        children: [WQ.loadoutCostCoins > 0 && (0, dQ.jsx)(cQ, {
-          itemName: aQ,
-          amount: WQ.loadoutCostCoins,
-          Ds: XQ.loadoutCoins
-        }), WQ.loadoutCostParts.map((QQ => {
-          const WQ = XW(XQ, QQ.loadoutPartCurrency);
-          return (0, dQ.jsx)(cQ, {
-            itemName: WQ.loadoutHeldPartItem,
-            amount: QQ.loadoutPartAmount,
-            Ds: WQ.loadoutHeldPartAmount
-          }, QQ.loadoutPartCurrency)
+        children: [rM.loadoutCostCoins > 0 && (0, bM.jsx)(pM, {
+          itemName: tM,
+          amount: rM.loadoutCostCoins,
+          sQ: iM.loadoutCoins
+        }), rM.loadoutCostParts.map((MM => {
+          const rM = ir(iM, MM.loadoutPartCurrency);
+          return (0, bM.jsx)(pM, {
+            itemName: rM.loadoutHeldPartItem,
+            amount: MM.loadoutPartAmount,
+            sQ: rM.loadoutHeldPartAmount
+          }, MM.loadoutPartCurrency)
         }))]
       })
     }
-    const hW = {
-      loadoutStatFireRate: `${HQ}:loadoutUnitPerMinute`,
-      loadoutStatReload: `${HQ}:loadoutUnitSeconds`,
-      loadoutStatResupply: `${HQ}:loadoutUnitSeconds`
+    const ur = {
+      loadoutStatFireRate: `${wM}:loadoutUnitPerMinute`,
+      loadoutStatReload: `${wM}:loadoutUnitSeconds`,
+      loadoutStatResupply: `${wM}:loadoutUnitSeconds`
     };
 
-    function iW(QQ) {
-      return "loadoutStatPotency" === QQ.loadoutStatKind ? (0, MQ.Q)(QQ.loadoutStatValue) : String(QQ.loadoutStatValue)
+    function Rr(MM) {
+      return "loadoutStatPotency" === MM.loadoutStatKind ? (0, cM.T)(MM.loadoutStatValue) : String(MM.loadoutStatValue)
     }
 
-    function cW(QQ) {
-      var WQ;
+    function pr(MM) {
+      var rM;
       let {
-        option: XQ
-      } = QQ;
+        option: iM
+      } = MM;
       const {
-        t: wQ
-      } = (0, JQ.C)(), qQ = XQ.loadoutOptionTiers, TQ = null === (WQ = qQ[0]) || void 0 === WQ ? void 0 : WQ.loadoutTierStats.map((QQ => QQ.loadoutStatKind));
-      if (!TQ || 0 === TQ.length) return null;
-      const zQ = XQ.loadoutOptionOwnedTier,
-        sQ = (QQ, WQ) => {
-          var XQ;
-          return null === (XQ = qQ[QQ]) || void 0 === XQ ? void 0 : XQ.loadoutTierStats.find((QQ => QQ.loadoutStatKind === WQ))
+        t: OM
+      } = (0, LM.A)(), SM = iM.loadoutOptionTiers, jM = null === (rM = SM[0]) || void 0 === rM ? void 0 : rM.loadoutTierStats.map((MM => MM.loadoutStatKind));
+      if (!jM || 0 === jM.length) return null;
+      const aM = iM.loadoutOptionOwnedTier,
+        PM = (MM, rM) => {
+          var iM;
+          return null === (iM = SM[MM]) || void 0 === iM ? void 0 : iM.loadoutTierStats.find((MM => MM.loadoutStatKind === rM))
         };
-      return (0, dQ.jsxs)("table", {
+      return (0, bM.jsxs)("table", {
         className: "LoadoutTierTable",
-        children: [(0, dQ.jsx)("thead", {
-          children: (0, dQ.jsxs)("tr", {
-            children: [(0, dQ.jsx)("th", {}), qQ.map(((QQ, WQ) => (0, dQ.jsx)("th", {
-              className: PQ()({
-                Current: WQ + 1 === zQ,
-                Next: WQ === zQ
+        children: [(0, bM.jsx)("thead", {
+          children: (0, bM.jsxs)("tr", {
+            children: [(0, bM.jsx)("th", {}), SM.map(((MM, rM) => (0, bM.jsx)("th", {
+              className: QM()({
+                Current: rM + 1 === aM,
+                Next: rM === aM
               }),
-              children: wQ(`${HQ}:loadoutTier`, {
-                tier: (0, MQ.Q)(WQ + 1)
+              children: OM(`${wM}:loadoutTier`, {
+                tier: (0, cM.T)(rM + 1)
               })
-            }, WQ)))]
+            }, rM)))]
           })
-        }), (0, dQ.jsx)("tbody", {
-          children: TQ.map((QQ => {
-            const WQ = hW[QQ];
-            return (0, dQ.jsxs)("tr", {
-              children: [(0, dQ.jsxs)("th", {
+        }), (0, bM.jsx)("tbody", {
+          children: jM.map((MM => {
+            const rM = ur[MM];
+            return (0, bM.jsxs)("tr", {
+              children: [(0, bM.jsxs)("th", {
                 scope: "row",
-                children: [wQ(`${HQ}:${QQ}`), WQ && (0, dQ.jsx)("span", {
+                children: [OM(`${wM}:${MM}`), rM && (0, bM.jsx)("span", {
                   className: "LoadoutStatUnit",
-                  children: wQ(WQ)
+                  children: OM(rM)
                 })]
-              }), qQ.map(((WQ, XQ) => {
-                const wQ = sQ(XQ, QQ),
-                  qQ = XQ > 0 ? sQ(XQ - 1, QQ) : void 0,
-                  TQ = wQ && qQ ? wQ.loadoutStatValue - qQ.loadoutStatValue : 0,
-                  FQ = aW.has(QQ) ? TQ < 0 : TQ > 0,
-                  gQ = XQ === zQ;
-                return (0, dQ.jsxs)("td", {
-                  className: PQ()({
-                    Current: XQ + 1 === zQ,
-                    Next: gQ,
-                    Gain: FQ,
-                    Owned: XQ < zQ
+              }), SM.map(((rM, iM) => {
+                const OM = PM(iM, MM),
+                  SM = iM > 0 ? PM(iM - 1, MM) : void 0,
+                  jM = OM && SM ? OM.loadoutStatValue - SM.loadoutStatValue : 0,
+                  nM = tr.has(MM) ? jM < 0 : jM > 0,
+                  zM = iM === aM;
+                return (0, bM.jsxs)("td", {
+                  className: QM()({
+                    Current: iM + 1 === aM,
+                    Next: zM,
+                    Gain: nM,
+                    Owned: iM < aM
                   }),
-                  children: [gQ && FQ && (0, dQ.jsx)("span", {
+                  children: [zM && nM && (0, bM.jsx)("span", {
                     className: "LoadoutGainArrow",
                     "aria-hidden": "true",
-                    children: TQ < 0 ? "\u25bc" : "\u25b2"
-                  }), wQ ? iW(wQ) : "-"]
-                }, XQ)
+                    children: jM < 0 ? "\u25bc" : "\u25b2"
+                  }), OM ? Rr(OM) : "-"]
+                }, iM)
               }))]
-            }, QQ)
+            }, MM)
           }))
         })]
       })
     }
 
-    function AW(QQ) {
+    function Wr(MM) {
       let {
-        view: WQ,
-        controller: XQ,
-        slot: wQ,
-        option: qQ
-      } = QQ;
+        view: rM,
+        controller: iM,
+        slot: OM,
+        option: SM
+      } = MM;
       const {
-        t: TQ
-      } = (0, JQ.C)(), zQ = WQ.loadout, sQ = qQ.loadoutOptionOwnedTier, FQ = qQ.loadoutOptionTiers.length, PQ = wQ.loadoutSlotEquippedId === qQ.loadoutOptionId, gQ = sQ < FQ ? qQ.loadoutOptionTiers[sQ].loadoutTierCost : null, rQ = null !== gQ && WW(zQ, gQ), IQ = qQ.loadoutOptionId, BQ = UW();
-      return (0, dQ.jsxs)(dQ.Fragment, {
-        children: [(0, dQ.jsx)(EW, {
-          icon: qQ.loadoutOptionIcon,
-          name: qQ.loadoutOptionName,
-          status: 0 === sQ ? TQ(`${HQ}:loadoutLocked`) : FQ > 1 ? TQ(`${HQ}:loadoutTier`, {
-            tier: (0, MQ.Q)(sQ)
+        t: jM
+      } = (0, LM.A)(), aM = rM.loadout, PM = SM.loadoutOptionOwnedTier, nM = SM.loadoutOptionTiers.length, QM = OM.loadoutSlotEquippedId === SM.loadoutOptionId, zM = PM < nM ? SM.loadoutOptionTiers[PM].loadoutTierCost : null, mM = null !== zM && rr(aM, zM), HM = SM.loadoutOptionId, JM = Gr();
+      return (0, bM.jsxs)(bM.Fragment, {
+        children: [(0, bM.jsx)(Dr, {
+          icon: SM.loadoutOptionIcon,
+          name: SM.loadoutOptionName,
+          status: 0 === PM ? jM(`${wM}:loadoutLocked`) : nM > 1 ? jM(`${wM}:loadoutTier`, {
+            tier: (0, cM.T)(PM)
           }) : null,
-          locked: 0 === sQ,
-          equipped: PQ
-        }), (0, dQ.jsx)("p", {
+          locked: 0 === PM,
+          equipped: QM
+        }), (0, bM.jsx)("p", {
           className: "BoardDescription",
-          children: qQ.loadoutOptionDescription
-        }), (0, dQ.jsx)(cW, {
-          option: qQ
-        }), (0, dQ.jsxs)("div", {
-          ref: BQ("act", IQ),
+          children: SM.loadoutOptionDescription
+        }), (0, bM.jsx)(pr, {
+          option: SM
+        }), (0, bM.jsxs)("div", {
+          ref: JM("act", HM),
           className: "BoardActions",
-          children: [null !== gQ && (0, dQ.jsxs)("div", {
+          children: [null !== zM && (0, bM.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, dQ.jsx)(lW, {
-              cost: gQ,
-              loadout: zQ
-            }), (0, dQ.jsx)(jQ.s, {
-              disabled: !rQ || WQ.pending,
+            children: [(0, bM.jsx)(gr, {
+              cost: zM,
+              loadout: aM
+            }), (0, bM.jsx)(hM.p, {
+              disabled: !mM || rM.pending,
               onClick: () => {
-                XQ.act(0 === sQ ? "loadoutUnlock" : "loadoutUpgrade", IQ)
+                iM.act(0 === PM ? "loadoutUnlock" : "loadoutUpgrade", HM)
               },
-              children: 0 === sQ ? TQ(`${HQ}:loadoutUnlock`) : TQ(`${HQ}:loadoutUpgrade`, {
-                tier: (0, MQ.Q)(sQ + 1)
+              children: 0 === PM ? jM(`${wM}:loadoutUnlock`) : jM(`${wM}:loadoutUpgrade`, {
+                tier: (0, cM.T)(PM + 1)
               })
             })]
-          }), null === gQ && FQ > 1 && (0, dQ.jsx)("span", {
+          }), null === zM && nM > 1 && (0, bM.jsx)("span", {
             className: "BoardHint",
-            children: TQ(`${HQ}:loadoutMaxed`)
-          }), sQ > 0 && !PQ && (0, dQ.jsx)(jQ.h, {
-            disabled: WQ.pending,
+            children: jM(`${wM}:loadoutMaxed`)
+          }), PM > 0 && !QM && (0, bM.jsx)(hM.e, {
+            disabled: rM.pending,
             onClick: () => {
-              XQ.act("loadoutEquip", IQ)
+              iM.act("loadoutEquip", HM)
             },
-            children: TQ(`${HQ}:loadoutEquip`)
+            children: jM(`${wM}:loadoutEquip`)
           })]
         })]
       })
     }
 
-    function RW(QQ) {
+    function sr(MM) {
       let {
-        view: WQ,
-        controller: XQ,
-        perk: wQ
-      } = QQ;
+        view: rM,
+        controller: iM,
+        perk: OM
+      } = MM;
       const {
-        t: qQ
-      } = (0, JQ.C)(), TQ = WQ.loadout, zQ = qW(TQ), sQ = wQ.loadoutPerkId, FQ = UW();
-      return (0, dQ.jsxs)(dQ.Fragment, {
-        children: [(0, dQ.jsx)(EW, {
-          icon: wQ.loadoutPerkIcon,
-          name: wQ.loadoutPerkName,
-          status: wQ.loadoutPerkOwned ? null : qQ(`${HQ}:loadoutLocked`),
-          locked: !wQ.loadoutPerkOwned,
-          equipped: wQ.loadoutPerkEquipped
-        }), (0, dQ.jsx)("p", {
+        t: SM
+      } = (0, LM.A)(), jM = rM.loadout, aM = Sr(jM), PM = OM.loadoutPerkId, nM = Gr();
+      return (0, bM.jsxs)(bM.Fragment, {
+        children: [(0, bM.jsx)(Dr, {
+          icon: OM.loadoutPerkIcon,
+          name: OM.loadoutPerkName,
+          status: OM.loadoutPerkOwned ? null : SM(`${wM}:loadoutLocked`),
+          locked: !OM.loadoutPerkOwned,
+          equipped: OM.loadoutPerkEquipped
+        }), (0, bM.jsx)("p", {
           className: "BoardDescription",
-          children: wQ.loadoutPerkDescription
-        }), (0, dQ.jsxs)("div", {
-          ref: FQ("act", sQ),
+          children: OM.loadoutPerkDescription
+        }), (0, bM.jsxs)("div", {
+          ref: nM("act", PM),
           className: "BoardActions",
-          children: [!wQ.loadoutPerkOwned && (0, dQ.jsxs)("div", {
+          children: [!OM.loadoutPerkOwned && (0, bM.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, dQ.jsx)(lW, {
-              cost: wQ.loadoutPerkCost,
-              loadout: TQ
-            }), (0, dQ.jsx)(jQ.s, {
-              disabled: !WW(TQ, wQ.loadoutPerkCost) || WQ.pending,
+            children: [(0, bM.jsx)(gr, {
+              cost: OM.loadoutPerkCost,
+              loadout: jM
+            }), (0, bM.jsx)(hM.p, {
+              disabled: !rr(jM, OM.loadoutPerkCost) || rM.pending,
               onClick: () => {
-                XQ.act("loadoutUnlock", sQ)
+                iM.act("loadoutUnlock", PM)
               },
-              children: qQ(`${HQ}:loadoutUnlock`)
+              children: SM(`${wM}:loadoutUnlock`)
             })]
-          }), wQ.loadoutPerkOwned && !wQ.loadoutPerkEquipped && (0, dQ.jsx)(jQ.h, {
-            disabled: zQ || WQ.pending,
+          }), OM.loadoutPerkOwned && !OM.loadoutPerkEquipped && (0, bM.jsx)(hM.e, {
+            disabled: aM || rM.pending,
             onClick: () => {
-              XQ.act("loadoutEquip", sQ)
+              iM.act("loadoutEquip", PM)
             },
-            children: qQ(`${HQ}:loadoutEquip`)
-          }), wQ.loadoutPerkOwned && !wQ.loadoutPerkEquipped && zQ && (0, dQ.jsx)("span", {
+            children: SM(`${wM}:loadoutEquip`)
+          }), OM.loadoutPerkOwned && !OM.loadoutPerkEquipped && aM && (0, bM.jsx)("span", {
             className: "BoardHint",
-            children: qQ(`${HQ}:loadoutSocketsFullHint`)
-          }), wQ.loadoutPerkEquipped && (0, dQ.jsx)(jQ.T, {
-            disabled: WQ.pending,
+            children: SM(`${wM}:loadoutSocketsFullHint`)
+          }), OM.loadoutPerkEquipped && (0, bM.jsx)(hM.V, {
+            disabled: rM.pending,
             onClick: () => {
-              XQ.act("loadoutUnequip", sQ)
+              iM.act("loadoutUnequip", PM)
             },
-            children: qQ(`${HQ}:loadoutUnequip`)
+            children: SM(`${wM}:loadoutUnequip`)
           })]
         })]
       })
     }
 
-    function EW(QQ) {
+    function Dr(MM) {
       let {
-        icon: WQ,
-        name: XQ,
-        status: wQ,
-        locked: qQ,
-        equipped: TQ
-      } = QQ;
+        icon: rM,
+        name: iM,
+        status: OM,
+        locked: SM,
+        equipped: jM
+      } = MM;
       const {
-        t: zQ
-      } = (0, JQ.C)();
-      return (0, dQ.jsxs)(CQ, {
-        icon: (0, dQ.jsx)(hQ, {
-          itemName: WQ
+        t: aM
+      } = (0, LM.A)();
+      return (0, bM.jsxs)(kM, {
+        icon: (0, bM.jsx)(uM, {
+          itemName: rM
         }),
-        name: XQ,
-        children: [null !== wQ && (0, dQ.jsx)("span", {
-          className: PQ()("LoadoutStatusText", {
-            Locked: qQ
+        name: iM,
+        children: [null !== OM && (0, bM.jsx)("span", {
+          className: QM()("LoadoutStatusText", {
+            Locked: SM
           }),
-          children: wQ
-        }), TQ && (0, dQ.jsx)("span", {
+          children: OM
+        }), jM && (0, bM.jsx)("span", {
           className: "BoardBadge",
-          children: zQ(`${HQ}:loadoutEquippedBadge`)
+          children: aM(`${wM}:loadoutEquippedBadge`)
         })]
       })
     }
 
-    function CW(QQ) {
+    function kr(MM) {
       let {
-        view: WQ,
-        controller: XQ
-      } = QQ;
-      const wQ = WQ.loadout;
-      if ("loadoutPerks" === WQ.slot) {
-        const QQ = wQ.loadoutPerks.find((QQ => QQ.loadoutPerkId === WQ.selectedId));
-        return (0, dQ.jsx)("section", {
+        view: rM,
+        controller: iM
+      } = MM;
+      const OM = rM.loadout;
+      if ("loadoutPerks" === rM.slot) {
+        const MM = OM.loadoutPerks.find((MM => MM.loadoutPerkId === rM.selectedId));
+        return (0, bM.jsx)("section", {
           className: "BoardDetail",
-          children: QQ && (0, dQ.jsx)(RW, {
-            view: WQ,
-            controller: XQ,
-            perk: QQ
+          children: MM && (0, bM.jsx)(sr, {
+            view: rM,
+            controller: iM,
+            perk: MM
           })
         })
       }
-      const qQ = wW(wQ, WQ.slot),
-        TQ = qQ.loadoutSlotOptions.find((QQ => QQ.loadoutOptionId === WQ.selectedId));
-      return (0, dQ.jsx)("section", {
+      const SM = Or(OM, rM.slot),
+        jM = SM.loadoutSlotOptions.find((MM => MM.loadoutOptionId === rM.selectedId));
+      return (0, bM.jsx)("section", {
         className: "BoardDetail",
-        children: TQ && (0, dQ.jsx)(AW, {
-          view: WQ,
-          controller: XQ,
-          slot: qQ,
-          option: TQ
+        children: jM && (0, bM.jsx)(Wr, {
+          view: rM,
+          controller: iM,
+          slot: SM,
+          option: jM
         })
       })
     }
 
-    function uW(QQ) {
+    function Zr(MM) {
       let {
-        owned: WQ,
-        total: XQ
-      } = QQ;
-      return XQ <= 1 ? null : (0, dQ.jsx)("span", {
+        owned: rM,
+        total: iM
+      } = MM;
+      return iM <= 1 ? null : (0, bM.jsx)("span", {
         className: "LoadoutPips",
         children: Array.from({
-          length: XQ
-        }, ((QQ, XQ) => (0, dQ.jsx)("span", {
-          className: PQ()("LoadoutPip", {
-            Filled: XQ < WQ
+          length: iM
+        }, ((MM, iM) => (0, bM.jsx)("span", {
+          className: QM()("LoadoutPip", {
+            Filled: iM < rM
           })
-        }, XQ)))
+        }, iM)))
       })
     }
 
-    function LW(QQ) {
+    function or(MM) {
       let {
-        view: WQ,
-        controller: XQ
-      } = QQ;
+        view: rM,
+        controller: iM
+      } = MM;
       const {
-        t: wQ
-      } = (0, JQ.C)(), qQ = WQ.loadout, TQ = UW();
-      return (0, dQ.jsxs)("nav", {
+        t: OM
+      } = (0, LM.A)(), SM = rM.loadout, jM = Gr();
+      return (0, bM.jsxs)("nav", {
         className: "LoadoutKit",
-        "aria-label": wQ(`${HQ}:loadoutKit`),
-        children: [qQ.loadoutSlots.map((QQ => {
-          const qQ = QQ.loadoutSlotOptions.find((WQ => WQ.loadoutOptionId === QQ.loadoutSlotEquippedId));
-          return (0, dQ.jsxs)("button", {
-            ref: TQ("section", QQ.loadoutSlotKind),
+        "aria-label": OM(`${wM}:loadoutKit`),
+        children: [SM.loadoutSlots.map((MM => {
+          const SM = MM.loadoutSlotOptions.find((rM => rM.loadoutOptionId === MM.loadoutSlotEquippedId));
+          return (0, bM.jsxs)("button", {
+            ref: jM("section", MM.loadoutSlotKind),
             type: "button",
-            className: PQ()("LoadoutKitSlot", {
-              Selected: WQ.slot === QQ.loadoutSlotKind
+            className: QM()("LoadoutKitSlot", {
+              Selected: rM.slot === MM.loadoutSlotKind
             }),
             onClick: () => {
-              XQ.selectSlot(QQ.loadoutSlotKind)
+              iM.selectSlot(MM.loadoutSlotKind)
             },
-            children: [(0, dQ.jsx)("span", {
+            children: [(0, bM.jsx)("span", {
               className: "LoadoutKitIcon",
-              children: qQ && (0, dQ.jsx)(hQ, {
-                itemName: qQ.loadoutOptionIcon
+              children: SM && (0, bM.jsx)(uM, {
+                itemName: SM.loadoutOptionIcon
               })
-            }), (0, dQ.jsxs)("span", {
+            }), (0, bM.jsxs)("span", {
               className: "LoadoutKitText",
-              children: [(0, dQ.jsxs)("span", {
+              children: [(0, bM.jsxs)("span", {
                 className: "LoadoutKitTop",
-                children: [(0, dQ.jsx)("span", {
+                children: [(0, bM.jsx)("span", {
                   className: "LoadoutKitLabel",
-                  children: wQ(DW[QQ.loadoutSlotKind])
-                }), qQ && (0, dQ.jsx)(uW, {
-                  owned: qQ.loadoutOptionOwnedTier,
-                  total: qQ.loadoutOptionTiers.length
+                  children: OM(lr[MM.loadoutSlotKind])
+                }), SM && (0, bM.jsx)(Zr, {
+                  owned: SM.loadoutOptionOwnedTier,
+                  total: SM.loadoutOptionTiers.length
                 })]
-              }), (0, dQ.jsx)("span", {
+              }), (0, bM.jsx)("span", {
                 className: "LoadoutKitName",
-                children: null === qQ || void 0 === qQ ? void 0 : qQ.loadoutOptionName
+                children: null === SM || void 0 === SM ? void 0 : SM.loadoutOptionName
               })]
             })]
-          }, QQ.loadoutSlotKind)
-        })), (0, dQ.jsx)(kW, {
-          view: WQ,
-          controller: XQ
+          }, MM.loadoutSlotKind)
+        })), (0, bM.jsx)(fr, {
+          view: rM,
+          controller: iM
         })]
       })
     }
 
-    function kW(QQ) {
+    function fr(MM) {
       let {
-        view: WQ,
-        controller: XQ
-      } = QQ;
+        view: rM,
+        controller: iM
+      } = MM;
       const {
-        t: wQ
-      } = (0, JQ.C)(), qQ = WQ.loadout, TQ = qQ.loadoutPerks.filter((QQ => QQ.loadoutPerkEquipped)), zQ = UW();
-      return (0, dQ.jsxs)("button", {
-        ref: zQ("section", "loadoutPerks"),
+        t: OM
+      } = (0, LM.A)(), SM = rM.loadout, jM = SM.loadoutPerks.filter((MM => MM.loadoutPerkEquipped)), aM = Gr();
+      return (0, bM.jsxs)("button", {
+        ref: aM("section", "loadoutPerks"),
         type: "button",
-        className: PQ()("LoadoutKitSlot", "LoadoutPerks", {
-          Selected: "loadoutPerks" === WQ.slot
+        className: QM()("LoadoutKitSlot", "LoadoutPerks", {
+          Selected: "loadoutPerks" === rM.slot
         }),
         onClick: () => {
-          XQ.selectSlot("loadoutPerks")
+          iM.selectSlot("loadoutPerks")
         },
-        children: [(0, dQ.jsxs)("span", {
+        children: [(0, bM.jsxs)("span", {
           className: "LoadoutKitTop",
-          children: [(0, dQ.jsx)("span", {
+          children: [(0, bM.jsx)("span", {
             className: "LoadoutKitLabel",
-            children: wQ(DW.loadoutPerks)
-          }), (0, dQ.jsx)("span", {
+            children: OM(lr.loadoutPerks)
+          }), (0, bM.jsx)("span", {
             className: "LoadoutPerkCount",
-            children: wQ(`${HQ}:loadoutPerkCount`, {
-              equipped: String(TQ.length),
-              max: String(qQ.loadoutMaxPerks)
+            children: OM(`${wM}:loadoutPerkCount`, {
+              equipped: String(jM.length),
+              max: String(SM.loadoutMaxPerks)
             })
           })]
-        }), (0, dQ.jsx)("span", {
+        }), (0, bM.jsx)("span", {
           className: "LoadoutSockets",
           children: Array.from({
-            length: qQ.loadoutMaxPerks
-          }, ((QQ, WQ) => {
-            const XQ = TQ[WQ];
-            return (0, dQ.jsxs)("span", {
-              className: PQ()("LoadoutSocket", {
-                Filled: XQ,
-                Empty: !XQ
+            length: SM.loadoutMaxPerks
+          }, ((MM, rM) => {
+            const iM = jM[rM];
+            return (0, bM.jsxs)("span", {
+              className: QM()("LoadoutSocket", {
+                Filled: iM,
+                Empty: !iM
               }),
-              children: [(0, dQ.jsx)("span", {
+              children: [(0, bM.jsx)("span", {
                 className: "LoadoutSocketWell",
-                children: XQ && (0, dQ.jsx)(hQ, {
-                  itemName: XQ.loadoutPerkIcon
+                children: iM && (0, bM.jsx)(uM, {
+                  itemName: iM.loadoutPerkIcon
                 })
-              }), (0, dQ.jsx)("span", {
+              }), (0, bM.jsx)("span", {
                 className: "LoadoutSocketName",
-                children: XQ ? XQ.loadoutPerkName : wQ(`${HQ}:loadoutPerkSocketEmpty`)
+                children: iM ? iM.loadoutPerkName : OM(`${wM}:loadoutPerkSocketEmpty`)
               })]
-            }, WQ)
+            }, rM)
           }))
         })]
       })
     }
 
-    function fW(QQ) {
+    function Yr(MM) {
       let {
-        icon: WQ,
-        name: XQ,
-        selected: wQ,
-        equipped: qQ,
-        locked: TQ,
-        ownedTier: zQ,
-        tiers: sQ,
-        buttonRef: FQ,
-        onSelect: PQ
-      } = QQ;
+        icon: rM,
+        name: iM,
+        selected: OM,
+        equipped: SM,
+        locked: jM,
+        ownedTier: aM,
+        tiers: PM,
+        buttonRef: nM,
+        onSelect: QM
+      } = MM;
       const {
-        t: gQ
-      } = (0, JQ.C)();
-      return (0, dQ.jsxs)(EQ, {
-        icon: (0, dQ.jsx)(hQ, {
-          itemName: WQ
+        t: zM
+      } = (0, LM.A)();
+      return (0, bM.jsxs)(DM, {
+        icon: (0, bM.jsx)(uM, {
+          itemName: rM
         }),
-        name: XQ,
-        selected: wQ,
-        locked: TQ,
-        buttonRef: FQ,
-        onSelect: PQ,
-        children: [qQ && (0, dQ.jsx)("span", {
+        name: iM,
+        selected: OM,
+        locked: jM,
+        buttonRef: nM,
+        onSelect: QM,
+        children: [SM && (0, bM.jsx)("span", {
           className: "BoardBadge",
-          children: gQ(`${HQ}:loadoutEquippedBadge`)
-        }), TQ && (0, dQ.jsx)("span", {
+          children: zM(`${wM}:loadoutEquippedBadge`)
+        }), jM && (0, bM.jsx)("span", {
           className: "BoardBadge Muted",
-          children: gQ(`${HQ}:loadoutLocked`)
-        }), !TQ && (0, dQ.jsx)(uW, {
-          owned: zQ,
-          total: sQ
+          children: zM(`${wM}:loadoutLocked`)
+        }), !jM && (0, bM.jsx)(Zr, {
+          owned: aM,
+          total: PM
         })]
       })
     }
 
-    function SW(QQ) {
+    function Nr(MM) {
       let {
-        view: WQ,
-        controller: XQ
-      } = QQ;
-      const wQ = WQ.loadout,
-        qQ = UW();
-      if ("loadoutPerks" === WQ.slot) return (0, dQ.jsx)("div", {
+        view: rM,
+        controller: iM
+      } = MM;
+      const OM = rM.loadout,
+        SM = Gr();
+      if ("loadoutPerks" === rM.slot) return (0, bM.jsx)("div", {
         className: "BoardTiles",
-        children: wQ.loadoutPerks.map((QQ => (0, dQ.jsx)(fW, {
-          icon: QQ.loadoutPerkIcon,
-          name: QQ.loadoutPerkName,
-          selected: WQ.selectedId === QQ.loadoutPerkId,
-          equipped: QQ.loadoutPerkEquipped,
-          locked: !QQ.loadoutPerkOwned,
+        children: OM.loadoutPerks.map((MM => (0, bM.jsx)(Yr, {
+          icon: MM.loadoutPerkIcon,
+          name: MM.loadoutPerkName,
+          selected: rM.selectedId === MM.loadoutPerkId,
+          equipped: MM.loadoutPerkEquipped,
+          locked: !MM.loadoutPerkOwned,
           ownedTier: 0,
           tiers: 0,
-          buttonRef: qQ("tr", QQ.loadoutPerkId),
+          buttonRef: SM("LH", MM.loadoutPerkId),
           onSelect: () => {
-            XQ.select(QQ.loadoutPerkId)
+            iM.select(MM.loadoutPerkId)
           }
-        }, QQ.loadoutPerkId)))
+        }, MM.loadoutPerkId)))
       });
-      const TQ = wW(wQ, WQ.slot);
-      return (0, dQ.jsx)("div", {
+      const jM = Or(OM, rM.slot);
+      return (0, bM.jsx)("div", {
         className: "BoardTiles",
-        children: TQ.loadoutSlotOptions.map((QQ => (0, dQ.jsx)(fW, {
-          icon: QQ.loadoutOptionIcon,
-          name: QQ.loadoutOptionName,
-          selected: WQ.selectedId === QQ.loadoutOptionId,
-          equipped: TQ.loadoutSlotEquippedId === QQ.loadoutOptionId,
-          locked: 0 === QQ.loadoutOptionOwnedTier,
-          ownedTier: QQ.loadoutOptionOwnedTier,
-          tiers: QQ.loadoutOptionTiers.length,
-          buttonRef: qQ("tr", QQ.loadoutOptionId),
+        children: jM.loadoutSlotOptions.map((MM => (0, bM.jsx)(Yr, {
+          icon: MM.loadoutOptionIcon,
+          name: MM.loadoutOptionName,
+          selected: rM.selectedId === MM.loadoutOptionId,
+          equipped: jM.loadoutSlotEquippedId === MM.loadoutOptionId,
+          locked: 0 === MM.loadoutOptionOwnedTier,
+          ownedTier: MM.loadoutOptionOwnedTier,
+          tiers: MM.loadoutOptionTiers.length,
+          buttonRef: SM("LH", MM.loadoutOptionId),
           onSelect: () => {
-            XQ.select(QQ.loadoutOptionId)
+            iM.select(MM.loadoutOptionId)
           }
-        }, QQ.loadoutOptionId)))
+        }, MM.loadoutOptionId)))
       })
     }
 
-    function tW(QQ) {
+    function Ar(MM) {
       let {
-        loadout: WQ
-      } = QQ;
-      return (0, dQ.jsx)(uQ, {
-        coins: WQ.loadoutCoins,
-        children: WQ.loadoutHeldParts.filter((QQ => QQ.loadoutHeldPartAmount > 0)).map((QQ => (0, dQ.jsx)(cQ, {
-          itemName: QQ.loadoutHeldPartItem,
-          amount: QQ.loadoutHeldPartAmount
-        }, QQ.loadoutHeldPartCurrency)))
+        loadout: rM
+      } = MM;
+      return (0, bM.jsx)(ZM, {
+        coins: rM.loadoutCoins,
+        children: rM.loadoutHeldParts.filter((MM => MM.loadoutHeldPartAmount > 0)).map((MM => (0, bM.jsx)(pM, {
+          itemName: MM.loadoutHeldPartItem,
+          amount: MM.loadoutHeldPartAmount
+        }, MM.loadoutHeldPartCurrency)))
       })
     }
 
-    function oW(QQ) {
+    function xr(MM) {
       let {
-        controller: WQ
-      } = QQ;
-      const XQ = (0, gQ.j)(rW, WQ.getSnapshot()),
+        controller: rM
+      } = MM;
+      const iM = (0, zM.e)(mr, rM.getSnapshot()),
         {
-          t: wQ
-        } = (0, JQ.C)();
-      if (null === XQ.loadout) return null;
-      const qQ = XQ.notice;
-      return (0, dQ.jsx)(dW, {
-        view: XQ,
-        onDismiss: WQ.dismiss,
-        children: (0, dQ.jsxs)(lQ, {
-          open: XQ.open,
-          onDismiss: WQ.dismiss,
-          title: wQ(`${HQ}:loadoutTitle`),
+          t: OM
+        } = (0, LM.A)();
+      if (null === iM.loadout) return null;
+      const SM = iM.notice;
+      return (0, bM.jsx)(br, {
+        view: iM,
+        onDismiss: rM.dismiss,
+        children: (0, bM.jsxs)(gM, {
+          open: iM.open,
+          onDismiss: rM.dismiss,
+          title: OM(`${wM}:loadoutTitle`),
           className: "ContainmentLoadoutPanel",
-          headerExtra: (0, dQ.jsx)(tW, {
-            loadout: XQ.loadout
+          headerExtra: (0, bM.jsx)(Ar, {
+            loadout: iM.loadout
           }),
-          statusRefused: null === qQ || void 0 === qQ ? void 0 : qQ.loadoutNoticeRefused,
-          status: (0, dQ.jsxs)(dQ.Fragment, {
-            children: [(0, dQ.jsx)("span", {
+          statusRefused: null === SM || void 0 === SM ? void 0 : SM.loadoutNoticeRefused,
+          status: (0, bM.jsxs)(bM.Fragment, {
+            children: [(0, bM.jsx)("span", {
               className: "LoadoutRadioBadge",
-              children: wQ(`${HQ}:loadoutRadioBadge`)
-            }), null !== qQ && wQ(`${HQ}:${qQ.loadoutNoticeKey}`, {
-              name: qQ.loadoutNoticeName,
-              tier: (0, MQ.Q)(qQ.loadoutNoticeTier),
-              max: String(XQ.loadout.loadoutMaxPerks)
+              children: OM(`${wM}:loadoutRadioBadge`)
+            }), null !== SM && OM(`${wM}:${SM.loadoutNoticeKey}`, {
+              name: SM.loadoutNoticeName,
+              tier: (0, cM.T)(SM.loadoutNoticeTier),
+              max: String(iM.loadout.loadoutMaxPerks)
             })]
           }),
-          children: [(0, dQ.jsx)(LW, {
-            view: XQ,
-            controller: WQ
-          }), (0, dQ.jsx)(SW, {
-            view: XQ,
-            controller: WQ
-          }), (0, dQ.jsx)(CW, {
-            view: XQ,
-            controller: WQ
+          children: [(0, bM.jsx)(or, {
+            view: iM,
+            controller: rM
+          }), (0, bM.jsx)(Nr, {
+            view: iM,
+            controller: rM
+          }), (0, bM.jsx)(kr, {
+            view: iM,
+            controller: rM
           })]
         })
       })
     }
 
-    function eW(QQ, WQ, XQ) {
-      const wQ = QQ.locatorEntries.find((QQ => QQ.locatorEntryId === XQ));
-      if (!wQ) return null;
-      const qQ = wQ.locatorEntryName;
-      if ("locatorDisarm" === WQ) return wQ.locatorEntryArmed ? {
-        board: nW(QQ, null),
-        notice: xW("locatorNoticeDisarmed", qQ)
+    function vr(MM, rM, iM) {
+      const OM = MM.locatorEntries.find((MM => MM.locatorEntryId === iM));
+      if (!OM) return null;
+      const SM = OM.locatorEntryName;
+      if ("locatorDisarm" === rM) return OM.locatorEntryArmed ? {
+        board: Fr(MM, null),
+        notice: Br("locatorNoticeDisarmed", SM)
       } : null;
-      if ("locatorArm" === WQ) return wQ.locatorEntryOwned && !wQ.locatorEntryArmed ? {
-        board: nW(QQ, XQ),
-        notice: xW("locatorNoticeArmed", qQ)
+      if ("locatorArm" === rM) return OM.locatorEntryOwned && !OM.locatorEntryArmed ? {
+        board: Fr(MM, iM),
+        notice: Br("locatorNoticeArmed", SM)
       } : null;
-      if (wQ.locatorEntryOwned || QQ.locatorCoins < wQ.locatorEntryPrice) return null;
-      const TQ = nW({
-        ...QQ,
-        locatorCoins: QQ.locatorCoins - wQ.locatorEntryPrice
-      }, XQ);
+      if (OM.locatorEntryOwned || MM.locatorCoins < OM.locatorEntryPrice) return null;
+      const jM = Fr({
+        ...MM,
+        locatorCoins: MM.locatorCoins - OM.locatorEntryPrice
+      }, iM);
       return {
         board: {
-          ...TQ,
-          locatorEntries: TQ.locatorEntries.map((QQ => QQ.locatorEntryId === XQ ? {
-            ...QQ,
+          ...jM,
+          locatorEntries: jM.locatorEntries.map((MM => MM.locatorEntryId === iM ? {
+            ...MM,
             locatorEntryOwned: !0
-          } : QQ))
+          } : MM))
         },
-        notice: xW("locatorNoticeBought", qQ)
+        notice: Br("locatorNoticeBought", SM)
       }
     }
 
-    function nW(QQ, WQ) {
+    function Fr(MM, rM) {
       return {
-        ...QQ,
-        locatorEntries: QQ.locatorEntries.map((QQ => {
-          const XQ = QQ.locatorEntryId === WQ;
-          return QQ.locatorEntryArmed === XQ ? QQ : {
-            ...QQ,
-            locatorEntryArmed: XQ
+        ...MM,
+        locatorEntries: MM.locatorEntries.map((MM => {
+          const iM = MM.locatorEntryId === rM;
+          return MM.locatorEntryArmed === iM ? MM : {
+            ...MM,
+            locatorEntryArmed: iM
           }
         }))
       }
     }
 
-    function xW(QQ, WQ) {
+    function Br(MM, rM) {
       return {
-        locatorNoticeKey: QQ,
+        locatorNoticeKey: MM,
         locatorNoticeRefused: !1,
-        locatorNoticeName: WQ
+        locatorNoticeName: rM
       }
     }
-    const YW = "containmentLocatorView";
-    class NW extends QW {
-      constructor(QQ, WQ, XQ, wQ) {
-        super(QQ, WQ, XQ, wQ, "locator", eW), this.snapshot = this.buildSnapshot()
+    const Xr = "containmentLocatorView";
+    class Ir extends Mr {
+      constructor(MM, rM, iM, OM) {
+        super(MM, rM, iM, OM, "locator", vr), this.snapshot = this.buildSnapshot()
       }
-      messageOpens(QQ) {
-        return QQ.locatorMessageOpens
+      messageOpens(MM) {
+        return MM.locatorMessageOpens
       }
-      messageNotice(QQ) {
-        return QQ.locatorNotice
+      messageNotice(MM) {
+        return MM.locatorNotice
       }
-      openingSelection(QQ) {
-        var WQ;
-        const XQ = QQ.locatorEntries;
-        return (null !== (WQ = XQ.find((QQ => QQ.locatorEntryArmed))) && void 0 !== WQ ? WQ : XQ[0]).locatorEntryId
+      openingSelection(MM) {
+        var rM;
+        const iM = MM.locatorEntries;
+        return (null !== (rM = iM.find((MM => MM.locatorEntryArmed))) && void 0 !== rM ? rM : iM[0]).locatorEntryId
       }
       buildSnapshot() {
         return {
@@ -1646,245 +1646,245 @@ export const modules = {
         }
       }
     }
-    const ZW = {
-        locatorContained: `${HQ}:locatorFlavourContained`,
-        locatorEncountered: `${HQ}:locatorFlavourEncountered`,
-        locatorUnseen: `${HQ}:locatorFlavourUnseen`
+    const Kr = {
+        locatorContained: `${wM}:locatorFlavourContained`,
+        locatorEncountered: `${wM}:locatorFlavourEncountered`,
+        locatorUnseen: `${wM}:locatorFlavourUnseen`
       },
-      OW = {
+      qr = {
         codexAnyDifficulty: null,
-        codexNormalOnly: `${HQ}:locatorAttunedNormal`,
-        codexHardOnly: `${HQ}:locatorAttunedHard`
+        codexNormalOnly: `${wM}:locatorAttunedNormal`,
+        codexHardOnly: `${wM}:locatorAttunedHard`
       };
 
-    function KW() {
-      return (0, dQ.jsx)(dQ.Fragment, {
+    function Tr() {
+      return (0, bM.jsx)(bM.Fragment, {
         children: Array.from({
           length: 5
-        }, ((QQ, WQ) => (0, dQ.jsx)("span", {
+        }, ((MM, rM) => (0, bM.jsx)("span", {
           className: "LocatorFly",
-          children: (0, dQ.jsx)("img", {
+          children: (0, bM.jsx)("img", {
             src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgoBboMlb5LyUjD8YgNtHyJ6/d+Q/CILa1lz9YAbo4DCDLYxjQv3gt3AYQG90AdHkUQ/qhkjAb0BURkgcDmAQMo7sSXR7deyiGoIvDvIOsGasB+ACyBmTNACS0go3ibhumAAAAAElFTkSuQmCC",
             alt: "",
             draggable: !1
           })
-        }, WQ)))
+        }, rM)))
       })
     }
 
-    function mW(QQ) {
+    function Vr(MM) {
       let {
-        entry: WQ
-      } = QQ;
+        entry: rM
+      } = MM;
       const {
-        t: XQ
-      } = (0, JQ.C)();
-      return WQ.locatorEntryArmed ? (0, dQ.jsx)("span", {
+        t: iM
+      } = (0, LM.A)();
+      return rM.locatorEntryArmed ? (0, bM.jsx)("span", {
         className: "BoardBadge Armed",
-        children: XQ(`${HQ}:locatorArmedBadge`)
-      }) : WQ.locatorEntryOwned ? (0, dQ.jsx)("span", {
+        children: iM(`${wM}:locatorArmedBadge`)
+      }) : rM.locatorEntryOwned ? (0, bM.jsx)("span", {
         className: "BoardBadge",
-        children: XQ(`${HQ}:locatorOwnedBadge`)
+        children: iM(`${wM}:locatorOwnedBadge`)
       }) : null
     }
 
-    function MW(QQ) {
+    function cr(MM) {
       let {
-        entry: WQ,
-        coins: XQ,
-        inTile: wQ = !1
-      } = QQ;
-      return (0, dQ.jsx)(cQ, {
-        itemName: aQ,
-        amount: WQ.locatorEntryPrice,
-        Ds: XQ,
-        inTile: wQ
+        entry: rM,
+        coins: iM,
+        inTile: OM = !1
+      } = MM;
+      return (0, bM.jsx)(pM, {
+        itemName: tM,
+        amount: rM.locatorEntryPrice,
+        sQ: iM,
+        inTile: OM
       })
     }
 
-    function QX(QQ) {
+    function Mi(MM) {
       let {
-        view: WQ,
-        controller: XQ,
-        entry: wQ
-      } = QQ;
+        view: rM,
+        controller: iM,
+        entry: OM
+      } = MM;
       const {
-        t: qQ
-      } = (0, JQ.C)(), TQ = wQ.locatorEntryId, zQ = WQ.locators.locatorEntries.find((QQ => QQ.locatorEntryArmed && QQ !== wQ));
-      return (0, dQ.jsxs)("div", {
+        t: SM
+      } = (0, LM.A)(), jM = OM.locatorEntryId, aM = rM.locators.locatorEntries.find((MM => MM.locatorEntryArmed && MM !== OM));
+      return (0, bM.jsxs)("div", {
         className: "BoardActions",
-        children: [wQ.locatorEntryArmed && (0, dQ.jsx)(jQ.T, {
-          disabled: WQ.pending,
+        children: [OM.locatorEntryArmed && (0, bM.jsx)(hM.V, {
+          disabled: rM.pending,
           onClick: () => {
-            XQ.act("locatorDisarm", TQ)
+            iM.act("locatorDisarm", jM)
           },
-          children: qQ(`${HQ}:locatorDisarm`)
-        }), wQ.locatorEntryOwned && !wQ.locatorEntryArmed && (0, dQ.jsx)(jQ.h, {
-          disabled: WQ.pending,
+          children: SM(`${wM}:locatorDisarm`)
+        }), OM.locatorEntryOwned && !OM.locatorEntryArmed && (0, bM.jsx)(hM.e, {
+          disabled: rM.pending,
           onClick: () => {
-            XQ.act("locatorArm", TQ)
+            iM.act("locatorArm", jM)
           },
-          children: qQ(`${HQ}:locatorArm`)
-        }), !wQ.locatorEntryOwned && (0, dQ.jsxs)("div", {
+          children: SM(`${wM}:locatorArm`)
+        }), !OM.locatorEntryOwned && (0, bM.jsxs)("div", {
           className: "LocatorBuy",
-          children: [(0, dQ.jsx)(MW, {
-            entry: wQ,
-            coins: WQ.locators.locatorCoins
-          }), (0, dQ.jsx)(jQ.s, {
-            disabled: WQ.locators.locatorCoins < wQ.locatorEntryPrice || WQ.pending,
+          children: [(0, bM.jsx)(cr, {
+            entry: OM,
+            coins: rM.locators.locatorCoins
+          }), (0, bM.jsx)(hM.p, {
+            disabled: rM.locators.locatorCoins < OM.locatorEntryPrice || rM.pending,
             onClick: () => {
-              XQ.act("locatorBuy", TQ)
+              iM.act("locatorBuy", jM)
             },
-            children: qQ(`${HQ}:locatorBuy`)
+            children: SM(`${wM}:locatorBuy`)
           })]
-        }), zQ && !wQ.locatorEntryArmed && (0, dQ.jsx)("span", {
+        }), aM && !OM.locatorEntryArmed && (0, bM.jsx)("span", {
           className: "BoardHint",
-          children: qQ(`${HQ}:locatorReplacesHint`, {
-            name: zQ.locatorEntryName
+          children: SM(`${wM}:locatorReplacesHint`, {
+            name: aM.locatorEntryName
           })
         })]
       })
     }
 
-    function WX(QQ) {
+    function ri(MM) {
       let {
-        entry: WQ
-      } = QQ;
-      return "locatorUnseen" === WQ.locatorEntryStanding ? (0, dQ.jsx)(hQ, {
+        entry: rM
+      } = MM;
+      return "locatorUnseen" === rM.locatorEntryStanding ? (0, bM.jsx)(uM, {
         itemName: "Compass"
-      }) : (0, dQ.jsx)(iQ, {
-        anomalyId: WQ.locatorEntryId,
-        caught: "locatorContained" === WQ.locatorEntryStanding
+      }) : (0, bM.jsx)(RM, {
+        anomalyId: rM.locatorEntryId,
+        caught: "locatorContained" === rM.locatorEntryStanding
       })
     }
 
-    function XX(QQ) {
+    function ii(MM) {
       let {
-        view: WQ,
-        controller: XQ,
-        entry: wQ
-      } = QQ;
+        view: rM,
+        controller: iM,
+        entry: OM
+      } = MM;
       const {
-        t: qQ
-      } = (0, JQ.C)(), TQ = OW[wQ.locatorEntryDifficulty];
-      return (0, dQ.jsxs)("section", {
+        t: SM
+      } = (0, LM.A)(), jM = qr[OM.locatorEntryDifficulty];
+      return (0, bM.jsxs)("section", {
         className: "BoardDetail",
-        children: [(0, dQ.jsxs)("div", {
-          className: PQ()("LocatorLabel", {
-            Armed: wQ.locatorEntryArmed
+        children: [(0, bM.jsxs)("div", {
+          className: QM()("LocatorLabel", {
+            Armed: OM.locatorEntryArmed
           }),
-          children: [(0, dQ.jsx)(CQ, {
-            icon: (0, dQ.jsx)(WX, {
-              entry: wQ
+          children: [(0, bM.jsx)(kM, {
+            icon: (0, bM.jsx)(ri, {
+              entry: OM
             }),
-            name: qQ(`${HQ}:locatorName`, {
-              name: wQ.locatorEntryName
+            name: SM(`${wM}:locatorName`, {
+              name: OM.locatorEntryName
             }),
-            children: (0, dQ.jsx)(mW, {
-              entry: wQ
+            children: (0, bM.jsx)(Vr, {
+              entry: OM
             })
-          }), (0, dQ.jsx)("p", {
+          }), (0, bM.jsx)("p", {
             className: "BoardDescription",
-            children: qQ(wQ.locatorEntryArmed ? `${HQ}:locatorFlavourArmed` : ZW[wQ.locatorEntryStanding])
-          }), null !== TQ && (0, dQ.jsx)("p", {
+            children: SM(OM.locatorEntryArmed ? `${wM}:locatorFlavourArmed` : Kr[OM.locatorEntryStanding])
+          }), null !== jM && (0, bM.jsx)("p", {
             className: "LocatorAttuned",
-            children: qQ(TQ)
-          }), (0, dQ.jsx)("p", {
+            children: SM(jM)
+          }), (0, bM.jsx)("p", {
             className: "BoardDescription LocatorUsage",
-            children: qQ(`${HQ}:locatorUsage`)
+            children: SM(`${wM}:locatorUsage`)
           })]
-        }), (0, dQ.jsx)(QX, {
-          view: WQ,
-          controller: XQ,
-          entry: wQ
+        }), (0, bM.jsx)(Mi, {
+          view: rM,
+          controller: iM,
+          entry: OM
         })]
       })
     }
 
-    function wX(QQ) {
+    function Oi(MM) {
       let {
-        controller: WQ
-      } = QQ;
-      const XQ = (0, gQ.j)(YW, WQ.getSnapshot()),
+        controller: rM
+      } = MM;
+      const iM = (0, zM.e)(Xr, rM.getSnapshot()),
         {
-          t: wQ
-        } = (0, JQ.C)(),
-        qQ = XQ.locators;
-      if (null === qQ) return null;
-      const TQ = qQ.locatorEntries.find((QQ => QQ.locatorEntryId === XQ.selectedId)),
-        zQ = XQ.notice;
-      return (0, dQ.jsxs)(lQ, {
-        open: XQ.open,
-        onDismiss: WQ.dismiss,
-        title: wQ(`${HQ}:locatorTitle`),
+          t: OM
+        } = (0, LM.A)(),
+        SM = iM.locators;
+      if (null === SM) return null;
+      const jM = SM.locatorEntries.find((MM => MM.locatorEntryId === iM.selectedId)),
+        aM = iM.notice;
+      return (0, bM.jsxs)(gM, {
+        open: iM.open,
+        onDismiss: rM.dismiss,
+        title: OM(`${wM}:locatorTitle`),
         className: "ContainmentLocatorPanel",
-        decor: (0, dQ.jsx)(KW, {}),
-        headerExtra: (0, dQ.jsx)(uQ, {
-          coins: qQ.locatorCoins
+        decor: (0, bM.jsx)(Tr, {}),
+        headerExtra: (0, bM.jsx)(ZM, {
+          coins: SM.locatorCoins
         }),
-        statusRefused: null === zQ || void 0 === zQ ? void 0 : zQ.locatorNoticeRefused,
-        status: (0, dQ.jsxs)(dQ.Fragment, {
-          children: [(0, dQ.jsx)("span", {
+        statusRefused: null === aM || void 0 === aM ? void 0 : aM.locatorNoticeRefused,
+        status: (0, bM.jsxs)(bM.Fragment, {
+          children: [(0, bM.jsx)("span", {
             className: "LocatorKeeperBadge",
-            children: wQ(`${HQ}:locatorKeeperName`)
-          }), null !== zQ && wQ(`${HQ}:${zQ.locatorNoticeKey}`, {
-            name: zQ.locatorNoticeName
+            children: OM(`${wM}:locatorKeeperName`)
+          }), null !== aM && OM(`${wM}:${aM.locatorNoticeKey}`, {
+            name: aM.locatorNoticeName
           })]
         }),
-        children: [(0, dQ.jsx)("div", {
+        children: [(0, bM.jsx)("div", {
           className: "BoardTiles",
-          children: qQ.locatorEntries.map((QQ => (0, dQ.jsxs)(EQ, {
-            icon: (0, dQ.jsx)(WX, {
-              entry: QQ
+          children: SM.locatorEntries.map((MM => (0, bM.jsxs)(DM, {
+            icon: (0, bM.jsx)(ri, {
+              entry: MM
             }),
-            name: QQ.locatorEntryName,
-            selected: QQ === TQ,
+            name: MM.locatorEntryName,
+            selected: MM === jM,
             locked: !1,
-            className: PQ()("LocatorTag", {
-              Armed: QQ.locatorEntryArmed
+            className: QM()("LocatorTag", {
+              Armed: MM.locatorEntryArmed
             }),
             onSelect: () => {
-              WQ.select(QQ.locatorEntryId)
+              rM.select(MM.locatorEntryId)
             },
-            children: [(0, dQ.jsx)(mW, {
-              entry: QQ
-            }), !QQ.locatorEntryOwned && (0, dQ.jsx)(MW, {
-              entry: QQ,
-              coins: qQ.locatorCoins,
+            children: [(0, bM.jsx)(Vr, {
+              entry: MM
+            }), !MM.locatorEntryOwned && (0, bM.jsx)(cr, {
+              entry: MM,
+              coins: SM.locatorCoins,
               inTile: !0
             })]
-          }, QQ.locatorEntryId)))
-        }), (0, dQ.jsx)(XX, {
-          view: XQ,
-          controller: WQ,
-          entry: TQ
+          }, MM.locatorEntryId)))
+        }), (0, bM.jsx)(ii, {
+          view: iM,
+          controller: rM,
+          entry: jM
         })]
       })
     }
 
-    function qX(QQ) {
+    function Si(MM) {
       let {
-        loadout: WQ,
-        codex: XQ,
-        locator: wQ
-      } = QQ;
-      return (0, dQ.jsxs)(dQ.Fragment, {
-        children: [(0, dQ.jsx)(oW, {
-          controller: WQ
-        }), (0, dQ.jsx)(mQ, {
-          controller: XQ
-        }), (0, dQ.jsx)(wX, {
-          controller: wQ
+        loadout: rM,
+        codex: iM,
+        locator: OM
+      } = MM;
+      return (0, bM.jsxs)(bM.Fragment, {
+        children: [(0, bM.jsx)(xr, {
+          controller: rM
+        }), (0, bM.jsx)(VM, {
+          controller: iM
+        }), (0, bM.jsx)(Oi, {
+          controller: OM
         })]
       })
     }
-    var TX = XQ(38831);
-    class zX {
-      constructor(QQ) {
-        let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.sendCommand = QQ, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new TX.d({
+    var ji = iM(39578);
+    class ai {
+      constructor(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.sendCommand = MM, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new ji.e({
           spacingMs: 0,
-          now: WQ
+          now: rM
         }), this.budget.subscribe((() => {
           this.notify()
         }))
@@ -1892,17 +1892,17 @@ export const modules = {
       isPending() {
         return this.awaitingReply || this.budget.isPacing()
       }
-      send(QQ, WQ) {
+      send(MM, rM) {
         return !this.isPending() && (this.awaitingReply = !0, this.replyTimer = setTimeout((() => {
-          this.replyTimer = null, this.awaitingReply = !1, WQ(), this.notify()
-        }), 8e3), this.budget.start(), this.sendCommand(QQ), !0)
+          this.replyTimer = null, this.awaitingReply = !1, rM(), this.notify()
+        }), 8e3), this.budget.start(), this.sendCommand(MM), !0)
       }
       onReply() {
         this.awaitingReply = !1, this.clearReplyTimer()
       }
-      subscribe(QQ) {
-        return this.listeners.add(QQ), () => {
-          this.listeners.delete(QQ)
+      subscribe(MM) {
+        return this.listeners.add(MM), () => {
+          this.listeners.delete(MM)
         }
       }
       dispose() {
@@ -1912,137 +1912,137 @@ export const modules = {
         null !== this.replyTimer && (clearTimeout(this.replyTimer), this.replyTimer = null)
       }
       notify() {
-        for (const QQ of this.listeners) QQ()
+        for (const MM of this.listeners) MM()
       }
     }
-    var sX = XQ(38825);
-    const FX = new Map([
-      ["npc_general", BW],
-      ["npc_tentacle_guy", sX]
+    var Pi = iM(39561);
+    const ni = new Map([
+      ["npc_general", Jr],
+      ["npc_tentacle_guy", Pi]
     ]);
 
-    function PX(QQ) {
-      const WQ = FX.get(QQ);
-      if (void 0 === WQ) return null;
-      const XQ = document.createElement("img");
-      return XQ.src = WQ, XQ.alt = "", XQ.draggable = !1, XQ.style.imageRendering = "pixelated", XQ
+    function Qi(MM) {
+      const rM = ni.get(MM);
+      if (void 0 === rM) return null;
+      const iM = document.createElement("img");
+      return iM.src = rM, iM.alt = "", iM.draggable = !1, iM.style.imageRendering = "pixelated", iM
     }
-    const gX = function() {
-      let QQ, WQ = !1,
-        XQ = null,
-        FQ = null;
-      const PQ = [],
-        gQ = QQ => {
-          for (const WQ of PQ) WQ !== QQ && WQ.close();
-          (0, sQ.u)()
+    const zi = function() {
+      let MM, rM = !1,
+        iM = null,
+        nM = null;
+      const QM = [],
+        zM = MM => {
+          for (const rM of QM) rM !== MM && rM.close();
+          (0, PM.w)()
         },
-        JQ = QQ => {
-          QQ && (0, sQ.n)()
+        LM = MM => {
+          MM && (0, PM.n)()
         },
-        rQ = new zX((WQ => {
-          QQ.sendCommand(WQ)
+        mM = new ai((rM => {
+          MM.sendCommand(rM)
         })),
-        IQ = new IW((QQ => {
-          zQ.k.mB(rW, QQ, !0)
-        }), gQ, JQ, rQ),
-        jQ = new fQ((QQ => {
-          zQ.k.mB(kQ, QQ, !0)
-        }), gQ, JQ),
-        BQ = new NW((QQ => {
-          zQ.k.mB(YW, QQ, !0)
-        }), gQ, JQ, rQ);
-      PQ.push(IQ, jQ, BQ);
+        HM = new Hr((MM => {
+          aM.i.Tz(mr, MM, !0)
+        }), zM, LM, mM),
+        hM = new YM((MM => {
+          aM.i.Tz(fM, MM, !0)
+        }), zM, LM),
+        JM = new Ir((MM => {
+          aM.i.Tz(Xr, MM, !0)
+        }), zM, LM, mM);
+      QM.push(HM, hM, JM);
       return {
-        onCreate: WQ => {
-          QQ = WQ, XQ = (0, sQ.A)(null, {
-            content: (0, wQ.createElement)(qX, {
-              loadout: IQ,
-              codex: jQ,
-              locator: BQ
+        onCreate: rM => {
+          MM = rM, iM = (0, PM.C)(null, {
+            content: (0, OM.createElement)(Si, {
+              loadout: HM,
+              codex: hM,
+              locator: JM
             }),
             onClose: () => {
-              for (const QQ of PQ) QQ.close()
+              for (const MM of QM) MM.close()
             }
-          }), FQ = (0, TQ.d)(PX)
+          }), nM = (0, jM.e)(Qi)
         },
-        onReceivedMessageFromServer: (QQ, WQ) => {
-          "containmentLoadout" === QQ ? IQ.gj(WQ) : "containmentLoadoutClose" === QQ ? IQ.isOpen() && (IQ.close(), (0, sQ.j)()) : "containmentCodex" === QQ ? jQ.gj(WQ) : "containmentLocator" === QQ && BQ.gj(WQ)
+        onReceivedMessageFromServer: (MM, rM) => {
+          "containmentLoadout" === MM ? HM.GL(rM) : "containmentLoadoutClose" === MM ? HM.isOpen() && (HM.close(), (0, PM.k)()) : "containmentCodex" === MM ? hM.GL(rM) : "containmentLocator" === MM && JM.GL(rM)
         },
-        fJ: () => {
-          WQ || qQ.b.get("loadingOverlayVisible") || (WQ = !0, QQ.sendCommand("containmentEntered"))
+        bL: () => {
+          rM || SM.d.get("loadingOverlayVisible") || (rM = !0, MM.sendCommand("containmentEntered"))
         },
         onClose: () => {
-          var QQ, WQ;
-          null === (QQ = XQ) || void 0 === QQ || QQ(), XQ = null, null === (WQ = FQ) || void 0 === WQ || WQ(), FQ = null;
-          for (const XQ of PQ) XQ.dispose();
-          rQ.dispose()
+          var MM, rM;
+          null === (MM = iM) || void 0 === MM || MM(), iM = null, null === (rM = nM) || void 0 === rM || rM(), nM = null;
+          for (const iM of QM) iM.dispose();
+          mM.dispose()
         }
       }
     }
   },
-  39597: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
+  40398: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
   },
-  39605: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
+  40401: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
   },
-  39607: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
+  40405: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
   },
-  39613: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/brood-father.e48391955a574c1155fa.webp"
+  40408: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/brood-father.e48391955a574c1155fa.webp"
   },
-  39615: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
+  40412: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
   },
-  39622: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
+  40419: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
   },
-  39626: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
+  40427: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
   },
-  39635: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
+  40433: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
   },
-  39639: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
+  40435: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
   },
-  39644: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
+  40443: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
   },
-  39650: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
+  40445: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
   },
-  39653: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
+  40451: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
   },
-  39659: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
+  40459: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
   },
-  39668: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
+  40464: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
   },
-  39672: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
+  40469: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
   },
-  39675: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
+  40471: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
   },
-  39681: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
+  40478: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
   },
-  39684: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
+  40485: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
   },
-  39691: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
+  40489: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
   },
-  39694: (QQ, WQ, XQ) => {
-    QQ.exports = XQ.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
+  40496: (MM, rM, iM) => {
+    MM.exports = iM.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
   },
-  38825: QQ => {
-    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
+  39561: MM => {
+    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

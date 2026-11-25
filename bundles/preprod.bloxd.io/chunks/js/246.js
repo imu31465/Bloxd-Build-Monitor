@@ -1,584 +1,860 @@
 export const id = 246;
 export const ids = [246];
 export const modules = {
-  41280: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      noaDevTools: () => JQ
+  40765: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => OM,
+      f: () => SM
     });
-    var wQ = XQ(37820),
-      qQ = XQ(37804),
-      TQ = XQ(2997),
-      zQ = XQ(1802),
-      sQ = XQ(41184);
+    const OM = "The world isn't loaded, so no blocks can be seen.",
+      SM = "The world isn't loaded, so nothing in it can be seen."
+  },
+  40140: (MM, rM, iM) => {
+    function OM(MM) {
+      return !(!MM.lobbyLeaderboardInfo && !MM.lobbyManage)
+    }
+    iM.d(rM, {
+      d: () => OM
+    })
+  },
+  37767: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => jM,
+      f: () => SM
+    });
+    let OM = () => null;
 
-    function FQ(QQ) {
-      const {
-        nj: WQ
-      } = QQ, XQ = WQ.engine, wQ = {
-        width: XQ.getRenderWidth(),
-        height: XQ.getRenderHeight()
-      };
+    function SM(MM) {
+      OM = MM
+    }
+
+    function jM(MM, rM) {
+      return OM(MM, rM)
+    }
+  },
+  41691: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => JM,
+      d: () => EM,
+      e: () => lM,
+      i: () => dM
+    });
+    var OM = iM(22),
+      SM = iM(41695),
+      jM = iM(41677),
+      aM = iM(41697),
+      PM = iM(41682),
+      nM = iM(41704),
+      QM = iM(41712);
+
+    function zM(MM) {
+      var rM, iM;
+      const OM = (0, jM.e)();
+      return OM ? null === (rM = (0, SM.e)(OM.api, MM[0], MM[1], MM[2])) || void 0 === rM || null === (iM = rM.persisted) || void 0 === iM ? void 0 : iM.shared : void 0
+    }
+
+    function LM(MM) {
+      return `${MM[0]},${MM[1]},${MM[2]}`
+    }
+    const mM = new Map;
+    let HM = null,
+      hM = 0;
+
+    function JM() {
+      return hM
+    }
+
+    function dM(MM) {
+      const rM = null !== HM && HM.key === LM(MM.pos) ? HM.type : null;
+      if (null === rM) return MM;
+      let iM = null;
+      if ("Iron" === rM) {
+        const {
+          cachedPasskey: rM,
+          ...OM
+        } = yM(MM.pos);
+        iM = {
+          oa: null !== rM && void 0 !== rM ? rM : [0, 0, 0, 0],
+          ...OM
+        }
+      }
       return {
-        canvas: XQ.getRenderingCanvas(),
-        maxTextureSize: XQ.getCaps().maxTextureSize,
-        pj: () => !QQ.lD,
-        resize: (QQ, WQ) => {
-          XQ.setSize(QQ, WQ)
-        },
-        restoreSize: () => {
-          XQ.setSize(wQ.width, wQ.height), WQ.resize()
-        },
-        onFrameDrawn: XQ => {
-          const wQ = () => {
-            WQ.eD && XQ()
-          };
-          return QQ.on("afterRender", wQ), () => {
-            QQ.off("afterRender", wQ)
-          }
-        }
+        ...MM,
+        type: rM,
+        ironChest: iM
       }
     }
-    var PQ = XQ(34393);
 
-    function gQ(QQ, WQ) {
-      let {
-        width: PQ,
-        height: gQ,
-        colouring: JQ
-      } = WQ;
-      const rQ = "normals" === JQ,
-        IQ = "depth" === JQ;
-      return new Promise((WQ => {
-        try {
-          const jQ = (0, TQ.f)();
-          if (jQ.nj.xj) return "screenshot" !== QQ || null !== JQ ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void WQ()) : void(0, sQ.g)(FQ(jQ), PQ, gQ).finally(WQ);
-          const BQ = jQ.nj.engine,
-            yQ = jQ.nj.sE(),
-            VQ = PQ,
-            DQ = gQ;
-          Promise.all([Promise.all([XQ.e(262), XQ.e(263), XQ.e(242)]).then((() => XQ(61523))), Promise.all([XQ.e(241), XQ.e(240), XQ.e(262), XQ.e(263), XQ.e(260), XQ.e(264), XQ.e(267), XQ.e(320), XQ.e(247)]).then((() => XQ(61526))), Promise.all([XQ.e(241), XQ.e(240), XQ.e(262), XQ.e(263), XQ.e(260), XQ.e(270), XQ.e(264), XQ.e(272), XQ.e(249)]).then((() => XQ(61529))), XQ.e(361).then((() => XQ(61534))), Promise.all([XQ.e(240), XQ.e(236)]).then((() => XQ(37367))), XQ.e(261).then((() => XQ(61542))), XQ.e(244).then((() => XQ(61549)))]).then((TQ => {
-            const {
-              CreateScreenshotUsingRenderTarget: sQ
-            } = TQ[1], {
-              ShaderMaterial: FQ
-            } = TQ[2], {
-              ShaderLanguage: PQ
-            } = TQ[3], {
-              vj: gQ
-            } = TQ[4], {
-              registerDevtoolsShader: JQ
-            } = TQ[6], jQ = PQ.GLSL, pQ = new Map, GQ = yQ.meshes.filter((QQ => QQ.material));
-            let UQ = !1,
-              bQ = null;
-
-            function vQ() {
-              var QQ;
-              UQ && (UQ = !1, (0, wQ.e)(yQ.meshes, !1)), null === (QQ = bQ) || void 0 === QQ || QQ(), bQ = null, GQ.forEach((QQ => {
-                const WQ = pQ.get(QQ);
-                WQ && (QQ.material = WQ)
-              }))
-            }
-            if (rQ) {
-              const QQ = [],
-                WQ = [];
-              GQ.forEach((XQ => {
-                const wQ = XQ.name.toLowerCase(),
-                  qQ = XQ.uC().boundingBox.center,
-                  TQ = yQ.activeCamera.position.subtract(qQ).length();
-                wQ.includes("sky") || wQ.includes("background") || wQ.includes("environment") || TQ > 1e3 ? WQ.push(XQ) : QQ.push(XQ)
-              })), JQ("devtoolsNormal", jQ);
-              const XQ = new FQ("normalMaterial", yQ, "devtoolsNormal", {
-                attributes: ["position", "normal"],
-                uniforms: ["worldViewProjection", "world"],
-                shaderLanguage: jQ
-              });
-              JQ("devtoolsWhite", jQ);
-              const wQ = new FQ("whiteMaterial", yQ, "devtoolsWhite", {
-                attributes: ["position"],
-                uniforms: ["worldViewProjection"],
-                shaderLanguage: jQ
-              });
-              QQ.forEach((QQ => {
-                pQ.set(QQ, QQ.material), QQ.material = XQ
-              })), WQ.forEach((QQ => {
-                pQ.set(QQ, QQ.material), QQ.material = wQ
-              }))
-            } else if (IQ) {
-              JQ("devtoolsDepth", jQ);
-              const QQ = yQ.activeCamera.position;
-              let WQ = 0,
-                XQ = 1 / 0;
-              GQ.forEach((wQ => {
-                const qQ = wQ.name.toLowerCase();
-                if (qQ.includes("sky") || qQ.includes("background") || qQ.includes("environment")) return;
-                const TQ = wQ.uC().boundingBox.center,
-                  zQ = gQ.TransformCoordinates(TQ, wQ.getWorldMatrix()),
-                  sQ = QQ.subtract(zQ).length();
-                sQ > 1e3 || (WQ = Math.max(WQ, sQ), XQ = Math.min(XQ, sQ))
-              }));
-              const wQ = WQ - XQ;
-              WQ += .1 * wQ, XQ = Math.max(0, XQ - .1 * wQ), console.log(`Depth range: min=${XQ.toFixed(2)}, max=${WQ.toFixed(2)}, range=${wQ.toFixed(2)}`), wQ < 1 && (WQ = XQ + 10);
-              const qQ = new FQ("depthMaterial", yQ, "devtoolsDepth", {
-                attributes: ["position"],
-                uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
-                shaderLanguage: jQ
-              });
-              qQ.setVector3("cameraPosition", QQ), qQ.setFloat("maxDepth", WQ), qQ.setFloat("minDepth", XQ), GQ.forEach((QQ => {
-                pQ.set(QQ, QQ.material), QQ.material = qQ
-              }))
-            }
-            if ((0, wQ.e)(yQ.meshes, !0), UQ = !0, "glb" === QQ && (bQ = (0, qQ.d)(yQ.meshes)), "screenshot" === QQ) {
-              let QQ = `bloxd-screenshot-${VQ}x${DQ}-${Date.now()}.png`;
-              rQ ? QQ = `bloxd-screenshot-normals-${VQ}x${DQ}-${Date.now()}.png` : IQ && (QQ = `bloxd-screenshot-depth-${VQ}x${DQ}-${Date.now()}.png`), sQ(BQ, yQ.activeCamera, {
-                width: VQ,
-                height: DQ
-              }, (function(XQ) {
-                vQ(), fetch(XQ).then((function(QQ) {
-                  return QQ.blob()
-                })).then((function(XQ) {
-                  (0, zQ.downloadBlob)(XQ, QQ), WQ()
-                })).catch((function(QQ) {
-                  console.error("Error processing screenshot:", QQ), WQ()
-                }))
-              }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
-                console.error("Screenshot timed out"), vQ(), WQ()
-              }))
-            } else {
-              let QQ = "cB";
-              rQ ? QQ = "scene-normals" : IQ && (QQ = "scene-depth"), rQ || IQ ? setTimeout((() => {
-                (async function() {
-                  const {
-                    StandardMaterial: QQ
-                  } = await Promise.all([XQ.e(241), XQ.e(240), XQ.e(262), XQ.e(263), XQ.e(260), XQ.e(270), XQ.e(269), XQ.e(248)]).then((() => XQ(40530))), {
-                    Color3: WQ
-                  } = await Promise.all([XQ.e(241), XQ.e(245)]).then((() => XQ(37539))), wQ = [], qQ = [];
-                  if (GQ.forEach((QQ => {
-                      const WQ = QQ.name.toLowerCase(),
-                        XQ = QQ.uC().boundingBox.center,
-                        TQ = yQ.activeCamera.position.subtract(XQ).length();
-                      WQ.includes("sky") || WQ.includes("background") || WQ.includes("environment") || TQ > 1e3 ? qQ.push(QQ) : wQ.push(QQ)
-                    })), rQ) wQ.forEach(((XQ, wQ) => {
-                    const qQ = XQ.getVerticesData("normal");
-                    if (qQ) {
-                      const TQ = [];
-                      for (let QQ = 0; QQ < qQ.length; QQ += 3) {
-                        const WQ = Math.abs(qQ[QQ]),
-                          XQ = Math.abs(qQ[QQ + 1]),
-                          wQ = Math.abs(qQ[QQ + 2]);
-                        TQ.push(WQ, XQ, wQ, 1)
-                      }
-                      XQ.setVerticesData("color", TQ);
-                      const zQ = new QQ(`vertexColorMat_${wQ}`, yQ);
-                      zQ.disableLighting = !0, zQ.emissiveColor = new WQ(1, 1, 1), zQ.specularColor = new WQ(0, 0, 0), XQ.material = zQ
-                    }
-                  })), qQ.forEach(((XQ, wQ) => {
-                    const qQ = XQ.getVerticesData("position");
-                    if (qQ) {
-                      const TQ = [],
-                        zQ = qQ.length / 3;
-                      for (let QQ = 0; QQ < zQ; QQ++) TQ.push(1, 1, 1, 1);
-                      XQ.setVerticesData("color", TQ);
-                      const sQ = new QQ(`whiteMat_${wQ}`, yQ);
-                      sQ.disableLighting = !0, sQ.emissiveColor = new WQ(1, 1, 1), sQ.specularColor = new WQ(0, 0, 0), XQ.material = sQ
-                    }
-                  }));
-                  else if (IQ) {
-                    const XQ = yQ.activeCamera.position;
-                    let qQ = 0,
-                      TQ = 1 / 0;
-                    wQ.forEach((QQ => {
-                      const WQ = QQ.uC().boundingBox.center,
-                        wQ = gQ.TransformCoordinates(WQ, QQ.getWorldMatrix()),
-                        zQ = XQ.subtract(wQ).length();
-                      qQ = Math.max(qQ, zQ), TQ = Math.min(TQ, zQ)
-                    }));
-                    const zQ = qQ - TQ;
-                    qQ += .1 * zQ, TQ = Math.max(0, TQ - .1 * zQ), zQ < 1 && (qQ = TQ + 10), GQ.forEach(((wQ, zQ) => {
-                      const sQ = wQ.name.toLowerCase(),
-                        FQ = wQ.uC().boundingBox.center,
-                        PQ = gQ.TransformCoordinates(FQ, wQ.getWorldMatrix()),
-                        JQ = XQ.subtract(PQ).length();
-                      if (!(sQ.includes("sky") || sQ.includes("background") || sQ.includes("environment") || JQ > 1e3)) {
-                        const XQ = 1 - Math.min(Math.max((JQ - TQ) / (qQ - TQ), 0), 1),
-                          sQ = new QQ(`depthMat_${zQ}`, yQ);
-                        sQ.diffuseColor = new WQ(XQ, XQ, XQ), sQ.specularColor = new WQ(0, 0, 0), wQ.material = sQ
-                      }
-                    }))
-                  }
-                })().then((() => Promise.all([XQ.e(241), XQ.e(240), XQ.e(262), XQ.e(263), XQ.e(260), XQ.e(270), XQ.e(264), XQ.e(269), XQ.e(267), XQ.e(259), XQ.e(272), XQ.e(283), XQ.e(320), XQ.e(253), XQ.e(271), XQ.e(239)]).then((() => XQ(61554))))).then((WQ => WQ.GLTF2Export.GLBAsync(yQ, QQ))).then((QQ => {
-                  vQ(), QQ.downloadFiles(), WQ()
-                })).catch((QQ => {
-                  console.error("Error exporting GLB:", QQ), vQ(), WQ()
-                }))
-              }), 100) : Promise.all([XQ.e(241), XQ.e(240), XQ.e(262), XQ.e(263), XQ.e(260), XQ.e(270), XQ.e(264), XQ.e(269), XQ.e(267), XQ.e(259), XQ.e(272), XQ.e(283), XQ.e(320), XQ.e(253), XQ.e(271), XQ.e(239)]).then((() => XQ(61554))).then((XQ => {
-                XQ.GLTF2Export.GLBAsync(yQ, QQ).then((QQ => {
-                  vQ(), QQ.downloadFiles(), WQ()
-                })).catch((QQ => {
-                  console.error("Error exporting GLB:", QQ), vQ(), WQ()
-                }))
-              })).catch((QQ => {
-                console.error("Error importing serializers:", QQ), vQ(), WQ()
-              }))
-            }
-          })).catch((QQ => {
-            console.error("Error downloading the scene:", QQ), WQ()
+    function yM(MM) {
+      const rM = zM(MM),
+        iM = null === rM || void 0 === rM ? void 0 : rM.ownerDbId,
+        OM = function(MM) {
+          var rM;
+          let iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zM(MM);
+          const OM = LM(MM),
+            SM = mM.get(OM);
+          return SM ? SM.lastOpened < (null !== (rM = null === iM || void 0 === iM ? void 0 : iM.passkeyLastUpdated) && void 0 !== rM ? rM : 0) ? (mM.delete(OM), null) : [...SM.oa] : null
+        }(MM, rM);
+      return void 0 === iM ? {
+        cachedPasskey: OM
+      } : {
+        ownerDbId: iM,
+        cachedPasskey: OM
+      }
+    }(0, QM.h)(aM.b, (MM => {
+      const rM = (0, nM.d)(aM.b, MM);
+      if (!(0, nM.c)(rM) || rM.ui) return;
+      if (hM++, !rM.ei || null === rM.ti) return void(HM = null);
+      const iM = LM(rM.ti);
+      HM = {
+        key: iM,
+        type: rM.wi
+      }, null !== rM.gi && mM.set(iM, {
+        oa: [...rM.gi],
+        lastOpened: Date.now()
+      })
+    })), (0, QM.c)((() => {
+      mM.clear(), HM = null, hM++
+    })), (0, QM.e)((() => {
+      null !== HM && (HM = null, hM++, OM.i.Tz("chestToggleFromServer", !1, !0))
+    }));
+    const lM = {
+        boardEditRequested: {
+          watch: MM => (0, OM.j)("EditBoard", (rM => {
+            let {
+              pos: iM
+            } = rM;
+            if (null === iM) return void MM(null);
+            const OM = (0, jM.e)(),
+              SM = (0, jM.p)();
+            OM && SM && MM(SM.readBoardToEdit(OM.api, OM.chunks, iM))
           }))
-        } catch (jQ) {
-          console.error("Error taking screenshot:", jQ), WQ()
+        },
+        ironChestOpenRequested: {
+          watch: MM => (0, OM.j)("OpenIronChest", (rM => {
+            let {
+              pos: iM
+            } = rM;
+            MM(function(MM) {
+              return {
+                pos: MM,
+                ...yM(MM)
+              }
+            }(iM))
+          }))
         }
-      }))
-    }
-    const JQ = new class {
-      constructor() {
-        this.tools = PQ.ALL_DEV_TOOLS
+      },
+      EM = {
+        writeOnBoard(MM) {
+          var rM;
+          let {
+            pos: iM,
+            text: OM,
+            textSize: SM
+          } = MM;
+          null === (rM = (0, jM.e)()) || void 0 === rM || rM.send(PM.d.UpdateBoard, (0, PM.U)({
+            mQ: iM,
+            hQ: OM,
+            JQ: SM
+          }))
+        },
+        writeBook(MM) {
+          var rM;
+          let {
+            pages: iM,
+            title: OM,
+            published: SM
+          } = MM;
+          null === (rM = (0, jM.e)()) || void 0 === rM || rM.send(PM.d.UpdateBook, (0, PM.X)({
+            aQ: iM,
+            nQ: OM,
+            QQ: SM
+          }))
+        },
+        writeNameTag(MM) {
+          var rM;
+          null === (rM = (0, jM.e)()) || void 0 === rM || rM.send(PM.d.UpdateNameTag, MM)
+        },
+        setCustomLobbyBlock(MM) {
+          let {
+            pos: rM,
+            blockName: iM
+          } = MM;
+          const OM = (0, jM.p)(),
+            SM = (0, jM.e)();
+          OM && SM && SM.send(PM.d.SetCustomLobbyBlock, (0, PM.K)({
+            jP: OM.blockIdOf(iM),
+            SP: rM
+          }))
+        }
       }
-      downloadScene(QQ, WQ) {
-        return gQ(QQ, WQ)
-      }
-      async setAmbientLightIntensity(QQ) {
-        const {
-          Color3: WQ
-        } = await Promise.all([XQ.e(241), XQ.e(245)]).then((() => XQ(37539)));
-        (0, TQ.f)().nj.sE().ambientColor = WQ.FromArray([QQ, QQ, QQ])
-      }
-      capturePhoto(QQ, WQ, XQ) {
-        return function(QQ, WQ, XQ, wQ) {
-          return (0, sQ.e)(FQ(QQ), WQ, XQ, wQ)
-        }((0, TQ.f)(), QQ, WQ, XQ)
-      }
-    }
   },
-  41184: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => sQ,
-      g: () => FQ
+  41728: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => nM,
+      f: () => aM,
+      h: () => PM
     });
-    var wQ = XQ(1812);
-    const qQ = 33177600,
-      TQ = 3e4;
-    let zQ = !1;
+    var OM = iM(41669),
+      SM = iM(5188),
+      jM = iM(41677);
 
-    function sQ(QQ, WQ, XQ) {
-      let wQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const {
-        scale: sQ = 1,
-        type: FQ = "image/png",
-        quality: PQ
-      } = wQ;
-      return QQ.pj() ? zQ ? Promise.reject(new Error("A screenshot is already being taken")) : (zQ = !0, new Promise(((wQ, gQ) => {
-        let JQ, rQ = 2,
-          IQ = null;
-        const jQ = () => {
-          var WQ;
-          zQ = !1, null === (WQ = IQ) || void 0 === WQ || WQ(), clearTimeout(JQ);
-          try {
-            QQ.restoreSize()
-          } catch (XQ) {
-            console.error("A screenshot couldn't size the canvas back", XQ)
-          }
-        };
-        JQ = setTimeout((() => {
-          jQ(), gQ(new Error("No frame was drawn to capture"))
-        }), TQ);
-        try {
-          const wQ = function(QQ, WQ, XQ) {
-            const wQ = Math.max(1, QQ),
-              TQ = Math.max(1, WQ),
-              zQ = Math.min(1, XQ / Math.max(wQ, TQ), Math.sqrt(qQ / (wQ * TQ)));
-            return {
-              width: Math.max(1, Math.floor(wQ * zQ)),
-              height: Math.max(1, Math.floor(TQ * zQ))
-            }
-          }(WQ, XQ, QQ.maxTextureSize);
-          QQ.resize(wQ.width, wQ.height, sQ * wQ.width / Math.max(1, WQ))
-        } catch (BQ) {
-          return jQ(), void gQ(BQ)
-        }
-        IQ = QQ.onFrameDrawn((() => {
-          if (rQ--, rQ > 0) return;
-          const {
-            canvas: WQ
-          } = QQ, XQ = {
-            width: WQ.width,
-            height: WQ.height
-          };
-          try {
-            WQ.toBlob((QQ => {
-              QQ ? wQ({
-                blob: QQ,
-                ...XQ
-              }) : gQ(new Error("The canvas gave no image"))
-            }), FQ, PQ)
-          } catch (BQ) {
-            gQ(BQ)
-          } finally {
-            jQ()
-          }
-        }))
-      }))) : Promise.reject(new Error("Screenshots need a game to be running"))
-    }
-    async function FQ(QQ, WQ, XQ) {
-      try {
-        const qQ = await sQ(QQ, WQ, XQ);
-        (0, wQ.e)(qQ.blob, `bloxd-screenshot-${qQ.width}x${qQ.height}-${Date.now()}.png`)
-      } catch (qQ) {
-        console.error("Error taking screenshot:", qQ)
-      }
-    }
-  },
-  37820: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => PQ,
-      e: () => sQ,
-      i: () => zQ
-    });
-    var wQ = XQ(37816),
-      qQ = XQ(37829);
-    let TQ = 0;
-
-    function zQ(QQ, WQ) {
-      const XQ = QQ;
-      XQ._noaFaceGroups = null !== WQ && void 0 !== WQ ? WQ : null, XQ._noaFaceEpoch = -1, XQ._noaFaceMask = -1, XQ._noaFaceCount = -1, XQ._noaFaceMaterial = null;
-      const wQ = QQ.ZD;
-      wQ && 1 === wQ.length && (wQ[0].indexStart = 0, wQ[0].indexCount = QQ.getTotalIndices())
+    function aM() {
+      var MM;
+      const rM = null === (MM = (0, jM.e)()) || void 0 === MM ? void 0 : MM.api.localId;
+      return void 0 === rM || rM === OM.Nc ? null : String(rM)
     }
 
-    function sQ(QQ, WQ) {
-      if (WQ) {
-        TQ++;
-        for (const WQ of QQ) {
-          const QQ = WQ._noaFaceGroups;
-          QQ && zQ(WQ, QQ)
-        }
-      } else TQ = Math.max(0, TQ - 1)
-    }
-
-    function FQ(QQ, WQ, XQ) {
-      let qQ = -1,
-        TQ = 0;
-      for (let zQ = 0; zQ < wQ.d; zQ++) {
-        const XQ = QQ[zQ],
-          sQ = QQ[zQ + 1];
-        sQ > XQ && WQ & 1 << wQ.b[zQ] && (qQ < 0 && (qQ = XQ), TQ = sQ)
-      }
-      return qQ < 0 ? (XQ[0] = 0, XQ[1] = 0, 0) : (XQ[0] = qQ, XQ[1] = TQ - qQ, TQ - qQ)
-    }
-    class PQ {
-      constructor(QQ, WQ) {
-        this.Ij = QQ, this.engine = WQ, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
-      }
-      apply(QQ, WQ) {
-        if (!WQ) return;
-        const XQ = WQ.getProjectionMatrix().m,
-          zQ = 0 === TQ && 0 === XQ[15],
-          sQ = WQ.globalPosition,
-          {
-            engine: PQ
-          } = this,
-          gQ = zQ ? (0, qQ.e)(XQ, PQ.getRenderWidth(), PQ.getRenderHeight()) : 0;
-        sQ.x === this.eyeX && sQ.y === this.eyeY && sQ.z === this.eyeZ && gQ === this.focalPx && zQ === this.culling || (this.epoch++, this.eyeX = sQ.x, this.eyeY = sQ.y, this.eyeZ = sQ.z, this.focalPx = gQ, this.culling = zQ);
-        const {
-          epoch: JQ,
-          range: rQ
-        } = this, IQ = this.Ij / 2, jQ = IQ * Math.sqrt(3), BQ = QQ.data, yQ = QQ.length;
-        let VQ = 0;
-        for (let TQ = 0; TQ < yQ; TQ++) {
-          const QQ = BQ[TQ],
-            WQ = QQ._noaFaceGroups;
-          if (WQ && (QQ._noaFaceEpoch !== JQ || QQ._noaFaceMaterial !== QQ.material)) {
-            QQ._noaFaceEpoch = JQ, QQ._noaFaceMaterial = QQ.material;
-            const XQ = QQ.ZD,
-              TQ = XQ && 1 === XQ.length ? XQ[0] : null;
-            let PQ = -1;
-            if (zQ && TQ && (0, wQ.w)(QQ.material)) {
-              const XQ = QQ.position,
-                wQ = sQ.x - XQ.x,
-                TQ = sQ.y - XQ.y,
-                zQ = sQ.z - XQ.z,
-                FQ = wQ - IQ,
-                JQ = TQ - IQ,
-                rQ = zQ - IQ,
-                BQ = Math.sqrt(FQ * FQ + JQ * JQ + rQ * rQ) + jQ;
-              PQ = (0, qQ.o)(WQ, wQ, TQ, zQ, (0, qQ.h)(BQ, gQ))
-            }
-            if (TQ && PQ !== QQ._noaFaceMask) {
-              QQ._noaFaceMask = PQ;
-              let XQ = 0,
-                qQ = WQ[wQ.d]; - 1 !== PQ && (qQ = FQ(WQ, PQ, rQ), XQ = rQ[0]), QQ._noaFaceCount = qQ, TQ.indexStart = 6 * XQ, TQ.indexCount = 6 * qQ, TQ.setBoundingInfo(QQ.uC())
-            }
-          }
-          WQ && 0 === QQ._noaFaceCount || (BQ[VQ++] = QQ)
-        }
-        QQ.length = VQ
-      }
-    }
-  },
-  37804: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => FQ,
-      e: () => sQ
-    });
-    const wQ = new WeakSet;
-    let qQ = 0;
-    const TQ = new Set;
-
-    function zQ(QQ, WQ) {
-      QQ._data = WQ
-    }
-
-    function sQ(QQ) {
-      var WQ, XQ;
-      (null !== (WQ = null === (XQ = QQ.getBuffer()) || void 0 === XQ ? void 0 : XQ.yJ) && void 0 !== WQ ? WQ : 0) > 0 && (wQ.add(QQ), 0 === qQ ? zQ(QQ, null) : TQ.add(QQ))
-    }
-
-    function FQ(QQ) {
-      qQ++;
-      for (const XQ of function(QQ) {
-          const WQ = new Set;
-          for (const qQ of QQ) {
-            const QQ = qQ.geometry;
-            for (const qQ of Object.values(null !== (XQ = null === QQ || void 0 === QQ ? void 0 : QQ.getVertexBuffers()) && void 0 !== XQ ? XQ : {})) {
-              var XQ;
-              const QQ = qQ.getWrapperBuffer();
-              wQ.has(QQ) && WQ.add(QQ)
-            }
-          }
-          return WQ
-        }(QQ)) XQ.getData() || PQ(XQ), TQ.add(XQ);
-      let WQ = !0;
+    function PM(MM) {
+      const rM = (0, jM.e)();
+      if (null !== rM) return MM(rM);
+      let iM = null;
+      const OM = (0, SM.x)((() => {
+        const rM = (0, jM.e)();
+        null !== rM && null === iM && (OM(), iM = MM(rM))
+      }));
       return () => {
-        if (WQ && (WQ = !1, qQ--, 0 === qQ)) {
-          for (const QQ of TQ) zQ(QQ, null);
-          TQ.clear()
-        }
+        var MM;
+        OM(), null === (MM = iM) || void 0 === MM || MM()
       }
     }
 
-    function PQ(QQ) {
-      const WQ = QQ.getBuffer();
-      if (!WQ || !(WQ.yJ > 0)) return;
-      const XQ = QQ._engine,
-        wQ = new Uint8Array(WQ.yJ);
-      XQ.bindArrayBuffer(WQ), XQ._gl.getBufferSubData(XQ._gl.ARRAY_BUFFER, 0, wQ), XQ._resetVertexBufferBinding(), zQ(QQ, wQ)
+    function nM(MM, rM, iM) {
+      return {
+        current: () => {
+          const iM = (0, jM.e)();
+          return null === iM ? rM : MM(iM)()
+        },
+        watch: rM => PM((OM => {
+          const SM = MM(OM);
+          let jM = SM();
+          return rM(jM), iM((() => {
+            const MM = SM();
+            MM !== jM && (jM = MM, rM(MM))
+          }))
+        }))
+      }
     }
   },
-  37816: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      b: () => zQ,
-      d: () => TQ,
-      h: () => FQ,
-      l: () => wQ,
-      o: () => sQ,
-      s: () => qQ,
-      w: () => PQ
+  41723: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => QM
     });
-    const wQ = 6,
-      qQ = [0, 2, 4, 1, 3, 5, 0, 2],
-      TQ = 6,
-      zQ = [1, 0, 3, 2, 5, 4];
-    for (let gQ = TQ; gQ < qQ.length; gQ++)
-      if (qQ[gQ] !== qQ[gQ - TQ]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
-    const sQ = qQ.length + 1,
-      FQ = (() => {
-        const QQ = [];
-        for (let WQ = 0; WQ < TQ; WQ++) QQ[qQ[WQ]] = WQ;
-        return QQ
-      })();
+    var OM = iM(41677),
+      SM = iM(41728),
+      jM = iM(41734);
 
-    function PQ(QQ) {
-      return !!QQ && QQ.backFaceCulling && (0 === QQ.transparencyMode || 1 === QQ.transparencyMode)
+    function aM() {
+      var MM, rM;
+      return null !== (MM = null === (rM = (0, OM.e)()) || void 0 === rM ? void 0 : rM.itemBridgeSources) && void 0 !== MM ? MM : jM.c
+    }
+
+    function PM(MM) {
+      return {
+        current: () => aM().states[MM].current(),
+        watch: rM => (0, SM.h)((iM => {
+          const OM = iM.itemBridgeSources.states[MM];
+          return rM(OM.current()), OM.watch(rM)
+        }))
+      }
+    }
+
+    function nM(MM) {
+      return {
+        watch: rM => (0, SM.h)((iM => iM.itemBridgeSources.events[MM].watch(rM)))
+      }
+    }
+    const QM = {
+      states: {
+        inventory: PM("inventory"),
+        hotbar: PM("hotbar"),
+        crafting: PM("crafting"),
+        heldItemAim: PM("heldItemAim")
+      },
+      events: {
+        hotbarSlotRequested: nM("hotbarSlotRequested"),
+        hotbarScrolled: nM("hotbarScrolled"),
+        numberKeyPressed: nM("numberKeyPressed"),
+        inventoryDropRequested: nM("inventoryDropRequested"),
+        chestToggled: nM("chestToggled"),
+        chestRefreshed: nM("chestRefreshed"),
+        inventorySynced: nM("inventorySynced"),
+        enchantingTableOpened: nM("enchantingTableOpened")
+      },
+      commands: {
+        selectHotbarSlot: MM => aM().commands.selectHotbarSlot(MM),
+        removeInventoryItem: MM => aM().commands.removeInventoryItem(MM),
+        swapInventorySlots: MM => aM().commands.swapInventorySlots(MM),
+        moveInventoryItem: MM => aM().commands.moveInventoryItem(MM),
+        quickMoveInventoryItem: MM => aM().commands.quickMoveInventoryItem(MM),
+        closeChest: MM => aM().commands.closeChest(MM),
+        focusCrafting: MM => aM().commands.focusCrafting(MM),
+        craftRecipe: MM => aM().commands.craftRecipe(MM),
+        salvageItem: MM => aM().commands.salvageItem(MM),
+        enchantItem: MM => aM().commands.enchantItem(MM)
+      },
+      queries: {
+        enchantingOffer: MM => aM().queries.enchantingOffer(MM)
+      }
     }
   },
-  37829: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => sQ,
-      h: () => FQ,
-      k: () => gQ,
-      o: () => PQ,
-      r: () => jQ
+  41734: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => PM
     });
-    var wQ = XQ(37816);
-    const qQ = 1 / 16,
-      TQ = 1 / 64,
-      zQ = 2048;
-    wQ.l;
+    var OM = iM(40765);
 
-    function sQ(QQ, WQ, XQ) {
-      return Math.min(Math.abs(QQ[0] * WQ), Math.abs(QQ[5] * XQ)) / 2
+    function SM(MM) {
+      return {
+        current: () => MM,
+        watch: () => () => {}
+      }
     }
 
-    function FQ(QQ, WQ) {
-      return qQ + TQ * QQ * QQ / WQ
-    }
-
-    function PQ(QQ, WQ, XQ, qQ, TQ) {
-      const zQ = wQ.o;
-      return gQ(QQ[zQ], QQ[zQ + 1], QQ[zQ + 2], QQ[zQ + 3], QQ[zQ + 4], QQ[zQ + 5], WQ, XQ, qQ, TQ)
-    }
-
-    function gQ(QQ, WQ, XQ, wQ, qQ, TQ, zQ, sQ, FQ, PQ) {
-      return (zQ <= QQ - PQ ? 0 : 1) | (zQ >= WQ + PQ ? 0 : 2) | (sQ <= XQ - PQ ? 0 : 4) | (sQ >= wQ + PQ ? 0 : 8) | (FQ <= qQ - PQ ? 0 : 16) | (FQ >= TQ + PQ ? 0 : 32)
-    }
-    const JQ = (() => {
-        const QQ = [];
-        for (let WQ = 0; WQ < wQ.s.length; WQ++) {
-          let XQ = 0;
-          for (let qQ = WQ + 1; qQ <= wQ.s.length; qQ++) {
-            const TQ = 1 << wQ.s[qQ - 1];
-            if (XQ & TQ) break;
-            XQ |= TQ, QQ.push({
-              start: WQ,
-              end: qQ,
-              pX: XQ
-            })
+    function jM() {}
+    const aM = Object.freeze([0, 0, 0]),
+      PM = {
+        states: {
+          health: SM({
+            health: null,
+            maxHealth: null,
+            shield: null,
+            maxShield: null
+          }),
+          inventory: SM({
+            player: [],
+            chestOrCreative: [],
+            chest: null,
+            creative: !1,
+            selectedSlot: 0,
+            freeSlots: 0
+          }),
+          hotbar: SM({
+            items: [],
+            ammo: 0,
+            selectedSlot: null
+          }),
+          stationItems: SM({
+            enchantable: {},
+            salvageable: {}
+          }),
+          itemInfo: SM({}),
+          creativeVisibility: SM({
+            publicLobby: !1,
+            shownInGame: {}
+          }),
+          aura: SM(null),
+          heldItemAim: SM({
+            gun: !1,
+            aimable: !1,
+            chargeName: null
+          }),
+          crouching: SM(!1),
+          gliderBoostFuel: SM(0),
+          flight: SM({
+            canFly: !1,
+            flying: !1
+          }),
+          crafting: SM({
+            focus: null,
+            recipes: [],
+            detail: null
+          }),
+          players: SM({
+            ids: [],
+            byId: {},
+            localId: null
+          }),
+          lobbyLeaderboardRows: SM({}),
+          fullInventory: SM(!1),
+          crosshairTarget: SM({
+            interactPrompt: null,
+            blockText: null,
+            neededTool: null
+          }),
+          localPlayerAlive: SM(!0),
+          freeCamera: SM({
+            allowed: !1,
+            movesFly: !1
+          }),
+          replay: SM(null),
+          replayEdits: SM(null),
+          replayRecorder: SM({
+            recording: !1,
+            clipping: !1,
+            hasClipBuffer: !1,
+            seconds: 0
+          }),
+          replayVideoExporting: SM(!1)
+        },
+        events: {
+          hotbarSlotRequested: {
+            watch: () => () => {}
+          },
+          hotbarScrolled: {
+            watch: () => () => {}
+          },
+          hotbarDropRequested: {
+            watch: () => () => {}
+          },
+          inventoryDropRequested: {
+            watch: () => () => {}
+          },
+          numberKeyPressed: {
+            watch: () => () => {}
+          },
+          chestToggled: {
+            watch: () => () => {}
+          },
+          chestRefreshed: {
+            watch: () => () => {}
+          },
+          inventorySynced: {
+            watch: () => () => {}
+          },
+          enchantingTableOpened: {
+            watch: () => () => {}
+          },
+          cosmeticsUpdated: {
+            watch: () => () => {}
+          },
+          shotDamageToShow: {
+            watch: () => () => {}
+          },
+          boardEditRequested: {
+            watch: () => () => {}
+          },
+          kill: {
+            watch: () => () => {}
+          },
+          chatReceived: {
+            watch: () => () => {}
+          },
+          ironChestOpenRequested: {
+            watch: () => () => {}
+          },
+          localEffectUpdated: {
+            watch: () => () => {}
+          },
+          localPlayerAliveSet: {
+            watch: () => () => {}
+          },
+          replayUiActionRequested: {
+            watch: () => () => {}
+          },
+          replayViewerRequested: {
+            watch: () => () => {}
           }
+        },
+        commands: {
+          selectHotbarSlot: jM,
+          removeInventoryItem: () => !1,
+          swapInventorySlots: () => !1,
+          moveInventoryItem: () => !1,
+          quickMoveInventoryItem: () => null,
+          closeChest: jM,
+          setInventoryOpen: jM,
+          changeIronChestPasskey: jM,
+          dragReplayCamera: jM,
+          applyTemporaryThirdPerson: jM,
+          holdEmoteWheel: jM,
+          recordFlyingMiddleText: jM,
+          focusCrafting: jM,
+          craftRecipe: () => ({
+            Ha: 0,
+            Pz: null,
+            amountAddedToSlot: 0
+          }),
+          salvageItem: () => !1,
+          enchantItem: jM,
+          setShopOpen: jM,
+          buyShopItem: jM,
+          lobbyManage: jM,
+          sendChatMessage: jM,
+          ignorePlayer: jM,
+          reportPlayer: jM,
+          reportWorldCodeChat: jM,
+          requestDiscordReportKey: jM,
+          reportLobbyOrGame: jM,
+          playEmote: jM,
+          updateMyCosmetic: jM,
+          writeOnBoard: jM,
+          writeBook: jM,
+          writeNameTag: jM,
+          setCustomLobbyBlock: jM,
+          openIronChest: jM,
+          sendCodeCollab: jM,
+          clickCodeBlock: jM,
+          bindCustomButtonKeys: jM,
+          pressCustomButton: jM,
+          moveReplayFreecam: jM,
+          holdReplayFreecamVertical: jM,
+          respawn: jM,
+          wakeUp: jM,
+          requestLeaderboard: jM,
+          completeTask: jM,
+          setServerCookie: jM,
+          answerUiRequest: jM,
+          chooseRewardedAd: jM,
+          setCameraZoom: jM,
+          setFreeCameraMovesFly: jM,
+          setBlockHighlight: jM,
+          setCrosshairInteractPrompt: jM,
+          setLookSensitivity: jM,
+          replayAction: jM,
+          setReplayPlaying: jM,
+          seekReplay: jM,
+          setReplayCameraMode: jM,
+          syncReplayCameraMode: jM,
+          setReplayCameraKeyframe: jM,
+          moveReplayCameraKeyframe: jM,
+          deleteReplayCameraKeyframes: jM,
+          setReplayPlaybackMark: jM,
+          cropReplay: () => !1,
+          holdReplayForShaderPackFailure: jM,
+          exportReplayVideo: jM,
+          toggleRecording: jM,
+          saveClip: jM,
+          setRecorderPrefs: jM,
+          setReplayViewerOpen: jM
+        },
+        queries: {
+          enchantingOffer: () => ({
+            perks: [],
+            options: []
+          }),
+          worldCodeAiChunk: () => OM.c,
+          worldCodeAiGameState: () => OM.f
+        },
+        lookups: {
+          localPos: () => aM,
+          targetedBlockPos: () => null,
+          blockAtViewPoint: () => null,
+          momentumFrac: () => 0,
+          screenPos: () => ({
+            x: 0,
+            y: 0
+          }),
+          cameraZoom: () => 0,
+          freeCameraPos: () => null,
+          blocksStandingOn: () => [],
+          dropAhead: () => !1,
+          replayCamera: () => null,
+          leaveGameReloadsPage: () => !1,
+          codeBlockClickable: () => !1
         }
-        return QQ
-      })(),
-      rQ = [];
+      }
+  },
+  41674: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => wM,
+      f: () => bM,
+      g: () => tM,
+      k: () => eM,
+      m: () => GM
+    });
+    var OM = iM(40325),
+      SM = iM(1229),
+      jM = iM(2067),
+      aM = iM(2078),
+      PM = iM(3693),
+      nM = iM(37767),
+      QM = iM(1373),
+      zM = iM(41677),
+      LM = iM(5214),
+      mM = iM(2619),
+      HM = iM(41682),
+      hM = iM(41691),
+      JM = iM(41723);
+    let dM = null;
 
-    function IQ(QQ, WQ) {
-      const XQ = wQ.h[WQ];
-      return QQ[XQ + 1] - QQ[XQ]
+    function yM(MM) {
+      const rM = new Map,
+        iM = iM => {
+          if ("string" !== typeof iM) return;
+          let OM = rM.get(iM);
+          return void 0 === OM && (OM = MM(iM), void 0 !== OM && rM.set(iM, OM)), OM
+        };
+      return new Proxy({}, {
+        get: (MM, rM) => iM(rM),
+        has: (MM, rM) => void 0 !== iM(rM)
+      })
     }
 
-    function jQ(QQ, WQ, XQ) {
-      let qQ = 0;
-      for (let zQ = 0; zQ < wQ.l; zQ++) IQ(QQ, zQ) > 0 && (qQ |= 1 << zQ);
-      if (0 === (WQ &= qQ)) return 0;
-      if (WQ === qQ) return XQ[0] = 0, XQ[1] = QQ[wQ.d], 1;
-      let TQ = null,
-        sQ = 1 / 0;
-      for (const PQ of function(QQ) {
-          let WQ = rQ[QQ];
-          if (WQ) return WQ;
-          const XQ = new Map,
-            wQ = (QQ, WQ) => {
-              const wQ = 4 * QQ + WQ.length / 2;
-              XQ.has(wQ) || XQ.set(wQ, {
-                pX: QQ,
-                windows: WQ
-              })
-            };
-          for (const TQ of JQ)
-            if ((TQ.pX & QQ) === QQ && wQ(TQ.pX, [TQ.start, TQ.end]), 0 !== (TQ.pX & QQ))
-              for (const WQ of JQ) WQ.start < TQ.end || 0 !== (TQ.pX & WQ.pX) || 0 === (WQ.pX & QQ) || ((TQ.pX | WQ.pX) & QQ) !== QQ || wQ(TQ.pX | WQ.pX, [TQ.start, TQ.end, WQ.start, WQ.end]);
-          const qQ = [...XQ.values()];
-          return WQ = qQ.filter((QQ => !qQ.some((WQ => WQ !== QQ && (WQ.pX & QQ.pX) === WQ.pX && WQ.windows.length <= QQ.windows.length)))), rQ[QQ] = WQ, WQ
-        }(WQ)) {
-        let XQ = (PQ.windows.length / 2 - 1) * zQ;
-        const FQ = PQ.pX & ~WQ & qQ;
-        for (let WQ = 0; WQ < wQ.l; WQ++) FQ & 1 << WQ && (XQ += IQ(QQ, WQ));
-        XQ < sQ && (TQ = PQ, sQ = XQ)
+    function lM(MM) {
+      const rM = (0, PM.d)(MM);
+      return void 0 !== rM && (0, PM.g)(rM) === MM
+    }
+
+    function EM(MM) {
+      var rM;
+      const iM = null === (rM = (0, zM.e)()) || void 0 === rM ? void 0 : rM.tables;
+      if (void 0 === iM || !lM(MM)) return;
+      const OM = {
+          displayName: iM.getDisplayName(MM)
+        },
+        SM = iM.getItemStat(MM, "description");
+      void 0 !== SM && null !== SM && (OM.description = SM);
+      const {
+        rootName: jM
+      } = iM.getMetaInfo(MM);
+      jM !== MM && (OM.rootName = jM);
+      const aM = iM.getItemStat(MM, "armourReduction");
+      return void 0 !== aM && null !== aM && (OM.armourReduction = aM), OM
+    }(0, zM.r)((MM => {
+      dM = MM
+    }));
+    const UM = (0, aM.l)("DisplayName", "Description");
+
+    function GM() {
+      return Boolean(jM.d.get("useInventory") && jM.d.get("useFullInventory"))
+    }
+    let CM = null;
+    const eM = {
+        inventory: function() {
+          const MM = JM.d.states.inventory;
+          let rM = null;
+          const iM = MM => {
+            var iM;
+            return null === MM.chest ? MM : ((null === (iM = rM) || void 0 === iM ? void 0 : iM.from) === MM && rM.chestVersion === (0, hM.b)() || (rM = {
+              from: MM,
+              chestVersion: (0, hM.b)(),
+              view: {
+                ...MM,
+                chest: (0, hM.i)(MM.chest)
+              }
+            }), rM.view)
+          };
+          return {
+            current: () => iM(MM.current()),
+            watch: rM => MM.watch((MM => {
+              rM(iM(MM))
+            }))
+          }
+        }(),
+        crafting: JM.d.states.crafting,
+        stationItems: {
+          current() {
+            var MM;
+            return (null === (MM = CM) || void 0 === MM ? void 0 : MM.namesVersion) !== (0, PM.h)() && (CM = {
+              namesVersion: (0, PM.h)(),
+              items: {
+                enchantable: yM((MM => {
+                  const rM = (0, PM.d)(MM);
+                  return void 0 !== rM && null !== dM && dM.enchantmentPerksOf(rM).length > 0 || void 0
+                })),
+                salvageable: yM((MM => !(!lM(MM) || null === (0, nM.d)(MM)) || void 0))
+              }
+            }), CM.items
+          },
+          watch: () => () => {}
+        },
+        itemInfo: function() {
+          let MM = null;
+          const rM = () => {
+            var rM;
+            return (null === (rM = MM) || void 0 === rM ? void 0 : rM.namesVersion) !== (0, PM.h)() && (MM = {
+              namesVersion: (0, PM.h)(),
+              infos: yM(EM)
+            }), MM.infos
+          };
+          return {
+            current: rM,
+            watch: iM => (0, aM.u)((OM => {
+              OM.some(UM) && (MM = null, iM(rM()))
+            }))
+          }
+        }(),
+        creativeVisibility: (0, aM.q)((function() {
+          const MM = {};
+          for (const SM of null !== (rM = null === (iM = dM) || void 0 === iM ? void 0 : iM.creativeItemIds()) && void 0 !== rM ? rM : []) {
+            var rM, iM, aM, nM;
+            const QM = (0, PM.g)(SM);
+            if (void 0 === QM) continue;
+            const zM = null !== (aM = jM.d.get((0, OM.g)(QM, "showInCreativeInven"))) && void 0 !== aM ? aM : null === (nM = dM) || void 0 === nM ? void 0 : nM.showInCreativeInvenOf(SM);
+            "boolean" === typeof zM && (MM[QM] = zM)
+          }
+          return {
+            publicLobby: (0, SM.P)((0, QM.e)().lobbyName),
+            shownInGame: MM
+          }
+        }), ["connectedGameChanged"], (0, aM.l)("ShowInCreativeInven")),
+        fullInventory: (0, aM.q)(GM, [], (0, aM.p)("useInventory", "useFullInventory"))
+      },
+      bM = {
+        inventoryDropRequested: JM.d.events.inventoryDropRequested,
+        chestToggled: JM.d.events.chestToggled,
+        chestRefreshed: JM.d.events.chestRefreshed,
+        inventorySynced: JM.d.events.inventorySynced,
+        enchantingTableOpened: JM.d.events.enchantingTableOpened
+      },
+      wM = {
+        removeInventoryItem: JM.d.commands.removeInventoryItem,
+        swapInventorySlots: JM.d.commands.swapInventorySlots,
+        moveInventoryItem: JM.d.commands.moveInventoryItem,
+        quickMoveInventoryItem: JM.d.commands.quickMoveInventoryItem,
+        closeChest: JM.d.commands.closeChest,
+        setInventoryOpen(MM) {
+          (0, LM.k)(mM.C.InventoryOpen, MM ? mM.C.InventoryOpen : 0)
+        },
+        focusCrafting: JM.d.commands.focusCrafting,
+        craftRecipe: JM.d.commands.craftRecipe,
+        salvageItem: JM.d.commands.salvageItem,
+        enchantItem: JM.d.commands.enchantItem,
+        changeIronChestPasskey(MM) {
+          var rM;
+          let {
+            pos: iM,
+            oa: OM
+          } = MM;
+          null === (rM = (0, zM.e)()) || void 0 === rM || rM.send(HM.d.ChangeIronChestPasskey, (0, HM.j)({
+            ti: iM,
+            oa: OM
+          }))
+        },
+        openIronChest(MM) {
+          var rM;
+          let {
+            pos: iM,
+            oa: OM
+          } = MM;
+          null === (rM = (0, zM.e)()) || void 0 === rM || rM.send(HM.d.OpenIronChest, (0, HM.B)({
+            ti: iM,
+            oa: OM
+          }))
+        }
+      },
+      tM = {
+        enchantingOffer: JM.d.queries.enchantingOffer
       }
-      const FQ = TQ.windows;
-      for (let wQ = 0; wQ < FQ.length; wQ += 2) {
-        const WQ = QQ[FQ[wQ]];
-        XQ[wQ] = WQ, XQ[wQ + 1] = QQ[FQ[wQ + 1]] - WQ
+  },
+  41714: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => OM,
+      g: () => zM,
+      h: () => aM,
+      i: () => SM,
+      k: () => PM,
+      l: () => QM
+    });
+    class OM extends Error {
+      constructor() {
+        super(...arguments), this.name = "CoreCorruption"
       }
-      return FQ.length / 2
+    }
+
+    function SM(MM) {
+      return MM instanceof RangeError && /call stack/i.test(MM.message) || MM instanceof Error && "InternalError" === MM.name && /recursion/i.test(MM.message)
+    }
+    const jM = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+
+    function aM(MM) {
+      var rM;
+      return MM instanceof WebAssembly.RuntimeError || MM instanceof OM || SM(MM) && jM.test(null !== (rM = MM.stack) && void 0 !== rM ? rM : "")
+    }
+
+    function PM(MM, rM) {
+      if (aM(MM)) throw MM;
+      console.error(rM, MM)
+    }
+
+    function nM(MM, rM, iM, SM, jM) {
+      if (rM % SM !== 0 || rM + iM > MM.byteLength) throw new OM(`${jM}: ${iM} bytes at ${rM}, ${SM}-aligned, outside ${MM.byteLength} bytes of memory`)
+    }
+
+    function QM(MM, rM, iM, OM, SM) {
+      return 0 === iM ? null : (nM(rM, iM, OM * MM.BYTES_PER_ELEMENT, MM.BYTES_PER_ELEMENT, SM), new MM(rM, iM, OM))
+    }
+
+    function zM(MM, rM, iM, OM, SM) {
+      return 0 === rM ? null : (nM(MM, rM, iM, OM, SM), new DataView(MM, rM, iM))
+    }
+  },
+  41677: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => OM,
+      c: () => yM,
+      e: () => JM,
+      h: () => dM,
+      i: () => mM,
+      m: () => HM,
+      p: () => zM,
+      r: () => LM,
+      t: () => hM
+    });
+    class OM extends Error {
+      constructor(MM) {
+        super(`the join's code did not load: ${MM instanceof Error?MM.message:String(MM)}`, {
+          cause: MM
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === MM || void 0 === MM ? void 0 : MM.request
+      }
+    }
+    let SM = null,
+      jM = null,
+      aM = null;
+    const PM = [];
+    let nM = null;
+
+    function QM(MM, rM) {
+      try {
+        MM(rM)
+      } catch (iM) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", iM)
+      }
+    }
+
+    function zM() {
+      return nM
+    }
+
+    function LM(MM) {
+      PM.push(MM), null !== nM && QM(MM, nM)
+    }
+
+    function mM(MM) {
+      return SM ??= Promise.all([iM.e(84), iM.e(111), iM.e(86), iM.e(244), iM.e(89), iM.e(245), iM.e(224), iM.e(109), iM.e(264), iM.e(296), iM.e(48), iM.e(213), iM.e(232), iM.e(222), iM.e(205), iM.e(206), iM.e(170), iM.e(101), iM.e(134), iM.e(272), iM.e(68)]).then((() => iM(45248))).then((rM => {
+        rM.loadAudio(MM), nM = rM;
+        for (const MM of PM) QM(MM, rM);
+        return rM
+      })).catch((MM => {
+        throw SM = null, MM
+      })), SM
+    }
+    async function HM(MM, rM) {
+      try {
+        const iM = await mM(MM);
+        await iM.loadClientGame(rM)
+      } catch (iM) {
+        throw new OM(iM)
+      }
+    }
+
+    function hM(MM, rM) {
+      jM = {
+        running: MM,
+        shell: rM
+      }
+    }
+
+    function JM() {
+      return aM
+    }
+    async function dM(MM) {
+      const rM = jM;
+      if ((null === rM || void 0 === rM ? void 0 : rM.running) !== MM) throw new Error("the core's session has ended");
+      const iM = await mM(rM.shell.audio).catch((MM => {
+        throw new OM(MM)
+      }));
+      if (null !== aM) return aM;
+      if (jM !== rM || MM.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (aM = iM.startGameHost(MM, rM.shell), null === aM) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return aM
+    }
+
+    function yM() {
+      null !== aM && (null !== nM ? nM.endGameHost(aM) : aM.closeGame()), aM = null, jM = null
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

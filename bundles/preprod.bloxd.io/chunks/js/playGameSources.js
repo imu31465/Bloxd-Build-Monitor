@@ -1,199 +1,199 @@
-export const id = 49;
-export const ids = [49];
+export const id = 53;
+export const ids = [53];
 export const modules = {
-  39907: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => FQ,
-      f: () => TQ,
-      i: () => qQ
+  40757: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => nM,
+      f: () => jM,
+      g: () => SM
     });
-    const wQ = 6e3;
+    const OM = 6e3;
 
-    function qQ(QQ, WQ) {
-      return [Math.floor(QQ[0] / WQ) * WQ, Math.floor(QQ[1] / WQ) * WQ, Math.floor(QQ[2] / WQ) * WQ]
+    function SM(MM, rM) {
+      return [Math.floor(MM[0] / rM) * rM, Math.floor(MM[1] / rM) * rM, Math.floor(MM[2] / rM) * rM]
     }
 
-    function TQ(QQ) {
-      const WQ = (null !== QQ && void 0 !== QQ ? QQ : "").match(/-?\d+(?:\.\d+)?/g);
-      return WQ && WQ.length >= 3 ? [Number(WQ[0]), Number(WQ[1]), Number(WQ[2])] : null
+    function jM(MM) {
+      const rM = (null !== MM && void 0 !== MM ? MM : "").match(/-?\d+(?:\.\d+)?/g);
+      return rM && rM.length >= 3 ? [Number(rM[0]), Number(rM[1]), Number(rM[2])] : null
     }
 
-    function zQ(QQ, WQ) {
-      return QQ === WQ ? String(QQ) : `${QQ}-${WQ}`
+    function aM(MM, rM) {
+      return MM === rM ? String(MM) : `${MM}-${rM}`
     }
 
-    function sQ(QQ, WQ, XQ, wQ) {
-      const qQ = [];
-      let TQ = new Map;
-      for (let zQ = QQ[2]; zQ < QQ[2] + WQ; zQ++) {
-        const sQ = new Map;
-        let FQ = QQ[0];
-        for (; FQ < QQ[0] + WQ;) {
-          const qQ = wQ(FQ, XQ, zQ);
-          let PQ = FQ;
-          for (; PQ + 1 < QQ[0] + WQ && wQ(PQ + 1, XQ, zQ) === qQ;) PQ++;
-          if (null !== qQ) {
-            const QQ = `${FQ} ${PQ} ${qQ}`,
-              WQ = TQ.get(QQ);
-            WQ ? (WQ.z1 = zQ, TQ.delete(QQ), sQ.set(QQ, WQ)) : sQ.set(QQ, {
-              x0: FQ,
-              x1: PQ,
-              z0: zQ,
-              z1: zQ,
-              name: qQ
+    function PM(MM, rM, iM, OM) {
+      const SM = [];
+      let jM = new Map;
+      for (let aM = MM[2]; aM < MM[2] + rM; aM++) {
+        const PM = new Map;
+        let nM = MM[0];
+        for (; nM < MM[0] + rM;) {
+          const SM = OM(nM, iM, aM);
+          let QM = nM;
+          for (; QM + 1 < MM[0] + rM && OM(QM + 1, iM, aM) === SM;) QM++;
+          if (null !== SM) {
+            const MM = `${nM} ${QM} ${SM}`,
+              rM = jM.get(MM);
+            rM ? (rM.z1 = aM, jM.delete(MM), PM.set(MM, rM)) : PM.set(MM, {
+              x0: nM,
+              x1: QM,
+              z0: aM,
+              z1: aM,
+              name: SM
             })
           }
-          FQ = PQ + 1
+          nM = QM + 1
         }
-        qQ.push(...TQ.values()), TQ = sQ
+        SM.push(...jM.values()), jM = PM
       }
-      return qQ.push(...TQ.values()), qQ.sort(((QQ, WQ) => QQ.z0 - WQ.z0 || QQ.x0 - WQ.x0)).map((QQ => `x${zQ(QQ.x0,QQ.x1)} z${zQ(QQ.z0,QQ.z1)} ${QQ.name}`))
+      return SM.push(...jM.values()), SM.sort(((MM, rM) => MM.z0 - rM.z0 || MM.x0 - rM.x0)).map((MM => `x${aM(MM.x0,MM.x1)} z${aM(MM.z0,MM.z1)} ${MM.name}`))
     }
 
-    function FQ(QQ, WQ, XQ, qQ) {
-      let TQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : wQ;
-      const FQ = [QQ[0] + WQ - 1, QQ[1] + WQ - 1, QQ[2] + WQ - 1],
-        PQ = null !== qQ && qQ.every(((WQ, XQ) => Math.floor(WQ) >= QQ[XQ] && Math.floor(WQ) <= FQ[XQ])),
-        gQ = [`The chunk from ${QQ.join(" ")} to ${FQ.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-      null !== qQ && gQ.push(`The player's feet are at ${qQ.map(Math.floor).join(" ")}, ${PQ?"in this chunk":"outside this chunk"}.`);
-      const JQ = [];
-      for (let wQ = QQ[1]; wQ <= FQ[1]; wQ++) {
-        const qQ = sQ(QQ, WQ, wQ, XQ).join("; "),
-          TQ = JQ[JQ.length - 1];
-        (null === TQ || void 0 === TQ ? void 0 : TQ.boxes) === qQ ? TQ.to = wQ : JQ.push({
-          from: wQ,
-          to: wQ,
-          boxes: qQ
+    function nM(MM, rM, iM, SM) {
+      let jM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : OM;
+      const nM = [MM[0] + rM - 1, MM[1] + rM - 1, MM[2] + rM - 1],
+        QM = null !== SM && SM.every(((rM, iM) => Math.floor(rM) >= MM[iM] && Math.floor(rM) <= nM[iM])),
+        zM = [`The chunk from ${MM.join(" ")} to ${nM.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+      null !== SM && zM.push(`The player's feet are at ${SM.map(Math.floor).join(" ")}, ${QM?"in this chunk":"outside this chunk"}.`);
+      const LM = [];
+      for (let OM = MM[1]; OM <= nM[1]; OM++) {
+        const SM = PM(MM, rM, OM, iM).join("; "),
+          jM = LM[LM.length - 1];
+        (null === jM || void 0 === jM ? void 0 : jM.boxes) === SM ? jM.to = OM : LM.push({
+          from: OM,
+          to: OM,
+          boxes: SM
         })
       }
-      const rQ = JQ.filter((QQ => "" !== QQ.boxes));
-      0 === rQ.length && gQ.push("It is all air.");
-      let IQ = gQ.join("\n").length;
-      for (const wQ of rQ) {
-        const QQ = `y${zQ(wQ.from,wQ.to)}: ${wQ.boxes}`;
-        if (IQ += QQ.length + 1, IQ > TQ) {
-          gQ.push(`Cut short: the layers from y${wQ.from} up aren't shown, as there are too many blocks.`);
+      const mM = LM.filter((MM => "" !== MM.boxes));
+      0 === mM.length && zM.push("It is all air.");
+      let HM = zM.join("\n").length;
+      for (const OM of mM) {
+        const MM = `y${aM(OM.from,OM.to)}: ${OM.boxes}`;
+        if (HM += MM.length + 1, HM > jM) {
+          zM.push(`Cut short: the layers from y${OM.from} up aren't shown, as there are too many blocks.`);
           break
         }
-        gQ.push(QQ)
+        zM.push(MM)
       }
-      return gQ.join("\n")
+      return zM.join("\n")
     }
   },
-  9168: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      b: () => qQ
+  9392: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => SM
     });
-    var wQ = XQ(26);
+    var OM = iM(19);
 
-    function qQ() {
-      return !wQ.b.get("isTouchScreen") && null !== document.pointerLockElement
+    function SM() {
+      return !OM.d.get("isTouchScreen") && null !== document.pointerLockElement
     }
   },
-  37224: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => zQ,
-      e: () => TQ,
-      h: () => qQ
+  37876: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => aM,
+      f: () => jM,
+      h: () => SM
     });
-    const wQ = [.25, .5, 1, 2, 4, 8, 16];
+    const OM = [.25, .5, 1, 2, 4, 8, 16];
 
-    function qQ(QQ, WQ) {
-      const XQ = wQ;
-      let qQ = XQ.indexOf(QQ);
-      return -1 === qQ && (qQ = XQ.findIndex((WQ => WQ >= QQ)), -1 === qQ && (qQ = XQ.length - 1)), "up" === WQ ? XQ[Math.min(qQ + 1, XQ.length - 1)] : XQ[Math.max(qQ - 1, 0)]
+    function SM(MM, rM) {
+      const iM = OM;
+      let SM = iM.indexOf(MM);
+      return -1 === SM && (SM = iM.findIndex((rM => rM >= MM)), -1 === SM && (SM = iM.length - 1)), "up" === rM ? iM[Math.min(SM + 1, iM.length - 1)] : iM[Math.max(SM - 1, 0)]
     }
 
-    function TQ(QQ) {
-      return QQ <= wQ[0]
+    function jM(MM) {
+      return MM <= OM[0]
     }
 
-    function zQ(QQ) {
-      return QQ >= wQ[wQ.length - 1]
+    function aM(MM) {
+      return MM >= OM[OM.length - 1]
     }
   },
-  39354: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => TQ,
-      g: () => zQ
+  40118: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => jM,
+      h: () => aM
     });
-    var wQ = XQ(31);
-    let qQ = !1;
+    var OM = iM(22);
+    let SM = !1;
 
-    function TQ() {
-      return qQ
+    function jM() {
+      return SM
     }
 
-    function zQ(QQ) {
-      qQ !== QQ && (qQ = QQ, wQ.k.mB("replayViewer|videoExportChanged"))
+    function aM(MM) {
+      SM !== MM && (SM = MM, OM.i.Tz("replayViewer|videoExportChanged"))
     }
   },
-  36809: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => qQ,
-      f: () => TQ
+  34822: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => SM,
+      d: () => jM
     });
-    let wQ = !1;
+    let OM = !1;
 
-    function qQ() {
-      return wQ
+    function SM() {
+      return OM
     }
 
-    function TQ(QQ) {
-      return wQ !== QQ && (wQ = QQ, !0)
+    function jM(MM) {
+      return OM !== MM && (OM = MM, !0)
     }
   },
-  39301: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => TQ
+  40059: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => jM
     });
-    var wQ = XQ(31),
-      qQ = XQ(2036);
+    var OM = iM(22),
+      SM = iM(2067);
 
-    function TQ(QQ) {
+    function jM(MM) {
       let {
-        taskId: WQ,
-        progress: XQ
-      } = QQ;
-      const wQ = qQ.e.get("_tasks");
-      null !== wQ && void 0 !== wQ && wQ[WQ] && qQ.e.apply({
+        taskId: rM,
+        progress: iM
+      } = MM;
+      const OM = SM.d.get("_tasks");
+      null !== OM && void 0 !== OM && OM[rM] && SM.d.apply({
         _tasks: {
-          ...wQ,
-          [WQ]: {
-            ...wQ[WQ],
-            progress: XQ
+          ...OM,
+          [rM]: {
+            ...OM[rM],
+            progress: iM
           }
         }
       })
     }
-    wQ.k.subscribe("clientTaskProgress", (QQ => {
-      TQ(QQ)
+    OM.i.subscribe("clientTaskProgress", (MM => {
+      jM(MM)
     }))
   },
-  39883: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => rQ,
-      f: () => jQ,
-      h: () => PQ,
-      i: () => JQ,
-      l: () => FQ,
-      o: () => zQ,
-      s: () => gQ,
-      v: () => BQ
+  40725: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => mM,
+      f: () => hM,
+      h: () => QM,
+      k: () => LM,
+      n: () => nM,
+      q: () => aM,
+      u: () => zM,
+      v: () => JM
     });
-    var wQ = XQ(2036),
-      qQ = XQ(31),
-      TQ = XQ(2048);
-    const zQ = (0, TQ.h)((function() {
-        var QQ, WQ, XQ, qQ;
+    var OM = iM(2067),
+      SM = iM(22),
+      jM = iM(2078);
+    const aM = (0, jM.q)((function() {
+        var MM, rM, iM, SM;
         return {
-          health: null !== (QQ = wQ.e.get("_health")) && void 0 !== QQ ? QQ : null,
-          maxHealth: null !== (WQ = wQ.e.get("_totalMaxHealth")) && void 0 !== WQ ? WQ : null,
-          shield: null !== (XQ = wQ.e.get("_shield")) && void 0 !== XQ ? XQ : null,
-          maxShield: null !== (qQ = wQ.e.get("maxShield")) && void 0 !== qQ ? qQ : null
+          health: null !== (MM = OM.d.get("_health")) && void 0 !== MM ? MM : null,
+          maxHealth: null !== (rM = OM.d.get("_totalMaxHealth")) && void 0 !== rM ? rM : null,
+          shield: null !== (iM = OM.d.get("_shield")) && void 0 !== iM ? iM : null,
+          maxShield: null !== (SM = OM.d.get("maxShield")) && void 0 !== SM ? SM : null
         }
-      }), [], (0, TQ.g)("_health", "_totalMaxHealth", "_shield", "maxShield")),
-      sQ = [{
+      }), [], (0, jM.p)("_health", "_totalMaxHealth", "_shield", "maxShield")),
+      PM = [{
         canFly: !1,
         flying: !1
       }, {
@@ -207,824 +207,837 @@ export const modules = {
         flying: !0
       }];
 
-    function FQ(QQ, WQ) {
-      return sQ[(QQ ? 2 : 0) + (WQ ? 1 : 0)]
+    function nM(MM, rM) {
+      return PM[(MM ? 2 : 0) + (rM ? 1 : 0)]
     }
-    const PQ = (0, TQ.h)((function() {
-      var QQ;
-      return null !== (QQ = wQ.e.get("_aura")) && void 0 !== QQ ? QQ : null
-    }), [], (0, TQ.g)("_aura"));
+    const QM = (0, jM.q)((function() {
+      var MM;
+      return null !== (MM = OM.d.get("_aura")) && void 0 !== MM ? MM : null
+    }), [], (0, jM.p)("_aura"));
 
-    function gQ(QQ) {
+    function zM(MM) {
       return {
-        watch: WQ => (0, qQ.o)("shotPlayer", (XQ => {
+        watch: rM => (0, SM.j)("shotPlayer", (iM => {
           let {
-            playerId: wQ,
-            damage: qQ,
-            wasCrit: TQ,
-            distance: zQ
-          } = XQ;
-          QQ(wQ) && WQ({
-            damage: qQ,
-            wasCrit: TQ,
-            distance: zQ
+            playerId: OM,
+            damage: SM,
+            wasCrit: jM,
+            distance: aM
+          } = iM;
+          MM(OM) && rM({
+            damage: SM,
+            wasCrit: jM,
+            distance: aM
           })
         }))
       }
     }
 
-    function JQ(QQ) {
-      return (0, TQ.c)("chat", (WQ => {
+    function LM(MM) {
+      return (0, jM.d)("chat", (rM => {
         let {
-          serverChatMsgId: XQ,
-          worldCodeLineId: wQ,
-          content: qQ,
-          chatterEId: TQ
-        } = WQ;
+          serverChatMsgId: iM,
+          worldCodeLineId: OM,
+          content: SM,
+          chatterEId: jM,
+          chatterObjectsToReplay: aM
+        } = rM;
+        const PM = jM ? MM(jM) : null;
         return {
-          serverChatMsgId: null !== XQ && void 0 !== XQ ? XQ : null,
-          worldCodeLineId: null !== wQ && void 0 !== wQ ? wQ : null,
-          content: qQ,
-          author: TQ ? QQ(TQ) : null
+          serverChatMsgId: null !== iM && void 0 !== iM ? iM : null,
+          worldCodeLineId: null !== OM && void 0 !== OM ? OM : null,
+          content: SM,
+          author: PM,
+          hiddenFromReplay: !0 === aM && !1 === (null === PM || void 0 === PM ? void 0 : PM.local)
         }
       }))
     }
-    class rQ {
+    class mM {
       constructor() {
         this.shown = null, this.needed = null, this.neededSince = 0
       }
-      update(QQ) {
-        let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-        const XQ = this.shown;
-        return QQ !== this.needed && (this.needed = QQ, this.neededSince = WQ, null === QQ && (this.shown = null)), this.shown !== this.needed && WQ - this.neededSince > 200 && (this.shown = this.needed), this.shown !== XQ
+      update(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+        const iM = this.shown;
+        return MM !== this.needed && (this.needed = MM, this.neededSince = rM, null === MM && (this.shown = null)), this.shown !== this.needed && rM - this.neededSince > 200 && (this.shown = this.needed), this.shown !== iM
       }
     }
 
-    function IQ(QQ) {
+    function HM(MM) {
       return [{
-        translationKey: `touchKeys:${QQ}`
+        translationKey: `touchKeys:${MM}`
       }]
     }
-    const jQ = {
-      open: IQ("open"),
-      close: IQ("close"),
-      milk: IQ("milk"),
-      shear: IQ("shear"),
-      tame: IQ("tame"),
-      feed: IQ("feed"),
-      ride: IQ("ride")
+    const hM = {
+      open: HM("open"),
+      close: HM("close"),
+      milk: HM("milk"),
+      shear: HM("shear"),
+      tame: HM("tame"),
+      feed: HM("feed"),
+      ride: HM("ride")
     };
 
-    function BQ(QQ) {
+    function JM(MM) {
       return [{
         translationKey: "touchKeys:tameWith"
       }, " ", {
-        icon: QQ
+        icon: MM
       }]
     }
   },
-  41255: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => sQ,
-      g: () => zQ
+  42157: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => PM,
+      g: () => aM
     });
-    var wQ = XQ(3559);
-    let qQ = null,
-      TQ = null;
+    var OM = iM(3698);
+    let SM = null,
+      jM = null;
 
-    function zQ() {
-      return TQ ??= XQ.e(220).then((() => XQ(36619))).then((QQ => {
+    function aM() {
+      return jM ??= iM.e(234).then((() => iM(37271))).then((MM => {
         let {
-          ITEM_SPRITES: WQ,
-          ITEM_SPRITES_WITHOUT_FILE: XQ,
-          ITEM_FILES_WITHOUT_SPRITE: TQ
-        } = QQ;
-        qQ = function(QQ, WQ, XQ) {
-          const qQ = new Set,
-            TQ = (0, wQ.D)(WQ);
-          let zQ = 0;
-          for (const [wQ, sQ] of QQ.entries()) wQ === TQ[zQ] ? zQ++ : qQ.add(sQ);
-          if ("" !== XQ)
-            for (const sQ of XQ.split(wQ.v)) qQ.add(sQ);
-          return qQ
-        }(WQ.split(wQ.v), XQ, TQ)
-      }), (QQ => {
-        throw TQ = null, QQ
-      })), TQ
+          ITEM_SPRITES: rM,
+          ITEM_SPRITES_WITHOUT_FILE: iM,
+          ITEM_FILES_WITHOUT_SPRITE: jM
+        } = MM;
+        SM = function(MM, rM, iM) {
+          const SM = new Set,
+            jM = (0, OM.u)(rM);
+          let aM = 0;
+          for (const [OM, PM] of MM.entries()) OM === jM[aM] ? aM++ : SM.add(PM);
+          if ("" !== iM)
+            for (const PM of iM.split(OM.s)) SM.add(PM);
+          return SM
+        }(rM.split(OM.s), iM, jM)
+      }), (MM => {
+        throw jM = null, MM
+      })), jM
     }
 
-    function sQ(QQ) {
-      var WQ, XQ;
-      return null !== (WQ = null === (XQ = qQ) || void 0 === XQ ? void 0 : XQ.has(QQ)) && void 0 !== WQ && WQ
+    function PM(MM) {
+      var rM, iM;
+      return null !== (rM = null === (iM = SM) || void 0 === iM ? void 0 : iM.has(MM)) && void 0 !== rM && rM
     }
   },
-  39895: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => wQ,
-      g: () => TQ,
-      j: () => qQ
+  40745: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => OM,
+      f: () => jM,
+      g: () => SM
     });
-    const wQ = 128;
+    const OM = 128;
 
-    function qQ(QQ, WQ, XQ, wQ) {
-      const qQ = 2 * WQ - 1,
-        TQ = 1 - 2 * XQ,
-        zQ = QQ(0) - qQ * QQ(3),
-        sQ = QQ(4) - qQ * QQ(7),
-        FQ = QQ(8) - qQ * QQ(11),
-        PQ = QQ(1) - TQ * QQ(3),
-        gQ = QQ(5) - TQ * QQ(7),
-        JQ = QQ(9) - TQ * QQ(11);
-      wQ[0] = sQ * JQ - FQ * gQ, wQ[1] = FQ * PQ - zQ * JQ, wQ[2] = zQ * gQ - sQ * PQ;
-      const rQ = wQ[0] * QQ(3) + wQ[1] * QQ(7) + wQ[2] * QQ(11) < 0 ? -1 : 1,
-        IQ = Math.hypot(wQ[0], wQ[1], wQ[2]) * rQ;
-      return wQ[0] /= IQ, wQ[1] /= IQ, wQ[2] /= IQ, wQ
+    function SM(MM, rM, iM, OM) {
+      const SM = 2 * rM - 1,
+        jM = 1 - 2 * iM,
+        aM = MM(0) - SM * MM(3),
+        PM = MM(4) - SM * MM(7),
+        nM = MM(8) - SM * MM(11),
+        QM = MM(1) - jM * MM(3),
+        zM = MM(5) - jM * MM(7),
+        LM = MM(9) - jM * MM(11);
+      OM[0] = PM * LM - nM * zM, OM[1] = nM * QM - aM * LM, OM[2] = aM * zM - PM * QM;
+      const mM = OM[0] * MM(3) + OM[1] * MM(7) + OM[2] * MM(11) < 0 ? -1 : 1,
+        HM = Math.hypot(OM[0], OM[1], OM[2]) * mM;
+      return OM[0] /= HM, OM[1] /= HM, OM[2] /= HM, OM
     }
 
-    function TQ(QQ, WQ, XQ, wQ, qQ, TQ) {
-      const zQ = [Math.floor(WQ[0]), Math.floor(WQ[1]), Math.floor(WQ[2])],
-        sQ = [0, 0, 0],
-        FQ = [1 / 0, 1 / 0, 1 / 0],
-        PQ = [1 / 0, 1 / 0, 1 / 0];
-      for (let rQ = 0; rQ < 3; rQ++) sQ[rQ] = Math.sign(XQ[rQ]), 0 !== sQ[rQ] && (PQ[rQ] = Math.abs(1 / XQ[rQ]), FQ[rQ] = (zQ[rQ] + (sQ[rQ] > 0 ? 1 : 0) - WQ[rQ]) / XQ[rQ]);
-      let gQ = 0,
-        JQ = Math.abs(XQ[0]) > Math.abs(XQ[1]) ? 0 : 1;
-      for (Math.abs(XQ[2]) > Math.abs(XQ[JQ]) && (JQ = 2); gQ <= wQ;) {
-        if (QQ(zQ[0], zQ[1], zQ[2])) return qQ[0] = zQ[0], qQ[1] = zQ[1], qQ[2] = zQ[2], TQ[0] = 0, TQ[1] = 0, TQ[2] = 0, TQ[JQ] = -sQ[JQ], !0;
-        JQ = FQ[0] < FQ[1] ? 0 : 1, FQ[2] < FQ[JQ] && (JQ = 2), gQ = FQ[JQ], zQ[JQ] += sQ[JQ], FQ[JQ] += PQ[JQ]
+    function jM(MM, rM, iM, OM, SM, jM) {
+      const aM = [Math.floor(rM[0]), Math.floor(rM[1]), Math.floor(rM[2])],
+        PM = [0, 0, 0],
+        nM = [1 / 0, 1 / 0, 1 / 0],
+        QM = [1 / 0, 1 / 0, 1 / 0];
+      for (let mM = 0; mM < 3; mM++) PM[mM] = Math.sign(iM[mM]), 0 !== PM[mM] && (QM[mM] = Math.abs(1 / iM[mM]), nM[mM] = (aM[mM] + (PM[mM] > 0 ? 1 : 0) - rM[mM]) / iM[mM]);
+      let zM = 0,
+        LM = Math.abs(iM[0]) > Math.abs(iM[1]) ? 0 : 1;
+      for (Math.abs(iM[2]) > Math.abs(iM[LM]) && (LM = 2); zM <= OM;) {
+        if (MM(aM[0], aM[1], aM[2])) return SM[0] = aM[0], SM[1] = aM[1], SM[2] = aM[2], jM[0] = 0, jM[1] = 0, jM[2] = 0, jM[LM] = -PM[LM], !0;
+        LM = nM[0] < nM[1] ? 0 : 1, nM[2] < nM[LM] && (LM = 2), zM = nM[LM], aM[LM] += PM[LM], nM[LM] += QM[LM]
       }
       return !1
     }
   },
-  39877: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => qQ
+  40723: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => SM
     });
-    var wQ = XQ(1972);
+    var OM = iM(2e3);
 
-    function qQ(QQ, WQ, XQ) {
-      return (0, wQ.k)(QQ, WQ) < XQ
+    function SM(MM, rM, iM) {
+      return (0, OM.p)(MM, rM) < iM
     }
   },
-  9101: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => qQ
+  9331: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => SM
     });
-    var wQ = XQ(1290);
+    var OM = iM(1265);
 
-    function qQ(QQ, WQ) {
-      var XQ, qQ;
+    function SM(MM, rM) {
+      var iM, SM;
       try {
-        const XQ = (0, wQ.c)();
-        if ("function" === typeof XQ) {
-          const wQ = new XQ(QQ, WQ);
-          if (wQ.type === QQ) return wQ
+        const iM = (0, OM.b)();
+        if ("function" === typeof iM) {
+          const OM = new iM(MM, rM);
+          if (OM.type === MM) return OM
         }
       } catch {}
-      const TQ = document.createEvent("Event");
-      return TQ.initEvent(QQ, null !== (XQ = null === WQ || void 0 === WQ ? void 0 : WQ.bubbles) && void 0 !== XQ && XQ, null !== (qQ = null === WQ || void 0 === WQ ? void 0 : WQ.cancelable) && void 0 !== qQ && qQ), TQ
+      const jM = document.createEvent("Event");
+      return jM.initEvent(MM, null !== (iM = null === rM || void 0 === rM ? void 0 : rM.bubbles) && void 0 !== iM && iM, null !== (SM = null === rM || void 0 === rM ? void 0 : rM.cancelable) && void 0 !== SM && SM), jM
     }
   },
-  36775: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => rQ,
-      h: () => gQ,
-      k: () => IQ,
-      n: () => JQ
+  37416: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => mM,
+      e: () => zM,
+      g: () => HM,
+      k: () => LM
     });
-    var wQ = XQ(402),
-      qQ = XQ(695),
-      TQ = XQ(702),
-      zQ = XQ(43);
-    const sQ = {
+    var OM = iM(332),
+      SM = iM(670),
+      jM = iM(680),
+      aM = iM(30);
+    const PM = {
         idStorageKey: "playSessionId",
         lastActivityStorageKey: "playSessionLastActivityMs",
         expiryMs: 3e5
       },
-      FQ = "playSessionGameNameWithVariation",
-      PQ = "wasMatchmakePlayer";
+      nM = "playSessionGameNameWithVariation",
+      QM = "wasMatchmakePlayer";
 
-    function gQ() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zQ.m;
-      (0, TQ.j)(QQ, sQ)
+    function zM() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k;
+      (0, jM.k)(MM, PM)
     }
 
-    function JQ() {
-      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zQ.m).setItem(PQ, !0)
+    function LM() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k).setItem(QM, !0)
     }
 
-    function rQ() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zQ.m;
-      return (0, TQ.e)(QQ, sQ)
+    function mM() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k;
+      return (0, jM.e)(MM, PM)
     }
 
-    function IQ(QQ) {
-      let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zQ.m;
-      const XQ = (0, TQ.e)(WQ, sQ),
-        gQ = function(QQ) {
-          const WQ = QQ.getItem(FQ);
-          return "string" !== typeof WQ ? null : WQ
-        }(WQ),
-        JQ = function() {
-          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zQ.m).getItem(PQ)
-        }(WQ);
-      let rQ;
-      return rQ = null !== XQ && null !== gQ && (0, TQ.f)(WQ, sQ) && function(QQ, WQ, XQ) {
-          const qQ = (0, wQ.Mb)(QQ),
-            TQ = (0, wQ.Mb)(WQ),
-            zQ = (0, wQ.Fb)(QQ),
-            sQ = (0, wQ.Fb)(WQ);
-          return !(qQ !== TQ || !XQ) || qQ === TQ && zQ === sQ
-        }(gQ, QQ, JQ) ? XQ : (0, qQ.e)(), (0, TQ.n)(WQ, sQ, rQ), WQ.setItem(FQ, QQ),
+    function HM(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aM.k;
+      const iM = (0, jM.e)(rM, PM),
+        zM = function(MM) {
+          const rM = MM.getItem(nM);
+          return "string" !== typeof rM ? null : rM
+        }(rM),
+        LM = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k).getItem(QM)
+        }(rM);
+      let mM;
+      return mM = null !== iM && null !== zM && (0, jM.g)(rM, PM) && function(MM, rM, iM) {
+          const SM = (0, OM.Mb)(MM),
+            jM = (0, OM.Mb)(rM),
+            aM = (0, OM.Jb)(MM),
+            PM = (0, OM.Jb)(rM);
+          return !(SM !== jM || !iM) || SM === jM && aM === PM
+        }(zM, MM, LM) ? iM : (0, SM.e)(), (0, jM.o)(rM, PM, mM), rM.setItem(nM, MM),
         function() {
-          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zQ.m).removeItem(PQ)
-        }(WQ), rQ
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k).removeItem(QM)
+        }(rM), mM
     }
   },
-  39289: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      b: () => gQ
+  40048: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => zM
     });
-    var wQ = XQ(1257),
-      qQ = XQ(1384),
-      TQ = XQ(26),
-      zQ = XQ(1360),
-      sQ = XQ(1376),
-      FQ = XQ(1567),
-      PQ = XQ(36775);
+    var OM = iM(1229),
+      SM = iM(1382),
+      jM = iM(19),
+      aM = iM(1360),
+      PM = iM(1373),
+      nM = iM(1591),
+      QM = iM(37416);
 
-    function gQ(QQ) {
+    function zM(MM) {
       let {
-        Cq: WQ,
-        uq: XQ
-      } = QQ;
-      const gQ = null !== WQ && void 0 !== WQ ? WQ : (0, sQ.e)().gameNameWithVariation;
-      (0, wQ.F)(gQ) && ((0, PQ.n)(), (0, zQ.Z)((() => {
-        console.log("Received matchmaking order from game server to game", WQ), (0, TQ.m)("inGameReplay"), (0, FQ.navigatePreserveSearch)((0, qQ.c)(gQ, null !== XQ && void 0 !== XQ ? XQ : void 0))
+        Wr: rM,
+        sr: iM
+      } = MM;
+      const zM = null !== rM && void 0 !== rM ? rM : (0, PM.e)().gameNameWithVariation;
+      (0, OM.L)(zM) && ((0, QM.k)(), (0, aM.bb)((() => {
+        console.log("Received matchmaking order from game server to game", rM), (0, jM.j)("inGameReplay"), (0, nM.navigatePreserveSearch)((0, SM.b)(zM, null !== iM && void 0 !== iM ? iM : void 0))
       }), "video_start"))
     }
   },
-  39456: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => TQ
+  40270: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => jM
     });
-    var wQ = XQ(31),
-      qQ = XQ(2061);
+    var OM = iM(22),
+      SM = iM(2093);
 
-    function TQ(QQ) {
-      var WQ, XQ;
-      const TQ = (0, qQ.n)(null !== (WQ = null === (XQ = qQ.s.toggleFreeCam) || void 0 === XQ ? void 0 : XQ[0]) && void 0 !== WQ ? WQ : null);
-      wQ.k.mB("showBottomMessage", {
-        message: `Free Camera ${QQ?"Enabled":"Disabled"}${TQ?` - Press ${TQ} to toggle`:""}`,
+    function jM(MM) {
+      var rM, iM;
+      const jM = (0, SM.m)(null !== (rM = null === (iM = SM.v.toggleFreeCam) || void 0 === iM ? void 0 : iM[0]) && void 0 !== rM ? rM : null);
+      OM.i.Tz("showBottomMessage", {
+        message: `Free Camera ${MM?"Enabled":"Disabled"}${jM?` - Press ${jM} to toggle`:""}`,
         timeoutLength: 2e3,
         type: "Warning"
       })
     }
   },
-  39287: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => FQ,
-      i: () => zQ,
-      l: () => sQ,
-      o: () => PQ
+  40043: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => zM,
+      e: () => nM,
+      g: () => QM,
+      h: () => LM
     });
-    var wQ = XQ(31),
-      qQ = XQ(1404);
-    const TQ = new Map;
+    var OM = iM(2039),
+      SM = iM(22),
+      jM = iM(1429),
+      aM = iM(1270);
+    const PM = new Map;
 
-    function zQ(QQ, WQ) {
-      wQ.k.mB("newUiRequest", {
-        id: QQ,
-        clientParameters: WQ
+    function nM(MM, rM) {
+      SM.i.Tz("newUiRequest", {
+        id: MM,
+        clientParameters: rM
       }, !0)
     }
 
-    function sQ(QQ) {
-      wQ.k.mB("removeUiRequest", QQ, !0);
-      const WQ = TQ.get(QQ);
-      WQ && (WQ.tearDownNotification(), TQ.delete(QQ))
+    function QM(MM) {
+      SM.i.Tz("removeUiRequest", MM, !0);
+      const rM = PM.get(MM);
+      rM && (rM.tearDownNotification(), PM.delete(MM))
     }
 
-    function FQ() {
-      wQ.k.mB("clearUiRequests");
-      for (const QQ of TQ.values()) QQ.tearDownNotification();
-      TQ.clear()
+    function zM() {
+      SM.i.Tz("clearUiRequests");
+      for (const MM of PM.values()) MM.tearDownNotification();
+      PM.clear()
     }
 
-    function PQ(QQ, WQ, XQ, wQ) {
-      const zQ = qQ.NotificationProvider.showPromptPopup({
-        title: WQ,
-        confirmText: "general:yes",
-        cancelText: "general:no",
-        destructive: XQ,
-        unlockPointerKey: "uiRequestPopup"
-      });
-      TQ.set(QQ, zQ), zQ.getResult().then((WQ => {
-        TQ.delete(QQ), "notificationTornDown" !== WQ && wQ(WQ)
+    function LM(MM, rM, iM, SM) {
+      const nM = "string" === typeof rM ? {
+          translationKey: rM
+        } : rM,
+        QM = jM.NotificationProvider.showPromptPopup({
+          title: nM.translationKey,
+          textOpts: {
+            title: (0, aM.g)(nM.params, OM.gameBridge.latest("hiddenPlayerNames"))
+          },
+          confirmText: "general:yes",
+          cancelText: "general:no",
+          destructive: iM,
+          unlockPointerKey: "uiRequestPopup"
+        });
+      PM.set(MM, QM), QM.getResult().then((rM => {
+        PM.delete(MM), "notificationTornDown" !== rM && SM(rM)
       }))
     }
   },
-  39898: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      b: () => JQ,
-      c: () => rQ
+  40753: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => LM,
+      h: () => mM
     });
-    var wQ = XQ(231),
-      qQ = XQ(39907);
-    const TQ = 20;
+    var OM = iM(181),
+      SM = iM(40757);
+    const jM = 20;
 
-    function zQ(QQ) {
-      return QQ.map(Math.floor).join(" ")
+    function aM(MM) {
+      return MM.map(Math.floor).join(" ")
     }
 
-    function sQ(QQ) {
-      return null === QQ.amount || 1 === QQ.amount ? QQ.name : `${QQ.amount} ${QQ.name}`
+    function PM(MM) {
+      return null === MM.amount || 1 === MM.amount ? MM.name : `${MM.amount} ${MM.name}`
     }
-    var FQ = XQ(39911),
-      PQ = XQ(2036),
-      gQ = XQ(1376);
+    var nM = iM(40765),
+      QM = iM(2067),
+      zM = iM(1373);
 
-    function JQ(QQ, WQ) {
-      if (!QQ) return FQ.d;
-      const XQ = QQ.playerFeet();
-      if (!XQ) return "The player isn't in the world yet, so no blocks can be seen.";
-      const TQ = wQ.h.Ij,
-        zQ = (0, qQ.i)(null !== WQ && void 0 !== WQ ? WQ : XQ, TQ),
-        sQ = QQ.chunkBlocks(zQ);
-      return sQ ? (0, qQ.d)(zQ, TQ, ((WQ, XQ, wQ) => {
-        const qQ = sQ(WQ, XQ, wQ);
-        return 0 === qQ ? null : QQ.blockName(qQ).split("|")[0]
-      }), XQ) : `The chunk from ${zQ.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${XQ.map(Math.floor).join(" ")}.`
+    function LM(MM, rM) {
+      if (!MM) return nM.c;
+      const iM = MM.playerFeet();
+      if (!iM) return "The player isn't in the world yet, so no blocks can be seen.";
+      const jM = OM.f.HL,
+        aM = (0, SM.g)(null !== rM && void 0 !== rM ? rM : iM, jM),
+        PM = MM.chunkBlocks(aM);
+      return PM ? (0, SM.d)(aM, jM, ((rM, iM, OM) => {
+        const SM = PM(rM, iM, OM);
+        return 0 === SM ? null : MM.blockName(SM).split("|")[0]
+      }), iM) : `The chunk from ${aM.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${iM.map(Math.floor).join(" ")}.`
     }
 
-    function rQ(QQ) {
-      var WQ, XQ, wQ;
-      if (!QQ) return FQ.h;
-      const qQ = QQ.playerFeet();
-      if (!qQ) return "The player isn't in the world yet, so nothing in it can be seen.";
+    function mM(MM) {
+      var rM, iM, OM;
+      if (!MM) return nM.f;
+      const SM = MM.playerFeet();
+      if (!SM) return "The player isn't in the world yet, so nothing in it can be seen.";
       const {
-        slots: JQ,
-        heldSlot: rQ
-      } = QQ.inventory();
-      return function(QQ) {
-        const WQ = [];
-        null !== QQ.game && WQ.push(`Game: ${QQ.game}.`);
-        const XQ = null === QQ.health ? "" : `, health ${Math.round(QQ.health)}${null===QQ.maxHealth?"":` of ${Math.round(QQ.maxHealth)}`}`;
-        WQ.push(`The player (the creator) stands at ${zQ(QQ.position)}${XQ}, ${QQ.creative?"in":"not in"} creative mode.`);
-        const wQ = QQ.slots[QQ.heldSlot];
-        WQ.push(wQ ? `Holding (slot ${QQ.heldSlot}): ${sQ(wQ)}.` : `Holding nothing (slot ${QQ.heldSlot} is empty).`);
-        const qQ = QQ.slots.flatMap(((QQ, WQ) => QQ ? [`slot ${WQ}: ${sQ(QQ)}`] : []));
-        WQ.push(qQ.length > 0 ? `Inventory: ${qQ.join(", ")}.` : "Inventory: empty.");
-        const FQ = WQ => Math.hypot(WQ.position[0] - QQ.position[0], WQ.position[1] - QQ.position[1], WQ.position[2] - QQ.position[2]),
-          PQ = [...QQ.nearby].sort(((QQ, WQ) => FQ(QQ) - FQ(WQ)));
-        if (0 === PQ.length) WQ.push("No other players or mobs are near enough to see.");
+        slots: LM,
+        heldSlot: mM
+      } = MM.inventory();
+      return function(MM) {
+        const rM = [];
+        null !== MM.game && rM.push(`Game: ${MM.game}.`);
+        const iM = null === MM.health ? "" : `, health ${Math.round(MM.health)}${null===MM.maxHealth?"":` of ${Math.round(MM.maxHealth)}`}`;
+        rM.push(`The player (the creator) stands at ${aM(MM.position)}${iM}, ${MM.creative?"in":"not in"} creative mode.`);
+        const OM = MM.slots[MM.heldSlot];
+        rM.push(OM ? `Holding (slot ${MM.heldSlot}): ${PM(OM)}.` : `Holding nothing (slot ${MM.heldSlot} is empty).`);
+        const SM = MM.slots.flatMap(((MM, rM) => MM ? [`slot ${rM}: ${PM(MM)}`] : []));
+        rM.push(SM.length > 0 ? `Inventory: ${SM.join(", ")}.` : "Inventory: empty.");
+        const nM = rM => Math.hypot(rM.position[0] - MM.position[0], rM.position[1] - MM.position[1], rM.position[2] - MM.position[2]),
+          QM = [...MM.nearby].sort(((MM, rM) => nM(MM) - nM(rM)));
+        if (0 === QM.length) rM.push("No other players or mobs are near enough to see.");
         else {
-          WQ.push("Near them, nearest first:");
-          for (const QQ of PQ.slice(0, TQ)) {
-            const XQ = "player" === QQ.kind ? `player "${QQ.name||"?"}"` : QQ.name && QQ.name !== QQ.kind ? `${QQ.kind} "${QQ.name}"` : QQ.kind,
-              wQ = Math.round(FQ(QQ));
-            WQ.push(`- ${XQ} at ${zQ(QQ.position)}, ${wQ} block${1===wQ?"":"s"} away`)
+          rM.push("Near them, nearest first:");
+          for (const MM of QM.slice(0, jM)) {
+            const iM = "player" === MM.kind ? `player "${MM.name||"?"}"` : MM.name && MM.name !== MM.kind ? `${MM.kind} "${MM.name}"` : MM.kind,
+              OM = Math.round(nM(MM));
+            rM.push(`- ${iM} at ${aM(MM.position)}, ${OM} block${1===OM?"":"s"} away`)
           }
-          PQ.length > TQ && WQ.push(`- and ${PQ.length-TQ} more further away`)
+          QM.length > jM && rM.push(`- and ${QM.length-jM} more further away`)
         }
-        return QQ.droppedItems > 0 && WQ.push(`${QQ.droppedItems} dropped item${1===QQ.droppedItems?" is":"s are"} on the ground nearby.`), WQ.join("\n")
+        return MM.droppedItems > 0 && rM.push(`${MM.droppedItems} dropped item${1===MM.droppedItems?" is":"s are"} on the ground nearby.`), rM.join("\n")
       }({
-        game: null !== (WQ = (0, gQ.e)().gameNameWithVariation) && void 0 !== WQ ? WQ : null,
-        position: qQ,
-        health: null !== (XQ = PQ.e.get("_health")) && void 0 !== XQ ? XQ : null,
-        maxHealth: null !== (wQ = PQ.e.get("_totalMaxHealth")) && void 0 !== wQ ? wQ : null,
-        creative: !0 === PQ.e.get("creative"),
-        heldSlot: rQ,
-        slots: JQ,
-        nearby: QQ.nearby(),
-        droppedItems: QQ.droppedItems()
+        game: null !== (rM = (0, zM.e)().gameNameWithVariation) && void 0 !== rM ? rM : null,
+        position: SM,
+        health: null !== (iM = QM.d.get("_health")) && void 0 !== iM ? iM : null,
+        maxHealth: null !== (OM = QM.d.get("_totalMaxHealth")) && void 0 !== OM ? OM : null,
+        creative: !0 === QM.d.get("creative"),
+        heldSlot: mM,
+        slots: LM,
+        nearby: MM.nearby(),
+        droppedItems: MM.droppedItems()
       })
     }
   },
-  41094: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      B: () => OQ,
-      E: () => uQ,
-      H: () => iQ,
-      L: () => CQ,
-      O: () => hQ,
-      R: () => nQ,
-      U: () => eQ,
-      Y: () => AQ,
-      b: () => xQ,
-      e: () => kQ,
-      h: () => aQ,
-      j: () => YQ,
-      l: () => lQ,
-      p: () => HQ,
-      r: () => LQ,
-      v: () => cQ,
-      x: () => EQ,
-      y: () => RQ
+  41975: (MM, rM, iM) => {
+    iM.d(rM, {
+      A: () => sM,
+      B: () => qM,
+      E: () => ZM,
+      F: () => RM,
+      H: () => kM,
+      J: () => uM,
+      M: () => FM,
+      N: () => vM,
+      R: () => WM,
+      c: () => BM,
+      f: () => fM,
+      h: () => tM,
+      j: () => XM,
+      n: () => gM,
+      q: () => wM,
+      s: () => oM,
+      v: () => pM,
+      z: () => DM
     });
-    var wQ = XQ(1454),
-      qQ = XQ(31),
-      TQ = XQ(1335),
-      zQ = XQ(2506),
-      sQ = XQ(5153),
-      FQ = XQ(5118);
-    let PQ, gQ = !1,
-      JQ = !1,
-      rQ = !1,
-      IQ = !1;
-    const jQ = 1300,
-      BQ = 3e3;
-    let yQ = 0,
-      VQ = !1,
-      DQ = !1,
-      pQ = 0;
-    const GQ = 2;
-    let UQ = !1,
-      bQ = !1;
-    const vQ = new Set,
-      dQ = new Set;
+    var OM = iM(1464),
+      SM = iM(22),
+      jM = iM(1313),
+      aM = iM(2619),
+      PM = iM(5214),
+      nM = iM(5188);
+    let QM, zM = !1,
+      LM = !1,
+      mM = !1,
+      HM = !1;
+    const hM = 1300,
+      JM = 3e3;
+    let dM = 0,
+      yM = !1,
+      lM = !1,
+      EM = 0;
+    const UM = 2;
+    let GM = !1,
+      CM = !1;
+    const eM = new Set,
+      bM = new Set;
 
-    function HQ() {
-      return gQ
+    function wM() {
+      return zM
     }
 
-    function aQ() {
-      return DQ
+    function tM() {
+      return lM
     }
 
-    function lQ() {
-      return bQ
+    function gM() {
+      return CM
     }
 
-    function hQ() {
-      return (0, TQ.A)() && !bQ
+    function uM() {
+      return (0, jM.B)() && !CM
     }
 
-    function iQ(QQ) {
-      let WQ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (QQ !== bQ) {
-        bQ = QQ;
-        for (const QQ of [...dQ]) QQ(bQ);
-        WQ && eQ()
+    function RM(MM) {
+      let rM = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (MM !== CM) {
+        CM = MM;
+        for (const MM of [...bM]) MM(CM);
+        rM && vM()
       }
     }
 
-    function cQ(QQ) {
-      return dQ.add(QQ), () => {
-        dQ.delete(QQ)
+    function pM(MM) {
+      return bM.add(MM), () => {
+        bM.delete(MM)
       }
     }
 
-    function AQ() {
-      (0, sQ.i)(zQ.x.Menu, (0, TQ.A)() ? 0 : zQ.x.Menu)
+    function WM() {
+      (0, PM.k)(aM.C.Menu, (0, jM.B)() ? 0 : aM.C.Menu)
     }
 
-    function RQ() {
-      DQ = !1, pQ = 0, AQ(), eQ()
+    function sM() {
+      lM = !1, EM = 0, WM(), vM()
     }
 
-    function EQ(QQ) {
-      return vQ.add(QQ), () => {
-        vQ.delete(QQ)
+    function DM(MM) {
+      return eM.add(MM), () => {
+        eM.delete(MM)
       }
     }
 
-    function CQ(QQ) {
-      JQ = !1, QQ !== gQ && (gQ = QQ, IQ = !1, clearTimeout(PQ), rQ = !gQ && UQ, gQ ? (VQ = !1, DQ = !1, pQ = 0) : hQ() && !UQ && (DQ = !0), UQ = !1, gQ && !hQ() && ZQ(), KQ(), rQ && eQ())
+    function kM(MM) {
+      LM = !1, MM !== zM && (zM = MM, HM = !1, clearTimeout(QM), mM = !zM && GM, zM ? (yM = !1, lM = !1, EM = 0) : uM() && !GM && (lM = !0), GM = !1, zM && !uM() && KM(), TM(), mM && vM())
     }
 
-    function uQ(QQ) {
-      QQ !== VQ && (VQ = QQ, QQ || eQ())
+    function ZM(MM) {
+      MM !== yM && (yM = MM, MM || vM())
     }
 
-    function LQ() {
-      JQ = !1, IQ || !0 !== tQ() || (IQ = !0, clearTimeout(PQ), PQ = setTimeout(fQ, jQ))
+    function oM() {
+      LM = !1, HM || !0 !== AM() || (HM = !0, clearTimeout(QM), QM = setTimeout(YM, hM))
     }
 
-    function kQ() {
-      return (!JQ || performance.now() - yQ > BQ) && (JQ = (0, FQ.H)().lockPointer(), yQ = performance.now()), JQ
+    function fM() {
+      return (!LM || performance.now() - dM > JM) && (LM = (0, nM.I)().lockPointer(), dM = performance.now()), LM
     }
 
-    function fQ() {
-      SQ() && oQ() && kQ()
+    function YM() {
+      NM() && xM() && fM()
     }
 
-    function SQ() {
-      return hQ() && !gQ && !VQ && !(0, wQ.l)()
+    function NM() {
+      return uM() && !zM && !yM && !(0, OM.l)()
     }
 
-    function tQ() {
-      var QQ;
-      return "undefined" === typeof navigator || null === (QQ = navigator.userActivation) || void 0 === QQ ? void 0 : QQ.isActive
+    function AM() {
+      var MM;
+      return "undefined" === typeof navigator || null === (MM = navigator.userActivation) || void 0 === MM ? void 0 : MM.isActive
     }
 
-    function oQ() {
-      return rQ && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== tQ()
+    function xM() {
+      return mM && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== AM()
     }
 
-    function eQ() {
-      hQ() ? SQ() && !DQ && oQ() && kQ() : gQ && !UQ && ZQ()
+    function vM() {
+      uM() ? NM() && !lM && xM() && fM() : zM && !GM && KM()
     }
 
-    function nQ() {
-      DQ ? navigator.vendor.startsWith("Apple") ? NQ() : pQ = GQ : eQ()
+    function FM() {
+      lM ? navigator.vendor.startsWith("Apple") ? IM() : EM = UM : vM()
     }
 
-    function xQ() {
-      pQ > 0 && 0 === --pQ && NQ()
+    function BM() {
+      EM > 0 && 0 === --EM && IM()
     }
 
-    function YQ() {
-      pQ = 0
+    function XM() {
+      EM = 0
     }
 
-    function NQ() {
-      SQ() && !0 === tQ() && kQ()
+    function IM() {
+      NM() && !0 === AM() && fM()
     }
 
-    function ZQ() {
-      UQ = !0, (0, FQ.H)().unlockPointer()
+    function KM() {
+      GM = !0, (0, nM.I)().unlockPointer()
     }
 
-    function OQ() {
-      JQ = !1, rQ = !1, IQ = !1, clearTimeout(PQ), VQ = !1, DQ = !1, pQ = 0, UQ = !1;
-      const QQ = gQ;
-      gQ = !1, QQ && KQ()
+    function qM() {
+      LM = !1, mM = !1, HM = !1, clearTimeout(QM), yM = !1, lM = !1, EM = 0, GM = !1;
+      const MM = zM;
+      zM = !1, MM && TM()
     }
 
-    function KQ() {
-      for (const QQ of [...vQ]) QQ(gQ);
-      qQ.k.mB("pointerLockUpdate", gQ)
+    function TM() {
+      for (const MM of [...eM]) MM(zM);
+      SM.i.Tz("pointerLockUpdate", zM)
     }
   },
-  40902: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => rQ,
-      d: () => sQ,
-      e: () => JQ,
-      f: () => PQ,
-      j: () => zQ,
-      n: () => gQ,
-      o: () => FQ
+  41761: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => mM,
+      f: () => PM,
+      j: () => LM,
+      n: () => QM,
+      r: () => aM,
+      s: () => zM,
+      v: () => nM
     });
-    let wQ = null,
-      qQ = null,
-      TQ = null;
+    let OM = null,
+      SM = null,
+      jM = null;
 
-    function zQ(QQ) {
-      wQ = QQ
+    function aM(MM) {
+      OM = MM
     }
 
-    function sQ() {
-      return wQ
+    function PM() {
+      return OM
     }
 
-    function FQ(QQ) {
-      qQ = QQ
+    function nM(MM) {
+      SM = MM
     }
 
-    function PQ() {
-      return qQ
+    function QM() {
+      return SM
     }
 
-    function gQ(QQ) {
-      TQ = QQ
+    function zM(MM) {
+      jM = MM
     }
 
-    function JQ() {
-      return TQ
+    function LM() {
+      return jM
     }
 
-    function rQ() {
-      var QQ, WQ;
-      return !0 === (null === (QQ = qQ) || void 0 === QQ || null === (WQ = QQ.currentViewer) || void 0 === WQ ? void 0 : WQ.inPlayback)
+    function mM() {
+      var MM, rM;
+      return !0 === (null === (MM = SM) || void 0 === MM || null === (rM = MM.currentViewer) || void 0 === rM ? void 0 : rM.inPlayback)
     }
   },
-  41206: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      attachPlayGameSources: () => vw,
-      playGameSources: () => bw
+  42102: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      attachPlayGameSources: () => wO,
+      playGameSources: () => bO
     });
-    var wQ = XQ(2003),
-      qQ = XQ(40902),
-      TQ = XQ(5118),
-      zQ = XQ(40829),
-      sQ = XQ(41195),
-      FQ = XQ(39883),
-      PQ = XQ(31),
-      gQ = XQ(5140),
-      JQ = XQ(5134),
-      rQ = XQ(40850),
-      IQ = XQ(40876),
-      jQ = XQ(41215),
-      BQ = XQ(40857);
-    (0, BQ.j)(gQ.gc.Chat, (QQ => {
-      if (QQ.payloadKind !== JQ.rc.Msgpack) return;
-      const WQ = function(QQ) {
-        if (null === QQ || "object" !== typeof QQ || !("content" in QQ)) return null;
+    var OM = iM(2039),
+      SM = iM(41761),
+      jM = iM(5188),
+      aM = iM(41677),
+      PM = iM(42081),
+      nM = iM(40725),
+      QM = iM(22),
+      zM = iM(5200),
+      LM = iM(5198),
+      mM = iM(41706),
+      HM = iM(41728),
+      hM = iM(42106),
+      JM = iM(41712);
+    (0, JM.h)(zM.hc.Chat, (MM => {
+      if (MM.payloadKind !== LM.hc.Msgpack) return;
+      const rM = function(MM) {
+        if (null === MM || "object" !== typeof MM || !("content" in MM)) return null;
         const {
-          chatMsgId: WQ,
-          worldCodeLineId: XQ,
-          content: wQ,
-          chatterEId: qQ
-        } = QQ;
+          chatMsgId: rM,
+          worldCodeLineId: iM,
+          content: OM,
+          chatterEId: SM,
+          chatterObjectsToReplay: jM
+        } = MM;
         return {
-          serverChatMsgId: null !== WQ && void 0 !== WQ ? WQ : void 0,
-          worldCodeLineId: null !== XQ && void 0 !== XQ ? XQ : void 0,
-          content: wQ,
-          chatterEId: void 0 === qQ || null === qQ ? void 0 : String(qQ)
+          serverChatMsgId: null !== rM && void 0 !== rM ? rM : void 0,
+          worldCodeLineId: null !== iM && void 0 !== iM ? iM : void 0,
+          content: OM,
+          chatterEId: void 0 === SM || null === SM ? void 0 : String(SM),
+          chatterObjectsToReplay: jM
         }
-      }((0, rQ.d)(QQ.payload));
-      null !== WQ && PQ.k.mB("chat", WQ, !0)
+      }((0, mM.c)(MM.payload));
+      null !== rM && QM.i.Tz("chat", rM, !0)
     }));
-    const yQ = {
-        chatReceived: (0, FQ.i)((function(QQ) {
-          var WQ, XQ, wQ;
+    const dM = {
+        chatReceived: (0, nM.k)((function(MM) {
+          var rM, iM, OM;
           return {
-            id: QQ,
-            name: null !== (WQ = jQ.f.getName(QQ)) && void 0 !== WQ ? WQ : null,
-            local: (0, IQ.d)() === QQ,
-            profileEffect: null !== (XQ = null === (wQ = (0, jQ.g)(QQ)) || void 0 === wQ ? void 0 : wQ.profileEffect) && void 0 !== XQ ? XQ : null
+            id: MM,
+            name: null !== (rM = hM.e.getName(MM)) && void 0 !== rM ? rM : null,
+            local: (0, HM.f)() === MM,
+            profileEffect: null !== (iM = null === (OM = (0, hM.g)(MM)) || void 0 === OM ? void 0 : OM.profileEffect) && void 0 !== iM ? iM : null
           }
         }))
       },
-      VQ = {
-        sendChatMessage(QQ) {
-          var WQ;
+      yM = {
+        sendChatMessage(MM) {
+          var rM;
           let {
-            cg: XQ,
-            channelName: wQ
-          } = QQ;
-          null === (WQ = (0, zQ.j)()) || void 0 === WQ || WQ.clientApi.sendChat(XQ, wQ)
+            Kz: iM,
+            channelName: OM
+          } = MM;
+          null === (rM = (0, aM.e)()) || void 0 === rM || rM.clientApi.sendChat(iM, OM)
         }
       };
-    var DQ = XQ(231),
-      pQ = XQ(2036),
-      GQ = XQ(40813),
-      UQ = XQ(39877);
-    const bQ = [0, 0, 0],
-      vQ = {
-        codeBlockClickable(QQ) {
-          var WQ;
-          const XQ = (0, zQ.j)();
-          if (null === XQ || void 0 === XQ || !XQ.isSessionLive) return !1;
-          const wQ = XQ.api;
-          if (0 !== (GQ.x.playerFlags(wQ.apiView, 0) & GQ.ae.Crouching)) return !1;
-          const qQ = wQ.queries.directorEntity(wQ.localId) >= GQ.Db.BYTES ? wQ.memoryData(wQ.scratch(), GQ.Db.BYTES, 8, "the local player's DirectorEntity") : null;
-          if (null === qQ) return !1;
-          for (let TQ = 0; TQ < 3; TQ++) bQ[TQ] = GQ.Db.feet(qQ, 0, TQ);
-          return bQ[1] += GQ.Db.eyeHeight(qQ, 0), (0, UQ.d)(bQ, QQ, null !== (WQ = pQ.e.get("blockReach")) && void 0 !== WQ ? WQ : DQ.h.Ny)
+    var lM = iM(181),
+      EM = iM(2067),
+      UM = iM(41669),
+      GM = iM(40723);
+    const CM = [0, 0, 0],
+      eM = {
+        codeBlockClickable(MM) {
+          var rM;
+          const iM = (0, aM.e)();
+          if (null === iM || void 0 === iM || !iM.isSessionLive) return !1;
+          const OM = iM.api;
+          if (0 !== (UM.v.playerFlags(OM.apiView, 0) & UM.yd.Crouching)) return !1;
+          const SM = OM.queries.directorEntity(OM.localId) >= UM.nb.BYTES ? OM.memoryData(OM.scratch(), UM.nb.BYTES, 8, "the local player's DirectorEntity") : null;
+          if (null === SM) return !1;
+          for (let jM = 0; jM < 3; jM++) CM[jM] = UM.nb.feet(SM, 0, jM);
+          return CM[1] += UM.nb.eyeHeight(SM, 0), (0, GM.c)(CM, MM, null !== (rM = EM.d.get("blockReach")) && void 0 !== rM ? rM : lM.f.ny)
         }
       },
-      dQ = {
-        clickCodeBlock(QQ) {
-          var WQ;
-          null === (WQ = (0, zQ.j)()) || void 0 === WQ || WQ.clickCodeBlock(QQ)
+      bM = {
+        clickCodeBlock(MM) {
+          var rM;
+          null === (rM = (0, aM.e)()) || void 0 === rM || rM.clickCodeBlock(MM)
         }
       };
-    var HQ = XQ(40837),
-      aQ = XQ(41221),
-      lQ = XQ(1049),
-      hQ = XQ(39311),
-      iQ = XQ(5111),
-      cQ = XQ(40845),
-      AQ = XQ(40835),
-      RQ = XQ(40847);
+    var wM = iM(41691),
+      tM = iM(42111),
+      gM = iM(1073),
+      uM = iM(40073),
+      RM = iM(5184),
+      pM = iM(41697),
+      WM = iM(41682),
+      sM = iM(41704);
 
-    function EQ(QQ) {
-      if (null === QQ) return null;
-      const WQ = [];
-      for (const XQ of QQ) {
-        const QQ = Object.keys(XQ)[0];
-        if ("MQ" === QQ) {
+    function DM(MM) {
+      if (null === MM) return null;
+      const rM = [];
+      for (const iM of MM) {
+        const MM = Object.keys(iM)[0];
+        if ("ki" === MM) {
           const {
-            str: QQ,
-            style: wQ,
-            clickableUrl: qQ
-          } = XQ.MQ, TQ = Object.keys(QQ)[0], zQ = QQ[TQ];
-          "string" !== TQ && "styledEntityName" !== TQ && "styledTranslatedText" !== TQ || WQ.push({
-            str: zQ,
-            style: wQ,
-            clickableUrl: qQ
+            str: MM,
+            style: OM,
+            clickableUrl: SM
+          } = iM.ki, jM = Object.keys(MM)[0], aM = MM[jM];
+          "string" !== jM && "styledEntityName" !== jM && "styledTranslatedText" !== jM || rM.push({
+            str: aM,
+            style: OM,
+            clickableUrl: SM
           })
-        } else WQ.push(XQ[QQ])
+        } else rM.push(iM[MM])
       }
-      return WQ
+      return rM
     }
-    const CQ = {
-      screenPos(QQ) {
-        var WQ, XQ;
-        return null !== (WQ = null === (XQ = (0, zQ.j)()) || void 0 === XQ ? void 0 : XQ.renderFrame.projectWorldPosToScreenPos(QQ)) && void 0 !== WQ ? WQ : {
+    const kM = {
+      screenPos(MM) {
+        var rM, iM;
+        return null !== (rM = null === (iM = (0, aM.e)()) || void 0 === iM ? void 0 : iM.renderFrame.projectWorldPosToScreenPos(MM)) && void 0 !== rM ? rM : {
           x: 0,
           y: 0
         }
       }
     };
-    let uQ = !1;
+    let ZM = !1;
 
-    function LQ() {
-      uQ || (uQ = !0, (0, BQ.j)(gQ.gc.ProgressBarUpdate, (QQ => {
-        const WQ = (0, RQ.h)(QQ);
-        (0, RQ.c)(WQ) && PQ.k.mB("progressBarUpdate", WQ, !0)
-      })), (0, BQ.j)(cQ.u, (QQ => {
-        const WQ = (0, RQ.d)(cQ.u, QQ);
-        WQ && PQ.k.mB("middleScreenBarInitiate", {
-          duration: WQ.iq,
-          cq: WQ.cq,
-          horizBarRemOffset: WQ.Aq
+    function oM() {
+      ZM || (ZM = !0, (0, JM.h)(zM.hc.ProgressBarUpdate, (MM => {
+        const rM = (0, sM.f)(MM);
+        (0, sM.c)(rM) && QM.i.Tz("progressBarUpdate", rM, !0)
+      })), (0, JM.h)(pM.w, (MM => {
+        const rM = (0, sM.d)(pM.w, MM);
+        rM && QM.i.Tz("middleScreenBarInitiate", {
+          duration: rM.QO,
+          zO: rM.zO,
+          horizBarRemOffset: rM.LO
         }, !0)
-      })), (0, BQ.j)(gQ.gc.RemoveMiddleScreenBar, (() => {
-        PQ.k.mB("middleScreenBarRemove")
-      })), (0, BQ.j)(cQ.X, (QQ => {
-        const WQ = (0, RQ.d)(cQ.X, QQ);
-        if (WQ) {
-          var XQ;
-          const QQ = WQ.aQ ? null === (XQ = (0, zQ.j)()) || void 0 === XQ ? void 0 : XQ.renderFrame.projectDirectionToScreenPos(WQ.aQ) : void 0;
-          PQ.k.mB("sendHitmarker", {
-            fW: WQ.fW,
-            screenPos: QQ
+      })), (0, JM.h)(zM.hc.RemoveMiddleScreenBar, (() => {
+        QM.i.Tz("middleScreenBarRemove")
+      })), (0, JM.h)(pM._, (MM => {
+        const rM = (0, sM.d)(pM._, MM);
+        if (rM) {
+          var iM;
+          const MM = rM.HO ? null === (iM = (0, aM.e)()) || void 0 === iM ? void 0 : iM.renderFrame.projectDirectionToScreenPos(rM.HO) : void 0;
+          QM.i.Tz("sendHitmarker", {
+            mO: rM.mO,
+            screenPos: MM
           }, !0)
         }
-      })), (0, BQ.j)(cQ.$, (QQ => {
-        const WQ = (0, RQ.d)(cQ.$, QQ);
-        if (WQ) {
+      })), (0, JM.h)(pM.fb, (MM => {
+        const rM = (0, sM.d)(pM.fb, MM);
+        if (rM) {
           const {
-            id: QQ,
-            position: XQ,
-            style: wQ,
-            iW: qQ,
-            AW: TQ
-          } = WQ;
-          PQ.k.mB("setDirectionArrow", {
-            id: QQ,
-            position: XQ,
-            style: wQ,
-            text: EQ(qQ),
-            AW: TQ
+            id: MM,
+            position: iM,
+            style: OM,
+            hO: SM,
+            dO: jM
+          } = rM;
+          QM.i.Tz("setDirectionArrow", {
+            id: MM,
+            position: iM,
+            style: OM,
+            text: DM(SM),
+            dO: jM
           }, !0)
         }
-      })), (0, BQ.j)(cQ.f, (QQ => {
-        const WQ = (0, RQ.d)(cQ.f, QQ);
-        WQ && PQ.k.mB("clearDirectionArrow", {
-          id: WQ.id
+      })), (0, JM.h)(pM.f, (MM => {
+        const rM = (0, sM.d)(pM.f, MM);
+        rM && QM.i.Tz("clearDirectionArrow", {
+          id: rM.id
         }, !0)
-      })), (0, BQ.j)(cQ.n, (QQ => {
-        const WQ = (0, RQ.d)(cQ.n, QQ);
-        WQ && PQ.k.mB("flyingMiddleMessage", {
-          content: EQ(WQ.aT),
-          lT: WQ.lT,
-          hT: WQ.hT
+      })), (0, JM.h)(pM.n, (MM => {
+        const rM = (0, sM.d)(pM.n, MM);
+        rM && QM.i.Tz("flyingMiddleMessage", {
+          content: DM(rM.Di),
+          oi: rM.oi,
+          Yi: rM.Yi
         }, !0)
-      })), (0, BQ.j)(gQ.gc.WorldVariation, (QQ => {
-        const WQ = (0, RQ.h)(QQ);
-        if ("string" === typeof WQ) {
-          const QQ = WQ === lQ.e ? null : {
-            message: `Currently loaded as variation: ${WQ}`,
+      })), (0, JM.h)(zM.hc.WorldVariation, (MM => {
+        const rM = (0, sM.f)(MM);
+        if ("string" === typeof rM) {
+          const MM = rM === gM.g ? null : {
+            message: `Currently loaded as variation: ${rM}`,
             type: "Warning"
           };
-          PQ.k.mB("showPermanentBottomMessage", QQ, !0)
+          QM.i.Tz("showPermanentBottomMessage", MM, !0)
         }
-      })), (0, BQ.j)(cQ.E, (QQ => {
-        const WQ = (0, RQ.d)(cQ.E, QQ);
-        WQ && function(QQ, WQ) {
+      })), (0, JM.h)(pM.J, (MM => {
+        const rM = (0, sM.d)(pM.J, MM);
+        rM && function(MM, rM) {
           const {
-            type: XQ,
-            params: wQ
-          } = (0, hQ.f)(WQ), qQ = {
-            ...wQ
+            type: iM,
+            params: OM
+          } = (0, uM.e)(rM), SM = {
+            ...OM
           };
-          for (const TQ of hQ.b) qQ[TQ] && (qQ[TQ] = EQ(qQ[TQ]));
-          iQ.c.queueQTE(QQ, XQ, qQ).getResult().then((WQ => {
-            var XQ;
-            "boolean" === typeof WQ && (null === (XQ = (0, zQ.j)()) || void 0 === XQ || XQ.send(AQ.d.QteResponse, {
-              qteId: QQ,
-              qteResponse: WQ
+          for (const jM of uM.b) SM[jM] && (SM[jM] = DM(SM[jM]));
+          RM.d.queueQTE(MM, iM, SM).getResult().then((rM => {
+            var iM;
+            "boolean" === typeof rM && (null === (iM = (0, aM.e)()) || void 0 === iM || iM.send(WM.d.QteResponse, {
+              qteId: MM,
+              qteResponse: rM
             }))
           }))
-        }(WQ.id, WQ.nQ)
-      })), (0, BQ.j)(cQ.Q, (QQ => {
-        const WQ = (0, RQ.d)(cQ.Q, QQ);
-        "number" === typeof WQ && iQ.c.cancelQTE(WQ)
-      })), (0, BQ.g)((() => {
-        iQ.c.reset()
-      })), (0, BQ.h)((() => {
-        iQ.c.reset()
-      })), (0, BQ.j)(gQ.gc.EditItemCraftingRecipes, (QQ => {
-        const WQ = (0, RQ.h)(QQ);
-        (0, RQ.c)(WQ) && PQ.k.mB("craftingRecipesEdited", {
-          itemName: WQ.craftingRecipeItemName,
-          recipesForItem: WQ.recipesForItem
+        }(rM.id, rM.bO)
+      })), (0, JM.h)(pM.U, (MM => {
+        const rM = (0, sM.d)(pM.U, MM);
+        "number" === typeof rM && RM.d.cancelQTE(rM)
+      })), (0, JM.c)((() => {
+        RM.d.reset()
+      })), (0, JM.e)((() => {
+        RM.d.reset()
+      })), (0, JM.h)(zM.hc.EditItemCraftingRecipes, (MM => {
+        const rM = (0, sM.f)(MM);
+        (0, sM.c)(rM) && QM.i.Tz("craftingRecipesEdited", {
+          itemName: rM.craftingRecipeItemName,
+          recipesForItem: rM.recipesForItem
         })
-      })), (0, BQ.j)(cQ.P, (QQ => {
-        const WQ = (0, RQ.d)(cQ.P, QQ);
-        WQ && PQ.k.mB("craftingRecipesEdited", {
-          itemName: WQ.hq,
+      })), (0, JM.h)(pM.R, (MM => {
+        const rM = (0, sM.d)(pM.R, MM);
+        rM && QM.i.Tz("craftingRecipesEdited", {
+          itemName: rM.nS,
           recipesForItem: []
         })
       })))
     }
-    var kQ = XQ(26);
-    const fQ = [{
+    var fM = iM(19);
+    const YM = [{
       allowed: !1,
       movesFly: !1
     }, {
@@ -1038,1531 +1051,1531 @@ export const modules = {
       movesFly: !0
     }];
 
-    function SQ(QQ) {
-      return GQ.x.playerFlags(QQ.api.apiView, 0)
+    function NM(MM) {
+      return UM.v.playerFlags(MM.api.apiView, 0)
     }
-    const tQ = {
-        freeCamera: (0, IQ.c)((QQ => () => {
-          const WQ = QQ.isSessionLive && 0 !== (SQ(QQ) & GQ.ae.FreeCamMoves),
-            XQ = QQ.freeCameraAllowed() && null === kQ.b.get("scriptedCameraFacing");
-          return fQ[(XQ ? 2 : 0) + (WQ ? 1 : 0)]
-        }), fQ[0], (QQ => (0, TQ.t)(QQ)))
+    const AM = {
+        freeCamera: (0, HM.b)((MM => () => {
+          const rM = MM.isSessionLive && 0 !== (NM(MM) & UM.yd.FreeCamMoves),
+            iM = MM.freeCameraAllowed() && null === fM.d.get("scriptedCameraFacing");
+          return YM[(iM ? 2 : 0) + (rM ? 1 : 0)]
+        }), YM[0], (MM => (0, jM.x)(MM)))
       },
-      oQ = {
-        setFreeCameraMovesFly: QQ => {
-          var WQ;
-          null === (WQ = (0, zQ.j)()) || void 0 === WQ || WQ.setFreeCameraMovesFly(QQ)
+      xM = {
+        setFreeCameraMovesFly: MM => {
+          var rM;
+          null === (rM = (0, aM.e)()) || void 0 === rM || rM.setFreeCameraMovesFly(MM)
         }
       },
-      eQ = {
+      vM = {
         freeCameraPos: () => {
-          const QQ = (0, zQ.j)();
-          return null !== QQ && void 0 !== QQ && QQ.isSessionLive && QQ.renderFrame.hasView && 0 !== (SQ(QQ) & GQ.ae.FreeCam) ? QQ.renderFrame.cameraPosition : null
+          const MM = (0, aM.e)();
+          return null !== MM && void 0 !== MM && MM.isSessionLive && MM.renderFrame.hasView && 0 !== (NM(MM) & UM.yd.FreeCam) ? MM.renderFrame.cameraPosition : null
         }
       };
-    var nQ = XQ(39456);
-    let xQ = !1,
-      YQ = !1;
+    var FM = iM(40270);
+    let BM = !1,
+      XM = !1;
 
-    function NQ() {
-      const QQ = (0, zQ.j)();
-      if (null === QQ || void 0 === QQ || !QQ.isSessionLive) return void(xQ = !1);
-      const WQ = 0 !== (GQ.x.playerFlags(QQ.api.apiView, 0) & GQ.ae.FreeCam);
-      WQ !== xQ && (xQ = WQ, (0, nQ.c)(WQ))
+    function IM() {
+      const MM = (0, aM.e)();
+      if (null === MM || void 0 === MM || !MM.isSessionLive) return void(BM = !1);
+      const rM = 0 !== (UM.v.playerFlags(MM.api.apiView, 0) & UM.yd.FreeCam);
+      rM !== BM && (BM = rM, (0, FM.e)(rM))
     }
-    var ZQ = XQ(402),
-      OQ = XQ(37311),
-      KQ = XQ(2048);
-    var mQ = XQ(41224),
-      MQ = XQ(40871);
-    const QW = {
+    var KM = iM(332),
+      qM = iM(37975),
+      TM = iM(2078);
+    var VM = iM(42119),
+      cM = iM(41723);
+    const Mr = {
       interactPrompt: null,
       blockText: null,
       neededTool: null
     };
-    let WW = "off";
+    let rr = "off";
 
-    function XW(QQ) {
-      var WQ;
-      return null === QQ ? null : {
-        label: null !== (WQ = (0, mQ.b)(QQ, "interactionPrompt")) && void 0 !== WQ ? WQ : null
+    function ir(MM) {
+      var rM;
+      return null === MM ? null : {
+        label: null !== (rM = (0, VM.d)(MM, "interactionPrompt")) && void 0 !== rM ? rM : null
       }
     }
-    const wW = new Map([
-      [GQ.Sc.Open, {
-        label: FQ.f.open
+    const Or = new Map([
+      [UM.ic.Open, {
+        label: nM.f.open
       }],
-      [GQ.Sc.Close, {
-        label: FQ.f.close
+      [UM.ic.Close, {
+        label: nM.f.close
       }],
-      [GQ.Sc.Milk, {
-        label: FQ.f.milk
+      [UM.ic.Milk, {
+        label: nM.f.milk
       }],
-      [GQ.Sc.Shear, {
-        label: FQ.f.shear
+      [UM.ic.Shear, {
+        label: nM.f.shear
       }],
-      [GQ.Sc.Tame, {
-        label: FQ.f.tame
+      [UM.ic.Tame, {
+        label: nM.f.tame
       }],
-      [GQ.Sc.Feed, {
-        label: FQ.f.feed
+      [UM.ic.Feed, {
+        label: nM.f.feed
       }],
-      [GQ.Sc.Ride, {
-        label: FQ.f.ride
+      [UM.ic.Ride, {
+        label: nM.f.ride
       }]
     ]);
-    class qW {
+    class Sr {
       constructor() {
-        this.target = QW, this.ez = GQ.Ad, this.optionName = null, this.pickaxe = new FQ.c
+        this.target = Mr, this.jP = UM.Pc, this.optionName = null, this.pickaxe = new nM.d
       }
-      read(QQ) {
-        var WQ;
-        const XQ = GQ.x.targetBlockId(QQ.api.apiView, 0);
-        XQ !== this.ez && (this.ez = XQ, this.optionName = XQ === GQ.Ad ? null : `${QQ.tables.getMetaInfo(XQ).rootName}CrosshairText`);
-        const wQ = null === this.optionName ? null : null !== (WQ = QQ.tables.getClientOption(this.optionName)) && void 0 !== WQ ? WQ : null;
-        this.pickaxe.update(function(QQ, WQ) {
-          var XQ, wQ, qQ;
-          if (0 === (GQ.x.playerFlags(QQ.api.apiView, 0) & GQ.ae.Breaking) || WQ === GQ.Ad || 0 === WQ) return null;
+      read(MM) {
+        var rM;
+        const iM = UM.v.targetBlockId(MM.api.apiView, 0);
+        iM !== this.jP && (this.jP = iM, this.optionName = iM === UM.Pc ? null : `${MM.tables.getMetaInfo(iM).rootName}CrosshairText`);
+        const OM = null === this.optionName ? null : null !== (rM = MM.tables.getClientOption(this.optionName)) && void 0 !== rM ? rM : null;
+        this.pickaxe.update(function(MM, rM) {
+          var iM, OM, SM;
+          if (0 === (UM.v.playerFlags(MM.api.apiView, 0) & UM.yd.Breaking) || rM === UM.Pc || 0 === rM) return null;
           const {
-            tables: TQ
-          } = QQ;
-          if (!0 === TQ.getClientOption("creative")) return null;
-          const zQ = TQ.nameOfId(WQ),
-            sQ = null === (XQ = QQ.items.Ds()) || void 0 === XQ ? void 0 : XQ.name,
-            FQ = null !== (wQ = TQ.getItemStat(zQ, "harvestLevel")) && void 0 !== wQ ? wQ : 0;
-          return (0, ZQ.xc)({
-            blockHarvestType: TQ.getDefaultItemStat(zQ, "harvestType"),
-            blockHarvestLevel: TQ.getDefaultItemStat(zQ, "harvestLevel"),
-            harvestLevel: FQ,
-            heldToolType: void 0 === sQ ? void 0 : TQ.getDefaultItemStat(sQ, "harvests"),
-            heldToolLevel: void 0 === sQ ? void 0 : TQ.getDefaultItemStat(sQ, "level")
-          }) && null !== (qQ = OQ.m[FQ]) && void 0 !== qQ ? qQ : null
-        }(QQ, XQ)), QQ.watchPromptPick(WW);
-        const qQ = "touch" === WW ? function(QQ) {
-          var WQ;
-          const XQ = QQ.interactLabel;
-          return XQ === GQ.Sc.Entity ? XW(QQ.promptEntity) : XQ === GQ.Sc.TameWith ? {
-            label: (0, FQ.v)(QQ.tables.nameOfId(QQ.interactIcon))
-          } : null !== (WQ = wW.get(XQ)) && void 0 !== WQ ? WQ : null
-        }(QQ) : XW(QQ.promptEntity);
-        return this.target = (0, KQ.j)(this.target, {
-          interactPrompt: qQ,
-          blockText: wQ,
+            tables: jM
+          } = MM;
+          if (!0 === jM.getClientOption("creative")) return null;
+          const aM = jM.nameOfId(rM),
+            PM = null === (iM = MM.items.sQ()) || void 0 === iM ? void 0 : iM.name,
+            nM = null !== (OM = jM.getItemStat(aM, "harvestLevel")) && void 0 !== OM ? OM : 0;
+          return (0, KM.Bc)({
+            blockHarvestType: jM.getDefaultItemStat(aM, "harvestType"),
+            blockHarvestLevel: jM.getDefaultItemStat(aM, "harvestLevel"),
+            harvestLevel: nM,
+            heldToolType: void 0 === PM ? void 0 : jM.getDefaultItemStat(PM, "harvests"),
+            heldToolLevel: void 0 === PM ? void 0 : jM.getDefaultItemStat(PM, "level")
+          }) && null !== (SM = qM.m[nM]) && void 0 !== SM ? SM : null
+        }(MM, iM)), MM.watchPromptPick(rr);
+        const SM = "touch" === rr ? function(MM) {
+          var rM;
+          const iM = MM.interactLabel;
+          return iM === UM.ic.Entity ? ir(MM.promptEntity) : iM === UM.ic.TameWith ? {
+            label: (0, nM.v)(MM.tables.nameOfId(MM.interactIcon))
+          } : null !== (rM = Or.get(iM)) && void 0 !== rM ? rM : null
+        }(MM) : ir(MM.promptEntity);
+        return this.target = (0, TM.r)(this.target, {
+          interactPrompt: SM,
+          blockText: OM,
           neededTool: this.pickaxe.shown
         }), this.target
       }
     }
-    let TW = null;
-    const zW = {
+    let jr = null;
+    const ar = {
       current: () => {
-        var QQ, WQ;
-        return null !== (QQ = null === (WQ = TW) || void 0 === WQ ? void 0 : WQ.target) && void 0 !== QQ ? QQ : QW
+        var MM, rM;
+        return null !== (MM = null === (rM = jr) || void 0 === rM ? void 0 : rM.target) && void 0 !== MM ? MM : Mr
       },
-      watch: QQ => {
-        const WQ = new qW;
-        TW = WQ;
-        const XQ = (0, IQ.e)((XQ => {
-          let wQ = WQ.read(XQ);
-          QQ(wQ);
-          const qQ = (0, TQ.w)((() => {
-            const qQ = WQ.read(XQ);
-            qQ !== wQ && (wQ = qQ, QQ(qQ))
+      watch: MM => {
+        const rM = new Sr;
+        jr = rM;
+        const iM = (0, HM.h)((iM => {
+          let OM = rM.read(iM);
+          MM(OM);
+          const SM = (0, jM.y)((() => {
+            const SM = rM.read(iM);
+            SM !== OM && (OM = SM, MM(SM))
           }));
           return () => {
-            qQ(), XQ.watchPromptPick("off")
+            SM(), iM.watchPromptPick("off")
           }
         }));
         return () => {
-          XQ(), TW === WQ && (TW = null)
+          iM(), jr === rM && (jr = null)
         }
       }
     };
-    let sW = 0,
-      FW = 0;
-    const PW = {
-        health: FQ.o,
-        aura: FQ.h,
-        hotbar: MQ.d.states.hotbar,
-        heldItemAim: MQ.d.states.heldItemAim,
-        crouching: (0, IQ.c)((QQ => function(QQ) {
-          const WQ = () => 0 !== (GQ.x.playerFlags(QQ.apiView, 0) & GQ.ae.Crouching);
+    let Pr = 0,
+      nr = 0;
+    const Qr = {
+        health: nM.q,
+        aura: nM.h,
+        hotbar: cM.d.states.hotbar,
+        heldItemAim: cM.d.states.heldItemAim,
+        crouching: (0, HM.b)((MM => function(MM) {
+          const rM = () => 0 !== (UM.v.playerFlags(MM.apiView, 0) & UM.yd.Crouching);
           return {
-            current: WQ,
-            watch(QQ) {
-              let XQ = WQ();
-              return (0, TQ.t)((() => {
-                const wQ = WQ();
-                wQ !== XQ && (XQ = wQ, QQ(wQ))
+            current: rM,
+            watch(MM) {
+              let iM = rM();
+              return (0, jM.x)((() => {
+                const OM = rM();
+                OM !== iM && (iM = OM, MM(OM))
               }))
             }
           }
-        }(QQ.api).current), !1, (QQ => (0, TQ.t)(QQ))),
-        flight: (0, IQ.c)((QQ => () => function(QQ) {
-          const WQ = GQ.x.playerFlags(QQ.apiView, 0);
-          return (0, FQ.l)(0 !== (WQ & GQ.ae.CanFly), 0 !== (WQ & GQ.ae.Flying))
-        }(QQ.api)), (0, FQ.l)(!1, !1), (QQ => (0, TQ.t)(QQ))),
-        gliderBoostFuel: (0, IQ.c)((QQ => () => GQ.x.gliderBoostFuel(QQ.api.apiView, 0)), 0, (QQ => (0, TQ.t)(QQ))),
-        crosshairTarget: zW
+        }(MM.api).current), !1, (MM => (0, jM.x)(MM))),
+        flight: (0, HM.b)((MM => () => function(MM) {
+          const rM = UM.v.playerFlags(MM.apiView, 0);
+          return (0, nM.n)(0 !== (rM & UM.yd.CanFly), 0 !== (rM & UM.yd.Flying))
+        }(MM.api)), (0, nM.n)(!1, !1), (MM => (0, jM.x)(MM))),
+        gliderBoostFuel: (0, HM.b)((MM => () => UM.v.gliderBoostFuel(MM.api.apiView, 0)), 0, (MM => (0, jM.x)(MM))),
+        crosshairTarget: ar
       },
-      gW = {
-        hotbarSlotRequested: MQ.d.events.hotbarSlotRequested,
-        hotbarScrolled: MQ.d.events.hotbarScrolled,
-        numberKeyPressed: MQ.d.events.numberKeyPressed,
-        shotDamageToShow: (0, FQ.s)((QQ => !0 === (0, mQ.b)(QQ, "showDamageAmounts")))
+      zr = {
+        hotbarSlotRequested: cM.d.events.hotbarSlotRequested,
+        hotbarScrolled: cM.d.events.hotbarScrolled,
+        numberKeyPressed: cM.d.events.numberKeyPressed,
+        shotDamageToShow: (0, nM.u)((MM => !0 === (0, VM.d)(MM, "showDamageAmounts")))
       },
-      JW = {
-        selectHotbarSlot: MQ.d.commands.selectHotbarSlot,
-        setCrosshairInteractPrompt: QQ => {
-          WW = QQ
+      Lr = {
+        selectHotbarSlot: cM.d.commands.selectHotbarSlot,
+        setCrosshairInteractPrompt: MM => {
+          rr = MM
         }
       },
-      rW = {
+      mr = {
         momentumFrac: function() {
-          var QQ, WQ, XQ;
-          const wQ = (0, zQ.j)(),
-            qQ = performance.now(),
-            TQ = null === wQ || void 0 === wQ || null === (QQ = wQ.items.Ds()) || void 0 === QQ || null === (WQ = QQ.attributes) || void 0 === WQ || null === (XQ = WQ.customAttributes) || void 0 === XQ ? void 0 : XQ.enchantments;
-          return sW = null !== wQ && null !== TQ && void 0 !== TQ && TQ.Momentum ? 0 !== (GQ.x.playerFlags(wQ.api.apiView, 0) & GQ.ae.Breaking) ? Math.max(0, GQ.x.momentumFrac(wQ.api.apiView, 0)) : Math.max(0, sW - (qQ - FW) / 1500) : 0, FW = qQ, sW
+          var MM, rM, iM;
+          const OM = (0, aM.e)(),
+            SM = performance.now(),
+            jM = null === OM || void 0 === OM || null === (MM = OM.items.sQ()) || void 0 === MM || null === (rM = MM.attributes) || void 0 === rM || null === (iM = rM.customAttributes) || void 0 === iM ? void 0 : iM.enchantments;
+          return Pr = null !== OM && null !== jM && void 0 !== jM && jM.Momentum ? 0 !== (UM.v.playerFlags(OM.api.apiView, 0) & UM.yd.Breaking) ? Math.max(0, UM.v.momentumFrac(OM.api.apiView, 0)) : Math.max(0, Pr - (SM - nr) / 1500) : 0, nr = SM, Pr
         }
       };
-    var IW = XQ(40822);
-    const jW = {
-      lobbyManage(QQ) {
-        var WQ;
-        null === (WQ = (0, zQ.j)()) || void 0 === WQ || WQ.send(AQ.d.LobbyManage, QQ)
+    var Hr = iM(41674);
+    const hr = {
+      lobbyManage(MM) {
+        var rM;
+        null === (rM = (0, aM.e)()) || void 0 === rM || rM.send(WM.d.LobbyManage, MM)
       }
     };
-    var BW = XQ(1273),
-      yW = XQ(36809),
-      VW = XQ(9168),
-      DW = XQ(1698),
-      pW = XQ(2506),
-      GW = XQ(5146);
-    let UW = !1;
+    var Jr = iM(1242),
+      dr = iM(34822),
+      yr = iM(9392),
+      lr = iM(1717),
+      Er = iM(2619),
+      Ur = iM(5204);
+    let Gr = !1;
 
-    function bW(QQ) {
-      UW = QQ
+    function Cr(MM) {
+      Gr = MM
     }
 
-    function vW() {
-      "inGame" !== kQ.b.get("gameState") || (0, DW.t)() || PQ.k.mB("ctrlCrouchWithoutFullscreen")
+    function er() {
+      "inGame" !== fM.d.get("gameState") || (0, lr.v)() || QM.i.Tz("ctrlCrouchWithoutFullscreen")
     }
-    let dW = !1;
-    const HW = {
+    let br = !1;
+    const wr = {
         OpenEmoteWheel: () => {
-          bW(!0), dW = !0, queueMicrotask((() => {
-            dW && (dW = !1, PQ.k.mB("requestEmoteWheelHoldOpen"))
+          Cr(!0), br = !0, queueMicrotask((() => {
+            br && (br = !1, QM.i.Tz("requestEmoteWheelHoldOpen"))
           }))
         },
         ToggleFullCoordinateOverlay: () => {
-          PQ.k.mB("toggleFullCoordinateOverlay")
+          QM.i.Tz("toggleFullCoordinateOverlay")
         },
         KeyYPressed: () => {
-          (0, yW.e)() || PQ.k.mB("YKeyPressed")
+          (0, dr.b)() || QM.i.Tz("YKeyPressed")
         },
         KeyXPressed: () => {
-          (0, yW.e)() || PQ.k.mB("XKeyPressed")
+          (0, dr.b)() || QM.i.Tz("XKeyPressed")
         },
-        CtrlCrouch: vW,
+        CtrlCrouch: er,
         "primary-fire": () => {
-          PQ.k.mB("mouseState", {
-            kg: BW.d.DownFirePrimary,
+          QM.i.Tz("mouseState", {
+            ba: Jr.c.DownFirePrimary,
             isDown: !0
           })
         },
         "alt-fire": () => {
-          PQ.k.mB("mouseState", {
-            kg: BW.d.DownFireSecondary,
+          QM.i.Tz("mouseState", {
+            ba: Jr.c.DownFireSecondary,
             isDown: !0
           })
         },
         TouchHold: () => {
-          PQ.k.mB("mouseState", {
-            kg: BW.d.TouchDownLong,
+          QM.i.Tz("mouseState", {
+            ba: Jr.c.TouchDownLong,
             isDown: !0
           })
         }
       },
-      aW = {
+      tr = {
         OpenEmoteWheel: () => {
-          bW(!1), dW ? (dW = !1, (0, VW.b)() || PQ.k.mB("requestEmoteWheelHoldOpen")) : PQ.k.mB("requestEmoteWheelHoldRelease")
+          Cr(!1), br ? (br = !1, (0, yr.e)() || QM.i.Tz("requestEmoteWheelHoldOpen")) : QM.i.Tz("requestEmoteWheelHoldRelease")
         },
-        CtrlCrouch: vW,
+        CtrlCrouch: er,
         "primary-fire": () => {
-          PQ.k.mB("mouseState", {
-            kg: BW.d.UpFirePrimary,
+          QM.i.Tz("mouseState", {
+            ba: Jr.c.UpFirePrimary,
             isDown: !1
           })
         },
         "alt-fire": () => {
-          PQ.k.mB("mouseState", {
-            kg: BW.d.UpFireSecondary,
+          QM.i.Tz("mouseState", {
+            ba: Jr.c.UpFireSecondary,
             isDown: !1
           })
         },
         TouchDig: () => {
-          PQ.k.mB("mouseState", {
-            kg: BW.d.UpFirePrimary,
+          QM.i.Tz("mouseState", {
+            ba: Jr.c.UpFirePrimary,
             isDown: !1
           })
         }
       };
-    let lW = !1;
+    let gr = !1;
 
-    function hW() {
-      lW || (lW = !0, (0, GW.j)((QQ => {
-        if ((0, qQ.c)()) return;
-        const WQ = (0, GW.h)(QQ) ? "primary-fire" : QQ.action;
-        var XQ;
-        if (QQ.down) {
-          if (0 === (QQ.flags & pW.e.Synthetic)) {
-            var wQ;
-            null === (wQ = HW[WQ]) || void 0 === wQ || wQ.call(HW)
+    function ur() {
+      gr || (gr = !0, (0, Ur.f)((MM => {
+        if ((0, SM.d)()) return;
+        const rM = (0, Ur.e)(MM) ? "primary-fire" : MM.action;
+        var iM;
+        if (MM.down) {
+          if (0 === (MM.flags & Er.d.Synthetic)) {
+            var OM;
+            null === (OM = wr[rM]) || void 0 === OM || OM.call(wr)
           }
-        } else null === (XQ = aW[WQ]) || void 0 === XQ || XQ.call(aW)
+        } else null === (iM = tr[rM]) || void 0 === iM || iM.call(tr)
       })))
     }
-    var iW = XQ(382),
-      cW = XQ(105),
-      AW = XQ(43),
-      RW = XQ(41094),
-      EW = XQ(1376),
-      CW = XQ(2526);
-    let uW = !1;
-    const LW = {
-      sendCodeCollab(QQ) {
-        var WQ;
-        null === (WQ = (0, zQ.j)()) || void 0 === WQ || WQ.send(AQ.d.CodeCollab, (0, AQ.m)(QQ), (0, CW.d)(QQ))
+    var Rr = iM(313),
+      pr = iM(83),
+      Wr = iM(30),
+      sr = iM(41975),
+      Dr = iM(1373),
+      kr = iM(2633);
+    let Zr = !1;
+    const or = {
+      sendCodeCollab(MM) {
+        var rM;
+        null === (rM = (0, aM.e)()) || void 0 === rM || rM.send(WM.d.CodeCollab, (0, WM.l)(MM), (0, kr.d)(MM))
       }
     };
-    var kW = XQ(39373),
-      fW = XQ(9101);
-    let SW = null,
-      tW = !1,
-      oW = null;
+    var fr = iM(40140),
+      Yr = iM(9331);
+    let Nr = null,
+      Ar = !1,
+      xr = null;
 
-    function eW() {
-      return "inGame" === kQ.b.get("gameState") && !(0, yW.e)()
+    function vr() {
+      return "inGame" === fM.d.get("gameState") && !(0, dr.b)()
     }
-    const nW = {
-        OpenInventory: QQ => {
-          (0, DW.A)(QQ, "inventory", (0, IW.k)())
+    const Fr = {
+        OpenInventory: MM => {
+          (0, lr.C)(MM, "inventory", (0, Hr.m)())
         },
-        OpenShop: QQ => {
-          SW && eW() && (0, DW.w)(QQ, iW.r.SHOP, !SW.shopIsEmpty(pQ.e.get("shopInfo")))
+        OpenShop: MM => {
+          Nr && vr() && (0, lr.B)(MM, Rr.m.SHOP, !Nr.shopIsEmpty(EM.d.get("shopInfo")))
         },
-        OpenLobbyLeaderboard: QQ => {
-          eW() && (0, DW.w)(QQ, iW.r.LOBBY_LEADERBOARD, (0, kW.b)({
-            lobbyLeaderboardInfo: pQ.e.get("lobbyLeaderboardInfo"),
-            lobbyManage: pQ.e.get("lobbyManage")
+        OpenLobbyLeaderboard: MM => {
+          vr() && (0, lr.B)(MM, Rr.m.LOBBY_LEADERBOARD, (0, fr.d)({
+            lobbyLeaderboardInfo: EM.d.get("lobbyLeaderboardInfo"),
+            lobbyManage: EM.d.get("lobbyManage")
           }))
         },
-        OpenTasksAndLeaderboard: QQ => {
-          var WQ;
-          const XQ = null === (WQ = SW) || void 0 === WQ ? void 0 : WQ.getClientGameMapKey();
-          XQ ? (0, DW.C)(QQ, !0, XQ) : (0, DW.A)(QQ, "retentionFeatures", !(!pQ.e.get("_tasks") && !pQ.e.get("_availableLeaderboards")))
+        OpenTasksAndLeaderboard: MM => {
+          var rM;
+          const iM = null === (rM = Nr) || void 0 === rM ? void 0 : rM.getClientGameMapKey();
+          iM ? (0, lr.E)(MM, !0, iM) : (0, lr.C)(MM, "retentionFeatures", !(!EM.d.get("_tasks") && !EM.d.get("_availableLeaderboards")))
         },
-        OpenInviteLink: QQ => {
-          (0, DW.A)(QQ, "inviteLink", cW.featureFlags.canUseInviteLinks)
+        OpenInviteLink: MM => {
+          (0, lr.C)(MM, "inviteLink", pr.featureFlags.canUseInviteLinks)
         },
-        OpenCodeEditor: QQ => {
-          eW() && function(QQ) {
-            const WQ = (0, zQ.j)(),
-              XQ = null !== WQ && void 0 !== WQ && WQ.isSessionLive ? WQ.api : null,
-              wQ = XQ ? XQ.xV(XQ.localId) : null;
-            (0, DW.C)(QQ, null !== wQ && (0, CW.c)((0, EW.e)()), (() => {
-              (0, CW.h)(wQ)
+        OpenCodeEditor: MM => {
+          vr() && function(MM) {
+            const rM = (0, aM.e)(),
+              iM = null !== rM && void 0 !== rM && rM.isSessionLive ? rM.api : null,
+              OM = iM ? iM.XE(iM.localId) : null;
+            (0, lr.E)(MM, null !== OM && (0, kr.b)((0, Dr.e)()), (() => {
+              (0, kr.e)(OM)
             }))
-          }(QQ)
+          }(MM)
         },
         HideUi: () => {
-          PQ.k.mB("showUi", !1)
+          QM.i.Tz("showUi", !1)
         }
       },
-      xW = {
+      Br = {
         HideUi: () => {
-          PQ.k.mB("showUi", !0)
+          QM.i.Tz("showUi", !0)
         }
       };
 
-    function YW() {
-      tW || (tW = !0, XQ.e(161).then((() => XQ(60851))).then((QQ => {
-        SW = QQ
-      }), (QQ => {
-        console.error("[bloxd-wasm-client] the menu keys' checks did not load", QQ)
-      })), (0, RW.x)((QQ => {
-        QQ || !(0, RW.h)() || (0, cW.isMobile)() || !AW.i.getItem("disableFullscreen") || (0, DW.r)() || kQ.b.set({
-          openEverythingMenuName: iW.r.SETTINGS
+    function Xr() {
+      Ar || (Ar = !0, iM.e(173).then((() => iM(63222))).then((MM => {
+        Nr = MM
+      }), (MM => {
+        console.error("[bloxd-wasm-client] the menu keys' checks did not load", MM)
+      })), (0, sr.z)((MM => {
+        MM || !(0, sr.h)() || (0, pr.isMobile)() || !Wr.g.getItem("disableFullscreen") || (0, lr.r)() || fM.d.set({
+          openEverythingMenuName: Rr.m.SETTINGS
         })
-      })), (0, GW.j)((QQ => {
+      })), (0, Ur.f)((MM => {
         let {
-          action: WQ,
-          down: XQ,
-          press: wQ
-        } = QQ;
-        var TQ, zQ;
-        (0, qQ.c)() || (XQ ? null === (TQ = nW[WQ]) || void 0 === TQ || TQ.call(nW, function(QQ) {
-          var WQ;
-          if (0 === QQ || (null === (WQ = oW) || void 0 === WQ ? void 0 : WQ.press) !== QQ) {
-            const WQ = {
-              press: QQ,
-              event: (0, fW.d)("inputAction")
+          action: rM,
+          down: iM,
+          press: OM
+        } = MM;
+        var jM, aM;
+        (0, SM.d)() || (iM ? null === (jM = Fr[rM]) || void 0 === jM || jM.call(Fr, function(MM) {
+          var rM;
+          if (0 === MM || (null === (rM = xr) || void 0 === rM ? void 0 : rM.press) !== MM) {
+            const rM = {
+              press: MM,
+              event: (0, Yr.d)("inputAction")
             };
-            oW = WQ, queueMicrotask((() => {
-              oW === WQ && (oW = null)
+            xr = rM, queueMicrotask((() => {
+              xr === rM && (xr = null)
             }))
           }
-          return oW.event
-        }(wQ)) : null === (zQ = xW[WQ]) || void 0 === zQ || zQ.call(xW))
+          return xr.event
+        }(OM)) : null === (aM = Br[rM]) || void 0 === aM || aM.call(Br))
       })))
     }
-    var NW = XQ(39301),
-      ZW = XQ(39289),
-      OW = XQ(39287);
-    const KW = {
-      completeTask(QQ) {
-        var WQ;
-        null === (WQ = (0, zQ.j)()) || void 0 === WQ || WQ.send(AQ.d.CompleteTask, (0, AQ.p)(QQ))
+    var Ir = iM(40059),
+      Kr = iM(40048),
+      qr = iM(40043);
+    const Tr = {
+      completeTask(MM) {
+        var rM;
+        null === (rM = (0, aM.e)()) || void 0 === rM || rM.send(WM.d.CompleteTask, (0, WM.n)(MM))
       },
-      setServerCookie(QQ) {
-        var WQ;
+      setServerCookie(MM) {
+        var rM;
         let {
-          key: XQ,
-          value: wQ
-        } = QQ;
-        null === (WQ = (0, zQ.j)()) || void 0 === WQ || WQ.send(AQ.d.GeneralCookieSet, (0, AQ.s)({
-          Oz: XQ,
-          Kz: wQ
+          key: iM,
+          value: OM
+        } = MM;
+        null === (rM = (0, aM.e)()) || void 0 === rM || rM.send(WM.d.GeneralCookieSet, (0, WM.s)({
+          Ja: iM,
+          da: OM
         }))
       },
-      answerUiRequest(QQ) {
-        var WQ;
+      answerUiRequest(MM) {
+        var rM;
         let {
-          id: XQ,
-          yg: wQ
-        } = QQ;
-        null === (WQ = (0, zQ.j)()) || void 0 === WQ || WQ.send(AQ.d.UiRequestResp, (0, AQ.S)({
-          gF: XQ,
-          JF: wQ,
-          rF: 5
+          id: iM,
+          IQ: OM
+        } = MM;
+        null === (rM = (0, aM.e)()) || void 0 === rM || rM.send(WM.d.UiRequestResp, (0, WM.S)({
+          fa: iM,
+          Ya: OM,
+          Na: 5
         }))
       },
-      chooseRewardedAd(QQ) {
-        var WQ;
+      chooseRewardedAd(MM) {
+        var rM;
         let {
-          id: XQ,
-          yg: wQ
-        } = QQ;
-        null === (WQ = (0, zQ.j)()) || void 0 === WQ || WQ.send(AQ.d.UiRequestResponded, (0, AQ.Q)({
-          id: XQ,
-          yg: wQ
+          id: iM,
+          IQ: OM
+        } = MM;
+        null === (rM = (0, aM.e)()) || void 0 === rM || rM.send(WM.d.UiRequestResponded, (0, WM.P)({
+          id: iM,
+          IQ: OM
         }))
       },
-      requestLeaderboard(QQ) {
-        var WQ;
+      requestLeaderboard(MM) {
+        var rM;
         let {
-          category: XQ,
-          timeframe: wQ,
-          seeTop: qQ
-        } = QQ;
-        null === (WQ = (0, zQ.j)()) || void 0 === WQ || WQ.send(AQ.d.LeaderboardRequest, {
-          category: XQ,
-          timeframe: wQ,
-          seeTop: qQ
+          category: iM,
+          timeframe: OM,
+          seeTop: SM
+        } = MM;
+        null === (rM = (0, aM.e)()) || void 0 === rM || rM.send(WM.d.LeaderboardRequest, {
+          category: iM,
+          timeframe: OM,
+          seeTop: SM
         })
       }
     };
-    let mW = !1;
-    const MW = DQ.h.ny / 2,
-      QX = [MW, -MW, -MW, -MW, MW, MW, -MW, MW],
-      WX = [0, 0, 0];
+    let Vr = !1;
+    const cr = lM.f.Sy / 2,
+      Mi = [cr, -cr, -cr, -cr, cr, cr, -cr, cr],
+      ri = [0, 0, 0];
 
-    function XX(QQ, WQ, XQ) {
-      for (let wQ = 0; wQ < QQ.length; wQ += 2)
-        if (QQ[wQ] === WQ && QQ[wQ + 1] === XQ) return !0;
+    function ii(MM, rM, iM) {
+      for (let OM = 0; OM < MM.length; OM += 2)
+        if (MM[OM] === rM && MM[OM + 1] === iM) return !0;
       return !1
     }
-    const wX = {
+    const Oi = {
       blocksStandingOn: function() {
-        const QQ = (0, zQ.j)();
-        if (null === QQ) return [];
+        const MM = (0, aM.e)();
+        if (null === MM) return [];
         const {
-          api: WQ,
-          chunks: XQ,
-          tables: wQ
-        } = QQ;
-        if (!WQ.readPosition(WQ.localId, WX)) return [];
-        const [qQ, TQ, sQ] = WX, FQ = Math.ceil(TQ) - 1, PQ = [], gQ = [];
-        for (let zQ = 0; zQ < QX.length; zQ += 2) {
-          const QQ = qQ + QX[zQ],
-            WQ = sQ + QX[zQ + 1];
-          if (Number.isInteger(QQ) || Number.isInteger(WQ)) continue;
-          const TQ = Math.floor(QQ),
-            JQ = Math.floor(WQ);
-          if (XX(gQ, TQ, JQ)) continue;
-          const rQ = XQ.ez(TQ, FQ, JQ);
-          wQ.isSolidBlockId(rQ) && (gQ.push(TQ, JQ), PQ.push(wQ.nameOfId(rQ)))
+          api: rM,
+          chunks: iM,
+          tables: OM
+        } = MM;
+        if (!rM.readPosition(rM.localId, ri)) return [];
+        const [SM, jM, PM] = ri, nM = Math.ceil(jM) - 1, QM = [], zM = [];
+        for (let aM = 0; aM < Mi.length; aM += 2) {
+          const MM = SM + Mi[aM],
+            rM = PM + Mi[aM + 1];
+          if (Number.isInteger(MM) || Number.isInteger(rM)) continue;
+          const jM = Math.floor(MM),
+            LM = Math.floor(rM);
+          if (ii(zM, jM, LM)) continue;
+          const mM = iM.jP(jM, nM, LM);
+          OM.isSolidBlockId(mM) && (zM.push(jM, LM), QM.push(OM.nameOfId(mM)))
         }
-        return PQ
+        return QM
       },
       dropAhead: function() {
-        const QQ = (0, zQ.j)();
-        return null !== QQ && 0 !== (GQ.x.playerFlags(QQ.api.apiView, 0) & GQ.ae.DropAhead)
+        const MM = (0, aM.e)();
+        return null !== MM && 0 !== (UM.v.playerFlags(MM.api.apiView, 0) & UM.yd.DropAhead)
       }
     };
-    var qX = XQ(37224),
-      TX = XQ(39354),
-      zX = XQ(1404),
-      sX = XQ(40883);
-    const FX = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
-      PX = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
+    var Si = iM(37876),
+      ji = iM(40118),
+      ai = iM(1429),
+      Pi = iM(41734);
+    const ni = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
+      Qi = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
 
-    function gX() {
-      const QQ = new Set;
+    function zi() {
+      const MM = new Set;
       return {
-        add: WQ => (QQ.add(WQ), () => {
-          QQ.delete(WQ)
+        add: rM => (MM.add(rM), () => {
+          MM.delete(rM)
         }),
         fire() {
-          for (const WQ of QQ) WQ()
+          for (const rM of MM) rM()
         }
       }
     }
-    const JX = Object.freeze([]);
+    const Li = Object.freeze([]);
 
-    function rX(QQ, WQ) {
-      let XQ, {
-        rereads: wQ,
-        followLocalId: qQ
-      } = WQ;
-      const zQ = () => (XQ = (0, KQ.j)(XQ, QQ()), XQ);
+    function mi(MM, rM) {
+      let iM, {
+        rereads: OM,
+        followLocalId: SM
+      } = rM;
+      const aM = () => (iM = (0, TM.r)(iM, MM()), iM);
       return {
-        current: zQ,
-        watch(QQ) {
-          const WQ = (0, jQ.d)((WQ => {
-            wQ(WQ) && QQ(zQ())
+        current: aM,
+        watch(MM) {
+          const rM = (0, hM.c)((rM => {
+            OM(rM) && MM(aM())
           }));
-          if (!qQ) return WQ;
-          let XQ = (0, IQ.d)();
-          const sQ = (0, TQ.w)((() => {
-            const WQ = (0, IQ.d)();
-            WQ !== XQ && (XQ = WQ, QQ(zQ()))
+          if (!SM) return rM;
+          let iM = (0, HM.f)();
+          const PM = (0, jM.y)((() => {
+            const rM = (0, HM.f)();
+            rM !== iM && (iM = rM, MM(aM()))
           }));
           return () => {
-            WQ(), sQ()
+            rM(), PM()
           }
         }
       }
     }
-    const IX = {
-        players: rX((function() {
-          const QQ = jQ.f.ids(),
-            WQ = {};
-          for (const TQ of QQ) {
-            var XQ, wQ, qQ;
-            WQ[TQ] = {
-              name: null !== (XQ = jQ.f.getName(TQ)) && void 0 !== XQ ? XQ : null,
-              ranks: null !== (wQ = jQ.f.getSetting(TQ, "ranks")) && void 0 !== wQ ? wQ : JX,
-              cosmetics: null !== (qQ = (0, jQ.g)(TQ)) && void 0 !== qQ ? qQ : null
+    const Hi = {
+        players: mi((function() {
+          const MM = hM.e.ids(),
+            rM = {};
+          for (const jM of MM) {
+            var iM, OM, SM;
+            rM[jM] = {
+              name: null !== (iM = hM.e.getName(jM)) && void 0 !== iM ? iM : null,
+              ranks: null !== (OM = hM.e.getSetting(jM, "ranks")) && void 0 !== OM ? OM : Li,
+              cosmetics: null !== (SM = (0, hM.g)(jM)) && void 0 !== SM ? SM : null
             }
           }
           return {
-            ids: QQ,
-            byId: WQ,
-            localId: (0, IQ.d)()
+            ids: MM,
+            byId: rM,
+            localId: (0, HM.f)()
           }
         }), {
-          rereads: QQ => "roster" !== QQ.kind || QQ.members || QQ.settings.has("ranks"),
+          rereads: MM => "roster" !== MM.kind || MM.members || MM.settings.has("ranks"),
           followLocalId: !0
         }),
-        lobbyLeaderboardRows: rX((function() {
-          const QQ = {};
-          for (const qQ of jQ.f.ids()) {
-            var WQ, XQ, wQ;
-            QQ[qQ] = {
-              colour: null !== (WQ = jQ.f.getSetting(qQ, "colorInLobbyLeaderboard")) && void 0 !== WQ ? WQ : null,
-              values: null !== (XQ = jQ.f.getSetting(qQ, "lobbyLeaderboardValues")) && void 0 !== XQ ? XQ : null,
-              tags: null !== (wQ = jQ.f.getSetting(qQ, "lobbyLeaderboardTags")) && void 0 !== wQ ? wQ : null
+        lobbyLeaderboardRows: mi((function() {
+          const MM = {};
+          for (const SM of hM.e.ids()) {
+            var rM, iM, OM;
+            MM[SM] = {
+              colour: null !== (rM = hM.e.getSetting(SM, "colorInLobbyLeaderboard")) && void 0 !== rM ? rM : null,
+              values: null !== (iM = hM.e.getSetting(SM, "lobbyLeaderboardValues")) && void 0 !== iM ? iM : null,
+              tags: null !== (OM = hM.e.getSetting(SM, "lobbyLeaderboardTags")) && void 0 !== OM ? OM : null
             }
           }
-          return QQ
+          return MM
         }), {
-          rereads: function(QQ) {
-            if ("roster" !== QQ.kind) return "reset" === QQ.kind;
+          rereads: function(MM) {
+            if ("roster" !== MM.kind) return "reset" === MM.kind;
             const {
-              members: WQ,
-              settings: XQ
-            } = QQ;
-            return WQ || XQ.has("colorInLobbyLeaderboard") || XQ.has("lobbyLeaderboardValues") || XQ.has("lobbyLeaderboardTags")
+              members: rM,
+              settings: iM
+            } = MM;
+            return rM || iM.has("colorInLobbyLeaderboard") || iM.has("lobbyLeaderboardValues") || iM.has("lobbyLeaderboardTags")
           },
           followLocalId: !1
         })
       },
-      jX = {
+      Ji = {
         cosmeticsUpdated: {
-          watch: QQ => (0, jQ.d)((WQ => {
-            if ("cosmetics" !== WQ.kind) return;
-            const XQ = (0, IQ.d)();
-            QQ(WQ.updates.map((QQ => {
+          watch: MM => (0, hM.c)((rM => {
+            if ("cosmetics" !== rM.kind) return;
+            const iM = (0, HM.f)();
+            MM(rM.updates.map((MM => {
               let {
-                vT: WQ,
-                dT: wQ,
-                HT: qQ
-              } = QQ;
+                Xi: rM,
+                Ii: OM,
+                Ki: SM
+              } = MM;
               return {
-                local: WQ === XQ,
-                dT: wQ,
-                HT: qQ
+                local: rM === iM,
+                Ii: OM,
+                Ki: SM
               }
             })))
           }))
         }
       };
-    var BX = XQ(3158),
-      yX = XQ(1802),
-      VX = XQ(698),
-      DX = XQ(41139);
-    let pX = !1,
-      GX = null;
-    const UX = {
-      setShopOpen(QQ) {
-        var WQ;
-        null === (WQ = (0, zQ.j)()) || void 0 === WQ || WQ.send(AQ.d.ShopMenuChanged, (0, AQ.I)(QQ))
+    var di = iM(3241),
+      yi = iM(1830),
+      li = iM(673),
+      Ei = iM(42031);
+    let Ui = !1,
+      Gi = null;
+    const Ci = {
+      setShopOpen(MM) {
+        var rM;
+        null === (rM = (0, aM.e)()) || void 0 === rM || rM.send(WM.d.ShopMenuChanged, (0, WM.N)(MM))
       },
-      buyShopItem(QQ) {
-        var WQ;
+      buyShopItem(MM) {
+        var rM;
         let {
-          categoryKey: XQ,
-          itemKey: wQ,
-          userInput: qQ
-        } = QQ;
-        null === (WQ = (0, zQ.j)()) || void 0 === WQ || WQ.send(AQ.d.ItemBought, {
-          categoryKey: XQ,
-          itemKey: wQ,
-          shopVersion: pQ.e.get("_shopVersion"),
-          userInput: qQ
+          categoryKey: iM,
+          itemKey: OM,
+          userInput: SM
+        } = MM;
+        null === (rM = (0, aM.e)()) || void 0 === rM || rM.send(WM.d.ItemBought, {
+          categoryKey: iM,
+          itemKey: OM,
+          shopVersion: EM.d.get("_shopVersion"),
+          userInput: SM
         })
       }
     };
-    let bX = !1;
-    var vX = XQ(5153);
-    const dX = pW.x.LookFrozen | pW.x.ClicksSuppressed;
+    let ei = !1;
+    var bi = iM(5214);
+    const wi = Er.C.LookFrozen | Er.C.ClicksSuppressed;
 
-    function HX(QQ, WQ) {
-      var XQ;
-      null !== (XQ = (0, zQ.j)()) && void 0 !== XQ && XQ.send(QQ, WQ) || console.warn(`[bloxd-wasm-client] message ${QQ} not sent: no live game or the core's command ring is full`)
-    }(0, BQ.j)(cQ.ab, (QQ => {
-      const WQ = (0, RQ.d)(cQ.ab, QQ);
-      void 0 !== WQ && PQ.k.mB("setDiscordReportKey", WQ)
+    function ti(MM, rM) {
+      var iM;
+      null !== (iM = (0, aM.e)()) && void 0 !== iM && iM.send(MM, rM) || console.warn(`[bloxd-wasm-client] message ${MM} not sent: no live game or the core's command ring is full`)
+    }(0, JM.h)(pM.gb, (MM => {
+      const rM = (0, sM.d)(pM.gb, MM);
+      void 0 !== rM && QM.i.Tz("setDiscordReportKey", rM)
     }));
-    const aX = {
-      ignorePlayer(QQ) {
-        HX(AQ.d.IgnoreUser, (0, AQ.t)({
-          IF: QQ
+    const gi = {
+      ignorePlayer(MM) {
+        ti(WM.d.IgnoreUser, (0, WM.w)({
+          KQ: MM
         }))
       },
-      reportPlayer(QQ) {
+      reportPlayer(MM) {
         let {
-          playerId: WQ,
-          chatMsgId: XQ,
-          mz: wQ,
-          details: qQ
-        } = QQ;
-        HX(AQ.d.UserReport, (0, AQ.bb)({
-          Ig: WQ,
-          jg: XQ,
-          mz: wQ,
-          Mz: qQ
+          playerId: rM,
+          chatMsgId: iM,
+          lQ: OM,
+          details: SM
+        } = MM;
+        ti(WM.d.UserReport, (0, WM.ab)({
+          dQ: rM,
+          yQ: iM,
+          lQ: OM,
+          EQ: SM
         }))
       },
-      reportWorldCodeChat(QQ) {
+      reportWorldCodeChat(MM) {
         let {
-          chatMsgId: WQ,
-          mz: XQ,
-          details: wQ
-        } = QQ;
-        HX(AQ.d.UserReport, (0, AQ.bb)({
-          Ig: "",
-          jg: WQ,
-          mz: XQ,
-          Mz: wQ
+          chatMsgId: rM,
+          lQ: iM,
+          details: OM
+        } = MM;
+        ti(WM.d.UserReport, (0, WM.ab)({
+          dQ: "",
+          yQ: rM,
+          lQ: iM,
+          EQ: OM
         }))
       },
-      requestDiscordReportKey(QQ) {
-        HX(AQ.d.ReqDiscordReportKey, (0, AQ.F)(QQ))
+      requestDiscordReportKey(MM) {
+        ti(WM.d.ReqDiscordReportKey, (0, WM.H)(MM))
       },
-      reportLobbyOrGame(QQ) {
+      reportLobbyOrGame(MM) {
         let {
-          target: WQ,
-          mz: XQ,
-          details: wQ
-        } = QQ;
-        "customGame" === WQ ? HX(AQ.d.CustomGameReport, (0, AQ.r)({
-          mz: XQ,
-          Mz: wQ
-        })) : HX(AQ.d.LobbyReport, (0, AQ.x)({
-          mz: XQ,
-          Mz: wQ
+          target: rM,
+          lQ: iM,
+          details: OM
+        } = MM;
+        "customGame" === rM ? ti(WM.d.CustomGameReport, (0, WM.p)({
+          lQ: iM,
+          EQ: OM
+        })) : ti(WM.d.LobbyReport, (0, WM.A)({
+          lQ: iM,
+          EQ: OM
         }))
       },
-      updateMyCosmetic(QQ) {
-        HX(AQ.d.UpdateMyCosmetic, (0, AQ.$)(QQ))
+      updateMyCosmetic(MM) {
+        ti(WM.d.UpdateMyCosmetic, (0, WM._)(MM))
       },
-      holdEmoteWheel(QQ) {
-        !QQ || UW ? (0, vX.i)(dX, QQ ? dX : 0) : PQ.k.mB("requestEmoteWheelHoldRelease")
+      holdEmoteWheel(MM) {
+        !MM || Gr ? (0, bi.k)(wi, MM ? wi : 0) : QM.i.Tz("requestEmoteWheelHoldRelease")
       }
     };
-    var lX = XQ(41229),
-      hX = XQ(9580),
-      iX = XQ(39895);
-    const cX = [0, 0, 0],
-      AX = [0, 0, 0],
-      RX = [0, 0, 0],
-      EX = {
-        blockAtViewPoint(QQ) {
+    var ui = iM(42126),
+      Ri = iM(9816),
+      Wi = iM(40745);
+    const si = [0, 0, 0],
+      Di = [0, 0, 0],
+      ki = [0, 0, 0],
+      Zi = {
+        blockAtViewPoint(MM) {
           let {
-            x: WQ,
-            y: XQ
-          } = QQ;
-          const wQ = (0, zQ.j)();
-          if (null === wQ || void 0 === wQ || !wQ.renderFrame.hasView) return null;
+            x: rM,
+            y: iM
+          } = MM;
+          const OM = (0, aM.e)();
+          if (null === OM || void 0 === OM || !OM.renderFrame.hasView) return null;
           const {
-            renderFrame: qQ,
-            clientApi: TQ,
-            api: sQ
-          } = wQ;
-          let FQ = 0;
-          return (0, iX.g)(((QQ, WQ, XQ) => (FQ = TQ.getBlockId(QQ, WQ, XQ), 0 !== FQ)), qQ.cameraPosition, (0, iX.j)((QQ => GQ.x.viewProj(sQ.apiView, 0, QQ)), WQ, XQ, cX), iX.e, AX, RX) ? {
-            pos: [AX[0], AX[1], AX[2]],
-            normal: [RX[0], RX[1], RX[2]],
-            name: (0, hX.f)(FQ)
+            renderFrame: SM,
+            clientApi: jM,
+            api: PM
+          } = OM;
+          let nM = 0;
+          return (0, Wi.f)(((MM, rM, iM) => (nM = jM.getBlockId(MM, rM, iM), 0 !== nM)), SM.cameraPosition, (0, Wi.g)((MM => UM.v.viewProj(PM.apiView, 0, MM)), rM, iM, si), Wi.b, Di, ki) ? {
+            pos: [Di[0], Di[1], Di[2]],
+            normal: [ki[0], ki[1], ki[2]],
+            name: (0, Ri.g)(nM)
           } : null
         }
       },
-      CX = {
-        setBlockHighlight(QQ) {
-          var WQ;
-          null === (WQ = (0, zQ.j)()) || void 0 === WQ || WQ.setBlockHighlight(QQ)
+      oi = {
+        setBlockHighlight(MM) {
+          var rM;
+          null === (rM = (0, aM.e)()) || void 0 === rM || rM.setBlockHighlight(MM)
         }
       };
-    var uX = XQ(2015),
-      LX = XQ(41128),
-      kX = XQ(41238),
-      fX = XQ(4806),
-      SX = XQ(4778),
-      tX = XQ(41245),
-      oX = XQ(3555),
-      eX = XQ(3559);
-    let nX = null,
-      xX = null;
+    var fi = iM(2050),
+      Yi = iM(42017),
+      Ni = iM(42135),
+      Ai = iM(4874),
+      xi = iM(4845),
+      vi = iM(42144),
+      Fi = iM(3693),
+      Bi = iM(3698);
+    let Xi = null,
+      Ii = null;
 
-    function YX(QQ) {
-      const WQ = QQ.startsWith(eX.n),
-        [XQ, wQ = XQ, qQ = XQ] = (WQ ? QQ.slice(eX.n.length) : QQ).split(eX.k);
+    function Ki(MM) {
+      const rM = MM.startsWith(Bi.j),
+        [iM, OM = iM, SM = iM] = (rM ? MM.slice(Bi.j.length) : MM).split(Bi.h);
       return {
-        top: XQ,
-        left: wQ,
-        right: qQ,
-        half: WQ
+        top: iM,
+        left: OM,
+        right: SM,
+        half: rM
       }
     }
 
-    function NX(QQ) {
-      const WQ = null === nX ? void 0 : (0, oX.c)(QQ),
-        XQ = void 0 === WQ ? 0 : nX.codes[WQ];
-      return 0 === XQ ? void 0 : nX.pool[XQ - 1]
+    function qi(MM) {
+      const rM = null === Xi ? void 0 : (0, Fi.d)(MM),
+        iM = void 0 === rM ? 0 : Xi.codes[rM];
+      return 0 === iM ? void 0 : Xi.pool[iM - 1]
     }
-    var ZX = XQ(3547),
-      OX = XQ(4770),
-      KX = XQ(4803),
-      mX = XQ(41170),
-      MX = XQ(41248);
-    const Qw = "item:";
-    let Ww = null,
-      Xw = null,
-      ww = null,
-      qw = null,
-      Tw = !1,
-      zw = !1;
+    var Ti = iM(3690),
+      Vi = iM(4835),
+      ci = iM(4868),
+      MO = iM(42053),
+      rO = iM(42151);
+    const iO = "item:";
+    let OO = null,
+      SO = null,
+      jO = null,
+      aO = null,
+      PO = !1,
+      nO = !1;
 
-    function sw() {
-      return zw || (zw = !0, (0, KX.f)().then((QQ => {
-        QQ && (0, uX.c)()
-      }))), ww ??= Promise.all([(0, ZX.e)(), (xX ??= XQ.e(1).then((() => XQ(60865))).then((QQ => {
+    function QO() {
+      return nO || (nO = !0, (0, ci.j)().then((MM => {
+        MM && (0, fi.c)()
+      }))), jO ??= Promise.all([(0, Ti.h)(), (Ii ??= iM.e(1).then((() => iM(63248))).then((MM => {
         let {
-          BLOCK_FACE_RUNS: WQ,
-          BLOCK_FACES: XQ,
-          MAX_FACE_ITEM_ID: wQ
-        } = QQ;
-        nX = {
-          codes: (0, eX.E)(WQ, wQ + 1),
-          pool: XQ.split(eX.v).map(YX)
+          BLOCK_FACE_RUNS: rM,
+          BLOCK_FACES: iM,
+          MAX_FACE_ITEM_ID: OM
+        } = MM;
+        Xi = {
+          codes: (0, Bi.y)(rM, OM + 1),
+          pool: iM.split(Bi.s).map(Ki)
         }
-      }), (QQ => {
-        throw xX = null, QQ
-      })), xX), (0, MX.f)(), XQ.e(206).then((() => XQ(34529)))]).then((QQ => {
-        let [, , WQ, XQ] = QQ;
-        WQ.followBundledTextures(), Ww = WQ, Xw = XQ, (0, uX.c)()
-      }), (QQ => {
-        ww = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", QQ)
-      })), ww
+      }), (MM => {
+        throw Ii = null, MM
+      })), Ii), (0, rO.d)(), iM.e(224).then((() => iM(35037)))]).then((MM => {
+        let [, , rM, iM] = MM;
+        rM.followBundledTextures(), OO = rM, SO = iM, (0, fi.c)()
+      }), (MM => {
+        jO = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", MM)
+      })), jO
     }
 
-    function Fw(QQ) {
-      var WQ, XQ;
-      return null !== (WQ = null === (XQ = (0, mX.j)()) || void 0 === XQ ? void 0 : XQ.textureUrl(QQ)) && void 0 !== WQ ? WQ : Ww.itemSpriteUrl(QQ)
+    function zO(MM) {
+      var rM, iM;
+      return null !== (rM = null === (iM = (0, MO.f)()) || void 0 === iM ? void 0 : iM.textureUrl(MM)) && void 0 !== rM ? rM : OO.itemSpriteUrl(MM)
     }
 
-    function Pw(QQ) {
-      var WQ, XQ;
-      return null !== (WQ = null === (XQ = (0, mX.j)()) || void 0 === XQ ? void 0 : XQ.textureUrl(QQ)) && void 0 !== WQ ? WQ : Ww.blockTextureUrl(QQ)
+    function LO(MM) {
+      var rM, iM;
+      return null !== (rM = null === (iM = (0, MO.f)()) || void 0 === iM ? void 0 : iM.textureUrl(MM)) && void 0 !== rM ? rM : OO.blockTextureUrl(MM)
     }
 
-    function gw(QQ) {
-      var WQ;
-      return null !== (WQ = (0, ZX.d)(QQ)) && void 0 !== WQ ? WQ : QQ
+    function mO(MM) {
+      var rM;
+      return null !== (rM = (0, Ti.e)(MM)) && void 0 !== rM ? rM : MM
     }
 
-    function Jw(QQ, WQ) {
-      var XQ, wQ, qQ;
-      return null !== (XQ = null !== (wQ = null !== (qQ = Pw(QQ)) && void 0 !== qQ ? qQ : null === WQ || void 0 === WQ ? void 0 : WQ.rotated[QQ]) && void 0 !== wQ ? wQ : null === WQ || void 0 === WQ ? void 0 : WQ.animated[QQ]) && void 0 !== XQ ? XQ : Ww.notFoundUrl()
+    function HO(MM, rM) {
+      var iM, OM, SM;
+      return null !== (iM = null !== (OM = null !== (SM = LO(MM)) && void 0 !== SM ? SM : null === rM || void 0 === rM ? void 0 : rM.rotated[MM]) && void 0 !== OM ? OM : null === rM || void 0 === rM ? void 0 : rM.animated[MM]) && void 0 !== iM ? iM : OO.notFoundUrl()
     }
 
-    function rw(QQ) {
-      return void 0 !== (0, oX.c)(QQ) ? QQ : /^[1-9][0-9]*$/.test(QQ) ? (0, oX.e)(Number(QQ)) : void 0
+    function hO(MM) {
+      return void 0 !== (0, Fi.d)(MM) ? MM : /^[1-9][0-9]*$/.test(MM) ? (0, Fi.g)(Number(MM)) : void 0
     }
 
-    function Iw(QQ) {
-      var WQ;
-      if (QQ.startsWith(Qw)) {
-        var XQ;
-        const WQ = (0, ZX.d)(QQ.slice(5));
-        return null !== (XQ = void 0 === WQ ? null : Fw(WQ)) && void 0 !== XQ ? XQ : Ww.notFoundUrl()
+    function JO(MM) {
+      var rM;
+      if (MM.startsWith(iO)) {
+        var iM;
+        const rM = (0, Ti.e)(MM.slice(5));
+        return null !== (iM = void 0 === rM ? null : zO(rM)) && void 0 !== iM ? iM : OO.notFoundUrl()
       }
-      return null !== (WQ = Ww.particleUrl(QQ)) && void 0 !== WQ ? WQ : Ww.notFoundUrl()
+      return null !== (rM = OO.particleUrl(MM)) && void 0 !== rM ? rM : OO.notFoundUrl()
     }
 
-    function jw(QQ, WQ) {
-      return "StairsBlock" === QQ ? QQ : WQ ? "SlabBlock" : "CubeBlock"
+    function dO(MM, rM) {
+      return "StairsBlock" === MM ? MM : rM ? "SlabBlock" : "CubeBlock"
     }
-    const Bw = {
-        async blockIcon(QQ) {
-          var WQ;
+    const yO = {
+        async blockIcon(MM) {
+          var rM;
           let {
-            name: wQ,
-            size: qQ,
-            lineWidth: TQ
-          } = QQ;
-          await sw();
-          const zQ = null !== (WQ = rw(wQ)) && void 0 !== WQ ? WQ : wQ,
-            sQ = (0, KX.b)(zQ, qQ, TQ);
-          if (null !== sQ) return sQ;
-          const FQ = NX(zQ),
-            PQ = (0, oX.c)(zQ),
-            gQ = void 0 === PQ || null === Xw ? void 0 : Xw.itemTypeNameOf(PQ);
-          if (null === Ww || void 0 === FQ) return "";
-          const JQ = [FQ.top, FQ.left, FQ.right].some((QQ => null === Pw(QQ))),
-            rQ = JQ ? await (qw ??= XQ.e(213).then((() => XQ(34609))).then((QQ => (Tw && (Tw = !1, (0, uX.c)()), {
-              rotated: QQ.rotatedBlockTextures,
-              animated: QQ.animatedBlockTextures
-            })), (QQ => (qw = null, Tw = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", QQ), null))), qw) : null;
-          if (JQ && null === rQ) return "";
-          const IQ = {
-              top: Jw(FQ.top, rQ),
-              left: Jw(FQ.left, rQ),
-              right: Jw(FQ.right, rQ),
-              itemType: jw(gQ, FQ.half)
+            name: OM,
+            size: SM,
+            lineWidth: jM
+          } = MM;
+          await QO();
+          const aM = null !== (rM = hO(OM)) && void 0 !== rM ? rM : OM,
+            PM = (0, ci.h)(aM, SM, jM);
+          if (null !== PM) return PM;
+          const nM = qi(aM),
+            QM = (0, Fi.d)(aM),
+            zM = void 0 === QM || null === SO ? void 0 : SO.itemTypeNameOf(QM);
+          if (null === OO || void 0 === nM) return "";
+          const LM = [nM.top, nM.left, nM.right].some((MM => null === LO(MM))),
+            mM = LM ? await (aO ??= iM.e(231).then((() => iM(35131))).then((MM => (PO && (PO = !1, (0, fi.c)()), {
+              rotated: MM.rotatedBlockTextures,
+              animated: MM.animatedBlockTextures
+            })), (MM => (aO = null, PO = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", MM), null))), aO) : null;
+          if (LM && null === mM) return "";
+          const HM = {
+              top: HO(nM.top, mM),
+              left: HO(nM.left, mM),
+              right: HO(nM.right, mM),
+              itemType: dO(zM, nM.half)
             },
-            jQ = (0, mX.g)(),
-            BQ = 0 === jQ ? zQ : `${zQ}#${jQ}`;
-          return (await (0, OX.e)()).drawBlockIconUrl(BQ, qQ, TQ, (() => IQ))
+            hM = (0, MO.e)(),
+            JM = 0 === hM ? aM : `${aM}#${hM}`;
+          return (await (0, Vi.b)()).drawBlockIconUrl(JM, SM, jM, (() => HM))
         }
       },
-      yw = {
-        itemIcon: function(QQ) {
-          var WQ, XQ, qQ, TQ;
-          if (null === Ww) return sw(), wQ.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(QQ);
-          if ((0, SX.h)(QQ)) return {
+      lO = {
+        itemIcon: function(MM) {
+          var rM, iM, SM, jM;
+          if (null === OO) return QO(), OM.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(MM);
+          if ((0, xi.h)(MM)) return {
             kind: "icon",
-            url: null !== (XQ = null !== (qQ = null === (TQ = (0, mX.j)()) || void 0 === TQ ? void 0 : TQ.textureUrl(QQ)) && void 0 !== qQ ? qQ : Ww.ingameIconUrl(QQ)) && void 0 !== XQ ? XQ : Ww.notFoundUrl()
+            url: null !== (iM = null !== (SM = null === (jM = (0, MO.f)()) || void 0 === jM ? void 0 : jM.textureUrl(MM)) && void 0 !== SM ? SM : OO.ingameIconUrl(MM)) && void 0 !== iM ? iM : OO.notFoundUrl()
           };
-          if (QQ.startsWith(SX.d)) return {
+          if (MM.startsWith(xi.b)) return {
             kind: "icon",
-            url: Iw(QQ.slice(SX.d.length))
+            url: JO(MM.slice(xi.b.length))
           };
-          if (0 === (0, oX.f)()) return (0, tX.c)(), wQ.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(QQ);
-          const zQ = null !== (WQ = rw(QQ)) && void 0 !== WQ ? WQ : QQ,
-            sQ = (0, oX.c)(zQ),
-            FQ = void 0 === sQ ? void 0 : Xw.itemTypeNameOf(sQ);
-          if (void 0 !== NX(zQ)) return {
+          if (0 === (0, Fi.h)()) return (0, vi.e)(), OM.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(MM);
+          const aM = null !== (rM = hO(MM)) && void 0 !== rM ? rM : MM,
+            PM = (0, Fi.d)(aM),
+            nM = void 0 === PM ? void 0 : SO.itemTypeNameOf(PM);
+          if (void 0 !== qi(aM)) return {
             kind: "drawnBlock"
           };
-          const PQ = function(QQ) {
-            var WQ;
-            return null !== (WQ = Fw(gw(QQ))) && void 0 !== WQ ? WQ : Ww.notFoundUrl()
-          }(zQ);
-          if ((0, KX.e)(zQ) && ! function(QQ) {
-              const WQ = (0, mX.j)();
-              return null !== WQ && (null !== WQ.textureUrl(gw(QQ)) || null !== WQ.modelUrl(QQ))
-            }(zQ)) return {
+          const QM = function(MM) {
+            var rM;
+            return null !== (rM = zO(mO(MM))) && void 0 !== rM ? rM : OO.notFoundUrl()
+          }(aM);
+          if ((0, ci.i)(aM) && ! function(MM) {
+              const rM = (0, MO.f)();
+              return null !== rM && (null !== rM.textureUrl(mO(MM)) || (0, ci.e)(MM).some((MM => null !== rM.modelUrl(MM))))
+            }(aM)) return {
             kind: "model",
-            url: PQ
+            url: QM
           };
-          if ("Gun" === FQ) return {
+          if ("Gun" === nM) return {
             kind: "gun",
-            url: PQ
+            url: QM
           };
-          if (void 0 !== sQ && "GrayscaleArmour" === Xw.itemTypeOf(sQ) || Object.hasOwn(fX.c, zQ)) {
-            var gQ;
-            const WQ = null !== (gQ = (0, fX.d)(QQ)) && void 0 !== gQ ? gQ : (0, fX.d)(zQ);
-            if (WQ) return {
+          if (void 0 !== PM && "GrayscaleArmour" === SO.itemTypeOf(PM) || Object.hasOwn(Ai.d, aM)) {
+            var zM;
+            const rM = null !== (zM = (0, Ai.f)(MM)) && void 0 !== zM ? zM : (0, Ai.f)(aM);
+            if (rM) return {
               kind: "item",
-              url: PQ,
-              tint: WQ
+              url: QM,
+              tint: rM
             }
           }
           return {
             kind: "item",
-            url: PQ
+            url: QM
           }
         },
-        hasIcon: function(QQ) {
-          return void 0 !== rw(QQ) || (0, SX.h)(QQ) || QQ.startsWith(SX.d)
+        hasIcon: function(MM) {
+          return void 0 !== hO(MM) || (0, xi.h)(MM) || MM.startsWith(xi.b)
         },
-        isItemName: function(QQ) {
-          return void 0 !== rw(QQ)
+        isItemName: function(MM) {
+          return void 0 !== hO(MM)
         }
       };
-    var Vw = XQ(651),
-      Dw = XQ(39898);
+    var EO = iM(613),
+      UO = iM(40753);
 
-    function pw(QQ) {
-      if (null === QQ || void 0 === QQ || !QQ.isCoreRunning) return null;
+    function GO(MM) {
+      if (null === MM || void 0 === MM || !MM.isCoreRunning) return null;
       const {
-        api: WQ,
-        chunks: XQ,
-        items: wQ,
-        tables: qQ
-      } = QQ;
+        api: rM,
+        chunks: iM,
+        items: OM,
+        tables: SM
+      } = MM;
       return {
         playerFeet() {
-          const QQ = WQ.xV(WQ.localId);
-          return null !== QQ && void 0 !== QQ && QQ.every(Number.isFinite) ? QQ : null
+          const MM = rM.XE(rM.localId);
+          return null !== MM && void 0 !== MM && MM.every(Number.isFinite) ? MM : null
         },
-        chunkBlocks: QQ => XQ.isLoaded(QQ[0], QQ[1], QQ[2]) ? (QQ, WQ, wQ) => XQ.ez(QQ, WQ, wQ) : null,
-        blockName: QQ => qQ.nameOfId(QQ),
+        chunkBlocks: MM => iM.isLoaded(MM[0], MM[1], MM[2]) ? (MM, rM, OM) => iM.jP(MM, rM, OM) : null,
+        blockName: MM => SM.nameOfId(MM),
         inventory: () => ({
-          slots: wQ.playerItems().map((QQ => QQ ? {
-            name: QQ.name,
-            amount: QQ.amount
+          slots: OM.playerItems().map((MM => MM ? {
+            name: MM.name,
+            amount: MM.amount
           } : null)),
-          heldSlot: wQ.selectedSlot
+          heldSlot: OM.selectedSlot
         }),
         nearby() {
-          const XQ = [];
-          for (let qQ = 0; qQ < WQ.idStr.length; qQ++) {
-            var wQ;
-            const TQ = WQ.idStr[qQ],
-              zQ = WQ.serverIds[qQ],
-              sQ = WQ.kinds[qQ];
-            if (null === TQ || WQ.isLocal(zQ) || sQ >>> GQ.e !== GQ.w.Lifeform) continue;
-            const FQ = WQ.xV(zQ),
-              PQ = Vw.i[sQ & GQ.i];
-            FQ && void 0 !== PQ && XQ.push({
-              kind: "Player" === PQ ? "player" : PQ,
-              name: null !== (wQ = QQ.clientApi.getEntityName(TQ)) && void 0 !== wQ ? wQ : null,
-              position: FQ
+          const iM = [];
+          for (let SM = 0; SM < rM.idStr.length; SM++) {
+            var OM;
+            const jM = rM.idStr[SM],
+              aM = rM.serverIds[SM],
+              PM = rM.kinds[SM];
+            if (null === jM || rM.isLocal(aM) || PM >>> UM.e !== UM.s.Lifeform) continue;
+            const nM = rM.XE(aM),
+              QM = EO.j[PM & UM.f];
+            nM && void 0 !== QM && iM.push({
+              kind: "Player" === QM ? "player" : QM,
+              name: null !== (OM = MM.clientApi.getEntityName(jM)) && void 0 !== OM ? OM : null,
+              position: nM
             })
           }
-          return XQ
+          return iM
         },
         droppedItems() {
-          let QQ = 0;
-          for (let XQ = 0; XQ < WQ.idStr.length; XQ++) null !== WQ.idStr[XQ] && WQ.kinds[XQ] >>> GQ.e === GQ.w.Item && QQ++;
-          return QQ
+          let MM = 0;
+          for (let iM = 0; iM < rM.idStr.length; iM++) null !== rM.idStr[iM] && rM.kinds[iM] >>> UM.e === UM.s.Item && MM++;
+          return MM
         }
       }
     }
-    const Gw = {
-        worldCodeAiChunk: QQ => Promise.resolve((0, Dw.b)(pw((0, zQ.j)()), QQ)),
-        worldCodeAiGameState: () => Promise.resolve((0, Dw.c)(pw((0, zQ.j)())))
+    const CO = {
+        worldCodeAiChunk: MM => Promise.resolve((0, UO.d)(GO((0, aM.e)()), MM)),
+        worldCodeAiGameState: () => Promise.resolve((0, UO.h)(GO((0, aM.e)())))
       },
-      Uw = function(QQ) {
-        const WQ = gX(),
-          wQ = gX(),
-          qQ = new Set,
-          TQ = new Set,
-          zQ = () => {
-            var WQ, XQ;
-            return null !== (WQ = null === (XQ = QQ.runtime()) || void 0 === XQ ? void 0 : XQ.currentViewer) && void 0 !== WQ ? WQ : null
+      eO = function(MM) {
+        const rM = zi(),
+          OM = zi(),
+          SM = new Set,
+          jM = new Set,
+          aM = () => {
+            var rM, iM;
+            return null !== (rM = null === (iM = MM.runtime()) || void 0 === iM ? void 0 : iM.currentViewer) && void 0 !== rM ? rM : null
           };
-        let sQ = null,
-          FQ = null;
-        const gQ = (QQ, WQ) => ({
-            current: QQ,
-            watch(XQ) {
-              let wQ = QQ();
-              return WQ.add((() => {
-                const WQ = QQ();
-                WQ !== wQ && (wQ = WQ, XQ(WQ))
+        let PM = null,
+          nM = null;
+        const zM = (MM, rM) => ({
+            current: MM,
+            watch(iM) {
+              let OM = MM();
+              return rM.add((() => {
+                const rM = MM();
+                rM !== OM && (OM = rM, iM(rM))
               }))
             }
           }),
-          rQ = QQ => ({
-            watch: WQ => (QQ.add(WQ), () => {
-              QQ.delete(WQ)
+          mM = MM => ({
+            watch: rM => (MM.add(rM), () => {
+              MM.delete(rM)
             })
           }),
-          IQ = QQ => {
-            const WQ = zQ(),
-              XQ = null === WQ || void 0 === WQ ? void 0 : WQ.view;
-            WQ && XQ && WQ.seek(Math.max(0, Math.min(XQ.totalTicks - 1, XQ.fJ + QQ * JQ.Kd)))
+          HM = MM => {
+            const rM = aM(),
+              iM = null === rM || void 0 === rM ? void 0 : rM.view;
+            rM && iM && rM.seek(Math.max(0, Math.min(iM.totalTicks - 1, iM.bL + MM * LM.ud)))
           },
-          jQ = {
-            replay: gQ((() => {
-              var QQ;
-              const WQ = zQ(),
-                XQ = null !== (QQ = null === WQ || void 0 === WQ ? void 0 : WQ.view) && void 0 !== QQ ? QQ : null;
-              return null === WQ || null === XQ || XQ.state === JQ.td.None ? (sQ = null, null) : (sQ = (0, KQ.j)(sQ, {
-                id: WQ.id,
-                fJ: XQ.fJ,
-                totalTicks: XQ.totalTicks,
-                qE: JQ.Kd,
-                playing: XQ.state === JQ.td.Playing,
-                speed: XQ.speed,
-                cameraMode: XQ.cameraMode,
-                freecam: "freecam" === XQ.cameraMode
-              }), sQ)
-            }), WQ),
-            replayEdits: gQ((() => {
-              var QQ;
-              const WQ = zQ(),
-                XQ = null !== (QQ = null === WQ || void 0 === WQ ? void 0 : WQ.view) && void 0 !== QQ ? QQ : null;
-              return null === WQ || null === XQ || XQ.state === JQ.td.None ? (FQ = null, null) : (FQ = (0, KQ.j)(FQ, {
-                cameraKeyframes: [...WQ.keyframes],
-                playbackMark: XQ.mark,
-                fileName: WQ.fileName,
-                unsavedChanges: WQ.unsavedChanges,
-                suggestSaveAs: WQ.suggestSaveAs
-              }), FQ)
-            }), WQ),
-            replayRecorder: gQ((() => {
-              var WQ, XQ;
-              return null !== (WQ = null === (XQ = QQ.runtime()) || void 0 === XQ ? void 0 : XQ.recorder.current) && void 0 !== WQ ? WQ : sX.b.states.replayRecorder.current()
-            }), wQ),
+          hM = {
+            replay: zM((() => {
+              var MM;
+              const rM = aM(),
+                iM = null !== (MM = null === rM || void 0 === rM ? void 0 : rM.view) && void 0 !== MM ? MM : null;
+              return null === rM || null === iM || iM.state === LM.hd.None ? (PM = null, null) : (PM = (0, TM.r)(PM, {
+                id: rM.id,
+                bL: iM.bL,
+                totalTicks: iM.totalTicks,
+                zk: LM.ud,
+                playing: iM.state === LM.hd.Playing,
+                speed: iM.speed,
+                cameraMode: iM.cameraMode,
+                freecam: "freecam" === iM.cameraMode
+              }), PM)
+            }), rM),
+            replayEdits: zM((() => {
+              var MM;
+              const rM = aM(),
+                iM = null !== (MM = null === rM || void 0 === rM ? void 0 : rM.view) && void 0 !== MM ? MM : null;
+              return null === rM || null === iM || iM.state === LM.hd.None ? (nM = null, null) : (nM = (0, TM.r)(nM, {
+                cameraKeyframes: [...rM.keyframes],
+                playbackMark: iM.mark,
+                fileName: rM.fileName,
+                unsavedChanges: rM.unsavedChanges,
+                suggestSaveAs: rM.suggestSaveAs
+              }), nM)
+            }), rM),
+            replayRecorder: zM((() => {
+              var rM, iM;
+              return null !== (rM = null === (iM = MM.runtime()) || void 0 === iM ? void 0 : iM.recorder.current) && void 0 !== rM ? rM : Pi.c.states.replayRecorder.current()
+            }), OM),
             replayVideoExporting: {
-              current: TX.d,
-              watch: QQ => (0, PQ.o)("replayViewer|videoExportChanged", (() => {
-                QQ((0, TX.d)())
+              current: ji.d,
+              watch: MM => (0, QM.j)("replayViewer|videoExportChanged", (() => {
+                MM((0, ji.d)())
               }))
             }
           },
-          BQ = {
-            replayUiActionRequested: rQ(TQ),
-            replayViewerRequested: rQ(qQ)
+          JM = {
+            replayUiActionRequested: mM(jM),
+            replayViewerRequested: mM(SM)
           },
-          yQ = QQ => {
-            for (const WQ of qQ) WQ(QQ)
+          dM = MM => {
+            for (const rM of SM) rM(MM)
           },
-          VQ = () => {
-            var wQ;
-            !0 === (null === (wQ = zQ()) || void 0 === wQ ? void 0 : wQ.isOpen) && Promise.all([XQ.e(101), XQ.e(69)]).then((() => XQ(60859))).then((XQ => {
+          yM = () => {
+            var OM;
+            !0 === (null === (OM = aM()) || void 0 === OM ? void 0 : OM.isOpen) && Promise.all([iM.e(111), iM.e(78)]).then((() => iM(63231))).then((iM => {
               let {
-                startWasmReplayVideoExport: wQ
-              } = XQ;
-              return wQ({
-                viewer: zQ,
+                startWasmReplayVideoExport: OM
+              } = iM;
+              return OM({
+                viewer: aM,
                 canvas: () => {
-                  var WQ, XQ;
-                  return null !== (WQ = null === (XQ = QQ.canvas) || void 0 === XQ ? void 0 : XQ.call(QQ)) && void 0 !== WQ ? WQ : null
+                  var rM, iM;
+                  return null !== (rM = null === (iM = MM.canvas) || void 0 === iM ? void 0 : iM.call(MM)) && void 0 !== rM ? rM : null
                 },
-                watchViewer: WQ.add,
-                requestViewer: yQ
+                watchViewer: rM.add,
+                requestViewer: dM
               })
-            }), (QQ => {
-              console.error("Couldn't load the video export", QQ), zX.NotificationProvider.showAlertPopup({
+            }), (MM => {
+              console.error("Couldn't load the video export", MM), ai.NotificationProvider.showAlertPopup({
                 title: "Video export failed",
                 subtitle: "Check your connection, then try again."
               })
-            })).catch((QQ => {
-              console.error("The video export failed", QQ)
+            })).catch((MM => {
+              console.error("The video export failed", MM)
             }))
           },
-          DQ = {
-            replayAction(QQ) {
-              if ((0, TX.d)()) return;
-              const WQ = zQ();
-              switch (QQ) {
+          lM = {
+            replayAction(MM) {
+              if ((0, ji.d)()) return;
+              const rM = aM();
+              switch (MM) {
                 case "replaySkipBack":
-                  IQ(-1);
+                  HM(-1);
                   break;
                 case "replaySkipForward":
-                  IQ(1);
+                  HM(1);
                   break;
                 case "replaySpeedUp":
                 case "replaySpeedDown":
-                  null !== WQ && void 0 !== WQ && WQ.view && WQ.setSpeed((0, qX.h)(WQ.view.speed, "replaySpeedUp" === QQ ? "up" : "down"));
+                  null !== rM && void 0 !== rM && rM.view && rM.setSpeed((0, Si.h)(rM.view.speed, "replaySpeedUp" === MM ? "up" : "down"));
                   break;
                 case "replayRecordKeyframe":
-                  null === WQ || void 0 === WQ || WQ.addKeyframe()
+                  null === rM || void 0 === rM || rM.addKeyframe()
               }
             },
-            setReplayPlaying(QQ) {
-              var WQ, XQ;
-              (0, TX.d)() || (QQ ? null === (WQ = zQ()) || void 0 === WQ || WQ.play() : null === (XQ = zQ()) || void 0 === XQ || XQ.pause())
+            setReplayPlaying(MM) {
+              var rM, iM;
+              (0, ji.d)() || (MM ? null === (rM = aM()) || void 0 === rM || rM.play() : null === (iM = aM()) || void 0 === iM || iM.pause())
             },
-            seekReplay(QQ) {
-              var WQ;
+            seekReplay(MM) {
+              var rM;
               let {
-                fJ: XQ,
-                ignorePlaybackMark: wQ
-              } = QQ;
-              null === (WQ = zQ()) || void 0 === WQ || WQ.seek(XQ, null !== wQ && void 0 !== wQ && wQ)
+                bL: iM,
+                ignorePlaybackMark: OM
+              } = MM;
+              null === (rM = aM()) || void 0 === rM || rM.seek(iM, null !== OM && void 0 !== OM && OM)
             },
-            setReplayCameraMode(QQ) {
-              var WQ;
-              null === (WQ = zQ()) || void 0 === WQ || WQ.setCameraMode(QQ)
+            setReplayCameraMode(MM) {
+              var rM;
+              null === (rM = aM()) || void 0 === rM || rM.setCameraMode(MM)
             },
             syncReplayCameraMode() {},
-            setReplayCameraKeyframe(QQ) {
-              var WQ;
-              null === (WQ = zQ()) || void 0 === WQ || WQ.setKeyframe(QQ)
+            setReplayCameraKeyframe(MM) {
+              var rM;
+              null === (rM = aM()) || void 0 === rM || rM.setKeyframe(MM)
             },
-            moveReplayCameraKeyframe(QQ) {
-              var WQ;
+            moveReplayCameraKeyframe(MM) {
+              var rM;
               let {
-                from: XQ,
-                to: wQ
-              } = QQ;
-              null === (WQ = zQ()) || void 0 === WQ || WQ.moveKeyframe(XQ, wQ)
+                from: iM,
+                to: OM
+              } = MM;
+              null === (rM = aM()) || void 0 === rM || rM.moveKeyframe(iM, OM)
             },
-            deleteReplayCameraKeyframes(QQ) {
-              var WQ;
+            deleteReplayCameraKeyframes(MM) {
+              var rM;
               let {
-                start: XQ,
-                end: wQ
-              } = QQ;
-              null === (WQ = zQ()) || void 0 === WQ || WQ.deleteKeyframes(XQ, wQ)
+                start: iM,
+                end: OM
+              } = MM;
+              null === (rM = aM()) || void 0 === rM || rM.deleteKeyframes(iM, OM)
             },
-            setReplayPlaybackMark(QQ) {
-              var WQ;
-              null === (WQ = zQ()) || void 0 === WQ || WQ.setMark(QQ)
+            setReplayPlaybackMark(MM) {
+              var rM;
+              null === (rM = aM()) || void 0 === rM || rM.setMark(MM)
             },
-            cropReplay(QQ) {
-              var WQ, XQ;
+            cropReplay(MM) {
+              var rM, iM;
               let {
-                start: wQ,
-                end: qQ
-              } = QQ;
-              return !(0, TX.d)() && (null !== (WQ = null === (XQ = zQ()) || void 0 === XQ ? void 0 : XQ.crop(wQ, qQ)) && void 0 !== WQ && WQ)
+                start: OM,
+                end: SM
+              } = MM;
+              return !(0, ji.d)() && (null !== (rM = null === (iM = aM()) || void 0 === iM ? void 0 : iM.crop(OM, SM)) && void 0 !== rM && rM)
             },
-            holdReplayForShaderPackFailure(QQ) {
-              const WQ = zQ();
-              WQ && (WQ.holdForShaderPackFailure(), function(QQ) {
-                XQ.e(119).then((() => XQ(39494))).then((WQ => {
+            holdReplayForShaderPackFailure(MM) {
+              const rM = aM();
+              rM && (rM.holdForShaderPackFailure(), function(MM) {
+                iM.e(129).then((() => iM(40300))).then((rM => {
                   let {
-                    shaderPackPage: XQ
-                  } = WQ;
-                  XQ.block(QQ)
-                })).catch((QQ => {
-                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", QQ)
+                    shaderPackPage: iM
+                  } = rM;
+                  iM.block(MM)
+                })).catch((MM => {
+                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", MM)
                 }))
-              }(QQ))
+              }(MM))
             },
             exportReplayVideo() {
-              VQ()
+              yM()
             },
             toggleRecording() {
-              var WQ;
-              null === (WQ = QQ.runtime()) || void 0 === WQ || WQ.recorder.toggleRecording()
+              var rM;
+              null === (rM = MM.runtime()) || void 0 === rM || rM.recorder.toggleRecording()
             },
             saveClip() {
-              var WQ;
-              null === (WQ = QQ.runtime()) || void 0 === WQ || WQ.recorder.saveClip()
+              var rM;
+              null === (rM = MM.runtime()) || void 0 === rM || rM.recorder.saveClip()
             },
-            setRecorderPrefs(WQ) {
-              var XQ;
+            setRecorderPrefs(rM) {
+              var iM;
               let {
-                clipping: wQ,
-                clipSeconds: qQ
-              } = WQ;
-              null === (XQ = QQ.runtime()) || void 0 === XQ || XQ.recorder.setPrefs(wQ, qQ)
+                clipping: OM,
+                clipSeconds: SM
+              } = rM;
+              null === (iM = MM.runtime()) || void 0 === iM || iM.recorder.setPrefs(OM, SM)
             },
-            setReplayViewerOpen(WQ) {
-              var XQ;
-              (0, yW.f)(WQ) && (null === (XQ = QQ.runtime()) || void 0 === XQ || XQ.recorder.viewerShown(WQ))
+            setReplayViewerOpen(rM) {
+              var iM;
+              (0, dr.d)(rM) && (null === (iM = MM.runtime()) || void 0 === iM || iM.recorder.viewerShown(rM))
             },
-            recordFlyingMiddleText(WQ) {
-              var XQ;
+            recordFlyingMiddleText(rM) {
+              var iM;
               let {
-                content: wQ,
-                lT: qQ,
-                angle: TQ,
-                hT: zQ
-              } = WQ;
-              null === (XQ = QQ.runtime()) || void 0 === XQ || XQ.recorder.recordFlyingText(JSON.stringify(wQ), qQ, TQ, zQ)
+                content: OM,
+                oi: SM,
+                angle: jM,
+                Yi: aM
+              } = rM;
+              null === (iM = MM.runtime()) || void 0 === iM || iM.recorder.recordFlyingText(JSON.stringify(OM), SM, jM, aM)
             },
-            dragReplayCamera(WQ) {
-              var XQ;
+            dragReplayCamera(rM) {
+              var iM;
               let {
-                dx: wQ,
-                dy: qQ
-              } = WQ;
-              null === (XQ = QQ.freecam()) || void 0 === XQ || XQ.drag(wQ, qQ)
+                dx: OM,
+                dy: SM
+              } = rM;
+              null === (iM = MM.freecam()) || void 0 === iM || iM.drag(OM, SM)
             },
-            moveReplayFreecam(WQ) {
-              var XQ;
-              null === (XQ = QQ.freecam()) || void 0 === XQ || XQ.move(WQ)
+            moveReplayFreecam(rM) {
+              var iM;
+              null === (iM = MM.freecam()) || void 0 === iM || iM.move(rM)
             },
-            holdReplayFreecamVertical(WQ) {
-              var XQ;
+            holdReplayFreecamVertical(rM) {
+              var iM;
               let {
-                action: wQ,
-                Ds: qQ
-              } = WQ;
-              null === (XQ = QQ.freecam()) || void 0 === XQ || XQ.holdVertical(wQ, qQ)
+                action: OM,
+                sQ: SM
+              } = rM;
+              null === (iM = MM.freecam()) || void 0 === iM || iM.holdVertical(OM, SM)
             }
           },
-          pQ = QQ => {
-            var WQ;
-            const XQ = zQ(),
-              wQ = null !== (WQ = null === XQ || void 0 === XQ ? void 0 : XQ.view) && void 0 !== WQ ? WQ : null;
-            FX.has(QQ) ? (QQ => {
-              for (const WQ of TQ) WQ(QQ)
-            })(QQ) : PX.has(QQ) ? DQ.replayAction(QQ) : "replayPlayPause" === QQ ? XQ && wQ && wQ.state !== JQ.td.None && DQ.setReplayPlaying(wQ.state !== JQ.td.Playing) : "replayChangeCameraMode" === QQ ? null === XQ || void 0 === XQ || XQ.cycleCameraMode() : "replayExit" === QQ ? !0 === (null === XQ || void 0 === XQ ? void 0 : XQ.inPlayback) && (0, EW.n)("/") : "replayExportVideo" === QQ && VQ()
+          EM = MM => {
+            var rM;
+            const iM = aM(),
+              OM = null !== (rM = null === iM || void 0 === iM ? void 0 : iM.view) && void 0 !== rM ? rM : null;
+            ni.has(MM) ? (MM => {
+              for (const rM of jM) rM(MM)
+            })(MM) : Qi.has(MM) ? lM.replayAction(MM) : "replayPlayPause" === MM ? iM && OM && OM.state !== LM.hd.None && lM.setReplayPlaying(OM.state !== LM.hd.Playing) : "replayChangeCameraMode" === MM ? null === iM || void 0 === iM || iM.cycleCameraMode() : "replayExit" === MM ? !0 === (null === iM || void 0 === iM ? void 0 : iM.inPlayback) && (0, Dr.n)("/") : "replayExportVideo" === MM && yM()
           };
-        let GQ = !1;
+        let UM = !1;
         return {
-          states: jQ,
-          events: BQ,
-          commands: DQ,
+          states: hM,
+          events: JM,
+          commands: lM,
           lookups: {
             replayCamera() {
-              var WQ, XQ, wQ;
-              return !0 !== (null === (WQ = zQ()) || void 0 === WQ ? void 0 : WQ.isOpen) ? null : null !== (XQ = null === (wQ = QQ.cameraView) || void 0 === wQ ? void 0 : wQ.call(QQ)) && void 0 !== XQ ? XQ : null
+              var rM, iM, OM;
+              return !0 !== (null === (rM = aM()) || void 0 === rM ? void 0 : rM.isOpen) ? null : null !== (iM = null === (OM = MM.cameraView) || void 0 === OM ? void 0 : OM.call(MM)) && void 0 !== iM ? iM : null
             },
             leaveGameReloadsPage() {
-              var QQ;
-              return !0 === (null === (QQ = zQ()) || void 0 === QQ ? void 0 : QQ.inPlayback)
+              var MM;
+              return !0 === (null === (MM = aM()) || void 0 === MM ? void 0 : MM.inPlayback)
             }
           },
           feed: {
             viewerChanged: () => {
-              var QQ;
-              const XQ = !0 === (null === (QQ = zQ()) || void 0 === QQ ? void 0 : QQ.inPlayback);
-              XQ !== GQ && (GQ = XQ, PQ.k.mB("connectedGameChanged")), WQ.fire()
+              var MM;
+              const iM = !0 === (null === (MM = aM()) || void 0 === MM ? void 0 : MM.inPlayback);
+              iM !== UM && (UM = iM, QM.i.Tz("connectedGameChanged")), rM.fire()
             },
-            recorderChanged: wQ.fire,
-            keyDown: QQ => {
-              var WQ;
-              switch (QQ) {
+            recorderChanged: OM.fire,
+            keyDown: MM => {
+              var rM;
+              switch (MM) {
                 case "recordGame":
-                  return void DQ.toggleRecording();
+                  return void lM.toggleRecording();
                 case "recordClip":
-                  return void((0, yW.e)() || DQ.saveClip())
-              }(0, TX.d)() || ("replayViewerOpen" !== QQ ? QQ.startsWith("replay") && ((0, yW.e)() || !0 === (null === (WQ = zQ()) || void 0 === WQ ? void 0 : WQ.inPlayback)) && pQ(QQ) : yQ("toggle"))
+                  return void((0, dr.b)() || lM.saveClip())
+              }(0, ji.d)() || ("replayViewerOpen" !== MM ? MM.startsWith("replay") && ((0, dr.b)() || !0 === (null === (rM = aM()) || void 0 === rM ? void 0 : rM.inPlayback)) && EM(MM) : dM("toggle"))
             }
           }
         }
       }({
-        runtime: qQ.f,
+        runtime: SM.n,
         cameraView: () => {
-          var QQ;
-          const WQ = null === (QQ = (0, zQ.j)()) || void 0 === QQ ? void 0 : QQ.renderFrame;
-          if (!WQ) return null;
-          const [XQ, wQ, qQ] = WQ.cameraPosition, [TQ, sQ, FQ] = WQ.cameraDirection;
+          var MM;
+          const rM = null === (MM = (0, aM.e)()) || void 0 === MM ? void 0 : MM.renderFrame;
+          if (!rM) return null;
+          const [iM, OM, SM] = rM.cameraPosition, [jM, PM, nM] = rM.cameraDirection;
           return {
-            position: [XQ, wQ, qQ],
-            direction: [TQ, sQ, FQ]
+            position: [iM, OM, SM],
+            direction: [jM, PM, nM]
           }
         },
         canvas: () => {
-          var QQ, WQ, XQ;
-          return null !== (QQ = null === (WQ = (XQ = (0, TQ.H)()).canvas) || void 0 === WQ ? void 0 : WQ.call(XQ)) && void 0 !== QQ ? QQ : null
+          var MM, rM, iM;
+          return null !== (MM = null === (rM = (iM = (0, jM.I)()).canvas) || void 0 === rM ? void 0 : rM.call(iM)) && void 0 !== MM ? MM : null
         },
-        freecam: qQ.e
+        freecam: SM.j
       }),
-      bw = {
+      bO = {
         states: {
-          ...PW,
-          ...IW.j,
-          ...Uw.states,
-          ...IX,
-          ...tQ
+          ...Qr,
+          ...Hr.k,
+          ...eO.states,
+          ...Hi,
+          ...AM
         },
         events: {
-          ...gW,
-          ...yQ,
-          ...IW.g,
-          ...aQ.b,
-          ...lX.i,
-          ...Uw.events,
-          ...jX,
-          ...HQ.f
+          ...zr,
+          ...dM,
+          ...Hr.f,
+          ...tM.d,
+          ...ui.e,
+          ...eO.events,
+          ...Ji,
+          ...wM.e
         },
         commands: {
-          ...dQ,
-          ...JW,
-          ...VQ,
-          ...IW.d,
-          ...KW,
-          ...aX,
-          ...HQ.d,
-          ...LW,
-          ...Uw.commands,
-          ...UX,
-          ...oQ,
-          ...CX,
-          ...jW
+          ...bM,
+          ...Lr,
+          ...yM,
+          ...Hr.c,
+          ...Tr,
+          ...gi,
+          ...wM.d,
+          ...or,
+          ...eO.commands,
+          ...Ci,
+          ...xM,
+          ...oi,
+          ...hr
         },
         queries: {
-          ...IW.i,
-          ...Gw
+          ...Hr.g,
+          ...CO
         },
         lookups: {
-          ...rW,
-          ...CQ,
-          ...lX.j,
-          ...Uw.lookups,
-          ...vQ,
-          ...wX,
-          ...EX,
-          ...eQ
+          ...mr,
+          ...kM,
+          ...ui.i,
+          ...eO.lookups,
+          ...eM,
+          ...Oi,
+          ...Zi,
+          ...vM
         }
       };
 
-    function vw() {
-      (0, sQ.d)(BQ.n), (0, qQ.j)(Uw.feed), (0, aQ.f)(), mW || (mW = !0, (0, BQ.j)(cQ.j, (QQ => {
-        const WQ = (0, RQ.d)(cQ.j, QQ);
-        "string" === typeof WQ && Promise.resolve().then((() => XQ(3881))).then((QQ => {
+    function wO() {
+      (0, PM.c)(JM.i), (0, SM.r)(eO.feed), (0, tM.e)(), Vr || (Vr = !0, (0, JM.h)(pM.i, (MM => {
+        const rM = (0, sM.d)(pM.i, MM);
+        "string" === typeof rM && Promise.resolve().then((() => iM(4019))).then((MM => {
           let {
-            onCosmeticPackGranted: XQ
-          } = QQ;
-          XQ(WQ)
+            onCosmeticPackGranted: iM
+          } = MM;
+          iM(rM)
         }))
-      })), (0, BQ.j)(cQ.Y, (QQ => {
-        const WQ = (0, RQ.d)(cQ.Y, QQ);
-        "number" === typeof WQ && PQ.k.mB("serverUpdating", Date.now() + WQ, !0)
-      })), (0, BQ.j)(cQ.C, (QQ => {
-        const WQ = (0, RQ.d)(cQ.C, QQ);
-        if ((0, RQ.c)(WQ)) {
+      })), (0, JM.h)(pM.bb, (MM => {
+        const rM = (0, sM.d)(pM.bb, MM);
+        "number" === typeof rM && QM.i.Tz("serverUpdating", Date.now() + rM, !0)
+      })), (0, JM.h)(pM.F, (MM => {
+        const rM = (0, sM.d)(pM.F, MM);
+        if ((0, sM.c)(rM)) {
           const {
-            Cq: QQ,
-            uq: XQ
-          } = WQ;
-          (0, ZW.b)({
-            Cq: "string" === typeof QQ ? QQ : null,
-            uq: "string" === typeof XQ ? XQ : null
+            Wr: MM,
+            sr: iM
+          } = rM;
+          (0, Kr.c)({
+            Wr: "string" === typeof MM ? MM : null,
+            sr: "string" === typeof iM ? iM : null
           })
         }
-      })), (0, BQ.j)(gQ.gc.NewUiRequest, (QQ => {
-        const WQ = (0, RQ.h)(QQ);
-        (0, RQ.c)(WQ) && "number" === typeof WQ.id && (0, RQ.c)(WQ.clientParameters) && (0, OW.i)(WQ.id, WQ.clientParameters)
-      })), (0, BQ.j)(cQ.U, (QQ => {
-        const WQ = (0, RQ.d)(cQ.U, QQ);
-        "number" === typeof WQ && (0, OW.l)(WQ)
-      })), (0, BQ.h)(OW.e), (0, BQ.j)(gQ.gc.UiRequestPopup, (QQ => {
-        const WQ = (0, RQ.h)(QQ);
-        if ((0, RQ.c)(WQ) && "number" === typeof WQ.id && "string" === typeof WQ.text) {
-          const QQ = WQ.id;
-          (0, OW.o)(QQ, WQ.text, !0 === WQ.destructive, (WQ => {
-            KW.answerUiRequest({
-              id: QQ,
-              yg: WQ
+      })), (0, JM.h)(zM.hc.NewUiRequest, (MM => {
+        const rM = (0, sM.f)(MM);
+        (0, sM.c)(rM) && "number" === typeof rM.id && (0, sM.c)(rM.clientParameters) && (0, qr.e)(rM.id, rM.clientParameters)
+      })), (0, JM.h)(pM.V, (MM => {
+        const rM = (0, sM.d)(pM.V, MM);
+        "number" === typeof rM && (0, qr.g)(rM)
+      })), (0, JM.e)(qr.b), (0, JM.h)(zM.hc.UiRequestPopup, (MM => {
+        const rM = (0, sM.f)(MM);
+        if ((0, sM.c)(rM) && "number" === typeof rM.id && ("string" === typeof rM.text || (0, sM.c)(rM.text) && "string" === typeof rM.text.translationKey)) {
+          const MM = rM.id;
+          (0, qr.h)(MM, rM.text, !0 === rM.destructive, (rM => {
+            Tr.answerUiRequest({
+              id: MM,
+              IQ: rM
             })
           }))
         }
-      })), (0, BQ.j)(gQ.gc.TopRightHelper, (QQ => {
-        const WQ = (0, RQ.h)(QQ);
-        void 0 !== WQ && PQ.k.mB("TopRightHelper", WQ, !0)
-      })), (0, BQ.j)(gQ.gc.TaskProgress, (QQ => {
-        const WQ = (0, RQ.h)(QQ);
-        (0, RQ.c)(WQ) && "string" === typeof WQ.taskId && "number" === typeof WQ.progress && (0, NW.d)({
-          taskId: WQ.taskId,
-          progress: WQ.progress
+      })), (0, JM.h)(zM.hc.TopRightHelper, (MM => {
+        const rM = (0, sM.f)(MM);
+        void 0 !== rM && QM.i.Tz("TopRightHelper", rM, !0)
+      })), (0, JM.h)(zM.hc.TaskProgress, (MM => {
+        const rM = (0, sM.f)(MM);
+        (0, sM.c)(rM) && "string" === typeof rM.taskId && "number" === typeof rM.progress && (0, Ir.c)({
+          taskId: rM.taskId,
+          progress: rM.progress
         })
-      }))), bX || (bX = !0, (0, BQ.j)(cQ.p, (QQ => {
-        const WQ = (0, RQ.d)(cQ.p, QQ);
-        (0, RQ.c)(WQ) && PQ.k.mB("showShopFromServer", {
-          toggle: WQ.sQ,
-          FQ: WQ.FQ
+      }))), ei || (ei = !0, (0, JM.h)(pM.q, (MM => {
+        const rM = (0, sM.d)(pM.q, MM);
+        (0, sM.c)(rM) && QM.i.Tz("showShopFromServer", {
+          toggle: rM.OS,
+          SS: rM.SS
         }, !0)
-      })), (0, BQ.j)(gQ.gc.OverShopInfo, (QQ => {
-        const WQ = (0, RQ.h)(QQ);
-        (0, RQ.c)(WQ) && PQ.k.mB("overShopInfo", WQ.info, !0)
-      })), (0, BQ.j)(gQ.gc.ShowShopTutorial, (() => {
-        PQ.k.mB("showShopTutorial", null, !0)
-      }))), pX || (pX = !0, (0, BQ.g)((() => {
-        var QQ;
-        (0, BX.resetLeaveEvents)(), null === (QQ = GX) || void 0 === QQ || QQ(), GX = (0, BQ.c)() ? (0, VX.f)(BQ.c) : null, (0, BQ.c)() || PQ.k.rV()
-      })), (0, BQ.j)(gQ.gc.SetCookie, (QQ => {
-        const WQ = (0, RQ.h)(QQ),
-          XQ = (0, EW.e)().gameNameWithVariation;
-        (0, RQ.c)(WQ) && "string" === typeof WQ.key && null !== XQ && (0, yX.setCookie)(XQ, WQ.key, WQ.value)
-      })), (0, BQ.j)(gQ.gc.LeaveValues, (QQ => {
-        const WQ = (0, RQ.h)(QQ);
-        if ((0, RQ.c)(WQ) && "string" === typeof WQ.leaveEventType) {
+      })), (0, JM.h)(zM.hc.OverShopInfo, (MM => {
+        const rM = (0, sM.f)(MM);
+        (0, sM.c)(rM) && QM.i.Tz("overShopInfo", rM.info, !0)
+      })), (0, JM.h)(zM.hc.ShowShopTutorial, (() => {
+        QM.i.Tz("showShopTutorial", null, !0)
+      }))), Ui || (Ui = !0, (0, JM.c)((() => {
+        var MM;
+        (0, di.resetLeaveEvents)(), null === (MM = Gi) || void 0 === MM || MM(), Gi = (0, JM.b)() ? (0, li.h)(JM.b) : null, (0, JM.b)() || QM.i.OE()
+      })), (0, JM.h)(zM.hc.SetCookie, (MM => {
+        const rM = (0, sM.f)(MM),
+          iM = (0, Dr.e)().gameNameWithVariation;
+        (0, sM.c)(rM) && "string" === typeof rM.key && null !== iM && (0, yi.setCookie)(iM, rM.key, rM.value)
+      })), (0, JM.h)(zM.hc.LeaveValues, (MM => {
+        const rM = (0, sM.f)(MM);
+        if ((0, sM.c)(rM) && "string" === typeof rM.leaveEventType) {
           const {
-            leaveEventType: QQ,
-            category: XQ,
-            subCategory: wQ,
-            value: qQ
-          } = WQ;
-          (0, BX.updateLeaveValue)({
-            leaveEventType: QQ,
-            category: XQ,
-            subCategory: wQ,
-            value: qQ
+            leaveEventType: MM,
+            category: iM,
+            subCategory: OM,
+            value: SM
+          } = rM;
+          (0, di.updateLeaveValue)({
+            leaveEventType: MM,
+            category: iM,
+            subCategory: OM,
+            value: SM
           })
         }
-      })), (0, BQ.j)(gQ.gc.CustomAnalyticsEvent, (QQ => {
-        const WQ = (0, RQ.h)(QQ);
-        if ((0, RQ.c)(WQ) && "string" === typeof WQ.cat1) {
+      })), (0, JM.h)(zM.hc.CustomAnalyticsEvent, (MM => {
+        const rM = (0, sM.f)(MM);
+        if ((0, sM.c)(rM) && "string" === typeof rM.cat1) {
           const {
-            cat1: QQ,
-            cat2: XQ,
-            cat3: wQ,
-            value: qQ
-          } = WQ;
-          (0, BX.logCustomAnalyticsEvent)({
-            cat1: QQ,
-            cat2: XQ,
-            cat3: wQ,
-            value: qQ
+            cat1: MM,
+            cat2: iM,
+            cat3: OM,
+            value: SM
+          } = rM;
+          (0, di.logCustomAnalyticsEvent)({
+            cat1: MM,
+            cat2: iM,
+            cat3: OM,
+            value: SM
           })
         }
-      })), (0, BQ.j)(gQ.gc.ProgressionEvent, (QQ => {
-        const WQ = (0, RQ.h)(QQ);
-        if ((0, RQ.c)(WQ)) {
+      })), (0, JM.h)(zM.hc.ProgressionEvent, (MM => {
+        const rM = (0, sM.f)(MM);
+        if ((0, sM.c)(rM)) {
           const {
-            type: QQ,
-            location1: XQ,
-            location2: wQ,
-            location3: qQ,
-            score: TQ
-          } = WQ;
-          (0, BX.logProgressionEvent)({
-            type: QQ,
-            location1: XQ,
-            location2: wQ,
-            location3: qQ,
-            score: TQ
+            type: MM,
+            location1: iM,
+            location2: OM,
+            location3: SM,
+            score: jM
+          } = rM;
+          (0, di.logProgressionEvent)({
+            type: MM,
+            location1: iM,
+            location2: OM,
+            location3: SM,
+            score: jM
           })
         }
-      })), (0, BQ.j)(gQ.gc.ResourceEvent, (QQ => {
-        const WQ = (0, RQ.h)(QQ);
-        if ((0, RQ.c)(WQ)) {
+      })), (0, JM.h)(zM.hc.ResourceEvent, (MM => {
+        const rM = (0, sM.f)(MM);
+        if ((0, sM.c)(rM)) {
           const {
-            type: QQ,
-            resourceType: XQ,
-            amount: wQ,
-            category: qQ,
-            itemName: TQ
-          } = WQ;
-          (0, BX.logResourceEvent)({
-            type: QQ,
-            resourceType: XQ,
-            amount: wQ,
-            category: qQ,
-            itemName: TQ
+            type: MM,
+            resourceType: iM,
+            amount: OM,
+            category: SM,
+            itemName: jM
+          } = rM;
+          (0, di.logResourceEvent)({
+            type: MM,
+            resourceType: iM,
+            amount: OM,
+            category: SM,
+            itemName: jM
           })
         }
-      })), (0, BQ.j)(gQ.gc.LeaderboardResponse, (QQ => {
-        const WQ = (0, RQ.h)(QQ);
-        if ((0, RQ.c)(WQ)) {
+      })), (0, JM.h)(zM.hc.LeaderboardResponse, (MM => {
+        const rM = (0, sM.f)(MM);
+        if ((0, sM.c)(rM)) {
           const {
-            category: QQ,
-            timeframe: XQ,
-            data: wQ
-          } = WQ;
-          PQ.k.mB("leaderboardResponse", {
-            category: QQ,
-            timeframe: XQ,
-            data: wQ
+            category: MM,
+            timeframe: iM,
+            data: OM
+          } = rM;
+          QM.i.Tz("leaderboardResponse", {
+            category: MM,
+            timeframe: iM,
+            data: OM
           })
         }
-      })), (0, BQ.j)(cQ.x, (QQ => {
-        const WQ = (0, RQ.d)(cQ.x, QQ);
-        "string" === typeof WQ && (0, DX.e)(QQ.conn, WQ)
-      })), (0, BQ.j)(cQ.A, (QQ => {
-        const WQ = (0, RQ.d)(cQ.A, QQ);
-        "string" === typeof WQ && console.error(`[logErrorToConsole]: ${WQ}`)
-      }))), LQ(), (0, lX.e)(), uW || (uW = !0, (0, BQ.j)(cQ.h, (QQ => {
-        const WQ = (0, RQ.d)(cQ.h, QQ);
-        void 0 !== WQ && (0, CW.k)(WQ)
-      }))), YW(), hW(), YQ || (YQ = !0, (0, TQ.t)(NQ)), wQ.gameBridge.attach(bw), (0, wQ.installPageSources)({
+      })), (0, JM.h)(pM.z, (MM => {
+        const rM = (0, sM.d)(pM.z, MM);
+        "string" === typeof rM && (0, Ei.c)(MM.conn, rM)
+      })), (0, JM.h)(pM.C, (MM => {
+        const rM = (0, sM.d)(pM.C, MM);
+        "string" === typeof rM && console.error(`[logErrorToConsole]: ${rM}`)
+      }))), oM(), (0, ui.b)(), Zr || (Zr = !0, (0, JM.h)(pM.h, (MM => {
+        const rM = (0, sM.d)(pM.h, MM);
+        void 0 !== rM && (0, kr.h)(rM)
+      }))), Xr(), ur(), XM || (XM = !0, (0, jM.x)(IM)), OM.gameBridge.attach(bO), (0, OM.installPageSources)({
         commands: {
-          ...wQ.DEFAULT_CLIENT_PAGE_SOURCES.commands,
-          setChunkAddDistance: LX.j
+          ...OM.DEFAULT_CLIENT_PAGE_SOURCES.commands,
+          setChunkAddDistance: Yi.g
         },
-        queries: Bw,
+        queries: yO,
         lookups: {
-          ...wQ.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
-          ...yw,
-          qD: LX.e,
-          drawCallStats: kX.g
+          ...OM.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
+          ...lO,
+          jU: Yi.b,
+          drawCallStats: Ni.j
         }
-      }), (0, uX.c)(), sw()
+      }), (0, fi.c)(), QO()
     }
   },
-  41170: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => gQ,
-      g: () => FQ,
-      j: () => sQ,
-      m: () => PQ
+  42053: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => zM,
+      e: () => nM,
+      f: () => PM,
+      j: () => QM
     });
-    var wQ = XQ(2015);
-    let qQ = null,
-      TQ = 0;
-    const zQ = new Set;
+    var OM = iM(2050);
+    let SM = null,
+      jM = 0;
+    const aM = new Set;
 
-    function sQ() {
-      return qQ
+    function PM() {
+      return SM
     }
 
-    function FQ() {
-      return TQ
+    function nM() {
+      return jM
     }
 
-    function PQ(QQ) {
-      qQ = QQ, TQ++, (0, wQ.c)();
-      for (const WQ of zQ) WQ()
+    function QM(MM) {
+      SM = MM, jM++, (0, OM.c)();
+      for (const rM of aM) rM()
     }
 
-    function gQ(QQ) {
-      zQ.add(QQ)
+    function zM(MM) {
+      aM.add(MM)
     }
   },
-  41248: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => zQ,
-      f: () => sQ
+  42151: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => aM,
+      d: () => PM
     });
-    var wQ = XQ(41255);
-    let qQ = null,
-      TQ = null;
+    var OM = iM(42157);
+    let SM = null,
+      jM = null;
 
-    function zQ() {
-      return qQ ??= XQ.e(64).then((() => XQ(60868))).catch((QQ => {
-        throw qQ = null, QQ
-      })), qQ
+    function aM() {
+      return SM ??= iM.e(73).then((() => iM(63252))).catch((MM => {
+        throw SM = null, MM
+      })), SM
     }
 
-    function sQ() {
-      return TQ ??= Promise.all([zQ(), (0, wQ.g)()]).then((QQ => {
-        let [WQ] = QQ;
-        return WQ
-      }), (QQ => {
-        throw TQ = null, QQ
-      })), TQ
+    function PM() {
+      return jM ??= Promise.all([aM(), (0, OM.g)()]).then((MM => {
+        let [rM] = MM;
+        return rM
+      }), (MM => {
+        throw jM = null, MM
+      })), jM
     }
   },
-  37343: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => wQ
+  38005: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM
     });
-    const wQ = {
+    const OM = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -2722,21 +2735,21 @@ export const modules = {
       }
     }
   },
-  39311: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      b: () => wQ,
-      f: () => qQ
+  40073: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => OM,
+      e: () => SM
     });
-    const wQ = ["description", "label"];
+    const OM = ["description", "label"];
 
-    function qQ(QQ) {
-      const WQ = QQ.type;
+    function SM(MM) {
+      const rM = MM.type;
       return {
-        type: WQ,
-        params: QQ[WQ]
+        type: rM,
+        params: MM[rM]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

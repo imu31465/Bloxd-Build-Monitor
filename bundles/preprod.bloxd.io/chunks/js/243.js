@@ -1,394 +1,590 @@
 export const id = 243;
 export const ids = [243];
 export const modules = {
-  37446: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => sQ,
-      d: () => zQ,
-      e: () => qQ
+  37821: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => bM,
+      e: () => CM,
+      g: () => eM,
+      k: () => hM
     });
-    const wQ = 1024,
-      qQ = 16,
-      TQ = 36e4;
-    class zQ {
-      constructor(QQ) {
-        this.boneCount = QQ, this.rotation = void 0, this.position = void 0, this.scale = void 0, this.touched = void 0, this.rotation = new Float64Array(3 * QQ), this.position = new Float64Array(3 * QQ), this.scale = new Float64Array(3 * QQ).fill(1), this.touched = new Uint8Array(QQ)
-      }
-      clampToLimits() {
-        for (let QQ = 0; QQ < this.boneCount; QQ++)
-          if (0 !== this.touched[QQ])
-            for (let WQ = 3 * QQ; WQ < 3 * QQ + 3; WQ++) {
-              const QQ = this.rotation[WQ],
-                XQ = this.position[WQ],
-                zQ = this.scale[WQ];
-              QQ >= -36e4 && QQ <= TQ || (this.rotation[WQ] = FQ(QQ, TQ)), XQ >= -1024 && XQ <= wQ || (this.position[WQ] = FQ(XQ, wQ)), zQ >= -qQ && zQ <= qQ || (this.scale[WQ] = FQ(zQ, qQ, 1))
-            }
-      }
-      reset() {
-        for (let QQ = 0; QQ < this.boneCount; QQ++)
-          if (0 !== this.touched[QQ]) {
-            this.touched[QQ] = 0;
-            for (let WQ = 3 * QQ; WQ < 3 * QQ + 3; WQ++) this.rotation[WQ] = 0, this.position[WQ] = 0, this.scale[WQ] = 1
-          }
-      }
-    }
-    class sQ {
-      constructor(QQ) {
-        this.rotation = void 0, this.position = void 0, this.scaleDelta = void 0, this.boneWeight = void 0, this.touched = void 0, this.overrides = void 0, this.touchedBones = void 0, this.touchedCount = 0, this.rotation = new Float64Array(3 * QQ), this.position = new Float64Array(3 * QQ), this.scaleDelta = new Float64Array(3 * QQ), this.boneWeight = new Float64Array(QQ), this.touched = new Uint8Array(QQ), this.overrides = new Uint8Array(QQ), this.touchedBones = new Int32Array(QQ)
-      }
-      touch(QQ, WQ, XQ) {
-        0 === this.touched[QQ] && (this.touched[QQ] = 1, this.touchedBones[this.touchedCount++] = QQ), this.boneWeight[QQ] += WQ, XQ && (this.overrides[QQ] = 1)
-      }
-      applyTo(QQ, WQ, XQ) {
-        let wQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        for (let qQ = 0; qQ < this.touchedCount; qQ++) {
-          const TQ = this.touchedBones[qQ],
-            zQ = this.boneWeight[TQ];
-          if (XQ || 1 === this.overrides[TQ]) {
-            const XQ = WQ * Math.min(1, zQ);
-            for (let WQ = 3 * TQ; WQ < 3 * TQ + 3; WQ++) QQ.rotation[WQ] += (this.rotation[WQ] / zQ - QQ.rotation[WQ]) * XQ, QQ.position[WQ] += (this.position[WQ] / zQ - QQ.position[WQ]) * XQ, QQ.scale[WQ] += (1 + this.scaleDelta[WQ] / zQ - QQ.scale[WQ]) * XQ
-          } else {
-            const XQ = wQ && zQ > 1 ? WQ / zQ : WQ;
-            for (let WQ = 3 * TQ; WQ < 3 * TQ + 3; WQ++) QQ.rotation[WQ] += this.rotation[WQ] * XQ, QQ.position[WQ] += this.position[WQ] * XQ, QQ.scale[WQ] *= 1 + this.scaleDelta[WQ] * XQ
-          }
-          QQ.touched[TQ] = 1
-        }
-      }
-      clear() {
-        for (let QQ = 0; QQ < this.touchedCount; QQ++) {
-          const WQ = this.touchedBones[QQ];
-          this.touched[WQ] = 0, this.overrides[WQ] = 0, this.boneWeight[WQ] = 0;
-          for (let QQ = 3 * WQ; QQ < 3 * WQ + 3; QQ++) this.rotation[QQ] = 0, this.position[QQ] = 0, this.scaleDelta[QQ] = 0
-        }
-        this.touchedCount = 0
-      }
+    var OM = iM(1116),
+      SM = iM.n(OM),
+      jM = iM(44),
+      aM = iM(65),
+      PM = iM(1446),
+      nM = iM(1520),
+      QM = iM(1440),
+      zM = iM(1287),
+      LM = iM(1188),
+      mM = iM(37828),
+      HM = iM(1303);
+
+    function hM(MM) {
+      const [rM, iM] = (0, jM.useState)((() => (0, mM.n)(MM)));
+      return (0, jM.useEffect)((() => (iM((0, mM.n)(MM)), (0, mM.G)((() => {
+        iM((0, mM.n)(MM))
+      })))), [MM]), rM
     }
 
-    function FQ(QQ, WQ) {
-      let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      return Number.isNaN(QQ) ? XQ : Math.min(WQ, Math.max(-WQ, QQ))
-    }
-  },
-  37437: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      b: () => FQ,
-      f: () => sQ
-    });
-    var wQ = XQ(37428),
-      qQ = XQ(402),
-      TQ = XQ(1972),
-      zQ = XQ(37446);
-
-    function sQ(QQ) {
-      if ("ew" in QQ) return HQ.createAnimationScript(QQ);
-      return new gQ(QQ).createAnimationScript()
+    function JM(MM, rM) {
+      "function" === typeof MM ? MM(rM) : MM && (MM.current = rM)
     }
 
-    function FQ(QQ, WQ, XQ, qQ) {
-      const TQ = QQ.ew <= 0 ? 1 : WQ + XQ * Math.max(0, qQ) / QQ.ew;
-      return QQ.nw === wQ.n.LoopOnLastFrame ? TQ % 1 : QQ.nw === wQ.n.NoLoop && TQ >= 1 ? null : Math.min(1, TQ)
+    function dM(MM) {
+      let {
+        tutorial: rM,
+        step: iM,
+        enabled: OM = !0
+      } = MM;
+      const SM = hM(rM);
+      return OM && SM === iM
     }
-    class PQ {
-      createAnimationScript(QQ) {
-        const {
-          ew: WQ,
-          loop: XQ,
-          xw: wQ
-        } = QQ;
-        return {
-          ew: Math.round(WQ),
-          nw: this.createLoopMode(null !== XQ && void 0 !== XQ && XQ),
-          xw: this.createNodeSkeletonAnimationScript(null !== wQ && void 0 !== wQ ? wQ : null)
-        }
-      }
-      createLoopMode(QQ) {
-        switch (QQ) {
-          case !1:
-            return wQ.n.NoLoop;
-          case !0:
-            return wQ.n.LoopOnLastFrame;
-          case "hold-on-last-frame":
-            return wQ.n.HoldOnLastFrame
-        }
-        throw new Error(`Invalid loop mode schema: ${QQ}`)
-      }
-      createNodeSkeletonAnimationScript(QQ) {
-        if (null === QQ) return null;
-        const WQ = {};
-        for (const XQ in QQ) {
-          const wQ = QQ[XQ];
-          WQ[XQ] = this.createNodeAnimationScript(wQ)
-        }
-        return WQ
-      }
-      createNodeAnimationScript(QQ) {
-        const {
-          timeline: WQ
-        } = QQ, XQ = WQ.filter((QQ => Number.isFinite(QQ.timeFraction)));
-        return XQ.sort(((QQ, WQ) => QQ.timeFraction - WQ.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(XQ, "rotation", IQ),
-          position: this.createTimelineFromKeyframes(XQ, "position", BQ),
-          scale: this.createTimelineFromKeyframes(XQ, "scale", BQ, VQ)
-        }
-      }
-      createTimelineFromKeyframes(QQ, WQ, XQ) {
-        let wQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : QQ => QQ;
-        const qQ = [];
-        for (const PQ of QQ) {
-          const QQ = PQ[WQ];
-          if (QQ) {
-            const WQ = this.createAnimationFrameWithoutPrecomputes(PQ.timeFraction, QQ, wQ);
-            JQ(WQ) && qQ.push(WQ)
+
+    function yM(MM, rM) {
+      const iM = (0, mM.o)(MM),
+        OM = iM.indexOf(rM);
+      return !iM.slice(OM + 1).some((rM => (0, mM.u)(MM, rM)))
+    }
+
+    function lM(MM, rM, iM, OM) {
+      let {
+        tutorial: SM,
+        step: jM,
+        waitForClick: aM = !1,
+        onPrevious: PM
+      } = MM;
+      const nM = rM && (0, mM.t)(SM, jM),
+        QM = rM && !yM(SM, jM),
+        LM = aM ? OM : iM;
+      let HM = null;
+      nM ? HM = () => {
+        null === PM || void 0 === PM || PM(), (0, mM.s)(SM, jM)
+      } : QM && (HM = () => {
+        (0, mM.k)(SM)
+      }), (0, zM.v)("popup", null !== LM && void 0 !== LM ? LM : iM, HM, rM && null !== LM, null, nM ? void 0 : "controller:menusSkipTutorial")
+    }
+
+    function EM(MM) {
+      let {
+        tutorial: rM,
+        step: iM,
+        text: OM,
+        waitForClick: SM = !1,
+        onPrevious: jM
+      } = MM;
+      const {
+        t: aM
+      } = (0, LM.A)(), PM = yM(rM, iM);
+      return (0, HM.jsxs)(HM.Fragment, {
+        children: [(0, HM.jsx)("div", {
+          className: "TutorialStepText",
+          children: OM
+        }), (0, HM.jsxs)("div", {
+          className: "TutorialStepButtons",
+          children: [(0, mM.t)(rM, iM) && (0, HM.jsx)(nM.i, {
+            className: "TutorialStepButton",
+            onClick: () => {
+              null === jM || void 0 === jM || jM(), (0, mM.s)(rM, iM)
+            },
+            children: aM("tutorial:back")
+          }), !SM && (0, HM.jsx)(nM.e, {
+            className: "TutorialStepButton",
+            onClick: () => {
+              (0, mM.h)(iM)
+            },
+            padDefaultFocus: !0,
+            children: aM(PM ? "tutorial:done" : "tutorial:next")
+          }), !PM && (0, HM.jsx)(nM.i, {
+            className: "TutorialStepButton",
+            onClick: () => {
+              (0, mM.k)(rM)
+            },
+            children: aM("tutorial:skip")
+          })]
+        })]
+      })
+    }
+    const UM = 6;
+
+    function GM(MM) {
+      let {
+        rect: rM,
+        margin: iM
+      } = MM;
+      const OM = Math.max(0, rM.top - iM),
+        SM = rM.bottom + iM,
+        jM = Math.max(0, rM.left - iM),
+        aM = rM.right + iM;
+      return (0, HM.jsxs)(HM.Fragment, {
+        children: [(0, HM.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: 0,
+            left: 0,
+            right: 0,
+            height: OM
           }
-        }
-        const TQ = [];
-        for (let PQ = 0; PQ < qQ.length; PQ++) {
-          var zQ, sQ, FQ;
-          const QQ = qQ[PQ],
-            WQ = null !== (zQ = qQ[PQ - 1]) && void 0 !== zQ ? zQ : QQ,
-            wQ = null !== (sQ = qQ[PQ + 1]) && void 0 !== sQ ? sQ : QQ,
-            gQ = null !== (FQ = qQ[PQ + 2]) && void 0 !== FQ ? FQ : wQ;
-          TQ.push({
-            ...QQ,
-            ...XQ(WQ.post, WQ.timeFraction, QQ.post, QQ.timeFraction, wQ.pre, wQ.timeFraction, gQ.pre, gQ.timeFraction)
-          })
-        }
-        return TQ
-      }
-      createAnimationFrameWithoutPrecomputes(QQ, WQ, XQ) {
-        let wQ, qQ, TQ = null;
-        var zQ;
-        if ("object" === typeof WQ && "point" in WQ) TQ = null !== (zQ = WQ.Zw) && void 0 !== zQ ? zQ : null, wQ = WQ.point, qQ = WQ.point;
-        else if ("object" === typeof WQ && "pre" in WQ) {
-          var sQ;
-          TQ = null !== (sQ = WQ.Zw) && void 0 !== sQ ? sQ : null, wQ = WQ.pre, qQ = WQ.post
-        } else wQ = WQ, qQ = WQ;
-        return {
-          timeFraction: QQ,
-          Zw: this.createLerpMode(TQ),
-          pre: XQ(wQ),
-          post: XQ(qQ)
-        }
-      }
-      createLerpMode(QQ) {
-        return null === QQ ? wQ.j.Linear : PQ.LERP_MODE_SCHEMA_MAPPING[QQ]
-      }
+        }), (0, HM.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: SM,
+            left: 0,
+            right: 0,
+            bottom: 0
+          }
+        }), (0, HM.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: OM,
+            left: 0,
+            width: jM,
+            height: SM - OM
+          }
+        }), (0, HM.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: OM,
+            left: aM,
+            right: 0,
+            height: SM - OM
+          }
+        })]
+      })
     }
-    PQ.LERP_MODE_SCHEMA_MAPPING = {
-      linear: wQ.j.Linear,
-      "catmull-rom-spline": wQ.j.CatmullRomSpline
-    };
-    class gQ {
-      constructor(QQ) {
-        this.animationSchema = QQ
-      }
-      createAnimationScript() {
-        const {
-          animation_length: QQ,
-          loop: WQ,
-          bones: XQ
-        } = this.animationSchema;
-        return {
-          ew: Math.round(1e3 * QQ),
-          nw: this.createLoopMode(null !== WQ && void 0 !== WQ && WQ),
-          xw: this.createNodeSkeletonAnimationScript(null !== XQ && void 0 !== XQ ? XQ : null)
+
+    function CM(MM) {
+      let {
+        target: rM,
+        placement: iM,
+        boxRef: OM,
+        className: nM,
+        spotlight: zM = !0,
+        spotlightMargin: LM = UM,
+        children: mM
+      } = MM;
+      const {
+        getArrowProps: hM,
+        getTooltipProps: JM,
+        setTooltipRef: dM,
+        setTriggerRef: yM,
+        update: lM
+      } = (0, PM.d)({
+        placement: iM,
+        trigger: null,
+        visible: !0,
+        interactive: !0,
+        closeOnOutsideClick: !1,
+        offset: [0, LM]
+      });
+      (0, jM.useLayoutEffect)((() => {
+        yM(rM)
+      }), [rM, yM]);
+      const EM = function(MM, rM) {
+        const [iM, OM] = (0, jM.useState)(null);
+        return (0, jM.useEffect)((() => {
+          if (!rM || !MM) return void OM(null);
+          let iM = 0,
+            SM = null;
+          const jM = () => {
+            const rM = MM.getBoundingClientRect();
+            SM && rM.left === SM.left && rM.top === SM.top && rM.width === SM.width && rM.height === SM.height || (SM = rM, OM(rM)), iM = requestAnimationFrame(jM)
+          };
+          return jM(), () => {
+            cancelAnimationFrame(iM)
+          }
+        }), [MM, rM]), iM
+      }(rM, zM);
+      (0, jM.useEffect)((() => {
+        null === lM || void 0 === lM || lM()
+      }), [EM, lM]), (0, jM.useEffect)((() => {
+        if (zM || !rM || !lM) return;
+        const MM = new ResizeObserver((() => {
+          lM()
+        }));
+        return MM.observe(rM), rM.parentElement && MM.observe(rM.parentElement), () => {
+          MM.disconnect()
         }
-      }
-      createLoopMode(QQ) {
-        switch (QQ) {
-          case !1:
-            return wQ.n.NoLoop;
-          case !0:
-            return wQ.n.LoopOnLastFrame;
-          case "hold_on_last_frame":
-            return wQ.n.HoldOnLastFrame
-        }
-        throw new Error(`Invalid Blockbench loop mode schema: ${QQ}`)
-      }
-      createNodeSkeletonAnimationScript(QQ) {
-        if (null === QQ) return null;
-        const WQ = {};
-        for (const XQ in QQ) {
-          const wQ = QQ[XQ];
-          WQ[XQ] = this.createNodeAnimationScript(wQ)
-        }
-        return WQ
-      }
-      createNodeAnimationScript(QQ) {
-        const {
-          rotation: WQ,
-          position: XQ,
-          scale: wQ
-        } = QQ;
-        return {
-          rotation: this.createAnimationTimeline(null !== WQ && void 0 !== WQ ? WQ : null, pQ, IQ, !0),
-          position: this.createAnimationTimeline(null !== XQ && void 0 !== XQ ? XQ : null, UQ, BQ, !1),
-          scale: this.createAnimationTimeline(null !== wQ && void 0 !== wQ ? wQ : null, yQ, BQ, !1)
-        }
-      }
-      createAnimationTimeline(QQ, WQ, XQ, wQ) {
-        if (null === QQ) return [];
-        (Array.isArray(QQ) || "number" === typeof QQ) && (QQ = {
-          "0.0": QQ
-        });
-        const qQ = Object.entries(QQ).map((QQ => {
-          let [XQ, wQ] = QQ;
-          const qQ = Number(XQ) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(qQ, wQ, WQ)
-        })).filter(JQ);
-        qQ.sort(((QQ, WQ) => QQ.timeFraction - WQ.timeFraction)), wQ && function(QQ) {
-          for (let WQ = 1; WQ < QQ.length; WQ++) {
-            const XQ = QQ[WQ - 1].post,
-              wQ = QQ[WQ],
-              qQ = bQ(wQ.pre),
-              TQ = bQ(wQ.post),
-              zQ = dQ(XQ, wQ.pre);
-            dQ(XQ, qQ) < zQ && (QQ[WQ] = {
-              ...wQ,
-              pre: qQ,
-              post: TQ
+      }), [rM, zM, lM]), (0, jM.useEffect)((() => {
+        zM && (null === rM || void 0 === rM || rM.scrollIntoView({
+          block: "nearest",
+          inline: "nearest"
+        }))
+      }), [rM, zM]);
+      const CM = (0, jM.useCallback)((MM => {
+        dM(MM), OM && (OM.current = MM)
+      }), [dM, OM]);
+      return (0, aM.createPortal)((0, HM.jsxs)(HM.Fragment, {
+        children: [EM && (0, HM.jsx)(GM, {
+          rect: EM,
+          margin: LM
+        }), (0, HM.jsxs)("div", {
+          ref: CM,
+          ...JM({
+            className: SM()("tooltip-container SmallTextLight TutorialStep", nM)
+          }),
+          children: [mM, (0, HM.jsx)("div", {
+            ...hM({
+              className: "tooltip-arrow"
             })
-          }
-        }(qQ);
-        const TQ = [];
-        for (let PQ = 0; PQ < qQ.length; PQ++) {
-          var zQ, sQ, FQ;
-          const QQ = qQ[PQ],
-            WQ = null !== (zQ = qQ[PQ - 1]) && void 0 !== zQ ? zQ : QQ,
-            wQ = null !== (sQ = qQ[PQ + 1]) && void 0 !== sQ ? sQ : QQ,
-            gQ = null !== (FQ = qQ[PQ + 2]) && void 0 !== FQ ? FQ : wQ;
-          TQ.push({
-            ...QQ,
-            ...XQ(WQ.post, WQ.timeFraction, QQ.post, QQ.timeFraction, wQ.pre, wQ.timeFraction, gQ.pre, gQ.timeFraction)
+          })]
+        })]
+      }), (0, QM.m)())
+    }
+    const eM = (0, jM.forwardRef)((function(MM, rM) {
+      let {
+        placement: iM = "right",
+        children: OM,
+        ...SM
+      } = MM;
+      const aM = dM(SM),
+        PM = (0, jM.useRef)(null),
+        nM = (0, jM.useRef)(null);
+      lM(SM, aM, PM, nM);
+      const [QM, zM] = (0, jM.useState)(null), LM = OM.ref, mM = (0, jM.useCallback)((MM => {
+        nM.current = MM, zM(MM), JM(rM, MM), JM(LM, MM)
+      }), [rM, LM]);
+      return (0, HM.jsxs)(HM.Fragment, {
+        children: [(0, jM.cloneElement)(OM, {
+          ref: mM
+        }), aM && (0, HM.jsx)(CM, {
+          target: QM,
+          placement: iM,
+          boxRef: PM,
+          children: (0, HM.jsx)(EM, {
+            ...SM
           })
-        }
-        return TQ
-      }
-      createAnimationFrameWithoutPrecomputes(QQ, WQ, XQ) {
-        let wQ, qQ, TQ = null;
-        if ("object" === typeof WQ && "post" in WQ) {
-          var zQ;
-          TQ = null !== (zQ = WQ.lerp_mode) && void 0 !== zQ ? zQ : null, qQ = XQ(WQ.post), wQ = void 0 !== WQ.pre ? XQ(WQ.pre) : qQ
-        } else {
-          const QQ = XQ(WQ);
-          qQ = QQ, wQ = QQ
-        }
-        return {
-          timeFraction: QQ,
-          Zw: this.createLerpMode(TQ),
-          pre: wQ,
-          post: qQ
-        }
-      }
-      createLerpMode(QQ) {
-        return null === QQ ? wQ.j.Linear : gQ.LERP_MODE_SCHEMA_MAPPING[QQ]
-      }
-    }
+        })]
+      })
+    }));
 
-    function JQ(QQ) {
-      return Number.isFinite(QQ.timeFraction) && rQ(QQ.pre) && rQ(QQ.post)
+    function bM(MM) {
+      const rM = dM(MM),
+        iM = (0, jM.useRef)(null);
+      return lM(MM, rM, iM, null), rM ? (0, aM.createPortal)((0, HM.jsx)("div", {
+        className: "TutorialCentreBackdrop",
+        children: (0, HM.jsx)("div", {
+          ref: iM,
+          className: "tooltip-container SmallTextLight TutorialStep TutorialCentreStep",
+          children: (0, HM.jsx)(EM, {
+            ...MM
+          })
+        })
+      }), (0, QM.m)()) : null
     }
-
-    function rQ(QQ) {
-      return Number.isFinite(QQ[0]) && Number.isFinite(QQ[1]) && Number.isFinite(QQ[2])
-    }
-
-    function IQ(QQ, WQ, XQ, wQ, qQ, TQ, zQ, sQ) {
-      const FQ = TQ - WQ,
-        PQ = TQ - wQ,
-        gQ = sQ - wQ,
-        JQ = [null, null, null];
-      for (let rQ = 0; rQ < JQ.length; rQ++) JQ[rQ] = jQ(QQ[rQ], XQ[rQ], qQ[rQ], zQ[rQ], FQ, gQ);
-      return {
-        Ow: PQ,
-        Kw: JQ
-      }
-    }
-
-    function jQ(QQ, WQ, XQ, wQ, TQ, zQ) {
-      return {
-        Mw: qQ.b.computeShortestRotation(QQ, XQ) / TQ,
-        Qq: qQ.b.computeShortestRotation(WQ, wQ) / zQ,
-        delta: qQ.b.computeShortestRotation(WQ, XQ)
-      }
-    }
-
-    function BQ(QQ, WQ, XQ, wQ, qQ, TQ, zQ, sQ) {
-      const FQ = TQ - WQ,
-        PQ = TQ - wQ,
-        gQ = sQ - wQ,
-        JQ = [null, null, null];
-      for (let rQ = 0; rQ < JQ.length; rQ++) JQ[rQ] = {
-        Mw: (qQ[rQ] - QQ[rQ]) / FQ,
-        Qq: (zQ[rQ] - XQ[rQ]) / gQ,
-        delta: qQ[rQ] - XQ[rQ]
-      };
-      return {
-        Ow: PQ,
-        Kw: JQ
-      }
-    }
-
-    function yQ(QQ) {
-      return VQ("number" === typeof QQ ? [QQ, QQ, QQ] : QQ)
-    }
-
-    function VQ(QQ) {
-      return [DQ(QQ[0]), DQ(QQ[1]), DQ(QQ[2])]
-    }
-
-    function DQ(QQ) {
-      return Number.isFinite(QQ) ? Math.min(zQ.e, Math.max(-zQ.e, QQ)) : QQ
-    }
-
-    function pQ(QQ) {
-      const [WQ, XQ, wQ] = QQ, zQ = -(0, TQ.j)(WQ), sQ = -(0, TQ.j)(XQ), FQ = (0, TQ.j)(wQ), PQ = qQ.b.quaternionFromEulerZYX(zQ, sQ, FQ);
-      return qQ.b.eulerYXZFromQuaternion(PQ)
-    }
-    gQ.LERP_MODE_SCHEMA_MAPPING = {
-      linear: wQ.j.Linear,
-      catmullrom: wQ.j.CatmullRomSpline
-    };
-    const GQ = 1 / 16;
-
-    function UQ(QQ) {
-      return [-QQ[0] * GQ, QQ[1] * GQ, QQ[2] * GQ]
-    }
-
-    function bQ(QQ) {
-      const [WQ, XQ, wQ] = QQ;
-      return [WQ >= 0 ? Math.PI - WQ : -Math.PI - WQ, vQ(XQ + Math.PI), vQ(wQ + Math.PI)]
-    }
-
-    function vQ(QQ) {
-      return qQ.b.mod(QQ + Math.PI, 2 * Math.PI) - Math.PI
-    }
-
-    function dQ(QQ, WQ) {
-      return Math.abs(qQ.b.computeShortestRotation(QQ[0], WQ[0])) + Math.abs(qQ.b.computeShortestRotation(QQ[1], WQ[1])) + Math.abs(qQ.b.computeShortestRotation(QQ[2], WQ[2]))
-    }
-    const HQ = new PQ
   },
-  37428: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => zQ,
-      g: () => TQ,
-      j: () => wQ,
-      n: () => qQ
+  37544: (MM, rM, iM) => {
+    iM.d(rM, {
+      B: () => lM,
+      b: () => jM,
+      f: () => JM,
+      i: () => dM,
+      j: () => PM,
+      m: () => mM,
+      q: () => yM,
+      u: () => LM,
+      x: () => EM,
+      y: () => hM
     });
-    let wQ = function(QQ) {
-        return QQ[QQ.Linear = 0] = "Linear", QQ[QQ.CatmullRomSpline = 1] = "CatmullRomSpline", QQ
-      }({}),
-      qQ = function(QQ) {
-        return QQ[QQ.NoLoop = 0] = "NoLoop", QQ[QQ.LoopOnLastFrame = 1] = "LoopOnLastFrame", QQ[QQ.HoldOnLastFrame = 2] = "HoldOnLastFrame", QQ
-      }({}),
-      TQ = function(QQ) {
-        return QQ[QQ.Movement = 0] = "Movement", QQ[QQ.Action = 1] = "Action", QQ[QQ.Emote = 2] = "Emote", QQ[QQ.Custom = 3] = "Custom", QQ
-      }({}),
-      zQ = function(QQ) {
-        return QQ[QQ.Start = 0] = "Start", QQ[QQ.Stop = 1] = "Stop", QQ
-      }({})
+    var OM = iM(19),
+      SM = iM(22);
+    const jM = "clientGameInventoryButtonsChanged",
+      aM = new Map;
+
+    function PM() {
+      return [...aM.values()].sort(((MM, rM) => {
+        var iM, OM;
+        return (null !== (iM = MM.order) && void 0 !== iM ? iM : 0) - (null !== (OM = rM.order) && void 0 !== OM ? OM : 0)
+      }))
+    }
+    let nM = null;
+
+    function QM(MM) {
+      nM = MM
+    }
+    let zM = !1;
+
+    function LM(MM) {
+      zM = !0;
+      try {
+        MM.onClick()
+      } finally {
+        zM = !1
+      }
+      MM.panel && "clientGame" === OM.d.get("openInGameMenuName") && QM(MM.id)
+    }
+
+    function mM() {
+      return zM
+    }
+
+    function HM() {
+      return PM().filter((MM => MM.panel && !MM.disabled))
+    }
+
+    function hM(MM) {
+      const rM = HM(),
+        iM = rM.findIndex((MM => MM.id === nM));
+      return !(iM < 0 || rM.length < 2) && (LM(rM[(iM + MM + rM.length) % rM.length]), !0)
+    }
+
+    function JM() {
+      return null !== nM && HM().length > 1
+    }
+
+    function dM() {
+      QM(null)
+    }
+
+    function yM() {
+      "inventory" !== OM.d.get("openInGameMenuName") && QM(null)
+    }
+
+    function lM() {
+      const MM = nM;
+      return QM(null), MM
+    }
+
+    function EM(MM) {
+      return aM.set(MM.id, MM), SM.i.Tz(jM, PM(), !0), () => {
+        aM.get(MM.id) === MM && (aM.delete(MM.id), SM.i.Tz(jM, PM()))
+      }
+    }
+  },
+  37542: (MM, rM, iM) => {
+    iM.d(rM, {
+      A: () => HM,
+      C: () => zM,
+      e: () => PM,
+      g: () => lM,
+      k: () => dM,
+      n: () => yM,
+      p: () => mM,
+      t: () => QM,
+      w: () => JM
+    });
+    var OM = iM(19),
+      SM = iM(22),
+      jM = iM(1313),
+      aM = iM(37544);
+    const PM = "clientGameUiChanged";
+    let nM = null;
+
+    function QM() {
+      return nM
+    }
+
+    function zM(MM, rM) {
+      const iM = {
+        content: MM,
+        menu: rM
+      };
+      return nM = iM, SM.i.Tz(PM, nM, !0), () => {
+        nM === iM && (nM = null, hM = !1, dM(), SM.i.Tz(PM, null))
+      }
+    }
+    let LM = null;
+
+    function mM() {
+      return LM
+    }
+
+    function HM(MM) {
+      return LM = MM, () => {
+        LM === MM && (LM = null)
+      }
+    }
+    let hM = !1;
+
+    function JM() {
+      const MM = OM.d.get("openInGameMenuName");
+      "clientGame" !== MM && (hM = "inventory" === MM), (0, aM.m)() || (0, aM.i)(), (0, jM.z)(jM.e), OM.d.set({
+        openInGameMenuName: "clientGame",
+        openEverythingMenuName: null
+      })
+    }
+
+    function dM() {
+      EM(!1)
+    }
+
+    function yM() {
+      EM(hM)
+    }
+
+    function lM() {
+      hM && EM(!1)
+    }
+
+    function EM(MM) {
+      "clientGame" === OM.d.get("openInGameMenuName") && OM.d.set({
+        openInGameMenuName: MM ? "inventory" : null
+      }), MM || (0, aM.i)(), hM = !1
+    }
+  },
+  37828: (MM, rM, iM) => {
+    iM.d(rM, {
+      D: () => oM,
+      E: () => DM,
+      G: () => fM,
+      d: () => nM,
+      h: () => uM,
+      j: () => PM,
+      k: () => sM,
+      n: () => tM,
+      o: () => CM,
+      s: () => WM,
+      t: () => pM,
+      u: () => wM,
+      y: () => kM,
+      z: () => ZM
+    });
+    var OM = iM(30);
+    const SM = {
+        codeBlock: ["codeBlockIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "worldCodeButton", "exportButton", "helpButton"],
+        worldCode: ["worldCodeIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "exportButton", "helpButton"]
+      },
+      jM = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
+      aM = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
+      PM = jM.filter((MM => "docsButton" !== MM)),
+      nM = aM.filter((MM => "aiHelperButton" !== MM)),
+      QM = "codeEditorTutorials",
+      zM = {
+        codeBlockIntro: "codeBlockIntroShown",
+        worldCodeIntro: "worldCodeIntroShown"
+      },
+      LM = {
+        welcome: "welcomeComplete",
+        docsOverview: "docsOverviewComplete",
+        aiHelperOverview: "aiHelperOverviewComplete"
+      };
+    let mM = null,
+      HM = null;
+    const hM = new Set,
+      JM = new Set;
+    let dM = null;
+    const yM = new Set,
+      lM = new Set;
+
+    function EM() {
+      lM.forEach((MM => {
+        MM()
+      }))
+    }
+
+    function UM() {
+      if (!mM) {
+        const MM = OM.g.getItem(QM);
+        mM = {
+          codeBlockIntroShown: !1,
+          worldCodeIntroShown: !1,
+          welcomeComplete: !1,
+          docsOverviewComplete: !1,
+          aiHelperOverviewComplete: !1,
+          ..."object" === typeof MM && null !== MM ? MM : {}
+        }
+      }
+      return mM
+    }
+
+    function GM(MM) {
+      const rM = UM();
+      rM[MM] || (mM = {
+        ...rM,
+        [MM]: !0
+      }, OM.g.setItem(QM, mM))
+    }
+
+    function CM(MM) {
+      return "docsOverview" === MM ? jM : "aiHelperOverview" === MM ? aM : HM ? SM[HM] : []
+    }
+
+    function eM(MM) {
+      return ("worldCodeButton" !== MM || !UM().worldCodeIntroShown) && !yM.has(MM)
+    }
+
+    function bM(MM) {
+      var rM;
+      return (null === (rM = dM) || void 0 === rM ? void 0 : rM.name) === MM ? dM.stepsDone : hM
+    }
+
+    function wM(MM, rM) {
+      if (! function(MM) {
+          return dM ? dM.name === MM : "welcome" === MM
+        }(MM) || !eM(rM) || bM(MM).has(rM)) return !1;
+      if (dM) return !0;
+      const iM = zM[rM];
+      return iM ? !UM()[iM] || JM.has(rM) : !UM()[LM[MM]]
+    }
+
+    function tM(MM) {
+      var rM;
+      return null !== (rM = CM(MM).find((rM => wM(MM, rM)))) && void 0 !== rM ? rM : null
+    }
+
+    function gM(MM) {
+      var rM;
+      GM(LM[MM]), (null === (rM = dM) || void 0 === rM ? void 0 : rM.name) === MM && (dM = null)
+    }
+
+    function uM(MM) {
+      const rM = (dM ? [dM.name] : ["welcome", "docsOverview"]).find((rM => tM(rM) === MM));
+      if (!rM) return;
+      bM(rM).add(MM);
+      const iM = zM[MM];
+      iM && (GM(iM), dM || JM.add(MM)), null === tM(rM) && gM(rM), EM()
+    }
+
+    function RM(MM, rM) {
+      const iM = CM(MM),
+        OM = bM(MM);
+      for (let SM = iM.indexOf(rM) - 1; SM >= 0; SM--)
+        if (OM.has(iM[SM]) && eM(iM[SM])) return iM[SM];
+      return null
+    }
+
+    function pM(MM, rM) {
+      return null !== RM(MM, rM)
+    }
+
+    function WM(MM, rM) {
+      const iM = RM(MM, rM);
+      iM && (bM(MM).delete(iM), EM())
+    }
+
+    function sM(MM) {
+      gM(MM), "welcome" === MM && CM("welcome").forEach((MM => {
+        const rM = zM[MM];
+        rM && GM(rM)
+      })), EM()
+    }
+
+    function DM(MM) {
+      dM = {
+        name: MM,
+        stepsDone: new Set
+      }, EM()
+    }
+
+    function kM() {
+      (dM || 0 !== hM.size || 0 !== JM.size) && (dM = null, hM.clear(), JM.clear(), EM())
+    }
+
+    function ZM(MM, rM) {
+      const iM = rM ? MM : HM === MM ? null : HM;
+      iM !== HM && (HM = iM, EM())
+    }
+
+    function oM(MM, rM) {
+      yM.has(MM) === rM && (rM ? yM.delete(MM) : yM.add(MM), EM())
+    }
+
+    function fM(MM) {
+      return lM.add(MM), () => {
+        lM.delete(MM)
+      }
+    }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

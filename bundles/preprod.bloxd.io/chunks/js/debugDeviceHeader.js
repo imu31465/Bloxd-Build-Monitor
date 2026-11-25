@@ -1,86 +1,86 @@
-export const id = 30;
-export const ids = [30];
+export const id = 34;
+export const ids = [34];
 export const modules = {
-  34376: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      clientHintsRead: () => IQ,
-      debugDeviceLines: () => BQ
+  34912: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      clientHintsRead: () => HM,
+      debugDeviceLines: () => JM
     });
-    var wQ = XQ(691),
-      qQ = XQ(105),
-      TQ = XQ(158),
-      zQ = XQ(150),
-      sQ = XQ(3534);
-    const FQ = new Set(["NT 10.0", "10", "10.15.7", "10.15"]);
+    var OM = iM(656),
+      SM = iM(83),
+      jM = iM(119),
+      aM = iM(114),
+      PM = iM(3674);
+    const nM = new Set(["NT 10.0", "10", "10.15.7", "10.15"]);
 
-    function PQ(QQ) {
-      if ("ios" === QQ.os) return function(QQ) {
-        if (null !== QQ.appIosVersion) return `${QQ.appIosVersion} (the iOS app's)`;
-        const WQ = /\b(?:iOS |FBSV\/)(\d+(?:[_.]\d+)*)/.exec(QQ.userAgent);
-        if (WQ) return `${WQ[1].replaceAll("_",".")} (the in-app browser's iOS token)`;
+    function QM(MM) {
+      if ("ios" === MM.os) return function(MM) {
+        if (null !== MM.appIosVersion) return `${MM.appIosVersion} (the iOS app's)`;
+        const rM = /\b(?:iOS |FBSV\/)(\d+(?:[_.]\d+)*)/.exec(MM.userAgent);
+        if (rM) return `${rM[1].replaceAll("_",".")} (the in-app browser's iOS token)`;
         const {
-          browser: XQ,
-          os: wQ
-        } = QQ.agent;
-        if ("Safari" === XQ.name && XQ.version) return `${XQ.version} (Safari's version, which follows iOS)`;
-        const qQ = wQ.version;
-        if ("iOS" !== wQ.name || !qQ) return "? (a desktop user agent)";
-        const [TQ, zQ = 0] = qQ.split(".").map(Number);
-        return TQ < 18 || 18 === TQ && zQ < 6 ? `${qQ} (user agent)` : `? (the user agent says ${qQ}, frozen from iOS 26)`
-      }(QQ);
-      const WQ = QQ.hintsPlatformVersion;
-      if (WQ) return "windows" === QQ.os ? `${WQ} (${function(QQ){const WQ=parseInt(QQ,10);if(WQ>=13)return"Windows 11";return WQ>=1?"Windows 10":"Windows 8.1 or older"}(WQ)}, client hints)` : `${WQ} (client hints)`;
-      const XQ = QQ.agent.os.version;
-      return XQ ? FQ.has(XQ) ? `${XQ} (user agent, which may be frozen)` : `${XQ} (user agent)` : "?"
+          browser: iM,
+          os: OM
+        } = MM.agent;
+        if ("Safari" === iM.name && iM.version) return `${iM.version} (Safari's version, which follows iOS)`;
+        const SM = OM.version;
+        if ("iOS" !== OM.name || !SM) return "? (a desktop user agent)";
+        const [jM, aM = 0] = SM.split(".").map(Number);
+        return jM < 18 || 18 === jM && aM < 6 ? `${SM} (user agent)` : `? (the user agent says ${SM}, frozen from iOS 26)`
+      }(MM);
+      const rM = MM.hintsPlatformVersion;
+      if (rM) return "windows" === MM.os ? `${rM} (${function(MM){const rM=parseInt(MM,10);if(rM>=13)return"Windows 11";return rM>=1?"Windows 10":"Windows 8.1 or older"}(rM)}, client hints)` : `${rM} (client hints)`;
+      const iM = MM.agent.os.version;
+      return iM ? nM.has(iM) ? `${iM} (user agent, which may be frozen)` : `${iM} (user agent)` : "?"
     }
 
-    function gQ(QQ) {
-      var WQ;
-      const XQ = (null !== (WQ = QQ.fullVersionList) && void 0 !== WQ ? WQ : []).filter((QQ => {
+    function zM(MM) {
+      var rM;
+      const iM = (null !== (rM = MM.fullVersionList) && void 0 !== rM ? rM : []).filter((MM => {
         let {
-          brand: WQ
-        } = QQ;
-        return !/not.a.brand/i.test(WQ)
-      })).map((QQ => {
+          brand: rM
+        } = MM;
+        return !/not.a.brand/i.test(rM)
+      })).map((MM => {
         let {
-          brand: WQ,
-          version: XQ
-        } = QQ;
-        return `${WQ} ${XQ}`
+          brand: rM,
+          version: iM
+        } = MM;
+        return `${rM} ${iM}`
       }));
-      return `${QQ.platform} ${QQ.platformVersion||"?"}, ${XQ.join(", ")||"?"}, ${QQ.architecture||"?"} ${QQ.bitness||"?"}-bit, model ${QQ.model||"?"}, mobile ${QQ.mobile}`
+      return `${MM.platform} ${MM.platformVersion||"?"}, ${iM.join(", ")||"?"}, ${MM.architecture||"?"} ${MM.bitness||"?"}-bit, model ${MM.model||"?"}, mobile ${MM.mobile}`
     }
-    let JQ = "pending";
-    const rQ = navigator.userAgentData;
-    void 0 === rQ && (JQ = "none (the browser has none)");
-    const IQ = void 0 === rQ ? Promise.resolve() : rQ.getHighEntropyValues(["platformVersion", "fullVersionList", "architecture", "bitness", "model"]).then((QQ => {
-      JQ = QQ
-    }), (QQ => {
-      JQ = `failed (${String(QQ)})`
+    let LM = "pending";
+    const mM = navigator.userAgentData;
+    void 0 === mM && (LM = "none (the browser has none)");
+    const HM = void 0 === mM ? Promise.resolve() : mM.getHighEntropyValues(["platformVersion", "fullVersionList", "architecture", "bitness", "model"]).then((MM => {
+      LM = MM
+    }), (MM => {
+      LM = `failed (${String(MM)})`
     }));
 
-    function jQ() {
-      const QQ = (0, zQ.y)(),
-        WQ = null !== QQ && void 0 !== QQ ? QQ : (0, zQ.n)(),
-        XQ = (0, zQ.j)();
-      return [WQ ? `webgl ${WQ.vendor} / ${WQ.renderer} (${QQ?"the renderer's context":"a probe"})` : "webgl ?", XQ ? `webgpu adapter ${XQ.vendor||"?"}/${XQ.architecture||"?"}` : "webgpu adapter ?"].join("; ")
+    function hM() {
+      const MM = (0, aM.y)(),
+        rM = null !== MM && void 0 !== MM ? MM : (0, aM.o)(),
+        iM = (0, aM.k)();
+      return [rM ? `webgl ${rM.vendor} / ${rM.renderer} (${MM?"the renderer's context":"a probe"})` : "webgl ?", iM ? `webgpu adapter ${iM.vendor||"?"}/${iM.architecture||"?"}` : "webgpu adapter ?"].join("; ")
     }
 
-    function BQ() {
-      var QQ, WQ, XQ, zQ, FQ, rQ;
-      const IQ = (0, qQ.getUserAgentDetails)(),
-        BQ = (0, qQ.getOperatingSystem)(),
-        yQ = PQ({
-          os: BQ,
+    function JM() {
+      var MM, rM, iM, aM, nM, mM;
+      const HM = (0, SM.getUserAgentDetails)(),
+        JM = (0, SM.getOperatingSystem)(),
+        dM = QM({
+          os: JM,
           userAgent: navigator.userAgent,
-          agent: IQ,
-          appIosVersion: sQ.d,
-          hintsPlatformVersion: "string" === typeof JQ ? void 0 : JQ.platformVersion
+          agent: HM,
+          appIosVersion: PM.f,
+          hintsPlatformVersion: "string" === typeof LM ? void 0 : LM.platformVersion
         }),
-        VQ = (0, wQ.g)(navigator.platform, navigator.maxTouchPoints, TQ.siteUsed, (0, qQ.getWebGpuSupported)());
-      return [`os ${BQ} ${yQ}; user agent's ${null!==(QQ=IQ.os.name)&&void 0!==QQ?QQ:"?"} ${null!==(WQ=IQ.os.version)&&void 0!==WQ?WQ:"?"}, platform ${navigator.platform}, touch points ${navigator.maxTouchPoints}, ${(0,qQ.getPlatformType)()}`, `browser ${null!==(XQ=IQ.browser.name)&&void 0!==XQ?XQ:"?"} ${null!==(zQ=IQ.browser.version)&&void 0!==zQ?zQ:"?"}, engine ${null!==(FQ=IQ.engine.name)&&void 0!==FQ?FQ:"?"} ${null!==(rQ=IQ.engine.version)&&void 0!==rQ?rQ:"?"}`, `client hints ${"string"===typeof JQ?JQ:gQ(JQ)}`, `gpu ${jQ()}`, `client ${wQ.l.client} (${wQ.l.reason})`, `surface site ${TQ.siteUsed}, subsite ${TQ.subsiteUsed}${TQ.isIframed?", iframed":""}, capped surface ${null!==VQ&&void 0!==VQ?VQ:"none"}`]
+        yM = (0, OM.n)(navigator.platform, navigator.maxTouchPoints, jM.siteUsed, (0, SM.getWebGpuSupported)());
+      return [`os ${JM} ${dM}; user agent's ${null!==(MM=HM.os.name)&&void 0!==MM?MM:"?"} ${null!==(rM=HM.os.version)&&void 0!==rM?rM:"?"}, platform ${navigator.platform}, touch points ${navigator.maxTouchPoints}, ${(0,SM.getPlatformType)()}`, `browser ${null!==(iM=HM.browser.name)&&void 0!==iM?iM:"?"} ${null!==(aM=HM.browser.version)&&void 0!==aM?aM:"?"}, engine ${null!==(nM=HM.engine.name)&&void 0!==nM?nM:"?"} ${null!==(mM=HM.engine.version)&&void 0!==mM?mM:"?"}`, `client hints ${"string"===typeof LM?LM:zM(LM)}`, `gpu ${hM()}`, `client ${OM.x.client} (${OM.x.reason})`, `surface site ${jM.siteUsed}, subsite ${jM.subsiteUsed}${jM.isIframed?", iframed":""}, capped surface ${null!==yM&&void 0!==yM?yM:"none"}`]
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

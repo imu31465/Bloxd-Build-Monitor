@@ -1,164 +1,97 @@
 export const id = 300;
-export const ids = [300];
+export const ids = [299, 300];
 export const modules = {
-  41521: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      CharacterPreview: () => JQ
+  42165: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      gamePackSource: () => jM
     });
-    var wQ = XQ(61),
-      qQ = XQ(2978),
-      TQ = XQ(1273),
-      zQ = XQ(2678),
-      sQ = XQ(34541),
-      FQ = XQ(3862),
-      PQ = XQ(1145);
-    const gQ = .6 * Math.PI,
-      JQ = (0, wQ.memo)((0, wQ.forwardRef)((function(QQ, WQ) {
-        let {
-          onReady: XQ,
-          onDrawn: JQ,
-          owner: rQ = "other",
-          framing: IQ = "player",
-          forcedCosmetics: jQ,
-          Rs: BQ,
-          emotePlaySeq: yQ,
-          turntableFromYaw: VQ = null
-        } = QQ;
-        const DQ = (0, wQ.useRef)(null),
-          {
-            width: pQ,
-            height: GQ
-          } = (0, qQ.d)(DQ),
-          UQ = (0, wQ.useRef)(null),
-          bQ = (0, wQ.useRef)({}),
-          vQ = (0, wQ.useRef)({}),
-          [dQ, HQ] = (0, wQ.useState)(!1),
-          aQ = (0, wQ.useRef)(XQ);
-        aQ.current = XQ;
-        const lQ = (0, wQ.useRef)(JQ);
-        lQ.current = JQ;
-        const hQ = (0, wQ.useRef)(null),
-          iQ = (0, wQ.useRef)(!1),
-          cQ = (0, wQ.useRef)(!1),
-          AQ = (0, wQ.useCallback)((() => {
-            const QQ = UQ.current;
-            if (!QQ || !lQ.current || iQ.current || !cQ.current) return;
-            const WQ = {};
-            hQ.current = WQ, queueMicrotask((() => {
-              if (hQ.current !== WQ) return;
-              const XQ = Promise.all(TQ.x.map((WQ => QQ.untilDrawn(WQ)))).catch((QQ => {
-                  console.error("Failed to draw the character preview", QQ)
-                })),
-                wQ = new Promise((QQ => {
-                  setTimeout(QQ, 1e4)
-                }));
-              Promise.race([XQ, wQ]).then((() => {
-                var XQ;
-                UQ.current !== QQ || hQ.current !== WQ || iQ.current || (iQ.current = !0, null === (XQ = lQ.current) || void 0 === XQ || XQ.call(lQ))
-              }))
-            }))
-          }), []);
-        return (0, wQ.useImperativeHandle)(WQ, (() => {
-          const QQ = (QQ, WQ) => {
-            var XQ;
-            (bQ.current[QQ] = WQ, null !== jQ && void 0 !== jQ && jQ[QQ]) || (null === (XQ = UQ.current) || void 0 === XQ || XQ.setCosmetic(QQ, WQ), AQ())
-          };
-          return {
-            updateCosmetic: QQ,
-            setAllCosmetics(WQ) {
-              for (const wQ of TQ.x) {
-                var XQ;
-                QQ(wQ, null !== (XQ = WQ[wQ]) && void 0 !== XQ ? XQ : (0, zQ.e)(wQ))
-              }
-            },
-            isReady() {
-              var QQ, WQ;
-              return null !== (QQ = null === (WQ = UQ.current) || void 0 === WQ ? void 0 : WQ.isReady()) && void 0 !== QQ && QQ
-            },
-            resetCamera() {
-              var QQ;
-              null === (QQ = UQ.current) || void 0 === QQ || QQ.resetCamera()
-            },
-            setOrbit(QQ) {
-              var WQ;
-              null === (WQ = UQ.current) || void 0 === WQ || WQ.setOrbit(QQ)
-            },
-            turnCamera(QQ) {
-              var WQ;
-              const XQ = sQ.c[IQ];
-              null === (WQ = UQ.current) || void 0 === WQ || WQ.setOrbit({
-                ...XQ,
-                yaw: XQ.yaw + QQ
-              })
-            },
-            async ensureReadyForCapture(QQ) {
-              var WQ;
-              await (null === (WQ = UQ.current) || void 0 === WQ ? void 0 : WQ.untilDrawn(QQ))
-            },
-            getDevTools() {
-              var QQ;
-              return null !== (QQ = UQ.current) && void 0 !== QQ && QQ.isReady() ? UQ.current.dev : null
-            }
-          }
-        }), [jQ, IQ, AQ]), (0, wQ.useEffect)((() => {
-          const QQ = FQ.e.register(rQ),
-            WQ = sQ.h.openCharacter(DQ.current, IQ);
-          UQ.current = WQ;
-          let XQ = !0;
-          return WQ.ready.then((() => {
-            XQ && (HQ(!0), aQ.current())
-          })).catch((QQ => {
-            console.error("Failed to set up the character preview", QQ)
-          })), () => {
-            XQ = !1, QQ(), WQ.resetCamera(), WQ.close(), UQ.current = null
-          }
-        }), []), (0, wQ.useEffect)((() => {
-          pQ <= 0 || GQ <= 0 || UQ.current.resize(pQ, GQ)
-        }), [pQ, GQ]), (0, wQ.useEffect)((() => {
-          if (!dQ) return;
-          const QQ = vQ.current;
-          for (const WQ of TQ.x) {
-            const XQ = null === jQ || void 0 === jQ ? void 0 : jQ[WQ],
-              wQ = QQ[WQ];
-            XQ && XQ !== wQ ? UQ.current.setCosmetic(WQ, XQ) : !XQ && wQ && bQ.current[WQ] && UQ.current.setCosmetic(WQ, bQ.current[WQ])
-          }
-          vQ.current = {
-            ...jQ
-          }, cQ.current = !0, AQ()
-        }), [jQ, dQ, AQ]), (0, wQ.useEffect)((() => {
-          dQ && UQ.current.playEmote(null !== BQ && void 0 !== BQ ? BQ : null)
-        }), [BQ, yQ, dQ]), (0, wQ.useEffect)((() => {
-          if (!dQ || null === VQ) return;
-          const QQ = UQ.current,
-            {
-              pitch: WQ,
-              radius: XQ
-            } = sQ.c[IQ];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return QQ.setOrbit({
-            yaw: VQ + gQ,
-            pitch: WQ,
-            radius: XQ
-          }), () => {
-            QQ.resetCamera()
-          };
-          const wQ = performance.now();
-          let qQ = 0;
-          const TQ = zQ => {
-            QQ.setOrbit({
-              yaw: VQ + (zQ - wQ) / 6e3 * 2 * Math.PI,
-              pitch: WQ,
-              radius: XQ
-            }), qQ = requestAnimationFrame(TQ)
-          };
-          return qQ = requestAnimationFrame(TQ), () => {
-            cancelAnimationFrame(qQ), QQ.resetCamera()
-          }
-        }), [dQ, VQ]), (0, PQ.jsx)("div", {
-          className: "CharCustomisationPreview",
-          ref: DQ
-        })
-      })))
+    var OM = iM(5388),
+      SM = iM(1573);
+
+    function jM(MM) {
+      return {
+        packKey: async rM => (await SM.c.getGame(MM, rM, !0)).customTexturePackKey,
+        fetchPack: OM.d
+      }
+    }
+  },
+  53755: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      fetchGuestContext: () => mM,
+      guestJoinTarget: () => EM,
+      guestJoinWithPack: () => hM,
+      guestPackForGame: () => HM,
+      invalidateGuestTrafficCode: () => lM
+    });
+    var OM = iM(1202),
+      SM = iM(1573),
+      jM = iM(83),
+      aM = iM(37414),
+      PM = iM(1144),
+      nM = iM(41833),
+      QM = iM(42165),
+      zM = iM(41787);
+
+    function LM() {
+      if (jM.featureFlags.useTurnstile) throw new nM.TurnstilePageError
+    }
+
+    function mM() {
+      return (0, PM.fetchAnonymousUserContext)(!0).catch((MM => (console.warn("the guest context didn't load", MM), null)))
+    }
+    async function HM(MM, rM, iM, OM) {
+      try {
+        const SM = await iM;
+        if (null === SM) return void console.warn(`the texture pack step for ${MM} has no guest context: the pack in play stays`);
+        await rM.packForGame(MM, (0, QM.gamePackSource)(SM), OM)
+      } catch (SM) {
+        console.warn(`the texture pack step for ${MM} failed: the pack in play stays`, SM)
+      }
+    }
+    async function hM(MM, rM, iM, OM) {
+      LM();
+      const SM = mM();
+      return await iM(((rM, iM) => HM(MM, rM, SM, iM))), EM(MM, rM, OM(), await SM)
+    }
+    let JM = null,
+      dM = null;
+    async function yM() {
+      if ((null === JM || JM.hasExpired()) && (dM ??= (0, PM.fetchAnonymousUserContext)(!0).then((MM => {
+          JM = MM
+        })).finally((() => {
+          dM = null
+        })), await dM), null === JM) throw new Error("no guest context to post as");
+      return JM.getMetricsCookies()
+    }
+    async function lM() {
+      var MM;
+      await (null === (MM = JM) || void 0 === MM ? void 0 : MM.invalidateTrafficCode())
+    }
+    async function EM(MM, rM, iM) {
+      let jM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      LM();
+      const nM = null !== jM && void 0 !== jM ? jM : await (0, PM.fetchAnonymousUserContext)(!0);
+      if (JM = nM, nM.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
+      const QM = await SM.c.matchmakePlayer(nM, rM, MM, (0, aM.c)()),
+        mM = performance.now();
+      if (!("gameServerHost" in QM)) throw new Error(`matchmaking refused: ${QM.failReason}`);
+      const HM = OM.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(QM.gameServerHost);
+      if (HM.isError()) throw new Error(`no socket URL for ${QM.gameServerHost}: ${HM.asError().message}`);
+      const hM = {
+        endpoint: HM.getValue(),
+        gameNameWithVariation: QM.gameNameWithVariation,
+        lobbyName: QM.lobbyName
+      };
+      return {
+        target: {
+          ...await (0, zM.d)(nM, hM, iM, !1),
+          postCookies: yM
+        },
+        matchedAt: mM,
+        freshMs: zM.b
+      }
+    }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

@@ -1,139 +1,139 @@
-export const id = 32;
-export const ids = [32];
+export const id = 36;
+export const ids = [36];
 export const modules = {
-  7049: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      BaseExtension: () => QX,
-      BaseInstrumentation: () => WX,
-      BaseTransport: () => mq,
-      CSPInstrumentation: () => Hq,
-      ConsoleInstrumentation: () => AX,
-      ConsoleTransport: () => wT,
-      EVENT_CLICK: () => pW,
-      EVENT_NAVIGATION: () => GW,
-      EVENT_ROUTE_CHANGE: () => aW,
-      EVENT_SESSION_EXTEND: () => dW,
-      EVENT_SESSION_RESUME: () => vW,
-      EVENT_SESSION_START: () => bW,
-      EVENT_VIEW_CHANGED: () => UW,
-      ErrorsInstrumentation: () => EX,
-      FetchTransport: () => UT,
-      InternalLoggerLevel: () => nW,
-      LogLevel: () => pX,
-      MAX_SESSION_PERSISTENCE_TIME: () => FQ,
-      NavigationInstrumentation: () => tq,
-      Observable: () => DX,
-      PerformanceInstrumentation: () => Nw,
-      PersistentSessionsManager: () => LW,
-      SESSION_EXPIRATION_TIME: () => TQ,
-      SESSION_INACTIVITY_TIME: () => zQ,
-      STORAGE_KEY: () => qQ,
-      SessionInstrumentation: () => wX,
-      TransportItemType: () => Mq,
-      UserActionInstrumentation: () => dq,
-      UserActionState: () => Bq,
-      VERSION: () => XX,
-      ViewInstrumentation: () => uX,
-      VolatileSessionsManager: () => kW,
-      WebVitalsInstrumentation: () => Ew,
-      allLogLevels: () => UX,
-      browserMeta: () => Nq,
-      buildStackFrame: () => qX,
-      captureMetas: () => LT,
-      createInternalLogger: () => aT,
-      createPromiseBuffer: () => IT,
-      createSession: () => Oq,
-      deepEqual: () => DW,
-      defaultEventDomain: () => wQ,
-      defaultExceptionType: () => HX,
-      defaultGlobalObjectKey: () => lT,
-      defaultInternalLoggerLevel: () => YW,
-      defaultLogLevel: () => GX,
-      faro: () => BQ,
-      genShortID: () => VW,
-      getCurrentTimestamp: () => jW,
-      getDataFromSafariExtensions: () => rX,
-      getIgnoreUrls: () => NQ,
-      getInternalFaroFromGlobalObject: () => rQ,
-      getStackFramesFromError: () => jX,
-      getTransportBody: () => XT,
-      getUrlFromResource: () => OQ,
-      getWebInstrumentations: () => oq,
-      globalObject: () => gQ,
-      initializeFaro: () => mT,
-      internalGlobalObjectKey: () => JQ,
-      isArray: () => iQ,
-      isBoolean: () => HQ,
-      isDomError: () => fQ,
-      isDomException: () => SQ,
-      isElement: () => oQ,
-      isElementDefined: () => tQ,
-      mI: () => YQ,
-      isError: () => LQ,
-      isErrorDefined: () => uQ,
-      isErrorEvent: () => kQ,
-      isEvent: () => CQ,
-      isEventDefined: () => EQ,
-      isFunction: () => hQ,
-      isInstanceOf: () => pQ,
-      isInt: () => dQ,
-      isInternalFaroOnGlobalObject: () => jQ,
-      isMap: () => nQ,
-      isMapDefined: () => eQ,
-      isNull: () => UQ,
-      isNumber: () => vQ,
-      isObject: () => lQ,
-      isPrimitive: () => RQ,
-      isRegExp: () => cQ,
-      isString: () => bQ,
-      isSymbol: () => aQ,
-      isSyntheticEvent: () => xQ,
-      isThenable: () => AQ,
-      isToString: () => DQ,
-      isTypeof: () => VQ,
-      isUndefined: () => GQ,
-      makeCoreConfig: () => cT,
-      noop: () => eW,
-      osMeta: () => Zq,
-      parseStacktrace: () => BX,
-      sdkMeta: () => Kq,
-      setInternalFaroOnGlobalObject: () => IQ,
-      transportItemTypeToBodyKey: () => QT,
-      unknownString: () => CX,
-      userActionDataAttribute: () => Zw,
-      userActionTimeoutDataAttribute: () => Ow
+  7156: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      BaseExtension: () => Mi,
+      BaseInstrumentation: () => ri,
+      BaseTransport: () => cS,
+      CSPInstrumentation: () => tS,
+      ConsoleInstrumentation: () => Di,
+      ConsoleTransport: () => Sj,
+      EVENT_CLICK: () => Er,
+      EVENT_NAVIGATION: () => Ur,
+      EVENT_ROUTE_CHANGE: () => tr,
+      EVENT_SESSION_EXTEND: () => br,
+      EVENT_SESSION_RESUME: () => er,
+      EVENT_SESSION_START: () => Cr,
+      EVENT_VIEW_CHANGED: () => Gr,
+      ErrorsInstrumentation: () => Zi,
+      FetchTransport: () => Cj,
+      InternalLoggerLevel: () => Fr,
+      LogLevel: () => Ui,
+      MAX_SESSION_PERSISTENCE_TIME: () => nM,
+      NavigationInstrumentation: () => xS,
+      Observable: () => Ei,
+      PerformanceInstrumentation: () => KO,
+      PersistentSessionsManager: () => or,
+      SESSION_EXPIRATION_TIME: () => jM,
+      SESSION_INACTIVITY_TIME: () => aM,
+      STORAGE_KEY: () => SM,
+      SessionInstrumentation: () => Oi,
+      TransportItemType: () => Mj,
+      UserActionInstrumentation: () => wS,
+      UserActionState: () => dS,
+      VERSION: () => ii,
+      ViewInstrumentation: () => fi,
+      VolatileSessionsManager: () => fr,
+      WebVitalsInstrumentation: () => kO,
+      allLogLevels: () => Ci,
+      browserMeta: () => KS,
+      buildStackFrame: () => Si,
+      captureMetas: () => fj,
+      createInternalLogger: () => gj,
+      createPromiseBuffer: () => hj,
+      createSession: () => TS,
+      deepEqual: () => lr,
+      defaultEventDomain: () => OM,
+      defaultExceptionType: () => ti,
+      defaultGlobalObjectKey: () => uj,
+      defaultInternalLoggerLevel: () => Xr,
+      defaultLogLevel: () => Gi,
+      faro: () => JM,
+      genShortID: () => yr,
+      getCurrentTimestamp: () => hr,
+      getDataFromSafariExtensions: () => mi,
+      getIgnoreUrls: () => IM,
+      getInternalFaroFromGlobalObject: () => mM,
+      getStackFramesFromError: () => Ji,
+      getTransportBody: () => Oj,
+      getUrlFromResource: () => qM,
+      getWebInstrumentations: () => vS,
+      globalObject: () => zM,
+      initializeFaro: () => cj,
+      internalGlobalObjectKey: () => LM,
+      isArray: () => RM,
+      isBoolean: () => wM,
+      isDomError: () => YM,
+      isDomException: () => NM,
+      isElement: () => xM,
+      isElementDefined: () => AM,
+      dL: () => XM,
+      isError: () => oM,
+      isErrorDefined: () => ZM,
+      isErrorEvent: () => fM,
+      isEvent: () => kM,
+      isEventDefined: () => DM,
+      isFunction: () => uM,
+      isInstanceOf: () => EM,
+      isInt: () => bM,
+      isInternalFaroOnGlobalObject: () => hM,
+      isMap: () => FM,
+      isMapDefined: () => vM,
+      isNull: () => GM,
+      isNumber: () => eM,
+      isObject: () => gM,
+      isPrimitive: () => sM,
+      isRegExp: () => pM,
+      isString: () => CM,
+      isSymbol: () => tM,
+      isSyntheticEvent: () => BM,
+      isThenable: () => WM,
+      isToString: () => lM,
+      isTypeof: () => yM,
+      isUndefined: () => UM,
+      makeCoreConfig: () => Wj,
+      noop: () => vr,
+      osMeta: () => qS,
+      parseStacktrace: () => di,
+      sdkMeta: () => VS,
+      setInternalFaroOnGlobalObject: () => HM,
+      transportItemTypeToBodyKey: () => rj,
+      unknownString: () => oi,
+      userActionDataAttribute: () => qO,
+      userActionTimeoutDataAttribute: () => TO
     });
-    const wQ = "browser",
-      qQ = "com.grafana.faro.session",
-      TQ = 144e5,
-      zQ = 9e5,
-      sQ = 1e3,
-      FQ = zQ,
-      PQ = {
+    const OM = "browser",
+      SM = "com.grafana.faro.session",
+      jM = 144e5,
+      aM = 9e5,
+      PM = 1e3,
+      nM = aM,
+      QM = {
         enabled: !0,
         persistent: !1,
-        maxSessionPersistenceTime: FQ
+        maxSessionPersistenceTime: nM
       };
-    const gQ = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof XQ.g ? XQ.g : "undefined" !== typeof self ? self : void 0;
-    const JQ = "_faroInternal";
+    const zM = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof iM.g ? iM.g : "undefined" !== typeof self ? self : void 0;
+    const LM = "_faroInternal";
 
-    function rQ() {
-      return gQ[JQ]
+    function mM() {
+      return zM[LM]
     }
 
-    function IQ(QQ) {
-      QQ.config.isolate ? QQ.internalLogger.debug("Skipping registering internal Faro instance on global object") : (QQ.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(gQ, JQ, {
+    function HM(MM) {
+      MM.config.isolate ? MM.internalLogger.debug("Skipping registering internal Faro instance on global object") : (MM.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(zM, LM, {
         configurable: !1,
         enumerable: !1,
         writable: !1,
-        value: QQ
+        value: MM
       }))
     }
 
-    function jQ() {
-      return JQ in gQ
+    function hM() {
+      return LM in zM
     }
-    let BQ = {
+    let JM = {
       api: {
         pushLog: () => {},
         pushError: () => {},
@@ -160,592 +160,592 @@ export const modules = {
       }
     };
 
-    function yQ(QQ, WQ, XQ, wQ, qQ, TQ, zQ) {
-      return WQ.debug("Initializing Faro"), BQ = {
-          api: TQ,
-          config: XQ,
-          instrumentations: zQ,
-          internalLogger: WQ,
-          metas: wQ,
-          pause: qQ.pause,
-          transports: qQ,
-          unpatchedConsole: QQ,
-          unpause: qQ.unpause
-        }, IQ(BQ),
-        function(QQ) {
-          if (QQ.config.preventGlobalExposure) QQ.internalLogger.debug("Skipping registering public Faro instance in the global scope");
+    function dM(MM, rM, iM, OM, SM, jM, aM) {
+      return rM.debug("Initializing Faro"), JM = {
+          api: jM,
+          config: iM,
+          instrumentations: aM,
+          internalLogger: rM,
+          metas: OM,
+          pause: SM.pause,
+          transports: SM,
+          unpatchedConsole: MM,
+          unpause: SM.unpause
+        }, HM(JM),
+        function(MM) {
+          if (MM.config.preventGlobalExposure) MM.internalLogger.debug("Skipping registering public Faro instance in the global scope");
           else {
-            if (QQ.internalLogger.debug(`Registering public faro reference in the global scope using "${QQ.config.globalObjectKey}" key`), QQ.config.globalObjectKey in gQ) return void QQ.internalLogger.warn(`Skipping global registration due to key "${QQ.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
-            Object.defineProperty(gQ, QQ.config.globalObjectKey, {
+            if (MM.internalLogger.debug(`Registering public faro reference in the global scope using "${MM.config.globalObjectKey}" key`), MM.config.globalObjectKey in zM) return void MM.internalLogger.warn(`Skipping global registration due to key "${MM.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
+            Object.defineProperty(zM, MM.config.globalObjectKey, {
               configurable: !1,
               writable: !1,
-              value: QQ
+              value: MM
             })
           }
-        }(BQ), BQ
+        }(JM), JM
     }
 
-    function VQ(QQ, WQ) {
-      return typeof QQ === WQ
+    function yM(MM, rM) {
+      return typeof MM === rM
     }
 
-    function DQ(QQ, WQ) {
-      return Object.prototype.toString.call(QQ) === `[object ${WQ}]`
+    function lM(MM, rM) {
+      return Object.prototype.toString.call(MM) === `[object ${rM}]`
     }
 
-    function pQ(QQ, WQ) {
+    function EM(MM, rM) {
       try {
-        return QQ instanceof WQ
-      } catch (XQ) {
+        return MM instanceof rM
+      } catch (iM) {
         return !1
       }
     }
-    const GQ = QQ => VQ(QQ, "undefined"),
-      UQ = QQ => VQ(QQ, "null"),
-      bQ = QQ => VQ(QQ, "string"),
-      vQ = QQ => VQ(QQ, "number") && !isNaN(QQ) || VQ(QQ, "bigint"),
-      dQ = QQ => vQ(QQ) && Number.isInteger(QQ),
-      HQ = QQ => VQ(QQ, "boolean"),
-      aQ = QQ => VQ(QQ, "symbol"),
-      lQ = QQ => !UQ(QQ) && VQ(QQ, "object"),
-      hQ = QQ => VQ(QQ, "function"),
-      iQ = QQ => DQ(QQ, "Array"),
-      cQ = QQ => DQ(QQ, "RegExp"),
-      AQ = QQ => hQ(null === QQ || void 0 === QQ ? void 0 : QQ.then),
-      RQ = QQ => !lQ(QQ) && !hQ(QQ),
-      EQ = "undefined" !== typeof Event,
-      CQ = QQ => EQ && pQ(QQ, Event),
-      uQ = "undefined" !== typeof Error,
-      LQ = QQ => uQ && pQ(QQ, Error),
-      kQ = QQ => DQ(QQ, "ErrorEvent"),
-      fQ = QQ => DQ(QQ, "DOMError"),
-      SQ = QQ => DQ(QQ, "DOMException"),
-      tQ = "undefined" !== typeof Element,
-      oQ = QQ => tQ && pQ(QQ, Element),
-      eQ = "undefined" !== typeof Map,
-      nQ = QQ => eQ && pQ(QQ, Map),
-      xQ = QQ => lQ(QQ) && "nativeEvent" in QQ && "preventDefault" in QQ && "stopPropagation" in QQ;
+    const UM = MM => yM(MM, "undefined"),
+      GM = MM => yM(MM, "null"),
+      CM = MM => yM(MM, "string"),
+      eM = MM => yM(MM, "number") && !isNaN(MM) || yM(MM, "bigint"),
+      bM = MM => eM(MM) && Number.isInteger(MM),
+      wM = MM => yM(MM, "boolean"),
+      tM = MM => yM(MM, "symbol"),
+      gM = MM => !GM(MM) && yM(MM, "object"),
+      uM = MM => yM(MM, "function"),
+      RM = MM => lM(MM, "Array"),
+      pM = MM => lM(MM, "RegExp"),
+      WM = MM => uM(null === MM || void 0 === MM ? void 0 : MM.then),
+      sM = MM => !gM(MM) && !uM(MM),
+      DM = "undefined" !== typeof Event,
+      kM = MM => DM && EM(MM, Event),
+      ZM = "undefined" !== typeof Error,
+      oM = MM => ZM && EM(MM, Error),
+      fM = MM => lM(MM, "ErrorEvent"),
+      YM = MM => lM(MM, "DOMError"),
+      NM = MM => lM(MM, "DOMException"),
+      AM = "undefined" !== typeof Element,
+      xM = MM => AM && EM(MM, Element),
+      vM = "undefined" !== typeof Map,
+      FM = MM => vM && EM(MM, Map),
+      BM = MM => gM(MM) && "nativeEvent" in MM && "preventDefault" in MM && "stopPropagation" in MM;
 
-    function YQ(QQ) {
-      return null == QQ || (iQ(QQ) || bQ(QQ) ? 0 === QQ.length : !!lQ(QQ) && 0 === Object.keys(QQ).length)
+    function XM(MM) {
+      return null == MM || (RM(MM) || CM(MM) ? 0 === MM.length : !!gM(MM) && 0 === Object.keys(MM).length)
     }
 
-    function NQ() {
-      return BQ.transports.transports.flatMap((QQ => QQ.getIgnoreUrls()))
+    function IM() {
+      return JM.transports.transports.flatMap((MM => MM.getIgnoreUrls()))
     }
 
-    function ZQ() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      return NQ().some((WQ => QQ && null != QQ.match(WQ)))
+    function KM() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      return IM().some((rM => MM && null != MM.match(rM)))
     }
 
-    function OQ(QQ) {
-      return bQ(QQ) ? QQ : QQ instanceof URL ? QQ.href : !YQ(QQ) && hQ(null === QQ || void 0 === QQ ? void 0 : QQ.toString) ? QQ.toString() : void 0
+    function qM(MM) {
+      return CM(MM) ? MM : MM instanceof URL ? MM.href : !XM(MM) && uM(null === MM || void 0 === MM ? void 0 : MM.toString) ? MM.toString() : void 0
     }
-    const KQ = "sessionStorage",
-      mQ = "localStorage";
+    const TM = "sessionStorage",
+      VM = "localStorage";
 
-    function MQ(QQ) {
+    function cM(MM) {
       try {
-        let WQ;
-        WQ = window[QQ];
-        const XQ = "__faro_storage_test__";
-        return WQ.setItem(XQ, XQ), WQ.removeItem(XQ), !0
-      } catch (XQ) {
-        var WQ;
-        return null === (WQ = BQ.internalLogger) || void 0 === WQ || WQ.info(`Web storage of type ${QQ} is not available. Reason: ${XQ}`), !1
+        let rM;
+        rM = window[MM];
+        const iM = "__faro_storage_test__";
+        return rM.setItem(iM, iM), rM.removeItem(iM), !0
+      } catch (iM) {
+        var rM;
+        return null === (rM = JM.internalLogger) || void 0 === rM || rM.info(`Web storage of type ${MM} is not available. Reason: ${iM}`), !1
       }
     }
 
-    function QW(QQ, WQ) {
-      return TW(WQ) ? window[WQ].getItem(QQ) : null
+    function Mr(MM, rM) {
+      return jr(rM) ? window[rM].getItem(MM) : null
     }
 
-    function WW(QQ, WQ, XQ) {
-      if (TW(XQ)) try {
-        window[XQ].setItem(QQ, WQ)
-      } catch (wQ) {}
+    function rr(MM, rM, iM) {
+      if (jr(iM)) try {
+        window[iM].setItem(MM, rM)
+      } catch (OM) {}
     }
 
-    function XW(QQ, WQ) {
-      TW(WQ) && window[WQ].removeItem(QQ)
+    function ir(MM, rM) {
+      jr(rM) && window[rM].removeItem(MM)
     }
-    const wW = MQ(mQ),
-      qW = MQ(KQ);
+    const Or = cM(VM),
+      Sr = cM(TM);
 
-    function TW(QQ) {
-      return QQ === mQ ? wW : QQ === KQ && qW
-    }
-
-    function zW(QQ) {
-      return zW = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(QQ) {
-        return typeof QQ
-      } : function(QQ) {
-        return QQ && "function" == typeof Symbol && QQ.constructor === Symbol && QQ !== Symbol.prototype ? "symbol" : typeof QQ
-      }, zW(QQ)
+    function jr(MM) {
+      return MM === VM ? Or : MM === TM && Sr
     }
 
-    function sW(QQ) {
-      var WQ = function(QQ, WQ) {
-        if ("object" != zW(QQ) || !QQ) return QQ;
-        var XQ = QQ[Symbol.toPrimitive];
-        if (void 0 !== XQ) {
-          var wQ = XQ.call(QQ, WQ || "default");
-          if ("object" != zW(wQ)) return wQ;
+    function ar(MM) {
+      return ar = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(MM) {
+        return typeof MM
+      } : function(MM) {
+        return MM && "function" == typeof Symbol && MM.constructor === Symbol && MM !== Symbol.prototype ? "symbol" : typeof MM
+      }, ar(MM)
+    }
+
+    function Pr(MM) {
+      var rM = function(MM, rM) {
+        if ("object" != ar(MM) || !MM) return MM;
+        var iM = MM[Symbol.toPrimitive];
+        if (void 0 !== iM) {
+          var OM = iM.call(MM, rM || "default");
+          if ("object" != ar(OM)) return OM;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === WQ ? String : Number)(QQ)
-      }(QQ, "string");
-      return "symbol" == zW(WQ) ? WQ : WQ + ""
+        return ("string" === rM ? String : Number)(MM)
+      }(MM, "string");
+      return "symbol" == ar(rM) ? rM : rM + ""
     }
 
-    function FW(QQ, WQ, XQ) {
-      return (WQ = sW(WQ)) in QQ ? Object.defineProperty(QQ, WQ, {
-        value: XQ,
+    function nr(MM, rM, iM) {
+      return (rM = Pr(rM)) in MM ? Object.defineProperty(MM, rM, {
+        value: iM,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : QQ[WQ] = XQ, QQ
+      }) : MM[rM] = iM, MM
     }
 
-    function PW(QQ, WQ) {
-      var XQ = Object.keys(QQ);
+    function Qr(MM, rM) {
+      var iM = Object.keys(MM);
       if (Object.getOwnPropertySymbols) {
-        var wQ = Object.getOwnPropertySymbols(QQ);
-        WQ && (wQ = wQ.filter((function(WQ) {
-          return Object.getOwnPropertyDescriptor(QQ, WQ).enumerable
-        }))), XQ.push.apply(XQ, wQ)
+        var OM = Object.getOwnPropertySymbols(MM);
+        rM && (OM = OM.filter((function(rM) {
+          return Object.getOwnPropertyDescriptor(MM, rM).enumerable
+        }))), iM.push.apply(iM, OM)
       }
-      return XQ
+      return iM
     }
 
-    function gW(QQ) {
-      for (var WQ = 1; WQ < arguments.length; WQ++) {
-        var XQ = null != arguments[WQ] ? arguments[WQ] : {};
-        WQ % 2 ? PW(Object(XQ), !0).forEach((function(WQ) {
-          FW(QQ, WQ, XQ[WQ])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(QQ, Object.getOwnPropertyDescriptors(XQ)) : PW(Object(XQ)).forEach((function(WQ) {
-          Object.defineProperty(QQ, WQ, Object.getOwnPropertyDescriptor(XQ, WQ))
+    function zr(MM) {
+      for (var rM = 1; rM < arguments.length; rM++) {
+        var iM = null != arguments[rM] ? arguments[rM] : {};
+        rM % 2 ? Qr(Object(iM), !0).forEach((function(rM) {
+          nr(MM, rM, iM[rM])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(MM, Object.getOwnPropertyDescriptors(iM)) : Qr(Object(iM)).forEach((function(rM) {
+          Object.defineProperty(MM, rM, Object.getOwnPropertyDescriptor(iM, rM))
         }))
       }
-      return QQ
+      return MM
     }
 
-    function JW() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : BQ;
-      var WQ, XQ, wQ;
-      const qQ = QQ.config.sessionTracking,
-        TQ = null !== (WQ = null !== (XQ = null === qQ || void 0 === qQ || null === (wQ = qQ.sampler) || void 0 === wQ ? void 0 : wQ.call(qQ, {
-          metas: QQ.metas.value
-        })) && void 0 !== XQ ? XQ : null === qQ || void 0 === qQ ? void 0 : qQ.samplingRate) && void 0 !== WQ ? WQ : 1,
-        zQ = "number" === typeof TQ ? function(QQ) {
-          return Math.min(1, Math.max(0, QQ))
-        }(TQ) : 0;
-      if (!(zQ > 0)) return !1;
-      if (1 === zQ) return !0;
+    function Lr() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : JM;
+      var rM, iM, OM;
+      const SM = MM.config.sessionTracking,
+        jM = null !== (rM = null !== (iM = null === SM || void 0 === SM || null === (OM = SM.sampler) || void 0 === OM ? void 0 : OM.call(SM, {
+          metas: MM.metas.value
+        })) && void 0 !== iM ? iM : null === SM || void 0 === SM ? void 0 : SM.samplingRate) && void 0 !== rM ? rM : 1,
+        aM = "number" === typeof jM ? function(MM) {
+          return Math.min(1, Math.max(0, MM))
+        }(jM) : 0;
+      if (!(aM > 0)) return !1;
+      if (1 === aM) return !0;
       try {
-        const QQ = "undefined" !== typeof window ? window.crypto : void 0;
-        if ("function" === typeof(null === QQ || void 0 === QQ ? void 0 : QQ.getRandomValues)) {
-          const WQ = new Uint32Array(1);
-          return QQ.getRandomValues(WQ), WQ[0] / Math.pow(2, 32) < zQ
+        const MM = "undefined" !== typeof window ? window.crypto : void 0;
+        if ("function" === typeof(null === MM || void 0 === MM ? void 0 : MM.getRandomValues)) {
+          const rM = new Uint32Array(1);
+          return MM.getRandomValues(rM), rM[0] / Math.pow(2, 32) < aM
         }
-      } catch (sQ) {}
-      return Math.random() < zQ
+      } catch (PM) {}
+      return Math.random() < aM
     }
 
-    function rW() {
+    function mr() {
       return Date.now()
     }
 
-    function IW() {
+    function Hr() {
       return "undefined" !== typeof performance && "function" === typeof performance.now ? performance.now() : Date.now()
     }
 
-    function jW() {
+    function hr() {
       return (new Date).toISOString()
     }
 
-    function BW(QQ) {
-      return new Date(QQ).toISOString()
+    function Jr(MM) {
+      return new Date(MM).toISOString()
     }
-    const yW = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
+    const dr = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
 
-    function VW() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      const WQ = new Uint32Array(QQ),
-        XQ = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
-      if (null === XQ || void 0 === XQ ? void 0 : XQ.getRandomValues) XQ.getRandomValues(WQ);
+    function yr() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      const rM = new Uint32Array(MM),
+        iM = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
+      if (null === iM || void 0 === iM ? void 0 : iM.getRandomValues) iM.getRandomValues(rM);
       else
-        for (let qQ = 0; qQ < QQ; qQ++) WQ[qQ] = Math.floor(4294967296 * Math.random());
-      let wQ = "";
-      for (let qQ = 0; qQ < QQ; qQ++) wQ += yW[WQ[qQ] % 59];
-      return wQ
+        for (let SM = 0; SM < MM; SM++) rM[SM] = Math.floor(4294967296 * Math.random());
+      let OM = "";
+      for (let SM = 0; SM < MM; SM++) OM += dr[rM[SM] % 59];
+      return OM
     }
 
-    function DW(QQ, WQ) {
-      if (QQ === WQ) return !0;
-      if (VQ(QQ, "number") && isNaN(QQ)) return VQ(WQ, "number") && isNaN(WQ);
-      const XQ = iQ(QQ),
-        wQ = iQ(WQ);
-      if (XQ !== wQ) return !1;
-      if (XQ && wQ) {
-        const XQ = QQ.length;
-        if (XQ !== WQ.length) return !1;
-        for (let wQ = XQ; 0 !== wQ--;)
-          if (!DW(QQ[wQ], WQ[wQ])) return !1;
+    function lr(MM, rM) {
+      if (MM === rM) return !0;
+      if (yM(MM, "number") && isNaN(MM)) return yM(rM, "number") && isNaN(rM);
+      const iM = RM(MM),
+        OM = RM(rM);
+      if (iM !== OM) return !1;
+      if (iM && OM) {
+        const iM = MM.length;
+        if (iM !== rM.length) return !1;
+        for (let OM = iM; 0 !== OM--;)
+          if (!lr(MM[OM], rM[OM])) return !1;
         return !0
       }
-      const qQ = lQ(QQ),
-        TQ = lQ(WQ);
-      if (qQ !== TQ) return !1;
-      if (QQ && WQ && qQ && TQ) {
-        const XQ = Object.keys(QQ),
-          wQ = Object.keys(WQ);
-        if (XQ.length !== wQ.length) return !1;
-        for (let QQ of XQ)
-          if (!wQ.includes(QQ)) return !1;
-        for (let qQ of XQ)
-          if (!DW(QQ[qQ], WQ[qQ])) return !1;
+      const SM = gM(MM),
+        jM = gM(rM);
+      if (SM !== jM) return !1;
+      if (MM && rM && SM && jM) {
+        const iM = Object.keys(MM),
+          OM = Object.keys(rM);
+        if (iM.length !== OM.length) return !1;
+        for (let MM of iM)
+          if (!OM.includes(MM)) return !1;
+        for (let SM of iM)
+          if (!lr(MM[SM], rM[SM])) return !1;
         return !0
       }
       return !1
     }
-    const pW = "click",
-      GW = "navigation",
-      UW = "view_changed",
-      bW = "session_start",
-      vW = "session_resume",
-      dW = "session_extend",
-      HW = "service_name_override",
-      aW = "route_change";
+    const Er = "click",
+      Ur = "navigation",
+      Gr = "view_changed",
+      Cr = "session_start",
+      er = "session_resume",
+      br = "session_extend",
+      wr = "service_name_override",
+      tr = "route_change";
 
-    function lW() {
+    function gr() {
       let {
-        sessionId: QQ,
-        started: WQ,
-        lastActivity: XQ,
-        isSampled: wQ = !0
-      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, qQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BQ;
-      var TQ;
-      const zQ = rW(),
-        sQ = null === (TQ = qQ.config) || void 0 === TQ || null === (TQ = TQ.sessionTracking) || void 0 === TQ ? void 0 : TQ.generateSessionId;
-      return null == QQ && (QQ = "function" === typeof sQ ? sQ() : VW()), {
-        sessionId: QQ,
-        lastActivity: null !== XQ && void 0 !== XQ ? XQ : zQ,
-        started: null !== WQ && void 0 !== WQ ? WQ : zQ,
-        isSampled: wQ
+        sessionId: MM,
+        started: rM,
+        lastActivity: iM,
+        isSampled: OM = !0
+      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, SM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JM;
+      var jM;
+      const aM = mr(),
+        PM = null === (jM = SM.config) || void 0 === jM || null === (jM = jM.sessionTracking) || void 0 === jM ? void 0 : jM.generateSessionId;
+      return null == MM && (MM = "function" === typeof PM ? PM() : yr()), {
+        sessionId: MM,
+        lastActivity: null !== iM && void 0 !== iM ? iM : aM,
+        started: null !== rM && void 0 !== rM ? rM : aM,
+        isSampled: OM
       }
     }
 
-    function hW(QQ) {
-      if (null == QQ) return !1;
-      const WQ = rW();
-      return WQ - QQ.started < 144e5 && WQ - QQ.lastActivity < zQ
+    function ur(MM) {
+      if (null == MM) return !1;
+      const rM = mr();
+      return rM - MM.started < 144e5 && rM - MM.lastActivity < aM
     }
 
-    function iW(QQ) {
+    function Rr(MM) {
       let {
-        fetchUserSession: WQ,
-        storeUserSession: XQ,
-        adoptSession: wQ,
-        updateInterval: qQ = 0
-      } = QQ, sQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BQ, FQ = 0;
+        fetchUserSession: rM,
+        storeUserSession: iM,
+        adoptSession: OM,
+        updateInterval: SM = 0
+      } = MM, PM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JM, nM = 0;
       return function() {
         let {
-          forceSessionExtend: QQ = !1,
-          refreshActivity: PQ = !0
+          forceSessionExtend: MM = !1,
+          refreshActivity: QM = !0
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        var gQ, JQ;
-        if (!WQ || !XQ) return;
-        const rQ = rW();
-        if (!QQ && rQ < FQ && FQ - rQ <= qQ) return;
-        const IQ = sQ.config.sessionTracking,
-          jQ = null === IQ || void 0 === IQ ? void 0 : IQ.persistent;
-        if (jQ && !wW || !jQ && !qW) return;
-        const BQ = WQ();
-        if (FQ = Math.min(rQ + qQ, (null !== (gQ = null === BQ || void 0 === BQ ? void 0 : BQ.started) && void 0 !== gQ ? gQ : rQ) + TQ, (null !== (JQ = null === BQ || void 0 === BQ ? void 0 : BQ.lastActivity) && void 0 !== JQ ? JQ : rQ) + zQ), !1 === QQ && hW(BQ)) {
-          var yQ;
-          PQ && XQ(gW(gW({}, BQ), {}, {
-            lastActivity: rQ
+        var zM, LM;
+        if (!rM || !iM) return;
+        const mM = mr();
+        if (!MM && mM < nM && nM - mM <= SM) return;
+        const HM = PM.config.sessionTracking,
+          hM = null === HM || void 0 === HM ? void 0 : HM.persistent;
+        if (hM && !Or || !hM && !Sr) return;
+        const JM = rM();
+        if (nM = Math.min(mM + SM, (null !== (zM = null === JM || void 0 === JM ? void 0 : JM.started) && void 0 !== zM ? zM : mM) + jM, (null !== (LM = null === JM || void 0 === JM ? void 0 : JM.lastActivity) && void 0 !== LM ? LM : mM) + aM), !1 === MM && ur(JM)) {
+          var dM;
+          QM && iM(zr(zr({}, JM), {}, {
+            lastActivity: mM
           }));
-          const QQ = null === (yQ = sQ.metas.value.session) || void 0 === yQ ? void 0 : yQ.id;
-          null != wQ && null != BQ.sessionMeta && BQ.sessionId !== QQ && wQ(BQ.sessionMeta)
+          const MM = null === (dM = PM.metas.value.session) || void 0 === dM ? void 0 : dM.id;
+          null != OM && null != JM.sessionMeta && JM.sessionId !== MM && OM(JM.sessionMeta)
         } else {
-          var VQ, DQ, pQ;
-          let QQ = AW(lW({
-            isSampled: JW(sQ)
-          }, sQ), BQ, sQ);
-          FQ = rQ + qQ, XQ(QQ), null === (VQ = sQ.api) || void 0 === VQ || VQ.setSession(QQ.sessionMeta), null === IQ || void 0 === IQ || null === (DQ = IQ.onSessionChange) || void 0 === DQ || DQ.call(IQ, null !== (pQ = null === BQ || void 0 === BQ ? void 0 : BQ.sessionMeta) && void 0 !== pQ ? pQ : null, QQ.sessionMeta)
+          var yM, lM, EM;
+          let MM = Wr(gr({
+            isSampled: Lr(PM)
+          }, PM), JM, PM);
+          nM = mM + SM, iM(MM), null === (yM = PM.api) || void 0 === yM || yM.setSession(MM.sessionMeta), null === HM || void 0 === HM || null === (lM = HM.onSessionChange) || void 0 === lM || lM.call(HM, null !== (EM = null === JM || void 0 === JM ? void 0 : JM.sessionMeta) && void 0 !== EM ? EM : null, MM.sessionMeta)
         }
       }
     }
 
-    function cW(QQ) {
-      let WQ, {
-          fetchUserSession: XQ,
-          storeUserSession: wQ,
-          updateInterval: qQ = 0
-        } = QQ,
-        TQ = 0;
-      return QQ => {
-        const zQ = rW();
-        if (QQ === WQ && zQ < TQ && TQ - zQ <= qQ) return;
-        WQ = QQ, TQ = zQ + qQ;
-        const sQ = XQ();
-        (null === sQ || void 0 === sQ ? void 0 : sQ.sessionId) === QQ && hW(sQ) && wQ(gW(gW({}, sQ), {}, {
-          lastActivity: zQ
+    function pr(MM) {
+      let rM, {
+          fetchUserSession: iM,
+          storeUserSession: OM,
+          updateInterval: SM = 0
+        } = MM,
+        jM = 0;
+      return MM => {
+        const aM = mr();
+        if (MM === rM && aM < jM && jM - aM <= SM) return;
+        rM = MM, jM = aM + SM;
+        const PM = iM();
+        (null === PM || void 0 === PM ? void 0 : PM.sessionId) === MM && ur(PM) && OM(zr(zr({}, PM), {}, {
+          lastActivity: aM
         }))
       }
     }
 
-    function AW(QQ, WQ) {
-      let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : BQ;
-      var wQ, qQ, TQ, zQ, sQ, FQ;
-      const PQ = gW(gW({}, QQ), {}, {
+    function Wr(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : JM;
+      var OM, SM, jM, aM, PM, nM;
+      const QM = zr(zr({}, MM), {}, {
           sessionMeta: {
-            id: QQ.sessionId,
-            attributes: EW(gW(gW(gW({}, null === (wQ = XQ.config.sessionTracking) || void 0 === wQ || null === (wQ = wQ.session) || void 0 === wQ ? void 0 : wQ.attributes), null !== (qQ = null === (TQ = XQ.metas.value.session) || void 0 === TQ ? void 0 : TQ.attributes) && void 0 !== qQ ? qQ : {}), {}, {
-              isSampled: QQ.isSampled.toString()
+            id: MM.sessionId,
+            attributes: Dr(zr(zr(zr({}, null === (OM = iM.config.sessionTracking) || void 0 === OM || null === (OM = OM.session) || void 0 === OM ? void 0 : OM.attributes), null !== (SM = null === (jM = iM.metas.value.session) || void 0 === jM ? void 0 : jM.attributes) && void 0 !== SM ? SM : {}), {}, {
+              isSampled: MM.isSampled.toString()
             }))
           }
         }),
-        gQ = null !== (zQ = null === (sQ = XQ.metas.value.session) || void 0 === sQ ? void 0 : sQ.overrides) && void 0 !== zQ ? zQ : null === WQ || void 0 === WQ || null === (FQ = WQ.sessionMeta) || void 0 === FQ ? void 0 : FQ.overrides;
-      YQ(gQ) || (PQ.sessionMeta.overrides = gQ);
-      const JQ = null === WQ || void 0 === WQ ? void 0 : WQ.sessionId;
-      return null != JQ && (PQ.sessionMeta.attributes.previousSession = JQ), PQ
+        zM = null !== (aM = null === (PM = iM.metas.value.session) || void 0 === PM ? void 0 : PM.overrides) && void 0 !== aM ? aM : null === rM || void 0 === rM || null === (nM = rM.sessionMeta) || void 0 === nM ? void 0 : nM.overrides;
+      XM(zM) || (QM.sessionMeta.overrides = zM);
+      const LM = null === rM || void 0 === rM ? void 0 : rM.sessionId;
+      return null != LM && (QM.sessionMeta.attributes.previousSession = LM), QM
     }
 
-    function RW(QQ) {
+    function sr(MM) {
       let {
-        fetchUserSession: WQ,
-        storeUserSession: XQ
-      } = QQ, wQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BQ, qQ = !1;
-      return function(QQ) {
-        if (qQ) return;
-        const TQ = QQ.session,
-          zQ = WQ();
-        let sQ = null === TQ || void 0 === TQ ? void 0 : TQ.id;
-        const FQ = null === TQ || void 0 === TQ ? void 0 : TQ.attributes,
-          PQ = null === TQ || void 0 === TQ ? void 0 : TQ.overrides,
-          gQ = null === zQ || void 0 === zQ ? void 0 : zQ.sessionMeta,
-          JQ = null === gQ || void 0 === gQ ? void 0 : gQ.overrides,
-          rQ = !!PQ && !DW(PQ, JQ),
-          IQ = !!FQ && !DW(FQ, null === gQ || void 0 === gQ ? void 0 : gQ.attributes);
-        if (TQ && sQ !== (null === zQ || void 0 === zQ ? void 0 : zQ.sessionId) || IQ || rQ) {
-          var jQ, BQ;
-          const QQ = null != zQ && sQ === zQ.sessionId,
-            WQ = AW(QQ ? zQ : lW({
-              sessionId: sQ,
-              isSampled: JW(wQ)
-            }, wQ), zQ, wQ),
-            TQ = null === zQ || void 0 === zQ || null === (jQ = zQ.sessionMeta) || void 0 === jQ || null === (jQ = jQ.attributes) || void 0 === jQ ? void 0 : jQ.previousSession;
-          QQ && null != TQ && TQ !== WQ.sessionId && (WQ.sessionMeta.attributes.previousSession = TQ), (null === (BQ = WQ.sessionMeta.attributes) || void 0 === BQ ? void 0 : BQ.previousSession) === WQ.sessionId && delete WQ.sessionMeta.attributes.previousSession, XQ(WQ),
-            function(QQ, WQ) {
-              let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                wQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-              var qQ, TQ, zQ;
-              if (!WQ) return;
-              const sQ = XQ.serviceName,
-                FQ = null !== (qQ = null !== (TQ = wQ.serviceName) && void 0 !== TQ ? TQ : null === (zQ = QQ.metas.value.app) || void 0 === zQ ? void 0 : zQ.name) && void 0 !== qQ ? qQ : "";
-              sQ && sQ !== FQ && QQ.api.pushEvent(HW, {
-                serviceName: sQ,
-                previousServiceName: FQ
+        fetchUserSession: rM,
+        storeUserSession: iM
+      } = MM, OM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : JM, SM = !1;
+      return function(MM) {
+        if (SM) return;
+        const jM = MM.session,
+          aM = rM();
+        let PM = null === jM || void 0 === jM ? void 0 : jM.id;
+        const nM = null === jM || void 0 === jM ? void 0 : jM.attributes,
+          QM = null === jM || void 0 === jM ? void 0 : jM.overrides,
+          zM = null === aM || void 0 === aM ? void 0 : aM.sessionMeta,
+          LM = null === zM || void 0 === zM ? void 0 : zM.overrides,
+          mM = !!QM && !lr(QM, LM),
+          HM = !!nM && !lr(nM, null === zM || void 0 === zM ? void 0 : zM.attributes);
+        if (jM && PM !== (null === aM || void 0 === aM ? void 0 : aM.sessionId) || HM || mM) {
+          var hM, JM;
+          const MM = null != aM && PM === aM.sessionId,
+            rM = Wr(MM ? aM : gr({
+              sessionId: PM,
+              isSampled: Lr(OM)
+            }, OM), aM, OM),
+            jM = null === aM || void 0 === aM || null === (hM = aM.sessionMeta) || void 0 === hM || null === (hM = hM.attributes) || void 0 === hM ? void 0 : hM.previousSession;
+          MM && null != jM && jM !== rM.sessionId && (rM.sessionMeta.attributes.previousSession = jM), (null === (JM = rM.sessionMeta.attributes) || void 0 === JM ? void 0 : JM.previousSession) === rM.sessionId && delete rM.sessionMeta.attributes.previousSession, iM(rM),
+            function(MM, rM) {
+              let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+              var SM, jM, aM;
+              if (!rM) return;
+              const PM = iM.serviceName,
+                nM = null !== (SM = null !== (jM = OM.serviceName) && void 0 !== jM ? jM : null === (aM = MM.metas.value.app) || void 0 === aM ? void 0 : aM.name) && void 0 !== SM ? SM : "";
+              PM && PM !== nM && MM.api.pushEvent(wr, {
+                serviceName: PM,
+                previousServiceName: nM
               })
-            }(wQ, rQ, PQ, JQ), qQ = !0;
+            }(OM, mM, QM, LM), SM = !0;
           try {
-            wQ.api.setSession(WQ.sessionMeta)
+            OM.api.setSession(rM.sessionMeta)
           } finally {
-            qQ = !1
+            SM = !1
           }
         }
       }
     }
 
-    function EW(QQ) {
-      const WQ = {};
-      for (const XQ of Object.keys(QQ)) {
-        const wQ = QQ[XQ];
-        void 0 !== wQ && (WQ[XQ] = wQ)
+    function Dr(MM) {
+      const rM = {};
+      for (const iM of Object.keys(MM)) {
+        const OM = MM[iM];
+        void 0 !== OM && (rM[iM] = OM)
       }
-      return WQ
+      return rM
     }
 
-    function CW() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return JSON.stringify(null !== QQ && void 0 !== QQ ? QQ : {}, function() {
-        const QQ = new WeakSet;
-        return function(WQ, XQ) {
-          if (lQ(XQ) && null !== XQ) {
-            if (QQ.has(XQ)) return null;
-            QQ.add(XQ)
+    function kr() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      return JSON.stringify(null !== MM && void 0 !== MM ? MM : {}, function() {
+        const MM = new WeakSet;
+        return function(rM, iM) {
+          if (gM(iM) && null !== iM) {
+            if (MM.has(iM)) return null;
+            MM.add(iM)
           }
-          return XQ
+          return iM
         }
       }())
     }
 
-    function uW() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const WQ = {};
-      for (const [XQ, wQ] of Object.entries(QQ)) WQ[XQ] = lQ(wQ) && null !== wQ ? CW(wQ) : String(wQ);
-      return WQ
+    function Zr() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const rM = {};
+      for (const [iM, OM] of Object.entries(MM)) rM[iM] = gM(OM) && null !== OM ? kr(OM) : String(OM);
+      return rM
     }
-    var LW = class QQ {
+    var or = class MM {
       constructor() {
-        var WQ = this;
-        let XQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : BQ;
-        this.context = XQ, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = QQ => {
+        var rM = this;
+        let iM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : JM;
+        this.context = iM, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = MM => {
           this.adopting = !0;
           try {
-            var WQ;
-            null === (WQ = this.context.api) || void 0 === WQ || WQ.setSession(QQ)
+            var rM;
+            null === (rM = this.context.api) || void 0 === rM || rM.setSession(MM)
           } finally {
             this.adopting = !1
           }
         }, this.updateSession = function() {
           let {
-            refreshActivity: QQ = !0
+            refreshActivity: MM = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return WQ.updateUserSession({
-            refreshActivity: QQ
+          return rM.updateUserSession({
+            refreshActivity: MM
           })
-        }, this.recordActivity = cW({
-          fetchUserSession: QQ.fetchUserSession,
-          storeUserSession: QQ.storeUserSession,
-          updateInterval: sQ
-        }), this.updateUserSession = iW({
-          fetchUserSession: QQ.fetchUserSession,
-          storeUserSession: QQ.storeUserSession,
+        }, this.recordActivity = pr({
+          fetchUserSession: MM.fetchUserSession,
+          storeUserSession: MM.storeUserSession,
+          updateInterval: PM
+        }), this.updateUserSession = Rr({
+          fetchUserSession: MM.fetchUserSession,
+          storeUserSession: MM.storeUserSession,
           adoptSession: this.adoptSession,
-          updateInterval: sQ
-        }, XQ), this.init()
+          updateInterval: PM
+        }, iM), this.init()
       }
       static removeUserSession() {
-        XW(qQ, QQ.storageTypeLocal)
+        ir(SM, MM.storageTypeLocal)
       }
-      static storeUserSession(WQ) {
-        WW(qQ, CW(WQ), QQ.storageTypeLocal)
+      static storeUserSession(rM) {
+        rr(SM, kr(rM), MM.storageTypeLocal)
       }
       static fetchUserSession() {
-        const WQ = QW(qQ, QQ.storageTypeLocal);
-        return WQ ? JSON.parse(WQ) : null
+        const rM = Mr(SM, MM.storageTypeLocal);
+        return rM ? JSON.parse(rM) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var QQ;
+            var MM;
             this.updateSession({
               refreshActivity: !1
             });
-            const WQ = null === (QQ = this.context.api) || void 0 === QQ || null === (QQ = QQ.getSession()) || void 0 === QQ ? void 0 : QQ.id;
-            WQ && this.recordActivity(WQ)
+            const rM = null === (MM = this.context.api) || void 0 === MM || null === (MM = MM.getSession()) || void 0 === MM ? void 0 : MM.id;
+            rM && this.recordActivity(rM)
           }
-        })), this.context.metas.addListener(RW({
-          fetchUserSession: QQ.fetchUserSession,
-          storeUserSession: QQ.storeUserSession
+        })), this.context.metas.addListener(sr({
+          fetchUserSession: MM.fetchUserSession,
+          storeUserSession: MM.storeUserSession
         }, this.context))
       }
     };
-    LW.storageTypeLocal = mQ;
-    var kW = class QQ {
+    or.storageTypeLocal = VM;
+    var fr = class MM {
       constructor() {
-        var WQ = this;
-        let XQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : BQ;
-        this.context = XQ, this.isAdopting = () => !1, this.updateSession = function() {
+        var rM = this;
+        let iM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : JM;
+        this.context = iM, this.isAdopting = () => !1, this.updateSession = function() {
           let {
-            refreshActivity: QQ = !0
+            refreshActivity: MM = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return WQ.updateUserSession({
-            refreshActivity: QQ
+          return rM.updateUserSession({
+            refreshActivity: MM
           })
-        }, this.recordActivity = cW({
-          fetchUserSession: QQ.fetchUserSession,
-          storeUserSession: QQ.storeUserSession,
-          updateInterval: sQ
-        }), this.updateUserSession = iW({
-          fetchUserSession: QQ.fetchUserSession,
-          storeUserSession: QQ.storeUserSession,
-          updateInterval: sQ
-        }, XQ), this.init()
+        }, this.recordActivity = pr({
+          fetchUserSession: MM.fetchUserSession,
+          storeUserSession: MM.storeUserSession,
+          updateInterval: PM
+        }), this.updateUserSession = Rr({
+          fetchUserSession: MM.fetchUserSession,
+          storeUserSession: MM.storeUserSession,
+          updateInterval: PM
+        }, iM), this.init()
       }
       static removeUserSession() {
-        XW(qQ, QQ.storageTypeSession)
+        ir(SM, MM.storageTypeSession)
       }
-      static storeUserSession(WQ) {
-        WW(qQ, CW(WQ), QQ.storageTypeSession)
+      static storeUserSession(rM) {
+        rr(SM, kr(rM), MM.storageTypeSession)
       }
       static fetchUserSession() {
-        const WQ = QW(qQ, QQ.storageTypeSession);
-        return WQ ? JSON.parse(WQ) : null
+        const rM = Mr(SM, MM.storageTypeSession);
+        return rM ? JSON.parse(rM) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var QQ;
+            var MM;
             this.updateSession({
               refreshActivity: !1
             });
-            const WQ = null === (QQ = this.context.api) || void 0 === QQ || null === (QQ = QQ.getSession()) || void 0 === QQ ? void 0 : QQ.id;
-            WQ && this.recordActivity(WQ)
+            const rM = null === (MM = this.context.api) || void 0 === MM || null === (MM = MM.getSession()) || void 0 === MM ? void 0 : MM.id;
+            rM && this.recordActivity(rM)
           }
-        })), this.context.metas.addListener(RW({
-          fetchUserSession: QQ.fetchUserSession,
-          storeUserSession: QQ.storeUserSession
+        })), this.context.metas.addListener(sr({
+          fetchUserSession: MM.fetchUserSession,
+          storeUserSession: MM.storeUserSession
         }, this.context))
       }
     };
-    kW.storageTypeSession = KQ;
-    const fW = new WeakMap;
+    fr.storageTypeSession = TM;
+    const Yr = new WeakMap;
 
-    function SW(QQ) {
-      let WQ = fW.get(QQ);
-      if (!WQ) {
-        let XQ = [],
-          wQ = [];
-        WQ = {
-          addSessionUpdateListener: QQ => {
-            XQ.push(QQ)
+    function Nr(MM) {
+      let rM = Yr.get(MM);
+      if (!rM) {
+        let iM = [],
+          OM = [];
+        rM = {
+          addSessionUpdateListener: MM => {
+            iM.push(MM)
           },
-          removeSessionUpdateListener: QQ => {
-            XQ = XQ.filter((WQ => WQ !== QQ))
+          removeSessionUpdateListener: MM => {
+            iM = iM.filter((rM => rM !== MM))
           },
-          notifySessionUpdate: QQ => {
-            XQ.forEach((WQ => WQ(QQ)))
+          notifySessionUpdate: MM => {
+            iM.forEach((rM => rM(MM)))
           },
-          shouldCapture: () => wQ.every((QQ => QQ())),
-          addCaptureFilter: QQ => {
-            wQ.push(QQ)
+          shouldCapture: () => OM.every((MM => MM())),
+          addCaptureFilter: MM => {
+            OM.push(MM)
           },
-          removeCaptureFilter: QQ => {
-            wQ = wQ.filter((WQ => WQ !== QQ))
+          removeCaptureFilter: MM => {
+            OM = OM.filter((rM => rM !== MM))
           }
-        }, fW.set(QQ, WQ)
+        }, Yr.set(MM, rM)
       }
-      return WQ
+      return rM
     }
-    var tW = class {
-      constructor(QQ, WQ, XQ) {
-        this.metas = QQ, this.transports = WQ, this.onActivate = XQ, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = QQ => {
-          var WQ, XQ, wQ;
-          const qQ = this.pending;
-          var TQ, zQ;
-          if ("overrides" === QQ.type) return void(this.pending = {
-            reset: null !== (TQ = null === qQ || void 0 === qQ ? void 0 : qQ.reset) && void 0 !== TQ && TQ,
-            inheritOverrides: null === (zQ = null === qQ || void 0 === qQ ? void 0 : qQ.inheritOverrides) || void 0 === zQ || zQ,
-            session: gW(gW({}, null === qQ || void 0 === qQ ? void 0 : qQ.session), {}, {
-              overrides: gW(gW({}, null === qQ || void 0 === qQ ? void 0 : qQ.session.overrides), QQ.overrides)
+    var Ar = class {
+      constructor(MM, rM, iM) {
+        this.metas = MM, this.transports = rM, this.onActivate = iM, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = MM => {
+          var rM, iM, OM;
+          const SM = this.pending;
+          var jM, aM;
+          if ("overrides" === MM.type) return void(this.pending = {
+            reset: null !== (jM = null === SM || void 0 === SM ? void 0 : SM.reset) && void 0 !== jM && jM,
+            inheritOverrides: null === (aM = null === SM || void 0 === SM ? void 0 : SM.inheritOverrides) || void 0 === aM || aM,
+            session: zr(zr({}, null === SM || void 0 === SM ? void 0 : SM.session), {}, {
+              overrides: zr(zr({}, null === SM || void 0 === SM ? void 0 : SM.session.overrides), MM.overrides)
             })
           });
-          const sQ = QQ.session,
-            FQ = YQ(sQ) || null != sQ && "id" in sQ && !sQ.id,
-            PQ = null !== (WQ = null === sQ || void 0 === sQ ? void 0 : sQ.overrides) && void 0 !== WQ ? WQ : null === qQ || void 0 === qQ ? void 0 : qQ.session.overrides;
+          const PM = MM.session,
+            nM = XM(PM) || null != PM && "id" in PM && !PM.id,
+            QM = null !== (rM = null === PM || void 0 === PM ? void 0 : PM.overrides) && void 0 !== rM ? rM : null === SM || void 0 === SM ? void 0 : SM.session.overrides;
           this.pending = {
-            reset: FQ || !(null === sQ || void 0 === sQ ? void 0 : sQ.id) && null !== (XQ = null === qQ || void 0 === qQ ? void 0 : qQ.reset) && void 0 !== XQ && XQ,
-            inheritOverrides: !(!QQ.overrides && void 0 !== (null === sQ || void 0 === sQ ? void 0 : sQ.overrides)) && (null === (wQ = null === qQ || void 0 === qQ ? void 0 : qQ.inheritOverrides) || void 0 === wQ || wQ),
+            reset: nM || !(null === PM || void 0 === PM ? void 0 : PM.id) && null !== (iM = null === SM || void 0 === SM ? void 0 : SM.reset) && void 0 !== iM && iM,
+            inheritOverrides: !(!MM.overrides && void 0 !== (null === PM || void 0 === PM ? void 0 : PM.overrides)) && (null === (OM = null === SM || void 0 === SM ? void 0 : SM.inheritOverrides) || void 0 === OM || OM),
             session: {
-              id: null === sQ || void 0 === sQ ? void 0 : sQ.id,
-              attributes: (null === sQ || void 0 === sQ ? void 0 : sQ.attributes) && gW({}, sQ.attributes),
-              overrides: QQ.overrides ? gW(gW({}, null === qQ || void 0 === qQ ? void 0 : qQ.session.overrides), QQ.overrides) : PQ && gW({}, PQ)
+              id: null === PM || void 0 === PM ? void 0 : PM.id,
+              attributes: (null === PM || void 0 === PM ? void 0 : PM.attributes) && zr({}, PM.attributes),
+              overrides: MM.overrides ? zr(zr({}, null === SM || void 0 === SM ? void 0 : SM.session.overrides), MM.overrides) : QM && zr({}, QM)
             }
           }
         }, this.activate = () => {
@@ -753,553 +753,553 @@ export const modules = {
         }
       }
       initialize() {
-        var QQ, WQ;
-        this.waiting = !0, SW(this.metas).addSessionUpdateListener(this.recordUpdate), SW(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (QQ = (WQ = this.metas).addCaptureListener) || void 0 === QQ || QQ.call(WQ, this.activate), this.activate()
+        var MM, rM;
+        this.waiting = !0, Nr(this.metas).addSessionUpdateListener(this.recordUpdate), Nr(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (MM = (rM = this.metas).addCaptureListener) || void 0 === MM || MM.call(rM, this.activate), this.activate()
       }
       destroy() {
-        var QQ, WQ;
-        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), SW(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (QQ = (WQ = this.metas).removeCaptureListener) || void 0 === QQ || QQ.call(WQ, this.activate), SW(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
+        var MM, rM;
+        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), Nr(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (MM = (rM = this.metas).removeCaptureListener) || void 0 === MM || MM.call(rM, this.activate), Nr(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
       }
     };
 
-    function oW(QQ) {
-      return (null === QQ || void 0 === QQ ? void 0 : QQ.persistent) ? LW : kW
+    function xr(MM) {
+      return (null === MM || void 0 === MM ? void 0 : MM.persistent) ? or : fr
     }
 
-    function eW() {}
-    let nW = function(QQ) {
-      return QQ[QQ.OFF = 0] = "OFF", QQ[QQ.ERROR = 1] = "ERROR", QQ[QQ.WARN = 2] = "WARN", QQ[QQ.INFO = 3] = "INFO", QQ[QQ.VERBOSE = 4] = "VERBOSE", QQ
+    function vr() {}
+    let Fr = function(MM) {
+      return MM[MM.OFF = 0] = "OFF", MM[MM.ERROR = 1] = "ERROR", MM[MM.WARN = 2] = "WARN", MM[MM.INFO = 3] = "INFO", MM[MM.VERBOSE = 4] = "VERBOSE", MM
     }({});
-    const xW = {
-        debug: eW,
-        error: eW,
-        info: eW,
+    const Br = {
+        debug: vr,
+        error: vr,
+        info: vr,
         prefix: "Faro",
-        warn: eW
+        warn: vr
       },
-      YW = 1;
+      Xr = 1;
 
-    function NW(QQ) {
-      return NW = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(QQ) {
-        return typeof QQ
-      } : function(QQ) {
-        return QQ && "function" == typeof Symbol && QQ.constructor === Symbol && QQ !== Symbol.prototype ? "symbol" : typeof QQ
-      }, NW(QQ)
+    function Ir(MM) {
+      return Ir = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(MM) {
+        return typeof MM
+      } : function(MM) {
+        return MM && "function" == typeof Symbol && MM.constructor === Symbol && MM !== Symbol.prototype ? "symbol" : typeof MM
+      }, Ir(MM)
     }
 
-    function ZW(QQ) {
-      var WQ = function(QQ, WQ) {
-        if ("object" != NW(QQ) || !QQ) return QQ;
-        var XQ = QQ[Symbol.toPrimitive];
-        if (void 0 !== XQ) {
-          var wQ = XQ.call(QQ, WQ || "default");
-          if ("object" != NW(wQ)) return wQ;
+    function Kr(MM) {
+      var rM = function(MM, rM) {
+        if ("object" != Ir(MM) || !MM) return MM;
+        var iM = MM[Symbol.toPrimitive];
+        if (void 0 !== iM) {
+          var OM = iM.call(MM, rM || "default");
+          if ("object" != Ir(OM)) return OM;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === WQ ? String : Number)(QQ)
-      }(QQ, "string");
-      return "symbol" == NW(WQ) ? WQ : WQ + ""
+        return ("string" === rM ? String : Number)(MM)
+      }(MM, "string");
+      return "symbol" == Ir(rM) ? rM : rM + ""
     }
 
-    function OW(QQ, WQ, XQ) {
-      return (WQ = ZW(WQ)) in QQ ? Object.defineProperty(QQ, WQ, {
-        value: XQ,
+    function qr(MM, rM, iM) {
+      return (rM = Kr(rM)) in MM ? Object.defineProperty(MM, rM, {
+        value: iM,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : QQ[WQ] = XQ, QQ
+      }) : MM[rM] = iM, MM
     }
 
-    function KW(QQ, WQ) {
-      var XQ = Object.keys(QQ);
+    function Tr(MM, rM) {
+      var iM = Object.keys(MM);
       if (Object.getOwnPropertySymbols) {
-        var wQ = Object.getOwnPropertySymbols(QQ);
-        WQ && (wQ = wQ.filter((function(WQ) {
-          return Object.getOwnPropertyDescriptor(QQ, WQ).enumerable
-        }))), XQ.push.apply(XQ, wQ)
+        var OM = Object.getOwnPropertySymbols(MM);
+        rM && (OM = OM.filter((function(rM) {
+          return Object.getOwnPropertyDescriptor(MM, rM).enumerable
+        }))), iM.push.apply(iM, OM)
       }
-      return XQ
+      return iM
     }
 
-    function mW(QQ) {
-      for (var WQ = 1; WQ < arguments.length; WQ++) {
-        var XQ = null != arguments[WQ] ? arguments[WQ] : {};
-        WQ % 2 ? KW(Object(XQ), !0).forEach((function(WQ) {
-          OW(QQ, WQ, XQ[WQ])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(QQ, Object.getOwnPropertyDescriptors(XQ)) : KW(Object(XQ)).forEach((function(WQ) {
-          Object.defineProperty(QQ, WQ, Object.getOwnPropertyDescriptor(XQ, WQ))
+    function Vr(MM) {
+      for (var rM = 1; rM < arguments.length; rM++) {
+        var iM = null != arguments[rM] ? arguments[rM] : {};
+        rM % 2 ? Tr(Object(iM), !0).forEach((function(rM) {
+          qr(MM, rM, iM[rM])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(MM, Object.getOwnPropertyDescriptors(iM)) : Tr(Object(iM)).forEach((function(rM) {
+          Object.defineProperty(MM, rM, Object.getOwnPropertyDescriptor(iM, rM))
         }))
       }
-      return QQ
+      return MM
     }
-    const MW = mW({}, console);
-    var QX = class {
+    const cr = Vr({}, console);
+    var Mi = class {
         constructor() {
-          this.unpatchedConsole = MW, this.internalLogger = xW, this.config = {}, this.metas = {}
+          this.unpatchedConsole = cr, this.internalLogger = Br, this.config = {}, this.metas = {}
         }
         logDebug() {
-          for (var QQ = arguments.length, WQ = new Array(QQ), XQ = 0; XQ < QQ; XQ++) WQ[XQ] = arguments[XQ];
-          this.internalLogger.debug(`${this.name}\n`, ...WQ)
+          for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
+          this.internalLogger.debug(`${this.name}\n`, ...rM)
         }
         logInfo() {
-          for (var QQ = arguments.length, WQ = new Array(QQ), XQ = 0; XQ < QQ; XQ++) WQ[XQ] = arguments[XQ];
-          this.internalLogger.info(`${this.name}\n`, ...WQ)
+          for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
+          this.internalLogger.info(`${this.name}\n`, ...rM)
         }
         logWarn() {
-          for (var QQ = arguments.length, WQ = new Array(QQ), XQ = 0; XQ < QQ; XQ++) WQ[XQ] = arguments[XQ];
-          this.internalLogger.warn(`${this.name}\n`, ...WQ)
+          for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
+          this.internalLogger.warn(`${this.name}\n`, ...rM)
         }
         logError() {
-          for (var QQ = arguments.length, WQ = new Array(QQ), XQ = 0; XQ < QQ; XQ++) WQ[XQ] = arguments[XQ];
-          this.internalLogger.error(`${this.name}\n`, ...WQ)
+          for (var MM = arguments.length, rM = new Array(MM), iM = 0; iM < MM; iM++) rM[iM] = arguments[iM];
+          this.internalLogger.error(`${this.name}\n`, ...rM)
         }
       },
-      WX = class extends QX {
+      ri = class extends Mi {
         constructor() {
           super(...arguments), this.api = {}, this.transports = {}
         }
       };
-    const XX = "2.12.1";
-    var wX = class extends WX {
+    const ii = "2.12.1";
+    var Oi = class extends ri {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = XX, this.isAdoptingSession = () => !1
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = ii, this.isAdoptingSession = () => !1
       }
-      sendSessionStartEvent(QQ) {
-        var WQ;
-        const XQ = QQ.session;
-        if (XQ && XQ.id !== (null === (WQ = this.notifiedSession) || void 0 === WQ ? void 0 : WQ.id)) {
-          var wQ;
-          if (this.isAdoptingSession()) return void(this.notifiedSession = XQ);
-          if (this.notifiedSession && this.notifiedSession.id === (null === (wQ = XQ.attributes) || void 0 === wQ ? void 0 : wQ.previousSession)) return this.api.pushEvent(dW, {}, void 0, {
+      sendSessionStartEvent(MM) {
+        var rM;
+        const iM = MM.session;
+        if (iM && iM.id !== (null === (rM = this.notifiedSession) || void 0 === rM ? void 0 : rM.id)) {
+          var OM;
+          if (this.isAdoptingSession()) return void(this.notifiedSession = iM);
+          if (this.notifiedSession && this.notifiedSession.id === (null === (OM = iM.attributes) || void 0 === OM ? void 0 : OM.previousSession)) return this.api.pushEvent(br, {}, void 0, {
             skipDedupe: !0
-          }), void(this.notifiedSession = XQ);
-          this.notifiedSession = XQ, this.api.pushEvent(bW, {}, void 0, {
+          }), void(this.notifiedSession = iM);
+          this.notifiedSession = iM, this.api.pushEvent(Cr, {}, void 0, {
             skipDedupe: !0
           })
         }
       }
-      createInitialSession(QQ, WQ, XQ) {
-        const wQ = null === XQ || void 0 === XQ ? void 0 : XQ.session;
-        let qQ, TQ, zQ = QQ.fetchUserSession();
-        if (WQ.persistent && WQ.maxSessionPersistenceTime && zQ) {
-          const QQ = rW();
-          zQ.lastActivity < QQ - WQ.maxSessionPersistenceTime && (LW.removeUserSession(), zQ = null)
+      createInitialSession(MM, rM, iM) {
+        const OM = null === iM || void 0 === iM ? void 0 : iM.session;
+        let SM, jM, aM = MM.fetchUserSession();
+        if (rM.persistent && rM.maxSessionPersistenceTime && aM) {
+          const MM = mr();
+          aM.lastActivity < MM - rM.maxSessionPersistenceTime && (or.removeUserSession(), aM = null)
         }
-        const sQ = hW(zQ);
-        if ((null === XQ || void 0 === XQ ? void 0 : XQ.reset) || !sQ || (null === wQ || void 0 === wQ ? void 0 : wQ.id) && wQ.id !== (null === zQ || void 0 === zQ ? void 0 : zQ.sessionId)) {
-          var FQ, PQ, gQ, JQ, rQ, IQ;
-          TQ = lW({
-            sessionId: (null === XQ || void 0 === XQ ? void 0 : XQ.reset) ? void 0 : null !== (FQ = null === wQ || void 0 === wQ ? void 0 : wQ.id) && void 0 !== FQ ? FQ : null === (PQ = WQ.session) || void 0 === PQ ? void 0 : PQ.id,
-            isSampled: JW(this)
+        const PM = ur(aM);
+        if ((null === iM || void 0 === iM ? void 0 : iM.reset) || !PM || (null === OM || void 0 === OM ? void 0 : OM.id) && OM.id !== (null === aM || void 0 === aM ? void 0 : aM.sessionId)) {
+          var nM, QM, zM, LM, mM, HM;
+          jM = gr({
+            sessionId: (null === iM || void 0 === iM ? void 0 : iM.reset) ? void 0 : null !== (nM = null === OM || void 0 === OM ? void 0 : OM.id) && void 0 !== nM ? nM : null === (QM = rM.session) || void 0 === QM ? void 0 : QM.id,
+            isSampled: Lr(this)
           }, this);
-          const QQ = TQ.sessionId,
-            jQ = XQ && sQ ? null === zQ || void 0 === zQ || null === (gQ = zQ.sessionMeta) || void 0 === gQ ? void 0 : gQ.overrides : void 0,
-            BQ = jQ ? gW(gW({}, null === (JQ = WQ.session) || void 0 === JQ ? void 0 : JQ.overrides), jQ) : null === (rQ = WQ.session) || void 0 === rQ ? void 0 : rQ.overrides;
-          TQ.sessionMeta = gW({
-            id: QQ,
-            attributes: gW({
-              isSampled: TQ.isSampled.toString()
-            }, null === (IQ = WQ.session) || void 0 === IQ ? void 0 : IQ.attributes)
-          }, BQ ? {
-            overrides: BQ
-          } : {}), qQ = bW
+          const MM = jM.sessionId,
+            hM = iM && PM ? null === aM || void 0 === aM || null === (zM = aM.sessionMeta) || void 0 === zM ? void 0 : zM.overrides : void 0,
+            JM = hM ? zr(zr({}, null === (LM = rM.session) || void 0 === LM ? void 0 : LM.overrides), hM) : null === (mM = rM.session) || void 0 === mM ? void 0 : mM.overrides;
+          jM.sessionMeta = zr({
+            id: MM,
+            attributes: zr({
+              isSampled: jM.isSampled.toString()
+            }, null === (HM = rM.session) || void 0 === HM ? void 0 : HM.attributes)
+          }, JM ? {
+            overrides: JM
+          } : {}), SM = Cr
         } else {
-          var jQ, BQ;
-          const QQ = null === zQ || void 0 === zQ ? void 0 : zQ.sessionId;
-          TQ = lW({
-            sessionId: QQ,
-            isSampled: zQ.isSampled || !1,
-            started: null === zQ || void 0 === zQ ? void 0 : zQ.started
+          var hM, JM;
+          const MM = null === aM || void 0 === aM ? void 0 : aM.sessionId;
+          jM = gr({
+            sessionId: MM,
+            isSampled: aM.isSampled || !1,
+            started: null === aM || void 0 === aM ? void 0 : aM.started
           }, this);
-          const XQ = null === zQ || void 0 === zQ ? void 0 : zQ.sessionMeta,
-            wQ = gW(gW({}, null === (jQ = WQ.session) || void 0 === jQ ? void 0 : jQ.overrides), null === XQ || void 0 === XQ ? void 0 : XQ.overrides);
-          TQ.sessionMeta = gW(gW({}, WQ.session), {}, {
-            id: QQ,
-            attributes: gW(gW(gW({}, null === (BQ = WQ.session) || void 0 === BQ ? void 0 : BQ.attributes), null === XQ || void 0 === XQ ? void 0 : XQ.attributes), {}, {
-              isSampled: TQ.isSampled.toString()
+          const iM = null === aM || void 0 === aM ? void 0 : aM.sessionMeta,
+            OM = zr(zr({}, null === (hM = rM.session) || void 0 === hM ? void 0 : hM.overrides), null === iM || void 0 === iM ? void 0 : iM.overrides);
+          jM.sessionMeta = zr(zr({}, rM.session), {}, {
+            id: MM,
+            attributes: zr(zr(zr({}, null === (JM = rM.session) || void 0 === JM ? void 0 : JM.attributes), null === iM || void 0 === iM ? void 0 : iM.attributes), {}, {
+              isSampled: jM.isSampled.toString()
             }),
-            overrides: wQ
-          }), qQ = vW
+            overrides: OM
+          }), SM = er
         }
-        var yQ;
-        if (wQ && (TQ.sessionMeta = gW(gW({}, TQ.sessionMeta), {}, {
-            attributes: gW(gW(gW({}, null === (yQ = TQ.sessionMeta) || void 0 === yQ ? void 0 : yQ.attributes), wQ.attributes), {}, {
-              isSampled: TQ.isSampled.toString()
+        var dM;
+        if (OM && (jM.sessionMeta = zr(zr({}, jM.sessionMeta), {}, {
+            attributes: zr(zr(zr({}, null === (dM = jM.sessionMeta) || void 0 === dM ? void 0 : dM.attributes), OM.attributes), {}, {
+              isSampled: jM.isSampled.toString()
             })
-          }), wQ.overrides)) {
-          const QQ = (null === XQ || void 0 === XQ ? void 0 : XQ.inheritOverrides) ? gW(gW({}, TQ.sessionMeta.overrides), wQ.overrides) : wQ.overrides;
-          Object.keys(QQ).length > 0 ? TQ.sessionMeta.overrides = QQ : delete TQ.sessionMeta.overrides
+          }), OM.overrides)) {
+          const MM = (null === iM || void 0 === iM ? void 0 : iM.inheritOverrides) ? zr(zr({}, jM.sessionMeta.overrides), OM.overrides) : OM.overrides;
+          Object.keys(MM).length > 0 ? jM.sessionMeta.overrides = MM : delete jM.sessionMeta.overrides
         }
         return {
-          initialSession: TQ,
-          lifecycleType: qQ
+          initialSession: jM,
+          lifecycleType: SM
         }
       }
-      registerBeforeSendHook(QQ) {
-        var WQ;
-        this.beforeSendHook = WQ => {
-          var XQ, wQ;
-          const qQ = null === (XQ = WQ.meta.session) || void 0 === XQ ? void 0 : XQ.id;
-          qQ && !this.transports.isPaused() && QQ(qQ);
-          const TQ = null === (wQ = WQ.meta.session) || void 0 === wQ ? void 0 : wQ.attributes;
-          if (TQ && "true" === (null === TQ || void 0 === TQ ? void 0 : TQ.isSampled)) {
-            var zQ;
-            let QQ = JSON.parse(JSON.stringify(WQ));
-            const XQ = null === (zQ = QQ.meta.session) || void 0 === zQ ? void 0 : zQ.attributes;
-            var sQ;
-            if (null === XQ || void 0 === XQ || delete XQ.isSampled, 0 === Object.keys(null !== XQ && void 0 !== XQ ? XQ : {}).length) null === (sQ = QQ.meta.session) || void 0 === sQ || delete sQ.attributes;
-            return QQ
+      registerBeforeSendHook(MM) {
+        var rM;
+        this.beforeSendHook = rM => {
+          var iM, OM;
+          const SM = null === (iM = rM.meta.session) || void 0 === iM ? void 0 : iM.id;
+          SM && !this.transports.isPaused() && MM(SM);
+          const jM = null === (OM = rM.meta.session) || void 0 === OM ? void 0 : OM.attributes;
+          if (jM && "true" === (null === jM || void 0 === jM ? void 0 : jM.isSampled)) {
+            var aM;
+            let MM = JSON.parse(JSON.stringify(rM));
+            const iM = null === (aM = MM.meta.session) || void 0 === aM ? void 0 : aM.attributes;
+            var PM;
+            if (null === iM || void 0 === iM || delete iM.isSampled, 0 === Object.keys(null !== iM && void 0 !== iM ? iM : {}).length) null === (PM = MM.meta.session) || void 0 === PM || delete PM.attributes;
+            return MM
           }
           return null
-        }, null === (WQ = this.transports) || void 0 === WQ || WQ.addBeforeSendHooks(this.beforeSendHook)
+        }, null === (rM = this.transports) || void 0 === rM || rM.addBeforeSendHooks(this.beforeSendHook)
       }
       initialize() {
-        var QQ;
+        var MM;
         this.logDebug("init session instrumentation");
-        const WQ = document.prerendering;
-        var XQ;
-        if ((null === (QQ = this.config.sessionTracking) || void 0 === QQ ? void 0 : QQ.enabled) && (WQ || this.prerenderSession)) return null !== (XQ = this.prerenderSession) && void 0 !== XQ || (this.prerenderSession = new tW(this.metas, this.transports, (QQ => {
-          this.prerenderSession = void 0, this.initializeSession(QQ)
+        const rM = document.prerendering;
+        var iM;
+        if ((null === (MM = this.config.sessionTracking) || void 0 === MM ? void 0 : MM.enabled) && (rM || this.prerenderSession)) return null !== (iM = this.prerenderSession) && void 0 !== iM || (this.prerenderSession = new Ar(this.metas, this.transports, (MM => {
+          this.prerenderSession = void 0, this.initializeSession(MM)
         }))), void this.prerenderSession.initialize();
         this.initializeSession()
       }
-      initializeSession(QQ) {
-        const WQ = this.config.sessionTracking;
-        if (null === WQ || void 0 === WQ ? void 0 : WQ.enabled) {
-          var XQ, wQ;
-          const qQ = oW(WQ),
-            TQ = new qQ(this);
-          this.isAdoptingSession = TQ.isAdopting, this.registerBeforeSendHook(TQ.recordActivity);
+      initializeSession(MM) {
+        const rM = this.config.sessionTracking;
+        if (null === rM || void 0 === rM ? void 0 : rM.enabled) {
+          var iM, OM;
+          const SM = xr(rM),
+            jM = new SM(this);
+          this.isAdoptingSession = jM.isAdopting, this.registerBeforeSendHook(jM.recordActivity);
           const {
-            initialSession: zQ,
-            lifecycleType: sQ
-          } = this.createInitialSession(qQ, WQ, QQ);
-          qQ.storeUserSession(zQ);
-          const FQ = zQ.sessionMeta;
-          this.notifiedSession = FQ, this.api.setSession(FQ), this.captureListener = () => {
-            this.transports.isPaused() || TQ.updateSession({
+            initialSession: aM,
+            lifecycleType: PM
+          } = this.createInitialSession(SM, rM, MM);
+          SM.storeUserSession(aM);
+          const nM = aM.sessionMeta;
+          this.notifiedSession = nM, this.api.setSession(nM), this.captureListener = () => {
+            this.transports.isPaused() || jM.updateSession({
               refreshActivity: !1
             })
-          }, null === (XQ = (wQ = this.metas).addCaptureListener) || void 0 === XQ || XQ.call(wQ, this.captureListener), sQ === bW && this.api.pushEvent(bW, {}, void 0, {
+          }, null === (iM = (OM = this.metas).addCaptureListener) || void 0 === iM || iM.call(OM, this.captureListener), PM === Cr && this.api.pushEvent(Cr, {}, void 0, {
             skipDedupe: !0
-          }), sQ === vW && this.api.pushEvent(vW, {}, void 0, {
+          }), PM === er && this.api.pushEvent(er, {}, void 0, {
             skipDedupe: !0
           })
         }
         this.sessionStartListener = this.sendSessionStartEvent.bind(this), this.metas.addListener(this.sessionStartListener)
       }
       destroy() {
-        var QQ, WQ, XQ;
-        (null === (QQ = this.prerenderSession) || void 0 === QQ || QQ.destroy(), this.captureListener) && (null === (WQ = (XQ = this.metas).removeCaptureListener) || void 0 === WQ || WQ.call(XQ, this.captureListener), this.captureListener = void 0);
+        var MM, rM, iM;
+        (null === (MM = this.prerenderSession) || void 0 === MM || MM.destroy(), this.captureListener) && (null === (rM = (iM = this.metas).removeCaptureListener) || void 0 === rM || rM.call(iM, this.captureListener), this.captureListener = void 0);
         this.beforeSendHook && (this.transports.removeBeforeSendHooks(this.beforeSendHook), this.beforeSendHook = void 0), this.sessionStartListener && (this.metas.removeListener(this.sessionStartListener), this.sessionStartListener = void 0)
       }
     };
 
-    function qX(QQ, WQ, XQ, wQ) {
-      const qQ = {
-        filename: QQ || document.location.href,
-        function: WQ || "?"
+    function Si(MM, rM, iM, OM) {
+      const SM = {
+        filename: MM || document.location.href,
+        function: rM || "?"
       };
-      return void 0 !== XQ && (qQ.lineno = XQ), void 0 !== wQ && (qQ.colno = wQ), qQ
+      return void 0 !== iM && (SM.lineno = iM), void 0 !== OM && (SM.colno = OM), SM
     }
-    const TX = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
-      zX = /\((\S*)(?::(\d+))(?::(\d+))\)/,
-      sX = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
-      FX = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
-      PX = "safari-extension",
-      gX = "safari-web-extension",
-      JX = /Minified React error #\d+;/i;
+    const ji = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
+      ai = /\((\S*)(?::(\d+))(?::(\d+))\)/,
+      Pi = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
+      ni = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
+      Qi = "safari-extension",
+      zi = "safari-web-extension",
+      Li = /Minified React error #\d+;/i;
 
-    function rX(QQ, WQ) {
-      const XQ = null === QQ || void 0 === QQ ? void 0 : QQ.includes(PX),
-        wQ = !XQ && (null === QQ || void 0 === QQ ? void 0 : QQ.includes("safari-web-extension"));
-      return XQ || wQ ? [(null === QQ || void 0 === QQ ? void 0 : QQ.includes("@")) ? QQ.split("@")[0] : QQ, XQ ? `${PX}:${WQ}` : `${gX}:${WQ}`] : [QQ, WQ]
+    function mi(MM, rM) {
+      const iM = null === MM || void 0 === MM ? void 0 : MM.includes(Qi),
+        OM = !iM && (null === MM || void 0 === MM ? void 0 : MM.includes("safari-web-extension"));
+      return iM || OM ? [(null === MM || void 0 === MM ? void 0 : MM.includes("@")) ? MM.split("@")[0] : MM, iM ? `${Qi}:${rM}` : `${zi}:${rM}`] : [MM, rM]
     }
-    const IX = 1024;
+    const Hi = 1024;
 
-    function jX(QQ) {
-      let WQ = [];
-      QQ.stacktrace ? WQ = QQ.stacktrace.split("\n").filter(((QQ, WQ) => WQ % 2 === 0)) : QQ.stack && (WQ = QQ.stack.split("\n"));
-      const XQ = WQ.reduce(((WQ, XQ, wQ) => {
-        if (XQ.length > IX) return WQ;
-        let qQ, TQ, zQ, sQ, FQ;
-        if (qQ = TX.exec(XQ)) {
-          if (TQ = qQ[1], zQ = qQ[2], sQ = qQ[3], FQ = qQ[4], null === zQ || void 0 === zQ ? void 0 : zQ.startsWith("eval")) {
-            const QQ = zX.exec(zQ);
-            QQ && (zQ = QQ[1], sQ = QQ[2], FQ = QQ[3])
+    function Ji(MM) {
+      let rM = [];
+      MM.stacktrace ? rM = MM.stacktrace.split("\n").filter(((MM, rM) => rM % 2 === 0)) : MM.stack && (rM = MM.stack.split("\n"));
+      const iM = rM.reduce(((rM, iM, OM) => {
+        if (iM.length > Hi) return rM;
+        let SM, jM, aM, PM, nM;
+        if (SM = ji.exec(iM)) {
+          if (jM = SM[1], aM = SM[2], PM = SM[3], nM = SM[4], null === aM || void 0 === aM ? void 0 : aM.startsWith("eval")) {
+            const MM = ai.exec(aM);
+            MM && (aM = MM[1], PM = MM[2], nM = MM[3])
           }
-          zQ = (null === zQ || void 0 === zQ ? void 0 : zQ.startsWith("address at ")) ? zQ.substring(11) : zQ, [TQ, zQ] = rX(TQ, zQ)
-        } else if (qQ = sX.exec(XQ)) {
-          if (TQ = qQ[1], zQ = qQ[3], sQ = qQ[4], FQ = qQ[5], zQ && zQ.includes(" > eval")) {
-            const QQ = FX.exec(zQ);
-            QQ && (TQ = TQ || "eval", zQ = QQ[1], sQ = QQ[2])
-          } else 0 === wQ && !FQ && vQ(QQ.columnNumber) && (FQ = String(QQ.columnNumber + 1));
-          [TQ, zQ] = rX(TQ, zQ)
+          aM = (null === aM || void 0 === aM ? void 0 : aM.startsWith("address at ")) ? aM.substring(11) : aM, [jM, aM] = mi(jM, aM)
+        } else if (SM = Pi.exec(iM)) {
+          if (jM = SM[1], aM = SM[3], PM = SM[4], nM = SM[5], aM && aM.includes(" > eval")) {
+            const MM = ni.exec(aM);
+            MM && (jM = jM || "eval", aM = MM[1], PM = MM[2])
+          } else 0 === OM && !nM && eM(MM.columnNumber) && (nM = String(MM.columnNumber + 1));
+          [jM, aM] = mi(jM, aM)
         }
-        return (zQ || TQ) && WQ.push(qX(zQ, TQ, sQ ? Number(sQ) : void 0, FQ ? Number(FQ) : void 0)), WQ
+        return (aM || jM) && rM.push(Si(aM, jM, PM ? Number(PM) : void 0, nM ? Number(nM) : void 0)), rM
       }), []);
-      return JX.test(QQ.message) ? XQ.slice(1) : XQ
+      return Li.test(MM.message) ? iM.slice(1) : iM
     }
 
-    function BX(QQ) {
+    function di(MM) {
       return {
-        frames: jX(QQ)
+        frames: Ji(MM)
       }
     }
-    const yX = "http-request-start",
-      VX = "http-request-end";
-    var DX = class QQ {
+    const yi = "http-request-start",
+      li = "http-request-end";
+    var Ei = class MM {
       constructor() {
         this.subscribers = []
       }
-      subscribe(QQ) {
-        return this.subscribers.push(QQ), {
-          unsubscribe: () => this.unsubscribe(QQ)
+      subscribe(MM) {
+        return this.subscribers.push(MM), {
+          unsubscribe: () => this.unsubscribe(MM)
         }
       }
-      unsubscribe(QQ) {
-        this.subscribers = this.subscribers.filter((WQ => WQ !== QQ))
+      unsubscribe(MM) {
+        this.subscribers = this.subscribers.filter((rM => rM !== MM))
       }
-      notify(QQ) {
-        this.subscribers.forEach((WQ => WQ(QQ)))
+      notify(MM) {
+        this.subscribers.forEach((rM => rM(MM)))
       }
       first() {
-        const WQ = new QQ,
-          XQ = QQ => {
-            WQ.notify(QQ), wQ.unsubscribe()
+        const rM = new MM,
+          iM = MM => {
+            rM.notify(MM), OM.unsubscribe()
           },
-          wQ = this.subscribe(XQ),
-          qQ = WQ.unsubscribe.bind(WQ);
-        return this.withUnsubscribeOverride(WQ, qQ, XQ)
+          OM = this.subscribe(iM),
+          SM = rM.unsubscribe.bind(rM);
+        return this.withUnsubscribeOverride(rM, SM, iM)
       }
-      takeWhile(WQ) {
-        const XQ = new QQ,
-          wQ = QQ => {
-            WQ(QQ) ? XQ.notify(QQ) : XQ.unsubscribe(wQ)
+      takeWhile(rM) {
+        const iM = new MM,
+          OM = MM => {
+            rM(MM) ? iM.notify(MM) : iM.unsubscribe(OM)
           };
-        this.subscribe(wQ);
-        const qQ = XQ.unsubscribe.bind(XQ);
-        return this.withUnsubscribeOverride(XQ, qQ, wQ)
+        this.subscribe(OM);
+        const SM = iM.unsubscribe.bind(iM);
+        return this.withUnsubscribeOverride(iM, SM, OM)
       }
-      filter(WQ) {
-        const XQ = new QQ,
-          wQ = QQ => {
-            WQ(QQ) && XQ.notify(QQ)
+      filter(rM) {
+        const iM = new MM,
+          OM = MM => {
+            rM(MM) && iM.notify(MM)
           };
-        this.subscribe(wQ);
-        const qQ = XQ.unsubscribe.bind(XQ);
-        return this.withUnsubscribeOverride(XQ, qQ, wQ)
+        this.subscribe(OM);
+        const SM = iM.unsubscribe.bind(iM);
+        return this.withUnsubscribeOverride(iM, SM, OM)
       }
       merge() {
-        const WQ = new QQ,
-          XQ = [];
-        for (var wQ = arguments.length, qQ = new Array(wQ), TQ = 0; TQ < wQ; TQ++) qQ[TQ] = arguments[TQ];
-        qQ.forEach((QQ => {
-          const wQ = QQ.subscribe((QQ => {
-            WQ.notify(QQ)
+        const rM = new MM,
+          iM = [];
+        for (var OM = arguments.length, SM = new Array(OM), jM = 0; jM < OM; jM++) SM[jM] = arguments[jM];
+        SM.forEach((MM => {
+          const OM = MM.subscribe((MM => {
+            rM.notify(MM)
           }));
-          XQ.push(wQ)
+          iM.push(OM)
         }));
-        const zQ = WQ.unsubscribeAll.bind(WQ);
-        return WQ.unsubscribe = () => {
-          XQ.forEach((QQ => QQ.unsubscribe())), zQ()
-        }, WQ
+        const aM = rM.unsubscribeAll.bind(rM);
+        return rM.unsubscribe = () => {
+          iM.forEach((MM => MM.unsubscribe())), aM()
+        }, rM
       }
-      withUnsubscribeOverride(QQ, WQ, XQ) {
-        return QQ.unsubscribe = QQ => {
-          WQ(QQ), this.unsubscribe(XQ)
-        }, QQ
+      withUnsubscribeOverride(MM, rM, iM) {
+        return MM.unsubscribe = MM => {
+          rM(MM), this.unsubscribe(iM)
+        }, MM
       }
       unsubscribeAll() {
         this.subscribers = []
       }
     };
-    let pX = function(QQ) {
-      return QQ.TRACE = "trace", QQ.DEBUG = "debug", QQ.INFO = "info", QQ.LOG = "log", QQ.WARN = "warn", QQ.ERROR = "error", QQ
+    let Ui = function(MM) {
+      return MM.TRACE = "trace", MM.DEBUG = "debug", MM.INFO = "info", MM.LOG = "log", MM.WARN = "warn", MM.ERROR = "error", MM
     }({});
-    const GX = "log",
-      UX = ["trace", "debug", "info", "log", "warn", "error"];
-    let bX, vX = !1;
-    const dX = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
-      HX = "Error",
-      aX = QQ => QQ.map((QQ => lQ(QQ) ? CW(QQ) : String(QQ))).join(" ");
+    const Gi = "log",
+      Ci = ["trace", "debug", "info", "log", "warn", "error"];
+    let ei, bi = !1;
+    const wi = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
+      ti = "Error",
+      gi = MM => MM.map((MM => gM(MM) ? kr(MM) : String(MM))).join(" ");
 
-    function lX(QQ) {
-      let WQ, XQ, wQ, qQ, TQ = [];
-      if (kQ(QQ) && QQ.error) WQ = QQ.error.message, XQ = QQ.error.name, TQ = jX(QQ.error);
-      else if ((wQ = fQ(QQ)) || SQ(QQ)) {
+    function ui(MM) {
+      let rM, iM, OM, SM, jM = [];
+      if (fM(MM) && MM.error) rM = MM.error.message, iM = MM.error.name, jM = Ji(MM.error);
+      else if ((OM = YM(MM)) || NM(MM)) {
         const {
-          name: qQ,
-          message: TQ
-        } = QQ;
-        XQ = null !== qQ && void 0 !== qQ ? qQ : wQ ? "DOMError" : "DOMException", WQ = TQ ? `${XQ}: ${TQ}` : XQ
-      } else LQ(QQ) ? (XQ = QQ.name, WQ = QQ.message, TQ = jX(QQ)) : (lQ(QQ) || (qQ = CQ(QQ))) && (XQ = qQ ? QQ.constructor.name : void 0, WQ = `Non-Error exception captured with keys: ${Object.keys(QQ)}`);
-      return [WQ, XQ, TQ]
+          name: SM,
+          message: jM
+        } = MM;
+        iM = null !== SM && void 0 !== SM ? SM : OM ? "DOMError" : "DOMException", rM = jM ? `${iM}: ${jM}` : iM
+      } else oM(MM) ? (iM = MM.name, rM = MM.message, jM = Ji(MM)) : (gM(MM) || (SM = kM(MM))) && (iM = SM ? MM.constructor.name : void 0, rM = `Non-Error exception captured with keys: ${Object.keys(MM)}`);
+      return [rM, iM, jM]
     }
 
-    function hX(QQ) {
-      const [WQ, XQ, wQ, qQ, TQ] = QQ;
-      let zQ, sQ, FQ = [];
-      const PQ = bQ(WQ),
-        gQ = qX(XQ, "?", wQ, qQ);
-      return TQ || !PQ ? ([zQ, sQ, FQ] = lX(null !== TQ && void 0 !== TQ ? TQ : WQ), 0 === FQ.length && (FQ = [gQ])) : PQ && ([zQ, sQ] = function(QQ) {
-        var WQ, XQ;
-        const wQ = QQ.match(dX),
-          qQ = null !== (WQ = null === wQ || void 0 === wQ ? void 0 : wQ[1]) && void 0 !== WQ ? WQ : HX;
-        return [null !== (XQ = null === wQ || void 0 === wQ ? void 0 : wQ[2]) && void 0 !== XQ ? XQ : QQ, qQ]
-      }(WQ), FQ = [gQ]), {
-        value: zQ,
-        type: sQ,
-        stackFrames: FQ
+    function Ri(MM) {
+      const [rM, iM, OM, SM, jM] = MM;
+      let aM, PM, nM = [];
+      const QM = CM(rM),
+        zM = Si(iM, "?", OM, SM);
+      return jM || !QM ? ([aM, PM, nM] = ui(null !== jM && void 0 !== jM ? jM : rM), 0 === nM.length && (nM = [zM])) : QM && ([aM, PM] = function(MM) {
+        var rM, iM;
+        const OM = MM.match(wi),
+          SM = null !== (rM = null === OM || void 0 === OM ? void 0 : OM[1]) && void 0 !== rM ? rM : ti;
+        return [null !== (iM = null === OM || void 0 === OM ? void 0 : OM[2]) && void 0 !== iM ? iM : MM, SM]
+      }(rM), nM = [zM]), {
+        value: aM,
+        type: PM,
+        stackFrames: nM
       }
     }
 
-    function iX(QQ, WQ) {
-      return LQ(QQ[0]) ? hX(QQ) : {
-        value: WQ(QQ)
+    function Wi(MM, rM) {
+      return oM(MM[0]) ? Ri(MM) : {
+        value: rM(MM)
       }
     }
-    const cX = QQ => QQ.map((QQ => {
+    const si = MM => MM.map((MM => {
       try {
-        return String(QQ)
-      } catch (WQ) {
+        return String(MM)
+      } catch (rM) {
         return ""
       }
     })).join(" ");
-    var AX = class QQ extends WX {
+    var Di = class MM extends ri {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = XX, this.errorSerializer = cX
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = ii, this.errorSerializer = si
       }
       initialize() {
-        var WQ, XQ;
-        const wQ = this.config.consoleInstrumentation,
-          qQ = (null === wQ || void 0 === wQ ? void 0 : wQ.serializeErrors) || !!(null === wQ || void 0 === wQ ? void 0 : wQ.errorSerializer);
-        this.errorSerializer = qQ ? null !== (WQ = null === wQ || void 0 === wQ ? void 0 : wQ.errorSerializer) && void 0 !== WQ ? WQ : aX : cX;
-        const TQ = null !== (XQ = null === wQ || void 0 === wQ ? void 0 : wQ.disabledLevels) && void 0 !== XQ ? XQ : QQ.defaultDisabledLevels,
-          zQ = function(QQ) {
-            if (bX || (bX = new DX), !vX) {
-              const WQ = null !== QQ && void 0 !== QQ ? QQ : MW;
-              UX.forEach((QQ => {
-                console[QQ] = function() {
-                  for (var XQ, wQ = arguments.length, qQ = new Array(wQ), TQ = 0; TQ < wQ; TQ++) qQ[TQ] = arguments[TQ];
-                  bX.notify({
+        var rM, iM;
+        const OM = this.config.consoleInstrumentation,
+          SM = (null === OM || void 0 === OM ? void 0 : OM.serializeErrors) || !!(null === OM || void 0 === OM ? void 0 : OM.errorSerializer);
+        this.errorSerializer = SM ? null !== (rM = null === OM || void 0 === OM ? void 0 : OM.errorSerializer) && void 0 !== rM ? rM : gi : si;
+        const jM = null !== (iM = null === OM || void 0 === OM ? void 0 : OM.disabledLevels) && void 0 !== iM ? iM : MM.defaultDisabledLevels,
+          aM = function(MM) {
+            if (ei || (ei = new Ei), !bi) {
+              const rM = null !== MM && void 0 !== MM ? MM : cr;
+              Ci.forEach((MM => {
+                console[MM] = function() {
+                  for (var iM, OM = arguments.length, SM = new Array(OM), jM = 0; jM < OM; jM++) SM[jM] = arguments[jM];
+                  ei.notify({
                     type: "console",
-                    level: QQ,
-                    args: qQ
-                  }), null === (XQ = WQ[QQ]) || void 0 === XQ || XQ.apply(console, qQ)
+                    level: MM,
+                    args: SM
+                  }), null === (iM = rM[MM]) || void 0 === iM || iM.apply(console, SM)
                 }
-              })), vX = !0
+              })), bi = !0
             }
-            return bX
+            return ei
           }(this.unpatchedConsole);
-        this.subscription = zQ.subscribe((WQ => {
+        this.subscription = aM.subscribe((rM => {
           let {
-            level: XQ,
-            args: qQ
-          } = WQ;
-          if (!TQ.includes(XQ)) try {
-            if (XQ !== pX.ERROR || (null === wQ || void 0 === wQ ? void 0 : wQ.consoleErrorAsLog))
-              if (XQ === pX.ERROR && (null === wQ || void 0 === wQ ? void 0 : wQ.consoleErrorAsLog)) {
+            level: iM,
+            args: SM
+          } = rM;
+          if (!jM.includes(iM)) try {
+            if (iM !== Ui.ERROR || (null === OM || void 0 === OM ? void 0 : OM.consoleErrorAsLog))
+              if (iM === Ui.ERROR && (null === OM || void 0 === OM ? void 0 : OM.consoleErrorAsLog)) {
                 const {
-                  value: WQ,
-                  type: wQ,
-                  stackFrames: TQ
-                } = iX(qQ, this.errorSerializer);
-                this.api.pushLog(WQ ? [QQ.consoleErrorPrefix + WQ] : qQ, {
-                  level: XQ,
+                  value: rM,
+                  type: OM,
+                  stackFrames: jM
+                } = Wi(SM, this.errorSerializer);
+                this.api.pushLog(rM ? [MM.consoleErrorPrefix + rM] : SM, {
+                  level: iM,
                   context: {
-                    value: null !== WQ && void 0 !== WQ ? WQ : "",
-                    type: null !== wQ && void 0 !== wQ ? wQ : "",
-                    stackFrames: (null === TQ || void 0 === TQ ? void 0 : TQ.length) ? aX(TQ) : ""
+                    value: null !== rM && void 0 !== rM ? rM : "",
+                    type: null !== OM && void 0 !== OM ? OM : "",
+                    stackFrames: (null === jM || void 0 === jM ? void 0 : jM.length) ? gi(jM) : ""
                   }
                 })
-              } else this.api.pushLog(qQ, {
-                level: XQ
+              } else this.api.pushLog(SM, {
+                level: iM
               });
             else {
               const {
-                value: WQ,
-                type: XQ,
-                stackFrames: wQ
-              } = iX(qQ, this.errorSerializer);
-              if (WQ && !XQ && !wQ) return void this.api.pushError(new Error(QQ.consoleErrorPrefix + WQ));
-              this.api.pushError(new Error(QQ.consoleErrorPrefix + WQ), {
-                type: XQ,
-                stackFrames: wQ
+                value: rM,
+                type: iM,
+                stackFrames: OM
+              } = Wi(SM, this.errorSerializer);
+              if (rM && !iM && !OM) return void this.api.pushError(new Error(MM.consoleErrorPrefix + rM));
+              this.api.pushError(new Error(MM.consoleErrorPrefix + rM), {
+                type: iM,
+                stackFrames: OM
               })
             }
-          } catch (zQ) {
-            this.logError(zQ)
+          } catch (aM) {
+            this.logError(aM)
           }
         }))
       }
       destroy() {
-        var QQ;
-        null === (QQ = this.subscription) || void 0 === QQ || QQ.unsubscribe(), this.subscription = void 0
+        var MM;
+        null === (MM = this.subscription) || void 0 === MM || MM.unsubscribe(), this.subscription = void 0
       }
     };
-    AX.defaultDisabledLevels = [pX.DEBUG, pX.TRACE, pX.LOG], AX.consoleErrorPrefix = "console.error: ";
-    const RX = [];
-    var EX = class extends WX {
+    Di.defaultDisabledLevels = [Ui.DEBUG, Ui.TRACE, Ui.LOG], Di.consoleErrorPrefix = "console.error: ";
+    const ki = [];
+    var Zi = class extends ri {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = XX
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = ii
       }
       initialize() {
         this.logDebug("Initializing"),
-          function(QQ) {
-            const WQ = window.onerror;
+          function(MM) {
+            const rM = window.onerror;
             window.onerror = function() {
-              for (var XQ = arguments.length, wQ = new Array(XQ), qQ = 0; qQ < XQ; qQ++) wQ[qQ] = arguments[qQ];
+              for (var iM = arguments.length, OM = new Array(iM), SM = 0; SM < iM; SM++) OM[SM] = arguments[SM];
               try {
                 const {
-                  value: WQ,
-                  type: XQ,
-                  stackFrames: qQ
-                } = hX(wQ), TQ = wQ[4];
-                if (WQ) {
-                  const wQ = {
-                    type: XQ,
-                    stackFrames: qQ
+                  value: rM,
+                  type: iM,
+                  stackFrames: SM
+                } = Ri(OM), jM = OM[4];
+                if (rM) {
+                  const OM = {
+                    type: iM,
+                    stackFrames: SM
                   };
-                  null != TQ && (wQ.originalError = TQ), QQ.pushError(new Error(WQ), wQ)
+                  null != jM && (OM.originalError = jM), MM.pushError(new Error(rM), OM)
                 }
               } finally {
-                null === WQ || void 0 === WQ || WQ.apply(window, wQ)
+                null === rM || void 0 === rM || rM.apply(window, OM)
               }
             }
           }(this.api),
-          function(QQ) {
-            const WQ = WQ => {
-              var XQ;
-              let wQ, qQ, TQ = WQ;
-              if (TQ.reason) TQ = WQ.reason;
-              else if (null === (XQ = WQ.detail) || void 0 === XQ ? void 0 : XQ.reason) {
-                var zQ;
-                TQ = null === (zQ = WQ.detail) || void 0 === zQ ? void 0 : zQ.reason
+          function(MM) {
+            const rM = rM => {
+              var iM;
+              let OM, SM, jM = rM;
+              if (jM.reason) jM = rM.reason;
+              else if (null === (iM = rM.detail) || void 0 === iM ? void 0 : iM.reason) {
+                var aM;
+                jM = null === (aM = rM.detail) || void 0 === aM ? void 0 : aM.reason
               }
-              let sQ = [];
-              RQ(TQ) ? (wQ = `Non-Error promise rejection captured with value: ${String(TQ)}`, qQ = "UnhandledRejection") : [wQ, qQ, sQ] = lX(TQ), wQ && QQ.pushError(new Error(wQ), {
-                type: qQ,
-                stackFrames: sQ
+              let PM = [];
+              sM(jM) ? (OM = `Non-Error promise rejection captured with value: ${String(jM)}`, SM = "UnhandledRejection") : [OM, SM, PM] = ui(jM), OM && MM.pushError(new Error(OM), {
+                type: SM,
+                stackFrames: PM
               })
             };
-            window.addEventListener("unhandledrejection", WQ), RX.push(WQ)
+            window.addEventListener("unhandledrejection", rM), ki.push(rM)
           }(this.api)
       }
     };
-    const CX = "unknown";
-    var uX = class extends WX {
+    const oi = "unknown";
+    var fi = class extends ri {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = XX, this.waitingForActivation = !1, this.sendViewChangedEvent = QQ => {
-          var WQ;
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = ii, this.waitingForActivation = !1, this.sendViewChangedEvent = MM => {
+          var rM;
           if (this.waitingForActivation || document.prerendering) return;
-          const XQ = QQ.view;
-          if (XQ && XQ.name !== (null === (WQ = this.notifiedView) || void 0 === WQ ? void 0 : WQ.name)) {
-            var wQ, qQ, TQ;
-            const QQ = null !== (wQ = null === (qQ = this.notifiedView) || void 0 === qQ ? void 0 : qQ.name) && void 0 !== wQ ? wQ : CX;
-            this.notifiedView = XQ, this.api.pushEvent(UW, {
-              fromView: QQ,
-              toView: null !== (TQ = XQ.name) && void 0 !== TQ ? TQ : CX
+          const iM = MM.view;
+          if (iM && iM.name !== (null === (rM = this.notifiedView) || void 0 === rM ? void 0 : rM.name)) {
+            var OM, SM, jM;
+            const MM = null !== (OM = null === (SM = this.notifiedView) || void 0 === SM ? void 0 : SM.name) && void 0 !== OM ? OM : oi;
+            this.notifiedView = iM, this.api.pushEvent(Gr, {
+              fromView: MM,
+              toView: null !== (jM = iM.name) && void 0 !== jM ? jM : oi
             }, void 0, {
               skipDedupe: !0
             })
@@ -1319,1292 +1319,1292 @@ export const modules = {
         this.waitingForActivation = !1, this.metas.removeListener(this.sendViewChangedEvent), document.removeEventListener("prerenderingchange", this.prerenderListener)
       }
     };
-    class LX {
+    class Yi {
       t;
       o = 0;
       i = [];
-      l(QQ) {
-        if (QQ.hadRecentInput) return;
-        const WQ = this.i[0],
-          XQ = this.i.at(-1);
-        this.o && WQ && XQ && QQ.startTime - XQ.startTime < 1e3 && QQ.startTime - WQ.startTime < 5e3 ? (this.o += QQ.value, this.i.push(QQ)) : (this.o = QQ.value, this.i = [QQ]), this.t?.(QQ)
+      l(MM) {
+        if (MM.hadRecentInput) return;
+        const rM = this.i[0],
+          iM = this.i.at(-1);
+        this.o && rM && iM && MM.startTime - iM.startTime < 1e3 && MM.startTime - rM.startTime < 5e3 ? (this.o += MM.value, this.i.push(MM)) : (this.o = MM.value, this.i = [MM]), this.t?.(MM)
       }
     }
-    const kX = () => {
-        const QQ = performance.getEntriesByType("navigation")[0];
-        if (QQ && QQ.responseStart > 0 && QQ.responseStart < performance.now()) return QQ
+    const Ni = () => {
+        const MM = performance.getEntriesByType("navigation")[0];
+        if (MM && MM.responseStart > 0 && MM.responseStart < performance.now()) return MM
       },
-      fX = QQ => {
+      Ai = MM => {
         if ("loading" === document.readyState) return "loading";
-        const WQ = kX();
-        if (WQ) {
-          if (QQ < WQ.domInteractive) return "loading";
-          if (0 === WQ.domContentLoadedEventStart || QQ < WQ.domContentLoadedEventStart) return "dom-interactive";
-          if (0 === WQ.domComplete || QQ < WQ.domComplete) return "dom-content-loaded"
+        const rM = Ni();
+        if (rM) {
+          if (MM < rM.domInteractive) return "loading";
+          if (0 === rM.domContentLoadedEventStart || MM < rM.domContentLoadedEventStart) return "dom-interactive";
+          if (0 === rM.domComplete || MM < rM.domComplete) return "dom-content-loaded"
         }
         return "complete"
       },
-      SX = QQ => {
-        const WQ = QQ.nodeName;
-        return 1 === QQ.nodeType ? WQ.toLowerCase() : WQ.toUpperCase().replace(/^#/, "")
+      xi = MM => {
+        const rM = MM.nodeName;
+        return 1 === MM.nodeType ? rM.toLowerCase() : rM.toUpperCase().replace(/^#/, "")
       },
-      tX = QQ => {
-        let WQ = "";
+      vi = MM => {
+        let rM = "";
         try {
-          for (; 9 !== QQ?.nodeType;) {
-            const XQ = QQ,
-              wQ = XQ.id ? "#" + XQ.id : [SX(XQ), ...Array.from(XQ.classList ?? []).sort()].join(".");
-            if (WQ.length + wQ.length > 99) return WQ || wQ;
-            if (WQ = WQ ? wQ + ">" + WQ : wQ, XQ.id) break;
-            QQ = XQ.parentNode
+          for (; 9 !== MM?.nodeType;) {
+            const iM = MM,
+              OM = iM.id ? "#" + iM.id : [xi(iM), ...Array.from(iM.classList ?? []).sort()].join(".");
+            if (rM.length + OM.length > 99) return rM || OM;
+            if (rM = rM ? OM + ">" + rM : OM, iM.id) break;
+            MM = iM.parentNode
           }
         } catch {}
-        return WQ
+        return rM
       },
-      oX = new WeakMap;
+      Fi = new WeakMap;
 
-    function eX(QQ, WQ) {
-      let XQ = oX.get(WQ);
-      return XQ || (XQ = new WeakMap, oX.set(WQ, XQ)), XQ.get(QQ) || XQ.set(QQ, new WQ), XQ.get(QQ)
+    function Bi(MM, rM) {
+      let iM = Fi.get(rM);
+      return iM || (iM = new WeakMap, Fi.set(rM, iM)), iM.get(MM) || iM.set(MM, new rM), iM.get(MM)
     }
-    let nX = -1;
-    const xX = () => nX,
-      YX = QQ => {
-        addEventListener("pageshow", (WQ => {
-          WQ.persisted && (nX = WQ.timeStamp, QQ(WQ))
+    let Xi = -1;
+    const Ii = () => Xi,
+      Ki = MM => {
+        addEventListener("pageshow", (rM => {
+          rM.persisted && (Xi = rM.timeStamp, MM(rM))
         }), !0)
       },
-      NX = (QQ, WQ, XQ, wQ) => {
-        let qQ, TQ;
-        return zQ => {
-          WQ.value >= 0 && (zQ || wQ) && (TQ = WQ.value - (qQ ?? 0), (TQ || void 0 === qQ) && (qQ = WQ.value, WQ.delta = TQ, WQ.rating = ((QQ, WQ) => QQ > WQ[1] ? "poor" : QQ > WQ[0] ? "needs-improvement" : "good")(WQ.value, XQ), QQ(WQ)))
+      qi = (MM, rM, iM, OM) => {
+        let SM, jM;
+        return aM => {
+          rM.value >= 0 && (aM || OM) && (jM = rM.value - (SM ?? 0), (jM || void 0 === SM) && (SM = rM.value, rM.delta = jM, rM.rating = ((MM, rM) => MM > rM[1] ? "poor" : MM > rM[0] ? "needs-improvement" : "good")(rM.value, iM), MM(rM)))
         }
       },
-      ZX = QQ => {
-        requestAnimationFrame((() => requestAnimationFrame((() => QQ()))))
+      Ti = MM => {
+        requestAnimationFrame((() => requestAnimationFrame((() => MM()))))
       },
-      OX = () => kX()?.activationStart ?? 0;
-    let KX = -1;
-    const mX = new Set,
-      MX = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
-      Qw = QQ => {
+      Vi = () => Ni()?.activationStart ?? 0;
+    let ci = -1;
+    const MO = new Set,
+      rO = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
+      iO = MM => {
         if ("hidden" === document.visibilityState) {
-          if ("visibilitychange" === QQ.type)
-            for (const QQ of mX) QQ();
-          isFinite(KX) || (KX = "visibilitychange" === QQ.type ? QQ.timeStamp : 0, removeEventListener("prerenderingchange", Qw, !0))
+          if ("visibilitychange" === MM.type)
+            for (const MM of MO) MM();
+          isFinite(ci) || (ci = "visibilitychange" === MM.type ? MM.timeStamp : 0, removeEventListener("prerenderingchange", iO, !0))
         }
       },
-      Ww = function() {
-        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (KX = 1 / 0), KX < 0) {
-          const QQ = OX(),
-            WQ = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((WQ => "hidden" === WQ.name && WQ.startTime >= QQ))?.startTime;
-          KX = WQ ?? MX(), addEventListener("visibilitychange", Qw, !0), addEventListener("prerenderingchange", Qw, !0), YX((() => {
+      OO = function() {
+        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (ci = 1 / 0), ci < 0) {
+          const MM = Vi(),
+            rM = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((rM => "hidden" === rM.name && rM.startTime >= MM))?.startTime;
+          ci = rM ?? rO(), addEventListener("visibilitychange", iO, !0), addEventListener("prerenderingchange", iO, !0), Ki((() => {
             setTimeout((() => {
-              KX = MX()
+              ci = rO()
             }))
           }))
         }
         return {
           get firstHiddenTime() {
-            return KX
+            return ci
           },
-          onHidden(QQ) {
-            mX.add(QQ)
+          onHidden(MM) {
+            MO.add(MM)
           }
         }
       },
-      Xw = function(QQ) {
-        let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          XQ = arguments.length > 2 ? arguments[2] : void 0,
-          wQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          qQ = arguments.length > 4 ? arguments[4] : void 0,
-          TQ = arguments.length > 5 ? arguments[5] : void 0,
-          zQ = arguments.length > 6 ? arguments[6] : void 0;
-        const sQ = kX(),
-          FQ = sQ?.navigationId || 0;
-        let PQ = "navigate";
-        return XQ ? PQ = XQ : xX() >= 0 ? PQ = "back-forward-cache" : sQ && (document.prerendering || OX() > 0 ? PQ = "prerender" : document.wasDiscarded ? PQ = "restore" : sQ.type && (PQ = sQ.type.replace(/_/g, "-"))), {
-          name: QQ,
-          value: WQ,
+      SO = function(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          iM = arguments.length > 2 ? arguments[2] : void 0,
+          OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          SM = arguments.length > 4 ? arguments[4] : void 0,
+          jM = arguments.length > 5 ? arguments[5] : void 0,
+          aM = arguments.length > 6 ? arguments[6] : void 0;
+        const PM = Ni(),
+          nM = PM?.navigationId || 0;
+        let QM = "navigate";
+        return iM ? QM = iM : Ii() >= 0 ? QM = "back-forward-cache" : PM && (document.prerendering || Vi() > 0 ? QM = "prerender" : document.wasDiscarded ? QM = "restore" : PM.type && (QM = PM.type.replace(/_/g, "-"))), {
+          name: MM,
+          value: rM,
           rating: "good",
           delta: 0,
           entries: [],
           id: `v6-${Date.now()}-${Math.floor(8999999999999*Math.random())+1e12}`,
-          navigationType: PQ,
-          navigationId: wQ || FQ,
-          navigationInteractionId: qQ,
-          navigationURL: TQ || sQ?.name,
-          navigationStartTime: zQ || 0
+          navigationType: QM,
+          navigationId: OM || nM,
+          navigationInteractionId: SM,
+          navigationURL: jM || PM?.name,
+          navigationStartTime: aM || 0
         }
       },
-      ww = function(QQ, WQ) {
-        let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      jO = function(MM, rM) {
+        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         try {
-          const wQ = QQ.filter((QQ => PerformanceObserver.supportedEntryTypes.includes(QQ)));
-          if (wQ.length > 0) {
-            const QQ = new PerformanceObserver((QQ => {
+          const OM = MM.filter((MM => PerformanceObserver.supportedEntryTypes.includes(MM)));
+          if (OM.length > 0) {
+            const MM = new PerformanceObserver((MM => {
               queueMicrotask((() => {
-                const XQ = QQ.getEntries();
-                wQ.length > 1 && XQ.sort(((QQ, WQ) => QQ.startTime + QQ.duration - (WQ.startTime + WQ.duration))), WQ(XQ)
+                const iM = MM.getEntries();
+                OM.length > 1 && iM.sort(((MM, rM) => MM.startTime + MM.duration - (rM.startTime + rM.duration))), rM(iM)
               }))
             }));
-            for (const WQ of wQ) QQ.observe({
-              type: WQ,
+            for (const rM of OM) MM.observe({
+              type: rM,
               buffered: !0,
-              ...XQ
+              ...iM
             });
-            return QQ
+            return MM
           }
         } catch {}
       },
-      qw = QQ => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && QQ && QQ.reportSoftNavs,
-      Tw = (QQ, WQ) => {
-        if (QQ.set(WQ.navigationId, WQ), QQ.size > 2) {
-          const WQ = QQ.keys().next().value;
-          void 0 !== WQ && QQ.delete(WQ)
+      aO = MM => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && MM && MM.reportSoftNavs,
+      PO = (MM, rM) => {
+        if (MM.set(rM.navigationId, rM), MM.size > 2) {
+          const rM = MM.keys().next().value;
+          void 0 !== rM && MM.delete(rM)
         }
       },
-      zw = QQ => {
-        let WQ = !1;
+      nO = MM => {
+        let rM = !1;
         return () => {
-          WQ || (QQ(), WQ = !0)
+          rM || (MM(), rM = !0)
         }
       };
-    class sw {
+    class QO {
       u
     }
-    const Fw = QQ => {
-        document.prerendering ? addEventListener("prerenderingchange", QQ, !0) : QQ()
+    const zO = MM => {
+        document.prerendering ? addEventListener("prerenderingchange", MM, !0) : MM()
       },
-      Pw = [1800, 3e3],
-      gw = function(QQ) {
-        let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const XQ = qw(WQ);
-        Fw((() => {
-          const wQ = eX(WQ, sw),
-            qQ = Ww();
-          let TQ, zQ = Xw("FCP");
-          const sQ = ww(["paint"], (QQ => {
-            for (const WQ of QQ) "first-contentful-paint" === WQ.name && (sQ.disconnect(), WQ.startTime < qQ.firstHiddenTime && (zQ.value = Math.max(WQ.startTime - OX(), 0), zQ.entries.push(WQ), zQ.navigationId = WQ.navigationId || zQ.navigationId, TQ(!0)))
+      LO = [1800, 3e3],
+      mO = function(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const iM = aO(rM);
+        zO((() => {
+          const OM = Bi(rM, QO),
+            SM = OO();
+          let jM, aM = SO("FCP");
+          const PM = jO(["paint"], (MM => {
+            for (const rM of MM) "first-contentful-paint" === rM.name && (PM.disconnect(), rM.startTime < SM.firstHiddenTime && (aM.value = Math.max(rM.startTime - Vi(), 0), aM.entries.push(rM), aM.navigationId = rM.navigationId || aM.navigationId, jM(!0)))
           }));
-          sQ && (TQ = NX(QQ, zQ, Pw, WQ.reportAllChanges), YX((XQ => {
-            zQ = Xw("FCP", -1, "back-forward-cache", zQ.navigationId, zQ.navigationInteractionId, zQ.navigationURL, xX()), TQ = NX(QQ, zQ, Pw, WQ.reportAllChanges), ZX((() => {
-              zQ.value = performance.now() - XQ.timeStamp, TQ(!0)
+          PM && (jM = qi(MM, aM, LO, rM.reportAllChanges), Ki((iM => {
+            aM = SO("FCP", -1, "back-forward-cache", aM.navigationId, aM.navigationInteractionId, aM.navigationURL, Ii()), jM = qi(MM, aM, LO, rM.reportAllChanges), Ti((() => {
+              aM.value = performance.now() - iM.timeStamp, jM(!0)
             }))
-          }))), XQ && ww(["soft-navigation"], (XQ => {
-            XQ.forEach((XQ => {
-              wQ.u && XQ.navigationId && Tw(wQ.u, XQ);
-              const qQ = Math.max((XQ.presentationTime || XQ.paintTime || 0) - XQ.startTime, 0);
-              zQ = Xw("FCP", qQ, "soft-navigation", XQ.navigationId, XQ.interactionId, XQ.name, XQ.startTime), TQ = NX(QQ, zQ, Pw, WQ.reportAllChanges), TQ(!0)
+          }))), iM && jO(["soft-navigation"], (iM => {
+            iM.forEach((iM => {
+              OM.u && iM.navigationId && PO(OM.u, iM);
+              const SM = Math.max((iM.presentationTime || iM.paintTime || 0) - iM.startTime, 0);
+              aM = SO("FCP", SM, "soft-navigation", iM.navigationId, iM.interactionId, iM.name, iM.startTime), jM = qi(MM, aM, LO, rM.reportAllChanges), jM(!0)
             }))
-          }), WQ)
+          }), rM)
         }))
       },
-      Jw = [.1, .25],
-      rw = QQ => QQ.find((QQ => 1 === QQ.node?.nodeType)) || QQ[0];
-    let Iw = 0,
-      jw = 1 / 0,
-      Bw = 0;
-    const yw = QQ => {
-      for (const WQ of QQ) WQ.interactionId && (jw = Math.min(jw, WQ.interactionId), Bw = Math.max(Bw, WQ.interactionId), Iw = Bw ? (Bw - jw) / 7 + 1 : 0)
+      HO = [.1, .25],
+      hO = MM => MM.find((MM => 1 === MM.node?.nodeType)) || MM[0];
+    let JO = 0,
+      dO = 1 / 0,
+      yO = 0;
+    const lO = MM => {
+      for (const rM of MM) rM.interactionId && (dO = Math.min(dO, rM.interactionId), yO = Math.max(yO, rM.interactionId), JO = yO ? (yO - dO) / 7 + 1 : 0)
     };
-    let Vw;
-    const Dw = () => Vw ? Iw : performance.interactionCount ?? 0;
-    class pw {
+    let EO;
+    const UO = () => EO ? JO : performance.interactionCount ?? 0;
+    class GO {
       h = 0;
       v = [];
       p = new Map;
       m;
       M;
       T() {
-        return Dw() - this.h
+        return UO() - this.h
       }
       D() {
-        this.h = Dw(), this.v.length = 0, this.p.clear()
+        this.h = UO(), this.v.length = 0, this.p.clear()
       }
-      S(QQ) {
-        const WQ = this.T(),
-          XQ = Math.min(this.v.length - 1, Math.floor(WQ / 50));
-        return !WQ || -1 !== XQ || "soft-navigation" !== QQ && "back-forward-cache" !== QQ ? this.v[XQ] : {
+      S(MM) {
+        const rM = this.T(),
+          iM = Math.min(this.v.length - 1, Math.floor(rM / 50));
+        return !rM || -1 !== iM || "soft-navigation" !== MM && "back-forward-cache" !== MM ? this.v[iM] : {
           k: 8,
           id: -1,
           entries: []
         }
       }
-      l(QQ) {
-        if (this.m?.(QQ), !QQ.interactionId) return;
-        const WQ = this.v.at(-1);
-        let XQ = this.p.get(QQ.interactionId);
-        if (XQ || this.v.length < 10 || QQ.duration > WQ.k) {
-          if (XQ ? QQ.duration > XQ.k ? (XQ.entries = [QQ], XQ.k = QQ.duration) : QQ.duration === XQ.k && QQ.startTime === XQ.entries[0].startTime && XQ.entries.push(QQ) : (XQ = {
-              id: QQ.interactionId,
-              entries: [QQ],
-              k: QQ.duration
-            }, this.p.set(XQ.id, XQ), this.v.push(XQ)), this.v.sort(((QQ, WQ) => WQ.k - QQ.k)), this.v.length > 10) {
-            const QQ = this.v.splice(10);
-            for (const WQ of QQ) this.p.delete(WQ.id)
+      l(MM) {
+        if (this.m?.(MM), !MM.interactionId) return;
+        const rM = this.v.at(-1);
+        let iM = this.p.get(MM.interactionId);
+        if (iM || this.v.length < 10 || MM.duration > rM.k) {
+          if (iM ? MM.duration > iM.k ? (iM.entries = [MM], iM.k = MM.duration) : MM.duration === iM.k && MM.startTime === iM.entries[0].startTime && iM.entries.push(MM) : (iM = {
+              id: MM.interactionId,
+              entries: [MM],
+              k: MM.duration
+            }, this.p.set(iM.id, iM), this.v.push(iM)), this.v.sort(((MM, rM) => rM.k - MM.k)), this.v.length > 10) {
+            const MM = this.v.splice(10);
+            for (const rM of MM) this.p.delete(rM.id)
           }
-          this.M?.(XQ)
+          this.M?.(iM)
         }
       }
     }
-    const Gw = QQ => {
-        const WQ = "requestIdleCallback" in globalThis ? 1e3 : 0,
-          XQ = globalThis.requestIdleCallback || setTimeout,
-          wQ = globalThis.cancelIdleCallback || clearTimeout;
-        if ("hidden" === document.visibilityState) QQ();
+    const CO = MM => {
+        const rM = "requestIdleCallback" in globalThis ? 1e3 : 0,
+          iM = globalThis.requestIdleCallback || setTimeout,
+          OM = globalThis.cancelIdleCallback || clearTimeout;
+        if ("hidden" === document.visibilityState) MM();
         else {
-          const qQ = zw(QQ);
-          let TQ = -1;
-          const zQ = () => {
-            wQ(TQ), qQ()
+          const SM = nO(MM);
+          let jM = -1;
+          const aM = () => {
+            OM(jM), SM()
           };
-          addEventListener("visibilitychange", zQ, {
+          addEventListener("visibilitychange", aM, {
             once: !0,
             capture: !0
-          }), TQ = XQ((() => {
-            removeEventListener("visibilitychange", zQ, {
+          }), jM = iM((() => {
+            removeEventListener("visibilitychange", aM, {
               capture: !0
-            }), qQ()
+            }), SM()
           }), {
-            timeout: WQ
+            timeout: rM
           })
         }
       },
-      Uw = [200, 500],
-      bw = function(QQ) {
-        let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const XQ = eX(WQ = Object.assign({}, WQ), pw);
-        let wQ = [],
-          qQ = [],
-          TQ = 0;
-        const zQ = new WeakMap,
-          sQ = new WeakMap;
-        let FQ = !1;
-        const PQ = () => {
-            FQ || (FQ = !0, Gw(gQ))
+      eO = [200, 500],
+      bO = function(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const iM = Bi(rM = Object.assign({}, rM), GO);
+        let OM = [],
+          SM = [],
+          jM = 0;
+        const aM = new WeakMap,
+          PM = new WeakMap;
+        let nM = !1;
+        const QM = () => {
+            nM || (nM = !0, CO(zM))
           },
-          gQ = () => {
-            const QQ = new Set(XQ.v.map((QQ => zQ.get(QQ.entries[0])))),
-              WQ = qQ.length - 10;
-            qQ = qQ.filter(((XQ, wQ) => wQ >= WQ || QQ.has(XQ)));
-            const sQ = new Set;
-            for (const XQ of qQ) {
-              const QQ = JQ(XQ.startTime, XQ.processingEnd);
-              for (const WQ of QQ) sQ.add(WQ)
+          zM = () => {
+            const MM = new Set(iM.v.map((MM => aM.get(MM.entries[0])))),
+              rM = SM.length - 10;
+            SM = SM.filter(((iM, OM) => OM >= rM || MM.has(iM)));
+            const PM = new Set;
+            for (const iM of SM) {
+              const MM = LM(iM.startTime, iM.processingEnd);
+              for (const rM of MM) PM.add(rM)
             }
-            const PQ = wQ.length - 10;
-            wQ = wQ.filter(((QQ, WQ) => sQ.has(QQ) || WQ >= PQ && QQ.startTime > TQ)), FQ = !1
+            const QM = OM.length - 10;
+            OM = OM.filter(((MM, rM) => PM.has(MM) || rM >= QM && MM.startTime > jM)), nM = !1
           };
-        XQ.m = QQ => {
-          const XQ = QQ.startTime + QQ.duration;
-          let wQ;
-          TQ = Math.max(TQ, QQ.processingEnd);
-          for (let TQ = qQ.length - 1; TQ >= 0; TQ--) {
-            const zQ = qQ[TQ];
-            if (Math.abs(XQ - zQ.renderTime) <= 8) {
-              wQ = zQ, wQ.startTime = Math.min(QQ.startTime, wQ.startTime), wQ.processingStart = Math.min(QQ.processingStart, wQ.processingStart), wQ.processingEnd = Math.max(QQ.processingEnd, wQ.processingEnd), WQ.includeProcessedEventEntries && wQ.entries.push(QQ);
+        iM.m = MM => {
+          const iM = MM.startTime + MM.duration;
+          let OM;
+          jM = Math.max(jM, MM.processingEnd);
+          for (let jM = SM.length - 1; jM >= 0; jM--) {
+            const aM = SM[jM];
+            if (Math.abs(iM - aM.renderTime) <= 8) {
+              OM = aM, OM.startTime = Math.min(MM.startTime, OM.startTime), OM.processingStart = Math.min(MM.processingStart, OM.processingStart), OM.processingEnd = Math.max(MM.processingEnd, OM.processingEnd), rM.includeProcessedEventEntries && OM.entries.push(MM);
               break
             }
           }
-          wQ || (wQ = {
-            startTime: QQ.startTime,
-            processingStart: QQ.processingStart,
-            processingEnd: QQ.processingEnd,
-            renderTime: XQ,
-            entries: WQ.includeProcessedEventEntries ? [QQ] : []
-          }, qQ.push(wQ)), QQ.interactionId && zQ.set(QQ, wQ), PQ()
-        }, XQ.M = QQ => {
-          if (!sQ.get(QQ)) {
-            const XQ = QQ.entries.find((QQ => QQ.target))?.target;
-            if (XQ) {
-              const wQ = WQ.generateTarget?.(XQ) ?? tX(XQ);
-              sQ.set(QQ, wQ)
+          OM || (OM = {
+            startTime: MM.startTime,
+            processingStart: MM.processingStart,
+            processingEnd: MM.processingEnd,
+            renderTime: iM,
+            entries: rM.includeProcessedEventEntries ? [MM] : []
+          }, SM.push(OM)), MM.interactionId && aM.set(MM, OM), QM()
+        }, iM.M = MM => {
+          if (!PM.get(MM)) {
+            const iM = MM.entries.find((MM => MM.target))?.target;
+            if (iM) {
+              const OM = rM.generateTarget?.(iM) ?? vi(iM);
+              PM.set(MM, OM)
             } else {
-              const WQ = QQ.entries.find((QQ => QQ.targetSelector))?.targetSelector;
-              WQ && sQ.set(QQ, WQ)
+              const rM = MM.entries.find((MM => MM.targetSelector))?.targetSelector;
+              rM && PM.set(MM, rM)
             }
           }
         };
-        const JQ = (QQ, WQ) => {
-          const XQ = [];
-          for (const qQ of wQ)
-            if (!(qQ.startTime + qQ.duration < QQ)) {
-              if (qQ.startTime > WQ) break;
-              XQ.push(qQ)
-            } return XQ
+        const LM = (MM, rM) => {
+          const iM = [];
+          for (const SM of OM)
+            if (!(SM.startTime + SM.duration < MM)) {
+              if (SM.startTime > rM) break;
+              iM.push(SM)
+            } return iM
         };
-        ww(["long-animation-frame"], (QQ => {
-            wQ = wQ.concat(QQ), PQ()
-          }), WQ),
-          function(QQ) {
-            let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        jO(["long-animation-frame"], (MM => {
+            OM = OM.concat(MM), QM()
+          }), rM),
+          function(MM) {
+            let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             if (!globalThis.PerformanceEventTiming || !("interactionId" in PerformanceEventTiming.prototype)) return;
-            const XQ = Ww();
-            Fw((() => {
-              "interactionCount" in performance || Vw || (Vw = ww(["event"], yw, {
+            const iM = OO();
+            zO((() => {
+              "interactionCount" in performance || EO || (EO = jO(["event"], lO, {
                 durationThreshold: 0
               }));
-              let wQ, qQ = Xw("INP");
-              const TQ = eX(WQ, pw),
-                zQ = (XQ, zQ, sQ, FQ, PQ) => {
-                  TQ.D(), qQ = Xw("INP", -1, XQ, zQ, sQ, FQ, PQ), wQ = NX(QQ, qQ, Uw, WQ.reportAllChanges)
+              let OM, SM = SO("INP");
+              const jM = Bi(rM, GO),
+                aM = (iM, aM, PM, nM, QM) => {
+                  jM.D(), SM = SO("INP", -1, iM, aM, PM, nM, QM), OM = qi(MM, SM, eO, rM.reportAllChanges)
                 },
-                sQ = () => {
-                  const QQ = TQ.S(qQ.navigationType);
-                  QQ && QQ.k !== qQ.value && (qQ.value = QQ.k, qQ.entries = QQ.entries, wQ())
+                PM = () => {
+                  const MM = jM.S(SM.navigationType);
+                  MM && MM.k !== SM.value && (SM.value = MM.k, SM.entries = MM.entries, OM())
                 },
-                FQ = QQ => {
-                  sQ(), wQ(!0), zQ("soft-navigation", QQ.navigationId, QQ.interactionId, QQ.name, QQ.startTime)
+                nM = MM => {
+                  PM(), OM(!0), aM("soft-navigation", MM.navigationId, MM.interactionId, MM.name, MM.startTime)
                 },
-                PQ = function(QQ) {
-                  let WQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                  Gw((() => {
-                    for (const WQ of QQ) "soft-navigation" !== WQ.entryType ? TQ.l(WQ) : FQ(WQ);
-                    sQ(), WQ && wQ(!0)
+                QM = function(MM) {
+                  let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                  CO((() => {
+                    for (const rM of MM) "soft-navigation" !== rM.entryType ? jM.l(rM) : nM(rM);
+                    PM(), rM && OM(!0)
                   }))
                 },
-                gQ = ["event", "first-input"];
-              qw(WQ) && gQ.push("soft-navigation");
-              const JQ = ww(gQ, PQ, {
-                ...WQ,
-                durationThreshold: WQ.durationThreshold ?? 40
+                zM = ["event", "first-input"];
+              aO(rM) && zM.push("soft-navigation");
+              const LM = jO(zM, QM, {
+                ...rM,
+                durationThreshold: rM.durationThreshold ?? 40
               });
-              wQ = NX(QQ, qQ, Uw, WQ.reportAllChanges), JQ && (XQ.onHidden((() => {
-                PQ(JQ.takeRecords(), !0)
-              })), YX((() => {
-                zQ("back-forward-cache", qQ.navigationId, qQ.navigationInteractionId, qQ.navigationURL, xX())
+              OM = qi(MM, SM, eO, rM.reportAllChanges), LM && (iM.onHidden((() => {
+                QM(LM.takeRecords(), !0)
+              })), Ki((() => {
+                aM("back-forward-cache", SM.navigationId, SM.navigationInteractionId, SM.navigationURL, Ii())
               })))
             }))
-          }((WQ => {
-            QQ((QQ => {
-              if (0 === QQ.entries.length) {
-                const WQ = QQ.navigationStartTime || 0,
-                  XQ = {
+          }((rM => {
+            MM((MM => {
+              if (0 === MM.entries.length) {
+                const rM = MM.navigationStartTime || 0,
+                  iM = {
                     processedEventEntries: [],
                     longAnimationFrameEntries: [],
                     inputDelay: 0,
                     processingDuration: 0,
-                    presentationDelay: QQ.value,
-                    loadState: fX(WQ)
+                    presentationDelay: MM.value,
+                    loadState: Ai(rM)
                   };
-                return Object.assign(QQ, {
-                  attribution: XQ
+                return Object.assign(MM, {
+                  attribution: iM
                 })
               }
-              const WQ = QQ.entries[0],
-                wQ = zQ.get(WQ),
-                qQ = Math.max(wQ.processingStart, WQ.startTime),
-                TQ = Math.max(WQ.startTime + WQ.duration, qQ),
-                FQ = Math.min(wQ.processingEnd, TQ),
-                PQ = wQ.entries.sort(((QQ, WQ) => QQ.processingStart - WQ.processingStart)),
-                gQ = JQ(WQ.startTime, FQ),
-                rQ = XQ.p.get(WQ.interactionId),
-                IQ = {
-                  interactionTarget: sQ.get(rQ),
-                  interactionType: WQ.name.startsWith("key") ? "keyboard" : "pointer",
-                  interactionTime: WQ.startTime,
-                  nextPaintTime: TQ,
-                  processedEventEntries: PQ,
-                  longAnimationFrameEntries: gQ,
-                  inputDelay: qQ - WQ.startTime,
-                  processingDuration: FQ - qQ,
-                  presentationDelay: TQ - FQ,
-                  loadState: fX(WQ.startTime),
+              const rM = MM.entries[0],
+                OM = aM.get(rM),
+                SM = Math.max(OM.processingStart, rM.startTime),
+                jM = Math.max(rM.startTime + rM.duration, SM),
+                nM = Math.min(OM.processingEnd, jM),
+                QM = OM.entries.sort(((MM, rM) => MM.processingStart - rM.processingStart)),
+                zM = LM(rM.startTime, nM),
+                mM = iM.p.get(rM.interactionId),
+                HM = {
+                  interactionTarget: PM.get(mM),
+                  interactionType: rM.name.startsWith("key") ? "keyboard" : "pointer",
+                  interactionTime: rM.startTime,
+                  nextPaintTime: jM,
+                  processedEventEntries: QM,
+                  longAnimationFrameEntries: zM,
+                  inputDelay: SM - rM.startTime,
+                  processingDuration: nM - SM,
+                  presentationDelay: jM - nM,
+                  loadState: Ai(rM.startTime),
                   longestScript: void 0,
                   totalScriptDuration: void 0,
                   totalStyleAndLayoutDuration: void 0,
                   totalPaintDuration: void 0,
                   totalUnattributedDuration: void 0
                 };
-              return (QQ => {
-                const WQ = QQ.interactionTime,
-                  XQ = QQ.nextPaintTime;
-                if (!QQ.longAnimationFrameEntries?.length || !WQ || !XQ) return;
-                const wQ = QQ.inputDelay,
-                  qQ = QQ.processingDuration;
-                let TQ, zQ, sQ = 0,
-                  FQ = 0,
-                  PQ = 0,
-                  gQ = 0;
-                for (const IQ of QQ.longAnimationFrameEntries) {
-                  FQ = FQ + IQ.startTime + IQ.duration - IQ.styleAndLayoutStart;
-                  for (const QQ of IQ.scripts) {
-                    const XQ = QQ.startTime + QQ.duration;
-                    if (XQ < WQ) continue;
-                    const PQ = XQ - Math.max(WQ, QQ.startTime),
-                      JQ = QQ.duration ? PQ / QQ.duration * QQ.forcedStyleAndLayoutDuration : 0;
-                    sQ += PQ - JQ, FQ += JQ, PQ > gQ && (zQ = QQ.startTime < WQ + wQ ? "input-delay" : QQ.startTime >= WQ + wQ + qQ ? "presentation-delay" : "processing-duration", TQ = QQ, gQ = PQ)
+              return (MM => {
+                const rM = MM.interactionTime,
+                  iM = MM.nextPaintTime;
+                if (!MM.longAnimationFrameEntries?.length || !rM || !iM) return;
+                const OM = MM.inputDelay,
+                  SM = MM.processingDuration;
+                let jM, aM, PM = 0,
+                  nM = 0,
+                  QM = 0,
+                  zM = 0;
+                for (const HM of MM.longAnimationFrameEntries) {
+                  nM = nM + HM.startTime + HM.duration - HM.styleAndLayoutStart;
+                  for (const MM of HM.scripts) {
+                    const iM = MM.startTime + MM.duration;
+                    if (iM < rM) continue;
+                    const QM = iM - Math.max(rM, MM.startTime),
+                      LM = MM.duration ? QM / MM.duration * MM.forcedStyleAndLayoutDuration : 0;
+                    PM += QM - LM, nM += LM, QM > zM && (aM = MM.startTime < rM + OM ? "input-delay" : MM.startTime >= rM + OM + SM ? "presentation-delay" : "processing-duration", jM = MM, zM = QM)
                   }
                 }
-                const JQ = QQ.longAnimationFrameEntries.at(-1),
-                  rQ = JQ ? JQ.startTime + JQ.duration : 0;
-                rQ >= WQ + wQ + qQ && (PQ = XQ - rQ), TQ && zQ && (QQ.longestScript = {
-                  entry: TQ,
-                  subpart: zQ,
-                  intersectingDuration: gQ
-                }), QQ.totalScriptDuration = sQ, QQ.totalStyleAndLayoutDuration = FQ, QQ.totalPaintDuration = PQ, QQ.totalUnattributedDuration = XQ - WQ - sQ - FQ - PQ
-              })(IQ), Object.assign(QQ, {
-                attribution: IQ
+                const LM = MM.longAnimationFrameEntries.at(-1),
+                  mM = LM ? LM.startTime + LM.duration : 0;
+                mM >= rM + OM + SM && (QM = iM - mM), jM && aM && (MM.longestScript = {
+                  entry: jM,
+                  subpart: aM,
+                  intersectingDuration: zM
+                }), MM.totalScriptDuration = PM, MM.totalStyleAndLayoutDuration = nM, MM.totalPaintDuration = QM, MM.totalUnattributedDuration = iM - rM - PM - nM - QM
+              })(HM), Object.assign(MM, {
+                attribution: HM
               })
-            })(WQ))
-          }), WQ)
+            })(rM))
+          }), rM)
       };
-    class vw {
+    class wO {
       m;
       u;
-      l(QQ) {
-        this.m?.(QQ)
+      l(MM) {
+        this.m?.(MM)
       }
     }
-    const dw = [2500, 4e3];
-    let Hw = 50;
-    const aw = [];
-    ww(["resource"], (QQ => {
-      for (const WQ of QQ) aw.push(WQ), aw.length > Hw && aw.shift()
+    const tO = [2500, 4e3];
+    let gO = 50;
+    const uO = [];
+    jO(["resource"], (MM => {
+      for (const rM of MM) uO.push(rM), uO.length > gO && uO.shift()
     }));
-    const lw = [800, 1800],
-      hw = QQ => {
-        document.prerendering ? Fw((() => hw(QQ))) : "complete" !== document.readyState ? addEventListener("load", (() => hw(QQ)), !0) : setTimeout(QQ)
+    const RO = [800, 1800],
+      pO = MM => {
+        document.prerendering ? zO((() => pO(MM))) : "complete" !== document.readyState ? addEventListener("load", (() => pO(MM)), !0) : setTimeout(MM)
       },
-      iw = "load_state",
-      Aw = "time_to_first_byte";
-    var Rw = class {
-        constructor(QQ, WQ) {
-          this.corePushMeasurement = QQ, this.webVitalConfig = WQ
+      WO = "load_state",
+      sO = "time_to_first_byte";
+    var DO = class {
+        constructor(MM, rM) {
+          this.corePushMeasurement = MM, this.webVitalConfig = rM
         }
         initialize() {
           this.measureCLS(), this.measureFCP(), this.measureINP(), this.measureLCP(), this.measureTTFB()
         }
         measureCLS() {
-          var QQ;
-          ! function(QQ) {
-            let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const XQ = eX(WQ = Object.assign({}, WQ), LX),
-              wQ = new WeakMap;
-            XQ.t = QQ => {
-                if (QQ?.sources?.length) {
-                  const XQ = rw(QQ.sources),
-                    qQ = XQ?.node;
-                  if (qQ) {
-                    const QQ = WQ.generateTarget?.(qQ) ?? tX(qQ);
-                    wQ.set(XQ, QQ)
+          var MM;
+          ! function(MM) {
+            let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const iM = Bi(rM = Object.assign({}, rM), Yi),
+              OM = new WeakMap;
+            iM.t = MM => {
+                if (MM?.sources?.length) {
+                  const iM = hO(MM.sources),
+                    SM = iM?.node;
+                  if (SM) {
+                    const MM = rM.generateTarget?.(SM) ?? vi(SM);
+                    OM.set(iM, MM)
                   }
                 }
               },
-              function(QQ) {
-                let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                const XQ = Ww();
-                gw(zw((() => {
-                  let wQ, qQ = Xw("CLS", 0);
-                  const TQ = eX(WQ, LX),
-                    zQ = (XQ, zQ, sQ, FQ, PQ) => {
-                      qQ = Xw("CLS", 0, XQ, zQ, sQ, FQ, PQ), TQ.o = 0, wQ = NX(QQ, qQ, Jw, WQ.reportAllChanges)
+              function(MM) {
+                let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                const iM = OO();
+                mO(nO((() => {
+                  let OM, SM = SO("CLS", 0);
+                  const jM = Bi(rM, Yi),
+                    aM = (iM, aM, PM, nM, QM) => {
+                      SM = SO("CLS", 0, iM, aM, PM, nM, QM), jM.o = 0, OM = qi(MM, SM, HO, rM.reportAllChanges)
                     },
-                    sQ = function() {
-                      let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                      TQ.o > qQ.value && (qQ.value = TQ.o, qQ.entries = TQ.i), wQ(QQ)
+                    PM = function() {
+                      let MM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                      jM.o > SM.value && (SM.value = jM.o, SM.entries = jM.i), OM(MM)
                     },
-                    FQ = QQ => {
-                      sQ(!0), zQ("soft-navigation", QQ.navigationId, QQ.interactionId, QQ.name, QQ.startTime)
+                    nM = MM => {
+                      PM(!0), aM("soft-navigation", MM.navigationId, MM.interactionId, MM.name, MM.startTime)
                     },
-                    PQ = QQ => {
-                      for (const WQ of QQ) "soft-navigation" !== WQ.entryType ? TQ.l(WQ) : FQ(WQ);
-                      sQ()
+                    QM = MM => {
+                      for (const rM of MM) "soft-navigation" !== rM.entryType ? jM.l(rM) : nM(rM);
+                      PM()
                     },
-                    gQ = ["layout-shift"];
-                  qw(WQ) && gQ.push("soft-navigation");
-                  const JQ = ww(gQ, PQ);
-                  JQ && (wQ = NX(QQ, qQ, Jw, WQ.reportAllChanges), XQ.onHidden((() => {
-                    PQ(JQ.takeRecords()), wQ(!0)
-                  })), YX((() => {
-                    zQ("back-forward-cache", qQ.navigationId, qQ.navigationInteractionId, qQ.navigationURL, xX()), ZX(wQ)
-                  })), setTimeout(wQ))
+                    zM = ["layout-shift"];
+                  aO(rM) && zM.push("soft-navigation");
+                  const LM = jO(zM, QM);
+                  LM && (OM = qi(MM, SM, HO, rM.reportAllChanges), iM.onHidden((() => {
+                    QM(LM.takeRecords()), OM(!0)
+                  })), Ki((() => {
+                    aM("back-forward-cache", SM.navigationId, SM.navigationInteractionId, SM.navigationURL, Ii()), Ti(OM)
+                  })), setTimeout(OM))
                 })))
-              }((WQ => {
-                QQ((QQ => {
-                  let WQ = {};
-                  if (QQ.entries.length) {
-                    const XQ = QQ.entries.reduce(((QQ, WQ) => QQ.value > WQ.value ? QQ : WQ));
-                    if (XQ?.sources?.length) {
-                      const QQ = rw(XQ.sources);
-                      QQ && (WQ = {
-                        largestShiftTarget: wQ.get(QQ),
-                        largestShiftTime: XQ.startTime,
-                        largestShiftValue: XQ.value,
-                        largestShiftSource: QQ,
-                        largestShiftEntry: XQ,
-                        loadState: fX(XQ.startTime)
+              }((rM => {
+                MM((MM => {
+                  let rM = {};
+                  if (MM.entries.length) {
+                    const iM = MM.entries.reduce(((MM, rM) => MM.value > rM.value ? MM : rM));
+                    if (iM?.sources?.length) {
+                      const MM = hO(iM.sources);
+                      MM && (rM = {
+                        largestShiftTarget: OM.get(MM),
+                        largestShiftTime: iM.startTime,
+                        largestShiftValue: iM.value,
+                        largestShiftSource: MM,
+                        largestShiftEntry: iM,
+                        loadState: Ai(iM.startTime)
                       })
                     }
                   }
-                  return Object.assign(QQ, {
-                    attribution: WQ
+                  return Object.assign(MM, {
+                    attribution: rM
                   })
-                })(WQ))
-              }), WQ)
-          }((QQ => {
+                })(rM))
+              }), rM)
+          }((MM => {
             const {
-              loadState: WQ,
-              largestShiftValue: XQ,
-              largestShiftTime: wQ,
-              largestShiftTarget: qQ
-            } = QQ.attribution, TQ = this.buildInitialValues(QQ);
-            this.addIfPresent(TQ, "largest_shift_value", XQ), this.addIfPresent(TQ, "largest_shift_time", wQ);
-            const zQ = this.buildInitialContext(QQ);
-            this.addIfPresent(zQ, iw, WQ), this.addIfPresent(zQ, "largest_shift_target", qQ), this.pushMeasurement(TQ, zQ)
+              loadState: rM,
+              largestShiftValue: iM,
+              largestShiftTime: OM,
+              largestShiftTarget: SM
+            } = MM.attribution, jM = this.buildInitialValues(MM);
+            this.addIfPresent(jM, "largest_shift_value", iM), this.addIfPresent(jM, "largest_shift_time", OM);
+            const aM = this.buildInitialContext(MM);
+            this.addIfPresent(aM, WO, rM), this.addIfPresent(aM, "largest_shift_target", SM), this.pushMeasurement(jM, aM)
           }), {
-            reportAllChanges: null === (QQ = this.webVitalConfig) || void 0 === QQ ? void 0 : QQ.reportAllChanges
+            reportAllChanges: null === (MM = this.webVitalConfig) || void 0 === MM ? void 0 : MM.reportAllChanges
           })
         }
         measureFCP() {
-          var QQ;
-          ! function(QQ) {
-            let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const XQ = eX(WQ = Object.assign({}, WQ), sw);
-            qw(WQ) && (XQ.u = new Map), gw((WQ => {
-              QQ((QQ => {
-                let WQ = {
+          var MM;
+          ! function(MM) {
+            let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const iM = Bi(rM = Object.assign({}, rM), QO);
+            aO(rM) && (iM.u = new Map), mO((rM => {
+              MM((MM => {
+                let rM = {
                   timeToFirstByte: 0,
-                  firstByteToFCP: QQ.value,
-                  loadState: fX(xX())
+                  firstByteToFCP: MM.value,
+                  loadState: Ai(Ii())
                 };
-                if ("soft-navigation" !== QQ.navigationType) {
-                  if (QQ.entries.length) {
-                    const XQ = kX(),
-                      wQ = QQ.entries.at(-1);
-                    if (XQ) {
-                      const qQ = XQ.responseStart,
-                        TQ = XQ.activationStart || 0,
-                        zQ = Math.max(0, qQ - TQ);
-                      WQ = {
-                        timeToFirstByte: zQ,
-                        firstByteToFCP: QQ.value - zQ,
-                        loadState: fX(QQ.entries[0].startTime),
-                        navigationEntry: XQ,
-                        fcpEntry: wQ
+                if ("soft-navigation" !== MM.navigationType) {
+                  if (MM.entries.length) {
+                    const iM = Ni(),
+                      OM = MM.entries.at(-1);
+                    if (iM) {
+                      const SM = iM.responseStart,
+                        jM = iM.activationStart || 0,
+                        aM = Math.max(0, SM - jM);
+                      rM = {
+                        timeToFirstByte: aM,
+                        firstByteToFCP: MM.value - aM,
+                        loadState: Ai(MM.entries[0].startTime),
+                        navigationEntry: iM,
+                        fcpEntry: OM
                       }
                     }
                   }
                 } else {
-                  const wQ = XQ.u?.get(QQ.navigationId);
-                  wQ && (WQ = {
+                  const OM = iM.u?.get(MM.navigationId);
+                  OM && (rM = {
                     timeToFirstByte: 0,
-                    firstByteToFCP: QQ.value,
+                    firstByteToFCP: MM.value,
                     loadState: "complete",
-                    navigationEntry: wQ
+                    navigationEntry: OM
                   })
                 }
-                return Object.assign(QQ, {
-                  attribution: WQ
+                return Object.assign(MM, {
+                  attribution: rM
                 })
-              })(WQ))
-            }), WQ)
-          }((QQ => {
+              })(rM))
+            }), rM)
+          }((MM => {
             const {
-              firstByteToFCP: WQ,
-              timeToFirstByte: XQ,
-              loadState: wQ
-            } = QQ.attribution, qQ = this.buildInitialValues(QQ);
-            this.addIfPresent(qQ, "first_byte_to_fcp", WQ), this.addIfPresent(qQ, Aw, XQ);
-            const TQ = this.buildInitialContext(QQ);
-            this.addIfPresent(TQ, iw, wQ), this.pushMeasurement(qQ, TQ)
+              firstByteToFCP: rM,
+              timeToFirstByte: iM,
+              loadState: OM
+            } = MM.attribution, SM = this.buildInitialValues(MM);
+            this.addIfPresent(SM, "first_byte_to_fcp", rM), this.addIfPresent(SM, sO, iM);
+            const jM = this.buildInitialContext(MM);
+            this.addIfPresent(jM, WO, OM), this.pushMeasurement(SM, jM)
           }), {
-            reportAllChanges: null === (QQ = this.webVitalConfig) || void 0 === QQ ? void 0 : QQ.reportAllChanges
+            reportAllChanges: null === (MM = this.webVitalConfig) || void 0 === MM ? void 0 : MM.reportAllChanges
           })
         }
         measureINP() {
-          var QQ;
-          bw((QQ => {
-            var WQ;
+          var MM;
+          bO((MM => {
+            var rM;
             const {
-              interactionTime: XQ,
-              presentationDelay: wQ,
-              inputDelay: qQ,
-              processingDuration: TQ,
-              nextPaintTime: zQ,
-              loadState: sQ,
-              interactionTarget: FQ,
-              interactionType: PQ,
-              totalScriptDuration: gQ,
-              totalStyleAndLayoutDuration: JQ,
-              totalPaintDuration: rQ,
-              totalUnattributedDuration: IQ,
-              longestScript: jQ
-            } = QQ.attribution, BQ = this.buildInitialValues(QQ);
-            this.addIfPresent(BQ, "interaction_time", XQ), this.addIfPresent(BQ, "presentation_delay", wQ), this.addIfPresent(BQ, "input_delay", qQ), this.addIfPresent(BQ, "processing_duration", TQ), this.addIfPresent(BQ, "next_paint_time", zQ), this.addNumberIfDefined(BQ, "total_script_duration", gQ), this.addNumberIfDefined(BQ, "total_style_and_layout_duration", JQ), this.addNumberIfDefined(BQ, "total_paint_duration", rQ), this.addNumberIfDefined(BQ, "total_unattributed_duration", IQ), this.addNumberIfDefined(BQ, "longest_script_intersecting_duration", null === jQ || void 0 === jQ ? void 0 : jQ.intersectingDuration);
-            const yQ = this.buildInitialContext(QQ);
-            this.addIfPresent(yQ, iw, sQ), this.addIfPresent(yQ, "interaction_target", FQ), this.addIfPresent(yQ, "interaction_type", PQ), this.addIfPresent(yQ, "longest_script_subpart", null === jQ || void 0 === jQ ? void 0 : jQ.subpart), this.addIfPresent(yQ, "longest_script_invoker_type", null === jQ || void 0 === jQ ? void 0 : jQ.entry.invokerType), (null === (WQ = this.webVitalConfig) || void 0 === WQ ? void 0 : WQ.trackAttributionSources) && (this.addIfPresent(yQ, "longest_script_invoker", null === jQ || void 0 === jQ ? void 0 : jQ.entry.invoker), this.addIfPresent(yQ, "longest_script_source_url", null === jQ || void 0 === jQ ? void 0 : jQ.entry.sourceURL), this.addIfPresent(yQ, "longest_script_source_function_name", null === jQ || void 0 === jQ ? void 0 : jQ.entry.sourceFunctionName), this.addIfPresent(yQ, "longest_script_source_char_position", void 0 !== (null === jQ || void 0 === jQ ? void 0 : jQ.entry.sourceCharPosition) ? String(jQ.entry.sourceCharPosition) : void 0)), this.pushMeasurement(BQ, yQ)
+              interactionTime: iM,
+              presentationDelay: OM,
+              inputDelay: SM,
+              processingDuration: jM,
+              nextPaintTime: aM,
+              loadState: PM,
+              interactionTarget: nM,
+              interactionType: QM,
+              totalScriptDuration: zM,
+              totalStyleAndLayoutDuration: LM,
+              totalPaintDuration: mM,
+              totalUnattributedDuration: HM,
+              longestScript: hM
+            } = MM.attribution, JM = this.buildInitialValues(MM);
+            this.addIfPresent(JM, "interaction_time", iM), this.addIfPresent(JM, "presentation_delay", OM), this.addIfPresent(JM, "input_delay", SM), this.addIfPresent(JM, "processing_duration", jM), this.addIfPresent(JM, "next_paint_time", aM), this.addNumberIfDefined(JM, "total_script_duration", zM), this.addNumberIfDefined(JM, "total_style_and_layout_duration", LM), this.addNumberIfDefined(JM, "total_paint_duration", mM), this.addNumberIfDefined(JM, "total_unattributed_duration", HM), this.addNumberIfDefined(JM, "longest_script_intersecting_duration", null === hM || void 0 === hM ? void 0 : hM.intersectingDuration);
+            const dM = this.buildInitialContext(MM);
+            this.addIfPresent(dM, WO, PM), this.addIfPresent(dM, "interaction_target", nM), this.addIfPresent(dM, "interaction_type", QM), this.addIfPresent(dM, "longest_script_subpart", null === hM || void 0 === hM ? void 0 : hM.subpart), this.addIfPresent(dM, "longest_script_invoker_type", null === hM || void 0 === hM ? void 0 : hM.entry.invokerType), (null === (rM = this.webVitalConfig) || void 0 === rM ? void 0 : rM.trackAttributionSources) && (this.addIfPresent(dM, "longest_script_invoker", null === hM || void 0 === hM ? void 0 : hM.entry.invoker), this.addIfPresent(dM, "longest_script_source_url", null === hM || void 0 === hM ? void 0 : hM.entry.sourceURL), this.addIfPresent(dM, "longest_script_source_function_name", null === hM || void 0 === hM ? void 0 : hM.entry.sourceFunctionName), this.addIfPresent(dM, "longest_script_source_char_position", void 0 !== (null === hM || void 0 === hM ? void 0 : hM.entry.sourceCharPosition) ? String(hM.entry.sourceCharPosition) : void 0)), this.pushMeasurement(JM, dM)
           }), {
-            reportAllChanges: null === (QQ = this.webVitalConfig) || void 0 === QQ ? void 0 : QQ.reportAllChanges
+            reportAllChanges: null === (MM = this.webVitalConfig) || void 0 === MM ? void 0 : MM.reportAllChanges
           })
         }
         measureLCP() {
-          var QQ;
-          ! function(QQ) {
-            let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            null != (WQ = Object.assign({}, WQ)).resourceBufferSize && (Hw = WQ.resourceBufferSize);
-            const XQ = eX(WQ, vw),
-              wQ = new WeakMap;
-            qw(WQ) && (XQ.u = new Map), XQ.m = QQ => {
-                const XQ = QQ.element;
-                if (XQ) {
-                  const qQ = WQ.generateTarget?.(XQ) ?? tX(XQ);
-                  wQ.set(QQ, qQ)
-                } else QQ.id && wQ.set(QQ, `#${QQ.id}`)
+          var MM;
+          ! function(MM) {
+            let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            null != (rM = Object.assign({}, rM)).resourceBufferSize && (gO = rM.resourceBufferSize);
+            const iM = Bi(rM, wO),
+              OM = new WeakMap;
+            aO(rM) && (iM.u = new Map), iM.m = MM => {
+                const iM = MM.element;
+                if (iM) {
+                  const SM = rM.generateTarget?.(iM) ?? vi(iM);
+                  OM.set(MM, SM)
+                } else MM.id && OM.set(MM, `#${MM.id}`)
               },
-              function(QQ) {
-                let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                  XQ = !1;
-                const wQ = qw(WQ);
-                Fw((() => {
-                  let qQ, TQ = Ww(),
-                    zQ = Xw("LCP");
-                  const sQ = eX(WQ, vw),
-                    FQ = (wQ, sQ, FQ, PQ, gQ) => {
-                      zQ = Xw("LCP", -1, wQ, sQ, FQ, PQ, gQ), qQ = NX(QQ, zQ, dw, WQ.reportAllChanges), XQ = !1, "soft-navigation" === wQ && (TQ = Ww(!0))
+              function(MM) {
+                let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                  iM = !1;
+                const OM = aO(rM);
+                zO((() => {
+                  let SM, jM = OO(),
+                    aM = SO("LCP");
+                  const PM = Bi(rM, wO),
+                    nM = (OM, PM, nM, QM, zM) => {
+                      aM = SO("LCP", -1, OM, PM, nM, QM, zM), SM = qi(MM, aM, tO, rM.reportAllChanges), iM = !1, "soft-navigation" === OM && (jM = OO(!0))
                     },
-                    PQ = QQ => {
-                      sQ.u && QQ.navigationId && Tw(sQ.u, QQ), XQ || qQ(!0), FQ("soft-navigation", QQ.navigationId, QQ.interactionId, QQ.name, QQ.startTime);
-                      const WQ = QQ.getLargestInteractionContentfulPaint?.();
-                      WQ && gQ([WQ])
+                    QM = MM => {
+                      PM.u && MM.navigationId && PO(PM.u, MM), iM || SM(!0), nM("soft-navigation", MM.navigationId, MM.interactionId, MM.name, MM.startTime);
+                      const rM = MM.getLargestInteractionContentfulPaint?.();
+                      rM && zM([rM])
                     },
-                    gQ = QQ => {
-                      WQ.reportAllChanges || wQ || (QQ = QQ.slice(-1));
-                      for (const WQ of QQ) {
-                        if (!WQ) continue;
-                        if ("soft-navigation" === WQ.entryType) {
-                          PQ(WQ);
+                    zM = MM => {
+                      rM.reportAllChanges || OM || (MM = MM.slice(-1));
+                      for (const rM of MM) {
+                        if (!rM) continue;
+                        if ("soft-navigation" === rM.entryType) {
+                          QM(rM);
                           continue
                         }
-                        let QQ = 0,
-                          XQ = [],
-                          wQ = WQ.startTime;
-                        if ("largest-contentful-paint" === WQ.entryType) QQ = Math.max(WQ.startTime - OX(), 0), sQ.l(WQ), XQ = [WQ];
-                        else if ("interaction-contentful-paint" === WQ.entryType) {
-                          const qQ = WQ;
-                          if (!zQ.navigationId) continue;
-                          if ("interactionId" in qQ && qQ.interactionId != zQ.navigationInteractionId) continue;
-                          wQ = qQ.largestContentfulPaint?.renderTime || 0, QQ = Math.max(wQ - WQ.startTime, 0), qQ.largestContentfulPaint && (sQ.l(qQ.largestContentfulPaint), XQ = [qQ.largestContentfulPaint])
+                        let MM = 0,
+                          iM = [],
+                          OM = rM.startTime;
+                        if ("largest-contentful-paint" === rM.entryType) MM = Math.max(rM.startTime - Vi(), 0), PM.l(rM), iM = [rM];
+                        else if ("interaction-contentful-paint" === rM.entryType) {
+                          const SM = rM;
+                          if (!aM.navigationId) continue;
+                          if ("interactionId" in SM && SM.interactionId != aM.navigationInteractionId) continue;
+                          OM = SM.largestContentfulPaint?.renderTime || 0, MM = Math.max(OM - rM.startTime, 0), SM.largestContentfulPaint && (PM.l(SM.largestContentfulPaint), iM = [SM.largestContentfulPaint])
                         }
-                        wQ < TQ.firstHiddenTime && (zQ.value = QQ, zQ.entries = XQ, qQ())
+                        OM < jM.firstHiddenTime && (aM.value = MM, aM.entries = iM, SM())
                       }
                     },
-                    JQ = ["largest-contentful-paint"];
-                  wQ && JQ.push("interaction-contentful-paint", "soft-navigation");
-                  const rQ = ww(JQ, gQ);
-                  if (rQ) {
-                    qQ = NX(QQ, zQ, dw, WQ.reportAllChanges);
-                    const TQ = ["keydown", "click", "visibilitychange"],
-                      sQ = QQ => {
-                        if (QQ.isTrusted && !XQ) {
-                          const QQ = zQ.id;
-                          Gw((() => {
-                            if (!XQ) {
-                              if (!wQ) {
-                                rQ.disconnect();
-                                for (const QQ of TQ) removeEventListener(QQ, sQ, {
+                    LM = ["largest-contentful-paint"];
+                  OM && LM.push("interaction-contentful-paint", "soft-navigation");
+                  const mM = jO(LM, zM);
+                  if (mM) {
+                    SM = qi(MM, aM, tO, rM.reportAllChanges);
+                    const jM = ["keydown", "click", "visibilitychange"],
+                      PM = MM => {
+                        if (MM.isTrusted && !iM) {
+                          const MM = aM.id;
+                          CO((() => {
+                            if (!iM) {
+                              if (!OM) {
+                                mM.disconnect();
+                                for (const MM of jM) removeEventListener(MM, PM, {
                                   capture: !0
                                 })
                               }
-                              QQ === zQ.id && (XQ = !0, qQ(!0))
+                              MM === aM.id && (iM = !0, SM(!0))
                             }
                           }))
                         }
                       };
-                    for (const QQ of TQ) addEventListener(QQ, sQ, {
+                    for (const MM of jM) addEventListener(MM, PM, {
                       capture: !0
                     });
-                    YX((wQ => {
-                      FQ("back-forward-cache", zQ.navigationId, zQ.navigationInteractionId, zQ.navigationURL, xX()), qQ = NX(QQ, zQ, dw, WQ.reportAllChanges), ZX((() => {
-                        zQ.value = performance.now() - wQ.timeStamp, XQ = !0, qQ(!0)
+                    Ki((OM => {
+                      nM("back-forward-cache", aM.navigationId, aM.navigationInteractionId, aM.navigationURL, Ii()), SM = qi(MM, aM, tO, rM.reportAllChanges), Ti((() => {
+                        aM.value = performance.now() - OM.timeStamp, iM = !0, SM(!0)
                       }))
                     }))
                   }
                 }))
-              }((WQ => {
-                QQ((QQ => {
-                  let WQ = {
+              }((rM => {
+                MM((MM => {
+                  let rM = {
                     timeToFirstByte: 0,
                     resourceLoadDelay: 0,
                     resourceLoadDuration: 0,
-                    elementRenderDelay: QQ.value
+                    elementRenderDelay: MM.value
                   };
-                  if (QQ.entries.length) {
-                    const qQ = QQ.entries.at(-1),
-                      TQ = QQ => QQ.name === qQ.url && (QQ.requestStart || QQ.startTime) <= qQ.startTime,
-                      zQ = qQ.url && (aw.findLast(TQ) || performance.getEntriesByType("resource").findLast(TQ));
-                    let sQ;
-                    WQ.target = wQ.get(qQ), WQ.lcpEntry = qQ, qQ.url && (WQ.url = qQ.url), zQ && (WQ.lcpResourceEntry = zQ);
-                    let FQ = 0,
-                      PQ = 0;
-                    if ("soft-navigation" !== QQ.navigationType ? (sQ = kX(), FQ = sQ?.activationStart ?? 0, PQ = sQ?.responseStart ?? 0) : (FQ = QQ.navigationStartTime || 0, sQ = XQ.u?.get(QQ.navigationId)), sQ) {
-                      const XQ = Math.max(0, PQ - FQ),
-                        wQ = Math.max(XQ, zQ ? (zQ.requestStart || zQ.startTime) - FQ : 0),
-                        qQ = Math.min(QQ.value, Math.max(wQ, zQ ? zQ.responseEnd - FQ : 0));
-                      WQ = {
-                        ...WQ,
-                        timeToFirstByte: XQ,
-                        resourceLoadDelay: wQ - XQ,
-                        resourceLoadDuration: qQ - wQ,
-                        elementRenderDelay: QQ.value - qQ,
-                        navigationEntry: sQ
+                  if (MM.entries.length) {
+                    const SM = MM.entries.at(-1),
+                      jM = MM => MM.name === SM.url && (MM.requestStart || MM.startTime) <= SM.startTime,
+                      aM = SM.url && (uO.findLast(jM) || performance.getEntriesByType("resource").findLast(jM));
+                    let PM;
+                    rM.target = OM.get(SM), rM.lcpEntry = SM, SM.url && (rM.url = SM.url), aM && (rM.lcpResourceEntry = aM);
+                    let nM = 0,
+                      QM = 0;
+                    if ("soft-navigation" !== MM.navigationType ? (PM = Ni(), nM = PM?.activationStart ?? 0, QM = PM?.responseStart ?? 0) : (nM = MM.navigationStartTime || 0, PM = iM.u?.get(MM.navigationId)), PM) {
+                      const iM = Math.max(0, QM - nM),
+                        OM = Math.max(iM, aM ? (aM.requestStart || aM.startTime) - nM : 0),
+                        SM = Math.min(MM.value, Math.max(OM, aM ? aM.responseEnd - nM : 0));
+                      rM = {
+                        ...rM,
+                        timeToFirstByte: iM,
+                        resourceLoadDelay: OM - iM,
+                        resourceLoadDuration: SM - OM,
+                        elementRenderDelay: MM.value - SM,
+                        navigationEntry: PM
                       }
                     }
                   }
-                  return Object.assign(QQ, {
-                    attribution: WQ
+                  return Object.assign(MM, {
+                    attribution: rM
                   })
-                })(WQ))
-              }), WQ)
-          }((QQ => {
-            var WQ;
+                })(rM))
+              }), rM)
+          }((MM => {
+            var rM;
             const {
-              elementRenderDelay: XQ,
-              resourceLoadDelay: wQ,
-              resourceLoadDuration: qQ,
-              timeToFirstByte: TQ,
-              target: zQ,
-              url: sQ,
-              lcpResourceEntry: FQ
-            } = QQ.attribution, PQ = this.buildInitialValues(QQ);
-            this.addIfPresent(PQ, "element_render_delay", XQ), this.addIfPresent(PQ, "resource_load_delay", wQ), this.addIfPresent(PQ, "resource_load_duration", qQ), this.addIfPresent(PQ, Aw, TQ);
-            const gQ = this.buildInitialContext(QQ);
-            this.addIfPresent(gQ, "element", zQ), (null === (WQ = this.webVitalConfig) || void 0 === WQ ? void 0 : WQ.trackAttributionSources) && (this.addIfPresent(gQ, "resource_url", sQ), this.addIfPresent(gQ, "resource_delivery_type", null === FQ || void 0 === FQ ? void 0 : FQ.deliveryType), this.addIfPresent(gQ, "resource_initiator_type", null === FQ || void 0 === FQ ? void 0 : FQ.initiatorType)), this.pushMeasurement(PQ, gQ)
+              elementRenderDelay: iM,
+              resourceLoadDelay: OM,
+              resourceLoadDuration: SM,
+              timeToFirstByte: jM,
+              target: aM,
+              url: PM,
+              lcpResourceEntry: nM
+            } = MM.attribution, QM = this.buildInitialValues(MM);
+            this.addIfPresent(QM, "element_render_delay", iM), this.addIfPresent(QM, "resource_load_delay", OM), this.addIfPresent(QM, "resource_load_duration", SM), this.addIfPresent(QM, sO, jM);
+            const zM = this.buildInitialContext(MM);
+            this.addIfPresent(zM, "element", aM), (null === (rM = this.webVitalConfig) || void 0 === rM ? void 0 : rM.trackAttributionSources) && (this.addIfPresent(zM, "resource_url", PM), this.addIfPresent(zM, "resource_delivery_type", null === nM || void 0 === nM ? void 0 : nM.deliveryType), this.addIfPresent(zM, "resource_initiator_type", null === nM || void 0 === nM ? void 0 : nM.initiatorType)), this.pushMeasurement(QM, zM)
           }), {
-            reportAllChanges: null === (QQ = this.webVitalConfig) || void 0 === QQ ? void 0 : QQ.reportAllChanges
+            reportAllChanges: null === (MM = this.webVitalConfig) || void 0 === MM ? void 0 : MM.reportAllChanges
           })
         }
         measureTTFB() {
-          var QQ;
-          ! function(QQ) {
-            ! function(QQ) {
-              let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const XQ = qw(WQ);
-              let wQ = Xw("TTFB"),
-                qQ = NX(QQ, wQ, lw, WQ.reportAllChanges);
-              hw((() => {
-                const TQ = kX();
-                if (TQ) {
-                  const zQ = TQ.responseStart;
-                  wQ.value = Math.max(zQ - OX(), 0), wQ.entries = [TQ], qQ(!0), YX((() => {
-                    wQ = Xw("TTFB", 0, "back-forward-cache", wQ.navigationId, wQ.navigationInteractionId, wQ.navigationURL, xX()), qQ = NX(QQ, wQ, lw, WQ.reportAllChanges), qQ(!0)
-                  })), XQ && ww(["soft-navigation"], (XQ => {
-                    XQ.forEach((XQ => {
-                      XQ.navigationId && (wQ = Xw("TTFB", 0, "soft-navigation", XQ.navigationId, XQ.interactionId, XQ.name, XQ.startTime), wQ.entries = [XQ], qQ = NX(QQ, wQ, lw, WQ.reportAllChanges), qQ(!0))
+          var MM;
+          ! function(MM) {
+            ! function(MM) {
+              let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const iM = aO(rM);
+              let OM = SO("TTFB"),
+                SM = qi(MM, OM, RO, rM.reportAllChanges);
+              pO((() => {
+                const jM = Ni();
+                if (jM) {
+                  const aM = jM.responseStart;
+                  OM.value = Math.max(aM - Vi(), 0), OM.entries = [jM], SM(!0), Ki((() => {
+                    OM = SO("TTFB", 0, "back-forward-cache", OM.navigationId, OM.navigationInteractionId, OM.navigationURL, Ii()), SM = qi(MM, OM, RO, rM.reportAllChanges), SM(!0)
+                  })), iM && jO(["soft-navigation"], (iM => {
+                    iM.forEach((iM => {
+                      iM.navigationId && (OM = SO("TTFB", 0, "soft-navigation", iM.navigationId, iM.interactionId, iM.name, iM.startTime), OM.entries = [iM], SM = qi(MM, OM, RO, rM.reportAllChanges), SM(!0))
                     }))
-                  }), WQ)
+                  }), rM)
                 }
               }))
-            }((WQ => {
-              QQ((QQ => {
-                const WQ = QQ.entries[0];
-                let XQ = {
+            }((rM => {
+              MM((MM => {
+                const rM = MM.entries[0];
+                let iM = {
                   waitingDuration: 0,
                   cacheDuration: 0,
                   dnsDuration: 0,
                   connectionDuration: 0,
                   requestDuration: 0,
-                  navigationEntry: WQ
+                  navigationEntry: rM
                 };
-                if (QQ.entries.length && WQ instanceof PerformanceNavigationTiming) {
-                  const wQ = WQ.activationStart || 0,
-                    qQ = Math.max((WQ.workerStart || WQ.fetchStart || 0) - wQ, 0),
-                    TQ = Math.max(WQ.domainLookupStart - wQ, 0),
-                    zQ = Math.max(WQ.connectStart - wQ, 0),
-                    sQ = Math.max(WQ.connectEnd - wQ, 0);
-                  XQ = {
-                    waitingDuration: qQ,
-                    cacheDuration: TQ - qQ,
-                    dnsDuration: zQ - TQ,
-                    connectionDuration: sQ - zQ,
-                    requestDuration: QQ.value - sQ,
-                    navigationEntry: WQ
+                if (MM.entries.length && rM instanceof PerformanceNavigationTiming) {
+                  const OM = rM.activationStart || 0,
+                    SM = Math.max((rM.workerStart || rM.fetchStart || 0) - OM, 0),
+                    jM = Math.max(rM.domainLookupStart - OM, 0),
+                    aM = Math.max(rM.connectStart - OM, 0),
+                    PM = Math.max(rM.connectEnd - OM, 0);
+                  iM = {
+                    waitingDuration: SM,
+                    cacheDuration: jM - SM,
+                    dnsDuration: aM - jM,
+                    connectionDuration: PM - aM,
+                    requestDuration: MM.value - PM,
+                    navigationEntry: rM
                   }
                 }
-                return Object.assign(QQ, {
-                  attribution: XQ
+                return Object.assign(MM, {
+                  attribution: iM
                 })
-              })(WQ))
+              })(rM))
             }), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
-          }((QQ => {
+          }((MM => {
             const {
-              dnsDuration: WQ,
-              connectionDuration: XQ,
-              requestDuration: wQ,
-              waitingDuration: qQ,
-              cacheDuration: TQ
-            } = QQ.attribution, zQ = this.buildInitialValues(QQ);
-            this.addIfPresent(zQ, "dns_duration", WQ), this.addIfPresent(zQ, "connection_duration", XQ), this.addIfPresent(zQ, "request_duration", wQ), this.addIfPresent(zQ, "waiting_duration", qQ), this.addIfPresent(zQ, "cache_duration", TQ);
-            const sQ = this.buildInitialContext(QQ);
-            this.pushMeasurement(zQ, sQ)
+              dnsDuration: rM,
+              connectionDuration: iM,
+              requestDuration: OM,
+              waitingDuration: SM,
+              cacheDuration: jM
+            } = MM.attribution, aM = this.buildInitialValues(MM);
+            this.addIfPresent(aM, "dns_duration", rM), this.addIfPresent(aM, "connection_duration", iM), this.addIfPresent(aM, "request_duration", OM), this.addIfPresent(aM, "waiting_duration", SM), this.addIfPresent(aM, "cache_duration", jM);
+            const PM = this.buildInitialContext(MM);
+            this.pushMeasurement(aM, PM)
           }), {
-            reportAllChanges: null === (QQ = this.webVitalConfig) || void 0 === QQ ? void 0 : QQ.reportAllChanges
+            reportAllChanges: null === (MM = this.webVitalConfig) || void 0 === MM ? void 0 : MM.reportAllChanges
           })
         }
-        buildInitialValues(QQ) {
+        buildInitialValues(MM) {
           return {
-            [QQ.name.toLowerCase()]: QQ.value,
-            delta: QQ.delta
+            [MM.name.toLowerCase()]: MM.value,
+            delta: MM.delta
           }
         }
-        buildInitialContext(QQ) {
-          var WQ;
-          const XQ = null !== (WQ = QW("com.grafana.faro.lastNavigationId", KQ)) && void 0 !== WQ ? WQ : CX;
+        buildInitialContext(MM) {
+          var rM;
+          const iM = null !== (rM = Mr("com.grafana.faro.lastNavigationId", TM)) && void 0 !== rM ? rM : oi;
           return {
-            id: QQ.id,
-            rating: QQ.rating,
-            navigation_type: QQ.navigationType,
-            navigation_entry_id: XQ
+            id: MM.id,
+            rating: MM.rating,
+            navigation_type: MM.navigationType,
+            navigation_entry_id: iM
           }
         }
-        pushMeasurement(QQ, WQ) {
+        pushMeasurement(MM, rM) {
           this.corePushMeasurement({
             type: "web-vitals",
-            values: QQ
+            values: MM
           }, {
-            context: WQ
+            context: rM
           })
         }
-        addIfPresent(QQ, WQ, XQ) {
-          XQ && (QQ[WQ] = XQ)
+        addIfPresent(MM, rM, iM) {
+          iM && (MM[rM] = iM)
         }
-        addNumberIfDefined(QQ, WQ, XQ) {
-          void 0 !== XQ && (QQ[WQ] = XQ)
+        addNumberIfDefined(MM, rM, iM) {
+          void 0 !== iM && (MM[rM] = iM)
         }
       },
-      Ew = class extends WX {
+      kO = class extends ri {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = XX
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = ii
         }
         initialize() {
-          this.logDebug("Initializing"), new Rw(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
+          this.logDebug("Initializing"), new DO(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
         }
       };
-    const Cw = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
+    const ZO = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
 
-    function uw() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-      for (const WQ of QQ)
-        if ("traceparent" === WQ.name) {
-          if (!Cw.test(WQ.description)) continue;
-          const [, QQ, XQ] = WQ.description.split("-");
-          if (null != QQ && null != XQ) return {
-            traceId: QQ,
-            spanId: XQ
+    function oO() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+      for (const rM of MM)
+        if ("traceparent" === rM.name) {
+          if (!ZO.test(rM.description)) continue;
+          const [, MM, iM] = rM.description.split("-");
+          if (null != MM && null != iM) return {
+            traceId: MM,
+            spanId: iM
           };
           break
         }
     }
 
-    function Lw(QQ) {
-      let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    function fO(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         wallNow: Date.now(),
         monoNow: performance.now()
       };
       const {
-        wallNow: XQ,
-        monoNow: wQ
-      } = WQ;
-      return Math.min(XQ, XQ - (wQ - QQ))
+        wallNow: iM,
+        monoNow: OM
+      } = rM;
+      return Math.min(iM, iM - (OM - MM))
     }
 
-    function kw(QQ) {
-      let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      for (const [XQ, wQ] of Object.entries(WQ)) {
-        const WQ = QQ[XQ];
-        return null != WQ && (iQ(wQ) ? wQ.includes(WQ) : WQ === wQ)
+    function YO(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      for (const [iM, OM] of Object.entries(rM)) {
+        const rM = MM[iM];
+        return null != rM && (RM(OM) ? OM.includes(rM) : rM === OM)
       }
       return !0
     }
 
-    function fw(QQ) {
+    function NO(MM) {
       const {
-        connectEnd: WQ,
-        connectStart: XQ,
-        decodedBodySize: wQ,
-        domainLookupEnd: qQ,
-        domainLookupStart: TQ,
-        duration: zQ,
-        encodedBodySize: sQ,
-        fetchStart: FQ,
-        initiatorType: PQ,
-        name: gQ,
-        nextHopProtocol: JQ,
-        redirectEnd: rQ,
-        redirectStart: IQ,
-        renderBlockingStatus: jQ,
-        requestStart: BQ,
-        responseEnd: yQ,
-        responseStart: VQ,
-        responseStatus: DQ,
-        secureConnectionStart: pQ,
-        transferSize: GQ,
-        workerStart: UQ
-      } = QQ;
+        connectEnd: rM,
+        connectStart: iM,
+        decodedBodySize: OM,
+        domainLookupEnd: SM,
+        domainLookupStart: jM,
+        duration: aM,
+        encodedBodySize: PM,
+        fetchStart: nM,
+        initiatorType: QM,
+        name: zM,
+        nextHopProtocol: LM,
+        redirectEnd: mM,
+        redirectStart: HM,
+        renderBlockingStatus: hM,
+        requestStart: JM,
+        responseEnd: dM,
+        responseStart: yM,
+        responseStatus: lM,
+        secureConnectionStart: EM,
+        transferSize: UM,
+        workerStart: GM
+      } = MM;
       return {
-        name: gQ,
-        httpHost: tw(gQ),
-        duration: ow(zQ),
-        tcpHandshakeTime: ow(WQ - XQ),
-        dnsLookupTime: ow(qQ - TQ),
-        tlsNegotiationTime: ow(WQ - pQ),
-        responseStatus: ow(DQ),
-        redirectTime: ow(rQ - IQ),
-        requestTime: ow(VQ - BQ),
-        responseTime: ow(yQ - VQ),
-        fetchTime: ow(yQ - FQ),
-        serviceWorkerTime: ow(UQ > 0 ? FQ - UQ : 0),
-        decodedBodySize: ow(wQ),
-        encodedBodySize: ow(sQ),
+        name: zM,
+        httpHost: xO(zM),
+        duration: vO(aM),
+        tcpHandshakeTime: vO(rM - iM),
+        dnsLookupTime: vO(SM - jM),
+        tlsNegotiationTime: vO(rM - EM),
+        responseStatus: vO(lM),
+        redirectTime: vO(mM - HM),
+        requestTime: vO(yM - JM),
+        responseTime: vO(dM - yM),
+        fetchTime: vO(dM - nM),
+        serviceWorkerTime: vO(GM > 0 ? nM - GM : 0),
+        decodedBodySize: vO(OM),
+        encodedBodySize: vO(PM),
         cacheHitStatus: function() {
-          let QQ = "fullLoad";
-          0 === GQ ? wQ > 0 && (QQ = "cache") : null != DQ ? 304 === DQ && (QQ = "conditionalFetch") : sQ > 0 && GQ < sQ && (QQ = "conditionalFetch");
-          return QQ
+          let MM = "fullLoad";
+          0 === UM ? OM > 0 && (MM = "cache") : null != lM ? 304 === lM && (MM = "conditionalFetch") : PM > 0 && UM < PM && (MM = "conditionalFetch");
+          return MM
         }(),
-        renderBlockingStatus: ow(jQ),
-        protocol: JQ,
-        initiatorType: PQ,
+        renderBlockingStatus: vO(hM),
+        protocol: LM,
+        initiatorType: QM,
         visibilityState: document.visibilityState,
-        ttfb: ow(VQ - BQ),
-        transferSize: ow(GQ)
+        ttfb: vO(yM - JM),
+        transferSize: vO(UM)
       }
     }
 
-    function Sw(QQ) {
+    function AO(MM) {
       const {
-        activationStart: WQ,
-        domComplete: XQ,
-        domContentLoadedEventEnd: wQ,
-        domContentLoadedEventStart: qQ,
-        domInteractive: TQ,
-        fetchStart: zQ,
-        loadEventEnd: sQ,
-        loadEventStart: FQ,
-        responseStart: PQ,
-        type: gQ
-      } = QQ, JQ = function() {
-        var QQ;
-        return null != (null === (QQ = performance.timing) || void 0 === QQ ? void 0 : QQ.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
+        activationStart: rM,
+        domComplete: iM,
+        domContentLoadedEventEnd: OM,
+        domContentLoadedEventStart: SM,
+        domInteractive: jM,
+        fetchStart: aM,
+        loadEventEnd: PM,
+        loadEventStart: nM,
+        responseStart: QM,
+        type: zM
+      } = MM, LM = function() {
+        var MM;
+        return null != (null === (MM = performance.timing) || void 0 === MM ? void 0 : MM.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
       }();
-      return gW(gW({}, fw(QQ)), {}, {
-        pageLoadTime: ow(XQ - zQ),
-        documentParsingTime: ow(JQ ? TQ - JQ : null),
-        domProcessingTime: ow(XQ - TQ),
-        domContentLoadHandlerTime: ow(wQ - qQ),
-        onLoadTime: ow(sQ - FQ),
-        ttfb: ow(Math.max(PQ - (null !== WQ && void 0 !== WQ ? WQ : 0), 0)),
-        type: gQ
+      return zr(zr({}, NO(MM)), {}, {
+        pageLoadTime: vO(iM - aM),
+        documentParsingTime: vO(LM ? jM - LM : null),
+        domProcessingTime: vO(iM - jM),
+        domContentLoadHandlerTime: vO(OM - SM),
+        onLoadTime: vO(PM - nM),
+        ttfb: vO(Math.max(QM - (null !== rM && void 0 !== rM ? rM : 0), 0)),
+        type: zM
       })
     }
 
-    function tw(QQ) {
+    function xO(MM) {
       try {
-        return new URL(QQ).host || CX
-      } catch (WQ) {
-        return CX
+        return new URL(MM).host || oi
+      } catch (rM) {
+        return oi
       }
     }
 
-    function ow(QQ) {
-      return null == QQ ? CX : "number" === typeof QQ ? Math.round(QQ > 0 ? QQ : 0).toString() : QQ.toString()
+    function vO(MM) {
+      return null == MM ? oi : "number" === typeof MM ? Math.round(MM > 0 ? MM : 0).toString() : MM.toString()
     }
-    const ew = {
+    const FO = {
       initiatorType: ["xmlhttprequest", "fetch"]
     };
 
-    function nw(QQ, WQ, XQ, wQ, qQ, TQ, zQ) {
+    function BO(MM, rM, iM, OM, SM, jM, aM) {
       try {
-        var sQ = QQ[TQ](zQ),
-          FQ = sQ.value
-      } catch (QQ) {
-        return void XQ(QQ)
+        var PM = MM[jM](aM),
+          nM = PM.value
+      } catch (MM) {
+        return void iM(MM)
       }
-      sQ.done ? WQ(FQ) : Promise.resolve(FQ).then(wQ, qQ)
+      PM.done ? rM(nM) : Promise.resolve(nM).then(OM, SM)
     }
 
-    function xw(QQ) {
+    function XO(MM) {
       return function() {
-        var WQ = this,
-          XQ = arguments;
-        return new Promise((function(wQ, qQ) {
-          var TQ = QQ.apply(WQ, XQ);
+        var rM = this,
+          iM = arguments;
+        return new Promise((function(OM, SM) {
+          var jM = MM.apply(rM, iM);
 
-          function zQ(QQ) {
-            nw(TQ, wQ, qQ, zQ, sQ, "next", QQ)
+          function aM(MM) {
+            BO(jM, OM, SM, aM, PM, "next", MM)
           }
 
-          function sQ(QQ) {
-            nw(TQ, wQ, qQ, zQ, sQ, "throw", QQ)
+          function PM(MM) {
+            BO(jM, OM, SM, aM, PM, "throw", MM)
           }
-          zQ(void 0)
+          aM(void 0)
         }))
       }
     }
-    const Yw = new DX;
-    var Nw = class extends WX {
+    const IO = new Ei;
+    var KO = class extends ri {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = XX
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = ii
       }
       initialize() {
-        var QQ = this;
+        var MM = this;
         if (!("PerformanceObserver" in window)) return void this.logDebug("performance observer not supported. Disable performance instrumentation.");
-        let WQ = !1;
-        const XQ = () => {
-          ! function(QQ) {
-            if ("complete" === document.readyState) QQ();
+        let rM = !1;
+        const iM = () => {
+          ! function(MM) {
+            if ("complete" === document.readyState) MM();
             else {
-              const WQ = () => {
-                "complete" === document.readyState && (QQ(), document.removeEventListener("readystatechange", WQ))
+              const rM = () => {
+                "complete" === document.readyState && (MM(), document.removeEventListener("readystatechange", rM))
               };
-              document.addEventListener("readystatechange", WQ)
+              document.addEventListener("readystatechange", rM)
             }
-          }(xw((function*() {
-            if (WQ) return;
-            const XQ = QQ.api.pushEvent,
+          }(XO((function*() {
+            if (rM) return;
+            const iM = MM.api.pushEvent,
               {
-                faroNavigationId: wQ
-              } = yield function(QQ) {
-                let WQ;
-                const XQ = new Promise((QQ => {
-                  WQ = QQ
+                faroNavigationId: OM
+              } = yield function(MM) {
+                let rM;
+                const iM = new Promise((MM => {
+                  rM = MM
                 }));
-                return new PerformanceObserver((XQ => {
-                  var wQ;
-                  const [qQ] = XQ.getEntries();
-                  if (null == qQ || ZQ(qQ.name)) return;
-                  const TQ = qQ.toJSON();
-                  let zQ = uw(null === TQ || void 0 === TQ ? void 0 : TQ.serverTiming);
-                  const sQ = null !== (wQ = QW("com.grafana.faro.lastNavigationId", KQ)) && void 0 !== wQ ? wQ : CX,
-                    FQ = gW(gW({}, Sw(TQ)), {}, {
-                      faroNavigationId: VW(),
-                      faroPreviousNavigationId: sQ
+                return new PerformanceObserver((iM => {
+                  var OM;
+                  const [SM] = iM.getEntries();
+                  if (null == SM || KM(SM.name)) return;
+                  const jM = SM.toJSON();
+                  let aM = oO(null === jM || void 0 === jM ? void 0 : jM.serverTiming);
+                  const PM = null !== (OM = Mr("com.grafana.faro.lastNavigationId", TM)) && void 0 !== OM ? OM : oi,
+                    nM = zr(zr({}, AO(jM)), {}, {
+                      faroNavigationId: yr(),
+                      faroPreviousNavigationId: PM
                     });
-                  WW("com.grafana.faro.lastNavigationId", FQ.faroNavigationId, KQ), QQ("faro.performance.navigation", FQ, void 0, {
-                    spanContext: zQ,
-                    timestampOverwriteMs: Lw(TQ.startTime)
-                  }), WQ(FQ)
+                  rr("com.grafana.faro.lastNavigationId", nM.faroNavigationId, TM), MM("faro.performance.navigation", nM, void 0, {
+                    spanContext: aM,
+                    timestampOverwriteMs: fO(jM.startTime)
+                  }), rM(nM)
                 })).observe({
                   type: "navigation",
                   buffered: !0
-                }), XQ
-              }(XQ);
-            WQ || null == wQ || function(QQ, WQ, XQ, wQ) {
-              const qQ = wQ.trackResources;
-              new PerformanceObserver((wQ => {
-                const TQ = wQ.getEntries(),
-                  zQ = {
+                }), iM
+              }(iM);
+            rM || null == OM || function(MM, rM, iM, OM) {
+              const SM = OM.trackResources;
+              new PerformanceObserver((OM => {
+                const jM = OM.getEntries(),
+                  aM = {
                     wallNow: Date.now(),
                     monoNow: performance.now()
                   };
-                for (const sQ of TQ) {
-                  if (ZQ(sQ.name)) continue;
-                  null === XQ || void 0 === XQ || XQ.notify({
+                for (const PM of jM) {
+                  if (KM(PM.name)) continue;
+                  null === iM || void 0 === iM || iM.notify({
                     type: "resource"
                   });
-                  const wQ = sQ.toJSON();
-                  let TQ = uw(null === wQ || void 0 === wQ ? void 0 : wQ.serverTiming);
-                  (null == qQ && kw(wQ, ew) || qQ) && WQ("faro.performance.resource", gW(gW({}, fw(wQ)), {}, {
-                    faroNavigationId: QQ,
-                    faroResourceId: VW()
+                  const OM = PM.toJSON();
+                  let jM = oO(null === OM || void 0 === OM ? void 0 : OM.serverTiming);
+                  (null == SM && YO(OM, FO) || SM) && rM("faro.performance.resource", zr(zr({}, NO(OM)), {}, {
+                    faroNavigationId: MM,
+                    faroResourceId: yr()
                   }), void 0, {
-                    spanContext: TQ,
-                    timestampOverwriteMs: Lw(wQ.startTime, zQ)
+                    spanContext: jM,
+                    timestampOverwriteMs: fO(OM.startTime, aM)
                   })
                 }
               })).observe({
                 type: "resource",
                 buffered: !0
               })
-            }(wQ, XQ, Yw, QQ.config)
+            }(OM, iM, IO, MM.config)
           })))
         };
         this.cancelInitialization = () => {
-          WQ = !0, document.removeEventListener("prerenderingchange", XQ)
-        }, document.prerendering ? document.addEventListener("prerenderingchange", XQ, {
+          rM = !0, document.removeEventListener("prerenderingchange", iM)
+        }, document.prerendering ? document.addEventListener("prerenderingchange", iM, {
           once: !0
-        }) : XQ()
+        }) : iM()
       }
       destroy() {
-        var QQ;
-        null === (QQ = this.cancelInitialization) || void 0 === QQ || QQ.call(this), this.cancelInitialization = void 0
+        var MM;
+        null === (MM = this.cancelInitialization) || void 0 === MM || MM.call(this), this.cancelInitialization = void 0
       }
     };
-    const Zw = "data-faro-user-action-name",
-      Ow = Zw.replace(/-name$/, "-timeout"),
-      Kw = 1e3;
+    const qO = "data-faro-user-action-name",
+      TO = qO.replace(/-name$/, "-timeout"),
+      VO = 1e3;
 
-    function mw(QQ) {
-      return `data-${(QQ.startsWith("data-")?QQ.slice(5):QQ).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
+    function cO(MM) {
+      return `data-${(MM.startsWith("data-")?MM.slice(5):MM).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
     }
 
-    function Mw(QQ) {
-      let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
-        XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : eW;
-      if (void 0 === QQ) return WQ;
-      let wQ = NaN;
+    function MS(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
+        iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : vr;
+      if (void 0 === MM) return rM;
+      let OM = NaN;
       try {
-        wQ = "string" === typeof QQ && "" === QQ.trim() ? NaN : Number(QQ)
-      } catch (qQ) {}
-      return !Number.isFinite(wQ) || wQ <= 0 ? (XQ(`initialActivityTimeout must be a finite number greater than zero; using ${WQ} ms`), WQ) : wQ > 1e3 ? (XQ(`initialActivityTimeout cannot exceed ${Kw} ms; clamping to the maximum`), Kw) : wQ
+        OM = "string" === typeof MM && "" === MM.trim() ? NaN : Number(MM)
+      } catch (SM) {}
+      return !Number.isFinite(OM) || OM <= 0 ? (iM(`initialActivityTimeout must be a finite number greater than zero; using ${rM} ms`), rM) : OM > 1e3 ? (iM(`initialActivityTimeout cannot exceed ${VO} ms; clamping to the maximum`), VO) : OM
     }
 
-    function Qq(QQ, WQ, XQ) {
-      return void 0 !== QQ && window.clearTimeout(QQ), window.setTimeout((() => {
-        WQ()
-      }), XQ)
+    function rS(MM, rM, iM) {
+      return void 0 !== MM && window.clearTimeout(MM), window.setTimeout((() => {
+        rM()
+      }), iM)
     }
 
-    function Wq(QQ) {
-      return QQ.type === VX
+    function iS(MM) {
+      return MM.type === li
     }
-    let Xq, wq;
+    let OS, SS;
 
-    function qq() {
-      return Xq || (Xq = new DX), wq || (wq = new MutationObserver(((QQ, WQ) => {
-        Xq.notify({
+    function jS() {
+      return OS || (OS = new Ei), SS || (SS = new MutationObserver(((MM, rM) => {
+        OS.notify({
           type: "dom-mutation"
         })
-      })), wq.observe(document, {
+      })), SS.observe(document, {
         attributes: !0,
         childList: !0,
         subtree: !0,
         characterData: !0
-      })), Xq
+      })), OS
     }
-    const Tq = "fetch",
-      zq = "xhr";
-    let sq, Fq, Pq, gq, Jq = !1;
+    const aS = "fetch",
+      PS = "xhr";
+    let nS, QS, zS, LS, mS = !1;
 
-    function rq() {
-      if (sq) return sq;
+    function HS() {
+      if (nS) return nS;
 
-      function QQ(QQ) {
-        sq.notify({
-          type: yX,
-          request: QQ
+      function MM(MM) {
+        nS.notify({
+          type: yi,
+          request: MM
         })
       }
 
-      function WQ(QQ) {
-        sq.notify({
-          type: VX,
-          request: QQ
+      function rM(MM) {
+        nS.notify({
+          type: li,
+          request: MM
         })
       }
-      return sq = new DX, Jq || (! function(QQ) {
+      return nS = new Ei, mS || (! function(MM) {
         let {
-          onRequestEnd: WQ,
-          onRequestStart: XQ
-        } = QQ;
-        Pq || (Pq = window.fetch);
+          onRequestEnd: rM,
+          onRequestStart: iM
+        } = MM;
+        zS || (zS = window.fetch);
         window.fetch = function() {
-          var QQ, wQ;
-          const qQ = null !== (QQ = OQ(arguments[0])) && void 0 !== QQ ? QQ : "",
-            TQ = ZQ(qQ),
-            zQ = (null !== (wQ = arguments[1]) && void 0 !== wQ ? wQ : {}).method,
-            sQ = VW();
-          return TQ || XQ({
-            url: qQ,
-            method: zQ,
-            requestId: sQ,
-            apiType: Tq
-          }), Pq.apply(this, arguments).then((QQ => (TQ || WQ({
-            url: qQ,
-            method: zQ,
-            requestId: sQ,
-            apiType: Tq
-          }), QQ))).catch((QQ => {
-            throw TQ || WQ({
-              url: qQ,
-              method: zQ,
-              requestId: sQ,
-              apiType: Tq
-            }), QQ
+          var MM, OM;
+          const SM = null !== (MM = qM(arguments[0])) && void 0 !== MM ? MM : "",
+            jM = KM(SM),
+            aM = (null !== (OM = arguments[1]) && void 0 !== OM ? OM : {}).method,
+            PM = yr();
+          return jM || iM({
+            url: SM,
+            method: aM,
+            requestId: PM,
+            apiType: aS
+          }), zS.apply(this, arguments).then((MM => (jM || rM({
+            url: SM,
+            method: aM,
+            requestId: PM,
+            apiType: aS
+          }), MM))).catch((MM => {
+            throw jM || rM({
+              url: SM,
+              method: aM,
+              requestId: PM,
+              apiType: aS
+            }), MM
           }))
         }
       }({
-        onRequestStart: QQ,
-        onRequestEnd: WQ
-      }), function(QQ) {
+        onRequestStart: MM,
+        onRequestEnd: rM
+      }), function(MM) {
         let {
-          onRequestStart: WQ,
-          onRequestEnd: XQ
-        } = QQ;
-        Fq || (Fq = XMLHttpRequest.prototype.open);
+          onRequestStart: rM,
+          onRequestEnd: iM
+        } = MM;
+        QS || (QS = XMLHttpRequest.prototype.open);
         XMLHttpRequest.prototype.open = function() {
-          const QQ = arguments[1],
-            wQ = ZQ(QQ),
-            qQ = arguments[0],
-            TQ = VW();
+          const MM = arguments[1],
+            OM = KM(MM),
+            SM = arguments[0],
+            jM = yr();
           this.addEventListener("loadstart", (function() {
-            wQ || WQ({
-              url: QQ,
-              method: qQ,
-              requestId: TQ,
-              apiType: zq
+            OM || rM({
+              url: MM,
+              method: SM,
+              requestId: jM,
+              apiType: PS
             })
           })), this.addEventListener("load", (function() {
-            wQ || XQ({
-              url: QQ,
-              method: qQ,
-              requestId: TQ,
-              apiType: zq
+            OM || iM({
+              url: MM,
+              method: SM,
+              requestId: jM,
+              apiType: PS
             })
           })), this.addEventListener("error", (function() {
-            wQ || XQ({
-              url: QQ,
-              method: qQ,
-              requestId: TQ,
-              apiType: zq
+            OM || iM({
+              url: MM,
+              method: SM,
+              requestId: jM,
+              apiType: PS
             })
           })), this.addEventListener("abort", (function() {
-            wQ || XQ({
-              url: QQ,
-              method: qQ,
-              requestId: TQ,
-              apiType: zq
+            OM || iM({
+              url: MM,
+              method: SM,
+              requestId: jM,
+              apiType: PS
             })
-          })), Fq.apply(this, arguments)
+          })), QS.apply(this, arguments)
         }
       }({
-        onRequestStart: QQ,
-        onRequestEnd: WQ
-      }), Jq = !0), sq
+        onRequestStart: MM,
+        onRequestEnd: rM
+      }), mS = !0), nS
     }
-    let Iq, jq = !1;
-    let Bq = function(QQ) {
-      return QQ[QQ.Started = 0] = "Started", QQ[QQ.Halted = 1] = "Halted", QQ[QQ.Cancelled = 2] = "Cancelled", QQ[QQ.Ended = 3] = "Ended", QQ
+    let hS, JS = !1;
+    let dS = function(MM) {
+      return MM[MM.Started = 0] = "Started", MM[MM.Halted = 1] = "Halted", MM[MM.Cancelled = 2] = "Cancelled", MM[MM.Ended = 3] = "Ended", MM
     }({});
-    var yq = class {
-      constructor(QQ, WQ) {
-        let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
-        this.userAction = QQ, this.logDebug = WQ, this.initialActivityTimeout = XQ, this.http = rq(), this.dom = qq(), this.perf = (gq || (gq = new DX), jq || (Iq = Yw.subscribe((QQ => {
-          "resource" === QQ.type && gq.notify({
+    var yS = class {
+      constructor(MM, rM) {
+        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
+        this.userAction = MM, this.logDebug = rM, this.initialActivityTimeout = iM, this.http = HS(), this.dom = jS(), this.perf = (LS || (LS = new Ei), JS || (hS = IO.subscribe((MM => {
+          "resource" === MM.type && LS.notify({
             type: "resource-entry"
           })
-        })), jq = !0), gq), this.isValid = !1, this.runningRequests = new Map
+        })), JS = !0), LS), this.isValid = !1, this.runningRequests = new Map
       }
       attach() {
-        this.allMonitorsSub = (new DX).merge(this.http, this.dom, this.perf).takeWhile((() => [Bq.Started, Bq.Halted].includes(this.userAction.getState()))).filter((QQ => !!(this.userAction.getState() !== Bq.Halted || Wq(QQ) && this.runningRequests.has(QQ.request.requestId)))).subscribe((QQ => {
-          (function(QQ) {
-            return QQ.type === yX
-          })(QQ) && this.runningRequests.set(QQ.request.requestId, QQ.request), Wq(QQ) && this.runningRequests.delete(QQ.request.requestId), Wq(QQ) ? this.userAction.getState() === Bq.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
-        })), this.stateSub = this.userAction.filter((QQ => [Bq.Ended, Bq.Cancelled].includes(QQ))).first().subscribe((() => this.cleanup())), this.startupTid = Qq(this.startupTid, (() => {
+        this.allMonitorsSub = (new Ei).merge(this.http, this.dom, this.perf).takeWhile((() => [dS.Started, dS.Halted].includes(this.userAction.getState()))).filter((MM => !!(this.userAction.getState() !== dS.Halted || iS(MM) && this.runningRequests.has(MM.request.requestId)))).subscribe((MM => {
+          (function(MM) {
+            return MM.type === yi
+          })(MM) && this.runningRequests.set(MM.request.requestId, MM.request), iS(MM) && this.runningRequests.delete(MM.request.requestId), iS(MM) ? this.userAction.getState() === dS.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
+        })), this.stateSub = this.userAction.filter((MM => [dS.Ended, dS.Cancelled].includes(MM))).first().subscribe((() => this.cleanup())), this.startupTid = rS(this.startupTid, (() => {
           this.logDebug("User action not sent; no DOM, resource, or HTTP activity:", this.userAction.name), this.cancelAction()
         }), this.initialActivityTimeout)
       }
       scheduleFollowUp() {
         this.clearTimer(this.followUpTid), this.followUpTid = window.setTimeout((() => {
-          this.userAction.getState() === Bq.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
+          this.userAction.getState() === dS.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
         }), 100)
       }
       haltAction() {
-        this.userAction.getState() === Bq.Started && (this.userAction.halt(), this.startHaltTimeout())
+        this.userAction.getState() === dS.Started && (this.userAction.halt(), this.startHaltTimeout())
       }
       startHaltTimeout() {
-        this.clearTimer(this.haltTid), this.haltTid = Qq(this.haltTid, (() => {
-          this.userAction.getState() === Bq.Halted && this.endAction()
+        this.clearTimer(this.haltTid), this.haltTid = rS(this.haltTid, (() => {
+          this.userAction.getState() === dS.Halted && this.endAction()
         }), 1e4)
       }
       endAction() {
@@ -2614,183 +2614,183 @@ export const modules = {
         this.userAction.cancel(), this.cleanup()
       }
       cleanup() {
-        var QQ, WQ;
-        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (QQ = this.allMonitorsSub) || void 0 === QQ || QQ.unsubscribe(), null === (WQ = this.stateSub) || void 0 === WQ || WQ.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
+        var MM, rM;
+        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (MM = this.allMonitorsSub) || void 0 === MM || MM.unsubscribe(), null === (rM = this.stateSub) || void 0 === rM || rM.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
       }
-      clearTimer(QQ) {
-        void 0 !== QQ && window.clearTimeout(QQ)
+      clearTimer(MM) {
+        void 0 !== MM && window.clearTimeout(MM)
       }
     };
 
-    function Vq(QQ) {
-      let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eW;
-      var XQ;
+    function lS(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vr;
+      var iM;
       const {
-        api: wQ,
-        config: qQ,
-        internalLogger: TQ
-      } = QQ, zQ = Mw(null === (XQ = qQ.userActionsInstrumentation) || void 0 === XQ ? void 0 : XQ.initialActivityTimeout, 100, WQ);
+        api: OM,
+        config: SM,
+        internalLogger: jM
+      } = MM, aM = MS(null === (iM = SM.userActionsInstrumentation) || void 0 === iM ? void 0 : iM.initialActivityTimeout, 100, rM);
       return {
-        processUserEvent: function(QQ) {
-          var WQ, XQ;
-          const TQ = null !== (WQ = null === (XQ = qQ.userActionsInstrumentation) || void 0 === XQ ? void 0 : XQ.dataAttributeName) && void 0 !== WQ ? WQ : Zw,
-            zQ = QQ.target;
-          if (!(zQ instanceof Element)) return;
-          const sQ = function(QQ, WQ) {
-              let XQ = QQ;
-              for (; XQ;) {
-                if (XQ.hasAttribute(WQ)) return XQ;
-                XQ = XQ.parentElement
+        processUserEvent: function(MM) {
+          var rM, iM;
+          const jM = null !== (rM = null === (iM = SM.userActionsInstrumentation) || void 0 === iM ? void 0 : iM.dataAttributeName) && void 0 !== rM ? rM : qO,
+            aM = MM.target;
+          if (!(aM instanceof Element)) return;
+          const PM = function(MM, rM) {
+              let iM = MM;
+              for (; iM;) {
+                if (iM.hasAttribute(rM)) return iM;
+                iM = iM.parentElement
               }
               return null
-            }(zQ, mw(TQ)),
-            FQ = function(QQ, WQ) {
-              if (!QQ) return;
-              const XQ = function(QQ) {
-                  return mw(QQ).slice(5).replace(/-(.)/g, ((QQ, WQ) => WQ.toUpperCase()))
-                }(WQ),
-                wQ = QQ.dataset;
-              for (const qQ in wQ)
-                if (qQ === XQ) return wQ[qQ]
-            }(sQ, TQ);
-          if (!sQ || !FQ) return;
-          const PQ = function(QQ, WQ) {
-            const XQ = QQ.getAttribute(function(QQ) {
-              const WQ = mw(QQ);
-              return WQ.endsWith("-name") ? `${WQ.slice(0,-5)}-timeout` : `${WQ}-timeout`
-            }(WQ));
-            return null === XQ ? void 0 : Number(XQ)
-          }(sQ, TQ);
-          wQ.startUserAction(FQ, {}, {
-            triggerName: QQ.type,
-            initialActivityTimeout: PQ
+            }(aM, cO(jM)),
+            nM = function(MM, rM) {
+              if (!MM) return;
+              const iM = function(MM) {
+                  return cO(MM).slice(5).replace(/-(.)/g, ((MM, rM) => rM.toUpperCase()))
+                }(rM),
+                OM = MM.dataset;
+              for (const SM in OM)
+                if (SM === iM) return OM[SM]
+            }(PM, jM);
+          if (!PM || !nM) return;
+          const QM = function(MM, rM) {
+            const iM = MM.getAttribute(function(MM) {
+              const rM = cO(MM);
+              return rM.endsWith("-name") ? `${rM.slice(0,-5)}-timeout` : `${rM}-timeout`
+            }(rM));
+            return null === iM ? void 0 : Number(iM)
+          }(PM, jM);
+          OM.startUserAction(nM, {}, {
+            triggerName: MM.type,
+            initialActivityTimeout: QM
           })
         },
-        processUserActionStarted: function(QQ, XQ) {
-          const wQ = QQ,
-            qQ = Mw(XQ, zQ, WQ);
-          new yq(wQ, TQ.debug, qQ).attach()
+        processUserActionStarted: function(MM, iM) {
+          const OM = MM,
+            SM = MS(iM, aM, rM);
+          new yS(OM, jM.debug, SM).attach()
         }
       }
     }
-    const Dq = "user_action_start",
-      pq = {
+    const ES = "user_action_start",
+      US = {
         Normal: "normal",
         Critical: "critical"
       };
-    var Gq = class {
+    var GS = class {
         constructor() {
           this.buffer = []
         }
-        addItem(QQ) {
-          this.buffer.push(QQ)
+        addItem(MM) {
+          this.buffer.push(MM)
         }
-        flushBuffer(QQ) {
-          if (hQ(QQ))
-            for (const WQ of this.buffer) QQ(WQ);
+        flushBuffer(MM) {
+          if (uM(MM))
+            for (const rM of this.buffer) MM(rM);
           this.buffer.length = 0
         }
         size() {
           return this.buffer.length
         }
       },
-      Uq = class extends DX {
-        constructor(QQ) {
+      CS = class extends Ei {
+        constructor(MM) {
           let {
-            name: WQ,
-            parentId: XQ,
-            trigger: wQ,
-            transports: qQ,
-            attributes: TQ,
-            trackUserActionsExcludeItem: zQ,
-            importance: sQ = pq.Normal,
-            pushEvent: FQ
-          } = QQ;
-          super(), this.name = WQ, this.attributes = TQ, this.id = VW(), this.trigger = wQ, this.parentId = null !== XQ && void 0 !== XQ ? XQ : this.id, this.trackUserActionsExcludeItem = zQ, this.importance = sQ, this._pushEvent = FQ, this._itemBuffer = new Gq, this._transports = qQ, this._state = 0, this._start()
+            name: rM,
+            parentId: iM,
+            trigger: OM,
+            transports: SM,
+            attributes: jM,
+            trackUserActionsExcludeItem: aM,
+            importance: PM = US.Normal,
+            pushEvent: nM
+          } = MM;
+          super(), this.name = rM, this.attributes = jM, this.id = yr(), this.trigger = OM, this.parentId = null !== iM && void 0 !== iM ? iM : this.id, this.trackUserActionsExcludeItem = aM, this.importance = PM, this._pushEvent = nM, this._itemBuffer = new GS, this._transports = SM, this._state = 0, this._start()
         }
-        addItem(QQ) {
-          return 0 === this._state && (this._itemBuffer.addItem(QQ), !0)
+        addItem(MM) {
+          return 0 === this._state && (this._itemBuffer.addItem(MM), !0)
         }
         _start() {
-          this._state = 0, 0 === this._state && (this.startTime = rW(), this._startTimeMono = IW())
+          this._state = 0, 0 === this._state && (this.startTime = mr(), this._startTimeMono = Hr())
         }
         halt() {
           0 === this._state && (this._state = 1, this.notify(this._state))
         }
         cancel() {
-          0 === this._state && this._itemBuffer.flushBuffer((QQ => {
-            this._transports.execute(QQ)
+          0 === this._state && this._itemBuffer.flushBuffer((MM => {
+            this._transports.execute(MM)
           })), this._state = 2, this.notify(this._state)
         }
         end() {
           if (2 === this._state) return;
-          const QQ = rW(),
-            WQ = IW() - this._startTimeMono;
-          this._state = 3, this._itemBuffer.flushBuffer((QQ => {
-            if (function(QQ, WQ) {
-                return (null === WQ || void 0 === WQ ? void 0 : WQ(QQ)) || "measurement" === QQ.type && "web-vitals" === QQ.payload.type
-              }(QQ, this.trackUserActionsExcludeItem)) return void this._transports.execute(QQ);
-            const WQ = mW(mW({}, QQ), {}, {
-              payload: mW(mW({}, QQ.payload), {}, {
+          const MM = mr(),
+            rM = Hr() - this._startTimeMono;
+          this._state = 3, this._itemBuffer.flushBuffer((MM => {
+            if (function(MM, rM) {
+                return (null === rM || void 0 === rM ? void 0 : rM(MM)) || "measurement" === MM.type && "web-vitals" === MM.payload.type
+              }(MM, this.trackUserActionsExcludeItem)) return void this._transports.execute(MM);
+            const rM = Vr(Vr({}, MM), {}, {
+              payload: Vr(Vr({}, MM.payload), {}, {
                 action: {
                   parentId: this.id,
                   name: this.name
                 }
               })
             });
-            this._transports.execute(WQ)
-          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", mW({
+            this._transports.execute(rM)
+          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", Vr({
             userActionName: this.name,
             userActionStartTime: this.startTime.toString(),
-            userActionEndTime: QQ.toString(),
-            userActionDuration: WQ.toString(),
+            userActionEndTime: MM.toString(),
+            userActionDuration: rM.toString(),
             userActionTrigger: this.trigger,
             userActionImportance: this.importance
-          }, uW(this.attributes)), void 0, {
+          }, Zr(this.attributes)), void 0, {
             timestampOverwriteMs: this.startTime,
-            customPayloadTransformer: QQ => (QQ.action = {
+            customPayloadTransformer: MM => (MM.action = {
               id: this.id,
               name: this.name
-            }, QQ)
+            }, MM)
           })
         }
         getState() {
           return this._state
         }
       };
-    const bq = new DX;
+    const eS = new Ei;
 
-    function vq(QQ, WQ) {
-      return !!QQ && (0 === (null === QQ || void 0 === QQ ? void 0 : QQ.getState()) && (QQ.addItem(WQ), !0))
+    function bS(MM, rM) {
+      return !!MM && (0 === (null === MM || void 0 === MM ? void 0 : MM.getState()) && (MM.addItem(rM), !0))
     }
-    var dq = class extends WX {
+    var wS = class extends ri {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = XX
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = ii
         }
         initialize() {
           const {
-            processUserEvent: QQ,
-            processUserActionStarted: WQ
-          } = Vq(BQ, (QQ => this.logWarn(QQ)));
-          this._processUserEvent = QQ, this._processKeydown = WQ => {
-            [" ", "Enter"].includes(WQ.key) && QQ(WQ)
-          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = bq.subscribe((QQ => {
+            processUserEvent: MM,
+            processUserActionStarted: rM
+          } = lS(JM, (MM => this.logWarn(MM)));
+          this._processUserEvent = MM, this._processKeydown = rM => {
+            [" ", "Enter"].includes(rM.key) && MM(rM)
+          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = eS.subscribe((MM => {
             let {
-              type: XQ,
-              userAction: wQ,
-              initialActivityTimeout: qQ
-            } = QQ;
-            "user_action_start" === XQ && WQ(wQ, qQ)
+              type: iM,
+              userAction: OM,
+              initialActivityTimeout: SM
+            } = MM;
+            "user_action_start" === iM && rM(OM, SM)
           }))
         }
         destroy() {
-          var QQ;
-          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (QQ = this._userActionSub) || void 0 === QQ || QQ.unsubscribe()
+          var MM;
+          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (MM = this._userActionSub) || void 0 === MM || MM.unsubscribe()
         }
       },
-      Hq = class extends WX {
+      tS = class extends ri {
         constructor() {
-          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = XX, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
+          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = ii, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
         }
         initialize() {
           document.addEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
@@ -2798,239 +2798,239 @@ export const modules = {
         destroy() {
           document.removeEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
         }
-        securitypolicyviolationHandler(QQ) {
-          const WQ = {
-            blockedURI: QQ.blockedURI,
-            columnNumber: QQ.columnNumber,
-            disposition: QQ.disposition,
-            documentURI: QQ.documentURI,
-            effectiveDirective: QQ.effectiveDirective,
-            lineNumber: QQ.lineNumber,
-            originalPolicy: QQ.originalPolicy,
-            referrer: QQ.referrer,
-            sample: QQ.sample,
-            sourceFile: QQ.sourceFile,
-            statusCode: QQ.statusCode,
-            violatedDirective: QQ.violatedDirective
+        securitypolicyviolationHandler(MM) {
+          const rM = {
+            blockedURI: MM.blockedURI,
+            columnNumber: MM.columnNumber,
+            disposition: MM.disposition,
+            documentURI: MM.documentURI,
+            effectiveDirective: MM.effectiveDirective,
+            lineNumber: MM.lineNumber,
+            originalPolicy: MM.originalPolicy,
+            referrer: MM.referrer,
+            sample: MM.sample,
+            sourceFile: MM.sourceFile,
+            statusCode: MM.statusCode,
+            violatedDirective: MM.violatedDirective
           };
-          this.api.pushEvent("securitypolicyviolation", uW(WQ))
+          this.api.pushEvent("securitypolicyviolation", Zr(rM))
         }
       };
-    var aq = class extends DX {
-      constructor(QQ, WQ) {
-        var XQ, wQ, qQ, TQ;
-        super(), this._tracking = !1, this.eventsObservable = QQ, this._options = {
-          inactivityMs: null !== (XQ = null === WQ || void 0 === WQ ? void 0 : WQ.inactivityMs) && void 0 !== XQ ? XQ : 100,
-          drainTimeoutMs: null !== (wQ = null === WQ || void 0 === WQ ? void 0 : WQ.drainTimeoutMs) && void 0 !== wQ ? wQ : 1e4,
-          isOperationStart: null !== (qQ = null === WQ || void 0 === WQ ? void 0 : WQ.isOperationStart) && void 0 !== qQ ? qQ : () => {},
-          isOperationEnd: null !== (TQ = null === WQ || void 0 === WQ ? void 0 : WQ.isOperationEnd) && void 0 !== TQ ? TQ : () => {}
+    var gS = class extends Ei {
+      constructor(MM, rM) {
+        var iM, OM, SM, jM;
+        super(), this._tracking = !1, this.eventsObservable = MM, this._options = {
+          inactivityMs: null !== (iM = null === rM || void 0 === rM ? void 0 : rM.inactivityMs) && void 0 !== iM ? iM : 100,
+          drainTimeoutMs: null !== (OM = null === rM || void 0 === rM ? void 0 : rM.drainTimeoutMs) && void 0 !== OM ? OM : 1e4,
+          isOperationStart: null !== (SM = null === rM || void 0 === rM ? void 0 : rM.isOperationStart) && void 0 !== SM ? SM : () => {},
+          isOperationEnd: null !== (jM = null === rM || void 0 === rM ? void 0 : rM.isOperationEnd) && void 0 !== jM ? jM : () => {}
         }, this._initialize()
       }
       _initialize() {
-        this.eventsObservable.filter((() => this._tracking)).subscribe((QQ => {
-          var WQ;
-          this._lastEventTime = IW(), null === (WQ = this._currentEvents) || void 0 === WQ || WQ.push(QQ);
-          const XQ = this._options.isOperationStart(QQ);
-          var wQ;
-          XQ && (null === (wQ = this._activeOperations) || void 0 === wQ || wQ.set(XQ, !0));
-          const qQ = this._options.isOperationEnd(QQ);
-          var TQ;
-          qQ && (null === (TQ = this._activeOperations) || void 0 === TQ || TQ.delete(qQ));
+        this.eventsObservable.filter((() => this._tracking)).subscribe((MM => {
+          var rM;
+          this._lastEventTime = Hr(), null === (rM = this._currentEvents) || void 0 === rM || rM.push(MM);
+          const iM = this._options.isOperationStart(MM);
+          var OM;
+          iM && (null === (OM = this._activeOperations) || void 0 === OM || OM.set(iM, !0));
+          const SM = this._options.isOperationEnd(MM);
+          var jM;
+          SM && (null === (jM = this._activeOperations) || void 0 === jM || jM.delete(SM));
           this._scheduleInactivityCheck()
         }))
       }
       startTracking() {
-        this._tracking || (this._tracking = !0, this._startTime = IW(), this._lastEventTime = this._startTime, this.notify({
+        this._tracking || (this._tracking = !0, this._startTime = Hr(), this._lastEventTime = this._startTime, this.notify({
           message: "tracking-started"
         }), this._currentEvents = [], this._activeOperations = new Map, this._scheduleInactivityCheck())
       }
       stopTracking() {
-        let QQ;
-        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), QQ = this.hasActiveOperations() ? IW() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
+        let MM;
+        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), MM = this.hasActiveOperations() ? Hr() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
           message: "tracking-ended",
           events: this._currentEvents,
-          duration: QQ
+          duration: MM
         })
       }
       _scheduleInactivityCheck() {
-        this._inactivityTid = lq(this._inactivityTid, (() => {
+        this._inactivityTid = uS(this._inactivityTid, (() => {
           this.hasActiveOperations() ? this._startDrainTimeout() : this.stopTracking()
         }), this._options.inactivityMs)
       }
       _startDrainTimeout() {
-        this._drainTid = lq(this._drainTid, (() => {
+        this._drainTid = uS(this._drainTid, (() => {
           this.stopTracking()
         }), this._options.drainTimeoutMs)
       }
       hasActiveOperations() {
         return !!this._activeOperations && this._activeOperations.size > 0
       }
-      _clearTimer(QQ) {
-        QQ && clearTimeout(QQ)
+      _clearTimer(MM) {
+        MM && clearTimeout(MM)
       }
     };
 
-    function lq(QQ, WQ, XQ) {
-      return QQ && clearTimeout(QQ), QQ = setTimeout((() => {
-        WQ()
-      }), XQ)
+    function uS(MM, rM, iM) {
+      return MM && clearTimeout(MM), MM = setTimeout((() => {
+        rM()
+      }), iM)
     }
-    let hq;
-    const iq = new Set,
-      cq = new Map;
-    let Aq, Rq, Eq, Cq, uq, Lq, kq, fq, Sq = !1;
-    var tq = class extends WX {
+    let RS;
+    const pS = new Set,
+      WS = new Map;
+    let sS, DS, kS, ZS, oS, fS, YS, NS, AS = !1;
+    var xS = class extends ri {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = XX
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = ii
       }
       initialize() {
-        const QQ = rq(),
-          WQ = qq(),
-          XQ = function() {
-            function QQ(QQ, WQ) {
-              const XQ = null !== WQ && void 0 !== WQ ? WQ : location.href;
-              XQ !== Rq && (Aq.notify({
+        const MM = HS(),
+          rM = jS(),
+          iM = function() {
+            function MM(MM, rM) {
+              const iM = null !== rM && void 0 !== rM ? rM : location.href;
+              iM !== DS && (sS.notify({
                 type: "url-change",
-                from: Rq,
-                to: XQ,
-                trigger: QQ
-              }), Rq = XQ)
+                from: DS,
+                to: iM,
+                trigger: MM
+              }), DS = iM)
             }
-            if (Aq || (Aq = new DX, Rq = location.href), !Sq)
+            if (sS || (sS = new Ei, DS = location.href), !AS)
               if ("navigation" in window && "NavigateEvent" in window) {
-                kq = WQ => {
+                YS = rM => {
                   try {
-                    const XQ = null === WQ || void 0 === WQ ? void 0 : WQ.destination;
-                    (null === XQ || void 0 === XQ ? void 0 : XQ.sameDocument) && "string" === typeof XQ.url && QQ("navigate", XQ.url)
-                  } catch (XQ) {}
-                }, window.navigation.addEventListener("navigate", kq);
-                const WQ = window.NavigateEvent;
-                WQ && WQ.prototype && "function" === typeof WQ.prototype.intercept && (fq || (fq = WQ.prototype.intercept), WQ.prototype.intercept = function(WQ) {
+                    const iM = null === rM || void 0 === rM ? void 0 : rM.destination;
+                    (null === iM || void 0 === iM ? void 0 : iM.sameDocument) && "string" === typeof iM.url && MM("navigate", iM.url)
+                  } catch (iM) {}
+                }, window.navigation.addEventListener("navigate", YS);
+                const rM = window.NavigateEvent;
+                rM && rM.prototype && "function" === typeof rM.prototype.intercept && (NS || (NS = rM.prototype.intercept), rM.prototype.intercept = function(rM) {
                   try {
-                    const WQ = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
-                      XQ = null === this || void 0 === this ? void 0 : this.destination;
-                    WQ && XQ && !1 === XQ.sameDocument && "string" === typeof XQ.url && QQ("navigate-intercept", XQ.url)
-                  } catch (XQ) {}
-                  return fq.call(this, WQ)
-                }), Sq = !0
-              } else Eq || (Eq = window.history.pushState), window.history.pushState = function() {
-                for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
-                const qQ = Eq.apply(window.history, XQ);
-                return QQ("pushState"), qQ
-              }, Cq || (Cq = window.history.replaceState), window.history.replaceState = function() {
-                for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
-                const qQ = Cq.apply(window.history, XQ);
-                return QQ("replaceState"), qQ
-              }, uq = () => QQ("popstate"), Lq = () => QQ("hashchange"), window.addEventListener("popstate", uq), window.addEventListener("hashchange", Lq), Sq = !0;
-            return Aq
+                    const rM = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
+                      iM = null === this || void 0 === this ? void 0 : this.destination;
+                    rM && iM && !1 === iM.sameDocument && "string" === typeof iM.url && MM("navigate-intercept", iM.url)
+                  } catch (iM) {}
+                  return NS.call(this, rM)
+                }), AS = !0
+              } else kS || (kS = window.history.pushState), window.history.pushState = function() {
+                for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
+                const SM = kS.apply(window.history, iM);
+                return MM("pushState"), SM
+              }, ZS || (ZS = window.history.replaceState), window.history.replaceState = function() {
+                for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
+                const SM = ZS.apply(window.history, iM);
+                return MM("replaceState"), SM
+              }, oS = () => MM("popstate"), fS = () => MM("hashchange"), window.addEventListener("popstate", oS), window.addEventListener("hashchange", fS), AS = !0;
+            return sS
           }(),
-          wQ = (qQ = ["pointerdown", "keydown"], hq || (hq = new DX), qQ.forEach((QQ => {
-            if (!iq.has(QQ)) {
-              const WQ = () => {
-                hq.notify({
+          OM = (SM = ["pointerdown", "keydown"], RS || (RS = new Ei), SM.forEach((MM => {
+            if (!pS.has(MM)) {
+              const rM = () => {
+                RS.notify({
                   type: "interaction",
-                  name: QQ
+                  name: MM
                 })
               };
-              window.addEventListener(QQ, WQ), iq.add(QQ), cq.set(QQ, WQ)
+              window.addEventListener(MM, rM), pS.add(MM), WS.set(MM, rM)
             }
-          })), hq);
-        var qQ;
-        const TQ = new aq((new DX).merge(QQ, WQ, XQ), {
+          })), RS);
+        var SM;
+        const jM = new gS((new Ei).merge(MM, rM, iM), {
           inactivityMs: 100,
           drainTimeoutMs: 1e4,
-          isOperationStart: QQ => function(QQ) {
-            return QQ.type === yX
-          }(QQ) ? QQ.request.requestId : void 0,
-          isOperationEnd: QQ => function(QQ) {
-            return QQ.type === VX
-          }(QQ) ? QQ.request.requestId : void 0
+          isOperationStart: MM => function(MM) {
+            return MM.type === yi
+          }(MM) ? MM.request.requestId : void 0,
+          isOperationEnd: MM => function(MM) {
+            return MM.type === li
+          }(MM) ? MM.request.requestId : void 0
         });
-        TQ.filter((QQ => "tracking-ended" === QQ.message)).subscribe((QQ => {
-          var WQ, XQ;
-          if ((null === (WQ = QQ.events) || void 0 === WQ ? void 0 : WQ.some((QQ => "url-change" === QQ.type))) && (null === (XQ = QQ.events) || void 0 === XQ ? void 0 : XQ.some((QQ => "dom-mutation" === QQ.type)))) {
-            var wQ;
-            const WQ = null === (wQ = QQ.events) || void 0 === wQ ? void 0 : wQ.find((QQ => "url-change" === QQ.type));
-            BQ.api.pushEvent("faro.navigation", {
-              fromUrl: null === WQ || void 0 === WQ ? void 0 : WQ.from,
-              toUrl: null === WQ || void 0 === WQ ? void 0 : WQ.to,
+        jM.filter((MM => "tracking-ended" === MM.message)).subscribe((MM => {
+          var rM, iM;
+          if ((null === (rM = MM.events) || void 0 === rM ? void 0 : rM.some((MM => "url-change" === MM.type))) && (null === (iM = MM.events) || void 0 === iM ? void 0 : iM.some((MM => "dom-mutation" === MM.type)))) {
+            var OM;
+            const rM = null === (OM = MM.events) || void 0 === OM ? void 0 : OM.find((MM => "url-change" === MM.type));
+            JM.api.pushEvent("faro.navigation", {
+              fromUrl: null === rM || void 0 === rM ? void 0 : rM.from,
+              toUrl: null === rM || void 0 === rM ? void 0 : rM.to,
               sameDocument: String(!0),
-              duration: QQ.duration
+              duration: MM.duration
             })
           }
-        })), wQ.subscribe((() => {
-          TQ.startTracking()
+        })), OM.subscribe((() => {
+          jM.startTracking()
         }))
       }
     };
 
-    function oq() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const WQ = [new dq, new EX, new Ew, new wX, new uX, new tq];
-      return !1 !== QQ.enablePerformanceInstrumentation && WQ.unshift(new Nw), !1 !== QQ.enableContentSecurityPolicyInstrumentation && WQ.push(new Hq), !1 !== QQ.captureConsole && WQ.push(new AX), WQ
+    function vS() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const rM = [new wS, new Zi, new kO, new Oi, new fi, new xS];
+      return !1 !== MM.enablePerformanceInstrumentation && rM.unshift(new KO), !1 !== MM.enableContentSecurityPolicyInstrumentation && rM.push(new tS), !1 !== MM.captureConsole && rM.push(new Di), rM
     }
-    var eq = XQ(7054);
-    let nq, xq;
+    var FS = iM(7161);
+    let BS, XS;
 
-    function Yq() {
-      const QQ = "undefined" !== typeof navigator ? navigator.userAgent : "";
-      return nq === QQ && xq || (xq = new eq.UAParser(QQ).getResult(), nq = QQ), xq
+    function IS() {
+      const MM = "undefined" !== typeof navigator ? navigator.userAgent : "";
+      return BS === MM && XS || (XS = new FS.UAParser(MM).getResult(), BS = MM), XS
     }
-    const Nq = () => {
+    const KS = () => {
         const {
-          browser: QQ,
-          os: WQ,
-          ua: XQ
-        } = Yq(), {
-          name: wQ,
-          version: qQ
-        } = QQ, {
-          name: TQ,
-          version: zQ
-        } = WQ, sQ = navigator.language, FQ = XQ.includes("Mobi"), PQ = function() {
-          if (!wQ || !qQ) return;
+          browser: MM,
+          os: rM,
+          ua: iM
+        } = IS(), {
+          name: OM,
+          version: SM
+        } = MM, {
+          name: jM,
+          version: aM
+        } = rM, PM = navigator.language, nM = iM.includes("Mobi"), QM = function() {
+          if (!OM || !SM) return;
           if ("userAgentData" in navigator && navigator.userAgentData) return navigator.userAgentData.brands
         }();
         return {
           browser: {
-            name: null !== wQ && void 0 !== wQ ? wQ : CX,
-            version: null !== qQ && void 0 !== qQ ? qQ : CX,
-            os: `${null!==TQ&&void 0!==TQ?TQ:CX} ${null!==zQ&&void 0!==zQ?zQ:CX}`,
-            userAgent: null !== XQ && void 0 !== XQ ? XQ : CX,
-            language: null !== sQ && void 0 !== sQ ? sQ : CX,
-            mobile: FQ,
-            brands: null !== PQ && void 0 !== PQ ? PQ : CX,
+            name: null !== OM && void 0 !== OM ? OM : oi,
+            version: null !== SM && void 0 !== SM ? SM : oi,
+            os: `${null!==jM&&void 0!==jM?jM:oi} ${null!==aM&&void 0!==aM?aM:oi}`,
+            userAgent: null !== iM && void 0 !== iM ? iM : oi,
+            language: null !== PM && void 0 !== PM ? PM : oi,
+            mobile: nM,
+            brands: null !== QM && void 0 !== QM ? QM : oi,
             viewportWidth: `${window.innerWidth}`,
             viewportHeight: `${window.innerHeight}`
           }
         }
       },
-      Zq = () => {
+      qS = () => {
         const {
-          name: QQ,
-          version: WQ
-        } = Yq().os;
-        if (!QQ && !WQ) return {};
-        const XQ = {};
-        return QQ && (XQ.name = QQ), WQ && (XQ.version = WQ), {
-          os: XQ
+          name: MM,
+          version: rM
+        } = IS().os;
+        if (!MM && !rM) return {};
+        const iM = {};
+        return MM && (iM.name = MM), rM && (iM.version = rM), {
+          os: iM
         }
       };
 
-    function Oq(QQ) {
-      var WQ, XQ, wQ;
+    function TS(MM) {
+      var rM, iM, OM;
       return {
-        id: null !== (WQ = null === (XQ = BQ.config) || void 0 === XQ || null === (XQ = XQ.sessionTracking) || void 0 === XQ || null === (wQ = XQ.generateSessionId) || void 0 === wQ ? void 0 : wQ.call(XQ)) && void 0 !== WQ ? WQ : VW(),
-        attributes: QQ
+        id: null !== (rM = null === (iM = JM.config) || void 0 === iM || null === (iM = iM.sessionTracking) || void 0 === iM || null === (OM = iM.generateSessionId) || void 0 === OM ? void 0 : OM.call(iM)) && void 0 !== rM ? rM : yr(),
+        attributes: MM
       }
     }
-    const Kq = () => ({
+    const VS = () => ({
       sdk: {
         name: "faro-web",
-        version: XX
+        version: ii
       }
     });
-    var mq = class extends QX {
+    var cS = class extends Mi {
       isBatched() {
         return !1
       }
@@ -3038,10 +3038,10 @@ export const modules = {
         return []
       }
     };
-    let Mq = function(QQ) {
-      return QQ.EXCEPTION = "exception", QQ.LOG = "log", QQ.MEASUREMENT = "measurement", QQ.TRACE = "trace", QQ.EVENT = "event", QQ
+    let Mj = function(MM) {
+      return MM.EXCEPTION = "exception", MM.LOG = "log", MM.MEASUREMENT = "measurement", MM.TRACE = "trace", MM.EVENT = "event", MM
     }({});
-    const QT = {
+    const rj = {
       exception: "exceptions",
       log: "logs",
       measurement: "measurements",
@@ -3049,356 +3049,356 @@ export const modules = {
       event: "events"
     };
 
-    function WT(QQ, WQ) {
-      var XQ, wQ;
-      if (void 0 === WQ) return QQ;
-      if (void 0 === QQ) return {
-        resourceSpans: WQ
+    function ij(MM, rM) {
+      var iM, OM;
+      if (void 0 === rM) return MM;
+      if (void 0 === MM) return {
+        resourceSpans: rM
       };
-      const qQ = null === (XQ = QQ.resourceSpans) || void 0 === XQ ? void 0 : XQ[0];
-      if (void 0 === qQ) return QQ;
-      const TQ = (null === qQ || void 0 === qQ ? void 0 : qQ.scopeSpans) || [],
-        zQ = (null === WQ || void 0 === WQ || null === (wQ = WQ[0]) || void 0 === wQ ? void 0 : wQ.scopeSpans) || [];
-      return mW(mW({}, QQ), {}, {
-        resourceSpans: [mW(mW({}, qQ), {}, {
-          scopeSpans: [...TQ, ...zQ]
+      const SM = null === (iM = MM.resourceSpans) || void 0 === iM ? void 0 : iM[0];
+      if (void 0 === SM) return MM;
+      const jM = (null === SM || void 0 === SM ? void 0 : SM.scopeSpans) || [],
+        aM = (null === rM || void 0 === rM || null === (OM = rM[0]) || void 0 === OM ? void 0 : OM.scopeSpans) || [];
+      return Vr(Vr({}, MM), {}, {
+        resourceSpans: [Vr(Vr({}, SM), {}, {
+          scopeSpans: [...jM, ...aM]
         })]
       })
     }
 
-    function XT(QQ) {
-      let WQ = {
+    function Oj(MM) {
+      let rM = {
         meta: {}
       };
-      return void 0 !== QQ[0] && (WQ.meta = QQ[0].meta), QQ.forEach((QQ => {
-        switch (QQ.type) {
+      return void 0 !== MM[0] && (rM.meta = MM[0].meta), MM.forEach((MM => {
+        switch (MM.type) {
           case "log":
           case "event":
           case "exception":
           case "measurement": {
-            const XQ = QT[QQ.type],
-              wQ = WQ[XQ];
-            WQ = mW(mW({}, WQ), {}, {
-              [XQ]: void 0 === wQ ? [QQ.payload] : [...wQ, QQ.payload]
+            const iM = rj[MM.type],
+              OM = rM[iM];
+            rM = Vr(Vr({}, rM), {}, {
+              [iM]: void 0 === OM ? [MM.payload] : [...OM, MM.payload]
             });
             break
           }
           case "trace":
-            WQ = mW(mW({}, WQ), {}, {
-              traces: WT(WQ.traces, QQ.payload.resourceSpans)
+            rM = Vr(Vr({}, rM), {}, {
+              traces: ij(rM.traces, MM.payload.resourceSpans)
             })
         }
-      })), WQ
+      })), rM
     }
-    var wT = class extends mq {
+    var Sj = class extends cS {
       constructor() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        super(), this.options = QQ, this.name = "@grafana/faro-web-sdk:transport-console", this.version = XX
+        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        super(), this.options = MM, this.name = "@grafana/faro-web-sdk:transport-console", this.version = ii
       }
-      send(QQ) {
-        var WQ;
-        return this.unpatchedConsole[null !== (WQ = this.options.level) && void 0 !== WQ ? WQ : pX.DEBUG]("New event", XT([QQ]))
+      send(MM) {
+        var rM;
+        return this.unpatchedConsole[null !== (rM = this.options.level) && void 0 !== rM ? rM : Ui.DEBUG]("New event", Oj([MM]))
       }
     };
-    const qT = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      TT = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      zT = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
-      sT = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      FT = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      PT = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const jj = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      aj = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      Pj = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
+      nj = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      Qj = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      zj = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    function gT(QQ) {
+    function Lj(MM) {
       let {
-        weekday: WQ,
-        day: XQ,
-        month: wQ,
-        year: qQ,
-        hour: TQ,
-        minute: zQ,
-        second: sQ
-      } = QQ;
-      if (qQ < 1900 || XQ < 1 || TQ > 23 || zQ > 59 || sQ > 60) return;
-      const FQ = 60 === sQ,
-        PQ = new Date(0);
-      return PQ.setUTCFullYear(qQ, wQ, XQ), PQ.setUTCHours(TQ, zQ, FQ ? 59 : sQ, 0), PQ.getUTCDay() === WQ && PQ.getUTCDate() === XQ && PQ.getUTCMonth() === wQ && PQ.getUTCFullYear() === qQ && PQ.getUTCHours() === TQ && PQ.getUTCMinutes() === zQ && PQ.getUTCSeconds() === (FQ ? 59 : sQ) ? PQ.getTime() + (FQ ? 1e3 : 0) : void 0
+        weekday: rM,
+        day: iM,
+        month: OM,
+        year: SM,
+        hour: jM,
+        minute: aM,
+        second: PM
+      } = MM;
+      if (SM < 1900 || iM < 1 || jM > 23 || aM > 59 || PM > 60) return;
+      const nM = 60 === PM,
+        QM = new Date(0);
+      return QM.setUTCFullYear(SM, OM, iM), QM.setUTCHours(jM, aM, nM ? 59 : PM, 0), QM.getUTCDay() === rM && QM.getUTCDate() === iM && QM.getUTCMonth() === OM && QM.getUTCFullYear() === SM && QM.getUTCHours() === jM && QM.getUTCMinutes() === aM && QM.getUTCSeconds() === (nM ? 59 : PM) ? QM.getTime() + (nM ? 1e3 : 0) : void 0
     }
-    var JT = class {
-      constructor(QQ) {
-        this.options = QQ, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
+    var mj = class {
+      constructor(MM) {
+        this.options = MM, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
       }
       reserve() {
-        var QQ = this;
+        var MM = this;
         if (this.admitted >= this.options.bufferSize) return;
         this.admitted++;
-        const WQ = this.sequence++;
-        let XQ = !1;
+        const rM = this.sequence++;
+        let iM = !1;
         return {
           deliver: function() {
-            var XQ = xw((function*(XQ) {
-              const wQ = QQ.options.getNow();
-              let qQ, TQ = 0;
+            var iM = XO((function*(iM) {
+              const OM = MM.options.getNow();
+              let SM, jM = 0;
               for (;;) {
-                var zQ, sQ, FQ;
-                const PQ = QQ.options.retry.maxAttempts - TQ,
-                  gQ = yield QQ.runAttempt((() => XQ(PQ, QQ.unloading)), TQ > 0);
-                if (TQ += gQ.attemptsMade, "success" === gQ.kind) return {
+                var aM, PM, nM;
+                const QM = MM.options.retry.maxAttempts - jM,
+                  zM = yield MM.runAttempt((() => iM(QM, MM.unloading)), jM > 0);
+                if (jM += zM.attemptsMade, "success" === zM.kind) return {
                   kind: "success",
-                  attempts: TQ,
-                  elapsedTimeMs: QQ.options.getNow() - wQ
+                  attempts: jM,
+                  elapsedTimeMs: MM.options.getNow() - OM
                 };
-                if (qQ = gQ.failure, "terminal" === gQ.kind || QQ.unloading) return {
+                if (SM = zM.failure, "terminal" === zM.kind || MM.unloading) return {
                   kind: "terminal",
-                  attempts: TQ,
-                  elapsedTimeMs: QQ.options.getNow() - wQ,
-                  failure: qQ
+                  attempts: jM,
+                  elapsedTimeMs: MM.options.getNow() - OM,
+                  failure: SM
                 };
-                if (TQ >= QQ.options.retry.maxAttempts) return {
+                if (jM >= MM.options.retry.maxAttempts) return {
                   kind: "terminal",
-                  attempts: TQ,
-                  elapsedTimeMs: QQ.options.getNow() - wQ,
-                  failure: qQ,
+                  attempts: jM,
+                  elapsedTimeMs: MM.options.getNow() - OM,
+                  failure: SM,
                   reason: "retries-exhausted"
                 };
-                if (null != gQ.retryAfterMs && gQ.retryAfterMs > QQ.options.retry.maxBackoffMs) return {
+                if (null != zM.retryAfterMs && zM.retryAfterMs > MM.options.retry.maxBackoffMs) return {
                   kind: "terminal",
-                  attempts: TQ,
-                  elapsedTimeMs: QQ.options.getNow() - wQ,
-                  failure: qQ,
+                  attempts: jM,
+                  elapsedTimeMs: MM.options.getNow() - OM,
+                  failure: SM,
                   reason: "retry-after-too-long"
                 };
-                const JQ = Math.min(null !== (zQ = gQ.retryAfterMs) && void 0 !== zQ ? zQ : QQ.options.retry.initialBackoffMs * Math.pow(QQ.options.retry.backoffMultiplier, TQ - 1), QQ.options.retry.maxBackoffMs);
-                if (null === (sQ = (FQ = QQ.options).onRetry) || void 0 === sQ || sQ.call(FQ, JQ, TQ + 1), yield QQ.waitForTurn(WQ, JQ)) {
-                  const WQ = QQ.options.retry.maxAttempts - TQ,
-                    qQ = yield QQ.runAttempt((() => XQ(WQ, !0)));
-                  return TQ += qQ.attemptsMade, {
-                    kind: "success" === qQ.kind ? "success" : "terminal",
-                    attempts: TQ,
-                    elapsedTimeMs: QQ.options.getNow() - wQ,
-                    failure: "success" === qQ.kind ? void 0 : qQ.failure
+                const LM = Math.min(null !== (aM = zM.retryAfterMs) && void 0 !== aM ? aM : MM.options.retry.initialBackoffMs * Math.pow(MM.options.retry.backoffMultiplier, jM - 1), MM.options.retry.maxBackoffMs);
+                if (null === (PM = (nM = MM.options).onRetry) || void 0 === PM || PM.call(nM, LM, jM + 1), yield MM.waitForTurn(rM, LM)) {
+                  const rM = MM.options.retry.maxAttempts - jM,
+                    SM = yield MM.runAttempt((() => iM(rM, !0)));
+                  return jM += SM.attemptsMade, {
+                    kind: "success" === SM.kind ? "success" : "terminal",
+                    attempts: jM,
+                    elapsedTimeMs: MM.options.getNow() - OM,
+                    failure: "success" === SM.kind ? void 0 : SM.failure
                   }
                 }
               }
             }));
-            return function(QQ) {
-              return XQ.apply(this, arguments)
+            return function(MM) {
+              return iM.apply(this, arguments)
             }
           }(),
           release: () => {
-            XQ || (XQ = !0, this.admitted--)
+            iM || (iM = !0, this.admitted--)
           }
         }
       }
       flush() {
         this.unloading = !0, this.nextSendAt = 0;
-        const QQ = this.waiting.splice(0);
+        const MM = this.waiting.splice(0);
         null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0);
-        for (const WQ of QQ) WQ.resolve(!0);
+        for (const rM of MM) rM.resolve(!0);
         this.runNextAttempt()
       }
       resume() {
         this.unloading = !1
       }
-      runAttempt(QQ) {
-        let WQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return new Promise(((XQ, wQ) => {
+      runAttempt(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return new Promise(((iM, OM) => {
           this.attemptQueue.push({
             run: () => {
               this.inProgress++;
-              const WQ = () => {
+              const rM = () => {
                 this.inProgress--, this.runNextAttempt()
               };
-              QQ().then((QQ => {
-                WQ(), XQ(QQ)
-              }), (QQ => {
-                WQ(), wQ(QQ)
+              MM().then((MM => {
+                rM(), iM(MM)
+              }), (MM => {
+                rM(), OM(MM)
               }))
             },
-            isRedelivery: WQ
+            isRedelivery: rM
           }), this.runNextAttempt()
         }))
       }
       runNextAttempt() {
         for (null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0); this.inProgress < this.options.concurrency && this.attemptQueue.length > 0;) {
-          const QQ = this.options.getNow(),
-            WQ = this.attemptQueue.findIndex((WQ => {
+          const MM = this.options.getNow(),
+            rM = this.attemptQueue.findIndex((rM => {
               let {
-                isRedelivery: XQ
-              } = WQ;
-              return this.unloading || !XQ || QQ >= this.nextSendAt
+                isRedelivery: iM
+              } = rM;
+              return this.unloading || !iM || MM >= this.nextSendAt
             }));
-          if (WQ < 0) return void(this.redeliveryTimer = setTimeout((() => {
+          if (rM < 0) return void(this.redeliveryTimer = setTimeout((() => {
             this.redeliveryTimer = void 0, this.runNextAttempt()
-          }), Math.max(0, this.nextSendAt - QQ)));
-          const [XQ] = this.attemptQueue.splice(WQ, 1);
-          XQ.isRedelivery && !this.unloading && (this.nextSendAt = QQ + 1), XQ.run()
+          }), Math.max(0, this.nextSendAt - MM)));
+          const [iM] = this.attemptQueue.splice(rM, 1);
+          iM.isRedelivery && !this.unloading && (this.nextSendAt = MM + 1), iM.run()
         }
       }
-      waitForTurn(QQ, WQ) {
-        const XQ = Math.min(WQ * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
-        return new Promise((WQ => {
+      waitForTurn(MM, rM) {
+        const iM = Math.min(rM * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
+        return new Promise((rM => {
           this.waiting.push({
-            sequence: QQ,
-            readyAt: this.options.getNow() + XQ,
-            resolve: WQ
-          }), this.waiting.sort(((QQ, WQ) => QQ.readyAt === WQ.readyAt ? QQ.sequence - WQ.sequence : QQ.readyAt - WQ.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
+            sequence: MM,
+            readyAt: this.options.getNow() + iM,
+            resolve: rM
+          }), this.waiting.sort(((MM, rM) => MM.readyAt === rM.readyAt ? MM.sequence - rM.sequence : MM.readyAt - rM.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
         }))
       }
       scheduleNext() {
         if (null != this.waitingTimer || 0 === this.waiting.length) return;
-        const QQ = this.waiting[0],
-          WQ = QQ.readyAt;
+        const MM = this.waiting[0],
+          rM = MM.readyAt;
         this.waitingTimer = setTimeout((() => {
           this.waitingTimer = void 0;
-          const WQ = this.waiting.indexOf(QQ);
-          WQ >= 0 && this.waiting.splice(WQ, 1), QQ.resolve(!1), this.scheduleNext()
-        }), Math.max(0, WQ - this.options.getNow()))
+          const rM = this.waiting.indexOf(MM);
+          rM >= 0 && this.waiting.splice(rM, 1), MM.resolve(!1), this.scheduleNext()
+        }), Math.max(0, rM - this.options.getNow()))
       }
     };
 
-    function rT(QQ, WQ) {
-      if (null == QQ) return {};
-      var XQ, wQ, qQ = function(QQ, WQ) {
-        if (null == QQ) return {};
-        var XQ = {};
-        for (var wQ in QQ)
-          if ({}.hasOwnProperty.call(QQ, wQ)) {
-            if (WQ.includes(wQ)) continue;
-            XQ[wQ] = QQ[wQ]
-          } return XQ
-      }(QQ, WQ);
+    function Hj(MM, rM) {
+      if (null == MM) return {};
+      var iM, OM, SM = function(MM, rM) {
+        if (null == MM) return {};
+        var iM = {};
+        for (var OM in MM)
+          if ({}.hasOwnProperty.call(MM, OM)) {
+            if (rM.includes(OM)) continue;
+            iM[OM] = MM[OM]
+          } return iM
+      }(MM, rM);
       if (Object.getOwnPropertySymbols) {
-        var TQ = Object.getOwnPropertySymbols(QQ);
-        for (wQ = 0; wQ < TQ.length; wQ++) XQ = TQ[wQ], WQ.includes(XQ) || {}.propertyIsEnumerable.call(QQ, XQ) && (qQ[XQ] = QQ[XQ])
+        var jM = Object.getOwnPropertySymbols(MM);
+        for (OM = 0; OM < jM.length; OM++) iM = jM[OM], rM.includes(iM) || {}.propertyIsEnumerable.call(MM, iM) && (SM[iM] = MM[iM])
       }
-      return qQ
+      return SM
     }
 
-    function IT(QQ) {
+    function hj(MM) {
       const {
-        size: WQ,
-        concurrency: XQ
-      } = QQ, wQ = [];
-      let qQ = 0;
-      const TQ = () => {
-        if (qQ < XQ && wQ.length) {
+        size: rM,
+        concurrency: iM
+      } = MM, OM = [];
+      let SM = 0;
+      const jM = () => {
+        if (SM < iM && OM.length) {
           const {
-            producer: QQ,
-            resolve: WQ,
-            reject: XQ
-          } = wQ.shift();
-          qQ++, QQ().then((QQ => {
-            qQ--, TQ(), WQ(QQ)
-          }), (QQ => {
-            qQ--, TQ(), XQ(QQ)
+            producer: MM,
+            resolve: rM,
+            reject: iM
+          } = OM.shift();
+          SM++, MM().then((MM => {
+            SM--, jM(), rM(MM)
+          }), (MM => {
+            SM--, jM(), iM(MM)
           }))
         }
       };
       return {
-        add: QQ => {
-          if (wQ.length + qQ >= WQ) throw new Error("Task buffer full");
-          return new Promise(((WQ, XQ) => {
-            wQ.push({
-              producer: QQ,
-              resolve: WQ,
-              reject: XQ
-            }), TQ()
+        add: MM => {
+          if (OM.length + SM >= rM) throw new Error("Task buffer full");
+          return new Promise(((rM, iM) => {
+            OM.push({
+              producer: MM,
+              resolve: rM,
+              reject: iM
+            }), jM()
           }))
         }
       }
     }
-    const jT = ["headers"],
-      BT = ["keepalive", "signal"],
-      yT = new Set([408, 425, 429, 500, 502, 503, 504]),
-      VT = new Set([429, 503]);
-    let DT = 0,
-      pT = 0;
-    var GT = class extends Error {};
-    var UT = class extends mq {
-      constructor(QQ) {
-        var WQ, XQ, wQ, qQ, TQ, zQ, sQ, FQ, PQ, gQ, JQ, rQ, IQ, jQ, BQ, yQ, VQ;
-        super(), this.options = QQ, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = XX, this.pendingCustomSends = 0, this.getNow = null !== (WQ = QQ.getNow) && void 0 !== WQ ? WQ : Date.now, this.requestTimeoutMs = null !== (XQ = QQ.requestTimeoutMs) && void 0 !== XQ ? XQ : 1e4, this.compressionEnabled = null !== (wQ = QQ.requestCompression) && void 0 !== wQ && wQ && "undefined" !== typeof CompressionStream, QQ.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new JT({
-          bufferSize: null !== (qQ = QQ.bufferSize) && void 0 !== qQ ? qQ : 30,
-          concurrency: null !== (TQ = QQ.concurrency) && void 0 !== TQ ? TQ : 5,
+    const Jj = ["headers"],
+      dj = ["keepalive", "signal"],
+      yj = new Set([408, 425, 429, 500, 502, 503, 504]),
+      lj = new Set([429, 503]);
+    let Ej = 0,
+      Uj = 0;
+    var Gj = class extends Error {};
+    var Cj = class extends cS {
+      constructor(MM) {
+        var rM, iM, OM, SM, jM, aM, PM, nM, QM, zM, LM, mM, HM, hM, JM, dM, yM;
+        super(), this.options = MM, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = ii, this.pendingCustomSends = 0, this.getNow = null !== (rM = MM.getNow) && void 0 !== rM ? rM : Date.now, this.requestTimeoutMs = null !== (iM = MM.requestTimeoutMs) && void 0 !== iM ? iM : 1e4, this.compressionEnabled = null !== (OM = MM.requestCompression) && void 0 !== OM && OM && "undefined" !== typeof CompressionStream, MM.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new mj({
+          bufferSize: null !== (SM = MM.bufferSize) && void 0 !== SM ? SM : 30,
+          concurrency: null !== (jM = MM.concurrency) && void 0 !== jM ? jM : 5,
           retry: {
-            maxAttempts: null !== (zQ = null === (sQ = QQ.retry) || void 0 === sQ ? void 0 : sQ.maxAttempts) && void 0 !== zQ ? zQ : 3,
-            initialBackoffMs: null !== (FQ = null !== (PQ = null === (gQ = QQ.retry) || void 0 === gQ ? void 0 : gQ.initialBackoffMs) && void 0 !== PQ ? PQ : QQ.defaultRateLimitBackoffMs) && void 0 !== FQ ? FQ : 1e3,
-            maxBackoffMs: null !== (JQ = null === (rQ = QQ.retry) || void 0 === rQ ? void 0 : rQ.maxBackoffMs) && void 0 !== JQ ? JQ : 3e4,
-            backoffMultiplier: null !== (IQ = null === (jQ = QQ.retry) || void 0 === jQ ? void 0 : jQ.backoffMultiplier) && void 0 !== IQ ? IQ : 2
+            maxAttempts: null !== (aM = null === (PM = MM.retry) || void 0 === PM ? void 0 : PM.maxAttempts) && void 0 !== aM ? aM : 3,
+            initialBackoffMs: null !== (nM = null !== (QM = null === (zM = MM.retry) || void 0 === zM ? void 0 : zM.initialBackoffMs) && void 0 !== QM ? QM : MM.defaultRateLimitBackoffMs) && void 0 !== nM ? nM : 1e3,
+            maxBackoffMs: null !== (LM = null === (mM = MM.retry) || void 0 === mM ? void 0 : mM.maxBackoffMs) && void 0 !== LM ? LM : 3e4,
+            backoffMultiplier: null !== (HM = null === (hM = MM.retry) || void 0 === hM ? void 0 : hM.backoffMultiplier) && void 0 !== HM ? HM : 2
           },
           getNow: this.getNow,
-          getRandom: null !== (BQ = QQ.getRandom) && void 0 !== BQ ? BQ : Math.random,
-          onRetry: (QQ, WQ) => {
-            this.logDebug(`Retrying failed request after ${QQ}ms. Attempt ${WQ}.`)
+          getRandom: null !== (JM = MM.getRandom) && void 0 !== JM ? JM : Math.random,
+          onRetry: (MM, rM) => {
+            this.logDebug(`Retrying failed request after ${MM}ms. Attempt ${rM}.`)
           }
-        }), this.customPromiseBuffer = IT({
-          size: null !== (yQ = QQ.bufferSize) && void 0 !== yQ ? yQ : 30,
-          concurrency: null !== (VQ = QQ.concurrency) && void 0 !== VQ ? VQ : 5
+        }), this.customPromiseBuffer = hj({
+          size: null !== (dM = MM.bufferSize) && void 0 !== dM ? dM : 30,
+          concurrency: null !== (yM = MM.concurrency) && void 0 !== yM ? yM : 5
         }), this.defaultPromiseBuffer = {
-          add: QQ => {
-            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(QQ);
-            const WQ = this.deliveryQueue.reserve();
-            if (!WQ) throw new Error("Task buffer full");
-            return this.runBufferedTask(WQ, QQ)
+          add: MM => {
+            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(MM);
+            const rM = this.deliveryQueue.reserve();
+            if (!rM) throw new Error("Task buffer full");
+            return this.runBufferedTask(rM, MM)
           }
-        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (QQ => {
-          QQ.persisted && this.deliveryQueue.resume()
+        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (MM => {
+          MM.persisted && this.deliveryQueue.resume()
         })))
       }
-      send(QQ) {
-        var WQ = this;
-        return xw((function*() {
-          const XQ = WQ.promiseBuffer;
-          if (XQ !== WQ.defaultPromiseBuffer || XQ.add !== WQ.defaultBufferAdd) {
-            WQ.pendingCustomSends++;
+      send(MM) {
+        var rM = this;
+        return XO((function*() {
+          const iM = rM.promiseBuffer;
+          if (iM !== rM.defaultPromiseBuffer || iM.add !== rM.defaultBufferAdd) {
+            rM.pendingCustomSends++;
             try {
-              yield XQ.add((() => WQ.deliver(QQ)))
-            } catch (wQ) {
-              WQ.logError("Permanent delivery failure", {
-                error: wQ,
+              yield iM.add((() => rM.deliver(MM)))
+            } catch (OM) {
+              rM.logError("Permanent delivery failure", {
+                error: OM,
                 attempts: 0,
                 elapsedTimeMs: 0
               })
             } finally {
-              WQ.pendingCustomSends--
+              rM.pendingCustomSends--
             }
-          } else yield WQ.deliver(QQ)
+          } else yield rM.deliver(MM)
         }))()
       }
-      runBufferedTask(QQ, WQ) {
-        return xw((function*() {
-          let XQ;
+      runBufferedTask(MM, rM) {
+        return XO((function*() {
+          let iM;
           try {
-            return yield QQ.deliver(xw((function*() {
-              return XQ = yield WQ(), {
+            return yield MM.deliver(XO((function*() {
+              return iM = yield rM(), {
                 kind: "success",
                 attemptsMade: 1
               }
-            }))), XQ
+            }))), iM
           } finally {
-            QQ.release()
+            MM.release()
           }
         }))()
       }
-      deliver(QQ) {
-        var WQ = this;
-        return xw((function*() {
-          const XQ = WQ.deliveryQueue.reserve();
-          if (XQ) try {
-            const wQ = yield WQ.prepareRequest(QQ), qQ = yield XQ.deliver(((QQ, XQ) => WQ.performAttempt(wQ, QQ, XQ)));
-            "terminal" === qQ.kind && WQ.logError("retries-exhausted" === qQ.reason ? "Delivery retries exhausted" : "Permanent delivery failure", gW(gW({}, qQ.failure), {}, {
-              reason: qQ.reason,
-              attempts: qQ.attempts,
-              elapsedTimeMs: qQ.elapsedTimeMs
+      deliver(MM) {
+        var rM = this;
+        return XO((function*() {
+          const iM = rM.deliveryQueue.reserve();
+          if (iM) try {
+            const OM = yield rM.prepareRequest(MM), SM = yield iM.deliver(((MM, iM) => rM.performAttempt(OM, MM, iM)));
+            "terminal" === SM.kind && rM.logError("retries-exhausted" === SM.reason ? "Delivery retries exhausted" : "Permanent delivery failure", zr(zr({}, SM.failure), {}, {
+              reason: SM.reason,
+              attempts: SM.attempts,
+              elapsedTimeMs: SM.elapsedTimeMs
             }))
-          } catch (wQ) {
-            WQ.logError("Permanent delivery failure", {
-              error: wQ,
+          } catch (OM) {
+            rM.logError("Permanent delivery failure", {
+              error: OM,
               attempts: 0,
               elapsedTimeMs: 0
             })
           } finally {
-            XQ.release()
-          } else WQ.logError("Permanent delivery failure", {
+            iM.release()
+          } else rM.logError("Permanent delivery failure", {
             error: "Reliable delivery queue is full",
             attempts: 0,
             elapsedTimeMs: 0
@@ -3406,477 +3406,477 @@ export const modules = {
         }))()
       }
       getIgnoreUrls() {
-        var QQ;
-        return [this.options.url].concat(null !== (QQ = this.config.ignoreUrls) && void 0 !== QQ ? QQ : [])
+        var MM;
+        return [this.options.url].concat(null !== (MM = this.config.ignoreUrls) && void 0 !== MM ? MM : [])
       }
       isBatched() {
         return !0
       }
-      prepareRequest(QQ) {
-        var WQ = this;
-        return xw((function*() {
-          var XQ, wQ;
-          const qQ = XT(QQ),
-            TQ = null === (XQ = qQ.meta.session) || void 0 === XQ ? void 0 : XQ.id,
-            zQ = JSON.stringify(qQ),
-            sQ = null !== (wQ = WQ.options.requestOptions) && void 0 !== wQ ? wQ : {},
+      prepareRequest(MM) {
+        var rM = this;
+        return XO((function*() {
+          var iM, OM;
+          const SM = Oj(MM),
+            jM = null === (iM = SM.meta.session) || void 0 === iM ? void 0 : iM.id,
+            aM = JSON.stringify(SM),
+            PM = null !== (OM = rM.options.requestOptions) && void 0 !== OM ? OM : {},
             {
-              headers: FQ = {}
-            } = sQ,
-            PQ = rT(sQ, jT),
+              headers: nM = {}
+            } = PM,
+            QM = Hj(PM, Jj),
             {
-              keepalive: gQ,
-              signal: JQ
-            } = PQ,
-            rQ = rT(PQ, BT),
-            IQ = {};
-          for (const [QQ, WQ] of Object.entries(FQ)) IQ[QQ] = "function" === typeof WQ ? yield WQ(): WQ;
-          let jQ = zQ,
-            BQ = function(QQ) {
-              return "undefined" === typeof TextEncoder ? QQ.length : (new TextEncoder).encode(QQ).byteLength
-            }(zQ);
-          const yQ = {};
-          return WQ.compressionEnabled && (jQ = yield WQ.compress(zQ), BQ = jQ.size, yQ["Content-Encoding"] = "gzip"), {
-            bodySize: BQ,
-            sessionId: TQ,
-            requestInit: gW({
+              keepalive: zM,
+              signal: LM
+            } = QM,
+            mM = Hj(QM, dj),
+            HM = {};
+          for (const [MM, rM] of Object.entries(nM)) HM[MM] = "function" === typeof rM ? yield rM(): rM;
+          let hM = aM,
+            JM = function(MM) {
+              return "undefined" === typeof TextEncoder ? MM.length : (new TextEncoder).encode(MM).byteLength
+            }(aM);
+          const dM = {};
+          return rM.compressionEnabled && (hM = yield rM.compress(aM), JM = hM.size, dM["Content-Encoding"] = "gzip"), {
+            bodySize: JM,
+            sessionId: jM,
+            requestInit: zr({
               method: "POST",
-              headers: gW(gW(gW(gW(gW({
+              headers: zr(zr(zr(zr(zr({
                 "Content-Type": "application/json"
-              }, yQ), IQ), WQ.options.apiKey ? {
-                "x-api-key": WQ.options.apiKey
-              } : {}), TQ ? {
-                "x-faro-session-id": TQ
+              }, dM), HM), rM.options.apiKey ? {
+                "x-api-key": rM.options.apiKey
+              } : {}), jM ? {
+                "x-faro-session-id": jM
               } : {}), {}, {
-                "Idempotency-Key": VW(20)
+                "Idempotency-Key": yr(20)
               }),
-              body: jQ
-            }, rQ)
+              body: hM
+            }, mM)
           }
         }))()
       }
-      performAttempt(QQ, WQ, XQ) {
-        var wQ = this;
-        return xw((function*() {
-          var qQ;
-          const TQ = null === (qQ = wQ.options.requestOptions) || void 0 === qQ ? void 0 : qQ.signal;
-          if (null === TQ || void 0 === TQ ? void 0 : TQ.aborted) return {
+      performAttempt(MM, rM, iM) {
+        var OM = this;
+        return XO((function*() {
+          var SM;
+          const jM = null === (SM = OM.options.requestOptions) || void 0 === SM ? void 0 : SM.signal;
+          if (null === jM || void 0 === jM ? void 0 : jM.aborted) return {
             kind: "terminal",
             failure: {
-              error: TQ.reason
+              error: jM.reason
             },
             attemptsMade: 0
           };
-          let zQ = 0;
+          let aM = 0;
           try {
-            var sQ;
-            const qQ = yield wQ.fetchWithKeepaliveFallback(QQ.requestInit, QQ.bodySize, !!XQ || (null === (sQ = wQ.options.requestOptions) || void 0 === sQ ? void 0 : sQ.keepalive), WQ, (() => zQ++));
-            if (wQ.handleResponse(qQ, QQ.sessionId), qQ.status >= 200 && qQ.status < 300) return {
+            var PM;
+            const SM = yield OM.fetchWithKeepaliveFallback(MM.requestInit, MM.bodySize, !!iM || (null === (PM = OM.options.requestOptions) || void 0 === PM ? void 0 : PM.keepalive), rM, (() => aM++));
+            if (OM.handleResponse(SM, MM.sessionId), SM.status >= 200 && SM.status < 300) return {
               kind: "success",
-              attemptsMade: zQ
+              attemptsMade: aM
             };
-            const TQ = {
-              status: qQ.status
+            const jM = {
+              status: SM.status
             };
-            return !yT.has(qQ.status) || XQ ? {
+            return !yj.has(SM.status) || iM ? {
               kind: "terminal",
-              failure: TQ,
-              attemptsMade: zQ
+              failure: jM,
+              attemptsMade: aM
             } : {
               kind: "retry",
-              failure: TQ,
-              attemptsMade: zQ,
-              retryAfterMs: VT.has(qQ.status) ? wQ.getRetryAfterDelayMs(qQ) : void 0
+              failure: jM,
+              attemptsMade: aM,
+              retryAfterMs: lj.has(SM.status) ? OM.getRetryAfterDelayMs(SM) : void 0
             }
-          } catch (FQ) {
-            const QQ = {
-              error: FQ
+          } catch (nM) {
+            const MM = {
+              error: nM
             };
-            return (null === TQ || void 0 === TQ ? void 0 : TQ.aborted) || !wQ.isFetchNetworkError(FQ) || XQ ? {
+            return (null === jM || void 0 === jM ? void 0 : jM.aborted) || !OM.isFetchNetworkError(nM) || iM ? {
               kind: "terminal",
-              failure: QQ,
-              attemptsMade: zQ
+              failure: MM,
+              attemptsMade: aM
             } : {
               kind: "retry",
-              failure: QQ,
-              attemptsMade: zQ
+              failure: MM,
+              attemptsMade: aM
             }
           }
         }))()
       }
-      fetchWithKeepaliveFallback(QQ, WQ, XQ, wQ, qQ) {
-        var TQ = this;
-        return xw((function*() {
-          const zQ = TQ.getNow(),
-            sQ = TQ.reserveKeepalive(WQ, XQ);
+      fetchWithKeepaliveFallback(MM, rM, iM, OM, SM) {
+        var jM = this;
+        return XO((function*() {
+          const aM = jM.getNow(),
+            PM = jM.reserveKeepalive(rM, iM);
           try {
-            return yield TQ.fetchWithTimeout(gW(gW({}, QQ), {}, {
-              keepalive: sQ.keepalive
-            }), TQ.requestTimeoutMs, qQ)
-          } catch (PQ) {
-            var FQ;
-            if (sQ.keepalive && wQ > 1 && TQ.isFetchNetworkError(PQ) && !(PQ instanceof GT) && !(null === (FQ = TQ.options.requestOptions) || void 0 === FQ || null === (FQ = FQ.signal) || void 0 === FQ ? void 0 : FQ.aborted)) {
-              TQ.logDebug("Retrying failed keepalive request with keepalive disabled.");
-              const WQ = TQ.requestTimeoutMs - (TQ.getNow() - zQ);
-              return TQ.fetchWithTimeout(gW(gW({}, QQ), {}, {
+            return yield jM.fetchWithTimeout(zr(zr({}, MM), {}, {
+              keepalive: PM.keepalive
+            }), jM.requestTimeoutMs, SM)
+          } catch (QM) {
+            var nM;
+            if (PM.keepalive && OM > 1 && jM.isFetchNetworkError(QM) && !(QM instanceof Gj) && !(null === (nM = jM.options.requestOptions) || void 0 === nM || null === (nM = nM.signal) || void 0 === nM ? void 0 : nM.aborted)) {
+              jM.logDebug("Retrying failed keepalive request with keepalive disabled.");
+              const rM = jM.requestTimeoutMs - (jM.getNow() - aM);
+              return jM.fetchWithTimeout(zr(zr({}, MM), {}, {
                 keepalive: !1
-              }), WQ, qQ)
+              }), rM, SM)
             }
-            throw PQ
+            throw QM
           } finally {
-            sQ.release()
+            PM.release()
           }
         }))()
       }
-      fetchWithTimeout(QQ, WQ, XQ) {
-        var wQ = this;
-        return xw((function*() {
-          var qQ;
-          const TQ = null === (qQ = wQ.options.requestOptions) || void 0 === qQ ? void 0 : qQ.signal;
-          if (wQ.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return XQ(), fetch(wQ.options.url, gW(gW({}, QQ), {}, {
-            signal: TQ
+      fetchWithTimeout(MM, rM, iM) {
+        var OM = this;
+        return XO((function*() {
+          var SM;
+          const jM = null === (SM = OM.options.requestOptions) || void 0 === SM ? void 0 : SM.signal;
+          if (OM.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return iM(), fetch(OM.options.url, zr(zr({}, MM), {}, {
+            signal: jM
           }));
-          if (WQ <= 0) throw new GT("Request timed out");
-          const zQ = new AbortController,
-            sQ = () => zQ.abort(null === TQ || void 0 === TQ ? void 0 : TQ.reason);
-          null === TQ || void 0 === TQ || TQ.addEventListener("abort", sQ, {
+          if (rM <= 0) throw new Gj("Request timed out");
+          const aM = new AbortController,
+            PM = () => aM.abort(null === jM || void 0 === jM ? void 0 : jM.reason);
+          null === jM || void 0 === jM || jM.addEventListener("abort", PM, {
             once: !0
           });
-          let FQ = !1;
-          const PQ = setTimeout((() => {
-            FQ = !0, zQ.abort()
-          }), WQ);
+          let nM = !1;
+          const QM = setTimeout((() => {
+            nM = !0, aM.abort()
+          }), rM);
           try {
-            return XQ(), yield fetch(wQ.options.url, gW(gW({}, QQ), {}, {
-              signal: zQ.signal
+            return iM(), yield fetch(OM.options.url, zr(zr({}, MM), {}, {
+              signal: aM.signal
             }))
-          } catch (gQ) {
-            if (FQ && !(null === TQ || void 0 === TQ ? void 0 : TQ.aborted)) throw new GT("Request timed out");
-            throw gQ
+          } catch (zM) {
+            if (nM && !(null === jM || void 0 === jM ? void 0 : jM.aborted)) throw new Gj("Request timed out");
+            throw zM
           } finally {
-            clearTimeout(PQ), null === TQ || void 0 === TQ || TQ.removeEventListener("abort", sQ)
+            clearTimeout(QM), null === jM || void 0 === jM || jM.removeEventListener("abort", PM)
           }
         }))()
       }
-      getRetryAfterDelayMs(QQ) {
-        const WQ = QQ.headers.get("Retry-After");
-        if (!WQ) return;
-        if (/^\d+$/.test(WQ)) {
-          const QQ = 1e3 * Number(WQ);
-          return Number.isFinite(QQ) ? QQ : Number.POSITIVE_INFINITY
+      getRetryAfterDelayMs(MM) {
+        const rM = MM.headers.get("Retry-After");
+        if (!rM) return;
+        if (/^\d+$/.test(rM)) {
+          const MM = 1e3 * Number(rM);
+          return Number.isFinite(MM) ? MM : Number.POSITIVE_INFINITY
         }
-        const XQ = this.getNow(),
-          wQ = function(QQ, WQ) {
-            const XQ = qT.exec(QQ);
-            if (XQ) {
-              const [, QQ, WQ, wQ, qQ, TQ, zQ, sQ] = XQ;
-              return gT({
-                weekday: sT.indexOf(QQ),
-                day: Number(WQ),
-                month: PT.indexOf(wQ),
-                year: Number(qQ),
-                hour: Number(TQ),
-                minute: Number(zQ),
-                second: Number(sQ)
+        const iM = this.getNow(),
+          OM = function(MM, rM) {
+            const iM = jj.exec(MM);
+            if (iM) {
+              const [, MM, rM, OM, SM, jM, aM, PM] = iM;
+              return Lj({
+                weekday: nj.indexOf(MM),
+                day: Number(rM),
+                month: zj.indexOf(OM),
+                year: Number(SM),
+                hour: Number(jM),
+                minute: Number(aM),
+                second: Number(PM)
               })
             }
-            const wQ = TT.exec(QQ);
-            if (wQ) {
-              const [, QQ, XQ, zQ, sQ, FQ, PQ, gQ] = wQ, JQ = new Date(WQ);
-              if (Number.isNaN(JQ.getTime())) return;
-              const rQ = JQ.getUTCFullYear();
-              let IQ = 100 * Math.floor(rQ / 100) + Number(sQ);
-              IQ < rQ && (IQ += 100);
-              const jQ = PT.indexOf(zQ),
-                BQ = {
-                  month: jQ,
-                  day: Number(XQ),
-                  hour: Number(FQ),
-                  minute: Number(PQ),
-                  second: Number(gQ),
+            const OM = aj.exec(MM);
+            if (OM) {
+              const [, MM, iM, aM, PM, nM, QM, zM] = OM, LM = new Date(rM);
+              if (Number.isNaN(LM.getTime())) return;
+              const mM = LM.getUTCFullYear();
+              let HM = 100 * Math.floor(mM / 100) + Number(PM);
+              HM < mM && (HM += 100);
+              const hM = zj.indexOf(aM),
+                JM = {
+                  month: hM,
+                  day: Number(iM),
+                  hour: Number(nM),
+                  minute: Number(QM),
+                  second: Number(zM),
                   millisecond: 0
                 },
-                yQ = {
-                  month: JQ.getUTCMonth(),
-                  day: JQ.getUTCDate(),
-                  hour: JQ.getUTCHours(),
-                  minute: JQ.getUTCMinutes(),
-                  second: JQ.getUTCSeconds(),
-                  millisecond: JQ.getUTCMilliseconds()
+                dM = {
+                  month: LM.getUTCMonth(),
+                  day: LM.getUTCDate(),
+                  hour: LM.getUTCHours(),
+                  minute: LM.getUTCMinutes(),
+                  second: LM.getUTCSeconds(),
+                  millisecond: LM.getUTCMilliseconds()
                 };
-              return (IQ > rQ + 50 || IQ === rQ + 50 && (TQ = yQ, ((qQ = BQ).month - TQ.month || qQ.day - TQ.day || qQ.hour - TQ.hour || qQ.minute - TQ.minute || qQ.second - TQ.second || qQ.millisecond - TQ.millisecond) > 0)) && (IQ -= 100), gT({
-                weekday: FT.indexOf(QQ),
-                day: Number(XQ),
-                month: jQ,
-                year: IQ,
-                hour: Number(FQ),
-                minute: Number(PQ),
-                second: Number(gQ)
+              return (HM > mM + 50 || HM === mM + 50 && (jM = dM, ((SM = JM).month - jM.month || SM.day - jM.day || SM.hour - jM.hour || SM.minute - jM.minute || SM.second - jM.second || SM.millisecond - jM.millisecond) > 0)) && (HM -= 100), Lj({
+                weekday: Qj.indexOf(MM),
+                day: Number(iM),
+                month: hM,
+                year: HM,
+                hour: Number(nM),
+                minute: Number(QM),
+                second: Number(zM)
               })
             }
-            var qQ, TQ;
-            const zQ = zT.exec(QQ);
-            if (!zQ) return;
-            const [, sQ, FQ, PQ, gQ, JQ, rQ, IQ, jQ] = zQ;
-            return gT({
-              weekday: sT.indexOf(sQ),
-              day: Number(null !== PQ && void 0 !== PQ ? PQ : gQ),
-              month: PT.indexOf(FQ),
-              year: Number(jQ),
-              hour: Number(JQ),
-              minute: Number(rQ),
-              second: Number(IQ)
+            var SM, jM;
+            const aM = Pj.exec(MM);
+            if (!aM) return;
+            const [, PM, nM, QM, zM, LM, mM, HM, hM] = aM;
+            return Lj({
+              weekday: nj.indexOf(PM),
+              day: Number(null !== QM && void 0 !== QM ? QM : zM),
+              month: zj.indexOf(nM),
+              year: Number(hM),
+              hour: Number(LM),
+              minute: Number(mM),
+              second: Number(HM)
             })
-          }(WQ, XQ);
-        return null == wQ ? void 0 : Math.max(0, wQ - XQ)
+          }(rM, iM);
+        return null == OM ? void 0 : Math.max(0, OM - iM)
       }
-      reserveKeepalive(QQ, WQ) {
-        if (!1 === WQ || QQ > 6e4 || DT + QQ > 6e4 || pT >= 9) return {
+      reserveKeepalive(MM, rM) {
+        if (!1 === rM || MM > 6e4 || Ej + MM > 6e4 || Uj >= 9) return {
           keepalive: !1,
-          release: eW
+          release: vr
         };
-        DT += QQ, pT++;
-        let XQ = !1;
+        Ej += MM, Uj++;
+        let iM = !1;
         return {
           keepalive: !0,
           release: () => {
-            XQ || (XQ = !0, DT -= QQ, pT--)
+            iM || (iM = !0, Ej -= MM, Uj--)
           }
         }
       }
-      handleResponse(QQ, WQ) {
-        202 === QQ.status && "invalid" === QQ.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), WQ), QQ.text().catch(eW)
+      handleResponse(MM, rM) {
+        202 === MM.status && "invalid" === MM.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), rM), MM.text().catch(vr)
       }
-      isFetchNetworkError(QQ) {
-        return QQ instanceof TypeError || QQ instanceof GT || QQ instanceof DOMException && "AbortError" === QQ.name
+      isFetchNetworkError(MM) {
+        return MM instanceof TypeError || MM instanceof Gj || MM instanceof DOMException && "AbortError" === MM.name
       }
-      compress(QQ) {
-        return xw((function*() {
-          const WQ = [],
-            XQ = new ReadableStream({
-              start(WQ) {
-                WQ.enqueue((new TextEncoder).encode(QQ)), WQ.close()
+      compress(MM) {
+        return XO((function*() {
+          const rM = [],
+            iM = new ReadableStream({
+              start(rM) {
+                rM.enqueue((new TextEncoder).encode(MM)), rM.close()
               }
             }).pipeThrough(new CompressionStream("gzip")).getReader();
           for (;;) {
             const {
-              done: QQ,
-              value: wQ
-            } = yield XQ.read();
-            if (QQ) return new Blob(WQ);
-            WQ.push(wQ)
+              done: MM,
+              value: OM
+            } = yield iM.read();
+            if (MM) return new Blob(rM);
+            rM.push(OM)
           }
         }))()
       }
-      extendFaroSession(QQ, WQ, XQ) {
-        var wQ, qQ;
-        const TQ = QQ.sessionTracking;
-        if (!(null === TQ || void 0 === TQ ? void 0 : TQ.enabled)) return void WQ("Session expired.");
+      extendFaroSession(MM, rM, iM) {
+        var OM, SM;
+        const jM = MM.sessionTracking;
+        if (!(null === jM || void 0 === jM ? void 0 : jM.enabled)) return void rM("Session expired.");
         const {
-          fetchUserSession: zQ,
-          storeUserSession: sQ
-        } = oW(TQ), FQ = null === (wQ = this.metas.value.session) || void 0 === wQ ? void 0 : wQ.id, PQ = null === (qQ = zQ()) || void 0 === qQ ? void 0 : qQ.sessionId;
-        XQ && XQ === FQ && XQ === PQ ? (iW({
-          fetchUserSession: zQ,
-          storeUserSession: sQ
+          fetchUserSession: aM,
+          storeUserSession: PM
+        } = xr(jM), nM = null === (OM = this.metas.value.session) || void 0 === OM ? void 0 : OM.id, QM = null === (SM = aM()) || void 0 === SM ? void 0 : SM.sessionId;
+        iM && iM === nM && iM === QM ? (Rr({
+          fetchUserSession: aM,
+          storeUserSession: PM
         })({
           forceSessionExtend: !0
-        }), WQ("Session expired; created new session.")) : WQ("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
+        }), rM("Session expired; created new session.")) : rM("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
       }
     };
-    const bT = () => {
-      const QQ = window.k6;
+    const ej = () => {
+      const MM = window.k6;
       return {
-        k6: gW({
+        k6: zr({
           isK6Browser: !0
-        }, (null === QQ || void 0 === QQ ? void 0 : QQ.testRunId) && {
-          testRunId: null === QQ || void 0 === QQ ? void 0 : QQ.testRunId
+        }, (null === MM || void 0 === MM ? void 0 : MM.testRunId) && {
+          testRunId: null === MM || void 0 === MM ? void 0 : MM.testRunId
         })
       }
     };
-    let vT, dT;
+    let bj, wj;
 
-    function HT() {
+    function tj() {
       let {
-        generatePageId: QQ,
-        initialPageMeta: WQ
+        generatePageId: MM,
+        initialPageMeta: rM
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return () => {
-        const XQ = location.href;
-        return hQ(QQ) && vT !== XQ && (vT = XQ, dT = QQ(location)), {
-          page: gW(gW({
-            url: XQ
-          }, dT ? {
-            id: dT
-          } : {}), WQ)
+        const iM = location.href;
+        return uM(MM) && bj !== iM && (bj = iM, wj = MM(location)), {
+          page: zr(zr({
+            url: iM
+          }, wj ? {
+            id: wj
+          } : {}), rM)
         }
       }
     }
 
-    function aT() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : MW,
-        WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const XQ = xW;
-      return WQ > 0 && (XQ.error = WQ >= 1 ? function() {
-        for (var WQ = arguments.length, wQ = new Array(WQ), qQ = 0; qQ < WQ; qQ++) wQ[qQ] = arguments[qQ];
-        QQ.error(`${XQ.prefix}\n`, ...wQ)
-      } : eW, XQ.warn = WQ >= 2 ? function() {
-        for (var WQ = arguments.length, wQ = new Array(WQ), qQ = 0; qQ < WQ; qQ++) wQ[qQ] = arguments[qQ];
-        QQ.warn(`${XQ.prefix}\n`, ...wQ)
-      } : eW, XQ.info = WQ >= 3 ? function() {
-        for (var WQ = arguments.length, wQ = new Array(WQ), qQ = 0; qQ < WQ; qQ++) wQ[qQ] = arguments[qQ];
-        QQ.info(`${XQ.prefix}\n`, ...wQ)
-      } : eW, XQ.debug = WQ >= 4 ? function() {
-        for (var WQ = arguments.length, wQ = new Array(WQ), qQ = 0; qQ < WQ; qQ++) wQ[qQ] = arguments[qQ];
-        QQ.debug(`${XQ.prefix}\n`, ...wQ)
-      } : eW), XQ
+    function gj() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : cr,
+        rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const iM = Br;
+      return rM > 0 && (iM.error = rM >= 1 ? function() {
+        for (var rM = arguments.length, OM = new Array(rM), SM = 0; SM < rM; SM++) OM[SM] = arguments[SM];
+        MM.error(`${iM.prefix}\n`, ...OM)
+      } : vr, iM.warn = rM >= 2 ? function() {
+        for (var rM = arguments.length, OM = new Array(rM), SM = 0; SM < rM; SM++) OM[SM] = arguments[SM];
+        MM.warn(`${iM.prefix}\n`, ...OM)
+      } : vr, iM.info = rM >= 3 ? function() {
+        for (var rM = arguments.length, OM = new Array(rM), SM = 0; SM < rM; SM++) OM[SM] = arguments[SM];
+        MM.info(`${iM.prefix}\n`, ...OM)
+      } : vr, iM.debug = rM >= 4 ? function() {
+        for (var rM = arguments.length, OM = new Array(rM), SM = 0; SM < rM; SM++) OM[SM] = arguments[SM];
+        MM.debug(`${iM.prefix}\n`, ...OM)
+      } : vr), iM
     }
-    const lT = "faro",
-      hT = {
+    const uj = "faro",
+      Rj = {
         enabled: !0,
         sendTimeout: 250,
         itemLimit: 50
       },
-      iT = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
+      pj = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
 
-    function cT(QQ) {
-      var WQ, XQ, qQ, TQ, zQ, sQ;
-      const FQ = [],
-        gQ = aT(QQ.unpatchedConsole, QQ.internalLoggerLevel);
-      QQ.transports ? ((QQ.url || QQ.apiKey) && gQ.error('if "transports" is defined, "url" and "apiKey" should not be defined'), FQ.push(...QQ.transports)) : QQ.url ? FQ.push(new UT({
-        url: QQ.url,
-        apiKey: QQ.apiKey,
-        requestCompression: QQ.requestCompression
-      })) : gQ.error('either "url" or "transports" must be defined');
+    function Wj(MM) {
+      var rM, iM, SM, jM, aM, PM;
+      const nM = [],
+        zM = gj(MM.unpatchedConsole, MM.internalLoggerLevel);
+      MM.transports ? ((MM.url || MM.apiKey) && zM.error('if "transports" is defined, "url" and "apiKey" should not be defined'), nM.push(...MM.transports)) : MM.url ? nM.push(new Cj({
+        url: MM.url,
+        apiKey: MM.apiKey,
+        requestCompression: MM.requestCompression
+      })) : zM.error('either "url" or "transports" must be defined');
       const {
-        dedupe: JQ = !0,
-        eventDomain: rQ = wQ,
-        globalObjectKey: IQ = lT,
-        instrumentations: jQ = oq(),
-        internalLoggerLevel: BQ = YW,
-        isolate: yQ = !1,
-        logArgsSerializer: VQ = cX,
-        metas: DQ = RT(QQ),
-        paused: pQ = !1,
-        preventGlobalExposure: GQ = !1,
-        unpatchedConsole: UQ = MW,
-        url: bQ,
-        experimental: vQ
-      } = QQ, dQ = rT(QQ, iT), HQ = null !== (WQ = null === vQ || void 0 === vQ ? void 0 : vQ.trackNavigation) && void 0 !== WQ && WQ, aQ = {
-        dataAttributeName: mw(null !== (XQ = null === (qQ = QQ.userActionsInstrumentation) || void 0 === qQ ? void 0 : qQ.dataAttributeName) && void 0 !== XQ ? XQ : Zw),
-        excludeItem: null === (TQ = QQ.userActionsInstrumentation) || void 0 === TQ ? void 0 : TQ.excludeItem,
-        initialActivityTimeout: Mw(null === (zQ = QQ.userActionsInstrumentation) || void 0 === zQ ? void 0 : zQ.initialActivityTimeout, 100, (QQ => gQ.warn(QQ)))
+        dedupe: LM = !0,
+        eventDomain: mM = OM,
+        globalObjectKey: HM = uj,
+        instrumentations: hM = vS(),
+        internalLoggerLevel: JM = Xr,
+        isolate: dM = !1,
+        logArgsSerializer: yM = si,
+        metas: lM = Dj(MM),
+        paused: EM = !1,
+        preventGlobalExposure: UM = !1,
+        unpatchedConsole: GM = cr,
+        url: CM,
+        experimental: eM
+      } = MM, bM = Hj(MM, pj), wM = null !== (rM = null === eM || void 0 === eM ? void 0 : eM.trackNavigation) && void 0 !== rM && rM, tM = {
+        dataAttributeName: cO(null !== (iM = null === (SM = MM.userActionsInstrumentation) || void 0 === SM ? void 0 : SM.dataAttributeName) && void 0 !== iM ? iM : qO),
+        excludeItem: null === (jM = MM.userActionsInstrumentation) || void 0 === jM ? void 0 : jM.excludeItem,
+        initialActivityTimeout: MS(null === (aM = MM.userActionsInstrumentation) || void 0 === aM ? void 0 : aM.initialActivityTimeout, 100, (MM => zM.warn(MM)))
       };
-      return gW(gW({}, dQ), {}, {
-        batching: gW(gW({}, hT), QQ.batching),
-        dedupe: JQ,
-        globalObjectKey: IQ,
-        instrumentations: AT(jQ, QQ),
-        internalLoggerLevel: BQ,
-        isolate: yQ,
-        logArgsSerializer: VQ,
-        metas: DQ,
-        parseStacktrace: BX,
-        paused: pQ,
-        preventGlobalExposure: GQ,
-        transports: FQ,
-        unpatchedConsole: UQ,
-        eventDomain: rQ,
-        ignoreUrls: [...null !== (sQ = QQ.ignoreUrls) && void 0 !== sQ ? sQ : [], ...bQ ? [bQ] : [], /\/collect(?:\/[\w]*)?$/],
-        sessionTracking: gW(gW(gW({}, PQ), QQ.sessionTracking), ET({
-          trackGeolocation: QQ.trackGeolocation,
-          sessionTracking: QQ.sessionTracking
+      return zr(zr({}, bM), {}, {
+        batching: zr(zr({}, Rj), MM.batching),
+        dedupe: LM,
+        globalObjectKey: HM,
+        instrumentations: sj(hM, MM),
+        internalLoggerLevel: JM,
+        isolate: dM,
+        logArgsSerializer: yM,
+        metas: lM,
+        parseStacktrace: di,
+        paused: EM,
+        preventGlobalExposure: UM,
+        transports: nM,
+        unpatchedConsole: GM,
+        eventDomain: mM,
+        ignoreUrls: [...null !== (PM = MM.ignoreUrls) && void 0 !== PM ? PM : [], ...CM ? [CM] : [], /\/collect(?:\/[\w]*)?$/],
+        sessionTracking: zr(zr(zr({}, QM), MM.sessionTracking), kj({
+          trackGeolocation: MM.trackGeolocation,
+          sessionTracking: MM.sessionTracking
         })),
-        userActionsInstrumentation: aQ,
+        userActionsInstrumentation: tM,
         experimental: {
-          trackNavigation: HQ
+          trackNavigation: wM
         }
       })
     }
 
-    function AT(QQ, WQ) {
+    function sj(MM, rM) {
       let {
-        experimental: XQ
-      } = WQ;
-      var wQ;
-      const qQ = null !== (wQ = null === XQ || void 0 === XQ ? void 0 : XQ.trackNavigation) && void 0 !== wQ && wQ;
-      return QQ.filter((QQ => !("@grafana/faro-web-sdk:instrumentation-navigation" === QQ.name && !qQ)))
+        experimental: iM
+      } = rM;
+      var OM;
+      const SM = null !== (OM = null === iM || void 0 === iM ? void 0 : iM.trackNavigation) && void 0 !== OM && OM;
+      return MM.filter((MM => !("@grafana/faro-web-sdk:instrumentation-navigation" === MM.name && !SM)))
     }
 
-    function RT(QQ) {
-      var WQ, XQ, wQ;
+    function Dj(MM) {
+      var rM, iM, OM;
       const {
-        page: qQ,
-        generatePageId: TQ
-      } = null !== (WQ = null === QQ || void 0 === QQ ? void 0 : QQ.pageTracking) && void 0 !== WQ ? WQ : {}, zQ = [Nq, Zq, HT({
-        generatePageId: TQ,
-        initialPageMeta: qQ
-      }), ...null !== (XQ = QQ.metas) && void 0 !== XQ ? XQ : [], Kq];
-      return lQ(null === (wQ = window) || void 0 === wQ ? void 0 : wQ.k6) ? [...zQ, bT] : zQ
+        page: SM,
+        generatePageId: jM
+      } = null !== (rM = null === MM || void 0 === MM ? void 0 : MM.pageTracking) && void 0 !== rM ? rM : {}, aM = [KS, qS, tj({
+        generatePageId: jM,
+        initialPageMeta: SM
+      }), ...null !== (iM = MM.metas) && void 0 !== iM ? iM : [], VS];
+      return gM(null === (OM = window) || void 0 === OM ? void 0 : OM.k6) ? [...aM, ej] : aM
     }
 
-    function ET(QQ) {
+    function kj(MM) {
       let {
-        trackGeolocation: WQ,
-        sessionTracking: XQ
-      } = QQ;
-      var wQ;
-      const qQ = {};
-      return HQ(WQ) && (qQ.geoLocationTrackingEnabled = WQ), YQ(qQ) ? {} : {
-        session: gW(gW({}, null !== (wQ = null === XQ || void 0 === XQ ? void 0 : XQ.session) && void 0 !== wQ ? wQ : {}), {}, {
-          overrides: qQ
+        trackGeolocation: rM,
+        sessionTracking: iM
+      } = MM;
+      var OM;
+      const SM = {};
+      return wM(rM) && (SM.geoLocationTrackingEnabled = rM), XM(SM) ? {} : {
+        session: zr(zr({}, null !== (OM = null === iM || void 0 === iM ? void 0 : iM.session) && void 0 !== OM ? OM : {}), {}, {
+          overrides: SM
         })
       }
     }
-    const CT = new WeakSet;
+    const Zj = new WeakSet;
 
-    function uT(QQ) {
-      return CT.add(QQ), QQ
+    function oj(MM) {
+      return Zj.add(MM), MM
     }
 
-    function LT(QQ, WQ) {
-      if (QQ.capture) return uT(QQ.capture(WQ));
-      const XQ = uT(QQ.value);
-      return null === WQ || void 0 === WQ || WQ(), XQ
+    function fj(MM, rM) {
+      if (MM.capture) return oj(MM.capture(rM));
+      const iM = oj(MM.value);
+      return null === rM || void 0 === rM || rM(), iM
     }
 
-    function kT(QQ) {
-      const WQ = `__faroBundleId_${QQ}`,
-        XQ = null === gQ || void 0 === gQ ? void 0 : gQ[WQ];
-      if ("string" === typeof XQ && "" !== XQ) return XQ;
-      const wQ = "undefined" !== typeof window ? window[WQ] : void 0;
-      return "string" === typeof wQ && "" !== wQ ? wQ : void 0
+    function Yj(MM) {
+      const rM = `__faroBundleId_${MM}`,
+        iM = null === zM || void 0 === zM ? void 0 : zM[rM];
+      if ("string" === typeof iM && "" !== iM) return iM;
+      const OM = "undefined" !== typeof window ? window[rM] : void 0;
+      return "string" === typeof OM && "" !== OM ? OM : void 0
     }
 
-    function fT(QQ) {
-      var WQ, XQ;
-      const wQ = QQ.config.app.name,
-        qQ = wQ ? function(QQ) {
-          return null === gQ || void 0 === gQ ? void 0 : gQ[`__faroGitHash_${QQ}`]
-        }(wQ) : void 0,
-        TQ = {
+    function Nj(MM) {
+      var rM, iM;
+      const OM = MM.config.app.name,
+        SM = OM ? function(MM) {
+          return null === zM || void 0 === zM ? void 0 : zM[`__faroGitHash_${MM}`]
+        }(OM) : void 0,
+        jM = {
           sdk: {
-            version: XX,
+            version: ii,
             name: "faro"
           },
-          app: mW({
-            bundleId: wQ && kT(wQ)
-          }, void 0 !== qQ ? {
-            gitHash: qQ
+          app: Vr({
+            bundleId: OM && Yj(OM)
+          }, void 0 !== SM ? {
+            gitHash: SM
           } : {})
         },
-        zQ = null === (WQ = QQ.config.sessionTracking) || void 0 === WQ ? void 0 : WQ.session;
-      zQ && QQ.api.setSession(zQ), QQ.config.app && (TQ.app = mW(mW({}, QQ.config.app), TQ.app)), QQ.config.user && (TQ.user = QQ.config.user), QQ.config.view && (TQ.view = QQ.config.view), QQ.metas.add(TQ, ...null !== (XQ = QQ.config.metas) && void 0 !== XQ ? XQ : [])
+        aM = null === (rM = MM.config.sessionTracking) || void 0 === rM ? void 0 : rM.session;
+      aM && MM.api.setSession(aM), MM.config.app && (jM.app = Vr(Vr({}, MM.config.app), jM.app)), MM.config.user && (jM.user = MM.config.user), MM.config.view && (jM.view = MM.config.view), MM.metas.add(jM, ...null !== (iM = MM.config.metas) && void 0 !== iM ? iM : [])
     }
-    var ST = class {
-      constructor(QQ, WQ) {
-        var XQ, wQ;
-        this.signalBuffer = [], this.itemLimit = null !== (XQ = null === WQ || void 0 === WQ ? void 0 : WQ.itemLimit) && void 0 !== XQ ? XQ : 50, this.sendTimeout = null !== (wQ = null === WQ || void 0 === WQ ? void 0 : WQ.sendTimeout) && void 0 !== wQ ? wQ : 250, this.paused = (null === WQ || void 0 === WQ ? void 0 : WQ.paused) || !1, this.sendFn = QQ, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
+    var Aj = class {
+      constructor(MM, rM) {
+        var iM, OM;
+        this.signalBuffer = [], this.itemLimit = null !== (iM = null === rM || void 0 === rM ? void 0 : rM.itemLimit) && void 0 !== iM ? iM : 50, this.sendTimeout = null !== (OM = null === rM || void 0 === rM ? void 0 : rM.sendTimeout) && void 0 !== OM ? OM : 250, this.paused = (null === rM || void 0 === rM ? void 0 : rM.paused) || !1, this.sendFn = MM, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.flush()
         }))
       }
-      addItem(QQ) {
-        this.paused || (this.signalBuffer.push(QQ), this.signalBuffer.length >= this.itemLimit && this.flush())
+      addItem(MM) {
+        this.paused || (this.signalBuffer.push(MM), this.signalBuffer.length >= this.itemLimit && this.flush())
       }
       start() {
         this.paused = !1, this.sendTimeout > 0 && (this.flushInterval = setInterval((() => this.flush()), this.sendTimeout))
@@ -3884,22 +3884,22 @@ export const modules = {
       pause() {
         this.paused = !0, clearInterval(this.flushInterval)
       }
-      groupItems(QQ) {
-        const WQ = new Map;
-        return QQ.forEach((QQ => {
-          const XQ = JSON.stringify(QQ.meta);
-          let wQ = WQ.get(XQ);
-          wQ = void 0 === wQ ? [QQ] : [...wQ, QQ], WQ.set(XQ, wQ)
-        })), Array.from(WQ.values())
+      groupItems(MM) {
+        const rM = new Map;
+        return MM.forEach((MM => {
+          const iM = JSON.stringify(MM.meta);
+          let OM = rM.get(iM);
+          OM = void 0 === OM ? [MM] : [...OM, MM], rM.set(iM, OM)
+        })), Array.from(rM.values())
       }
       flush() {
         if (this.paused || 0 === this.signalBuffer.length) return;
-        const QQ = this.signalBuffer;
+        const MM = this.signalBuffer;
         this.signalBuffer = [];
         try {
-          this.groupItems(QQ).forEach(this.sendFn)
-        } catch (WQ) {
-          throw this.signalBuffer = [...QQ, ...this.signalBuffer], this.trimBufferToLimit(), WQ
+          this.groupItems(MM).forEach(this.sendFn)
+        } catch (rM) {
+          throw this.signalBuffer = [...MM, ...this.signalBuffer], this.trimBufferToLimit(), rM
         }
       }
       trimBufferToLimit() {
@@ -3907,710 +3907,710 @@ export const modules = {
       }
     };
 
-    function tT(QQ, WQ, XQ, wQ) {
-      var qQ;
-      WQ.debug("Initializing transports");
-      const TQ = [];
-      let zQ = [];
-      const sQ = QQ => {
-        let WQ = QQ;
-        for (const wQ of zQ) {
-          const QQ = WQ.map(wQ).filter(Boolean);
-          if (0 === QQ.length) return [];
-          WQ = oT(QQ, XQ)
+    function xj(MM, rM, iM, OM) {
+      var SM;
+      rM.debug("Initializing transports");
+      const jM = [];
+      let aM = [];
+      const PM = MM => {
+        let rM = MM;
+        for (const OM of aM) {
+          const MM = rM.map(OM).filter(Boolean);
+          if (0 === MM.length) return [];
+          rM = vj(MM, iM)
         }
-        return WQ
+        return rM
       };
-      let FQ;
-      (null === (qQ = XQ.batching) || void 0 === qQ ? void 0 : qQ.enabled) && (FQ = new ST((QQ => {
-        const XQ = sQ(QQ);
-        if (0 !== XQ.length)
-          for (const wQ of TQ) WQ.debug(`Transporting item using ${wQ.name}\n`, XQ), wQ.isBatched() && wQ.send(XQ)
+      let nM;
+      (null === (SM = iM.batching) || void 0 === SM ? void 0 : SM.enabled) && (nM = new Aj((MM => {
+        const iM = PM(MM);
+        if (0 !== iM.length)
+          for (const OM of jM) rM.debug(`Transporting item using ${OM.name}\n`, iM), OM.isBatched() && OM.send(iM)
       }), {
-        sendTimeout: XQ.batching.sendTimeout,
-        itemLimit: XQ.batching.itemLimit,
-        paused: XQ.paused
+        sendTimeout: iM.batching.sendTimeout,
+        itemLimit: iM.batching.itemLimit,
+        paused: iM.paused
       }));
       return {
         add: function() {
-          WQ.debug("Adding transports");
-          for (var qQ = arguments.length, zQ = new Array(qQ), sQ = 0; sQ < qQ; sQ++) zQ[sQ] = arguments[sQ];
-          zQ.forEach((qQ => {
-            WQ.debug(`Adding "${qQ.name}" transport`), TQ.some((QQ => QQ === qQ)) ? WQ.warn(`Transport ${qQ.name} is already added`) : (qQ.unpatchedConsole = QQ, qQ.internalLogger = WQ, qQ.config = XQ, qQ.metas = wQ, TQ.push(qQ))
+          rM.debug("Adding transports");
+          for (var SM = arguments.length, aM = new Array(SM), PM = 0; PM < SM; PM++) aM[PM] = arguments[PM];
+          aM.forEach((SM => {
+            rM.debug(`Adding "${SM.name}" transport`), jM.some((MM => MM === SM)) ? rM.warn(`Transport ${SM.name} is already added`) : (SM.unpatchedConsole = MM, SM.internalLogger = rM, SM.config = iM, SM.metas = OM, jM.push(SM))
           }))
         },
         addBeforeSendHooks: function() {
-          WQ.debug("Adding beforeSendHooks\n", zQ);
-          for (var QQ = arguments.length, XQ = new Array(QQ), wQ = 0; wQ < QQ; wQ++) XQ[wQ] = arguments[wQ];
-          XQ.forEach((QQ => {
-            QQ && zQ.push(QQ)
+          rM.debug("Adding beforeSendHooks\n", aM);
+          for (var MM = arguments.length, iM = new Array(MM), OM = 0; OM < MM; OM++) iM[OM] = arguments[OM];
+          iM.forEach((MM => {
+            MM && aM.push(MM)
           }))
         },
-        getBeforeSendHooks: () => [...zQ],
-        execute: QQ => {
-          var qQ;
-          if (!XQ.paused && SW(wQ).shouldCapture()) {
-            if (JQ = QQ.meta, !CT.has(JQ)) {
-              var zQ, PQ, gQ;
-              const WQ = null === (zQ = wQ.value.session) || void 0 === zQ ? void 0 : zQ.id,
-                qQ = LT(wQ);
-              if (XQ.paused) return;
-              const TQ = mW({}, QQ.meta);
-              (null === (PQ = TQ.session) || void 0 === PQ ? void 0 : PQ.id) === WQ && (null === (gQ = qQ.session) || void 0 === gQ ? void 0 : gQ.id) !== WQ && (void 0 === qQ.session ? delete TQ.session : TQ.session = qQ.session), QQ = mW(mW({}, QQ), {}, {
-                meta: uT(TQ)
+        getBeforeSendHooks: () => [...aM],
+        execute: MM => {
+          var SM;
+          if (!iM.paused && Nr(OM).shouldCapture()) {
+            if (LM = MM.meta, !Zj.has(LM)) {
+              var aM, QM, zM;
+              const rM = null === (aM = OM.value.session) || void 0 === aM ? void 0 : aM.id,
+                SM = fj(OM);
+              if (iM.paused) return;
+              const jM = Vr({}, MM.meta);
+              (null === (QM = jM.session) || void 0 === QM ? void 0 : QM.id) === rM && (null === (zM = SM.session) || void 0 === zM ? void 0 : zM.id) !== rM && (void 0 === SM.session ? delete jM.session : jM.session = SM.session), MM = Vr(Vr({}, MM), {}, {
+                meta: oj(jM)
               })
             }
-            var JQ;
-            (null === (qQ = XQ.batching) || void 0 === qQ ? void 0 : qQ.enabled) && (null === FQ || void 0 === FQ || FQ.addItem(QQ)), (QQ => {
-              var wQ;
-              if ((null === (wQ = XQ.batching) || void 0 === wQ ? void 0 : wQ.enabled) && TQ.every((QQ => QQ.isBatched()))) return;
-              const [qQ] = sQ([QQ]);
-              if (void 0 !== qQ)
-                for (const sQ of TQ) {
-                  var zQ;
-                  WQ.debug(`Transporting item using ${sQ.name}\n`, qQ), sQ.isBatched() ? (null === (zQ = XQ.batching) || void 0 === zQ ? void 0 : zQ.enabled) || sQ.send([qQ]) : sQ.send(qQ)
+            var LM;
+            (null === (SM = iM.batching) || void 0 === SM ? void 0 : SM.enabled) && (null === nM || void 0 === nM || nM.addItem(MM)), (MM => {
+              var OM;
+              if ((null === (OM = iM.batching) || void 0 === OM ? void 0 : OM.enabled) && jM.every((MM => MM.isBatched()))) return;
+              const [SM] = PM([MM]);
+              if (void 0 !== SM)
+                for (const PM of jM) {
+                  var aM;
+                  rM.debug(`Transporting item using ${PM.name}\n`, SM), PM.isBatched() ? (null === (aM = iM.batching) || void 0 === aM ? void 0 : aM.enabled) || PM.send([SM]) : PM.send(SM)
                 }
-            })(QQ)
+            })(MM)
           }
         },
-        isPaused: () => XQ.paused,
+        isPaused: () => iM.paused,
         pause: () => {
-          WQ.debug("Pausing transports"), null === FQ || void 0 === FQ || FQ.pause(), XQ.paused = !0
+          rM.debug("Pausing transports"), null === nM || void 0 === nM || nM.pause(), iM.paused = !0
         },
         remove: function() {
-          WQ.debug("Removing transports");
-          for (var QQ = arguments.length, XQ = new Array(QQ), wQ = 0; wQ < QQ; wQ++) XQ[wQ] = arguments[wQ];
-          XQ.forEach((QQ => {
-            WQ.debug(`Removing "${QQ.name}" transport`);
-            const XQ = TQ.indexOf(QQ); - 1 !== XQ ? TQ.splice(XQ, 1) : WQ.warn(`Transport "${QQ.name}" is not added`)
+          rM.debug("Removing transports");
+          for (var MM = arguments.length, iM = new Array(MM), OM = 0; OM < MM; OM++) iM[OM] = arguments[OM];
+          iM.forEach((MM => {
+            rM.debug(`Removing "${MM.name}" transport`);
+            const iM = jM.indexOf(MM); - 1 !== iM ? jM.splice(iM, 1) : rM.warn(`Transport "${MM.name}" is not added`)
           }))
         },
         removeBeforeSendHooks: function() {
-          for (var QQ = arguments.length, XQ = new Array(QQ), wQ = 0; wQ < QQ; wQ++) XQ[wQ] = arguments[wQ];
-          WQ.debug("Removing beforeSendHooks"), zQ = zQ.filter((QQ => !XQ.includes(QQ)))
+          for (var MM = arguments.length, iM = new Array(MM), OM = 0; OM < MM; OM++) iM[OM] = arguments[OM];
+          rM.debug("Removing beforeSendHooks"), aM = aM.filter((MM => !iM.includes(MM)))
         },
         get transports() {
-          return [...TQ]
+          return [...jM]
         },
         unpause: () => {
-          WQ.debug("Unpausing transports"), null === FQ || void 0 === FQ || FQ.start(), XQ.paused = !1
+          rM.debug("Unpausing transports"), null === nM || void 0 === nM || nM.start(), iM.paused = !1
         }
       }
     }
 
-    function oT(QQ, WQ) {
-      if (WQ.preserveOriginalError)
-        for (const XQ of QQ) "exception" === XQ.type && delete XQ.payload.originalError;
-      return QQ
+    function vj(MM, rM) {
+      if (rM.preserveOriginalError)
+        for (const iM of MM) "exception" === iM.type && delete iM.payload.originalError;
+      return MM
     }
-    let eT = MW;
+    let Fj = cr;
 
-    function nT(QQ) {
-      var WQ;
-      return eT = null !== (WQ = QQ.unpatchedConsole) && void 0 !== WQ ? WQ : eT, eT
+    function Bj(MM) {
+      var rM;
+      return Fj = null !== (rM = MM.unpatchedConsole) && void 0 !== rM ? rM : Fj, Fj
     }
-    let xT, YT = xW;
+    let Xj, Ij = Br;
 
-    function NT(QQ, WQ) {
-      return YT = aT(QQ, WQ.internalLoggerLevel), YT
+    function Kj(MM, rM) {
+      return Ij = gj(MM, rM.internalLoggerLevel), Ij
     }
 
-    function ZT(QQ) {
+    function qj(MM) {
       let {
-        internalLogger: WQ,
-        config: XQ,
-        metas: wQ,
-        transports: qQ,
-        tracesApi: TQ,
-        userActionsApi: zQ
-      } = QQ;
-      var sQ;
-      WQ.debug("Initializing exceptions API");
-      let FQ = null;
-      xT = null !== (sQ = XQ.parseStacktrace) && void 0 !== sQ ? sQ : xT;
-      const PQ = QQ => {
-          WQ.debug("Changing stacktrace parser"), xT = null !== QQ && void 0 !== QQ ? QQ : xT
+        internalLogger: rM,
+        config: iM,
+        metas: OM,
+        transports: SM,
+        tracesApi: jM,
+        userActionsApi: aM
+      } = MM;
+      var PM;
+      rM.debug("Initializing exceptions API");
+      let nM = null;
+      Xj = null !== (PM = iM.parseStacktrace) && void 0 !== PM ? PM : Xj;
+      const QM = MM => {
+          rM.debug("Changing stacktrace parser"), Xj = null !== MM && void 0 !== MM ? MM : Xj
         },
         {
-          ignoreErrors: gQ = [],
-          preserveOriginalError: JQ
-        } = XQ;
-      return PQ(XQ.parseStacktrace), {
-        changeStacktraceParser: PQ,
-        getStacktraceParser: () => xT,
-        pushError: function(QQ) {
+          ignoreErrors: zM = [],
+          preserveOriginalError: LM
+        } = iM;
+      return QM(iM.parseStacktrace), {
+        changeStacktraceParser: QM,
+        getStacktraceParser: () => Xj,
+        pushError: function(MM) {
           let {
-            skipDedupe: sQ,
-            stackFrames: PQ,
-            type: rQ,
-            context: IQ,
-            spanContext: jQ,
-            timestampOverwriteMs: BQ,
-            originalError: yQ,
-            fingerprint: VQ,
-            fatal: DQ
+            skipDedupe: PM,
+            stackFrames: QM,
+            type: mM,
+            context: HM,
+            spanContext: hM,
+            timestampOverwriteMs: JM,
+            originalError: dM,
+            fingerprint: yM,
+            fatal: lM
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (! function(QQ, WQ) {
+          if (! function(MM, rM) {
               const {
-                message: XQ,
-                name: wQ,
-                stack: qQ
-              } = WQ;
-              return TQ = QQ, zQ = XQ + " " + wQ + " " + qQ, TQ.some((QQ => bQ(QQ) ? zQ.includes(QQ) : !!zQ.match(QQ)));
-              var TQ, zQ
-            }(gQ, null !== yQ && void 0 !== yQ ? yQ : QQ)) try {
-            var pQ, GQ;
-            if (!SW(wQ).shouldCapture()) return;
-            const gQ = uW(mW(mW({}, function(QQ) {
-                let WQ = QQ.cause;
-                LQ(WQ) ? WQ = QQ.cause.toString() : null !== WQ && (lQ(QQ.cause) || iQ(QQ.cause)) ? WQ = CW(QQ.cause) : null != WQ && (WQ = QQ.cause.toString());
-                return null == WQ ? {} : {
-                  cause: WQ
+                message: iM,
+                name: OM,
+                stack: SM
+              } = rM;
+              return jM = MM, aM = iM + " " + OM + " " + SM, jM.some((MM => CM(MM) ? aM.includes(MM) : !!aM.match(MM)));
+              var jM, aM
+            }(zM, null !== dM && void 0 !== dM ? dM : MM)) try {
+            var EM, UM;
+            if (!Nr(OM).shouldCapture()) return;
+            const zM = Zr(Vr(Vr({}, function(MM) {
+                let rM = MM.cause;
+                oM(rM) ? rM = MM.cause.toString() : null !== rM && (gM(MM.cause) || RM(MM.cause)) ? rM = kr(MM.cause) : null != rM && (rM = MM.cause.toString());
+                return null == rM ? {} : {
+                  cause: rM
                 }
-              }(null !== yQ && void 0 !== yQ ? yQ : QQ)), null !== IQ && void 0 !== IQ ? IQ : {})),
-              bQ = mW(mW(mW(mW({
-                type: rQ || QQ.name || "Error",
-                value: QQ.message,
-                timestamp: BQ ? BW(BQ) : jW(),
-                trace: jQ ? {
-                  trace_id: jQ.traceId,
-                  span_id: jQ.spanId
-                } : TQ.getTraceContext()
-              }, YQ(gQ) ? {} : {
-                context: gQ
-              }), JQ ? {
-                originalError: yQ
-              } : {}), VQ ? {
-                fingerprint: VQ
-              } : {}), void 0 !== DQ ? {
-                fatal: DQ
+              }(null !== dM && void 0 !== dM ? dM : MM)), null !== HM && void 0 !== HM ? HM : {})),
+              CM = Vr(Vr(Vr(Vr({
+                type: mM || MM.name || "Error",
+                value: MM.message,
+                timestamp: JM ? Jr(JM) : hr(),
+                trace: hM ? {
+                  trace_id: hM.traceId,
+                  span_id: hM.spanId
+                } : jM.getTraceContext()
+              }, XM(zM) ? {} : {
+                context: zM
+              }), LM ? {
+                originalError: dM
+              } : {}), yM ? {
+                fingerprint: yM
+              } : {}), void 0 !== lM ? {
+                fatal: lM
               } : {});
-            PQ = null !== (pQ = PQ) && void 0 !== pQ ? pQ : QQ.stack ? null === xT || void 0 === xT ? void 0 : xT(QQ).frames : void 0, (null === PQ || void 0 === PQ ? void 0 : PQ.length) && (bQ.stacktrace = {
-              frames: PQ
+            QM = null !== (EM = QM) && void 0 !== EM ? EM : MM.stack ? null === Xj || void 0 === Xj ? void 0 : Xj(MM).frames : void 0, (null === QM || void 0 === QM ? void 0 : QM.length) && (CM.stacktrace = {
+              frames: QM
             });
-            const vQ = {
-              type: bQ.type,
-              value: bQ.value,
-              stacktrace: bQ.stacktrace,
-              context: bQ.context,
-              fingerprint: bQ.fingerprint,
-              fatal: null !== (GQ = bQ.fatal) && void 0 !== GQ && GQ
+            const eM = {
+              type: CM.type,
+              value: CM.value,
+              stacktrace: CM.stacktrace,
+              context: CM.context,
+              fingerprint: CM.fingerprint,
+              fatal: null !== (UM = CM.fatal) && void 0 !== UM && UM
             };
-            if (!sQ && XQ.dedupe && !UQ(FQ) && DW(vQ, FQ)) return void WQ.debug("Skipping error push because it is the same as the last one\n", bQ);
-            const dQ = FQ,
-              HQ = LT(wQ);
-            if (FQ !== dQ && !sQ && XQ.dedupe && DW(vQ, FQ)) return;
-            FQ = vQ;
-            const aQ = {
-              meta: HQ,
-              payload: bQ,
+            if (!PM && iM.dedupe && !GM(nM) && lr(eM, nM)) return void rM.debug("Skipping error push because it is the same as the last one\n", CM);
+            const bM = nM,
+              wM = fj(OM);
+            if (nM !== bM && !PM && iM.dedupe && lr(eM, nM)) return;
+            nM = eM;
+            const tM = {
+              meta: wM,
+              payload: CM,
               type: "exception"
             };
-            WQ.debug("Pushing exception\n", aQ), vq(zQ.getActiveUserAction(), aQ) || qQ.execute(aQ)
-          } catch (vQ) {
-            WQ.error("Error pushing event", vQ)
+            rM.debug("Pushing exception\n", tM), bS(aM.getActiveUserAction(), tM) || SM.execute(tM)
+          } catch (eM) {
+            rM.error("Error pushing event", eM)
           }
         }
       }
     }
 
-    function OT(QQ, WQ, XQ, wQ, qQ) {
-      WQ.debug("Initializing API");
-      let TQ = null;
-      const zQ = function(QQ) {
+    function Tj(MM, rM, iM, OM, SM) {
+      rM.debug("Initializing API");
+      let jM = null;
+      const aM = function(MM) {
           let {
-            transports: WQ,
-            internalLogger: XQ,
-            config: wQ,
-            pushEvent: qQ
-          } = QQ;
-          var TQ;
-          const zQ = null === (TQ = wQ.userActionsInstrumentation) || void 0 === TQ ? void 0 : TQ.excludeItem;
-          let sQ;
-          const FQ = () => sQ;
+            transports: rM,
+            internalLogger: iM,
+            config: OM,
+            pushEvent: SM
+          } = MM;
+          var jM;
+          const aM = null === (jM = OM.userActionsInstrumentation) || void 0 === jM ? void 0 : jM.excludeItem;
+          let PM;
+          const nM = () => PM;
           return {
-            startUserAction: (QQ, wQ, TQ) => {
-              if (void 0 === FQ()) {
-                const XQ = new Uq({
-                  name: QQ,
-                  transports: WQ,
-                  attributes: wQ,
-                  trigger: (null === TQ || void 0 === TQ ? void 0 : TQ.triggerName) || "faroApiCall",
-                  importance: (null === TQ || void 0 === TQ ? void 0 : TQ.importance) || pq.Normal,
-                  trackUserActionsExcludeItem: zQ,
-                  pushEvent: qQ
+            startUserAction: (MM, OM, jM) => {
+              if (void 0 === nM()) {
+                const iM = new CS({
+                  name: MM,
+                  transports: rM,
+                  attributes: OM,
+                  trigger: (null === jM || void 0 === jM ? void 0 : jM.triggerName) || "faroApiCall",
+                  importance: (null === jM || void 0 === jM ? void 0 : jM.importance) || US.Normal,
+                  trackUserActionsExcludeItem: aM,
+                  pushEvent: SM
                 });
-                return XQ.filter((QQ => [3, 2].includes(QQ))).first().subscribe((() => {
-                  sQ = void 0
-                })), bq.notify({
-                  type: Dq,
-                  userAction: XQ,
-                  initialActivityTimeout: null === TQ || void 0 === TQ ? void 0 : TQ.initialActivityTimeout
-                }), sQ = XQ, sQ
+                return iM.filter((MM => [3, 2].includes(MM))).first().subscribe((() => {
+                  PM = void 0
+                })), eS.notify({
+                  type: ES,
+                  userAction: iM,
+                  initialActivityTimeout: null === jM || void 0 === jM ? void 0 : jM.initialActivityTimeout
+                }), PM = iM, PM
               }
-              XQ.error("Attempted to create a new user action while one is already running. This is not possible.")
+              iM.error("Attempted to create a new user action while one is already running. This is not possible.")
             },
-            getActiveUserAction: FQ
+            getActiveUserAction: nM
           }
         }({
-          transports: qQ,
-          config: XQ,
-          internalLogger: WQ,
-          pushEvent: (QQ, XQ, wQ, qQ) => {
-            TQ ? TQ(QQ, XQ, wQ, qQ) : WQ.warn("pushEventImpl is not initialized. Event dropped:", {
-              name: QQ,
-              attributes: XQ,
-              domain: wQ,
-              options: qQ
+          transports: SM,
+          config: iM,
+          internalLogger: rM,
+          pushEvent: (MM, iM, OM, SM) => {
+            jM ? jM(MM, iM, OM, SM) : rM.warn("pushEventImpl is not initialized. Event dropped:", {
+              name: MM,
+              attributes: iM,
+              domain: OM,
+              options: SM
             })
           }
         }),
-        sQ = function(QQ, WQ, XQ, wQ, qQ) {
-          let TQ;
-          return WQ.debug("Initializing traces API"), {
-            getOTEL: () => TQ,
+        PM = function(MM, rM, iM, OM, SM) {
+          let jM;
+          return rM.debug("Initializing traces API"), {
+            getOTEL: () => jM,
             getTraceContext: () => {
-              const QQ = null === TQ || void 0 === TQ ? void 0 : TQ.trace.getSpanContext(TQ.context.active());
-              return QQ ? {
-                trace_id: QQ.traceId,
-                span_id: QQ.spanId
+              const MM = null === jM || void 0 === jM ? void 0 : jM.trace.getSpanContext(jM.context.active());
+              return MM ? {
+                trace_id: MM.traceId,
+                span_id: MM.spanId
               } : void 0
             },
-            initOTEL: (QQ, XQ) => {
-              WQ.debug("Initializing OpenTelemetry"), TQ = {
-                trace: QQ,
-                context: XQ
+            initOTEL: (MM, iM) => {
+              rM.debug("Initializing OpenTelemetry"), jM = {
+                trace: MM,
+                context: iM
               }
             },
-            isOTELInitialized: () => !!TQ,
-            pushTraces: QQ => {
+            isOTELInitialized: () => !!jM,
+            pushTraces: MM => {
               try {
-                if (!SW(wQ).shouldCapture()) return;
-                const XQ = {
+                if (!Nr(OM).shouldCapture()) return;
+                const iM = {
                   type: "trace",
-                  payload: QQ,
-                  meta: LT(wQ)
+                  payload: MM,
+                  meta: fj(OM)
                 };
-                WQ.debug("Pushing trace\n", XQ), qQ.execute(XQ)
-              } catch (XQ) {
-                WQ.error("Error pushing trace\n", XQ)
+                rM.debug("Pushing trace\n", iM), SM.execute(iM)
+              } catch (iM) {
+                rM.error("Error pushing trace\n", iM)
               }
             }
           }
-        }(0, WQ, 0, wQ, qQ),
-        FQ = {
-          unpatchedConsole: QQ,
-          internalLogger: WQ,
-          userActionsApi: zQ,
-          config: XQ,
-          metas: wQ,
-          transports: qQ,
-          tracesApi: sQ
+        }(0, rM, 0, OM, SM),
+        nM = {
+          unpatchedConsole: MM,
+          internalLogger: rM,
+          userActionsApi: aM,
+          config: iM,
+          metas: OM,
+          transports: SM,
+          tracesApi: PM
         },
-        PQ = function(QQ) {
+        QM = function(MM) {
           let {
-            internalLogger: WQ,
-            config: XQ,
-            metas: wQ,
-            transports: qQ,
-            tracesApi: TQ,
-            userActionsApi: zQ
-          } = QQ, sQ = null;
+            internalLogger: rM,
+            config: iM,
+            metas: OM,
+            transports: SM,
+            tracesApi: jM,
+            userActionsApi: aM
+          } = MM, PM = null;
           return {
-            pushEvent: function(QQ, FQ, PQ) {
+            pushEvent: function(MM, nM, QM) {
               let {
-                skipDedupe: gQ,
-                spanContext: JQ,
-                timestampOverwriteMs: rQ,
-                customPayloadTransformer: IQ = QQ => QQ
+                skipDedupe: zM,
+                spanContext: LM,
+                timestampOverwriteMs: mM,
+                customPayloadTransformer: HM = MM => MM
               } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
               try {
-                if (!SW(wQ).shouldCapture()) return;
-                const jQ = uW(FQ),
-                  BQ = IQ({
-                    name: QQ,
-                    domain: null !== PQ && void 0 !== PQ ? PQ : XQ.eventDomain,
-                    attributes: YQ(jQ) ? void 0 : jQ,
-                    timestamp: rQ ? BW(rQ) : jW(),
-                    trace: JQ ? {
-                      trace_id: JQ.traceId,
-                      span_id: JQ.spanId
-                    } : TQ.getTraceContext()
+                if (!Nr(OM).shouldCapture()) return;
+                const hM = Zr(nM),
+                  JM = HM({
+                    name: MM,
+                    domain: null !== QM && void 0 !== QM ? QM : iM.eventDomain,
+                    attributes: XM(hM) ? void 0 : hM,
+                    timestamp: mM ? Jr(mM) : hr(),
+                    trace: LM ? {
+                      trace_id: LM.traceId,
+                      span_id: LM.spanId
+                    } : jM.getTraceContext()
                   }),
-                  yQ = {
-                    name: BQ.name,
-                    attributes: BQ.attributes,
-                    domain: BQ.domain
+                  dM = {
+                    name: JM.name,
+                    attributes: JM.attributes,
+                    domain: JM.domain
                   };
-                if (!gQ && XQ.dedupe && !UQ(sQ) && DW(yQ, sQ)) return void WQ.debug("Skipping event push because it is the same as the last one\n", BQ);
-                const VQ = sQ,
-                  DQ = LT(wQ);
-                if (sQ !== VQ && !gQ && XQ.dedupe && DW(yQ, sQ)) return;
-                sQ = yQ;
-                const pQ = {
-                  meta: DQ,
-                  payload: BQ,
+                if (!zM && iM.dedupe && !GM(PM) && lr(dM, PM)) return void rM.debug("Skipping event push because it is the same as the last one\n", JM);
+                const yM = PM,
+                  lM = fj(OM);
+                if (PM !== yM && !zM && iM.dedupe && lr(dM, PM)) return;
+                PM = dM;
+                const EM = {
+                  meta: lM,
+                  payload: JM,
                   type: "event"
                 };
-                WQ.debug("Pushing event\n", pQ), vq(zQ.getActiveUserAction(), pQ) || qQ.execute(pQ)
-              } catch (jQ) {
-                WQ.error("Error pushing event", jQ)
+                rM.debug("Pushing event\n", EM), bS(aM.getActiveUserAction(), EM) || SM.execute(EM)
+              } catch (hM) {
+                rM.error("Error pushing event", hM)
               }
             }
           }
-        }(FQ);
-      return TQ = PQ.pushEvent, mW(mW(mW(mW(mW(mW(mW({}, sQ), ZT(FQ)), function(QQ) {
-        let WQ, XQ, wQ, qQ, {
-          internalLogger: TQ,
-          metas: zQ
-        } = QQ;
-        TQ.debug("Initializing meta API");
-        const sQ = QQ => {
-            XQ && zQ.remove(XQ), XQ = {
-              user: QQ
-            }, zQ.add(XQ)
+        }(nM);
+      return jM = QM.pushEvent, Vr(Vr(Vr(Vr(Vr(Vr(Vr({}, PM), qj(nM)), function(MM) {
+        let rM, iM, OM, SM, {
+          internalLogger: jM,
+          metas: aM
+        } = MM;
+        jM.debug("Initializing meta API");
+        const PM = MM => {
+            iM && aM.remove(iM), iM = {
+              user: MM
+            }, aM.add(iM)
           },
-          FQ = (QQ, XQ) => {
-            var wQ;
-            const qQ = null === XQ || void 0 === XQ ? void 0 : XQ.overrides,
-              TQ = qQ ? {
-                overrides: mW(mW({}, null === WQ || void 0 === WQ || null === (wQ = WQ.session) || void 0 === wQ ? void 0 : wQ.overrides), qQ)
+          nM = (MM, iM) => {
+            var OM;
+            const SM = null === iM || void 0 === iM ? void 0 : iM.overrides,
+              jM = SM ? {
+                overrides: Vr(Vr({}, null === rM || void 0 === rM || null === (OM = rM.session) || void 0 === OM ? void 0 : OM.overrides), SM)
               } : {};
-            WQ && zQ.remove(WQ), WQ = {
-              session: mW(mW({}, YQ(QQ) ? void 0 : QQ), TQ)
-            }, zQ.add(WQ)
+            rM && aM.remove(rM), rM = {
+              session: Vr(Vr({}, XM(MM) ? void 0 : MM), jM)
+            }, aM.add(rM)
           },
-          PQ = (QQ, WQ) => {
-            SW(zQ).notifySessionUpdate({
+          QM = (MM, rM) => {
+            Nr(aM).notifySessionUpdate({
               type: "replace",
-              session: QQ,
-              overrides: null === WQ || void 0 === WQ ? void 0 : WQ.overrides
-            }), FQ(QQ, WQ)
+              session: MM,
+              overrides: null === rM || void 0 === rM ? void 0 : rM.overrides
+            }), nM(MM, rM)
           },
-          gQ = () => zQ.value.session,
-          JQ = () => zQ.value.page;
+          zM = () => aM.value.session,
+          LM = () => aM.value.page;
         return {
-          setUser: sQ,
-          resetUser: sQ,
-          setSession: PQ,
-          resetSession: PQ,
-          getSession: gQ,
-          setView: (QQ, WQ) => {
-            var XQ;
-            if ((null === WQ || void 0 === WQ ? void 0 : WQ.overrides) && (SW(zQ).notifySessionUpdate({
+          setUser: PM,
+          resetUser: PM,
+          setSession: QM,
+          resetSession: QM,
+          getSession: zM,
+          setView: (MM, rM) => {
+            var iM;
+            if ((null === rM || void 0 === rM ? void 0 : rM.overrides) && (Nr(aM).notifySessionUpdate({
                 type: "overrides",
-                overrides: WQ.overrides
-              }), FQ(gQ(), {
-                overrides: WQ.overrides
-              })), (null === wQ || void 0 === wQ || null === (XQ = wQ.view) || void 0 === XQ ? void 0 : XQ.name) === (null === QQ || void 0 === QQ ? void 0 : QQ.name)) return;
-            const qQ = wQ;
-            wQ = {
-              view: QQ
-            }, zQ.add(wQ), qQ && zQ.remove(qQ)
+                overrides: rM.overrides
+              }), nM(zM(), {
+                overrides: rM.overrides
+              })), (null === OM || void 0 === OM || null === (iM = OM.view) || void 0 === iM ? void 0 : iM.name) === (null === MM || void 0 === MM ? void 0 : MM.name)) return;
+            const SM = OM;
+            OM = {
+              view: MM
+            }, aM.add(OM), SM && aM.remove(SM)
           },
-          getView: () => zQ.value.view,
-          setPage: QQ => {
-            var WQ;
-            const XQ = bQ(QQ) ? mW(mW({}, null !== (WQ = null === qQ || void 0 === qQ ? void 0 : qQ.page) && void 0 !== WQ ? WQ : JQ()), {}, {
-              id: QQ
-            }) : QQ;
-            qQ && zQ.remove(qQ), qQ = {
-              page: XQ
-            }, zQ.add(qQ)
+          getView: () => aM.value.view,
+          setPage: MM => {
+            var rM;
+            const iM = CM(MM) ? Vr(Vr({}, null !== (rM = null === SM || void 0 === SM ? void 0 : SM.page) && void 0 !== rM ? rM : LM()), {}, {
+              id: MM
+            }) : MM;
+            SM && aM.remove(SM), SM = {
+              page: iM
+            }, aM.add(SM)
           },
-          getPage: JQ
+          getPage: LM
         }
-      }(FQ)), function(QQ) {
+      }(nM)), function(MM) {
         let {
-          internalLogger: WQ,
-          config: XQ,
-          metas: wQ,
-          transports: qQ,
-          tracesApi: TQ,
-          userActionsApi: zQ
-        } = QQ;
-        var sQ;
-        WQ.debug("Initializing logs API");
-        let FQ = null;
-        const PQ = null !== (sQ = XQ.logArgsSerializer) && void 0 !== sQ ? sQ : cX;
+          internalLogger: rM,
+          config: iM,
+          metas: OM,
+          transports: SM,
+          tracesApi: jM,
+          userActionsApi: aM
+        } = MM;
+        var PM;
+        rM.debug("Initializing logs API");
+        let nM = null;
+        const QM = null !== (PM = iM.logArgsSerializer) && void 0 !== PM ? PM : si;
         return {
-          pushLog: function(QQ) {
+          pushLog: function(MM) {
             let {
-              context: sQ,
-              level: gQ,
-              skipDedupe: JQ,
-              spanContext: rQ,
-              timestampOverwriteMs: IQ
+              context: PM,
+              level: zM,
+              skipDedupe: LM,
+              spanContext: mM,
+              timestampOverwriteMs: HM
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!SW(wQ).shouldCapture()) return;
-              const jQ = uW(sQ),
-                BQ = {
-                  message: PQ(QQ),
-                  level: null !== gQ && void 0 !== gQ ? gQ : "log",
-                  context: YQ(jQ) ? void 0 : jQ,
-                  timestamp: IQ ? BW(IQ) : jW(),
-                  trace: rQ ? {
-                    trace_id: rQ.traceId,
-                    span_id: rQ.spanId
-                  } : TQ.getTraceContext()
+              if (!Nr(OM).shouldCapture()) return;
+              const hM = Zr(PM),
+                JM = {
+                  message: QM(MM),
+                  level: null !== zM && void 0 !== zM ? zM : "log",
+                  context: XM(hM) ? void 0 : hM,
+                  timestamp: HM ? Jr(HM) : hr(),
+                  trace: mM ? {
+                    trace_id: mM.traceId,
+                    span_id: mM.spanId
+                  } : jM.getTraceContext()
                 },
-                yQ = {
-                  message: BQ.message,
-                  level: BQ.level,
-                  context: BQ.context
+                dM = {
+                  message: JM.message,
+                  level: JM.level,
+                  context: JM.context
                 };
-              if (!JQ && XQ.dedupe && !UQ(FQ) && DW(yQ, FQ)) return void WQ.debug("Skipping log push because it is the same as the last one\n", BQ);
-              const VQ = FQ,
-                DQ = LT(wQ);
-              if (FQ !== VQ && !JQ && XQ.dedupe && DW(yQ, FQ)) return;
-              FQ = yQ;
-              const pQ = {
+              if (!LM && iM.dedupe && !GM(nM) && lr(dM, nM)) return void rM.debug("Skipping log push because it is the same as the last one\n", JM);
+              const yM = nM,
+                lM = fj(OM);
+              if (nM !== yM && !LM && iM.dedupe && lr(dM, nM)) return;
+              nM = dM;
+              const EM = {
                 type: "log",
-                payload: BQ,
-                meta: DQ
+                payload: JM,
+                meta: lM
               };
-              WQ.debug("Pushing log\n", pQ), vq(zQ.getActiveUserAction(), pQ) || qQ.execute(pQ)
-            } catch (jQ) {
-              WQ.error("Error pushing log\n", jQ)
+              rM.debug("Pushing log\n", EM), bS(aM.getActiveUserAction(), EM) || SM.execute(EM)
+            } catch (hM) {
+              rM.error("Error pushing log\n", hM)
             }
           }
         }
-      }(FQ)), function(QQ) {
+      }(nM)), function(MM) {
         let {
-          internalLogger: WQ,
-          config: XQ,
-          metas: wQ,
-          transports: qQ,
-          tracesApi: TQ,
-          userActionsApi: zQ
-        } = QQ;
-        WQ.debug("Initializing measurements API");
-        let sQ = null;
+          internalLogger: rM,
+          config: iM,
+          metas: OM,
+          transports: SM,
+          tracesApi: jM,
+          userActionsApi: aM
+        } = MM;
+        rM.debug("Initializing measurements API");
+        let PM = null;
         return {
-          pushMeasurement: function(QQ) {
+          pushMeasurement: function(MM) {
             let {
-              skipDedupe: FQ,
-              context: PQ,
-              spanContext: gQ,
-              timestampOverwriteMs: JQ
+              skipDedupe: nM,
+              context: QM,
+              spanContext: zM,
+              timestampOverwriteMs: LM
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!SW(wQ).shouldCapture()) return;
-              const rQ = uW(PQ),
-                IQ = mW(mW({}, QQ), {}, {
-                  trace: gQ ? {
-                    trace_id: gQ.traceId,
-                    span_id: gQ.spanId
-                  } : TQ.getTraceContext(),
-                  timestamp: JQ ? BW(JQ) : jW(),
-                  context: YQ(rQ) ? void 0 : rQ
+              if (!Nr(OM).shouldCapture()) return;
+              const mM = Zr(QM),
+                HM = Vr(Vr({}, MM), {}, {
+                  trace: zM ? {
+                    trace_id: zM.traceId,
+                    span_id: zM.spanId
+                  } : jM.getTraceContext(),
+                  timestamp: LM ? Jr(LM) : hr(),
+                  context: XM(mM) ? void 0 : mM
                 }),
-                jQ = {
-                  type: IQ.type,
-                  values: IQ.values,
-                  context: IQ.context
+                hM = {
+                  type: HM.type,
+                  values: HM.values,
+                  context: HM.context
                 };
-              if (!FQ && XQ.dedupe && !UQ(sQ) && DW(jQ, sQ)) return void WQ.debug("Skipping measurement push because it is the same as the last one\n", IQ);
-              const BQ = sQ,
-                yQ = LT(wQ);
-              if (sQ !== BQ && !FQ && XQ.dedupe && DW(jQ, sQ)) return;
-              sQ = jQ;
-              const VQ = {
+              if (!nM && iM.dedupe && !GM(PM) && lr(hM, PM)) return void rM.debug("Skipping measurement push because it is the same as the last one\n", HM);
+              const JM = PM,
+                dM = fj(OM);
+              if (PM !== JM && !nM && iM.dedupe && lr(hM, PM)) return;
+              PM = hM;
+              const yM = {
                 type: "measurement",
-                payload: IQ,
-                meta: yQ
+                payload: HM,
+                meta: dM
               };
-              WQ.debug("Pushing measurement\n", VQ), vq(zQ.getActiveUserAction(), VQ) || qQ.execute(VQ)
-            } catch (rQ) {
-              WQ.error("Error pushing measurement\n", rQ)
+              rM.debug("Pushing measurement\n", yM), bS(aM.getActiveUserAction(), yM) || SM.execute(yM)
+            } catch (mM) {
+              rM.error("Error pushing measurement\n", mM)
             }
           }
         }
-      }(FQ)), PQ), zQ)
+      }(nM)), QM), aM)
     }
 
-    function KT(QQ) {
-      const WQ = nT(QQ),
-        XQ = NT(WQ, QQ);
-      if (jQ() && !QQ.isolate) return void XQ.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
-      XQ.debug("Initializing");
-      const wQ = function(QQ, WQ) {
-          let XQ, wQ = [],
-            qQ = [],
-            TQ = [],
-            zQ = 0,
-            sQ = 0;
-          const FQ = () => wQ.reduce(((QQ, WQ) => Object.assign(QQ, hQ(WQ) ? WQ() : WQ)), {}),
-            PQ = () => {
-              if (qQ.length) {
-                const QQ = FQ();
-                qQ.forEach((WQ => WQ(QQ)))
+    function Vj(MM) {
+      const rM = Bj(MM),
+        iM = Kj(rM, MM);
+      if (hM() && !MM.isolate) return void iM.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
+      iM.debug("Initializing");
+      const OM = function(MM, rM) {
+          let iM, OM = [],
+            SM = [],
+            jM = [],
+            aM = 0,
+            PM = 0;
+          const nM = () => OM.reduce(((MM, rM) => Object.assign(MM, uM(rM) ? rM() : rM)), {}),
+            QM = () => {
+              if (SM.length) {
+                const MM = nM();
+                SM.forEach((rM => rM(MM)))
               }
             };
           return {
             add: function() {
-              for (var QQ = arguments.length, XQ = new Array(QQ), qQ = 0; qQ < QQ; qQ++) XQ[qQ] = arguments[qQ];
-              WQ.debug("Adding metas\n", XQ), wQ.push(...XQ), PQ()
+              for (var MM = arguments.length, iM = new Array(MM), SM = 0; SM < MM; SM++) iM[SM] = arguments[SM];
+              rM.debug("Adding metas\n", iM), OM.push(...iM), QM()
             },
             remove: function() {
-              for (var QQ = arguments.length, XQ = new Array(QQ), qQ = 0; qQ < QQ; qQ++) XQ[qQ] = arguments[qQ];
-              WQ.debug("Removing metas\n", XQ), wQ = wQ.filter((QQ => !XQ.includes(QQ))), PQ()
+              for (var MM = arguments.length, iM = new Array(MM), SM = 0; SM < MM; SM++) iM[SM] = arguments[SM];
+              rM.debug("Removing metas\n", iM), OM = OM.filter((MM => !iM.includes(MM))), QM()
             },
-            addListener: QQ => {
-              WQ.debug("Adding metas listener\n", QQ), qQ.push(QQ)
+            addListener: MM => {
+              rM.debug("Adding metas listener\n", MM), SM.push(MM)
             },
-            removeListener: QQ => {
-              WQ.debug("Removing metas listener\n", QQ), qQ = qQ.filter((WQ => WQ !== QQ))
+            removeListener: MM => {
+              rM.debug("Removing metas listener\n", MM), SM = SM.filter((rM => rM !== MM))
             },
-            capture: QQ => {
-              var WQ;
-              const wQ = void 0 !== XQ,
-                qQ = null !== (WQ = XQ) && void 0 !== WQ ? WQ : TQ;
-              wQ || (XQ = qQ, zQ = 0, sQ = qQ.length);
+            capture: MM => {
+              var rM;
+              const OM = void 0 !== iM,
+                SM = null !== (rM = iM) && void 0 !== rM ? rM : jM;
+              OM || (iM = SM, aM = 0, PM = SM.length);
               try {
-                for (; zQ < sQ;) {
-                  const QQ = qQ[zQ++];
-                  null === QQ || void 0 === QQ || QQ()
+                for (; aM < PM;) {
+                  const MM = SM[aM++];
+                  null === MM || void 0 === MM || MM()
                 }
-                const WQ = uT(FQ());
-                return null === QQ || void 0 === QQ || QQ(), WQ
+                const rM = oj(nM());
+                return null === MM || void 0 === MM || MM(), rM
               } finally {
-                wQ || (XQ = void 0)
+                OM || (iM = void 0)
               }
             },
-            addCaptureListener: QQ => {
-              TQ.push(QQ)
+            addCaptureListener: MM => {
+              jM.push(MM)
             },
-            removeCaptureListener: QQ => {
-              TQ = TQ.filter((WQ => WQ !== QQ))
+            removeCaptureListener: MM => {
+              jM = jM.filter((rM => rM !== MM))
             },
             get value() {
-              return FQ()
+              return nM()
             }
           }
-        }(0, XQ),
-        qQ = tT(WQ, XQ, QQ, wQ),
-        TQ = OT(WQ, XQ, QQ, wQ, qQ),
-        zQ = function(QQ, WQ, XQ, wQ, qQ, TQ) {
-          WQ.debug("Initializing instrumentations");
-          const zQ = [];
+        }(0, iM),
+        SM = xj(rM, iM, MM, OM),
+        jM = Tj(rM, iM, MM, OM, SM),
+        aM = function(MM, rM, iM, OM, SM, jM) {
+          rM.debug("Initializing instrumentations");
+          const aM = [];
           return {
             add: function() {
-              WQ.debug("Adding instrumentations");
-              for (var sQ = arguments.length, FQ = new Array(sQ), PQ = 0; PQ < sQ; PQ++) FQ[PQ] = arguments[PQ];
-              FQ.forEach((sQ => {
-                WQ.debug(`Adding "${sQ.name}" instrumentation`), zQ.some((QQ => QQ.name === sQ.name)) ? WQ.warn(`Instrumentation ${sQ.name} is already added`) : (sQ.unpatchedConsole = QQ, sQ.internalLogger = WQ, sQ.config = XQ, sQ.metas = wQ, sQ.transports = qQ, sQ.api = TQ, zQ.push(sQ), sQ.initialize())
+              rM.debug("Adding instrumentations");
+              for (var PM = arguments.length, nM = new Array(PM), QM = 0; QM < PM; QM++) nM[QM] = arguments[QM];
+              nM.forEach((PM => {
+                rM.debug(`Adding "${PM.name}" instrumentation`), aM.some((MM => MM.name === PM.name)) ? rM.warn(`Instrumentation ${PM.name} is already added`) : (PM.unpatchedConsole = MM, PM.internalLogger = rM, PM.config = iM, PM.metas = OM, PM.transports = SM, PM.api = jM, aM.push(PM), PM.initialize())
               }))
             },
             get instrumentations() {
-              return [...zQ]
+              return [...aM]
             },
             remove: function() {
-              WQ.debug("Removing instrumentations");
-              for (var QQ = arguments.length, XQ = new Array(QQ), wQ = 0; wQ < QQ; wQ++) XQ[wQ] = arguments[wQ];
-              XQ.forEach((QQ => {
-                var XQ, wQ;
-                WQ.debug(`Removing "${QQ.name}" instrumentation`);
-                const qQ = zQ.reduce(((WQ, XQ, wQ) => null === WQ && XQ.name === QQ.name ? wQ : null), null);
-                null !== qQ ? (null === (XQ = (wQ = zQ[qQ]).destroy) || void 0 === XQ || XQ.call(wQ), zQ.splice(qQ, 1)) : WQ.warn(`Instrumentation "${QQ.name}" is not added`)
+              rM.debug("Removing instrumentations");
+              for (var MM = arguments.length, iM = new Array(MM), OM = 0; OM < MM; OM++) iM[OM] = arguments[OM];
+              iM.forEach((MM => {
+                var iM, OM;
+                rM.debug(`Removing "${MM.name}" instrumentation`);
+                const SM = aM.reduce(((rM, iM, OM) => null === rM && iM.name === MM.name ? OM : null), null);
+                null !== SM ? (null === (iM = (OM = aM[SM]).destroy) || void 0 === iM || iM.call(OM), aM.splice(SM, 1)) : rM.warn(`Instrumentation "${MM.name}" is not added`)
               }))
             }
           }
-        }(WQ, XQ, QQ, wQ, qQ, TQ),
-        sQ = yQ(WQ, XQ, QQ, wQ, qQ, TQ, zQ);
-      return fT(sQ),
-        function(QQ) {
-          QQ.transports.add(...QQ.config.transports), QQ.transports.addBeforeSendHooks(QQ.config.beforeSend)
-        }(sQ),
-        function(QQ) {
-          QQ.instrumentations.add(...QQ.config.instrumentations)
-        }(sQ), sQ
+        }(rM, iM, MM, OM, SM, jM),
+        PM = dM(rM, iM, MM, OM, SM, jM, aM);
+      return Nj(PM),
+        function(MM) {
+          MM.transports.add(...MM.config.transports), MM.transports.addBeforeSendHooks(MM.config.beforeSend)
+        }(PM),
+        function(MM) {
+          MM.instrumentations.add(...MM.config.instrumentations)
+        }(PM), PM
     }
 
-    function mT(QQ) {
-      const WQ = cT(QQ);
-      if (WQ) return KT(WQ)
+    function cj(MM) {
+      const rM = Wj(MM);
+      if (rM) return Vj(rM)
     }
   },
-  7054: function(QQ, WQ, XQ) {
-    var wQ;
-    ! function(qQ, TQ) {
-      var zQ = "function",
-        sQ = "undefined",
-        FQ = "object",
-        PQ = "string",
-        gQ = "major",
-        JQ = "model",
-        rQ = "name",
-        IQ = "type",
-        jQ = "vendor",
-        BQ = "version",
-        yQ = "architecture",
-        VQ = "console",
-        DQ = "mobile",
-        pQ = "tablet",
-        GQ = "smarttv",
-        UQ = "wearable",
-        bQ = "embedded",
-        vQ = "Amazon",
-        dQ = "Apple",
-        HQ = "ASUS",
-        aQ = "BlackBerry",
-        lQ = "Browser",
-        hQ = "Chrome",
-        iQ = "Firefox",
-        cQ = "Google",
-        AQ = "Honor",
-        RQ = "Huawei",
-        EQ = "LG",
-        CQ = "Microsoft",
-        uQ = "Motorola",
-        LQ = "Nvidia",
-        kQ = "OnePlus",
-        fQ = "Opera",
-        SQ = "OPPO",
-        tQ = "Samsung",
-        oQ = "Sharp",
-        eQ = "Sony",
-        nQ = "Xiaomi",
-        xQ = "Zebra",
-        YQ = "Facebook",
-        NQ = "Chromium OS",
-        ZQ = "Mac OS",
-        OQ = " Browser",
-        KQ = function(QQ) {
-          for (var WQ = {}, XQ = 0; XQ < QQ.length; XQ++) WQ[QQ[XQ].toUpperCase()] = QQ[XQ];
-          return WQ
+  7161: function(MM, rM, iM) {
+    var OM;
+    ! function(SM, jM) {
+      var aM = "function",
+        PM = "undefined",
+        nM = "object",
+        QM = "string",
+        zM = "major",
+        LM = "model",
+        mM = "name",
+        HM = "type",
+        hM = "vendor",
+        JM = "version",
+        dM = "architecture",
+        yM = "console",
+        lM = "mobile",
+        EM = "tablet",
+        UM = "smarttv",
+        GM = "wearable",
+        CM = "embedded",
+        eM = "Amazon",
+        bM = "Apple",
+        wM = "ASUS",
+        tM = "BlackBerry",
+        gM = "Browser",
+        uM = "Chrome",
+        RM = "Firefox",
+        pM = "Google",
+        WM = "Honor",
+        sM = "Huawei",
+        DM = "LG",
+        kM = "Microsoft",
+        ZM = "Motorola",
+        oM = "Nvidia",
+        fM = "OnePlus",
+        YM = "Opera",
+        NM = "OPPO",
+        AM = "Samsung",
+        xM = "Sharp",
+        vM = "Sony",
+        FM = "Xiaomi",
+        BM = "Zebra",
+        XM = "Facebook",
+        IM = "Chromium OS",
+        KM = "Mac OS",
+        qM = " Browser",
+        TM = function(MM) {
+          for (var rM = {}, iM = 0; iM < MM.length; iM++) rM[MM[iM].toUpperCase()] = MM[iM];
+          return rM
         },
-        mQ = function(QQ, WQ) {
-          return typeof QQ === PQ && -1 !== MQ(WQ).indexOf(MQ(QQ))
+        VM = function(MM, rM) {
+          return typeof MM === QM && -1 !== cM(rM).indexOf(cM(MM))
         },
-        MQ = function(QQ) {
-          return QQ.toLowerCase()
+        cM = function(MM) {
+          return MM.toLowerCase()
         },
-        QW = function(QQ, WQ) {
-          if (typeof QQ === PQ) return QQ = QQ.replace(/^\s\s*/, ""), typeof WQ === sQ ? QQ : QQ.substring(0, 500)
+        Mr = function(MM, rM) {
+          if (typeof MM === QM) return MM = MM.replace(/^\s\s*/, ""), typeof rM === PM ? MM : MM.substring(0, 500)
         },
-        WW = function(QQ, WQ) {
-          for (var XQ, wQ, qQ, sQ, PQ, gQ, JQ = 0; JQ < WQ.length && !PQ;) {
-            var rQ = WQ[JQ],
-              IQ = WQ[JQ + 1];
-            for (XQ = wQ = 0; XQ < rQ.length && !PQ && rQ[XQ];)
-              if (PQ = rQ[XQ++].exec(QQ))
-                for (qQ = 0; qQ < IQ.length; qQ++) gQ = PQ[++wQ], typeof(sQ = IQ[qQ]) === FQ && sQ.length > 0 ? 2 === sQ.length ? typeof sQ[1] == zQ ? this[sQ[0]] = sQ[1].call(this, gQ) : this[sQ[0]] = sQ[1] : 3 === sQ.length ? typeof sQ[1] !== zQ || sQ[1].exec && sQ[1].test ? this[sQ[0]] = gQ ? gQ.replace(sQ[1], sQ[2]) : TQ : this[sQ[0]] = gQ ? sQ[1].call(this, gQ, sQ[2]) : TQ : 4 === sQ.length && (this[sQ[0]] = gQ ? sQ[3].call(this, gQ.replace(sQ[1], sQ[2])) : TQ) : this[sQ] = gQ || TQ;
-            JQ += 2
+        rr = function(MM, rM) {
+          for (var iM, OM, SM, PM, QM, zM, LM = 0; LM < rM.length && !QM;) {
+            var mM = rM[LM],
+              HM = rM[LM + 1];
+            for (iM = OM = 0; iM < mM.length && !QM && mM[iM];)
+              if (QM = mM[iM++].exec(MM))
+                for (SM = 0; SM < HM.length; SM++) zM = QM[++OM], typeof(PM = HM[SM]) === nM && PM.length > 0 ? 2 === PM.length ? typeof PM[1] == aM ? this[PM[0]] = PM[1].call(this, zM) : this[PM[0]] = PM[1] : 3 === PM.length ? typeof PM[1] !== aM || PM[1].exec && PM[1].test ? this[PM[0]] = zM ? zM.replace(PM[1], PM[2]) : jM : this[PM[0]] = zM ? PM[1].call(this, zM, PM[2]) : jM : 4 === PM.length && (this[PM[0]] = zM ? PM[3].call(this, zM.replace(PM[1], PM[2])) : jM) : this[PM] = zM || jM;
+            LM += 2
           }
         },
-        XW = function(QQ, WQ) {
-          for (var XQ in WQ)
-            if (typeof WQ[XQ] === FQ && WQ[XQ].length > 0) {
-              for (var wQ = 0; wQ < WQ[XQ].length; wQ++)
-                if (mQ(WQ[XQ][wQ], QQ)) return "?" === XQ ? TQ : XQ
-            } else if (mQ(WQ[XQ], QQ)) return "?" === XQ ? TQ : XQ;
-          return WQ.hasOwnProperty("*") ? WQ["*"] : QQ
+        ir = function(MM, rM) {
+          for (var iM in rM)
+            if (typeof rM[iM] === nM && rM[iM].length > 0) {
+              for (var OM = 0; OM < rM[iM].length; OM++)
+                if (VM(rM[iM][OM], MM)) return "?" === iM ? jM : iM
+            } else if (VM(rM[iM], MM)) return "?" === iM ? jM : iM;
+          return rM.hasOwnProperty("*") ? rM["*"] : MM
         },
-        wW = {
+        Or = {
           ME: "4.90",
           "NT 3.11": "NT3.51",
           "NT 4.0": "NT4.0",
@@ -4623,110 +4623,110 @@ export const modules = {
           10: ["NT 6.4", "NT 10.0"],
           RT: "ARM"
         },
-        qW = {
+        Sr = {
           browser: [
             [/\b(?:crmo|crios)\/([\w\.]+)/i],
-            [BQ, [rQ, "Chrome"]],
+            [JM, [mM, "Chrome"]],
             [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-            [BQ, [rQ, "Edge"]],
+            [JM, [mM, "Edge"]],
             [/(opera mini)\/([-\w\.]+)/i, /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i, /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i],
-            [rQ, BQ],
+            [mM, JM],
             [/opios[\/ ]+([\w\.]+)/i],
-            [BQ, [rQ, fQ + " Mini"]],
+            [JM, [mM, YM + " Mini"]],
             [/\bop(?:rg)?x\/([\w\.]+)/i],
-            [BQ, [rQ, fQ + " GX"]],
+            [JM, [mM, YM + " GX"]],
             [/\bopr\/([\w\.]+)/i],
-            [BQ, [rQ, fQ]],
+            [JM, [mM, YM]],
             [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
-            [BQ, [rQ, "Baidu"]],
+            [JM, [mM, "Baidu"]],
             [/\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i],
-            [BQ, [rQ, "Maxthon"]],
+            [JM, [mM, "Maxthon"]],
             [/(kindle)\/([\w\.]+)/i, /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i, /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i, /(?:ms|\()(ie) ([\w\.]+)/i, /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon)\/([-\w\.]+)/i, /(heytap|ovi|115)browser\/([\d\.]+)/i, /(weibo)__([\d\.]+)/i],
-            [rQ, BQ],
+            [mM, JM],
             [/quark(?:pc)?\/([-\w\.]+)/i],
-            [BQ, [rQ, "Quark"]],
+            [JM, [mM, "Quark"]],
             [/\bddg\/([\w\.]+)/i],
-            [BQ, [rQ, "DuckDuckGo"]],
+            [JM, [mM, "DuckDuckGo"]],
             [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-            [BQ, [rQ, "UC" + lQ]],
+            [JM, [mM, "UC" + gM]],
             [/microm.+\bqbcore\/([\w\.]+)/i, /\bqbcore\/([\w\.]+).+microm/i, /micromessenger\/([\w\.]+)/i],
-            [BQ, [rQ, "WeChat"]],
+            [JM, [mM, "WeChat"]],
             [/konqueror\/([\w\.]+)/i],
-            [BQ, [rQ, "Konqueror"]],
+            [JM, [mM, "Konqueror"]],
             [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-            [BQ, [rQ, "IE"]],
+            [JM, [mM, "IE"]],
             [/ya(?:search)?browser\/([\w\.]+)/i],
-            [BQ, [rQ, "Yandex"]],
+            [JM, [mM, "Yandex"]],
             [/slbrowser\/([\w\.]+)/i],
-            [BQ, [rQ, "Smart Lenovo " + lQ]],
+            [JM, [mM, "Smart Lenovo " + gM]],
             [/(avast|avg)\/([\w\.]+)/i],
             [
-              [rQ, /(.+)/, "$1 Secure " + lQ], BQ
+              [mM, /(.+)/, "$1 Secure " + gM], JM
             ],
             [/\bfocus\/([\w\.]+)/i],
-            [BQ, [rQ, iQ + " Focus"]],
+            [JM, [mM, RM + " Focus"]],
             [/\bopt\/([\w\.]+)/i],
-            [BQ, [rQ, fQ + " Touch"]],
+            [JM, [mM, YM + " Touch"]],
             [/coc_coc\w+\/([\w\.]+)/i],
-            [BQ, [rQ, "Coc Coc"]],
+            [JM, [mM, "Coc Coc"]],
             [/dolfin\/([\w\.]+)/i],
-            [BQ, [rQ, "Dolphin"]],
+            [JM, [mM, "Dolphin"]],
             [/coast\/([\w\.]+)/i],
-            [BQ, [rQ, fQ + " Coast"]],
+            [JM, [mM, YM + " Coast"]],
             [/miuibrowser\/([\w\.]+)/i],
-            [BQ, [rQ, "MIUI" + OQ]],
+            [JM, [mM, "MIUI" + qM]],
             [/fxios\/([\w\.-]+)/i],
-            [BQ, [rQ, iQ]],
+            [JM, [mM, RM]],
             [/\bqihoobrowser\/?([\w\.]*)/i],
-            [BQ, [rQ, "360"]],
+            [JM, [mM, "360"]],
             [/\b(qq)\/([\w\.]+)/i],
             [
-              [rQ, /(.+)/, "$1Browser"], BQ
+              [mM, /(.+)/, "$1Browser"], JM
             ],
             [/(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i],
             [
-              [rQ, /(.+)/, "$1" + OQ], BQ
+              [mM, /(.+)/, "$1" + qM], JM
             ],
             [/samsungbrowser\/([\w\.]+)/i],
-            [BQ, [rQ, tQ + " Internet"]],
+            [JM, [mM, AM + " Internet"]],
             [/metasr[\/ ]?([\d\.]+)/i],
-            [BQ, [rQ, "Sogou Explorer"]],
+            [JM, [mM, "Sogou Explorer"]],
             [/(sogou)mo\w+\/([\d\.]+)/i],
             [
-              [rQ, "Sogou Mobile"], BQ
+              [mM, "Sogou Mobile"], JM
             ],
             [/(electron)\/([\w\.]+) safari/i, /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i, /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i],
-            [rQ, BQ],
+            [mM, JM],
             [/(lbbrowser|rekonq)/i, /\[(linkedin)app\]/i],
-            [rQ],
+            [mM],
             [/ome\/([\w\.]+) \w* ?(iron) saf/i, /ome\/([\w\.]+).+qihu (360)[es]e/i],
-            [BQ, rQ],
+            [JM, mM],
             [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
             [
-              [rQ, YQ], BQ
+              [mM, XM], JM
             ],
             [/(Klarna)\/([\w\.]+)/i, /(kakao(?:talk|story))[\/ ]([\w\.]+)/i, /(naver)\(.*?(\d+\.[\w\.]+).*\)/i, /(daum)apps[\/ ]([\w\.]+)/i, /safari (line)\/([\w\.]+)/i, /\b(line)\/([\w\.]+)\/iab/i, /(alipay)client\/([\w\.]+)/i, /(twitter)(?:and| f.+e\/([\w\.]+))/i, /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i],
-            [rQ, BQ],
+            [mM, JM],
             [/\bgsa\/([\w\.]+) .*safari\//i],
-            [BQ, [rQ, "GSA"]],
+            [JM, [mM, "GSA"]],
             [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
-            [BQ, [rQ, "TikTok"]],
+            [JM, [mM, "TikTok"]],
             [/headlesschrome(?:\/([\w\.]+)| )/i],
-            [BQ, [rQ, hQ + " Headless"]],
+            [JM, [mM, uM + " Headless"]],
             [/ wv\).+(chrome)\/([\w\.]+)/i],
             [
-              [rQ, hQ + " WebView"], BQ
+              [mM, uM + " WebView"], JM
             ],
             [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-            [BQ, [rQ, "Android " + lQ]],
+            [JM, [mM, "Android " + gM]],
             [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-            [rQ, BQ],
+            [mM, JM],
             [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
-            [BQ, [rQ, "Mobile Safari"]],
+            [JM, [mM, "Mobile Safari"]],
             [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
-            [BQ, rQ],
+            [JM, mM],
             [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-            [rQ, [BQ, XW, {
+            [mM, [JM, ir, {
               "1.0": "/8",
               1.2: "/1",
               1.3: "/3",
@@ -4737,642 +4737,642 @@ export const modules = {
               "?": "/"
             }]],
             [/(webkit|khtml)\/([\w\.]+)/i],
-            [rQ, BQ],
+            [mM, JM],
             [/(navigator|netscape\d?)\/([-\w\.]+)/i],
             [
-              [rQ, "Netscape"], BQ
+              [mM, "Netscape"], JM
             ],
             [/(wolvic|librewolf)\/([\w\.]+)/i],
-            [rQ, BQ],
+            [mM, JM],
             [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-            [BQ, [rQ, iQ + " Reality"]],
+            [JM, [mM, RM + " Reality"]],
             [/ekiohf.+(flow)\/([\w\.]+)/i, /(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror)[\/ ]?([\w\.\+]+)/i, /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i, /(firefox)\/([\w\.]+)/i, /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i, /(amaya|dillo|doris|icab|ladybird|lynx|mosaic|netsurf|obigo|polaris|w3m|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i, /\b(links) \(([\w\.]+)/i],
-            [rQ, [BQ, /_/g, "."]],
+            [mM, [JM, /_/g, "."]],
             [/(cobalt)\/([\w\.]+)/i],
-            [rQ, [BQ, /master.|lts./, ""]]
+            [mM, [JM, /master.|lts./, ""]]
           ],
           cpu: [
             [/\b((amd|x|x86[-_]?|wow|win)64)\b/i],
             [
-              [yQ, "amd64"]
+              [dM, "amd64"]
             ],
             [/(ia32(?=;))/i, /\b((i[346]|x)86)(pc)?\b/i],
             [
-              [yQ, "ia32"]
+              [dM, "ia32"]
             ],
             [/\b(aarch64|arm(v?[89]e?l?|_?64))\b/i],
             [
-              [yQ, "arm64"]
+              [dM, "arm64"]
             ],
             [/\b(arm(v[67])?ht?n?[fl]p?)\b/i],
             [
-              [yQ, "armhf"]
+              [dM, "armhf"]
             ],
             [/( (ce|mobile); ppc;|\/[\w\.]+arm\b)/i],
             [
-              [yQ, "arm"]
+              [dM, "arm"]
             ],
             [/((ppc|powerpc)(64)?)( mac|;|\))/i],
             [
-              [yQ, /ower/, "", MQ]
+              [dM, /ower/, "", cM]
             ],
             [/ sun4\w[;\)]/i],
             [
-              [yQ, "sparc"]
+              [dM, "sparc"]
             ],
             [/\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i],
             [
-              [yQ, MQ]
+              [dM, cM]
             ]
           ],
           device: [
             [/\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i],
-            [JQ, [jQ, tQ],
-              [IQ, pQ]
+            [LM, [hM, AM],
+              [HM, EM]
             ],
             [/\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i, /samsung[- ]((?!sm-[lr])[-\w]+)/i, /sec-(sgh\w+)/i],
-            [JQ, [jQ, tQ],
-              [IQ, DQ]
+            [LM, [hM, AM],
+              [HM, lM]
             ],
             [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
-            [JQ, [jQ, dQ],
-              [IQ, DQ]
+            [LM, [hM, bM],
+              [HM, lM]
             ],
             [/\((ipad);[-\w\),; ]+apple/i, /applecoremedia\/[\w\.]+ \((ipad)/i, /\b(ipad)\d\d?,\d\d?[;\]].+ios/i],
-            [JQ, [jQ, dQ],
-              [IQ, pQ]
+            [LM, [hM, bM],
+              [HM, EM]
             ],
             [/(macintosh);/i],
-            [JQ, [jQ, dQ]],
+            [LM, [hM, bM]],
             [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-            [JQ, [jQ, oQ],
-              [IQ, DQ]
+            [LM, [hM, xM],
+              [HM, lM]
             ],
             [/\b((?:brt|eln|hey2?|gdi|jdn)-a?[lnw]09|(?:ag[rm]3?|jdn2|kob2)-a?[lw]0[09]hn)(?: bui|\)|;)/i],
-            [JQ, [jQ, AQ],
-              [IQ, pQ]
+            [LM, [hM, WM],
+              [HM, EM]
             ],
             [/honor([-\w ]+)[;\)]/i],
-            [JQ, [jQ, AQ],
-              [IQ, DQ]
+            [LM, [hM, WM],
+              [HM, lM]
             ],
             [/\b((?:ag[rs][2356]?k?|bah[234]?|bg[2o]|bt[kv]|cmr|cpn|db[ry]2?|jdn2|got|kob2?k?|mon|pce|scm|sht?|[tw]gr|vrd)-[ad]?[lw][0125][09]b?|605hw|bg2-u03|(?:gem|fdr|m2|ple|t1)-[7a]0[1-4][lu]|t1-a2[13][lw]|mediapad[\w\. ]*(?= bui|\)))\b(?!.+d\/s)/i],
-            [JQ, [jQ, RQ],
-              [IQ, pQ]
+            [LM, [hM, sM],
+              [HM, EM]
             ],
             [/(?:huawei)([-\w ]+)[;\)]/i, /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i],
-            [JQ, [jQ, RQ],
-              [IQ, DQ]
+            [LM, [hM, sM],
+              [HM, lM]
             ],
             [/oid[^\)]+; (2[\dbc]{4}(182|283|rp\w{2})[cgl]|m2105k81a?c)(?: bui|\))/i, /\b((?:red)?mi[-_ ]?pad[\w- ]*)(?: bui|\))/i],
             [
-              [JQ, /_/g, " "],
-              [jQ, nQ],
-              [IQ, pQ]
+              [LM, /_/g, " "],
+              [hM, FM],
+              [HM, EM]
             ],
             [/\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i, /\b; (\w+) build\/hm\1/i, /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i, /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i, /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i, /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite|pro)?)(?: bui|\))/i, / ([\w ]+) miui\/v?\d/i],
             [
-              [JQ, /_/g, " "],
-              [jQ, nQ],
-              [IQ, DQ]
+              [LM, /_/g, " "],
+              [hM, FM],
+              [HM, lM]
             ],
             [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
-            [JQ, [jQ, SQ],
-              [IQ, DQ]
+            [LM, [hM, NM],
+              [HM, lM]
             ],
             [/\b(opd2(\d{3}a?))(?: bui|\))/i],
-            [JQ, [jQ, XW, {
+            [LM, [hM, ir, {
                 OnePlus: ["304", "403", "203"],
-                "*": SQ
+                "*": NM
               }],
-              [IQ, pQ]
+              [HM, EM]
             ],
             [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-            [JQ, [jQ, "Vivo"],
-              [IQ, DQ]
+            [LM, [hM, "Vivo"],
+              [HM, lM]
             ],
             [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
-            [JQ, [jQ, "Realme"],
-              [IQ, DQ]
+            [LM, [hM, "Realme"],
+              [HM, lM]
             ],
             [/\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i, /\bmot(?:orola)?[- ](\w*)/i, /((?:moto(?! 360)[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i],
-            [JQ, [jQ, uQ],
-              [IQ, DQ]
+            [LM, [hM, ZM],
+              [HM, lM]
             ],
             [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-            [JQ, [jQ, uQ],
-              [IQ, pQ]
+            [LM, [hM, ZM],
+              [HM, EM]
             ],
             [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-            [JQ, [jQ, EQ],
-              [IQ, pQ]
+            [LM, [hM, DM],
+              [HM, EM]
             ],
             [/(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i, /\blg[-e;\/ ]+((?!browser|netcast|android tv|watch)\w+)/i, /\blg-?([\d\w]+) bui/i],
-            [JQ, [jQ, EQ],
-              [IQ, DQ]
+            [LM, [hM, DM],
+              [HM, lM]
             ],
             [/(ideatab[-\w ]+|602lv|d-42a|a101lv|a2109a|a3500-hv|s[56]000|pb-6505[my]|tb-?x?\d{3,4}(?:f[cu]|xu|[av])|yt\d?-[jx]?\d+[lfmx])( bui|;|\)|\/)/i, /lenovo ?(b[68]0[08]0-?[hf]?|tab(?:[\w- ]+?)|tb[\w-]{6,7})( bui|;|\)|\/)/i],
-            [JQ, [jQ, "Lenovo"],
-              [IQ, pQ]
+            [LM, [hM, "Lenovo"],
+              [HM, EM]
             ],
             [/(nokia) (t[12][01])/i],
-            [jQ, JQ, [IQ, pQ]],
+            [hM, LM, [HM, EM]],
             [/(?:maemo|nokia).*(n900|lumia \d+|rm-\d+)/i, /nokia[-_ ]?(([-\w\. ]*))/i],
             [
-              [JQ, /_/g, " "],
-              [IQ, DQ],
-              [jQ, "Nokia"]
+              [LM, /_/g, " "],
+              [HM, lM],
+              [hM, "Nokia"]
             ],
             [/(pixel (c|tablet))\b/i],
-            [JQ, [jQ, cQ],
-              [IQ, pQ]
+            [LM, [hM, pM],
+              [HM, EM]
             ],
             [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-            [JQ, [jQ, cQ],
-              [IQ, DQ]
+            [LM, [hM, pM],
+              [HM, lM]
             ],
             [/droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
-            [JQ, [jQ, eQ],
-              [IQ, DQ]
+            [LM, [hM, vM],
+              [HM, lM]
             ],
             [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
             [
-              [JQ, "Xperia Tablet"],
-              [jQ, eQ],
-              [IQ, pQ]
+              [LM, "Xperia Tablet"],
+              [hM, vM],
+              [HM, EM]
             ],
             [/ (kb2005|in20[12]5|be20[12][59])\b/i, /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i],
-            [JQ, [jQ, kQ],
-              [IQ, DQ]
+            [LM, [hM, fM],
+              [HM, lM]
             ],
             [/(alexa)webm/i, /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i, /(kf[a-z]+)( bui|\)).+silk\//i],
-            [JQ, [jQ, vQ],
-              [IQ, pQ]
+            [LM, [hM, eM],
+              [HM, EM]
             ],
             [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
             [
-              [JQ, /(.+)/g, "Fire Phone $1"],
-              [jQ, vQ],
-              [IQ, DQ]
+              [LM, /(.+)/g, "Fire Phone $1"],
+              [hM, eM],
+              [HM, lM]
             ],
             [/(playbook);[-\w\),; ]+(rim)/i],
-            [JQ, jQ, [IQ, pQ]],
+            [LM, hM, [HM, EM]],
             [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-            [JQ, [jQ, aQ],
-              [IQ, DQ]
+            [LM, [hM, tM],
+              [HM, lM]
             ],
             [/(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i],
-            [JQ, [jQ, HQ],
-              [IQ, pQ]
+            [LM, [hM, wM],
+              [HM, EM]
             ],
             [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-            [JQ, [jQ, HQ],
-              [IQ, DQ]
+            [LM, [hM, wM],
+              [HM, lM]
             ],
             [/(nexus 9)/i],
-            [JQ, [jQ, "HTC"],
-              [IQ, pQ]
+            [LM, [hM, "HTC"],
+              [HM, EM]
             ],
             [/(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i, /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i, /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i],
-            [jQ, [JQ, /_/g, " "],
-              [IQ, DQ]
+            [hM, [LM, /_/g, " "],
+              [HM, lM]
             ],
             [/droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])\w*(\)| bui)/i],
-            [JQ, [jQ, "TCL"],
-              [IQ, pQ]
+            [LM, [hM, "TCL"],
+              [HM, EM]
             ],
             [/(itel) ((\w+))/i],
             [
-              [jQ, MQ], JQ, [IQ, XW, {
+              [hM, cM], LM, [HM, ir, {
                 tablet: ["p10001l", "w7001"],
                 "*": "mobile"
               }]
             ],
             [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-            [JQ, [jQ, "Acer"],
-              [IQ, pQ]
+            [LM, [hM, "Acer"],
+              [HM, EM]
             ],
             [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-            [JQ, [jQ, "Meizu"],
-              [IQ, DQ]
+            [LM, [hM, "Meizu"],
+              [HM, lM]
             ],
             [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
-            [JQ, [jQ, "Ulefone"],
-              [IQ, DQ]
+            [LM, [hM, "Ulefone"],
+              [HM, lM]
             ],
             [/; (energy ?\w+)(?: bui|\))/i, /; energizer ([\w ]+)(?: bui|\))/i],
-            [JQ, [jQ, "Energizer"],
-              [IQ, DQ]
+            [LM, [hM, "Energizer"],
+              [HM, lM]
             ],
             [/; cat (b35);/i, /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i],
-            [JQ, [jQ, "Cat"],
-              [IQ, DQ]
+            [LM, [hM, "Cat"],
+              [HM, lM]
             ],
             [/((?:new )?andromax[\w- ]+)(?: bui|\))/i],
-            [JQ, [jQ, "Smartfren"],
-              [IQ, DQ]
+            [LM, [hM, "Smartfren"],
+              [HM, lM]
             ],
             [/droid.+; (a(?:015|06[35]|142p?))/i],
-            [JQ, [jQ, "Nothing"],
-              [IQ, DQ]
+            [LM, [hM, "Nothing"],
+              [HM, lM]
             ],
             [/; (x67 5g|tikeasy \w+|ac[1789]\d\w+)( b|\))/i, /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d+[\w ]*)( b|\))/i],
-            [JQ, [jQ, "Archos"],
-              [IQ, pQ]
+            [LM, [hM, "Archos"],
+              [HM, EM]
             ],
             [/archos ([\w ]+)( b|\))/i, /; (ac[3-6]\d\w{2,8})( b|\))/i],
-            [JQ, [jQ, "Archos"],
-              [IQ, DQ]
+            [LM, [hM, "Archos"],
+              [HM, lM]
             ],
             [/(imo) (tab \w+)/i, /(infinix) (x1101b?)/i],
-            [jQ, JQ, [IQ, pQ]],
+            [hM, LM, [HM, EM]],
             [/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i, /; (hmd|imo) ([\w ]+?)(?: bui|\))/i, /(hp) ([\w ]+\w)/i, /(microsoft); (lumia[\w ]+)/i, /(lenovo)[-_ ]?([-\w ]+?)(?: bui|\)|\/)/i, /(oppo) ?([\w ]+) bui/i],
-            [jQ, JQ, [IQ, DQ]],
+            [hM, LM, [HM, lM]],
             [/(kobo)\s(ereader|touch)/i, /(hp).+(touchpad(?!.+tablet)|tablet)/i, /(kindle)\/([\w\.]+)/i, /(nook)[\w ]+build\/(\w+)/i, /(dell) (strea[kpr\d ]*[\dko])/i, /(le[- ]+pan)[- ]+(\w{1,9}) bui/i, /(trinity)[- ]*(t\d{3}) bui/i, /(gigaset)[- ]+(q\w{1,9}) bui/i, /(vodafone) ([\w ]+)(?:\)| bui)/i],
-            [jQ, JQ, [IQ, pQ]],
+            [hM, LM, [HM, EM]],
             [/(surface duo)/i],
-            [JQ, [jQ, CQ],
-              [IQ, pQ]
+            [LM, [hM, kM],
+              [HM, EM]
             ],
             [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-            [JQ, [jQ, "Fairphone"],
-              [IQ, DQ]
+            [LM, [hM, "Fairphone"],
+              [HM, lM]
             ],
             [/(u304aa)/i],
-            [JQ, [jQ, "AT&T"],
-              [IQ, DQ]
+            [LM, [hM, "AT&T"],
+              [HM, lM]
             ],
             [/\bsie-(\w*)/i],
-            [JQ, [jQ, "Siemens"],
-              [IQ, DQ]
+            [LM, [hM, "Siemens"],
+              [HM, lM]
             ],
             [/\b(rct\w+) b/i],
-            [JQ, [jQ, "RCA"],
-              [IQ, pQ]
+            [LM, [hM, "RCA"],
+              [HM, EM]
             ],
             [/\b(venue[\d ]{2,7}) b/i],
-            [JQ, [jQ, "Dell"],
-              [IQ, pQ]
+            [LM, [hM, "Dell"],
+              [HM, EM]
             ],
             [/\b(q(?:mv|ta)\w+) b/i],
-            [JQ, [jQ, "Verizon"],
-              [IQ, pQ]
+            [LM, [hM, "Verizon"],
+              [HM, EM]
             ],
             [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
-            [JQ, [jQ, "Barnes & Noble"],
-              [IQ, pQ]
+            [LM, [hM, "Barnes & Noble"],
+              [HM, EM]
             ],
             [/\b(tm\d{3}\w+) b/i],
-            [JQ, [jQ, "NuVision"],
-              [IQ, pQ]
+            [LM, [hM, "NuVision"],
+              [HM, EM]
             ],
             [/\b(k88) b/i],
-            [JQ, [jQ, "ZTE"],
-              [IQ, pQ]
+            [LM, [hM, "ZTE"],
+              [HM, EM]
             ],
             [/\b(nx\d{3}j) b/i],
-            [JQ, [jQ, "ZTE"],
-              [IQ, DQ]
+            [LM, [hM, "ZTE"],
+              [HM, lM]
             ],
             [/\b(gen\d{3}) b.+49h/i],
-            [JQ, [jQ, "Swiss"],
-              [IQ, DQ]
+            [LM, [hM, "Swiss"],
+              [HM, lM]
             ],
             [/\b(zur\d{3}) b/i],
-            [JQ, [jQ, "Swiss"],
-              [IQ, pQ]
+            [LM, [hM, "Swiss"],
+              [HM, EM]
             ],
             [/\b((zeki)?tb.*\b) b/i],
-            [JQ, [jQ, "Zeki"],
-              [IQ, pQ]
+            [LM, [hM, "Zeki"],
+              [HM, EM]
             ],
             [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
             [
-              [jQ, "Dragon Touch"], JQ, [IQ, pQ]
+              [hM, "Dragon Touch"], LM, [HM, EM]
             ],
             [/\b(ns-?\w{0,9}) b/i],
-            [JQ, [jQ, "Insignia"],
-              [IQ, pQ]
+            [LM, [hM, "Insignia"],
+              [HM, EM]
             ],
             [/\b((nxa|next)-?\w{0,9}) b/i],
-            [JQ, [jQ, "NextBook"],
-              [IQ, pQ]
+            [LM, [hM, "NextBook"],
+              [HM, EM]
             ],
             [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
             [
-              [jQ, "Voice"], JQ, [IQ, DQ]
+              [hM, "Voice"], LM, [HM, lM]
             ],
             [/\b(lvtel\-)?(v1[12]) b/i],
             [
-              [jQ, "LvTel"], JQ, [IQ, DQ]
+              [hM, "LvTel"], LM, [HM, lM]
             ],
             [/\b(ph-1) /i],
-            [JQ, [jQ, "Essential"],
-              [IQ, DQ]
+            [LM, [hM, "Essential"],
+              [HM, lM]
             ],
             [/\b(v(100md|700na|7011|917g).*\b) b/i],
-            [JQ, [jQ, "Envizen"],
-              [IQ, pQ]
+            [LM, [hM, "Envizen"],
+              [HM, EM]
             ],
             [/\b(trio[-\w\. ]+) b/i],
-            [JQ, [jQ, "MachSpeed"],
-              [IQ, pQ]
+            [LM, [hM, "MachSpeed"],
+              [HM, EM]
             ],
             [/\btu_(1491) b/i],
-            [JQ, [jQ, "Rotor"],
-              [IQ, pQ]
+            [LM, [hM, "Rotor"],
+              [HM, EM]
             ],
             [/((?:tegranote|shield t(?!.+d tv))[\w- ]*?)(?: b|\))/i],
-            [JQ, [jQ, LQ],
-              [IQ, pQ]
+            [LM, [hM, oM],
+              [HM, EM]
             ],
             [/(sprint) (\w+)/i],
-            [jQ, JQ, [IQ, DQ]],
+            [hM, LM, [HM, lM]],
             [/(kin\.[onetw]{3})/i],
             [
-              [JQ, /\./g, " "],
-              [jQ, CQ],
-              [IQ, DQ]
+              [LM, /\./g, " "],
+              [hM, kM],
+              [HM, lM]
             ],
             [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-            [JQ, [jQ, xQ],
-              [IQ, pQ]
+            [LM, [hM, BM],
+              [HM, EM]
             ],
             [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-            [JQ, [jQ, xQ],
-              [IQ, DQ]
+            [LM, [hM, BM],
+              [HM, lM]
             ],
             [/smart-tv.+(samsung)/i],
-            [jQ, [IQ, GQ]],
+            [hM, [HM, UM]],
             [/hbbtv.+maple;(\d+)/i],
             [
-              [JQ, /^/, "SmartTV"],
-              [jQ, tQ],
-              [IQ, GQ]
+              [LM, /^/, "SmartTV"],
+              [hM, AM],
+              [HM, UM]
             ],
             [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
             [
-              [jQ, EQ],
-              [IQ, GQ]
+              [hM, DM],
+              [HM, UM]
             ],
             [/(apple) ?tv/i],
-            [jQ, [JQ, dQ + " TV"],
-              [IQ, GQ]
+            [hM, [LM, bM + " TV"],
+              [HM, UM]
             ],
             [/crkey/i],
             [
-              [JQ, hQ + "cast"],
-              [jQ, cQ],
-              [IQ, GQ]
+              [LM, uM + "cast"],
+              [hM, pM],
+              [HM, UM]
             ],
             [/droid.+aft(\w+)( bui|\))/i],
-            [JQ, [jQ, vQ],
-              [IQ, GQ]
+            [LM, [hM, eM],
+              [HM, UM]
             ],
             [/(shield \w+ tv)/i],
-            [JQ, [jQ, LQ],
-              [IQ, GQ]
+            [LM, [hM, oM],
+              [HM, UM]
             ],
             [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
-            [JQ, [jQ, oQ],
-              [IQ, GQ]
+            [LM, [hM, xM],
+              [HM, UM]
             ],
             [/(bravia[\w ]+)( bui|\))/i],
-            [JQ, [jQ, eQ],
-              [IQ, GQ]
+            [LM, [hM, vM],
+              [HM, UM]
             ],
             [/(mi(tv|box)-?\w+) bui/i],
-            [JQ, [jQ, nQ],
-              [IQ, GQ]
+            [LM, [hM, FM],
+              [HM, UM]
             ],
             [/Hbbtv.*(technisat) (.*);/i],
-            [jQ, JQ, [IQ, GQ]],
+            [hM, LM, [HM, UM]],
             [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
             [
-              [jQ, QW],
-              [JQ, QW],
-              [IQ, GQ]
+              [hM, Mr],
+              [LM, Mr],
+              [HM, UM]
             ],
             [/droid.+; ([\w- ]+) (?:android tv|smart[- ]?tv)/i],
-            [JQ, [IQ, GQ]],
+            [LM, [HM, UM]],
             [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
             [
-              [IQ, GQ]
+              [HM, UM]
             ],
             [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
-            [jQ, JQ, [IQ, VQ]],
+            [hM, LM, [HM, yM]],
             [/droid.+; (shield)( bui|\))/i],
-            [JQ, [jQ, LQ],
-              [IQ, VQ]
+            [LM, [hM, oM],
+              [HM, yM]
             ],
             [/(playstation \w+)/i],
-            [JQ, [jQ, eQ],
-              [IQ, VQ]
+            [LM, [hM, vM],
+              [HM, yM]
             ],
             [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-            [JQ, [jQ, CQ],
-              [IQ, VQ]
+            [LM, [hM, kM],
+              [HM, yM]
             ],
             [/\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i],
-            [JQ, [jQ, tQ],
-              [IQ, UQ]
+            [LM, [hM, AM],
+              [HM, GM]
             ],
             [/((pebble))app/i, /(asus|google|lg|oppo) ((pixel |zen)?watch[\w ]*)( bui|\))/i],
-            [jQ, JQ, [IQ, UQ]],
+            [hM, LM, [HM, GM]],
             [/(ow(?:19|20)?we?[1-3]{1,3})/i],
-            [JQ, [jQ, SQ],
-              [IQ, UQ]
+            [LM, [hM, NM],
+              [HM, GM]
             ],
             [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-            [JQ, [jQ, dQ],
-              [IQ, UQ]
+            [LM, [hM, bM],
+              [HM, GM]
             ],
             [/(opwwe\d{3})/i],
-            [JQ, [jQ, kQ],
-              [IQ, UQ]
+            [LM, [hM, fM],
+              [HM, GM]
             ],
             [/(moto 360)/i],
-            [JQ, [jQ, uQ],
-              [IQ, UQ]
+            [LM, [hM, ZM],
+              [HM, GM]
             ],
             [/(smartwatch 3)/i],
-            [JQ, [jQ, eQ],
-              [IQ, UQ]
+            [LM, [hM, vM],
+              [HM, GM]
             ],
             [/(g watch r)/i],
-            [JQ, [jQ, EQ],
-              [IQ, UQ]
+            [LM, [hM, DM],
+              [HM, GM]
             ],
             [/droid.+; (wt63?0{2,3})\)/i],
-            [JQ, [jQ, xQ],
-              [IQ, UQ]
+            [LM, [hM, BM],
+              [HM, GM]
             ],
             [/droid.+; (glass) \d/i],
-            [JQ, [jQ, cQ],
-              [IQ, UQ]
+            [LM, [hM, pM],
+              [HM, GM]
             ],
             [/(pico) (4|neo3(?: link|pro)?)/i],
-            [jQ, JQ, [IQ, UQ]],
+            [hM, LM, [HM, GM]],
             [/; (quest( \d| pro)?)/i],
-            [JQ, [jQ, YQ],
-              [IQ, UQ]
+            [LM, [hM, XM],
+              [HM, GM]
             ],
             [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
-            [jQ, [IQ, bQ]],
+            [hM, [HM, CM]],
             [/(aeobc)\b/i],
-            [JQ, [jQ, vQ],
-              [IQ, bQ]
+            [LM, [hM, eM],
+              [HM, CM]
             ],
             [/(homepod).+mac os/i],
-            [JQ, [jQ, dQ],
-              [IQ, bQ]
+            [LM, [hM, bM],
+              [HM, CM]
             ],
             [/windows iot/i],
             [
-              [IQ, bQ]
+              [HM, CM]
             ],
             [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i],
-            [JQ, [IQ, DQ]],
+            [LM, [HM, lM]],
             [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
-            [JQ, [IQ, pQ]],
+            [LM, [HM, EM]],
             [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
             [
-              [IQ, pQ]
+              [HM, EM]
             ],
             [/(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i],
             [
-              [IQ, DQ]
+              [HM, lM]
             ],
             [/droid .+?; ([\w\. -]+)( bui|\))/i],
-            [JQ, [jQ, "Generic"]]
+            [LM, [hM, "Generic"]]
           ],
           engine: [
             [/windows.+ edge\/([\w\.]+)/i],
-            [BQ, [rQ, "EdgeHTML"]],
+            [JM, [mM, "EdgeHTML"]],
             [/(arkweb)\/([\w\.]+)/i],
-            [rQ, BQ],
+            [mM, JM],
             [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
-            [BQ, [rQ, "Blink"]],
+            [JM, [mM, "Blink"]],
             [/(presto)\/([\w\.]+)/i, /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, /ekioh(flow)\/([\w\.]+)/i, /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i, /(icab)[\/ ]([23]\.[\d\.]+)/i, /\b(libweb)/i],
-            [rQ, BQ],
+            [mM, JM],
             [/ladybird\//i],
             [
-              [rQ, "LibWeb"]
+              [mM, "LibWeb"]
             ],
             [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
-            [BQ, rQ]
+            [JM, mM]
           ],
           os: [
             [/microsoft (windows) (vista|xp)/i],
-            [rQ, BQ],
+            [mM, JM],
             [/(windows (?:phone(?: os)?|mobile|iot))[\/ ]?([\d\.\w ]*)/i],
-            [rQ, [BQ, XW, wW]],
+            [mM, [JM, ir, Or]],
             [/windows nt 6\.2; (arm)/i, /windows[\/ ]([ntce\d\. ]+\w)(?!.+xbox)/i, /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
             [
-              [BQ, XW, wW],
-              [rQ, "Windows"]
+              [JM, ir, Or],
+              [mM, "Windows"]
             ],
             [/[adehimnop]{4,7}\b(?:.*os ([\w]+) like mac|; opera)/i, /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i, /cfnetwork\/.+darwin/i],
             [
-              [BQ, /_/g, "."],
-              [rQ, "iOS"]
+              [JM, /_/g, "."],
+              [mM, "iOS"]
             ],
             [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+haiku)/i],
             [
-              [rQ, ZQ],
-              [BQ, /_/g, "."]
+              [mM, KM],
+              [JM, /_/g, "."]
             ],
             [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
-            [BQ, rQ],
+            [JM, mM],
             [/(ubuntu) ([\w\.]+) like android/i],
             [
-              [rQ, /(.+)/, "$1 Touch"], BQ
+              [mM, /(.+)/, "$1 Touch"], JM
             ],
             [/(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/; ]?([\d\.]*)/i],
-            [rQ, BQ],
+            [mM, JM],
             [/\(bb(10);/i],
-            [BQ, [rQ, aQ]],
+            [JM, [mM, tM]],
             [/(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i],
-            [BQ, [rQ, "Symbian"]],
+            [JM, [mM, "Symbian"]],
             [/mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i],
-            [BQ, [rQ, iQ + " OS"]],
+            [JM, [mM, RM + " OS"]],
             [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
-            [BQ, [rQ, "webOS"]],
+            [JM, [mM, "webOS"]],
             [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
-            [BQ, [rQ, "watchOS"]],
+            [JM, [mM, "watchOS"]],
             [/crkey\/([\d\.]+)/i],
-            [BQ, [rQ, hQ + "cast"]],
+            [JM, [mM, uM + "cast"]],
             [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
             [
-              [rQ, NQ], BQ
+              [mM, IM], JM
             ],
             [/panasonic;(viera)/i, /(netrange)mmh/i, /(nettv)\/(\d+\.[\w\.]+)/i, /(nintendo|playstation) ([wids345portablevuch]+)/i, /(xbox); +xbox ([^\);]+)/i, /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i, /(mint)[\/\(\) ]?(\w*)/i, /(mageia|vectorlinux)[; ]/i, /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i, /(hurd|linux)(?: arm\w*| x86\w*| ?)([\w\.]*)/i, /(gnu) ?([\w\.]*)/i, /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i, /(haiku) (\w+)/i],
-            [rQ, BQ],
+            [mM, JM],
             [/(sunos) ?([\w\.\d]*)/i],
             [
-              [rQ, "Solaris"], BQ
+              [mM, "Solaris"], JM
             ],
             [/((?:open)?solaris)[-\/ ]?([\w\.]*)/i, /(aix) ((\d)(?=\.|\)| )[\w\.])*/i, /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux|serenityos)/i, /(unix) ?([\w\.]*)/i],
-            [rQ, BQ]
+            [mM, JM]
           ]
         },
-        TW = function(QQ, WQ) {
-          if (typeof QQ === FQ && (WQ = QQ, QQ = TQ), !(this instanceof TW)) return new TW(QQ, WQ).getResult();
-          var XQ = typeof qQ !== sQ && qQ.navigator ? qQ.navigator : TQ,
-            wQ = QQ || (XQ && XQ.userAgent ? XQ.userAgent : ""),
-            VQ = XQ && XQ.userAgentData ? XQ.userAgentData : TQ,
-            GQ = WQ ? function(QQ, WQ) {
-              var XQ = {};
-              for (var wQ in QQ) WQ[wQ] && WQ[wQ].length % 2 === 0 ? XQ[wQ] = WQ[wQ].concat(QQ[wQ]) : XQ[wQ] = QQ[wQ];
-              return XQ
-            }(qW, WQ) : qW,
-            UQ = XQ && XQ.userAgent == wQ;
+        jr = function(MM, rM) {
+          if (typeof MM === nM && (rM = MM, MM = jM), !(this instanceof jr)) return new jr(MM, rM).getResult();
+          var iM = typeof SM !== PM && SM.navigator ? SM.navigator : jM,
+            OM = MM || (iM && iM.userAgent ? iM.userAgent : ""),
+            yM = iM && iM.userAgentData ? iM.userAgentData : jM,
+            UM = rM ? function(MM, rM) {
+              var iM = {};
+              for (var OM in MM) rM[OM] && rM[OM].length % 2 === 0 ? iM[OM] = rM[OM].concat(MM[OM]) : iM[OM] = MM[OM];
+              return iM
+            }(Sr, rM) : Sr,
+            GM = iM && iM.userAgent == OM;
           return this.getBrowser = function() {
-            var QQ, WQ = {};
-            return WQ[rQ] = TQ, WQ[BQ] = TQ, WW.call(WQ, wQ, GQ.browser), WQ[gQ] = typeof(QQ = WQ[BQ]) === PQ ? QQ.replace(/[^\d\.]/g, "").split(".")[0] : TQ, UQ && XQ && XQ.brave && typeof XQ.brave.isBrave == zQ && (WQ[rQ] = "Brave"), WQ
+            var MM, rM = {};
+            return rM[mM] = jM, rM[JM] = jM, rr.call(rM, OM, UM.browser), rM[zM] = typeof(MM = rM[JM]) === QM ? MM.replace(/[^\d\.]/g, "").split(".")[0] : jM, GM && iM && iM.brave && typeof iM.brave.isBrave == aM && (rM[mM] = "Brave"), rM
           }, this.getCPU = function() {
-            var QQ = {};
-            return QQ[yQ] = TQ, WW.call(QQ, wQ, GQ.cpu), QQ
+            var MM = {};
+            return MM[dM] = jM, rr.call(MM, OM, UM.cpu), MM
           }, this.getDevice = function() {
-            var QQ = {};
-            return QQ[jQ] = TQ, QQ[JQ] = TQ, QQ[IQ] = TQ, WW.call(QQ, wQ, GQ.device), UQ && !QQ[IQ] && VQ && VQ.mobile && (QQ[IQ] = DQ), UQ && "Macintosh" == QQ[JQ] && XQ && typeof XQ.standalone !== sQ && XQ.maxTouchPoints && XQ.maxTouchPoints > 2 && (QQ[JQ] = "iPad", QQ[IQ] = pQ), QQ
-          }, this.Uj = function() {
-            var QQ = {};
-            return QQ[rQ] = TQ, QQ[BQ] = TQ, WW.call(QQ, wQ, GQ.engine), QQ
+            var MM = {};
+            return MM[hM] = jM, MM[LM] = jM, MM[HM] = jM, rr.call(MM, OM, UM.device), GM && !MM[HM] && yM && yM.mobile && (MM[HM] = lM), GM && "Macintosh" == MM[LM] && iM && typeof iM.standalone !== PM && iM.maxTouchPoints && iM.maxTouchPoints > 2 && (MM[LM] = "iPad", MM[HM] = EM), MM
+          }, this.ph = function() {
+            var MM = {};
+            return MM[mM] = jM, MM[JM] = jM, rr.call(MM, OM, UM.engine), MM
           }, this.getOS = function() {
-            var QQ = {};
-            return QQ[rQ] = TQ, QQ[BQ] = TQ, WW.call(QQ, wQ, GQ.os), UQ && !QQ[rQ] && VQ && VQ.platform && "Unknown" != VQ.platform && (QQ[rQ] = VQ.platform.replace(/chrome os/i, NQ).replace(/macos/i, ZQ)), QQ
+            var MM = {};
+            return MM[mM] = jM, MM[JM] = jM, rr.call(MM, OM, UM.os), GM && !MM[mM] && yM && yM.platform && "Unknown" != yM.platform && (MM[mM] = yM.platform.replace(/chrome os/i, IM).replace(/macos/i, KM)), MM
           }, this.getResult = function() {
             return {
               ua: this.getUA(),
               browser: this.getBrowser(),
-              engine: this.Uj(),
+              engine: this.ph(),
               os: this.getOS(),
               device: this.getDevice(),
               cpu: this.getCPU()
             }
           }, this.getUA = function() {
-            return wQ
-          }, this.setUA = function(QQ) {
-            return wQ = typeof QQ === PQ && QQ.length > 500 ? QW(QQ, 500) : QQ, this
-          }, this.setUA(wQ), this
+            return OM
+          }, this.setUA = function(MM) {
+            return OM = typeof MM === QM && MM.length > 500 ? Mr(MM, 500) : MM, this
+          }, this.setUA(OM), this
         };
-      TW.VERSION = "1.0.41", TW.BROWSER = KQ([rQ, BQ, gQ]), TW.CPU = KQ([yQ]), TW.DEVICE = KQ([JQ, jQ, IQ, VQ, DQ, GQ, pQ, UQ, bQ]), TW.ENGINE = TW.OS = KQ([rQ, BQ]), typeof WQ !== sQ ? (QQ.exports && (WQ = QQ.exports = TW), WQ.UAParser = TW) : XQ.amdO ? (wQ = function() {
-        return TW
-      }.call(WQ, XQ, WQ, QQ)) === TQ || (QQ.exports = wQ) : typeof qQ !== sQ && (qQ.UAParser = TW);
-      var zW = typeof qQ !== sQ && (qQ.jQuery || qQ.Zepto);
-      if (zW && !zW.ua) {
-        var sW = new TW;
-        zW.ua = sW.getResult(), zW.ua.get = function() {
-          return sW.getUA()
-        }, zW.ua.set = function(QQ) {
-          sW.setUA(QQ);
-          var WQ = sW.getResult();
-          for (var XQ in WQ) zW.ua[XQ] = WQ[XQ]
+      jr.VERSION = "1.0.41", jr.BROWSER = TM([mM, JM, zM]), jr.CPU = TM([dM]), jr.DEVICE = TM([LM, hM, HM, yM, lM, UM, EM, GM, CM]), jr.ENGINE = jr.OS = TM([mM, JM]), typeof rM !== PM ? (MM.exports && (rM = MM.exports = jr), rM.UAParser = jr) : iM.amdO ? (OM = function() {
+        return jr
+      }.call(rM, iM, rM, MM)) === jM || (MM.exports = OM) : typeof SM !== PM && (SM.UAParser = jr);
+      var ar = typeof SM !== PM && (SM.jQuery || SM.Zepto);
+      if (ar && !ar.ua) {
+        var Pr = new jr;
+        ar.ua = Pr.getResult(), ar.ua.get = function() {
+          return Pr.getUA()
+        }, ar.ua.set = function(MM) {
+          Pr.setUA(MM);
+          var rM = Pr.getResult();
+          for (var iM in rM) ar.ua[iM] = rM[iM]
         }
       }
     }("object" === typeof window ? window : this)
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

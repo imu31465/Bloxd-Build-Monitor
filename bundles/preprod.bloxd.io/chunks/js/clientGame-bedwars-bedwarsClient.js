@@ -1,76 +1,76 @@
 export const id = 9;
 export const ids = [9];
 export const modules = {
-  39560: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      default: () => qQ
+  40357: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      default: () => SM
     });
-    var wQ = XQ(38311);
-    const qQ = function(QQ, WQ, XQ) {
-      let qQ;
+    var OM = iM(39012);
+    const SM = function(MM, rM, iM) {
+      let SM;
       return {
         plugins: {
-          placeAgainstBeds: (0, wQ.e)()
+          placeAgainstBeds: (0, OM.d)()
         },
-        onCreate: QQ => {
-          qQ = QQ
+        onCreate: MM => {
+          SM = MM
         },
-        onPlayerAltAction: (QQ, WQ, XQ, wQ, TQ, zQ) => {
-          ((QQ, WQ) => {
-            if (!WQ || "Mesh" !== qQ.getEntityType(WQ)) return;
-            const XQ = qQ.getEntityName(WQ);
-            "Upgrades" === XQ ? qQ.openShop(QQ, !1, "Upgrades") : "Items" === XQ && qQ.openShop(QQ, !1, "Recommended")
-          })(QQ, zQ)
+        onPlayerAltAction: (MM, rM, iM, OM, jM, aM) => {
+          ((MM, rM) => {
+            if (!rM || "Mesh" !== SM.getEntityType(rM)) return;
+            const iM = SM.getEntityName(rM);
+            "Upgrades" === iM ? SM.openShop(MM, !1, "Upgrades") : "Items" === iM && SM.openShop(MM, !1, "Recommended")
+          })(MM, aM)
         }
       }
     }
   },
-  38311: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => sQ
+  39012: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => PM
     });
-    var wQ = XQ(402),
-      qQ = XQ(37217),
-      TQ = XQ(4789);
-    const zQ = ["Leaf Bed", "_Leaf Bed Head", ...wQ.Fc.flatMap((QQ => [`${QQ} Bed`, `_${QQ} Bed Head`, `${QQ} Strongbed`, `_${QQ} Strongbed Head`]))];
+    var OM = iM(332),
+      SM = iM(37858),
+      jM = iM(4854);
+    const aM = ["Leaf Bed", "_Leaf Bed Head", ...OM.Ec.flatMap((MM => [`${MM} Bed`, `_${MM} Bed Head`, `${MM} Strongbed`, `_${MM} Strongbed Head`]))];
 
-    function sQ() {
-      let QQ;
+    function PM() {
+      let MM;
       return {
-        onCreate(WQ) {
-          QQ = WQ
+        onCreate(rM) {
+          MM = rM
         },
-        altVetoBlocks: zQ,
-        onPlayerAttemptAltAction(WQ, XQ, wQ, zQ, sQ, FQ) {
-          var PQ;
-          if ((0, qQ.e)(QQ.getMetaInfo(sQ).rootName) && !QQ.isEntityInteractable(FQ) && (0, TQ.g)(null === (PQ = QQ.wXQ(WQ)) || void 0 === PQ ? void 0 : PQ.typeObj.type)) return "preventAction"
+        altVetoBlocks: aM,
+        onPlayerAttemptAltAction(rM, iM, OM, aM, PM, nM) {
+          var QM;
+          if ((0, SM.e)(MM.getMetaInfo(PM).rootName) && !MM.isEntityInteractable(nM) && (0, jM.g)(null === (QM = MM.TrM(rM)) || void 0 === QM ? void 0 : QM.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  37217: (QQ, WQ, XQ) => {
-    function wQ(QQ) {
-      return QQ.includes("Leaf Bed")
+  37858: (MM, rM, iM) => {
+    function OM(MM) {
+      return MM.includes("Leaf Bed")
     }
 
-    function qQ(QQ) {
-      return / Bed(?: Head)?(?:\||$)/.test(QQ) && !wQ(QQ)
+    function SM(MM) {
+      return / Bed(?: Head)?(?:\||$)/.test(MM) && !OM(MM)
     }
 
-    function TQ(QQ) {
-      return QQ.includes(" Strongbed")
+    function jM(MM) {
+      return MM.includes(" Strongbed")
     }
 
-    function zQ(QQ) {
-      return wQ(QQ) || qQ(QQ) || TQ(QQ)
+    function aM(MM) {
+      return OM(MM) || SM(MM) || jM(MM)
     }
-    XQ.d(WQ, {
-      e: () => zQ,
-      f: () => wQ,
-      h: () => TQ,
-      l: () => qQ
+    iM.d(rM, {
+      e: () => aM,
+      g: () => OM,
+      h: () => jM,
+      l: () => SM
     })
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

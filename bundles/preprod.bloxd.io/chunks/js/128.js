@@ -1,226 +1,373 @@
 export const id = 128;
-export const ids = [128];
+export const ids = [128, 130, 151, 152];
 export const modules = {
-  6928: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      default: () => TQ
+  5435: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM.g,
+      g: () => SM,
+      k: () => OM.o
     });
-    var wQ = XQ(1226),
-      qQ = XQ(1145);
+    var OM = iM(5442);
+    const SM = [!1, !0].flatMap((MM => ["terrain", "liquid", "model"].map((rM => ({
+      strict: MM,
+      program: rM
+    })))))
+  },
+  7142: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      forgetShaderPackActiveHint: () => uM,
+      isOtherApiVersion: () => bM,
+      isShaderPackActive: () => UM,
+      isShaderPackChangePending: () => eM,
+      markShaderPackChangePending: () => CM,
+      pageShaderPackValidationVersion: () => wM,
+      reconcileStoredShaderPackHint: () => gM,
+      removeShaderPack: () => EM,
+      replaceShaderPack: () => dM,
+      saveShaderPack: () => JM,
+      shaderPackNeedsCheck: () => tM,
+      storedPackOutcome: () => GM,
+      storedShaderPackFiles: () => mM,
+      toStoredShaderPack: () => LM
+    });
+    var OM = iM(5442),
+      SM = iM(5435),
+      jM = iM(30),
+      aM = iM(3855),
+      PM = iM(7148),
+      nM = iM(7120);
+    const QM = "shaderPackChangePending";
+    let zM = null;
 
-    function TQ() {
-      const {
-        t: QQ
-      } = (0, wQ.C)();
-      return (0, qQ.jsxs)("div", {
-        className: "LegalText",
-        children: [(0, qQ.jsx)("div", {
-          className: "BloxdInformationHeader FullyFancyText",
-          children: QQ("homePage:termsOfService")
-        }), (0, qQ.jsx)("p", {
-          children: (0, qQ.jsx)("em", {
-            children: "Last updated: July 15, 2025"
+    function LM(MM, rM, iM) {
+      return {
+        manifest: MM.manifest,
+        files: (0, OM.w)(MM.files),
+        validation: rM,
+        ...iM && {
+          listing: iM
+        }
+      }
+    }
+
+    function mM(MM) {
+      return Object.keys(MM.files).map((rM => ({
+        path: rM,
+        source: MM.files[rM]
+      })))
+    }
+    let HM = Promise.resolve();
+
+    function hM(MM) {
+      const rM = HM.then(MM);
+      return HM = rM.catch((() => {})), rM
+    }
+
+    function JM(MM, rM) {
+      return hM((() => yM(MM, rM)))
+    }
+
+    function dM(MM, rM, iM) {
+      return hM((async () => JSON.stringify(await (0, PM.d)()) === JSON.stringify(MM) && (null === rM ? (await lM(), !0) : yM(rM, iM))))
+    }
+    async function yM(MM, rM) {
+      const iM = await jM.f.setItem(PM.b, MM);
+      return iM && RM(MM, rM), iM
+    }
+    async function lM() {
+      await jM.f.removeItem(PM.b), jM.g.removeItem(aM.c)
+    }
+
+    function EM() {
+      return hM(lM)
+    }
+
+    function UM(MM, rM) {
+      return "active" === GM(MM, rM).kind
+    }
+
+    function GM(MM, rM) {
+      var iM;
+      return null === MM ? {
+        kind: "none",
+        reason: "nothingStored"
+      } : bM(MM) ? {
+        kind: "none",
+        reason: "otherApiVersion"
+      } : !1 !== (null === (iM = MM.validation) || void 0 === iM ? void 0 : iM.ok) || MM.validation.fromRecheck ? null === rM ? {
+        kind: "none",
+        reason: "noCompiler"
+      } : tM(MM, rM) ? {
+        kind: "blocked",
+        messageKey: "shaderPack:failedUnchecked"
+      } : MM.validation.ok ? {
+        kind: "active"
+      } : {
+        kind: "blocked",
+        messageKey: "shaderPack:failedValidation"
+      } : {
+        kind: "none",
+        reason: "failedWhenLoaded"
+      }
+    }
+
+    function CM() {
+      jM.k.setItem(QM, performance.timeOrigin)
+    }
+
+    function eM() {
+      return jM.k.getItem(QM) === performance.timeOrigin
+    }
+
+    function bM(MM) {
+      return !(0, SM.k)(MM.manifest.apiVersion)
+    }
+
+    function wM(MM) {
+      return zM ??= MM.KD((0, nM.shaderPackTextures)()), zM
+    }
+
+    function tM(MM, rM) {
+      var iM;
+      return (null === (iM = MM.validation) || void 0 === iM ? void 0 : iM.headerVersion) !== wM(rM)
+    }
+
+    function gM(MM) {
+      return hM((async () => {
+        RM(await (0, PM.d)(!0), MM)
+      }))
+    }
+
+    function uM() {
+      return hM((async () => {
+        jM.g.removeItem(aM.c)
+      }))
+    }
+
+    function RM(MM, rM) {
+      UM(MM, rM) ? jM.g.setItem(aM.c, !0) : jM.g.removeItem(aM.c)
+    }
+  },
+  7148: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => SM,
+      d: () => jM
+    });
+    var OM = iM(30);
+    const SM = "shaderPack";
+    async function jM() {
+      var MM;
+      let rM = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (MM = await OM.f.getItem(SM, rM)) && void 0 !== MM ? MM : null
+    }
+  },
+  7120: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      loadShaderPackTextures: () => aM,
+      shaderPackTextures: () => PM
+    });
+    var OM = iM(5442);
+    let SM = null,
+      jM = null;
+
+    function aM() {
+      return jM ??= Promise.all([iM.e(84), iM.e(204)]).then((() => iM(41585))).then((MM => {
+        let {
+          FORMER_BLOCK_IMAGE_NAMES: rM,
+          textureNameToIndex: iM,
+          textureAnimationData: jM
+        } = MM;
+        return SM ??= (0, OM.j)(iM, jM, rM), SM
+      })), jM
+    }
+
+    function PM() {
+      if (null === SM) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return SM
+    }
+  },
+  5442: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => PM,
+      f: () => aM,
+      g: () => OM,
+      j: () => JM,
+      k: () => LM,
+      o: () => SM,
+      q: () => jM,
+      t: () => QM,
+      w: () => zM,
+      z: () => mM
+    });
+    const OM = 5;
+
+    function SM(MM) {
+      return MM === OM
+    }
+
+    function jM(MM) {
+      return [...MM.features]
+    }
+    const aM = 262144,
+      PM = 256,
+      nM = 256;
+
+    function QM(MM) {
+      if ("object" !== typeof MM || null === MM || Array.isArray(MM)) return "The pack has no files.";
+      const rM = [];
+      for (const [iM, OM] of Object.entries(MM)) {
+        if ("string" !== typeof OM) return `${iM} isn't text.`;
+        rM.push({
+          path: iM,
+          source: OM
+        })
+      }
+      return rM.sort(((MM, rM) => LM(MM.path, rM.path))),
+        function(MM) {
+          if (0 === MM.length) return "The pack has no .wgsl files.";
+          if (MM.length > PM) return `The pack has more than ${PM} .wgsl files.`;
+          const rM = new Set;
+          for (const {
+              path: iM
+            }
+            of MM) {
+            const MM = HM(iM);
+            if (null !== MM) return MM;
+            if (rM.has(iM)) return `The pack has two files at ${iM}.`;
+            rM.add(iM)
+          }
+          return mM(MM) > aM ? `The pack's .wgsl files are over ${aM/1024} KB in total.` : null
+        }(rM) ?? rM
+    }
+
+    function zM(MM) {
+      const rM = {};
+      for (const iM of MM) rM[iM.path] = iM.source;
+      return rM
+    }
+
+    function LM(MM, rM) {
+      return MM < rM ? -1 : MM > rM ? 1 : 0
+    }
+
+    function mM(MM) {
+      const rM = new TextEncoder;
+      let iM = 0;
+      for (const {
+          source: OM
+        }
+        of MM) iM += rM.encode(OM).byteLength;
+      return iM
+    }
+
+    function HM(MM) {
+      if (!MM.toLowerCase().endsWith(".wgsl")) return `${MM} isn't a .wgsl file.`;
+      if (MM.length > nM) return `A file path is over ${nM} characters.`;
+      if (MM.includes("\\") || /[\u0000-\u001f]/.test(MM)) return `${MM} isn't a valid file path.`;
+      return MM.split("/").some((MM => "" === MM || "." === MM || ".." === MM)) ? `${MM} isn't a valid file path.` : null
+    }
+    const hM = /^(.*)\[rot\[([1-4])$/;
+
+    function JM(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const OM = new Map;
+      rM.forEach(((MM, rM) => {
+        let {
+          numAnimStates: iM,
+          animStartIdx: SM
+        } = MM;
+        for (let jM = 1; jM < iM; jM++) OM.set(SM + jM - 1, rM)
+      }));
+      const SM = Object.entries(MM),
+        jM = new Map;
+      for (const [JM, dM] of SM) {
+        const MM = hM.exec(JM);
+        "1" === MM?.[2] && jM.set(MM[1], dM + 1)
+      }
+      const aM = MM => {
+          const rM = hM.exec(MM);
+          return rM && jM.has(rM[1]) ? {
+            root: rM[1],
+            rotation: Number(rM[2]) - 1
+          } : null
+        },
+        PM = new Set(SM.map((MM => {
+          let [rM] = MM;
+          return aM(rM)?.root ?? rM
+        }))),
+        nM = (MM, iM) => {
+          const OM = MM.replace(/_?0$/, "");
+          return (rM[iM]?.numAnimStates ?? 0) > 1 && !PM.has(OM) ? OM : MM
+        },
+        QM = new Map;
+      for (const [hM, JM] of SM) QM.set(JM, nM(aM(hM)?.root ?? hM, JM));
+      const zM = SM.reduce(((MM, rM) => {
+          let [, iM] = rM;
+          return Math.max(MM, iM + 1)
+        }), 0),
+        LM = Array.from({
+          length: zM
+        }, ((MM, rM) => ({
+          id: rM + 1,
+          rotation: 0
+        }))),
+        mM = new Map,
+        HM = new Map;
+      for (const [hM, JM] of SM) {
+        const MM = aM(hM),
+          rM = OM.get(JM);
+        if (void 0 !== rM) {
+          const iM = QM.get(rM);
+          HM.set(hM, {
+            name: hM,
+            texture: iM,
+            kind: "frame"
+          }), MM && !HM.has(MM.root) && HM.set(MM.root, {
+            name: MM.root,
+            texture: iM,
+            kind: "frame"
+          });
+          continue
+        }
+        const iM = QM.get(JM),
+          SM = MM?.root ?? hM;
+        if (iM !== SM && HM.set(SM, {
+            name: SM,
+            texture: iM,
+            kind: "frame"
+          }), MM) {
+          const rM = jM.get(MM.root);
+          LM[JM] = {
+            id: rM,
+            rotation: MM.rotation
+          }, mM.set(iM, rM), HM.set(hM, {
+            name: hM,
+            texture: iM,
+            kind: "rotation"
           })
-        }), (0, qQ.jsx)("p", {
-          children: 'These Terms of Service ("Terms") govern your access to and use of the Bloxd.io website and services (the "Services"). These Terms form a legally binding agreement between you and Bloxd LTD ("we," "us" or "our"). By using our Services, you agree to these Terms in full. If you do not agree, you may not access or use our Services.'
-        }), (0, qQ.jsx)("h3", {
-          children: "1. General Information"
-        }), (0, qQ.jsx)("p", {
-          children: "We may update these Terms at any time. When we do, we\u2019ll post the revised version on our website with the new effective date. Your continued use of Bloxd.io after the changes take effect means you accept the updated Terms. If you do not agree to the changes, you must stop using the Services."
-        }), (0, qQ.jsx)("h3", {
-          children: "2. Definitions"
-        }), (0, qQ.jsx)("p", {
-          children: (0, qQ.jsxs)("ul", {
-            children: [(0, qQ.jsx)("li", {
-              children: '"Account" means the account you create to access the Services on Bloxd.io.'
-            }), (0, qQ.jsx)("li", {
-              children: '"Company" refers to Bloxd LTD and its affiliates, subsidiaries, and associated entities.'
-            }), (0, qQ.jsx)("li", {
-              children: '"Services" includes the Bloxd.io website, games, content, and related services provided by us.'
-            }), (0, qQ.jsx)("li", {
-              children: '"User", "you", or "your" refers to anyone using the Services.'
-            }), (0, qQ.jsx)("li", {
-              children: '"Content" means all text, graphics, logos, images, software, and other material found on Bloxd.io.'
-            }), (0, qQ.jsx)("li", {
-              children: '"Virtual Goods" refers to virtual items available for purchase within Bloxd.io, such as game items and in-game currency.'
-            })]
-          })
-        }), (0, qQ.jsx)("h3", {
-          children: "3. Age Requirements"
-        }), (0, qQ.jsx)("p", {
-          children: "To use Bloxd.io, you must be at least 13 years old. If you are under 13, you need permission from a parent or guardian. By using our Services, you confirm that you meet this age or permission requirement."
-        }), (0, qQ.jsx)("h3", {
-          children: "4. Account Creation and Security"
-        }), (0, qQ.jsx)("p", {
-          children: (0, qQ.jsxs)("ul", {
-            children: [(0, qQ.jsx)("li", {
-              children: "Account Information: You agree to provide accurate and complete information when creating your account. You are responsible for keeping your account information secure and confidential."
-            }), (0, qQ.jsx)("li", {
-              children: "Account Security: Notify us immediately if you suspect unauthorized access to your account. We are not liable for any loss or damage arising from your failure to secure your account."
-            })]
-          })
-        }), (0, qQ.jsx)("h3", {
-          children: "5. User Conduct and Community Guidelines"
-        }), (0, qQ.jsx)("p", {
-          children: "We are committed to creating a fun, safe, and inclusive environment for everyone. By using Bloxd.io, you agree to follow our Community Conduct Guidelines and adhere to the following rules:"
-        }), (0, qQ.jsx)("h4", {
-          children: "Expected Behavior"
-        }), (0, qQ.jsx)("p", {
-          children: (0, qQ.jsxs)("ul", {
-            children: [(0, qQ.jsx)("li", {
-              children: "Show Respect: Treat others with kindness and consideration in all interactions."
-            }), (0, qQ.jsx)("li", {
-              children: "Promote Positivity: Engage in activities that contribute to a positive community experience."
-            }), (0, qQ.jsx)("li", {
-              children: "Play Fairly: Participate honestly and with integrity, respecting the rules and spirit of the game."
-            })]
-          })
-        }), (0, qQ.jsx)("h4", {
-          children: "Prohibited Behavior"
-        }), (0, qQ.jsxs)("p", {
-          children: ["To maintain a safe and welcoming environment, the following actions are strictly prohibited:", (0, qQ.jsxs)("ul", {
-            children: [(0, qQ.jsx)("li", {
-              children: "Harassment and Threats: Any form of bullying, stalking, or harassment, including making threats or inciting violence."
-            }), (0, qQ.jsx)("li", {
-              children: "Discrimination and Hate Speech: Discriminating against or mocking others based on age, race, ethnicity, gender, sexual orientation, religion, disability, or any other protected characteristic."
-            }), (0, qQ.jsx)("li", {
-              children: "Inappropriate Content and Behavior: Sharing or promoting content that is sexually explicit, violent, or otherwise inappropriate."
-            }), (0, qQ.jsx)("li", {
-              children: "Impersonation: Impersonating other players, staff, or developers with the intent to deceive or harm."
-            }), (0, qQ.jsx)("li", {
-              children: "Account Security and Privacy: Sharing, selling, or trading accounts, or using someone else's account without permission."
-            }), (0, qQ.jsx)("li", {
-              children: "Spam and Advertising: Spamming chat, boards, or other communication channels with repetitive or irrelevant messages."
-            }), (0, qQ.jsx)("li", {
-              children: "Inappropriate World Creation: Creating worlds or lobbies with inappropriate or offensive themes or content."
-            })]
-          })]
-        }), (0, qQ.jsx)("h4", {
-          children: "Cheating and Unfair Play"
-        }), (0, qQ.jsxs)("p", {
-          children: ["You may not make, use, share, or promote any cheats, hacks, bots, scripts, or other tools that change how the game works or give players an unfair advantage.", (0, qQ.jsxs)("ul", {
-            children: [(0, qQ.jsx)("li", {
-              children: "This includes trying to bypass any form of security - including, but not limited to, protections related to client integrity or gameplay action security."
-            }), (0, qQ.jsx)("li", {
-              children: "It also includes trying to reverse engineer our game's code in any way, or trying to gain unauthorised access to our systems."
-            }), (0, qQ.jsx)("li", {
-              children: "If you do any of these things, we may suspend or ban your account, and we reserve the right to take civil and/or criminal legal action for your actions harming our game, our players, and our business."
-            }), (0, qQ.jsx)("li", {
-              children: "If you break these rules - like hacking, cheating, or trying to mess with our game or servers - you agree to pay us \xa325,000 for each violation. This is because it's hard to measure exactly how much damage those actions cause, and this amount is a fair estimate of the harm they can do. This doesn't stop us from taking other legal steps if needed, like our right to seek injunctive relief or any other remedy available at law or in equity."
-            }), (0, qQ.jsx)("li", {
-              children: "These rules apply to everyone, whether or not you have a game account, and even if you used a bot or other automated tool to do it."
-            })]
-          })]
-        }), (0, qQ.jsx)("h3", {
-          children: "6. Software License and IP Restrictions"
-        }), (0, qQ.jsxs)("ul", {
-          children: [(0, qQ.jsx)("li", {
-            children: "License Grant: We grant you a limited, non-exclusive, non-transferable right to download and run the Bloxd game client solely to access and play our Services."
-          }), (0, qQ.jsx)("li", {
-            children: "What You Can't Do: You may not copy, modify, distribute, or create derivative works of the game client, or attempt to reverse-engineer, decompile, disassemble, hack, bypass security, inject cheats, bots, scripts, or any unauthorized tools. Any such action automatically terminates your license and may lead to legal remedies. For the avoidance of doubt, any use of hacks and cheats including but not limited to killaura, fly exploits, and speed exploits automatically terminates your license and may lead to legal remedies."
-          }), (0, qQ.jsx)("li", {
-            children: "Our Ownership: All intellectual property rights in the game client and Services stay with Bloxd LTD. You get no ownership or other rights here beyond this limited license."
-          })]
-        }), (0, qQ.jsx)("h3", {
-          children: "7. Virtual Goods and In-Game Purchases"
-        }), (0, qQ.jsx)("p", {
-          children: (0, qQ.jsxs)("ul", {
-            children: [(0, qQ.jsx)("li", {
-              children: "Purchases: Virtual Goods can be purchased within the Services. All purchases are final and non-refundable unless required by law."
-            }), (0, qQ.jsx)("li", {
-              children: "License: When you purchase Virtual Goods, you receive a limited, non-transferable license to use them within the Services."
-            }), (0, qQ.jsx)("li", {
-              children: "Termination: We may terminate your access to Virtual Goods if you violate these Terms or our Community Conduct Guidelines."
-            })]
-          })
-        }), (0, qQ.jsx)("h3", {
-          children: "8. Modifications and Updates"
-        }), (0, qQ.jsx)("p", {
-          children: (0, qQ.jsxs)("ul", {
-            children: [(0, qQ.jsx)("li", {
-              children: "Service Changes: We may update or modify the Services at any time without prior notice. We are not liable for any changes, suspensions, or discontinuations of the Services."
-            }), (0, qQ.jsx)("li", {
-              children: "Terms Updates: These Terms may be updated periodically. We will notify you of significant changes, and your continued use of the Services constitutes your acceptance of the new Terms."
-            })]
-          })
-        }), (0, qQ.jsx)("h3", {
-          children: "9. Termination"
-        }), (0, qQ.jsx)("p", {
-          children: (0, qQ.jsxs)("ul", {
-            children: [(0, qQ.jsx)("li", {
-              children: "Termination by You: You can terminate your account at any time by contacting us."
-            }), (0, qQ.jsx)("li", {
-              children: "Termination by Us: We reserve the right to terminate or suspend your account if you violate these Terms, the Community Conduct Guidelines, or engage in harmful behavior."
-            })]
-          })
-        }), (0, qQ.jsx)("h3", {
-          children: "10. Reporting and Consequences"
-        }), (0, qQ.jsx)("p", {
-          children: (0, qQ.jsxs)("ul", {
-            children: [(0, qQ.jsx)("li", {
-              children: "Reporting Violations: If you encounter behavior that violates these Terms or the Community Conduct Guidelines, report it using the in-game tools. Your reports help us maintain a high-quality, enjoyable experience for everyone."
-            }), (0, qQ.jsx)("li", {
-              children: "Consequences for Violations: Breaking these guidelines can result in penalties ranging from temporary suspensions to permanent bans. Players who demonstrate positive behavior over time may see a reduction in penalties."
-            })]
-          })
-        }), (0, qQ.jsx)("h3", {
-          children: "11. Disclaimer of Warranties"
-        }), (0, qQ.jsx)("p", {
-          children: (0, qQ.jsxs)("ul", {
-            children: [(0, qQ.jsx)("li", {
-              children: 'As-Is Basis: The Services are provided "as is" and "as available", without any warranties, either express or implied.'
-            }), (0, qQ.jsx)("li", {
-              children: "No Warranty: We do not guarantee that the Services will be uninterrupted or error-free."
-            })]
-          })
-        }), (0, qQ.jsx)("h3", {
-          children: "12. Limitation of Liability"
-        }), (0, qQ.jsx)("p", {
-          children: (0, qQ.jsxs)("ul", {
-            children: [(0, qQ.jsx)("li", {
-              children: "No Liability: To the maximum extent permitted by law, we are not liable for any indirect, incidental, special, or consequential damages arising from your use of the Services."
-            }), (0, qQ.jsx)("li", {
-              children: "Total Liability: Our total liability to you for any claims related to the Services is limited to the amount you paid us in the past 12 months."
-            })]
-          })
-        }), (0, qQ.jsx)("h3", {
-          children: "13. Governing Law and Dispute Resolution"
-        }), (0, qQ.jsx)("p", {
-          children: (0, qQ.jsxs)("ul", {
-            children: [(0, qQ.jsx)("li", {
-              children: "Governing Law: These Terms are governed by the laws of England and Wales."
-            }), (0, qQ.jsx)("li", {
-              children: "Small-Claims Court Option: If you or we seek only money damages up to the small-claims track limit set by the Civil Procedure Rules (currently \xa310,000), you may choose to bring that claim in the County Court small-claims track in England and Wales. This does not cover any other kinds of relief (like injunctions), nor can you split one dispute into several small claims to get around this limit."
-            }), (0, qQ.jsx)("li", {
-              children: "Dispute Resolution: Any other disputes arising from these Terms will be resolved through binding arbitration in London, United Kingdom. You waive any right to participate in a class action or jury trial."
-            }), (0, qQ.jsx)("li", {
-              children: "Equitable Relief for Bloxd: Even though we agree to arbitrate all other non-small claim disputes, only Bloxd LTD (not you) may go to an English or Welsh court for urgent orders - like injunctions or specific-performance - to protect our IP, confidential data, account security, gameplay experience, or the integrity of our service. Asking a court for such relief won't count as breaking our arbitration agreement."
-            }), (0, qQ.jsx)("li", {
-              children: "Identity Verification: If the arbitrator issues any award against you (including for hacks, cheats, or other breaches), you agree that upon request you will promptly provide your full legal name, current address, relevant IP logs, and a copy of a government-issued photo ID to confirm your identity and enable enforcement of the award (including collection of any monetary damages)."
-            })]
-          })
-        }), (0, qQ.jsx)("h3", {
-          children: "14. Severability"
-        }), (0, qQ.jsx)("p", {
-          children: "If any part of these Terms is found to be unenforceable, the remaining provisions will continue to be in full force and effect."
-        }), (0, qQ.jsx)("h3", {
-          children: "15. Contact Information"
-        }), (0, qQ.jsxs)("p", {
-          children: ["If you have any questions about these Terms, please contact us at:", (0, qQ.jsxs)("ul", {
-            children: [(0, qQ.jsx)("li", {
-              children: "Email: privacy@bloxd.io"
-            }), (0, qQ.jsx)("li", {
-              children: "Address: Bloxd LTD, 86-90 Paul Street, London, England, United Kingdom, EC2A 4NE"
-            })]
-          })]
-        }), (0, qQ.jsx)("h3", {
-          children: "16. Entire Agreement"
-        }), (0, qQ.jsx)("p", {
-          children: "These Terms, together with our Privacy Policy and Community Conduct Guidelines, constitute the entire agreement between you and Bloxd LTD regarding your use of the Services. They supersede any prior agreements or communications."
-        })]
-      })
+        } else mM.set(iM, JM + 1)
+      }
+      for (const hM of mM.keys()) HM.delete(hM);
+      for (const [hM, JM] of iM) {
+        const MM = mM.get(JM);
+        void 0 === MM || mM.has(hM) || (mM.set(hM, MM), HM.delete(hM))
+      }
+      return {
+        named: [...mM].sort(((MM, rM) => {
+          let [iM] = MM, [OM] = rM;
+          return iM < OM ? -1 : iM > OM ? 1 : 0
+        })).map((MM => {
+          let [rM, iM] = MM;
+          return {
+            name: rM,
+            id: iM
+          }
+        })),
+        aliases: [...HM.values()],
+        layers: LM
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

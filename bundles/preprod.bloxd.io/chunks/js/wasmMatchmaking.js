@@ -1,30 +1,30 @@
-/*! For license information please see 8104he.wasmMatchmaking.7266f9d3.chunk.js.LICENSE.txt */
-export const id = 65;
-export const ids = [65];
+/*! For license information please see fo1voe.wasmMatchmaking.eb11e22c.chunk.js.LICENSE.txt */
+export const id = 74;
+export const ids = [74];
 export const modules = {
-  36833: (QQ, WQ) => {
-    function XQ(QQ) {
-      if (QQ && "object" === typeof QQ) {
-        var WQ = QQ.which || QQ.keyCode || QQ.charCode;
-        WQ && (QQ = WQ)
+  37484: (MM, rM) => {
+    function iM(MM) {
+      if (MM && "object" === typeof MM) {
+        var rM = MM.which || MM.keyCode || MM.charCode;
+        rM && (MM = rM)
       }
-      if ("number" === typeof QQ) return zQ[QQ];
-      var XQ, TQ = String(QQ);
-      return (XQ = wQ[TQ.toLowerCase()]) ? XQ : (XQ = qQ[TQ.toLowerCase()]) || (1 === TQ.length ? TQ.charCodeAt(0) : void 0)
+      if ("number" === typeof MM) return aM[MM];
+      var iM, jM = String(MM);
+      return (iM = OM[jM.toLowerCase()]) ? iM : (iM = SM[jM.toLowerCase()]) || (1 === jM.length ? jM.charCodeAt(0) : void 0)
     }
-    XQ.isEventKey = function(QQ, WQ) {
-      if (QQ && "object" === typeof QQ) {
-        var XQ = QQ.which || QQ.keyCode || QQ.charCode;
-        if (null === XQ || void 0 === XQ) return !1;
-        if ("string" === typeof WQ) {
-          var TQ;
-          if (TQ = wQ[WQ.toLowerCase()]) return TQ === XQ;
-          if (TQ = qQ[WQ.toLowerCase()]) return TQ === XQ
-        } else if ("number" === typeof WQ) return WQ === XQ;
+    iM.isEventKey = function(MM, rM) {
+      if (MM && "object" === typeof MM) {
+        var iM = MM.which || MM.keyCode || MM.charCode;
+        if (null === iM || void 0 === iM) return !1;
+        if ("string" === typeof rM) {
+          var jM;
+          if (jM = OM[rM.toLowerCase()]) return jM === iM;
+          if (jM = SM[rM.toLowerCase()]) return jM === iM
+        } else if ("number" === typeof rM) return rM === iM;
         return !1
       }
     };
-    var wQ = (WQ = QQ.exports = XQ).code = WQ.codes = {
+    var OM = (rM = MM.exports = iM).code = rM.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      qQ = WQ.aliases = {
+      SM = rM.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (TQ = 97; TQ < 123; TQ++) wQ[String.fromCharCode(TQ)] = TQ - 32;
-    for (var TQ = 48; TQ < 58; TQ++) wQ[TQ - 48] = TQ;
-    for (TQ = 1; TQ < 13; TQ++) wQ["f" + TQ] = TQ + 111;
-    for (TQ = 0; TQ < 10; TQ++) wQ["numpad " + TQ] = TQ + 96;
-    var zQ = WQ.names = WQ.title = {};
-    for (TQ in wQ) zQ[wQ[TQ]] = TQ;
-    for (var sQ in qQ) wQ[sQ] = qQ[sQ]
+    for (jM = 97; jM < 123; jM++) OM[String.fromCharCode(jM)] = jM - 32;
+    for (var jM = 48; jM < 58; jM++) OM[jM - 48] = jM;
+    for (jM = 1; jM < 13; jM++) OM["f" + jM] = jM + 111;
+    for (jM = 0; jM < 10; jM++) OM["numpad " + jM] = jM + 96;
+    var aM = rM.names = rM.title = {};
+    for (jM in OM) aM[OM[jM]] = jM;
+    for (var PM in SM) OM[PM] = SM[PM]
   },
-  36999: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => zQ
+  37640: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => aM
     });
-    var wQ = XQ(61);
-    const qQ = wQ.useLayoutEffect;
-    const TQ = function(QQ) {
-      var WQ = (0, wQ.useRef)(QQ);
-      return qQ((function() {
-        WQ.current = QQ
-      })), WQ
+    var OM = iM(44);
+    const SM = OM.useLayoutEffect;
+    const jM = function(MM) {
+      var rM = (0, OM.useRef)(MM);
+      return SM((function() {
+        rM.current = MM
+      })), rM
     };
-    var zQ = function(QQ) {
-      var WQ = TQ(QQ);
-      (0, wQ.useEffect)((function() {
-        var QQ = function(QQ) {
-          var XQ;
-          if (null != WQ.current && (XQ = WQ.current(QQ)), QQ.defaultPrevented && (QQ.returnValue = ""), "string" === typeof XQ) return QQ.returnValue = XQ, XQ
+    var aM = function(MM) {
+      var rM = jM(MM);
+      (0, OM.useEffect)((function() {
+        var MM = function(MM) {
+          var iM;
+          if (null != rM.current && (iM = rM.current(MM)), MM.defaultPrevented && (MM.returnValue = ""), "string" === typeof iM) return MM.returnValue = iM, iM
         };
-        return window.addEventListener("beforeunload", QQ),
+        return window.addEventListener("beforeunload", MM),
           function() {
-            window.removeEventListener("beforeunload", QQ)
+            window.removeEventListener("beforeunload", MM)
           }
       }), [])
     }
   },
-  36875: QQ => {
-    var WQ, XQ = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      wQ = /OS X/.test(XQ),
-      qQ = /Opera/.test(XQ),
-      TQ = !/like Gecko/.test(XQ) && !qQ,
-      zQ = QQ.exports = {
-        0: wQ ? "<menu>" : "<UNK>",
+  37517: MM => {
+    var rM, iM = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      OM = /OS X/.test(iM),
+      SM = /Opera/.test(iM),
+      jM = !/like Gecko/.test(iM) && !SM,
+      aM = MM.exports = {
+        0: OM ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: wQ ? "<meta>" : "<menu>",
+        93: OM ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: wQ && TQ ? "-" : "<volume-mute>",
+        173: OM && jM ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: qQ ? "`" : "<unicode>",
+        231: SM ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,326 +234,409 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (WQ = 58; WQ < 65; ++WQ) zQ[WQ] = String.fromCharCode(WQ);
-    for (WQ = 48; WQ < 58; ++WQ) zQ[WQ] = WQ - 48 + "";
-    for (WQ = 65; WQ < 91; ++WQ) zQ[WQ] = String.fromCharCode(WQ);
-    for (WQ = 96; WQ < 106; ++WQ) zQ[WQ] = "<num-" + (WQ - 96) + ">";
-    for (WQ = 112; WQ < 136; ++WQ) zQ[WQ] = "F" + (WQ - 111)
+    for (rM = 58; rM < 65; ++rM) aM[rM] = String.fromCharCode(rM);
+    for (rM = 48; rM < 58; ++rM) aM[rM] = rM - 48 + "";
+    for (rM = 65; rM < 91; ++rM) aM[rM] = String.fromCharCode(rM);
+    for (rM = 96; rM < 106; ++rM) aM[rM] = "<num-" + (rM - 96) + ">";
+    for (rM = 112; rM < 136; ++rM) aM[rM] = "F" + (rM - 111)
   },
-  9295: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      b: () => TQ,
-      f: () => qQ
+  37538: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => HM,
+      i: () => hM,
+      m: () => mM,
+      p: () => LM
     });
-    let wQ = !1;
+    var OM = iM(35017),
+      SM = iM(37542),
+      jM = iM(37544),
+      aM = iM(9328),
+      PM = iM(1516),
+      nM = iM(44),
+      QM = iM(65),
+      zM = iM(1303);
 
-    function qQ() {
-      wQ = !0
+    function LM() {
+      var MM;
+      return (0, PM.e)(SM.e, (0, SM.t)()), (0, zM.jsx)(zM.Fragment, {
+        children: null === (MM = (0, SM.t)()) || void 0 === MM ? void 0 : MM.content
+      })
     }
 
-    function TQ() {
-      return wQ
+    function mM(MM) {
+      var rM;
+      let {
+        show: iM
+      } = MM;
+      (0, PM.e)(SM.e, (0, SM.t)());
+      const QM = null === (rM = (0, SM.t)()) || void 0 === rM ? void 0 : rM.menu;
+      return (0, nM.useEffect)((() => {
+        var MM;
+        iM || (null === QM || void 0 === QM || null === (MM = QM.onClose) || void 0 === MM || MM.call(QM), (0, jM.q)())
+      }), [iM, QM]), (0, nM.useEffect)((() => iM ? (0, aM.e)(jM.y, jM.f) : void 0), [iM]), (0, zM.jsx)(OM.e, {
+        showing: iM,
+        globallyUniqueKey: "clientGameMenu",
+        children: null === QM || void 0 === QM ? void 0 : QM.content
+      })
+    }
+
+    function HM(MM) {
+      let {
+        placement: rM = "bottom"
+      } = MM;
+      return (0, zM.jsx)("div", {
+        id: `clientGameHud-${rM}`,
+        style: {
+          display: "contents"
+        }
+      })
+    }
+
+    function hM(MM) {
+      let {
+        children: rM,
+        placement: iM = "bottom"
+      } = MM;
+      const [OM, SM] = (0, nM.useState)(null);
+      return (0, nM.useEffect)((() => {
+        SM(document.getElementById(`clientGameHud-${iM}`))
+      }), [iM]), OM ? (0, QM.createPortal)(rM, OM) : null
     }
   },
-  36752: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      InGameUi: () => UQ.d,
-      LobbyLeaderboard: () => bQ.d,
-      loadCharacterCustomisationUI: () => vQ,
-      loadCharacterPreview: () => dQ,
-      matchmakeAndPlay: () => hQ,
-      matchmakeForAhead: () => sQ.f,
-      setUpGame: () => HQ
+  9328: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => jM,
+      e: () => SM
     });
-    var wQ = XQ(1280),
-      qQ = XQ(193),
-      TQ = XQ(26),
-      zQ = XQ(36757),
-      sQ = XQ(36763),
-      FQ = XQ(2036),
-      PQ = XQ(36800);
+    let OM = null;
+    const SM = function(MM) {
+        const rM = {
+          cycle: MM,
+          canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
+        };
+        return OM = rM, () => {
+          OM === rM && (OM = null)
+        }
+      },
+      jM = () => {
+        var MM;
+        return null !== (MM = OM) && void 0 !== MM && MM.canCycle() ? OM.cycle : null
+      }
+  },
+  9517: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => jM,
+      e: () => SM
+    });
+    let OM = !1;
 
-    function gQ() {
-      return !1 !== FQ.e.get("canCustomiseChar")
+    function SM() {
+      OM = !0
     }
-    let JQ = !1;
-    var rQ = XQ(1376),
-      IQ = XQ(1285),
-      jQ = XQ(291),
-      BQ = XQ(3819),
-      yQ = XQ(9295),
-      VQ = XQ(9293);
 
-    function DQ() {
-      (0, yQ.b)() || (0, VQ.d)().catch((QQ => {
-        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", QQ)
+    function jM() {
+      return OM
+    }
+  },
+  37397: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      InGameUi: () => GM.e,
+      LobbyLeaderboard: () => CM.c,
+      loadCharacterCustomisationUI: () => eM,
+      loadCharacterPreview: () => bM,
+      matchmakeAndPlay: () => uM,
+      matchmakeForAhead: () => PM.h,
+      setUpGame: () => wM
+    });
+    var OM = iM(1251),
+      SM = iM(143),
+      jM = iM(19),
+      aM = iM(37402),
+      PM = iM(37407),
+      nM = iM(2067),
+      QM = iM(37440);
+
+    function zM() {
+      return !1 !== nM.d.get("canCustomiseChar")
+    }
+    let LM = !1;
+    var mM = iM(1373),
+      HM = iM(1258),
+      hM = iM(222),
+      JM = iM(2562),
+      dM = iM(9517),
+      yM = iM(9514);
+
+    function lM() {
+      (0, dM.b)() || (0, yM.e)().catch((MM => {
+        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", MM)
       }))
     }
-    var pQ = XQ(3699),
-      GQ = XQ(1821);
-    var UQ = XQ(36811),
-      bQ = XQ(37278);
+    var EM = iM(3839),
+      UM = iM(1851);
+    var GM = iM(37442),
+      CM = iM(37944);
 
-    function vQ() {
-      return XQ.e(224).then((() => XQ(41519)))
+    function eM() {
+      return iM.e(239).then((() => iM(43954)))
     }
 
-    function dQ() {
-      return XQ.e(300).then((() => XQ(41521)))
+    function bM() {
+      return iM.e(601).then((() => iM(43956)))
     }
 
-    function HQ() {
-      return (0, VQ.i)()
+    function wM() {
+      return (0, yM.h)()
     }
-    JQ || (JQ = !0, document.addEventListener("keydown", (QQ => {
-        (0, PQ.c)(QQ, gQ)
+    LM || (LM = !0, document.addEventListener("keydown", (MM => {
+        (0, QM.e)(MM, zM)
       }))),
-      function(QQ) {
-        var WQ;
-        return !0 !== (null === QQ || void 0 === QQ ? void 0 : QQ.saveData) && !/2g$/.test(null !== (WQ = null === QQ || void 0 === QQ ? void 0 : QQ.effectiveType) && void 0 !== WQ ? WQ : "")
-      }(navigator.connection) && (0, BQ.d)((() => {
-        (0, yQ.b)() || Promise.all([XQ.e(80), XQ.e(93), XQ.e(219), XQ.e(218), XQ.e(139), XQ.e(142), XQ.e(61)]).then((() => XQ(41257))).then((async QQ => {
-          if ((0, yQ.b)()) return;
-          const WQ = QQ.startLoadAheadOfJoin({
-            joinStarted: yQ.b,
-            language: IQ.h.get().getCurrentLanguageCode()
+      function(MM) {
+        var rM;
+        return !0 !== (null === MM || void 0 === MM ? void 0 : MM.saveData) && !/2g$/.test(null !== (rM = null === MM || void 0 === MM ? void 0 : MM.effectiveType) && void 0 !== rM ? rM : "")
+      }(navigator.connection) && (0, JM.f)((() => {
+        (0, dM.b)() || Promise.all([iM.e(89), iM.e(103), iM.e(233), iM.e(232), iM.e(150), iM.e(153), iM.e(70)]).then((() => iM(42162))).then((async MM => {
+          if ((0, dM.b)()) return;
+          const rM = MM.startLoadAheadOfJoin({
+            joinStarted: dM.b,
+            language: HM.e.get().getCurrentLanguageCode()
           });
-          (0, jQ.e)((() => {
-            (0, yQ.b)() || QQ.probeWebgl2AheadOfJoin()
-          })), await WQ, (0, jQ.e)(DQ)
-        }), (QQ => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", QQ)
+          (0, hM.d)((() => {
+            (0, dM.b)() || MM.probeWebgl2AheadOfJoin()
+          })), await rM, (0, hM.d)(lM)
+        }), (MM => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", MM)
         }))
       }));
-    const aQ = TQ.b.get("router");
-    null === aQ ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function QQ(WQ) {
-      if ((0, GQ.d)(WQ.state.location.pathname)) return void(0, VQ.g)().catch((() => {}));
-      const XQ = WQ.subscribe((wQ => {
-        (0, GQ.d)(wQ.location.pathname) && (XQ(), (0, pQ.e)().then((() => {
-          QQ(WQ)
+    const tM = jM.d.get("router");
+    null === tM ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function MM(rM) {
+      if ((0, UM.e)(rM.state.location.pathname)) return void(0, yM.f)().catch((() => {}));
+      const iM = rM.subscribe((OM => {
+        (0, UM.e)(OM.location.pathname) && (iM(), (0, EM.e)().then((() => {
+          MM(rM)
         })))
       }))
-    }(aQ), (0, zQ.c)();
-    const lQ = (0, sQ.d)((async function(QQ, WQ) {
+    }(tM), (0, aM.b)();
+    const gM = (0, PM.e)((async function(MM, rM) {
       let {
-        place: XQ,
-        userContext: TQ,
-        direct: zQ,
-        matchedAt: sQ,
-        rematch: FQ
-      } = QQ;
-      const PQ = zQ ? 1 / 0 : sQ;
-      let gQ;
+        place: iM,
+        userContext: jM,
+        direct: aM,
+        matchedAt: PM,
+        rematch: nM
+      } = MM;
+      const QM = aM ? 1 / 0 : PM;
+      let zM;
       try {
-        gQ = await (0, VQ.g)()
-      } catch (JQ) {
-        return console.error("The wasm client did not load:", JQ), (0, rQ.t)({
+        zM = await (0, yM.f)()
+      } catch (LM) {
+        return console.error("The wasm client did not load:", LM), (0, mM.p)({
           websocketUrl: null
-        }), wQ.e.errorWithCode(String(JQ), qQ.h.CONNECT_TO_GAME_SERVER, {
-          error: JQ,
-          severity: WQ.aborted ? "low" : "medium",
-          fX: WQ.aborted
+        }), OM.b.errorWithCode(String(LM), SM.n.CONNECT_TO_GAME_SERVER, {
+          error: LM,
+          severity: rM.aborted ? "low" : "medium",
+          Ti: rM.aborted
         })
       }
-      return gQ.playWasmGame({
-        userContext: TQ,
-        place: XQ,
-        matchedAt: PQ,
-        rematch: FQ
-      }, WQ)
+      return zM.playWasmGame({
+        userContext: jM,
+        place: iM,
+        matchedAt: QM,
+        rematch: nM
+      }, rM)
     }));
 
-    function hQ() {
-      return (0, VQ.g)().catch((() => {})), lQ(...arguments)
+    function uM() {
+      return (0, yM.f)().catch((() => {})), gM(...arguments)
     }
   },
-  9293: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => IQ,
-      g: () => rQ,
-      i: () => jQ
+  9514: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => HM,
+      f: () => mM,
+      h: () => hM
     });
-    var wQ = XQ(3424),
-      qQ = XQ(2370),
-      TQ = XQ(2211),
-      zQ = XQ(4967),
-      sQ = XQ(3751),
-      FQ = XQ(9295);
-    let PQ = null;
+    var OM = iM(3563),
+      SM = iM(2414),
+      jM = iM(2257),
+      aM = iM(5022),
+      PM = iM(3902),
+      nM = iM(9517);
+    let QM = null;
 
-    function gQ() {
-      return Promise.all([XQ.e(77), XQ.e(80), XQ.e(93), XQ.e(219), XQ.e(218), XQ.e(162), XQ.e(203), XQ.e(139), XQ.e(142), XQ.e(91), XQ.e(279), XQ.e(66)]).then((() => XQ(40897)))
+    function zM() {
+      return Promise.all([iM.e(86), iM.e(89), iM.e(103), iM.e(233), iM.e(232), iM.e(174), iM.e(222), iM.e(150), iM.e(153), iM.e(101), iM.e(298), iM.e(75)]).then((() => iM(41755)))
     }
 
-    function JQ() {
-      Promise.all([XQ.e(75), XQ.e(78), XQ.e(77), XQ.e(76), XQ.e(93), XQ.e(90), XQ.e(277), XQ.e(193), XQ.e(232), XQ.e(256), XQ.e(279), XQ.e(49)]).then((() => XQ(41206))).catch((() => {}))
+    function LM() {
+      Promise.all([iM.e(84), iM.e(87), iM.e(85), iM.e(86), iM.e(103), iM.e(100), iM.e(296), iM.e(205), iM.e(246), iM.e(272), iM.e(298), iM.e(53)]).then((() => iM(42102))).catch((() => {}))
     }
 
-    function rQ() {
-      return zQ.c.cancelDownloadForJoin(), (0, sQ.d)(), (0, qQ.c)(), (0, FQ.f)(), (0, TQ.i)(), JQ(), Promise.all([XQ.e(80), XQ.e(93), XQ.e(219), XQ.e(218), XQ.e(139), XQ.e(142), XQ.e(61)]).then((() => XQ(41257))).then((QQ => {
+    function mM() {
+      return aM.e.cancelDownloadForJoin(), (0, PM.b)(), (0, SM.c)(), (0, nM.e)(), (0, jM.j)(), LM(), Promise.all([iM.e(89), iM.e(103), iM.e(233), iM.e(232), iM.e(150), iM.e(153), iM.e(70)]).then((() => iM(42162))).then((MM => {
         let {
-          startJoinLoad: WQ
-        } = QQ;
-        WQ()
-      }), (() => {})), PQ ??= gQ().then((QQ => (QQ.startWasmPlay(), QQ.followPageUiPack((QQ => {
-        wQ.d.showGamePack(QQ)
-      })), QQ)), (QQ => {
-        throw PQ = null, QQ
-      })), PQ
+          startJoinLoad: rM
+        } = MM;
+        rM()
+      }), (() => {})), QM ??= zM().then((MM => (MM.startWasmPlay(), MM.followPageUiPack((MM => {
+        OM.e.showGamePack(MM)
+      })), MM)), (MM => {
+        throw QM = null, MM
+      })), QM
     }
 
-    function IQ() {
-      return JQ(), XQ.e(280).then((() => XQ(41265))).catch((() => {})), gQ().then((() => {}))
+    function HM() {
+      return LM(), iM.e(299).then((() => iM(42165))).catch((() => {})), zM().then((() => {}))
     }
 
-    function jQ() {
-      return gQ().then((QQ => {
-        QQ.startWasmPreviews(), QQ.prefetchWasmPreviews()
+    function hM() {
+      return zM().then((MM => {
+        MM.startWasmPreviews(), MM.prefetchWasmPreviews()
       }))
     }
   },
-  36775: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => rQ,
-      h: () => gQ,
-      k: () => IQ,
-      n: () => JQ
+  37416: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => mM,
+      e: () => zM,
+      g: () => HM,
+      k: () => LM
     });
-    var wQ = XQ(402),
-      qQ = XQ(695),
-      TQ = XQ(702),
-      zQ = XQ(43);
-    const sQ = {
+    var OM = iM(332),
+      SM = iM(670),
+      jM = iM(680),
+      aM = iM(30);
+    const PM = {
         idStorageKey: "playSessionId",
         lastActivityStorageKey: "playSessionLastActivityMs",
         expiryMs: 3e5
       },
-      FQ = "playSessionGameNameWithVariation",
-      PQ = "wasMatchmakePlayer";
+      nM = "playSessionGameNameWithVariation",
+      QM = "wasMatchmakePlayer";
 
-    function gQ() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zQ.m;
-      (0, TQ.j)(QQ, sQ)
+    function zM() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k;
+      (0, jM.k)(MM, PM)
     }
 
-    function JQ() {
-      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zQ.m).setItem(PQ, !0)
+    function LM() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k).setItem(QM, !0)
     }
 
-    function rQ() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zQ.m;
-      return (0, TQ.e)(QQ, sQ)
+    function mM() {
+      let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k;
+      return (0, jM.e)(MM, PM)
     }
 
-    function IQ(QQ) {
-      let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zQ.m;
-      const XQ = (0, TQ.e)(WQ, sQ),
-        gQ = function(QQ) {
-          const WQ = QQ.getItem(FQ);
-          return "string" !== typeof WQ ? null : WQ
-        }(WQ),
-        JQ = function() {
-          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zQ.m).getItem(PQ)
-        }(WQ);
-      let rQ;
-      return rQ = null !== XQ && null !== gQ && (0, TQ.f)(WQ, sQ) && function(QQ, WQ, XQ) {
-          const qQ = (0, wQ.Mb)(QQ),
-            TQ = (0, wQ.Mb)(WQ),
-            zQ = (0, wQ.Fb)(QQ),
-            sQ = (0, wQ.Fb)(WQ);
-          return !(qQ !== TQ || !XQ) || qQ === TQ && zQ === sQ
-        }(gQ, QQ, JQ) ? XQ : (0, qQ.e)(), (0, TQ.n)(WQ, sQ, rQ), WQ.setItem(FQ, QQ),
+    function HM(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aM.k;
+      const iM = (0, jM.e)(rM, PM),
+        zM = function(MM) {
+          const rM = MM.getItem(nM);
+          return "string" !== typeof rM ? null : rM
+        }(rM),
+        LM = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k).getItem(QM)
+        }(rM);
+      let mM;
+      return mM = null !== iM && null !== zM && (0, jM.g)(rM, PM) && function(MM, rM, iM) {
+          const SM = (0, OM.Mb)(MM),
+            jM = (0, OM.Mb)(rM),
+            aM = (0, OM.Jb)(MM),
+            PM = (0, OM.Jb)(rM);
+          return !(SM !== jM || !iM) || SM === jM && aM === PM
+        }(zM, MM, LM) ? iM : (0, SM.e)(), (0, jM.o)(rM, PM, mM), rM.setItem(nM, MM),
         function() {
-          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zQ.m).removeItem(PQ)
-        }(WQ), rQ
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : aM.k).removeItem(QM)
+        }(rM), mM
     }
   },
-  36766: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => UQ,
-      e: () => bQ
+  37414: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => GM,
+      f: () => CM
     });
-    var wQ = XQ(1049),
-      qQ = XQ(243),
-      TQ = XQ(400),
-      zQ = XQ(670),
-      sQ = XQ(402),
-      FQ = XQ(1055),
-      PQ = XQ(691),
-      gQ = XQ(714),
-      JQ = XQ(4836),
-      rQ = XQ(105),
-      IQ = XQ(158),
-      jQ = XQ(1802),
-      BQ = XQ(129),
-      yQ = XQ(36775),
-      VQ = XQ(43),
-      DQ = XQ(698),
-      pQ = XQ(675),
-      GQ = XQ(36777);
+    var OM = iM(1073),
+      SM = iM(187),
+      jM = iM(327),
+      aM = iM(632),
+      PM = iM(332),
+      nM = iM(1081),
+      QM = iM(656),
+      zM = iM(694),
+      LM = iM(4906),
+      mM = iM(83),
+      HM = iM(119),
+      hM = iM(1830),
+      JM = iM(103),
+      dM = iM(37416),
+      yM = iM(30),
+      lM = iM(673),
+      EM = iM(637),
+      UM = iM(37422);
 
-    function UQ() {
-      var QQ, WQ;
-      return [...null !== (QQ = navigator.languages) && void 0 !== QQ ? QQ : [null !== (WQ = navigator.language) && void 0 !== WQ ? WQ : "none"], "en-Gb"]
+    function GM() {
+      var MM, rM;
+      return [...null !== (MM = navigator.languages) && void 0 !== MM ? MM : [null !== (rM = navigator.language) && void 0 !== rM ? rM : "none"], "en-Gb"]
     }
 
-    function bQ(QQ, WQ, XQ, bQ, vQ) {
-      const dQ = (0, wQ.k)(WQ) ? (0, wQ.n)(WQ) : null,
-        HQ = QQ.isLoggedIn() && void 0 !== (0, qQ.e)(TQ.j, IQ.siteUsed) ? (0, pQ.e)() : null,
-        aQ = {
-          cookies: (0, jQ.getAllCookiesForGameNameWithVariation)(WQ),
-          isMobile: (0, rQ.isMobile)(),
-          isUsingCustomGameTexturePack: null !== dQ && vQ(dQ),
+    function CM(MM, rM, iM, CM, eM) {
+      const bM = (0, OM.m)(rM) ? (0, OM.p)(rM) : null,
+        wM = MM.isLoggedIn() && void 0 !== (0, SM.d)(jM.g, HM.siteUsed) ? (0, EM.h)() : null,
+        tM = {
+          cookies: (0, hM.getAllCookiesForGameNameWithVariation)(rM),
+          isMobile: (0, mM.isMobile)(),
+          isUsingCustomGameTexturePack: null !== bM && eM(bM),
           generalCookies: {
-            joinDiscord: !!VQ.i.getItem("DiscordPressed"),
-            newGo: JQ.e,
-            ...QQ.getMetricsCookies(),
-            trafficCode: bQ,
-            compliance: rQ.compliance
+            joinDiscord: !!yM.g.getItem("DiscordPressed"),
+            newGo: LM.c,
+            ...MM.getMetricsCookies(),
+            trafficCode: CM,
+            compliance: mM.compliance
           },
           browserInfo: {
             ua: window.navigator.userAgent,
-            name: (0, rQ.getBrowserName)(),
-            version: (0, rQ.getBrowserVersion)(),
+            name: (0, mM.getBrowserName)(),
+            version: (0, mM.getBrowserVersion)(),
             platform: navigator.platform,
-            platformType: (0, rQ.getPlatformType)(),
-            deviceType: (0, BQ.c)()
+            platformType: (0, mM.getPlatformType)(),
+            deviceType: (0, JM.c)()
           },
-          isLoggedIn: QQ.isLoggedIn(),
-          lobbyName: XQ,
-          languages: UQ(),
-          version: zQ.c,
-          siteUsed: IQ.siteUsed,
-          subsiteUsed: IQ.subsiteUsed,
-          playSessionId: (0, yQ.k)(WQ),
-          visitSessionId: (0, DQ.d)(),
-          clientReason: PQ.l.reason,
-          budgetBasis: (0, GQ.i)(),
-          ...null !== gQ.t && {
-            diagClaim: gQ.t.claimId
+          isLoggedIn: MM.isLoggedIn(),
+          lobbyName: iM,
+          languages: GM(),
+          version: aM.c,
+          siteUsed: HM.siteUsed,
+          subsiteUsed: HM.subsiteUsed,
+          playSessionId: (0, dM.g)(rM),
+          visitSessionId: (0, lM.e)(),
+          clientReason: QM.x.reason,
+          budgetBasis: (0, UM.f)(),
+          ...null !== zM.m && {
+            diagClaim: zM.m.claimId
           },
-          ...null !== HQ && {
-            webGpuLoss: HQ
+          ...null !== wM && {
+            webGpuLoss: wM
           }
         };
-      return null !== dQ && (0, sQ.Bc)(dQ) ? (aQ.lobbyName = (0, wQ.i)(dQ, (0, wQ.m)(WQ), XQ), {
-        roomName: `classic_${FQ.c}`,
-        joinOptions: aQ
+      return null !== bM && (0, PM.Dc)(bM) ? (tM.lobbyName = (0, OM.i)(bM, (0, OM.o)(rM), iM), {
+        roomName: `classic_${nM.g}`,
+        joinOptions: tM
       }) : {
-        roomName: WQ,
-        joinOptions: aQ
+        roomName: rM,
+        joinOptions: tM
       }
     }
   },
-  9679: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      b: () => qQ,
-      c: () => TQ
+  9918: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => SM,
+      e: () => jM
     });
-    var wQ = XQ(9634);
-    const qQ = "Air",
-      TQ = Object.freeze(new wQ.d(qQ, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var OM = iM(9863);
+    const SM = "Air",
+      jM = Object.freeze(new OM.c(SM, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

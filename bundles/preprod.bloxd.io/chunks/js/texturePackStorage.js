@@ -1,72 +1,72 @@
-export const id = 58;
-export const ids = [58];
+export const id = 67;
+export const ids = [67];
 export const modules = {
-  34576: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      announceStoredTexturePack: () => qQ.c,
-      takeOneShotTexturePack: () => wQ.f
+  35092: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      announceStoredTexturePack: () => SM.d,
+      takeOneShotTexturePack: () => OM.g
     });
-    var wQ = XQ(34583),
-      qQ = XQ(34587)
+    var OM = iM(35100),
+      SM = iM(35103)
   },
-  34587: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => qQ,
-      d: () => TQ
+  35103: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => SM,
+      e: () => jM
     });
-    var wQ = XQ(3523);
+    var OM = iM(3657);
 
-    function qQ() {
+    function SM() {
       if ("undefined" === typeof BroadcastChannel) return null;
-      const QQ = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      const MM = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
       try {
-        const WQ = new BroadcastChannel(wQ.k);
-        WQ.postMessage({
-          stored: QQ
-        }), WQ.close()
+        const rM = new BroadcastChannel(OM.i);
+        rM.postMessage({
+          stored: MM
+        }), rM.close()
       } catch {
         return null
       }
-      return QQ
+      return MM
     }
 
-    function TQ(QQ) {
-      const WQ = "object" === typeof QQ && null !== QQ ? QQ.stored : null;
-      return "string" === typeof WQ ? WQ : null
+    function jM(MM) {
+      const rM = "object" === typeof MM && null !== MM ? MM.stored : null;
+      return "string" === typeof rM ? rM : null
     }
   },
-  34583: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      b: () => zQ,
-      e: () => qQ,
-      f: () => TQ
+  35100: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => aM,
+      f: () => SM,
+      g: () => jM
     });
-    var wQ = XQ(3523);
-    async function qQ(QQ, WQ, XQ) {
-      let qQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-      const TQ = zQ(await QQ.getItem(wQ.f, WQ));
-      if (null === TQ || qQ()) return null;
-      const sQ = await QQ.getItem(wQ.g, WQ);
-      return qQ() ? null : (await async function(QQ) {
-        await Promise.all([QQ.removeItem(wQ.f), QQ.removeItem(wQ.g)])
-      }(QQ).catch(XQ), {
-        pack: TQ,
-        source: "string" === typeof sQ ? sQ : null
+    var OM = iM(3657);
+    async function SM(MM, rM, iM) {
+      let SM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const jM = aM(await MM.getItem(OM.e, rM));
+      if (null === jM || SM()) return null;
+      const PM = await MM.getItem(OM.f, rM);
+      return SM() ? null : (await async function(MM) {
+        await Promise.all([MM.removeItem(OM.e), MM.removeItem(OM.f)])
+      }(MM).catch(iM), {
+        pack: jM,
+        source: "string" === typeof PM ? PM : null
       })
     }
 
-    function TQ(QQ) {
-      return (0, wQ.r)() ? Promise.resolve(null) : qQ(QQ, !1, (QQ => {
-        console.error("Error removing temporary texture pack: ", QQ)
-      }), wQ.r)
+    function jM(MM) {
+      return (0, OM.n)() ? Promise.resolve(null) : SM(MM, !1, (MM => {
+        console.error("Error removing temporary texture pack: ", MM)
+      }), OM.n)
     }
 
-    function zQ(QQ) {
-      if ("object" !== typeof QQ || null === QQ) return null;
-      const WQ = QQ.metaData;
-      return "object" !== typeof WQ || null === WQ || "string" !== typeof WQ.id ? null : QQ
+    function aM(MM) {
+      if ("object" !== typeof MM || null === MM) return null;
+      const rM = MM.metaData;
+      return "object" !== typeof rM || null === rM || "string" !== typeof rM.id ? null : MM
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

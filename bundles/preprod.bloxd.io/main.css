@@ -131,658 +131,6 @@
   background-size: auto, 4rem 4rem
 }
 
-@keyframes SnowflakeFall {
-  0% {
-    top: -10rem
-  }
-
-  to {
-    top: calc(100% + 10rem)
-  }
-}
-
-@keyframes SnowflakeSway {
-  0% {
-    transform: translateX(-2em) translateY(0)
-  }
-
-  50% {
-    transform: translateX(2em) translateY(-.5em)
-  }
-
-  to {
-    transform: translateX(-2em) translateY(0)
-  }
-}
-
-.IconShower {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%
-}
-
-.IconShower .Icon {
-  position: absolute;
-  top: -10rem
-}
-
-.IconShower .Icon.IconGroup0 {
-  font-size: 1rem
-}
-
-.IconShower .Icon.IconGroup1 {
-  font-size: .7rem;
-  opacity: .8
-}
-
-.IconShower .Icon.IconGroup2 {
-  font-size: .5rem;
-  opacity: .6
-}
-
-.IconShower.IconShowerAnimationSnowflakeFall .Icon {
-  animation: SnowflakeFall 20s linear infinite, SnowflakeSway 4s ease-in-out infinite
-}
-
-.IconShower.IconShowerAnimationFall .Icon {
-  animation: SnowflakeFall 5s linear infinite
-}
-
-:host,
-:root {
-  --fa-font-solid: normal 900 1em/1 "Font Awesome 7 Free";
-  --fa-font-regular: normal 400 1em/1 "Font Awesome 7 Free";
-  --fa-font-light: normal 300 1em/1 "Font Awesome 7 Pro";
-  --fa-font-thin: normal 100 1em/1 "Font Awesome 7 Pro";
-  --fa-font-duotone: normal 900 1em/1 "Font Awesome 7 Duotone";
-  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 7 Duotone";
-  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 7 Duotone";
-  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 7 Duotone";
-  --fa-font-brands: normal 400 1em/1 "Font Awesome 7 Brands";
-  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 7 Sharp";
-  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 7 Sharp";
-  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 7 Sharp";
-  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 7 Sharp";
-  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 7 Sharp Duotone";
-  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 7 Sharp Duotone";
-  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 7 Sharp Duotone";
-  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 7 Sharp Duotone";
-  --fa-font-slab-regular: normal 400 1em/1 "Font Awesome 7 Slab";
-  --fa-font-slab-press-regular: normal 400 1em/1 "Font Awesome 7 Slab Press";
-  --fa-font-whiteboard-semibold: normal 600 1em/1 "Font Awesome 7 Whiteboard";
-  --fa-font-thumbprint-light: normal 300 1em/1 "Font Awesome 7 Thumbprint";
-  --fa-font-notdog-solid: normal 900 1em/1 "Font Awesome 7 Notdog";
-  --fa-font-notdog-duo-solid: normal 900 1em/1 "Font Awesome 7 Notdog Duo";
-  --fa-font-etch-solid: normal 900 1em/1 "Font Awesome 7 Etch";
-  --fa-font-graphite-thin: normal 100 1em/1 "Font Awesome 7 Graphite";
-  --fa-font-jelly-regular: normal 400 1em/1 "Font Awesome 7 Jelly";
-  --fa-font-jelly-fill-regular: normal 400 1em/1 "Font Awesome 7 Jelly Fill";
-  --fa-font-jelly-duo-regular: normal 400 1em/1 "Font Awesome 7 Jelly Duo";
-  --fa-font-chisel-regular: normal 400 1em/1 "Font Awesome 7 Chisel";
-  --fa-font-utility-semibold: normal 600 1em/1 "Font Awesome 7 Utility";
-  --fa-font-utility-duo-semibold: normal 600 1em/1 "Font Awesome 7 Utility Duo";
-  --fa-font-utility-fill-semibold: normal 600 1em/1 "Font Awesome 7 Utility Fill"
-}
-
-.svg-inline--fa {
-  box-sizing: content-box;
-  display: var(--fa-display, inline-block);
-  height: 1em;
-  overflow: visible;
-  vertical-align: -.125em;
-  width: var(--fa-width, 1.25em)
-}
-
-.svg-inline--fa.fa-2xs {
-  vertical-align: .1em
-}
-
-.svg-inline--fa.fa-xs {
-  vertical-align: 0
-}
-
-.svg-inline--fa.fa-sm {
-  vertical-align: -.0714285714em
-}
-
-.svg-inline--fa.fa-lg {
-  vertical-align: -.2em
-}
-
-.svg-inline--fa.fa-xl {
-  vertical-align: -.25em
-}
-
-.svg-inline--fa.fa-2xl {
-  vertical-align: -.3125em
-}
-
-.svg-inline--fa .fa-pull-start,
-.svg-inline--fa.fa-pull-left {
-  float: inline-start;
-  margin-inline-end: var(--fa-pull-margin, .3em)
-}
-
-.svg-inline--fa .fa-pull-end,
-.svg-inline--fa.fa-pull-right {
-  float: inline-end;
-  margin-inline-start: var(--fa-pull-margin, .3em)
-}
-
-.svg-inline--fa.fa-li {
-  inset-block-start: .25em;
-  inset-inline-start: calc(var(--fa-li-width, 2em)*-1);
-  width: var(--fa-li-width, 2em)
-}
-
-.fa-layers-counter,
-.fa-layers-text {
-  display: inline-block;
-  position: absolute;
-  text-align: center
-}
-
-.fa-layers {
-  display: inline-block;
-  height: 1em;
-  position: relative;
-  text-align: center;
-  vertical-align: -.125em;
-  width: var(--fa-width, 1.25em)
-}
-
-.fa-layers .svg-inline--fa {
-  inset: 0;
-  margin: auto;
-  position: absolute;
-  transform-origin: center center
-}
-
-.fa-layers-text {
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transform-origin: center center
-}
-
-.fa-layers-counter {
-  background-color: var(--fa-counter-background-color, #ff253a);
-  border-radius: var(--fa-counter-border-radius, 1em);
-  box-sizing: border-box;
-  color: var(--fa-inverse, #fff);
-  line-height: var(--fa-counter-line-height, 1);
-  max-width: var(--fa-counter-max-width, 5em);
-  min-width: var(--fa-counter-min-width, 1.5em);
-  overflow: hidden;
-  padding: var(--fa-counter-padding, .25em .5em);
-  right: var(--fa-right, 0);
-  text-overflow: ellipsis;
-  top: var(--fa-top, 0);
-  transform: scale(var(--fa-counter-scale, .25));
-  transform-origin: top right
-}
-
-.fa-layers-bottom-right {
-  bottom: var(--fa-bottom, 0);
-  right: var(--fa-right, 0);
-  top: auto;
-  transform: scale(var(--fa-layers-scale, .25));
-  transform-origin: bottom right
-}
-
-.fa-layers-bottom-left {
-  bottom: var(--fa-bottom, 0);
-  left: var(--fa-left, 0);
-  right: auto;
-  top: auto;
-  transform: scale(var(--fa-layers-scale, .25));
-  transform-origin: bottom left
-}
-
-.fa-layers-top-right {
-  right: var(--fa-right, 0);
-  top: var(--fa-top, 0);
-  transform: scale(var(--fa-layers-scale, .25));
-  transform-origin: top right
-}
-
-.fa-layers-top-left {
-  left: var(--fa-left, 0);
-  right: auto;
-  top: var(--fa-top, 0);
-  transform: scale(var(--fa-layers-scale, .25));
-  transform-origin: top left
-}
-
-.fa-1x {
-  font-size: 1em
-}
-
-.fa-2x {
-  font-size: 2em
-}
-
-.fa-3x {
-  font-size: 3em
-}
-
-.fa-4x {
-  font-size: 4em
-}
-
-.fa-5x {
-  font-size: 5em
-}
-
-.fa-6x {
-  font-size: 6em
-}
-
-.fa-7x {
-  font-size: 7em
-}
-
-.fa-8x {
-  font-size: 8em
-}
-
-.fa-9x {
-  font-size: 9em
-}
-
-.fa-10x {
-  font-size: 10em
-}
-
-.fa-2xs {
-  font-size: .625em;
-  line-height: .1em;
-  vertical-align: .225em
-}
-
-.fa-xs {
-  font-size: .75em;
-  line-height: .08333em;
-  vertical-align: .125em
-}
-
-.fa-sm {
-  font-size: .875em;
-  line-height: .07143em;
-  vertical-align: .05357em
-}
-
-.fa-lg {
-  font-size: 1.25em;
-  line-height: .05em;
-  vertical-align: -.075em
-}
-
-.fa-xl {
-  font-size: 1.5em;
-  line-height: .04167em;
-  vertical-align: -.125em
-}
-
-.fa-2xl {
-  font-size: 2em;
-  line-height: .03125em;
-  vertical-align: -.1875em
-}
-
-.fa-width-auto {
-  --fa-width: auto
-}
-
-.fa-fw,
-.fa-width-fixed {
-  --fa-width: 1.25em
-}
-
-.fa-ul {
-  list-style-type: none;
-  margin-inline-start: var(--fa-li-margin, 2.5em);
-  padding-inline-start: 0
-}
-
-.fa-ul>li {
-  position: relative
-}
-
-.fa-li {
-  inset-inline-start: calc(var(--fa-li-width, 2em)*-1);
-  line-height: inherit;
-  position: absolute;
-  text-align: center;
-  width: var(--fa-li-width, 2em)
-}
-
-.fa-border {
-  border-color: var(--fa-border-color, #eee);
-  border-radius: var(--fa-border-radius, .1em);
-  border-style: var(--fa-border-style, solid);
-  border-width: var(--fa-border-width, .0625em);
-  box-sizing: var(--fa-border-box-sizing, content-box);
-  padding: var(--fa-border-padding, .1875em .25em)
-}
-
-.fa-pull-left,
-.fa-pull-start {
-  float: inline-start;
-  margin-inline-end: var(--fa-pull-margin, .3em)
-}
-
-.fa-pull-end,
-.fa-pull-right {
-  float: inline-end;
-  margin-inline-start: var(--fa-pull-margin, .3em)
-}
-
-.fa-beat {
-  animation-delay: var(--fa-animation-delay, 0s);
-  animation-direction: var(--fa-animation-direction, normal);
-  animation-duration: var(--fa-animation-duration, 1s);
-  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-name: fa-beat;
-  animation-timing-function: var(--fa-animation-timing, ease-in-out)
-}
-
-.fa-bounce {
-  animation-delay: var(--fa-animation-delay, 0s);
-  animation-direction: var(--fa-animation-direction, normal);
-  animation-duration: var(--fa-animation-duration, 1s);
-  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-name: fa-bounce;
-  animation-timing-function: var(--fa-animation-timing, cubic-bezier(.28, .84, .42, 1))
-}
-
-.fa-fade {
-  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-name: fa-fade;
-  animation-timing-function: var(--fa-animation-timing, cubic-bezier(.4, 0, .6, 1))
-}
-
-.fa-beat-fade,
-.fa-fade {
-  animation-delay: var(--fa-animation-delay, 0s);
-  animation-direction: var(--fa-animation-direction, normal);
-  animation-duration: var(--fa-animation-duration, 1s)
-}
-
-.fa-beat-fade {
-  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-name: fa-beat-fade;
-  animation-timing-function: var(--fa-animation-timing, cubic-bezier(.4, 0, .6, 1))
-}
-
-.fa-flip {
-  animation-delay: var(--fa-animation-delay, 0s);
-  animation-direction: var(--fa-animation-direction, normal);
-  animation-duration: var(--fa-animation-duration, 1s);
-  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-name: fa-flip;
-  animation-timing-function: var(--fa-animation-timing, ease-in-out)
-}
-
-.fa-shake {
-  animation-duration: var(--fa-animation-duration, 1s);
-  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-name: fa-shake;
-  animation-timing-function: var(--fa-animation-timing, linear)
-}
-
-.fa-shake,
-.fa-spin {
-  animation-delay: var(--fa-animation-delay, 0s);
-  animation-direction: var(--fa-animation-direction, normal)
-}
-
-.fa-spin {
-  animation-duration: var(--fa-animation-duration, 2s);
-  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-name: fa-spin;
-  animation-timing-function: var(--fa-animation-timing, linear)
-}
-
-.fa-spin-reverse {
-  --fa-animation-direction: reverse
-}
-
-.fa-pulse,
-.fa-spin-pulse {
-  animation-direction: var(--fa-animation-direction, normal);
-  animation-duration: var(--fa-animation-duration, 1s);
-  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
-  animation-name: fa-spin;
-  animation-timing-function: var(--fa-animation-timing, steps(8))
-}
-
-@media (prefers-reduced-motion:reduce) {
-
-  .fa-beat,
-  .fa-beat-fade,
-  .fa-bounce,
-  .fa-fade,
-  .fa-flip,
-  .fa-pulse,
-  .fa-shake,
-  .fa-spin,
-  .fa-spin-pulse {
-    animation: none !important;
-    transition: none !important
-  }
-}
-
-@keyframes fa-beat {
-
-  0%,
-  90% {
-    transform: scale(1)
-  }
-
-  45% {
-    transform: scale(var(--fa-beat-scale, 1.25))
-  }
-}
-
-@keyframes fa-bounce {
-  0% {
-    transform: scale(1) translateY(0)
-  }
-
-  10% {
-    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, .9)) translateY(0)
-  }
-
-  30% {
-    transform: scale(var(--fa-bounce-jump-scale-x, .9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -.5em))
-  }
-
-  50% {
-    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, .95)) translateY(0)
-  }
-
-  57% {
-    transform: scale(1) translateY(var(--fa-bounce-rebound, -.125em))
-  }
-
-  64% {
-    transform: scale(1) translateY(0)
-  }
-
-  to {
-    transform: scale(1) translateY(0)
-  }
-}
-
-@keyframes fa-fade {
-  50% {
-    opacity: var(--fa-fade-opacity, .4)
-  }
-}
-
-@keyframes fa-beat-fade {
-
-  0%,
-  to {
-    opacity: var(--fa-beat-fade-opacity, .4);
-    transform: scale(1)
-  }
-
-  50% {
-    opacity: 1;
-    transform: scale(var(--fa-beat-fade-scale, 1.125))
-  }
-}
-
-@keyframes fa-flip {
-  50% {
-    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg))
-  }
-}
-
-@keyframes fa-shake {
-  0% {
-    transform: rotate(-15deg)
-  }
-
-  4% {
-    transform: rotate(15deg)
-  }
-
-  24%,
-  8% {
-    transform: rotate(-18deg)
-  }
-
-  12%,
-  28% {
-    transform: rotate(18deg)
-  }
-
-  16% {
-    transform: rotate(-22deg)
-  }
-
-  20% {
-    transform: rotate(22deg)
-  }
-
-  32% {
-    transform: rotate(-12deg)
-  }
-
-  36% {
-    transform: rotate(12deg)
-  }
-
-  40%,
-  to {
-    transform: rotate(0deg)
-  }
-}
-
-@keyframes fa-spin {
-  0% {
-    transform: rotate(0deg)
-  }
-
-  to {
-    transform: rotate(1turn)
-  }
-}
-
-.fa-rotate-90 {
-  transform: rotate(90deg)
-}
-
-.fa-rotate-180 {
-  transform: rotate(180deg)
-}
-
-.fa-rotate-270 {
-  transform: rotate(270deg)
-}
-
-.fa-flip-horizontal {
-  transform: scaleX(-1)
-}
-
-.fa-flip-vertical {
-  transform: scaleY(-1)
-}
-
-.fa-flip-both,
-.fa-flip-horizontal.fa-flip-vertical {
-  transform: scale(-1)
-}
-
-.fa-rotate-by {
-  transform: rotate(var(--fa-rotate-angle, 0))
-}
-
-.svg-inline--fa .fa-primary {
-  fill: var(--fa-primary-color, currentColor);
-  opacity: var(--fa-primary-opacity, 1)
-}
-
-.svg-inline--fa .fa-secondary {
-  fill: var(--fa-secondary-color, currentColor)
-}
-
-.svg-inline--fa .fa-secondary,
-.svg-inline--fa.fa-swap-opacity .fa-primary {
-  opacity: var(--fa-secondary-opacity, .4)
-}
-
-.svg-inline--fa.fa-swap-opacity .fa-secondary {
-  opacity: var(--fa-primary-opacity, 1)
-}
-
-.svg-inline--fa mask .fa-primary,
-.svg-inline--fa mask .fa-secondary {
-  fill: #000
-}
-
-.svg-inline--fa.fa-inverse {
-  fill: var(--fa-inverse, #fff)
-}
-
-.fa-stack {
-  display: inline-block;
-  height: 2em;
-  line-height: 2em;
-  position: relative;
-  vertical-align: middle;
-  width: 2.5em
-}
-
-.fa-inverse {
-  color: var(--fa-inverse, #fff)
-}
-
-.svg-inline--fa.fa-stack-1x {
-  --fa-width: 1.25em;
-  height: 1em;
-  width: var(--fa-width)
-}
-
-.svg-inline--fa.fa-stack-2x {
-  --fa-width: 2.5em;
-  height: 2em;
-  width: var(--fa-width)
-}
-
-.fa-stack-1x,
-.fa-stack-2x {
-  inset: 0;
-  margin: auto;
-  position: absolute;
-  z-index: var(--fa-stack-z-index, auto)
-}
-
 .HomeHeader {
   display: flex;
   flex-direction: row;
@@ -1437,24 +785,20 @@
 }
 
 .LogoLoader .LoaderSantaHat {
+  --fa-primary-color: #e73131;
+  --fa-secondary-color: #fff;
+  --fa-secondary-opacity: 1;
   font-size: .7em;
   position: absolute;
-  right: -3.5rem;
+  right: -.36em;
   rotate: 20deg;
-  top: -5rem;
+  top: -.51em;
   z-index: 2
 }
 
-.LogoLoader .LoaderSantaHat:before {
-  color: red;
-  z-index: 2
-}
-
-.LogoLoader .LoaderSantaHat:after {
-  color: #fff;
-  opacity: 1;
-  position: relative;
-  z-index: 3
+.InGameHeaderLogo .LogoLoader .LoaderSantaHat,
+.TitleContainer .LogoLoader .LoaderSantaHat {
+  top: -.25em
 }
 
 .LogoLoader .LogoLoaderInner {
@@ -1550,6 +894,599 @@ html[data-app-covered] .WholeAppWrapper .LogoLoader:not(.LogoLoaderIsProgressBar
 
 .LogoLoader:not(.LogoLoaderIsProgressBar):not(.LogoLoaderIsLoading) .LogoLoaderLoadingBar {
   border: var(--border-size) solid #2e80ee
+}
+
+:host,
+:root {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 7 Free";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 7 Free";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 7 Pro";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 7 Pro";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 7 Duotone";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 7 Brands";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 7 Sharp";
+  --fa-font-sharp-duotone-solid: normal 900 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-sharp-duotone-regular: normal 400 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-sharp-duotone-light: normal 300 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-sharp-duotone-thin: normal 100 1em/1 "Font Awesome 7 Sharp Duotone";
+  --fa-font-slab-regular: normal 400 1em/1 "Font Awesome 7 Slab";
+  --fa-font-slab-press-regular: normal 400 1em/1 "Font Awesome 7 Slab Press";
+  --fa-font-whiteboard-semibold: normal 600 1em/1 "Font Awesome 7 Whiteboard";
+  --fa-font-thumbprint-light: normal 300 1em/1 "Font Awesome 7 Thumbprint";
+  --fa-font-notdog-solid: normal 900 1em/1 "Font Awesome 7 Notdog";
+  --fa-font-notdog-duo-solid: normal 900 1em/1 "Font Awesome 7 Notdog Duo";
+  --fa-font-etch-solid: normal 900 1em/1 "Font Awesome 7 Etch";
+  --fa-font-graphite-thin: normal 100 1em/1 "Font Awesome 7 Graphite";
+  --fa-font-jelly-regular: normal 400 1em/1 "Font Awesome 7 Jelly";
+  --fa-font-jelly-fill-regular: normal 400 1em/1 "Font Awesome 7 Jelly Fill";
+  --fa-font-jelly-duo-regular: normal 400 1em/1 "Font Awesome 7 Jelly Duo";
+  --fa-font-chisel-regular: normal 400 1em/1 "Font Awesome 7 Chisel";
+  --fa-font-utility-semibold: normal 600 1em/1 "Font Awesome 7 Utility";
+  --fa-font-utility-duo-semibold: normal 600 1em/1 "Font Awesome 7 Utility Duo";
+  --fa-font-utility-fill-semibold: normal 600 1em/1 "Font Awesome 7 Utility Fill"
+}
+
+.svg-inline--fa {
+  box-sizing: content-box;
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -.125em;
+  width: var(--fa-width, 1.25em)
+}
+
+.svg-inline--fa.fa-2xs {
+  vertical-align: .1em
+}
+
+.svg-inline--fa.fa-xs {
+  vertical-align: 0
+}
+
+.svg-inline--fa.fa-sm {
+  vertical-align: -.0714285714em
+}
+
+.svg-inline--fa.fa-lg {
+  vertical-align: -.2em
+}
+
+.svg-inline--fa.fa-xl {
+  vertical-align: -.25em
+}
+
+.svg-inline--fa.fa-2xl {
+  vertical-align: -.3125em
+}
+
+.svg-inline--fa .fa-pull-start,
+.svg-inline--fa.fa-pull-left {
+  float: inline-start;
+  margin-inline-end: var(--fa-pull-margin, .3em)
+}
+
+.svg-inline--fa .fa-pull-end,
+.svg-inline--fa.fa-pull-right {
+  float: inline-end;
+  margin-inline-start: var(--fa-pull-margin, .3em)
+}
+
+.svg-inline--fa.fa-li {
+  inset-block-start: .25em;
+  inset-inline-start: calc(var(--fa-li-width, 2em)*-1);
+  width: var(--fa-li-width, 2em)
+}
+
+.fa-layers-counter,
+.fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -.125em;
+  width: var(--fa-width, 1.25em)
+}
+
+.fa-layers .svg-inline--fa {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  transform-origin: center center
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, .25em .5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-counter-scale, .25));
+  transform-origin: top right
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  transform: scale(var(--fa-layers-scale, .25));
+  transform-origin: bottom right
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  transform: scale(var(--fa-layers-scale, .25));
+  transform-origin: bottom left
+}
+
+.fa-layers-top-right {
+  right: var(--fa-right, 0);
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, .25));
+  transform-origin: top right
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  transform: scale(var(--fa-layers-scale, .25));
+  transform-origin: top left
+}
+
+.fa-1x {
+  font-size: 1em
+}
+
+.fa-2x {
+  font-size: 2em
+}
+
+.fa-3x {
+  font-size: 3em
+}
+
+.fa-4x {
+  font-size: 4em
+}
+
+.fa-5x {
+  font-size: 5em
+}
+
+.fa-6x {
+  font-size: 6em
+}
+
+.fa-7x {
+  font-size: 7em
+}
+
+.fa-8x {
+  font-size: 8em
+}
+
+.fa-9x {
+  font-size: 9em
+}
+
+.fa-10x {
+  font-size: 10em
+}
+
+.fa-2xs {
+  font-size: .625em;
+  line-height: .1em;
+  vertical-align: .225em
+}
+
+.fa-xs {
+  font-size: .75em;
+  line-height: .08333em;
+  vertical-align: .125em
+}
+
+.fa-sm {
+  font-size: .875em;
+  line-height: .07143em;
+  vertical-align: .05357em
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: .05em;
+  vertical-align: -.075em
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: .04167em;
+  vertical-align: -.125em
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: .03125em;
+  vertical-align: -.1875em
+}
+
+.fa-width-auto {
+  --fa-width: auto
+}
+
+.fa-fw,
+.fa-width-fixed {
+  --fa-width: 1.25em
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-inline-start: var(--fa-li-margin, 2.5em);
+  padding-inline-start: 0
+}
+
+.fa-ul>li {
+  position: relative
+}
+
+.fa-li {
+  inset-inline-start: calc(var(--fa-li-width, 2em)*-1);
+  line-height: inherit;
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em)
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, .1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, .0625em);
+  box-sizing: var(--fa-border-box-sizing, content-box);
+  padding: var(--fa-border-padding, .1875em .25em)
+}
+
+.fa-pull-left,
+.fa-pull-start {
+  float: inline-start;
+  margin-inline-end: var(--fa-pull-margin, .3em)
+}
+
+.fa-pull-end,
+.fa-pull-right {
+  float: inline-end;
+  margin-inline-start: var(--fa-pull-margin, .3em)
+}
+
+.fa-beat {
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-name: fa-beat;
+  animation-timing-function: var(--fa-animation-timing, ease-in-out)
+}
+
+.fa-bounce {
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-name: fa-bounce;
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(.28, .84, .42, 1))
+}
+
+.fa-fade {
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-name: fa-fade;
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(.4, 0, .6, 1))
+}
+
+.fa-beat-fade,
+.fa-fade {
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s)
+}
+
+.fa-beat-fade {
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-name: fa-beat-fade;
+  animation-timing-function: var(--fa-animation-timing, cubic-bezier(.4, 0, .6, 1))
+}
+
+.fa-flip {
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-name: fa-flip;
+  animation-timing-function: var(--fa-animation-timing, ease-in-out)
+}
+
+.fa-shake {
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-name: fa-shake;
+  animation-timing-function: var(--fa-animation-timing, linear)
+}
+
+.fa-shake,
+.fa-spin {
+  animation-delay: var(--fa-animation-delay, 0s);
+  animation-direction: var(--fa-animation-direction, normal)
+}
+
+.fa-spin {
+  animation-duration: var(--fa-animation-duration, 2s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-name: fa-spin;
+  animation-timing-function: var(--fa-animation-timing, linear)
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  animation-direction: var(--fa-animation-direction, normal);
+  animation-duration: var(--fa-animation-duration, 1s);
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  animation-name: fa-spin;
+  animation-timing-function: var(--fa-animation-timing, steps(8))
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+  .fa-beat,
+  .fa-beat-fade,
+  .fa-bounce,
+  .fa-fade,
+  .fa-flip,
+  .fa-pulse,
+  .fa-shake,
+  .fa-spin,
+  .fa-spin-pulse {
+    animation: none !important;
+    transition: none !important
+  }
+}
+
+@keyframes fa-beat {
+
+  0%,
+  90% {
+    transform: scale(1)
+  }
+
+  45% {
+    transform: scale(var(--fa-beat-scale, 1.25))
+  }
+}
+
+@keyframes fa-bounce {
+  0% {
+    transform: scale(1) translateY(0)
+  }
+
+  10% {
+    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, .9)) translateY(0)
+  }
+
+  30% {
+    transform: scale(var(--fa-bounce-jump-scale-x, .9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -.5em))
+  }
+
+  50% {
+    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, .95)) translateY(0)
+  }
+
+  57% {
+    transform: scale(1) translateY(var(--fa-bounce-rebound, -.125em))
+  }
+
+  64% {
+    transform: scale(1) translateY(0)
+  }
+
+  to {
+    transform: scale(1) translateY(0)
+  }
+}
+
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, .4)
+  }
+}
+
+@keyframes fa-beat-fade {
+
+  0%,
+  to {
+    opacity: var(--fa-beat-fade-opacity, .4);
+    transform: scale(1)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(var(--fa-beat-fade-scale, 1.125))
+  }
+}
+
+@keyframes fa-flip {
+  50% {
+    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg))
+  }
+}
+
+@keyframes fa-shake {
+  0% {
+    transform: rotate(-15deg)
+  }
+
+  4% {
+    transform: rotate(15deg)
+  }
+
+  24%,
+  8% {
+    transform: rotate(-18deg)
+  }
+
+  12%,
+  28% {
+    transform: rotate(18deg)
+  }
+
+  16% {
+    transform: rotate(-22deg)
+  }
+
+  20% {
+    transform: rotate(22deg)
+  }
+
+  32% {
+    transform: rotate(-12deg)
+  }
+
+  36% {
+    transform: rotate(12deg)
+  }
+
+  40%,
+  to {
+    transform: rotate(0deg)
+  }
+}
+
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(1turn)
+  }
+}
+
+.fa-rotate-90 {
+  transform: rotate(90deg)
+}
+
+.fa-rotate-180 {
+  transform: rotate(180deg)
+}
+
+.fa-rotate-270 {
+  transform: rotate(270deg)
+}
+
+.fa-flip-horizontal {
+  transform: scaleX(-1)
+}
+
+.fa-flip-vertical {
+  transform: scaleY(-1)
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  transform: scale(-1)
+}
+
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0))
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1)
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor)
+}
+
+.svg-inline--fa .fa-secondary,
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, .4)
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1)
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: #000
+}
+
+.svg-inline--fa.fa-inverse {
+  fill: var(--fa-inverse, #fff)
+}
+
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2.5em
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff)
+}
+
+.svg-inline--fa.fa-stack-1x {
+  --fa-width: 1.25em;
+  height: 1em;
+  width: var(--fa-width)
+}
+
+.svg-inline--fa.fa-stack-2x {
+  --fa-width: 2.5em;
+  height: 2em;
+  width: var(--fa-width)
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  z-index: var(--fa-stack-z-index, auto)
 }
 
 .GenericVideoWrapper {
@@ -1752,6 +1689,10 @@ html[data-app-covered] .WholeAppWrapper .LogoLoader:not(.LogoLoaderIsProgressBar
   gap: 1rem;
   max-width: max(50vw, 40rem);
   min-width: min(80vw, 26rem)
+}
+
+.InputGenericPopup:not(.PromptGenericPopup) .PromptGenericPopupTitle {
+  padding-inline: 3rem
 }
 
 .InputGenericPopup .InputGenericPopupInputRow {
@@ -3026,24 +2967,39 @@ a {
   color: #e73131
 }
 
-.LoadableButton.ReportButton {
+.LoadableButton.ReportButton,
+.LoadableButton.StopRecordingButton {
   background-color: #3c4b68
 }
 
 @media(hover:hover) {
-  .LoadableButton.ReportButton:hover {
+
+  .LoadableButton.ReportButton:hover,
+  .LoadableButton.StopRecordingButton:hover {
     background-color: #394980
   }
 }
 
-.LoadableButton.ReportButton.pad-focused {
+.LoadableButton.ReportButton.pad-focused,
+.LoadableButton.StopRecordingButton.pad-focused {
   background-color: #394980
 }
 
 @media(hover:none) {
-  .LoadableButton.ReportButton:active {
+
+  .LoadableButton.ReportButton:active,
+  .LoadableButton.StopRecordingButton:active {
     background-color: #394980
   }
+}
+
+.LoadableButton.StopRecordingButton {
+  color: #e34f4f
+}
+
+.LoadableButton.StopRecordingButton .StopRecordingButtonLabel {
+  color: #fff;
+  white-space: nowrap
 }
 
 .LoadableButton.DisabledLoadableButton {
@@ -3554,6 +3510,7 @@ a {
 @media(pointer:coarse) {
 
   .HomeHeader .TopRightIconsContainer .TopRightIcons .NotificationBell:before,
+  .HomeHeader .TopRightIconsContainer .TopRightIcons .StopRecordingButton:before,
   .HomeHeader .TopRightIconsContainer .TopRightIcons .TopRightIcon>.UiItemIcon:before {
     content: "";
     inset: min(0px, (100% - 44px)/2) max(var(--header-icon-gap, 1.25rem)/-2, min(0px, (100% - 44px)/2));
@@ -3573,6 +3530,15 @@ a {
     justify-content: center;
     min-width: 1em
   }
+}
+
+.HomeHeader .TopRightIconsContainer .TopRightIcons .TopRightStopRecording {
+  align-self: center
+}
+
+.HomeHeader .TopRightIconsContainer .TopRightIcons .TopRightStopRecording .StopRecordingButton {
+  font-size: 1.6rem;
+  padding: .4rem
 }
 
 .TopRightIconsContainer .TopRightIcons.TouchInGame {
@@ -4649,6 +4615,7 @@ a {
 }
 
 .NotificationTray .NotificationTrayRows::-webkit-scrollbar {
+  height: 6px;
   width: 6px
 }
 
@@ -6073,6 +6040,659 @@ a {
   }
 }
 
+.CandyCanePackBackground {
+  container-type: size;
+  background: repeating-linear-gradient(135deg, rgba(224, 40, 60, .07) 0 1.2em, transparent 1.2em 2.4em), radial-gradient(ellipse at 50% 40%, #fff1f3 0, #f9cdd6 100%);
+  inset: 0;
+  overflow: hidden;
+  position: absolute
+}
+
+.CandyCanePackBackground.PackBackgroundSimple .CandyCanePackBackgroundInner .CandyCaneWrap .CandyCane {
+  animation: none
+}
+
+.CandyCanePackBackground .CandyCanePackBackgroundInner {
+  inset: 0;
+  pointer-events: none;
+  position: absolute
+}
+
+.CandyCanePackBackground .CandyCanePackBackgroundInner:before {
+  background-image: radial-gradient(circle at 8% 18%, hsla(0, 0%, 100%, .7) 0 1.5px, transparent 2px), radial-gradient(circle at 26% 64%, hsla(0, 0%, 100%, .7) 0 1.5px, transparent 2px), radial-gradient(circle at 41% 12%, hsla(0, 0%, 100%, .7) 0 1px, transparent 1.5px), radial-gradient(circle at 57% 86%, hsla(0, 0%, 100%, .7) 0 1.5px, transparent 2px), radial-gradient(circle at 70% 34%, hsla(0, 0%, 100%, .7) 0 1px, transparent 1.5px), radial-gradient(circle at 86% 80%, hsla(0, 0%, 100%, .7) 0 1.5px, transparent 2px), radial-gradient(circle at 96% 22%, hsla(0, 0%, 100%, .7) 0 1px, transparent 1.5px);
+  content: "";
+  inset: 0;
+  position: absolute
+}
+
+.CandyCanePackBackground .CandyCanePackBackgroundInner .CandyCanePeppermint {
+  background: radial-gradient(circle, snow 0 18%, transparent 19%), repeating-conic-gradient(#e0283c 0 30deg, snow 30deg 60deg);
+  border-radius: 50%;
+  box-shadow: 0 0 0 .08em #a3152a, inset -.12em -.12em 0 rgba(0, 0, 0, .12);
+  opacity: .9;
+  position: absolute
+}
+
+.CandyCanePackBackground .CandyCanePackBackgroundInner .CandyCaneWrap {
+  position: absolute
+}
+
+.CandyCanePackBackground .CandyCanePackBackgroundInner .CandyCaneWrap .CandyCane {
+  animation: candyCaneSway 3.5s ease-in-out infinite alternate;
+  aspect-ratio: 30/80;
+  background: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 80%27><defs><pattern id=%27s%27 patternUnits=%27userSpaceOnUse%27 width=%277%27 height=%277%27 patternTransform=%27rotate%2840%29%27><rect width=%273.2%27 height=%277%27 fill=%27%23e0283c%27/></pattern></defs><g fill=%27none%27 stroke-linecap=%27round%27><path stroke=%27%23a3152a%27 stroke-width=%279.5%27 d=%27M9 76V25a8 8 0 0 1 16 0v5%27/><path stroke=%27%23fffafa%27 stroke-width=%277.5%27 d=%27M9 76V25a8 8 0 0 1 16 0v5%27/><path stroke=%27url%28%23s%29%27 stroke-width=%277.5%27 d=%27M9 76V25a8 8 0 0 1 16 0v5%27/><path stroke=%27%23ffffff%27 stroke-opacity=%270.55%27 stroke-width=%271.4%27 d=%27M7.2 72V26%27/></g></svg>") 50%/contain no-repeat;
+  filter: drop-shadow(.06em .1em 0 rgba(120, 20, 35, .25));
+  transform-origin: 50% 100%
+}
+
+@keyframes candyCaneSway {
+  0% {
+    transform: rotate(-5deg)
+  }
+
+  to {
+    transform: rotate(5deg)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .CandyCanePackBackground .CandyCanePackBackgroundInner .CandyCaneWrap .CandyCane {
+    animation: none
+  }
+}
+
+.JingleBellsPackBackground {
+  container-type: size;
+  background: radial-gradient(ellipse at 45% 35%, #1f6b3e 0, #0d3a22 75%);
+  inset: 0;
+  overflow: hidden;
+  position: absolute
+}
+
+.JingleBellsPackBackground.PackBackgroundSimple .JingleBellsPackBackgroundInner .JingleBell {
+  animation: none
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner {
+  inset: 0;
+  pointer-events: none;
+  position: absolute
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner:before {
+  background-image: radial-gradient(circle at 18% 72%, rgba(242, 193, 78, .5) 0 1.5px, transparent 2px), radial-gradient(circle at 30% 30%, rgba(242, 193, 78, .35) 0 1px, transparent 1.5px), radial-gradient(circle at 46% 84%, rgba(242, 193, 78, .4) 0 1.5px, transparent 2px), radial-gradient(circle at 50% 42%, rgba(242, 193, 78, .35) 0 1px, transparent 1.5px), radial-gradient(circle at 68% 90%, rgba(242, 193, 78, .45) 0 1.5px, transparent 2px), radial-gradient(circle at 90% 40%, rgba(242, 193, 78, .4) 0 1px, transparent 1.5px), radial-gradient(circle at 8% 94%, rgba(242, 193, 78, .35) 0 1.5px, transparent 2px);
+  content: "";
+  inset: 0;
+  position: absolute
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarlands {
+  --jingleSwag: max(7.5em, min(15cqw, 30cqh));
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--jingleSwag)*.08);
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarlandsIcon {
+  --jingleSwag: 80cqw;
+  left: 10%;
+  top: 22%;
+  transform: none
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarlandsIcon .JingleGarland .JingleSwag .JingleBow.JingleBowEnd {
+  left: 100%
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarlandsIcon .JingleGarland .JingleSwag .JingleSwagHang.JingleBellPair {
+  width: 60%
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland {
+  display: flex;
+  padding-bottom: calc(var(--jingleSwag)*.1)
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland.JingleGarlandShifted {
+  margin-left: calc(var(--jingleSwag)/-2)
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland.JingleGarlandExtra {
+  display: none
+}
+
+@container (min-height: 400px) {
+  .JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland.JingleGarlandExtra {
+    display: flex
+  }
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland .JingleSwag {
+  aspect-ratio: 100/44;
+  flex: none;
+  position: relative;
+  width: var(--jingleSwag)
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland .JingleSwag .JingleSwagGarland {
+  background: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 44%27><g fill=%27none%27 stroke-linecap=%27round%27><path stroke=%27%230f4d2a%27 stroke-width=%2710%27 d=%27M-6 -1Q50 58 106 -1%27/><path stroke=%27%231d6e3c%27 stroke-width=%2711.5%27 stroke-dasharray=%270.8 3.2%27 d=%27M-6 -1Q50 58 106 -1%27/><path stroke=%27%232f8f4e%27 stroke-width=%277.5%27 stroke-dasharray=%272.2 1.6%27 d=%27M-6 -1Q50 58 106 -1%27/><path stroke=%27%234fb06a%27 stroke-width=%273%27 stroke-dasharray=%271 5%27 d=%27M-6 -1Q50 58 106 -1%27/></g><g fill=%27%23d42a35%27 stroke=%27%238c1420%27 stroke-width=%270.5%27><circle cx=%2722%27 cy=%2721%27 r=%272%27/><circle cx=%2725%27 cy=%2723.5%27 r=%271.7%27/><circle cx=%2775%27 cy=%2722.6%27 r=%272%27/><circle cx=%2778%27 cy=%2720%27 r=%271.7%27/></g></svg>") 50%/100% 100% no-repeat;
+  filter: drop-shadow(0 .1em .06em rgba(0, 0, 0, .35));
+  inset: 0;
+  position: absolute
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland .JingleSwag .JingleBow {
+  aspect-ratio: 30/22;
+  background: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 22%27><g fill=%27%23d42a35%27 stroke=%27%238c1420%27 stroke-width=%270.8%27 stroke-linejoin=%27round%27><path d=%27M13 9L8 21L11 19L13 22L15 10Z%27/><path d=%27M17 9L22 21L19 19L17 22L15 10Z%27/><path d=%27M15 8C9 0 2 2 3 8C4 13 11 12 15 8Z%27/><path d=%27M15 8C21 0 28 2 27 8C26 13 19 12 15 8Z%27/><circle cx=%2715%27 cy=%278.5%27 r=%273%27/></g></svg>") 50%/contain no-repeat;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -30%);
+  width: 30%;
+  z-index: 1
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland .JingleSwag .JingleSwagHang {
+  display: flex;
+  gap: 4%;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  top: 70%;
+  transform: translateX(-50%)
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland .JingleSwag .JingleSwagHang.JingleBellPair {
+  width: 32%
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland .JingleSwag .JingleSwagHang.JingleBellPair .JingleBell {
+  width: 48%
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland .JingleSwag .JingleSwagHang.JingleMistletoe {
+  aspect-ratio: 40/34;
+  background: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 34%27><g fill=%27%237fae4a%27 stroke=%27%234f7a2a%27 stroke-width=%270.8%27><ellipse cx=%2711%27 cy=%2716%27 rx=%2710%27 ry=%274%27 transform=%27rotate%28-28 11 16%29%27/><ellipse cx=%2729%27 cy=%2716%27 rx=%2710%27 ry=%274%27 transform=%27rotate%2828 29 16%29%27/><ellipse cx=%2714%27 cy=%2724%27 rx=%278%27 ry=%273.4%27 transform=%27rotate%28-55 14 24%29%27/><ellipse cx=%2726%27 cy=%2724%27 rx=%278%27 ry=%273.4%27 transform=%27rotate%2855 26 24%29%27/></g><g fill=%27%23f4f7ee%27 stroke=%27%23b9c4a6%27 stroke-width=%270.6%27><circle cx=%2717%27 cy=%2719%27 r=%272.4%27/><circle cx=%2723%27 cy=%2719%27 r=%272.4%27/><circle cx=%2720%27 cy=%2722.5%27 r=%272.4%27/></g><g fill=%27%23c21f30%27 stroke=%27%23801420%27 stroke-width=%270.6%27><path d=%27M20 8C14 2 9 5 11 9C13 12 17 11 20 8Z%27/><path d=%27M20 8C26 2 31 5 29 9C27 12 23 11 20 8Z%27/><circle cx=%2720%27 cy=%278.5%27 r=%272.4%27/></g></svg>") 50%/contain no-repeat;
+  filter: drop-shadow(0 .1em .08em rgba(0, 0, 0, .3));
+  top: 64%;
+  width: 30%
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland .JingleSwag .JingleBell {
+  animation: jingleBellSwing 1.4s ease-in-out infinite alternate;
+  aspect-ratio: 20/24;
+  background: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 20 24%27><defs><linearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%271%27 y2=%270%27><stop offset=%270%27 stop-color=%27%23b8860b%27/><stop offset=%270.35%27 stop-color=%27%23fff1a8%27/><stop offset=%270.6%27 stop-color=%27%23f2c14e%27/><stop offset=%271%27 stop-color=%27%23b8860b%27/></linearGradient></defs><circle cx=%2710%27 cy=%272.6%27 r=%271.8%27 fill=%27none%27 stroke=%27%238a5a00%27 stroke-width=%271%27/><path fill=%27url%28%23g%29%27 stroke=%27%238a5a00%27 stroke-width=%270.8%27 d=%27M10 4C5 4 4.2 9 4.2 13C4.2 16 2 17 2 19H18C18 17 15.8 16 15.8 13C15.8 9 15 4 10 4Z%27/><rect x=%271.6%27 y=%2718.6%27 width=%2716.8%27 height=%272%27 rx=%271%27 fill=%27%23f2c14e%27 stroke=%27%238a5a00%27 stroke-width=%270.6%27/><circle cx=%2710%27 cy=%2721.8%27 r=%271.8%27 fill=%27%238a5a00%27/></svg>") 50%/contain no-repeat;
+  filter: drop-shadow(0 .08em .05em rgba(0, 0, 0, .35));
+  transform-origin: 50% 0
+}
+
+.JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleGarland .JingleSwag .JingleBell.JingleBellReverse {
+  animation-direction: alternate-reverse
+}
+
+@keyframes jingleBellSwing {
+  0% {
+    transform: rotate(-14deg)
+  }
+
+  to {
+    transform: rotate(14deg)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .JingleBellsPackBackground .JingleBellsPackBackgroundInner .JingleBell {
+    animation: none
+  }
+}
+
+.SnowflakesPackBackground {
+  container-type: size;
+  background: radial-gradient(ellipse at 70% 10%, rgba(191, 227, 255, .25) 0, transparent 55%), linear-gradient(180deg, #0a1a3f, #163a78 45%, #4f86c6 82%, #9cc8ec);
+  inset: 0;
+  overflow: hidden;
+  position: absolute
+}
+
+.SnowflakesPackBackground.PackBackgroundSimple .SnowflakesPackBackgroundInner .SnowflakesCrystal:before,
+.SnowflakesPackBackground.PackBackgroundSimple .SnowflakesPackBackgroundInner .SnowflakesCrystalSpin,
+.SnowflakesPackBackground.PackBackgroundSimple .SnowflakesPackBackgroundInner .SnowflakesGlint,
+.SnowflakesPackBackground.PackBackgroundSimple .SnowflakesPackBackgroundInner .SnowflakesSheen,
+.SnowflakesPackBackground.PackBackgroundSimple .SnowflakesPackBackgroundInner .SnowflakesSnowLayer {
+  animation: none
+}
+
+.SnowflakesPackBackground.PackBackgroundSimple .SnowflakesPackBackgroundInner .SnowflakesSheen {
+  display: none
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner {
+  inset: 0;
+  pointer-events: none;
+  position: absolute
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesSnowLayer {
+  animation: snowflakesFall linear infinite, snowflakesSway ease-in-out infinite alternate;
+  height: 200%;
+  left: -10%;
+  position: absolute;
+  top: 0;
+  width: 120%
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesSnowFar {
+  animation-duration: 22s, 9s;
+  background-image: radial-gradient(circle at 8% 12%, hsla(0, 0%, 100%, .95) 0 1px, transparent 2px), radial-gradient(circle at 24% 58%, hsla(0, 0%, 100%, .95) 0 1px, transparent 2px), radial-gradient(circle at 40% 30%, hsla(0, 0%, 100%, .95) 0 1px, transparent 2px), radial-gradient(circle at 57% 82%, hsla(0, 0%, 100%, .95) 0 1px, transparent 2px), radial-gradient(circle at 72% 18%, hsla(0, 0%, 100%, .95) 0 1px, transparent 2px), radial-gradient(circle at 88% 64%, hsla(0, 0%, 100%, .95) 0 1px, transparent 2px), radial-gradient(circle at 15% 90%, hsla(0, 0%, 100%, .95) 0 1px, transparent 2px), radial-gradient(circle at 64% 46%, hsla(0, 0%, 100%, .95) 0 1px, transparent 2px);
+  background-size: 50% 25%;
+  opacity: .55
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesSnowMid {
+  animation-duration: 14s, 7s;
+  background-image: radial-gradient(circle at 12% 20%, hsla(0, 0%, 100%, .95) 0 1.6px, transparent 2.6px), radial-gradient(circle at 38% 70%, hsla(0, 0%, 100%, .95) 0 1.6px, transparent 2.6px), radial-gradient(circle at 62% 34%, hsla(0, 0%, 100%, .95) 0 1.6px, transparent 2.6px), radial-gradient(circle at 84% 86%, hsla(0, 0%, 100%, .95) 0 1.6px, transparent 2.6px), radial-gradient(circle at 30% 8%, hsla(0, 0%, 100%, .95) 0 1.6px, transparent 2.6px);
+  background-size: 50% 25%;
+  opacity: .8
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesSnowNear {
+  animation-duration: 8s, 5s;
+  background-image: radial-gradient(circle at 20% 30%, hsla(0, 0%, 100%, .95) 0 2.6px, transparent 3.6px), radial-gradient(circle at 70% 75%, hsla(0, 0%, 100%, .95) 0 2.6px, transparent 3.6px), radial-gradient(circle at 52% 10%, hsla(0, 0%, 100%, .95) 0 2.6px, transparent 3.6px);
+  background-size: 33.333% 25%;
+  filter: blur(.5px)
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesCrystal {
+  aspect-ratio: 1;
+  position: absolute
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesCrystal:before {
+  animation: snowflakesPulse 4s ease-in-out infinite alternate;
+  background: radial-gradient(circle, rgba(191, 227, 255, .45) 0, rgba(191, 227, 255, .12) 45%, transparent 70%);
+  border-radius: 50%;
+  content: "";
+  inset: -25%;
+  position: absolute
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesCrystal .SnowflakesCrystalSpin {
+  animation: snowflakesSpin linear infinite;
+  background: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-50 -50 100 100%27><defs><path id=%27a%27 d=%27M0 0V-44M0-16L-9-25M0-16L9-25M0-28L-7-35M0-28L7-35M0-38L-4-42M0-38L4-42%27/><g id=%27h%27><use href=%27%23a%27/><use href=%27%23a%27 transform=%27rotate%2860%29%27/><use href=%27%23a%27 transform=%27rotate%28120%29%27/><use href=%27%23a%27 transform=%27rotate%28180%29%27/><use href=%27%23a%27 transform=%27rotate%28240%29%27/><use href=%27%23a%27 transform=%27rotate%28300%29%27/></g></defs><g fill=%27none%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27><g stroke=%27%2398ccf5%27 stroke-width=%276%27><use href=%27%23h%27/></g><g stroke=%27%23ffffff%27 stroke-width=%272.6%27><use href=%27%23h%27/></g></g><polygon fill=%27%23ffffff%27 stroke=%27%2398ccf5%27 stroke-width=%271.5%27 points=%270,-7 6,-3.5 6,3.5 0,7 -6,3.5 -6,-3.5%27/></svg>") 50%/contain no-repeat;
+  filter: drop-shadow(0 0 .2em rgba(191, 227, 255, .9));
+  inset: 0;
+  position: absolute
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesTumbler {
+  animation: snowflakesTumble linear infinite;
+  aspect-ratio: 1;
+  background: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-10 -10 20 20%27><defs><path id=%27a%27 d=%27M0 0V-9M0-5L-2.5-7.5M0-5L2.5-7.5%27/></defs><g fill=%27none%27 stroke=%27%23ffffff%27 stroke-width=%271.6%27 stroke-linecap=%27round%27><use href=%27%23a%27/><use href=%27%23a%27 transform=%27rotate%2860%29%27/><use href=%27%23a%27 transform=%27rotate%28120%29%27/><use href=%27%23a%27 transform=%27rotate%28180%29%27/><use href=%27%23a%27 transform=%27rotate%28240%29%27/><use href=%27%23a%27 transform=%27rotate%28300%29%27/></g></svg>") 50%/contain no-repeat;
+  filter: drop-shadow(0 0 .15em rgba(191, 227, 255, .8));
+  position: absolute;
+  top: 0
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesGlint {
+  animation: snowflakesGlint 2.8s ease-in-out infinite;
+  background: #fff;
+  clip-path: polygon(50% 0, 58% 42%, 100% 50%, 58% 58%, 50% 100%, 42% 58%, 0 50%, 42% 42%);
+  position: absolute
+}
+
+.SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesSheen {
+  animation: snowflakesSheen 7s ease-in-out infinite;
+  background: linear-gradient(105deg, transparent 38%, hsla(0, 0%, 100%, .22) 50%, transparent 62%);
+  inset: 0;
+  position: absolute;
+  transform: translateX(-100%)
+}
+
+@keyframes snowflakesFall {
+  0% {
+    transform: translateY(-50%)
+  }
+
+  to {
+    transform: translateY(0)
+  }
+}
+
+@keyframes snowflakesSway {
+  0% {
+    translate: -2% 0
+  }
+
+  to {
+    translate: 2% 0
+  }
+}
+
+@keyframes snowflakesSpin {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(1turn)
+  }
+}
+
+@keyframes snowflakesPulse {
+  0% {
+    opacity: .45;
+    transform: scale(.9)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+}
+
+@keyframes snowflakesTumble {
+  0% {
+    transform: translateY(-15cqh) rotate(0deg)
+  }
+
+  50% {
+    transform: translate(var(--drift), 50cqh) rotate(180deg)
+  }
+
+  to {
+    transform: translateY(115cqh) rotate(1turn)
+  }
+}
+
+@keyframes snowflakesGlint {
+
+  0%,
+  60%,
+  to {
+    opacity: 0;
+    transform: scale(.3) rotate(0deg)
+  }
+
+  75% {
+    opacity: 1;
+    transform: scale(1) rotate(45deg)
+  }
+}
+
+@keyframes snowflakesSheen {
+  0% {
+    transform: translateX(-100%)
+  }
+
+  45%,
+  to {
+    transform: translateX(100%)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesCrystal:before,
+  .SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesCrystalSpin,
+  .SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesGlint,
+  .SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesSheen,
+  .SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesSnowLayer,
+  .SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesTumbler {
+    animation: none
+  }
+
+  .SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesSheen,
+  .SnowflakesPackBackground .SnowflakesPackBackgroundInner .SnowflakesTumbler {
+    display: none
+  }
+}
+
+.AuroraPackBackground {
+  container-type: size;
+  background: linear-gradient(180deg, #040817, #0a1934 55%, #123a4a);
+  inset: 0;
+  overflow: hidden;
+  position: absolute
+}
+
+.AuroraPackBackground.PackBackgroundSimple .AuroraPackBackgroundInner .AuroraCurtain,
+.AuroraPackBackground.PackBackgroundSimple .AuroraPackBackgroundInner .AuroraSparkle,
+.AuroraPackBackground.PackBackgroundSimple .AuroraPackBackgroundInner .AuroraStar,
+.AuroraPackBackground.PackBackgroundSimple .AuroraPackBackgroundInner:before {
+  animation: none
+}
+
+.AuroraPackBackground.PackBackgroundSimple .AuroraPackBackgroundInner .AuroraSparkle {
+  opacity: .6
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner {
+  inset: 0;
+  pointer-events: none;
+  position: absolute
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner:before {
+  animation: auroraStarfieldShimmer 6s ease-in-out infinite alternate;
+  background-image: radial-gradient(1px 1px at 4% 22%, hsla(0, 0%, 100%, .5) 50%, transparent 100%), radial-gradient(1px 1px at 12% 6%, hsla(0, 0%, 100%, .35) 50%, transparent 100%), radial-gradient(1px 1px at 26% 16%, hsla(0, 0%, 100%, .45) 50%, transparent 100%), radial-gradient(1px 1px at 38% 40%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 44% 4%, hsla(0, 0%, 100%, .5) 50%, transparent 100%), radial-gradient(1px 1px at 58% 32%, hsla(0, 0%, 100%, .35) 50%, transparent 100%), radial-gradient(1px 1px at 64% 12%, hsla(0, 0%, 100%, .45) 50%, transparent 100%), radial-gradient(1px 1px at 78% 36%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 82% 4%, hsla(0, 0%, 100%, .5) 50%, transparent 100%), radial-gradient(1px 1px at 92% 18%, hsla(0, 0%, 100%, .35) 50%, transparent 100%), radial-gradient(1px 1px at 8% 46%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 17% 12%, hsla(0, 0%, 100%, .45) 50%, transparent 100%), radial-gradient(1px 1px at 31% 28%, hsla(0, 0%, 100%, .35) 50%, transparent 100%), radial-gradient(1px 1px at 49% 50%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 53% 22%, hsla(0, 0%, 100%, .45) 50%, transparent 100%), radial-gradient(1px 1px at 70% 44%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 74% 26%, hsla(0, 0%, 100%, .4) 50%, transparent 100%), radial-gradient(1px 1px at 87% 52%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 97% 30%, hsla(0, 0%, 100%, .45) 50%, transparent 100%), radial-gradient(1px 1px at 3% 64%, hsla(0, 0%, 100%, .4) 50%, transparent 100%), radial-gradient(1px 1px at 9% 76%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 15% 60%, hsla(0, 0%, 100%, .45) 50%, transparent 100%), radial-gradient(1px 1px at 21% 70%, hsla(0, 0%, 100%, .35) 50%, transparent 100%), radial-gradient(1px 1px at 27% 56%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 34% 66%, hsla(0, 0%, 100%, .45) 50%, transparent 100%), radial-gradient(1px 1px at 40% 74%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 46% 62%, hsla(0, 0%, 100%, .4) 50%, transparent 100%), radial-gradient(1px 1px at 52% 72%, hsla(0, 0%, 100%, .35) 50%, transparent 100%), radial-gradient(1px 1px at 57% 58%, hsla(0, 0%, 100%, .45) 50%, transparent 100%), radial-gradient(1px 1px at 63% 68%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 69% 76%, hsla(0, 0%, 100%, .4) 50%, transparent 100%), radial-gradient(1px 1px at 75% 62%, hsla(0, 0%, 100%, .35) 50%, transparent 100%), radial-gradient(1px 1px at 81% 72%, hsla(0, 0%, 100%, .45) 50%, transparent 100%), radial-gradient(1px 1px at 88% 64%, hsla(0, 0%, 100%, .3) 50%, transparent 100%), radial-gradient(1px 1px at 94% 74%, hsla(0, 0%, 100%, .4) 50%, transparent 100%), radial-gradient(1px 1px at 98% 60%, hsla(0, 0%, 100%, .35) 50%, transparent 100%);
+  content: "";
+  inset: 0;
+  position: absolute
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraStar {
+  animation: auroraStarSparkle ease-in-out infinite;
+  position: absolute
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraStar:after {
+  background: radial-gradient(circle, rgba(244, 251, 255, .55) 0, rgba(244, 251, 255, .15) 35%, transparent 65%);
+  border-radius: 50%;
+  content: "";
+  inset: -70%;
+  position: absolute
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraStar:before {
+  background: radial-gradient(circle, #fff 0, #f4fbff 40%, #c9f2ff 100%);
+  clip-path: polygon(50% 0, 57% 43%, 100% 50%, 57% 57%, 50% 100%, 43% 57%, 0 50%, 43% 43%);
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: 1
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraSparkle {
+  animation: auroraSparkle 5.6s ease-in-out infinite;
+  background: radial-gradient(circle, #fff 0, #f4fbff 35%, rgba(43, 255, 160, .9) 100%);
+  clip-path: polygon(50% 0, 56% 44%, 100% 50%, 56% 56%, 50% 100%, 44% 56%, 0 50%, 44% 44%);
+  filter: drop-shadow(0 0 .25em rgba(43, 255, 160, .9));
+  opacity: 0;
+  position: absolute;
+  z-index: 1
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraShootingStar {
+  animation: auroraShootingStar ease-in infinite;
+  background: linear-gradient(90deg, rgba(244, 251, 255, .95), rgba(244, 251, 255, 0));
+  height: .12em;
+  opacity: 0;
+  position: absolute;
+  transform-origin: 0 50%;
+  width: 6em
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraShootingStar.AuroraShootingStar1 {
+  animation-delay: 2s;
+  animation-duration: 9s;
+  left: 70cqw;
+  top: 6cqh
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraShootingStar.AuroraShootingStar2 {
+  animation-delay: 6s;
+  animation-duration: 11s;
+  left: 42cqw;
+  top: 18cqh
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraShootingStar.AuroraShootingStar3 {
+  animation-delay: 9.5s;
+  animation-duration: 13s;
+  left: 96cqw;
+  top: 2cqh
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraCurtain {
+  animation: auroraDrift linear infinite, auroraBreathe ease-in-out infinite alternate;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  background-size: 50% 100%;
+  filter: blur(.3em) saturate(1.35);
+  left: 0;
+  mix-blend-mode: screen;
+  opacity: var(--auroraPeak);
+  position: absolute;
+  width: 200%
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraCurtain.AuroraCurtainViolet {
+  --auroraPeak: 0.9;
+  animation-delay: -12s, -2s;
+  animation-duration: 32s, 9s;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 120%27 preserveAspectRatio=%27none%27><defs><linearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%270%27 y2=%271%27><stop offset=%270%27 stop-color=%27%23ff4fd8%27 stop-opacity=%270%27/><stop offset=%271%27 stop-color=%27%23c45cff%27 stop-opacity=%270.75%27/></linearGradient><path id=%27e%27 d=%27M0 56C60 40 120 44 180 58S340 72 400 56%27/><g id=%27w%27><path fill=%27url%28%23g%29%27 d=%27M0 56C60 40 120 44 180 58S340 72 400 56V0H0Z%27/><use href=%27%23e%27 fill=%27none%27 stroke=%27%23c45cff%27 stroke-opacity=%270.9%27 stroke-width=%2712%27/></g></defs><use href=%27%23w%27 x=%27-400%27/><use href=%27%23w%27/><use href=%27%23w%27 x=%27400%27/></svg>");
+  height: 40%;
+  top: 0
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraCurtain.AuroraCurtainGreen {
+  --auroraPeak: 1;
+  animation-duration: 60s, 6.5s;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 120%27 preserveAspectRatio=%27none%27><defs><linearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%270%27 y2=%271%27><stop offset=%270%27 stop-color=%27%232bffa0%27 stop-opacity=%270%27/><stop offset=%271%27 stop-color=%27%232bffa0%27 stop-opacity=%270.7%27/></linearGradient><path id=%27e%27 d=%27M0 80C40 60 100 56 150 74S230 104 280 86S360 100 400 80%27/><g id=%27w%27><path fill=%27url%28%23g%29%27 d=%27M0 80C40 60 100 56 150 74S230 104 280 86S360 100 400 80V0H0Z%27/><use href=%27%23e%27 fill=%27none%27 stroke=%27%232bffa0%27 stroke-opacity=%270.8%27 stroke-width=%2714%27/><use href=%27%23e%27 fill=%27none%27 stroke=%27%23e4fff2%27 stroke-width=%274.5%27/></g></defs><use href=%27%23w%27 x=%27-400%27/><use href=%27%23w%27/><use href=%27%23w%27 x=%27400%27/></svg>");
+  height: 44%;
+  top: 8%
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraCurtain.AuroraCurtainCyan {
+  --auroraPeak: 1;
+  animation-delay: -7s, -1s;
+  animation-duration: 20s, 8s;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 120%27 preserveAspectRatio=%27none%27><defs><linearGradient id=%27g%27 x1=%270%27 y1=%270%27 x2=%270%27 y2=%271%27><stop offset=%270%27 stop-color=%27%231fd8ff%27 stop-opacity=%270%27/><stop offset=%271%27 stop-color=%27%231fd8ff%27 stop-opacity=%270.6%27/></linearGradient><path id=%27e%27 d=%27M0 72C60 92 140 92 200 72S340 52 400 72%27/><g id=%27w%27><path fill=%27url%28%23g%29%27 d=%27M0 72C60 92 140 92 200 72S340 52 400 72V0H0Z%27/><use href=%27%23e%27 fill=%27none%27 stroke=%27%231fd8ff%27 stroke-opacity=%270.75%27 stroke-width=%2713%27/><use href=%27%23e%27 fill=%27none%27 stroke=%27%23e6fbff%27 stroke-width=%274%27/></g></defs><use href=%27%23w%27 x=%27-400%27/><use href=%27%23w%27/><use href=%27%23w%27 x=%27400%27/></svg>");
+  height: 36%;
+  top: 34%
+}
+
+.AuroraPackBackground .AuroraPackBackgroundInner .AuroraRidge {
+  background: url("data:image/svg+xml;utf8,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 60%27 preserveAspectRatio=%27none%27><path fill=%27%230b1c33%27 d=%27M0 40L40 22L70 34L110 10L150 30L190 18L230 34L270 6L310 28L350 16L400 32V60H0Z%27/></svg>") bottom/100% 100% no-repeat;
+  bottom: 0;
+  height: 24%;
+  left: 0;
+  position: absolute;
+  right: 0
+}
+
+@keyframes auroraStarfieldShimmer {
+  0% {
+    opacity: .6
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes auroraStarSparkle {
+
+  0%,
+  to {
+    opacity: .35;
+    transform: scale(.55) rotate(0deg)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(45deg)
+  }
+}
+
+@keyframes auroraSparkle {
+
+  0%,
+  30%,
+  to {
+    opacity: 0;
+    transform: scale(.2) rotate(0deg)
+  }
+
+  15% {
+    opacity: 1;
+    transform: scale(1) rotate(45deg)
+  }
+}
+
+@keyframes auroraBreathe {
+  0% {
+    opacity: calc(var(--auroraPeak)*.75)
+  }
+
+  to {
+    opacity: var(--auroraPeak)
+  }
+}
+
+@keyframes auroraDrift {
+  0% {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(-50%)
+  }
+}
+
+@keyframes auroraShootingStar {
+  0% {
+    opacity: 0;
+    transform: translate(0) rotate(-20deg)
+  }
+
+  2% {
+    opacity: 1
+  }
+
+  9% {
+    opacity: 0;
+    transform: translate(-45cqw, 18cqh) rotate(-20deg)
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(-45cqw, 18cqh) rotate(-20deg)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .AuroraPackBackground .AuroraPackBackgroundInner .AuroraCurtain,
+  .AuroraPackBackground .AuroraPackBackgroundInner .AuroraSparkle,
+  .AuroraPackBackground .AuroraPackBackgroundInner .AuroraStar,
+  .AuroraPackBackground .AuroraPackBackgroundInner:before {
+    animation: none
+  }
+
+  .AuroraPackBackground .AuroraPackBackgroundInner .AuroraSparkle {
+    opacity: .6
+  }
+
+  .AuroraPackBackground .AuroraPackBackgroundInner .AuroraShootingStar {
+    display: none
+  }
+}
+
 .PaymentEntryIcon {
   align-items: center;
   color: #ffb914;
@@ -6563,29 +7183,24 @@ a {
 }
 
 .TitleContainer .TitleContainerTop .Title .TitleSantaHat {
-  font-size: 2.2rem;
+  --fa-primary-color: #e73131;
+  --fa-secondary-color: #fff;
+  --fa-secondary-opacity: 1;
+  font-size: .55em;
   position: absolute;
-  right: -1rem;
+  right: -.2em;
   rotate: 20deg;
-  top: .5rem
-}
-
-.TitleContainer .TitleContainerTop .Title .TitleSantaHat:before {
-  color: red;
-  z-index: 2
-}
-
-.TitleContainer .TitleContainerTop .Title .TitleSantaHat:after {
-  color: #fff;
-  opacity: 1;
-  position: relative;
-  z-index: 3
+  top: -1.25em
 }
 
 .TitleContainer .TitleContainerTop .Title.TitleNinetyNineNightsBundle {
   font-size: .65em;
   line-height: 1.1;
   white-space: pre-line
+}
+
+.TitleContainer .TitleContainerTop .Title.TitleNinetyNineNightsBundle .TitleSantaHat {
+  display: none
 }
 
 .TitleContainer .TitleContainerTop .LogoContainer {
@@ -7114,6 +7729,7 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
 }
 
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner::-webkit-scrollbar {
+  height: 6px;
   width: 6px
 }
 
@@ -7169,6 +7785,7 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
 }
 
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarPeople::-webkit-scrollbar {
+  height: 6px;
   width: 6px
 }
 
@@ -7231,6 +7848,13 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
 
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarIdentityTop .NotificationBellContainer {
   padding: calc(1.3rem + var(--notchTop)) .5rem 0 0
+}
+
+.SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarIdentityTop .SocialBarIdentityActions {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem
 }
 
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialSectionTitle {
@@ -10280,19 +10904,8 @@ html[data-app-covered] .WholeAppWrapper .AdBannerContainer .AdBanner.CosmeticPac
 }
 
 .CosmeticShopDetail .CosmeticShopDetailBody .CosmeticShopDetailCosmeticsArea .CharCustomPartWrapper .CharCustomPart.CharCustomProfileEffect {
-  align-items: center;
-  display: flex;
   height: 100%;
   width: 100%
-}
-
-.CosmeticShopDetail .CosmeticShopDetailBody .CosmeticShopDetailCosmeticsArea .CharCustomPartWrapper .CharCustomPart.CharCustomProfileEffect .ProfilePreview {
-  height: 100%;
-  width: 100%
-}
-
-.CosmeticShopDetail .CosmeticShopDetailBody .CosmeticShopDetailCosmeticsArea .CharCustomPartWrapper .CharCustomPart.CharCustomProfileEffect .ProfilePreview .ProfilePreviewBackground {
-  opacity: 1
 }
 
 .CosmeticShopDetail .CosmeticShopDetailBody .CosmeticShopDetailPreviewArea {
@@ -10690,7 +11303,12 @@ html[data-app-covered] .WholeAppWrapper .CosmeticShopDetail .CosmeticShopPurchas
 
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseTitle {
   font-size: 2rem;
+  overflow-wrap: anywhere;
   text-align: center
+}
+
+.PremiumCurrencyPurchase .PremiumCurrencyPurchaseTitle.PremiumCurrencyPurchaseTitleGift {
+  color: #85baff
 }
 
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseCard {
@@ -10773,12 +11391,6 @@ html[data-app-covered] .WholeAppWrapper .CosmeticShopDetail .CosmeticShopPurchas
   font-weight: 800;
   padding: .6rem 1rem;
   text-align: left
-}
-
-.PremiumCurrencyPurchase .PremiumCurrencyPurchaseBanner.PremiumCurrencyPurchaseBannerGift {
-  background: rgba(79, 148, 241, .15);
-  border: .1rem solid #4f94f1;
-  color: #85baff
 }
 
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseBanner.PremiumCurrencyPurchaseBannerWarning {
@@ -11217,6 +11829,20 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   top: 3.2rem
 }
 
+.CharCustomProfileEffect {
+  align-items: center;
+  display: flex
+}
+
+.CharCustomProfileEffect .ProfilePreview {
+  height: 100%;
+  width: 100%
+}
+
+.CharCustomProfileEffect .ProfilePreview .ProfilePreviewBackground {
+  opacity: 1
+}
+
 .StoreTierLabel {
   color: #cfcfcf;
   font-size: 1.1rem;
@@ -11255,6 +11881,18 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
 
 .StoreTierLabel.StoreTierLabelMythic {
   color: #f38ab6
+}
+
+.CharCustomPart.CharCustomPartWithPlaceholder {
+  align-items: center;
+  display: flex;
+  justify-content: center
+}
+
+.CharCustomPart.CharCustomPartWithPlaceholder .CharCustomPartPlaceholder {
+  color: #cfcfcf;
+  height: 50%;
+  width: 50%
 }
 
 .SuperRankPerksTable {
@@ -13054,6 +13692,7 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 }
 
 .ProfileCardHost .ProfileCard .ProfileCardInfo::-webkit-scrollbar {
+  height: 6px;
   width: 6px
 }
 
@@ -13454,15 +14093,27 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 
 .DebugOverlay .DebugOverlaySection .DebugOverlaySectionTitle {
   align-items: center;
+  background: none;
+  border: none;
+  box-sizing: content-box;
+  color: inherit;
   color: #4f94f1;
   cursor: pointer;
   display: flex;
+  font: inherit;
   font-weight: 700;
   gap: .3rem;
-  margin-bottom: .125rem;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0 0 .125rem;
+  padding: 0;
   pointer-events: auto;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit;
   -webkit-user-select: none;
-  user-select: none
+  user-select: none;
+  width: 100%
 }
 
 @media(hover:hover) {
@@ -14119,6 +14770,265 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   transform: translateX(-50%);
   transition: opacity .4s, bottom .4s;
   transition-delay: .2s
+}
+
+.SeasonPassRewardTile {
+  align-items: center;
+  background-color: #3c4b68;
+  border: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  justify-content: center;
+  margin: 0;
+  position: relative
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-super {
+  background-color: #604c20
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-small {
+  gap: 0;
+  height: 2.5rem;
+  width: 2.75rem
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-small .SeasonPassRewardIcon {
+  font-size: 1.1rem
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-small .SeasonPassRewardTileStateMark,
+.SeasonPassRewardTile.SeasonPassRewardTile-small .SeasonPassRewardTileSuperMark {
+  font-size: .55rem
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large {
+  gap: .5rem;
+  min-width: 0;
+  padding: .6rem
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardIcon {
+  font-size: 3.75rem
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTileName {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  font-size: .9rem;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  white-space: normal
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTilePreview {
+  background: none;
+  border: none;
+  box-sizing: content-box;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  inset: 0;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit;
+  z-index: 1
+}
+
+@media(hover:hover) {
+  .SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTilePreview:hover {
+    background-color: rgba(57, 73, 128, .4)
+  }
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTilePreview.pad-focused {
+  background-color: rgba(57, 73, 128, .4)
+}
+
+@media(hover:none) {
+  .SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTilePreview:active {
+    background-color: rgba(57, 73, 128, .4)
+  }
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTileClaim {
+  bottom: -1rem;
+  font-size: .95rem;
+  left: 0;
+  margin: 0 auto;
+  padding: .35rem 1.1rem;
+  position: absolute;
+  right: 0;
+  width: max-content;
+  z-index: 1
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTileSuperMark {
+  font-size: .9rem;
+  right: .4rem;
+  top: .3rem
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTileStateMark {
+  align-items: center;
+  background-color: #1dd06d;
+  border: 1px solid #0f0f0f;
+  color: #fff;
+  display: flex;
+  font-size: 1rem;
+  height: 1.85rem;
+  justify-content: center;
+  left: auto;
+  right: -.6rem;
+  top: -.6rem;
+  width: 1.85rem;
+  z-index: 1
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large.SeasonPassRewardTile-claimed>:not(.SeasonPassRewardTileStateMark) {
+  opacity: .55
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large .SeasonPassRewardTilePadlock {
+  background-color: #1a1f2e;
+  color: #ffb914;
+  font-size: .95rem;
+  height: 1.85rem;
+  right: -.6rem;
+  top: -.75rem;
+  width: 1.85rem
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large.SeasonPassRewardTile-claimable {
+  background-color: #394980
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-large.SeasonPassRewardTile-needsSuper {
+  border: 1px solid #0f0f0f;
+  outline: 3px solid #ffb914;
+  outline-offset: 1px
+}
+
+.SeasonPassRewardTile .SeasonPassRewardIcon {
+  align-items: center;
+  display: flex;
+  justify-content: center
+}
+
+.SeasonPassRewardTile .SeasonPassRewardIcon.SeasonPassRewardIcon-xpBoost {
+  color: #85baff
+}
+
+.SeasonPassRewardTile .SeasonPassRewardIcon.SeasonPassRewardIcon-cosmetic {
+  color: #fcd373
+}
+
+.SeasonPassRewardTile .SeasonPassRewardIcon .SeasonPassRewardIconPreview {
+  height: 1.8em;
+  object-fit: contain;
+  width: 1.8em
+}
+
+.SeasonPassRewardTile .SeasonPassRewardTileSuperMark {
+  color: #ffb914;
+  font-size: .65rem;
+  position: absolute;
+  right: .2rem;
+  top: .15rem
+}
+
+.SeasonPassRewardTile .SeasonPassRewardTileStateMark {
+  color: #cfcfcf;
+  font-size: .65rem;
+  left: .2rem;
+  position: absolute;
+  top: .15rem
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-claimed .SeasonPassRewardIcon,
+.SeasonPassRewardTile.SeasonPassRewardTile-empty .SeasonPassRewardIcon {
+  filter: grayscale(.6) brightness(.6)
+}
+
+.SeasonPassRewardTile .SeasonPassRewardTilePadlock {
+  align-items: center;
+  background-color: #ffb914;
+  border: 1px solid #0f0f0f;
+  color: #1a1f2e;
+  display: flex;
+  font-size: .7rem;
+  height: 1.4rem;
+  justify-content: center;
+  position: absolute;
+  right: -.5rem;
+  top: -.5rem;
+  width: 1.4rem;
+  z-index: 1
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-small .SeasonPassRewardTilePadlock {
+  font-size: .55rem;
+  height: 1.1rem;
+  right: -.4rem;
+  top: -.4rem;
+  width: 1.1rem
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-needsSuper {
+  border: 2px solid #fcd373
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-claimable {
+  outline: 3px solid #ffb914;
+  outline-offset: 1px
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-pressable {
+  cursor: pointer
+}
+
+@media(hover:hover) {
+  .SeasonPassRewardTile.SeasonPassRewardTile-pressable:hover {
+    background-color: #394980
+  }
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-pressable.pad-focused {
+  background-color: #394980
+}
+
+@media(hover:none) {
+  .SeasonPassRewardTile.SeasonPassRewardTile-pressable:active {
+    background-color: #394980
+  }
+}
+
+.SeasonPassRewardTile.SeasonPassRewardTile-pressable:disabled {
+  cursor: default
+}
+
+.SeasonPassRewardIcon .SeasonPassRewardIconEffect {
+  border-radius: 0;
+  display: block;
+  overflow: hidden;
+  position: relative
+}
+
+.SeasonPassRewardIcon .SeasonPassRewardIconEffect .PackBackground {
+  font-size: .25em
 }
 
 .PromptGenericPopup.BrowserTipPopup {
@@ -16476,6 +17386,498 @@ html[data-app-covered] .WholeAppWrapper .YoutubeHomepageSection .YoutubeTile.You
 .YoutubeHomepageSection.Portrait .YoutubeShortsColumn,
 .YoutubeHomepageSection.Portrait .YoutubeVideosColumn {
   flex: none
+}
+
+@property --ring-progress {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0
+}
+
+.SeasonPassStrip {
+  align-items: center;
+  background: none;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-sizing: content-box;
+  box-sizing: border-box;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  gap: .75rem;
+  isolation: isolate;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0 0 .75rem;
+  min-height: calc(6.6rem + 2px);
+  padding: .5rem .75rem;
+  position: relative;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit;
+  width: 100%
+}
+
+@media(hover:hover) {
+  .SeasonPassStrip:not(.SeasonPassStripLoading):hover {
+    filter: brightness(1.15)
+  }
+}
+
+.SeasonPassStrip:not(.SeasonPassStripLoading).pad-focused {
+  filter: brightness(1.15)
+}
+
+@media(hover:none) {
+  .SeasonPassStrip:not(.SeasonPassStripLoading):active {
+    filter: brightness(1.15)
+  }
+}
+
+.SeasonPassStrip:not(.SeasonPassStripLoading)[data-pressing] {
+  border-color: #ffb914;
+  filter: brightness(.8);
+  transition: none
+}
+
+.SeasonPassStrip.SeasonPassStripLoading {
+  background-color: #303a59;
+  cursor: default
+}
+
+.SeasonPassStrip .SeasonPassStripSeason {
+  background: conic-gradient(#ffb914 calc(var(--season-progress)*1turn), #1a1f2e 0);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex: none;
+  height: 4.4rem;
+  padding: 3px;
+  position: relative;
+  width: 7.5rem
+}
+
+.SeasonPassStrip .SeasonPassStripSeason .SeasonPassStripSeasonInner {
+  background-color: #394980;
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: 0 .5rem
+}
+
+.SeasonPassStrip .SeasonPassStripSeason .SeasonPassStripSeasonName {
+  font-size: .95rem;
+  line-height: 1.2;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.SeasonPassStrip .SeasonPassStripSeason .SeasonPassStripSeasonTime {
+  color: #cfcfcf;
+  font-size: .75rem;
+  line-height: 1.2;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.SeasonPassStrip .SeasonPassStripSeason .SeasonPassStripBadge {
+  align-items: center;
+  background-color: #e34f4f;
+  border: 1px solid #0f0f0f;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  font-size: .75rem;
+  font-weight: 900;
+  height: 1.3rem;
+  justify-content: center;
+  min-width: 1.3rem;
+  padding: 0 .2rem;
+  position: absolute;
+  right: -.5rem;
+  top: -.5rem
+}
+
+.SeasonPassStrip .SeasonPassStripTrack {
+  container: seasonPassTrack/inline-size;
+  align-items: center;
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  gap: .2rem;
+  min-width: 0
+}
+
+.SeasonPassStrip .SeasonPassStripRewards {
+  --fits: 3;
+  --shown: min(var(--fits), var(--tier-count));
+  --first: clamp(1, var(--target) - (var(--shown) - 1)/2, var(--tier-count) - var(--shown) + 1);
+  --chip-room: 0rem;
+  --step: calc((100cqw - 6.4rem - var(--chip-room))/(var(--shown) - 1));
+  box-sizing: border-box;
+  padding: 0 1rem;
+  position: relative;
+  width: 100%
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripMore {
+  color: #cfcfcf;
+  font-weight: 900;
+  line-height: 1;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripMore.SeasonPassStripMoreBefore {
+  left: 0;
+  opacity: clamp(0, var(--first) - 1, 1)
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripMore.SeasonPassStripMoreAfter {
+  opacity: clamp(0, var(--tier-count) - var(--first) - var(--shown) + 1, 1);
+  right: 0
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripWindow {
+  display: block;
+  height: 5.6rem;
+  overflow: hidden
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripRow {
+  display: block;
+  height: 100%;
+  position: relative;
+  transform: translateX(calc((1 - var(--first))*var(--step)))
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripLine {
+  background-color: #1a1f2e;
+  height: .3rem;
+  left: calc((var(--tier) - 2)*var(--step) + 2.2rem + var(--past-target)*var(--chip-room));
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(var(--step) + var(--into-target)*var(--chip-room))
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripLine.SeasonPassStripLineFilled {
+  background-color: #ffb914
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward {
+  --reward-fill: #3c4b68;
+  align-items: center;
+  background: linear-gradient(var(--reward-fill), var(--reward-fill)), #3c4b68;
+  border: 2px solid #0f0f0f;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 1.5rem;
+  height: 3.4rem;
+  justify-content: center;
+  left: calc((var(--tier) - 1)*var(--step) + 2.2rem + var(--past-target)*var(--chip-room));
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 3.4rem
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward.SeasonPassStripRewardSuper {
+  --reward-fill: #604c20
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward.SeasonPassStripRewardReached {
+  border-color: #ffb914
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward.SeasonPassStripReward-claimable {
+  --reward-fill: rgba(255, 185, 20, .15)
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward.SeasonPassStripRewardTarget {
+  background-image: conic-gradient(#ffb914 calc(var(--ring-progress)*1turn), #2b3249 0);
+  font-size: 1.7rem;
+  height: 4.4rem;
+  width: 4.4rem
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward.SeasonPassStripRewardTarget:before {
+  background: linear-gradient(var(--reward-fill), var(--reward-fill)), #3c4b68;
+  border-radius: 50%;
+  content: "";
+  inset: .5rem;
+  position: absolute
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward.SeasonPassStripRewardTarget .SeasonPassRewardIcon {
+  position: relative
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward.SeasonPassStripRewardTarget .SeasonPassRewardIcon.SeasonPassRewardIconWithEffect {
+  inset: .5rem
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward.SeasonPassStripReward-claimed .SeasonPassRewardIcon {
+  filter: brightness(.6)
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward .SeasonPassRewardIcon.SeasonPassRewardIcon-xpBoost {
+  color: #85baff
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward .SeasonPassRewardIcon.SeasonPassRewardIcon-cosmetic {
+  color: #fcd373
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward .SeasonPassRewardIcon .SeasonPassRewardIconPreview {
+  height: 1.6em;
+  object-fit: contain;
+  width: 1.6em
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward .SeasonPassRewardIcon.SeasonPassRewardIconWithEffect {
+  border-radius: 50%;
+  inset: 0;
+  overflow: hidden;
+  position: absolute
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripReward .SeasonPassRewardIcon.SeasonPassRewardIconWithEffect .SeasonPassRewardIconEffect {
+  height: 100%;
+  width: 100%
+}
+
+.SeasonPassStrip .SeasonPassStripRewards .SeasonPassStripXp {
+  background-color: #1a1f2e;
+  border: 1px solid #0f0f0f;
+  color: #ffb914;
+  font-size: .75rem;
+  font-weight: 900;
+  left: calc((var(--tier) - 1)*var(--step) + 2.2rem);
+  line-height: 1.2;
+  padding: .05rem .4rem;
+  position: absolute;
+  top: calc(50% + 2.2rem);
+  transform: translate(-50%, -50%);
+  white-space: nowrap
+}
+
+@container seasonPassTrack (min-width: 19.8rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --chip-room: 5rem
+  }
+
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp .SeasonPassStripXp {
+    left: calc((var(--tier) - 1)*var(--step) + var(--chip-room) - .3rem);
+    top: 50%;
+    transform: translate(-100%, -50%)
+  }
+}
+
+@container seasonPassTrack (min-width: 23.2rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 5
+  }
+}
+
+@container seasonPassTrack (min-width: 28.2rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 5
+  }
+}
+
+@container seasonPassTrack (min-width: 31.6rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 7
+  }
+}
+
+@container seasonPassTrack (min-width: 36.6rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 7
+  }
+}
+
+@container seasonPassTrack (min-width: 40rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 9
+  }
+}
+
+@container seasonPassTrack (min-width: 45rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 9
+  }
+}
+
+@container seasonPassTrack (min-width: 48.4rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 11
+  }
+}
+
+@container seasonPassTrack (min-width: 53.4rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 11
+  }
+}
+
+@container seasonPassTrack (min-width: 56.8rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 13
+  }
+}
+
+@container seasonPassTrack (min-width: 61.8rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 13
+  }
+}
+
+@container seasonPassTrack (min-width: 65.2rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 15
+  }
+}
+
+@container seasonPassTrack (min-width: 70.2rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 15
+  }
+}
+
+@container seasonPassTrack (min-width: 73.6rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 17
+  }
+}
+
+@container seasonPassTrack (min-width: 78.6rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 17
+  }
+}
+
+@container seasonPassTrack (min-width: 82rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 19
+  }
+}
+
+@container seasonPassTrack (min-width: 87rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 19
+  }
+}
+
+@container seasonPassTrack (min-width: 90.4rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 21
+  }
+}
+
+@container seasonPassTrack (min-width: 95.4rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 21
+  }
+}
+
+@container seasonPassTrack (min-width: 98.8rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 23
+  }
+}
+
+@container seasonPassTrack (min-width: 103.8rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 23
+  }
+}
+
+@container seasonPassTrack (min-width: 107.2rem) {
+  .SeasonPassStrip .SeasonPassStripRewards:not(.SeasonPassStripRewardsXp) {
+    --fits: 25
+  }
+}
+
+@container seasonPassTrack (min-width: 112.2rem) {
+  .SeasonPassStrip .SeasonPassStripRewards.SeasonPassStripRewardsXp {
+    --fits: 25
+  }
+}
+
+.SeasonPassStrip .SeasonPassStripClaimWindow {
+  color: #fcd373;
+  font-size: .8rem;
+  line-height: 1.2;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+@media(prefers-reduced-motion:no-preference) {
+  .SeasonPassStrip.SeasonPassStripMoving .SeasonPassStripRewards .SeasonPassStripMore {
+    transition: opacity .9s ease-in-out
+  }
+
+  .SeasonPassStrip.SeasonPassStripMoving .SeasonPassStripRewards .SeasonPassStripRow {
+    transition: transform .9s ease-in-out
+  }
+
+  .SeasonPassStrip.SeasonPassStripMoving .SeasonPassStripRewards .SeasonPassStripLine {
+    transition: left .9s ease-in-out, width .9s ease-in-out, background-color .9s ease-in-out
+  }
+
+  .SeasonPassStrip.SeasonPassStripMoving .SeasonPassStripRewards .SeasonPassStripReward {
+    transition: left .9s ease-in-out, width .9s ease-in-out, height .9s ease-in-out, font-size .9s ease-in-out, border-color .9s ease-in-out, --ring-progress .9s ease-in-out
+  }
+
+  .SeasonPassStrip.SeasonPassStripMoving .SeasonPassStripRewards .SeasonPassStripXp {
+    transition: left .9s ease-in-out, top .9s ease-in-out, transform .9s ease-in-out
+  }
+}
+
+@media(max-width:480px) {
+  .SeasonPassStrip {
+    gap: .5rem;
+    padding: .5rem
+  }
+
+  .SeasonPassStrip .SeasonPassStripSeason {
+    width: 6.25rem
+  }
+}
+
+.SeasonPassBackdrop {
+  background-color: #22283b;
+  background-position: 50%;
+  background-size: cover;
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: -1
+}
+
+.SeasonPassBackdrop:after {
+  background-color: rgba(26, 31, 46, .6);
+  content: "";
+  inset: 0;
+  position: absolute
 }
 
 .LegalPage {

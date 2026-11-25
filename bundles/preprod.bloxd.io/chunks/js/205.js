@@ -1,731 +1,1370 @@
 export const id = 205;
 export const ids = [205];
 export const modules = {
-  39376: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => sQ,
-      f: () => TQ
+  41704: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => nM,
+      d: () => PM,
+      f: () => aM
     });
-    var wQ = XQ(4357);
-    let qQ = null;
+    var OM = iM(41706),
+      SM = iM(5198),
+      jM = iM(41710);
 
-    function TQ(QQ) {
-      return null !== qQ && QQ === qQ
+    function aM(MM) {
+      return MM.payloadKind === SM.hc.Msgpack ? (0, OM.c)(MM.payload) : void 0
     }
 
-    function zQ() {
-      this.EY = !1, this.stopPropagation = !1, this.kY = !1, this.disabled = !1
+    function PM(MM, rM) {
+      if (rM.payloadKind === SM.hc.Bytes || rM.payloadKind === SM.hc.MsgpackBin) return (0, jM.d)(MM, rM.payload)
     }
-    class sQ {
-      constructor(QQ, WQ) {
-        this.version = "0.7.0";
-        var XQ = Object.assign({}, new zQ, WQ || {});
-        this.element = QQ || document, this.EY = !!XQ.EY, this.stopPropagation = !!XQ.stopPropagation, this.kY = !!XQ.kY, this.disabled = !!XQ.disabled, this.filterEvents = (QQ, WQ) => !0, this.ignoreEvent = QQ => !1, this.down = new wQ.EventEmitter, this.up = new wQ.EventEmitter, this.state = {}, this.fY = {
-          dx: 0,
-          dy: 0,
-          VWQ: 0,
-          DWQ: 0,
-          pWQ: 0
-        }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
-          lastX: 0,
-          lastY: 0,
-          currID: null
-        }, "loading" !== document.readyState ? PQ(this) : document.addEventListener("DOMContentLoaded", (QQ => {
-          PQ(this)
-        }), {
-          once: !0
-        })
+
+    function nM(MM) {
+      return null !== MM && "object" === typeof MM
+    }
+  },
+  41712: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => LM,
+      c: () => mM,
+      e: () => HM,
+      h: () => zM,
+      i: () => dM
+    });
+    var OM = iM(5198),
+      SM = iM(41714);
+    const jM = new Map,
+      aM = new Set,
+      PM = new Set;
+    let nM = 0,
+      QM = 0;
+
+    function zM(MM, rM) {
+      let iM = jM.get(MM);
+      return iM || (iM = new Set, jM.set(MM, iM)), iM.add(rM), () => {
+        iM.delete(rM)
       }
-      bind(QQ) {
-        for (var WQ = arguments.length, XQ = new Array(WQ > 1 ? WQ - 1 : 0), wQ = 1; wQ < WQ; wQ++) XQ[wQ - 1] = arguments[wQ];
-        XQ.forEach((WQ => {
-          var XQ = this._keyBindmap[WQ] || [];
-          XQ.includes(QQ) || (XQ.push(QQ), this._keyBindmap[WQ] = XQ)
-        })), this.state[QQ] = !!this.state[QQ], this.pressCount[QQ] = this.pressCount[QQ] || 0, this.releaseCount[QQ] = this.releaseCount[QQ] || 0
+    }
+
+    function LM() {
+      return 0 !== nM
+    }
+
+    function mM(MM) {
+      return aM.add(MM), () => {
+        aM.delete(MM)
       }
-      unbind(QQ) {
-        for (var WQ in this._keyBindmap) {
-          var XQ = this._keyBindmap[WQ],
-            wQ = XQ.indexOf(QQ);
-          wQ > -1 && XQ.splice(wQ, 1)
+    }
+
+    function HM(MM) {
+      return PM.add(MM), () => {
+        PM.delete(MM)
+      }
+    }
+    const hM = "A raw message listener threw";
+
+    function JM(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : aM;
+      for (const OM of rM) try {
+        OM()
+      } catch (iM) {
+        MM ? (0, SM.k)(iM, hM) : console.error(hM, iM)
+      }
+    }
+    const dM = {
+      fire: function(MM) {
+        if ("connection" === MM.type) {
+          const rM = MM.phase === OM.F.Activated && MM.conn !== nM && MM.conn > QM,
+            iM = (MM.phase === OM.F.Left || MM.phase === OM.F.Closed) && MM.conn === nM;
+          return void(rM || iM ? (nM = rM ? MM.conn : 0, JM(!0)) : MM.phase === OM.F.Resumed && 0 !== nM && MM.conn > QM && (nM = MM.conn, JM(!0, PM)))
+        }
+        const rM = jM.get(MM.Kz);
+        if (rM && MM.conn === nM && 0 !== nM)
+          for (const OM of rM) try {
+            OM(MM)
+          } catch (iM) {
+            (0, SM.k)(iM, hM)
+          }
+      },
+      close: function(MM) {
+        QM = Math.max(QM, MM, nM), 0 !== nM && (nM = 0, JM(!1))
+      }
+    }
+  },
+  41695: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => QM,
+      i: () => nM,
+      j: () => PM
+    });
+    var OM = iM(1279),
+      SM = iM(41669);
+    const jM = new TextDecoder,
+      aM = new TextEncoder;
+
+    function PM(MM, rM) {
+      const iM = MM.queries.entityName(rM);
+      if (iM === SM.xc) return;
+      const aM = MM.memoryData(MM.scratch(), 4 + iM, 4, "entity_name's answer");
+      if (!aM) return;
+      const PM = aM.getUint32(0, !0),
+        nM = jM.decode(new Uint8Array(aM.buffer, aM.byteOffset + 4, iM));
+      return (0, OM.e)(nM, !1, PM === SM.Ld ? null : PM)
+    }
+
+    function nM(MM, rM, iM) {
+      const OM = aM.encode(iM);
+      if (OM.length > SM.zb) return !1;
+      const jM = MM.memoryView(Uint8Array, MM.scratch(), OM.length, "has_effect's name");
+      return !!jM && (jM.set(OM), 1 === MM.queries.hasEffect(rM, OM.length))
+    }
+
+    function QM(MM, rM, iM, OM) {
+      const aM = MM.queries.blockData(rM, iM, OM);
+      if (aM === SM.xc) return;
+      const PM = MM.memoryView(Uint8Array, MM.scratch(), aM, "block_data's answer");
+      return PM ? JSON.parse(jM.decode(PM)) : void 0
+    }
+  },
+  41706: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => SM,
+      f: () => zM
+    });
+    const OM = new TextDecoder;
+
+    function SM(MM) {
+      const rM = new jM(MM),
+        iM = rM.value();
+      if (rM.at !== MM.length) throw new Error(`msgpack: ${MM.length-rM.at} bytes after the value`);
+      return iM
+    }
+    class jM {
+      constructor(MM) {
+        this.bytes = MM, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(MM.buffer, MM.byteOffset, MM.byteLength)
+      }
+      value() {
+        const MM = this.u8();
+        if (MM <= 127) return MM;
+        if (MM >= 224) return MM - 256;
+        if (MM >= 128 && MM <= 143) return this.map(15 & MM);
+        if (MM >= 144 && MM <= 159) return this.array(15 & MM);
+        if (MM >= 160 && MM <= 191) return this.str(31 & MM);
+        switch (MM) {
+          case 192:
+            return null;
+          case 194:
+            return !1;
+          case 195:
+            return !0;
+          case 196:
+            return this.bin(this.u8());
+          case 197:
+            return this.bin(this.u16());
+          case 198:
+            return this.bin(this.u32());
+          case 199:
+            return this.ext(this.u8());
+          case 200:
+            return this.ext(this.u16());
+          case 201:
+            return this.ext(this.u32());
+          case 202:
+            return this.view.getFloat32(this.take(4), !1);
+          case 203:
+            return this.view.getFloat64(this.take(8), !1);
+          case 204:
+            return this.u8();
+          case 205:
+            return this.u16();
+          case 206:
+            return this.u32();
+          case 207:
+            return this.int64(!1);
+          case 208:
+            return this.view.getInt8(this.take(1));
+          case 209:
+            return this.view.getInt16(this.take(2), !1);
+          case 210:
+            return this.view.getInt32(this.take(4), !1);
+          case 211:
+            return this.int64(!0);
+          case 212:
+            return this.ext(1);
+          case 213:
+            return this.ext(2);
+          case 214:
+            return this.ext(4);
+          case 215:
+            return this.ext(8);
+          case 216:
+            return this.ext(16);
+          case 217:
+            return this.str(this.u8());
+          case 218:
+            return this.str(this.u16());
+          case 219:
+            return this.str(this.u32());
+          case 220:
+            return this.array(this.u16());
+          case 221:
+            return this.array(this.u32());
+          case 222:
+            return this.map(this.u16());
+          case 223:
+            return this.map(this.u32());
+          default:
+            throw new Error(`msgpack: unknown byte 0x${MM.toString(16)} at ${this.at-1}`)
         }
       }
-      getBindings() {
-        var QQ = {};
-        for (var WQ in this._keyBindmap) {
-          this._keyBindmap[WQ].forEach((XQ => {
-            QQ[XQ] = QQ[XQ] || [], QQ[XQ].push(WQ)
-          }))
+      take(MM) {
+        const rM = this.at;
+        if (rM + MM > this.bytes.length) throw new Error(`msgpack: ${MM} bytes past the end at ${rM}`);
+        return this.at = rM + MM, rM
+      }
+      u8() {
+        return this.view.getUint8(this.take(1))
+      }
+      u16() {
+        return this.view.getUint16(this.take(2), !1)
+      }
+      u32() {
+        return this.view.getUint32(this.take(4), !1)
+      }
+      int64(MM) {
+        const rM = this.take(8);
+        return MM ? this.view.getBigInt64(rM, !1) : this.view.getBigUint64(rM, !1)
+      }
+      str(MM) {
+        const rM = this.take(MM),
+          iM = this.bytes;
+        if (MM < 16) {
+          let SM = "";
+          for (let jM = rM; jM < rM + MM; jM++) {
+            const aM = iM[jM];
+            if (aM >= 128) return OM.decode(iM.subarray(rM, rM + MM));
+            SM += String.fromCharCode(aM)
+          }
+          return SM
         }
-        return QQ
+        return OM.decode(iM.subarray(rM, rM + MM))
       }
-      fJ() {
-        FQ(this.fY), FQ(this.pressCount), FQ(this.releaseCount)
+      bin(MM) {
+        const rM = this.take(MM);
+        return this.bytes.subarray(rM, rM + MM)
       }
-    }
-
-    function FQ(QQ) {
-      for (var WQ in QQ) QQ[WQ] = 0
-    }
-
-    function PQ(QQ) {
-      window.addEventListener("keydown", yQ.bind(null, QQ, !0), !1), window.addEventListener("keyup", yQ.bind(null, QQ, !1), !1);
-      var WQ = {
-        passive: !0
-      };
-      QQ.element.addEventListener("touchstart", IQ.bind(void 0, QQ), {
-        passive: !1
-      }), QQ.element.addEventListener("touchend", BQ.bind(void 0, QQ), WQ), QQ.element.addEventListener("mousedown", VQ.bind(null, QQ, !0), WQ), window.document.addEventListener("mouseup", VQ.bind(null, QQ, !1), WQ), QQ.element.addEventListener("touchmove", DQ.bind(null, QQ), WQ), QQ.element.addEventListener("mousemove", DQ.bind(null, QQ), WQ), window.PointerEvent, QQ.element.addEventListener("wheel", pQ.bind(null, QQ), WQ), QQ.element.addEventListener("contextmenu", GQ.bind(null, QQ), !1), window.addEventListener("blur", vQ.bind(null, QQ), !1)
-    }
-    var gQ = 0,
-      JQ = 0,
-      rQ = null;
-
-    function IQ(QQ, WQ) {
-      WQ.preventDefault(), jQ(WQ)
-    }
-
-    function jQ(QQ) {
-      let WQ = !1;
-      for (let XQ = 0; XQ < QQ.touches.length; ++XQ)
-        if (QQ.touches[XQ].identifier === rQ) {
-          WQ = !0;
-          break
-        } if (!WQ) {
-        const WQ = QQ.changedTouches[0];
-        gQ = WQ.clientX, JQ = WQ.clientY, rQ = WQ.identifier
+      enter() {
+        if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-    }
-
-    function BQ(QQ, WQ) {
-      for (var XQ = WQ.changedTouches, wQ = 0; wQ < XQ.length; ++wQ) XQ[wQ].identifier === rQ && (rQ = null)
-    }
-
-    function yQ(QQ, WQ, XQ) {
-      if (!QQ.ignoreEvent(XQ)) try {
-        dQ(QQ, XQ), WQ && XQ.isTrusted && !XQ.repeat && QQ._keyStates[XQ.code] && HQ(QQ, XQ.code)
-      } finally {
-        aQ(XQ.code, WQ, QQ, XQ)
+      array(MM) {
+        this.enter();
+        const rM = [];
+        for (let iM = 0; iM < MM; iM++) rM.push(this.value());
+        return this.depth--, rM
+      }
+      map(MM) {
+        this.enter();
+        const rM = {};
+        for (let iM = 0; iM < MM; iM++) {
+          const MM = this.value(),
+            iM = this.value();
+          rM["__proto__" === MM ? "__proto_" : String(MM)] = iM
+        }
+        return this.depth--, rM
+      }
+      ext(MM) {
+        const rM = this.view.getInt8(this.take(1)),
+          iM = this.take(MM);
+        if (0 !== rM) {
+          if (-1 === rM) {
+            if (1 === MM) return new Date(NaN);
+            if (4 === MM) return new Date(1e3 * this.view.getUint32(iM, !1));
+            if (8 === MM) {
+              const MM = this.view.getUint32(iM, !1),
+                rM = MM >>> 2,
+                OM = 4294967296 * (3 & MM) + this.view.getUint32(iM + 4, !1);
+              return new Date(1e3 * OM + rM / 1e6)
+            }
+            if (12 === MM) {
+              const MM = this.view.getUint32(iM, !1),
+                rM = 4294967296 * this.view.getInt32(iM + 4, !1) + this.view.getUint32(iM + 8, !1);
+              return new Date(1e3 * rM + MM / 1e6)
+            }
+          }
+          throw new Error(`msgpack: ext type ${rM} of ${MM} bytes`)
+        }
       }
     }
+    const aM = new TextEncoder,
+      PM = -(2n ** 63n),
+      nM = 2n ** 63n - 1n,
+      QM = 2n ** 64n - 1n;
 
-    function VQ(QQ, WQ, XQ) {
-      if (!QQ.ignoreEvent(XQ)) try {
-        dQ(QQ, XQ)
-      } finally {
-        ! function(QQ, WQ, XQ) {
-          if ("pointerId" in XQ)
-            if (WQ) {
-              if (null !== QQ._touches.currID) return;
-              QQ._touches.currID = XQ.pointerId
+    function zM(MM) {
+      const rM = new LM;
+      return rM.value(MM, 0), rM.bytes()
+    }
+    class LM {
+      constructor() {
+        this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
+      }
+      bytes() {
+        return this.buf.subarray(0, this.at)
+      }
+      value(MM, rM) {
+        if (rM > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof MM) {
+          case "undefined":
+            return this.u8(212), this.u8(0), void this.u8(0);
+          case "boolean":
+            return void this.u8(MM ? 195 : 194);
+          case "number":
+            return void this.number(MM);
+          case "bigint":
+            return void this.bigint(MM);
+          case "string":
+            return void this.string(MM);
+          case "object":
+            if (null === MM) this.u8(192);
+            else if (MM instanceof Uint8Array) this.head(MM.length, 196, -1, 197, 198), this.room(MM.length), this.buf.set(MM, this.at), this.at += MM.length;
+            else if (Array.isArray(MM)) {
+              this.head(MM.length, 220, 144, 220, 221);
+              for (const iM of MM) this.value(iM, rM + 1)
             } else {
-              if (QQ._touches.currID !== XQ.pointerId) return;
-              QQ._touches.currID = null
-            } var wQ = "button" in XQ ? XQ.button + 1 : 1;
-          aQ("Mouse" + wQ, WQ, QQ, XQ)
-        }(QQ, WQ, XQ)
-      }
-    }
-
-    function DQ(QQ, WQ) {
-      var XQ = WQ.movementX || WQ.mozMovementX || 0,
-        wQ = WQ.movementY || WQ.mozMovementY || 0;
-      if (WQ.touches && 0 === (XQ | wQ)) {
-        var qQ = function(QQ) {
-          jQ(QQ);
-          for (let WQ = 0; WQ < QQ.changedTouches.length; ++WQ)
-            if (QQ.changedTouches[WQ].identifier == rQ) {
-              const XQ = QQ.changedTouches[WQ],
-                wQ = [XQ.clientX - gQ, XQ.clientY - JQ];
-              return gQ = XQ.clientX, JQ = XQ.clientY, wQ
-            } return console.error(`Did not find touch id ${rQ}`), [0, 0]
-        }(WQ);
-        XQ = qQ[0], wQ = qQ[1]
-      }
-      QQ.fY.dx += XQ, QQ.fY.dy += wQ
-    }
-
-    function pQ(QQ, WQ) {
-      dQ(QQ, WQ);
-      var XQ = 1;
-      switch (WQ.deltaMode) {
-        case 0:
-          XQ = 1;
-          break;
-        case 1:
-          XQ = 12;
-          break;
-        case 2:
-          XQ = QQ.element.clientHeight || window.innerHeight
-      }
-      QQ.fY.VWQ += (WQ.deltaX || 0) * XQ, QQ.fY.DWQ += (WQ.deltaY || 0) * XQ, QQ.fY.pWQ += (WQ.deltaZ || 0) * XQ
-    }
-
-    function GQ(QQ, WQ) {
-      if (!QQ.kY) return WQ.preventDefault(), !1
-    }
-    var UQ = {
-      AltLeft: "altKey",
-      AltRight: "altKey",
-      ControlLeft: "ctrlKey",
-      ControlRight: "ctrlKey",
-      ShiftLeft: "shiftKey",
-      ShiftRight: "shiftKey",
-      MetaLeft: "metaKey",
-      MetaRight: "metaKey"
-    };
-
-    function bQ(QQ, WQ) {
-      return !!QQ[UQ[WQ]] || ("AltRight" === WQ || "ControlLeft" === WQ) && "function" === typeof QQ.getModifierState && !0 === QQ.getModifierState("AltGraph")
-    }
-
-    function vQ(QQ, WQ) {
-      for (var XQ in QQ._modifiersHeldThroughBlur = {}, UQ) QQ._keyStates[XQ] && (QQ._modifiersHeldThroughBlur[XQ] = !0);
-      WQ && WQ.isTrusted && function() {
-        try {
-          return window.self !== window.top
-        } catch (QQ) {
-          return !0
+              var iM, OM;
+              if (Object.getPrototypeOf(MM) !== Object.prototype && null !== Object.getPrototypeOf(MM)) throw new Error(`msgpack: can't encode a ${null!==(iM=null===(OM=MM.constructor)||void 0===OM?void 0:OM.name)&&void 0!==iM?iM:"object"}`);
+              {
+                const iM = Object.keys(MM);
+                this.head(iM.length, 222, 128, 222, 223);
+                for (const OM of iM) this.string(OM), this.value(MM[OM], rM + 1)
+              }
+            }
+            return;
+          default:
+            throw new Error("msgpack: can't encode a " + typeof MM)
         }
-      }() && (clearTimeout(QQ._blurRelease), QQ._blurRelease = setTimeout((function() {
-        if (!document.hasFocus())
-          for (var WQ in QQ._modifiersHeldThroughBlur = {}, QQ._keyStates) QQ._keyStates[WQ] && !/^Mouse\d/.test(WQ) && HQ(QQ, WQ)
-      }), 0))
-    }
-
-    function dQ(QQ, WQ) {
-      var XQ = QQ._modifiersHeldThroughBlur;
-      if (XQ && WQ.isTrusted && document.hasFocus())
-        for (var wQ in XQ) delete XQ[wQ], QQ._keyStates[wQ] && wQ !== WQ.code && (bQ(WQ, wQ) || HQ(QQ, wQ))
-    }
-
-    function HQ(QQ, WQ) {
-      const XQ = {
-          code: WQ,
-          preventDefault: () => {},
-          stopPropagation: () => {}
-        },
-        wQ = qQ;
-      qQ = XQ;
-      try {
-        aQ(WQ, !1, QQ, XQ)
-      } finally {
-        qQ = wQ
+      }
+      number(MM) {
+        Number.isInteger(MM) && MM >= -2147483648 && MM <= 4294967295 ? MM >= 0 ? MM < 128 ? this.u8(MM) : MM < 256 ? (this.u8(204), this.u8(MM)) : MM < 65536 ? (this.u8(205), this.u16(MM)) : (this.u8(206), this.u32(MM)) : MM >= -32 ? this.u8(MM + 256) : MM >= -128 ? (this.u8(208), this.u8(MM + 256)) : MM >= -32768 ? (this.u8(209), this.u16(MM + 65536)) : (this.u8(210), this.u32(MM >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, MM, !1), this.at += 8)
+      }
+      bigint(MM) {
+        const rM = MM >= PM && MM <= nM;
+        if (!rM && (MM < 0n || MM > QM)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(rM ? 211 : 207), this.room(8), rM ? this.view.setBigInt64(this.at, MM, !1) : this.view.setBigUint64(this.at, MM, !1), this.at += 8
+      }
+      string(MM) {
+        const rM = aM.encode(MM);
+        this.head(rM.length, 217, 160, 218, 219), this.room(rM.length), this.buf.set(rM, this.at), this.at += rM.length
+      }
+      head(MM, rM, iM, OM, SM) {
+        iM >= 0 && MM < (160 === iM ? 32 : 16) ? this.u8(iM | MM) : rM !== OM && MM < 256 ? (this.u8(rM), this.u8(MM)) : MM < 65536 ? (this.u8(OM), this.u16(MM)) : (this.u8(SM), this.u32(MM))
+      }
+      room(MM) {
+        if (this.at + MM <= this.buf.length) return;
+        let rM = 2 * this.buf.length;
+        for (; rM < this.at + MM;) rM *= 2;
+        const iM = new Uint8Array(rM);
+        iM.set(this.buf.subarray(0, this.at)), this.buf = iM, this.view = new DataView(iM.buffer)
+      }
+      u8(MM) {
+        this.room(1), this.buf[this.at++] = MM
+      }
+      u16(MM) {
+        this.room(2), this.view.setUint16(this.at, MM, !1), this.at += 2
+      }
+      u32(MM) {
+        this.room(4), this.view.setUint32(this.at, MM, !1), this.at += 4
       }
     }
-
-    function aQ(QQ, WQ, XQ, wQ) {
-      var qQ = XQ._keyBindmap[QQ];
-      qQ && (lQ(XQ._keyStates[QQ], WQ) && (XQ._keyStates[QQ] = WQ, qQ.forEach((QQ => {
-        (!XQ.filterEvents || XQ.filterEvents(wQ, QQ)) && function(QQ, WQ, XQ, wQ) {
-          var qQ = WQ ? XQ.pressCount : XQ.releaseCount;
-          qQ[QQ] = (qQ[QQ] || 0) + 1;
-          var TQ = XQ._bindPressCount[QQ] || 0;
-          (TQ += WQ ? 1 : -1) < 0 && (TQ = 0);
-          XQ._bindPressCount[QQ] = TQ;
-          var zQ = XQ.state[QQ];
-          if (lQ(zQ, TQ)) {
-            XQ.state[QQ] = TQ > 0;
-            var sQ = WQ ? XQ.down : XQ.up;
-            XQ.disabled || sQ.emit(QQ, wQ)
+  },
+  41710: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => aM
+    });
+    var OM = iM(41697);
+    const SM = new TextDecoder("utf-8", {
+      ignoreBOM: !0
+    });
+    class jM {
+      constructor(MM) {
+        this.buf = MM, this.at = 0, this.view = null
+      }
+      bool() {
+        return 0 !== this.u8()
+      }
+      long() {
+        let MM = this.u8(),
+          rM = 127 & MM,
+          iM = 128;
+        for (; 128 & MM;) {
+          if (iM > 2 ** 63) throw new RangeError("avro: varint too long");
+          MM = this.u8(), rM += (127 & MM) * iM, iM *= 128
+        }
+        return rM % 2 === 1 ? -(rM + 1) / 2 : rM / 2
+      }
+      float() {
+        const MM = this.take(4);
+        return this.floats().getFloat32(MM, !0)
+      }
+      double() {
+        const MM = this.take(8);
+        return this.floats().getFloat64(MM, !0)
+      }
+      str() {
+        const MM = this.size(),
+          rM = this.take(MM),
+          iM = rM + MM;
+        if (MM <= 32) {
+          let MM = "";
+          for (let OM = rM; OM < iM; OM++) {
+            const jM = this.buf[OM];
+            if (jM >= 128) return SM.decode(this.buf.subarray(rM, iM));
+            MM += String.fromCharCode(jM)
           }
-        }(QQ, WQ, XQ, wQ)
-      }))), "button" in wQ || (XQ.EY && !wQ.defaultPrevented && wQ.preventDefault(), XQ.stopPropagation && wQ.stopPropagation()))
-    }
-
-    function lQ(QQ, WQ) {
-      return QQ ? !WQ : WQ
-    }
-  },
-  36980: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => BQ,
-      h: () => yQ
-    });
-    var wQ = XQ(61),
-      qQ = XQ(1498),
-      TQ = XQ(2052),
-      zQ = XQ(36926),
-      sQ = XQ(663),
-      FQ = XQ(1081),
-      PQ = XQ.n(FQ),
-      gQ = XQ(1145);
-    const JQ = [rQ()];
-
-    function rQ() {
-      return {
-        source: null,
-        direction: null,
-        uL: null,
-        timeout: void 0,
-        writtenAngle: null
-      }
-    }
-
-    function IQ(QQ) {
-      return JQ.find((WQ => null !== WQ.source && WQ.source === QQ))
-    }
-
-    function jQ(QQ) {
-      clearTimeout(QQ.timeout), QQ.source = null, QQ.direction = null, QQ.writtenAngle = null, QQ.uL && (QQ.uL.style.rotate = "")
-    }
-    const BQ = (0, wQ.memo)((function() {
-      const [, QQ] = (0, wQ.useReducer)((QQ => QQ + 1), 0);
-      return (0, qQ.f)("damagedByOtherPlayer", (WQ => {
-        let {
-          jX: XQ,
-          direction: wQ
-        } = WQ;
-        const qQ = XQ || "nonDirectional",
-          TQ = function(QQ) {
-            var WQ;
-            const XQ = null !== (WQ = IQ(QQ)) && void 0 !== WQ ? WQ : JQ.find((QQ => null === QQ.source));
-            if (XQ) return XQ;
-            const wQ = {
-              source: null,
-              direction: null,
-              uL: null,
-              timeout: void 0,
-              writtenAngle: null
-            };
-            return JQ.push(wQ), wQ
-          }(qQ);
-        clearTimeout(TQ.timeout), TQ.source = qQ, TQ.direction = wQ, TQ.timeout = setTimeout((() => {
-          jQ(TQ), QQ()
-        }), 800), QQ()
-      })), (0, TQ.b)("kill", (WQ => {
-        let {
-          killer: XQ,
-          victim: wQ
-        } = WQ;
-        const qQ = XQ.local && IQ(wQ.id);
-        qQ && (jQ(qQ), QQ())
-      })), (0, wQ.useEffect)((() => {
-        const QQ = (0, zQ.f)("turnDamageIndicators", yQ);
-        return () => {
-          QQ(), JQ.forEach(jQ)
+          return MM
         }
-      }), []), (0, gQ.jsx)("div", {
-        className: "DirectionalDamage",
-        children: JQ.map(((QQ, WQ) => (0, gQ.jsx)("div", {
-          ref: WQ => {
-            QQ.uL = WQ
-          },
-          className: PQ()("DamageIndicator", {
-            DamageIndicatorFullCircle: (0, sQ.G)(QQ.direction),
-            DamageIndicatorIdle: null === QQ.source
-          })
-        }, WQ)))
-      })
-    }));
-
-    function yQ(QQ) {
-      for (const WQ of JQ) {
-        if (null === WQ.source || (0, sQ.G)(WQ.direction)) continue;
-        const XQ = WQ.direction - QQ;
-        XQ !== WQ.writtenAngle && (WQ.writtenAngle = XQ, WQ.uL.style.rotate = `${XQ}rad`)
+        return SM.decode(this.buf.subarray(rM, iM))
+      }
+      bytes() {
+        return this.fixed(this.size())
+      }
+      fixed(MM) {
+        const rM = this.take(MM);
+        return this.buf.slice(rM, rM + MM)
+      }
+      index(MM) {
+        const rM = this.long();
+        if (!(rM >= 0 && rM < MM)) throw new RangeError(`avro: index ${rM} of ${MM}`);
+        return rM
+      }
+      OL(MM) {
+        const rM = [];
+        for (let iM = this.long(); 0 !== iM; iM = this.long()) {
+          iM = this.block(iM);
+          for (let OM = 0; OM < iM; OM++) rM.push(MM(this))
+        }
+        return rM
+      }
+      map(MM) {
+        const rM = {};
+        for (let iM = this.long(); 0 !== iM; iM = this.long()) {
+          iM = this.block(iM);
+          for (let OM = 0; OM < iM; OM++) {
+            rM[this.str()] = MM(this)
+          }
+        }
+        return rM
+      }
+      end() {
+        if (this.at !== this.buf.length) throw new RangeError(`avro: ${this.buf.length-this.at} bytes after the value`)
+      }
+      block(MM) {
+        let rM = MM;
+        if (rM < 0 && (rM = -rM, this.long()), rM > this.buf.length - this.at) throw new RangeError(`avro: block of ${rM} items in ${this.buf.length-this.at} bytes`);
+        return rM
+      }
+      floats() {
+        return this.view ??= new DataView(this.buf.buffer, this.buf.byteOffset, this.buf.byteLength), this.view
+      }
+      size() {
+        const MM = this.long();
+        if (MM < 0) throw new RangeError(`avro: length ${MM}`);
+        return MM
+      }
+      u8() {
+        const MM = this.buf[this.at];
+        if (void 0 === MM) throw new RangeError("avro: truncated");
+        return this.at++, MM
+      }
+      take(MM) {
+        const rM = this.at;
+        if (MM > this.buf.length - rM) throw new RangeError("avro: truncated");
+        return this.at = rM + MM, rM
       }
     }
-  },
-  36809: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => qQ,
-      f: () => TQ
-    });
-    let wQ = !1;
 
-    function qQ() {
-      return wQ
-    }
-
-    function TQ(QQ) {
-      return wQ !== QQ && (wQ = QQ, !0)
+    function aM(MM, rM) {
+      const iM = new jM(rM),
+        SM = (0, OM.kb)(MM, iM);
+      return iM.end(), SM
     }
   },
-  34469: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => TQ,
-      d: () => qQ
+  41697: (MM, rM, iM) => {
+    iM.d(rM, {
+      C: () => aM,
+      D: () => gM,
+      F: () => SM,
+      J: () => PM,
+      M: () => HM,
+      O: () => wM,
+      P: () => bM,
+      R: () => CM,
+      U: () => zM,
+      V: () => LM,
+      W: () => tM,
+      _: () => hM,
+      b: () => GM,
+      bb: () => EM,
+      f: () => dM,
+      fb: () => JM,
+      gb: () => nM,
+      h: () => yM,
+      i: () => lM,
+      k: () => eM,
+      kb: () => uM,
+      n: () => OM,
+      q: () => jM,
+      u: () => UM,
+      w: () => mM,
+      z: () => QM
     });
-    var wQ = XQ(26);
+    const OM = 2,
+      SM = 12,
+      jM = 27,
+      aM = 40,
+      PM = 52,
+      nM = 59,
+      QM = 63,
+      zM = 83,
+      LM = 84,
+      mM = 89,
+      HM = 91,
+      hM = 93,
+      JM = 94,
+      dM = 95,
+      yM = 97,
+      lM = 101,
+      EM = 102,
+      UM = 73,
+      GM = 16,
+      CM = 86,
+      eM = 60,
+      bM = 17,
+      wM = 56,
+      tM = 100,
+      gM = 81;
 
-    function qQ(QQ, WQ) {
-      return QQ && !WQ
-    }
-
-    function TQ() {
-      return qQ(wQ.b.get("isTouchScreen"), wQ.b.get("clientEscMenuOptions").touchActionButtons)
-    }
-  },
-  40891: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      startPadGameplay: () => UQ
-    });
-    XQ(40787);
-    var wQ = XQ(40790),
-      qQ = XQ(3984),
-      TQ = XQ(26),
-      zQ = XQ(39346),
-      sQ = XQ(3907),
-      FQ = XQ(39370),
-      PQ = XQ(31),
-      gQ = XQ(2997),
-      JQ = XQ(38713),
-      rQ = XQ(9220),
-      IQ = XQ(40796);
-    const jQ = {
-      yawRadPerSec: 0,
-      pitchRadPerSec: 0
-    };
-    var BQ = XQ(40807),
-      yQ = XQ(9189),
-      VQ = XQ(39373);
-    const DQ = QQ => QQ.padSneakToggled || !!TQ.b.get("clientEscMenuOptions").crouchIsToggle && QQ.crouchToggled,
-      pQ = () => {
-        const QQ = (() => {
-          const QQ = (0, rQ.d)();
-          let WQ = jQ;
-          const XQ = new IQ.d;
-          let wQ = !1,
-            qQ = 0;
-          const TQ = () => {
-            const XQ = performance.now(),
-              TQ = 0 === qQ ? 0 : XQ - qQ;
-            if (qQ = XQ, !wQ) return QQ.discardPending(), null;
-            const zQ = (0, IQ.o)(WQ, TQ),
-              sQ = QQ.drainLookDelta(),
-              FQ = (0, JQ.j)();
+    function uM(MM, rM) {
+      switch (MM) {
+        case OM:
+          return function(MM) {
             return {
-              jR: (zQ.jR + sQ.jR) * FQ,
-              yR: (zQ.yR + sQ.yR) * FQ
+              Di: KM(MM),
+              oi: MM.float(),
+              Yi: MM.long()
             }
-          };
-          return {
-            update: (QQ, qQ, zQ, sQ) => {
-              QQ.camera.LO !== TQ && (QQ.camera.LO = TQ), wQ = !0, WQ = (0, IQ.p)(XQ, qQ, zQ, sQ, performance.now())
-            },
-            release: () => {
-              wQ = !1, WQ = jQ, XQ.reset()
-            },
-            uninstall: QQ => {
-              QQ.camera.LO === TQ && (QQ.camera.LO = null)
+          }(rM);
+        case SM:
+          return function(MM) {
+            return {
+              Wr: DM(MM),
+              sr: DM(MM)
             }
-          }
-        })();
-        return {
-          update: (WQ, XQ, wQ) => {
-            QQ.update((0, gQ.f)(), WQ, XQ, wQ)
-          },
-          release: QQ.release,
-          uninstall: () => {
-            const WQ = (0, gQ.f)();
-            WQ && QQ.uninstall(WQ)
-          }
-        }
-      };
-    var GQ = XQ(40802);
-    XQ(37953), XQ(9106);
-    XQ(9128).c;
-    const UQ = () => {
-      const QQ = (0, GQ.d)((() => {
-          const QQ = {
-            x: 0,
-            y: 0,
-            magnitude: 0,
-            headingOffset: 0,
-            jumpHeld: !1,
-            jumpPressedSinceTick: !1,
-            crouchHeld: !1,
-            running: !1,
-            sprintHeld: !1
-          };
-          return {
-            bodies: () => (0, zQ.e)(),
-            look: pQ(),
-            move: (WQ, XQ) => {
-              const wQ = (0, gQ.f)(),
-                qQ = wQ.rD.PXQ();
-              if (QQ.x = WQ.x, QQ.y = WQ.y, QQ.magnitude = WQ.magnitude, QQ.headingOffset = WQ.headingOffset, QQ.jumpHeld = WQ.jumpHeld, WQ.jumpPressed && (QQ.jumpPressedSinceTick = !0), QQ.running = WQ.running, QQ.sprintHeld = WQ.sprintHeld, XQ) {
-                const WQ = (0, BQ.g)({
-                  ...XQ,
-                  descending: wQ.rD.rWQ(wQ.RC).shouldIgnoreCrouchingSpeedReduction(),
-                  canCrouch: !!wQ.zD.canCrouch,
-                  toggled: DQ(qQ)
-                });
-                QQ.crouchHeld = WQ.crouchHeld, qQ.padSneakToggled = WQ.toggled, qQ.crouchToggled = !1, (0, yQ.g)(WQ.toggled)
-              }
-              qQ.gamepad = QQ
-            },
-            stopMoving: () => {
-              var WQ;
-              Object.assign(QQ, {
-                x: 0,
-                y: 0,
-                magnitude: 0,
-                headingOffset: 0,
-                jumpHeld: !1,
-                jumpPressedSinceTick: !1,
-                crouchHeld: !1,
-                running: !1,
-                sprintHeld: !1
-              });
-              const XQ = null === (WQ = (0, gQ.f)()) || void 0 === WQ ? void 0 : WQ.rD.PXQ();
-              (null === XQ || void 0 === XQ ? void 0 : XQ.gamepad) === QQ && (XQ.gamepad = null)
-            },
-            uninstall: () => {},
-            deviceChanged: QQ => {
-              const WQ = (0, gQ.f)(),
-                XQ = null === WQ || void 0 === WQ ? void 0 : WQ.rD.PXQ();
-              "touch" === QQ ? ((0, yQ.g)(!1), null !== XQ && void 0 !== XQ && XQ.padSneakToggled && (XQ.padSneakToggled = !1, XQ.isTouchscreen && !XQ.gamepad && WQ.rD.RWQ(WQ.RC).setCrouching(!!WQ.zD.canCrouch && XQ.touchCrouch))) : "gamepad" === QQ && XQ && (0, yQ.g)(DQ(XQ))
-            },
-            hasPlayer: () => {
-              var QQ;
-              return !(null === (QQ = (0, gQ.f)()) || void 0 === QQ || !QQ.RC)
-            },
-            isPlayerDead: () => {
-              var QQ;
-              const WQ = (0, gQ.f)();
-              return !1 === (null === (QQ = WQ.rD.WXQ(WQ.RC)) || void 0 === QQ ? void 0 : QQ.isAlive)
-            },
-            isReplayMode: () => {
-              var QQ, WQ;
-              return !(null === (QQ = (0, gQ.d)()) || void 0 === QQ || null === (WQ = QQ.client) || void 0 === WQ || !WQ.isReplayMode())
-            },
-            isFreeCameraOn: () => {
-              var QQ, WQ, XQ;
-              return !(null === (QQ = (0, gQ.d)()) || void 0 === QQ || null === (WQ = QQ.client) || void 0 === WQ || null === (XQ = WQ.freeCameraController) || void 0 === XQ || !XQ.isEnabled())
-            },
-            targetsBlock: () => !!(0, gQ.f)().CQQ,
-            selectedSlotEmpty: () => {
-              var QQ;
-              const WQ = (0, gQ.f)();
-              return !(null !== (QQ = WQ.rD.CWQ(WQ.RC)) && void 0 !== QQ && QQ.getItemAtSelectedSlot())
-            },
-            pickBlockAllowed: () => {
-              const QQ = (0, gQ.f)().zD;
-              return !!QQ.creative && !!QQ.canPickBlocks
-            },
-            scrollHotbar: QQ => {
-              PQ.k.mB("ScrollInventorySlot", QQ)
-            },
-            hasFullInventory: () => (0, FQ.b)((0, gQ.f)()),
-            hasLobbyTab: () => (0, VQ.b)((0, gQ.f)().zD),
-            contextActionInputs: () => {
-              var QQ, WQ, XQ, wQ;
-              const qQ = (0, gQ.f)();
-              return {
-                holdingGun: !(null === (QQ = qQ.rD.XXQ(qQ.RC)) || void 0 === QQ || null === (WQ = QQ.Qp) || void 0 === WQ || !WQ.isGun()),
-                customButtons: null !== (XQ = qQ.zD.customButtons) && void 0 !== XQ ? XQ : null,
-                touchscreenActionButton: null !== (wQ = qQ.zD.touchscreenActionButton) && void 0 !== wQ ? wQ : null
-              }
-            },
-            pressTouchButton: QQ => {
-              (0, sQ.sendColyMessage)(qQ.Wj, QQ)
+          }(rM);
+        case jM:
+          return function(MM) {
+            return {
+              OS: MM.bool(),
+              SS: DM(MM)
             }
-          }
-        })()),
-        WQ = (0, wQ.d)(),
-        XQ = null,
-        TQ = null;
-      return () => {
-        QQ(), WQ(), null === XQ || void 0 === XQ || XQ(), null === TQ || void 0 === TQ || TQ()
+          }(rM);
+        case aM:
+          return rM.str();
+        case PM:
+          return function(MM) {
+            return {
+              id: MM.long(),
+              bO: ar(MM)
+            }
+          }(rM);
+        case nM:
+          return function(MM) {
+            return {
+              LM: DM(MM),
+              mM: nr(MM)
+            }
+          }(rM);
+        case QM:
+          return rM.str();
+        case zM:
+        case LM:
+          return rM.long();
+        case mM:
+          return function(MM) {
+            return {
+              QO: MM.long(),
+              zO: MM.bool(),
+              LO: MM.float()
+            }
+          }(rM);
+        case HM:
+          return rM.long();
+        case hM:
+          return function(MM) {
+            return {
+              mO: MM.bool(),
+              HO: Lr(MM)
+            }
+          }(rM);
+        case JM:
+          return function(MM) {
+            return {
+              id: MM.str(),
+              position: zr(MM),
+              hO: mr(MM),
+              style: NM(MM),
+              dO: MM.bool()
+            }
+          }(rM);
+        case dM:
+          return function(MM) {
+            return {
+              id: DM(MM)
+            }
+          }(rM);
+        case yM:
+          return function(MM) {
+            return {
+              hM: MM.long(),
+              JM: MM.str(),
+              dM: Sr(MM),
+              yM: Sr(MM),
+              lM: DM(MM),
+              EM: DM(MM),
+              UM: DM(MM),
+              GM: DM(MM),
+              CM: DM(MM),
+              eM: Sr(MM),
+              bM: Sr(MM),
+              wM: DM(MM),
+              tM: DM(MM),
+              gM: DM(MM)
+            }
+          }(rM);
+        case lM:
+          return rM.str();
+        case EM:
+          return rM.long();
+        case UM:
+          return function(MM) {
+            return {
+              Aj: MM.long(),
+              xj: MM.str(),
+              vj: MM.float()
+            }
+          }(rM);
+        case GM:
+          return function(MM) {
+            return {
+              ei: MM.bool(),
+              bi: DM(MM),
+              wi: MM.str(),
+              ti: hr(MM),
+              gi: hr(MM),
+              ui: MM.bool(),
+              Ri: MM.long(),
+              Wi: Jr(MM)
+            }
+          }(rM);
+        case CM:
+          return function(MM) {
+            return {
+              nS: DM(MM)
+            }
+          }(rM);
+        case eM:
+          return function(MM) {
+            return {
+              Pi: MM.str(),
+              ni: MM.str(),
+              Qi: dr(MM),
+              Ui: MM.str(),
+              Gi: VM(MM),
+              Ci: MM.float()
+            }
+          }(rM);
+        case bM:
+          return function(MM) {
+            return {
+              Pi: MM.str(),
+              ni: MM.str(),
+              Qi: dr(MM)
+            }
+          }(rM);
+        case wM:
+          return function(MM) {
+            return MM.OL(yr)
+          }(rM);
+        case tM:
+          return function(MM) {
+            return {
+              MM: Er(MM),
+              jM: vM(MM)
+            }
+          }(rM);
+        case gM:
+          return function(MM) {
+            return {
+              fS: MM.bool(),
+              YS: DM(MM),
+              NS: Gr(MM),
+              vS: or(MM)
+            }
+          }(rM);
+        default:
+          throw new Error(`no reader for to-client message ${MM}`)
       }
     }
-  },
-  36906: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      B: () => DQ,
-      b: () => TQ,
-      f: () => BQ,
-      h: () => yQ,
-      j: () => sQ,
-      n: () => rQ,
-      r: () => VQ,
-      t: () => JQ,
-      u: () => pQ,
-      y: () => jQ
-    });
-    var wQ = XQ(26),
-      qQ = XQ(31);
-    const TQ = "clientGameInventoryButtonsChanged",
-      zQ = new Map;
 
-    function sQ() {
-      return [...zQ.values()].sort(((QQ, WQ) => {
-        var XQ, wQ;
-        return (null !== (XQ = QQ.order) && void 0 !== XQ ? XQ : 0) - (null !== (wQ = WQ.order) && void 0 !== wQ ? wQ : 0)
+    function RM(MM) {
+      return {
+        entityName: MM.str()
+      }
+    }
+
+    function pM(MM) {
+      const rM = MM.index(4);
+      return 0 === rM ? MM.str() : 1 === rM ? MM.long() : 2 === rM ? MM.bool() : RM(MM)
+    }
+
+    function WM(MM) {
+      return 0 === MM.index(2) ? null : function(MM) {
+        return MM.map(pM)
+      }(MM)
+    }
+
+    function sM(MM) {
+      return {
+        translationKey: MM.str(),
+        params: WM(MM)
+      }
+    }
+
+    function DM(MM) {
+      return 0 === MM.index(2) ? null : MM.str()
+    }
+
+    function kM(MM) {
+      return 0 === MM.index(2) ? null : function(MM) {
+        return {
+          color: DM(MM),
+          colour: DM(MM),
+          fontSize: DM(MM)
+        }
+      }(MM)
+    }
+
+    function ZM(MM) {
+      return {
+        icon: MM.str(),
+        style: kM(MM)
+      }
+    }
+
+    function oM(MM) {
+      const rM = MM.index(3);
+      return 0 === rM ? {
+        string: MM.str()
+      } : 1 === rM ? {
+        styledEntityName: RM(MM)
+      } : {
+        styledTranslatedText: sM(MM)
+      }
+    }
+
+    function fM(MM) {
+      const rM = MM.index(3);
+      return 0 === rM ? null : 1 === rM ? MM.str() : MM.long()
+    }
+
+    function YM(MM) {
+      return 0 === MM.index(2) ? null : MM.float()
+    }
+
+    function NM(MM) {
+      return 0 === MM.index(2) ? null : function(MM) {
+        return {
+          color: DM(MM),
+          colour: DM(MM),
+          fontWeight: fM(MM),
+          fontStyle: DM(MM),
+          fontSize: DM(MM),
+          opacity: YM(MM)
+        }
+      }(MM)
+    }
+
+    function AM(MM) {
+      return {
+        str: oM(MM),
+        style: NM(MM),
+        clickableUrl: DM(MM)
+      }
+    }
+
+    function xM(MM) {
+      return MM.str()
+    }
+
+    function vM(MM) {
+      return MM.OL(xM)
+    }
+
+    function FM(MM) {
+      return 0 === MM.index(2) ? null : vM(MM)
+    }
+
+    function BM(MM) {
+      return {
+        type: MM.str(),
+        progress: MM.float(),
+        width: DM(MM),
+        height: DM(MM),
+        colours: FM(MM),
+        backgroundColour: DM(MM)
+      }
+    }
+
+    function XM(MM) {
+      return {
+        type: MM.str(),
+        action: MM.str(),
+        style: NM(MM)
+      }
+    }
+
+    function IM(MM) {
+      const rM = MM.index(7);
+      return 0 === rM ? {
+        string: MM.str()
+      } : 1 === rM ? {
+        entityName: RM(MM)
+      } : 2 === rM ? {
+        translatedText: sM(MM)
+      } : 3 === rM ? {
+        styledIcon: ZM(MM)
+      } : 4 === rM ? {
+        ki: AM(MM)
+      } : 5 === rM ? {
+        styledProgressBar: BM(MM)
+      } : {
+        styledKeyBinding: XM(MM)
+      }
+    }
+
+    function KM(MM) {
+      return MM.OL(IM)
+    }
+    const qM = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
+
+    function TM(MM) {
+      return qM[MM.index(5)]
+    }
+
+    function VM(MM) {
+      return 0 === MM.index(2) ? null : MM.double()
+    }
+
+    function cM(MM) {
+      return 0 === MM.index(2) ? null : function(MM) {
+        return {
+          uO: VM(MM),
+          RO: MM.double(),
+          pO: MM.double(),
+          WO: MM.bool(),
+          description: KM(MM),
+          sO: MM.str(),
+          scale: VM(MM),
+          rotation: VM(MM)
+        }
+      }(MM)
+    }
+
+    function Mr(MM) {
+      return 0 === MM.index(2) ? null : MM.bool()
+    }
+
+    function rr(MM) {
+      return 0 === MM.index(2) ? null : function(MM) {
+        return {
+          kO: MM.double(),
+          icon: MM.str(),
+          label: KM(MM),
+          ZO: MM.bool(),
+          scale: VM(MM),
+          rotation: VM(MM),
+          oO: Mr(MM)
+        }
+      }(MM)
+    }
+
+    function ir(MM) {
+      return 0 === MM.index(2) ? null : function(MM) {
+        return {
+          uO: VM(MM),
+          YO: MM.double(),
+          AO: MM.double(),
+          xO: MM.double(),
+          gravity: MM.double(),
+          vO: MM.double(),
+          FO: MM.double(),
+          BO: MM.double(),
+          WO: MM.bool(),
+          description: KM(MM),
+          icon: DM(MM)
+        }
+      }(MM)
+    }
+
+    function Or(MM) {
+      return 0 === MM.index(2) ? null : function(MM) {
+        return {
+          speed: MM.double(),
+          IO: MM.double(),
+          label: KM(MM),
+          icon: DM(MM),
+          scale: VM(MM),
+          rotation: VM(MM)
+        }
+      }(MM)
+    }
+
+    function Sr(MM) {
+      return 0 === MM.index(2) ? null : MM.long()
+    }
+
+    function jr(MM) {
+      return 0 === MM.index(2) ? null : function(MM) {
+        return {
+          qO: MM.long(),
+          VO: MM.double(),
+          cO: MM.double(),
+          MS: Sr(MM),
+          label: KM(MM),
+          icon: DM(MM)
+        }
+      }(MM)
+    }
+
+    function ar(MM) {
+      return {
+        type: TM(MM),
+        progressBar: cM(MM),
+        timedClick: rr(MM),
+        gravityBar: ir(MM),
+        precisionBar: Or(MM),
+        rhythmClick: jr(MM)
+      }
+    }
+    const Pr = ["playerGone", "rateLimited"];
+
+    function nr(MM) {
+      return 0 === MM.index(2) ? null : function(MM) {
+        return Pr[MM.index(2)]
+      }(MM)
+    }
+
+    function Qr(MM) {
+      return MM.float()
+    }
+
+    function zr(MM) {
+      return MM.OL(Qr)
+    }
+
+    function Lr(MM) {
+      return 0 === MM.index(2) ? null : zr(MM)
+    }
+
+    function mr(MM) {
+      return 0 === MM.index(2) ? null : KM(MM)
+    }
+
+    function Hr(MM) {
+      return MM.long()
+    }
+
+    function hr(MM) {
+      return 0 === MM.index(2) ? null : function(MM) {
+        return MM.OL(Hr)
+      }(MM)
+    }
+
+    function Jr(MM) {
+      return 0 === MM.index(2) ? null : function(MM) {
+        return {
+          br: MM.str(),
+          pr: MM.long()
+        }
+      }(MM)
+    }
+
+    function dr(MM) {
+      const rM = MM.index(3);
+      return 0 === rM ? null : 1 === rM ? MM.str() : sM(MM)
+    }
+
+    function yr(MM) {
+      return {
+        Xi: MM.str(),
+        Ii: MM.str(),
+        Ki: MM.str()
+      }
+    }
+
+    function lr(MM) {
+      return {
+        rM: MM.str(),
+        iM: DM(MM),
+        OM: DM(MM),
+        SM: vM(MM)
+      }
+    }
+
+    function Er(MM) {
+      return MM.OL(lr)
+    }
+
+    function Ur(MM) {
+      return {
+        xS: MM.str(),
+        x: MM.long(),
+        y: MM.long(),
+        z: MM.long()
+      }
+    }
+
+    function Gr(MM) {
+      return MM.OL(Ur)
+    }
+
+    function Cr(MM) {
+      return 0 === MM.index(2) ? null : function(MM) {
+        return {
+          mj: MM.float(),
+          Hj: MM.long(),
+          hj: MM.long()
+        }
+      }(MM)
+    }
+
+    function er(MM) {
+      return {
+        blockName: MM.str(),
+        Sj: MM.bool(),
+        jj: MM.bool(),
+        aj: MM.bool(),
+        Pj: MM.float(),
+        nj: MM.float(),
+        Qj: MM.long(),
+        zj: Cr(MM)
+      }
+    }
+
+    function br(MM) {
+      return 0 === MM.index(2) ? null : function(MM) {
+        return MM.OL(er)
+      }(MM)
+    }
+
+    function wr(MM) {
+      return {
+        rj: MM.str(),
+        ij: br(MM)
+      }
+    }
+
+    function tr(MM) {
+      return {
+        blockName: MM.str(),
+        frequency: MM.float()
+      }
+    }
+
+    function gr(MM) {
+      return MM.OL(tr)
+    }
+
+    function ur(MM) {
+      return {
+        yj: MM.str(),
+        lj: MM.str(),
+        frequency: MM.float(),
+        Ej: gr(MM)
+      }
+    }
+
+    function Rr(MM) {
+      return MM.OL(ur)
+    }
+
+    function pr(MM) {
+      return {
+        blockName: MM.str(),
+        radius: MM.long(),
+        ej: MM.long(),
+        XS: MM.long(),
+        KS: MM.long(),
+        bj: MM.float()
+      }
+    }
+
+    function Wr(MM) {
+      return MM.OL(pr)
+    }
+
+    function sr(MM) {
+      return {
+        XS: MM.long(),
+        KS: MM.long(),
+        qS: MM.long(),
+        VS: MM.bool(),
+        cS: wr(MM),
+        Jj: Rr(MM),
+        Gj: Wr(MM)
+      }
+    }
+
+    function Dr(MM) {
+      return MM.OL(sr)
+    }
+
+    function kr(MM) {
+      return 0 === MM.index(2) ? null : function(MM) {
+        return {
+          name: MM.str(),
+          uj: DM(MM)
+        }
+      }(MM)
+    }
+
+    function Zr(MM) {
+      return 0 === MM.index(2) ? null : function(MM) {
+        return {
+          terrain: kr(MM),
+          Rj: Wr(MM)
+        }
+      }(MM)
+    }
+
+    function or(MM) {
+      return 0 === MM.index(2) ? null : function(MM) {
+        return {
+          layers: Dr(MM),
+          wj: Zr(MM)
+        }
+      }(MM)
+    }
+  },
+  41682: (MM, rM, iM) => {
+    iM.d(rM, {
+      A: () => eM,
+      B: () => RM,
+      D: () => UM,
+      H: () => GM,
+      K: () => dM,
+      N: () => tM,
+      O: () => WM,
+      P: () => hM,
+      S: () => DM,
+      U: () => lM,
+      X: () => yM,
+      _: () => EM,
+      ab: () => CM,
+      d: () => SM,
+      h: () => sM,
+      j: () => pM,
+      k: () => HM,
+      l: () => JM,
+      n: () => uM,
+      p: () => bM,
+      s: () => gM,
+      w: () => wM
+    });
+    var OM = iM(3349);
+    const SM = {
+      Chat: 49,
+      UiRequestResponded: 91,
+      CodeCollab: 89,
+      SetCustomLobbyBlock: 60,
+      UpdateBook: 56,
+      UpdateBoard: 33,
+      UpdateMyCosmetic: 45,
+      PlayEmote: 90,
+      ReqDiscordReportKey: 9,
+      UserReport: 11,
+      LobbyReport: 12,
+      CustomGameReport: 13,
+      IgnoreUser: 34,
+      ShopMenuChanged: 26,
+      GeneralCookieSet: 72,
+      CompleteTask: 69,
+      OpenIronChest: 80,
+      ChangeIronChestPasskey: 81,
+      StopSleeping: 78,
+      AnalyticsUpdate: 3,
+      UiRequestResp: 15,
+      QteResponse: 16,
+      ItemBought: 25,
+      LeaderboardRequest: 40,
+      UpdateNameTag: 53,
+      LobbyManage: 96
+    };
+
+    function jM(MM, rM) {
+      return !ArrayBuffer.isView(MM) || MM instanceof DataView ? Array.isArray(MM) ? MM.map((MM => rM(MM))) : MM : Array.from(MM, (MM => rM(MM)))
+    }
+
+    function aM(MM) {
+      if ("string" !== typeof MM) return MM;
+      for (let rM = 0; rM < MM.length; rM++) {
+        const iM = MM.charCodeAt(rM);
+        if (iM >= 55296 && iM <= 57343) return nM.decode(PM.encode(MM))
+      }
+      return MM
+    }
+    const PM = new TextEncoder,
+      nM = new TextDecoder;
+
+    function QM(MM) {
+      return MM
+    }
+    let zM;
+
+    function LM(MM) {
+      return null === MM || "object" !== typeof MM ? MM : [aM(MM.lQ), aM(MM.EQ)]
+    }
+
+    function mM(MM) {
+      return null === MM || "object" !== typeof MM ? MM : [jM(MM.ti, QM), jM(MM.oa, QM)]
+    }
+
+    function HM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.Kz), aM(rM.qz)];
+      var rM
+    }
+
+    function hM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [rM.id, rM.IQ];
+      var rM
+    }
+
+    function JM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [rM.hM, aM(rM.JM), rM.dM, aM(rM.EM), rM.eM, rM.bM, rM.cn, aM(rM.MQ), aM(rM.rQ)];
+      var rM
+    }
+
+    function dM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [jM(rM.SP, QM), rM.jP];
+      var rM
+    }
+
+    function yM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [jM(rM.aQ, (MM => aM(MM))), aM(rM.nQ), rM.QQ];
+      var rM
+    }
+
+    function lM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [jM(rM.mQ, QM), aM(rM.hQ), rM.JQ];
+      var rM
+    }
+
+    function EM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.Ii), aM(rM.Ki)];
+      var rM
+    }
+
+    function UM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.Ua)];
+      var rM
+    }
+
+    function GM(MM) {
+      return aM(MM)
+    }
+
+    function CM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.dQ), aM(rM.yQ), aM(rM.lQ), aM(rM.EQ)];
+      var rM
+    }
+
+    function eM(MM) {
+      return LM(MM)
+    }
+
+    function bM(MM) {
+      return LM(MM)
+    }
+
+    function wM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.KQ)];
+      var rM
+    }
+
+    function tM(MM) {
+      return MM
+    }
+
+    function gM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.Ja), aM(rM.da)];
+      var rM
+    }
+
+    function uM(MM) {
+      return aM(MM)
+    }
+
+    function RM(MM) {
+      return mM(MM)
+    }
+
+    function pM(MM) {
+      return mM(MM)
+    }
+
+    function WM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [aM(rM.vQ)];
+      var rM
+    }
+
+    function sM(MM) {
+      return (zM ??= (0, OM.f)().map((MM => MM.name)), zM).map((rM => {
+        return "string" === typeof(iM = MM[rM]) ? aM(iM) : jM(iM, QM);
+        var iM
       }))
     }
-    let FQ = null;
 
-    function PQ(QQ) {
-      FQ = QQ
-    }
-    let gQ = !1;
-
-    function JQ(QQ) {
-      gQ = !0;
-      try {
-        QQ.onClick()
-      } finally {
-        gQ = !1
-      }
-      QQ.panel && "clientGame" === wQ.b.get("openInGameMenuName") && PQ(QQ.id)
-    }
-
-    function rQ() {
-      return gQ
-    }
-
-    function IQ() {
-      return sQ().filter((QQ => QQ.panel && !QQ.disabled))
-    }
-
-    function jQ(QQ) {
-      const WQ = IQ(),
-        XQ = WQ.findIndex((QQ => QQ.id === FQ));
-      return !(XQ < 0 || WQ.length < 2) && (JQ(WQ[(XQ + QQ + WQ.length) % WQ.length]), !0)
-    }
-
-    function BQ() {
-      return null !== FQ && IQ().length > 1
-    }
-
-    function yQ() {
-      PQ(null)
-    }
-
-    function VQ() {
-      "inventory" !== wQ.b.get("openInGameMenuName") && PQ(null)
-    }
-
-    function DQ() {
-      const QQ = FQ;
-      return PQ(null), QQ
-    }
-
-    function pQ(QQ) {
-      return zQ.set(QQ.id, QQ), qQ.k.mB(TQ, sQ(), !0), () => {
-        zQ.get(QQ.id) === QQ && (zQ.delete(QQ.id), qQ.k.mB(TQ, sQ()))
-      }
+    function DM(MM) {
+      return null === (rM = MM) || "object" !== typeof rM ? rM : [rM.fa, rM.Ya, rM.Na];
+      var rM
     }
   },
-  36900: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      A: () => gQ,
-      c: () => sQ,
-      g: () => DQ,
-      j: () => yQ,
-      n: () => VQ,
-      q: () => rQ,
-      s: () => PQ,
-      u: () => BQ,
-      y: () => IQ
+  9918: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => SM,
+      e: () => jM
     });
-    var wQ = XQ(26),
-      qQ = XQ(31),
-      TQ = XQ(1335),
-      zQ = XQ(36906);
-    const sQ = "clientGameUiChanged";
-    let FQ = null;
-
-    function PQ() {
-      return FQ
-    }
-
-    function gQ(QQ, WQ) {
-      const XQ = {
-        content: QQ,
-        menu: WQ
-      };
-      return FQ = XQ, qQ.k.mB(sQ, FQ, !0), () => {
-        FQ === XQ && (FQ = null, jQ = !1, yQ(), qQ.k.mB(sQ, null))
-      }
-    }
-    let JQ = null;
-
-    function rQ() {
-      return JQ
-    }
-
-    function IQ(QQ) {
-      return JQ = QQ, () => {
-        JQ === QQ && (JQ = null)
-      }
-    }
-    let jQ = !1;
-
-    function BQ() {
-      const QQ = wQ.b.get("openInGameMenuName");
-      "clientGame" !== QQ && (jQ = "inventory" === QQ), (0, zQ.n)() || (0, zQ.h)(), (0, TQ.z)(TQ.e), wQ.b.set({
-        openInGameMenuName: "clientGame",
-        openEverythingMenuName: null
-      })
-    }
-
-    function yQ() {
-      pQ(!1)
-    }
-
-    function VQ() {
-      pQ(jQ)
-    }
-
-    function DQ() {
-      jQ && pQ(!1)
-    }
-
-    function pQ(QQ) {
-      "clientGame" === wQ.b.get("openInGameMenuName") && wQ.b.set({
-        openInGameMenuName: QQ ? "inventory" : null
-      }), QQ || (0, zQ.h)(), jQ = !1
-    }
+    var OM = iM(9863);
+    const SM = "Air",
+      jM = Object.freeze(new OM.c(SM, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  36800: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => FQ
+  40325: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => jM,
+      g: () => PM
     });
-    var wQ = XQ(382),
-      qQ = XQ(26),
-      TQ = XQ(36809),
-      zQ = XQ(1698),
-      sQ = XQ(2061);
+    var OM = iM(332),
+      SM = iM(4843);
+    const jM = new Set(SM.n),
+      aM = new Map;
 
-    function FQ(QQ, WQ) {
-      var XQ, FQ, PQ;
-      if (!qQ.b.get("isKeydownEnabled") || QQ.repeat) return;
-      const gQ = QQ.code;
-      "Escape" === QQ.key ? (0, zQ.i)(QQ) : null !== (XQ = sQ.s.OpenSettings) && void 0 !== XQ && XQ.includes(gQ) ? (0, zQ.w)(QQ, wQ.r.SETTINGS) : null !== (FQ = sQ.s.OpenCharacterCustomization) && void 0 !== FQ && FQ.includes(gQ) ? (0, TQ.e)() || (0, zQ.w)(QQ, wQ.r.CUSTOMISATION, WQ()) : null !== (PQ = sQ.s.ShowDebugOverlay) && void 0 !== PQ && PQ.includes(gQ) && qQ.b.set({
-        showDebugOverlay: !qQ.b.get("showDebugOverlay")
-      })
+    function PM(MM, rM) {
+      let iM = aM.get(rM);
+      void 0 === iM && (iM = new Map, aM.set(rM, iM));
+      let SM = iM.get(MM);
+      return void 0 === SM && (SM = `${MM}${(0,OM.A)(rM)}`, iM.set(MM, SM)), SM
     }
-  },
-  39264: (QQ, WQ, XQ) => {
-    function wQ(QQ, WQ, XQ, wQ, qQ) {
-      var TQ = {};
-      return Object.keys(wQ).forEach((function(QQ) {
-        TQ[QQ] = wQ[QQ]
-      })), TQ.enumerable = !!TQ.enumerable, TQ.configurable = !!TQ.configurable, ("value" in TQ || TQ.initializer) && (TQ.writable = !0), TQ = XQ.slice().reverse().reduce((function(XQ, wQ) {
-        return wQ(QQ, WQ, XQ) || XQ
-      }), TQ), qQ && void 0 !== TQ.initializer && (TQ.value = TQ.initializer ? TQ.initializer.call(qQ) : void 0, TQ.initializer = void 0), void 0 === TQ.initializer && (Object.defineProperty(QQ, WQ, TQ), TQ = null), TQ
-    }
-    XQ.d(WQ, {
-      e: () => wQ
-    })
-  },
-  39259: (QQ, WQ, XQ) => {
-    function wQ(QQ, WQ, XQ, wQ) {
-      XQ && Object.defineProperty(QQ, WQ, {
-        enumerable: XQ.enumerable,
-        configurable: XQ.configurable,
-        writable: XQ.writable,
-        value: XQ.initializer ? XQ.initializer.call(wQ) : void 0
-      })
-    }
-    XQ.d(WQ, {
-      b: () => wQ
-    })
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

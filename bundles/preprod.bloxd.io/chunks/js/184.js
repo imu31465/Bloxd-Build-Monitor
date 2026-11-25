@@ -1,40 +1,40 @@
 export const id = 184;
 export const ids = [184];
 export const modules = {
-  9439: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      pageBody: () => wQ
+  9595: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      pageBody: () => OM
     });
-    const wQ = {
-      whatIs: ["Don't get infected... or do. Bloxd Infection is a humans vs zombies game where the virus spreads fast and anyone could end up against you. As a human you're racing through obstacles to escape. As a zombie you're part of the horde trying to stop them getting away."],
-      howToPlay: ["Everyone starts out human. After 15 seconds, 3 players turn into the first zombies. Humans follow the arrows and get through the obstacles before the zombies catch up. If a zombie takes you down, that's it, you're infected and on the zombie team now.", "Humans earn points by taking down zombies and shooting the diamonds hidden around the map. Spend those points to unlock the next section and buy guns at gun stations. Be the very last human alive and you'll get a Minigun. Zombies just need to hunt down every human before they escape."],
-      features: ["Up to 18 Players per Match", "Play as Humans or Zombies", "9 Human Kits, Including Veteran, Medic, Scout and Bombardier", "5 Zombie Kits, Including Sprinter, Tank, Puker and Bomber", "Unlock New Sections and Buy Guns with Points", "5 Maps: Hospital, Bunker, Subway, Airport and Farm", "Awards for First Kill, Final Kill and Last Human Alive"],
-      tips: ["Stick together as humans. Zombies find it much harder to pick you off", "Shoot the diamonds for extra points. They'll come back after a while", "Grab a gun at a gun station as soon as you can afford one", "The Medic kit lets you heal yourself and your teammates", "Playing zombie? Try the Sprinter to catch humans fast", "Last human alive? Make that Minigun count"],
-      similarGames: ["murderMystery", "containmentBreach", "shooting", "hideseek"],
+    const OM = {
+      whatIs: ["Infinite blocks, custom tools and no limits on what you build. Bloxd Creative is the free building mode where you can get creating straight away. Build in a shared world with players from all over, or set up your own free build server and create with your friends online. There's no health bar and nobody can attack you, so all you have to think about is your build."],
+      howToPlay: ["Open the creative menu and grab any block or item you want. It's all sorted into categories like Building Blocks, Coloured Blocks, Nature, Decoration, Utility, Tools and Vehicles, and World Tools. Place as many as you like, fly around your build and make anything from a tiny cottage to an entire city.", "Want a completely blank canvas? Try Superflat, a world of endless flat grass that's great for big projects. In the normal Creative world, use Teleport To Fresh Land to jump to a random empty spot so nobody gets in your way. Place a Protector and other players can't change blocks or open chests in that area. If you'd like a plot of your own that's saved for good, Plots is the one to try."],
+      features: ["Infinite Blocks and Items from the Creative Menu", "Fly Freely Around Your Builds", "Superflat Worlds for Big Builds", "Teleport To Fresh Land for Uninterrupted Building", "Free Private Build Servers to Create with Friends", "Extra Tools for Server Owners, Including WorldBuilder and Code Editing", "Protectors to Keep Your Builds Safe", "No Health Bar and No Attacks from Other Players"],
+      tips: ["Teleport To Fresh Land is the quickest way to find some empty space", "In public lobbies, build away from spawn, because blocks near spawn reset every few hours", "Put down a Protector so other players can't change your build or open your chests", "Use /tp to get around fast, and type /help to see all the commands", "Saplings are limited in Creative, so plan your trees carefully", "Free cam lets you check your build from every angle", "If you want your build to stay exactly as you left it, start a private build server"],
+      similarGames: ["classic", "classic_survival", "plots", "skyblock", "oneBlock"],
       faq: [{
-        question: "What is Bloxd Infection?",
-        answer: "A humans vs zombies mode for up to 18 players. Humans try to escape through maps full of obstacles, and zombies try to infect everyone before they do."
+        question: "What is Bloxd Creative?",
+        answer: "Bloxd Creative is the creative building mode in Bloxd.io. You get infinite blocks and custom tools to build whatever you like, on your own or with friends."
       }, {
-        question: "How does the infection spread in Bloxd Infection?",
-        answer: "Humans follow the arrows and get past the obstacles while zombies chase them. Anyone a zombie takes down becomes a zombie too."
+        question: "Can you fly in Bloxd Creative?",
+        answer: "Yes, you can fly in Creative, so you can reach every bit of your build."
       }, {
-        question: "How do humans win?",
-        answer: "Get through all the obstacles and escape before you're infected."
+        question: "What is Superflat in Bloxd?",
+        answer: "A Creative world made of endless flat grass. It gives you a clean canvas for your biggest projects."
       }, {
-        question: "How do zombies win?",
-        answer: "By infecting every human before they escape."
+        question: "How do I make a free build server in Bloxd?",
+        answer: "Start your own private lobby for free and invite your friends. As the owner you also get extra tools like WorldBuilder."
       }, {
-        question: "How are points earned?",
-        answer: "Humans get 100 points for taking down a zombie and 25 for an assist, plus extra for shooting diamonds."
+        question: "Can you use TNT in Bloxd Creative?",
+        answer: "Not in public Creative worlds. You can't take explosives from the menu or craft them, so nobody can blow up other people's builds."
       }, {
-        question: "What kits are in Bloxd Infection?",
-        answer: "Humans can pick kits like Veteran, who starts with an AK-47, or Scout, who has a sniper rifle. On the zombie side there's Puker, who can puke acid, and Tank, who has more health. Win awards to earn gold for the kit shop."
+        question: "Why did my build disappear in Bloxd Creative?",
+        answer: "In public lobbies, blocks near spawn reset every few hours; a message shows when you cross the edge of that area. Build further away, use Teleport To Fresh Land, or start a private build server, where nothing resets unless its owner turns on Enable Spawn Reset."
       }, {
-        question: "What's the player limit in Infection?",
-        answer: "18 players per match."
+        question: "What's the difference between Creative and Plots?",
+        answer: "Creative is an open shared world. You build wherever you want and guard areas with Protectors. In Plots you claim your own 91\xd791 plot that only you and the players you add can change, and it's saved for good once you've changed 500 blocks."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

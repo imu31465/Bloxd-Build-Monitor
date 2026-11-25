@@ -1,1089 +1,230 @@
 export const id = 224;
-export const ids = [224, 300];
+export const ids = [224];
 export const modules = {
-  41519: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      CharacterCustomisationUI: () => qW
+  35037: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      MAX_BLOCK_ID: () => OM,
+      armourReductionOf: () => AM,
+      clipSizeOf: () => NM,
+      creativeAltNames: () => ar,
+      creativeCategoryOf: () => VM,
+      creativeItemCategories: () => PM,
+      creativeItemCategoryIcons: () => nM,
+      creativeItemIds: () => TM,
+      descriptionOf: () => oM,
+      displayNameOf: () => ZM,
+      dropsNothing: () => FM,
+      enchantmentPerksOf: () => KM,
+      gunTypeOf: () => vM,
+      harvestsNullLevelOf: () => BM,
+      isDevOnlyItem: () => ir,
+      itemIsDisabled: () => Sr,
+      itemTypeNameOf: () => YM,
+      itemTypeOf: () => fM,
+      rootMetaDescOf: () => IM,
+      scopeTypeOf: () => xM,
+      showInCreativeInvenOf: () => Or,
+      showOnlyInCreativeCategory: () => rr,
+      showOnlyInCreativeSearch: () => Mr,
+      showsAimingUi: () => XM
     });
-    var wQ = XQ(61),
-      qQ = XQ(2728),
-      TQ = XQ(1162),
-      zQ = XQ(1081),
-      sQ = XQ.n(zQ),
-      FQ = XQ(1273),
-      PQ = XQ(646),
-      gQ = XQ(1226),
-      JQ = XQ(2313),
-      rQ = XQ(1626),
-      IQ = XQ(2678);
-    const jQ = FQ.x.filter((QQ => !rQ.g.includes(QQ)));
+    const OM = 8558,
+      SM = "''WL&M3GT%cM)MK$YE1aM2'I+F+O_*c^*=%'%%%%%%%K>F>%%)K=H=%%[*W5_5['[R$ZW$S%[X&NH&L5C$W$5,KS&%]]&I%^Z&NM&b7TK$Y6G,Y>%M%M7P6$WD%Vc$LZ$OY$%+Q[&;S$/G$N&W%F$W%F$S$N&G'.F$c%`'1+%)41(1(+49$(2=b$/`N,RN,K/c_&Q0EC$O(''P`&O$%-%%^R2-*)&%;NV/ZT%IT%3XM$%%%%%_U$%b73.%%`-T-%%%%%%L9$M8X7/$``3/Fa3T+%%%%SAQ<U6W<^7V]&&)*'OAO<Y6W<^7X]&+&)*'CG%%`)W<^7VW&C[&Tc%Wc%Tc%P;'O;Uc%PH%SH%]T$`T$J;^7S&ZX%S]%VX$ZF$U5W^/TF$aU/C$C$C$C$C$O7E7K<^7RX%33333`4E7K<^7_`$++++++O1K<^7_B$aR%%D'%b_$CH$%%%G3'Y*R?SH&]I&I>RO&KM&DC%L$/Q+C.Q0QH$''_b$TS$J-%%%%%%%%%)I%)$','G6b=E7K<^7NQ&%%%%%%%%%%%%%%%CW&S$S$S$S$S$S$S$S$S$S$S$S$S$S$S$G:+++++++++++++++S+%%%%Va$*$(50)2+,7:%)5>Q?^1S$]T$XG&333333333333333U[$333333333333333CN%)@G$))))X$`$))))P%W%]H(<3$3('<)%+.3$2+YJ2HH2*$&52)6%+/2%7&6MD%S$/G$N&W%F$W%F$S$N&G'.F$c%`'O['C%3S$R'S&R$S&R$C%R'S(2R$c&S)Xc&'+%)41(1(+49$(2=Q$S$/G$N&W%F$W%F$S$N&G'.F$c%`'C]&C%3S$R'S&R$S&R$C%R'S(2R$c&S)TI'+%)41(1(+49$(2=Q)S$/G$N&W%F$W%F$S$N&G'.F$c%`'C_&C%3S$R'S&R$S&R$C%R'S(2R$c&S)JW*34$*'9(-0,+.9('CZ$34$*'9(-0,+.9('M%%%%%%%%%%%%%%%%MM'cJ)%%%%%%%%%%%%%%%G-+++++++++++++++UZ(X-%%M.DE(//////G2E7K<^7_S%/Wa$M3MT%_b'//////QY$DY$///////////////////////`Y'3333333333MD*C&C&C&C&C&C&C&C&C&C&M.C$C$C$C$C$C$C$C$C$C$FW+333333333333333333333333333333M`,'cF2%CG2%%%%%%%%%'E8N7%%%''''''-+%)41(1(+49$(2=E$)$'%%/_%E+'%)%%)&)&)%'%%%%%%cI2)%G`12^,T,%%%[-%%%%%%%%%%%VD1+WD1(%%)$b<T%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%aD2%%E>WO%b`+%%%ab.EC&HC&U6UA%%%%LU$'5[5H<%%'%%3`;%QH$M&%UD$W$/%%%^L*cR-OK1%RN2+S$^L2%M$@%.%5%+%O$)%H$%5%.%M$%+%+%+%+)))%+N%L$%5%.%3+%)%T%%.%5%-$S%%.%5%+%)))+%)c&D$-7S%,R%Q$,=F$O$4F$W%-)))-)]0'%'%+['$W.+%)41(1(+49$(2=M<%'+%)41(1(+49$(2=%%'+%)41(1(+49$(2=V_$%%%%%%%%%%%%'%%%%%%%%%%%%%%%HL1%%%%%[Y1+++++++++5UU$%%%%'%%%%3%%%%'%%%%'%%%%N$%%%%RV$EY$3JJ%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Y6)&[$&3Z$&[$>.'/'>3?.Z1'%*W2%'F3%%M0W%RJ/--L+W+-D,%K*^3-VT(C[$G<G'+J'%%%%%%%%%%%%%%%U&%%%%%%%5%%6+1%%%%%%E'++++MI2%%%%%%aG2IU$C$C$C$SO$RN$C$C$KZ0%%%H$'-.c)55&Y$*V%%%'%%%%%%%'%%%%%''%%%%%%%%%%%%%%%%%%%'%%'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%M$%%%%%%%%%%%%%U(Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$a'Y$Y$Y$F(Y$Y$Y$V'Y$Y$Y$]'Y$Y$Y$Z'Y$Y$Y$c'Y$Y$Y$a'Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$J(Y$Y$Y$D)Y$Y$Y$c'Y$Y$Y$_'Y$Y$Y$H(Y$Y$Y$c'Y$Y$Y$E$%%%%%%%%%%%%%%%%%+-%%%%%%%%%%%%%+-%%%%%%%%%%%%%+-%%%%%%%%%%%%%+-%%%%%%%%%%%%%%%aI6QX(%%%%%%%%%%%%%%%%",
+      jM = "S-$SW$$R&$SG2$)$'$)$4$)$X*$I6$-$%$%$cC1$WD1$%%%$]5$b7$RH4$%$%$%$%$%$%$%$%$%$)$N+$EG&$ZT%$IT%$3$XM$$%$%$%$%$%$Z1$Y[$$O`0$'$'$'$-&+&%&)&4&1&(&1*(*+&4&9&$&(&2&=&E$&'&%&%&%&1%_%$TV3$%$D.$$$Uc&$S$$S$$S$$S$$S$$S$$S$&S$&S$$S$$S$$S$$S$$S$$S$$S$$^1$S$$]I($%$M/$+$N-$%$Z$$%$I6$3$Uc$$3$WR%$X$$T`%$F$$CC($R$$P_&$($I$$($W'$F$$WC'$R$$cZ&$F$$WE'$R$$Cc,$($[<$%$'$+$%$)$4$1$($1&(&+$4$9$$$($2$=$%$%$'$+$%$)$4$1$($1&(&+$4$9$$$($2$=$ZX$$%$%$%$%$%$%$%$%$%$cb0$MK2'T%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$aD2$%$%$E>$WO%$b`+$%$%$%$ab.$EC&$HC&$U6$UA$%$%$%$%$LU$$'$5$[5$H<$%$%$'$%$%$3$`;$%$QH$$M&$%$UD$$W$$/$%$%$%$^L*$FP0$QX($%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$L]%$OP1%%%S@&%'%'%'%'%%ZU0$C$$C$$C$$SO$$RN$$C$$C$$OZ0%/%",
+      aM = "Crafting Table|Cauldron|Sign|Iron Nugget|Gold Nugget|Diamond Nugget|Moonstone Nugget|Iron Ingot|Gold Ingot|Draugr Knight Sword|Cooked Potato|Cooked Beef|Raw Lamb|Cooked Lamb|Gold Watermelon Stag Antlers|Bear Fur|Cave Golem Eye|Frost Golem Eye|Draugr Knight Heart|Fur Boots|Milk Bottle|Yellow Flower|Red Flower|Red Flower|Pink Flower|White Flower|Orange Flower|White Yellow Flower|Blue Flower|Blue Flower|Purple Flower|Black Flower|Cobblestone|Carved Cobblestone|Mossy Cobblestone|Snowy Cobblestone|Compressed Snow|Compressed Cobblestone|Extra Compressed Cobblestone|Super Compressed Cobblestone|Hyper Compressed Cobblestone|Ultra Compressed Cobblestone|Mega Compressed Cobblestone|Cobblestone Slab|Snowy Cobblestone Slab|Wood Hand Glider|Iron Hand Glider|Gold Hand Glider|Diamond Hand Glider|White Go Kart|White Cart|White Go Cart|Orange Go Kart|Orange Cart|Orange Go Cart|Magenta Go Kart|Magenta Cart|Magenta Go Cart|Light Blue Go Kart|Light Blue Cart|Light Blue Go Cart|Yellow Go Kart|Yellow Cart|Yellow Go Cart|Lime Go Kart|Lime Cart|Lime Go Cart|Pink Go Kart|Pink Cart|Pink Go Cart|Gray Go Kart|Gray Cart|Gray Go Cart|Grey Kart|Grey Go Kart|Grey Cart|Grey Go Cart|Light Gray Go Kart|Light Gray Cart|Light Gray Go Cart|Light Grey Kart|Light Grey Go Kart|Light Grey Cart|Light Grey Go Cart|Cyan Go Kart|Cyan Cart|Cyan Go Cart|Purple Go Kart|Purple Cart|Purple Go Cart|Blue Go Kart|Blue Cart|Blue Go Cart|Brown Go Kart|Brown Cart|Brown Go Cart|Green Go Kart|Green Cart|Green Go Cart|Red Go Kart|Red Cart|Red Go Cart|Black Go Kart|Black Cart|Black Go Cart|Off Road Jeep|Off Road Truck|Off Road Car|Drill|Mining Drill|Digger|Drill|Mining Drill|Digger|Drill|Mining Drill|Digger|Drill|Mining Drill|Digger|Light Blue Car|Light Blue Sedan|Hoverboat|Grey Planks|Light Grey Planks|Light Grey Wool|Grey Wool|White Flag|Orange Flag|Magenta Flag|Light Blue Flag|Yellow Flag|Lime Flag|Pink Flag|Gray Flag|Grey Banner|Grey Flag|Light Gray Flag|Light Grey Banner|Light Grey Flag|Cyan Flag|Purple Flag|Blue Flag|Brown Flag|Green Flag|Red Flag|Black Flag|Draugr Flag|Skull Flag|Rainbow Flag|Grey Baked Clay|Light Grey Baked Clay|Grey Ceramic|Light Grey Ceramic|Grey Glass|Light Grey Glass|Grey Concrete|Light Grey Concrete|Grey Bed|Light Grey Bed|Grey Strongbed|Light Grey Strongbed|Small Grey Pod|Small Light Grey Pod|Grey Concrete Slab|Light Grey Concrete Slab|Grey Concrete Stairs|Light Grey Concrete Stairs|Grey Chalk|Light Grey Chalk|Grey Chalk Bricks|Light Grey Chalk Bricks|Grey Chalk Slab|Light Grey Chalk Slab|Grey Chalk Stairs|Light Grey Chalk Stairs|Grey Chalk Bricks Slab|Light Grey Chalk Bricks Slab|Grey Chalk Bricks Stairs|Light Grey Chalk Bricks Stairs|Grey Balloon|Light Grey Balloon|Firework|Rainbow Firework|White Firework|Orange Firework|Magenta Firework|Light Blue Firework|Yellow Firework|Lime Firework|Pink Firework|Gray Firework|Grey Firework|Grey Firecracker|Light Gray Firework|Light Grey Firework|Light Grey Firecracker|Cyan Firework|Purple Firework|Blue Firework|Brown Firework|Green Firework|Red Firework|Black Firework|Firework Pebble|Rainbow Firework Pebble|White Firework Pebble|Orange Firework Pebble|Magenta Firework Pebble|Light Blue Firework Pebble|Yellow Firework Pebble|Lime Firework Pebble|Pink Firework Pebble|Gray Firework Pebble|Grey Firework Pebble|Grey Firecracker Pebble|Light Gray Firework Pebble|Light Grey Firework Pebble|Light Grey Firecracker Pebble|Cyan Firework Pebble|Purple Firework Pebble|Blue Firework Pebble|Brown Firework Pebble|Green Firework Pebble|Red Firework Pebble|Black Firework Pebble|Grey Wood Helmet|Grey Wood Chestplate|Grey Wood Leggings|Grey Wood Boots|Grey Wood Gauntlets|Light Grey Wood Helmet|Light Grey Wood Chestplate|Light Grey Wood Leggings|Light Grey Wood Boots|Light Grey Wood Gauntlets|Command Block|Mob Net|Catcher Net|Pet Net|Pet Catcher|Mob Pig Spawn Egg|Mob Cow Spawn Egg|Mob Sheep Spawn Egg|Mob Horse Spawn Egg|Mob Camel Spawn Egg|Mob Iron Goofy Golem Spawn Egg|Mob Gold Goofy Golem Spawn Egg|Mob Diamond Goofy Golem Spawn Egg|Mob Moonstone Goofy Golem Spawn Egg|Mob Deer Spawn Egg|Mob Slime Spawn Egg|Mob Wolf Spawn Egg|Mob Wildcat Spawn Egg|Mob Spirit Golem Spawn Egg|Mob Spirit Wolf Spawn Egg|Mob Spirit Bear Spawn Egg|Mob Spirit Stag Spawn Egg|Mob Spirit Gorilla Spawn Egg|Mob Bear Spawn Egg|Mob Stag Spawn Egg|Mob Gold Watermelon Stag Spawn Egg|Mob Gorilla Spawn Egg|Mob Cave Golem Spawn Egg|Mob Draugr Zombie Spawn Egg|Mob Draugr Skeleton Spawn Egg|Mob Frost Golem Spawn Egg|Mob Frost Zombie Spawn Egg|Mob Frost Skeleton Spawn Egg|Mob Draugr Knight Spawn Egg|Mob Draugr Huntress Spawn Egg|Mob Magma Golem Spawn Egg|Mob Draugr Warper Spawn Egg|Mob Frost Wraith Spawn Egg|Mob Draugr Reaver Spawn Egg|Mob Stalker Spawn Egg|Mob Crone Spawn Egg|Mob Iron Guardian Spawn Egg|Mob Gold Guardian Spawn Egg|Mob Diamond Guardian Spawn Egg|Mob Moonstone Guardian Spawn Egg|Mob Tiki Terror Spawn Egg|Pig Mob Spawner Block|Cow Mob Spawner Block|Sheep Mob Spawner Block|Horse Mob Spawner Block|Camel Mob Spawner Block|Iron Goofy Golem Mob Spawner Block|Gold Goofy Golem Mob Spawner Block|Diamond Goofy Golem Mob Spawner Block|Moonstone Goofy Golem Mob Spawner Block|Deer Mob Spawner Block|Slime Mob Spawner Block|Wolf Mob Spawner Block|Wildcat Mob Spawner Block|Spirit Golem Mob Spawner Block|Spirit Wolf Mob Spawner Block|Spirit Bear Mob Spawner Block|Spirit Stag Mob Spawner Block|Spirit Gorilla Mob Spawner Block|Bear Mob Spawner Block|Stag Mob Spawner Block|Gold Watermelon Stag Mob Spawner Block|Gorilla Mob Spawner Block|Cave Golem Mob Spawner Block|Draugr Zombie Mob Spawner Block|Draugr Skeleton Mob Spawner Block|Frost Golem Mob Spawner Block|Frost Zombie Mob Spawner Block|Frost Skeleton Mob Spawner Block|Draugr Knight Mob Spawner Block|Draugr Huntress Mob Spawner Block|Magma Golem Mob Spawner Block|Draugr Warper Mob Spawner Block|Frost Wraith Mob Spawner Block|Draugr Reaver Mob Spawner Block|Stalker Mob Spawner Block|Crone Mob Spawner Block|Iron Guardian Mob Spawner Block|Gold Guardian Mob Spawner Block|Diamond Guardian Mob Spawner Block|Moonstone Guardian Mob Spawner Block|Tiki Terror Mob Spawner Block|Barrier|Yellow Light Block|White Light Block|Red Light Block|Purple Light Block|Pink Light Block|Orange Light Block|Magenta Light Block|Lime Light Block|Light Gray Light Block|Light Blue Light Block|Green Light Block|Gray Light Block|Cyan Light Block|Brown Light Block|Blue Light Block|Black Light Block|Sky Light Block|Empty Mob Spawner Block|XRay Vision Potion|X Ray Vision Potion|Splash XRay Vision Potion|Splash X Ray Vision Potion|Experience Orb|EXP Orb|Enchanting Orb|Experience Potion|Enchanting Potion|Bottle of Enchanting|EXP Potion|Experience Potion II|Enchanting Potion II|Bottle of Enchanting II|EXP Potion II|Splash Experience Potion|Splash Enchanting Potion|Splash Bottle of Enchanting|Splash EXP Potion|Splash Experience Potion II|Splash Enchanting Potion II|Splash Bottle of Enchanting II|Splash EXP Potion II|Enchanting Arrow|EXP Arrow|Sheep Painting|Cow Painting|Pig Painting|Horse Painting|Camel Painting|Wolf Painting|Deer Painting|Wildcat Painting|Cow Milk|Cows Milk|Sheep Milk|Sheeps Milk",
+      PM = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"],
+      nM = {
+        building: "Stone Bricks",
+        colours: "Magenta Wool",
+        nature: "Grass Block",
+        decoration: "Lantern",
+        utility: "Workbench",
+        tools: "Iron Pickaxe",
+        combat: "Iron Sword",
+        food: "Apple",
+        mobs: "Pig Spawn Orb",
+        materials: "Iron Bar",
+        worldTools: "Code Block"
+      };
+    var QM = iM(3693),
+      zM = iM(3698);
+    const LM = Object.freeze([]);
 
-    function BQ(QQ, WQ) {
-      return jQ.includes(QQ) && "string" === typeof WQ && (0, IQ.h)(QQ, WQ)
-    }
-
-    function yQ(QQ) {
-      const WQ = {};
-      for (const XQ of jQ) {
-        const wQ = QQ[XQ];
-        void 0 !== wQ && BQ(XQ, wQ) && (WQ[XQ] = wQ)
+    function mM(MM) {
+      let rM = null;
+      return iM => {
+        var OM;
+        return rM ??= (0, zM.y)(MM, 10096), null !== (OM = rM[iM]) && void 0 !== OM ? OM : 0
       }
-      return WQ
-    }
-
-    function VQ(QQ) {
-      return 0 === Object.keys(QQ).length
-    }
-
-    function DQ(QQ, WQ) {
-      return Object.entries(QQ).every((QQ => {
-        let [XQ, wQ] = QQ;
-        return WQ[XQ] === wQ
-      }))
-    }
-    var pQ = XQ(2318),
-      GQ = XQ(3362),
-      UQ = XQ(2052),
-      bQ = XQ(1507),
-      vQ = XQ(2351),
-      dQ = XQ(26),
-      HQ = XQ(2850),
-      aQ = XQ(1548),
-      lQ = XQ(1165),
-      hQ = XQ(1927);
-    class iQ {
-      constructor() {
-        this.slots = new Map, this.before = new Map, this.accountId = null
-      }
-      moveTo(QQ) {
-        null !== QQ && QQ !== this.accountId && (null !== this.accountId && this.slots.size > 0 && (console.warn("saved_outfits_dropped_on_account_switch", this.slots.size), this.slots.clear()), null !== this.accountId && this.before.clear(), this.accountId = QQ)
-      }
-      isFor(QQ) {
-        return null === this.accountId || this.accountId === QQ
-      }
-      overlay(QQ) {
-        let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-        return QQ.map(((QQ, XQ) => {
-          var wQ, qQ;
-          return null !== (wQ = null !== (qQ = this.slots.get(XQ)) && void 0 !== qQ ? qQ : WQ.get(XQ)) && void 0 !== wQ ? wQ : QQ
-        }))
-      }
-    }
-    class cQ extends HQ.d {
-      constructor() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new iQ;
-        super("saved outfits", (async WQ => {
-          const XQ = QQ.isFor(WQ.whamm),
-            wQ = new Map(QQ.slots),
-            qQ = await aQ.e.getSavedOutfits(WQ);
-          return XQ ? QQ.overlay(qQ, wQ) : qQ
-        })), this.unsaved = QQ, this.started = !1, this.sending = !1
-      }
-      ensureLoaded() {
-        if (this.started) {
-          if (!this.getState().failed) return
-        } else this.started = !0, this.watchAccount();
-        this.refresh()
-      }
-      save(QQ, WQ) {
-        var XQ, wQ;
-        (this.unsaved.moveTo(this.getState().accountId), this.unsaved.before.has(QQ)) || this.unsaved.before.set(QQ, null !== (XQ = null === (wQ = this.getState().data) || void 0 === wQ ? void 0 : wQ[QQ]) && void 0 !== XQ ? XQ : {});
-        this.unsaved.slots.set(QQ, WQ), this.update((XQ => XQ.map(((XQ, wQ) => wQ === QQ ? WQ : XQ)))), this.sending || this.sendUnsaved()
-      }
-      clear(QQ) {
-        this.save(QQ, {})
-      }
-      async sendUnsaved() {
-        this.sending = !0;
-        let QQ = !1;
-        for (; this.unsaved.slots.size > 0;) {
-          const XQ = new Map(this.unsaved.slots);
-          let wQ = this.getState().accountId;
-          try {
-            const QQ = await lQ.userContextManager.getCurrentUserContext();
-            if (wQ = QQ.whamm, this.unsaved.moveTo(QQ.whamm), 0 === this.unsaved.slots.size) {
-              this.refresh();
-              break
-            }
-            const {
-              accountId: WQ,
-              data: qQ
-            } = this.getState();
-            let TQ = qQ;
-            WQ === QQ.whamm && null !== TQ || (TQ = this.unsaved.overlay(await aQ.e.getSavedOutfits(QQ)), this.refresh()), await aQ.e.setSavedOutfits(QQ, TQ), this.unsaved.isFor(QQ.whamm) && TQ.forEach(((QQ, WQ) => {
-              const wQ = this.unsaved.slots.get(WQ);
-              void 0 === wQ || wQ === XQ.get(WQ) ? this.unsaved.before.delete(WQ) : this.unsaved.before.set(WQ, QQ)
-            }))
-          } catch (WQ) {
-            if (console.error("Failed to save outfits", WQ), this.getState().accountId === wQ && [...this.unsaved.slots].every((QQ => {
-                let [WQ, wQ] = QQ;
-                return XQ.get(WQ) === wQ
-              }))) {
-              const WQ = [...XQ.values()].every(VQ);
-              hQ.g.showMessage({
-                translationKey: WQ ? "homePage:deleteOutfitFailed" : "homePage:saveOutfitFailed"
-              });
-              const wQ = new Map(this.unsaved.before);
-              this.unsaved.before.clear(), this.update((QQ => QQ.map(((QQ, WQ) => {
-                var XQ;
-                return null !== (XQ = wQ.get(WQ)) && void 0 !== XQ ? XQ : QQ
-              })))), QQ = !0
-            }
-          }
-          for (const [QQ, WQ] of XQ) this.unsaved.slots.get(QQ) === WQ && this.unsaved.slots.delete(QQ)
-        }
-        this.sending = !1, QQ && this.refresh()
-      }
-    }
-    const AQ = new cQ;
-    var RQ = XQ(402),
-      EQ = XQ(41521),
-      CQ = XQ(1620),
-      uQ = XQ(2410),
-      LQ = XQ(3255),
-      kQ = XQ(2237),
-      fQ = XQ(2756),
-      SQ = XQ(1094);
-    XQ(34541), XQ(3371);
-    Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI;
-    var tQ = XQ(2359),
-      oQ = XQ(1416),
-      eQ = XQ(2451),
-      nQ = XQ(1404),
-      xQ = XQ(1145);
-
-    function YQ(QQ) {
-      let {
-        wornOutfit: WQ,
-        onApply: XQ,
-        onOverwrite: qQ,
-        onDelete: zQ
-      } = QQ;
-      const {
-        t: FQ
-      } = (0, gQ.C)(), {
-        accountId: PQ,
-        data: JQ
-      } = (0, HQ.f)(AQ, !1), {
-        userContext: rQ
-      } = (0, TQ.c)();
-      async function IQ(QQ, WQ) {
-        const XQ = await nQ.NotificationProvider.showPromptPopup({
-            title: "homePage:deleteOutfitConfirm",
-            confirmText: "general:delete",
-            cancelText: "general:cancel",
-            destructive: !0
-          }).getResult(),
-          {
-            accountId: wQ,
-            data: qQ
-          } = AQ.getState();
-        var TQ, sQ;
-        !0 === XQ && wQ === PQ && null !== qQ && (DQ(TQ = qQ[QQ], sQ = WQ) && DQ(sQ, TQ)) && (AQ.clear(QQ), zQ(QQ))
-      }
-      return (0, wQ.useEffect)((() => {
-        AQ.ensureLoaded()
-      }), []), null === JQ || PQ !== rQ.whamm ? null : (0, xQ.jsxs)("div", {
-        className: "CosmeticPackGroup SavedOutfits",
-        children: [(0, xQ.jsx)("div", {
-          className: "CosmeticPackGroupLabel",
-          children: (0, xQ.jsx)("span", {
-            className: "CosmeticPackGroupLabelName",
-            children: FQ("homePage:myOutfits")
-          })
-        }), (0, xQ.jsx)("div", {
-          className: "CharacterPresetsGrid SavedOutfitsGrid",
-          children: JQ.map(((QQ, wQ) => {
-            const TQ = VQ(QQ);
-            return (0, xQ.jsxs)("div", {
-              className: sQ()("SavedOutfitSlot", {
-                SavedOutfitSlotFilled: !TQ
-              }),
-              children: [(0, xQ.jsxs)("div", {
-                ...(0, bQ.ab)(),
-                role: TQ ? "button" : "link",
-                "data-pad-focusable": !0,
-                className: sQ()("CharacterPresetCard SavedOutfitCard", {
-                  SavedOutfitCardEmpty: TQ,
-                  CharacterPresetCardActive: !TQ && DQ(QQ, WQ)
-                }),
-                onClick: () => {
-                  TQ ? AQ.save(wQ, WQ) : XQ(QQ)
-                },
-                children: [TQ && (0, xQ.jsxs)(xQ.Fragment, {
-                  children: [(0, xQ.jsx)(SQ.d, {
-                    name: "plus"
-                  }), FQ("homePage:saveOutfit")]
-                }), !TQ && (0, xQ.jsxs)(xQ.Fragment, {
-                  children: [(0, xQ.jsx)("div", {
-                    className: "SavedOutfitCardPicture",
-                    children: (0, xQ.jsx)(eQ.d, {
-                      cosmetics: QQ
-                    })
-                  }), (0, xQ.jsx)(bQ.T, {
-                    padSecondaryLabelKey: "homePage:saveOutfit",
-                    stopPropagation: !0,
-                    onClick: () => {
-                      DQ(WQ, QQ) || (AQ.save(wQ, WQ), qQ(wQ, QQ))
-                    },
-                    children: FQ("general:save")
-                  })]
-                })]
-              }), !TQ && (0, xQ.jsx)("button", {
-                type: "button",
-                className: "SavedOutfitDeleteButton",
-                "data-pad-destructive": !0,
-                "aria-label": FQ("general:delete"),
-                title: FQ("general:delete"),
-                onClick: () => {
-                  IQ(wQ, QQ)
-                },
-                children: (0, xQ.jsx)(SQ.d, {
-                  name: "trash-can"
-                })
-              })]
-            }, wQ)
-          }))
-        })]
-      })
-    }
-    var NQ = XQ(36684),
-      ZQ = XQ(2668),
-      OQ = XQ(2674);
-
-    function KQ(QQ, WQ, XQ) {
-      return null !== QQ && !(0, ZQ.e)(OQ.e, WQ, XQ, QQ.collected, QQ.ownedPacks)
     }
 
-    function mQ(QQ) {
-      let {
-        locked: WQ,
-        children: XQ
-      } = QQ;
-      return WQ ? (0, xQ.jsx)(MQ, {
-        children: XQ
-      }) : XQ
+    function HM(MM, rM, iM) {
+      const OM = mM(MM);
+      let SM = null,
+        jM = [];
+      return MM => {
+        const aM = OM(MM);
+        if (0 !== aM) return null === SM && (SM = rM.split(zM.s), jM = new Array(SM.length)), jM[aM - 1] ??= iM(SM[aM - 1])
+      }
     }
 
-    function MQ(QQ) {
-      var WQ;
-      let {
-        children: XQ
-      } = QQ;
-      const {
-        t: wQ
-      } = (0, gQ.C)(), {
-        userContext: qQ
-      } = (0, TQ.c)(), zQ = null !== (WQ = qQ.dailyDrop) && void 0 !== WQ && WQ.hidden ? wQ("dailyDrop:lockedFromHidden") : wQ("dailyDrop:lockedFrom");
-      return (0, xQ.jsx)(oQ.e, {
-        tooltipInner: (0, xQ.jsx)(xQ.Fragment, {
-          children: zQ
-        }),
-        children: XQ
-      })
+    function hM(MM) {
+      return MM
     }
 
-    function QW(QQ, WQ, XQ) {
-      return (0, JQ.n)(QQ, WQ).purchasable && !(0, uQ.x)(QQ, WQ, XQ)
+    function JM(MM) {
+      return MM === zM.g ? null : (0, zM.z)(MM)
     }
+    const dM = HM("T$$#&#$T'#$F$#$$%$B#$>#$##=$$1$.)$*#$(&$)#)$N$#$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$+##$&#$$%$*/$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$T$&$($$$*$(#$$1$$1$$1$$1$$1$$1$$)$$)$$)$$)$$)$*)$N2#$.($$1$$)$T$$$,#$4#$)##$V'#$)#[$$+#$#$($$'#%$&$$N)*$4#$$1$$)$:$$##1$##.$#*####*C%$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$,($$($&)$################################2R$$################1$##########-$####################/$##+$(#$$1$$)$T%$$########1$##+$################################################################-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#)$2&$(#$(#$$1$$)$<$$.#$####/$####/$####3$##)#'#'#'#)#'#'#'#'#'#'#'##$B#$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#1$###########$$R&$##)$**$**$0*$%##$%##$%#$#####$%##$%##$%##$%##$%##$%##$%##$%##$%##$%##$%##$%##$%#)$9#9$9#1$$.$*)$*#$*#$*#$*#$*3#)#)#)#)#)#)#)#)#)#)#)#)#)#)#)#,F'$$5$$&$(2$##U$$&2$*5$X$#$H%.$##-$(2$####$&#######'$@#$##$2#######################################b?$1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#IW&$b$I*b$J*b$K*b$L*b$M*b$N*b$O*b$P*b$Q*b$R*b$S*b$T*b$U*b$V*b$W*b$X*b$Y*b$Z*b$[*b$]*b$^*b$_*b$`*b$a*b$b*b$c*b$C+b$D+b$E+b$F+b$G+b$H+Z'&$##b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b&$b&#;$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#########)$J&6$)#;$%#b$$)E,U&$##U&$$#$c&($I$#Y$$1#O%$####-$)I,Q'$b&#)$b&#G($<,$##[+$'#5$$#$$#$$#$$#$$#$$#$$#$B#$$2$,#$$'$$#$##%$##3$##'$########`%$7###S%$##################+$###$##%$###$##%$###$##%$###$##+$###$##%$###$##%$###$##+$###$##'$##%$###$##%$###$##%$###$##%$###$##/$#######$###$##/$$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##S$$c&2$################################################################################################################################U)$2P'$###$##K%$##5$##O&$##C'$##+$##^&$##########A$####################################################)#)#######################################)#)#######################################)#)#######################################)#)###############Y)$##G$$############W'$##W$$", '*|forget-Me-Not|ladder|wheat|jackO\'Lantern|bookshelf|rice|cotton|rocket|cornSeeds|corn|chest|ice|yellowSpawnBlock|whiteSpawnBlock|redSpawnBlock|purpleSpawnBlock|pinkSpawnBlock|orangeSpawnBlock|magentaSpawnBlock|limeSpawnBlock|lightGraySpawnBlock|lightBlueSpawnBlock|greenSpawnBlock|graySpawnBlock|cyanSpawnBlock|brownSpawnBlock|blueSpawnBlock|blackSpawnBlock|redGeneratorSpawnBlock|blueGeneratorSpawnBlock|limeGeneratorSpawnBlock|yellowGeneratorSpawnBlock|cyanGeneratorSpawnBlock|whiteGeneratorSpawnBlock|pinkGeneratorSpawnBlock|grayGeneratorSpawnBlock|diamondGeneratorSpawnBlock|moonstoneGeneratorSpawnBlock|oreGeneratorSpawnBlock|redGoalBlock|blueGoalBlock|pigMobSpawnerBlock|cowMobSpawnerBlock|sheepMobSpawnerBlock|caveGolemMobSpawnerBlock|draugrZombieMobSpawnerBlock|draugrSkeletonMobSpawnerBlock|emptyMobSpawnerBlock|frostGolemMobSpawnerBlock|frostZombieMobSpawnerBlock|frostSkeletonMobSpawnerBlock|draugrKnightMobSpawnerBlock|wolfMobSpawnerBlock|bearMobSpawnerBlock|deerMobSpawnerBlock|stagMobSpawnerBlock|goldWatermelonStagMobSpawnerBlock|colouredChalk^colour=$t(colour:yellow)|colouredChalk^colour=$t(colour:white)|colouredChalk^colour=$t(colour:red)|colouredChalk^colour=$t(colour:purple)|colouredChalk^colour=$t(colour:pink)|colouredChalk^colour=$t(colour:orange)|colouredChalk^colour=$t(colour:magenta)|colouredChalk^colour=$t(colour:lime)|colouredChalk^colour=$t(colour:light_gray)|colouredChalk^colour=$t(colour:light_blue)|colouredChalk^colour=$t(colour:green)|colouredChalk^colour=$t(colour:gray)|colouredChalk^colour=$t(colour:cyan)|colouredChalk^colour=$t(colour:brown)|colouredChalk^colour=$t(colour:blue)|colouredChalk^colour=$t(colour:black)|colouredChalkBricks^colour=$t(colour:yellow)|colouredChalkBricks^colour=$t(colour:white)|colouredChalkBricks^colour=$t(colour:red)|colouredChalkBricks^colour=$t(colour:purple)|colouredChalkBricks^colour=$t(colour:pink)|colouredChalkBricks^colour=$t(colour:orange)|colouredChalkBricks^colour=$t(colour:magenta)|colouredChalkBricks^colour=$t(colour:lime)|colouredChalkBricks^colour=$t(colour:light_gray)|colouredChalkBricks^colour=$t(colour:light_blue)|colouredChalkBricks^colour=$t(colour:green)|colouredChalkBricks^colour=$t(colour:gray)|colouredChalkBricks^colour=$t(colour:cyan)|colouredChalkBricks^colour=$t(colour:brown)|colouredChalkBricks^colour=$t(colour:blue)|colouredChalkBricks^colour=$t(colour:black)|colouredChalkSlab^colour=$t(colour:yellow)|colouredChalkSlab^colour=$t(colour:white)|colouredChalkSlab^colour=$t(colour:red)|colouredChalkSlab^colour=$t(colour:purple)|colouredChalkSlab^colour=$t(colour:pink)|colouredChalkSlab^colour=$t(colour:orange)|colouredChalkSlab^colour=$t(colour:magenta)|colouredChalkSlab^colour=$t(colour:lime)|colouredChalkSlab^colour=$t(colour:light_gray)|colouredChalkSlab^colour=$t(colour:light_blue)|colouredChalkSlab^colour=$t(colour:green)|colouredChalkSlab^colour=$t(colour:gray)|colouredChalkSlab^colour=$t(colour:cyan)|colouredChalkSlab^colour=$t(colour:brown)|colouredChalkSlab^colour=$t(colour:blue)|colouredChalkSlab^colour=$t(colour:black)|colouredChalkBricksSlab^colour=$t(colour:yellow)|colouredChalkBricksSlab^colour=$t(colour:white)|colouredChalkBricksSlab^colour=$t(colour:red)|colouredChalkBricksSlab^colour=$t(colour:purple)|colouredChalkBricksSlab^colour=$t(colour:pink)|colouredChalkBricksSlab^colour=$t(colour:orange)|colouredChalkBricksSlab^colour=$t(colour:magenta)|colouredChalkBricksSlab^colour=$t(colour:lime)|colouredChalkBricksSlab^colour=$t(colour:light_gray)|colouredChalkBricksSlab^colour=$t(colour:light_blue)|colouredChalkBricksSlab^colour=$t(colour:green)|colouredChalkBricksSlab^colour=$t(colour:gray)|colouredChalkBricksSlab^colour=$t(colour:cyan)|colouredChalkBricksSlab^colour=$t(colour:brown)|colouredChalkBricksSlab^colour=$t(colour:blue)|colouredChalkBricksSlab^colour=$t(colour:black)|gorillaMobSpawnerBlock|wildcatMobSpawnerBlock|draugrHuntressMobSpawnerBlock|magmaGolemMobSpawnerBlock|lightbluePortal|lightgrayPortal|horseMobSpawnerBlock|tomato|carrotSeeds|potatoSeeds|strawberries|sugarCane|lettuce|coffeeBean|cauliflower|parsnip|blueberries|redCabbage|beetrootSeeds|whiteBanner|orangeBanner|magentaBanner|lightBlueBanner|yellowBanner|limeBanner|pinkBanner|grayBanner|lightGrayBanner|cyanBanner|purpleBanner|blueBanner|brownBanner|greenBanner|redBanner|blackBanner|draugrBanner|spiritGolemMobSpawnerBlock|spiritWolfMobSpawnerBlock|spiritBearMobSpawnerBlock|spiritStagMobSpawnerBlock|spiritGorillaMobSpawnerBlock|draugrWarperMobSpawnerBlock|smallMagentaPod|smallLightGrayPod|smallRedPod|frostWraithMobSpawnerBlock|draugrReaverMobSpawnerBlock|smallWhitePod|smallOrangePod|smallLightBluePod|smallYellowPod|smallLimePod|smallPinkPod|smallGrayPod|smallCyanPod|smallPurplePod|smallBluePod|smallBrownPod|smallGreenPod|smallBlackPod|skullBanner|rainbowBanner|directionalArrow^colour=$t(colour:white)|directionalArrow^colour=$t(colour:orange)|directionalArrow^colour=$t(colour:magenta)|directionalArrow^colour=$t(colour:light_blue)|directionalArrow^colour=$t(colour:yellow)|directionalArrow^colour=$t(colour:lime)|directionalArrow^colour=$t(colour:pink)|directionalArrow^colour=$t(colour:gray)|directionalArrow^colour=$t(colour:light_gray)|directionalArrow^colour=$t(colour:cyan)|directionalArrow^colour=$t(colour:purple)|directionalArrow^colour=$t(colour:blue)|directionalArrow^colour=$t(colour:brown)|directionalArrow^colour=$t(colour:green)|directionalArrow^colour=$t(colour:red)|directionalArrow^colour=$t(colour:black)|=Smoke Block|stalkerMobSpawnerBlock|croneMobSpawnerBlock|slimeMobSpawnerBlock|ironGuardianMobSpawnerBlock|goldGuardianMobSpawnerBlock|diamondGuardianMobSpawnerBlock|moonstoneGuardianMobSpawnerBlock|camelMobSpawnerBlock|=Rare Lucky Block|=Super Lucky Block|=Rare Weapon Lucky Block|=Super Weapon Lucky Block|=Building Lucky Block|=Rare Building Lucky Block|=Super Building Lucky Block|=Armour Lucky Block|=Rare Armour Lucky Block|=Super Armour Lucky Block|=Tools Lucky Block|=Rare Tools Lucky Block|=Super Tools Lucky Block|=Food Lucky Block|=Rare Food Lucky Block|=Super Food Lucky Block|=Potion Lucky Block|=Rare Potion Lucky Block|=Super Potion Lucky Block|=Block Destroyer TNT|colouredChalkStairs^colour=$t(colour:yellow)|colouredChalkStairs^colour=$t(colour:white)|colouredChalkStairs^colour=$t(colour:red)|colouredChalkStairs^colour=$t(colour:purple)|colouredChalkStairs^colour=$t(colour:pink)|colouredChalkStairs^colour=$t(colour:orange)|colouredChalkStairs^colour=$t(colour:magenta)|colouredChalkStairs^colour=$t(colour:lime)|colouredChalkStairs^colour=$t(colour:light_gray)|colouredChalkStairs^colour=$t(colour:light_blue)|colouredChalkStairs^colour=$t(colour:green)|colouredChalkStairs^colour=$t(colour:gray)|colouredChalkStairs^colour=$t(colour:cyan)|colouredChalkStairs^colour=$t(colour:brown)|colouredChalkStairs^colour=$t(colour:blue)|colouredChalkStairs^colour=$t(colour:black)|colouredChalkBricksStairs^colour=$t(colour:yellow)|colouredChalkBricksStairs^colour=$t(colour:white)|colouredChalkBricksStairs^colour=$t(colour:red)|colouredChalkBricksStairs^colour=$t(colour:purple)|colouredChalkBricksStairs^colour=$t(colour:pink)|colouredChalkBricksStairs^colour=$t(colour:orange)|colouredChalkBricksStairs^colour=$t(colour:magenta)|colouredChalkBricksStairs^colour=$t(colour:lime)|colouredChalkBricksStairs^colour=$t(colour:light_gray)|colouredChalkBricksStairs^colour=$t(colour:light_blue)|colouredChalkBricksStairs^colour=$t(colour:green)|colouredChalkBricksStairs^colour=$t(colour:gray)|colouredChalkBricksStairs^colour=$t(colour:cyan)|colouredChalkBricksStairs^colour=$t(colour:brown)|colouredChalkBricksStairs^colour=$t(colour:blue)|colouredChalkBricksStairs^colour=$t(colour:black)|tikiTerrorMobSpawnerBlock|mapleFence|pineFence|plumFence|cedarFence|aspenFence|jungleFence|palmFence|pearFence|cherryFence|spectralFence|mangoFence|noticeboard|mapleFenceGate|pineFenceGate|plumFenceGate|cedarFenceGate|aspenFenceGate|jungleFenceGate|palmFenceGate|pearFenceGate|cherryFenceGate|spectralFenceGate|mangoFenceGate|ironGoofyGolemMobSpawnerBlock|goldGoofyGolemMobSpawnerBlock|diamondGoofyGolemMobSpawnerBlock|moonstoneGoofyGolemMobSpawnerBlock|autoBench|homesteadCore|starframe|reactorFrame|collider|jetChestplate|atomicSpire|fluidPipe|waterPipe|=Artisan Axe|bowlOfCranberries|=Snowball Launcher|=Bullet|rpg|=67 Base Projectile|=67 Boosted Projectile|=Capitano Grenade|=Scatter Pellet|=Compass|=Chunk Map|=Teleport Heart|=Frost Shard|=Molten Cog|=Choir Bell|=Siege Core|=Flywheel|=Radiant Spark|=Brood Sac|=Bandolier|slownessPotionII|splashSlownessPotionII|poisonPotionII|splashPoisonPotionII|weaknessPotionII|splashWeaknessPotionII|instantDamagePotionII|splashInstantDamagePotionII|speedPotionII|splashSpeedPotionII|defensePotionII|splashDefensePotionII|strengthPotionII|splashStrengthPotionII|jumpPotionII|splashJumpPotionII|splashKnockbackPotionII|regenerationPotionII|splashRegenerationPotionII|instantHealingPotionII|splashInstantHealingPotionII|hastePotionII|splashHastePotionII|shieldPotionII|splashShieldPotionII|xRayVisionPotion|splashXRayVisionPotion|arrowOfXRayVision|miningYieldPotionII|splashMiningYieldPotionII|=AK-47|=M16|=MP40|=TAR-21|=M1911|=One Shot Pistol|=Double Barrel|=AWP|=Deagle|=Striker-12|=VSR|=DMR|=Minigun|=FMR|=SKAR|=Block-19|=Mini Izu|=GPMG|yellowPaintballExplosive|whitePaintballExplosive|redPaintballExplosive|purplePaintballExplosive|pinkPaintballExplosive|orangePaintballExplosive|magentaPaintballExplosive|limePaintballExplosive|lightGrayPaintballExplosive|lightBluePaintballExplosive|greenPaintballExplosive|grayPaintballExplosive|cyanPaintballExplosive|brownPaintballExplosive|bluePaintballExplosive|blackPaintballExplosive|yellowStickyPaintballExplosive|whiteStickyPaintballExplosive|redStickyPaintballExplosive|purpleStickyPaintballExplosive|pinkStickyPaintballExplosive|orangeStickyPaintballExplosive|magentaStickyPaintballExplosive|limeStickyPaintballExplosive|lightGrayStickyPaintballExplosive|lightBlueStickyPaintballExplosive|greenStickyPaintballExplosive|grayStickyPaintballExplosive|cyanStickyPaintballExplosive|brownStickyPaintballExplosive|blueStickyPaintballExplosive|blackStickyPaintballExplosive|yellowSeekingPaintballExplosive|whiteSeekingPaintballExplosive|redSeekingPaintballExplosive|purpleSeekingPaintballExplosive|pinkSeekingPaintballExplosive|orangeSeekingPaintballExplosive|magentaSeekingPaintballExplosive|limeSeekingPaintballExplosive|lightGraySeekingPaintballExplosive|lightBlueSeekingPaintballExplosive|greenSeekingPaintballExplosive|graySeekingPaintballExplosive|cyanSeekingPaintballExplosive|brownSeekingPaintballExplosive|blueSeekingPaintballExplosive|blackSeekingPaintballExplosive|yellowQuickPaintballExplosive|whiteQuickPaintballExplosive|redQuickPaintballExplosive|purpleQuickPaintballExplosive|pinkQuickPaintballExplosive|orangeQuickPaintballExplosive|magentaQuickPaintballExplosive|limeQuickPaintballExplosive|lightGrayQuickPaintballExplosive|lightBlueQuickPaintballExplosive|greenQuickPaintballExplosive|grayQuickPaintballExplosive|cyanQuickPaintballExplosive|brownQuickPaintballExplosive|blueQuickPaintballExplosive|blackQuickPaintballExplosive|auraXpPotionII|splashAuraXpPotionII|worldBuilderWand|barnacleJaw|triPointedNeedlefish|cowsMilk|sheepsMilk|[{"str":"Common Lottery Ticket","style":{"color":"#4d4d4d"}}]|[{"str":"Uncommon Lottery Ticket","style":{"color":"#A9FF21"}}]|[{"str":"Rare Lottery Ticket","style":{"color":"#84E0FF"}}]|[{"str":"Epic Lottery Ticket","style":{"color":"#800080"}}]|[{"str":"Legendary Lottery Ticket","style":{"color":"#ffa500"}}]|=Sword Upgrade|=Armour Upgrade|=Tools Upgrade|=Clovers|=Void Wings|=Lucky Bomb|=Unlucky Bomb|=Swap Orb|=Golden Clover|=Sticky Bomb Launcher|=Impact Grenade Launcher|=Sticky Charge Launcher|=Cluster Bomb Launcher|=Rocket Launcher|=Amethite|=Amethite Fragment|=Amethite Pickaxe|=Amethite Axe|=Amethite Spade|=Amethite Sword|=Amethite Hoe|=Amethite Helmet|=Amethite Chestplate|=Amethite Leggings|=Amethite Boots|=Amethite Gauntlets|=Amethite Bow|=Amethite Crossbow|=Amethite Crossbow Charged|=Amethite Spear|=Amethite Dagger|=Amethite Boomerang|=Amethite Club|=Amethite Mace|=Amethite Whip|=Magmasteel|=Magmasteel Fragment|=Magmasteel Pickaxe|=Magmasteel Axe|=Magmasteel Spade|=Magmasteel Sword|=Magmasteel Hoe|=Magmasteel Helmet|=Magmasteel Chestplate|=Magmasteel Leggings|=Magmasteel Boots|=Magmasteel Gauntlets|=Magmasteel Bow|=Magmasteel Crossbow|=Magmasteel Crossbow Charged|=Magmasteel Spear|=Magmasteel Dagger|=Magmasteel Boomerang|=Magmasteel Club|=Magmasteel Mace|=Magmasteel Whip|=Rubellite|=Rubellite Fragment|=Rubellite Pickaxe|=Rubellite Axe|=Rubellite Spade|=Rubellite Sword|=Rubellite Hoe|=Rubellite Helmet|=Rubellite Chestplate|=Rubellite Leggings|=Rubellite Boots|=Rubellite Gauntlets|=Rubellite Bow|=Rubellite Crossbow|=Rubellite Crossbow Charged|=Rubellite Spear|=Rubellite Dagger|=Rubellite Boomerang|=Rubellite Club|=Rubellite Mace|=Rubellite Whip|=Serpentite|=Serpentite Fragment|=Serpentite Pickaxe|=Serpentite Axe|=Serpentite Spade|=Serpentite Sword|=Serpentite Hoe|=Serpentite Helmet|=Serpentite Chestplate|=Serpentite Leggings|=Serpentite Boots|=Serpentite Gauntlets|=Serpentite Bow|=Serpentite Crossbow|=Serpentite Crossbow Charged|=Serpentite Spear|=Serpentite Dagger|=Serpentite Boomerang|=Serpentite Club|=Serpentite Mace|=Serpentite Whip|=Cracked Rubellite Pickaxe|depositSeedCopper|depositSeedGold|depositSeedVoltite|depositSeedCoal|depositSeedIron|depositSeedStone|depositSeedUranium', JM),
+      yM = HM("$J$#$&$$F&$23$$J$$$A$$c$$,^'$&H2$$'$$'$$0$*9$$R$#49$$($$&$$%$$$#,C(##$$#$&U)#$#$$($B+#2R$$1#7$%#+$6#$$)$J$O$#*-$1#M1$$a$$&'#%$&)$$4$.&$(;$*%$$$$$#$$#$,Z/$$T&$&V$$$Z-$###$%/V$O$$&2$*5#X$#$V%.$&2$&#$*&$$5$$E$#c2R1$&$$cc$c]$$$R%$*G=$]/=$2:$J5-$b*#G$$,,#%$+##$#4+#+##$+#%$$*$$*$$^%$$#$&#$$#$$#$&#$*#$&#$$#$$'$$^$###%8<#$########[%#$#$7###'#/$###$##/$##%$#D$#A#D$#A#D$#A#D$#A%$$#$*$$##################+$###$##$#$###$##$#$###$##$#$###$##$#$##$#$###$##$#$###$##$#$###$##&#$$#$###$##&#$##$#$###$##$#$###$##$#$###$##$#$###$##&#$&#$&#$$#$###$##&#$&#$2H$$A#B2#A#A#AL%A#A#A#A#b&####################################################################################$2P'$###$##$#$C$##$C$##$$%$$*$$($$#$$6$$%$(E%$$&$F$*$.##-#-#-#-#-#A$+#A#############################$###3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$###3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$#V'#3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$#V'#3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$1W'#63>#a&#b&#C'#D'#E'#C'$'V'#63>#a&#b&#C'#D'#E'#C'$'V'#63>#a&#b&#C'#D'#E'#C'$'W'#63>#a&#b&#C'#D'#E'#C'$,#W&$#######Y'#Z'#['#Y'#Z'#['#Y'#Z'#['#Y'#Z'#['#Y'#Z'#['#Y'#Z'#['#Y'#Z'#['#Y'#Z'#['#6b$$+#)$", "*|emptyBookshelfDescription|=Prevents other factions from changing blocks and\nopening chests in the placed chunk|spikesDescription|fatMushroomDescription|spawnBlockDescription|teamGeneratorSpawnBlockDescription|goalBlockDescription|enchantingTableDescription|antlersDescription|ceilingClimbableDescription|jumpPadDescription|rocketShipDescription|=Place it to start a 30 second fuse. When it goes off, every placed block on the map is removed. Lucky blocks survive.|fluidPipeDescription|pickaxeDescription|axeDescription|spadeDescription|swordDescription|hoeDescription|throwableItemDescription|=Rapidly fires snowballs!|=The base projectile for the 67 character in Heroes v Brainrots|=The boosted projectile for the 67 character in Heroes v Brainrots|=A small explosive grenade thrown by Capitano Explovissimo in Heroes v Brainrots|=Primary spread shot from Scatter in Heroes v Brainrots|bowDescription|compassDescription|=Drop into any locked chunk to instantly unlock it.|foodDescription|watermelonSliceDescription|melonSliceDescription|rawFoodDescription|=The still-beating core of a Blink. Salvaged from a Warp Stalker.|=A splinter of cryogenic shell that never melts. Salvaged from a Frost Revenant.|=A gear from an overload mechanism, seized mid-cycle. Salvaged from a Magma Warden.|=The toll that calls the dead. Salvaged from a Hollow Choir.|=The firing heart of a barrage. Salvaged from a Siege Engine.|=The wheel a room-mill spins around. Salvaged from a Carousel.|=A mote of the failure state itself. Salvaged from Breach Zero.|=A sac filled with an acidic bile. Still full. Salvaged from a Broodfather.|=Her charge belt. Three still on it, and nobody has volunteered to count again. Salvaged from a Deadlock.|slownessPotionDescription|splashSlownessPotionDescription|poisonPotionDescription|splashPoisonPotionDescription|weaknessPotionDescription|splashWeaknessPotionDescription|instantDamagePotionDescription|splashInstantDamagePotionDescription|milkPotionDescription|speedPotionDescription|splashSpeedPotionDescription|defensePotionDescription|splashDefensePotionDescription|strengthPotionDescription|splashStrengthPotionDescription|jumpPotionDescription|splashJumpPotionDescription|splashKnockbackPotionDescription|regenerationPotionDescription|splashRegenerationPotionDescription|instantHealingPotionDescription|splashInstantHealingPotionDescription|hastePotionDescription|splashHastePotionDescription|shieldPotionDescription|splashShieldPotionDescription|miningYieldPotionDescription|splashMiningYieldPotionDescription|balloonDescription|popupTowerDescription|paintballGunDescription|paintballDescription|paintballExplosiveDescription|stickyPaintballExplosiveDescription|seekingPaintballExplosiveDescription|quickPaintballExplosiveDescription|paintBowDescription|pigSpawnOrbDescription^mob=Pig|cowSpawnOrbDescription^mob=Cow|sheepSpawnOrbDescription^mob=Sheep|horseSpawnOrbDescription^mob=Horse|camelSpawnOrbDescription^mob=Camel|ironGoofyGolemSpawnOrbDescription^mob=Iron Goofy Golem|goldGoofyGolemSpawnOrbDescription^mob=Gold Goofy Golem|diamondGoofyGolemSpawnOrbDescription^mob=Diamond Goofy Golem|moonstoneGoofyGolemSpawnOrbDescription^mob=Moonstone Goofy Golem|deerSpawnOrbDescription^mob=Deer|slimeSpawnOrbDescription^mob=Slime|wolfSpawnOrbDescription^mob=Wolf|wildcatSpawnOrbDescription^mob=Wildcat|spiritGolemSpawnOrbDescription^mob=Spirit Golem|spiritWolfSpawnOrbDescription^mob=Spirit Wolf|spiritBearSpawnOrbDescription^mob=Spirit Bear|spiritStagSpawnOrbDescription^mob=Spirit Stag|spiritGorillaSpawnOrbDescription^mob=Spirit Gorilla|bearSpawnOrbDescription^mob=Bear|stagSpawnOrbDescription^mob=Stag|goldWatermelonStagSpawnOrbDescription^mob=Gold Watermelon Stag|gorillaSpawnOrbDescription^mob=Gorilla|caveGolemSpawnOrbDescription^mob=Cave Golem|draugrZombieSpawnOrbDescription^mob=Draugr Zombie|draugrSkeletonSpawnOrbDescription^mob=Draugr Skeleton|frostGolemSpawnOrbDescription^mob=Frost Golem|frostZombieSpawnOrbDescription^mob=Frost Zombie|frostSkeletonSpawnOrbDescription^mob=Frost Skeleton|draugrKnightSpawnOrbDescription^mob=Draugr Knight|draugrHuntressSpawnOrbDescription^mob=Draugr Huntress|magmaGolemSpawnOrbDescription^mob=Magma Golem|draugrWarperSpawnOrbDescription^mob=Draugr Warper|frostWraithSpawnOrbDescription^mob=Frost Wraith|draugrReaverSpawnOrbDescription^mob=Draugr Reaver|stalkerSpawnOrbDescription^mob=Stalker|croneSpawnOrbDescription^mob=Crone|ironGuardianSpawnOrbDescription^mob=Iron Guardian|goldGuardianSpawnOrbDescription^mob=Gold Guardian|diamondGuardianSpawnOrbDescription^mob=Diamond Guardian|moonstoneGuardianSpawnOrbDescription^mob=Moonstone Guardian|tikiTerrorSpawnOrbDescription^mob=Tiki Terror|auraXpPotionDescription|splashAuraXpPotionDescription|firecrackerDescription|firecrackerPebbleDescription|spearDescription|daggerDescription|boomerangDescription|clubDescription|maceDescription|whipDescription|=Take it to the Lottery stall in the spawn hub to redeem it for a reward.|clockDescription|=Use to permanently advance your Sword tier for this match. Share spare upgrades with your team.|=Use to permanently advance your Armour tier for this match. Share spare upgrades with your team.|=Use to permanently advance your Pickaxe and Axe tier for this match. Share spare upgrades with your team.|=Earned from lucky blocks, kills and beds. Spend them at your base's Lucky Trader and Lucky Upgrades.|=Keep one in your inventory. Falling into the void uses it up and puts you back on solid ground.|=A random lucky effect for everyone it splashes, you included. Usually good!|=A random unlucky effect for everyone it splashes, you included. Usually bad!|=Throw near an enemy or mob to swap places with them.|=A shiny golden four-leaf clover.|=Sticks where it lands and goes off by itself.|=Bursts on the first thing it hits.|=Sticks where it lands. Set them all off with Attack.|=Splits into five bomblets.|=Flies straight and bursts on impact.|elementalShardDescription|forgeFragmentDescription|=Ruby calls it cracked, not beaten. A sturdy pickaxe ready for the stubborn stone in her mine.|swordBladeDescription|swordGuardDescription|swordHandleDescription|cagedMobDescription", JM),
+      lM = new Map,
+      EM = new Map;
+    let UM = -1;
 
-    function WW(QQ, WQ) {
-      return Object.entries(QQ).some((QQ => {
-        let [XQ, wQ] = QQ;
-        return QW(XQ, wQ, WQ)
+    function GM(MM, rM, iM) {
+      UM !== (0, QM.h)() && (UM = (0, QM.h)(), lM.clear(), EM.clear());
+      let OM = MM.get(rM);
+      return void 0 === OM && (OM = iM(), void 0 !== OM && MM.set(rM, OM)), OM
+    }
+    const CM = HM("_$QN+###Y$#b'#%$=%/#I'%##7%))+%[%(#%9##%)(#%9(#%?(I$%'('%%('%%('%%('%#(%%%('%%('%%('%#(%%%('%#('%%('%%('%%('%%('%#(%%#(%%#(%%%('%#(%%%(#%I%##%%)M&%A)A%A)b&%b&(Q.%)(#%)(W%%#(1%#(-%#(#%#(Q$%#(G(%/(#%1('%I%$K&%+$+&3(-$%%+$+&3(-$%%+$+&3(-$%%+$+&3(-$?&#%#$3(-$+&#%#$3(-$+&#%#$3(-$+&#%#$3(-$+&+%#$;%#$I$%#$1%#$5%+&W$%#$O$%/&#$-%#$'%", "Tool|Item|Armour|GrayscaleArmour|Chargeable|FullAuto|Directional|Gun", hM),
+      eM = HM("J,##O$##$#%/$#%/$#%/$-%9$1%#$)%A$#%b&$1%-$[+%S%$%%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%9$M2#+%-$#%/$#%/$#%/$#%%$-&/$-%+$9%3$-%E$$b%%I%$A%#$%%=$b(&-$-&#%/$#%/$#%/$#%%$-&)%'$-%#$7%M'$E+%#$%%#$?%K)$5%#$-&#%%$#%+$#%/$#%/$#%/$#%%$-&Q$%#$-&'%#$C$%C%$b.&1%#$-&'%+$#%/$#%/$#%/$#%%$-&)%%$5%/$%%E$$O%%%$#%-$#%#$#%#$^<%#$b)%#$+%)$1%)$1%)$)%%$G*%#$I1%A$+%O$$#%#$A%)$U%%#$b%%A$E%%#$#%%$I$%'$5%%$#%#$-&U$%I$$bO$#)$bV('CQ$%+$Y/%G%$1&;$1&I($)&=$A&U%$#%#$-%1$7%^)$Y$&=$b&%1$b&%)$b*%5$)%+$5%^$###Y$#b'#%(=)/#I')##7))-+)[%,#)9##)),#)9,#)?,I$)',')%,')%,')%,')#,%)%,')%,')%,')#,%)%,')#,')%,')%,')%,')%,')#,%)#,%)#,%)%,')#,%)%,#)I%##)%-M&)A-A)A-b&)b&,Q.)),#)),W%)#,1)#,-)#,#)#,Q$)#,G()/,#)1,')I%(K&)+(+*3,-(%)+(+*3,-(%)+(+*3,-(%)+(+*3,-(?*#)#(3,-(+*#)#(3,-(+*#)#(3,-(+*#)#(3,-(+*+)#(;)#(I$)#(1)#(5)+*W$)#(O$)/*#(-)#(')", "CubeBlock|TwoDBlock|SlabBlock|StairsBlock|TwoDTool|TwoDItem|TwoDArmour|GrayscaleTwoDArmour|Chargeable|FullAuto|Directional|Gun", hM),
+      bM = HM(".W]+#%#%#%#%#%#%#%#%%%#%#%#%%%#%#%#", "30|20|16|1|2|5|7|12|8|100|21|24|22|75", Number),
+      wM = HM("&PO+#####%####################$#%#,#%#####,%&#)#,#.#%#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1$FD$'#*#/#,#&$8'#*#/#,#&$8'#*#/#,#&$8'#*#/#,#&$1'#*#&#/#,#'#*#&#/#,#'#*#&#/#,$3'#*#&#/#,$3'#*#&#/#,$3'#*#&#/#,$3'#*#&#/#,$_$-#######&$U$######7#'#)#4", "0.07|0.09|0.11|0.13|0.18|0.21|0.24|0.22|0.1|0.14|0.16|0.19|0.05|0.06|0.08|0.25|0.12|0.2|0|0.27|0.15", Number),
+      tM = HM(">W]+#%#)$)%9$", "none|sniper", hM),
+      gM = HM("*W]+#%#%#%#%$%#)&%(%%%$%%)$)'%&", "semi_automatic|submachine|rifle|pistol|shotgun", hM),
+      uM = mM("]%LV+#c&M.$4C2$44$44$44$49$4/$4/$4/$"),
+      RM = mM("$a&#$9$Z$K?$&;$$[($(c($6Y&$$)$$$$&G%$*$$$*$(V*$Z$V$$$#$$#$&+$$#$$%$$$$$$$$$$&$$$#$$($,E0$$T&$&V$$D$`-$(%$6*$$%$T$M$$$L%$6;$$$$$2$$W:$*D^%$$N%$BB$BB$BB$BB$BB$BB$BB$BB$BB$BB$BB$2O'$2*$2*$2*$2*$2*$2*$2*$2*$2*$:*$0=$&^$$$N$$(Q$$$]$$.#$&6$$K%$:.$*I$$*&$*S+$6,$"),
+      pM = HM("$DO+#######%#$ZD$$#%#&#'%(#$#%#&#'%(#$#%#&#'%(#$#%#&#'%(#$#%#&#'%(#$#%#&#'%($Z$(.1($'(.1($'(.1($'(.1($2(.+($((.+($((.+($((.+($C&($@$", "1|2|3|4|5", (MM => "" === MM ? null : Number(MM))),
+      WM = HM("$F(#$%$$&#$)%$)%$0$$,$$%$$&$$6$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$@$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$'$$I$%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$.#$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$2%$)%$)%$,&$.$$.$$'$$&$$%$$'$$7$$%$$%$$%$$%$$%$$%$$%$$5#$%#$9#$J$&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$-&$'%$)%$)%$,&$'$$:$$G%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$B<$$R$$$%$$-$$%$$;&$0%$)%$)%$,&$'$$%$$%$$%$$%$$%$$&&$/$$%$$&$$F$&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'$$%$$&&$/%$)%$)%$,&$'$$)$$N%$$,&$%#$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$;$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$'$$%$$%$$%$$%$$%$$%$$%$$%$$'$$X$&$%*$5&$%*$I$$$&$$&$$&$$&$$6$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$&$$%$$*&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$U$&$'&$'$$)#$7$$%$$%$$%$$%$$?+$8$$%$$%$$%$$%+$7#$'#$+$$%$$%$$%$$%$$6&$'&$&$$&$$%$$%$$%$$9&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$Q^%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$V3$$b$$$F%%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$-$$%$$%$$%$$%$$%$$0$$%$$%$$%$$%$$%$$%$$%$$&$$%$$%$$%$$%$$P$$$*$$)$$)$$)$$)$$&$$>$$+$$)$$A$$8$$)$$)$$)$$)$$*$$B$$,$$%$$%$$%$$%$$&$$-$$?+$b$$$)+$O)$0O(#$[%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$+#*..:#.@#.,6.*#.&#.&%.$%.($.&$.&%.$%.&$.$%.&%.&%.&%.&%.$%.$$.$$.&$.$%.&$.$P).$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$^(.*&.$M$.$*.$(.$#.$:.0U%.2#.$H&.$%.$8.$%.$8.$%.$8.$%.$=.$%.$3.$%.$3.$%.$3.$%.", "meta,rot1|meta,rot1,closed|meta,rot1,bot|meta,rot1,books6|meta,rot1,books0|meta,rot1,empty|meta,rot1,top|meta,conn,none|meta,input,none|meta,output,none|meta,charging1|meta,dir1", (MM => MM.split(zM.m).join(zM.s))),
+      sM = HM(",QN+####$/#+#+###+#4####1+##S(+$$#2A#$H%#$%0$%0$%0$%0$%0$%0$%0$%0$%0$U.0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0:C/(:.($W$$#&#'#(#*++#0$%0&&(&$($$$#&#'#(#*++#0$%0&&(&$($$$#&#'#(#*++#0$%0&&(&$($$$#&#'#(#*++#0$%0&&(&$(?+$#(#0$%0&&(&#(,#+$#(#0$%0&&(&#(,#+$#(#0$%0&&(&#(,#+$#(#0$%0&&(&#(,#+$'$,X$+$=(09+", "Break Speed,Momentum,Mining Yield,Mining Aura|Break Speed,Momentum|Break Speed,Momentum,Lumber Aura|Break Speed,Momentum,Digging Aura|Damage,Attack Speed,Critical Damage|Damage,Attack Speed,Critical Damage,Horizontal Knockback|Break Speed,Momentum,Farming Yield,Farming Aura|Protection,Health,Health Regen|Protection,Health,Health Regen,Knockback Resist|Protection,Health,Health Regen,Stomp Damage|Horizontal Knockback,Vertical Knockback,Damage|Firecracker Cooldown,Firecracker Boost,Gliding Speed|Arrow Speed,Arrow Damage,Quick Charge", (MM => Object.freeze(MM.split(",")))),
+      DM = HM(",$#0#$-#-$&#%2#%(#$$$$'%B$##%b$&)$$#$#%A&$&#)%,$%#$#%$&%###%:#$$$$##$%)$%%#)$1).)$$#)$))%$#)$%$$&)B%&#)#&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%$$'$&#$$%%$/)$))$))$))$))$))$))$))$))$))$))$))$))$))$))$))&)$#)$%%#$,#%2%%($$$*$$#%#$#)$1)$1)$1)$1)$1)$1)$))$))$))$))$))$)$#%%$$#$$'%$'%$'%$'%$'%$'%$'%$'$$'$$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%(-$#%#$#)$1)$)$$$%$'$-%##*%$$%$$'$$'$#%$%%$%$$'$B#&#)$%)$%)$%)$%)$%)$%)$%)B%*#)$%)$9)$)$$($($$$%)#$&$$$-&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&&($$#%%$$')$1)$)$$$%$')$%$.$)%$$R%)$))$))$))$))$))$))$))$))$))$))$))$))$))$))$))*,$$0'B#'$R$)$%'4%'$%'6%'#%5#%%$'+#$#%'$$#%#$#)$1)$)$$$%$')$%)$%)$%)$%)$%)&%$*'$)+#*$%*$%+#)$%%C%&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$')&)$$'$(#$$#%#$#)$1)$)$$$%$')(%$$'*#$%+/$%+-)6#)#%#+$H$$$#$#).&$#*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*,9+$+*$1*$1*$1*$1*$1*$1*$*+&F$)#*$%*$$*$$*&%+#*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$9*$E$)$)*$&*$&*$&*$&*$6*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$3*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*B'&+)C$'$$)$&)#$$'$$'*(%$$Q'+$:%%+*&+'$$#$$'*$&$$%+$**$=%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$+$$K_%*$I$+#*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$F'*$1*$1*$1*$1*$1*$1*$1*$1*$1*$1**1+&:%#$.Q)%$+%<]1#,#,-(-,Y)(#,8##&#-*%##-*#,$#,$#,$#,$#,$#,$#,$#,B#,$2,,#,$',$#(&#(4#((#($&($%($%($%($%($%($%($%($%($%($*(#,@..D$#.'-%+'-$++%-+.#().#().#().#(%.#().#().#().#(%.#().#('.#().#().#().#().#(%.#(%.#(%.#().#(%.#(#.&#($#($#($#($#($%($#($#($#($#($#($#($#($#($#($#($#($#-%(#,#(B&,V%R)+.U'.K%((#-#.1-#.--#.#-#.Q$-#.G'-',$&,0*.#(1.#(#-,#(,#(,#(,#(,#(,#($8,$),&7-',#(#,-($%(.&(%-',#(#,-($%(.&(%-',#(#,-($%(.&(%-',#(#,-($%(L$&(#-%($%(8&(#-%($%(8&(#-%($%(8&(#-%($%(8&(+-", "nature|building|colours|worldTools|combat|utility|decoration|mobs|tools|materials|food", hM),
+      kM = HM("$b&#$R)#$)%$)%$)%$)%$1%$)%$)%$)%$)%$)%$)%$)%$)%$)%$_7%$'%$'%$'%$'%$'%$'%$-%$'%$'%$'%$'%$'%$'%$'%$a$#$T%%$)%$)%$)%$)%$1%$)%$)%$)%$)%$)%$)%$)%$)%$)%$>#B#'$V$&4%'$%'6%'$)#$b%#$%)$G$%$'%$'%$'%$'%$'%$'%$-%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$-%$'%$'%$'%$'%$'%$'%$'%$`'%$9%$9%$9%$9%$Q$%$9%$9%$9%$9%$9%$9%$9%$9%$9%$9%&U(&$&%$$%$$%$'%$$%$$%$$%$'%$$%$$%$$%$$%$$%$$%$$%$$%$9%$E$&D$[*$$$&$&&$P5%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%*CZ&)c'Q;%&N$%<#%(G$&$%&&#&&Q)&$#&$#&$#&$#&$%&$#&$#&$#&$#&$#&$#&$#&$#&$#&$#&$#&&,%<#%*W))$-)BS(%B$%", "6|2|8|10|17|9", Number);
+
+    function ZM(MM) {
+      const rM = dM(MM);
+      return null !== rM ? rM : GM(lM, MM, (() => {
+        const rM = (0, QM.g)(MM);
+        return void 0 === rM ? void 0 : (0, zM.F)(rM)
       }))
     }
 
-    function XW(QQ) {
-      var WQ;
-      let {
-        pack: XQ,
-        ownedPacks: wQ,
-        showStoreLink: qQ = !1,
-        children: TQ
-      } = QQ;
-      const {
-        t: zQ
-      } = (0, gQ.C)(), FQ = CQ.d[XQ], PQ = FQ.purchasable && !wQ.includes(XQ) && CQ.u.includes(XQ), JQ = LQ.l[XQ];
-      return (0, xQ.jsxs)("div", {
-        className: sQ()("CosmeticPackGroup", {
-          CosmeticPackGroupLocked: PQ
-        }),
-        children: [JQ && (0, xQ.jsx)(JQ, {}), (0, xQ.jsxs)("div", {
-          className: "CosmeticPackGroupLabel",
-          children: [(0, xQ.jsx)("span", {
-            className: "CosmeticPackGroupLabelName",
-            children: null !== (WQ = FQ.displayName) && void 0 !== WQ ? WQ : XQ
-          }), (PQ || qQ) && (0, xQ.jsxs)(bQ.I, {
-            onClick: () => {
-              PQ ? (0, LQ.j)(XQ) : (0, vQ.q)({
-                mode: "self",
-                source: "characterCustomisation"
-              })
-            },
-            children: [(0, xQ.jsx)(SQ.d, {
-              name: "store"
-            }), " ", zQ("general:viewInShop")]
-          })]
-        }), PQ && "bee" === XQ && (0, xQ.jsx)(LQ.c, {}), TQ]
-      })
+    function oM(MM) {
+      const rM = yM(MM);
+      return null !== rM ? rM : GM(EM, MM, (() => {
+        var rM;
+        return null !== (rM = (0, zM.D)(ZM(MM))) && void 0 !== rM ? rM : void 0
+      }))
     }
 
-    function wW(QQ) {
-      let {
-        equippedEmoteIds: WQ,
-        ownedPacks: XQ,
-        canBuy: wQ,
-        onUpdateLoadout: qQ,
-        onEmoteSelected: TQ,
-        onEquipPreviewSkin: zQ
-      } = QQ;
-      const {
-        t: PQ
-      } = (0, gQ.C)(), rQ = new Set(WQ), IQ = new Map, jQ = Object.keys(JQ.f.emote).sort(((QQ, WQ) => {
-        var XQ, wQ, qQ, TQ;
-        return (null !== (XQ = null === (wQ = (0, JQ.j)("emote", QQ)) || void 0 === wQ ? void 0 : wQ.clientIdx) && void 0 !== XQ ? XQ : 0) - (null !== (qQ = null === (TQ = (0, JQ.j)("emote", WQ)) || void 0 === TQ ? void 0 : TQ.clientIdx) && void 0 !== qQ ? qQ : 0)
-      })).filter((QQ => {
-        const WQ = (0, JQ.n)("emote", QQ),
-          qQ = (0, uQ.x)("emote", QQ, XQ);
-        return !(WQ.purchasable && !qQ && !wQ) && (WQ.clientSelectable || qQ)
-      }));
-      for (const sQ of jQ) {
-        const QQ = (0, JQ.j)("emote", sQ).cosmeticPack;
-        IQ.has(QQ) || IQ.set(QQ, []), IQ.get(QQ).push(sQ)
-      }
-      const BQ = Array.from(IQ.keys());
-      return (0, xQ.jsxs)("div", {
-        className: "CharCustomisPartSelectorWrapper",
-        children: [!1, (0, xQ.jsxs)("div", {
-          className: "EmoteLoadoutSummary",
-          children: [(0, xQ.jsx)("span", {
-            className: "EmoteLoadoutSummaryText SmallTextBold",
-            children: PQ("emotes:equippedCount", {
-              count: WQ.length,
-              max: FQ.o
-            })
-          }), (0, xQ.jsx)("span", {
-            className: "EmoteLoadoutSummaryHint SmallTextLight",
-            children: PQ("emotes:loadoutHint")
-          })]
-        }), BQ.map((QQ => {
-          const wQ = IQ.get(QQ);
-          return (0, xQ.jsx)(XW, {
-            pack: QQ,
-            ownedPacks: XQ,
-            children: (0, xQ.jsx)("div", {
-              className: "CosmeticPackGroupItems",
-              children: wQ.map((QQ => {
-                var wQ;
-                const zQ = WQ.indexOf(QQ),
-                  gQ = -1 !== zQ,
-                  JQ = WQ.length >= FQ.o,
-                  IQ = QW("emote", QQ, XQ),
-                  jQ = IQ || !gQ && JQ,
-                  BQ = (0, pQ.i)(QQ);
-                return (0, xQ.jsxs)("div", {
-                  className: sQ()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
-                    SelectedCharCustomPartWrapper: gQ
-                  }),
-                  onClick: () => {
-                    TQ(QQ)
-                  },
-                  children: [(0, xQ.jsxs)("div", {
-                    className: "CharCustomPart EmoteCustomPart",
-                    children: [(0, xQ.jsx)("div", {
-                      className: "EmoteCustomPartIcon",
-                      style: {
-                        backgroundImage: `url(/textures/charSkins/previews/emote_${QQ}_preview.png)`
-                      },
-                      "aria-hidden": !0
-                    }), (0, xQ.jsx)("span", {
-                      className: "EmoteCustomPartLabel SmallTextBold",
-                      children: null !== (wQ = null === BQ || void 0 === BQ ? void 0 : BQ.displayName) && void 0 !== wQ ? wQ : QQ
-                    })]
-                  }), (0, xQ.jsxs)("div", {
-                    className: "EmoteCustomPartToggleContainer",
-                    children: [gQ && (0, xQ.jsx)("span", {
-                      className: "EmoteCustomPartSlotBadge",
-                      children: zQ + 1
-                    }), IQ && (0, xQ.jsx)(SQ.d, {
-                      name: "lock",
-                      className: "LockedCosmeticIcon"
-                    }), (0, xQ.jsx)(oQ.e, {
-                      tooltipInner: (0, xQ.jsx)(xQ.Fragment, {
-                        children: PQ(gQ ? "general:remove" : "general:add")
-                      }),
-                      delayShow: 0,
-                      delayHide: 0,
-                      children: (0, xQ.jsx)("div", {
-                        className: sQ()("EmoteCustomPartToggle", {
-                          EmoteCustomPartToggleDisabled: jQ,
-                          EmoteCustomPartToggleEquipped: gQ
-                        }),
-                        onClick: XQ => {
-                          XQ.stopPropagation(), jQ || function(QQ) {
-                            rQ.has(QQ) ? qQ(WQ.filter((WQ => WQ !== QQ))) : WQ.length >= FQ.o || qQ([...WQ, QQ])
-                          }(QQ)
-                        },
-                        children: (0, xQ.jsx)(SQ.d, {
-                          name: gQ ? "minus" : "plus",
-                          "aria-hidden": !0
-                        })
-                      })
-                    })]
-                  })]
-                }, QQ)
-              }))
-            })
-          }, QQ)
-        }))]
-      })
+    function fM(MM) {
+      return CM(MM)
     }
-    const qW = (0, wQ.memo)((function(QQ) {
-      let {
-        selectedTab: WQ
-      } = QQ;
-      const XQ = "characters" === WQ ? "skin" : WQ,
-        {
-          t: zQ
-        } = (0, gQ.C)(),
-        {
-          userContext: jQ,
-          isUserContextUpdating: BQ
-        } = (0, TQ.c)(),
-        VQ = (0, qQ.d)(),
-        {
-          gameState: pQ
-        } = (0, dQ.n)(["gameState"]),
-        [HQ, aQ] = (0, wQ.useState)({}),
-        [lQ, hQ] = (0, wQ.useState)({}),
-        [iQ, cQ] = (0, wQ.useState)(null),
-        {
-          previewEmote: LQ,
-          triggerEmote: oQ
-        } = (0, GQ.c)(),
-        eQ = (0, wQ.useRef)(FQ.x.reduce(((QQ, WQ) => (QQ[WQ] = (0, IQ.e)(WQ), QQ)), {})),
-        nQ = (0, wQ.useRef)(!1),
-        ZQ = (0, wQ.useRef)(null),
-        OQ = (0, wQ.useRef)(null),
-        MQ = (0, wQ.useRef)(null);
 
-      function qW() {
-        null !== OQ.current && (clearTimeout(OQ.current), OQ.current = null);
-        const QQ = MQ.current;
-        null !== QQ && (MQ.current = null, (0, NQ.e)(jQ, [
-          ["emote", QQ]
-        ]))
+    function YM(MM) {
+      return eM(MM)
+    }
+
+    function NM(MM) {
+      return bM(MM)
+    }
+
+    function AM(MM) {
+      return wM(MM)
+    }
+
+    function xM(MM) {
+      return tM(MM)
+    }
+
+    function vM(MM) {
+      return gM(MM)
+    }
+
+    function FM(MM) {
+      return 0 !== RM(MM)
+    }
+
+    function BM(MM) {
+      return pM(MM)
+    }
+
+    function XM(MM) {
+      return 0 !== uM(MM)
+    }
+
+    function IM(MM) {
+      const rM = WM(MM);
+      if (void 0 === rM || rM.startsWith(zM.o)) return null === rM || void 0 === rM ? void 0 : rM.slice(zM.o.length);
+      const iM = (0, QM.g)(MM);
+      return void 0 === iM ? void 0 : `${iM}${zM.s}${rM}`
+    }
+
+    function KM(MM) {
+      var rM;
+      return null !== (rM = sM(MM)) && void 0 !== rM ? rM : LM
+    }
+    let qM = null;
+
+    function TM() {
+      if (null === qM) {
+        const MM = [],
+          rM = new zM.t(SM);
+        let iM = 0;
+        for (; !rM.done;) iM += (0, zM.I)(rM.next()), MM.push(iM);
+        qM = Object.freeze(MM)
       }
+      return qM
+    }
 
-      function TW(QQ, WQ, XQ) {
-        var wQ, qQ, TQ;
-        eQ.current = {
-          ...eQ.current,
-          [QQ]: WQ
-        }, VQ(), XQ && ((0, NQ.e)(jQ, [
-          [QQ, WQ]
-        ]), cQ(null));
-        const zQ = (0, JQ.j)(QQ, WQ);
-        if (null !== zQ && void 0 !== zQ && zQ.colourGroup && null !== (wQ = CQ.d[zQ.cosmeticPack].colourGroups) && void 0 !== wQ && null !== (qQ = wQ[zQ.colourGroup]) && void 0 !== qQ && qQ.showSwatchSelector) {
-          const XQ = (0, JQ.g)(WQ);
-          XQ && hQ((WQ => ({
-            ...WQ,
-            [`${zQ.cosmeticPack}_${QQ}_${zQ.colourGroup}`]: parseInt(XQ[1])
-          })))
+    function VM(MM) {
+      return DM(MM)
+    }
+
+    function cM(MM, rM) {
+      var iM;
+      return 0 !== ((null !== (iM = kM(MM)) && void 0 !== iM ? iM : 0) & rM)
+    }
+
+    function Mr(MM) {
+      return cM(MM, zM.d.OnlyInSearch)
+    }
+
+    function rr(MM) {
+      return cM(MM, zM.d.OnlyInCategory)
+    }
+
+    function ir(MM) {
+      return cM(MM, zM.d.DevOnly)
+    }
+
+    function Or(MM) {
+      return !cM(MM, zM.d.HiddenByDefault) && void 0
+    }
+
+    function Sr(MM, rM, iM, OM) {
+      var SM;
+      const jM = null !== (SM = kM(MM)) && void 0 !== SM ? SM : 0;
+      return 0 !== (jM & zM.d.DisabledInPublicLobbies) && rM || 0 !== (jM & zM.d.DisabledInProduction) && !0 || !iM || !OM && 0 !== (jM & zM.d.DevOnly)
+    }
+    let jr = null;
+
+    function ar() {
+      if (null === jr) {
+        const MM = aM.split(zM.s),
+          rM = new Map,
+          iM = new zM.t(jM);
+        let OM = 0,
+          SM = 0;
+        for (; !iM.done;) {
+          OM += (0, zM.I)(iM.next());
+          const jM = iM.next();
+          rM.set(OM, Object.freeze(MM.slice(SM, SM + jM))), SM += jM
         }
-        null !== (TQ = ZQ.current) && void 0 !== TQ && TQ.isReady() && ZQ.current.updateCosmetic(QQ, WQ)
+        jr = rM
       }
-
-      function zW(QQ) {
-        aQ((WQ => {
-          const XQ = {
-            ...WQ
-          };
-          return delete XQ[QQ], XQ
-        }))
-      }
-
-      function sW(QQ, WQ) {
-        let {
-          undoable: XQ
-        } = WQ;
-        Object.keys(HQ).length > 0 && aQ({});
-        const wQ = Object.entries(QQ).filter((QQ => {
-          let [WQ, XQ] = QQ;
-          return eQ.current[WQ] !== XQ && !QW(WQ, XQ, FW) && !KQ(PW, WQ, XQ)
-        }));
-        XQ ? wQ.length > 0 && cQ({
-          kind: "worn",
-          outfit: yQ(eQ.current)
-        }) : cQ(null);
-        for (const [qQ, TQ] of wQ) TW(qQ, TQ, !1);
-        wQ.length > 0 && (0, NQ.e)(jQ, wQ)
-      }(0, UQ.b)("cosmeticsUpdated", (QQ => {
-        let WQ = !1;
-        for (const {
-            local: XQ,
-            dT: wQ,
-            HT: qQ
-          }
-          of QQ) {
-          if (!XQ) return;
-          WQ = !0, nQ.current || TW(wQ, qQ, !1), VQ()
-        }
-        WQ && (nQ.current = !0)
-      })), (0, wQ.useEffect)((() => {
-        if (!BQ) {
-          for (const [QQ, WQ] of Object.entries(jQ.getPlayerCosmetics())) TW(QQ, WQ, !1);
-          VQ()
-        }
-      }), [BQ]), (0, wQ.useEffect)((() => () => {
-        qW()
-      }), []);
-      const FW = jQ.getOwnedCosmeticPacks(),
-        PW = function(QQ, WQ) {
-          return null === QQ ? null : {
-            collected: new Set(QQ.collected),
-            ownedPacks: WQ
-          }
-        }(jQ.dailyDrop, FW),
-        gW = (0, tQ.usePurchasesAllowed)(),
-        JW = Object.keys(JQ.f[XQ]).filter((QQ => {
-          const WQ = (0, JQ.n)(XQ, QQ),
-            wQ = (0, uQ.x)(XQ, QQ, FW);
-          return !(WQ.purchasable && !wQ && !gW) && (WQ.clientSelectable || wQ)
-        })).sort(((QQ, WQ) => {
-          var wQ, qQ, TQ, zQ;
-          return (null !== (wQ = null === (qQ = (0, JQ.j)(XQ, QQ)) || void 0 === qQ ? void 0 : qQ.clientIdx) && void 0 !== wQ ? wQ : 0) - (null !== (TQ = null === (zQ = (0, JQ.j)(XQ, WQ)) || void 0 === zQ ? void 0 : zQ.clientIdx) && void 0 !== TQ ? TQ : 0)
-        })),
-        rW = new Map;
-      for (const wQ of JW) {
-        var IW;
-        const QQ = null === (IW = (0, JQ.j)(XQ, wQ)) || void 0 === IW ? void 0 : IW.cosmeticPack;
-        rW.has(QQ) || rW.set(QQ, []), rW.get(QQ).push(wQ)
-      }
-      const jW = function(QQ, WQ) {
-          const XQ = new Set,
-            wQ = new Set;
-          for (const [qQ, TQ] of Object.entries(JQ.f[QQ])) {
-            if (void 0 === TQ.colourGroup) continue;
-            const zQ = `${TQ.cosmeticPack}_${TQ.colourGroup}`;
-            (QW(QQ, qQ, WQ) ? wQ : XQ).add(zQ)
-          }
-          return new Set([...XQ].filter((QQ => wQ.has(QQ))))
-        }(XQ, FW),
-        BW = new Map;
-      for (const [wQ, qQ] of rW) {
-        const QQ = [],
-          WQ = new Map;
-        for (const wQ of qQ) {
-          var yW, VW;
-          const qQ = null !== (yW = null === (VW = (0, JQ.j)(XQ, wQ)) || void 0 === VW ? void 0 : VW.colourGroup) && void 0 !== yW ? yW : null;
-          WQ.has(qQ) || (WQ.set(qQ, []), QQ.push(qQ)), WQ.get(qQ).push(wQ)
-        }
-        const TQ = QQ.map((QQ => {
-          var qQ;
-          const TQ = WQ.get(QQ),
-            zQ = QQ ? null === (qQ = CQ.d[wQ].colourGroups) || void 0 === qQ ? void 0 : qQ[QQ] : void 0,
-            sQ = !0 === (null === zQ || void 0 === zQ ? void 0 : zQ.showSwatchSelector) && !jW.has(`${wQ}_${QQ}`);
-          if (sQ && zQ) {
-            var FQ;
-            const WQ = null !== (FQ = lQ[`${wQ}_${XQ}_${QQ}`]) && void 0 !== FQ ? FQ : (0, CQ.i)(zQ.colours);
-            return {
-              groupName: QQ,
-              showSwatch: sQ,
-              cosmetics: TQ.filter((QQ => {
-                const XQ = (0, JQ.g)(QQ);
-                return !XQ || WQ.toString() === XQ[1].toString()
-              }))
-            }
-          }
-          return {
-            groupName: QQ,
-            cosmetics: TQ,
-            showSwatch: sQ
-          }
-        }));
-        BW.set(wQ, TQ)
-      }
-      const DW = Array.from(rW.keys()),
-        pW = new Map;
-      for (const [wQ, qQ] of Object.entries(rQ.c)) {
-        const QQ = CQ.d[qQ.cosmeticPack],
-          WQ = !WW(qQ.cosmetics, FW),
-          XQ = CQ.q.some((QQ => (0, CQ.f)(QQ) === wQ));
-        (QQ.clientSelectable || XQ || WQ) && ((!QQ.purchasable || WQ || gW) && (pW.has(qQ.cosmeticPack) || pW.set(qQ.cosmeticPack, []), pW.get(qQ.cosmeticPack).push([wQ, qQ])))
-      }
-      const GW = Array.from(pW.keys());
-      return (0, xQ.jsxs)("div", {
-        className: "CharCustomisationBody",
-        children: [("cape" === XQ || "nameColour" === XQ) && !jQ.playerHasRank("super") && (0, xQ.jsxs)("div", {
-          className: "CharCustomisationBodyHeader",
-          children: [(0, xQ.jsx)(SQ.d, {
-            name: "bolt"
-          }), zQ("homePage:unlockWithSuperRank"), gW && (0, xQ.jsx)(bQ.s, {
-            onClick: () => {
-              (0, vQ.q)({
-                mode: "self",
-                source: "characterCustomisation",
-                openItem: "superRank"
-              })
-            },
-            children: zQ("general:getItNow")
-          })]
-        }), (0, xQ.jsxs)("div", {
-          className: "CharCustomisationBodyInner",
-          children: ["characters" === WQ && (0, xQ.jsxs)("div", {
-            className: "CharCustomisPartSelectorWrapper",
-            children: [!1, (0, xQ.jsx)(YQ, {
-              wornOutfit: yQ(eQ.current),
-              onApply: QQ => {
-                sW(QQ, {
-                  undoable: !0
-                })
-              },
-              onOverwrite: (QQ, WQ) => {
-                cQ({
-                  kind: "slot",
-                  slot: QQ,
-                  outfit: WQ
-                })
-              },
-              onDelete: QQ => {
-                cQ((WQ => "slot" === (null === WQ || void 0 === WQ ? void 0 : WQ.kind) && WQ.slot === QQ ? null : WQ))
-              }
-            }), GW.map((QQ => {
-              const WQ = pW.get(QQ);
-              return (0, xQ.jsx)(XW, {
-                pack: QQ,
-                ownedPacks: FW,
-                showStoreLink: !CQ.t.includes(QQ) && WQ.some((QQ => {
-                  let [, {
-                    cosmetics: WQ
-                  }] = QQ;
-                  return WW(WQ, FW)
-                })),
-                children: (0, xQ.jsx)("div", {
-                  className: "CharacterPresetsGrid",
-                  children: WQ.map((QQ => {
-                    let [WQ, {
-                      cosmetics: XQ
-                    }] = QQ;
-                    const wQ = WW(XQ, FW),
-                      qQ = !wQ && function(QQ, WQ) {
-                        return Object.entries(WQ).some((WQ => {
-                          let [XQ, wQ] = WQ;
-                          return KQ(QQ, XQ, wQ)
-                        }))
-                      }(PW, XQ),
-                      TQ = wQ || qQ,
-                      zQ = DQ(XQ, HQ),
-                      FQ = !zQ && DQ(XQ, eQ.current);
-                    return (0, xQ.jsx)(mQ, {
-                      locked: qQ,
-                      children: (0, xQ.jsxs)("div", {
-                        "data-pad-focusable": !0,
-                        className: sQ()("CharacterPresetCard", {
-                          CharacterPresetCardActive: FQ,
-                          CharacterPresetCardTryingOn: zQ
-                        }),
-                        onClick: () => {
-                          TQ ? function(QQ) {
-                            DQ(QQ, HQ) ? aQ({}) : aQ({
-                              ...QQ
-                            })
-                          }(XQ) : sW(XQ, {
-                            undoable: !0
-                          })
-                        },
-                        children: [(0, xQ.jsx)("div", {
-                          className: "CharacterPresetCardPreview",
-                          style: {
-                            backgroundImage: `url(/textures/charSkins/previews/character_${WQ}_preview.png)`
-                          }
-                        }), TQ && (0, xQ.jsx)(SQ.d, {
-                          name: "lock",
-                          className: "LockedCosmeticIcon"
-                        })]
-                      })
-                    }, WQ)
-                  }))
-                })
-              }, QQ)
-            }))]
-          }), "emote" === WQ && (0, xQ.jsx)(wW, {
-            equippedEmoteIds: (0, IQ.i)(eQ.current.emote),
-            ownedPacks: FW,
-            canBuy: gW,
-            onUpdateLoadout: QQ => {
-              const WQ = (0, IQ.j)(QQ);
-              var XQ;
-              eQ.current = {
-                ...eQ.current,
-                emote: WQ
-              }, jQ.setPlayerCosmetics("emote", WQ), VQ(), XQ = WQ, MQ.current = XQ, null !== OQ.current && clearTimeout(OQ.current), OQ.current = setTimeout(qW, 350)
-            },
-            onEmoteSelected: oQ,
-            onEquipPreviewSkin: () => {
-              ! function(QQ, WQ) {
-                for (const XQ of FQ.x) "cape" !== XQ && "nameColour" !== XQ && "emote" !== XQ && QQ(XQ, "skin" === XQ ? "skin_preview" : `${XQ}_none`, !1);
-                WQ()
-              }(TW, VQ)
-            }
-          }), "characters" !== WQ && "emote" !== WQ && (0, xQ.jsxs)("div", {
-            className: "CharCustomisPartSelectorWrapper",
-            children: [!1, DW.map((QQ => {
-              const WQ = BW.get(QQ);
-              return (0, xQ.jsx)(XW, {
-                pack: QQ,
-                ownedPacks: FW,
-                children: WQ.map((WQ => {
-                  var wQ;
-                  let {
-                    groupName: qQ,
-                    cosmetics: TQ,
-                    showSwatch: zQ
-                  } = WQ;
-                  const FQ = qQ ? null === (wQ = CQ.d[QQ].colourGroups) || void 0 === wQ ? void 0 : wQ[qQ] : void 0,
-                    gQ = `${QQ}_${XQ}_${qQ}`;
-                  return (0, xQ.jsxs)("div", {
-                    className: "CosmeticPackGroupItems",
-                    children: [zQ && FQ && (0, xQ.jsx)("div", {
-                      className: "CosmeticColorSwatchCell",
-                      children: [...FQ.colours.map(((QQ, WQ) => ({
-                        color: QQ,
-                        index: WQ
-                      })))].sort(((QQ, WQ) => QQ.color.order - WQ.color.order)).map((WQ => {
-                        var wQ;
-                        let {
-                          color: TQ,
-                          index: zQ
-                        } = WQ;
-                        return (0, xQ.jsx)("div", {
-                          className: sQ()("CosmeticColorOption", {
-                            CosmeticColorOptionSelected: (null !== (wQ = lQ[gQ]) && void 0 !== wQ ? wQ : (0, CQ.i)(FQ.colours)) === zQ
-                          }),
-                          style: {
-                            backgroundColor: `rgb(${TQ.rbg.join(",")})`
-                          },
-                          onClick: () => {
-                            var WQ;
-                            hQ((QQ => ({
-                              ...QQ,
-                              [gQ]: zQ
-                            })));
-                            const wQ = HQ[XQ],
-                              TQ = wQ ? (0, JQ.j)(XQ, wQ) : null,
-                              sQ = (null === TQ || void 0 === TQ ? void 0 : TQ.cosmeticPack) === QQ,
-                              FQ = sQ ? wQ : eQ.current[XQ],
-                              PQ = sQ ? TQ : (0, JQ.j)(XQ, FQ);
-                            if ((null === PQ || void 0 === PQ ? void 0 : PQ.cosmeticPack) !== QQ) return;
-                            if ((null !== (WQ = null === PQ || void 0 === PQ ? void 0 : PQ.colourGroup) && void 0 !== WQ ? WQ : null) !== qQ) return;
-                            const rQ = (0, JQ.g)(FQ);
-                            if (rQ) {
-                              const QQ = `${XQ}_${rQ[0]}_${zQ}`;
-                              QW(XQ, QQ, FW) || KQ(PW, XQ, QQ) ? aQ((WQ => ({
-                                ...WQ,
-                                [XQ]: QQ
-                              }))) : (sQ && zW(XQ), TW(XQ, QQ, !0))
-                            }
-                          }
-                        }, TQ.rbg.join())
-                      }))
-                    }), TQ.map((QQ => {
-                      const WQ = QQ === eQ.current[XQ],
-                        wQ = HQ[XQ] === QQ,
-                        qQ = QW(XQ, QQ, FW),
-                        TQ = !qQ && KQ(PW, XQ, QQ),
-                        zQ = qQ || TQ;
-                      let FQ = !0;
-                      return zQ || WQ || ("cape" !== XQ || (0, RQ.Hd)(jQ.getPlayerRanks(), QQ)) && ("nameColour" !== XQ || jQ.playerHasRank("super")) || (FQ = !1), (0, xQ.jsx)(mQ, {
-                        locked: TQ,
-                        children: (0, xQ.jsxs)("div", {
-                          className: sQ()("CharCustomPartWrapper", {
-                            SelectedCharCustomPartWrapper: WQ && !wQ,
-                            TryingOnCharCustomPartWrapper: wQ,
-                            DisabledCharCustomPartWrapper: !FQ,
-                            CharCustomPartWrapperProfileEffect: "profileEffect" === XQ
-                          }),
-                          onClick: () => {
-                            if (FQ)
-                              if (zQ) aQ((WQ => {
-                                if (WQ[XQ] === QQ) {
-                                  const QQ = {
-                                    ...WQ
-                                  };
-                                  return delete QQ[XQ], QQ
-                                }
-                                return {
-                                  ...WQ,
-                                  [XQ]: QQ
-                                }
-                              }));
-                              else {
-                                var WQ;
-                                if (HQ[XQ] && zW(XQ), QQ === eQ.current[XQ]) return;
-                                null !== (WQ = ZQ.current) && void 0 !== WQ && WQ.isReady() && TW(XQ, QQ, !0)
-                              }
-                          },
-                          children: ["profileEffect" === XQ ? (0, xQ.jsx)("div", {
-                            className: "CharCustomPart CharCustomProfileEffect",
-                            children: (0, xQ.jsx)(fQ.c, {
-                              playerSocialPreview: (0, kQ.b)(QQ, {
-                                name: jQ.getPlayerName(),
-                                cosmetics: jQ.getPlayerCosmetics()
-                              }),
-                              showLocation: !1,
-                              opensProfileCard: !1
-                            })
-                          }) : (0, xQ.jsx)("div", {
-                            className: sQ()("CharCustomPart", {
-                              PixelatedImage: "cape" === XQ
-                            }),
-                            style: (0, JQ.j)(XQ, QQ).previewTex ? {
-                              backgroundImage: `url(/textures/charSkins/previews/${(0,JQ.j)(XQ,QQ).previewTex}.png)`
-                            } : {
-                              backgroundColor: PQ.s[QQ]
-                            }
-                          }), zQ && (0, xQ.jsx)(SQ.d, {
-                            name: "lock",
-                            className: "LockedCosmeticIcon"
-                          })]
-                        })
-                      }, QQ)
-                    }))]
-                  }, null !== qQ && void 0 !== qQ ? qQ : "ungrouped")
-                }))
-              }, QQ)
-            }))]
-          }), iQ && (0, xQ.jsxs)(bQ.h, {
-            className: "CharCustomisationUndo",
-            onClick: () => {
-              "worn" === iQ.kind ? sW(iQ.outfit, {
-                undoable: !1
-              }) : (AQ.save(iQ.slot, iQ.outfit), cQ(null))
-            },
-            children: [(0, xQ.jsx)(SQ.d, {
-              name: "rotate-left"
-            }), zQ("general:undo")]
-          }), (0, xQ.jsx)(EQ.CharacterPreview, {
-            ref: ZQ,
-            forcedCosmetics: HQ,
-            Rs: LQ.id,
-            emotePlaySeq: LQ.seq,
-            onReady: () => {
-              for (const QQ of FQ.x) TW(QQ, eQ.current[QQ], !1)
-            }
-          })]
-        })]
-      })
-    }))
-  },
-  41521: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      CharacterPreview: () => JQ
-    });
-    var wQ = XQ(61),
-      qQ = XQ(2978),
-      TQ = XQ(1273),
-      zQ = XQ(2678),
-      sQ = XQ(34541),
-      FQ = XQ(3862),
-      PQ = XQ(1145);
-    const gQ = .6 * Math.PI,
-      JQ = (0, wQ.memo)((0, wQ.forwardRef)((function(QQ, WQ) {
-        let {
-          onReady: XQ,
-          onDrawn: JQ,
-          owner: rQ = "other",
-          framing: IQ = "player",
-          forcedCosmetics: jQ,
-          Rs: BQ,
-          emotePlaySeq: yQ,
-          turntableFromYaw: VQ = null
-        } = QQ;
-        const DQ = (0, wQ.useRef)(null),
-          {
-            width: pQ,
-            height: GQ
-          } = (0, qQ.d)(DQ),
-          UQ = (0, wQ.useRef)(null),
-          bQ = (0, wQ.useRef)({}),
-          vQ = (0, wQ.useRef)({}),
-          [dQ, HQ] = (0, wQ.useState)(!1),
-          aQ = (0, wQ.useRef)(XQ);
-        aQ.current = XQ;
-        const lQ = (0, wQ.useRef)(JQ);
-        lQ.current = JQ;
-        const hQ = (0, wQ.useRef)(null),
-          iQ = (0, wQ.useRef)(!1),
-          cQ = (0, wQ.useRef)(!1),
-          AQ = (0, wQ.useCallback)((() => {
-            const QQ = UQ.current;
-            if (!QQ || !lQ.current || iQ.current || !cQ.current) return;
-            const WQ = {};
-            hQ.current = WQ, queueMicrotask((() => {
-              if (hQ.current !== WQ) return;
-              const XQ = Promise.all(TQ.x.map((WQ => QQ.untilDrawn(WQ)))).catch((QQ => {
-                  console.error("Failed to draw the character preview", QQ)
-                })),
-                wQ = new Promise((QQ => {
-                  setTimeout(QQ, 1e4)
-                }));
-              Promise.race([XQ, wQ]).then((() => {
-                var XQ;
-                UQ.current !== QQ || hQ.current !== WQ || iQ.current || (iQ.current = !0, null === (XQ = lQ.current) || void 0 === XQ || XQ.call(lQ))
-              }))
-            }))
-          }), []);
-        return (0, wQ.useImperativeHandle)(WQ, (() => {
-          const QQ = (QQ, WQ) => {
-            var XQ;
-            (bQ.current[QQ] = WQ, null !== jQ && void 0 !== jQ && jQ[QQ]) || (null === (XQ = UQ.current) || void 0 === XQ || XQ.setCosmetic(QQ, WQ), AQ())
-          };
-          return {
-            updateCosmetic: QQ,
-            setAllCosmetics(WQ) {
-              for (const wQ of TQ.x) {
-                var XQ;
-                QQ(wQ, null !== (XQ = WQ[wQ]) && void 0 !== XQ ? XQ : (0, zQ.e)(wQ))
-              }
-            },
-            isReady() {
-              var QQ, WQ;
-              return null !== (QQ = null === (WQ = UQ.current) || void 0 === WQ ? void 0 : WQ.isReady()) && void 0 !== QQ && QQ
-            },
-            resetCamera() {
-              var QQ;
-              null === (QQ = UQ.current) || void 0 === QQ || QQ.resetCamera()
-            },
-            setOrbit(QQ) {
-              var WQ;
-              null === (WQ = UQ.current) || void 0 === WQ || WQ.setOrbit(QQ)
-            },
-            turnCamera(QQ) {
-              var WQ;
-              const XQ = sQ.c[IQ];
-              null === (WQ = UQ.current) || void 0 === WQ || WQ.setOrbit({
-                ...XQ,
-                yaw: XQ.yaw + QQ
-              })
-            },
-            async ensureReadyForCapture(QQ) {
-              var WQ;
-              await (null === (WQ = UQ.current) || void 0 === WQ ? void 0 : WQ.untilDrawn(QQ))
-            },
-            getDevTools() {
-              var QQ;
-              return null !== (QQ = UQ.current) && void 0 !== QQ && QQ.isReady() ? UQ.current.dev : null
-            }
-          }
-        }), [jQ, IQ, AQ]), (0, wQ.useEffect)((() => {
-          const QQ = FQ.e.register(rQ),
-            WQ = sQ.h.openCharacter(DQ.current, IQ);
-          UQ.current = WQ;
-          let XQ = !0;
-          return WQ.ready.then((() => {
-            XQ && (HQ(!0), aQ.current())
-          })).catch((QQ => {
-            console.error("Failed to set up the character preview", QQ)
-          })), () => {
-            XQ = !1, QQ(), WQ.resetCamera(), WQ.close(), UQ.current = null
-          }
-        }), []), (0, wQ.useEffect)((() => {
-          pQ <= 0 || GQ <= 0 || UQ.current.resize(pQ, GQ)
-        }), [pQ, GQ]), (0, wQ.useEffect)((() => {
-          if (!dQ) return;
-          const QQ = vQ.current;
-          for (const WQ of TQ.x) {
-            const XQ = null === jQ || void 0 === jQ ? void 0 : jQ[WQ],
-              wQ = QQ[WQ];
-            XQ && XQ !== wQ ? UQ.current.setCosmetic(WQ, XQ) : !XQ && wQ && bQ.current[WQ] && UQ.current.setCosmetic(WQ, bQ.current[WQ])
-          }
-          vQ.current = {
-            ...jQ
-          }, cQ.current = !0, AQ()
-        }), [jQ, dQ, AQ]), (0, wQ.useEffect)((() => {
-          dQ && UQ.current.playEmote(null !== BQ && void 0 !== BQ ? BQ : null)
-        }), [BQ, yQ, dQ]), (0, wQ.useEffect)((() => {
-          if (!dQ || null === VQ) return;
-          const QQ = UQ.current,
-            {
-              pitch: WQ,
-              radius: XQ
-            } = sQ.c[IQ];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return QQ.setOrbit({
-            yaw: VQ + gQ,
-            pitch: WQ,
-            radius: XQ
-          }), () => {
-            QQ.resetCamera()
-          };
-          const wQ = performance.now();
-          let qQ = 0;
-          const TQ = zQ => {
-            QQ.setOrbit({
-              yaw: VQ + (zQ - wQ) / 6e3 * 2 * Math.PI,
-              pitch: WQ,
-              radius: XQ
-            }), qQ = requestAnimationFrame(TQ)
-          };
-          return qQ = requestAnimationFrame(TQ), () => {
-            cancelAnimationFrame(qQ), QQ.resetCamera()
-          }
-        }), [dQ, VQ]), (0, PQ.jsx)("div", {
-          className: "CharCustomisationPreview",
-          ref: DQ
-        })
-      })))
-  },
-  36684: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => zQ
-    });
-    var wQ = XQ(2003),
-      qQ = XQ(1548);
-    const TQ = new class {
-      constructor() {
-        this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
-      }
-      save(QQ, WQ) {
-        QQ !== this.userContext && this.sendHeld(), this.userContext = QQ;
-        for (const [wQ, qQ] of WQ) this.pending.set(wQ, qQ);
-        if (null !== this.timer) return;
-        const XQ = this.lastSentAt + 1100 - Date.now();
-        XQ <= 0 ? this.send(QQ) : (this.timer = setTimeout((() => {
-          this.sendHeld()
-        }), XQ), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
-          "hidden" === document.visibilityState && this.sendHeld()
-        }))))
-      }
-      sendHeld() {
-        null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
-      }
-      send(QQ) {
-        const WQ = Array.from(this.pending, (QQ => {
-          let [WQ, XQ] = QQ;
-          return {
-            dT: WQ,
-            HT: XQ
-          }
-        }));
-        this.pending.clear(), this.lastSentAt = Date.now(), qQ.e.updateCosmetics(QQ, WQ).catch((QQ => {
-          console.error("Failed to update cosmetics", QQ)
-        }))
-      }
-    };
-
-    function zQ(QQ, WQ) {
-      for (const [XQ, wQ] of WQ) QQ.setPlayerCosmetics(XQ, wQ);
-      if (null === wQ.gameBridge.latest("connectedGame").websocketUrl) TQ.save(QQ, WQ);
-      else
-        for (const [XQ, qQ] of WQ) wQ.gameBridge.send("updateMyCosmetic", {
-          dT: XQ,
-          HT: qQ
-        })
+      return jr
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

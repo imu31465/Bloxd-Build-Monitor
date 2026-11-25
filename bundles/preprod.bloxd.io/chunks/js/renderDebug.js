@@ -1,30 +1,30 @@
-export const id = 51;
-export const ids = [51];
+export const id = 55;
+export const ids = [55];
 export const modules = {
-  4997: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => gQ
+  5062: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => zM
     });
-    var wQ = XQ(26),
-      qQ = XQ(31),
-      TQ = XQ(1335),
-      zQ = XQ(3045);
-    const sQ = 3e4,
-      FQ = 1e3;
+    var OM = iM(19),
+      SM = iM(22),
+      jM = iM(1313),
+      aM = iM(3122);
+    const PM = 3e4,
+      nM = 1e3;
 
-    function PQ() {
-      return "visible" === document.visibilityState && "inGame" === wQ.b.get("gameState") && (0, TQ.A)()
+    function QM() {
+      return "visible" === document.visibilityState && "inGame" === OM.d.get("gameState") && (0, jM.B)()
     }
 
-    function gQ(QQ, WQ) {
-      (0, zQ.n)() || function(QQ, WQ, XQ) {
-        let wQ = 0;
-        const qQ = setInterval((() => {
-          WQ() && (wQ += FQ, wQ >= QQ && (clearInterval(qQ), XQ()))
-        }), FQ)
-      }(sQ, PQ, (() => {
-        WQ().then((() => {
-          QQ(`saved for the player after ${sQ/1e3} s of play`), (0, zQ.A)(), qQ.k.mB("chat", {
+    function zM(MM, rM) {
+      (0, aM.q)() || function(MM, rM, iM) {
+        let OM = 0;
+        const SM = setInterval((() => {
+          rM() && (OM += nM, OM >= MM && (clearInterval(SM), iM()))
+        }), nM)
+      }(PM, QM, (() => {
+        rM().then((() => {
+          MM(`saved for the player after ${PM/1e3} s of play`), (0, aM.F)(), SM.i.Tz("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,61 +36,61 @@ export const modules = {
       }))
     }
   },
-  4995: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      installRenderDebug: () => JX,
-      renderDebugPlayable: () => IX,
-      startRenderDebug: () => rX,
-      waitForDraw: () => jX
+  5058: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      installRenderDebug: () => Li,
+      renderDebugPlayable: () => Hi,
+      startRenderDebug: () => mi,
+      waitForDraw: () => Ji
     });
-    var wQ = XQ(1881),
-      qQ = XQ(4997),
-      TQ = XQ(3045);
-    const zQ = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
+    var OM = iM(1919),
+      SM = iM(5062),
+      jM = iM(3122);
+    const aM = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
 
-    function sQ(QQ) {
-      return 7 & QQ
+    function PM(MM) {
+      return 7 & MM
     }
 
-    function FQ(QQ) {
-      return QQ >>> 11 & 1
+    function nM(MM) {
+      return MM >>> 11 & 1
     }
 
-    function PQ(QQ) {
-      return [1 + (QQ >>> 18 & 63), 1 + (QQ >>> 24 & 63)]
+    function QM(MM) {
+      return [1 + (MM >>> 18 & 63), 1 + (MM >>> 24 & 63)]
     }
 
-    function gQ(QQ, WQ) {
-      const [XQ, , wQ] = QQ, qQ = sQ(wQ), TQ = function(QQ, WQ, XQ) {
-        return WQ + (1 === (22 >>> QQ & 1) ? 4 - XQ : XQ) & 3
-      }(qQ, FQ(wQ), WQ), zQ = qQ >>> 1, [gQ, JQ] = PQ(XQ), rQ = 1 === TQ || 2 === TQ ? gQ : 0, IQ = TQ >= 2 ? JQ : 0, jQ = [63 & XQ, XQ >>> 6 & 63, XQ >>> 12 & 63];
-      return jQ[2 === zQ ? 0 : 2] += rQ, jQ[1 === zQ ? 0 : 1] += IQ, jQ
+    function zM(MM, rM) {
+      const [iM, , OM] = MM, SM = PM(OM), jM = function(MM, rM, iM) {
+        return rM + (1 === (22 >>> MM & 1) ? 4 - iM : iM) & 3
+      }(SM, nM(OM), rM), aM = SM >>> 1, [zM, LM] = QM(iM), mM = 1 === jM || 2 === jM ? zM : 0, HM = jM >= 2 ? LM : 0, hM = [63 & iM, iM >>> 6 & 63, iM >>> 12 & 63];
+      return hM[2 === aM ? 0 : 2] += mM, hM[1 === aM ? 0 : 1] += HM, hM
     }
 
-    function JQ(QQ) {
-      const WQ = Math.max(...PQ(QQ[0]));
-      return 1 === WQ ? "1" : WQ <= 4 ? "2-4" : WQ <= 16 ? "5-16" : "17-64"
+    function LM(MM) {
+      const rM = Math.max(...QM(MM[0]));
+      return 1 === rM ? "1" : rM <= 4 ? "2-4" : rM <= 16 ? "5-16" : "17-64"
     }
-    const rQ = 16;
+    const mM = 16;
 
-    function IQ(QQ) {
-      let WQ = 2166136261;
-      for (let XQ = 0; XQ < QQ.length; XQ++) WQ = Math.imul(WQ ^ QQ[XQ], 16777619);
-      return WQ >>> 0
+    function HM(MM) {
+      let rM = 2166136261;
+      for (let iM = 0; iM < MM.length; iM++) rM = Math.imul(rM ^ MM[iM], 16777619);
+      return rM >>> 0
     }
 
-    function jQ(QQ, WQ) {
-      let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
-      const wQ = Math.max(0, WQ - XQ),
-        qQ = Math.min(QQ.length, WQ + XQ),
-        TQ = [];
-      for (let zQ = wQ; zQ < qQ; zQ++) {
-        const XQ = QQ[zQ].toString(16).padStart(2, "0");
-        TQ.push(zQ === WQ ? `[${XQ}]` : XQ)
+    function hM(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
+      const OM = Math.max(0, rM - iM),
+        SM = Math.min(MM.length, rM + iM),
+        jM = [];
+      for (let aM = OM; aM < SM; aM++) {
+        const iM = MM[aM].toString(16).padStart(2, "0");
+        jM.push(aM === rM ? `[${iM}]` : iM)
       }
-      return TQ.join(" ")
+      return jM.join(" ")
     }
-    const BQ = {
+    const JM = {
         NO_ERROR: 0,
         POINTS: 0,
         ARRAY_BUFFER: 34962,
@@ -168,438 +168,438 @@ export const modules = {
         FLOAT_MAT3: 35675,
         FLOAT_MAT4: 35676
       },
-      yQ = "_vs2fs_location0";
-    const VQ = 0,
-      DQ = 4,
-      pQ = 6,
-      GQ = [0, 1, 2, 0, 2, 3],
-      UQ = 2048,
-      bQ = 4,
-      vQ = 256,
-      dQ = 64,
-      HQ = 268435456,
-      aQ = 65536,
-      lQ = /^#version [^\n]*\/\/ program (\S+)$/m;
+      dM = "_vs2fs_location0";
+    const yM = 0,
+      lM = 4,
+      EM = 6,
+      UM = [0, 1, 2, 0, 2, 3],
+      GM = 2048,
+      CM = 4,
+      eM = 256,
+      bM = 64,
+      wM = 268435456,
+      tM = 65536,
+      gM = /^#version [^\n]*\/\/ program (\S+)$/m;
 
-    function hQ(QQ) {
-      return null === QQ.name ? `#${QQ.id}` : `#${QQ.id} ${QQ.name}`
+    function uM(MM) {
+      return null === MM.name ? `#${MM.id}` : `#${MM.id} ${MM.name}`
     }
-    const iQ = [],
-      cQ = new WeakMap,
-      AQ = new WeakMap,
-      RQ = {
+    const RM = [],
+      pM = new WeakMap,
+      WM = new WeakMap,
+      sM = {
         context: null,
         inProbe: !1,
         pendingCheck: null,
         shadowBytes: 0,
         uncopied: 0
       };
-    let EQ = 1;
-    const CQ = new WeakMap;
+    let DM = 1;
+    const kM = new WeakMap;
 
-    function uQ(QQ) {
-      if (null === QQ) return 0;
-      let WQ = CQ.get(QQ);
-      return void 0 === WQ && (WQ = EQ++, CQ.set(QQ, WQ)), WQ
+    function ZM(MM) {
+      if (null === MM) return 0;
+      let rM = kM.get(MM);
+      return void 0 === rM && (rM = DM++, kM.set(MM, rM)), rM
     }
-    class LQ {
-      constructor(QQ, WQ) {
-        this.print = QQ, this.now = WQ, this.shown = 0, this.Ds = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.HI = [], this.dropped = 0
+    class oM {
+      constructor(MM, rM) {
+        this.print = MM, this.now = rM, this.shown = 0, this.sQ = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.ML = [], this.dropped = 0
       }
-      line(QQ) {
-        const WQ = this.now();
-        if (WQ - this.second >= 1e3 && (this.second = WQ, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.Ds++, void this.store(QQ);
-        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${QQ} (the last line here: the rest go to bloxdDebug.save())` : QQ)
+      line(MM) {
+        const rM = this.now();
+        if (rM - this.second >= 1e3 && (this.second = rM, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.sQ++, void this.store(MM);
+        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${MM} (the last line here: the rest go to bloxdDebug.save())` : MM)
       }
-      keep(QQ) {
-        this.sections++, this.store(QQ)
+      keep(MM) {
+        this.sections++, this.store(MM)
       }
-      store(QQ) {
-        this.HI.push(`${new Date(Date.now()).toISOString()} ${QQ}`), this.HI.length > 2e4 && (this.HI.shift(), this.dropped++)
+      store(MM) {
+        this.ML.push(`${new Date(Date.now()).toISOString()} ${MM}`), this.ML.length > 2e4 && (this.ML.shift(), this.dropped++)
       }
       dump() {
-        return [`${this.shown} lines logged (above); kept here: ${this.Ds} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.HI].join("\n")
+        return [`${this.shown} lines logged (above); kept here: ${this.sQ} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.ML].join("\n")
       }
     }
-    let kQ = null;
+    let fM = null;
 
-    function fQ() {
-      if (null === kQ) {
-        const QQ = new LQ((QQ => {
-          (0, TQ.j)("render", QQ)
+    function YM() {
+      if (null === fM) {
+        const MM = new oM((MM => {
+          (0, jM.k)("render", MM)
         }), (() => performance.now()));
-        (0, TQ.h)("render", (() => QQ.dump())), kQ = QQ
+        (0, jM.i)("render", (() => MM.dump())), fM = MM
       }
-      return kQ
+      return fM
     }
 
-    function SQ(QQ) {
-      fQ().line(QQ)
+    function NM(MM) {
+      YM().line(MM)
     }
 
-    function tQ(QQ) {
-      fQ().keep(QQ)
+    function AM(MM) {
+      YM().keep(MM)
     }
 
-    function oQ(QQ) {
-      let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
-      return QQ.length <= WQ ? QQ : `${QQ.slice(0,WQ)}... (${QQ.length-WQ} more characters)`
+    function xM(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
+      return MM.length <= rM ? MM : `${MM.slice(0,rM)}... (${MM.length-rM} more characters)`
     }
 
-    function eQ(QQ, WQ, XQ, wQ, qQ, TQ) {
-      const zQ = RQ.pendingCheck;
-      if (null === zQ) return;
-      const sQ = "undefined" !== typeof WebGL2RenderingContext && QQ instanceof WebGL2RenderingContext,
-        FQ = {
-          gl: QQ,
-          program: XQ,
-          call: wQ,
-          Qy: qQ,
-          instances: TQ,
+    function vM(MM, rM, iM, OM, SM, jM) {
+      const aM = sM.pendingCheck;
+      if (null === aM) return;
+      const PM = "undefined" !== typeof WebGL2RenderingContext && MM instanceof WebGL2RenderingContext,
+        nM = {
+          gl: MM,
+          program: iM,
+          call: OM,
+          Ld: SM,
+          instances: jM,
           attributes: [],
           group: -1,
           chunk: "",
           pages: []
         };
-      if (zQ.draws.push(FQ), sQ) try {
-        const wQ = function(QQ) {
-          const WQ = [],
-            XQ = new Map,
-            wQ = Math.min(16, QQ.getParameter(BQ.MAX_VERTEX_ATTRIBS));
-          for (let qQ = 0; qQ < wQ; qQ++) {
-            if (!QQ.getVertexAttrib(qQ, BQ.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
-            const wQ = QQ.getVertexAttrib(qQ, BQ.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
-              TQ = QQ.getVertexAttribOffset(qQ, BQ.VERTEX_ATTRIB_ARRAY_POINTER),
-              zQ = QQ.getVertexAttrib(qQ, BQ.VERTEX_ATTRIB_ARRAY_STRIDE),
-              sQ = QQ.getVertexAttrib(qQ, BQ.VERTEX_ATTRIB_ARRAY_SIZE),
-              FQ = QQ.getVertexAttrib(qQ, BQ.VERTEX_ATTRIB_ARRAY_TYPE),
-              PQ = "VERTEX_ATTRIB_ARRAY_INTEGER" in QQ && QQ.getVertexAttrib(qQ, BQ.VERTEX_ATTRIB_ARRAY_INTEGER),
-              gQ = "VERTEX_ATTRIB_ARRAY_DIVISOR" in QQ ? QQ.getVertexAttrib(qQ, BQ.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
-            XQ.set(qQ, {
-              buffer: wQ,
-              offset: TQ,
-              stride: zQ
-            }), WQ.push(`@${qQ} buf#${uQ(wQ)} +${TQ} stride ${zQ} ${sQ}x0x${FQ.toString(16)}${PQ?" int":""} div ${gQ}`)
+      if (aM.draws.push(nM), PM) try {
+        const OM = function(MM) {
+          const rM = [],
+            iM = new Map,
+            OM = Math.min(16, MM.getParameter(JM.MAX_VERTEX_ATTRIBS));
+          for (let SM = 0; SM < OM; SM++) {
+            if (!MM.getVertexAttrib(SM, JM.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
+            const OM = MM.getVertexAttrib(SM, JM.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
+              jM = MM.getVertexAttribOffset(SM, JM.VERTEX_ATTRIB_ARRAY_POINTER),
+              aM = MM.getVertexAttrib(SM, JM.VERTEX_ATTRIB_ARRAY_STRIDE),
+              PM = MM.getVertexAttrib(SM, JM.VERTEX_ATTRIB_ARRAY_SIZE),
+              nM = MM.getVertexAttrib(SM, JM.VERTEX_ATTRIB_ARRAY_TYPE),
+              QM = "VERTEX_ATTRIB_ARRAY_INTEGER" in MM && MM.getVertexAttrib(SM, JM.VERTEX_ATTRIB_ARRAY_INTEGER),
+              zM = "VERTEX_ATTRIB_ARRAY_DIVISOR" in MM ? MM.getVertexAttrib(SM, JM.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
+            iM.set(SM, {
+              buffer: OM,
+              offset: jM,
+              stride: aM
+            }), rM.push(`@${SM} buf#${ZM(OM)} +${jM} stride ${aM} ${PM}x0x${nM.toString(16)}${QM?" int":""} div ${zM}`)
           }
           return {
-            lines: WQ,
-            byLocation: XQ
+            lines: rM,
+            byLocation: iM
           }
-        }(QQ);
-        if (FQ.attributes = wQ.lines, "inst" === XQ.terrain) {
+        }(MM);
+        if (nM.attributes = OM.lines, "inst" === iM.terrain) {
           const {
-            group: qQ,
-            chunk: sQ
-          } = function(QQ, WQ, XQ) {
-            const wQ = WQ.get(pQ),
-              qQ = QQ.getVertexAttrib(pQ, BQ.CURRENT_VERTEX_ATTRIB),
-              TQ = wQ ? `+${wQ.offset}` : qQ ? Array.from(qQ).slice(0, 3).join(",") : "?";
-            let zQ = XQ.groups.get(TQ);
-            return void 0 === zQ && (zQ = XQ.groups.size, XQ.groups.set(TQ, zQ)), {
-              group: zQ,
-              chunk: TQ
+            group: SM,
+            chunk: PM
+          } = function(MM, rM, iM) {
+            const OM = rM.get(EM),
+              SM = MM.getVertexAttrib(EM, JM.CURRENT_VERTEX_ATTRIB),
+              jM = OM ? `+${OM.offset}` : SM ? Array.from(SM).slice(0, 3).join(",") : "?";
+            let aM = iM.groups.get(jM);
+            return void 0 === aM && (aM = iM.groups.size, iM.groups.set(jM, aM)), {
+              group: aM,
+              chunk: jM
             }
-          }(QQ, wQ.byLocation, zQ);
-          FQ.group = qQ, FQ.chunk = sQ;
-          for (const QQ of [VQ, DQ]) {
-            var PQ;
-            const WQ = null === (PQ = wQ.byLocation.get(QQ)) || void 0 === PQ ? void 0 : PQ.buffer;
-            WQ && FQ.pages.push({
+          }(MM, OM.byLocation, aM);
+          nM.group = SM, nM.chunk = PM;
+          for (const MM of [yM, lM]) {
+            var QM;
+            const rM = null === (QM = OM.byLocation.get(MM)) || void 0 === QM ? void 0 : QM.buffer;
+            rM && nM.pages.push({
               kind: "buf",
-              buffer: WQ
+              buffer: rM
             })
-          }! function(QQ, WQ, XQ, wQ, qQ, TQ, zQ) {
-            const sQ = wQ.get(VQ),
-              FQ = zQ.parts.get(TQ);
-            if (void 0 === FQ && zQ.parts.size >= bQ) return;
-            const PQ = Math.min(qQ, dQ, vQ - (null !== FQ && void 0 !== FQ ? FQ : 0));
-            if (null === sQ || void 0 === sQ || !sQ.buffer || PQ <= 0) return;
-            const gQ = nQ(QQ, WQ, XQ);
-            if (!gQ) return;
-            const JQ = sQ.stride || 12,
-              rQ = OQ(QQ, sQ.buffer, sQ.offset, (PQ - 1) * JQ + 12),
-              IQ = new DataView(rQ.buffer),
-              jQ = function(QQ, WQ) {
-                const XQ = function(QQ) {
-                    const WQ = MQ.get(QQ);
-                    if (void 0 !== WQ && (null === WQ || QQ.isProgram(WQ))) return WQ;
-                    RQ.inProbe = !0;
-                    let XQ = null;
+          }! function(MM, rM, iM, OM, SM, jM, aM) {
+            const PM = OM.get(yM),
+              nM = aM.parts.get(jM);
+            if (void 0 === nM && aM.parts.size >= CM) return;
+            const QM = Math.min(SM, bM, eM - (null !== nM && void 0 !== nM ? nM : 0));
+            if (null === PM || void 0 === PM || !PM.buffer || QM <= 0) return;
+            const zM = FM(MM, rM, iM);
+            if (!zM) return;
+            const LM = PM.stride || 12,
+              mM = qM(MM, PM.buffer, PM.offset, (QM - 1) * LM + 12),
+              HM = new DataView(mM.buffer),
+              hM = function(MM, rM) {
+                const iM = function(MM) {
+                    const rM = cM.get(MM);
+                    if (void 0 !== rM && (null === rM || MM.isProgram(rM))) return rM;
+                    sM.inProbe = !0;
+                    let iM = null;
                     try {
-                      XQ = xQ(QQ, KQ, mQ, "fed", "the record feed")
+                      iM = BM(MM, TM, VM, "fed", "the record feed")
                     } finally {
-                      RQ.inProbe = !1
+                      sM.inProbe = !1
                     }
-                    return MQ.set(QQ, XQ), XQ
-                  }(QQ),
-                  wQ = XQ ? ZQ(QQ, XQ, WQ, (() => {
-                    QQ.drawArraysInstanced(BQ.POINTS, 0, 1, WQ)
+                    return cM.set(MM, iM), iM
+                  }(MM),
+                  OM = iM ? KM(MM, iM, rM, (() => {
+                    MM.drawArraysInstanced(JM.POINTS, 0, 1, rM)
                   }), "decode probe input (the record feed)") : null;
-                return wQ ? new Uint32Array(wQ.buffer) : null
-              }(QQ, PQ);
-            jQ || zQ.fed.failed++;
-            const yQ = ZQ(QQ, gQ, 4 * PQ, (() => {
-              QQ.drawArraysInstanced(BQ.POINTS, 0, 4, PQ)
+                return OM ? new Uint32Array(OM.buffer) : null
+              }(MM, QM);
+            hM || aM.fed.failed++;
+            const dM = KM(MM, zM, 4 * QM, (() => {
+              MM.drawArraysInstanced(JM.POINTS, 0, 4, QM)
             }));
-            if (!yQ) return;
-            zQ.parts.set(TQ, (null !== FQ && void 0 !== FQ ? FQ : 0) + PQ);
-            for (let BQ = 0; BQ < PQ; BQ++) {
-              const QQ = BQ * JQ,
-                WQ = [IQ.getUint32(QQ, !0), IQ.getUint32(QQ + 4, !0), IQ.getUint32(QQ + 8, !0)],
-                XQ = jQ ? [jQ[3 * BQ], jQ[3 * BQ + 1], jQ[3 * BQ + 2]] : WQ;
-              jQ && (zQ.fed.records++, XQ.some(((QQ, XQ) => QQ !== WQ[XQ])) && (zQ.fed.differing++, zQ.fed.first.length < 8 && zQ.fed.first.push(`part ${TQ} instance ${BQ}: fed ${XQ.map(qW).join(" ")} buffer ${WQ.map(qW).join(" ")}`)));
-              for (let wQ = 0; wQ < 4; wQ++) {
-                const QQ = 3 * (4 * BQ + wQ);
-                zQ.vertices.push({
-                  record: XQ,
-                  slot: wQ,
-                  group: TQ,
-                  gpu: [yQ[QQ], yQ[QQ + 1], yQ[QQ + 2]]
+            if (!dM) return;
+            aM.parts.set(jM, (null !== nM && void 0 !== nM ? nM : 0) + QM);
+            for (let JM = 0; JM < QM; JM++) {
+              const MM = JM * LM,
+                rM = [HM.getUint32(MM, !0), HM.getUint32(MM + 4, !0), HM.getUint32(MM + 8, !0)],
+                iM = hM ? [hM[3 * JM], hM[3 * JM + 1], hM[3 * JM + 2]] : rM;
+              hM && (aM.fed.records++, iM.some(((MM, iM) => MM !== rM[iM])) && (aM.fed.differing++, aM.fed.first.length < 8 && aM.fed.first.push(`part ${jM} instance ${JM}: fed ${iM.map(Sr).join(" ")} buffer ${rM.map(Sr).join(" ")}`)));
+              for (let OM = 0; OM < 4; OM++) {
+                const MM = 3 * (4 * JM + OM);
+                aM.vertices.push({
+                  record: iM,
+                  slot: OM,
+                  group: jM,
+                  gpu: [dM[MM], dM[MM + 1], dM[MM + 2]]
                 })
               }
             }
-          }(QQ, WQ, XQ, wQ.byLocation, TQ, qQ, zQ)
+          }(MM, rM, iM, OM.byLocation, jM, SM, aM)
         } else {
-          const wQ = QW(QQ, WQ, 16),
-            TQ = QW(QQ, WQ, 8);
-          for (const QQ of [wQ, TQ]) QQ && FQ.pages.push({
+          const OM = Mr(MM, rM, 16),
+            jM = Mr(MM, rM, 8);
+          for (const MM of [OM, jM]) MM && nM.pages.push({
             kind: "tex",
-            texture: QQ
+            texture: MM
           });
-          wQ && function(QQ, WQ, XQ, wQ, qQ, TQ) {
-            if (TQ.parts.size >= bQ) return;
-            const zQ = nQ(QQ, WQ, XQ);
-            if (!zQ) return;
-            let sQ = 6 * vQ;
-            const FQ = [];
-            for (const [IQ, jQ] of qQ) {
-              const QQ = Math.min(jQ, sQ, Math.max(6, 6 * Math.floor(vQ / qQ.length)));
-              QQ > 0 && (FQ.push([IQ, QQ]), sQ -= QQ)
+          OM && function(MM, rM, iM, OM, SM, jM) {
+            if (jM.parts.size >= CM) return;
+            const aM = FM(MM, rM, iM);
+            if (!aM) return;
+            let PM = 6 * eM;
+            const nM = [];
+            for (const [HM, hM] of SM) {
+              const MM = Math.min(hM, PM, Math.max(6, 6 * Math.floor(eM / SM.length)));
+              MM > 0 && (nM.push([HM, MM]), PM -= MM)
             }
-            const PQ = FQ.reduce(((QQ, WQ) => {
-                let [, XQ] = WQ;
-                return QQ + XQ
+            const QM = nM.reduce(((MM, rM) => {
+                let [, iM] = rM;
+                return MM + iM
               }), 0),
-              gQ = ZQ(QQ, zQ, PQ, (() => {
-                for (const [WQ, XQ] of FQ) QQ.drawArrays(BQ.POINTS, WQ, XQ)
+              zM = KM(MM, aM, QM, (() => {
+                for (const [rM, iM] of nM) MM.drawArrays(JM.POINTS, rM, iM)
               }));
-            if (!gQ) return;
-            let JQ = 0;
-            for (const [IQ, jQ] of FQ) {
-              const WQ = Math.floor(IQ / 6),
-                XQ = Math.floor((IQ + jQ - 1) / 6) - WQ + 1,
-                qQ = WW(QQ, wQ, UQ, WQ, XQ);
-              for (let QQ = IQ; QQ < IQ + jQ; QQ++, JQ++) {
-                var rQ;
-                const XQ = 4 * (Math.floor(QQ / 6) - WQ),
-                  wQ = [qQ[XQ], qQ[XQ + 1], qQ[XQ + 2]];
-                TQ.parts.set(qQ[XQ + 3], (null !== (rQ = TQ.parts.get(qQ[XQ + 3])) && void 0 !== rQ ? rQ : 0) + (QQ % 6 === 0 ? 1 : 0)), TQ.vertices.push({
-                  record: wQ,
-                  slot: GQ[QQ % 6],
-                  group: qQ[XQ + 3],
-                  gpu: [gQ[3 * JQ], gQ[3 * JQ + 1], gQ[3 * JQ + 2]]
+            if (!zM) return;
+            let LM = 0;
+            for (const [HM, hM] of nM) {
+              const rM = Math.floor(HM / 6),
+                iM = Math.floor((HM + hM - 1) / 6) - rM + 1,
+                SM = rr(MM, OM, GM, rM, iM);
+              for (let MM = HM; MM < HM + hM; MM++, LM++) {
+                var mM;
+                const iM = 4 * (Math.floor(MM / 6) - rM),
+                  OM = [SM[iM], SM[iM + 1], SM[iM + 2]];
+                jM.parts.set(SM[iM + 3], (null !== (mM = jM.parts.get(SM[iM + 3])) && void 0 !== mM ? mM : 0) + (MM % 6 === 0 ? 1 : 0)), jM.vertices.push({
+                  record: OM,
+                  slot: UM[MM % 6],
+                  group: SM[iM + 3],
+                  gpu: [zM[3 * LM], zM[3 * LM + 1], zM[3 * LM + 2]]
                 })
               }
             }
-          }(QQ, WQ, XQ, wQ, qQ, zQ)
+          }(MM, rM, iM, OM, SM, aM)
         }
-      } catch (gQ) {
-        SQ(`decode probe failed on program ${hQ(XQ)}: ${String(gQ)}`)
+      } catch (zM) {
+        NM(`decode probe failed on program ${uM(iM)}: ${String(zM)}`)
       }
     }
 
-    function nQ(QQ, WQ, XQ) {
-      if (void 0 !== XQ.probe) return XQ.probe && YQ(QQ, WQ, XQ.probe), XQ.probe;
-      XQ.probe = null, RQ.inProbe = !0;
+    function FM(MM, rM, iM) {
+      if (void 0 !== iM.probe) return iM.probe && XM(MM, rM, iM.probe), iM.probe;
+      iM.probe = null, sM.inProbe = !0;
       try {
-        XQ.probe = function(QQ, WQ) {
-          return xQ(QQ, (XQ = WQ.vertex, XQ.replace(`\nvec3 ${yQ} = vec3(0);\n`, `\nout vec3 ${yQ};\n`)), WQ.fragment, yQ, `program ${hQ(WQ)}'s twin`);
-          var XQ
-        }(QQ, XQ)
+        iM.probe = function(MM, rM) {
+          return BM(MM, (iM = rM.vertex, iM.replace(`\nvec3 ${dM} = vec3(0);\n`, `\nout vec3 ${dM};\n`)), rM.fragment, dM, `program ${uM(rM)}'s twin`);
+          var iM
+        }(MM, iM)
       } finally {
-        RQ.inProbe = !1
+        sM.inProbe = !1
       }
-      return XQ.probe && YQ(QQ, WQ, XQ.probe), XQ.probe
+      return iM.probe && XM(MM, rM, iM.probe), iM.probe
     }
 
-    function xQ(QQ, WQ, XQ, wQ, qQ) {
-      const TQ = [QQ.createShader(BQ.VERTEX_SHADER), QQ.createShader(BQ.FRAGMENT_SHADER)],
-        zQ = QQ.createProgram();
-      if (!zQ || !TQ[0] || !TQ[1]) return null;
-      QQ.shaderSource(TQ[0], WQ), QQ.shaderSource(TQ[1], XQ);
-      for (const FQ of TQ) QQ.compileShader(FQ), QQ.attachShader(zQ, FQ);
-      QQ.transformFeedbackVaryings(zQ, [wQ], BQ.INTERLEAVED_ATTRIBS), QQ.linkProgram(zQ);
-      for (const FQ of TQ) QQ.deleteShader(FQ);
-      var sQ;
-      return QQ.getProgramParameter(zQ, BQ.LINK_STATUS) ? zQ : (SQ(`decode probe: ${qQ} failed to link: ${oQ(null!==(sQ=QQ.getProgramInfoLog(zQ))&&void 0!==sQ?sQ:"",300)}`), QQ.deleteProgram(zQ), null)
+    function BM(MM, rM, iM, OM, SM) {
+      const jM = [MM.createShader(JM.VERTEX_SHADER), MM.createShader(JM.FRAGMENT_SHADER)],
+        aM = MM.createProgram();
+      if (!aM || !jM[0] || !jM[1]) return null;
+      MM.shaderSource(jM[0], rM), MM.shaderSource(jM[1], iM);
+      for (const nM of jM) MM.compileShader(nM), MM.attachShader(aM, nM);
+      MM.transformFeedbackVaryings(aM, [OM], JM.INTERLEAVED_ATTRIBS), MM.linkProgram(aM);
+      for (const nM of jM) MM.deleteShader(nM);
+      var PM;
+      return MM.getProgramParameter(aM, JM.LINK_STATUS) ? aM : (NM(`decode probe: ${SM} failed to link: ${xM(null!==(PM=MM.getProgramInfoLog(aM))&&void 0!==PM?PM:"",300)}`), MM.deleteProgram(aM), null)
     }
 
-    function YQ(QQ, WQ, XQ) {
-      const wQ = QQ.getProgramParameter(WQ, BQ.ACTIVE_UNIFORM_BLOCKS);
-      for (let sQ = 0; sQ < wQ; sQ++) {
-        const wQ = QQ.getActiveUniformBlockName(WQ, sQ),
-          qQ = null === wQ ? BQ.INVALID_INDEX : QQ.getUniformBlockIndex(XQ, wQ);
-        qQ !== BQ.INVALID_INDEX && QQ.uniformBlockBinding(XQ, qQ, QQ.getActiveUniformBlockParameter(WQ, sQ, BQ.UNIFORM_BLOCK_BINDING))
+    function XM(MM, rM, iM) {
+      const OM = MM.getProgramParameter(rM, JM.ACTIVE_UNIFORM_BLOCKS);
+      for (let PM = 0; PM < OM; PM++) {
+        const OM = MM.getActiveUniformBlockName(rM, PM),
+          SM = null === OM ? JM.INVALID_INDEX : MM.getUniformBlockIndex(iM, OM);
+        SM !== JM.INVALID_INDEX && MM.uniformBlockBinding(iM, SM, MM.getActiveUniformBlockParameter(rM, PM, JM.UNIFORM_BLOCK_BINDING))
       }
-      const qQ = QQ.getParameter(BQ.CURRENT_PROGRAM);
-      QQ.useProgram(XQ);
-      const TQ = QQ.getProgramParameter(WQ, BQ.ACTIVE_UNIFORMS),
-        zQ = QQ.getActiveUniforms(WQ, [...Array(TQ).keys()], BQ.UNIFORM_BLOCK_INDEX);
-      for (let sQ = 0; sQ < TQ; sQ++) {
-        const wQ = QQ.getActiveUniform(WQ, sQ);
-        if (!wQ || -1 !== zQ[sQ]) continue;
-        const qQ = wQ.name.replace(/\[0\]$/, "");
-        for (let TQ = 0; TQ < wQ.size; TQ++) {
-          const zQ = wQ.size > 1 ? `${qQ}[${TQ}]` : wQ.name,
-            sQ = QQ.getUniformLocation(WQ, zQ),
-            FQ = QQ.getUniformLocation(XQ, zQ);
-          sQ && FQ && NQ(QQ, FQ, wQ.type, QQ.getUniform(WQ, sQ))
+      const SM = MM.getParameter(JM.CURRENT_PROGRAM);
+      MM.useProgram(iM);
+      const jM = MM.getProgramParameter(rM, JM.ACTIVE_UNIFORMS),
+        aM = MM.getActiveUniforms(rM, [...Array(jM).keys()], JM.UNIFORM_BLOCK_INDEX);
+      for (let PM = 0; PM < jM; PM++) {
+        const OM = MM.getActiveUniform(rM, PM);
+        if (!OM || -1 !== aM[PM]) continue;
+        const SM = OM.name.replace(/\[0\]$/, "");
+        for (let jM = 0; jM < OM.size; jM++) {
+          const aM = OM.size > 1 ? `${SM}[${jM}]` : OM.name,
+            PM = MM.getUniformLocation(rM, aM),
+            nM = MM.getUniformLocation(iM, aM);
+          PM && nM && IM(MM, nM, OM.type, MM.getUniform(rM, PM))
         }
       }
-      QQ.useProgram(qQ)
+      MM.useProgram(SM)
     }
 
-    function NQ(QQ, WQ, XQ, wQ) {
-      const qQ = ArrayBuffer.isView(wQ) ? Array.from(wQ) : [Number(wQ)];
-      switch (XQ) {
-        case BQ.FLOAT:
-          return void QQ.uniform1f(WQ, qQ[0]);
-        case BQ.FLOAT_VEC2:
-          return void QQ.uniform2fv(WQ, qQ);
-        case BQ.FLOAT_VEC3:
-          return void QQ.uniform3fv(WQ, qQ);
-        case BQ.FLOAT_VEC4:
-          return void QQ.uniform4fv(WQ, qQ);
-        case BQ.FLOAT_MAT3:
-          return void QQ.uniformMatrix3fv(WQ, !1, qQ);
-        case BQ.FLOAT_MAT4:
-          return void QQ.uniformMatrix4fv(WQ, !1, qQ);
-        case BQ.UNSIGNED_INT:
-          return void QQ.uniform1ui(WQ, qQ[0]);
-        case BQ.UNSIGNED_INT_VEC2:
-          return void QQ.uniform2uiv(WQ, qQ);
-        case BQ.UNSIGNED_INT_VEC3:
-          return void QQ.uniform3uiv(WQ, qQ);
-        case BQ.UNSIGNED_INT_VEC4:
-          return void QQ.uniform4uiv(WQ, qQ);
-        case BQ.INT_VEC2:
-          return void QQ.uniform2iv(WQ, qQ);
-        case BQ.INT_VEC3:
-          return void QQ.uniform3iv(WQ, qQ);
-        case BQ.INT_VEC4:
-          return void QQ.uniform4iv(WQ, qQ);
+    function IM(MM, rM, iM, OM) {
+      const SM = ArrayBuffer.isView(OM) ? Array.from(OM) : [Number(OM)];
+      switch (iM) {
+        case JM.FLOAT:
+          return void MM.uniform1f(rM, SM[0]);
+        case JM.FLOAT_VEC2:
+          return void MM.uniform2fv(rM, SM);
+        case JM.FLOAT_VEC3:
+          return void MM.uniform3fv(rM, SM);
+        case JM.FLOAT_VEC4:
+          return void MM.uniform4fv(rM, SM);
+        case JM.FLOAT_MAT3:
+          return void MM.uniformMatrix3fv(rM, !1, SM);
+        case JM.FLOAT_MAT4:
+          return void MM.uniformMatrix4fv(rM, !1, SM);
+        case JM.UNSIGNED_INT:
+          return void MM.uniform1ui(rM, SM[0]);
+        case JM.UNSIGNED_INT_VEC2:
+          return void MM.uniform2uiv(rM, SM);
+        case JM.UNSIGNED_INT_VEC3:
+          return void MM.uniform3uiv(rM, SM);
+        case JM.UNSIGNED_INT_VEC4:
+          return void MM.uniform4uiv(rM, SM);
+        case JM.INT_VEC2:
+          return void MM.uniform2iv(rM, SM);
+        case JM.INT_VEC3:
+          return void MM.uniform3iv(rM, SM);
+        case JM.INT_VEC4:
+          return void MM.uniform4iv(rM, SM);
         default:
-          QQ.uniform1i(WQ, qQ[0])
+          MM.uniform1i(rM, SM[0])
       }
     }
 
-    function ZQ(QQ, WQ, XQ, wQ) {
-      let qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
-      const TQ = QQ.getParameter(BQ.CURRENT_PROGRAM),
-        zQ = QQ.getParameter(BQ.TRANSFORM_FEEDBACK_BINDING),
-        sQ = QQ.getParameter(BQ.TRANSFORM_FEEDBACK_BUFFER_BINDING),
-        FQ = QQ.getParameter(BQ.COPY_READ_BUFFER_BINDING),
-        PQ = QQ.isEnabled(BQ.RASTERIZER_DISCARD),
-        gQ = QQ.createTransformFeedback(),
-        JQ = QQ.createBuffer();
-      RQ.inProbe = !0;
+    function KM(MM, rM, iM, OM) {
+      let SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
+      const jM = MM.getParameter(JM.CURRENT_PROGRAM),
+        aM = MM.getParameter(JM.TRANSFORM_FEEDBACK_BINDING),
+        PM = MM.getParameter(JM.TRANSFORM_FEEDBACK_BUFFER_BINDING),
+        nM = MM.getParameter(JM.COPY_READ_BUFFER_BINDING),
+        QM = MM.isEnabled(JM.RASTERIZER_DISCARD),
+        zM = MM.createTransformFeedback(),
+        LM = MM.createBuffer();
+      sM.inProbe = !0;
       try {
-        const TQ = QQ.getError();
-        TQ !== BQ.NO_ERROR && SQ(`GL error 0x${TQ.toString(16)} pending before the decode probe (the renderer's)`), QQ.useProgram(WQ), QQ.bindTransformFeedback(BQ.TRANSFORM_FEEDBACK, gQ), QQ.bindBuffer(BQ.TRANSFORM_FEEDBACK_BUFFER, JQ), QQ.bufferData(BQ.TRANSFORM_FEEDBACK_BUFFER, 12 * XQ, BQ.STREAM_READ), QQ.bindBufferBase(BQ.TRANSFORM_FEEDBACK_BUFFER, 0, JQ), QQ.enable(BQ.RASTERIZER_DISCARD), QQ.beginTransformFeedback(BQ.POINTS), wQ(), QQ.endTransformFeedback(), QQ.bindBufferBase(BQ.TRANSFORM_FEEDBACK_BUFFER, 0, null);
-        const zQ = QQ.getError();
-        if (zQ !== BQ.NO_ERROR) return SQ(`${qQ}: GL error 0x${zQ.toString(16)} on the feedback draw`), null;
-        const sQ = new Float32Array(3 * XQ);
-        return QQ.bindBuffer(BQ.COPY_READ_BUFFER, JQ), QQ.getBufferSubData(BQ.COPY_READ_BUFFER, 0, sQ), sQ
+        const jM = MM.getError();
+        jM !== JM.NO_ERROR && NM(`GL error 0x${jM.toString(16)} pending before the decode probe (the renderer's)`), MM.useProgram(rM), MM.bindTransformFeedback(JM.TRANSFORM_FEEDBACK, zM), MM.bindBuffer(JM.TRANSFORM_FEEDBACK_BUFFER, LM), MM.bufferData(JM.TRANSFORM_FEEDBACK_BUFFER, 12 * iM, JM.STREAM_READ), MM.bindBufferBase(JM.TRANSFORM_FEEDBACK_BUFFER, 0, LM), MM.enable(JM.RASTERIZER_DISCARD), MM.beginTransformFeedback(JM.POINTS), OM(), MM.endTransformFeedback(), MM.bindBufferBase(JM.TRANSFORM_FEEDBACK_BUFFER, 0, null);
+        const aM = MM.getError();
+        if (aM !== JM.NO_ERROR) return NM(`${SM}: GL error 0x${aM.toString(16)} on the feedback draw`), null;
+        const PM = new Float32Array(3 * iM);
+        return MM.bindBuffer(JM.COPY_READ_BUFFER, LM), MM.getBufferSubData(JM.COPY_READ_BUFFER, 0, PM), PM
       } finally {
-        PQ || QQ.disable(BQ.RASTERIZER_DISCARD), QQ.bindTransformFeedback(BQ.TRANSFORM_FEEDBACK, zQ), QQ.bindBuffer(BQ.TRANSFORM_FEEDBACK_BUFFER, sQ), QQ.bindBuffer(BQ.COPY_READ_BUFFER, FQ), QQ.deleteTransformFeedback(gQ), QQ.deleteBuffer(JQ), QQ.useProgram(TQ), RQ.inProbe = !1
+        QM || MM.disable(JM.RASTERIZER_DISCARD), MM.bindTransformFeedback(JM.TRANSFORM_FEEDBACK, aM), MM.bindBuffer(JM.TRANSFORM_FEEDBACK_BUFFER, PM), MM.bindBuffer(JM.COPY_READ_BUFFER, nM), MM.deleteTransformFeedback(zM), MM.deleteBuffer(LM), MM.useProgram(jM), sM.inProbe = !1
       }
     }
 
-    function OQ(QQ, WQ, XQ, wQ) {
-      const qQ = QQ.getParameter(BQ.COPY_READ_BUFFER_BINDING),
-        TQ = new Uint8Array(wQ);
-      return QQ.bindBuffer(BQ.COPY_READ_BUFFER, WQ), QQ.getBufferSubData(BQ.COPY_READ_BUFFER, XQ, TQ), QQ.bindBuffer(BQ.COPY_READ_BUFFER, qQ), TQ
+    function qM(MM, rM, iM, OM) {
+      const SM = MM.getParameter(JM.COPY_READ_BUFFER_BINDING),
+        jM = new Uint8Array(OM);
+      return MM.bindBuffer(JM.COPY_READ_BUFFER, rM), MM.getBufferSubData(JM.COPY_READ_BUFFER, iM, jM), MM.bindBuffer(JM.COPY_READ_BUFFER, SM), jM
     }
-    const KQ = `#version 300 es\nlayout(location = ${VQ}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
-      mQ = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
-      MQ = new WeakMap;
+    const TM = `#version 300 es\nlayout(location = ${yM}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
+      VM = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
+      cM = new WeakMap;
 
-    function QW(QQ, WQ, XQ) {
-      const wQ = QQ.getProgramParameter(WQ, BQ.ACTIVE_UNIFORMS),
-        qQ = QQ.getParameter(BQ.ACTIVE_TEXTURE);
+    function Mr(MM, rM, iM) {
+      const OM = MM.getProgramParameter(rM, JM.ACTIVE_UNIFORMS),
+        SM = MM.getParameter(JM.ACTIVE_TEXTURE);
       try {
-        for (let qQ = 0; qQ < wQ; qQ++) {
-          const wQ = QQ.getActiveUniform(WQ, qQ);
-          if ((null === wQ || void 0 === wQ ? void 0 : wQ.type) !== BQ.UNSIGNED_INT_SAMPLER_2D) continue;
-          const TQ = QQ.getUniformLocation(WQ, wQ.name),
-            zQ = TQ ? QQ.getUniform(WQ, TQ) : -1;
-          if (zQ < 0) continue;
-          QQ.activeTexture(BQ.TEXTURE0 + zQ);
-          const sQ = QQ.getParameter(BQ.TEXTURE_BINDING_2D);
-          if (sQ && AQ.get(sQ) === XQ) return sQ
+        for (let SM = 0; SM < OM; SM++) {
+          const OM = MM.getActiveUniform(rM, SM);
+          if ((null === OM || void 0 === OM ? void 0 : OM.type) !== JM.UNSIGNED_INT_SAMPLER_2D) continue;
+          const jM = MM.getUniformLocation(rM, OM.name),
+            aM = jM ? MM.getUniform(rM, jM) : -1;
+          if (aM < 0) continue;
+          MM.activeTexture(JM.TEXTURE0 + aM);
+          const PM = MM.getParameter(JM.TEXTURE_BINDING_2D);
+          if (PM && WM.get(PM) === iM) return PM
         }
         return null
       } finally {
-        QQ.activeTexture(qQ)
+        MM.activeTexture(SM)
       }
     }
 
-    function WW(QQ, WQ, XQ, wQ, qQ) {
-      const TQ = new Uint32Array(4 * qQ),
-        zQ = QQ.getParameter(BQ.READ_FRAMEBUFFER_BINDING),
-        sQ = QQ.createFramebuffer();
-      QQ.bindFramebuffer(BQ.READ_FRAMEBUFFER, sQ), QQ.framebufferTexture2D(BQ.READ_FRAMEBUFFER, BQ.COLOR_ATTACHMENT0, BQ.TEXTURE_2D, WQ, 0);
+    function rr(MM, rM, iM, OM, SM) {
+      const jM = new Uint32Array(4 * SM),
+        aM = MM.getParameter(JM.READ_FRAMEBUFFER_BINDING),
+        PM = MM.createFramebuffer();
+      MM.bindFramebuffer(JM.READ_FRAMEBUFFER, PM), MM.framebufferTexture2D(JM.READ_FRAMEBUFFER, JM.COLOR_ATTACHMENT0, JM.TEXTURE_2D, rM, 0);
       try {
-        let WQ = 0;
-        for (; WQ < qQ;) {
-          const zQ = wQ + WQ,
-            sQ = zQ % XQ,
-            FQ = Math.min(qQ - WQ, XQ - sQ);
-          QQ.readPixels(sQ, Math.floor(zQ / XQ), FQ, 1, BQ.RGBA_INTEGER, BQ.UNSIGNED_INT, TQ.subarray(4 * WQ, 4 * (WQ + FQ))), WQ += FQ
+        let rM = 0;
+        for (; rM < SM;) {
+          const aM = OM + rM,
+            PM = aM % iM,
+            nM = Math.min(SM - rM, iM - PM);
+          MM.readPixels(PM, Math.floor(aM / iM), nM, 1, JM.RGBA_INTEGER, JM.UNSIGNED_INT, jM.subarray(4 * rM, 4 * (rM + nM))), rM += nM
         }
       } finally {
-        QQ.bindFramebuffer(BQ.READ_FRAMEBUFFER, zQ), QQ.deleteFramebuffer(sQ)
+        MM.bindFramebuffer(JM.READ_FRAMEBUFFER, aM), MM.deleteFramebuffer(PM)
       }
-      return TQ
+      return jM
     }
 
-    function XW(QQ, WQ, XQ) {
-      let wQ = 0,
-        qQ = 0;
-      for (let FQ = 0; FQ < WQ.bytes.length; FQ += aQ) {
-        wQ++;
-        const QQ = Math.min(FQ + aQ, WQ.bytes.length);
-        IQ(WQ.bytes.subarray(FQ, QQ)) !== IQ(XQ.subarray(FQ, QQ)) && qQ++
+    function ir(MM, rM, iM) {
+      let OM = 0,
+        SM = 0;
+      for (let nM = 0; nM < rM.bytes.length; nM += tM) {
+        OM++;
+        const MM = Math.min(nM + tM, rM.bytes.length);
+        HM(rM.bytes.subarray(nM, MM)) !== HM(iM.subarray(nM, MM)) && SM++
       }
-      const TQ = `${QQ} ${WQ.bytes.length} B cpu ${IQ(WQ.bytes).toString(16)} gpu ${IQ(XQ).toString(16)}, ${qQ}/${wQ} blocks differ${WQ.missed?`, ${WQ.missed} GPU-side writes uncopied`:""}`;
-      if (0 === qQ) return TQ;
+      const jM = `${MM} ${rM.bytes.length} B cpu ${HM(rM.bytes).toString(16)} gpu ${HM(iM).toString(16)}, ${SM}/${OM} blocks differ${rM.missed?`, ${rM.missed} GPU-side writes uncopied`:""}`;
+      if (0 === SM) return jM;
       const {
-        count: zQ,
-        offsets: sQ
-      } = function(QQ, WQ) {
-        let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
-        const wQ = Math.min(QQ.length, WQ.length);
-        let qQ = Math.abs(QQ.length - WQ.length);
-        const TQ = [];
-        for (let zQ = 0; zQ < wQ; zQ++) QQ[zQ] !== WQ[zQ] && (qQ++, TQ.length < XQ && TQ.push(zQ));
+        count: aM,
+        offsets: PM
+      } = function(MM, rM) {
+        let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
+        const OM = Math.min(MM.length, rM.length);
+        let SM = Math.abs(MM.length - rM.length);
+        const jM = [];
+        for (let aM = 0; aM < OM; aM++) MM[aM] !== rM[aM] && (SM++, jM.length < iM && jM.push(aM));
         return {
-          count: qQ,
-          offsets: TQ
+          count: SM,
+          offsets: jM
         }
-      }(WQ.bytes, XQ);
-      return tQ([`${TQ}: ${zQ} bytes differ`, ...sQ.map((QQ => `  +${QQ}: cpu ${jQ(WQ.bytes,QQ)} | gpu ${jQ(XQ,QQ)}`))].join("\n")), `${TQ}: ${zQ} bytes differ, first at ${sQ.join(", ")} (context in the saved file)`
+      }(rM.bytes, iM);
+      return AM([`${jM}: ${aM} bytes differ`, ...PM.map((MM => `  +${MM}: cpu ${hM(rM.bytes,MM)} | gpu ${hM(iM,MM)}`))].join("\n")), `${jM}: ${aM} bytes differ, first at ${PM.join(", ")} (context in the saved file)`
     }
 
-    function wW(QQ) {
-      if (0 === QQ.vertices.length) return void SQ(`decode probe (${QQ.reason}): no terrain draw probed (${QQ.draws.length} seen)`);
-      const WQ = function(QQ) {
-          const WQ = new Map;
-          for (const wQ of QQ) {
-            const QQ = WQ.get(wQ.group);
-            QQ ? QQ.push(wQ) : WQ.set(wQ.group, [wQ])
+    function Or(MM) {
+      if (0 === MM.vertices.length) return void NM(`decode probe (${MM.reason}): no terrain draw probed (${MM.draws.length} seen)`);
+      const rM = function(MM) {
+          const rM = new Map;
+          for (const OM of MM) {
+            const MM = rM.get(OM.group);
+            MM ? MM.push(OM) : rM.set(OM.group, [OM])
           }
-          const XQ = {
-            vertices: QQ.length,
+          const iM = {
+            vertices: MM.length,
             mismatches: 0,
             byDirection: new Array(8).fill(0),
             byDiagonal: [0, 0],
@@ -607,67 +607,67 @@ export const modules = {
             translations: new Map,
             first: []
           };
-          for (const [wQ, qQ] of WQ) {
-            const QQ = new Map,
-              WQ = qQ.map((WQ => {
-                const XQ = gQ(WQ.record, WQ.slot),
-                  wQ = [WQ.gpu[0] - XQ[0], WQ.gpu[1] - XQ[1], WQ.gpu[2] - XQ[2]],
-                  qQ = wQ.map((QQ => Math.round(64 * QQ))).join(","),
-                  TQ = QQ.get(qQ);
-                return TQ ? TQ.count++ : QQ.set(qQ, {
+          for (const [OM, SM] of rM) {
+            const MM = new Map,
+              rM = SM.map((rM => {
+                const iM = zM(rM.record, rM.slot),
+                  OM = [rM.gpu[0] - iM[0], rM.gpu[1] - iM[1], rM.gpu[2] - iM[2]],
+                  SM = OM.map((MM => Math.round(64 * MM))).join(","),
+                  jM = MM.get(SM);
+                return jM ? jM.count++ : MM.set(SM, {
                   count: 1,
-                  offset: wQ
-                }), XQ
+                  offset: OM
+                }), iM
               }));
-            let TQ = [0, 0, 0],
-              zQ = 0;
-            for (const XQ of QQ.values()) XQ.count > zQ && (zQ = XQ.count, TQ = XQ.offset);
-            XQ.translations.set(wQ, TQ), qQ.forEach(((QQ, wQ) => {
-              var qQ;
-              const zQ = [WQ[wQ][0] + TQ[0], WQ[wQ][1] + TQ[1], WQ[wQ][2] + TQ[2]];
-              if (zQ.every(((WQ, XQ) => {
-                  return wQ = QQ.gpu[XQ], qQ = WQ, Math.abs(wQ - qQ) <= Math.max(.001, 1e-6 * Math.abs(qQ));
-                  var wQ, qQ
+            let jM = [0, 0, 0],
+              aM = 0;
+            for (const iM of MM.values()) iM.count > aM && (aM = iM.count, jM = iM.offset);
+            iM.translations.set(OM, jM), SM.forEach(((MM, OM) => {
+              var SM;
+              const aM = [rM[OM][0] + jM[0], rM[OM][1] + jM[1], rM[OM][2] + jM[2]];
+              if (aM.every(((rM, iM) => {
+                  return OM = MM.gpu[iM], SM = rM, Math.abs(OM - SM) <= Math.max(.001, 1e-6 * Math.abs(SM));
+                  var OM, SM
                 }))) return;
-              XQ.mismatches++, XQ.byDirection[sQ(QQ.record[2])]++, XQ.byDiagonal[FQ(QQ.record[2])]++;
-              const PQ = JQ(QQ.record);
-              XQ.byBand[PQ] = (null !== (qQ = XQ.byBand[PQ]) && void 0 !== qQ ? qQ : 0) + 1, XQ.first.length < rQ && XQ.first.push({
-                ...QQ,
-                expected: zQ
+              iM.mismatches++, iM.byDirection[PM(MM.record[2])]++, iM.byDiagonal[nM(MM.record[2])]++;
+              const QM = LM(MM.record);
+              iM.byBand[QM] = (null !== (SM = iM.byBand[QM]) && void 0 !== SM ? SM : 0) + 1, iM.first.length < mM && iM.first.push({
+                ...MM,
+                expected: aM
               })
             }))
           }
-          return XQ
-        }(QQ.vertices),
-        XQ = WQ.byDirection.map(((QQ, WQ) => QQ ? `${zQ[WQ]} ${QQ}` : "")).filter(Boolean).join(" "),
-        wQ = Object.entries(WQ.byBand).map((QQ => {
-          let [WQ, XQ] = QQ;
-          return `${WQ}: ${XQ}`
+          return iM
+        }(MM.vertices),
+        iM = rM.byDirection.map(((MM, rM) => MM ? `${aM[rM]} ${MM}` : "")).filter(Boolean).join(" "),
+        OM = Object.entries(rM.byBand).map((MM => {
+          let [rM, iM] = MM;
+          return `${rM}: ${iM}`
         })).join(" ");
-      if (SQ(`decode probe (${QQ.reason}): ${WQ.mismatches}/${WQ.vertices} vertices differ from the CPU decode over ${QQ.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (WQ.mismatches ? ` by direction [${XQ}] diagonal [0: ${WQ.byDiagonal[0]} 1: ${WQ.byDiagonal[1]}] extent [${wQ}]` : "")), QQ.fed.records > 0 || QQ.fed.failed > 0) {
-        SQ(`decode probe input: ${QQ.fed.differing}/${QQ.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (QQ.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (QQ.fed.failed ? `; the feed failed on ${QQ.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
-        for (const WQ of QQ.fed.first) SQ(`  ${WQ}`)
+      if (NM(`decode probe (${MM.reason}): ${rM.mismatches}/${rM.vertices} vertices differ from the CPU decode over ${MM.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (rM.mismatches ? ` by direction [${iM}] diagonal [0: ${rM.byDiagonal[0]} 1: ${rM.byDiagonal[1]}] extent [${OM}]` : "")), MM.fed.records > 0 || MM.fed.failed > 0) {
+        NM(`decode probe input: ${MM.fed.differing}/${MM.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (MM.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (MM.fed.failed ? `; the feed failed on ${MM.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
+        for (const rM of MM.fed.first) NM(`  ${rM}`)
       }
-      for (const qQ of WQ.first) {
-        const [QQ, WQ, XQ] = qQ.record;
-        SQ(`  mismatch part ${qQ.group} r0 ${QQ.toString(16)} r1 ${WQ.toString(16)} r2 ${XQ.toString(16)} slot ${qQ.slot} (${zQ[sQ(XQ)]}): expected ${qQ.expected.map(TW).join(",")} gpu ${qQ.gpu.map(TW).join(",")}`)
+      for (const SM of rM.first) {
+        const [MM, rM, iM] = SM.record;
+        NM(`  mismatch part ${SM.group} r0 ${MM.toString(16)} r1 ${rM.toString(16)} r2 ${iM.toString(16)} slot ${SM.slot} (${aM[PM(iM)]}): expected ${SM.expected.map(jr).join(",")} gpu ${SM.gpu.map(jr).join(",")}`)
       }
-      tQ(`decode probe translations: ${[...WQ.translations].map((QQ=>{let[WQ,XQ]=QQ;return`${WQ}: ${XQ.map(TW).join(",")}`})).join("; ")}`)
+      AM(`decode probe translations: ${[...rM.translations].map((MM=>{let[rM,iM]=MM;return`${rM}: ${iM.map(jr).join(",")}`})).join("; ")}`)
     }
 
-    function qW(QQ) {
-      return QQ.toString(16)
+    function Sr(MM) {
+      return MM.toString(16)
     }
 
-    function TW(QQ) {
-      return Number.isInteger(QQ) ? String(QQ) : QQ.toFixed(3)
+    function jr(MM) {
+      return Number.isInteger(MM) ? String(MM) : MM.toFixed(3)
     }
 
-    function zW(QQ) {
-      return null !== RQ.pendingCheck ? Promise.resolve() : new Promise((WQ => {
-        let XQ = !1;
-        const wQ = {
-          reason: QQ,
+    function ar(MM) {
+      return null !== sM.pendingCheck ? Promise.resolve() : new Promise((rM => {
+        let iM = !1;
+        const OM = {
+          reason: MM,
           terrainDraws: 0,
           draws: [],
           vertices: [],
@@ -680,85 +680,85 @@ export const modules = {
             failed: 0
           }
         };
-        RQ.pendingCheck = wQ;
-        const qQ = () => {
-            RQ.pendingCheck = null;
+        sM.pendingCheck = OM;
+        const SM = () => {
+            sM.pendingCheck = null;
             try {
-              ! function(QQ) {
-                SQ(`draw ranges (${QQ.reason}): ${QQ.terrainDraws} terrain draws in the frame, the first ${QQ.draws.length} here`);
-                for (const WQ of QQ.draws) {
-                  const QQ = WQ.Qy.slice(0, 8).map((QQ => {
-                      let [WQ, XQ] = QQ;
-                      return `${WQ}+${XQ}`
+              ! function(MM) {
+                NM(`draw ranges (${MM.reason}): ${MM.terrainDraws} terrain draws in the frame, the first ${MM.draws.length} here`);
+                for (const rM of MM.draws) {
+                  const MM = rM.Ld.slice(0, 8).map((MM => {
+                      let [rM, iM] = MM;
+                      return `${rM}+${iM}`
                     })).join(" "),
-                    XQ = WQ.Qy.length > 8 ? ` (+${WQ.Qy.length-8} ranges)` : "";
-                  SQ(`  ${hQ(WQ.program)} ${WQ.program.terrain} ${WQ.call} ${QQ}${XQ} x${WQ.instances}${WQ.group>=0?` part ${WQ.group} chunk ${WQ.chunk}`:""} | ${WQ.attributes.join(" | ")}`)
+                    iM = rM.Ld.length > 8 ? ` (+${rM.Ld.length-8} ranges)` : "";
+                  NM(`  ${uM(rM.program)} ${rM.program.terrain} ${rM.call} ${MM}${iM} x${rM.instances}${rM.group>=0?` part ${rM.group} chunk ${rM.chunk}`:""} | ${rM.attributes.join(" | ")}`)
                 }
-              }(wQ), wW(wQ);
-              wQ.draws.some((QQ => "undefined" !== typeof WebGL2RenderingContext && QQ.gl instanceof WebGL2RenderingContext)) || 0 === wQ.draws.length ? function(QQ) {
-                const WQ = [],
-                  XQ = new Map;
-                for (const wQ of QQ)
-                  if ("undefined" !== typeof WebGL2RenderingContext && wQ.gl instanceof WebGL2RenderingContext)
-                    for (const QQ of wQ.pages) XQ.set("buf" === QQ.kind ? QQ.buffer : QQ.texture, {
-                      page: QQ,
-                      gl: wQ.gl
+              }(OM), Or(OM);
+              OM.draws.some((MM => "undefined" !== typeof WebGL2RenderingContext && MM.gl instanceof WebGL2RenderingContext)) || 0 === OM.draws.length ? function(MM) {
+                const rM = [],
+                  iM = new Map;
+                for (const OM of MM)
+                  if ("undefined" !== typeof WebGL2RenderingContext && OM.gl instanceof WebGL2RenderingContext)
+                    for (const MM of OM.pages) iM.set("buf" === MM.kind ? MM.buffer : MM.texture, {
+                      page: MM,
+                      gl: OM.gl
                     });
-                for (const [wQ, {
-                    page: qQ,
-                    gl: TQ
-                  }] of XQ) {
-                  const QQ = cQ.get(wQ);
-                  if (!QQ) {
-                    WQ.push(`${qQ.kind}#${uQ(wQ)}: no CPU copy (${RQ.uncopied} pages over the copy budget)`);
+                for (const [OM, {
+                    page: SM,
+                    gl: jM
+                  }] of iM) {
+                  const MM = pM.get(OM);
+                  if (!MM) {
+                    rM.push(`${SM.kind}#${ZM(OM)}: no CPU copy (${sM.uncopied} pages over the copy budget)`);
                     continue
                   }
-                  if ("buf" === qQ.kind) {
-                    WQ.push(XW(`buf#${QQ.id}`, QQ, OQ(TQ, qQ.buffer, 0, QQ.bytes.length)));
+                  if ("buf" === SM.kind) {
+                    rM.push(ir(`buf#${MM.id}`, MM, qM(jM, SM.buffer, 0, MM.bytes.length)));
                     continue
                   }
-                  const XQ = WW(TQ, qQ.texture, QQ.width, 0, QQ.width * QQ.height),
-                    zQ = 16 === QQ.texelBytes ? new Uint8Array(XQ.buffer) : new Uint8Array(new Uint16Array(XQ).buffer);
-                  WQ.push(XW(`tex#${QQ.id} (${16===QQ.texelBytes?"records":"light"})`, QQ, zQ))
+                  const iM = rr(jM, SM.texture, MM.width, 0, MM.width * MM.height),
+                    aM = 16 === MM.texelBytes ? new Uint8Array(iM.buffer) : new Uint8Array(new Uint16Array(iM).buffer);
+                  rM.push(ir(`tex#${MM.id} (${16===MM.texelBytes?"records":"light"})`, MM, aM))
                 }
-                for (const wQ of WQ) SQ(`page readback ${wQ}`)
-              }(wQ.draws) : SQ("page readback: none on WebGL1 (no buffer readback)")
-            } catch (QQ) {
-              SQ(`check failed: ${String(QQ)}`)
+                for (const OM of rM) NM(`page readback ${OM}`)
+              }(OM.draws) : NM("page readback: none on WebGL1 (no buffer readback)")
+            } catch (MM) {
+              NM(`check failed: ${String(MM)}`)
             }
-            WQ()
+            rM()
           },
-          TQ = () => {
-            if (wQ.draws.length > 0 && !XQ) return XQ = !0, void setTimeout(qQ, 0);
-            XQ || requestAnimationFrame(TQ)
+          jM = () => {
+            if (OM.draws.length > 0 && !iM) return iM = !0, void setTimeout(SM, 0);
+            iM || requestAnimationFrame(jM)
           };
-        requestAnimationFrame(TQ), setTimeout((() => {
-          XQ || (XQ = !0, qQ())
+        requestAnimationFrame(jM), setTimeout((() => {
+          iM || (iM = !0, SM())
         }), 5e3)
       }))
     }
-    var sW = XQ(5002);
-    const FW = 20,
-      PW = 24,
-      gW = Reflect.apply;
+    var Pr = iM(5069);
+    const nr = 20,
+      Qr = 24,
+      zr = Reflect.apply;
 
-    function JW(QQ, WQ, XQ) {
-      if (!QQ) return;
-      const wQ = QQ[WQ];
-      if ("function" === typeof wQ) {
-        const qQ = XQ(wQ);
-        QQ[WQ] = qQ, (0, sW.s)(qQ, wQ)
+    function Lr(MM, rM, iM) {
+      if (!MM) return;
+      const OM = MM[rM];
+      if ("function" === typeof OM) {
+        const SM = iM(OM);
+        MM[rM] = SM, (0, Pr.A)(SM, OM)
       }
     }
-    let rW = !1;
-    const IW = new WeakMap,
-      jW = new WeakMap,
-      BW = new WeakMap,
-      yW = {
+    let mr = !1;
+    const Hr = new WeakMap,
+      hr = new WeakMap,
+      Jr = new WeakMap,
+      dr = {
         gl: 0,
         lost: 0
       };
-    let VW = {
+    let yr = {
         inst: {
           draws: 0,
           faces: 0
@@ -772,307 +772,307 @@ export const modules = {
           faces: 0
         }
       },
-      DW = {
+      lr = {
         buffer: 0,
         texture: 0
       },
-      pW = 0;
+      Er = 0;
 
-    function GW(QQ) {
-      let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      if (QQ instanceof ArrayBuffer) return new Uint8Array(QQ, WQ, XQ || void 0);
-      if (!ArrayBuffer.isView(QQ)) return null;
-      const wQ = "BYTES_PER_ELEMENT" in QQ ? QQ.BYTES_PER_ELEMENT : 1,
-        qQ = QQ.byteOffset + WQ * wQ,
-        TQ = XQ ? XQ * wQ : QQ.byteLength - WQ * wQ;
-      return new Uint8Array(QQ.buffer, qQ, Math.max(0, TQ))
+    function Ur(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      if (MM instanceof ArrayBuffer) return new Uint8Array(MM, rM, iM || void 0);
+      if (!ArrayBuffer.isView(MM)) return null;
+      const OM = "BYTES_PER_ELEMENT" in MM ? MM.BYTES_PER_ELEMENT : 1,
+        SM = MM.byteOffset + rM * OM,
+        jM = iM ? iM * OM : MM.byteLength - rM * OM;
+      return new Uint8Array(MM.buffer, SM, Math.max(0, jM))
     }
 
-    function UW(QQ, WQ) {
-      const XQ = function(QQ) {
-        switch (QQ) {
-          case BQ.ARRAY_BUFFER:
-            return BQ.ARRAY_BUFFER_BINDING;
-          case BQ.ELEMENT_ARRAY_BUFFER:
-            return BQ.ELEMENT_ARRAY_BUFFER_BINDING;
-          case BQ.COPY_READ_BUFFER:
-            return BQ.COPY_READ_BUFFER_BINDING;
-          case BQ.COPY_WRITE_BUFFER:
-            return BQ.COPY_WRITE_BUFFER_BINDING;
-          case BQ.UNIFORM_BUFFER:
-            return BQ.UNIFORM_BUFFER_BINDING;
-          case BQ.PIXEL_UNPACK_BUFFER:
-            return BQ.PIXEL_UNPACK_BUFFER_BINDING;
-          case BQ.TRANSFORM_FEEDBACK_BUFFER:
-            return BQ.TRANSFORM_FEEDBACK_BUFFER_BINDING;
+    function Gr(MM, rM) {
+      const iM = function(MM) {
+        switch (MM) {
+          case JM.ARRAY_BUFFER:
+            return JM.ARRAY_BUFFER_BINDING;
+          case JM.ELEMENT_ARRAY_BUFFER:
+            return JM.ELEMENT_ARRAY_BUFFER_BINDING;
+          case JM.COPY_READ_BUFFER:
+            return JM.COPY_READ_BUFFER_BINDING;
+          case JM.COPY_WRITE_BUFFER:
+            return JM.COPY_WRITE_BUFFER_BINDING;
+          case JM.UNIFORM_BUFFER:
+            return JM.UNIFORM_BUFFER_BINDING;
+          case JM.PIXEL_UNPACK_BUFFER:
+            return JM.PIXEL_UNPACK_BUFFER_BINDING;
+          case JM.TRANSFORM_FEEDBACK_BUFFER:
+            return JM.TRANSFORM_FEEDBACK_BUFFER_BINDING;
           default:
             return 0
         }
-      }(WQ);
-      return XQ ? QQ.getParameter(XQ) : null
+      }(rM);
+      return iM ? MM.getParameter(iM) : null
     }
 
-    function bW(QQ) {
-      const WQ = cQ.get(QQ);
-      WQ && (RQ.shadowBytes -= WQ.bytes.length, cQ.delete(QQ))
+    function Cr(MM) {
+      const rM = pM.get(MM);
+      rM && (sM.shadowBytes -= rM.bytes.length, pM.delete(MM))
     }
 
-    function vW(QQ, WQ) {
-      let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        wQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-      bW(QQ), RQ.shadowBytes + WQ > HQ ? RQ.uncopied++ : (RQ.shadowBytes += WQ, cQ.set(QQ, {
-        id: uQ(QQ),
-        bytes: new Uint8Array(WQ),
-        width: XQ,
-        height: wQ,
-        texelBytes: qQ,
+    function er(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        OM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        SM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+      Cr(MM), sM.shadowBytes + rM > wM ? sM.uncopied++ : (sM.shadowBytes += rM, pM.set(MM, {
+        id: ZM(MM),
+        bytes: new Uint8Array(rM),
+        width: iM,
+        height: OM,
+        texelBytes: SM,
         missed: 0
       }))
     }
 
-    function dW(QQ, WQ) {
-      for (const XQ of ["deleteBuffer", "deleteTexture"]) JW(QQ, XQ, (QQ => function() {
-        for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
-        return XQ[0] && bW(XQ[0]), gW(QQ, this, XQ)
+    function br(MM, rM) {
+      for (const iM of ["deleteBuffer", "deleteTexture"]) Lr(MM, iM, (MM => function() {
+        for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
+        return iM[0] && Cr(iM[0]), zr(MM, this, iM)
       }));
-      JW(QQ, "shaderSource", (QQ => function() {
-        for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
-        return XQ[0] && "string" === typeof XQ[1] && IW.set(XQ[0], XQ[1]), gW(QQ, this, XQ)
-      })), JW(QQ, "attachShader", (QQ => function() {
-        for (var WQ, XQ = arguments.length, wQ = new Array(XQ), qQ = 0; qQ < XQ; qQ++) wQ[qQ] = arguments[qQ];
-        const TQ = wQ[0],
-          zQ = null !== (WQ = jW.get(TQ)) && void 0 !== WQ ? WQ : [];
-        return zQ.push(wQ[1]), jW.set(TQ, zQ), gW(QQ, this, wQ)
-      })), JW(QQ, "linkProgram", (QQ => function() {
-        for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
-        const qQ = gW(QQ, this, XQ);
-        return RQ.inProbe || function(QQ, WQ) {
-          var XQ, wQ, qQ;
-          "undefined" !== typeof HTMLCanvasElement && QQ.canvas instanceof HTMLCanvasElement && function(QQ) {
-            if (cW.has(QQ)) return;
-            cW.add(QQ);
-            for (const WQ of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) QQ.addEventListener(WQ, (QQ => {
-              yW.lost < FW && (yW.lost++, SQ(`${WQ}${"statusMessage"in QQ?`: ${String(QQ.statusMessage)}`:""}`))
+      Lr(MM, "shaderSource", (MM => function() {
+        for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
+        return iM[0] && "string" === typeof iM[1] && Hr.set(iM[0], iM[1]), zr(MM, this, iM)
+      })), Lr(MM, "attachShader", (MM => function() {
+        for (var rM, iM = arguments.length, OM = new Array(iM), SM = 0; SM < iM; SM++) OM[SM] = arguments[SM];
+        const jM = OM[0],
+          aM = null !== (rM = hr.get(jM)) && void 0 !== rM ? rM : [];
+        return aM.push(OM[1]), hr.set(jM, aM), zr(MM, this, OM)
+      })), Lr(MM, "linkProgram", (MM => function() {
+        for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
+        const SM = zr(MM, this, iM);
+        return sM.inProbe || function(MM, rM) {
+          var iM, OM, SM;
+          "undefined" !== typeof HTMLCanvasElement && MM.canvas instanceof HTMLCanvasElement && function(MM) {
+            if (pr.has(MM)) return;
+            pr.add(MM);
+            for (const rM of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) MM.addEventListener(rM, (MM => {
+              dr.lost < nr && (dr.lost++, NM(`${rM}${"statusMessage"in MM?`: ${String(MM.statusMessage)}`:""}`))
             }))
-          }(QQ.canvas);
-          RQ.context ??= QQ;
-          const TQ = null !== (XQ = jW.get(WQ)) && void 0 !== XQ ? XQ : [];
-          let zQ = "",
-            sQ = "";
-          for (const gQ of TQ) {
-            var FQ;
-            const QQ = null !== (FQ = IW.get(gQ)) && void 0 !== FQ ? FQ : "";
-            /\bgl_Position\b/.test(QQ) ? zQ = QQ : sQ = QQ
+          }(MM.canvas);
+          sM.context ??= MM;
+          const jM = null !== (iM = hr.get(rM)) && void 0 !== iM ? iM : [];
+          let aM = "",
+            PM = "";
+          for (const zM of jM) {
+            var nM;
+            const MM = null !== (nM = Hr.get(zM)) && void 0 !== nM ? nM : "";
+            /\bgl_Position\b/.test(MM) ? aM = MM : PM = MM
           }
-          const PQ = {
-            id: uQ(WQ),
-            name: null !== (wQ = null === (qQ = lQ.exec(zQ)) || void 0 === qQ ? void 0 : qQ[1]) && void 0 !== wQ ? wQ : null,
-            gl: QQ,
-            vertex: zQ,
-            fragment: sQ,
-            terrain: aW(zQ),
+          const QM = {
+            id: ZM(rM),
+            name: null !== (OM = null === (SM = gM.exec(aM)) || void 0 === SM ? void 0 : SM[1]) && void 0 !== OM ? OM : null,
+            gl: MM,
+            vertex: aM,
+            fragment: PM,
+            terrain: tr(aM),
             checked: !1,
             firstDraw: !1
           };
-          if (BW.set(WQ, PQ), iQ.push([WQ, PQ]), null !== PQ.terrain) {
-            const WQ = TQ.map((WQ => {
-              var XQ;
-              return null !== (XQ = QQ.getShaderInfoLog(WQ)) && void 0 !== XQ ? XQ : ""
-            })).filter((QQ => "" !== QQ.trim()));
-            WQ.length > 0 && tQ(`program ${hQ(PQ)} (${PQ.terrain}) shader logs:\n${oQ(WQ.join("\n"))}`)
+          if (Jr.set(rM, QM), RM.push([rM, QM]), null !== QM.terrain) {
+            const rM = jM.map((rM => {
+              var iM;
+              return null !== (iM = MM.getShaderInfoLog(rM)) && void 0 !== iM ? iM : ""
+            })).filter((MM => "" !== MM.trim()));
+            rM.length > 0 && AM(`program ${uM(QM)} (${QM.terrain}) shader logs:\n${xM(rM.join("\n"))}`)
           }
-        }(this, XQ[0]), qQ
-      })), JW(QQ, "bufferData", (QQ => function() {
-        for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
-        const qQ = gW(QQ, this, XQ);
-        if (!RQ.inProbe) {
-          const QQ = UW(this, XQ[0]);
-          if (QQ) {
-            var TQ, zQ, sQ;
-            const WQ = "number" === typeof XQ[1] ? null : GW(XQ[1], null !== (TQ = XQ[3]) && void 0 !== TQ ? TQ : 0, null !== (zQ = XQ[4]) && void 0 !== zQ ? zQ : 0);
-            var FQ;
-            if (vW(QQ, "number" === typeof XQ[1] ? XQ[1] : null !== (sQ = null === WQ || void 0 === WQ ? void 0 : WQ.length) && void 0 !== sQ ? sQ : 0), WQ) null === (FQ = cQ.get(QQ)) || void 0 === FQ || FQ.bytes.set(WQ)
-          }
-        }
-        return qQ
-      })), JW(QQ, "bufferSubData", (QQ => function() {
-        for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
-        const qQ = gW(QQ, this, XQ);
-        if (!RQ.inProbe) {
-          var TQ, zQ;
-          const QQ = UW(this, XQ[0]),
-            WQ = QQ ? cQ.get(QQ) : void 0,
-            wQ = GW(XQ[2], null !== (TQ = XQ[3]) && void 0 !== TQ ? TQ : 0, null !== (zQ = XQ[4]) && void 0 !== zQ ? zQ : 0);
-          if (WQ && wQ) {
-            const QQ = XQ[1];
-            WQ.bytes.set(wQ.subarray(0, Math.max(0, WQ.bytes.length - QQ)), QQ), HW("buffer", WQ, QQ, wQ.length)
+        }(this, iM[0]), SM
+      })), Lr(MM, "bufferData", (MM => function() {
+        for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
+        const SM = zr(MM, this, iM);
+        if (!sM.inProbe) {
+          const MM = Gr(this, iM[0]);
+          if (MM) {
+            var jM, aM, PM;
+            const rM = "number" === typeof iM[1] ? null : Ur(iM[1], null !== (jM = iM[3]) && void 0 !== jM ? jM : 0, null !== (aM = iM[4]) && void 0 !== aM ? aM : 0);
+            var nM;
+            if (er(MM, "number" === typeof iM[1] ? iM[1] : null !== (PM = null === rM || void 0 === rM ? void 0 : rM.length) && void 0 !== PM ? PM : 0), rM) null === (nM = pM.get(MM)) || void 0 === nM || nM.bytes.set(rM)
           }
         }
-        return qQ
-      })), WQ && (JW(QQ, "copyBufferSubData", (QQ => function() {
-        for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
-        const qQ = gW(QQ, this, XQ);
-        if (!RQ.inProbe) {
-          const [QQ, WQ, wQ, qQ, TQ] = XQ, zQ = UW(this, QQ), sQ = UW(this, WQ), FQ = zQ ? cQ.get(zQ) : void 0, PQ = sQ ? cQ.get(sQ) : void 0;
-          PQ && (FQ ? PQ.bytes.set(FQ.bytes.slice(wQ, wQ + TQ), qQ) : PQ.missed++)
-        }
-        return qQ
-      })), JW(QQ, "texStorage2D", (QQ => function() {
-        for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
-        const qQ = gW(QQ, this, XQ),
-          [, , TQ, zQ, sQ] = XQ;
-        if (!RQ.inProbe && (TQ === BQ.RGBA32UI || TQ === BQ.RGBA16UI)) {
-          const QQ = this.getParameter(BQ.TEXTURE_BINDING_2D),
-            WQ = TQ === BQ.RGBA32UI ? 16 : 8;
-          QQ && (AQ.set(QQ, WQ), vW(QQ, zQ * sQ * WQ, zQ, sQ, WQ))
-        }
-        return qQ
-      })), JW(QQ, "texSubImage2D", (QQ => function() {
-        for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
-        const qQ = gW(QQ, this, XQ);
-        return !RQ.inProbe && XQ.length >= 9 && XQ[0] === BQ.TEXTURE_2D && 0 === XQ[1] && function(QQ, WQ) {
-          var XQ;
-          const wQ = QQ.getParameter(BQ.TEXTURE_BINDING_2D),
-            qQ = wQ ? cQ.get(wQ) : void 0;
-          if (!qQ) return;
-          const [, , TQ, zQ, sQ, FQ] = WQ;
-          let PQ = GW(WQ[8], null !== (XQ = WQ[9]) && void 0 !== XQ ? XQ : 0);
-          if (null === PQ && "number" === typeof WQ[8]) {
-            const XQ = UW(QQ, BQ.PIXEL_UNPACK_BUFFER),
-              wQ = XQ ? cQ.get(XQ) : void 0;
-            PQ = wQ ? wQ.bytes.subarray(WQ[8]) : null
+        return SM
+      })), Lr(MM, "bufferSubData", (MM => function() {
+        for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
+        const SM = zr(MM, this, iM);
+        if (!sM.inProbe) {
+          var jM, aM;
+          const MM = Gr(this, iM[0]),
+            rM = MM ? pM.get(MM) : void 0,
+            OM = Ur(iM[2], null !== (jM = iM[3]) && void 0 !== jM ? jM : 0, null !== (aM = iM[4]) && void 0 !== aM ? aM : 0);
+          if (rM && OM) {
+            const MM = iM[1];
+            rM.bytes.set(OM.subarray(0, Math.max(0, rM.bytes.length - MM)), MM), wr("buffer", rM, MM, OM.length)
           }
-          if (null === PQ) return void qQ.missed++;
-          const gQ = QQ.getParameter(BQ.UNPACK_ROW_LENGTH) || sQ,
-            JQ = QQ.getParameter(BQ.UNPACK_SKIP_ROWS),
-            rQ = QQ.getParameter(BQ.UNPACK_SKIP_PIXELS),
-            IQ = qQ.texelBytes;
-          for (let jQ = 0; jQ < FQ; jQ++) {
-            const QQ = ((JQ + jQ) * gQ + rQ) * IQ,
-              WQ = ((zQ + jQ) * qQ.width + TQ) * IQ;
-            qQ.bytes.set(PQ.subarray(QQ, QQ + sQ * IQ), WQ)
+        }
+        return SM
+      })), rM && (Lr(MM, "copyBufferSubData", (MM => function() {
+        for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
+        const SM = zr(MM, this, iM);
+        if (!sM.inProbe) {
+          const [MM, rM, OM, SM, jM] = iM, aM = Gr(this, MM), PM = Gr(this, rM), nM = aM ? pM.get(aM) : void 0, QM = PM ? pM.get(PM) : void 0;
+          QM && (nM ? QM.bytes.set(nM.bytes.slice(OM, OM + jM), SM) : QM.missed++)
+        }
+        return SM
+      })), Lr(MM, "texStorage2D", (MM => function() {
+        for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
+        const SM = zr(MM, this, iM),
+          [, , jM, aM, PM] = iM;
+        if (!sM.inProbe && (jM === JM.RGBA32UI || jM === JM.RGBA16UI)) {
+          const MM = this.getParameter(JM.TEXTURE_BINDING_2D),
+            rM = jM === JM.RGBA32UI ? 16 : 8;
+          MM && (WM.set(MM, rM), er(MM, aM * PM * rM, aM, PM, rM))
+        }
+        return SM
+      })), Lr(MM, "texSubImage2D", (MM => function() {
+        for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
+        const SM = zr(MM, this, iM);
+        return !sM.inProbe && iM.length >= 9 && iM[0] === JM.TEXTURE_2D && 0 === iM[1] && function(MM, rM) {
+          var iM;
+          const OM = MM.getParameter(JM.TEXTURE_BINDING_2D),
+            SM = OM ? pM.get(OM) : void 0;
+          if (!SM) return;
+          const [, , jM, aM, PM, nM] = rM;
+          let QM = Ur(rM[8], null !== (iM = rM[9]) && void 0 !== iM ? iM : 0);
+          if (null === QM && "number" === typeof rM[8]) {
+            const iM = Gr(MM, JM.PIXEL_UNPACK_BUFFER),
+              OM = iM ? pM.get(iM) : void 0;
+            QM = OM ? OM.bytes.subarray(rM[8]) : null
           }
-          HW("texture", qQ, (zQ * qQ.width + TQ) * IQ, sQ * FQ * IQ)
-        }(this, XQ), qQ
-      })), JW(QQ, "copyTexSubImage2D", (QQ => function() {
-        for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
-        const qQ = XQ[0] === BQ.TEXTURE_2D ? this.getParameter(BQ.TEXTURE_BINDING_2D) : null,
-          TQ = qQ ? cQ.get(qQ) : void 0;
-        return TQ && TQ.missed++, gW(QQ, this, XQ)
+          if (null === QM) return void SM.missed++;
+          const zM = MM.getParameter(JM.UNPACK_ROW_LENGTH) || PM,
+            LM = MM.getParameter(JM.UNPACK_SKIP_ROWS),
+            mM = MM.getParameter(JM.UNPACK_SKIP_PIXELS),
+            HM = SM.texelBytes;
+          for (let hM = 0; hM < nM; hM++) {
+            const MM = ((LM + hM) * zM + mM) * HM,
+              rM = ((aM + hM) * SM.width + jM) * HM;
+            SM.bytes.set(QM.subarray(MM, MM + PM * HM), rM)
+          }
+          wr("texture", SM, (aM * SM.width + jM) * HM, PM * nM * HM)
+        }(this, iM), SM
+      })), Lr(MM, "copyTexSubImage2D", (MM => function() {
+        for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
+        const SM = iM[0] === JM.TEXTURE_2D ? this.getParameter(JM.TEXTURE_BINDING_2D) : null,
+          jM = SM ? pM.get(SM) : void 0;
+        return jM && jM.missed++, zr(MM, this, iM)
       })));
-      for (const XQ of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) JW(QQ, XQ, (QQ => function() {
-        for (var WQ = arguments.length, wQ = new Array(WQ), qQ = 0; qQ < WQ; qQ++) wQ[qQ] = arguments[qQ];
-        const TQ = gW(QQ, this, wQ);
-        return RQ.inProbe || hW(this, XQ, wQ), TQ
+      for (const iM of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) Lr(MM, iM, (MM => function() {
+        for (var rM = arguments.length, OM = new Array(rM), SM = 0; SM < rM; SM++) OM[SM] = arguments[SM];
+        const jM = zr(MM, this, OM);
+        return sM.inProbe || ur(this, iM, OM), jM
       }));
-      JW(QQ, "getExtension", (QQ => function() {
-        for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
-        const qQ = gW(QQ, this, XQ);
-        return qQ && "object" === typeof qQ && function(QQ, WQ, XQ) {
-          const wQ = {
+      Lr(MM, "getExtension", (MM => function() {
+        for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
+        const SM = zr(MM, this, iM);
+        return SM && "object" === typeof SM && function(MM, rM, iM) {
+          const OM = {
             WEBGL_multi_draw: ["multiDrawArraysWEBGL", "multiDrawElementsWEBGL", "multiDrawArraysInstancedWEBGL", "multiDrawElementsInstancedWEBGL"],
             ANGLE_instanced_arrays: ["drawArraysInstancedANGLE", "drawElementsInstancedANGLE"]
           };
-          if (!(WQ in wQ) || XQ.bloxdRenderDebug) return;
-          XQ.bloxdRenderDebug = !0;
-          for (const qQ of wQ[WQ]) {
-            const WQ = XQ[qQ];
-            "function" === typeof WQ && (XQ[qQ] = function() {
-              for (var wQ = arguments.length, TQ = new Array(wQ), zQ = 0; zQ < wQ; zQ++) TQ[zQ] = arguments[zQ];
-              const sQ = gW(WQ, XQ, TQ);
-              return RQ.inProbe || hW(QQ, qQ, TQ), sQ
+          if (!(rM in OM) || iM.bloxdRenderDebug) return;
+          iM.bloxdRenderDebug = !0;
+          for (const SM of OM[rM]) {
+            const rM = iM[SM];
+            "function" === typeof rM && (iM[SM] = function() {
+              for (var OM = arguments.length, jM = new Array(OM), aM = 0; aM < OM; aM++) jM[aM] = arguments[aM];
+              const PM = zr(rM, iM, jM);
+              return sM.inProbe || ur(MM, SM, jM), PM
             })
           }
-        }(this, XQ[0], qQ), qQ
+        }(this, iM[0], SM), SM
       }))
     }
 
-    function HW(QQ, WQ, XQ, wQ) {
-      DW[QQ] += wQ, pW < 32 && WQ.bytes.length >= 1 << 20 && (pW++, tQ(`upload ${QQ} #${WQ.id} +${XQ} ${wQ} B`))
+    function wr(MM, rM, iM, OM) {
+      lr[MM] += OM, Er < 32 && rM.bytes.length >= 1 << 20 && (Er++, AM(`upload ${MM} #${rM.id} +${iM} ${OM} B`))
     }
 
-    function aW(QQ) {
-      if (!QQ.includes("decodeQuad")) return null;
-      return !/^\s*#version 300 es/.test(QQ) || /in uvec3 _p2vs_location0\b/.test(QQ) ? "inst" : "tex"
+    function tr(MM) {
+      if (!MM.includes("decodeQuad")) return null;
+      return !/^\s*#version 300 es/.test(MM) || /in uvec3 _p2vs_location0\b/.test(MM) ? "inst" : "tex"
     }
 
-    function lW(QQ, WQ, XQ) {
-      var wQ;
-      if (XQ.checked) return;
-      XQ.checked = !0;
-      const qQ = QQ.getProgramParameter(WQ, BQ.LINK_STATUS),
-        TQ = (null !== (wQ = QQ.getProgramInfoLog(WQ)) && void 0 !== wQ ? wQ : "").trim();
-      var zQ;
-      null === XQ.terrain && qQ || (SQ(`program ${hQ(XQ)} ${null!==(zQ=XQ.terrain)&&void 0!==zQ?zQ:"other"} link ${qQ?"ok":"FAILED"}${TQ?`: ${oQ(TQ,300)}`:""}`), TQ && tQ(`program ${hQ(XQ)} link log:\n${oQ(TQ)}`))
+    function gr(MM, rM, iM) {
+      var OM;
+      if (iM.checked) return;
+      iM.checked = !0;
+      const SM = MM.getProgramParameter(rM, JM.LINK_STATUS),
+        jM = (null !== (OM = MM.getProgramInfoLog(rM)) && void 0 !== OM ? OM : "").trim();
+      var aM;
+      null === iM.terrain && SM || (NM(`program ${uM(iM)} ${null!==(aM=iM.terrain)&&void 0!==aM?aM:"other"} link ${SM?"ok":"FAILED"}${jM?`: ${xM(jM,300)}`:""}`), jM && AM(`program ${uM(iM)} link log:\n${xM(jM)}`))
     }
 
-    function hW(QQ, WQ, XQ) {
-      var wQ;
-      const qQ = QQ.getParameter(BQ.CURRENT_PROGRAM),
-        TQ = qQ ? BW.get(qQ) : void 0;
-      if (!qQ || !TQ) return;
-      const zQ = null !== (wQ = TQ.terrain) && void 0 !== wQ ? wQ : "other",
+    function ur(MM, rM, iM) {
+      var OM;
+      const SM = MM.getParameter(JM.CURRENT_PROGRAM),
+        jM = SM ? Jr.get(SM) : void 0;
+      if (!SM || !jM) return;
+      const aM = null !== (OM = jM.terrain) && void 0 !== OM ? OM : "other",
         {
-          Qy: sQ,
-          instances: FQ
-        } = function(QQ, WQ) {
-          switch (QQ) {
+          Ld: PM,
+          instances: nM
+        } = function(MM, rM) {
+          switch (MM) {
             case "drawArrays":
               return {
-                Qy: [
-                  [WQ[1], WQ[2]]
+                Ld: [
+                  [rM[1], rM[2]]
                 ], instances: 1
               };
             case "drawArraysInstanced":
             case "drawArraysInstancedANGLE":
               return {
-                Qy: [
-                  [WQ[1], WQ[2]]
-                ], instances: WQ[3]
+                Ld: [
+                  [rM[1], rM[2]]
+                ], instances: rM[3]
               };
             case "drawElements":
               return {
-                Qy: [
-                  [0, WQ[1]]
+                Ld: [
+                  [0, rM[1]]
                 ], instances: 1
               };
             case "drawElementsInstanced":
             case "drawElementsInstancedANGLE":
               return {
-                Qy: [
-                  [0, WQ[1]]
-                ], instances: WQ[4]
+                Ld: [
+                  [0, rM[1]]
+                ], instances: rM[4]
               };
             case "multiDrawArraysWEBGL": {
-              const QQ = WQ[1],
-                XQ = WQ[3],
-                wQ = WQ[2],
-                qQ = WQ[4],
-                TQ = [];
-              for (let zQ = 0; zQ < WQ[5]; zQ++) TQ.push([QQ[wQ + zQ], XQ[qQ + zQ]]);
+              const MM = rM[1],
+                iM = rM[3],
+                OM = rM[2],
+                SM = rM[4],
+                jM = [];
+              for (let aM = 0; aM < rM[5]; aM++) jM.push([MM[OM + aM], iM[SM + aM]]);
               return {
-                Qy: TQ,
+                Ld: jM,
                 instances: 1
               }
             }
             default:
               return {
-                Qy: [], instances: 0
+                Ld: [], instances: 0
               }
           }
-        }(WQ, XQ),
-        PQ = "inst" === TQ.terrain ? FQ : sQ.reduce(((QQ, WQ) => {
-          let [, XQ] = WQ;
-          return QQ + XQ
+        }(rM, iM),
+        QM = "inst" === jM.terrain ? nM : PM.reduce(((MM, rM) => {
+          let [, iM] = rM;
+          return MM + iM
         }), 0) / 6;
-      if (VW[zQ].draws++, VW[zQ].faces += PQ, null === TQ.terrain) return;
-      if (RQ.context = QQ, !TQ.firstDraw) {
-        TQ.firstDraw = !0, lW(QQ, qQ, TQ), iW || (iW = !0, SQ(function(QQ) {
-          var WQ;
-          const XQ = QQ.getParameter(BQ.DEPTH_FUNC),
-            wQ = {
+      if (yr[aM].draws++, yr[aM].faces += QM, null === jM.terrain) return;
+      if (sM.context = MM, !jM.firstDraw) {
+        jM.firstDraw = !0, gr(MM, SM, jM), Rr || (Rr = !0, NM(function(MM) {
+          var rM;
+          const iM = MM.getParameter(JM.DEPTH_FUNC),
+            OM = {
               513: "less",
               514: "equal",
               515: "lequal",
@@ -1080,319 +1080,319 @@ export const modules = {
               518: "gequal",
               519: "always"
             };
-          let qQ = "default framebuffer";
-          if ("DRAW_FRAMEBUFFER" in QQ && QQ.getParameter(BQ.DRAW_FRAMEBUFFER_BINDING)) {
-            const WQ = QQ;
-            qQ = WQ.getFramebufferAttachmentParameter(BQ.DRAW_FRAMEBUFFER, BQ.DEPTH_ATTACHMENT, BQ.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(WQ.getFramebufferAttachmentParameter(BQ.DRAW_FRAMEBUFFER,BQ.DEPTH_ATTACHMENT,BQ.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(WQ.getFramebufferAttachmentParameter(BQ.DRAW_FRAMEBUFFER,BQ.DEPTH_ATTACHMENT,BQ.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
+          let SM = "default framebuffer";
+          if ("DRAW_FRAMEBUFFER" in MM && MM.getParameter(JM.DRAW_FRAMEBUFFER_BINDING)) {
+            const rM = MM;
+            SM = rM.getFramebufferAttachmentParameter(JM.DRAW_FRAMEBUFFER, JM.DEPTH_ATTACHMENT, JM.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(rM.getFramebufferAttachmentParameter(JM.DRAW_FRAMEBUFFER,JM.DEPTH_ATTACHMENT,JM.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(rM.getFramebufferAttachmentParameter(JM.DRAW_FRAMEBUFFER,JM.DEPTH_ATTACHMENT,JM.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
           }
-          const TQ = QQ.getParameter(BQ.DEPTH_CLEAR_VALUE);
-          return `depth ${null!==(WQ=wQ[XQ])&&void 0!==WQ?WQ:`0x${XQ.toString(16)}`} clear ${TQ}${516===XQ||518===XQ?" (reverse-Z)":""}, samples ${String(QQ.getParameter(BQ.SAMPLES))}, ${qQ}`
-        }(QQ)));
-        const XQ = QQ.getError();
-        XQ !== BQ.NO_ERROR && yW.gl < FW && (yW.gl++, SQ(`GL error 0x${XQ.toString(16)} after program ${hQ(TQ)}'s first terrain draw (${WQ})`))
+          const jM = MM.getParameter(JM.DEPTH_CLEAR_VALUE);
+          return `depth ${null!==(rM=OM[iM])&&void 0!==rM?rM:`0x${iM.toString(16)}`} clear ${jM}${516===iM||518===iM?" (reverse-Z)":""}, samples ${String(MM.getParameter(JM.SAMPLES))}, ${SM}`
+        }(MM)));
+        const iM = MM.getError();
+        iM !== JM.NO_ERROR && dr.gl < nr && (dr.gl++, NM(`GL error 0x${iM.toString(16)} after program ${uM(jM)}'s first terrain draw (${rM})`))
       }
-      const gQ = RQ.pendingCheck;
-      null !== gQ && (gQ.terrainDraws++, gQ.draws.length < PW && eQ(QQ, qQ, TQ, WQ, sQ, FQ))
+      const zM = sM.pendingCheck;
+      null !== zM && (zM.terrainDraws++, zM.draws.length < Qr && vM(MM, SM, jM, rM, PM, nM))
     }
-    let iW = !1;
-    const cW = new WeakSet;
-    var AW = XQ(4821),
-      RW = XQ(5008);
-    const EW = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
-    let CW = !1;
-    const uW = new WeakSet,
-      LW = new WeakMap,
-      kW = new WeakMap,
-      fW = {
+    let Rr = !1;
+    const pr = new WeakSet;
+    var Wr = iM(4895),
+      sr = iM(5076);
+    const Dr = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
+    let kr = !1;
+    const Zr = new WeakSet,
+      or = new WeakMap,
+      fr = new WeakMap,
+      Yr = {
         uncaptured: 0,
         compile: 0,
         rejected: 0
       };
-    let SW = 0,
-      tW = !1,
-      oW = null,
-      eW = {
+    let Nr = 0,
+      Ar = !1,
+      xr = null,
+      vr = {
         draws: 0,
         faces: 0
       };
 
-    function nW(QQ) {
-      const WQ = globalThis[QQ];
-      return null === WQ || void 0 === WQ ? void 0 : WQ.prototype
+    function Fr(MM) {
+      const rM = globalThis[MM];
+      return null === rM || void 0 === rM ? void 0 : rM.prototype
     }
 
-    function xW(QQ) {
-      return QQ && "function" === typeof QQ[Symbol.iterator] ? [...QQ].sort().join(" ") : ""
+    function Br(MM) {
+      return MM && "function" === typeof MM[Symbol.iterator] ? [...MM].sort().join(" ") : ""
     }
 
-    function YW(QQ, WQ) {
-      const XQ = null !== QQ && void 0 !== QQ ? QQ : {},
-        wQ = null !== WQ && void 0 !== WQ ? WQ : Object.keys(Object.getPrototypeOf(XQ)).concat(Object.keys(XQ));
-      return [...new Set(wQ)].filter((QQ => "number" === typeof XQ[QQ])).map((QQ => `${QQ} ${String(XQ[QQ])}`)).join(", ")
+    function Xr(MM, rM) {
+      const iM = null !== MM && void 0 !== MM ? MM : {},
+        OM = null !== rM && void 0 !== rM ? rM : Object.keys(Object.getPrototypeOf(iM)).concat(Object.keys(iM));
+      return [...new Set(OM)].filter((MM => "number" === typeof iM[MM])).map((MM => `${MM} ${String(iM[MM])}`)).join(", ")
     }
 
-    function NW(QQ, WQ) {
-      var XQ;
-      const wQ = null !== (XQ = WQ.vertex) && void 0 !== XQ ? XQ : {};
-      if (wQ.module && uW.has(wQ.module)) {
-        var qQ;
-        const XQ = String(null !== (qQ = wQ.entryPoint) && void 0 !== qQ ? qQ : "");
-        if (XQ.startsWith("vs_packed") && LW.set(QQ, XQ), !tW) {
-          var TQ, zQ, sQ, FQ, PQ;
-          tW = !0;
-          const QQ = null !== (TQ = WQ.depthStencil) && void 0 !== TQ ? TQ : {},
-            wQ = null !== (zQ = WQ.multisample) && void 0 !== zQ ? zQ : {},
-            qQ = String(null !== (sQ = QQ.depthCompare) && void 0 !== sQ ? sQ : "");
-          SQ(`WebGPU terrain pipeline ${XQ}: depth ${String(null!==(FQ=QQ.format)&&void 0!==FQ?FQ:"none")} ${qQ}${qQ.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(PQ=wQ.count)&&void 0!==PQ?PQ:1)}`)
+    function Ir(MM, rM) {
+      var iM;
+      const OM = null !== (iM = rM.vertex) && void 0 !== iM ? iM : {};
+      if (OM.module && Zr.has(OM.module)) {
+        var SM;
+        const iM = String(null !== (SM = OM.entryPoint) && void 0 !== SM ? SM : "");
+        if (iM.startsWith("vs_packed") && or.set(MM, iM), !Ar) {
+          var jM, aM, PM, nM, QM;
+          Ar = !0;
+          const MM = null !== (jM = rM.depthStencil) && void 0 !== jM ? jM : {},
+            OM = null !== (aM = rM.multisample) && void 0 !== aM ? aM : {},
+            SM = String(null !== (PM = MM.depthCompare) && void 0 !== PM ? PM : "");
+          NM(`WebGPU terrain pipeline ${iM}: depth ${String(null!==(nM=MM.format)&&void 0!==nM?nM:"none")} ${SM}${SM.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(QM=OM.count)&&void 0!==QM?QM:1)}`)
         }
       }
     }
 
-    function ZW(QQ) {
-      JW(QQ, "setPipeline", (QQ => function() {
-        for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
-        return kW.set(this, XQ[0]), gW(QQ, this, XQ)
+    function Kr(MM) {
+      Lr(MM, "setPipeline", (MM => function() {
+        for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
+        return fr.set(this, iM[0]), zr(MM, this, iM)
       }));
-      for (const WQ of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) JW(QQ, WQ, (QQ => function() {
-        const XQ = kW.get(this),
-          wQ = XQ ? LW.get(XQ) : void 0;
-        for (var qQ = arguments.length, TQ = new Array(qQ), zQ = 0; zQ < qQ; zQ++) TQ[zQ] = arguments[zQ];
-        return void 0 !== wQ && OW(WQ, wQ, TQ), gW(QQ, this, TQ)
+      for (const rM of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) Lr(MM, rM, (MM => function() {
+        const iM = fr.get(this),
+          OM = iM ? or.get(iM) : void 0;
+        for (var SM = arguments.length, jM = new Array(SM), aM = 0; aM < SM; aM++) jM[aM] = arguments[aM];
+        return void 0 !== OM && qr(rM, OM, jM), zr(MM, this, jM)
       }))
     }
 
-    function OW(QQ, WQ, XQ) {
-      var wQ;
-      (eW.draws++, "draw" === QQ || "drawIndexed" === QQ) && (eW.faces += XQ[0] * (null !== (wQ = XQ[1]) && void 0 !== wQ ? wQ : 1) / 6);
-      if (null !== oW && oW.length < PW) {
-        const wQ = ("draw" === QQ ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === QQ ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((WQ, wQ) => {
-          const qQ = QQ.endsWith("Indirect") ? XQ[1] : XQ[wQ];
-          return `${WQ} ${String(null!==qQ&&void 0!==qQ?qQ:"instances"===WQ?1:0)}`
+    function qr(MM, rM, iM) {
+      var OM;
+      (vr.draws++, "draw" === MM || "drawIndexed" === MM) && (vr.faces += iM[0] * (null !== (OM = iM[1]) && void 0 !== OM ? OM : 1) / 6);
+      if (null !== xr && xr.length < Qr) {
+        const OM = ("draw" === MM ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === MM ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((rM, OM) => {
+          const SM = MM.endsWith("Indirect") ? iM[1] : iM[OM];
+          return `${rM} ${String(null!==SM&&void 0!==SM?SM:"instances"===rM?1:0)}`
         }));
-        oW.push(`  ${WQ} ${QQ} ${wQ.join(" ")}`)
+        xr.push(`  ${rM} ${MM} ${OM.join(" ")}`)
       }
     }
 
-    function KW() {
-      if (CW || "undefined" === typeof navigator || !("gpu" in navigator)) return;
-      CW = !0, JW(nW("GPU"), "requestAdapter", (QQ => function() {
-        for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
-        return gW(QQ, this, XQ).then((QQ => {
-          var WQ;
-          QQ ? function(QQ) {
-            var WQ;
-            const XQ = null !== (WQ = QQ.info) && void 0 !== WQ ? WQ : {};
-            SQ(`WebGPU adapter ${["vendor","architecture","device","description"].map((QQ=>{var WQ;return`${QQ} "${String(null!==(WQ=XQ[QQ])&&void 0!==WQ?WQ:"")}"`})).join(" ")}${QQ.isFallbackAdapter?" (fallback)":""}`), SQ(`WebGPU adapter features ${xW(QQ.features)}`), SQ(`WebGPU adapter limits ${YW(QQ.limits,EW)}`), tQ(`WebGPU adapter all limits ${YW(QQ.limits,null)}`)
-          }(QQ) : SQ(`WebGPU requestAdapter(${JSON.stringify(null!==(WQ=XQ[0])&&void 0!==WQ?WQ:{})}) gave none`);
-          return QQ
+    function Tr() {
+      if (kr || "undefined" === typeof navigator || !("gpu" in navigator)) return;
+      kr = !0, Lr(Fr("GPU"), "requestAdapter", (MM => function() {
+        for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
+        return zr(MM, this, iM).then((MM => {
+          var rM;
+          MM ? function(MM) {
+            var rM;
+            const iM = null !== (rM = MM.info) && void 0 !== rM ? rM : {};
+            NM(`WebGPU adapter ${["vendor","architecture","device","description"].map((MM=>{var rM;return`${MM} "${String(null!==(rM=iM[MM])&&void 0!==rM?rM:"")}"`})).join(" ")}${MM.isFallbackAdapter?" (fallback)":""}`), NM(`WebGPU adapter features ${Br(MM.features)}`), NM(`WebGPU adapter limits ${Xr(MM.limits,Dr)}`), AM(`WebGPU adapter all limits ${Xr(MM.limits,null)}`)
+          }(MM) : NM(`WebGPU requestAdapter(${JSON.stringify(null!==(rM=iM[0])&&void 0!==rM?rM:{})}) gave none`);
+          return MM
         }))
-      })), JW(nW("GPUAdapter"), "requestDevice", (QQ => function() {
-        for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
-        return gW(QQ, this, XQ).then((QQ => (function(QQ) {
-          SQ(`WebGPU device features ${xW(QQ.features)}`), SQ(`WebGPU device limits ${YW(QQ.limits,EW)}`), QQ.addEventListener("uncapturederror", (QQ => {
-            if (fW.uncaptured < FW) {
-              var WQ, XQ, wQ;
-              fW.uncaptured++;
-              const qQ = QQ.error;
-              SQ(`WebGPU uncaptured ${null!==(WQ=null===qQ||void 0===qQ||null===(XQ=qQ.constructor)||void 0===XQ?void 0:XQ.name)&&void 0!==WQ?WQ:"error"}: ${oQ(String(null!==(wQ=null===qQ||void 0===qQ?void 0:qQ.message)&&void 0!==wQ?wQ:""),600)}`)
+      })), Lr(Fr("GPUAdapter"), "requestDevice", (MM => function() {
+        for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
+        return zr(MM, this, iM).then((MM => (function(MM) {
+          NM(`WebGPU device features ${Br(MM.features)}`), NM(`WebGPU device limits ${Xr(MM.limits,Dr)}`), MM.addEventListener("uncapturederror", (MM => {
+            if (Yr.uncaptured < nr) {
+              var rM, iM, OM;
+              Yr.uncaptured++;
+              const SM = MM.error;
+              NM(`WebGPU uncaptured ${null!==(rM=null===SM||void 0===SM||null===(iM=SM.constructor)||void 0===iM?void 0:iM.name)&&void 0!==rM?rM:"error"}: ${xM(String(null!==(OM=null===SM||void 0===SM?void 0:SM.message)&&void 0!==OM?OM:""),600)}`)
             }
           }));
-          const WQ = QQ.lost;
-          null === WQ || void 0 === WQ || WQ.then((QQ => {
-            var WQ;
-            SQ(`WebGPU device lost (${String(QQ.reason)}): ${oQ(String(null!==(WQ=QQ.message)&&void 0!==WQ?WQ:""),600)}`)
+          const rM = MM.lost;
+          null === rM || void 0 === rM || rM.then((MM => {
+            var rM;
+            NM(`WebGPU device lost (${String(MM.reason)}): ${xM(String(null!==(rM=MM.message)&&void 0!==rM?rM:""),600)}`)
           }))
-        }(QQ), QQ)), (QQ => {
-          throw SQ(`WebGPU requestDevice failed: ${String(QQ)}`), QQ
+        }(MM), MM)), (MM => {
+          throw NM(`WebGPU requestDevice failed: ${String(MM)}`), MM
         }))
       }));
-      const QQ = nW("GPUDevice");
-      JW(QQ, "createShaderModule", (QQ => function() {
-        for (var WQ, XQ, wQ = arguments.length, qQ = new Array(wQ), TQ = 0; TQ < wQ; TQ++) qQ[TQ] = arguments[TQ];
-        const zQ = gW(QQ, this, qQ);
-        return function(QQ, WQ) {
-          const XQ = WQ.includes("decodeQuad");
-          XQ && uW.add(QQ);
-          const wQ = QQ.getCompilationInfo;
-          null === wQ || void 0 === wQ || wQ.call(QQ).then((QQ => {
-            if (0 === QQ.messages.length && !XQ) return;
-            const WQ = {};
-            for (const XQ of QQ.messages) {
-              var wQ;
-              WQ[String(XQ.type)] = (null !== (wQ = WQ[String(XQ.type)]) && void 0 !== wQ ? wQ : 0) + 1
+      const MM = Fr("GPUDevice");
+      Lr(MM, "createShaderModule", (MM => function() {
+        for (var rM, iM, OM = arguments.length, SM = new Array(OM), jM = 0; jM < OM; jM++) SM[jM] = arguments[jM];
+        const aM = zr(MM, this, SM);
+        return function(MM, rM) {
+          const iM = rM.includes("decodeQuad");
+          iM && Zr.add(MM);
+          const OM = MM.getCompilationInfo;
+          null === OM || void 0 === OM || OM.call(MM).then((MM => {
+            if (0 === MM.messages.length && !iM) return;
+            const rM = {};
+            for (const iM of MM.messages) {
+              var OM;
+              rM[String(iM.type)] = (null !== (OM = rM[String(iM.type)]) && void 0 !== OM ? OM : 0) + 1
             }
-            const qQ = QQ.messages.map((QQ => `${String(QQ.type)} ${String(QQ.lineNum)}:${String(QQ.linePos)} ${String(QQ.message)}`)).join("\n");
-            fW.compile < FW && (fW.compile++, SQ(`WebGPU ${XQ?"terrain ":""}shader module compiled: ${JSON.stringify(WQ)}${qQ?` first: ${oQ(qQ.split("\n")[0],300)}`:""}`)), qQ && tQ(`WebGPU shader module messages:\n${oQ(qQ)}`)
+            const SM = MM.messages.map((MM => `${String(MM.type)} ${String(MM.lineNum)}:${String(MM.linePos)} ${String(MM.message)}`)).join("\n");
+            Yr.compile < nr && (Yr.compile++, NM(`WebGPU ${iM?"terrain ":""}shader module compiled: ${JSON.stringify(rM)}${SM?` first: ${xM(SM.split("\n")[0],300)}`:""}`)), SM && AM(`WebGPU shader module messages:\n${xM(SM)}`)
           }))
-        }(zQ, String(null !== (WQ = (null !== (XQ = qQ[0]) && void 0 !== XQ ? XQ : {}).code) && void 0 !== WQ ? WQ : "")), zQ
-      })), JW(QQ, "createRenderPipeline", (QQ => function() {
-        for (var WQ, XQ = arguments.length, wQ = new Array(XQ), qQ = 0; qQ < XQ; qQ++) wQ[qQ] = arguments[qQ];
-        const TQ = gW(QQ, this, wQ);
-        return NW(TQ, null !== (WQ = wQ[0]) && void 0 !== WQ ? WQ : {}), TQ
-      })), JW(QQ, "createRenderPipelineAsync", (QQ => function() {
-        for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
-        return gW(QQ, this, XQ).then((QQ => {
-          var WQ;
-          return NW(QQ, null !== (WQ = XQ[0]) && void 0 !== WQ ? WQ : {}), QQ
-        }), (QQ => {
-          var WQ;
-          throw function(QQ, WQ) {
-            var XQ, wQ, qQ;
-            if (fW.rejected >= FW) return;
-            fW.rejected++;
+        }(aM, String(null !== (rM = (null !== (iM = SM[0]) && void 0 !== iM ? iM : {}).code) && void 0 !== rM ? rM : "")), aM
+      })), Lr(MM, "createRenderPipeline", (MM => function() {
+        for (var rM, iM = arguments.length, OM = new Array(iM), SM = 0; SM < iM; SM++) OM[SM] = arguments[SM];
+        const jM = zr(MM, this, OM);
+        return Ir(jM, null !== (rM = OM[0]) && void 0 !== rM ? rM : {}), jM
+      })), Lr(MM, "createRenderPipelineAsync", (MM => function() {
+        for (var rM = arguments.length, iM = new Array(rM), OM = 0; OM < rM; OM++) iM[OM] = arguments[OM];
+        return zr(MM, this, iM).then((MM => {
+          var rM;
+          return Ir(MM, null !== (rM = iM[0]) && void 0 !== rM ? rM : {}), MM
+        }), (MM => {
+          var rM;
+          throw function(MM, rM) {
+            var iM, OM, SM;
+            if (Yr.rejected >= nr) return;
+            Yr.rejected++;
             const {
-              reason: TQ,
-              message: zQ
-            } = null !== WQ && void 0 !== WQ ? WQ : {}, sQ = String(null !== (XQ = (null !== (wQ = QQ.vertex) && void 0 !== wQ ? wQ : {}).entryPoint) && void 0 !== XQ ? XQ : "");
-            SQ(`WebGPU pipeline "${String(null!==(qQ=QQ.label)&&void 0!==qQ?qQ:"")}" ${sQ} rejected (${String(null!==TQ&&void 0!==TQ?TQ:"no reason")}): ${oQ(String(null!==zQ&&void 0!==zQ?zQ:WQ),600)}`)
-          }(null !== (WQ = XQ[0]) && void 0 !== WQ ? WQ : {}, QQ), QQ
+              reason: jM,
+              message: aM
+            } = null !== rM && void 0 !== rM ? rM : {}, PM = String(null !== (iM = (null !== (OM = MM.vertex) && void 0 !== OM ? OM : {}).entryPoint) && void 0 !== iM ? iM : "");
+            NM(`WebGPU pipeline "${String(null!==(SM=MM.label)&&void 0!==SM?SM:"")}" ${PM} rejected (${String(null!==jM&&void 0!==jM?jM:"no reason")}): ${xM(String(null!==aM&&void 0!==aM?aM:rM),600)}`)
+          }(null !== (rM = iM[0]) && void 0 !== rM ? rM : {}, MM), MM
         }))
-      })), JW(nW("GPUCanvasContext"), "configure", (QQ => function() {
-        for (var WQ, XQ = arguments.length, wQ = new Array(XQ), qQ = 0; qQ < XQ; qQ++) wQ[qQ] = arguments[qQ];
-        const TQ = null !== (WQ = wQ[0]) && void 0 !== WQ ? WQ : {};
-        var zQ, sQ;
-        SW++ < 3 && SQ(`WebGPU canvas ${String(TQ.format)} ${String(null!==(zQ=TQ.colorSpace)&&void 0!==zQ?zQ:"srgb")} alpha ${String(null!==(sQ=TQ.alphaMode)&&void 0!==sQ?sQ:"opaque")}`);
-        return gW(QQ, this, wQ)
-      })), ZW(nW("GPURenderPassEncoder")), ZW(nW("GPURenderBundleEncoder"))
+      })), Lr(Fr("GPUCanvasContext"), "configure", (MM => function() {
+        for (var rM, iM = arguments.length, OM = new Array(iM), SM = 0; SM < iM; SM++) OM[SM] = arguments[SM];
+        const jM = null !== (rM = OM[0]) && void 0 !== rM ? rM : {};
+        var aM, PM;
+        Nr++ < 3 && NM(`WebGPU canvas ${String(jM.format)} ${String(null!==(aM=jM.colorSpace)&&void 0!==aM?aM:"srgb")} alpha ${String(null!==(PM=jM.alphaMode)&&void 0!==PM?PM:"opaque")}`);
+        return zr(MM, this, OM)
+      })), Kr(Fr("GPURenderPassEncoder")), Kr(Fr("GPURenderBundleEncoder"))
     }
-    const mW = 1e4,
-      MW = 6e4,
-      QX = 5e3,
-      WX = 3e3,
-      XX = 100;
-    let wX = null,
-      qX = !1,
-      TX = {
-        ...AW.d
+    const Vr = 1e4,
+      cr = 6e4,
+      Mi = 5e3,
+      ri = 3e3,
+      ii = 100;
+    let Oi = null,
+      Si = !1,
+      ji = {
+        ...Wr.c
       },
-      zX = !1,
-      sX = null,
-      FX = 0,
-      PX = () => {};
-    const gX = new Promise((QQ => {
-      PX = QQ
+      ai = !1,
+      Pi = null,
+      ni = 0,
+      Qi = () => {};
+    const zi = new Promise((MM => {
+      Qi = MM
     }));
 
-    function JX() {
-      var QQ;
-      qX || (qX = !0, TX = Object.assign(window.bloxdRenderDebug ??= {
-        ...AW.d
+    function Li() {
+      var MM;
+      Si || (Si = !0, ji = Object.assign(window.bloxdRenderDebug ??= {
+        ...Wr.c
       }, {
-        faceCull: "0" === (0, TQ.k)("faceCull") ? "0" : "1",
-        adrenoProbe: null !== (QQ = (0, TQ.k)("adrenoProbe")) && void 0 !== QQ ? QQ : ""
-      }), SQ("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), rW || "undefined" === typeof window || (rW = !0, "undefined" !== typeof WebGL2RenderingContext && dW(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && dW(WebGLRenderingContext.prototype, !1)), KW(), (0, TQ.e)("renderProbe", (() => {
-        VX("console")
-      })), BX(), setInterval(pX, QX))
+        faceCull: "0" === (0, jM.o)("faceCull") ? "0" : "1",
+        adrenoProbe: null !== (MM = (0, jM.o)("adrenoProbe")) && void 0 !== MM ? MM : ""
+      }), NM("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), mr || "undefined" === typeof window || (mr = !0, "undefined" !== typeof WebGL2RenderingContext && br(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && br(WebGLRenderingContext.prototype, !1)), Tr(), (0, jM.b)("renderProbe", (() => {
+        li("console")
+      })), di(), setInterval(Ui, Mi))
     }
 
-    function rX(QQ) {
-      var WQ, XQ;
-      JX(), wX = null !== (WQ = null === QQ || void 0 === QQ ? void 0 : QQ.backend) && void 0 !== WQ ? WQ : null;
-      const wQ = `, renderer param ${null!==(XQ=(0,TQ.k)("renderer"))&&void 0!==XQ?XQ:"none"}, faceCull ${"0"===TX.faceCull?"off (whole parts)":"on"}, adrenoProbe ${TX.adrenoProbe||"none"}`;
-      SQ(`${(0,RW.d)(QQ)}${null===QQ?"":wQ}`)
+    function mi(MM) {
+      var rM, iM;
+      Li(), Oi = null !== (rM = null === MM || void 0 === MM ? void 0 : MM.backend) && void 0 !== rM ? rM : null;
+      const OM = `, renderer param ${null!==(iM=(0,jM.o)("renderer"))&&void 0!==iM?iM:"none"}, faceCull ${"0"===ji.faceCull?"off (whole parts)":"on"}, adrenoProbe ${ji.adrenoProbe||"none"}`;
+      NM(`${(0,sr.d)(MM)}${null===MM?"":OM}`)
     }
 
-    function IX() {
-      const QQ = performance.now(),
-        WQ = jX(gX, mW, MW).then((WQ => VX(`${Math.round((performance.now()-QQ)/1e3)} s after playable${WQ?"":", no terrain drawn yet"}`)));
-      (0, qQ.c)(SQ, (async () => {
-        await WQ, await sX
+    function Hi() {
+      const MM = performance.now(),
+        rM = Ji(zi, Vr, cr).then((rM => li(`${Math.round((performance.now()-MM)/1e3)} s after playable${rM?"":", no terrain drawn yet"}`)));
+      (0, SM.c)(NM, (async () => {
+        await rM, await Pi
       }))
     }
-    async function jX(QQ, WQ, XQ) {
-      const qQ = (0, wQ.e)(XQ).then((() => !1));
-      return await (0, wQ.e)(WQ), Promise.race([QQ.then((() => !0)), qQ])
+    async function Ji(MM, rM, iM) {
+      const SM = (0, OM.c)(iM).then((() => !1));
+      return await (0, OM.c)(rM), Promise.race([MM.then((() => !0)), SM])
     }
 
-    function BX() {
+    function di() {
       requestAnimationFrame((() => {
-        FX++, BX()
+        ni++, di()
       }))
     }
 
-    function yX() {
-      var QQ, WQ, XQ;
-      if (zX) return;
-      (zX = !0, SQ(`renderer caps ${null!==(QQ=TX.caps)&&void 0!==QQ?QQ:"(not noted)"}; terrain fetch ${null!==(WQ=TX.fetch)&&void 0!==WQ?WQ:"(not noted)"}`), TX.adrenoProbe) && SQ(`adrenoProbe ${TX.adrenoProbe} asked; in force (storage fetch only): ${null!==(XQ=TX.probe)&&void 0!==XQ?XQ:"(not noted)"}`);
-      const wQ = RQ.context;
-      if (wQ) {
-        for (const QQ of function(QQ) {
-            var WQ;
-            const XQ = [],
-              wQ = QQ.getExtension("WEBGL_debug_renderer_info"),
-              qQ = wQ ? QQ.getParameter(wQ.UNMASKED_VENDOR_WEBGL) : "(masked)",
-              TQ = wQ ? QQ.getParameter(wQ.UNMASKED_RENDERER_WEBGL) : "(masked)";
-            XQ.push(`GL ${String(QQ.getParameter(QQ.VERSION))} | ${String(QQ.getParameter(QQ.SHADING_LANGUAGE_VERSION))} | ${String(QQ.getParameter(QQ.VENDOR))} / ${String(QQ.getParameter(QQ.RENDERER))}`), XQ.push(`GL unmasked ${qQ} / ${TQ}`);
-            const zQ = [
-              ["MAX_TEXTURE_SIZE", QQ.MAX_TEXTURE_SIZE],
-              ["MAX_VERTEX_ATTRIBS", QQ.MAX_VERTEX_ATTRIBS],
-              ["MAX_VERTEX_UNIFORM_VECTORS", QQ.MAX_VERTEX_UNIFORM_VECTORS],
-              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", QQ.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
-              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", QQ.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
-              ["MAX_VARYING_VECTORS", QQ.MAX_VARYING_VECTORS],
-              ["MAX_RENDERBUFFER_SIZE", QQ.MAX_RENDERBUFFER_SIZE]
+    function yi() {
+      var MM, rM, iM;
+      if (ai) return;
+      (ai = !0, NM(`renderer caps ${null!==(MM=ji.caps)&&void 0!==MM?MM:"(not noted)"}; terrain fetch ${null!==(rM=ji.fetch)&&void 0!==rM?rM:"(not noted)"}`), ji.adrenoProbe) && NM(`adrenoProbe ${ji.adrenoProbe} asked; in force (storage fetch only): ${null!==(iM=ji.probe)&&void 0!==iM?iM:"(not noted)"}`);
+      const OM = sM.context;
+      if (OM) {
+        for (const MM of function(MM) {
+            var rM;
+            const iM = [],
+              OM = MM.getExtension("WEBGL_debug_renderer_info"),
+              SM = OM ? MM.getParameter(OM.UNMASKED_VENDOR_WEBGL) : "(masked)",
+              jM = OM ? MM.getParameter(OM.UNMASKED_RENDERER_WEBGL) : "(masked)";
+            iM.push(`GL ${String(MM.getParameter(MM.VERSION))} | ${String(MM.getParameter(MM.SHADING_LANGUAGE_VERSION))} | ${String(MM.getParameter(MM.VENDOR))} / ${String(MM.getParameter(MM.RENDERER))}`), iM.push(`GL unmasked ${SM} / ${jM}`);
+            const aM = [
+              ["MAX_TEXTURE_SIZE", MM.MAX_TEXTURE_SIZE],
+              ["MAX_VERTEX_ATTRIBS", MM.MAX_VERTEX_ATTRIBS],
+              ["MAX_VERTEX_UNIFORM_VECTORS", MM.MAX_VERTEX_UNIFORM_VECTORS],
+              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", MM.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
+              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", MM.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
+              ["MAX_VARYING_VECTORS", MM.MAX_VARYING_VECTORS],
+              ["MAX_RENDERBUFFER_SIZE", MM.MAX_RENDERBUFFER_SIZE]
             ];
-            "MAX_UNIFORM_BLOCK_SIZE" in QQ && zQ.push(["MAX_UNIFORM_BLOCK_SIZE", QQ.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", QQ.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", QQ.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", QQ.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), XQ.push(`GL limits ${zQ.map((WQ=>{let[XQ,wQ]=WQ;return`${XQ} ${String(QQ.getParameter(wQ))}`})).join(", ")}`);
-            const sQ = (WQ, XQ) => {
-              const wQ = QQ.getShaderPrecisionFormat(WQ, QQ.HIGH_FLOAT),
-                qQ = QQ.getShaderPrecisionFormat(WQ, QQ.HIGH_INT);
-              return `${XQ} highp float ${wQ?`${wQ.rangeMin}/${wQ.rangeMax}/${wQ.precision}`:"?"} int ${qQ?`${qQ.rangeMin}/${qQ.rangeMax}/${qQ.precision}`:"?"}`
+            "MAX_UNIFORM_BLOCK_SIZE" in MM && aM.push(["MAX_UNIFORM_BLOCK_SIZE", MM.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", MM.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", MM.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", MM.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), iM.push(`GL limits ${aM.map((rM=>{let[iM,OM]=rM;return`${iM} ${String(MM.getParameter(OM))}`})).join(", ")}`);
+            const PM = (rM, iM) => {
+              const OM = MM.getShaderPrecisionFormat(rM, MM.HIGH_FLOAT),
+                SM = MM.getShaderPrecisionFormat(rM, MM.HIGH_INT);
+              return `${iM} highp float ${OM?`${OM.rangeMin}/${OM.rangeMax}/${OM.precision}`:"?"} int ${SM?`${SM.rangeMin}/${SM.rangeMax}/${SM.precision}`:"?"}`
             };
-            XQ.push(`GL precision ${sQ(QQ.VERTEX_SHADER,"VS")}, ${sQ(QQ.FRAGMENT_SHADER,"FS")}`);
-            const FQ = QQ.getContextAttributes();
-            return XQ.push(`GL context ${JSON.stringify(FQ)} drawingBuffer ${QQ.drawingBufferWidth}x${QQ.drawingBufferHeight}${"drawingBufferFormat"in QQ?` format 0x${Number(QQ.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in QQ?` ${String(QQ.drawingBufferColorSpace)}`:""}`), XQ.push(`GL extensions ${(null!==(WQ=QQ.getSupportedExtensions())&&void 0!==WQ?WQ:[]).join(" ")}`), XQ
-          }(wQ)) SQ(QQ);
+            iM.push(`GL precision ${PM(MM.VERTEX_SHADER,"VS")}, ${PM(MM.FRAGMENT_SHADER,"FS")}`);
+            const nM = MM.getContextAttributes();
+            return iM.push(`GL context ${JSON.stringify(nM)} drawingBuffer ${MM.drawingBufferWidth}x${MM.drawingBufferHeight}${"drawingBufferFormat"in MM?` format 0x${Number(MM.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in MM?` ${String(MM.drawingBufferColorSpace)}`:""}`), iM.push(`GL extensions ${(null!==(rM=MM.getSupportedExtensions())&&void 0!==rM?rM:[]).join(" ")}`), iM
+          }(OM)) NM(MM);
         ! function() {
-          if (!RQ.context) return;
-          let QQ = 0,
-            WQ = 0;
-          for (const [XQ, wQ] of iQ) !wQ.gl.isContextLost() && wQ.gl.isProgram(XQ) && (WQ++, lW(wQ.gl, XQ, wQ), null !== wQ.terrain && QQ++);
-          SQ(`programs: ${WQ} live of ${iQ.length} linked, ${QQ} packed terrain; CPU page copies ${Math.round(RQ.shadowBytes/1048576)} MiB (${RQ.uncopied} over budget)`)
+          if (!sM.context) return;
+          let MM = 0,
+            rM = 0;
+          for (const [iM, OM] of RM) !OM.gl.isContextLost() && OM.gl.isProgram(iM) && (rM++, gr(OM.gl, iM, OM), null !== OM.terrain && MM++);
+          NM(`programs: ${rM} live of ${RM.length} linked, ${MM} packed terrain; CPU page copies ${Math.round(sM.shadowBytes/1048576)} MiB (${sM.uncopied} over budget)`)
         }()
       }
     }
 
-    function VX(QQ) {
-      return sX ??= async function(QQ) {
-        yX(), "webgpu" === wX ? (DX(), "1" === TX.slotCheck && SQ("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), TX.slotCheck = "1", await
-          function(QQ) {
-            if (null !== oW) return Promise.resolve();
-            const WQ = [];
-            return oW = WQ, new Promise((XQ => {
+    function li(MM) {
+      return Pi ??= async function(MM) {
+        yi(), "webgpu" === Oi ? (Ei(), "1" === ji.slotCheck && NM("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), ji.slotCheck = "1", await
+          function(MM) {
+            if (null !== xr) return Promise.resolve();
+            const rM = [];
+            return xr = rM, new Promise((iM => {
               setTimeout((() => {
-                oW = null, SQ(`WebGPU draw ranges (${QQ}): ${WQ.length} terrain draws recorded in a second (first ${PW}; bundles replay without new ones)`);
-                for (const QQ of WQ) SQ(QQ);
-                XQ()
+                xr = null, NM(`WebGPU draw ranges (${MM}): ${rM.length} terrain draws recorded in a second (first ${Qr}; bundles replay without new ones)`);
+                for (const MM of rM) NM(MM);
+                iM()
               }), 1e3)
             }))
-          }(QQ), await async function() {
-            if (await (0, AW.h)(TX, "slotCheck", ["1"], WX, XX), "1" === TX.slotCheck) return void SQ(`slot check: no answer in ${WX} ms (only the storage fetch has one; a later answer logs on its own)`);
-            DX()
-          }()) : await zW(QQ);
-        SQ(`check (${QQ}) done: bloxdDebug.save() downloads it all`)
-      }(QQ).catch((WQ => {
-        SQ(`check (${QQ}) failed: ${String(WQ)}`)
+          }(MM), await async function() {
+            if (await (0, Wr.e)(ji, "slotCheck", ["1"], ri, ii), "1" === ji.slotCheck) return void NM(`slot check: no answer in ${ri} ms (only the storage fetch has one; a later answer logs on its own)`);
+            Ei()
+          }()) : await ar(MM);
+        NM(`check (${MM}) done: bloxdDebug.save() downloads it all`)
+      }(MM).catch((rM => {
+        NM(`check (${MM}) failed: ${String(rM)}`)
       })).finally((() => {
-        sX = null
-      })), sX
+        Pi = null
+      })), Pi
     }
 
-    function DX() {
-      void 0 !== TX.slotCheck && "1" !== TX.slotCheck && (SQ(TX.slotCheck), delete TX.slotCheck)
+    function Ei() {
+      void 0 !== ji.slotCheck && "1" !== ji.slotCheck && (NM(ji.slotCheck), delete ji.slotCheck)
     }
 
-    function pX() {
-      const QQ = QQ => FX ? (QQ / FX).toFixed(1) : "0",
-        WQ = function() {
-          const QQ = eW;
-          return eW = {
+    function Ui() {
+      const MM = MM => ni ? (MM / ni).toFixed(1) : "0",
+        rM = function() {
+          const MM = vr;
+          return vr = {
             draws: 0,
             faces: 0
-          }, QQ
+          }, MM
         }(),
-        XQ = function() {
-          const QQ = VW;
-          return VW = {
+        iM = function() {
+          const MM = yr;
+          return yr = {
             inst: {
               draws: 0,
               faces: 0
@@ -1405,30 +1405,30 @@ export const modules = {
               draws: 0,
               faces: 0
             }
-          }, QQ
+          }, MM
         }(),
-        wQ = function() {
-          const QQ = DW;
-          return DW = {
+        OM = function() {
+          const MM = lr;
+          return lr = {
             buffer: 0,
             texture: 0
-          }, QQ
+          }, MM
         }();
-      DX(), ("webgpu" === wX ? WQ.draws : XQ.inst.draws + XQ.tex.draws) > 0 && PX();
-      const qQ = "webgpu" === wX ? [`terrain ${QQ(WQ.draws)} draws ${QQ(WQ.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((QQ => XQ[QQ].draws > 0)).map((WQ => `${WQ} ${QQ(XQ[WQ].draws)} draws ${QQ(XQ[WQ].faces)} faces a frame`));
-      SQ(`${FX} frames: ${qQ.join(", ")||"no draws"}; uploaded ${Math.round(wQ.buffer/1024)} KiB to buffers, ${Math.round(wQ.texture/1024)} KiB to data textures`), FX = 0
+      Ei(), ("webgpu" === Oi ? rM.draws : iM.inst.draws + iM.tex.draws) > 0 && Qi();
+      const SM = "webgpu" === Oi ? [`terrain ${MM(rM.draws)} draws ${MM(rM.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((MM => iM[MM].draws > 0)).map((rM => `${rM} ${MM(iM[rM].draws)} draws ${MM(iM[rM].faces)} faces a frame`));
+      NM(`${ni} frames: ${SM.join(", ")||"no draws"}; uploaded ${Math.round(OM.buffer/1024)} KiB to buffers, ${Math.round(OM.texture/1024)} KiB to data textures`), ni = 0
     }
   },
-  5008: (QQ, WQ, XQ) => {
-    function wQ(QQ) {
-      if (null === QQ) return "backend: none picked (no renderer build)";
-      const WQ = QQ.adapter ? `${QQ.adapter.vendor}/${QQ.adapter.architecture}` : "none";
-      return `backend ${QQ.backend}: reason ${QQ.reason}, source ${QQ.source}, adapter ${WQ}`
+  5076: (MM, rM, iM) => {
+    function OM(MM) {
+      if (null === MM) return "backend: none picked (no renderer build)";
+      const rM = MM.adapter ? `${MM.adapter.vendor}/${MM.adapter.architecture}` : "none";
+      return `backend ${MM.backend}: reason ${MM.reason}, source ${MM.source}, adapter ${rM}`
     }
-    XQ.d(WQ, {
-      d: () => wQ
+    iM.d(rM, {
+      d: () => OM
     })
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

@@ -1,590 +1,442 @@
 export const id = 228;
 export const ids = [228];
 export const modules = {
-  37169: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => dQ,
-      g: () => bQ,
-      h: () => vQ,
-      i: () => jQ
+  35103: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => SM,
+      e: () => jM
     });
-    var wQ = XQ(1081),
-      qQ = XQ.n(wQ),
-      TQ = XQ(61),
-      zQ = XQ(78),
-      sQ = XQ(1421),
-      FQ = XQ(1507),
-      PQ = XQ(1416),
-      gQ = XQ(1318),
-      JQ = XQ(1226),
-      rQ = XQ(37172),
-      IQ = XQ(1145);
+    var OM = iM(3657);
 
-    function jQ(QQ) {
-      const [WQ, XQ] = (0, TQ.useState)((() => (0, rQ.p)(QQ)));
-      return (0, TQ.useEffect)((() => (XQ((0, rQ.p)(QQ)), (0, rQ.G)((() => {
-        XQ((0, rQ.p)(QQ))
-      })))), [QQ]), WQ
-    }
-
-    function BQ(QQ, WQ) {
-      "function" === typeof QQ ? QQ(WQ) : QQ && (QQ.current = WQ)
-    }
-
-    function yQ(QQ) {
-      let {
-        tutorial: WQ,
-        step: XQ,
-        enabled: wQ = !0
-      } = QQ;
-      const qQ = jQ(WQ);
-      return wQ && qQ === XQ
-    }
-
-    function VQ(QQ, WQ) {
-      const XQ = (0, rQ.t)(QQ),
-        wQ = XQ.indexOf(WQ);
-      return !XQ.slice(wQ + 1).some((WQ => (0, rQ.B)(QQ, WQ)))
-    }
-
-    function DQ(QQ, WQ, XQ, wQ) {
-      let {
-        tutorial: qQ,
-        step: TQ,
-        waitForClick: zQ = !1,
-        onPrevious: sQ
-      } = QQ;
-      const FQ = WQ && (0, rQ.z)(qQ, TQ),
-        PQ = WQ && !VQ(qQ, TQ),
-        JQ = zQ ? wQ : XQ;
-      let IQ = null;
-      FQ ? IQ = () => {
-        null === sQ || void 0 === sQ || sQ(), (0, rQ.v)(qQ, TQ)
-      } : PQ && (IQ = () => {
-        (0, rQ.l)(qQ)
-      }), (0, gQ.k)("popup", null !== JQ && void 0 !== JQ ? JQ : XQ, IQ, WQ && null !== JQ, null, FQ ? void 0 : "controller:menusSkipTutorial")
-    }
-
-    function pQ(QQ) {
-      let {
-        tutorial: WQ,
-        step: XQ,
-        text: wQ,
-        waitForClick: qQ = !1,
-        onPrevious: TQ
-      } = QQ;
-      const {
-        t: zQ
-      } = (0, JQ.C)(), sQ = VQ(WQ, XQ);
-      return (0, IQ.jsxs)(IQ.Fragment, {
-        children: [(0, IQ.jsx)("div", {
-          className: "TutorialStepText",
-          children: wQ
-        }), (0, IQ.jsxs)("div", {
-          className: "TutorialStepButtons",
-          children: [(0, rQ.z)(WQ, XQ) && (0, IQ.jsx)(FQ.l, {
-            className: "TutorialStepButton",
-            onClick: () => {
-              null === TQ || void 0 === TQ || TQ(), (0, rQ.v)(WQ, XQ)
-            },
-            children: zQ("tutorial:back")
-          }), !qQ && (0, IQ.jsx)(FQ.h, {
-            className: "TutorialStepButton",
-            onClick: () => {
-              (0, rQ.e)(XQ)
-            },
-            padDefaultFocus: !0,
-            children: zQ(sQ ? "tutorial:done" : "tutorial:next")
-          }), !sQ && (0, IQ.jsx)(FQ.l, {
-            className: "TutorialStepButton",
-            onClick: () => {
-              (0, rQ.l)(WQ)
-            },
-            children: zQ("tutorial:skip")
-          })]
-        })]
-      })
-    }
-    const GQ = 6;
-
-    function UQ(QQ) {
-      let {
-        rect: WQ,
-        margin: XQ
-      } = QQ;
-      const wQ = Math.max(0, WQ.top - XQ),
-        qQ = WQ.bottom + XQ,
-        TQ = Math.max(0, WQ.left - XQ),
-        zQ = WQ.right + XQ;
-      return (0, IQ.jsxs)(IQ.Fragment, {
-        children: [(0, IQ.jsx)("div", {
-          className: "TutorialSpotlightBackdrop",
-          style: {
-            top: 0,
-            left: 0,
-            right: 0,
-            height: wQ
-          }
-        }), (0, IQ.jsx)("div", {
-          className: "TutorialSpotlightBackdrop",
-          style: {
-            top: qQ,
-            left: 0,
-            right: 0,
-            bottom: 0
-          }
-        }), (0, IQ.jsx)("div", {
-          className: "TutorialSpotlightBackdrop",
-          style: {
-            top: wQ,
-            left: 0,
-            width: TQ,
-            height: qQ - wQ
-          }
-        }), (0, IQ.jsx)("div", {
-          className: "TutorialSpotlightBackdrop",
-          style: {
-            top: wQ,
-            left: zQ,
-            right: 0,
-            height: qQ - wQ
-          }
-        })]
-      })
-    }
-
-    function bQ(QQ) {
-      let {
-        target: WQ,
-        placement: XQ,
-        boxRef: wQ,
-        className: FQ,
-        spotlight: gQ = !0,
-        spotlightMargin: JQ = GQ,
-        children: rQ
-      } = QQ;
-      const {
-        getArrowProps: jQ,
-        getTooltipProps: BQ,
-        setTooltipRef: yQ,
-        setTriggerRef: VQ,
-        update: DQ
-      } = (0, sQ.b)({
-        placement: XQ,
-        trigger: null,
-        visible: !0,
-        interactive: !0,
-        closeOnOutsideClick: !1,
-        offset: [0, JQ]
-      });
-      (0, TQ.useLayoutEffect)((() => {
-        VQ(WQ)
-      }), [WQ, VQ]);
-      const pQ = function(QQ, WQ) {
-        const [XQ, wQ] = (0, TQ.useState)(null);
-        return (0, TQ.useEffect)((() => {
-          if (!WQ || !QQ) return void wQ(null);
-          let XQ = 0,
-            qQ = null;
-          const TQ = () => {
-            const WQ = QQ.getBoundingClientRect();
-            qQ && WQ.left === qQ.left && WQ.top === qQ.top && WQ.width === qQ.width && WQ.height === qQ.height || (qQ = WQ, wQ(WQ)), XQ = requestAnimationFrame(TQ)
-          };
-          return TQ(), () => {
-            cancelAnimationFrame(XQ)
-          }
-        }), [QQ, WQ]), XQ
-      }(WQ, gQ);
-      (0, TQ.useEffect)((() => {
-        null === DQ || void 0 === DQ || DQ()
-      }), [pQ, DQ]), (0, TQ.useEffect)((() => {
-        if (gQ || !WQ || !DQ) return;
-        const QQ = new ResizeObserver((() => {
-          DQ()
-        }));
-        return QQ.observe(WQ), WQ.parentElement && QQ.observe(WQ.parentElement), () => {
-          QQ.disconnect()
-        }
-      }), [WQ, gQ, DQ]), (0, TQ.useEffect)((() => {
-        gQ && (null === WQ || void 0 === WQ || WQ.scrollIntoView({
-          block: "nearest",
-          inline: "nearest"
-        }))
-      }), [WQ, gQ]);
-      const bQ = (0, TQ.useCallback)((QQ => {
-        yQ(QQ), wQ && (wQ.current = QQ)
-      }), [yQ, wQ]);
-      return (0, zQ.createPortal)((0, IQ.jsxs)(IQ.Fragment, {
-        children: [pQ && (0, IQ.jsx)(UQ, {
-          rect: pQ,
-          margin: JQ
-        }), (0, IQ.jsxs)("div", {
-          ref: bQ,
-          ...BQ({
-            className: qQ()("tooltip-container SmallTextLight TutorialStep", FQ)
-          }),
-          children: [rQ, (0, IQ.jsx)("div", {
-            ...jQ({
-              className: "tooltip-arrow"
-            })
-          })]
-        })]
-      }), (0, PQ.g)())
-    }
-    const vQ = (0, TQ.forwardRef)((function(QQ, WQ) {
-      let {
-        placement: XQ = "right",
-        children: wQ,
-        ...qQ
-      } = QQ;
-      const zQ = yQ(qQ),
-        sQ = (0, TQ.useRef)(null),
-        FQ = (0, TQ.useRef)(null);
-      DQ(qQ, zQ, sQ, FQ);
-      const [PQ, gQ] = (0, TQ.useState)(null), JQ = wQ.ref, rQ = (0, TQ.useCallback)((QQ => {
-        FQ.current = QQ, gQ(QQ), BQ(WQ, QQ), BQ(JQ, QQ)
-      }), [WQ, JQ]);
-      return (0, IQ.jsxs)(IQ.Fragment, {
-        children: [(0, TQ.cloneElement)(wQ, {
-          ref: rQ
-        }), zQ && (0, IQ.jsx)(bQ, {
-          target: PQ,
-          placement: XQ,
-          boxRef: sQ,
-          children: (0, IQ.jsx)(pQ, {
-            ...qQ
-          })
-        })]
-      })
-    }));
-
-    function dQ(QQ) {
-      const WQ = yQ(QQ),
-        XQ = (0, TQ.useRef)(null);
-      return DQ(QQ, WQ, XQ, null), WQ ? (0, zQ.createPortal)((0, IQ.jsx)("div", {
-        className: "TutorialCentreBackdrop",
-        children: (0, IQ.jsx)("div", {
-          ref: XQ,
-          className: "tooltip-container SmallTextLight TutorialStep TutorialCentreStep",
-          children: (0, IQ.jsx)(pQ, {
-            ...QQ
-          })
-        })
-      }), (0, PQ.g)()) : null
-    }
-  },
-  36906: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      B: () => DQ,
-      b: () => TQ,
-      f: () => BQ,
-      h: () => yQ,
-      j: () => sQ,
-      n: () => rQ,
-      r: () => VQ,
-      t: () => JQ,
-      u: () => pQ,
-      y: () => jQ
-    });
-    var wQ = XQ(26),
-      qQ = XQ(31);
-    const TQ = "clientGameInventoryButtonsChanged",
-      zQ = new Map;
-
-    function sQ() {
-      return [...zQ.values()].sort(((QQ, WQ) => {
-        var XQ, wQ;
-        return (null !== (XQ = QQ.order) && void 0 !== XQ ? XQ : 0) - (null !== (wQ = WQ.order) && void 0 !== wQ ? wQ : 0)
-      }))
-    }
-    let FQ = null;
-
-    function PQ(QQ) {
-      FQ = QQ
-    }
-    let gQ = !1;
-
-    function JQ(QQ) {
-      gQ = !0;
+    function SM() {
+      if ("undefined" === typeof BroadcastChannel) return null;
+      const MM = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
       try {
-        QQ.onClick()
-      } finally {
-        gQ = !1
+        const rM = new BroadcastChannel(OM.i);
+        rM.postMessage({
+          stored: MM
+        }), rM.close()
+      } catch {
+        return null
       }
-      QQ.panel && "clientGame" === wQ.b.get("openInGameMenuName") && PQ(QQ.id)
+      return MM
     }
 
-    function rQ() {
-      return gQ
-    }
-
-    function IQ() {
-      return sQ().filter((QQ => QQ.panel && !QQ.disabled))
-    }
-
-    function jQ(QQ) {
-      const WQ = IQ(),
-        XQ = WQ.findIndex((QQ => QQ.id === FQ));
-      return !(XQ < 0 || WQ.length < 2) && (JQ(WQ[(XQ + QQ + WQ.length) % WQ.length]), !0)
-    }
-
-    function BQ() {
-      return null !== FQ && IQ().length > 1
-    }
-
-    function yQ() {
-      PQ(null)
-    }
-
-    function VQ() {
-      "inventory" !== wQ.b.get("openInGameMenuName") && PQ(null)
-    }
-
-    function DQ() {
-      const QQ = FQ;
-      return PQ(null), QQ
-    }
-
-    function pQ(QQ) {
-      return zQ.set(QQ.id, QQ), qQ.k.mB(TQ, sQ(), !0), () => {
-        zQ.get(QQ.id) === QQ && (zQ.delete(QQ.id), qQ.k.mB(TQ, sQ()))
-      }
+    function jM(MM) {
+      const rM = "object" === typeof MM && null !== MM ? MM.stored : null;
+      return "string" === typeof rM ? rM : null
     }
   },
-  36900: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      A: () => gQ,
-      c: () => sQ,
-      g: () => DQ,
-      j: () => yQ,
-      n: () => VQ,
-      q: () => rQ,
-      s: () => PQ,
-      u: () => BQ,
-      y: () => IQ
+  35100: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => aM,
+      f: () => SM,
+      g: () => jM
     });
-    var wQ = XQ(26),
-      qQ = XQ(31),
-      TQ = XQ(1335),
-      zQ = XQ(36906);
-    const sQ = "clientGameUiChanged";
-    let FQ = null;
-
-    function PQ() {
-      return FQ
-    }
-
-    function gQ(QQ, WQ) {
-      const XQ = {
-        content: QQ,
-        menu: WQ
-      };
-      return FQ = XQ, qQ.k.mB(sQ, FQ, !0), () => {
-        FQ === XQ && (FQ = null, jQ = !1, yQ(), qQ.k.mB(sQ, null))
-      }
-    }
-    let JQ = null;
-
-    function rQ() {
-      return JQ
-    }
-
-    function IQ(QQ) {
-      return JQ = QQ, () => {
-        JQ === QQ && (JQ = null)
-      }
-    }
-    let jQ = !1;
-
-    function BQ() {
-      const QQ = wQ.b.get("openInGameMenuName");
-      "clientGame" !== QQ && (jQ = "inventory" === QQ), (0, zQ.n)() || (0, zQ.h)(), (0, TQ.z)(TQ.e), wQ.b.set({
-        openInGameMenuName: "clientGame",
-        openEverythingMenuName: null
+    var OM = iM(3657);
+    async function SM(MM, rM, iM) {
+      let SM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const jM = aM(await MM.getItem(OM.e, rM));
+      if (null === jM || SM()) return null;
+      const PM = await MM.getItem(OM.f, rM);
+      return SM() ? null : (await async function(MM) {
+        await Promise.all([MM.removeItem(OM.e), MM.removeItem(OM.f)])
+      }(MM).catch(iM), {
+        pack: jM,
+        source: "string" === typeof PM ? PM : null
       })
     }
 
-    function yQ() {
-      pQ(!1)
+    function jM(MM) {
+      return (0, OM.n)() ? Promise.resolve(null) : SM(MM, !1, (MM => {
+        console.error("Error removing temporary texture pack: ", MM)
+      }), OM.n)
     }
 
-    function VQ() {
-      pQ(jQ)
-    }
-
-    function DQ() {
-      jQ && pQ(!1)
-    }
-
-    function pQ(QQ) {
-      "clientGame" === wQ.b.get("openInGameMenuName") && wQ.b.set({
-        openInGameMenuName: QQ ? "inventory" : null
-      }), QQ || (0, zQ.h)(), jQ = !1
+    function aM(MM) {
+      if ("object" !== typeof MM || null === MM) return null;
+      const rM = MM.metaData;
+      return "object" !== typeof rM || null === rM || "string" !== typeof rM.id ? null : MM
     }
   },
-  37172: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      B: () => HQ,
-      C: () => CQ,
-      D: () => uQ,
-      E: () => LQ,
-      F: () => EQ,
-      G: () => kQ,
-      d: () => FQ,
-      e: () => hQ,
-      i: () => sQ,
-      l: () => RQ,
-      p: () => aQ,
-      t: () => bQ,
-      v: () => AQ,
-      z: () => cQ
+  53774: (MM, rM, iM) => {
+    function OM(MM) {
+      return null === MM.gameSource ? "player" : "customGame"
+    }
+    iM.d(rM, {
+      c: () => jM,
+      g: () => JM,
+      h: () => hM,
+      j: () => OM
     });
-    var wQ = XQ(43);
-    const qQ = {
-        codeBlock: ["codeBlockIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "worldCodeButton", "exportButton", "helpButton"],
-        worldCode: ["worldCodeIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "exportButton", "helpButton"]
-      },
-      TQ = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
-      zQ = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
-      sQ = TQ.filter((QQ => "docsButton" !== QQ)),
-      FQ = zQ.filter((QQ => "aiHelperButton" !== QQ)),
-      PQ = "codeEditorTutorials",
-      gQ = {
-        codeBlockIntro: "codeBlockIntroShown",
-        worldCodeIntro: "worldCodeIntroShown"
-      },
-      JQ = {
-        welcome: "welcomeComplete",
-        docsOverview: "docsOverviewComplete",
-        aiHelperOverview: "aiHelperOverviewComplete"
-      };
-    let rQ = null,
-      IQ = null;
-    const jQ = new Set,
-      BQ = new Set;
-    let yQ = null;
-    const VQ = new Set,
-      DQ = new Set;
+    const SM = /^data:[\w.+/-]*;base64,[A-Za-z0-9+/]*={0,2}$/;
 
-    function pQ() {
-      DQ.forEach((QQ => {
-        QQ()
+    function jM(MM) {
+      return "" === MM || "string" === typeof MM && SM.test(MM)
+    }
+
+    function aM(MM) {
+      return "object" === typeof MM && null !== MM && ("earth" === MM.type || Object.entries(MM).every((MM => {
+        let [rM, iM] = MM;
+        return "type" === rM || jM(iM)
+      })))
+    }
+    const PM = /(?:src|image|image-set|cross-fade)\(/i,
+      nM = /url\(\s*(?:"(?<doubleQuoted>[^"]*)"|'(?<singleQuoted>[^']*)'|(?<unquoted>[^"'()\s]*))\s*\)/gi,
+      QM = /url\(/gi,
+      zM = ["https://bloxd.invalid/", "http://bloxd.invalid/"],
+      LM = new Set([...zM.map((MM => new URL(MM).origin)), "https://fonts.gstatic.com"]),
+      mM = new Set(["https://i.imgur.com/MEcjBFQ.png"]);
+
+    function HM(MM) {
+      var rM, iM;
+      if (MM.includes("\\") || PM.test(MM)) return !0;
+      const OM = [...MM.matchAll(nM)];
+      return OM.length !== (null !== (rM = null === (iM = MM.match(QM)) || void 0 === iM ? void 0 : iM.length) && void 0 !== rM ? rM : 0) || !OM.every((MM => {
+        var rM, iM, OM;
+        let {
+          groups: SM
+        } = MM;
+        return function(MM) {
+          try {
+            return zM.every((rM => {
+              const iM = new URL(MM, rM);
+              return "data:" === iM.protocol || LM.has(iM.origin) || mM.has(iM.href)
+            }))
+          } catch {
+            return !1
+          }
+        }(null !== (rM = null !== (iM = null !== (OM = null === SM || void 0 === SM ? void 0 : SM.doubleQuoted) && void 0 !== OM ? OM : null === SM || void 0 === SM ? void 0 : SM.singleQuoted) && void 0 !== iM ? iM : null === SM || void 0 === SM ? void 0 : SM.unquoted) && void 0 !== rM ? rM : "")
       }))
     }
 
-    function GQ() {
-      if (!rQ) {
-        const QQ = wQ.i.getItem(PQ);
-        rQ = {
-          codeBlockIntroShown: !1,
-          worldCodeIntroShown: !1,
-          welcomeComplete: !1,
-          docsOverviewComplete: !1,
-          aiHelperOverviewComplete: !1,
-          ..."object" === typeof QQ && null !== QQ ? QQ : {}
+    function hM(MM) {
+      var rM, iM, OM, SM, PM, nM, QM;
+      const zM = [...Object.values(null !== (rM = MM.textureOverrides) && void 0 !== rM ? rM : {}), ...Object.values(null !== (iM = MM.modelOverrides) && void 0 !== iM ? iM : {})],
+        LM = [...Object.values(null !== (OM = null === (SM = MM.customCss) || void 0 === SM ? void 0 : SM.fontFaces) && void 0 !== OM ? OM : {}), ...Object.values(null !== (PM = null === (nM = MM.customCss) || void 0 === nM ? void 0 : nM.classStyles) && void 0 !== PM ? PM : {})].flatMap((MM => Object.values(null !== MM && void 0 !== MM ? MM : {})));
+      return !zM.every(jM) || !Object.values(null !== (QM = MM.skyBoxes) && void 0 !== QM ? QM : {}).every(aM) || LM.some((MM => "string" === typeof MM && HM(MM)))
+    }
+
+    function JM(MM, rM) {
+      if (null === MM || "player" === rM || !hM(MM)) return MM;
+      const iM = {
+        ...MM
+      };
+      return MM.textureOverrides && (iM.textureOverrides = yM(MM.textureOverrides, jM, "texture")), MM.modelOverrides && (iM.modelOverrides = yM(MM.modelOverrides, jM, "model")), MM.skyBoxes && (iM.skyBoxes = yM(MM.skyBoxes, aM, "sky")), MM.customCss && (iM.customCss = function(MM) {
+        const rM = MM => yM(MM, (MM => "string" === typeof MM && !HM(MM)), "CSS"),
+          {
+            fontFaces: iM,
+            classStyles: OM
+          } = dM(MM) ? MM : {},
+          SM = {};
+        for (const [jM, aM] of Object.entries(dM(OM) ? OM : {})) SM[jM] = rM(aM);
+        return {
+          fontFaces: (Array.isArray(iM) ? iM : []).map(rM),
+          classStyles: SM
+        }
+      }(MM.customCss)), iM
+    }
+
+    function dM(MM) {
+      return "object" === typeof MM && null !== MM && !Array.isArray(MM)
+    }
+
+    function yM(MM, rM, iM) {
+      const OM = Object.entries(dM(MM) ? MM : {}),
+        SM = OM.filter((MM => {
+          let [, iM] = MM;
+          return !rM(iM)
+        }));
+      if (SM.length > 0) {
+        const MM = SM.map((MM => {
+          let [rM] = MM;
+          return rM
+        }));
+        console.warn(`Ignoring a custom game texture pack's ${iM} files that name another site: ${MM.join(", ")}`)
+      }
+      return Object.fromEntries(OM.filter((MM => {
+        let [, iM] = MM;
+        return rM(iM)
+      })))
+    }
+  },
+  53778: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => hM,
+      f: () => EM,
+      i: () => lM
+    });
+    var OM = iM(1073),
+      SM = iM(2263),
+      jM = iM(3647),
+      aM = iM(3657),
+      PM = iM(35103),
+      nM = iM(35100),
+      QM = iM(53774),
+      zM = iM(42090),
+      LM = iM(42065),
+      mM = iM(5463);
+    const HM = {
+      pack: null,
+      gameSource: null
+    };
+    class hM {
+      constructor(MM) {
+        this.host = MM, this.ready = void 0, this.state = HM, this.playerPack = null, this.onGamePack = !1, this.confirmGamePack = null, this.skippedKey = null, this.ownAnnouncements = new Set, this.listeners = new Map, this.ownListeners = new Set, this.changes = 0, this.picks = 0, this.playerPicked = !1, this.ownChanges = 0, this.dh = !1, (0, aM.j)(), this.ready = this.readStored()
+      }
+      readyWithin(MM) {
+        return Promise.race([this.ready, new Promise((rM => {
+          setTimeout(rM, MM)
+        }))])
+      }
+      current() {
+        return this.state
+      }
+      playerState() {
+        return {
+          pack: this.playerPack,
+          gameSource: null
         }
       }
-      return rQ
-    }
-
-    function UQ(QQ) {
-      const WQ = GQ();
-      WQ[QQ] || (rQ = {
-        ...WQ,
-        [QQ]: !0
-      }, wQ.i.setItem(PQ, rQ))
-    }
-
-    function bQ(QQ) {
-      return "docsOverview" === QQ ? TQ : "aiHelperOverview" === QQ ? zQ : IQ ? qQ[IQ] : []
-    }
-
-    function vQ(QQ) {
-      return ("worldCodeButton" !== QQ || !GQ().worldCodeIntroShown) && !VQ.has(QQ)
-    }
-
-    function dQ(QQ) {
-      var WQ;
-      return (null === (WQ = yQ) || void 0 === WQ ? void 0 : WQ.name) === QQ ? yQ.stepsDone : jQ
-    }
-
-    function HQ(QQ, WQ) {
-      if (! function(QQ) {
-          return yQ ? yQ.name === QQ : "welcome" === QQ
-        }(QQ) || !vQ(WQ) || dQ(QQ).has(WQ)) return !1;
-      if (yQ) return !0;
-      const XQ = gQ[WQ];
-      return XQ ? !GQ()[XQ] || BQ.has(WQ) : !GQ()[JQ[QQ]]
-    }
-
-    function aQ(QQ) {
-      var WQ;
-      return null !== (WQ = bQ(QQ).find((WQ => HQ(QQ, WQ)))) && void 0 !== WQ ? WQ : null
-    }
-
-    function lQ(QQ) {
-      var WQ;
-      UQ(JQ[QQ]), (null === (WQ = yQ) || void 0 === WQ ? void 0 : WQ.name) === QQ && (yQ = null)
-    }
-
-    function hQ(QQ) {
-      const WQ = (yQ ? [yQ.name] : ["welcome", "docsOverview"]).find((WQ => aQ(WQ) === QQ));
-      if (!WQ) return;
-      dQ(WQ).add(QQ);
-      const XQ = gQ[QQ];
-      XQ && (UQ(XQ), yQ || BQ.add(QQ)), null === aQ(WQ) && lQ(WQ), pQ()
-    }
-
-    function iQ(QQ, WQ) {
-      const XQ = bQ(QQ),
-        wQ = dQ(QQ);
-      for (let qQ = XQ.indexOf(WQ) - 1; qQ >= 0; qQ--)
-        if (wQ.has(XQ[qQ]) && vQ(XQ[qQ])) return XQ[qQ];
-      return null
-    }
-
-    function cQ(QQ, WQ) {
-      return null !== iQ(QQ, WQ)
-    }
-
-    function AQ(QQ, WQ) {
-      const XQ = iQ(QQ, WQ);
-      XQ && (dQ(QQ).delete(XQ), pQ())
-    }
-
-    function RQ(QQ) {
-      lQ(QQ), "welcome" === QQ && bQ("welcome").forEach((QQ => {
-        const WQ = gQ[QQ];
-        WQ && UQ(WQ)
-      })), pQ()
-    }
-
-    function EQ(QQ) {
-      yQ = {
-        name: QQ,
-        stepsDone: new Set
-      }, pQ()
-    }
-
-    function CQ() {
-      (yQ || 0 !== jQ.size || 0 !== BQ.size) && (yQ = null, jQ.clear(), BQ.clear(), pQ())
-    }
-
-    function uQ(QQ, WQ) {
-      const XQ = WQ ? QQ : IQ === QQ ? null : IQ;
-      XQ !== IQ && (IQ = XQ, pQ())
-    }
-
-    function LQ(QQ, WQ) {
-      VQ.has(QQ) === WQ && (WQ ? VQ.delete(QQ) : VQ.add(QQ), pQ())
-    }
-
-    function kQ(QQ) {
-      return DQ.add(QQ), () => {
-        DQ.delete(QQ)
+      onPlayerPackChange(MM) {
+        return this.ownListeners.add(MM), () => {
+          this.ownListeners.delete(MM)
+        }
       }
+      isUsingCustomGameTexturePack(MM) {
+        return (0, LM.c)(this.state, MM)
+      }
+      setGamePackConfirm(MM) {
+        this.confirmGamePack = MM
+      }
+      subscribe(MM) {
+        return this.listeners.set(MM, null), this.ready.then((() => {
+          this.deliver(MM)
+        })), () => {
+          this.listeners.delete(MM)
+        }
+      }
+      async setPlayerPack(MM) {
+        const rM = dM(MM) ? null : MM;
+        this.picks++, this.playerPicked = !0, this.ownChanges++, this.setOwn(rM), this.change({
+          pack: rM,
+          gameSource: null
+        }, !1);
+        const iM = await this.storePlayerPack(rM);
+        return iM && this.announce(), iM
+      }
+      async packForGame(MM, rM, iM) {
+        await this.readyWithin(Math.max(0, (null !== iM && void 0 !== iM ? iM : performance.now() + zM.d) - performance.now()));
+        const SM = ++this.picks,
+          jM = (0, OM.m)(MM) ? (0, OM.p)(MM) : null;
+        if (null === jM) return void this.usePlayerPack();
+        let aM;
+        const PM = function(MM) {
+          let rM;
+          const iM = new Promise(((iM, OM) => {
+            rM = setTimeout((() => {
+              OM(new Error(`no answer in ${MM} ms`))
+            }), MM)
+          }));
+          return iM.catch((() => {})), {
+            passed: iM,
+            clear: () => {
+              clearTimeout(rM)
+            }
+          }
+        }(2e4);
+        try {
+          const MM = await Promise.race([rM.packKey(jM), PM.passed]);
+          if (null !== MM && this.onGamePack && this.state.gameSource === MM) return;
+          if (null !== MM && MM === this.skippedKey) return void(this.dh || this.picks !== SM || this.usePlayerPack());
+          aM = null === MM ? null : await Promise.race([JM(jM, MM, rM), PM.passed])
+        } catch (LM) {
+          const MM = !this.dh && this.picks === SM && this.holdsOtherGamePack(jM);
+          return this.host.warn(`the texture pack of ${jM} didn't load: ${MM?"the player's own shows":"the pack in play stays"}`, LM), void(MM && this.usePlayerPack())
+        } finally {
+          PM.clear()
+        }
+        if (this.dh || this.picks !== SM) return;
+        null !== aM && (0, QM.h)(aM.pack) && (this.host.warn(`the texture pack of ${jM} names files on other sites: the player's own shows`, null), aM = null);
+        const nM = null === aM || await this.confirmed(aM.pack, jM) ? null : aM.key;
+        this.dh || this.picks !== SM || (null !== nM && (this.skippedKey = nM, aM = null), null === aM ? this.usePlayerPack() : (this.onGamePack = !0, this.change({
+          pack: aM.pack,
+          gameSource: aM.key
+        }, !0)))
+      }
+      endGamePack() {
+        this.picks++, this.usePlayerPack()
+      }
+      holdsOtherGamePack(MM) {
+        return this.onGamePack && "" !== this.state.gameSource && !this.isUsingCustomGameTexturePack(MM)
+      }
+      async confirmed(MM, rM) {
+        const iM = this.confirmGamePack;
+        if (null === iM) return !0;
+        try {
+          return await iM(MM, rM)
+        } catch (OM) {
+          return this.host.warn(`the texture pack prompt of ${rM} failed: the pack is skipped`, OM), !1
+        }
+      }
+      async readPlayerPack() {
+        let MM = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        if (null !== MM && this.ownAnnouncements.delete(MM)) return;
+        await this.ready;
+        const rM = this.ownChanges;
+        let iM;
+        try {
+          iM = await this.host.store.getItem(aM.b, !0)
+        } catch (SM) {
+          return void this.host.warn("the stored texture pack didn't read again: the pack in play stays", SM)
+        }
+        if (this.dh || this.ownChanges !== rM) return;
+        const OM = yM(iM);
+        (0, mM.d)(OM, this.playerPack) || (this.ownChanges++, this.setOwn(OM), this.onGamePack || this.change({
+          pack: OM,
+          gameSource: null
+        }, !1))
+      }
+      joinedWithout() {
+        this.picks++
+      }
+      dispose() {
+        this.dh = !0, this.listeners.clear()
+      }
+      async readStored() {
+        const {
+          store: MM,
+          warn: rM
+        } = this.host;
+        await Promise.all([!1 === this.host.oneShot ? void 0 : (0, nM.f)(MM, !0, (MM => {
+          rM("the custom game's texture pack wasn't removed from storage", MM)
+        })).then((MM => {
+          this.takeOneShot(MM)
+        }), (MM => {
+          rM("the custom game's texture pack didn't read: the player's own shows", MM)
+        })), MM.getItem(aM.b, !0).then((MM => {
+          this.takeStoredOwn(MM)
+        }), (MM => {
+          rM("the stored texture pack didn't read: the default pack shows", MM), this.takeStoredOwn(null)
+        }))]), this.update()
+      }
+      takeOneShot(MM) {
+        var rM;
+        null === MM || this.dh || this.changes > 0 || this.picks > 0 || ((0, QM.h)(MM.pack) ? this.host.warn("the custom game's texture pack names files on other sites: the player's own shows", null) : (this.onGamePack = !0, this.state = {
+          pack: MM.pack,
+          gameSource: null !== (rM = MM.source) && void 0 !== rM ? rM : ""
+        }))
+      }
+      takeStoredOwn(MM) {
+        if (this.playerPicked || this.dh) return;
+        if (this.ownChanges++, this.setOwn(yM(MM)), this.onGamePack) return;
+        const rM = {
+          pack: this.playerPack,
+          gameSource: null
+        };
+        0 === this.changes ? this.state = rM : this.change(rM, !1)
+      }
+      async update() {
+        const MM = this.playerPack,
+          rM = null === MM || void 0 === MM ? void 0 : MM.metaData.id;
+        if (!MM || !rM || !this.host.fetchLatest || rM === SM.b || rM === SM.o.CUSTOM) return;
+        const iM = SM.s[rM];
+        if (void 0 === iM || MM.metaData.version >= iM) return;
+        let OM;
+        try {
+          OM = yM(await this.host.fetchLatest(rM))
+        } catch (jM) {
+          return void this.host.warn(`texture pack ${rM} didn't update to version ${iM}`, jM)
+        }
+        null === OM || this.dh || this.playerPack !== MM || (this.ownChanges++, this.setOwn(OM), this.onGamePack || this.change({
+          pack: OM,
+          gameSource: null
+        }, !1), await this.storePlayerPack(OM) && this.announce())
+      }
+      announce() {
+        const MM = (0, PM.d)();
+        null !== MM && this.ownAnnouncements.add(MM)
+      }
+      setOwn(MM) {
+        this.playerPack = MM;
+        for (const iM of [...this.ownListeners]) try {
+          iM()
+        } catch (rM) {
+          this.host.warn("a texture pack listener threw", rM)
+        }
+      }
+      usePlayerPack() {
+        this.onGamePack && this.change({
+          pack: this.playerPack,
+          gameSource: null
+        }, !1)
+      }
+      async storePlayerPack(MM) {
+        try {
+          return null === MM ? (await this.host.store.removeItem(aM.b), !0) : await this.host.store.setItem(aM.b, MM)
+        } catch (rM) {
+          return this.host.warn("the texture pack wasn't stored: it shows until the page reloads", rM), !1
+        }
+      }
+      change(MM, rM) {
+        if (!this.dh) {
+          this.changes++, this.onGamePack = rM, this.state = MM;
+          for (const MM of [...this.listeners.keys()]) this.deliver(MM)
+        }
+      }
+      deliver(MM) {
+        if (!this.dh && this.listeners.has(MM) && this.listeners.get(MM) !== this.state) {
+          this.listeners.set(MM, this.state);
+          try {
+            MM(this.state)
+          } catch (rM) {
+            this.host.warn("a texture pack listener threw", rM)
+          }
+        }
+      }
+    }
+    async function JM(MM, rM, iM) {
+      const OM = (0, nM.d)(await iM.fetchPack(rM));
+      if (null !== OM) return {
+        pack: OM,
+        key: rM
+      };
+      const SM = await iM.packKey(MM);
+      if (null === SM) return null;
+      const jM = (0, nM.d)(await iM.fetchPack(SM));
+      if (null === jM) throw new Error(`no texture pack at ${SM}`);
+      return {
+        pack: jM,
+        key: SM
+      }
+    }
+
+    function dM(MM) {
+      return null === MM || MM.metaData.id === SM.b
+    }
+
+    function yM(MM) {
+      const rM = (0, nM.d)(MM);
+      return dM(rM) ? null : rM
+    }
+    async function lM(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jM.c;
+      if (null === MM.pack) return null;
+      const {
+        packAssets: OM
+      } = await Promise.all([iM.e(230), iM.e(51)]).then((() => iM(64133)));
+      return OM(MM, rM)
+    }
+
+    function EM(MM) {
+      const rM = (0, aM.o)();
+      return null === rM ? () => {} : (rM.onmessage = rM => {
+        MM.readPlayerPack((0, PM.e)(rM.data))
+      }, () => {
+        rM.close()
+      })
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

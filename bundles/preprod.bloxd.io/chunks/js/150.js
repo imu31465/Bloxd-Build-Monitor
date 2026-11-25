@@ -1,276 +1,542 @@
 export const id = 150;
 export const ids = [150];
 export const modules = {
-  8463: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      BloxdDiscordActivitySdk: () => pQ
+  37257: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => KM,
+      h: () => cM,
+      j: () => TM,
+      k: () => IM
     });
-    var wQ = XQ(8470),
-      qQ = XQ(1263),
-      TQ = XQ(1226),
-      zQ = XQ(663),
-      sQ = XQ(1285),
-      FQ = XQ(1802),
-      PQ = XQ(1376),
-      gQ = XQ(814),
-      JQ = XQ(26),
-      rQ = XQ(1118),
-      IQ = XQ(2447),
-      jQ = function(QQ) {
-        return QQ.APPLICATION_COMMANDS = "applications.commands", QQ.IDENTIFY = "identify", QQ.EMAIL = "email", QQ.GUILDS = "guilds", QQ.READ_DM_CHANNELS = "dm_channels.read", QQ.WRITE_ACTIVITIES = "rpc.activities.write", QQ
-      }(jQ || {}),
-      BQ = function(QQ) {
-        return QQ[QQ.CLOSE_NORMAL = 1e3] = "CLOSE_NORMAL", QQ[QQ.CLOSE_UNSUPPORTED = 1003] = "CLOSE_UNSUPPORTED", QQ[QQ.CLOSE_ABNORMAL = 1006] = "CLOSE_ABNORMAL", QQ[QQ.INVALID_CLIENTID = 4e3] = "INVALID_CLIENTID", QQ[QQ.INVALID_ORIGIN = 4001] = "INVALID_ORIGIN", QQ[QQ.RATELIMITED = 4002] = "RATELIMITED", QQ[QQ.TOKEN_REVOKED = 4003] = "TOKEN_REVOKED", QQ[QQ.INVALID_VERSION = 4004] = "INVALID_VERSION", QQ[QQ.INVALID_ENCODING = 4005] = "INVALID_ENCODING", QQ
-      }(BQ || {}),
-      yQ = function(QQ) {
-        return QQ[QQ.PLAYING = 0] = "PLAYING", QQ[QQ.STREAMING = 1] = "STREAMING", QQ[QQ.LISTENING = 2] = "LISTENING", QQ[QQ.WATCHING = 3] = "WATCHING", QQ[QQ.CUSTOM = 4] = "CUSTOM", QQ[QQ.COMPETING = 5] = "COMPETING", QQ
-      }(yQ || {});
-    const VQ = {
-        Minigames: "Playing",
-        Puzzle: "Solving",
-        Escape: "Escaping",
-        Parkour: "Parkouring",
-        "Cool Parkour": "Parkouring",
-        "Two Player Parkour": "Parkouring",
-        "Clutch Parkour": "Parkouring",
-        "Challenging Parkour": "Parkouring",
-        "Progressive Parkour": "Parkouring",
-        "Themed Parkour": "Parkouring",
-        Obby: "Parkouring",
-        Tower: "Climbing",
-        Roleplay: "Roleplaying",
-        Arena: "Battling",
-        Duels: "Duelling",
-        Shooting: "Shooting",
-        Survival: "Surviving",
-        Simulator: "Grinding",
-        Tycoon: "Building",
-        Clicker: "Clicking",
-        PvE: "Battling",
-        Building: "Building",
-        Horror: "Surviving",
-        "Lucky Block": "Battling",
-        Racing: "Racing",
-        Driving: "Driving",
-        "Cool Build": "Building",
-        Adventure: "Adventuring",
-        Other: "Being mischievous"
-      },
-      DQ = {
-        goalRush: "Playing",
-        heroesvbrainrots: "Battling",
-        hideseek: "Playing",
-        bingo: "Playing"
-      };
-    class pQ {
-      constructor(QQ) {
-        this.discordSdk = QQ, this.guildNameCache = {}, this.startTime = Date.now(), this.cachedAccessToken = null, this.activityUpdateId = 0
+    var OM = iM(3185),
+      SM = iM(3205),
+      jM = iM(7116),
+      aM = iM(5069),
+      PM = iM(3196),
+      nM = iM(3188);
+    const QM = "bloxd-wasmDownloaded",
+      zM = 12;
+
+    function LM(MM) {
+      return MM.pathname.slice(MM.pathname.lastIndexOf("/") + 1)
+    }
+
+    function mM() {
+      try {
+        if ("undefined" === typeof localStorage) return null;
+        const MM = JSON.parse(localStorage.getItem(QM) ?? "[]");
+        return Array.isArray(MM) ? MM.filter((MM => "string" === typeof MM)) : []
+      } catch (MM) {
+        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", MM), null
       }
-      static async setup() {
-        console.log("Setting up Discord SDK with client id", rQ.d.discordClientID);
-        const QQ = new wQ.b(rQ.d.discordClientID);
-        let WQ = !1;
-        setTimeout((() => {
-          WQ || (console.warn("Discord SDK took too long to initialize"), (0, FQ.reloadBloxd)())
-        }), 15e3), await QQ.ready(), WQ = !0;
+    }
+    const HM = Reflect.apply,
+      hM = "undefined" === typeof Worker ? void 0 : Worker,
+      JM = hM?.prototype.postMessage,
+      dM = hM?.prototype.terminate,
+      yM = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
+      lM = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
+      EM = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
+      UM = function() {
         try {
-          const {
-            enabled: WQ
-          } = await QQ.commands.encourageHardwareAcceleration();
-          WQ || console.warn("Hardware acceleration not enabled in the Discord client")
-        } catch (qQ) {
-          console.error("Failed to encourage hardware acceleration in the Discord client", qQ)
+          return (0, aM.p)(hM, "Worker", !0) && (0, aM.p)(JM, "postMessage") && (0, aM.p)(dM, "terminate") && (0, aM.p)(EM, "buffer") && void 0 !== yM && void 0 !== lM
+        } catch {
+          return !1
         }
-        const XQ = new pQ(QQ);
-        return XQ.isMobilePlatform() && (XQ.applyDiscordSafeAreaNotch(), window.addEventListener("resize", (() => {
-          XQ.applyDiscordSafeAreaNotch()
-        }))), XQ
+      }();
+    let GM = !1;
+
+    function CM() {
+      return UM && !GM
+    }
+    class eM {
+      worker = null;
+      failed = !1;
+      constructor() {
+        if (CM()) try {
+          this.worker = wM(), HM(yM, this.worker, ["error", () => {
+            this.failed = !0
+          }])
+        } catch {
+          this.stop()
+        }
       }
-      async updateActivityDescription(QQ) {
-        const WQ = ++this.activityUpdateId;
-        let XQ, wQ;
-        switch (QQ) {
-          case "homePage":
-            XQ = "Chilling in the Main Menu";
-            break;
-          case "inGame": {
-            const QQ = await this.getInGameDescriptions();
-            XQ = QQ.primary, wQ = QQ.secondary;
-            break
-          }
+      take() {
+        const MM = this.worker;
+        if (this.worker = null, null !== MM && this.failed) throw HM(dM, MM, []), new Error("it did not run");
+        return MM
+      }
+      stop() {
+        const MM = this.worker;
+        this.worker = null, null !== MM && HM(dM, MM, [])
+      }
+    }
+    class bM {
+      decoded;
+      worker;
+      reject;
+      constructor(MM, rM, iM, OM, jM) {
+        try {
+          this.worker = jM?.take() ?? wM()
+        } catch (QM) {
+          throw GM = !0, new Error(`The zstd decoder's worker did not start: ${(0,PM.g)(QM)}`)
         }
-        WQ === this.activityUpdateId && await this.discordSdk.commands.setActivity({
-          activity: {
-            type: yQ.PLAYING,
-            details: XQ,
-            state: wQ,
-            assets: {
-              large_image: "icon",
-              large_text: XQ
-            },
-            timestamps: {
-              start: this.startTime
+        const aM = this.worker;
+        this.decoded = (0, SM.i)(((rM, SM) => {
+          this.reject = SM;
+          const jM = (MM, rM) => {
+            HM(yM, aM, [MM, rM])
+          };
+          jM("message", (MM => {
+            OM();
+            try {
+              const OM = HM(lM, MM, []);
+              if (!0 === OM) rM();
+              else {
+                if ("string" === typeof OM) throw OM.startsWith(PM.e) && (GM = !0), new Error(OM);
+                iM(OM, HM(nM.u, OM, []))
+              }
+            } catch (QM) {
+              SM(QM)
+            }
+          })), jM("error", (() => {
+            GM = !0, SM(new Error("The zstd decoder's worker did not run"))
+          })), jM("messageerror", (() => {
+            SM(new Error(`${MM}'s decoder sent a piece that could not be read`))
+          }))
+        })), (0, nM.V)(this.decoded), HM(JM, aM, [
+          [MM, rM]
+        ])
+      }
+      push(MM) {
+        HM(JM, this.worker, [MM, [HM(EM, MM, [])]])
+      }
+      end() {
+        HM(JM, this.worker, [null])
+      }
+      markWorkerFailed() {
+        GM = !0
+      }
+      fail(MM) {
+        this.reject(MM), this.terminate()
+      }
+      terminate() {
+        HM(dM, this.worker, [])
+      }
+    }
+
+    function wM() {
+      if (globalThis.Worker !== hM) throw new Error("Worker is not the one the page loaded with");
+      return new Worker(new URL(iM.p + iM.u(79), iM.b), {
+        name: "wasmZstdDecoder",
+        type: "module"
+      })
+    }
+    const tM = Reflect.apply,
+      gM = ArrayBuffer,
+      uM = "undefined" === typeof Response ? void 0 : Response,
+      RM = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
+      pM = function() {
+        let MM;
+        void 0 !== RM && new RM({
+          __proto__: null,
+          start(rM) {
+            const {
+              enqueue: iM,
+              close: OM,
+              error: SM
+            } = Object.getPrototypeOf(rM);
+            MM = {
+              enqueue: iM,
+              close: OM,
+              error: SM
             }
           }
-        }).catch((QQ => {
-          console.error(`Failed to update Discord activity rich presence with description="${XQ}":`, QQ)
-        }))
-      }
-      async getInGameDescriptions() {
-        const QQ = (0, PQ.e)(),
-          {
-            verb: WQ,
-            title: XQ
-          } = await this.getGameVerbAndTitle(QQ.requestedGameNameWithVariation);
-        if ((0, PQ.l)(QQ)) return {
-          primary: `${WQ} in a Discord World`
-        };
-        const wQ = `${WQ} in ${XQ}`;
-        return (0, zQ.G)(QQ.lobbyName) ? {
-          primary: wQ
-        } : {
-          primary: wQ,
-          secondary: `Lobby ${QQ.lobbyName}`
-        }
-      }
-      async getGameVerbAndTitle(QQ) {
-        var WQ;
-        const XQ = "Playing";
-        if ((0, zQ.G)(QQ)) return {
-          verb: XQ,
-          title: "Bloxd"
-        };
-        const wQ = (0, gQ.j)(QQ);
-        var qQ;
-        if (null !== wQ) return {
-          verb: null !== (qQ = DQ[QQ]) && void 0 !== qQ ? qQ : VQ[wQ.type],
-          title: await (0, TQ.A)(sQ.e.ENGLISH, wQ.title)
-        };
-        const FQ = await (0, IQ.b)(QQ);
-        return {
-          verb: null !== (WQ = FQ && VQ[FQ.gameCategory]) && void 0 !== WQ ? WQ : XQ,
-          title: (null === FQ || void 0 === FQ ? void 0 : FQ.name) || "a Custom World"
-        }
-      }
-      getCurrentChannelType() {
-        const {
-          channelId: QQ,
-          guildId: WQ
-        } = this.getCurrentChannelAndGuild();
-        return null !== WQ ? qQ.d.GUILD : null !== QQ ? qQ.d.DM : null
-      }
-      getRequiredScopeForCurrentChannel() {
-        const QQ = this.getCurrentChannelType(),
-          WQ = [jQ.APPLICATION_COMMANDS, jQ.IDENTIFY, jQ.EMAIL, jQ.GUILDS, jQ.WRITE_ACTIVITIES];
-        switch (QQ) {
-          case qQ.d.DM:
-          case qQ.d.GUILD:
-            return [...WQ];
-          default:
-            throw new Error(`Unknown Discord channel type: ${QQ}`)
-        }
-      }
-      getCurrentChannelAndGuild() {
-        const {
-          channelId: QQ,
-          guildId: WQ
-        } = this.discordSdk;
-        return {
-          channelId: null !== QQ && void 0 !== QQ ? QQ : null,
-          guildId: null !== WQ && void 0 !== WQ ? WQ : null
-        }
-      }
-      getInstanceId() {
-        return this.discordSdk.instanceId
-      }
-      async askDiscordUserForAuthorization() {
-        const QQ = this.getRequiredScopeForCurrentChannel(),
-          {
-            code: WQ
-          } = await this.discordSdk.commands.authorize({
-            client_id: rQ.d.discordClientID,
-            response_type: "code",
-            state: "",
-            prompt: "none",
-            scope: QQ
-          });
-        return WQ
-      }
-      getCachedAccessToken() {
-        return this.cachedAccessToken
-      }
-      setCachedAccessToken(QQ) {
-        this.cachedAccessToken = QQ
-      }
-      registerGuild(QQ, WQ) {
-        this.guildNameCache[QQ] = WQ
-      }
-      async authenticate(QQ) {
-        return this.discordSdk.commands.authenticate({
-          access_token: QQ
-        }).then((QQ => null !== QQ))
-      }
-      async getUserLocale() {
+        }, {
+          __proto__: null
+        });
+        return MM
+      }(),
+      WM = function() {
         try {
-          const {
-            locale: QQ
-          } = await this.discordSdk.commands.userSettingsGetLocale();
-          return QQ
-        } catch (QQ) {
-          return console.error("Failed to get user locale from Discord:", QQ.stack), null
+          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== pM && (0, aM.p)(uM, "Response", !0) && (0, aM.p)(RM, "ReadableStream", !0) && (0, aM.p)(pM.enqueue, "enqueue") && (0, aM.p)(pM.close, "close") && (0, aM.p)(pM.error, "error") && (0, aM.p)(nM._, "body") && (0, aM.p)(nM.N, "getReader") && (0, aM.p)(nM.Z, "read")
+        } catch {
+          return !1
         }
-      }
-      async getChannelName(QQ) {
-        return this.discordSdk.commands.getChannel({
-          channel_id: QQ
-        }).then((QQ => QQ.name)).catch((QQ => "Your Current Discord Chat"))
-      }
-      async getDiscordContextFromChannelId(QQ) {
-        const WQ = await this.getChannelName(QQ);
-        return qQ.k.from({
-          type: qQ.d.DM,
-          channelId: QQ,
-          channelName: WQ
-        })
-      }
-      getDiscordContextFromGuildId(QQ) {
-        const WQ = this.guildNameCache[QQ];
-        return (0, zQ.G)(WQ) ? null : qQ.h.from({
-          type: qQ.d.GUILD,
-          guildId: QQ,
-          guildName: WQ
-        })
-      }
-      async getCurrentDiscordContext() {
-        const {
-          channelId: QQ,
-          guildId: WQ
-        } = this.getCurrentChannelAndGuild();
-        return null !== WQ ? this.getDiscordContextFromGuildId(WQ) : null !== QQ ? this.getDiscordContextFromChannelId(QQ) : null
-      }
-      exit(QQ) {
-        console.log("Exiting Discord Activity:", QQ), this.discordSdk.close(BQ.CLOSE_NORMAL, QQ)
-      }
-      isMobilePlatform() {
-        return this.discordSdk.platform === wQ.e.MOBILE
-      }
-      applyDiscordSafeAreaNotch() {
-        const QQ = getComputedStyle(document.documentElement),
-          WQ = (WQ, XQ) => {
-            const wQ = parseFloat(QQ.getPropertyValue(`--discord-safe-area-inset-${WQ}`));
-            return isNaN(wQ) || 0 === XQ ? 0 : wQ / XQ * 100
-          };
-        JQ.b.set({
-          notchSize: {
-            top: WQ("top", window.innerHeight),
-            right: Math.max(WQ("right", window.innerWidth), 7),
-            bottom: 0,
-            left: WQ("left", window.innerWidth)
+      }();
+    async function sM(MM, rM, iM, OM, jM, aM, QM) {
+      const zM = new gM(rM),
+        {
+          controller: LM,
+          compiled: mM
+        } = function(MM) {
+          try {
+            let MM;
+            const rM = new RM({
+                __proto__: null,
+                start(rM) {
+                  MM = rM
+                }
+              }, {
+                __proto__: null
+              }),
+              iM = new uM(rM, {
+                __proto__: null,
+                headers: {
+                  __proto__: null,
+                  "Content-Type": "application/wasm"
+                }
+              });
+            return {
+              controller: MM,
+              compiled: (0, nM.V)((0, nM.y)((0, nM.eb)(iM)))
+            }
+          } catch (rM) {
+            throw new Error(`${MM} could not be streamed into a compile: ${(0,PM.g)(rM)}`)
           }
-        })
+        }(MM),
+        {
+          enqueue: HM,
+          close: hM,
+          error: JM
+        } = pM,
+        dM = MM => {
+          try {
+            tM(JM, LM, [MM])
+          } catch {}
+        };
+      let yM = 0;
+      const lM = (iM, OM) => {
+        if (yM + OM > rM) throw new Error(`${MM} decoded past its module's ${rM} bytes`);
+        tM(nM.$, new nM.i(zM), [new nM.i(iM), yM]);
+        try {
+          tM(HM, LM, [new nM.i(zM, yM, OM)])
+        } catch {}
+        yM += OM
+      };
+      let EM, UM;
+      try {
+        EM = new bM(MM, rM, lM, OM, QM)
+      } catch (wM) {
+        throw dM(wM), wM
       }
+      const GM = MM => {
+        EM.fail(MM), void 0 !== UM && DM(UM)
+      };
+      let CM = !1;
+      iM.addEventListener("abort", (() => {
+        CM && EM.markWorkerFailed(), GM(new Error(`${MM} stalled`))
+      }), {
+        once: !0
+      }), (0, SM.p)(mM, (() => {}), GM);
+      try {
+        let aM;
+        try {
+          aM = await fetch(MM, {
+            signal: iM
+          })
+        } catch (wM) {
+          throw new Error(`Fetching ${MM} failed: ${(0,PM.g)(wM)}`)
+        }
+        const {
+          ok: QM,
+          status: zM,
+          body: LM
+        } = function(MM, rM) {
+          try {
+            const {
+              ok: MM,
+              status: iM
+            } = rM;
+            return {
+              ok: MM,
+              status: iM,
+              body: tM(nM._, rM, [])
+            }
+          } catch {
+            throw new Error(`${MM} came in a response a page script made`)
+          }
+        }(MM, aM);
+        if (!QM) throw new Error(`Fetching ${MM} failed: HTTP ${zM}`);
+        OM();
+        const mM = tM(nM.N, LM, []);
+        UM = mM;
+        const HM = () => {
+          DM(mM)
+        };
+        for ((0, SM.p)(EM.decoded, HM, HM);;) {
+          let rM;
+          try {
+            rM = await tM(nM.Z, mM, [])
+          } catch (wM) {
+            throw new Error(`Downloading ${MM} failed: ${(0,PM.g)(wM)}`)
+          }
+          if (rM.done) break;
+          OM(), EM.push(rM.value)
+        }
+        if (CM = !0, EM.end(), await EM.decoded, jM(), yM !== rM) throw new Error(`${MM} ended before its module did`)
+      } catch (wM) {
+        throw dM(wM), GM(wM), wM
+      }
+      EM.terminate();
+      try {
+        tM(hM, LM, [])
+      } catch {}
+      const eM = await mM;
+      return void 0 !== aM && await (0, nM.v)(MM, new nM.i(zM), {
+        sha256: aM.sha256,
+        onMismatch: () => {}
+      }), eM
+    }
+
+    function DM(MM) {
+      try {
+        (0, nM.V)(MM.cancel())
+      } catch {}
+    }
+    const kM = ".zst.bin",
+      ZM = 1e3;
+    let oM = null;
+
+    function fM(MM) {
+      return oM ??= function() {
+        const MM = new Map,
+          rM = "bloxd_wasm_webgpu:5157353,bloxd_wasm_webgl:5537354,bloxd_wasm_webgl1:4870652,bloxd_wasm_workers:201241,bloxd_wasm_models:311549,bloxd_wasm_client:3726896";
+        for (const iM of rM?.split(",") ?? []) {
+          const [rM = "", OM] = iM.split(":"), SM = Number(OM);
+          Number.isInteger(SM) && SM > 0 && MM.set(rM, SM)
+        }
+        return MM
+      }(), oM.get(MM)
+    }
+    async function YM(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const OM = fM(MM.name);
+      if (void 0 === OM) return NM(await AM(MM, rM, iM), "cold-wasm");
+      const jM = WM ? new eM : null;
+      let aM;
+      try {
+        if (QM = MM.url(), mM()?.includes(LM(QM)) && await async function(MM) {
+            const rM = new AbortController;
+            let iM;
+            const OM = (0, SM.i)((MM => {
+              iM = setTimeout((() => {
+                rM.abort(), MM(null)
+              }), ZM)
+            }));
+            try {
+              const iM = fetch(MM.href, {
+                  cache: "only-if-cached",
+                  mode: "same-origin",
+                  signal: rM.signal
+                }),
+                jM = await (0, SM.m)([iM, OM]);
+              return !!jM?.ok && ((0, nM.V)(jM.body.cancel()), !0)
+            } catch {
+              return !1
+            } finally {
+              clearTimeout(iM)
+            }
+          }(MM.url())) return jM?.stop(), await async function(MM, rM, iM, OM) {
+          let SM = !1;
+          const jM = iM && {
+            sha256: iM.sha256,
+            onMismatch: () => {
+              SM = !0
+            }
+          };
+          try {
+            return NM(await AM(MM, jM, OM), "warm")
+          } catch (aM) {
+            const OM = await xM(MM, rM, iM, null);
+            if (null === OM) throw SM && iM.onMismatch(), aM;
+            return console.warn(`${MM.url().href} from the HTTP cache failed: ${(0,PM.g)(aM)}: loaded its copy instead`), NM(OM, SM ? "warm-refused" : "warm-broken")
+          }
+        }(MM, OM, rM, iM);
+        aM = await xM(MM, OM, rM, jM)
+      } finally {
+        jM?.stop()
+      }
+      var QM;
+      return null !== aM ? NM(aM, "cold-worker") : NM(await AM(MM, rM, iM), "cold-wasm")
+    }
+
+    function NM(MM, rM) {
+      return {
+        __proto__: null,
+        module: MM,
+        path: rM
+      }
+    }
+
+    function AM(MM, rM, iM) {
+      return void 0 === fM(MM.name) ? (0, nM.E)(MM.url(), rM, iM) : (0, nM.E)(MM.url(), rM, {
+        ...iM,
+        hideThen: !0,
+        onDownloaded: () => {
+          ! function(MM) {
+            const rM = mM();
+            if (null === rM) return;
+            const iM = LM(MM),
+              OM = rM.filter((MM => MM !== iM));
+            OM.push(iM);
+            try {
+              localStorage.setItem(QM, JSON.stringify(OM.slice(-zM)))
+            } catch (SM) {
+              console.warn(`Bloxd wasm: ${iM} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, SM)
+            }
+          }(MM.url()), iM.onDownloaded?.()
+        }
+      })
+    }
+    async function xM(MM, rM, iM, OM) {
+      if (!WM || !CM()) return null;
+      const SM = MM.url(),
+        jM = `${SM.href}${kM}`;
+      try {
+        return await (0, nM.ab)(jM, ((MM, SM, aM) => sM(jM, rM, MM, SM, aM, iM, OM)))
+      } catch (aM) {
+        return console.warn(`${(0,PM.g)(aM)}: loading ${SM.href} instead`), null
+      }
+    }
+    let vM = null,
+      FM = !1;
+    const BM = new Map,
+      XM = new Map;
+
+    function IM(MM, rM, iM) {
+      return null === vM ? vM = qM(MM, rM, iM?.memoryMaximumBytes) : MM !== vM.build ? console.warn(`Bloxd wasm: ${MM.name} was asked for after ${vM.build.name} started loading, which this thread keeps`) : rM.name !== vM.workers.name && console.warn(`Bloxd wasm: ${rM.name} was asked for workers after ${vM.workers.name}, which this thread keeps`), iM?.reloadFailedDownload && !FM && (0, OM.$)() && (FM = !0, vM = qM(vM.build, vM.workers, vM.memoryMaximumBytes)), vM.loaded
+    }
+
+    function KM(MM, rM) {
+      if (null !== vM) return (0, SM.g)([]);
+      const iM = MM.filter((MM => !BM.has(MM.name))).map((MM => {
+        const iM = new AbortController,
+          OM = {
+            compiled: AM(MM, (0, jM.b)(MM.name), {
+              priority: rM,
+              Ti: iM.signal,
+              onDownloaded: () => {
+                OM.downloaded = !0
+              },
+              retries: {
+                onRetry: () => {
+                  OM.downloaded = !1, null !== vM && iM.abort()
+                }
+              }
+            }),
+            cancel: iM,
+            downloaded: !1
+          };
+        return BM.set(MM.name, OM), (0, SM.i)((rM => {
+          (0, SM.p)(OM.compiled, (() => {
+            OM.downloaded = !0, rM()
+          }), (OM => {
+            iM.signal.aborted || console.warn(`Bloxd wasm: ${MM.name}'s compile ahead of the load failed: the load compiles it afresh`, OM), rM()
+          }))
+        }))
+      }));
+      return (0, SM.g)(iM)
+    }
+
+    function qM(MM, rM, iM) {
+      const jM = (0, OM.K)((async () => {
+        (0, aM.F)(), XM.clear();
+        const iM = VM(MM),
+          OM = rM.name === MM.name ? iM : VM(rM);
+        for (const {
+            cancel: MM
+          }
+          of BM.values()) MM.abort();
+        BM.clear(), await (0, SM.g)([iM, OM]);
+        const jM = await iM,
+          PM = await OM;
+        return (0, aM.F)(), {
+          module: jM,
+          workerModule: PM
+        }
+      }), MM, iM);
+      return {
+        build: MM,
+        workers: rM,
+        memoryMaximumBytes: iM,
+        loaded: jM
+      }
+    }
+
+    function TM(MM) {
+      return XM.get(MM)
+    }
+
+    function VM(MM) {
+      const rM = performance.now(),
+        iM = BM.get(MM.name);
+      BM.delete(MM.name);
+      const OM = !0 === iM?.downloaded ? iM : void 0;
+      return void 0 !== iM && void 0 === OM && iM.cancel.abort(), (0, SM.i)(((iM, jM) => {
+        const aM = (OM, SM) => {
+            XM.set(MM.name, {
+              path: SM,
+              ms: performance.now() - rM
+            }), iM(OM)
+          },
+          PM = () => {
+            (0, SM.p)(Mr(MM), (MM => {
+              let {
+                module: rM,
+                path: iM
+              } = MM;
+              aM(rM, iM)
+            }), jM)
+          };
+        void 0 === OM ? PM() : (0, SM.p)(OM.compiled, (MM => {
+          aM(MM, "ahead")
+        }), PM)
+      }))
+    }
+    async function cM(MM, rM) {
+      const {
+        module: iM
+      } = await Mr(MM, {
+        retries: rM
+      });
+      return iM
+    }
+    async function Mr(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return await YM(MM, (0, jM.b)(MM.name), rM)
+    }
+  },
+  7116: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => aM
+    });
+    var OM = iM(3188);
+    const SM = {
+      bloxd_wasm: () => "9c356b3ab0e1dec8279681c51821e86b0c769cac263f9e0f7f99f79b8758e8b4",
+      bloxd_wasm_client: () => "80b728e2e1c07ea01ac0480b86847c41501509afdc4dddbfb5c028d2bf09dee0",
+      bloxd_wasm_workers: () => "d70704eca78df456ad3913c0adf79f8b52dba4340cd12a1b6bf933cca972741b",
+      bloxd_wasm_models: () => "3ad7e1eadb9490d2eafb88cd8a1e2fa3b217bc686d0f647a926d3b3e45f346b2",
+      bloxd_wasm_webgpu: () => "b23ee9a016abf7c07a51e4dd79c87b95e00f54293086e61b89ff00c5c3054e76",
+      bloxd_wasm_webgl: () => "c7e113e0705d9817aa1ea95296a04ca341e8508395d22c3a7f94a5cdffba84cd",
+      bloxd_wasm_webgl1: () => "153c631ef0614b6599a45ffada7f02f5904513286e82e789064544612e2e6f87",
+      bloxd_wasm_replay: () => "05e5306bf37c51cb76f69bd76cd489a1e480f7bb5d6f9b73f5c592d1fcaea336",
+      bloxd_wasm_recorder: () => "ef71649d3e6f52a30e3021925f1ba0c1225f7afb503bf09554b23ac481798d94",
+      bloxd_wasm_anim: () => "9b12a80af4e0001e472a77f851e64ef000ea347ea6f87cc37b924c310c6e0847",
+      bloxd_wasm_textures: () => "6d67beffabd1d2d1a22a74a0da90a6f5a26efadd82c32dec4de58168d5b38069",
+      bloxd_wasm_shader_pack: () => "48a1189cb064654273445fd97d029cf7474ee7e14007e5ca8ff8bb20718ac5cb"
+    };
+    var jM = iM(5069);
+
+    function aM(MM) {
+      const rM = Object.prototype.hasOwnProperty.call(SM, MM) ? SM[MM]() : void 0;
+      if (void 0 !== rM) return {
+        sha256: rM,
+        onMismatch: jM.B
+      };
+      throw new OM.f(`${MM} has no release digest, so this build refuses it`)
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

@@ -1,0 +1,815 @@
+.BloxdForm .SectionTitle {
+  color: #cfcfcf;
+  font-size: 1rem;
+  padding-bottom: .5rem;
+  text-align: left
+}
+
+.BloxdForm .SectionBody {
+  align-items: center;
+  border: 2px solid #303a59;
+  border-radius: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: .5rem;
+  position: relative
+}
+
+.BloxdForm .SectionBody.SectionBodyHasWarning {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-color: #ffb914
+}
+
+.BloxdForm .SectionBody .SectionBodyOverlay {
+  align-items: center;
+  background-color: transparent;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  justify-content: center;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: background-color .2s;
+  z-index: 2
+}
+
+.BloxdForm .SectionBody .SectionBodyOverlay.SectionBodyOverlayLoading,
+.BloxdForm .SectionBody .SectionBodyOverlay.SectionBodyOverlaySuccess {
+  background-color: rgba(0, 0, 0, .75);
+  pointer-events: all
+}
+
+.BloxdForm .SectionBody .SectionBodyOverlay.SectionBodyOverlaySuccess .svg-inline--fa {
+  color: #ffb914;
+  font-size: 3rem
+}
+
+.BloxdForm .SectionBody .SectionBodyOverlay.SectionBodyOverlayError {
+  background-color: rgba(0, 0, 0, .75);
+  pointer-events: all
+}
+
+.BloxdForm .SectionBody .SectionBodyOverlay.SectionBodyOverlayError .svg-inline--fa {
+  color: #ff8a80;
+  font-size: 3rem
+}
+
+.BloxdForm .SectionBodyWarning {
+  background-color: #ffb914;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  color: #000;
+  font-size: 1rem;
+  padding: .5rem 0 .5rem .5rem;
+  text-shadow: none
+}
+
+.LabeledInput {
+  align-items: stretch;
+  display: flex;
+  min-height: 3rem;
+  transition: filter .2s
+}
+
+.LabeledInput.DisabledLabelInput {
+  filter: brightness(.6);
+  pointer-events: none
+}
+
+.LabeledInput .LabeledInputTooltip {
+  font-size: 1.2rem;
+  max-width: 25rem
+}
+
+.LabeledInput .Label {
+  align-items: center;
+  background-color: #303a59;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+  border-top-right-radius: 0;
+  color: #cfcfcf;
+  display: flex;
+  font-size: 1.2rem;
+  gap: .4rem;
+  justify-content: center;
+  padding: .2rem .5rem
+}
+
+.LabeledInput .Label.ClickableLabel {
+  cursor: pointer;
+  position: relative
+}
+
+@media(pointer:coarse) {
+  .LabeledInput .Label.ClickableLabel:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.LabeledInput .TextInput,
+.LabeledInput input[type=number] {
+  background-color: #303a59;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  box-shadow: none;
+  font-size: 1.2rem;
+  padding: .5rem;
+  text-align: left
+}
+
+.LabeledInput input[type=number] {
+  width: 7rem
+}
+
+.LabeledInput .BloxdDropdownControl {
+  align-items: center;
+  background-color: #303a59;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  box-shadow: none;
+  display: flex;
+  font-size: 1.2rem;
+  height: 100%;
+  padding: 0 2rem 0 .5rem;
+  text-align: left
+}
+
+.LabeledInput .Dropdown-option {
+  font-size: 1.2rem;
+  text-align: left
+}
+
+.LabeledInput .OtherInput {
+  align-items: center;
+  background-color: #303a59;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem
+}
+
+.SwitchContainer {
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex
+}
+
+.SwitchContainer.SwitchContainerDisabled {
+  cursor: default;
+  filter: brightness(.6);
+  pointer-events: none
+}
+
+.SwitchContainer .SwitchCheckbox.rc-checkbox {
+  height: 1.5rem;
+  width: 2.625rem
+}
+
+.SwitchContainer .SwitchCheckbox .rc-checkbox-inner {
+  background-color: #303a59;
+  border: 1px solid #3c4b68;
+  height: 100%;
+  transition: background-color .15s, border-color .15s;
+  width: 100%
+}
+
+.SwitchContainer .SwitchCheckbox .rc-checkbox-inner:after {
+  content: none
+}
+
+.SwitchContainer .SwitchCheckbox .rc-checkbox-inner:before {
+  background-color: #a4a4a4;
+  content: "";
+  height: 1.125rem;
+  left: .1875rem;
+  position: absolute;
+  top: .1875rem;
+  transition: transform .15s, background-color .15s;
+  width: 1.125rem
+}
+
+.SwitchContainer .SwitchCheckbox .rc-checkbox-input:focus+.rc-checkbox-inner,
+.SwitchContainer .SwitchCheckbox.rc-checkbox:hover .rc-checkbox-inner {
+  border-color: #ffb914
+}
+
+.SwitchContainer .SwitchCheckbox.rc-checkbox-checked .rc-checkbox-inner {
+  background-color: #ffb914;
+  border-color: #ffb914
+}
+
+.SwitchContainer .SwitchCheckbox.rc-checkbox-checked .rc-checkbox-inner:before {
+  background-color: #22283b;
+  transform: translateX(1.125rem)
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup {
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+  max-height: 90dvh;
+  overflow: hidden;
+  position: relative
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup {
+    box-sizing: border-box;
+    max-width: none;
+    width: calc(100vw - 2rem)
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby {
+  display: flex;
+  flex-direction: column;
+  max-width: 75vw;
+  min-height: 0;
+  width: 80rem
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby {
+    max-width: none;
+    width: 100%
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby.CreateCustomLobbySuccess .CreateCustomLobbyBody {
+  overflow: hidden
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbySuccessOverlay {
+  align-items: center;
+  background-color: #22283b;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  padding: 2rem 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbySuccessOverlay .CreateCustomLobbySuccessTitle {
+  align-items: center;
+  animation-delay: .2s;
+  background-color: rgba(182, 131, 14, .2);
+  color: #ffb914;
+  display: flex;
+  font-size: 12rem;
+  height: 14rem;
+  justify-content: center;
+  position: relative;
+  text-align: left;
+  width: 14rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbySuccessOverlay .CreateCustomLobbySuccessTitle .Confetti {
+  font-size: 6rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbySuccessOverlay .CreateCustomLobbySuccessTitle .Confetti .ConfettiParticle {
+  animation-delay: .2s
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbySuccessOverlay .CreateCustomLobbySuccessButtons {
+  align-items: center;
+  animation-delay: .5s;
+  display: flex;
+  gap: 1rem;
+  justify-content: center
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbySuccessOverlay .CreateCustomLobbySuccessButtons .NewButton {
+  font-size: 3rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyTitleContainer {
+  align-items: center;
+  display: flex;
+  flex: none;
+  margin-right: 5rem;
+  padding-bottom: 1.5rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyTitleContainer .CreateCustomLobbyTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: left
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyTitleContainer .CreateCustomLobbyTitle {
+    font-size: 2.5rem
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyBody {
+  flex: 0 1 auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-padding-block: 1.5rem 2rem;
+  scrollbar-color: #3c4b68 #22283b;
+  scrollbar-width: thin
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyBody::-webkit-scrollbar {
+  height: 6px;
+  width: 6px
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyBody::-webkit-scrollbar-track {
+  background-color: #22283b
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyBody::-webkit-scrollbar-thumb {
+  background-color: #3c4b68;
+  border-radius: 0
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyBody.CreateCustomLobbyBodyMoreAbove {
+  mask-image: linear-gradient(180deg, transparent 0, #000 1.5rem, #000 100%, transparent);
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 1.5rem, #000 100%, transparent)
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyBody.CreateCustomLobbyBodyMoreBelow {
+  mask-image: linear-gradient(180deg, transparent 0, #000 0, #000 calc(100% - 2rem), transparent);
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 0, #000 calc(100% - 2rem), transparent)
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyBody.CreateCustomLobbyBodyMoreAbove.CreateCustomLobbyBodyMoreBelow {
+  mask-image: linear-gradient(180deg, transparent 0, #000 1.5rem, #000 calc(100% - 2rem), transparent);
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 1.5rem, #000 calc(100% - 2rem), transparent)
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyBody .CreateCustomLobbyFields {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .NameInput {
+  max-width: 100%
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .NameInput .TextInput {
+  min-width: 0
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby:not(.AdvancedMode) .NameInput {
+  width: 100%
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby:not(.AdvancedMode) .NameInput .TextInput {
+  flex: 1 1 auto
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby:not(.AdvancedMode) .NameInput .Label,
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby:not(.AdvancedMode) .NameInput .TextInput {
+  font-size: 2rem
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+
+  .MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby:not(.AdvancedMode) .NameInput .Label,
+  .MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby:not(.AdvancedMode) .NameInput .TextInput {
+    font-size: 1.6rem
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyFooter {
+  align-items: center;
+  border-top: 2px solid hsla(0, 0%, 95%, .1);
+  display: flex;
+  flex: none;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
+  margin-top: 1rem;
+  min-width: 0;
+  padding-top: 1rem;
+  text-align: left
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyFooter .CreateCustomLobbyAdvancedToggle .ClickableOtherInput {
+  position: relative
+}
+
+@media(pointer:coarse) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyFooter .CreateCustomLobbyAdvancedToggle .ClickableOtherInput:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyFooter .CreateCustomLobbyError {
+  align-items: center;
+  background-color: rgba(204, 20, 20, .1);
+  border-radius: 0;
+  color: #ff8a80;
+  display: flex;
+  flex-basis: 100%;
+  font-size: 1.25rem;
+  justify-content: center;
+  min-width: 0;
+  padding: 0 1rem;
+  text-align: left
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyFooter .CreateCustomLobbyButton {
+  align-items: center;
+  display: inline-flex;
+  height: 3rem;
+  justify-content: center
+}
+
+@media(pointer:coarse) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyFooter .CreateCustomLobbyButton:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+
+  .MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyFooter .CreateCustomLobbyButton {
+    overflow: visible
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.CreateCustomLobbyPopup .CreateCustomLobby .CreateCustomLobbyFooter .CreateCustomLobbyButton .ButtonBody {
+  overflow: hidden;
+  padding: 0 1rem
+}
+
+.CustomLobbyDescription {
+  width: 100%
+}
+
+.CustomLobbyDescription .TextInput {
+  flex-grow: 1
+}
+
+.WorldGamemode .Dropdown-placeholder {
+  width: 12rem
+}
+
+.SchematicListTitle {
+  color: #cfcfcf;
+  font-size: 1rem;
+  padding-top: .5rem;
+  text-align: left;
+  width: 100%
+}
+
+.SchematicListContainer {
+  background-color: #303a59;
+  border-radius: 0;
+  padding: .5rem;
+  width: 100%
+}
+
+.SchematicListContainer.SchematicListContainerDisabled {
+  filter: brightness(.6);
+  pointer-events: none
+}
+
+.PluginsGrid {
+  grid-gap: .5rem;
+  align-items: stretch;
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: repeat(2, 1fr)
+}
+
+.PluginCard {
+  align-items: center;
+  background-color: rgba(48, 58, 89, .5);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex;
+  gap: .75rem;
+  min-width: 0;
+  padding: .6rem .75rem;
+  transition: scale .15s, background-color .15s, border-color .15s
+}
+
+@media(hover:hover) {
+  .PluginCard:hover {
+    scale: 1.03
+  }
+}
+
+.PluginCard.pad-focused {
+  scale: 1.03
+}
+
+@media(hover:none) {
+  .PluginCard:active {
+    scale: 1.03
+  }
+}
+
+.PluginCard.PluginCardDisabledForm {
+  filter: brightness(.6);
+  pointer-events: none
+}
+
+.PluginCard .PluginCardIcon {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  height: 4rem;
+  justify-content: center;
+  width: 4rem
+}
+
+.PluginCard .PluginCardIcon img {
+  -ms-interpolation-mode: nearest-neighbor;
+  height: 100%;
+  image-rendering: optimizeSpeed;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  object-fit: contain;
+  width: 100%
+}
+
+.PluginCard .PluginCardBody {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: .15rem;
+  min-width: 0;
+  text-align: left
+}
+
+.PluginCard .PluginCardTitle {
+  color: #f2f2f2;
+  font-size: 1.2rem;
+  font-weight: 700;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.PluginCard .PluginCardDescription {
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #cfcfcf;
+  display: -webkit-box;
+  font-size: .75rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  white-space: normal
+}
+
+.PluginCard .PluginCardToggleLabel {
+  color: #cfcfcf;
+  flex-shrink: 0;
+  font-size: 1rem;
+  font-weight: 700
+}
+
+.PluginCard.PluginCardEnabled {
+  background-color: rgba(255, 185, 20, .2);
+  border-color: #ffb914
+}
+
+.PluginCard.PluginCardEnabled .PluginCardToggleLabel {
+  color: #ffb914
+}
+
+@keyframes rainbowShimmer {
+  0% {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(88.88889%)
+  }
+}
+
+@keyframes rainbowShimmerPosition {
+  to {
+    background-position: -200% 0
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+.BloxdForm.GamemodeForm .SectionBody,
+.BloxdForm.MapTypeForm .SectionBody {
+  grid-gap: .5rem;
+  align-items: stretch;
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr))
+}
+
+.BloxdForm.GamemodeForm .SectionBody .MapType,
+.BloxdForm.GamemodeForm .SectionBody .WorldGamemode,
+.BloxdForm.MapTypeForm .SectionBody .MapType,
+.BloxdForm.MapTypeForm .SectionBody .WorldGamemode {
+  background: none;
+  border: none;
+  box-sizing: content-box;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit
+}
+
+@media(pointer:coarse) {
+
+  .BloxdForm.GamemodeForm .SectionBody .MapType:before,
+  .BloxdForm.GamemodeForm .SectionBody .WorldGamemode:before,
+  .BloxdForm.MapTypeForm .SectionBody .MapType:before,
+  .BloxdForm.MapTypeForm .SectionBody .WorldGamemode:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) max(.5rem/-2, min(0px, (100% - 44px)/2));
+    position: absolute
+  }
+}
+
+.BloxdForm.GamemodeForm .SectionBody .MapType,
+.BloxdForm.GamemodeForm .SectionBody .WorldGamemode,
+.BloxdForm.MapTypeForm .SectionBody .MapType,
+.BloxdForm.MapTypeForm .SectionBody .WorldGamemode {
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), var(--background-image);
+  background-position: 50%;
+  background-size: cover;
+  border: 3px solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex;
+  height: 3rem;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+  transition: border-color .2s
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+
+  .BloxdForm.GamemodeForm .SectionBody .MapType,
+  .BloxdForm.GamemodeForm .SectionBody .WorldGamemode,
+  .BloxdForm.MapTypeForm .SectionBody .MapType,
+  .BloxdForm.MapTypeForm .SectionBody .WorldGamemode {
+    font-size: 1.25rem;
+    padding: .5rem
+  }
+}
+
+.BloxdForm.GamemodeForm .SectionBody .MapType.Selected,
+.BloxdForm.GamemodeForm .SectionBody .WorldGamemode.Selected,
+.BloxdForm.MapTypeForm .SectionBody .MapType.Selected,
+.BloxdForm.MapTypeForm .SectionBody .WorldGamemode.Selected {
+  border-color: #ffb914
+}
+
+.BloxdForm.GamemodeForm .SectionBody .MapType:disabled,
+.BloxdForm.GamemodeForm .SectionBody .WorldGamemode:disabled,
+.BloxdForm.MapTypeForm .SectionBody .MapType:disabled,
+.BloxdForm.MapTypeForm .SectionBody .WorldGamemode:disabled {
+  cursor: default
+}
+
+.BloxdForm.MapTypeForm .SectionBody {
+  grid-template-columns: repeat(auto-fill, minmax(14.4rem, 1fr))
+}
+
+.BloxdForm.GamemodeForm.BasicOptions .SectionBody,
+.BloxdForm.MapTypeForm.BasicOptions .SectionBody {
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+  grid-template-columns: none
+}
+
+.BloxdForm.GamemodeForm.BasicOptions .SectionBody .WorldGamemode {
+  height: 6rem
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+
+  .BloxdForm.GamemodeForm .SectionBody,
+  .BloxdForm.MapTypeForm .SectionBody,
+  .BloxdForm.MapTypeForm.BasicOptions .SectionBody {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+  }
+
+  .BloxdForm.GamemodeForm.BasicOptions .SectionBody .WorldGamemode {
+    height: 3rem
+  }
+}

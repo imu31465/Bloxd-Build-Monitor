@@ -1,941 +1,700 @@
 export const id = 94;
 export const ids = [94];
 export const modules = {
-  36674: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => gQ,
-      g: () => sQ,
-      j: () => PQ,
-      k: () => FQ,
-      m: () => pQ
+  5142: (MM, rM, iM) => {
+    iM.d(rM, {
+      C: () => mM,
+      d: () => OM,
+      h: () => aM,
+      j: () => dM,
+      l: () => JM,
+      n: () => PM,
+      q: () => SM,
+      r: () => jM,
+      v: () => hM,
+      z: () => HM
     });
-    var wQ = XQ(670),
-      qQ = XQ(1812),
-      TQ = XQ(5140);
-    class zQ {
-      constructor(QQ, WQ) {
-        this.width = QQ, this.yJ = WQ, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(QQ * WQ)
-      }
-      push(QQ) {
-        let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const XQ = this.data,
-          wQ = this.next * this.width;
-        for (let qQ = 0; qQ < this.width; qQ++) XQ[wQ + qQ] = QQ[WQ + qQ];
-        this.next = (this.next + 1) % this.yJ, this.size = Math.min(this.size + 1, this.yJ)
-      }
-      rows() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
-        const XQ = [],
-          wQ = (this.next - this.size + this.yJ) % this.yJ;
-        for (let qQ = 0; qQ < this.size; qQ++) {
-          const TQ = (wQ + qQ) % this.yJ * this.width;
-          this.data[TQ + QQ] >= WQ && XQ.push(Array.from(this.data.subarray(TQ, TQ + this.width)))
-        }
-        return XQ
-      }
-      lines() {
-        return this.rows().map((QQ => QQ.join(",")))
-      }
-    }
-    const sQ = 10,
-      FQ = {
-        idle: 0,
-        HI: 1,
-        oR: 2,
-        xR: 3,
-        Py: 4
-      },
-      PQ = {
-        none: 0,
-        skipped: 1,
-        paced: 2,
-        drawn: 3
-      },
-      gQ = {
-        lockGained: 1,
-        lockLost: 2,
-        lockError: 3,
-        visible: 4,
-        hidden: 5,
-        focus: 6,
-        blur: 7,
-        jsClient: 8,
-        wasmClient: 9,
-        droppedCopies: 10,
-        stepsLost: 11,
-        cameraSetsLost: 12
-      },
-      JQ = 12e3,
-      rQ = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
-      IQ = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
-      jQ = ["nowMs", "dtMs", "heading", "pitch", "kind"],
-      BQ = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
-      yQ = ["nowMs", "change", "count"];
+    const OM = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-    function VQ(QQ) {
-      return "js" === QQ ? gQ.jsClient : gQ.wasmClient
-    }
-    class DQ {
-      constructor() {
-        this.steps = new zQ(sQ, JQ), this.events = new zQ(IQ.length, JQ), this.frames = new zQ(jQ.length, JQ), this.cameraSets = new zQ(TQ.f, 256), this.changes = new zQ(yQ.length, 256)
+    function SM(MM) {
+      try {
+        return decodeURIComponent(MM.slice(1))
+      } catch {
+        return MM.slice(1)
       }
     }
-    const pQ = new class {
-      constructor() {
-        this.rings = null, this.sample = new Float64Array(IQ.length), this.startedClient = null, this.startedAtMs = 0
-      }
-      get client() {
-        return this.startedClient
-      }
-      start(QQ, WQ) {
-        this.startedClient = QQ, this.startedAtMs = performance.now(), null !== this.rings ? this.change(VQ(QQ)) : WQ && this.allocate()
-      }
-      lockGained() {
-        this.allocate(), this.change(gQ.lockGained)
-      }
-      allocate() {
-        null === this.rings && (this.rings = new DQ, null !== this.startedClient && this.changeAt(this.startedAtMs, VQ(this.startedClient), 1))
-      }
-      step(QQ, WQ) {
-        var XQ;
-        QQ[WQ + 6] !== FQ.Py && (null === (XQ = this.rings) || void 0 === XQ || XQ.steps.push(QQ, WQ))
-      }
-      cameraSet(QQ, WQ) {
-        var XQ;
-        null === (XQ = this.rings) || void 0 === XQ || XQ.cameraSets.push(QQ, WQ)
-      }
-      mouseMove(QQ, WQ) {
-        const XQ = this.rings;
-        if (null === XQ) return;
-        const wQ = this.sample;
-        wQ[0] = QQ.timeStamp, wQ[1] = performance.now(), wQ[2] = QQ.movementX, wQ[3] = QQ.movementY, wQ[4] = WQ ? 1 : 0, XQ.events.push(wQ)
-      }
-      frame(QQ, WQ, XQ, wQ) {
-        const qQ = this.rings;
-        if (null === qQ || wQ === PQ.none) return;
-        const TQ = this.sample;
-        TQ[0] = performance.now(), TQ[1] = QQ, TQ[2] = WQ, TQ[3] = XQ, TQ[4] = wQ, qQ.frames.push(TQ)
-      }
-      change(QQ) {
-        let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.changeAt(performance.now(), QQ, WQ)
-      }
-      changeAt(QQ, WQ, XQ) {
-        const wQ = this.rings;
-        if (null === wQ) return;
-        const qQ = this.sample;
-        qQ[0] = QQ, qQ[1] = WQ, qQ[2] = XQ, wQ.changes.push(qQ)
-      }
-      dumpText() {
-        var QQ, WQ;
-        const XQ = this.rings;
-        return [`look records (${this.startedClient}): ${rQ.join(",")}`, ...null !== (QQ = null === XQ || void 0 === XQ ? void 0 : XQ.steps.lines()) && void 0 !== QQ ? QQ : [], `mousemove events: ${IQ.join(",")}`, ...null !== (WQ = null === XQ || void 0 === XQ ? void 0 : XQ.events.lines()) && void 0 !== WQ ? WQ : []].join("\n")
-      }
-      toJson(QQ, WQ) {
-        var XQ;
-        const qQ = QQ - 6e4,
-          TQ = this.rings,
-          zQ = function(QQ, WQ) {
-            var XQ;
-            let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-            const TQ = null !== (XQ = null === QQ || void 0 === QQ ? void 0 : QQ.rows(wQ, qQ)) && void 0 !== XQ ? XQ : [];
-            return {
-              columns: WQ,
-              fromMs: 0 === TQ.length ? null : TQ[0][wQ],
-              rows: TQ
-            }
-          };
-        return {
-          version: wQ.c,
-          client: null !== (XQ = this.startedClient) && void 0 !== XQ ? XQ : "not started",
-          savedAt: (new Date).toISOString(),
-          savedAtMs: QQ,
-          keptMs: 6e4,
-          page: window.location.href,
-          userAgent: navigator.userAgent,
-          devicePixelRatio: window.devicePixelRatio,
-          screen: {
-            width: window.screen.width,
-            height: window.screen.height
-          },
-          Sy: null !== document.pointerLockElement,
-          visibility: document.visibilityState,
-          ...WQ,
-          outcomes: FQ,
-          frameKinds: PQ,
-          changes: gQ,
-          lookSteps: zQ(null === TQ || void 0 === TQ ? void 0 : TQ.steps, rQ),
-          mouseMoves: zQ(null === TQ || void 0 === TQ ? void 0 : TQ.events, IQ, 1),
-          frames: zQ(null === TQ || void 0 === TQ ? void 0 : TQ.frames, jQ),
-          cameraSets: zQ(null === TQ || void 0 === TQ ? void 0 : TQ.cameraSets, BQ),
-          pageChanges: zQ(null === TQ || void 0 === TQ ? void 0 : TQ.changes, yQ)
+
+    function jM(MM) {
+      return MM.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+    }
+    const aM = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${OM.source}`, "g");
+
+    function PM(MM, rM) {
+      return 2 === MM.length ? rM.replace(/^ (.*) $/, "$1") : rM
+    }
+
+    function nM(MM) {
+      return "" === MM.trim()
+    }
+
+    function QM(MM) {
+      const rM = [];
+      for (const iM of MM.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) rM.length > 0 && rM[rM.length - 1].endsWith("\\") ? rM[rM.length - 1] += `|${iM}` : rM.push(iM);
+      return rM.map((MM => MM.trim().replaceAll("\\|", "|")))
+    }
+    const zM = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+    function LM(MM) {
+      const rM = [],
+        iM = [{
+          indent: -1,
+          items: rM
+        }];
+      let OM = null;
+      for (const SM of MM) {
+        const MM = SM.match(zM);
+        if (!MM) {
+          OM && (OM.text += ` ${SM.trim()}`);
+          continue
         }
+        const rM = MM[1].replace(/\t/g, "  ").length;
+        for (; rM <= iM[iM.length - 1].indent;) iM.pop();
+        OM = {
+          text: MM[3].trim(),
+          children: []
+        }, iM[iM.length - 1].items.push(OM), iM.push({
+          indent: rM,
+          items: OM.children
+        })
       }
-      save(QQ) {
-        const WQ = JSON.stringify(this.toJson(performance.now(), QQ));
-        (0, qQ.e)(new Blob([WQ], {
-          type: "application/json"
-        }), `bloxd-mouse-look-${(new Date).toISOString().replace(/[:.]/g,"-")}.json`)
+      return rM
+    }
+
+    function mM(MM) {
+      const rM = MM.replace(/\r\n/g, "\n").split("\n"),
+        iM = [];
+      let OM = 0;
+      for (; OM < rM.length;) {
+        const MM = rM[OM];
+        if (nM(MM)) {
+          OM++;
+          continue
+        }
+        const SM = MM.match(/^\s*```\s*(\w*)\s*$/);
+        if (SM) {
+          const MM = [];
+          for (OM++; OM < rM.length && !/^\s*```\s*$/.test(rM[OM]);) MM.push(rM[OM]), OM++;
+          OM++, iM.push({
+            kind: "code",
+            lang: SM[1] || "text",
+            code: MM.join("\n").replace(/\s+$/, "")
+          });
+          continue
+        }
+        const aM = MM.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+        if (aM) {
+          const MM = aM[2].trim();
+          iM.push({
+            kind: "heading",
+            level: aM[1].length,
+            text: MM,
+            anchor: jM(MM)
+          }), OM++;
+          continue
+        }
+        if (/^\s*(-{3,}|\*{3,})\s*$/.test(MM)) {
+          iM.push({
+            kind: "rule"
+          }), OM++;
+          continue
+        }
+        if (MM.trim().startsWith("|") && OM + 1 < rM.length && /^\s*\|[\s:|-]+\|\s*$/.test(rM[OM + 1])) {
+          const SM = QM(MM),
+            jM = [];
+          for (OM += 2; OM < rM.length && rM[OM].trim().startsWith("|");) jM.push(QM(rM[OM])), OM++;
+          iM.push({
+            kind: "table",
+            header: SM,
+            rows: jM
+          });
+          continue
+        }
+        if (MM.startsWith(">")) {
+          const MM = [];
+          for (; OM < rM.length && rM[OM].startsWith(">");) MM.push(rM[OM].replace(/^>\s?/, "")), OM++;
+          iM.push({
+            kind: "quote",
+            blocks: mM(MM.join("\n"))
+          });
+          continue
+        }
+        if (zM.test(MM)) {
+          const SM = [],
+            jM = /^\s*\d+\./.test(MM);
+          for (; OM < rM.length && !nM(rM[OM]) && (zM.test(rM[OM]) || /^\s+\S/.test(rM[OM]));) SM.push(rM[OM]), OM++;
+          iM.push({
+            kind: "list",
+            ordered: jM,
+            items: LM(SM)
+          });
+          continue
+        }
+        const PM = [];
+        for (; OM < rM.length && !nM(rM[OM]) && !/^\s*```/.test(rM[OM]) && !/^#{1,6}\s/.test(rM[OM]) && !rM[OM].startsWith(">") && !zM.test(rM[OM]) && (!rM[OM].trim().startsWith("|") || 0 !== PM.length);) PM.push(rM[OM].trim()), OM++;
+        0 === PM.length && (PM.push(rM[OM].trim()), OM++), iM.push({
+          kind: "paragraph",
+          text: PM.join(" ")
+        })
+      }
+      return iM
+    }
+
+    function HM(MM) {
+      let rM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const iM = mM(MM);
+      let OM = "";
+      const SM = [],
+        jM = [],
+        aM = new Map;
+      for (const QM of iM) {
+        if ("heading" === QM.kind) {
+          var PM;
+          const MM = (null !== (PM = aM.get(QM.anchor)) && void 0 !== PM ? PM : 0) + 1;
+          aM.set(QM.anchor, MM), MM > 1 && (QM.anchor = `${QM.anchor}-${MM}`)
+        }
+        if ("heading" === QM.kind && 1 === QM.level && !OM) {
+          OM = QM.text;
+          continue
+        }
+        if ("heading" === QM.kind && QM.level <= rM) {
+          jM.push({
+            heading: QM,
+            blocks: []
+          });
+          continue
+        }
+        const MM = jM.at(-1);
+        MM ? MM.blocks.push(QM) : SM.push(QM)
+      }
+      const nM = MM => {
+        for (;
+          "rule" === (null === (rM = MM.at(-1)) || void 0 === rM ? void 0 : rM.kind);) {
+          var rM;
+          MM.pop()
+        }
+      };
+      nM(SM);
+      for (const QM of jM) nM(QM.blocks);
+      return {
+        title: OM,
+        intro: SM,
+        sections: jM
+      }
+    }
+
+    function hM(MM) {
+      return [{
+        heading: null,
+        blocks: MM.intro
+      }, ...MM.sections.map((MM => ({
+        heading: MM.heading,
+        blocks: MM.blocks
+      })))]
+    }
+
+    function JM(MM) {
+      return MM.flatMap((MM => "code" === MM.kind ? [MM] : "quote" === MM.kind ? JM(MM.blocks) : []))
+    }
+
+    function dM(MM) {
+      switch (MM.kind) {
+        case "heading":
+        case "paragraph":
+          return MM.text;
+        case "code":
+          return MM.code;
+        case "table":
+          return [MM.header, ...MM.rows].map((MM => MM.join(" "))).join(" ");
+        case "list": {
+          const rM = MM => MM.map((MM => `${MM.text} ${rM(MM.children)}`)).join(" ");
+          return rM(MM.items)
+        }
+        case "quote":
+          return MM.blocks.map(dM).join(" ");
+        case "rule":
+          return ""
       }
     }
   },
-  36671: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      LOOK_DEBUG_HEADER: () => gQ,
-      endLookDebugTake: () => VQ,
-      noteLookDroppedCopy: () => DQ,
-      saveLookCapture: () => pQ,
-      startLookDebug: () => yQ
+  6966: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => LM,
+      f: () => aM,
+      h: () => PM
     });
-    var wQ = XQ(5140),
-      qQ = XQ(3045),
-      TQ = XQ(1972);
-    const zQ = new Map(Object.entries(wQ.l).map((QQ => {
-      let [WQ, XQ] = QQ;
-      return [XQ, WQ]
-    })));
+    iM(6963);
+    var OM = iM(44),
+      SM = iM(5142),
+      jM = iM(1303);
+    const aM = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
 
-    function sQ(QQ) {
-      return (0, TQ.y)(QQ).toFixed(1)
+    function PM(MM, rM) {
+      return MM === rM ? MM : `${MM} (${rM})`
     }
 
-    function FQ(QQ, WQ) {
-      return `camera set by ${zQ.get(QQ[WQ+1])}: heading ${`${sQ(QQ[WQ+2])} -> ${sQ(QQ[WQ+4])}`} deg, pitch ${`${sQ(QQ[WQ+3])} -> ${sQ(QQ[WQ+5])}`} deg, at ${QQ[WQ].toFixed(1)} ms`
-    }
-    var PQ = XQ(36674);
-    const gQ = 2;
-
-    function JQ(QQ) {
-      return Number.isFinite(QQ) ? String(Math.round(10 * QQ) / 10) : String(QQ)
-    }
-
-    function rQ(QQ) {
-      return Number.isFinite(QQ) ? QQ.toFixed(1) : String(QQ)
-    }
-    class IQ {
-      constructor() {
-        this.frames = 0, this.looked = 0, this.idle = 0, this.oR = 0, this.pastLimit = 0, this.lockSkips = 0, this.Py = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.cameraSets = 0, this.cameraSetsLost = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
+    function nM(MM) {
+      const rM = [];
+      let iM = 0;
+      for (const OM of MM.matchAll(aM)) {
+        OM.index > iM && rM.push(MM.slice(iM, OM.index));
+        const [, SM, aM, nM, QM, zM, LM] = OM;
+        void 0 !== SM ? rM.push(PM(SM, aM)) : void 0 !== nM || void 0 !== QM ? rM.push((0, jM.jsx)("strong", {
+          children: null !== nM && void 0 !== nM ? nM : QM
+        }, OM.index)) : void 0 !== zM ? rM.push((0, jM.jsx)("em", {
+          children: zM
+        }, OM.index)) : rM.push((0, jM.jsx)("code", {
+          children: LM
+        }, OM.index)), iM = OM.index + OM[0].length
       }
-      moved() {
-        return this.events > 0 || 0 !== this.raw[0] || 0 !== this.raw[1] || this.lockSkips > 0 || this.oR > 0 || this.dropped > 0 || this.cameraSets > 0
-      }
-      hasEvent() {
-        return this.oR > 0 || this.pastLimit > 0 || this.bigEvents > 0 || this.dropped > 0 || this.cameraSets > 0
-      }
-    }
-    class jQ {
-      constructor() {
-        var QQ = this;
-        this.topicOn = (0, qQ.m)("look"), this.remote = (0, qQ.n)(), this.tally = new IQ, this.takes = null, this.started = !1, this.record = function(WQ) {
-          let XQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-          if (PQ.m.step(WQ, XQ), !QQ.topicOn) return;
-          const wQ = WQ[XQ],
-            qQ = WQ[XQ + 1],
-            TQ = WQ[XQ + 2],
-            zQ = WQ[XQ + 3],
-            sQ = WQ[XQ + 4],
-            FQ = WQ[XQ + 5],
-            gQ = WQ[XQ + 6],
-            IQ = WQ[XQ + 7],
-            jQ = WQ[XQ + 8],
-            BQ = WQ[XQ + 9],
-            yQ = QQ.tally;
-          switch (yQ.frames++, gQ) {
-            case PQ.k.idle:
-              return void yQ.idle++;
-            case PQ.k.Py:
-              return void yQ.Py++;
-            case PQ.k.xR:
-              return yQ.lockSkips++, void(0 === TQ && 0 === zQ || QQ.outlier(`lock skip dropped raw (${JQ(TQ)}, ${JQ(zQ)}) at ${rQ(wQ)} ms`))
-          }
-          yQ.looked++, Number.isFinite(qQ) && (yQ.dtMin = Math.min(yQ.dtMin, qQ), yQ.dtMax = Math.max(yQ.dtMax, qQ), yQ.dtSum += qQ, qQ > 0 && (yQ.peakRate = Math.max(yQ.peakRate, Math.hypot(sQ, FQ) / qQ))), yQ.raw[0] += TQ, yQ.raw[1] += zQ, yQ.turned[0] += sQ, yQ.turned[1] += FQ;
-          const VQ = Math.abs(TQ) > BQ || Math.abs(zQ) > BQ,
-            DQ = `raw (${JQ(TQ)}, ${JQ(zQ)}) over ${rQ(qQ)} ms, limit ${JQ(BQ)}, filter v (${IQ.toFixed(3)}, ${jQ.toFixed(3)}) px/ms, at ${rQ(wQ)} ms`;
-          gQ === PQ.k.oR ? (yQ.oR++, QQ.outlier(`spike put right: ${DQ} -> turned (${JQ(sQ)}, ${JQ(FQ)})`)) : VQ ? (yQ.pastLimit++, QQ.outlier(`kept past limit: ${DQ}`)) : qQ > 50 && (yQ.longFrames++, QQ.remote || QQ.outlier(`long frame: ${DQ}, turned in full`))
-        }, this.onMouseMove = QQ => {
-          const WQ = null !== document.pointerLockElement;
-          if (PQ.m.mouseMove(QQ, WQ), !this.topicOn) return;
-          const XQ = this.tally,
-            {
-              movementX: wQ,
-              movementY: qQ
-            } = QQ;
-          XQ.events++;
-          const TQ = Math.max(Math.abs(wQ), Math.abs(qQ));
-          XQ.eventMax = Math.max(XQ.eventMax, TQ), TQ >= 200 && (XQ.bigEvents++, this.eventOutlier(`big mousemove (${wQ}, ${qQ}) at ${rQ(QQ.timeStamp)} ms, lock ${WQ?"Ds":"free"}`))
-        }, this.onLockChange = () => {
-          const QQ = document.pointerLockElement;
-          QQ ? PQ.m.lockGained() : PQ.m.change(PQ.d.lockLost), this.topicOn && (0, qQ.j)("look", `pointer lock ${QQ?`gained (${QQ.tagName.toLowerCase()})`:"lost"} at ${rQ(performance.now())} ms`)
-        }, this.onLockError = () => {
-          PQ.m.change(PQ.d.lockError), this.topicOn && (0, qQ.j)("look", `pointer lock request failed at ${rQ(performance.now())} ms`)
-        }, this.onVisibility = () => {
-          PQ.m.change("hidden" === document.visibilityState ? PQ.d.hidden : PQ.d.visible), this.topicOn && (0, qQ.j)("look", `page ${document.visibilityState} at ${rQ(performance.now())} ms`)
-        }, this.onFocus = () => {
-          PQ.m.change(PQ.d.focus)
-        }, this.onBlur = () => {
-          PQ.m.change(PQ.d.blur)
-        }, this.flush = () => {
-          if (this.takeRecords(), !this.topicOn) return;
-          const QQ = this.tally;
-          if (this.tally = new IQ, !QQ.moved() || this.remote && !QQ.hasEvent()) return;
-          const WQ = QQ.looked > 0 ? QQ.dtSum / QQ.looked : NaN,
-            XQ = [`${QQ.frames} frames (${QQ.looked} looked, ${QQ.idle} idle${"wasm"===PQ.m.client?`, ${QQ.Py} carried`:""})`, `dt avg ${rQ(WQ)} min ${rQ(QQ.dtMin)} max ${rQ(QQ.dtMax)}, ${QQ.longFrames} long`, `${QQ.events} mousemoves (max ${JQ(QQ.eventMax)} px, ${QQ.bigEvents} big)`, `raw (${JQ(QQ.raw[0])}, ${JQ(QQ.raw[1])}) turned (${JQ(QQ.turned[0])}, ${JQ(QQ.turned[1])})`, `peak ${QQ.peakRate.toFixed(2)} px/ms`, `put right ${QQ.oR}, past limit ${QQ.pastLimit}, lock skips ${QQ.lockSkips}`, "lock " + (document.pointerLockElement ? "Ds" : "free")];
-          QQ.dropped > 0 && XQ.push(`${QQ.dropped} doubled spike copies dropped`), QQ.cameraSets > 0 && XQ.push(`${QQ.cameraSets} camera sets`), QQ.cameraSetsLost > 0 && XQ.push(`${QQ.cameraSetsLost} camera set records lost`), QQ.lost > 0 && XQ.push(`${QQ.lost} records lost`), QQ.suppressed > 0 && XQ.push(`${QQ.suppressed} outlier lines not shown`), (0, qQ.j)("look", `1s: ${XQ.join("; ")}`)
-        }
-      }
-      start(QQ, WQ) {
-        if (PQ.m.start(QQ, null !== document.pointerLockElement), this.takes = WQ, this.topicOn) {
-          const {
-            screen: WQ
-          } = window;
-          (0, qQ.j)("look", `start: ${QQ} client, dpr ${window.devicePixelRatio}, screen ${WQ.width}x${WQ.height}, pointer lock ${document.pointerLockElement?"Ds":"free"}`)
-        }
-        this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
-          capture: !0,
-          passive: !0
-        }), window.addEventListener("focus", this.onFocus), window.addEventListener("blur", this.onBlur), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), this.topicOn && !this.remote && (0, qQ.h)("look", (() => PQ.m.dumpText())))
-      }
-      outlier(QQ) {
-        const WQ = this.tally;
-        WQ.outliers >= 20 ? WQ.suppressed++ : (WQ.outliers++, (0, qQ.j)("look", QQ))
-      }
-      eventOutlier(QQ) {
-        const WQ = this.tally;
-        WQ.eventLines >= 10 ? WQ.suppressed++ : (WQ.eventLines++, (0, qQ.j)("look", QQ))
-      }
-      takeRecords() {
-        if (null === this.takes) return;
-        const QQ = this.takes.look();
-        if (QQ.length >= gQ) {
-          this.counted(PQ.d.stepsLost, QQ[0]), this.counted(PQ.d.droppedCopies, QQ[1]);
-          for (let WQ = gQ; WQ + PQ.g <= QQ.length; WQ += PQ.g) this.record(QQ, WQ)
-        }
-        const WQ = this.takes.cameraSets();
-        if (WQ.length >= wQ.c) {
-          this.counted(PQ.d.cameraSetsLost, WQ[0]);
-          for (let QQ = wQ.c; QQ + wQ.f <= WQ.length; QQ += wQ.f) PQ.m.cameraSet(WQ, QQ), this.topicOn && (this.tally.cameraSets++, this.outlier(FQ(WQ, QQ)))
-        }
-      }
-      droppedCopy() {
-        this.counted(PQ.d.droppedCopies, 1)
-      }
-      counted(QQ, WQ) {
-        if (0 === WQ) return;
-        if (PQ.m.change(QQ, WQ), !this.topicOn) return;
-        const XQ = this.tally;
-        QQ === PQ.d.droppedCopies ? XQ.dropped += WQ : QQ === PQ.d.stepsLost ? XQ.lost += WQ : XQ.cameraSetsLost += WQ
-      }
-      endTake() {
-        this.takeRecords(), this.takes = null
-      }
-    }
-    let BQ = null;
-
-    function yQ(QQ) {
-      let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      return BQ ??= new jQ, BQ.start(QQ, WQ), BQ.record
+      return iM < MM.length && rM.push(MM.slice(iM)), rM
     }
 
-    function VQ() {
-      var QQ;
-      null === (QQ = BQ) || void 0 === QQ || QQ.endTake()
+    function QM(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      const OM = MM.map(((MM, rM) => (0, jM.jsxs)("li", {
+        children: [nM(MM.text), MM.children.length > 0 && QM(MM.children, !1)]
+      }, rM)));
+      return rM ? (0, jM.jsx)("ol", {
+        start: iM,
+        children: OM
+      }) : (0, jM.jsx)("ul", {
+        children: OM
+      })
     }
 
-    function DQ() {
-      var QQ;
-      null === (QQ = BQ) || void 0 === QQ || QQ.droppedCopy()
+    function zM(MM, rM) {
+      switch (MM.kind) {
+        case "heading":
+          return MM.level <= 2 ? (0, jM.jsx)("h3", {
+            children: nM(MM.text)
+          }, rM) : (0, jM.jsx)("h4", {
+            children: nM(MM.text)
+          }, rM);
+        case "paragraph":
+          return (0, jM.jsx)("p", {
+            children: nM(MM.text)
+          }, rM);
+        case "list":
+          return (0, jM.jsx)(OM.Fragment, {
+            children: QM(MM.items, MM.ordered)
+          }, rM);
+        case "quote":
+          return (0, jM.jsx)("blockquote", {
+            children: MM.blocks.map(((MM, rM) => zM(MM, rM)))
+          }, rM);
+        case "code":
+          return (0, jM.jsx)("pre", {
+            children: (0, jM.jsx)("code", {
+              children: MM.code
+            })
+          }, rM);
+        case "table":
+          return (0, jM.jsxs)("table", {
+            children: [(0, jM.jsx)("thead", {
+              children: (0, jM.jsx)("tr", {
+                children: MM.header.map(((MM, rM) => (0, jM.jsx)("th", {
+                  children: nM(MM)
+                }, rM)))
+              })
+            }), (0, jM.jsx)("tbody", {
+              children: MM.rows.map(((MM, rM) => (0, jM.jsx)("tr", {
+                children: MM.map(((MM, rM) => (0, jM.jsx)("td", {
+                  children: nM(MM)
+                }, rM)))
+              }, rM)))
+            })]
+          }, rM);
+        case "rule":
+          return (0, jM.jsx)("hr", {}, rM)
+      }
     }
-    async function pQ(QQ) {
-      var WQ;
-      null === (WQ = BQ) || void 0 === WQ || WQ.takeRecords();
-      const {
-        clientHintsRead: wQ,
-        debugDeviceLines: qQ
-      } = await XQ.e(30).then((() => XQ(34376)));
-      await wQ, PQ.m.save({
-        ...QQ,
-        device: qQ()
+
+    function LM(MM) {
+      let {
+        markdown: rM
+      } = MM, iM = 0;
+      return (0, jM.jsx)("div", {
+        className: "StudioAiAnswerText",
+        children: (0, SM.C)(rM).map(((MM, rM) => {
+          if ("list" !== MM.kind || !MM.ordered) return iM = 0, zM(MM, rM);
+          const SM = iM + 1;
+          return iM += MM.items.length, (0, jM.jsx)(OM.Fragment, {
+            children: QM(MM.items, !0, SM)
+          }, rM)
+        }))
       })
     }
   },
-  5140: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      $b: () => aQ,
-      A: () => sQ,
-      Ab: () => uQ,
-      C: () => wQ,
-      Cb: () => yQ,
-      F: () => TQ,
-      G: () => GQ,
-      Gb: () => hQ,
-      I: () => mQ,
-      Ib: () => lQ,
-      M: () => JQ,
-      Mb: () => LQ,
-      Nb: () => nQ,
-      Pb: () => fQ,
-      Q: () => rQ,
-      Sb: () => tQ,
-      U: () => gQ,
-      V: () => PQ,
-      Wb: () => oQ,
-      X: () => UQ,
-      Z: () => FQ,
-      Zb: () => HQ,
-      bb: () => BQ,
-      c: () => DQ,
-      cb: () => jQ,
-      dc: () => YQ,
-      f: () => VQ,
-      fb: () => iQ,
-      fc: () => qQ,
-      gc: () => KQ,
-      i: () => OQ,
-      jb: () => AQ,
-      l: () => pQ,
-      mb: () => RQ,
-      n: () => ZQ,
-      nb: () => cQ,
-      p: () => IQ,
-      q: () => dQ,
-      r: () => NQ,
-      rb: () => EQ,
-      tb: () => xQ,
-      u: () => vQ,
-      ub: () => eQ,
-      vb: () => SQ,
-      y: () => bQ,
-      yb: () => CQ,
-      z: () => zQ,
-      zb: () => kQ
+  6956: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => lM,
+      g: () => EM,
+      c: () => GM,
+      k: () => hM
     });
-    const wQ = 32,
-      qQ = 33.333333333333336,
-      TQ = {
-        AbiVersion: 0,
-        Status: 1,
-        LastError: 2,
-        ErrorCount: 3,
-        FrameIndex: 4,
-        TicksRun: 5,
-        TicksDropped: 6,
-        Alpha: 7,
-        NetOutPtr: 8,
-        NetOutLen: 9,
-        WorkerOutPtr: 10,
-        WorkerOutLen: 11,
-        EventsPtr: 12,
-        EventsLen: 13,
-        ScenePtr: 14,
-        SceneLen: 15,
-        TickIndex: 16,
-        LastErrorDetail: 17,
-        RenderPending: 18,
-        GpuSampled: 19,
-        GpuTimed: 20,
-        GpuFrameUs: 21,
-        TickUs: 22,
-        RenderUs: 23,
-        FirstView: 24,
-        ChunksCancelled: 25,
-        PingSent: 26,
-        NetInKept: 27,
-        FrameDraw: 28,
-        Pacing: 29,
-        PacingLagUs: 30,
-        LoadSteps: 31
-      },
-      zQ = {
-        NotYet: 0,
-        Drawn: 1,
-        Backstop: 2,
-        HeldBackstop: 3
-      },
-      sQ = {
-        NotDrawn: 0,
-        Drawn: 1,
-        Paced: 2
-      },
-      FQ = {
-        AheadMask: 15,
-        Defaulted: 128,
-        LagsShift: 8,
-        CountMask: 4095
-      },
-      PQ = {
-        TerrainDrawn: 1,
-        ChunkRequested: 2,
-        ChunkStored: 4,
-        MeshLanded: 8,
-        PlayerChunk: 16
-      },
-      gQ = {
-        PlayerBound: 32,
-        JoinPreload: 64
-      },
-      JQ = 14,
-      rQ = {
-        ChunksReceived: 0,
-        ChunksStored: 1,
-        JobsSent: 2,
-        JobsDone: 3,
-        JobsInFlight: 4,
-        WorkersLive: 5,
-        WorkersRetired: 6,
-        ViewQueuedPrograms: 7,
-        FirstViewLinkMs: 8,
-        FirstViewTerrainMs: 9,
-        FirstViewHeldMs: 10,
-        FirstViewOtherMs: 11,
-        FirstViewGaps: 12,
-        FirstViewGapMs: 13
-      },
-      IQ = {
-        Look: 0,
-        Remesh: 1,
-        CameraSet: 2
-      },
-      jQ = 8,
-      BQ = 1,
-      yQ = {
-        Edit: 0,
-        Sent: 1,
-        Done: 2,
-        Failed: 3,
-        Shown: 4,
-        Replaced: 5,
-        Emptied: 6
-      },
-      VQ = 6,
-      DQ = 1,
-      pQ = {
-        SetCamDir: 0,
-        Forced: 1,
-        ScriptedTake: 2,
-        ScriptedPose: 3,
-        ScriptedRelease: 4
-      },
-      GQ = {
-        KeyDown: 1,
-        KeyUp: 2,
-        MouseMove: 3,
-        MouseDown: 4,
-        MouseUp: 5,
-        Wheel: 6,
-        TouchStart: 7,
-        TouchMove: 8,
-        TouchEnd: 9,
-        TouchCancel: 10,
-        PointerLock: 11,
-        Resize: 12,
-        Focus: 13,
-        Blur: 14,
-        UiPrefs: 15,
-        Binding: 16,
-        UiCapture: 17,
-        Sensitivity: 18,
-        Joystick: 19,
-        TouchButton: 20,
-        TouchZone: 21,
-        Options: 22,
-        AntiCheat: 23,
-        PadAction: 24,
-        PadLook: 25,
-        EnvPrefs: 32
-      },
-      UQ = {
-        Frame: 1,
-        Open: 2,
-        Close: 3
-      },
-      bQ = {
-        RawMessage: 1,
-        CoreErrors: 2,
-        LocalHurt: 16,
-        AttackHit: 17,
-        HealthChanged: 18,
-        LocalPlayerBound: 19,
-        ConnectionState: 20,
-        ReconnectGrace: 5,
-        GameCalls: 96,
-        JoinPreloadEnded: 6,
-        LocalTeleported: 21,
-        PhysicsType: 22,
-        VehicleEffect: 23,
-        InputAction: 24,
-        ZoomChanged: 25,
-        ZoomDisabled: 26,
-        SendRefused: 27,
-        KeepAliveDue: 28,
-        GameCamera: 29,
-        BhopDisabled: 30,
-        TickEnd: 32,
-        EntitySpawned: 33,
-        EntityDespawned: 34,
-        ChangeBlockFail: 39,
-        ChangeBlockFailEnd: 46,
-        InventoryEvent: 48,
-        HeldItemChanged: 49,
-        ShotDamage: 50,
-        EnchantOffer: 51,
-        UiEvent: 52,
-        EntityInfoChanged: 53,
-        ChunkSlot: 55,
-        PlaySound: 40,
-        SoundPos: 41,
-        SoundSet: 42,
-        SoundFade: 43,
-        SoundStop: 44,
-        SoundReset: 45,
-        EnvLighting: 54,
-        SkyImages: 64,
-        ReplayFailed: 56,
-        ReplayOption: 57,
-        ReplayFilePart: 58,
-        ReplayFileReady: 59,
-        ReplayOpened: 60,
-        ReplayUiEvent: 61,
-        RecorderEvent: 62,
-        Images: 128,
-        ModelRequests: 129,
-        ModelTaken: 130,
-        RenderReload: 3,
-        TerrainTexturesWanted: 4
-      },
-      vQ = {
-        EntityInfo: 1,
-        EntityTable: 2,
-        CoreErrors: 4,
-        Other: 8,
-        NetSession: 16,
-        ItemsUi: 32,
-        PlayerHud: 64,
-        GameCalls: 128
-      },
-      dQ = 4,
-      HQ = 4,
-      aQ = 65535,
-      lQ = {
-        Open: 1,
-        TooLarge: 2,
-        NothingStaged: 3,
-        NotPlayback: 4,
-        NotOpen: 5,
-        BadValue: 6,
-        Crop: 7,
-        NotLive: 8,
-        ModuleLoad: 9,
-        ModuleTrap: 10,
-        Port: 11
-      },
-      hQ = {
-        Busy: 0,
-        Range: 1,
-        OtherBody: 2,
-        TooLarge: 3,
-        Corrupt: 4,
-        Ended: 5
-      },
-      iQ = 88,
-      cQ = 0,
-      AQ = 24,
-      RQ = 48,
-      EQ = 80,
-      CQ = {
-        FilePartDone: 526,
-        FileDone: 527,
-        Control: 528,
-        Prefs: 529,
-        Option: 530,
-        FlyingText: 531,
-        PlayerKilled: 532,
-        Killfeed: 533,
-        Session: 534
-      },
-      uQ = {
-        ToggleRecording: 0,
-        SaveClip: 1,
-        ViewerOpened: 2,
-        ViewerClosed: 3
-      },
-      LQ = {
-        Clip: 0,
-        Recording: 1,
-        Edited: 2
-      },
-      kQ = {
-        RecordingStarted: 0,
-        RecordingStopped: 1,
-        RecordingDiscarded: 2,
-        ClipSaved: 3,
-        ClipEmpty: 4,
-        ClippingNotOn: 5,
-        Disallowed: 6,
-        ClippingOn: 7,
-        ClippingOff: 8,
-        LimitReached: 9,
-        ClipSettingsChanged: 10,
-        SaveBusy: 11,
-        CloseViewerFirst: 12,
-        FileDiscarded: 13,
-        SaveFailed: 14,
-        RecordingTurnedOff: 15
-      },
-      fQ = {
-        Cleared: 0,
-        Text: 1,
-        Int: 2,
-        Double: 3
-      },
-      SQ = 65535,
-      tQ = {
-        FlyingText: 1,
-        PlayerKilled: 2,
-        Killfeed: 3
-      },
-      oQ = {
-        None: 0,
-        Paused: 1,
-        Playing: 2,
-        Cropping: 3,
-        Loading: 4
-      },
-      eQ = 2,
-      nQ = {
-        UiText: 0,
-        Environment: 6,
-        Hud: 12,
-        Count: 19
-      },
-      xQ = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      YQ = {
-        SkyTable: 600,
-        SkyImagesReady: 601,
-        SkyTableHeaderBytes: 8,
-        SkyTableEntryBytes: 92,
-        SkyImagesReadyBytes: 32,
-        KindNone: 0,
-        KindCustom: 1,
-        KindEarth: 2,
-        AddedId: 65534,
-        MaxAdded: 32,
-        CubeFaces: 6,
-        Failed: 0
-      },
-      NQ = {
-        Bytes: 88,
-        Inclination: 0,
-        Turbidity: 1,
-        Luminance: 2,
-        Rayleigh: 3,
-        MieCoefficient: 4,
-        MieDirectionalG: 5,
-        Distance: 6,
-        Azimuth: 7,
-        Params: 8,
-        SunPosition: 256,
-        CameraOffsetX: 512,
-        CameraOffsetY: 1024,
-        CameraOffsetZ: 2048,
-        Up: 4096,
-        VertexTint: 8192,
-        UseSunPosition: 16384,
-        Dithering: 32768,
-        InfiniteDistance: 65536,
-        SunPositionAt: 32,
-        CameraOffsetAt: 44,
-        UpAt: 56,
-        VertexTintAt: 68,
-        PresentAt: 80,
-        FlagsAt: 84
-      },
-      ZQ = {
-        None: 0,
-        InputOverCapacity: 1,
-        InputTruncated: 2,
-        InputUnknownKind: 3,
-        InputNonFinite: 4,
-        NetOverCapacity: 16,
-        NetTruncated: 17,
-        NetOversize: 18,
-        NetBadKind: 19,
-        NetConnUnknown: 20,
-        NetConnBackwards: 21,
-        WorkerOverCapacity: 32,
-        WorkerTruncated: 33,
-        WorkerUnknownKind: 34,
-        TimeNonFinite: 48,
-        TimeBackwards: 49,
-        GameCallThrew: 50,
-        ResumeUnconsumed: 51,
-        CallLogMismatch: 52,
-        TerrainTextureRefused: 53,
-        TerrainTextureMissing: 54,
-        ShaderPackRefused: 55,
-        ReserveTooLarge: 64,
-        ReserveFailed: 65,
-        GrowFailed: 66,
-        EventOversize: 80,
-        OutputFull: 81,
-        StateCorrupt: 128,
-        OriginRefused: 129,
-        CoreBusy: 138,
-        WorldWorldgenRefused: 88,
-        WorldWorldgenResultMalformed: 89,
-        WorldBlockDataInvalid: 90,
-        WorldNetDecode: 96,
-        WorldChunkId: 97,
-        WorldChunkVoxels: 98,
-        WorldChunkLight: 99,
-        WorldSendFailed: 100,
-        WorldEditInvalid: 101,
-        WorldPlayerInvalid: 102,
-        WorldNoVoxels: 103,
-        WorldStoreCorrupt: 224,
-        WorldWorldgenTrapped: 226,
-        WorldRegistryInvalid: 227,
-        WorldStreamStartInvalid: 228,
-        PresentationRigRefused: 160,
-        PresentationSceneRefused: 161,
-        PresentationModelMissing: 162,
-        PresentationAnimDecode: 163,
-        PresentationSettingDecode: 164,
-        PresentationParticleDecode: 165,
-        PresentationNodeUnknown: 166,
-        PresentationStateFull: 167,
-        PresentationBindingUnfit: 168,
-        PresentationClipUnplayable: 169,
-        PresentationObjectOpsDropped: 170,
-        PresentationImageFailed: 171,
-        PresentationDracoFailure: 144,
-        NetNotGameRoom: 184,
-        NetEnvelope: 185,
-        NetMessageDecode: 186,
-        NetNoHandshake: 187,
-        NetRejoin: 188,
-        NetHandshake: 189,
-        NetSchemaDesync: 136,
-        ReplicationUnknownType: 192,
-        ReplicationBadId: 193,
-        ReplicationFull: 194,
-        ReplicationNamesFull: 195,
-        ReplicationRosterFull: 196,
-        ReplicationEffectsFull: 197,
-        ReplicationNoDecoder: 198,
-        ReplicationResetFailed: 137,
-        OptionsMalformed: 56,
-        OptionsRecordBad: 57,
-        ItemsDeadlinesFull: 73,
-        ItemsThrowablesFull: 75,
-        ItemsSendLatchFull: 76,
-        ItemsBadSlotJson: 77,
-        ItemsUnknownItem: 78,
-        ItemsMessageDecode: 79,
-        ItemsRecipeBad: 82,
-        ItemsSendFailed: 83,
-        ItemsMarkerLost: 84,
-        ItemsCallStackFull: 85,
-        ItemsUiDropsFull: 272,
-        ItemsReplayRefused: 273,
-        ApiCmdUnknownKind: 67,
-        ApiCmdBadLength: 68,
-        ApiCmdTruncated: 69,
-        ApiQueryBadArgs: 70,
-        ApiScratchTooLarge: 71,
-        AudioUnknownSound: 86,
-        JobsRefused: 104,
-        JobsResultMalformed: 105,
-        JobsUnknownJob: 106,
-        JobsWorkerIndexInvalid: 107,
-        JobsWorkerOutFull: 108,
-        JobsTablesRefused: 109,
-        JobsVisInputRefused: 110,
-        JobsKeyInvalid: 111,
-        JobsTrapped: 288,
-        JobsTrapGaveUp: 289,
-        JobsTablesRetired: 290,
-        JobsHeapGaveUp: 291,
-        JobsTablesTrapped: 232,
-        JobsWorkerTablesRefused: 233,
-        EffectsUnknownPreset: 256,
-        EffectsParticleCmdBad: 257,
-        EffectsParticleKeysFull: 258,
-        EffectsUnknownAnchor: 259,
-        EffectsGrowingFull: 260,
-        EffectsMessageDecode: 261,
-        EnvUnknownSky: 264,
-        EnvSkyTableBad: 265,
-        EnvSkyRowsRefused: 266,
-        EnvSkyReleasesLost: 267,
-        EnvOverlayRowsRefused: 268,
-        SendsSendRefused: 58,
-        SendsSendMalformed: 59,
-        SendsSendQueueFull: 60,
-        SendsAntiCheatRecordBad: 61,
-        SendsSendFailed: 62,
-        RenderDeviceLost: 176,
-        RenderSceneRowNotDrawn: 177,
-        RenderChunkMeshNotDrawn: 178,
-        RenderShaderPackNotRun: 179,
-        RenderInternal: 180,
-        RenderCaveCullingOff: 181,
-        RenderGlErrorAfterRestore: 182,
-        RenderSerialLinks: 183,
-        RenderOutOfMemory: 200,
-        RenderValidation: 201,
-        RenderSurfaceUnusable: 202,
-        RenderPipelineFailed: 203,
-        RenderStateCorrupt: 204,
-        RenderDeviceUnrecoverable: 205,
-        PlayerMessageDecode: 112,
-        PlayerMovementFailed: 113,
-        PlayerPhysicsFailed: 114,
-        PlayerConfirmQueueFull: 115,
-        PlayerSendFailed: 116,
-        PlayerBadPhysicsState: 117,
-        PlayerBadOverride: 118,
-        PlayerNonFinitePosition: 119,
-        PlayerEventsFull: 120,
-        PlayerMultiplierSetDropped: 121,
-        CameraNonFinite: 126,
-        CameraCmdBad: 127,
-        CameraScriptedPoseRefused: 296,
-        InputBadKey: 122,
-        InputBadAction: 123,
-        InputBadTouch: 124,
-        InputEdgesFull: 125,
-        ReplayDrops: 87,
-        ReplayRecorderDrops: 304
-      },
-      OQ = 8,
-      KQ = {
-        GameCodeMessage: 4,
-        NewOtherEntitySettings: 23,
-        NewClientOptions: 37,
-        Chat: 64,
-        UiRequestPopup: 8,
-        TaskProgress: 9,
-        CustomKillfeed: 15,
-        TopRightHelper: 24,
-        NewUiRequest: 51,
-        PlayerKilled: 61,
-        OverShopInfo: 43,
-        ShowShopTutorial: 76,
-        SetCookie: 0,
-        LeaveValues: 85,
-        CustomAnalyticsEvent: 31,
-        ProgressionEvent: 19,
-        ResourceEvent: 22,
-        LeaderboardResponse: 30,
-        ResumeComplete: 105,
-        ProgressBarUpdate: 33,
-        RemoveMiddleScreenBar: 90,
-        WorldVariation: 5,
-        EditItemCraftingRecipes: 78
-      },
-      mQ = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
-  }
+    var OM = iM(1215),
+      SM = iM(6905),
+      jM = iM(5273);
+    const aM = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
+
+    function PM(MM) {
+      return (0, jM.e)(MM, aM, (rM => !/^my/i.test(rM[0]) || !/follow $/i.test(MM.slice(0, rM.index)))).length > 0
+    }
+    const nM = /\byou(?:r|'re|'ll)?\b/i,
+      QM = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
+      zM = 2;
+
+    function LM(MM) {
+      return function(MM) {
+        const rM = [];
+        let iM = !1;
+        for (const OM of MM.split("\n")) {
+          if (/^\s*(```|~~~)/.test(OM)) {
+            iM = !iM;
+            continue
+          }
+          if (iM || /^\s*>/.test(OM)) continue;
+          const MM = OM.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
+          rM.push(...(0, SM.u)(MM))
+        }
+        return rM
+      }(MM).filter((MM => PM(MM) || QM.test(MM) && !nM.test(MM)))
+    }
+    const mM = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      HM = [{
+        name: "Qwen3.6-27B",
+        temperature: .7,
+        reasoningEffort: "none"
+      }, {
+        name: "Qwen3.5-397B-A17B",
+        temperature: .7,
+        reasoningEffort: "none"
+      }, {
+        name: "Mistral-Small-3.2-24B-Instruct-2506",
+        temperature: .15
+      }];
+
+    function hM(MM) {
+      const rM = HM.findIndex((rM => rM.name === MM));
+      return -1 === rM ? HM.length : rM
+    }
+    const JM = 2500,
+      dM = 12e4;
+    class yM extends Error {
+      constructor(MM) {
+        super(`Studio AI chat ${MM}`), this.reason = MM
+      }
+    }
+
+    function lM(MM, rM) {
+      const iM = new AbortController,
+        OM = () => {
+          iM.abort()
+        },
+        SM = setTimeout(OM, MM);
+      return null !== rM && void 0 !== rM && rM.aborted && OM(), null === rM || void 0 === rM || rM.addEventListener("abort", OM, {
+        once: !0
+      }), {
+        signal: iM.signal,
+        clear: () => {
+          clearTimeout(SM), null === rM || void 0 === rM || rM.removeEventListener("abort", OM)
+        }
+      }
+    }
+
+    function EM(MM, rM, iM) {
+      return new Promise(((SM, jM) => {
+        const aM = new AbortController,
+          PM = () => {
+            aM.abort(), jM((0, OM.f)(iM))
+          };
+        if (null !== iM && void 0 !== iM && iM.aborted) return void PM();
+        null === iM || void 0 === iM || iM.addEventListener("abort", PM, {
+          once: !0
+        });
+        const nM = HM.map((() => !1));
+        let QM = null;
+        const zM = HM.map((() => !1)),
+          LM = HM.map((() => !1));
+        HM.forEach(((OM, mM) => {
+          const hM = lM(dM, aM.signal);
+          CM(OM, [{
+            role: "user",
+            content: MM
+          }], hM.signal).then((MM => {
+            aM.signal.aborted || ("busy" === MM || "failed" === MM ? (zM[mM] = "busy" === MM, LM[mM] = !0) : null !== MM && (null === QM || mM < QM.rank) && (QM = {
+              rank: mM,
+              answer: {
+                text: MM.text,
+                model: OM.name
+              }
+            }, rM(QM.answer)))
+          }), (MM => {
+            aM.signal.aborted || (LM[mM] = !0, console.warn(`Studio AI: ${OM.name} couldn't be reached`, MM))
+          })).finally((() => {
+            hM.clear(), nM[mM] = !0, aM.signal.aborted || (() => {
+              var MM, rM;
+              const OM = null !== (MM = null === (rM = QM) || void 0 === rM ? void 0 : rM.rank) && void 0 !== MM ? MM : HM.length;
+              nM.slice(0, OM).includes(!1) || (null === iM || void 0 === iM || iM.removeEventListener("abort", PM), aM.abort(), null !== QM ? SM({
+                ...QM.answer,
+                isFinal: !LM.slice(0, QM.rank).includes(!0)
+              }) : jM(new yM(zM.includes(!0) ? "busy" : "failed")))
+            })()
+          })).catch((MM => {
+            console.error("Studio AI: showing an answer failed", MM)
+          }))
+        }))
+      }))
+    }
+
+    function UM(MM) {
+      var rM, iM;
+      return "length" === (null === MM || void 0 === MM || null === (rM = MM.choices) || void 0 === rM || null === (iM = rM[0]) || void 0 === iM ? void 0 : iM.finish_reason)
+    }
+    async function GM(MM, rM, iM) {
+      const OM = HM.find((rM => rM.name === MM));
+      if (void 0 === OM) return "failed";
+      const SM = lM(dM, iM);
+      try {
+        const MM = await CM(OM, rM, SM.signal);
+        return null !== MM && "object" === typeof MM ? MM.isCutOff ? (console.warn(`Studio AI: ${OM.name}'s answer was cut off at the token limit`), null) : {
+          text: MM.text
+        } : MM
+      } finally {
+        SM.clear()
+      }
+    }
+    async function CM(MM, rM, iM) {
+      const OM = await fetch(mM, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          model: MM.name,
+          messages: rM,
+          max_tokens: JM,
+          temperature: MM.temperature,
+          reasoning_effort: MM.reasoningEffort
+        }),
+        credentials: "omit",
+        referrerPolicy: "no-referrer",
+        signal: iM
+      });
+      if (429 === OM.status) return "busy";
+      if (!OM.ok) return console.warn(`Studio AI: ${MM.name} answered ${OM.status}`), "failed";
+      const SM = await OM.json().catch((() => null)),
+        jM = function(MM) {
+          var rM, iM, OM;
+          const SM = null === MM || void 0 === MM || null === (rM = MM.choices) || void 0 === rM || null === (iM = rM[0]) || void 0 === iM || null === (OM = iM.message) || void 0 === OM ? void 0 : OM.content;
+          if ("string" !== typeof SM) return null;
+          const jM = SM.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+          return "" === jM ? null : jM
+        }(SM);
+      return null !== jM && function(MM) {
+        const rM = LM(MM);
+        return rM.length >= zM || rM.some((MM => PM(MM)))
+      }(jM) ? (console.warn(`Studio AI: ${MM.name} thought out loud instead of answering`), "failed") : null === jM ? null : {
+        text: jM,
+        isCutOff: UM(SM)
+      }
+    }
+  },
+  6905: (MM, rM, iM) => {
+    iM.d(rM, {
+      B: () => UM,
+      E: () => CM,
+      H: () => dM,
+      I: () => EM,
+      M: () => GM,
+      Q: () => lM,
+      S: () => LM,
+      U: () => QM,
+      W: () => HM,
+      e: () => hM,
+      i: () => PM,
+      l: () => aM,
+      p: () => JM,
+      t: () => mM,
+      u: () => zM,
+      x: () => jM,
+      z: () => SM
+    });
+    var OM = iM(5273);
+    const SM = 2e3,
+      jM = 2e4;
+
+    function aM(MM) {
+      return MM.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    }
+
+    function PM(MM) {
+      return MM.replace(/\$/g, "\\$")
+    }
+    const nM = /[.!?](?=\s|\*|_|$)|\n|$/g;
+
+    function QM(MM, rM) {
+      nM.lastIndex = rM;
+      const iM = nM.exec(MM);
+      return iM.index + iM[0].length
+    }
+
+    function zM(MM) {
+      return (0, OM.r)(MM, /\s+/g, (0, OM.n)(".!?")).flatMap((MM => MM.split("\n")))
+    }
+
+    function LM(MM, rM) {
+      let iM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : rM;
+      const OM = [...MM.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((MM => MM.index)),
+        SM = OM.filter((MM => MM < rM)),
+        jM = OM.find((MM => MM >= iM));
+      return [0 === SM.length ? 0 : SM.at(-1) + 1, void 0 === jM ? MM.length : jM + 1]
+    }
+
+    function mM(MM, rM) {
+      const iM = MM.charCodeAt(rM - 1);
+      return MM.slice(0, rM > 0 && rM < MM.length && iM >= 55296 && iM <= 56319 ? rM - 1 : rM)
+    }
+
+    function HM(MM, rM) {
+      return `${rM}${MM.replace(/\\/g,"\\\\").split(rM).join(`\\${rM}`)}${rM}`
+    }
+
+    function hM(MM) {
+      return MM.charAt(0).toUpperCase() + MM.slice(1)
+    }
+
+    function JM(MM) {
+      return Math.round(MM).toLocaleString("en-US")
+    }
+
+    function dM(MM) {
+      return MM.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((MM => "" !== MM))
+    }
+    const yM = 3;
+
+    function lM(MM, rM) {
+      return dM(MM).filter((MM => MM.length >= yM && !/\d/.test(MM))).map((MM => `${MM} ${rM}`))
+    }
+
+    function EM(MM) {
+      return MM.split(/[\s:_]+/).filter((MM => "" !== MM)).map(aM).join("[`:_\\s]+")
+    }
+
+    function UM(MM) {
+      return dM(MM.split(".").pop())
+    }
+
+    function GM(MM) {
+      return MM.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    }
+
+    function CM(MM) {
+      let rM = null;
+      return () => {
+        const iM = rM ??= MM();
+        return iM.catch((() => {
+          rM === iM && (rM = null)
+        })), iM
+      }
+    }
+  },
+  5273: (MM, rM, iM) => {
+    function OM(MM) {
+      return {
+        notAfter: MM
+      }
+    }
+    iM.d(rM, {
+      c: () => nM,
+      e: () => QM,
+      f: () => PM,
+      g: () => OM,
+      h: () => SM,
+      j: () => jM,
+      n: () => aM,
+      p: () => zM,
+      r: () => LM
+    });
+    const SM = OM("\\w$."),
+      jM = OM("\\w.,");
+
+    function aM(MM) {
+      return rM => nM(rM, MM)
+    }
+
+    function PM(MM) {
+      return rM => !MM.test(rM.input.slice(0, rM.index))
+    }
+
+    function nM(MM, rM) {
+      return MM.index > 0 && new RegExp(`[${rM}]`).test(MM.input[MM.index - 1])
+    }
+
+    function QM(MM, rM, iM) {
+      return function(MM) {
+        return void 0 !== MM && "function" !== typeof MM
+      }(iM) ? function(MM, rM, iM) {
+        const OM = rM.flags.replace(/[gy]/g, ""),
+          SM = new RegExp(`[^${iM}](?:${rM.source})`, `${OM}g`),
+          jM = [],
+          aM = iM => {
+            const OM = iM.index + iM[0].length;
+            return ("" === iM[0] ? mM(MM, rM, OM) : OM) - 1
+          },
+          PM = new RegExp(`(?:${rM.source})`, `${OM}y`).exec(MM);
+        if (PM) {
+          if (jM.push(PM), !rM.global) return jM;
+          SM.lastIndex = aM(PM)
+        }
+        for (let nM = SM.exec(MM); nM; nM = SM.exec(MM)) {
+          const iM = mM(MM, rM, nM.index) - nM.index;
+          if (nM[0] = nM[0].slice(iM), nM.index += iM, jM.push(nM), !rM.global) break;
+          SM.lastIndex = aM(nM)
+        }
+        return jM
+      }(MM, rM, iM.notAfter) : function(MM, rM, iM) {
+        const OM = new RegExp(rM.source, `${rM.flags.replace(/[gy]/g,"")}g`),
+          SM = [];
+        for (let jM = OM.exec(MM); jM; jM = OM.exec(MM))
+          if (!iM || iM(jM)) {
+            if (SM.push(jM), !rM.global) break;
+            "" === jM[0] && (OM.lastIndex = mM(MM, rM, OM.lastIndex))
+          } else OM.lastIndex = mM(MM, rM, jM.index);
+        return SM
+      }(MM, rM, iM)
+    }
+
+    function zM(MM, rM, iM, OM) {
+      let SM = "",
+        jM = 0;
+      for (const aM of QM(MM, rM, iM)) SM += MM.slice(jM, aM.index) + OM(aM), jM = aM.index + aM[0].length;
+      return SM + MM.slice(jM)
+    }
+
+    function LM(MM, rM, iM) {
+      const OM = [];
+      let SM = 0;
+      for (const jM of QM(MM, rM, iM)) OM.push(MM.slice(SM, jM.index)), SM = jM.index + jM[0].length;
+      return [...OM, MM.slice(SM)]
+    }
+
+    function mM(MM, rM, iM) {
+      var OM;
+      return iM + (rM.unicode && (null !== (OM = MM.codePointAt(iM)) && void 0 !== OM ? OM : 0) > 65535 ? 2 : 1)
+    }
+  },
+  6963: () => {}
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

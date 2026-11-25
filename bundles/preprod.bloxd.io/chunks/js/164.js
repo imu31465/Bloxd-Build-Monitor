@@ -1,37 +1,123 @@
 export const id = 164;
 export const ids = [164];
 export const modules = {
-  9316: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      pageBody: () => wQ
+  7206: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      AdMobSdkAdaptor: () => zM
     });
-    const wQ = {
-      whatIs: ["What if every sword, block and piece of armour came from a Lucky Block? Lucky Bedwars is the Bedwars mode where they do. Four teams of up to four players each get their own base and a bed to protect. Open Lucky Blocks for random weapons, armour, blocks and wild surprises, then race to break every other team's bed. You never know what you'll get, so expect lots of chaos, and every match is free to jump into from your browser."],
-      howToPlay: ["Before the match, your lobby votes on a map. You start with four Lucky Blocks. The first Basic Building and Basic Weapon blocks you open give you team wool and a weapon, so you're ready to go. Generators at your base and in the centre of the map keep the loot coming. Better armour equips itself automatically, and your compass points to the nearest enemy.", "Opening blocks, getting kills and breaking beds earns Clovers. Spend them at your Lucky Trader on the Lucky Blocks you want, or chip in 50 Clovers at a time towards team upgrades like the Bed Trap. Turn unwanted loot into Clovers in the Recycle tab. Twice a match, a random event shakes things up, and late in the game the arena starts to shrink. You can respawn as long as your bed stands, but once it's gone, dying makes you a spectator. The last team standing wins."],
-      features: ["4 Teams of up to 4 Players", "Building, Weapon, Armour and Food Lucky Blocks in Basic, Rare and Super Rarities", "Evil Lucky Blocks with Nasty Surprises", "Wild Items: Lucky Bombs, Swap Orbs, Fireballs, Iceballs, Toxin Balls and Void Nets", "Random Events: Blood Moon, Lucky Crown, Masquerade, Simon Says, Lucky Storm and Tiny Titans", "Bed Trap Team Upgrades", "4 Maps: Lucky Islands, Helicarrier, Nuclear and Turtles", "Leaderboards"],
-      tips: ["Open your four starting Lucky Blocks straight away to get wool and a weapon", "Chip in for the Bed Trap early. Evil Lucky Blocks around your bed can seal raiders in obsidian, poison them or send them home", "Save any Obsidian from Super Building blocks for your bed, because explosions can't destroy it", "Recycle loot you don't need. Anything you leave on the ground turns into Clovers after 8 seconds", "Beds can't be broken during an event, so use that time to regroup and stock up", "Stay alive until an event ends to earn bonus Clovers", "Be careful with Lucky and Unlucky Bombs, because they hit you too"],
-      similarGames: ["bedwars", "luckyTowers", "skywars"],
-      faq: [{
-        question: "What is Bloxd Lucky Bedwars?",
-        answer: "It's Bedwars with a twist: all your gear comes from Lucky Blocks. Four teams of up to four players defend their beds and try to be the last team standing."
-      }, {
-        question: "How do you play Lucky Bedwars?",
-        answer: "Open Lucky Blocks for weapons, armour and blocks, protect your bed and break the other teams' beds. You respawn while your bed stands. Without it, one death makes you a spectator."
-      }, {
-        question: "How is Lucky Bedwars different from normal Bedwars?",
-        answer: "Your loot comes from Lucky Blocks, so every match is random. You earn Clovers to buy more Lucky Blocks and team upgrades, and random events change up each game."
-      }, {
-        question: "What are Clovers in Lucky Bedwars?",
-        answer: "Clovers are the in-game currency. Earn them by opening Lucky Blocks, getting kills, breaking beds, recycling loot and surviving events. Spend them at the Lucky Trader or on team upgrades."
-      }, {
-        question: "What's inside Evil Lucky Blocks?",
-        answer: "Bad luck! The Bed Trap upgrade puts Evil Lucky Blocks around your bed. Anyone who opens one could get trapped in obsidian, dropped in lava, webbed, poisoned, blinded, chased by guard dogs or sent home."
-      }, {
-        question: "What are the Lucky Bedwars events?",
-        answer: "Twice a match a random event starts: Blood Moon, Lucky Crown, Masquerade, Simon Says, Lucky Storm or Tiny Titans. You get a 30-second warning, and beds can't be broken while an event runs."
-      }]
+    var OM = iM(1367),
+      SM = iM(19),
+      jM = iM(1771),
+      aM = iM(119),
+      PM = iM(3868),
+      nM = iM(332);
+    const QM = {
+      mobileAndroid: {
+        banners: {
+          leaderboard_1: "ca-app-pub-5991928098122027/7081016880",
+          leaderboard_4: "ca-app-pub-5991928098122027/6301601920",
+          leaderboard_5: "ca-app-pub-5991928098122027/7592152779",
+          skyscraper_1: "ca-app-pub-5991928098122027/1026744422",
+          skyscraper_2: "ca-app-pub-5991928098122027/3483866894",
+          square_1: "ca-app-pub-5991928098122027/6381115670"
+        },
+        rewarded: "ca-app-pub-5991928098122027/5726886857",
+        interstitial: "ca-app-pub-5991928098122027/1979213537"
+      },
+      mobileIos: {
+        banners: {
+          leaderboard_1: "ca-app-pub-5991928098122027/4652945503",
+          leaderboard_4: "ca-app-pub-5991928098122027/2921518285",
+          leaderboard_5: "ca-app-pub-5991928098122027/7518781992",
+          skyscraper_1: "ca-app-pub-5991928098122027/8344778507",
+          skyscraper_2: "ca-app-pub-5991928098122027/3781201590",
+          square_1: "ca-app-pub-5991928098122027/2468119924"
+        },
+        rewarded: "ca-app-pub-5991928098122027/5014392212",
+        interstitial: "ca-app-pub-5991928098122027/4405533493"
+      }
+    };
+    class zM extends OM.d {
+      constructor(MM) {
+        super(), this.name = "admob", this.bannerAutoRefresh = "alwaysOn", this.adUnitIds = void 0, this.bannerPlacementByBloxdId = new Map, this.bannerFirstResponseSeen = new Set, this.fullScreenAdsInFlight = 0, this.adUnitIds = QM[MM], jM.e.on("ads.bannerStatus", (MM => {
+          let {
+            placementId: rM,
+            shown: iM,
+            error: OM
+          } = MM;
+          const SM = !this.bannerFirstResponseSeen.has(rM);
+          this.bannerFirstResponseSeen.add(rM), SM ? iM ? console.log(`AD ${rM}: AdMob banner loaded`) : console.warn(`AD ${rM}: AdMob banner failed to load: ${OM}`) : iM || console.warn(`AD ${rM}: AdMob banner refresh failed: ${OM}`)
+        }))
+      }
+      static async setup() {
+        const MM = "mobileIos" === aM.siteUsed ? "mobileIos" : "mobileAndroid";
+        return console.log(`AD: AdMobSDK initialised for ${MM}`), new zM(MM)
+      }
+      muteGameDuring(MM) {
+        return this.fullScreenAdsInFlight++, SM.d.set({
+          soundOnFromAd: !1
+        }), MM.finally((() => {
+          this.fullScreenAdsInFlight--, 0 === this.fullScreenAdsInFlight && SM.d.set({
+            soundOnFromAd: !0
+          })
+        }))
+      }
+      playRewarded(MM, rM) {
+        const iM = this.adUnitIds.rewarded;
+        this.muteGameDuring(jM.e.request("ads.showRewarded", {
+          placementId: iM
+        })).then((iM => {
+          let {
+            rewarded: OM
+          } = iM;
+          OM ? MM() : rM()
+        }), (MM => {
+          console.warn(`AD ${iM}: AdMob rewarded failed:`, MM), rM()
+        }))
+      }
+      playVideoAd(MM, rM) {
+        const iM = this.adUnitIds.interstitial;
+        this.muteGameDuring(jM.e.request("ads.showInterstitial", {
+          placementId: iM
+        })).then((() => {
+          MM()
+        }), (rM => {
+          console.warn(`AD ${iM}: AdMob interstitial failed:`, rM), MM()
+        }))
+      }
+      renderBanner(MM) {
+        const rM = (0, PM.b)(MM),
+          iM = this.adUnitIds.banners[rM];
+        if (void 0 === iM) return;
+        const OM = document.getElementById(MM.divId);
+        if (!OM) return void console.warn(`AD ${rM}: AdMob renderBanner called but div ${MM.divId} is not in DOM`);
+        const SM = OM.getBoundingClientRect(),
+          aM = window.innerWidth,
+          QM = window.innerHeight;
+        if (0 === aM || 0 === QM) return void console.warn(`AD ${rM}: AdMob renderBanner skipped \u2014 viewport has zero dimension`);
+        const zM = {
+          x1: nM.d.clamp(SM.left / aM * 100, 0, 100),
+          y1: nM.d.clamp(SM.top / QM * 100, 0, 100),
+          x2: nM.d.clamp(SM.right / aM * 100, 0, 100),
+          y2: nM.d.clamp(SM.bottom / QM * 100, 0, 100)
+        };
+        this.bannerPlacementByBloxdId.set(rM, iM), console.log(`AD ${rM}: AdMob renderBanner placementId=${iM} box=`, zM), jM.e.emit("ads.showBanner", {
+          placementId: iM,
+          ...zM
+        })
+      }
+      clearBanner(MM) {
+        const rM = (0, PM.b)(MM),
+          iM = this.bannerPlacementByBloxdId.get(rM);
+        void 0 !== iM && (this.bannerPlacementByBloxdId.delete(rM), this.bannerFirstResponseSeen.delete(iM), console.log(`AD ${rM}: AdMob clearBanner placementId=${iM}`), jM.e.emit("ads.hideBanner", {
+          placementId: iM
+        }))
+      }
+      canShowBloxdAd(MM) {
+        return !1
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

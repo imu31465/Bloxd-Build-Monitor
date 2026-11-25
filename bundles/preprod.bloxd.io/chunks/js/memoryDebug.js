@@ -1,66 +1,66 @@
-export const id = 42;
-export const ids = [42];
+export const id = 46;
+export const ids = [46];
 export const modules = {
-  5030: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      startMemoryDebug: () => gQ
+  5104: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      startMemoryDebug: () => zM
     });
-    var wQ = XQ(3107),
-      qQ = XQ(3045);
-    const TQ = 6e4,
-      zQ = 5,
-      sQ = ["wasmMainMiB", "wasmWorkersMiB", "jsHeapMiB", "gpuMiB", "footprintMiB", "footprintBudgetMiB", "decodedAudioMiB", "storedChunks", "knownChunks", "liveParticleSystems", "renderDistance", "sheds", "gcFull60s", "gcHighS"];
-    var FQ = XQ(693);
-    const PQ = [];
+    var OM = iM(3185),
+      SM = iM(3122);
+    const jM = 6e4,
+      aM = 5,
+      PM = ["wasmMainMiB", "wasmWorkersMiB", "jsHeapMiB", "gpuMiB", "footprintMiB", "footprintBudgetMiB", "decodedAudioMiB", "storedChunks", "knownChunks", "liveParticleSystems", "renderDistance", "sheds", "gcFull60s", "gcHighS"];
+    var nM = iM(665);
+    const QM = [];
 
-    function gQ() {
-      (0, qQ.n)() && (0, qQ.u)(rQ), JQ(), setInterval(JQ, TQ)
+    function zM() {
+      (0, SM.q)() && (0, SM.x)(mM), LM(), setInterval(LM, jM)
     }
 
-    function JQ() {
-      var QQ;
+    function LM() {
+      var MM;
       const {
-        client: WQ,
-        playedS: XQ,
-        snapshot: TQ
-      } = (0, FQ.p)(), gQ = null !== (QQ = TQ.wasmMainMiB) && void 0 !== QQ ? QQ : function() {
+        client: rM,
+        playedS: iM,
+        snapshot: jM
+      } = (0, nM.m)(), zM = null !== (MM = jM.wasmMainMiB) && void 0 !== MM ? MM : function() {
         try {
-          return (0, FQ.M)((0, wQ.w)().buffer.byteLength)
+          return (0, nM.J)((0, OM.y)().buffer.byteLength)
         } catch {
           return null
         }
-      }(), JQ = function(QQ) {
+      }(), LM = function(MM) {
         let {
-          client: WQ,
-          playedS: XQ,
-          hidden: wQ,
-          snapshot: qQ
-        } = QQ;
-        const TQ = [`client=${null!==WQ&&void 0!==WQ?WQ:"none"}`];
-        null !== XQ && TQ.push(`playedS=${XQ}`);
-        const zQ = qQ.pageAgeS;
-        "number" === typeof zQ && TQ.push(`pageAgeS=${zQ}`), TQ.push("hidden=" + (wQ ? 1 : 0));
-        for (const FQ of sQ) {
-          const QQ = qQ[FQ];
-          "number" === typeof QQ && Number.isFinite(QQ) && TQ.push(`${FQ}=${QQ}`)
+          client: rM,
+          playedS: iM,
+          hidden: OM,
+          snapshot: SM
+        } = MM;
+        const jM = [`client=${null!==rM&&void 0!==rM?rM:"none"}`];
+        null !== iM && jM.push(`playedS=${iM}`);
+        const aM = SM.pageAgeS;
+        "number" === typeof aM && jM.push(`pageAgeS=${aM}`), jM.push("hidden=" + (OM ? 1 : 0));
+        for (const nM of PM) {
+          const MM = SM[nM];
+          "number" === typeof MM && Number.isFinite(MM) && jM.push(`${nM}=${MM}`)
         }
-        return TQ.join(" ")
+        return jM.join(" ")
       }({
-        client: WQ,
-        playedS: XQ,
+        client: rM,
+        playedS: iM,
         hidden: document.hidden,
         snapshot: {
-          ...TQ,
-          wasmMainMiB: gQ
+          ...jM,
+          wasmMainMiB: zM
         }
       });
-      (0, qQ.n)() ? (PQ.push(JQ), PQ.length >= zQ && rQ()) : (0, qQ.j)("memory", JQ)
+      (0, SM.q)() ? (QM.push(LM), QM.length >= aM && mM()) : (0, SM.k)("memory", LM)
     }
 
-    function rQ() {
-      for (const QQ of PQ.splice(0))(0, qQ.j)("memory", QQ)
+    function mM() {
+      for (const MM of QM.splice(0))(0, SM.k)("memory", MM)
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

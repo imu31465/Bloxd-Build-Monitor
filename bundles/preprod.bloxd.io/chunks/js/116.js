@@ -1,530 +1,489 @@
 export const id = 116;
 export const ids = [116];
 export const modules = {
-  5398: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => gQ,
-      e: () => PQ
+  5306: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => mM
     });
-    var wQ = XQ(61),
-      qQ = XQ(1507),
-      TQ = XQ(1226),
-      zQ = XQ(105),
-      sQ = XQ(3408),
-      FQ = XQ(1145);
+    var OM = iM(1116),
+      SM = iM.n(OM),
+      jM = iM(1398),
+      aM = iM(1396),
+      PM = iM(3902),
+      nM = iM(119),
+      QM = iM(3945),
+      zM = iM(3934),
+      LM = iM(1303);
 
-    function PQ() {
-      return !(0, zQ.isMobile)()
-    }
-
-    function gQ(QQ) {
+    function mM(MM) {
       let {
-        disabled: WQ,
-        openFolderPicker: XQ,
-        onFiles: zQ
-      } = QQ;
-      const {
-        t: gQ
-      } = (0, TQ.C)(), JQ = (0, wQ.useRef)(null);
-      return (0, FQ.jsxs)("div", {
-        className: "PackPickButtons",
-        "data-pad-mouse-only": !0,
-        children: [(0, FQ.jsx)("input", {
-          ref: JQ,
-          type: "file",
-          accept: ".zip,application/zip",
-          hidden: !0,
-          onChange: function(QQ) {
-            const WQ = Array.from(QQ.target.files);
-            QQ.target.value = "", zQ(WQ)
-          }
-        }), PQ() && (0, FQ.jsx)(qQ.h, {
-          disabled: WQ,
-          onClick: XQ,
-          children: gQ("general:chooseFolder")
-        }), (0, FQ.jsx)(qQ.h, {
-          disabled: WQ,
-          onClick: () => {
-            (0, sQ.d)(JQ.current)
-          },
-          children: gQ("general:chooseZip")
-        })]
-      })
-    }
-  },
-  5386: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => sQ,
-      i: () => zQ,
-      l: () => TQ
-    });
-    var wQ = XQ(5394);
-    const qQ = [QQ => QQ.strict ? "strict" : "nonStrict", QQ => QQ.program];
-
-    function TQ(QQ, WQ) {
-      let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const wQ = {};
-      for (const qQ in XQ) wQ[qQ] = `\0${qQ}\0`;
-      return QQ(WQ, wQ).replace(/\0(\w+)\0/g, ((QQ, WQ) => XQ[WQ]))
-    }
-
-    function zQ(QQ) {
-      return null === QQ.file ? null : QQ.line > 0 ? `${QQ.file}:${QQ.line}` : QQ.file
-    }
-
-    function sQ(QQ) {
-      const WQ = new Map(QQ.map((QQ => [FQ(QQ).join("."), QQ])));
-      if (0 === WQ.size) return [];
-      const XQ = gQ([...WQ.values()]);
-      return 0 === XQ[0].length ? [] : XQ
-    }
-
-    function FQ(QQ) {
-      return qQ.map((WQ => WQ(QQ)))
-    }
-    const PQ = qQ.map((QQ => new Set(wQ.c.map(QQ)).size));
-
-    function gQ(QQ) {
-      const WQ = qQ.map((WQ => new Set(QQ.map(WQ)))),
-        XQ = WQ.reduce(((QQ, WQ) => QQ * WQ.size), 1),
-        wQ = WQ.every(((QQ, WQ) => 1 === QQ.size || QQ.size === PQ[WQ]));
-      if (XQ === QQ.length && wQ) return [qQ.filter(((QQ, XQ) => 1 === WQ[XQ].size)).map((WQ => WQ(QQ[0])))];
-      let TQ = null;
-      for (let zQ = 0; zQ < qQ.length; zQ++) {
-        if (1 === WQ[zQ].size) continue;
-        const XQ = JQ(QQ, qQ[zQ]).flatMap(gQ);
-        (null === TQ || XQ.length < TQ.length) && (TQ = XQ)
-      }
-      return TQ
-    }
-
-    function JQ(QQ, WQ) {
-      const XQ = new Map;
-      for (const qQ of QQ) {
-        var wQ;
-        const QQ = WQ(qQ);
-        XQ.set(QQ, [...null !== (wQ = XQ.get(QQ)) && void 0 !== wQ ? wQ : [], qQ])
-      }
-      return [...XQ.values()]
-    }
-  },
-  6970: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      ShaderPackPublishForm: () => pQ
-    });
-    var wQ = XQ(61),
-      qQ = XQ(6952),
-      TQ = XQ(240),
-      zQ = XQ(5396),
-      sQ = XQ(1094),
-      FQ = XQ(1507),
-      PQ = XQ(1739),
-      gQ = XQ(1162),
-      JQ = XQ(6972),
-      rQ = XQ(6979),
-      IQ = XQ(1548),
-      jQ = XQ(1226),
-      BQ = XQ(6984),
-      yQ = XQ(7018),
-      VQ = XQ(6946),
-      DQ = XQ(1145);
-
-    function pQ(QQ) {
-      var WQ, XQ, JQ;
-      let {
-        existing: pQ,
-        onPublished: UQ
-      } = QQ;
-      const {
-        t: vQ
-      } = (0, jQ.C)(), {
-        userContext: dQ,
-        isUserContextUpdating: HQ
-      } = (0, gQ.c)(), [aQ, lQ] = (0, wQ.useState)(null), [hQ, iQ] = (0, wQ.useState)(0), [cQ, AQ] = (0, wQ.useState)(null !== (WQ = null === pQ || void 0 === pQ ? void 0 : pQ.name) && void 0 !== WQ ? WQ : ""), RQ = (0, wQ.useRef)(cQ), EQ = (0, wQ.useRef)(""), CQ = QQ => {
-        RQ.current = QQ, AQ(QQ)
-      }, [uQ, LQ] = (0, wQ.useState)(null !== (XQ = null === pQ || void 0 === pQ ? void 0 : pQ.description) && void 0 !== XQ ? XQ : ""), kQ = (0, wQ.useRef)(uQ), fQ = (0, wQ.useRef)(""), SQ = QQ => {
-        kQ.current = QQ, LQ(QQ)
-      }, [tQ, oQ] = (0, wQ.useState)(!1), {
-        loading: eQ,
-        error: nQ,
-        setError: xQ,
-        onFiles: YQ
-      } = (0, rQ.d)((async QQ => {
-        const WQ = await (0, BQ.loadPageShaderPackCompiler)();
-        if (!WQ) return void xQ(vQ("shaderPack:compilerUnavailable"));
-        const XQ = await (0, yQ.g)(WQ, QQ.files);
-        if (lQ({
-            pack: QQ,
-            validation: XQ,
-            sourceBytes: (0, zQ.z)(QQ.files)
-          }), !pQ) {
-          var wQ;
-          if ("" !== RQ.current.trim() && RQ.current !== EQ.current || (EQ.current = (0, qQ.M)(QQ.manifest.name.trim(), qQ.w), CQ(EQ.current)), "" === kQ.current.trim() || kQ.current === fQ.current) fQ.current = (0, qQ.M)((null !== (wQ = QQ.manifest.description) && void 0 !== wQ ? wQ : "").trim(), qQ.o), SQ(fQ.current);
-          iQ((QQ => QQ + 1))
-        }
-      })), NQ = !HQ && !dQ.isLoggedIn() && !TQ.e.offlineMode, ZQ = cQ.trim(), OQ = ZQ.length < qQ.z, KQ = null !== aQ && !1 !== (null === (JQ = aQ.validation) || void 0 === JQ ? void 0 : JQ.ok) && !eQ && !OQ && !NQ && !HQ;
-      return (0, DQ.jsxs)("div", {
-        className: "ShaderPackPublishForm",
-        children: [(0, DQ.jsx)("p", {
-          className: "ShaderPackPublishIntro",
-          children: pQ ? vQ("shaderPackListing:uploadIntro", {
-            minutes: String(qQ.E / 6e4)
-          }) : vQ("shaderPackListing:publishIntro")
-        }), (0, DQ.jsx)(bQ, {}), NQ && (0, DQ.jsx)("div", {
-          className: "ShaderPackPublishNote Warning",
-          children: vQ("shaderPackListing:publishNeedsLogin")
-        }), (0, DQ.jsx)(rQ.b, {
-          busy: eQ,
-          disabled: eQ || tQ,
-          onFiles: QQ => {
-            lQ(null), YQ(QQ)
-          }
-        }), aQ && (0, DQ.jsxs)("div", {
-          className: "ShaderPackPublishSummary",
-          children: [(0, DQ.jsx)("div", {
-            className: "ShaderPackPublishPackName",
-            children: aQ.pack.manifest.name
-          }), (0, DQ.jsxs)("div", {
-            className: "ShaderPackPublishPackSize",
-            children: [vQ("shaderPackListing:sizeValue", {
-              kilobytes: String((0, VQ.L)(aQ.sourceBytes))
-            }), " \xb7", " ", vQ("shaderPackListing:filesValue", {
-              files: String(aQ.pack.files.length)
-            })]
-          }), (0, DQ.jsx)(GQ, {
-            picked: aQ
-          })]
-        }), !pQ && (0, DQ.jsxs)(DQ.Fragment, {
-          children: [(0, DQ.jsxs)("label", {
-            className: "ShaderPackPublishField",
-            children: [(0, DQ.jsx)("span", {
-              children: vQ("general:name")
-            }), (0, DQ.jsx)(PQ.e, {
-              className: "ShaderPackPublishInput",
-              defaultValue: cQ,
-              maxLength: qQ.w,
-              onValueChange: CQ
-            }, hQ), aQ && OQ && (0, DQ.jsx)("span", {
-              className: "ShaderPackPublishHint",
-              children: vQ("shaderPackListing:nameTooShort", {
-                min: String(qQ.z)
-              })
-            })]
-          }), (0, DQ.jsxs)("label", {
-            className: "ShaderPackPublishField",
-            children: [(0, DQ.jsx)("span", {
-              children: vQ("general:description")
-            }), (0, DQ.jsx)(PQ.e, {
-              className: "ShaderPackPublishInput ShaderPackPublishDescription",
-              defaultValue: uQ,
-              maxLength: qQ.o,
-              onValueChange: SQ,
-              useTextarea: !0
-            }, hQ)]
-          })]
-        }), nQ && (0, DQ.jsx)("div", {
-          className: "ShaderPackPublishNote Error",
-          children: nQ
-        }), (0, DQ.jsxs)(FQ.s, {
-          className: "ShaderPackPublishButton",
-          disabled: !KQ,
-          loading: tQ,
-          onClick: () => {
-            !async function() {
-              var QQ;
-              if (!aQ) return;
-              const {
-                name: WQ,
-                description: XQ
-              } = null !== pQ && void 0 !== pQ ? pQ : {
-                name: ZQ,
-                description: uQ.trim()
-              }, wQ = {
-                packId: null !== (QQ = null === pQ || void 0 === pQ ? void 0 : pQ.packId) && void 0 !== QQ ? QQ : null,
-                name: WQ,
-                description: XQ,
-                apiVersion: aQ.pack.manifest.apiVersion,
-                files: (0, zQ.w)(aQ.pack.files),
-                keepCircleShadows: !0 === aQ.pack.manifest.keepCircleShadows
-              };
-              if ((new TextEncoder).encode(JSON.stringify(wQ)).byteLength > 1024 * qQ.K) xQ(vQ("shaderPackListing:publishTooBig", {
-                kilobytes: String(qQ.K)
-              }));
-              else {
-                oQ(!0), xQ(null);
-                try {
-                  UQ(await IQ.e.publishShaderPack(dQ, wQ))
-                } catch (TQ) {
-                  console.error("Failed to publish the shader pack", TQ), xQ((0, VQ.y)(TQ, vQ, "shaderPackListing:publishFailed"))
-                } finally {
-                  oQ(!1)
-                }
-              }
-            }()
-          },
-          children: [(0, DQ.jsx)(sQ.d, {
-            name: "upload"
-          }), " ", vQ(pQ ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
-        })]
-      })
-    }
-
-    function GQ(QQ) {
-      let {
-        picked: WQ
-      } = QQ;
-      const {
-        t: XQ
-      } = (0, jQ.C)(), {
-        validation: wQ
-      } = WQ;
-      return null === wQ ? (0, DQ.jsx)("div", {
-        className: "ShaderPackPublishNote",
-        children: XQ("shaderPackListing:publishUnchecked")
-      }) : wQ.ok ? (0, DQ.jsxs)(DQ.Fragment, {
-        children: [(0, DQ.jsxs)("div", {
-          className: "ShaderPackPublishNote Ready",
-          children: [(0, DQ.jsx)(sQ.d, {
-            name: "circle-check"
-          }), " ", XQ("shaderPackListing:publishReady")]
-        }), wQ.offInStrict.length > 0 && (0, DQ.jsxs)(DQ.Fragment, {
-          children: [(0, DQ.jsxs)("div", {
-            className: "ShaderPackPublishNote Warning",
-            children: [(0, DQ.jsx)(sQ.d, {
-              name: "triangle-exclamation"
-            }), " ", XQ("shaderPack:offInStrict")]
-          }), (0, DQ.jsx)(JQ.e, {
-            diagnostics: wQ.offInStrict,
-            t: XQ
-          })]
-        })]
-      }) : (0, DQ.jsxs)(DQ.Fragment, {
-        children: [(0, DQ.jsxs)("div", {
-          className: "ShaderPackPublishNote Error",
-          children: [(0, DQ.jsx)(sQ.d, {
-            name: "triangle-exclamation"
-          }), " ", XQ("shaderPackListing:publishHasErrors")]
-        }), (0, DQ.jsx)(JQ.e, {
-          diagnostics: wQ.errors,
-          more: wQ.moreErrors,
-          t: XQ
-        })]
-      })
-    }
-    const UQ = "\0";
-
-    function bQ() {
-      const {
-        t: QQ
-      } = (0, jQ.C)(), [WQ, XQ] = QQ("shaderPackListing:bloxdhubHelp", {
-        site: UQ
-      }).split(UQ);
-      return (0, DQ.jsxs)("p", {
-        className: "ShaderPackPublishIntro",
-        children: [WQ, (0, DQ.jsx)("a", {
-          className: "ShaderPackPublishLink",
-          href: qQ.i,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          children: qQ.c
-        }), XQ]
-      })
-    }
-  },
-  5394: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      b: () => wQ.i,
-      c: () => qQ,
-      g: () => wQ.n
-    });
-    var wQ = XQ(5396);
-    const qQ = [!1, !0].flatMap((QQ => ["terrain", "liquid", "model"].map((WQ => ({
-      strict: QQ,
-      program: WQ
-    })))))
-  },
-  5396: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => sQ,
-      f: () => zQ,
-      i: () => wQ,
-      l: () => BQ,
-      m: () => JQ,
-      n: () => qQ,
-      r: () => TQ,
-      t: () => PQ,
-      w: () => gQ,
-      z: () => rQ
-    });
-    const wQ = 5;
-
-    function qQ(QQ) {
-      return QQ === wQ
-    }
-
-    function TQ(QQ) {
-      return [...QQ.features]
-    }
-    const zQ = 262144,
-      sQ = 256,
-      FQ = 256;
-
-    function PQ(QQ) {
-      if ("object" !== typeof QQ || null === QQ || Array.isArray(QQ)) return "The pack has no files.";
-      const WQ = [];
-      for (const [XQ, wQ] of Object.entries(QQ)) {
-        if ("string" !== typeof wQ) return `${XQ} isn't text.`;
-        WQ.push({
-          path: XQ,
-          source: wQ
-        })
-      }
-      return WQ.sort(((QQ, WQ) => JQ(QQ.path, WQ.path))),
-        function(QQ) {
-          if (0 === QQ.length) return "The pack has no .wgsl files.";
-          if (QQ.length > sQ) return `The pack has more than ${sQ} .wgsl files.`;
-          const WQ = new Set;
-          for (const {
-              path: XQ
-            }
-            of QQ) {
-            const QQ = IQ(XQ);
-            if (null !== QQ) return QQ;
-            if (WQ.has(XQ)) return `The pack has two files at ${XQ}.`;
-            WQ.add(XQ)
-          }
-          return rQ(QQ) > zQ ? `The pack's .wgsl files are over ${zQ/1024} KB in total.` : null
-        }(WQ) ?? WQ
-    }
-
-    function gQ(QQ) {
-      const WQ = {};
-      for (const XQ of QQ) WQ[XQ.path] = XQ.source;
-      return WQ
-    }
-
-    function JQ(QQ, WQ) {
-      return QQ < WQ ? -1 : QQ > WQ ? 1 : 0
-    }
-
-    function rQ(QQ) {
-      const WQ = new TextEncoder;
-      let XQ = 0;
-      for (const {
-          source: wQ
-        }
-        of QQ) XQ += WQ.encode(wQ).byteLength;
-      return XQ
-    }
-
-    function IQ(QQ) {
-      if (!QQ.toLowerCase().endsWith(".wgsl")) return `${QQ} isn't a .wgsl file.`;
-      if (QQ.length > FQ) return `A file path is over ${FQ} characters.`;
-      if (QQ.includes("\\") || /[\u0000-\u001f]/.test(QQ)) return `${QQ} isn't a valid file path.`;
-      return QQ.split("/").some((QQ => "" === QQ || "." === QQ || ".." === QQ)) ? `${QQ} isn't a valid file path.` : null
-    }
-    const jQ = /^(.*)\[rot\[([1-4])$/;
-
-    function BQ(QQ, WQ) {
-      let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const wQ = new Map;
-      WQ.forEach(((QQ, WQ) => {
-        let {
-          numAnimStates: XQ,
-          animStartIdx: qQ
-        } = QQ;
-        for (let TQ = 1; TQ < XQ; TQ++) wQ.set(qQ + TQ - 1, WQ)
-      }));
-      const qQ = Object.entries(QQ),
-        TQ = new Map;
-      for (const [BQ, yQ] of qQ) {
-        const QQ = jQ.exec(BQ);
-        "1" === QQ?.[2] && TQ.set(QQ[1], yQ + 1)
-      }
-      const zQ = QQ => {
-          const WQ = jQ.exec(QQ);
-          return WQ && TQ.has(WQ[1]) ? {
-            root: WQ[1],
-            rotation: Number(WQ[2]) - 1
-          } : null
-        },
-        sQ = new Set(qQ.map((QQ => {
-          let [WQ] = QQ;
-          return zQ(WQ)?.root ?? WQ
-        }))),
-        FQ = (QQ, XQ) => {
-          const wQ = QQ.replace(/_?0$/, "");
-          return (WQ[XQ]?.numAnimStates ?? 0) > 1 && !sQ.has(wQ) ? wQ : QQ
-        },
-        PQ = new Map;
-      for (const [jQ, BQ] of qQ) PQ.set(BQ, FQ(zQ(jQ)?.root ?? jQ, BQ));
-      const gQ = qQ.reduce(((QQ, WQ) => {
-          let [, XQ] = WQ;
-          return Math.max(QQ, XQ + 1)
-        }), 0),
-        JQ = Array.from({
-          length: gQ
-        }, ((QQ, WQ) => ({
-          id: WQ + 1,
-          rotation: 0
-        }))),
-        rQ = new Map,
-        IQ = new Map;
-      for (const [jQ, BQ] of qQ) {
-        const QQ = zQ(jQ),
-          WQ = wQ.get(BQ);
-        if (void 0 !== WQ) {
-          const XQ = PQ.get(WQ);
-          IQ.set(jQ, {
-            name: jQ,
-            texture: XQ,
-            kind: "frame"
-          }), QQ && !IQ.has(QQ.root) && IQ.set(QQ.root, {
-            name: QQ.root,
-            texture: XQ,
-            kind: "frame"
-          });
-          continue
-        }
-        const XQ = PQ.get(BQ),
-          qQ = QQ?.root ?? jQ;
-        if (XQ !== qQ && IQ.set(qQ, {
-            name: qQ,
-            texture: XQ,
-            kind: "frame"
-          }), QQ) {
-          const WQ = TQ.get(QQ.root);
-          JQ[BQ] = {
-            id: WQ,
-            rotation: QQ.rotation
-          }, rQ.set(XQ, WQ), IQ.set(jQ, {
-            name: jQ,
-            texture: XQ,
-            kind: "rotation"
+        game: rM
+      } = MM;
+      const iM = (0, nM.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        OM = (0, QM.g)(rM, iM),
+        mM = (0, PM.c)(OM),
+        HM = void 0 !== mM.blurhash;
+      return (0, LM.jsxs)("div", {
+        className: "SchematicImageContainer",
+        children: [mM.isLoading && !HM && (0, LM.jsx)(aM.d, {
+          loaderType: "Secondary"
+        }), !mM.failed && (null !== mM.src || HM) && (0, LM.jsx)("div", {
+          className: SM()("SchematicImage", zM.k, {
+            SchematicImageFadeIn: mM.fadeIn && !HM
+          }),
+          style: (0, zM.h)(mM),
+          children: (0, LM.jsx)(zM.e, {
+            image: mM
           })
-        } else rQ.set(XQ, BQ + 1)
-      }
-      for (const jQ of rQ.keys()) IQ.delete(jQ);
-      for (const [jQ, BQ] of XQ) {
-        const QQ = rQ.get(BQ);
-        void 0 === QQ || rQ.has(jQ) || (rQ.set(jQ, QQ), IQ.delete(jQ))
-      }
-      return {
-        named: [...rQ].sort(((QQ, WQ) => {
-          let [XQ] = QQ, [wQ] = WQ;
-          return XQ < wQ ? -1 : XQ > wQ ? 1 : 0
-        })).map((QQ => {
-          let [WQ, XQ] = QQ;
-          return {
-            name: WQ,
-            id: XQ
-          }
-        })),
-        aliases: [...IQ.values()],
-        layers: JQ
-      }
+        }), mM.failed && (0, LM.jsx)("div", {
+          className: "SchematicImageError",
+          children: (0, LM.jsx)(jM.b, {
+            name: "face-dizzy"
+          })
+        })]
+      })
     }
+  },
+  7012: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      default: () => fM
+    });
+    iM(5299);
+    var OM = iM(44),
+      SM = iM(1116),
+      jM = iM.n(SM),
+      aM = iM(313),
+      PM = iM(1088),
+      nM = iM(1229),
+      QM = iM(1067),
+      zM = iM(1188),
+      LM = iM(1573),
+      mM = iM(3955),
+      HM = iM(1142),
+      hM = iM(5306),
+      JM = iM(2818),
+      dM = iM(1520),
+      yM = iM(4945),
+      lM = iM(5309),
+      EM = iM(1396),
+      UM = iM(1591),
+      GM = iM(4937),
+      CM = iM(2721),
+      eM = iM(5318),
+      bM = iM(6869),
+      wM = iM(1627),
+      tM = iM(1303);
+    const gM = [{
+        scope: "customGames",
+        title: "studio:leaderboardCustomGames"
+      }, {
+        scope: "allGames",
+        title: "studio:leaderboardAllGames"
+      }, {
+        scope: "dormantGames",
+        title: "studio:leaderboardDormantGames"
+      }],
+      uM = 25,
+      RM = "scope",
+      pM = "category",
+      WM = "customGames";
+    const sM = 7,
+      DM = {
+        playsPerDay: null,
+        avgPlaytimeMinutes: null,
+        retention: null
+      };
+
+    function kM(MM) {
+      let {
+        position: rM
+      } = MM;
+      const iM = bM.e[rM];
+      return (0, tM.jsxs)("td", {
+        className: jM()("StudioLeaderboardPosition", {
+          StudioLeaderboardTopPosition: void 0 !== iM,
+          [`StudioLeaderboardTopPosition${rM}`]: void 0 !== iM
+        }),
+        children: [void 0 !== iM && (0, tM.jsx)("img", {
+          className: "StudioLeaderboardPositionItem",
+          src: iM,
+          alt: ""
+        }), rM]
+      })
+    }
+
+    function ZM(MM) {
+      let {
+        discoverability: rM
+      } = MM;
+      const {
+        playsPerDay: iM,
+        avgPlaytimeMinutes: SM,
+        retention: jM
+      } = null === rM ? DM : (0, mM.i)(rM);
+      return (0, tM.jsxs)(OM.Fragment, {
+        children: [(0, tM.jsx)("td", {
+          children: null !== iM ? (0, mM.b)(iM) : "-"
+        }), (0, tM.jsx)("td", {
+          children: null !== SM ? (0, mM.d)(SM) : "-"
+        }), (0, tM.jsx)("td", {
+          children: null !== jM ? (0, mM.g)(jM) : "-"
+        })]
+      })
+    }
+
+    function oM(MM) {
+      let {
+        discoverability: rM
+      } = MM;
+      return (0, tM.jsx)("td", {
+        className: "StudioLeaderboardEngagementScore",
+        children: void 0 !== (null === rM || void 0 === rM ? void 0 : rM.engagementScore) ? (0, nM.T)(Math.round(rM.engagementScore)) : "-"
+      })
+    }
+
+    function fM() {
+      var MM, rM;
+      const {
+        t: iM
+      } = (0, zM.A)(), SM = (0, UM.useNavigatePreserveSearch)(), {
+        userContext: jM,
+        isUserContextUpdating: bM
+      } = (0, HM.b)(), DM = (0, CM.q)(), [fM, YM] = (0, GM.k)(), NM = (AM = fM.get(RM), gM.some((MM => MM.scope === AM)) ? AM : WM);
+      var AM;
+      const xM = function(MM) {
+          return aM.N.includes(MM) ? MM : null
+        }(fM.get(pM)),
+        vM = (0, GM.d)(fM.get(GM.c)),
+        [FM, BM] = (0, OM.useState)(null),
+        [XM, IM] = (0, OM.useState)(!1);
+
+      function KM(MM) {
+        YM((rM => {
+          (0, GM.f)(rM, RM, MM.scope === WM ? null : MM.scope), (0, GM.f)(rM, pM, MM.category), (0, GM.h)(rM, MM.page)
+        }))
+      }
+      const qM = !bM && jM.playerHasRank("developer"),
+        TM = qM && "allGames" === NM,
+        VM = qM && "dormantGames" === NM;
+      (0, OM.useEffect)((() => {
+        if (bM) return;
+        let MM = !1;
+        return BM(null), IM(!1), LM.c.getPublishedGamePreviews(jM, {
+          searchQuery: null,
+          pageNumber: vM,
+          pageSize: uM,
+          onlyFavouriteGames: !1,
+          onlyOwnedGames: !1,
+          onlyApprovedGames: !1,
+          schematicIdsToExclude: [],
+          gameCategories: null !== xM ? [xM] : [],
+          upAndComing: !1,
+          dormantGames: VM,
+          sortByEngagementScore: !0,
+          firstPartyGameNames: TM ? QM.b : void 0,
+          includeOwners: !0
+        }).then((rM => {
+          MM || BM(rM)
+        })).catch((rM => {
+          console.error("Failed to load the studio leaderboard", rM), MM || IM(!0)
+        })), () => {
+          MM = !0
+        }
+      }), [bM, TM, VM, xM, vM, jM]);
+      const cM = null !== (MM = null === FM || void 0 === FM ? void 0 : FM.results) && void 0 !== MM ? MM : null,
+        Mr = function(MM, rM, iM) {
+          const [SM, jM] = (0, OM.useState)({}), aM = iM ? (null !== MM && void 0 !== MM ? MM : []).flatMap((MM => "firstPartyGame" === MM.type ? [(0, PM.e)(MM.gameNameWithVariation, !0)] : [])).join(",") : "", nM = (0, OM.useMemo)((() => "" === aM ? [] : aM.split(",")), [aM]);
+          return (0, OM.useEffect)((() => {
+            if (0 === nM.length) return void jM({});
+            let MM = !1;
+            return LM.c.getGamesByAnalyticsIds(rM, nM).then((rM => {
+              MM || jM(rM)
+            })).catch((MM => {
+              console.error("Failed to load first party discoverability for the studio leaderboard", MM)
+            })), () => {
+              MM = !0
+            }
+          }), [nM, rM]), SM
+        }(cM, jM, qM),
+        rr = null !== cM ? function(MM, rM, iM, OM, SM) {
+          return MM.map(((MM, jM) => {
+            var aM;
+            const nM = OM + jM + 1;
+            if ("customGame" === MM.type) {
+              const rM = MM.preview;
+              return {
+                key: rM.schematicId,
+                position: nM,
+                thumbnail: (0, tM.jsx)(hM.b, {
+                  game: rM
+                }),
+                name: rM.name,
+                owner: MM.owner,
+                category: rM.gameCategory,
+                ccu: rM.ccu,
+                favourites: rM.favourites,
+                discoverability: (0, mM.k)(rM) ? rM : null,
+                url: (0, wM.p)((0, PM.d)(rM.schematicId))
+              }
+            }
+            const QM = MM.gameNameWithVariation,
+              zM = (0, PM.e)(QM, !0);
+            return {
+              key: QM,
+              position: nM,
+              thumbnail: (0, tM.jsx)(eM.d, {
+                game: QM
+              }),
+              name: (0, wM.n)(QM, SM),
+              owner: null,
+              category: (0, wM.e)(QM),
+              ccu: (0, CM.e)(QM, rM),
+              favourites: null,
+              discoverability: null !== (aM = iM[zM]) && void 0 !== aM ? aM : null,
+              url: (0, wM.p)(zM)
+            }
+          }))
+        }(cM, DM, Mr, (vM - 1) * uM, iM) : [],
+        ir = !XM && null === FM,
+        Or = !ir && !XM && 0 === rr.length,
+        Sr = null !== (rM = null === FM || void 0 === FM ? void 0 : FM.totalPages) && void 0 !== rM ? rM : 1;
+      return (0, tM.jsxs)("div", {
+        className: "StudioPage StudioLeaderboard",
+        children: [(0, tM.jsx)("div", {
+          className: "StudioPageHeader",
+          children: (0, tM.jsx)("h1", {
+            className: "StudioPageTitle",
+            children: iM("studio:leaderboard")
+          })
+        }), (0, tM.jsxs)("div", {
+          className: "StudioLeaderboardBanner",
+          children: [!VM && (0, tM.jsx)("div", {
+            children: iM("studio:leaderboardBanner")
+          }), VM && (0, tM.jsx)("div", {
+            children: iM("studio:leaderboardDormantBanner")
+          }), (0, tM.jsx)("div", {
+            children: iM("studio:leaderboardMetricsBanner", {
+              days: sM
+            })
+          })]
+        }), qM && (0, tM.jsx)("div", {
+          className: "StudioLeaderboardScopes",
+          children: gM.map((MM => (0, tM.jsx)(dM.V, {
+            active: NM === MM.scope,
+            onClick: () => {
+              KM({
+                scope: MM.scope,
+                category: xM,
+                page: 1
+              })
+            },
+            children: iM(MM.title)
+          }, MM.scope)))
+        }), (0, tM.jsxs)("div", {
+          className: "StudioLeaderboardCategories",
+          children: [(0, tM.jsx)(dM.V, {
+            active: null === xM,
+            onClick: () => {
+              KM({
+                scope: NM,
+                category: null,
+                page: 1
+              })
+            },
+            children: iM("studio:leaderboardAllCategories")
+          }), aM.N.map((MM => (0, tM.jsx)(dM.V, {
+            active: xM === MM,
+            onClick: () => {
+              KM({
+                scope: NM,
+                category: MM,
+                page: 1
+              })
+            },
+            children: (0, aM.W)(MM)
+          }, MM)))]
+        }), ir && (0, tM.jsx)("div", {
+          className: "StudioPageLoader AnimFadeIn",
+          children: (0, tM.jsx)(EM.d, {})
+        }), XM && (0, tM.jsx)("div", {
+          className: "StudioPageMessage AnimFadeIn",
+          children: iM("studio:failedToLoadLeaderboard")
+        }), Or && (0, tM.jsx)("div", {
+          className: "StudioPageMessage AnimFadeIn",
+          children: iM("studio:leaderboardEmpty")
+        }), !ir && !XM && !Or && (0, tM.jsx)("div", {
+          className: "StudioLeaderboardTableScroll AnimFadeIn",
+          children: (0, tM.jsx)(lM.c, {
+            className: "StudioTable",
+            columns: [{
+              key: "position",
+              header: "#"
+            }, {
+              key: "game",
+              header: iM("general:game")
+            }, {
+              key: "owner",
+              header: iM("general:owner")
+            }, ...null === xM ? [{
+              key: "category",
+              header: iM("general:category")
+            }] : [], ...qM ? [{
+              key: "engagementScore",
+              header: "engagementScore"
+            }] : [], {
+              key: "playsPerDay",
+              header: iM("studio:leaderboardPlaysPerDay")
+            }, {
+              key: "sessionLength",
+              header: iM("studio:leaderboardSessionLength")
+            }, {
+              key: "retention",
+              header: iM("studio:leaderboardSessionsPerPlayer")
+            }, ...VM ? [] : [{
+              key: "ccu",
+              header: iM("studio:metricCcu")
+            }], {
+              key: "favourites",
+              header: iM("general:favourites")
+            }],
+            rows: rr,
+            getRowKey: MM => MM.key,
+            renderRow: MM => (0, tM.jsxs)("tr", {
+              onClick: () => {
+                SM(MM.url)
+              },
+              children: [(0, tM.jsx)(kM, {
+                position: MM.position
+              }), (0, tM.jsx)("td", {
+                children: (0, tM.jsx)(eM.f, {
+                  thumbnail: MM.thumbnail,
+                  name: MM.name
+                })
+              }), (0, tM.jsxs)("td", {
+                className: "StudioLeaderboardOwner",
+                children: [null === MM.owner && "-", null !== MM.owner && (0, tM.jsx)(JM.f, {
+                  playerSocialPreview: MM.owner,
+                  showLocation: !1,
+                  opensProfileCard: !1
+                })]
+              }), null === xM && (0, tM.jsx)("td", {
+                children: (0, aM.W)(MM.category)
+              }), qM && (0, tM.jsx)(oM, {
+                discoverability: MM.discoverability
+              }), (0, tM.jsx)(ZM, {
+                discoverability: MM.discoverability
+              }), !VM && (0, tM.jsx)("td", {
+                children: null !== MM.ccu ? (0, nM.T)(MM.ccu) : "-"
+              }), (0, tM.jsx)("td", {
+                children: null !== MM.favourites ? (0, nM.T)(MM.favourites) : "-"
+              })]
+            })
+          })
+        }), !XM && (0, tM.jsx)(yM.d, {
+          className: "AnimFadeIn",
+          page: vM,
+          totalPages: Sr,
+          onSetPage: MM => {
+            KM({
+              scope: NM,
+              category: xM,
+              page: MM
+            })
+          }
+        })]
+      })
+    }
+  },
+  5318: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => aM,
+      f: () => jM
+    });
+    var OM = iM(1627),
+      SM = iM(1303);
+
+    function jM(MM) {
+      let {
+        thumbnail: rM,
+        name: iM
+      } = MM;
+      return (0, SM.jsxs)("div", {
+        className: "StudioTableGameCell",
+        children: [(0, SM.jsx)("div", {
+          className: "StudioTableThumbnail",
+          children: rM
+        }), (0, SM.jsx)("span", {
+          className: "StudioTableGameName",
+          children: iM
+        })]
+      })
+    }
+
+    function aM(MM) {
+      let {
+        game: rM
+      } = MM;
+      return (0, SM.jsx)("img", {
+        className: "StudioTableThumbnailImage",
+        src: (0, OM.j)(rM),
+        alt: ""
+      })
+    }
+  },
+  6869: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM
+    });
+    const OM = {
+      1: iM(6874),
+      2: iM(6877),
+      3: iM(6883)
+    }
+  },
+  5309: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => PM
+    });
+    var OM = iM(44),
+      SM = iM(1116),
+      jM = iM.n(SM),
+      aM = iM(1303);
+
+    function PM(MM) {
+      let {
+        columns: rM,
+        rows: iM,
+        getRowKey: SM,
+        renderRow: PM,
+        className: nM
+      } = MM;
+      return (0, aM.jsxs)("table", {
+        className: jM()("Table", nM),
+        children: [(0, aM.jsx)("thead", {
+          children: (0, aM.jsx)("tr", {
+            children: rM.map((MM => (0, aM.jsx)("th", {
+              children: MM.header
+            }, MM.key)))
+          })
+        }), (0, aM.jsx)("tbody", {
+          children: iM.map((MM => (0, aM.jsx)(OM.Fragment, {
+            children: PM(MM)
+          }, SM(MM))))
+        })]
+      })
+    }
+  },
+  5299: () => {},
+  6874: MM => {
+    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
+  },
+  6877: MM => {
+    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
+  },
+  6883: MM => {
+    MM.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

@@ -1,273 +1,241 @@
 export const id = 249;
-export const ids = [248, 249];
+export const ids = [249];
 export const modules = {
-  61529: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      RegisterShaderMaterial: () => wQ.c,
-      ShaderMaterial: () => wQ.t,
-      ShaderMaterialCreateFromSnippetAsync: () => wQ.g,
-      ShaderMaterialParse: () => wQ.r,
-      ShaderMaterialParseFromFileAsync: () => wQ.j,
-      ShaderMaterialParseFromSnippetAsync: () => wQ.n
+  40906: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      getBlockFaces: () => mM,
+      getIngameIconUrl: () => JM,
+      getItemIconUrl: () => hM,
+      getItemTextureUrl: () => HM,
+      getParticleTextureUrl: () => dM
     });
-    var wQ = XQ(40717);
-    (0, wQ.c)()
-  },
-  38041: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => qQ
-    });
-    var wQ = XQ(38047);
-    class qQ {
-      static GetPlanes(QQ) {
-        const WQ = [];
-        for (let XQ = 0; XQ < 6; XQ++) WQ.push(new wQ.b(0, 0, 0, 0));
-        return qQ.GetPlanesToRef(QQ, WQ), WQ
+    var OM = iM(4843),
+      SM = iM(37975),
+      jM = iM(9810),
+      aM = iM(3571);
+    const PM = new Set,
+      nM = new Set;
+    let QM = null;
+
+    function zM(MM) {
+      PM.has(MM) || (PM.add(MM), nM.add(MM), QM ??= setTimeout((() => {
+        console.warn(`Docs gallery: no default texture for ${nM.size} names`, [...nM]), nM.clear(), QM = null
+      }), 1e3))
+    }
+
+    function LM(MM, rM) {
+      try {
+        return (0, jM.getDefaultTexture)(MM, rM).url
+      } catch {
+        return zM(MM), null
       }
-      static GetNearPlaneToRef(QQ, WQ) {
-        const XQ = QQ.m;
-        WQ.normal.x = XQ[3] + XQ[2], WQ.normal.y = XQ[7] + XQ[6], WQ.normal.z = XQ[11] + XQ[10], WQ.d = XQ[15] + XQ[14], WQ.normalize()
-      }
-      static GetFarPlaneToRef(QQ, WQ) {
-        const XQ = QQ.m;
-        WQ.normal.x = XQ[3] - XQ[2], WQ.normal.y = XQ[7] - XQ[6], WQ.normal.z = XQ[11] - XQ[10], WQ.d = XQ[15] - XQ[14], WQ.normalize()
-      }
-      static GetLeftPlaneToRef(QQ, WQ) {
-        const XQ = QQ.m;
-        WQ.normal.x = XQ[3] + XQ[0], WQ.normal.y = XQ[7] + XQ[4], WQ.normal.z = XQ[11] + XQ[8], WQ.d = XQ[15] + XQ[12], WQ.normalize()
-      }
-      static GetRightPlaneToRef(QQ, WQ) {
-        const XQ = QQ.m;
-        WQ.normal.x = XQ[3] - XQ[0], WQ.normal.y = XQ[7] - XQ[4], WQ.normal.z = XQ[11] - XQ[8], WQ.d = XQ[15] - XQ[12], WQ.normalize()
-      }
-      static GetTopPlaneToRef(QQ, WQ) {
-        const XQ = QQ.m;
-        WQ.normal.x = XQ[3] - XQ[1], WQ.normal.y = XQ[7] - XQ[5], WQ.normal.z = XQ[11] - XQ[9], WQ.d = XQ[15] - XQ[13], WQ.normalize()
-      }
-      static GetBottomPlaneToRef(QQ, WQ) {
-        const XQ = QQ.m;
-        WQ.normal.x = XQ[3] + XQ[1], WQ.normal.y = XQ[7] + XQ[5], WQ.normal.z = XQ[11] + XQ[9], WQ.d = XQ[15] + XQ[13], WQ.normalize()
-      }
-      static GetPlanesToRef(QQ, WQ) {
-        qQ.GetNearPlaneToRef(QQ, WQ[0]), qQ.GetFarPlaneToRef(QQ, WQ[1]), qQ.GetLeftPlaneToRef(QQ, WQ[2]), qQ.GetRightPlaneToRef(QQ, WQ[3]), qQ.GetTopPlaneToRef(QQ, WQ[4]), qQ.GetBottomPlaneToRef(QQ, WQ[5])
-      }
-      static IsPointInFrustum(QQ, WQ) {
-        for (let XQ = 0; XQ < 6; XQ++)
-          if (WQ[XQ].dotCoordinate(QQ) < 0) return !1;
-        return !0
+    }
+
+    function mM(MM) {
+      var rM, iM;
+      const jM = SM.k[MM];
+      if (!jM || jM.itemTexture || !jM.textureInfo) return null;
+      const {
+        textureInfo: PM,
+        texturePerSide: nM
+      } = jM, QM = MM => {
+        return "string" === typeof(rM = nM && Array.isArray(PM) ? PM[nM[MM]] : PM) ? LM(rM, aM.f.BLOCK) : rM && "object" === typeof rM && "animTextures" in rM ? LM((0, OM.j)(rM), aM.f.BLOCK) : null;
+        var rM
+      }, zM = QM(2);
+      return zM ? {
+        top: zM,
+        left: null !== (rM = QM(4)) && void 0 !== rM ? rM : zM,
+        right: null !== (iM = QM(0)) && void 0 !== iM ? iM : zM
+      } : null
+    }
+
+    function HM(MM) {
+      var rM;
+      const iM = SM.k[MM];
+      return LM(null !== (rM = null === iM || void 0 === iM ? void 0 : iM.itemTexture) && void 0 !== rM ? rM : "string" === typeof(null === iM || void 0 === iM ? void 0 : iM.textureInfo) ? iM.textureInfo : MM, aM.f.ITEM)
+    }
+
+    function hM(MM) {
+      var rM, iM;
+      return SM.k[MM] ? null !== (rM = null === (iM = mM(MM)) || void 0 === iM ? void 0 : iM.top) && void 0 !== rM ? rM : HM(MM) : null
+    }
+
+    function JM(MM) {
+      return LM(MM, aM.f.ICON)
+    }
+
+    function dM(MM) {
+      try {
+        return iM(3724)(`./${MM}.png`)
+      } catch {
+        return zM(MM), null
       }
     }
   },
-  38047: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      b: () => qQ
+  38005: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM
     });
-    var wQ = XQ(37370);
-    class qQ {
-      constructor(QQ, WQ, XQ, qQ) {
-        this.normal = new wQ.s(QQ, WQ, XQ), this.d = qQ
-      }
-      awQ() {
-        return [this.normal.x, this.normal.y, this.normal.z, this.d]
-      }
-      clone() {
-        return new qQ(this.normal.x, this.normal.y, this.normal.z, this.d)
-      }
-      getClassName() {
-        return "Plane"
-      }
-      getHashCode() {
-        let QQ = this.normal.getHashCode();
-        return QQ = 397 * QQ ^ this.d, QQ
-      }
-      normalize() {
-        const QQ = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let WQ = 0;
-        return 0 !== QQ && (WQ = 1 / QQ), this.normal.x *= WQ, this.normal.y *= WQ, this.normal.z *= WQ, this.d *= WQ, this
-      }
-      transform(QQ) {
-        const WQ = qQ._TmpMatrix;
-        QQ.invertToRef(WQ);
-        const XQ = WQ.m,
-          wQ = this.normal.x,
-          TQ = this.normal.y,
-          zQ = this.normal.z,
-          sQ = this.d,
-          FQ = wQ * XQ[0] + TQ * XQ[1] + zQ * XQ[2] + sQ * XQ[3],
-          PQ = wQ * XQ[4] + TQ * XQ[5] + zQ * XQ[6] + sQ * XQ[7],
-          gQ = wQ * XQ[8] + TQ * XQ[9] + zQ * XQ[10] + sQ * XQ[11],
-          JQ = wQ * XQ[12] + TQ * XQ[13] + zQ * XQ[14] + sQ * XQ[15];
-        return new qQ(FQ, PQ, gQ, JQ)
-      }
-      dotCoordinate(QQ) {
-        return this.normal.x * QQ.x + this.normal.y * QQ.y + this.normal.z * QQ.z + this.d
-      }
-      copyFromPoints(QQ, WQ, XQ) {
-        const wQ = WQ.x - QQ.x,
-          qQ = WQ.y - QQ.y,
-          TQ = WQ.z - QQ.z,
-          zQ = XQ.x - QQ.x,
-          sQ = XQ.y - QQ.y,
-          FQ = XQ.z - QQ.z,
-          PQ = qQ * FQ - TQ * sQ,
-          gQ = TQ * zQ - wQ * FQ,
-          JQ = wQ * sQ - qQ * zQ,
-          rQ = Math.sqrt(PQ * PQ + gQ * gQ + JQ * JQ);
-        let IQ;
-        return IQ = 0 !== rQ ? 1 / rQ : 0, this.normal.x = PQ * IQ, this.normal.y = gQ * IQ, this.normal.z = JQ * IQ, this.d = -(this.normal.x * QQ.x + this.normal.y * QQ.y + this.normal.z * QQ.z), this
-      }
-      isFrontFacingTo(QQ, WQ) {
-        return wQ.s.Dot(this.normal, QQ) <= WQ
-      }
-      signedDistanceTo(QQ) {
-        return wQ.s.Dot(QQ, this.normal) + this.d
-      }
-      static FromArray(QQ) {
-        return new qQ(QQ[0], QQ[1], QQ[2], QQ[3])
-      }
-      static FromPoints(QQ, WQ, XQ) {
-        const wQ = new qQ(0, 0, 0, 0);
-        return wQ.copyFromPoints(QQ, WQ, XQ), wQ
-      }
-      static FromPositionAndNormal(QQ, WQ) {
-        const XQ = new qQ(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(QQ, WQ, XQ)
-      }
-      static FromPositionAndNormalToRef(QQ, WQ, XQ) {
-        return XQ.normal.WH(WQ), XQ.normal.normalize(), XQ.d = -QQ.dot(XQ.normal), XQ
-      }
-      static SignedDistanceToPlaneFromPositionAndNormal(QQ, WQ, XQ) {
-        const qQ = -(WQ.x * QQ.x + WQ.y * QQ.y + WQ.z * QQ.z);
-        return wQ.s.Dot(XQ, WQ) + qQ
-      }
-    }
-    qQ._TmpMatrix = wQ.e.Identity()
-  },
-  38947: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => TQ
-    });
-    var wQ = XQ(38956);
-    const qQ = (QQ, WQ, XQ) => QQ ? QQ.getClassName && "Mesh" === QQ.getClassName() ? null : !QQ.getClassName || "SubMesh" !== QQ.getClassName() && "PhysicsBody" !== QQ.getClassName() ? QQ.clone ? QQ.clone() : Array.isArray(QQ) ? QQ.slice() : XQ && "object" === typeof QQ ? {
-      ...QQ
-    } : null : QQ.clone(WQ) : null;
-    class TQ {
-      static DeepCopy(QQ, WQ, XQ, TQ) {
-        let zQ = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const sQ = function(QQ) {
-          const WQ = [];
-          do {
-            const XQ = Object.getOwnPropertyNames(QQ);
-            for (const QQ of XQ) - 1 === WQ.indexOf(QQ) && WQ.push(QQ)
-          } while (QQ = Object.getPrototypeOf(QQ));
-          return WQ
-        }(QQ);
-        for (const PQ of sQ) {
-          if ("_" === PQ[0] && (!TQ || -1 === TQ.indexOf(PQ))) continue;
-          if (PQ.endsWith("Observable")) continue;
-          if (XQ && -1 !== XQ.indexOf(PQ)) continue;
-          const sQ = QQ[PQ],
-            gQ = typeof sQ;
-          if ("function" !== gQ) try {
-            if ("object" === gQ)
-              if (sQ instanceof Uint8Array) WQ[PQ] = Uint8Array.from(sQ);
-              else if (sQ instanceof Array) {
-              if (WQ[PQ] = [], sQ.length > 0)
-                if ("object" == typeof sQ[0])
-                  for (let QQ = 0; QQ < sQ.length; QQ++) {
-                    const XQ = qQ(sQ[QQ], WQ, zQ); - 1 === WQ[PQ].indexOf(XQ) && WQ[PQ].push(XQ)
-                  } else WQ[PQ] = sQ.slice(0)
-            } else WQ[PQ] = qQ(sQ, WQ, zQ);
-            else WQ[PQ] = sQ
-          } catch (FQ) {
-            wQ.b.Warn(FQ.message)
-          }
+    const OM = {
+      "skyblock:forged:astral-astral-astral": {
+        name: "Heart of the Cosmos",
+        lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
+        damageMultiplier: 1.8,
+        cooldownMultiplier: .8,
+        ability: "starfall"
+      },
+      "skyblock:forged:astral-moonstone-sanguine": {
+        name: "Eclipse Edge",
+        lore: "Moonlight over starlight over blood: the sky goes dark wherever it is drawn.",
+        damageMultiplier: 1.7,
+        cooldownMultiplier: .81,
+        ability: "eclipseField"
+      },
+      "skyblock:forged:astral-diamond-moonstone": {
+        name: "Starcutter",
+        lore: "A blade so sharp the Forge Mother swears it once cut a falling star in two.",
+        damageMultiplier: 1.65,
+        cooldownMultiplier: .83,
+        ability: "starfall"
+      },
+      "skyblock:forged:astral-sanguine-magmasteel": {
+        name: "Triune Flame",
+        lore: "Each of Lord Vulcan's three faces, bound into one burning edge.",
+        damageMultiplier: 1.65,
+        cooldownMultiplier: .83,
+        ability: "magmaWave"
+      },
+      "skyblock:forged:magmasteel-magmasteel-magmasteel": {
+        name: "Vulcan's Bane",
+        lore: "Forged in the heat of his own rift. It remembers the way down.",
+        damageMultiplier: 1.56,
+        cooldownMultiplier: .83,
+        ability: "magmaWave"
+      },
+      "skyblock:forged:magmasteel-astral-sanguine": {
+        name: "Comet's Wake",
+        lore: "It leaves a trail of fire through the air, like something falling from very far up.",
+        damageMultiplier: 1.56,
+        cooldownMultiplier: .83,
+        ability: "starfall"
+      },
+      "skyblock:forged:magmasteel-sanguine-astral": {
+        name: "Vulcan's Ruin",
+        lore: "The Forge Mother made only one, then sat down for a long while.",
+        damageMultiplier: 1.6,
+        cooldownMultiplier: .83,
+        ability: "warcry"
+      },
+      "skyblock:forged:magmasteel-iron-stone": {
+        name: "Forgehand",
+        lore: "A smith's sword: plain to look at, and it hits like a hammer.",
+        damageMultiplier: 1.4,
+        cooldownMultiplier: .9,
+        ability: "quake"
+      },
+      "skyblock:forged:sanguine-sanguine-sanguine": {
+        name: "Crimson Covenant",
+        lore: "It drinks, and so do you.",
+        damageMultiplier: 1.53,
+        cooldownMultiplier: .83,
+        ability: "bloodPact"
+      },
+      "skyblock:forged:sanguine-astral-moonstone": {
+        name: "Nightbloom",
+        lore: "A red flower that only opens after dark.",
+        damageMultiplier: 1.56,
+        cooldownMultiplier: .83,
+        ability: "eclipseField"
+      },
+      "skyblock:forged:sanguine-iron-wood": {
+        name: "Butcher's Oath",
+        lore: "Heavy, honest and always hungry.",
+        damageMultiplier: 1.35,
+        cooldownMultiplier: .95,
+        ability: "bloodPact"
+      },
+      "skyblock:forged:moonstone-moonstone-moonstone": {
+        name: "Lunar Requiem",
+        lore: "Swung, it leaves a pale arc that lingers like a second moon.",
+        damageMultiplier: 1.35,
+        cooldownMultiplier: .85,
+        ability: "moonDash"
+      },
+      "skyblock:forged:moonstone-astral-moonstone": {
+        name: "Silver Tide",
+        lore: "Pulled by the same moon that pulls the sea.",
+        damageMultiplier: 1.4,
+        cooldownMultiplier: .84,
+        ability: "moonDash"
+      },
+      "skyblock:forged:diamond-diamond-diamond": {
+        name: "Prism Fang",
+        lore: "Every facet catches a different light, and every strike finds a different weakness.",
+        damageMultiplier: 1.29,
+        cooldownMultiplier: .88,
+        ability: "gildedEdge",
+        traits: {
+          crit: 1.8
         }
+      },
+      "skyblock:forged:diamond-moonstone-gold": {
+        name: "Jeweller's Pride",
+        lore: "Too pretty to fight with. Fight with it anyway.",
+        damageMultiplier: 1.24,
+        cooldownMultiplier: .91,
+        ability: "gildedEdge"
+      },
+      "skyblock:forged:gold-gold-gold": {
+        name: "King's Ransom",
+        lore: "Worth more than the treasure it guards.",
+        damageMultiplier: 1.18,
+        cooldownMultiplier: .91,
+        ability: "gildedEdge",
+        traits: {
+          coins: 2.5
+        }
+      },
+      "skyblock:forged:gold-moonstone-gold": {
+        name: "Midas Moon",
+        lore: "Mobs it fells seem to rattle with coins.",
+        damageMultiplier: 1.18,
+        cooldownMultiplier: .92,
+        ability: "gildedEdge",
+        traits: {
+          coins: 2,
+          bossBane: .6
+        }
+      },
+      "skyblock:forged:iron-iron-iron": {
+        name: "Old Faithful",
+        lore: "It has never let anyone down. It never will.",
+        damageMultiplier: 1.15,
+        cooldownMultiplier: .94,
+        ability: "warcry"
+      },
+      "skyblock:forged:iron-wood-wood": {
+        name: "Militia Blade",
+        lore: "Handed out at the outpost gate when the rift first opened.",
+        damageMultiplier: 1.09,
+        cooldownMultiplier: .97,
+        ability: "warcry"
+      },
+      "skyblock:forged:stone-stone-stone": {
+        name: "Quarryman's Cleaver",
+        lore: "Chipped from one block of stone, handle and all.",
+        damageMultiplier: 1.09,
+        cooldownMultiplier: .97,
+        ability: "quake"
+      },
+      "skyblock:forged:wood-wood-wood": {
+        name: "Lorenzo's Lesson",
+        lore: "Courage matters more than the blade. This one is mostly courage.",
+        damageMultiplier: 1.06,
+        cooldownMultiplier: .97,
+        ability: "warcry"
       }
     }
-  },
-  38191: (QQ, WQ, XQ) => {
-    function wQ() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (QQ => {
-        const WQ = 16 * Math.random() | 0;
-        return ("x" === QQ ? WQ : 3 & WQ | 8).toString(16)
-      }))
-    }
-    XQ.d(WQ, {
-      d: () => wQ
-    })
-  },
-  38956: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      b: () => wQ
-    });
-    class wQ {
-      static _CheckLimit(QQ, WQ) {
-        let XQ = wQ._LogLimitOutputs[QQ];
-        return XQ ? XQ.current++ : (XQ = {
-          limit: WQ,
-          current: 1
-        }, wQ._LogLimitOutputs[QQ] = XQ), XQ.current <= XQ.limit
-      }
-      static _GenerateLimitMessage(QQ) {
-        let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const XQ = wQ._LogLimitOutputs[QQ];
-        if (!XQ || !wQ.MessageLimitReached) return;
-        const qQ = this._Levels[WQ];
-        XQ.current === XQ.limit && wQ[qQ.name](wQ.MessageLimitReached.replace(/%LIMIT%/g, "" + XQ.limit).replace(/%TYPE%/g, qQ.name ?? ""))
-      }
-      static _AddLogEntry(QQ) {
-        wQ._LogCache = QQ + wQ._LogCache, wQ.OnNewCacheEntry && wQ.OnNewCacheEntry(QQ)
-      }
-      static _FormatMessage(QQ) {
-        const WQ = QQ => QQ < 10 ? "0" + QQ : "" + QQ,
-          XQ = new Date;
-        return "[" + WQ(XQ.getHours()) + ":" + WQ(XQ.getMinutes()) + ":" + WQ(XQ.getSeconds()) + "]: " + QQ
-      }
-      static _LogDisabled(QQ, WQ) {}
-      static _LogEnabled() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          WQ = arguments.length > 1 ? arguments[1] : void 0,
-          XQ = arguments.length > 2 ? arguments[2] : void 0;
-        const qQ = Array.isArray(WQ) ? WQ[0] : WQ;
-        if (void 0 !== XQ && !wQ._CheckLimit(qQ, XQ)) return;
-        const TQ = wQ._FormatMessage(qQ),
-          zQ = this._Levels[QQ],
-          sQ = Array.isArray(WQ) ? WQ.slice(1) : [];
-        zQ.logFunc && zQ.logFunc("BJS - " + TQ, ...sQ);
-        const FQ = `<div style='color:${zQ.color}'>${TQ}</div><br>`;
-        wQ._AddLogEntry(FQ), wQ._GenerateLimitMessage(qQ, QQ)
-      }
-      static get LogCache() {
-        return wQ._LogCache
-      }
-      static ClearLogCache() {
-        wQ._LogCache = "", wQ._LogLimitOutputs = {}, wQ.errorsCount = 0
-      }
-      static set LogLevels(QQ) {
-        wQ.Log = wQ._LogDisabled, wQ.Warn = wQ._LogDisabled, wQ.Error = wQ._LogDisabled;
-        const WQ = [wQ.MessageLogLevel, wQ.WarningLogLevel, wQ.ErrorLogLevel];
-        for (const XQ of WQ)
-          if ((QQ & XQ) === XQ) {
-            const QQ = this._Levels[XQ];
-            wQ[QQ.name] = wQ._LogEnabled.bind(wQ, XQ)
-          }
-      }
-    }
-    wQ.NoneLogLevel = 0, wQ.MessageLogLevel = 1, wQ.WarningLogLevel = 2, wQ.ErrorLogLevel = 4, wQ.AllLogLevel = 7, wQ.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", wQ._LogCache = "", wQ._LogLimitOutputs = {}, wQ._Levels = [{}, {
-      color: "white",
-      logFunc: console.log,
-      name: "Log"
-    }, {
-      color: "orange",
-      logFunc: console.warn,
-      name: "Warn"
-    }, {}, {
-      color: "red",
-      logFunc: console.error,
-      name: "Error"
-    }], wQ.errorsCount = 0, wQ.Log = wQ._LogEnabled.bind(wQ, wQ.MessageLogLevel), wQ.Warn = wQ._LogEnabled.bind(wQ, wQ.WarningLogLevel), wQ.Error = wQ._LogEnabled.bind(wQ, wQ.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

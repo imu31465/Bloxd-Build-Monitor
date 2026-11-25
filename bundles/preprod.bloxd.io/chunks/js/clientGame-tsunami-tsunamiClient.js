@@ -1,116 +1,116 @@
-export const id = 27;
-export const ids = [27];
+export const id = 31;
+export const ids = [31];
 export const modules = {
-  39827: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      default: () => sQ
+  40668: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      default: () => PM
     });
-    var wQ = XQ(34536);
-    const qQ = 1e3 / 3;
+    var OM = iM(35040);
+    const SM = 1e3 / 3;
 
-    function TQ(QQ, WQ, XQ) {
-      if ("parenthetical-seconds" === WQ) return ` (${QQ}s)`;
-      const wQ = `${Math.floor(QQ/60)}:${(QQ%60).toString().padStart(2,"0")}`;
-      return XQ ? `${XQ}${wQ}` : wQ
+    function jM(MM, rM, iM) {
+      if ("parenthetical-seconds" === rM) return ` (${MM}s)`;
+      const OM = `${Math.floor(MM/60)}:${(MM%60).toString().padStart(2,"0")}`;
+      return iM ? `${iM}${OM}` : OM
     }
 
-    function zQ(QQ, WQ, XQ, qQ, TQ) {
-      var zQ;
-      const sQ = {
-        ...qQ.baseNametag
+    function aM(MM, rM, iM, SM, jM) {
+      var aM;
+      const PM = {
+        ...SM.baseNametag
       };
-      sQ.content = [...null !== (zQ = qQ.baseNametag.content) && void 0 !== zQ ? zQ : [], {
+      PM.content = [...null !== (aM = SM.baseNametag.content) && void 0 !== aM ? aM : [], {
         str: " "
       }, {
         icon: "Gold Coin"
       }, {
-        str: `: ${(0,wQ.d)(TQ)}`
-      }], QQ.setOtherEntitySetting(WQ, XQ, "nameTagInfo", sQ)
+        str: `: ${(0,OM.e)(jM)}`
+      }], MM.setOtherEntitySetting(rM, iM, "nameTagInfo", PM)
     }
-    const sQ = function(QQ, WQ, XQ, wQ) {
-      let sQ, {
-        localPlayerId: FQ
-      } = wQ;
-      const PQ = new Map,
-        gQ = new Map;
-      let JQ = 0,
-        rQ = 0;
+    const PM = function(MM, rM, iM, OM) {
+      let PM, {
+        localPlayerId: nM
+      } = OM;
+      const QM = new Map,
+        zM = new Map;
+      let LM = 0,
+        mM = 0;
       return {
-        onCreate: QQ => {
-          sQ = QQ
+        onCreate: MM => {
+          PM = MM
         },
-        fJ: QQ => {
-          const WQ = Date.now();
-          for (const [wQ, qQ] of PQ) {
-            const QQ = Math.floor((WQ - qQ.startTime) / 1e3),
-              zQ = Math.max(0, qQ.remainingSeconds - QQ);
-            if (zQ === qQ.lastRenderedSecond) continue;
-            qQ.lastRenderedSecond = zQ;
-            const gQ = {
-                str: TQ(zQ, qQ.format, qQ.prefix),
-                style: qQ.style
+        bL: MM => {
+          const rM = Date.now();
+          for (const [OM, SM] of QM) {
+            const MM = Math.floor((rM - SM.startTime) / 1e3),
+              aM = Math.max(0, SM.remainingSeconds - MM);
+            if (aM === SM.lastRenderedSecond) continue;
+            SM.lastRenderedSecond = aM;
+            const zM = {
+                str: jM(aM, SM.format, SM.prefix),
+                style: SM.style
               },
-              JQ = {
-                ...qQ.baseNametag
+              LM = {
+                ...SM.baseNametag
               };
-            var XQ;
-            if ("content" === qQ.location) JQ.content = [...null !== (XQ = qQ.baseNametag.content) && void 0 !== XQ ? XQ : [], gQ];
-            else JQ.subtitle = [gQ];
-            sQ.setOtherEntitySetting(FQ, wQ, "nameTagInfo", JQ), zQ <= 0 && PQ.delete(wQ)
+            var iM;
+            if ("content" === SM.location) LM.content = [...null !== (iM = SM.baseNametag.content) && void 0 !== iM ? iM : [], zM];
+            else LM.subtitle = [zM];
+            PM.setOtherEntitySetting(nM, OM, "nameTagInfo", LM), aM <= 0 && QM.delete(OM)
           }
-          if (gQ.size > 0 && WQ - JQ >= qQ) {
-            JQ = WQ, rQ = (rQ + 1) % 3;
-            let QQ = 0;
-            for (const [XQ, wQ] of gQ) {
-              if (QQ++ % 3 !== rQ) continue;
-              const qQ = Math.floor((WQ - wQ.startTime) / 1e3);
-              if (qQ === wQ.lastRenderedSecond) continue;
-              wQ.lastRenderedSecond = qQ;
-              const TQ = wQ.accumulatedIncome + wQ.incomePerSecond * BigInt(qQ);
-              zQ(sQ, FQ, XQ, wQ, TQ)
+          if (zM.size > 0 && rM - LM >= SM) {
+            LM = rM, mM = (mM + 1) % 3;
+            let MM = 0;
+            for (const [iM, OM] of zM) {
+              if (MM++ % 3 !== mM) continue;
+              const SM = Math.floor((rM - OM.startTime) / 1e3);
+              if (SM === OM.lastRenderedSecond) continue;
+              OM.lastRenderedSecond = SM;
+              const jM = OM.accumulatedIncome + OM.incomePerSecond * BigInt(SM);
+              aM(PM, nM, iM, OM, jM)
             }
           }
         },
-        onReceivedMessageFromServer: (QQ, WQ) => {
-          if ("startCountdown" === QQ) PQ.set(WQ.eId, {
-            baseNametag: WQ.baseNametag,
-            remainingSeconds: WQ.remainingSeconds,
+        onReceivedMessageFromServer: (MM, rM) => {
+          if ("startCountdown" === MM) QM.set(rM.eId, {
+            baseNametag: rM.baseNametag,
+            remainingSeconds: rM.remainingSeconds,
             startTime: Date.now(),
-            format: WQ.format,
-            location: WQ.location,
-            prefix: WQ.prefix,
-            style: WQ.style,
+            format: rM.format,
+            location: rM.location,
+            prefix: rM.prefix,
+            style: rM.style,
             lastRenderedSecond: -1
           });
-          else if ("stopCountdown" === QQ) PQ.delete(WQ.eId);
-          else if ("startIncomeTicking" === QQ) {
-            const QQ = {
-              baseNametag: WQ.baseNametag,
-              accumulatedIncome: BigInt(WQ.accumulatedIncome),
-              incomePerSecond: BigInt(WQ.incomePerSecond),
+          else if ("stopCountdown" === MM) QM.delete(rM.eId);
+          else if ("startIncomeTicking" === MM) {
+            const MM = {
+              baseNametag: rM.baseNametag,
+              accumulatedIncome: BigInt(rM.accumulatedIncome),
+              incomePerSecond: BigInt(rM.incomePerSecond),
               startTime: Date.now(),
               lastRenderedSecond: -1
             };
-            gQ.set(WQ.eId, QQ), zQ(sQ, FQ, WQ.eId, QQ, QQ.accumulatedIncome)
-          } else "stopIncomeTicking" === QQ && gQ.delete(WQ.eId) && sQ.setOtherEntitySetting(FQ, WQ.eId, "nameTagInfo", {
+            zM.set(rM.eId, MM), aM(PM, nM, rM.eId, MM, MM.accumulatedIncome)
+          } else "stopIncomeTicking" === MM && zM.delete(rM.eId) && PM.setOtherEntitySetting(nM, rM.eId, "nameTagInfo", {
             content: []
           })
         },
-        onPlayerAltAction: (QQ, WQ, XQ, wQ, qQ, TQ) => {
-          if (TQ && "Mesh" === sQ.getEntityType(TQ)) {
-            const WQ = sQ.getEntityName(TQ);
-            "Upgrades" === WQ ? sQ.openShop(QQ, !1, "Upgrades") : "Items" === WQ ? sQ.openShop(QQ, !1, "Items") : "Prestige" === WQ ? sQ.openShop(QQ, !1, "Prestige") : "Collections" === WQ ? sQ.openShop(QQ, !1, "Collections") : "Base Skins" === WQ ? sQ.openShop(QQ, !1, "Base Skins") : "Gauntlet" === WQ ? sQ.openShop(QQ, !1, "Gauntlet") : "Diamond Shop" === WQ && sQ.openShop(QQ, !1, "Diamond Shop")
+        onPlayerAltAction: (MM, rM, iM, OM, SM, jM) => {
+          if (jM && "Mesh" === PM.getEntityType(jM)) {
+            const rM = PM.getEntityName(jM);
+            "Upgrades" === rM ? PM.openShop(MM, !1, "Upgrades") : "Items" === rM ? PM.openShop(MM, !1, "Items") : "Prestige" === rM ? PM.openShop(MM, !1, "Prestige") : "Collections" === rM ? PM.openShop(MM, !1, "Collections") : "Base Skins" === rM ? PM.openShop(MM, !1, "Base Skins") : "Gauntlet" === rM ? PM.openShop(MM, !1, "Gauntlet") : "Diamond Shop" === rM && PM.openShop(MM, !1, "Diamond Shop")
           }
         }
       }
     }
   },
-  34536: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => qQ,
-      f: () => zQ
+  35040: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => SM,
+      g: () => aM
     });
-    const wQ = [{
+    const OM = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -292,67 +292,67 @@ export const modules = {
       suffix: "K"
     }];
 
-    function qQ(QQ) {
-      let WQ, XQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof QQ) {
-        if (!Number.isFinite(QQ)) return "0";
-        if (Math.abs(QQ) < 100) {
-          const WQ = QQ < 0 ? "-" : "",
-            XQ = Math.abs(QQ);
-          return XQ >= 10 ? `${WQ}${XQ.toFixed(1).replace(/\.0$/,"")}` : `${WQ}${XQ.toFixed(2).replace(/\.?0+$/,"")}`
+    function SM(MM) {
+      let rM, iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof MM) {
+        if (!Number.isFinite(MM)) return "0";
+        if (Math.abs(MM) < 100) {
+          const rM = MM < 0 ? "-" : "",
+            iM = Math.abs(MM);
+          return iM >= 10 ? `${rM}${iM.toFixed(1).replace(/\.0$/,"")}` : `${rM}${iM.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        WQ = BigInt(Math.floor(QQ))
-      } else WQ = QQ;
-      const qQ = WQ < 0n ? -WQ : WQ,
-        TQ = WQ < 0n ? "-" : "",
-        zQ = qQ.toString();
-      if (zQ.length <= XQ) return `${TQ}${zQ}`;
-      const sQ = 3 * Math.floor((zQ.length - 1) / 3);
-      if (sQ < 3) return `${TQ}${zQ}`;
-      if (sQ > 3 * wQ.length) {
-        const QQ = zQ[0],
-          WQ = zQ.slice(1, 3).replace(/0+$/, "");
-        return `${TQ}${WQ?`${QQ}.${WQ}`:QQ}e${zQ.length-1}`
+        rM = BigInt(Math.floor(MM))
+      } else rM = MM;
+      const SM = rM < 0n ? -rM : rM,
+        jM = rM < 0n ? "-" : "",
+        aM = SM.toString();
+      if (aM.length <= iM) return `${jM}${aM}`;
+      const PM = 3 * Math.floor((aM.length - 1) / 3);
+      if (PM < 3) return `${jM}${aM}`;
+      if (PM > 3 * OM.length) {
+        const MM = aM[0],
+          rM = aM.slice(1, 3).replace(/0+$/, "");
+        return `${jM}${rM?`${MM}.${rM}`:MM}e${aM.length-1}`
       }
       const {
-        threshold: FQ,
-        suffix: PQ
-      } = wQ[wQ.length - sQ / 3], gQ = qQ / FQ, JQ = Number(1000n * (qQ % FQ) / FQ), rQ = Number(gQ) + JQ / 1e3;
-      let IQ;
-      return IQ = rQ >= 100 ? Math.floor(rQ).toString() : rQ >= 10 ? rQ.toFixed(1).replace(/\.0$/, "") : rQ.toFixed(2).replace(/\.?0+$/, ""), `${TQ}${IQ}${PQ}`
+        threshold: nM,
+        suffix: QM
+      } = OM[OM.length - PM / 3], zM = SM / nM, LM = Number(1000n * (SM % nM) / nM), mM = Number(zM) + LM / 1e3;
+      let HM;
+      return HM = mM >= 100 ? Math.floor(mM).toString() : mM >= 10 ? mM.toFixed(1).replace(/\.0$/, "") : mM.toFixed(2).replace(/\.?0+$/, ""), `${jM}${HM}${QM}`
     }
-    const TQ = wQ.map((QQ => {
+    const jM = OM.map((MM => {
       let {
-        threshold: WQ,
-        suffix: XQ
-      } = QQ;
+        threshold: rM,
+        suffix: iM
+      } = MM;
       return {
-        threshold: Number(WQ),
-        suffix: XQ
+        threshold: Number(rM),
+        suffix: iM
       }
-    })).filter((QQ => {
+    })).filter((MM => {
       let {
-        threshold: WQ
-      } = QQ;
-      return Number.isFinite(WQ)
+        threshold: rM
+      } = MM;
+      return Number.isFinite(rM)
     }));
 
-    function zQ(QQ) {
-      const WQ = Math.abs(QQ),
-        XQ = QQ < 0 ? "-" : "";
+    function aM(MM) {
+      const rM = Math.abs(MM),
+        iM = MM < 0 ? "-" : "";
       for (const {
-          threshold: wQ,
-          suffix: qQ
+          threshold: OM,
+          suffix: SM
         }
-        of TQ)
-        if (WQ >= wQ) {
-          const QQ = WQ / wQ;
-          if (QQ >= 1e3) return `${XQ}${WQ.toExponential(2).replace("e+","e")}`;
-          let TQ;
-          return TQ = QQ >= 100 ? Math.floor(QQ).toString() : QQ >= 10 ? QQ.toFixed(1).replace(/\.0$/, "") : QQ.toFixed(2).replace(/\.?0+$/, ""), `${XQ}${TQ}${qQ}`
-        } return `${XQ}${WQ}`
+        of jM)
+        if (rM >= OM) {
+          const MM = rM / OM;
+          if (MM >= 1e3) return `${iM}${rM.toExponential(2).replace("e+","e")}`;
+          let jM;
+          return jM = MM >= 100 ? Math.floor(MM).toString() : MM >= 10 ? MM.toFixed(1).replace(/\.0$/, "") : MM.toFixed(2).replace(/\.?0+$/, ""), `${iM}${jM}${SM}`
+        } return `${iM}${rM}`
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

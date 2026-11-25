@@ -1,22 +1,22 @@
 export const id = 10;
 export const ids = [10];
 export const modules = {
-  39569: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      default: () => wQ
+  40364: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      default: () => OM
     });
-    const wQ = function(QQ, WQ, XQ) {
-      let wQ;
+    const OM = function(MM, rM, iM) {
+      let OM;
       return {
-        onCreate: QQ => {
-          wQ = QQ
+        onCreate: MM => {
+          OM = MM
         },
-        onPlayerAltAction: (QQ, WQ, XQ, qQ, TQ, zQ) => {
-          zQ && "Mesh" === wQ.getEntityType(zQ) && ("Permanent Upgrades" === wQ.getEntityName(zQ) ? wQ.openShop(QQ, !1, "Upgrades") : "Items" === wQ.getEntityName(zQ) ? wQ.openShop(QQ, !1, "Items") : "Prestige" === wQ.getEntityName(zQ) && wQ.openShop(QQ, !1, "Prestige"))
+        onPlayerAltAction: (MM, rM, iM, SM, jM, aM) => {
+          aM && "Mesh" === OM.getEntityType(aM) && ("Permanent Upgrades" === OM.getEntityName(aM) ? OM.openShop(MM, !1, "Upgrades") : "Items" === OM.getEntityName(aM) ? OM.openShop(MM, !1, "Items") : "Prestige" === OM.getEntityName(aM) && OM.openShop(MM, !1, "Prestige"))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

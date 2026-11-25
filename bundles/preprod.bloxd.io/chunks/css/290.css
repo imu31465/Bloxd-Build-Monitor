@@ -1,0 +1,356 @@
+@keyframes rainbowShimmer {
+  0% {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(88.88889%)
+  }
+}
+
+@keyframes rainbowShimmerPosition {
+  to {
+    background-position: -200% 0
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+.StudioReplaysTab {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem
+}
+
+.StudioReplaysTab .StudioReplaysToolbar {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem
+}
+
+.StudioReplaysTab .StudioReplaysToolbar .StudioReplaysQuota {
+  color: #a4a4a4;
+  font-size: .85rem;
+  margin-left: auto
+}
+
+.StudioReplaysTab .StudioReplaysBody {
+  grid-gap: 1rem;
+  align-items: start;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(14rem, 18rem) 1fr
+}
+
+@media(max-width:900px) {
+  .StudioReplaysTab .StudioReplaysBody {
+    grid-template-columns: 1fr
+  }
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplaysList {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  max-height: 36rem;
+  overflow-y: auto
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplaysList .StudioReplaysListEmpty {
+  align-items: flex-start;
+  color: #cfcfcf;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 1rem
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplaysList .StudioReplayListItem {
+  background-color: #3c4b68;
+  border: 2px solid transparent;
+  border-radius: 0;
+  color: #f2f2f2;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  gap: .4rem;
+  padding: .6rem .75rem;
+  text-align: left
+}
+
+@media(hover:hover) {
+  .StudioReplaysTab .StudioReplaysBody .StudioReplaysList .StudioReplayListItem:hover {
+    background-color: #394980
+  }
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplaysList .StudioReplayListItem.pad-focused {
+  background-color: #394980
+}
+
+@media(hover:none) {
+  .StudioReplaysTab .StudioReplaysBody .StudioReplaysList .StudioReplayListItem:active {
+    background-color: #394980
+  }
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplaysList .StudioReplayListItem.StudioReplayListItemSelected {
+  border-color: #ffb914
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplaysList .StudioReplayListItem .StudioReplayListItemTop {
+  display: flex;
+  font-size: .9rem;
+  gap: .5rem;
+  justify-content: space-between
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplaysList .StudioReplayListItem .StudioReplayListItemTop .StudioReplayListItemDuration {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  font-weight: 800
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplaysList .StudioReplayListItem .StudioReplayListItemTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplaysList .StudioReplayListItem .StudioReplayListItemTags .StudioReplayTag {
+  background-color: rgba(57, 73, 128, .4);
+  color: #cfcfcf;
+  font-size: .7rem;
+  padding: .1rem .45rem
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplaysList .StudioReplayListItem .StudioReplayListItemTags .StudioReplayTag.StudioReplayTag-newPlayer {
+  color: #1dd06d
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplaysList .StudioReplayListItem .StudioReplayListItemTags .StudioReplayTag.StudioReplayTag-error,
+.StudioReplaysTab .StudioReplaysBody .StudioReplaysList .StudioReplayListItem .StudioReplayListItemTags .StudioReplayTag.StudioReplayTag-leftAfterDying,
+.StudioReplaysTab .StudioReplaysBody .StudioReplaysList .StudioReplayListItem .StudioReplayListItemTags .StudioReplayTag.StudioReplayTag-lowFps {
+  color: #ff8a80
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplayViewer {
+  background-color: #22283b;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  max-width: calc(max(12rem, 100vh - 17rem)*16/9);
+  min-width: 0;
+  width: 100%
+}
+
+@media(max-width:900px) {
+  .StudioReplaysTab .StudioReplaysBody .StudioReplayViewer {
+    order: -1
+  }
+
+  .StudioReplaysTab .StudioReplaysBody .StudioReplayViewer.StudioReplayViewerWaiting {
+    display: none
+  }
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplayViewer .StudioReplayPlayer {
+  --brv-bg: #22283b;
+  --brv-panel: #3c4b68;
+  --brv-track: #303a59;
+  --brv-accent: #ffb914;
+  --brv-text: #f2f2f2;
+  --brv-muted: #cfcfcf;
+  --brv-fps: #1dd06d;
+  --brv-low-fps: #ff8a80;
+  --brv-marker-error: #ff8a80;
+  --brv-marker-death: #85baff;
+  --brv-marker-note: #fcd373
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplayViewer .StudioReplayPlayer:not(:-webkit-full-screen) .brv-viewport {
+  aspect-ratio: 16/9;
+  flex: none;
+  max-height: max(12rem, 100vh - 17rem)
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplayViewer .StudioReplayPlayer:not(:fullscreen) .brv-viewport {
+  aspect-ratio: 16/9;
+  flex: none;
+  max-height: max(12rem, 100vh - 17rem)
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplayViewer .StudioReplayPlayer .brv-button,
+.StudioReplaysTab .StudioReplaysBody .StudioReplayViewer .StudioReplayPlayer .brv-switch {
+  position: relative
+}
+
+@media(pointer:coarse) {
+
+  .StudioReplaysTab .StudioReplaysBody .StudioReplayViewer .StudioReplayPlayer .brv-button:before,
+  .StudioReplaysTab .StudioReplaysBody .StudioReplayViewer .StudioReplayPlayer .brv-switch:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) max(.5rem/-2, min(0px, (100% - 44px)/2));
+    position: absolute
+  }
+
+  .StudioReplaysTab .StudioReplaysBody .StudioReplayViewer .StudioReplayPlayer .brv-chapter,
+  .StudioReplaysTab .StudioReplaysBody .StudioReplayViewer .StudioReplayPlayer .brv-speed {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplayViewer .StudioReplaysMessage {
+  aspect-ratio: 16/9
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplayViewer .StudioReplayPlaceholder {
+  align-items: center;
+  aspect-ratio: 16/9;
+  background: none;
+  border: none;
+  color: #cfcfcf;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  gap: .75rem;
+  justify-content: center
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplayViewer .StudioReplayPlaceholder .StudioReplayPlaceholderPlay {
+  align-items: center;
+  background-color: #ffb914;
+  color: #22283b;
+  display: flex;
+  font-size: 1.75rem;
+  height: 4.5rem;
+  justify-content: center;
+  width: 4.5rem
+}
+
+@media(hover:hover) {
+  .StudioReplaysTab .StudioReplaysBody .StudioReplayViewer .StudioReplayPlaceholder:hover .StudioReplayPlaceholderPlay {
+    filter: brightness(1.1)
+  }
+}
+
+.StudioReplaysTab .StudioReplaysBody .StudioReplayViewer .StudioReplayPlaceholder.pad-focused .StudioReplayPlaceholderPlay {
+  filter: brightness(1.1)
+}
+
+@media(hover:none) {
+  .StudioReplaysTab .StudioReplaysBody .StudioReplayViewer .StudioReplayPlaceholder:active .StudioReplayPlaceholderPlay {
+    filter: brightness(1.1)
+  }
+}
+
+.StudioReplaysTab .StudioReplaysMessage,
+.StudioReplaysTab.StudioReplaysMessage {
+  align-items: center;
+  color: #cfcfcf;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  justify-content: center;
+  min-height: 12rem;
+  padding: 1rem;
+  text-align: center
+}
+
+.StudioReplaysTab .StudioReplaysMessage .svg-inline--fa,
+.StudioReplaysTab.StudioReplaysMessage .svg-inline--fa {
+  color: #ffb914;
+  font-size: 2rem
+}
+
+.StudioReplaysTab.StudioReplaysMessage {
+  min-height: 50vh
+}

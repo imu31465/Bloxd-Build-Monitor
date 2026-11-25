@@ -1,489 +1,509 @@
 export const id = 106;
 export const ids = [106];
 export const modules = {
-  5256: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      b: () => rQ
+  43937: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      DOCS_AGENT_PART_CHARS: () => Zr.e,
+      DOCS_LLMS_FULL_TXT_PATH: () => Zr.f,
+      DOCS_LLMS_TXT_PATH: () => Zr.h,
+      DOCS_LLMS_TXT_URL: () => Zr.k,
+      ROOT_LLMS_TXT_PATH: () => Zr.m,
+      allGamemodeSettings: () => OM.e,
+      arcadeModeStaticConfig: () => JM.e,
+      arenaStaticConfig: () => Sr,
+      backroomsStaticConfig: () => Or.d,
+      battleBoxStaticConfig: () => nr,
+      bedwarsStaticConfig: () => RM.b,
+      bloxdAggregatorConfig: () => PM.b,
+      bloxdPreprodAggregatorConfig: () => nM.c,
+      bloxdStagingAggregatorConfig: () => QM.b,
+      bridgeBattleStaticConfig: () => NM.b,
+      captureTheFlagStaticConfig: () => Hr,
+      classicStaticConfig: () => sM.b,
+      clutchStaticConfig: () => IM.e,
+      conquerorStaticConfig: () => mr,
+      containmentBreachStaticConfig: () => Mr.d,
+      cookingStaticConfig: () => vM.b,
+      coolMathGamesAggregatorConfig: () => zM.b,
+      coreDefendersStaticConfig: () => cM.e,
+      crazyGamesNinetyNineNightsBundle: () => LM.c,
+      ctfStaticConfig: () => Lr,
+      customGameSettings: () => OM.g,
+      customGamesListingHeading: () => Dr.b,
+      customGamesListingPath: () => Dr.c,
+      defusalStaticConfig: () => zr,
+      docsPageHtmlPath: () => Zr.o,
+      docsPageMarkdownPath: () => Zr.q,
+      docsPagePartPath: () => Zr.u,
+      docsPageTitles: () => wr.c,
+      docsSitePageMarkdownPath: () => Zr.w,
+      dodgeBowStaticConfig: () => Pr,
+      doodleStaticConfig: () => gM.c,
+      dressUpStaticConfig: () => KM.d,
+      eatToGrowStaticConfig: () => ir.d,
+      escapeHtml: () => wr.d,
+      eviltowerStaticConfig: () => lM.d,
+      exampleStaticConfig: () => dM.b,
+      extractionStaticConfig: () => FM.b,
+      firstPartyStudioGames: () => jM.b,
+      fishingStaticConfig: () => hM.e,
+      gameImageVariantHeights: () => er.b,
+      gameImageVariantsEncoding: () => Cr.e,
+      getAllAggregatorGameNames: () => aM.c,
+      getConfiguredGameImagePaths: () => br.b,
+      getCustomGameFromPath: () => wr.h,
+      getCustomGameListingPage: () => Dr.d,
+      getCustomGamePagePath: () => wr.l,
+      getCustomGamePageRedirectPath: () => wr.o,
+      getCustomGameSchematicIdFromPath: () => wr.q,
+      getCustomGameThumbnailCandidates: () => Er.e,
+      getCustomGameThumbnailUrls: () => Er.h,
+      getCustomGameUrlIdFromPath: () => wr.s,
+      getFirstPartyStudioGameName: () => jM.d,
+      getGameCanonicalUrl: () => wr.w,
+      getGameImageBlurhash: () => Ur.b,
+      getGameImagePath: () => br.c,
+      getGameImageVariantPath: () => er.j,
+      getGameImageVariantSource: () => Gr.b,
+      getGameImageVariants: () => Gr.f,
+      getGamePage: () => wr.F,
+      getGamePageContentHeadings: () => tr.e,
+      getGamePagePath: () => wr.x,
+      getGamePageRedirectPath: () => wr.B,
+      getGameSeoMetadata: () => wr.H,
+      getGameTileImagePaths: () => Gr.g,
+      getIndexedCustomGameListingPaths: () => Dr.f,
+      getIndexedGamePages: () => wr.I,
+      getJsonLdScriptText: () => wr.K,
+      getPathGamePageContentGame: () => wr.M,
+      getPathSeoMetadata: () => wr.Q,
+      getPlayableGame: () => SM,
+      getPlayerSeoMetadata: () => wr.S,
+      getSeoMetaTagAttributes: () => wr.W,
+      getShaderPackPolicy: () => OM.j,
+      getShaderPackSeoMetadata: () => wr.Z,
+      getStaticGameConfig: () => OM.m,
+      getStaticPageSeoMetadata: () => wr.$,
+      getUndescribedPageSeoMetadata: () => wr.ab,
+      goalRushStaticConfig: () => TM.c,
+      goldrushStaticConfig: () => jr,
+      greenvilleStaticConfig: () => uM.e,
+      heroesvbrainrotsStaticConfig: () => VM.d,
+      hideseekStaticConfig: () => WM.d,
+      infectionStaticConfig: () => DM.d,
+      isGameIndexed: () => wr.bb,
+      knockoutStaticConfig: () => XM.c,
+      lastStandStaticConfig: () => fM.e,
+      loadGamePageContent: () => tr.h,
+      luckyBattlegroundsStaticConfig: () => tM.e,
+      luckyTowersStaticConfig: () => wM.b,
+      murderMysteryStaticConfig: () => pM.c,
+      naturalDisasterStaticConfig: () => ZM.d,
+      ninetyNineNightsStaticConfig: () => oM.e,
+      normaliseFirstPartyGameNames: () => jM.h,
+      oneBlockStaticConfig: () => EM.c,
+      paintballStaticConfig: () => kM.b,
+      parkourStaticConfig: () => mM.c,
+      petSimulatorStaticConfig: () => Qr,
+      piratesStaticConfig: () => eM.b,
+      plotsStaticConfig: () => CM.e,
+      prisonStaticConfig: () => lr,
+      pvpCivStaticConfig: () => rr.b,
+      racingStaticConfig: () => yr,
+      rankedStaticConfig: () => AM.d,
+      readDocsPageMarkdownPath: () => Zr.y,
+      renderGamePageContentHtml: () => sr,
+      renderSeoMetaTags: () => wr.db,
+      rocketParkourStaticConfig: () => YM.b,
+      rocketSpleefStaticConfig: () => bM.b,
+      seoSiteOrigin: () => kr.d,
+      shootingStaticConfig: () => HM.b,
+      simonSaysStaticConfig: () => BM.d,
+      skyIslandsStaticConfig: () => qM.b,
+      skyblockStaticConfig: () => UM.d,
+      skywarsStaticConfig: () => GM.d,
+      survivalRoyaleStaticConfig: () => hr,
+      testGymStaticConfig: () => yM.b,
+      thePitStaticConfig: () => dr,
+      tsunamiStaticConfig: () => xM.d,
+      uchStaticConfig: () => Jr,
+      wallsStaticConfig: () => ar
     });
-    var wQ = XQ(1081),
-      qQ = XQ.n(wQ),
-      TQ = XQ(1094),
-      zQ = XQ(1391),
-      sQ = XQ(3751),
-      FQ = XQ(158),
-      PQ = XQ(3793),
-      gQ = XQ(3776),
-      JQ = XQ(1145);
+    var OM = iM(821);
 
-    function rQ(QQ) {
-      let {
-        game: WQ
-      } = QQ;
-      const XQ = (0, FQ.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        wQ = (0, PQ.g)(WQ, XQ),
-        rQ = (0, sQ.g)(wQ),
-        IQ = void 0 !== rQ.blurhash;
-      return (0, JQ.jsxs)("div", {
-        className: "SchematicImageContainer",
-        children: [rQ.isLoading && !IQ && (0, JQ.jsx)(zQ.e, {
-          loaderType: "Secondary"
-        }), !rQ.failed && (null !== rQ.src || IQ) && (0, JQ.jsx)("div", {
-          className: qQ()("SchematicImage", gQ.i, {
-            SchematicImageFadeIn: rQ.fadeIn && !IQ
-          }),
-          style: (0, gQ.h)(rQ),
-          children: (0, JQ.jsx)(gQ.e, {
-            image: rQ
-          })
-        }), rQ.failed && (0, JQ.jsx)("div", {
-          className: "SchematicImageError",
-          children: (0, JQ.jsx)(TQ.d, {
-            name: "face-dizzy"
-          })
-        })]
-      })
+    function SM(MM) {
+      var rM, iM;
+      return null !== (rM = null === (iM = (0, OM.m)(MM)) || void 0 === iM ? void 0 : iM.defaultListedVariation) && void 0 !== rM ? rM : MM
     }
-  },
-  6908: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      default: () => kQ
-    });
-    XQ(5250);
-    var wQ = XQ(61),
-      qQ = XQ(1081),
-      TQ = XQ.n(qQ),
-      zQ = XQ(382),
-      sQ = XQ(1057),
-      FQ = XQ(1257),
-      PQ = XQ(1046),
-      gQ = XQ(1226),
-      JQ = XQ(1548),
-      rQ = XQ(3801),
-      IQ = XQ(1162),
-      jQ = XQ(5256),
-      BQ = XQ(2756),
-      yQ = XQ(1507),
-      VQ = XQ(4882),
-      DQ = XQ(5263),
-      pQ = XQ(1391),
-      GQ = XQ(1567),
-      UQ = XQ(4879),
-      bQ = XQ(2627),
-      vQ = XQ(5270),
-      dQ = XQ(6809),
-      HQ = XQ(1601),
-      aQ = XQ(1145);
-    const lQ = [{
-        scope: "customGames",
-        title: "studio:leaderboardCustomGames"
-      }, {
-        scope: "allGames",
-        title: "studio:leaderboardAllGames"
-      }, {
-        scope: "dormantGames",
-        title: "studio:leaderboardDormantGames"
-      }],
-      hQ = 25,
-      iQ = "scope",
-      cQ = "category",
-      AQ = "customGames";
-    const RQ = 7,
-      EQ = {
-        playsPerDay: null,
-        avgPlaytimeMinutes: null,
-        retention: null
+    var jM = iM(1067),
+      aM = iM(1099),
+      PM = iM(816),
+      nM = iM(799),
+      QM = iM(808),
+      zM = iM(794),
+      LM = iM(791),
+      mM = iM(826),
+      HM = iM(847),
+      hM = iM(832),
+      JM = iM(835),
+      dM = iM(837),
+      yM = iM(841),
+      lM = iM(854),
+      EM = iM(856),
+      UM = iM(865),
+      GM = iM(877),
+      CM = iM(885),
+      eM = iM(893),
+      bM = iM(897),
+      wM = iM(901),
+      tM = iM(909),
+      gM = iM(915),
+      uM = iM(923),
+      RM = iM(929),
+      pM = iM(931),
+      WM = iM(933),
+      sM = iM(939),
+      DM = iM(946),
+      kM = iM(953),
+      ZM = iM(956),
+      oM = iM(963),
+      fM = iM(969),
+      YM = iM(973),
+      NM = iM(977),
+      AM = iM(984),
+      xM = iM(988),
+      vM = iM(992),
+      FM = iM(998),
+      BM = iM(1001),
+      XM = iM(1010),
+      IM = iM(1018),
+      KM = iM(1021),
+      qM = iM(1025),
+      TM = iM(1033),
+      VM = iM(1038),
+      cM = iM(1040),
+      Mr = iM(1046),
+      rr = iM(1052),
+      ir = iM(1056),
+      Or = iM(1059);
+    const Sr = {
+        type: "Arena",
+        title: "Battle Arena",
+        description: "Fight for glory in a 2v2v2v2v2v2v2v2 arena!",
+        smallPicture: "battle_arena",
+        thumbnailUseLongRatio: !1,
+        badges: [{
+          type: "limitedTimeGame"
+        }],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      jr = {
+        type: "Arena",
+        title: "Goldrush",
+        description: "Who is the best miner?\nMine gold and deposit it at your spawn, but beware of others killing you",
+        smallPicture: "goldrushThumbnail",
+        largePicture: "goldrushThumbnailLarge",
+        thumbnailUseLongRatio: !1,
+        badges: [{
+          type: "limitedTimeGame"
+        }],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      ar = {
+        type: "Arena",
+        title: "Walls",
+        description: "Prepare with your team before the walls comes down and you need to fight to the death!",
+        smallPicture: "wallsThumbnail2",
+        thumbnailUseLongRatio: !1,
+        badges: [],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      Pr = {
+        type: "Arena",
+        title: "Dodge Bow",
+        description: "Runners use speed and cover to survive until the timer ends. Hunters use bows, trying to eliminate all runners before time runs out.",
+        smallPicture: "image-c",
+        thumbnailUseLongRatio: !1,
+        badges: [],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        firebaseConfig: {
+          apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
+          projectId: "bloxd-ee1aa",
+          storageBucket: "bloxd-ee1aa.appspot.com",
+          messagingSenderId: "758847442742",
+          appId: "1:758847442742:web:65e726de81c0cd0bf02d97",
+          measurementId: "G-KYV287K7XD"
+        },
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      nr = {
+        type: "Arena",
+        title: "BattleBox",
+        description: "Battle other teams in rounds!",
+        largePicture: "bloxd_battlebox_thumbnail_large",
+        smallPicture: "bloxd_battlebox_thumbnail_small",
+        thumbnailUseLongRatio: !1,
+        badges: [{
+          type: "limitedTimeGame"
+        }],
+        countdownInformation: {
+          type: "releaseCountdown",
+          previewText: "general:comingSoon",
+          countdownStartTime: new Date("2025-08-13T12:00:00Z"),
+          countdownToTime: new Date("2025-08-18T13:30:00Z")
+        },
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: ""
+      },
+      Qr = {
+        type: "Simulator",
+        title: "game:petSim",
+        description: "game:petSimDescription",
+        smallPicture: "bloxd_pet_sim_thumbnail_small_1",
+        largePicture: "bloxd_pet_sim_thumbnail_large_1",
+        thumbnailUseLongRatio: !1,
+        badges: [{
+          type: "limitedTimeGame"
+        }],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      zr = {
+        type: "Shooting",
+        title: "Defusal",
+        description: "Defuse or detonate the spike!",
+        smallPicture: "thumbnail",
+        thumbnailUseLongRatio: !1,
+        badges: [],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      Lr = {
+        type: "Arena",
+        title: "Capture the Flag",
+        description: "Classic 'Capture the Flag' with kits.",
+        smallPicture: "ctf",
+        thumbnailUseLongRatio: !1,
+        badges: [],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: []
+      },
+      mr = {
+        type: "Arena",
+        title: "Conqueror",
+        description: "Make tactical choices to conquer your enemies!",
+        smallPicture: "duos_combined_pic",
+        thumbnailUseLongRatio: !1,
+        badges: [],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        firebaseConfig: {
+          apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
+          projectId: "bloxd-ee1aa",
+          storageBucket: "bloxd-ee1aa.appspot.com",
+          messagingSenderId: "758847442742",
+          appId: "1:758847442742:web:c3d095738f8bde05f02d97",
+          measurementId: "G-SCYFMGGGEW"
+        },
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      Hr = {
+        type: "Arena",
+        title: "Capture the Flag",
+        description: "Capture the flag to win! It's that simple!",
+        smallPicture: "bloxd_capture_the_flag_thumbnail_small",
+        largePicture: "bloxd_capture_the_flag_thumbnail_large",
+        thumbnailUseLongRatio: !1,
+        badges: [{
+          type: "limitedTimeGame"
+        }],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: []
+      },
+      hr = {
+        type: "Survival",
+        title: "Survival Royale",
+        description: "Fortnite but way better ofc ;)",
+        smallPicture: "survivalRoyale",
+        thumbnailUseLongRatio: !1,
+        badges: [],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      Jr = {
+        type: "Parkour",
+        title: "Parkour Builder",
+        description: "Race through a parkour map with a twist - each round, you get to add a new block to the course!",
+        smallPicture: "uchThumbnail",
+        thumbnailUseLongRatio: !1,
+        badges: [{
+          type: "limitedTimeGame"
+        }],
+        visibleBetweenDates: {
+          startDate: new Date("2025-10-24T14:00:00Z"),
+          endDate: new Date("2025-10-25T14:00:00Z")
+        },
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      dr = {
+        type: "Arena",
+        title: "The Pit",
+        description: "Jump in the pit, beat everyone else!",
+        smallPicture: "thePitThumbnail",
+        thumbnailUseLongRatio: !1,
+        badges: [],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      yr = {
+        type: "Racing",
+        title: "Rush Racing",
+        description: "Compete against other players in a fast-paced racing game!",
+        smallPicture: "racing_thumbnail_compressed",
+        thumbnailUseLongRatio: !1,
+        badges: [{
+          type: "limitedTimeGame"
+        }],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
+      },
+      lr = {
+        title: "Prison",
+        type: "Roleplay",
+        description: "Survive in maximum security prison!",
+        smallPicture: "prison_thumbnail",
+        thumbnailUseLongRatio: !1,
+        badges: [],
+        useRejoinLastLobbyButton: !1,
+        additionalMetaTags: [],
+        firebaseConfig: {
+          apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
+          projectId: "bloxd-ee1aa",
+          storageBucket: "bloxd-ee1aa.appspot.com",
+          messagingSenderId: "758847442742",
+          appId: "1:758847442742:web:bd6d1461bd147389f02d97",
+          measurementId: "G-3NHZG8TJSS"
+        },
+        gameMonId: "wzap3u9jp9ki78o4dohtfdfnklxyci19"
       };
+    var Er = iM(1648),
+      Ur = iM(1659),
+      Gr = iM(3916),
+      Cr = iM(3932),
+      er = iM(1654),
+      br = iM(3923),
+      wr = iM(1630),
+      tr = iM(1675);
 
-    function CQ(QQ) {
-      let {
-        position: WQ
-      } = QQ;
-      const XQ = dQ.e[WQ];
-      return (0, aQ.jsxs)("td", {
-        className: TQ()("StudioLeaderboardPosition", {
-          StudioLeaderboardTopPosition: void 0 !== XQ,
-          [`StudioLeaderboardTopPosition${WQ}`]: void 0 !== XQ
-        }),
-        children: [void 0 !== XQ && (0, aQ.jsx)("img", {
-          className: "StudioLeaderboardPositionItem",
-          src: XQ,
-          alt: ""
-        }), WQ]
-      })
+    function gr(MM, rM, iM) {
+      return `<${MM}><h2>${(0,wr.d)(rM)}</h2>${iM}</${MM}>`
     }
 
-    function uQ(QQ) {
-      let {
-        discoverability: WQ
-      } = QQ;
-      const {
-        playsPerDay: XQ,
-        avgPlaytimeMinutes: qQ,
-        retention: TQ
-      } = null === WQ ? EQ : (0, rQ.n)(WQ);
-      return (0, aQ.jsxs)(wQ.Fragment, {
-        children: [(0, aQ.jsx)("td", {
-          children: null !== XQ ? (0, rQ.c)(XQ) : "-"
-        }), (0, aQ.jsx)("td", {
-          children: null !== qQ ? (0, rQ.g)(qQ) : "-"
-        }), (0, aQ.jsx)("td", {
-          children: null !== TQ ? (0, rQ.j)(TQ) : "-"
-        })]
-      })
+    function ur(MM) {
+      return MM.map((MM => `<p>${(0,wr.d)(MM)}</p>`)).join("")
     }
 
-    function LQ(QQ) {
-      let {
-        discoverability: WQ
-      } = QQ;
-      return (0, aQ.jsx)("td", {
-        className: "StudioLeaderboardEngagementScore",
-        children: void 0 !== (null === WQ || void 0 === WQ ? void 0 : WQ.engagementScore) ? (0, FQ.O)(Math.round(WQ.engagementScore)) : "-"
-      })
+    function Rr(MM) {
+      return `<ul>${MM.map((MM=>`<li>${MM}</li>`)).join("")}</ul>`
     }
 
-    function kQ() {
-      var QQ, WQ;
-      const {
-        t: XQ
-      } = (0, gQ.C)(), qQ = (0, GQ.useNavigatePreserveSearch)(), {
-        userContext: TQ,
-        isUserContextUpdating: dQ
-      } = (0, IQ.c)(), EQ = (0, bQ.m)(), [kQ, fQ] = (0, UQ.p)(), SQ = (tQ = kQ.get(iQ), lQ.some((QQ => QQ.scope === tQ)) ? tQ : AQ);
-      var tQ;
-      const oQ = function(QQ) {
-          return zQ.W.includes(QQ) ? QQ : null
-        }(kQ.get(cQ)),
-        eQ = (0, UQ.f)(kQ.get(UQ.e)),
-        [nQ, xQ] = (0, wQ.useState)(null),
-        [YQ, NQ] = (0, wQ.useState)(!1);
+    function pr(MM) {
+      return Rr(MM.map(wr.d))
+    }
 
-      function ZQ(QQ) {
-        fQ((WQ => {
-          (0, UQ.i)(WQ, iQ, QQ.scope === AQ ? null : QQ.scope), (0, UQ.i)(WQ, cQ, QQ.category), (0, UQ.m)(WQ, QQ.page)
-        }))
+    function Wr(MM, rM) {
+      return Rr(MM.similarGames.map((MM => {
+        var iM, SM;
+        const jM = null !== (iM = null === (SM = tr.c[MM]) || void 0 === SM ? void 0 : SM.name) && void 0 !== iM ? iM : rM(OM.e[MM].title);
+        return `<a href="${(0,wr.d)((0,wr.x)(MM))}">${(0,wr.d)(jM)}</a>`
+      })))
+    }
+    async function sr(MM, rM) {
+      const iM = (0, wr.F)(MM);
+      if (!iM) return null;
+      const OM = await (0, tr.h)(iM),
+        SM = (0, tr.e)(OM),
+        jM = OM.faq.map((MM => {
+          let {
+            question: rM,
+            answer: iM
+          } = MM;
+          return `<h3>${(0,wr.d)(rM)}</h3><p>${(0,wr.d)(iM)}</p>`
+        })).join("");
+      return `<main style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"><article>${[`<header><h1>${(0,wr.d)(OM.name)}</h1><p>${(0,wr.d)(OM.description)}</p></header>`,gr("section",SM.whatIs,ur(OM.whatIs)),gr("section",SM.howToPlay,ur(OM.howToPlay)),gr("section",SM.features,pr(OM.features)),gr("aside",SM.tips,pr(OM.tips)),gr("section",SM.faq,jM),gr("nav",SM.similarGames,Wr(OM,rM))].join("")}</article></main>`
+    }
+    var Dr = iM(1669),
+      kr = iM(1663),
+      Zr = iM(5221)
+  },
+  5221: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => SM,
+      f: () => nM,
+      h: () => jM,
+      k: () => aM,
+      m: () => PM,
+      o: () => dM,
+      q: () => zM,
+      u: () => LM,
+      w: () => JM,
+      y: () => HM
+    });
+    var OM = iM(1663);
+    const SM = 24e3,
+      jM = "/docs/llms.txt",
+      aM = `${OM.d}${jM}`,
+      PM = "/llms.txt",
+      nM = "/docs/llms-full.txt";
+
+    function QM(MM) {
+      return MM || "index"
+    }
+
+    function zM(MM) {
+      return `/docs/${QM(MM)}.md`
+    }
+
+    function LM(MM, rM) {
+      return `/docs/${QM(MM)}/${rM+1}.md`
+    }
+    const mM = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+
+    function HM(MM) {
+      const rM = mM.exec(MM);
+      return null === rM ? null : {
+        name: rM[1],
+        part: void 0 === rM[2] ? null : Number(rM[2])
       }
-      const OQ = !dQ && TQ.playerHasRank("developer"),
-        KQ = OQ && "allGames" === SQ,
-        mQ = OQ && "dormantGames" === SQ;
-      (0, wQ.useEffect)((() => {
-        if (dQ) return;
-        let QQ = !1;
-        return xQ(null), NQ(!1), JQ.e.getPublishedGamePreviews(TQ, {
-          searchQuery: null,
-          pageNumber: eQ,
-          pageSize: hQ,
-          onlyFavouriteGames: !1,
-          onlyOwnedGames: !1,
-          onlyApprovedGames: !1,
-          schematicIdsToExclude: [],
-          gameCategories: null !== oQ ? [oQ] : [],
-          upAndComing: !1,
-          dormantGames: mQ,
-          sortByEngagementScore: !0,
-          firstPartyGameNames: KQ ? PQ.b : void 0,
-          includeOwners: !0
-        }).then((WQ => {
-          QQ || xQ(WQ)
-        })).catch((WQ => {
-          console.error("Failed to load the studio leaderboard", WQ), QQ || NQ(!0)
-        })), () => {
-          QQ = !0
-        }
-      }), [dQ, KQ, mQ, oQ, eQ, TQ]);
-      const MQ = null !== (QQ = null === nQ || void 0 === nQ ? void 0 : nQ.results) && void 0 !== QQ ? QQ : null,
-        QW = function(QQ, WQ, XQ) {
-          const [qQ, TQ] = (0, wQ.useState)({}), zQ = XQ ? (null !== QQ && void 0 !== QQ ? QQ : []).flatMap((QQ => "firstPartyGame" === QQ.type ? [(0, sQ.d)(QQ.gameNameWithVariation, !0)] : [])).join(",") : "", FQ = (0, wQ.useMemo)((() => "" === zQ ? [] : zQ.split(",")), [zQ]);
-          return (0, wQ.useEffect)((() => {
-            if (0 === FQ.length) return void TQ({});
-            let QQ = !1;
-            return JQ.e.getGamesByAnalyticsIds(WQ, FQ).then((WQ => {
-              QQ || TQ(WQ)
-            })).catch((QQ => {
-              console.error("Failed to load first party discoverability for the studio leaderboard", QQ)
-            })), () => {
-              QQ = !0
-            }
-          }), [FQ, WQ]), qQ
-        }(MQ, TQ, OQ),
-        WW = null !== MQ ? function(QQ, WQ, XQ, wQ, qQ) {
-          return QQ.map(((QQ, TQ) => {
-            var zQ;
-            const FQ = wQ + TQ + 1;
-            if ("customGame" === QQ.type) {
-              const WQ = QQ.preview;
-              return {
-                key: WQ.schematicId,
-                position: FQ,
-                thumbnail: (0, aQ.jsx)(jQ.b, {
-                  game: WQ
-                }),
-                name: WQ.name,
-                owner: QQ.owner,
-                category: WQ.gameCategory,
-                ccu: WQ.ccu,
-                favourites: WQ.favourites,
-                discoverability: (0, rQ.q)(WQ) ? WQ : null,
-                url: (0, HQ.m)((0, sQ.b)(WQ.schematicId))
-              }
-            }
-            const PQ = QQ.gameNameWithVariation,
-              gQ = (0, sQ.d)(PQ, !0);
-            return {
-              key: PQ,
-              position: FQ,
-              thumbnail: (0, aQ.jsx)(vQ.b, {
-                game: PQ
-              }),
-              name: (0, HQ.j)(PQ, qQ),
-              owner: null,
-              category: (0, HQ.d)(PQ),
-              ccu: (0, bQ.e)(PQ, WQ),
-              favourites: null,
-              discoverability: null !== (zQ = XQ[gQ]) && void 0 !== zQ ? zQ : null,
-              url: (0, HQ.m)(gQ)
-            }
-          }))
-        }(MQ, EQ, QW, (eQ - 1) * hQ, XQ) : [],
-        XW = !YQ && null === nQ,
-        wW = !XW && !YQ && 0 === WW.length,
-        qW = null !== (WQ = null === nQ || void 0 === nQ ? void 0 : nQ.totalPages) && void 0 !== WQ ? WQ : 1;
-      return (0, aQ.jsxs)("div", {
-        className: "StudioPage StudioLeaderboard",
-        children: [(0, aQ.jsx)("div", {
-          className: "StudioPageHeader",
-          children: (0, aQ.jsx)("h1", {
-            className: "StudioPageTitle",
-            children: XQ("studio:leaderboard")
-          })
-        }), (0, aQ.jsxs)("div", {
-          className: "StudioLeaderboardBanner",
-          children: [!mQ && (0, aQ.jsx)("div", {
-            children: XQ("studio:leaderboardBanner")
-          }), mQ && (0, aQ.jsx)("div", {
-            children: XQ("studio:leaderboardDormantBanner")
-          }), (0, aQ.jsx)("div", {
-            children: XQ("studio:leaderboardMetricsBanner", {
-              days: RQ
-            })
-          })]
-        }), OQ && (0, aQ.jsx)("div", {
-          className: "StudioLeaderboardScopes",
-          children: lQ.map((QQ => (0, aQ.jsx)(yQ.T, {
-            active: SQ === QQ.scope,
-            onClick: () => {
-              ZQ({
-                scope: QQ.scope,
-                category: oQ,
-                page: 1
-              })
-            },
-            children: XQ(QQ.title)
-          }, QQ.scope)))
-        }), (0, aQ.jsxs)("div", {
-          className: "StudioLeaderboardCategories",
-          children: [(0, aQ.jsx)(yQ.T, {
-            active: null === oQ,
-            onClick: () => {
-              ZQ({
-                scope: SQ,
-                category: null,
-                page: 1
-              })
-            },
-            children: XQ("studio:leaderboardAllCategories")
-          }), zQ.W.map((QQ => (0, aQ.jsx)(yQ.T, {
-            active: oQ === QQ,
-            onClick: () => {
-              ZQ({
-                scope: SQ,
-                category: QQ,
-                page: 1
-              })
-            },
-            children: (0, zQ.hb)(QQ)
-          }, QQ)))]
-        }), XW && (0, aQ.jsx)("div", {
-          className: "StudioPageLoader AnimFadeIn",
-          children: (0, aQ.jsx)(pQ.e, {})
-        }), YQ && (0, aQ.jsx)("div", {
-          className: "StudioPageMessage AnimFadeIn",
-          children: XQ("studio:failedToLoadLeaderboard")
-        }), wW && (0, aQ.jsx)("div", {
-          className: "StudioPageMessage AnimFadeIn",
-          children: XQ("studio:leaderboardEmpty")
-        }), !XW && !YQ && !wW && (0, aQ.jsx)("div", {
-          className: "StudioLeaderboardTableScroll AnimFadeIn",
-          children: (0, aQ.jsx)(DQ.c, {
-            className: "StudioTable",
-            columns: [{
-              key: "position",
-              header: "#"
-            }, {
-              key: "game",
-              header: XQ("general:game")
-            }, {
-              key: "owner",
-              header: XQ("general:owner")
-            }, ...null === oQ ? [{
-              key: "category",
-              header: XQ("general:category")
-            }] : [], ...OQ ? [{
-              key: "engagementScore",
-              header: "engagementScore"
-            }] : [], {
-              key: "playsPerDay",
-              header: XQ("studio:leaderboardPlaysPerDay")
-            }, {
-              key: "sessionLength",
-              header: XQ("studio:leaderboardSessionLength")
-            }, {
-              key: "retention",
-              header: XQ("studio:leaderboardSessionsPerPlayer")
-            }, ...mQ ? [] : [{
-              key: "ccu",
-              header: XQ("studio:metricCcu")
-            }], {
-              key: "favourites",
-              header: XQ("general:favourites")
-            }],
-            rows: WW,
-            getRowKey: QQ => QQ.key,
-            renderRow: QQ => (0, aQ.jsxs)("tr", {
-              onClick: () => {
-                qQ(QQ.url)
-              },
-              children: [(0, aQ.jsx)(CQ, {
-                position: QQ.position
-              }), (0, aQ.jsx)("td", {
-                children: (0, aQ.jsx)(vQ.e, {
-                  thumbnail: QQ.thumbnail,
-                  name: QQ.name
-                })
-              }), (0, aQ.jsxs)("td", {
-                className: "StudioLeaderboardOwner",
-                children: [null === QQ.owner && "-", null !== QQ.owner && (0, aQ.jsx)(BQ.c, {
-                  playerSocialPreview: QQ.owner,
-                  showLocation: !1,
-                  opensProfileCard: !1
-                })]
-              }), null === oQ && (0, aQ.jsx)("td", {
-                children: (0, zQ.hb)(QQ.category)
-              }), OQ && (0, aQ.jsx)(LQ, {
-                discoverability: QQ.discoverability
-              }), (0, aQ.jsx)(uQ, {
-                discoverability: QQ.discoverability
-              }), !mQ && (0, aQ.jsx)("td", {
-                children: null !== QQ.ccu ? (0, FQ.O)(QQ.ccu) : "-"
-              }), (0, aQ.jsx)("td", {
-                children: null !== QQ.favourites ? (0, FQ.O)(QQ.favourites) : "-"
-              })]
-            })
-          })
-        }), !YQ && (0, aQ.jsx)(VQ.b, {
-          className: "AnimFadeIn",
-          page: eQ,
-          totalPages: qW,
-          onSetPage: QQ => {
-            ZQ({
-              scope: SQ,
-              category: oQ,
-              page: QQ
-            })
-          }
-        })]
-      })
     }
-  },
-  5270: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      b: () => zQ,
-      e: () => TQ
-    });
-    var wQ = XQ(1601),
-      qQ = XQ(1145);
+    const hM = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-    function TQ(QQ) {
-      let {
-        thumbnail: WQ,
-        name: XQ
-      } = QQ;
-      return (0, qQ.jsxs)("div", {
-        className: "StudioTableGameCell",
-        children: [(0, qQ.jsx)("div", {
-          className: "StudioTableThumbnail",
-          children: WQ
-        }), (0, qQ.jsx)("span", {
-          className: "StudioTableGameName",
-          children: XQ
-        })]
-      })
+    function JM(MM) {
+      const rM = hM.exec(MM);
+      if (null === rM) return null;
+      const [, iM = "", OM] = rM;
+      return void 0 === OM ? zM(iM) : LM(iM, Number(OM) - 1)
     }
 
-    function zQ(QQ) {
-      let {
-        game: WQ
-      } = QQ;
-      return (0, qQ.jsx)("img", {
-        className: "StudioTableThumbnailImage",
-        src: (0, wQ.h)(WQ),
-        alt: ""
-      })
+    function dM(MM) {
+      return `/docsHtml/${QM(MM)}.html`
     }
-  },
-  6809: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => wQ
-    });
-    const wQ = {
-      1: XQ(6814),
-      2: XQ(6823),
-      3: XQ(6827)
-    }
-  },
-  5263: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => sQ
-    });
-    var wQ = XQ(61),
-      qQ = XQ(1081),
-      TQ = XQ.n(qQ),
-      zQ = XQ(1145);
-
-    function sQ(QQ) {
-      let {
-        columns: WQ,
-        rows: XQ,
-        getRowKey: qQ,
-        renderRow: sQ,
-        className: FQ
-      } = QQ;
-      return (0, zQ.jsxs)("table", {
-        className: TQ()("Table", FQ),
-        children: [(0, zQ.jsx)("thead", {
-          children: (0, zQ.jsx)("tr", {
-            children: WQ.map((QQ => (0, zQ.jsx)("th", {
-              children: QQ.header
-            }, QQ.key)))
-          })
-        }), (0, zQ.jsx)("tbody", {
-          children: XQ.map((QQ => (0, zQ.jsx)(wQ.Fragment, {
-            children: sQ(QQ)
-          }, qQ(QQ))))
-        })]
-      })
-    }
-  },
-  5250: () => {},
-  6814: QQ => {
-    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
-  },
-  6823: QQ => {
-    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
-  },
-  6827: QQ => {
-    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

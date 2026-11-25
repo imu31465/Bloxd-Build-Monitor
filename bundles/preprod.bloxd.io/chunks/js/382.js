@@ -1,19 +1,9 @@
 export const id = 382;
 export const ids = [382];
 export const modules = {
-  61733: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      passCubePixelShader: () => zQ
-    });
-    var wQ = XQ(40126);
-    const qQ = "passCubePixelShader",
-      TQ = "varying vec2 vUV;uniform samplerCube textureSampler;\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) \n{vec2 uv=vUV*2.0-1.0;\n#ifdef POSITIVEX\ngl_FragColor=textureCube(textureSampler,vec3(1.001,uv.y,uv.x));\n#endif\n#ifdef NEGATIVEX\ngl_FragColor=textureCube(textureSampler,vec3(-1.001,uv.y,uv.x));\n#endif\n#ifdef POSITIVEY\ngl_FragColor=textureCube(textureSampler,vec3(uv.y,1.001,uv.x));\n#endif\n#ifdef NEGATIVEY\ngl_FragColor=textureCube(textureSampler,vec3(uv.y,-1.001,uv.x));\n#endif\n#ifdef POSITIVEZ\ngl_FragColor=textureCube(textureSampler,vec3(uv,1.001));\n#endif\n#ifdef NEGATIVEZ\ngl_FragColor=textureCube(textureSampler,vec3(uv,-1.001));\n#endif\n}";
-    wQ.b.ShadersStore[qQ] || (wQ.b.ShadersStore[qQ] = TQ);
-    const zQ = {
-      name: qQ,
-      shader: TQ
-    }
+  42731: MM => {
+    MM.exports = JSON.parse('{"texture":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAABCSURBVBiVY1RSVv7PAAWXr1yHMRl0dTTh7Ht37zIyMRAJiFbI+PX7L7jVyNYhO4Obk40GVrPgsg5ZnCQTiVZINAAAQoERlZZrqhQAAAAASUVORK5CYII=","alphaCutoff":0.05,"vertices":[1,0.77526,0,1,0.77526,0,1,0.77526,0,0.5,0.55051,-0.3062,0.5,0.55051,-0.3062,0.5,0.55051,-0.3062,0.5,0,-0.0562,0.5,0,-0.0562,0.5,0,-0.0562,0,0.22474,0.25,0,0.22474,0.25,0,0.22474,0.25,0,0.77526,0,0,0.77526,0,0,0.77526,0,0.5,0.44949,0.5562,0.5,0.44949,0.5562,0.5,0.44949,0.5562,0.5,1,0.3062,0.5,1,0.3062,0.5,1,0.3062,1,0.22474,0.25,1,0.22474,0.25,1,0.22474,0.25],"uvs":[0.896875,0.896875,0.896875,0.896875,0.003125,0.896875,0.003125,0.896875,0.003125,0.896875,0.896875,0.896875,0.896875,0.003125,0.003125,0.003125,0.003125,0.003125,0.896875,0.003125,0.003125,0.896875,0.003125,0.003125,0.003125,0.896875,0.003125,0.003125,0.896875,0.896875,0.896875,0.896875,0.003125,0.003125,0.896875,0.003125,0.896875,0.003125,0.896875,0.896875,0.003125,0.896875,0.003125,0.003125,0.896875,0.003125,0.896875,0.003125],"indices":[2,5,6,8,3,9,3,14,9,11,12,17,17,12,19,13,4,18,4,0,18,20,1,22,2,6,21,7,10,23,10,15,23,20,22,16],"shades":[0.85,0.7,0.7,0.85,0.85,0.85,0.85,0.7,0.85,1,1,0.7]}')
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

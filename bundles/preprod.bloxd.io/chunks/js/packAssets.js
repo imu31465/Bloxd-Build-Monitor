@@ -1,286 +1,286 @@
-export const id = 47;
-export const ids = [47, 211];
+export const id = 51;
+export const ids = [51, 229];
 export const modules = {
-  34589: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      packDisplayName: () => jQ,
-      packModelMessage: () => BQ,
-      packModelSummary: () => VQ,
-      refusedPackModels: () => yQ
+  35106: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      packDisplayName: () => hM,
+      packModelMessage: () => JM,
+      packModelSummary: () => yM,
+      refusedPackModels: () => dM
     });
-    var wQ = XQ(34591),
-      qQ = XQ(34596);
-    const TQ = "DRACO",
-      zQ = 0,
-      sQ = 1,
-      FQ = 0,
-      PQ = 1,
-      gQ = 32768;
+    var OM = iM(35113),
+      SM = iM(35120);
+    const jM = "DRACO",
+      aM = 0,
+      PM = 1,
+      nM = 0,
+      QM = 1,
+      zM = 32768;
 
-    function JQ(QQ) {
-      const WQ = new DataView(QQ.buffer, QQ.byteOffset, QQ.byteLength);
-      let XQ = 0;
-      const wQ = () => {
-          if (XQ >= QQ.byteLength) throw new RangeError("past the stream");
-          return QQ[XQ++]
+    function LM(MM) {
+      const rM = new DataView(MM.buffer, MM.byteOffset, MM.byteLength);
+      let iM = 0;
+      const OM = () => {
+          if (iM >= MM.byteLength) throw new RangeError("past the stream");
+          return MM[iM++]
         },
-        qQ = () => {
-          if (XQ + 4 > QQ.byteLength) throw new RangeError("past the stream");
-          const wQ = WQ.getUint32(XQ, !0);
-          return XQ += 4, wQ
+        SM = () => {
+          if (iM + 4 > MM.byteLength) throw new RangeError("past the stream");
+          const OM = rM.getUint32(iM, !0);
+          return iM += 4, OM
         },
-        JQ = () => {
-          let QQ = 0;
-          for (let WQ = 0; WQ < 35; WQ += 7) {
-            const XQ = wQ();
-            if (QQ += (127 & XQ) * 2 ** WQ, 0 === (128 & XQ)) return QQ
+        LM = () => {
+          let MM = 0;
+          for (let rM = 0; rM < 35; rM += 7) {
+            const iM = OM();
+            if (MM += (127 & iM) * 2 ** rM, 0 === (128 & iM)) return MM
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let QQ = 0; QQ < TQ.length; QQ++)
-          if (wQ() !== TQ.charCodeAt(QQ)) return null;
-        const WQ = wQ(),
-          rQ = wQ(),
-          IQ = wQ(),
-          jQ = wQ(),
-          BQ = wQ() | wQ() << 8;
-        if (2 !== WQ) return null;
-        0 !== (BQ & gQ) && function(QQ, WQ, XQ) {
-          const wQ = () => {
-              WQ(XQ())
+        for (let MM = 0; MM < jM.length; MM++)
+          if (OM() !== jM.charCodeAt(MM)) return null;
+        const rM = OM(),
+          mM = OM(),
+          HM = OM(),
+          hM = OM(),
+          JM = OM() | OM() << 8;
+        if (2 !== rM) return null;
+        0 !== (JM & zM) && function(MM, rM, iM) {
+          const OM = () => {
+              rM(iM())
             },
-            qQ = () => {
-              let XQ = 1,
-                qQ = !0;
-              for (; XQ > 0;) {
-                XQ--, qQ || wQ(), qQ = !1;
-                const TQ = QQ();
-                for (let XQ = 0; XQ < TQ; XQ++) wQ(), WQ(QQ());
-                XQ += QQ()
+            SM = () => {
+              let iM = 1,
+                SM = !0;
+              for (; iM > 0;) {
+                iM--, SM || OM(), SM = !1;
+                const jM = MM();
+                for (let iM = 0; iM < jM; iM++) OM(), rM(MM());
+                iM += MM()
               }
             },
-            TQ = QQ();
-          for (let zQ = 0; zQ < TQ; zQ++) QQ(), qQ();
-          qQ()
-        }(JQ, (WQ => {
-          if (XQ + WQ > QQ.byteLength) throw new RangeError("past the stream");
-          XQ += WQ
-        }), wQ);
-        const yQ = rQ < 2 ? qQ : JQ;
-        if (IQ === zQ) return {
+            jM = MM();
+          for (let aM = 0; aM < jM; aM++) MM(), SM();
+          SM()
+        }(LM, (rM => {
+          if (iM + rM > MM.byteLength) throw new RangeError("past the stream");
+          iM += rM
+        }), OM);
+        const dM = mM < 2 ? SM : LM;
+        if (HM === aM) return {
           faces: 0,
-          vertices: qQ()
+          vertices: SM()
         };
-        if (IQ !== sQ) return null;
-        if (jQ === FQ) {
+        if (HM !== PM) return null;
+        if (hM === nM) {
           return {
-            faces: yQ(),
-            vertices: yQ()
+            faces: dM(),
+            vertices: dM()
           }
         }
-        if (jQ !== PQ) return null;
-        wQ(), rQ < 2 && JQ();
-        const VQ = JQ();
+        if (hM !== QM) return null;
+        OM(), mM < 2 && LM();
+        const yM = LM();
         return {
-          faces: JQ(),
-          vertices: VQ
+          faces: LM(),
+          vertices: yM
         }
       } catch {
         return null
       }
     }
 
-    function rQ(QQ, WQ, XQ) {
-      var wQ, qQ;
-      if (null === (wQ = null === (qQ = QQ.extensionsUsed) || void 0 === qQ ? void 0 : qQ.includes("KHR_draco_mesh_compression")) || void 0 === wQ || !wQ) return null;
-      for (const jQ of null !== (TQ = QQ.meshes) && void 0 !== TQ ? TQ : []) {
-        var TQ;
-        for (const wQ of jQ.primitives) {
-          var zQ, sQ, FQ, PQ, gQ, rQ;
-          const qQ = null === (zQ = wQ.extensions) || void 0 === zQ ? void 0 : zQ.KHR_draco_mesh_compression;
-          if ("object" !== typeof qQ || null === qQ) continue;
-          const TQ = null === (sQ = QQ.bufferViews) || void 0 === sQ ? void 0 : sQ[qQ.bufferView];
-          if (null === WQ || void 0 === TQ) return IQ;
-          const jQ = null !== (FQ = TQ.byteOffset) && void 0 !== FQ ? FQ : 0,
-            BQ = JQ(WQ.subarray(jQ, jQ + TQ.byteLength));
-          if (null === BQ && !XQ) continue;
-          const yQ = null !== (PQ = QQ.accessors) && void 0 !== PQ ? PQ : [],
-            VQ = null === (gQ = yQ[wQ.attributes.POSITION]) || void 0 === gQ ? void 0 : gQ.count,
-            DQ = void 0 === wQ.indices ? 0 : null === (rQ = yQ[wQ.indices]) || void 0 === rQ ? void 0 : rQ.count;
-          if (null === BQ || void 0 === VQ || void 0 === DQ || 3 * BQ.faces !== DQ || BQ.vertices > VQ) return IQ
+    function mM(MM, rM, iM) {
+      var OM, SM;
+      if (null === (OM = null === (SM = MM.extensionsUsed) || void 0 === SM ? void 0 : SM.includes("KHR_draco_mesh_compression")) || void 0 === OM || !OM) return null;
+      for (const hM of null !== (jM = MM.meshes) && void 0 !== jM ? jM : []) {
+        var jM;
+        for (const OM of hM.primitives) {
+          var aM, PM, nM, QM, zM, mM;
+          const SM = null === (aM = OM.extensions) || void 0 === aM ? void 0 : aM.KHR_draco_mesh_compression;
+          if ("object" !== typeof SM || null === SM) continue;
+          const jM = null === (PM = MM.bufferViews) || void 0 === PM ? void 0 : PM[SM.bufferView];
+          if (null === rM || void 0 === jM) return HM;
+          const hM = null !== (nM = jM.byteOffset) && void 0 !== nM ? nM : 0,
+            JM = LM(rM.subarray(hM, hM + jM.byteLength));
+          if (null === JM && !iM) continue;
+          const dM = null !== (QM = MM.accessors) && void 0 !== QM ? QM : [],
+            yM = null === (zM = dM[OM.attributes.POSITION]) || void 0 === zM ? void 0 : zM.count,
+            lM = void 0 === OM.indices ? 0 : null === (mM = dM[OM.indices]) || void 0 === mM ? void 0 : mM.count;
+          if (null === JM || void 0 === yM || void 0 === lM || 3 * JM.faces !== lM || JM.vertices > yM) return HM
         }
       }
       return null
     }
-    const IQ = "has a Draco stream whose counts don't match its accessors";
+    const HM = "has a Draco stream whose counts don't match its accessors";
 
-    function jQ(QQ) {
-      var WQ;
-      return null !== (WQ = QQ.name) && void 0 !== WQ ? WQ : QQ.fromFolderName || QQ.id
+    function hM(MM) {
+      var rM;
+      return null !== (rM = MM.name) && void 0 !== rM ? rM : MM.fromFolderName || MM.id
     }
 
-    function BQ(QQ, WQ, XQ) {
-      return `Texture pack "${QQ}": model "${WQ}" was not loaded because it ${XQ}. The default model is used instead.`
+    function JM(MM, rM, iM) {
+      return `Texture pack "${MM}": model "${rM}" was not loaded because it ${iM}. The default model is used instead.`
     }
 
-    function yQ(QQ, WQ, XQ) {
+    function dM(MM, rM, iM) {
       let {
-        strictDraco: TQ = !1
+        strictDraco: jM = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const zQ = {};
-      for (const [sQ, FQ] of Object.entries(WQ)) {
-        let WQ;
-        if (FQ.startsWith("data:")) try {
-          const QQ = new Uint8Array((0, qQ.l)(FQ));
-          if (WQ = (0, wQ.c)(QQ), null === WQ) {
+      const aM = {};
+      for (const [PM, nM] of Object.entries(rM)) {
+        let rM;
+        if (nM.startsWith("data:")) try {
+          const MM = new Uint8Array((0, SM.v)(nM));
+          if (rM = (0, OM.c)(MM), null === rM) {
             const {
-              json: XQ,
-              bin: wQ
-            } = (0, qQ.u)(QQ);
-            WQ = rQ(XQ, wQ, TQ)
+              json: iM,
+              bin: OM
+            } = (0, SM.E)(MM);
+            rM = mM(iM, OM, jM)
           }
         } catch {
-          WQ = "is not a binary glTF 2.0 file"
-        } else WQ = "loads data from outside the file";
-        WQ && (zQ[sQ] = WQ, XQ && console.warn(BQ(QQ, sQ, WQ)))
+          rM = "is not a binary glTF 2.0 file"
+        } else rM = "loads data from outside the file";
+        rM && (aM[PM] = rM, iM && console.warn(JM(MM, PM, rM)))
       }
-      return zQ
+      return aM
     }
 
-    function VQ(QQ, WQ) {
-      const XQ = Object.keys(WQ);
-      if (0 === XQ.length) return null;
-      if (1 === XQ.length) return BQ(QQ, XQ[0], WQ[XQ[0]]);
-      const wQ = XQ.map((QQ => `"${QQ}" ${WQ[QQ]}`)).join("; ");
-      return `Texture pack "${QQ}": ${XQ.length} models were not loaded (${wQ}). The default models are used instead.`
+    function yM(MM, rM) {
+      const iM = Object.keys(rM);
+      if (0 === iM.length) return null;
+      if (1 === iM.length) return JM(MM, iM[0], rM[iM[0]]);
+      const OM = iM.map((MM => `"${MM}" ${rM[MM]}`)).join("; ");
+      return `Texture pack "${MM}": ${iM.length} models were not loaded (${OM}). The default models are used instead.`
     }
   },
-  61761: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      packAssets: () => VQ
+  64133: (MM, rM, iM) => {
+    iM.d(rM, {
+      packAssets: () => yM
     });
-    var wQ = XQ(2226),
-      qQ = XQ(2211),
-      TQ = XQ(34589),
-      zQ = XQ(3483),
-      sQ = XQ(3514);
+    var OM = iM(2263),
+      SM = iM(2257),
+      jM = iM(35106),
+      aM = iM(3619),
+      PM = iM(3647);
 
-    function FQ(QQ, WQ, XQ, wQ) {
-      const qQ = `${(0,zQ.e)(QQ,WQ)}|sheets${XQ}`;
-      return wQ === sQ.c ? qQ : `${qQ}|layers${wQ}`
+    function nM(MM, rM, iM, OM) {
+      const SM = `${(0,aM.b)(MM,rM)}|sheets${iM}`;
+      return OM === PM.c ? SM : `${SM}|layers${OM}`
     }
-    var PQ = XQ(3517),
-      gQ = XQ(3453),
-      JQ = XQ(3440),
-      rQ = XQ(3492);
-    var IQ = XQ(51248);
-    const jQ = 256;
-    let BQ = null,
-      yQ = null;
+    var QM = iM(3652),
+      zM = iM(3586),
+      LM = iM(3580),
+      mM = iM(3625);
+    var HM = iM(53774);
+    const hM = 256;
+    let JM = null,
+      dM = null;
 
-    function VQ(QQ) {
-      var WQ;
-      let XQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : sQ.c;
-      if ((null === (WQ = BQ) || void 0 === WQ ? void 0 : WQ.pack) === QQ.pack && BQ.maxLayerWidth === XQ) return BQ.assets;
-      const VQ = (0, IQ.f)(QQ.pack, (0, IQ.n)(QQ));
-      if (null === VQ || !(0, qQ.g)(VQ)) return Promise.resolve(null);
-      const pQ = async function(QQ, WQ, XQ) {
-        var IQ;
-        const BQ = null !== (IQ = QQ.textureOverrides) && void 0 !== IQ ? IQ : {},
+    function yM(MM) {
+      var rM;
+      let iM = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : PM.c;
+      if ((null === (rM = JM) || void 0 === rM ? void 0 : rM.pack) === MM.pack && JM.maxLayerWidth === iM) return JM.assets;
+      const yM = (0, HM.g)(MM.pack, (0, HM.j)(MM));
+      if (null === yM || !(0, SM.g)(yM)) return Promise.resolve(null);
+      const EM = async function(MM, rM, iM) {
+        var HM;
+        const JM = null !== (HM = MM.textureOverrides) && void 0 !== HM ? HM : {},
           {
-            id: VQ,
-            version: pQ
-          } = QQ.metaData,
-          GQ = WQ && VQ !== wQ.i.CUSTOM,
-          UQ = {};
-        GQ && (yQ = UQ);
-        let bQ, vQ, dQ = GQ ? await async function(QQ, WQ, XQ, wQ) {
-          const qQ = FQ(QQ, WQ, XQ, sQ.c),
-            TQ = FQ(QQ, WQ, XQ, wQ),
-            PQ = await (0, zQ.j)((QQ => QQ === qQ || QQ === TQ));
-          return null !== PQ && (wQ === sQ.c || PQ.blockAtlasWidth <= wQ) ? PQ : null
-        }(VQ, pQ, jQ, XQ): null;
-        if (null === dQ) {
+            id: yM,
+            version: EM
+          } = MM.metaData,
+          UM = rM && yM !== OM.o.CUSTOM,
+          GM = {};
+        UM && (dM = GM);
+        let CM, eM, bM = UM ? await async function(MM, rM, iM, OM) {
+          const SM = nM(MM, rM, iM, PM.c),
+            jM = nM(MM, rM, iM, OM),
+            QM = await (0, aM.g)((MM => MM === SM || MM === jM));
+          return null !== QM && (OM === PM.c || QM.blockAtlasWidth <= OM) ? QM : null
+        }(yM, EM, hM, iM): null;
+        if (null === bM) {
           const {
-            blockMetadata: QQ,
-            getDefaultTexture: WQ,
-            textureNameToIndex: TQ
-          } = await (0, qQ.k)(), sQ = (0, gQ.d)(QQ, ((QQ, XQ) => ({
-            url: DQ(BQ, WQ, QQ, "block" === XQ ? JQ.d.BLOCK : JQ.d.ITEM)
-          }))), PQ = await
-          function(QQ, WQ, XQ, wQ, qQ, TQ) {
-            return (0, rQ.c)((zQ => zQ.WasmTextureWorker.generateRequired(QQ, WQ, XQ, wQ, qQ, TQ)))
-          }(QQ, TQ, sQ, VQ === wQ.c, XQ, jQ), IQ = PQ.assets;
-          dQ = {
-            ...IQ,
+            blockMetadata: MM,
+            getDefaultTexture: rM,
+            textureNameToIndex: jM
+          } = await (0, SM.m)(), PM = (0, zM.b)(MM, ((MM, iM) => ({
+            url: lM(JM, rM, MM, "block" === iM ? LM.f.BLOCK : LM.f.ITEM)
+          }))), QM = await
+          function(MM, rM, iM, OM, SM, jM) {
+            return (0, mM.c)((aM => aM.WasmTextureWorker.generateRequired(MM, rM, iM, OM, SM, jM)))
+          }(MM, jM, PM, yM === OM.b, iM, hM), HM = QM.assets;
+          bM = {
+            ...HM,
             averageColors: {}
-          }, bQ = PQ.averageColors(), GQ && (vQ = bQ.then((async QQ => {
-            null !== QQ && yQ === UQ && await
-            function(QQ, WQ, XQ, wQ, qQ) {
-              return (0, zQ.r)(FQ(QQ, WQ, wQ, qQ), XQ)
-            }(VQ, pQ, {
-              ...IQ,
-              averageColors: QQ
-            }, jQ, PQ.layerCap)
+          }, CM = QM.averageColors(), UM && (eM = CM.then((async MM => {
+            null !== MM && dM === GM && await
+            function(MM, rM, iM, OM, SM) {
+              return (0, aM.i)(nM(MM, rM, OM, SM), iM)
+            }(yM, EM, {
+              ...HM,
+              averageColors: MM
+            }, hM, QM.layerCap)
           })))
         }
-        return function(QQ, WQ) {
-          var XQ, wQ;
-          let qQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((sQ = QQ.averageColors, 0 === Object.keys(null !== sQ && void 0 !== sQ ? sQ : {}).length ? null : QQ.averageColors)),
-            zQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
-          var sQ;
-          const FQ = null !== (XQ = WQ.textureOverrides) && void 0 !== XQ ? XQ : {},
-            gQ = null !== (wQ = WQ.modelOverrides) && void 0 !== wQ ? wQ : {},
-            JQ = 0 === Object.keys(gQ).length ? {} : (0, TQ.refusedPackModels)((0, TQ.packDisplayName)(WQ.metaData), gQ, !0, {
+        return function(MM, rM) {
+          var iM, OM;
+          let SM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((PM = MM.averageColors, 0 === Object.keys(null !== PM && void 0 !== PM ? PM : {}).length ? null : MM.averageColors)),
+            aM = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
+          var PM;
+          const nM = null !== (iM = rM.textureOverrides) && void 0 !== iM ? iM : {},
+            zM = null !== (OM = rM.modelOverrides) && void 0 !== OM ? OM : {},
+            LM = 0 === Object.keys(zM).length ? {} : (0, jM.refusedPackModels)((0, jM.packDisplayName)(rM.metaData), zM, !0, {
               strictDraco: !0
             }),
             {
-              animatedBlockTextures: rQ,
-              rotatedBlockTextures: IQ
-            } = QQ,
-            jQ = QQ => {
-              var WQ, XQ;
-              return null !== (WQ = null !== (XQ = rQ[QQ]) && void 0 !== XQ ? XQ : IQ[QQ]) && void 0 !== WQ ? WQ : null
+              animatedBlockTextures: mM,
+              rotatedBlockTextures: HM
+            } = MM,
+            hM = MM => {
+              var rM, iM;
+              return null !== (rM = null !== (iM = mM[MM]) && void 0 !== iM ? iM : HM[MM]) && void 0 !== rM ? rM : null
             };
           return {
             terrain: {
-              atlasSheets: QQ.blockAtlasArr,
-              texture: jQ
+              atlasSheets: MM.blockAtlasArr,
+              texture: hM
             },
-            sheetPixels: [...QQ.blockAtlasPixels],
-            heldUntil: zQ,
-            sheetLayout: QQ.imagesPerAtlas,
-            sheetWidth: QQ.blockAtlasWidth,
-            armourAtlasUrl: QQ.armourAtlas,
-            texture: QQ => {
-              var WQ, XQ;
-              return null !== (WQ = null !== (XQ = jQ(QQ)) && void 0 !== XQ ? XQ : (0, PQ.e)(FQ, QQ)) && void 0 !== WQ ? WQ : null
+            sheetPixels: [...MM.blockAtlasPixels],
+            heldUntil: aM,
+            sheetLayout: MM.imagesPerAtlas,
+            sheetWidth: MM.blockAtlasWidth,
+            armourAtlasUrl: MM.armourAtlas,
+            texture: MM => {
+              var rM, iM;
+              return null !== (rM = null !== (iM = hM(MM)) && void 0 !== iM ? iM : (0, QM.c)(nM, MM)) && void 0 !== rM ? rM : null
             },
-            model: QQ => void 0 === JQ[QQ] && gQ[QQ] || null,
-            averageColours: qQ
+            model: MM => void 0 === LM[MM] && zM[MM] || null,
+            averageColours: SM
           }
-        }(dQ, QQ, bQ, vQ)
-      }(VQ, null === QQ.gameSource, XQ), GQ = {
-        pack: QQ.pack,
-        maxLayerWidth: XQ,
-        assets: pQ
+        }(bM, MM, CM, eM)
+      }(yM, null === MM.gameSource, iM), UM = {
+        pack: MM.pack,
+        maxLayerWidth: iM,
+        assets: EM
       };
-      return BQ = GQ, pQ.catch((() => {
-        BQ === GQ && (BQ = null)
-      })), pQ
+      return JM = UM, EM.catch((() => {
+        JM === UM && (JM = null)
+      })), EM
     }
 
-    function DQ(QQ, WQ, wQ, qQ) {
-      const TQ = (0, PQ.e)(QQ, wQ);
-      if (TQ) return TQ;
+    function lM(MM, rM, OM, SM) {
+      const jM = (0, QM.c)(MM, OM);
+      if (jM) return jM;
       try {
-        return WQ(wQ, qQ).url
+        return rM(OM, SM).url
       } catch {
-        return XQ(3581)
+        return iM(3721)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

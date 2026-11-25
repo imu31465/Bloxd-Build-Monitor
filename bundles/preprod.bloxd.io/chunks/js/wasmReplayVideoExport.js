@@ -1,77 +1,77 @@
-export const id = 69;
-export const ids = [63, 69, 98];
+export const id = 78;
+export const ids = [72, 78, 108];
 export const modules = {
-  37260: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => JQ,
-      f: () => rQ
+  37913: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => LM,
+      h: () => mM
     });
-    var wQ = XQ(663),
-      qQ = XQ(43),
-      TQ = XQ(37221);
-    const zQ = "replayFileKeptForReload",
-      sQ = "replayFileKeptForReloadAt",
-      FQ = "replayFileKeptForReloadTab",
-      PQ = 3e5,
-      gQ = 5e3;
-    async function JQ(QQ, WQ) {
-      const XQ = Date.now(),
-        TQ = {
-          at: XQ,
-          bytes: QQ,
-          source: WQ
+    var OM = iM(625),
+      SM = iM(30),
+      jM = iM(37872);
+    const aM = "replayFileKeptForReload",
+      PM = "replayFileKeptForReloadAt",
+      nM = "replayFileKeptForReloadTab",
+      QM = 3e5,
+      zM = 5e3;
+    async function LM(MM, rM) {
+      const iM = Date.now(),
+        jM = {
+          at: iM,
+          bytes: MM,
+          source: rM
         },
-        PQ = await Promise.race([(async () => await qQ.f.setItem(sQ, XQ) && qQ.f.setItem(zQ, TQ))(), (0, wQ.L)(gQ).then((() => !1))]);
-      PQ || console.warn("The replay file couldn't be kept across the reload into a newer build: the reloaded page asks for it again");
-      const JQ = {
-        at: XQ,
-        HI: PQ
+        QM = await Promise.race([(async () => await SM.f.setItem(PM, iM) && SM.f.setItem(aM, jM))(), (0, OM.Q)(zM).then((() => !1))]);
+      QM || console.warn("The replay file couldn't be kept across the reload into a newer build: the reloaded page asks for it again");
+      const LM = {
+        at: iM,
+        ML: QM
       };
-      qQ.m.setItem(FQ, JQ)
+      SM.k.setItem(nM, LM)
     }
-    async function rQ() {
-      var QQ;
-      const WQ = qQ.m.getItem(FQ);
-      null !== WQ && qQ.m.removeItem(FQ);
-      const XQ = Date.now(),
-        wQ = await qQ.f.getItem(sQ),
-        gQ = null !== WQ && XQ - WQ.at <= PQ,
-        JQ = null !== WQ && wQ === WQ.at;
-      let rQ = null;
-      if (null !== wQ && (JQ || ("number" !== typeof wQ || XQ - wQ > PQ)) && (rQ = gQ && JQ && WQ.HI ? await qQ.f.getItem(zQ) : null, await Promise.all([qQ.f.removeItem(sQ), qQ.f.removeItem(zQ)])), !gQ) return null;
-      if ((null === (QQ = rQ) || void 0 === QQ ? void 0 : QQ.at) !== WQ.at) throw new Error(TQ.b.replayNotKept.text);
+    async function mM() {
+      var MM;
+      const rM = SM.k.getItem(nM);
+      null !== rM && SM.k.removeItem(nM);
+      const iM = Date.now(),
+        OM = await SM.f.getItem(PM),
+        zM = null !== rM && iM - rM.at <= QM,
+        LM = null !== rM && OM === rM.at;
+      let mM = null;
+      if (null !== OM && (LM || ("number" !== typeof OM || iM - OM > QM)) && (mM = zM && LM && rM.ML ? await SM.f.getItem(aM) : null, await Promise.all([SM.f.removeItem(PM), SM.f.removeItem(aM)])), !zM) return null;
+      if ((null === (MM = mM) || void 0 === MM ? void 0 : MM.at) !== rM.at) throw new Error(jM.c.replayNotKept.text);
       return {
-        bytes: rQ.bytes,
-        source: rQ.source
+        bytes: mM.bytes,
+        source: mM.source
       }
     }
   },
-  37254: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      b: () => wQ,
-      f: () => TQ,
-      g: () => qQ
+  37905: (MM, rM, iM) => {
+    iM.d(rM, {
+      e: () => OM,
+      h: () => jM,
+      i: () => SM
     });
-    const wQ = [9];
+    const OM = [9];
 
-    function qQ(QQ) {
-      return wQ.includes(QQ)
+    function SM(MM) {
+      return OM.includes(MM)
     }
 
-    function TQ(QQ) {
-      return null !== QQ && QQ >= 3 && QQ < wQ[0]
+    function jM(MM) {
+      return null !== MM && MM >= 3 && MM < OM[0]
     }
   },
-  37221: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      b: () => zQ,
-      e: () => PQ,
-      i: () => FQ
+  37872: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => aM,
+      d: () => QM,
+      f: () => nM
     });
-    var wQ = XQ(31);
-    const qQ = 1500,
-      TQ = 1e3,
-      zQ = {
+    var OM = iM(22);
+    const SM = 1500,
+      jM = 1e3,
+      aM = {
         recordingStarted: {
           text: "Started recording",
           type: "Success"
@@ -162,29 +162,29 @@ export const modules = {
           type: "Error"
         }
       },
-      sQ = new Set(Object.values(zQ).filter((QQ => "Error" === QQ.type)).map((QQ => QQ.text)));
+      PM = new Set(Object.values(aM).filter((MM => "Error" === MM.type)).map((MM => MM.text)));
 
-    function FQ(QQ) {
-      return QQ instanceof Error && sQ.has(QQ.message) ? QQ.message : void 0
+    function nM(MM) {
+      return MM instanceof Error && PM.has(MM.message) ? MM.message : void 0
     }
 
-    function PQ(QQ) {
-      var WQ;
-      const XQ = null !== (WQ = QQ.timeoutMs) && void 0 !== WQ ? WQ : "Error" === QQ.type ? qQ : TQ;
-      wQ.k.mB("showBottomMessage", {
-        message: QQ.text,
-        timeoutLength: XQ,
-        type: QQ.type
+    function QM(MM) {
+      var rM;
+      const iM = null !== (rM = MM.timeoutMs) && void 0 !== rM ? rM : "Error" === MM.type ? SM : jM;
+      OM.i.Tz("showBottomMessage", {
+        message: MM.text,
+        timeoutLength: iM,
+        type: MM.type
       })
     }
   },
-  37269: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => wQ,
-      e: () => qQ
+  37926: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => OM,
+      c: () => SM
     });
-    const wQ = "data-replay-ui-active",
-      qQ = [{
+    const OM = "data-replay-ui-active",
+      SM = [{
         group: "middleTextTop",
         dataAttr: "data-replay-hide-middle-text-top",
         label: "Middle text top"
@@ -234,78 +234,78 @@ export const modules = {
         label: "Everything else"
       }]
   },
-  37275: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => PQ,
-      g: () => JQ,
-      i: () => gQ
+  37935: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => QM,
+      f: () => LM,
+      g: () => zM
     });
-    var wQ = XQ(26),
-      qQ = XQ(31),
-      TQ = XQ(37269);
+    var OM = iM(19),
+      SM = iM(22),
+      jM = iM(37926);
 
-    function zQ() {
-      const QQ = {};
+    function aM() {
+      const MM = {};
       for (const {
-          group: WQ
+          group: rM
         }
-        of TQ.e) QQ[WQ] = !0;
-      return QQ
+        of jM.c) MM[rM] = !0;
+      return MM
     }
-    let sQ = zQ();
+    let PM = aM();
 
-    function FQ() {
-      qQ.k.mB("replayViewer|uiVisibilityChanged")
-    }
-
-    function PQ() {
-      return sQ
+    function nM() {
+      SM.i.Tz("replayViewer|uiVisibilityChanged")
     }
 
-    function gQ(QQ, WQ) {
-      sQ[QQ] !== WQ && (sQ = {
-        ...sQ,
-        [QQ]: WQ
-      }, "nametag" === QQ && wQ.b.set({
-        areNametagsHidden: !WQ
-      }), FQ())
+    function QM() {
+      return PM
     }
 
-    function JQ() {
-      sQ = zQ(), wQ.b.set({
+    function zM(MM, rM) {
+      PM[MM] !== rM && (PM = {
+        ...PM,
+        [MM]: rM
+      }, "nametag" === MM && OM.d.set({
+        areNametagsHidden: !rM
+      }), nM())
+    }
+
+    function LM() {
+      PM = aM(), OM.d.set({
         areNametagsHidden: !1
-      }), FQ()
+      }), nM()
     }
   },
-  39542: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => iQ
+  40338: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => RM
     });
-    var wQ = XQ(1812),
-      qQ = XQ(1404),
-      TQ = XQ(61),
-      zQ = XQ(1081),
-      sQ = XQ.n(zQ),
-      FQ = XQ(1507),
-      PQ = XQ(105);
-    const gQ = ["video/webm;codecs=vp9,opus", "video/webm;codecs=vp8,opus", "video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm"],
-      JQ = ["video/mp4;codecs=avc1,mp4a.40.2", "video/mp4;codecs=avc1.42E01E,mp4a.40.2", "video/mp4;codecs=avc1", "video/mp4"];
+    var OM = iM(1845),
+      SM = iM(1429),
+      jM = iM(44),
+      aM = iM(1116),
+      PM = iM.n(aM),
+      nM = iM(1520),
+      QM = iM(83);
+    const zM = ["video/webm;codecs=vp9,opus", "video/webm;codecs=vp8,opus", "video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm"],
+      LM = ["video/mp4;codecs=avc1,mp4a.40.2", "video/mp4;codecs=avc1.42E01E,mp4a.40.2", "video/mp4;codecs=avc1", "video/mp4"];
 
-    function rQ(QQ) {
-      return "webm" === QQ ? gQ : JQ
+    function mM(MM) {
+      return "webm" === MM ? zM : LM
     }
 
-    function IQ(QQ) {
-      for (const WQ of QQ)
-        if ("undefined" !== typeof MediaRecorder && MediaRecorder.isTypeSupported(WQ)) return WQ;
+    function HM(MM) {
+      for (const rM of MM)
+        if ("undefined" !== typeof MediaRecorder && MediaRecorder.isTypeSupported(rM)) return rM;
       return null
     }
 
-    function jQ(QQ) {
-      return null !== IQ(rQ(QQ))
+    function hM(MM) {
+      return null !== HM(mM(MM))
     }
-    var BQ = XQ(1145);
-    const yQ = [{
+    var JM = iM(1303);
+    const dM = [{
       id: "webm",
       label: "WebM",
       description: "Usually less screen tearing, but may not play in all media players."
@@ -315,177 +315,177 @@ export const modules = {
       description: "Works in more players, but may show graphical glitches on some devices."
     }];
 
-    function VQ() {
-      return jQ("webm") ? "webm" : jQ("mp4") ? "mp4" : "webm"
+    function yM() {
+      return hM("webm") ? "webm" : hM("mp4") ? "mp4" : "webm"
     }
 
-    function DQ(QQ) {
+    function lM(MM) {
       let {
-        cards: WQ
-      } = QQ;
-      return (0, BQ.jsx)("div", {
+        cards: rM
+      } = MM;
+      return (0, JM.jsx)("div", {
         className: "ReplayVideoExportOptionCards",
-        children: WQ.map((QQ => (0, BQ.jsxs)("div", {
+        children: rM.map((MM => (0, JM.jsxs)("div", {
           className: "ReplayVideoExportOptionColumn",
-          children: [(0, BQ.jsx)("div", {
-            className: sQ()("ReplayVideoExportOptionCard", {
-              Selected: QQ.selected,
-              Disabled: QQ.disabled
+          children: [(0, JM.jsx)("div", {
+            className: PM()("ReplayVideoExportOptionCard", {
+              Selected: MM.selected,
+              Disabled: MM.disabled
             }),
             onClick: () => {
-              QQ.disabled || QQ.onSelect()
+              MM.disabled || MM.onSelect()
             },
-            children: (0, BQ.jsxs)("div", {
+            children: (0, JM.jsxs)("div", {
               className: "ReplayVideoExportOptionCardBody",
-              children: [(0, BQ.jsx)("div", {
+              children: [(0, JM.jsx)("div", {
                 className: "ReplayVideoExportOptionCardLabel",
-                children: QQ.label
-              }), (0, BQ.jsx)("div", {
+                children: MM.label
+              }), (0, JM.jsx)("div", {
                 className: "ReplayVideoExportOptionCardDescription",
-                children: QQ.description
+                children: MM.description
               })]
             })
-          }), QQ.disabled && QQ.disabledReason && (0, BQ.jsx)("div", {
+          }), MM.disabled && MM.disabledReason && (0, JM.jsx)("div", {
             className: "ReplayVideoExportOptionError SmallTextLight",
-            children: QQ.disabledReason
+            children: MM.disabledReason
           })]
-        }, QQ.id)))
+        }, MM.id)))
       })
     }
-    const pQ = (0, TQ.memo)((function(QQ) {
+    const EM = (0, jM.memo)((function(MM) {
       let {
-        hasPlaybackMark: WQ,
-        canIncludeUi: XQ,
-        includeUiDisabledReason: wQ,
-        selectionRef: qQ,
-        closePopup: zQ
-      } = QQ;
-      const sQ = jQ("webm") || jQ("mp4"),
-        [gQ, JQ] = (0, TQ.useState)(VQ),
-        [rQ, IQ] = (0, TQ.useState)(XQ),
-        pQ = sQ && jQ(gQ);
-      if (!sQ) {
-        const QQ = (0, PQ.isMobile)() ? "screen recording" : "OBS";
-        return (0, BQ.jsxs)("div", {
+        hasPlaybackMark: rM,
+        canIncludeUi: iM,
+        includeUiDisabledReason: OM,
+        selectionRef: SM,
+        closePopup: aM
+      } = MM;
+      const PM = hM("webm") || hM("mp4"),
+        [zM, LM] = (0, jM.useState)(yM),
+        [mM, HM] = (0, jM.useState)(iM),
+        EM = PM && hM(zM);
+      if (!PM) {
+        const MM = (0, QM.isMobile)() ? "screen recording" : "OBS";
+        return (0, JM.jsxs)("div", {
           className: "PromptPopupNotification ReplayVideoExportOptionsPopup",
-          children: [(0, BQ.jsx)("div", {
+          children: [(0, JM.jsx)("div", {
             className: "PromptPopupNotificationTitle SmallTextBold",
             children: "Can't export video"
-          }), (0, BQ.jsx)("div", {
+          }), (0, JM.jsx)("div", {
             className: "PromptPopupNotificationSubtitle SmallTextLight",
-            children: `Your device does not support exporting. Try recording with an external software like ${QQ}.`
-          }), (0, BQ.jsx)("div", {
+            children: `Your device does not support exporting. Try recording with an external software like ${MM}.`
+          }), (0, JM.jsx)("div", {
             className: "PromptPopupNotificationBody",
-            children: (0, BQ.jsx)(FQ.P, {
+            children: (0, JM.jsx)(nM.J, {
               className: "PromptPopupNotificationBodyButton",
               onClick: () => {
-                qQ.options = null, zQ()
+                SM.options = null, aM()
               },
               children: "Close"
             })
           })]
         })
       }
-      const GQ = WQ ? "This will only play the range you've set.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes." : "This will play the whole recording from the start.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes.",
-        UQ = [{
+      const UM = rM ? "This will only play the range you've set.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes." : "This will play the whole recording from the start.\nYou won't be able to cancel once it begins.\n\nDon't touch the mouse or keyboard until it finishes.",
+        GM = [{
           id: "withoutUi",
           label: "Without UI",
           description: "Usually cleaner and sharper.",
-          selected: !rQ,
+          selected: !mM,
           disabled: !1,
           disabledReason: null,
           onSelect: () => {
-            IQ(!1)
+            HM(!1)
           }
         }, {
           id: "withUi",
           label: "With UI",
           description: "Includes HUD elements. May look worse on some devices.",
-          selected: rQ,
-          disabled: !XQ,
-          disabledReason: wQ,
+          selected: mM,
+          disabled: !iM,
+          disabledReason: OM,
           onSelect: () => {
-            IQ(!0)
+            HM(!0)
           }
         }],
-        bQ = yQ.map((QQ => {
-          const WQ = jQ(QQ.id);
+        CM = dM.map((MM => {
+          const rM = hM(MM.id);
           return {
-            id: QQ.id,
-            label: QQ.label,
-            description: QQ.description,
-            selected: gQ === QQ.id,
-            disabled: !WQ,
+            id: MM.id,
+            label: MM.label,
+            description: MM.description,
+            selected: zM === MM.id,
+            disabled: !rM,
             disabledReason: "Your device doesn't support this format",
             onSelect: () => {
-              JQ(QQ.id)
+              LM(MM.id)
             }
           }
         }));
-      return (0, BQ.jsxs)("div", {
+      return (0, JM.jsxs)("div", {
         className: "PromptPopupNotification ReplayVideoExportOptionsPopup",
-        children: [(0, BQ.jsx)("div", {
+        children: [(0, JM.jsx)("div", {
           className: "PromptPopupNotificationTitle SmallTextBold",
           children: "Export video?"
-        }), (0, BQ.jsx)("div", {
+        }), (0, JM.jsx)("div", {
           className: "PromptPopupNotificationSubtitle SmallTextLight",
-          children: GQ
-        }), (0, BQ.jsxs)("div", {
+          children: UM
+        }), (0, JM.jsxs)("div", {
           className: "ReplayVideoExportOptionsSection",
-          children: [(0, BQ.jsx)("div", {
+          children: [(0, JM.jsx)("div", {
             className: "ReplayVideoExportOptionsSectionLabel SmallTextBold",
             children: "UI"
-          }), (0, BQ.jsx)(DQ, {
-            cards: UQ
+          }), (0, JM.jsx)(lM, {
+            cards: GM
           })]
-        }), (0, BQ.jsxs)("div", {
+        }), (0, JM.jsxs)("div", {
           className: "ReplayVideoExportOptionsSection",
-          children: [(0, BQ.jsx)("div", {
+          children: [(0, JM.jsx)("div", {
             className: "ReplayVideoExportOptionsSectionLabel SmallTextBold",
             children: "Format"
-          }), (0, BQ.jsx)(DQ, {
-            cards: bQ
+          }), (0, JM.jsx)(lM, {
+            cards: CM
           })]
-        }), (0, BQ.jsxs)("div", {
+        }), (0, JM.jsxs)("div", {
           className: "PromptPopupNotificationBody",
-          children: [(0, BQ.jsx)(FQ.s, {
+          children: [(0, JM.jsx)(nM.p, {
             className: "PromptPopupNotificationBodyButton PromptPopupNotificationBodyPrimaryButton",
-            disabled: !pQ,
+            disabled: !EM,
             onClick: () => {
-              qQ.options = {
-                format: gQ,
-                includeUi: XQ && rQ
-              }, zQ()
+              SM.options = {
+                format: zM,
+                includeUi: iM && mM
+              }, aM()
             },
             children: "Export"
-          }), (0, BQ.jsx)(FQ.P, {
+          }), (0, JM.jsx)(nM.J, {
             className: "PromptPopupNotificationBodyButton",
             onClick: () => {
-              qQ.options = null, zQ()
+              SM.options = null, aM()
             },
             children: "Cancel"
           })]
         })]
       })
     }));
-    var GQ = XQ(5212),
-      UQ = XQ(37269),
-      bQ = XQ(37275);
-    let vQ = null;
+    var UM = iM(5265),
+      GM = iM(37926),
+      CM = iM(37935);
+    let eM = null;
 
-    function dQ() {
+    function bM() {
       return function() {
-        const QQ = (0, bQ.d)();
+        const MM = (0, CM.c)();
         for (const {
-            group: WQ,
-            dataAttr: XQ
+            group: rM,
+            dataAttr: iM
           }
-          of UQ.e)
-          if (XQ && QQ[WQ]) return !0;
+          of GM.c)
+          if (iM && MM[rM]) return !0;
         return !1
       }() ? function() {
-        var QQ;
-        return "function" === typeof(null === (QQ = navigator.mediaDevices) || void 0 === QQ ? void 0 : QQ.getDisplayMedia)
+        var MM;
+        return "function" === typeof(null === (MM = navigator.mediaDevices) || void 0 === MM ? void 0 : MM.getDisplayMedia)
       }() ? {
         canIncludeUi: !0,
         includeUiDisabledReason: null
@@ -497,344 +497,344 @@ export const modules = {
         includeUiDisabledReason: "No UI to include"
       }
     }
-    async function HQ(QQ, WQ, XQ) {
-      return QQ ? async function() {
-        const QQ = await navigator.mediaDevices.getDisplayMedia({
+    async function wM(MM, rM, iM) {
+      return MM ? async function() {
+        const MM = await navigator.mediaDevices.getDisplayMedia({
           video: !0,
           audio: !1,
           preferCurrentTab: !0,
           selfBrowserSurface: "include"
         });
-        for (const WQ of QQ.getAudioTracks()) WQ.stop(), QQ.removeTrack(WQ);
-        return QQ
-      }(): WQ().captureStream(Math.max(1, Math.round(XQ)))
+        for (const rM of MM.getAudioTracks()) rM.stop(), MM.removeTrack(rM);
+        return MM
+      }(): rM().captureStream(Math.max(1, Math.round(iM)))
     }
-    var aQ = XQ(39354);
-    let lQ = !1;
+    var tM = iM(40118);
+    let gM = !1;
 
-    function hQ(QQ) {
-      QQ.holdInput(!1), (0, aQ.g)(!1)
+    function uM(MM) {
+      MM.holdInput(!1), (0, tM.h)(!1)
     }
-    async function iQ(QQ) {
-      var WQ, XQ;
-      if ((0, aQ.d)() || lQ) return;
-      const TQ = QQ();
-      if (!TQ) return;
-      lQ = !0;
-      let zQ = null;
-      const sQ = TQ.playbackMarkInTick,
+    async function RM(MM) {
+      var rM, iM;
+      if ((0, tM.d)() || gM) return;
+      const jM = MM();
+      if (!jM) return;
+      gM = !0;
+      let aM = null;
+      const PM = jM.playbackMarkInTick,
         {
-          canIncludeUi: FQ,
-          includeUiDisabledReason: PQ
-        } = dQ();
+          canIncludeUi: nM,
+          includeUiDisabledReason: QM
+        } = bM();
       try {
-        zQ = await async function(QQ) {
+        aM = await async function(MM) {
           let {
-            hasPlaybackMark: WQ,
-            canIncludeUi: XQ,
-            includeUiDisabledReason: wQ
-          } = QQ;
-          const TQ = {
+            hasPlaybackMark: rM,
+            canIncludeUi: iM,
+            includeUiDisabledReason: OM
+          } = MM;
+          const jM = {
               options: null
             },
-            zQ = qQ.NotificationProvider.showCustomPopup({
-              body: QQ => (0, BQ.jsx)(pQ, {
-                hasPlaybackMark: WQ,
-                canIncludeUi: XQ,
-                includeUiDisabledReason: wQ,
-                selectionRef: TQ,
-                closePopup: QQ
+            aM = SM.NotificationProvider.showCustomPopup({
+              body: MM => (0, JM.jsx)(EM, {
+                hasPlaybackMark: rM,
+                canIncludeUi: iM,
+                includeUiDisabledReason: OM,
+                selectionRef: jM,
+                closePopup: MM
               }),
               disableExitButton: !0,
               disablePressBackgroundToClose: !0,
               unlockPointerKey: "replayVideoExportOptions"
             });
-          return "notificationTornDown" === await zQ.getResult() ? null : TQ.options
+          return "notificationTornDown" === await aM.getResult() ? null : jM.options
         }({
-          hasPlaybackMark: null !== sQ,
-          canIncludeUi: FQ,
-          includeUiDisabledReason: PQ
+          hasPlaybackMark: null !== PM,
+          canIncludeUi: nM,
+          includeUiDisabledReason: QM
         })
       } finally {
-        lQ = !1
+        gM = !1
       }
-      if (!zQ) return;
-      const gQ = null !== (WQ = null === (XQ = TQ.startFailure) || void 0 === XQ ? void 0 : XQ.call(TQ)) && void 0 !== WQ ? WQ : null;
-      if (null !== gQ) return void qQ.NotificationProvider.showAlertPopup({
+      if (!aM) return;
+      const zM = null !== (rM = null === (iM = jM.startFailure) || void 0 === iM ? void 0 : iM.call(jM)) && void 0 !== rM ? rM : null;
+      if (null !== zM) return void SM.NotificationProvider.showAlertPopup({
         title: "Video export failed",
-        subtitle: gQ
+        subtitle: zM
       });
-      if (! function(QQ) {
-          return !(0, aQ.d)() && ((0, aQ.g)(!0), QQ.holdInput(!0), !0)
-        }(TQ)) return;
-      let JQ = null;
+      if (! function(MM) {
+          return !(0, tM.d)() && ((0, tM.h)(!0), MM.holdInput(!0), !0)
+        }(jM)) return;
+      let LM = null;
       try {
-        JQ = await HQ(zQ.includeUi, (() => TQ.canvas()), TQ.qE)
-      } catch (cQ) {
-        return console.error("Failed to create video stream for export", cQ), hQ(TQ), void qQ.NotificationProvider.showAlertPopup({
+        LM = await wM(aM.includeUi, (() => jM.canvas()), jM.zk)
+      } catch (pM) {
+        return console.error("Failed to create video stream for export", pM), uM(jM), void SM.NotificationProvider.showAlertPopup({
           title: "Video export failed",
-          subtitle: cQ instanceof Error ? cQ.message : "Could not start capture."
+          subtitle: pM instanceof Error ? pM.message : "Could not start capture."
         })
       }
-      let jQ = null;
-      const yQ = [];
-      let VQ = null,
-        DQ = null;
+      let hM = null;
+      const dM = [];
+      let yM = null,
+        lM = null;
       try {
-        var UQ, bQ, iQ;
-        jQ = TQ.playbackSpeed(), TQ.closeViewer(), TQ.setPlaybackSpeed(1), TQ.pause(), TQ.seekToTick(null !== sQ && void 0 !== sQ ? sQ : 0);
-        const QQ = await async function() {
-          const QQ = GQ.Howler.masterGain;
-          if (!GQ.Howler.ctx || !QQ) return null;
-          await GQ.Howler.ctx.resume();
-          const WQ = GQ.Howler.ctx.createMediaStreamDestination();
-          QQ.connect(WQ), vQ = WQ;
-          const [XQ] = WQ.stream.getAudioTracks();
-          return null !== XQ && void 0 !== XQ ? XQ : null
+        var GM, CM, RM;
+        hM = jM.playbackSpeed(), jM.closeViewer(), jM.setPlaybackSpeed(1), jM.pause(), jM.seekToTick(null !== PM && void 0 !== PM ? PM : 0);
+        const MM = await async function() {
+          const MM = UM.Howler.masterGain;
+          if (!UM.Howler.ctx || !MM) return null;
+          await UM.Howler.ctx.resume();
+          const rM = UM.Howler.ctx.createMediaStreamDestination();
+          MM.connect(rM), eM = rM;
+          const [iM] = rM.stream.getAudioTracks();
+          return null !== iM && void 0 !== iM ? iM : null
         }();
-        DQ = new MediaStream;
-        for (const wQ of JQ.getVideoTracks()) DQ.addTrack(wQ);
-        QQ && DQ.addTrack(QQ);
-        const WQ = function(QQ) {
-          const WQ = IQ(rQ(QQ));
-          if (!WQ) throw new Error(`No MediaRecorder mime type available for ${QQ}`);
-          return WQ
-        }(zQ.format);
-        VQ = new MediaRecorder(DQ, {
-          mimeType: WQ,
+        lM = new MediaStream;
+        for (const OM of LM.getVideoTracks()) lM.addTrack(OM);
+        MM && lM.addTrack(MM);
+        const rM = function(MM) {
+          const rM = HM(mM(MM));
+          if (!rM) throw new Error(`No MediaRecorder mime type available for ${MM}`);
+          return rM
+        }(aM.format);
+        yM = new MediaRecorder(lM, {
+          mimeType: rM,
           videoBitsPerSecond: 8e6
-        }), VQ.ondataavailable = QQ => {
-          QQ.data.size > 0 && yQ.push(QQ.data)
+        }), yM.ondataavailable = MM => {
+          MM.data.size > 0 && dM.push(MM.data)
         };
-        const XQ = new Promise((QQ => {
-          VQ.onstop = () => {
-            QQ()
+        const iM = new Promise((MM => {
+          yM.onstop = () => {
+            MM()
           }
         }));
-        await (null === (UQ = TQ.seekSettled) || void 0 === UQ ? void 0 : UQ.call(TQ));
-        const [FQ] = JQ.getVideoTracks();
-        VQ.start(250), TQ.play();
-        const PQ = await
-        function(QQ, WQ, XQ) {
-          return new Promise((wQ => {
-            let qQ = !1;
-            const TQ = QQ => {
-                qQ || (qQ = !0, sQ(), WQ.removeEventListener("ended", zQ), wQ(QQ))
+        await (null === (GM = jM.seekSettled) || void 0 === GM ? void 0 : GM.call(jM));
+        const [nM] = LM.getVideoTracks();
+        yM.start(250), jM.play();
+        const QM = await
+        function(MM, rM, iM) {
+          return new Promise((OM => {
+            let SM = !1;
+            const jM = MM => {
+                SM || (SM = !0, PM(), rM.removeEventListener("ended", aM), OM(MM))
               },
-              zQ = () => {
-                TQ("captureLost")
+              aM = () => {
+                jM("captureLost")
               },
-              sQ = QQ.watchPlayback((() => {
-                QQ.isPlaying() || TQ("completed")
+              PM = MM.watchPlayback((() => {
+                MM.isPlaying() || jM("completed")
               }));
-            WQ.addEventListener("ended", zQ), XQ.onerror = () => {
-              TQ("recorderError")
-            }, "ended" !== WQ.readyState ? QQ.isPlaying() || TQ("completed") : TQ("captureLost")
+            rM.addEventListener("ended", aM), iM.onerror = () => {
+              jM("recorderError")
+            }, "ended" !== rM.readyState ? MM.isPlaying() || jM("completed") : jM("captureLost")
           }))
-        }(TQ, FQ, VQ);
-        if (TQ.pause(), "inactive" !== VQ.state && VQ.stop(), await XQ, "captureLost" === PQ) return void qQ.NotificationProvider.showAlertPopup({
+        }(jM, nM, yM);
+        if (jM.pause(), "inactive" !== yM.state && yM.stop(), await iM, "captureLost" === QM) return void SM.NotificationProvider.showAlertPopup({
           title: "Video export stopped",
           subtitle: "Screen sharing ended before the replay finished. Nothing was saved."
         });
-        if ("recorderError" === PQ) return void qQ.NotificationProvider.showAlertPopup({
+        if ("recorderError" === QM) return void SM.NotificationProvider.showAlertPopup({
           title: "Video export failed",
           subtitle: "The recorder encountered an error. Nothing was saved."
         });
-        const gQ = null !== (bQ = null === (iQ = TQ.playbackFailure) || void 0 === iQ ? void 0 : iQ.call(TQ)) && void 0 !== bQ ? bQ : null;
-        if (null !== gQ) return void qQ.NotificationProvider.showAlertPopup({
+        const zM = null !== (CM = null === (RM = jM.playbackFailure) || void 0 === RM ? void 0 : RM.call(jM)) && void 0 !== CM ? CM : null;
+        if (null !== zM) return void SM.NotificationProvider.showAlertPopup({
           title: "Video export failed",
-          subtitle: `${gQ} Nothing was saved.`
+          subtitle: `${zM} Nothing was saved.`
         });
-        const BQ = new Blob(yQ, {
-          type: WQ
+        const JM = new Blob(dM, {
+          type: rM
         });
-        BQ.size > 0 ? (0, wQ.e)(BQ, function(QQ, WQ) {
-          const XQ = function(QQ) {
-            return "mp4" === QQ ? "mp4" : "webm"
-          }(WQ);
-          if (QQ) return `${QQ.replace(/\.bloxdreplay$/i,"")}.${XQ}`;
-          return `bloxd-replay-${Date.now()}.${XQ}`
-        }(TQ.fileName(), zQ.format)) : qQ.NotificationProvider.showAlertPopup({
+        JM.size > 0 ? (0, OM.c)(JM, function(MM, rM) {
+          const iM = function(MM) {
+            return "mp4" === MM ? "mp4" : "webm"
+          }(rM);
+          if (MM) return `${MM.replace(/\.bloxdreplay$/i,"")}.${iM}`;
+          return `bloxd-replay-${Date.now()}.${iM}`
+        }(jM.fileName(), aM.format)) : SM.NotificationProvider.showAlertPopup({
           title: "Video export failed",
           subtitle: "No video data was captured. Try again."
         })
-      } catch (cQ) {
-        console.error("Replay video export failed", cQ), qQ.NotificationProvider.showAlertPopup({
+      } catch (pM) {
+        console.error("Replay video export failed", pM), SM.NotificationProvider.showAlertPopup({
           title: "Video export failed",
-          subtitle: cQ instanceof Error ? cQ.message : "Something went wrong while exporting."
+          subtitle: pM instanceof Error ? pM.message : "Something went wrong while exporting."
         })
       } finally {
-        if (VQ && "inactive" !== VQ.state) try {
-          VQ.stop()
-        } catch (cQ) {
-          console.error("Failed to stop MediaRecorder", cQ)
+        if (yM && "inactive" !== yM.state) try {
+          yM.stop()
+        } catch (pM) {
+          console.error("Failed to stop MediaRecorder", pM)
         }! function() {
-          const QQ = GQ.Howler.masterGain;
-          if (vQ && QQ) {
+          const MM = UM.Howler.masterGain;
+          if (eM && MM) {
             try {
-              QQ.disconnect(vQ)
-            } catch (cQ) {
-              console.error("Failed to disconnect Howler export tee", cQ)
+              MM.disconnect(eM)
+            } catch (pM) {
+              console.error("Failed to disconnect Howler export tee", pM)
             }
-            vQ = null
-          } else vQ = null
+            eM = null
+          } else eM = null
         }();
-        for (const QQ of JQ.getTracks()) QQ.stop();
-        if (DQ)
-          for (const QQ of DQ.getTracks()) QQ.stop();
-        null !== jQ && TQ.setPlaybackSpeed(jQ), TQ.pause(), hQ(TQ), TQ.reopenViewer()
+        for (const MM of LM.getTracks()) MM.stop();
+        if (lM)
+          for (const MM of lM.getTracks()) MM.stop();
+        null !== hM && jM.setPlaybackSpeed(hM), jM.pause(), uM(jM), jM.reopenViewer()
       }
     }
   },
-  5212: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      Howl: () => qQ.Howl,
-      Howler: () => qQ.Howler,
-      musicOutput: () => yQ,
-      readyAudioContext: () => VQ
+  5265: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      Howl: () => SM.Howl,
+      Howler: () => SM.Howler,
+      musicOutput: () => dM,
+      readyAudioContext: () => yM
     });
-    var wQ, qQ = XQ(5216),
-      TQ = XQ(3699),
-      zQ = XQ(4969);
-    const sQ = qQ.Howler;
+    var OM, SM = iM(5269),
+      jM = iM(3839),
+      aM = iM(5026);
+    const PM = SM.Howler;
 
-    function FQ() {
-      var QQ, WQ;
-      if (sQ.ctx || !sQ.usingWebAudio || "undefined" === typeof AudioContext || !(0, zQ.f)()) return;
-      const XQ = navigator.audioSession;
-      let wQ;
-      "auto" === (null === XQ || void 0 === XQ ? void 0 : XQ.type) && (XQ.type = "ambient");
+    function nM() {
+      var MM, rM;
+      if (PM.ctx || !PM.usingWebAudio || "undefined" === typeof AudioContext || !(0, aM.k)()) return;
+      const iM = navigator.audioSession;
+      let OM;
+      "auto" === (null === iM || void 0 === iM ? void 0 : iM.type) && (iM.type = "ambient");
       try {
-        wQ = new AudioContext({
+        OM = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const qQ = wQ.createGain();
-      qQ.gain.setValueAtTime(sQ._muted ? 0 : null !== (QQ = sQ._volume) && void 0 !== QQ ? QQ : 1, wQ.currentTime), qQ.connect(wQ.destination), sQ.ctx = wQ, sQ.masterGain = qQ, null === (WQ = sQ._setup) || void 0 === WQ || WQ.call(sQ)
+      const SM = OM.createGain();
+      SM.gain.setValueAtTime(PM._muted ? 0 : null !== (MM = PM._volume) && void 0 !== MM ? MM : 1, OM.currentTime), SM.connect(OM.destination), PM.ctx = OM, PM.masterGain = SM, null === (rM = PM._setup) || void 0 === rM || rM.call(PM)
     }
-    sQ._mobileUnloaded = !0;
-    const PQ = sQ.volume.bind(qQ.Howler);
-    sQ.volume = function() {
-      return FQ(), PQ(...arguments)
+    PM._mobileUnloaded = !0;
+    const QM = PM.volume.bind(SM.Howler);
+    PM.volume = function() {
+      return nM(), QM(...arguments)
     };
-    const gQ = sQ.mute.bind(qQ.Howler);
-    sQ.mute = QQ => (FQ(), gQ(QQ));
-    const JQ = qQ.Howl.prototype,
-      rQ = JQ.init;
+    const zM = PM.mute.bind(SM.Howler);
+    PM.mute = MM => (nM(), zM(MM));
+    const LM = SM.Howl.prototype,
+      mM = LM.init;
 
-    function IQ() {
-      for (; sQ._html5AudioPool.length < sQ.html5PoolSize;) {
-        const QQ = new Audio;
-        QQ._unlocked = !0, sQ._releaseHtml5Audio(QQ)
+    function HM() {
+      for (; PM._html5AudioPool.length < PM.html5PoolSize;) {
+        const MM = new Audio;
+        MM._unlocked = !0, PM._releaseHtml5Audio(MM)
       }
-      for (const WQ of sQ._howls)
-        if (!WQ._webAudio)
-          for (const XQ of WQ._getSoundIds()) {
-            var QQ;
-            const wQ = null === (QQ = WQ._soundById(XQ)) || void 0 === QQ ? void 0 : QQ._node;
-            wQ && !wQ._unlocked && (wQ._unlocked = !0, wQ.load())
+      for (const rM of PM._howls)
+        if (!rM._webAudio)
+          for (const iM of rM._getSoundIds()) {
+            var MM;
+            const OM = null === (MM = rM._soundById(iM)) || void 0 === MM ? void 0 : MM._node;
+            OM && !OM._unlocked && (OM._unlocked = !0, OM.load())
           }
     }
-    JQ.init = function(QQ) {
-      return FQ(), rQ.call(this, QQ)
-    }, (0, zQ.f)() && (sQ._unlockAudio = () => {
-      const QQ = sQ.ctx;
-      if (sQ._audioUnlocked || !QQ) return;
-      sQ.autoUnlock = !1;
-      const WQ = QQ.createBuffer(1, 1, 22050);
-      sQ._scratchBuffer = WQ;
-      const XQ = new AbortController;
-      let wQ = "afterPaint";
-      const qQ = () => {
-          var wQ;
-          if (sQ._audioUnlocked) return;
-          null === (wQ = sQ._autoResume) || void 0 === wQ || wQ.call(sQ);
-          const qQ = QQ.createBufferSource();
-          qQ.buffer = WQ, qQ.connect(QQ.destination), qQ.start(0), QQ.resume().catch((() => {})), qQ.onended = () => {
-            qQ.disconnect(0), sQ._audioUnlocked = !0, XQ.abort();
-            for (const QQ of sQ._howls) QQ._emit("unlock")
+    LM.init = function(MM) {
+      return nM(), mM.call(this, MM)
+    }, (0, aM.k)() && (PM._unlockAudio = () => {
+      const MM = PM.ctx;
+      if (PM._audioUnlocked || !MM) return;
+      PM.autoUnlock = !1;
+      const rM = MM.createBuffer(1, 1, 22050);
+      PM._scratchBuffer = rM;
+      const iM = new AbortController;
+      let OM = "afterPaint";
+      const SM = () => {
+          var OM;
+          if (PM._audioUnlocked) return;
+          null === (OM = PM._autoResume) || void 0 === OM || OM.call(PM);
+          const SM = MM.createBufferSource();
+          SM.buffer = rM, SM.connect(MM.destination), SM.start(0), MM.resume().catch((() => {})), SM.onended = () => {
+            SM.disconnect(0), PM._audioUnlocked = !0, iM.abort();
+            for (const MM of PM._howls) MM._emit("unlock")
           }
         },
-        FQ = () => {
-          IQ(), qQ()
+        nM = () => {
+          HM(), SM()
         },
-        PQ = WQ => {
-          if (IQ(), "inTap" === wQ) {
-            if ("running" === QQ.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), qQ()
-          } else "afterPaint" === wQ && (wQ = "queued", (0, TQ.c)(WQ.timeStamp, (() => {
-            wQ = "inTap", qQ()
+        QM = rM => {
+          if (HM(), "inTap" === OM) {
+            if ("running" === MM.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), SM()
+          } else "afterPaint" === OM && (OM = "queued", (0, jM.d)(rM.timeStamp, (() => {
+            OM = "inTap", SM()
           })))
         };
-      for (const TQ of ["touchstart", "touchend"]) document.addEventListener(TQ, FQ, {
+      for (const jM of ["touchstart", "touchend"]) document.addEventListener(jM, nM, {
         capture: !0,
-        signal: XQ.signal
+        signal: iM.signal
       });
-      for (const TQ of zQ.d) document.addEventListener(TQ, PQ, {
+      for (const jM of aM.e) document.addEventListener(jM, QM, {
         capture: !0,
-        signal: XQ.signal
+        signal: iM.signal
       })
     });
-    let jQ = 0;
-    const BQ = null === (wQ = sQ._autoSuspend) || void 0 === wQ ? void 0 : wQ.bind(qQ.Howler);
+    let hM = 0;
+    const JM = null === (OM = PM._autoSuspend) || void 0 === OM ? void 0 : OM.bind(SM.Howler);
 
-    function yQ() {
-      VQ();
+    function dM() {
+      yM();
       const {
-        ctx: QQ,
-        masterGain: WQ
-      } = sQ;
-      return QQ && WQ ? {
-        ctx: QQ,
-        destination: WQ,
-        holdAwake: QQ => {
-          var WQ, XQ;
-          (jQ += QQ ? 1 : -1, QQ) ? null === (WQ = sQ._autoResume) || void 0 === WQ || WQ.call(sQ): null === (XQ = sQ._autoSuspend) || void 0 === XQ || XQ.call(sQ)
+        ctx: MM,
+        masterGain: rM
+      } = PM;
+      return MM && rM ? {
+        ctx: MM,
+        destination: rM,
+        holdAwake: MM => {
+          var rM, iM;
+          (hM += MM ? 1 : -1, MM) ? null === (rM = PM._autoResume) || void 0 === rM || rM.call(PM): null === (iM = PM._autoSuspend) || void 0 === iM || iM.call(PM)
         },
         wake: () => {
-          var WQ;
-          "running" !== QQ.state && (null === (WQ = sQ._autoResume) || void 0 === WQ || WQ.call(sQ), QQ.resume().catch((() => {})))
+          var rM;
+          "running" !== MM.state && (null === (rM = PM._autoResume) || void 0 === rM || rM.call(PM), MM.resume().catch((() => {})))
         }
       } : null
     }
 
-    function VQ() {
-      var QQ;
-      (sQ.volume(), sQ.ctx && sQ.autoUnlock) && (null === (QQ = sQ._unlockAudio) || void 0 === QQ || QQ.call(sQ))
+    function yM() {
+      var MM;
+      (PM.volume(), PM.ctx && PM.autoUnlock) && (null === (MM = PM._unlockAudio) || void 0 === MM || MM.call(PM))
     }
-    BQ && (sQ._autoSuspend = () => jQ > 0 ? qQ.Howler : BQ())
+    JM && (PM._autoSuspend = () => hM > 0 ? SM.Howler : JM())
   },
-  42867: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => wQ,
-      i: () => qQ
+  53658: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => OM,
+      e: () => SM
     });
-    const wQ = ["recording", "freecam", "keyframe"];
+    const OM = ["recording", "freecam", "keyframe"];
 
-    function qQ() {
-      const QQ = crypto.getRandomValues(new Uint32Array(2));
-      return BigInt(QQ[1]) << 32n | BigInt(QQ[0])
+    function SM() {
+      const MM = crypto.getRandomValues(new Uint32Array(2));
+      return BigInt(MM[1]) << 32n | BigInt(MM[0])
     }
   },
-  60861: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      HOLD_TIMEOUT_MS: () => PQ,
-      ReplayViewer: () => JQ
+  63239: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      HOLD_TIMEOUT_MS: () => QM,
+      ReplayViewer: () => LM
     });
-    var wQ = XQ(37221),
-      qQ = XQ(37260),
-      TQ = XQ(37254),
-      zQ = XQ(37275),
-      sQ = XQ(5134),
-      FQ = XQ(42867);
-    const PQ = 1e4,
-      gQ = new Set(["xI"]);
-    class JQ {
-      constructor(QQ) {
-        var WQ;
-        this.deps = QQ, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (WQ = QQ.now) && void 0 !== WQ ? WQ : () => performance.now()
+    var OM = iM(37872),
+      SM = iM(37913),
+      jM = iM(37905),
+      aM = iM(37935),
+      PM = iM(5198),
+      nM = iM(53658);
+    const QM = 1e4,
+      zM = new Set(["nh"]);
+    class LM {
+      constructor(MM) {
+        var rM;
+        this.deps = MM, this.id = 0, this.fileName = null, this.fileHandle = null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.playback = !1, this.opening = !1, this.loadingOpens = 0, this.epoch = 0, this.holds = new Map, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0, this.pendingSave = null, this.pendingOpen = null, this.saveRefused = !1, this.edits = 0, this.editsAtSave = null, this.lastView = null, this.now = void 0, this.now = null !== (rM = MM.now) && void 0 !== rM ? rM : () => performance.now()
       }
       get inPlayback() {
         return this.playback
@@ -843,123 +843,123 @@ export const modules = {
         return this.lastView
       }
       get isOpen() {
-        return null !== this.lastView && this.lastView.state !== sQ.td.None
+        return null !== this.lastView && this.lastView.state !== PM.hd.None
       }
       get keyframes() {
         return this.deps.client.keyframes()
       }
-      get Ds() {
+      get sQ() {
         return [...this.holds.keys()]
       }
       get savePending() {
         return null !== this.pendingSave
       }
       get saveRefusal() {
-        return this.cropping ? wQ.b.cropBusy.text : null
+        return this.cropping ? OM.c.cropBusy.text : null
       }
       get cropping() {
         return this.cropAsked || this.cropRunning
       }
-      async open(QQ, WQ) {
-        var XQ, TQ, zQ, FQ;
+      async open(MM, rM) {
+        var iM, jM, aM, nM;
         const {
-          client: PQ
+          client: QM
         } = this.deps;
         if (!this.playback) {
-          if (!PQ.setPlayback(!0)) throw new Error(wQ.b.cantOpen.text);
+          if (!QM.setPlayback(!0)) throw new Error(OM.c.cantOpen.text);
           this.playback = !0
         }
         this.hold("opening"), this.loadingOpens++;
-        const gQ = this.epoch;
-        let JQ;
+        const zM = this.epoch;
+        let LM;
         try {
-          JQ = await PQ.open(QQ, (() => (0, qQ.e)(QQ, WQ)))
+          LM = await QM.open(MM, (() => (0, SM.d)(MM, rM)))
         } finally {
           this.loadingOpens--
         }
-        if (gQ !== this.epoch && "reloading" !== JQ) throw new Error(wQ.b.coreStopped.text);
-        if ("opening" !== JQ) {
+        if (zM !== this.epoch && "reloading" !== LM) throw new Error(OM.c.coreStopped.text);
+        if ("opening" !== LM) {
           this.opening || 0 !== this.loadingOpens || this.release("opening");
-          const QQ = function(QQ) {
-            switch (QQ) {
+          const MM = function(MM) {
+            switch (MM) {
               case "reloading":
                 return null;
               case "stopped":
-              case sQ.id.ModuleTrap:
-                return wQ.b.coreStopped;
-              case sQ.id.ModuleLoad:
-                return wQ.b.viewerLoadFailed;
-              case sQ.id.TooLarge:
-                return wQ.b.cantOpen
+              case PM.Zc.ModuleTrap:
+                return OM.c.coreStopped;
+              case PM.Zc.ModuleLoad:
+                return OM.c.viewerLoadFailed;
+              case PM.Zc.TooLarge:
+                return OM.c.cantOpen
             }
-          }(JQ);
-          if (null === QQ) return;
-          throw new Error(QQ.text)
+          }(LM);
+          if (null === MM) return;
+          throw new Error(MM.text)
         }
-        return this.rejectSave(new Error(wQ.b.saveClosed.text)), this.fileName = null !== (XQ = null !== (TQ = WQ.fileName) && void 0 !== TQ ? TQ : null === (zQ = WQ.fileHandle) || void 0 === zQ ? void 0 : zQ.name) && void 0 !== XQ ? XQ : null, this.fileHandle = null !== (FQ = WQ.fileHandle) && void 0 !== FQ ? FQ : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((QQ, WQ) => {
+        return this.rejectSave(new Error(OM.c.saveClosed.text)), this.fileName = null !== (iM = null !== (jM = rM.fileName) && void 0 !== jM ? jM : null === (aM = rM.fileHandle) || void 0 === aM ? void 0 : aM.name) && void 0 !== iM ? iM : null, this.fileHandle = null !== (nM = rM.fileHandle) && void 0 !== nM ? nM : null, this.unsavedChanges = !1, this.suggestSaveAs = !1, this.opening = !0, this.cropAsked = !1, this.cropRunning = !1, this.seekAsked = !1, this.hold("opening"), this.id++, this.deps.onChange(), this.settleOpen(null), new Promise(((MM, rM) => {
           this.pendingOpen = {
-            resolve: QQ,
-            reject: WQ
+            resolve: MM,
+            reject: rM
           }
         }))
       }
       play() {
-        this.holds.has("xI") || this.deps.client.play()
+        this.holds.has("nh") || this.deps.client.play()
       }
       pause() {
         this.deps.client.pause()
       }
       holdForShaderPackFailure() {
-        this.isOpen && this.pause(), this.hold("xI")
+        this.isOpen && this.pause(), this.hold("nh")
       }
-      seek(QQ) {
-        let WQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const XQ = this.lastView;
-        null !== XQ && (WQ || QQ < XQ.fJ) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(QQ, WQ)
+      seek(MM) {
+        let rM = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const iM = this.lastView;
+        null !== iM && (rM || MM < iM.bL) && (this.seekAsked = !0, this.hold("seek")), this.deps.client.seek(MM, rM)
       }
-      setSpeed(QQ) {
-        this.deps.client.setSpeed(QQ)
+      setSpeed(MM) {
+        this.deps.client.setSpeed(MM)
       }
-      setCameraMode(QQ) {
-        this.deps.client.setCameraMode(QQ)
+      setCameraMode(MM) {
+        this.deps.client.setCameraMode(MM)
       }
       cycleCameraMode() {
-        const QQ = this.lastView;
-        null !== QQ && QQ.state !== sQ.td.None && this.setCameraMode(FQ.e[(FQ.e.indexOf(QQ.cameraMode) + 1) % FQ.e.length])
+        const MM = this.lastView;
+        null !== MM && MM.state !== PM.hd.None && this.setCameraMode(nM.c[(nM.c.indexOf(MM.cameraMode) + 1) % nM.c.length])
       }
       addKeyframe() {
         this.edited(this.deps.client.addKeyframe())
       }
-      setKeyframe(QQ) {
-        this.edited(this.deps.client.setKeyframe(QQ))
+      setKeyframe(MM) {
+        this.edited(this.deps.client.setKeyframe(MM))
       }
-      moveKeyframe(QQ, WQ) {
-        this.edited(this.deps.client.moveKeyframe(QQ, WQ))
+      moveKeyframe(MM, rM) {
+        this.edited(this.deps.client.moveKeyframe(MM, rM))
       }
-      deleteKeyframes(QQ, WQ) {
-        this.edited(this.deps.client.deleteKeyframes(QQ, WQ))
+      deleteKeyframes(MM, rM) {
+        this.edited(this.deps.client.deleteKeyframes(MM, rM))
       }
-      setMark(QQ) {
-        this.edited(this.deps.client.setMark(QQ))
+      setMark(MM) {
+        this.edited(this.deps.client.setMark(MM))
       }
-      crop(QQ, WQ) {
-        return !(WQ <= QQ) && (null !== this.pendingSave ? (this.deps.notify(wQ.b.saveBusy), !1) : !!this.deps.client.crop(QQ, WQ) && (this.cropAsked = !0, this.hold("crop"), !0))
+      crop(MM, rM) {
+        return !(rM <= MM) && (null !== this.pendingSave ? (this.deps.notify(OM.c.saveBusy), !1) : !!this.deps.client.crop(MM, rM) && (this.cropAsked = !0, this.hold("crop"), !0))
       }
       save() {
-        return null !== this.pendingSave ? Promise.reject(new Error(wQ.b.saveBusy.text)) : new Promise(((QQ, WQ) => {
-          const XQ = {
-            resolve: QQ,
-            reject: WQ
+        return null !== this.pendingSave ? Promise.reject(new Error(OM.c.saveBusy.text)) : new Promise(((MM, rM) => {
+          const iM = {
+            resolve: MM,
+            reject: rM
           };
-          this.pendingSave = XQ, this.editsAtSave = this.edits, this.deps.client.save((0, FQ.i)()).then((QQ => {
-            this.pendingSave === XQ && this.saveStarted(QQ)
-          }), (QQ => {
-            this.pendingSave === XQ && this.rejectSave(QQ instanceof Error ? QQ : new Error(String(QQ)))
+          this.pendingSave = iM, this.editsAtSave = this.edits, this.deps.client.save((0, nM.e)()).then((MM => {
+            this.pendingSave === iM && this.saveStarted(MM)
+          }), (MM => {
+            this.pendingSave === iM && this.rejectSave(MM instanceof Error ? MM : new Error(String(MM)))
           }))
         }))
       }
-      saveStarted(QQ) {
-        switch (QQ) {
+      saveStarted(MM) {
+        switch (MM) {
           case "sealing":
             return;
           case "busy":
@@ -970,40 +970,40 @@ export const modules = {
             return void this.saveFailed(!1)
         }
       }
-      markSaved(QQ, WQ) {
-        var XQ, wQ;
-        this.fileHandle = QQ, this.fileName = null !== (XQ = null !== (wQ = null === QQ || void 0 === QQ ? void 0 : QQ.name) && void 0 !== wQ ? wQ : WQ) && void 0 !== XQ ? XQ : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
+      markSaved(MM, rM) {
+        var iM, OM;
+        this.fileHandle = MM, this.fileName = null !== (iM = null !== (OM = null === MM || void 0 === MM ? void 0 : MM.name) && void 0 !== OM ? OM : rM) && void 0 !== iM ? iM : this.fileName, this.unsavedChanges = null !== this.editsAtSave && this.edits !== this.editsAtSave, this.editsAtSave = null, this.suggestSaveAs = !1, this.deps.onChange()
       }
       end() {
-        this.epoch++, this.resetInFlight(), this.releaseAll(), this.settleOpen(new Error(wQ.b.coreStopped.text)), this.rejectSave(new Error(wQ.b.saveClosed.text)), this.lastView = null, this.deps.onChange()
+        this.epoch++, this.resetInFlight(), this.releaseAll(), this.settleOpen(new Error(OM.c.coreStopped.text)), this.rejectSave(new Error(OM.c.saveClosed.text)), this.lastView = null, this.deps.onChange()
       }
       afterFrame() {
-        var QQ, WQ, XQ;
-        const wQ = this.deps.client.view(),
-          qQ = wQ !== this.lastView;
-        this.lastView = wQ, this.opening && null !== wQ && wQ.state !== sQ.td.None && wQ.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, zQ.g)()), this.cropAsked ? (this.cropAsked = !1, null !== wQ && wQ.state === sQ.td.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== wQ && wQ.state !== sQ.td.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
-        const TQ = 0 === this.settleFrames && 0 === (null !== (QQ = null === (WQ = (XQ = this.deps).meshPending) || void 0 === WQ ? void 0 : WQ.call(XQ)) && void 0 !== QQ ? QQ : 0);
-        this.holds.has("opening") && !this.opening && 0 === this.loadingOpens && TQ && this.release("opening"), this.holds.has("seek") && TQ && this.release("seek"), this.holds.has("crop") && !this.cropRunning && TQ && this.release("crop");
-        const FQ = this.now();
-        for (const [zQ, sQ] of this.holds) !gQ.has(zQ) && FQ - sQ >= PQ && this.release(zQ);
-        this.saveRefused && !this.cropping && this.saveFailed(!1), qQ && this.deps.onChange()
+        var MM, rM, iM;
+        const OM = this.deps.client.view(),
+          SM = OM !== this.lastView;
+        this.lastView = OM, this.opening && null !== OM && OM.state !== PM.hd.None && OM.totalTicks > 0 && (this.opening = !1, this.settleFrames = 2, this.settleOpen(null), (0, aM.f)()), this.cropAsked ? (this.cropAsked = !1, null !== OM && OM.state === PM.hd.Cropping ? this.cropRunning = !0 : this.cropped()) : this.cropRunning && null !== OM && OM.state !== PM.hd.Cropping && (this.cropRunning = !1, this.cropped()), this.seekAsked && (this.seekAsked = !1, this.settleFrames = 2), this.settleFrames > 0 && this.settleFrames--;
+        const jM = 0 === this.settleFrames && 0 === (null !== (MM = null === (rM = (iM = this.deps).meshPending) || void 0 === rM ? void 0 : rM.call(iM)) && void 0 !== MM ? MM : 0);
+        this.holds.has("opening") && !this.opening && 0 === this.loadingOpens && jM && this.release("opening"), this.holds.has("seek") && jM && this.release("seek"), this.holds.has("crop") && !this.cropRunning && jM && this.release("crop");
+        const nM = this.now();
+        for (const [aM, PM] of this.holds) !zM.has(aM) && nM - PM >= QM && this.release(aM);
+        this.saveRefused && !this.cropping && this.saveFailed(!1), SM && this.deps.onChange()
       }
       cropped() {
-        (0, zQ.g)(), this.id++, this.unsavedChanges = !0, this.suggestSaveAs = null !== this.fileHandle || null !== this.fileName, this.settleFrames = 2
+        (0, aM.f)(), this.id++, this.unsavedChanges = !0, this.suggestSaveAs = null !== this.fileHandle || null !== this.fileName, this.settleFrames = 2
       }
-      onFailed(QQ) {
-        switch (QQ.reason) {
-          case sQ.id.TooLarge:
+      onFailed(MM) {
+        switch (MM.reason) {
+          case PM.Zc.TooLarge:
             break;
-          case sQ.id.Open:
-          case sQ.id.NothingStaged: {
+          case PM.Zc.Open:
+          case PM.Zc.NothingStaged: {
             this.opening = !1, this.release("opening");
-            const WQ = (0, TQ.f)(QQ.version) ? wQ.b.replayTooOld : wQ.b.cantOpen;
-            null === this.pendingOpen && this.deps.notify(WQ), this.settleOpen(new Error(WQ.text));
+            const rM = (0, jM.h)(MM.version) ? OM.c.replayTooOld : OM.c.cantOpen;
+            null === this.pendingOpen && this.deps.notify(rM), this.settleOpen(new Error(rM.text));
             break
           }
-          case sQ.id.Crop:
-            if (QQ.code === sQ.fd.Busy) {
+          case PM.Zc.Crop:
+            if (MM.code === PM.Xc.Busy) {
               this.cropBusy();
               break
             }
@@ -1011,166 +1011,166 @@ export const modules = {
               this.saveFailed(!1);
               break
             }
-            this.cropAsked = !1, this.cropRunning = !1, this.release("crop"), this.deps.notify(wQ.b.cropFailed);
+            this.cropAsked = !1, this.cropRunning = !1, this.release("crop"), this.deps.notify(OM.c.cropFailed);
             break;
-          case sQ.id.ModuleTrap:
-          case sQ.id.ModuleLoad:
-          case sQ.id.Port:
-            this.moduleEnded(QQ.reason === sQ.id.ModuleTrap ? wQ.b.coreStopped : wQ.b.cantOpen);
+          case PM.Zc.ModuleTrap:
+          case PM.Zc.ModuleLoad:
+          case PM.Zc.Port:
+            this.moduleEnded(MM.reason === PM.Zc.ModuleTrap ? OM.c.coreStopped : OM.c.cantOpen);
             break;
-          case sQ.id.NotLive:
+          case PM.Zc.NotLive:
             console.warn("[bloxd-wasm-client] the core refused a recorder command in playback");
             break;
           default:
-            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${QQ.reason})`), this.seekAsked = !1, this.release("seek")
+            console.warn(`[bloxd-wasm-client] the replay module refused a command (ReplayFailed ${MM.reason})`), this.seekAsked = !1, this.release("seek")
         }
         this.deps.onChange()
       }
-      moduleEnded(QQ) {
-        this.resetInFlight(), this.release("opening"), this.release("seek"), this.release("crop"), null === this.pendingOpen && this.deps.notify(QQ), this.settleOpen(new Error(QQ.text))
+      moduleEnded(MM) {
+        this.resetInFlight(), this.release("opening"), this.release("seek"), this.release("crop"), null === this.pendingOpen && this.deps.notify(MM), this.settleOpen(new Error(MM.text))
       }
-      saveDone(QQ) {
-        const WQ = this.pendingSave;
-        this.pendingSave = null, this.saveRefused = !1, null === WQ || void 0 === WQ || WQ.resolve(QQ)
+      saveDone(MM) {
+        const rM = this.pendingSave;
+        this.pendingSave = null, this.saveRefused = !1, null === rM || void 0 === rM || rM.resolve(MM)
       }
-      saveFailed(QQ) {
-        this.rejectSave(new Error(QQ ? wQ.b.saveBusy.text : "The replay couldn't be saved"))
+      saveFailed(MM) {
+        this.rejectSave(new Error(MM ? OM.c.saveBusy.text : "The replay couldn't be saved"))
       }
-      edited(QQ) {
-        QQ && !this.cropping && (this.edits++, this.unsavedChanges = !0, this.deps.onChange())
+      edited(MM) {
+        MM && !this.cropping && (this.edits++, this.unsavedChanges = !0, this.deps.onChange())
       }
       cropBusy() {
-        null !== this.pendingSave && this.saveRefused ? this.rejectSave(new Error(wQ.b.cropBusy.text)) : this.deps.notify(wQ.b.cropBusy)
+        null !== this.pendingSave && this.saveRefused ? this.rejectSave(new Error(OM.c.cropBusy.text)) : this.deps.notify(OM.c.cropBusy)
       }
       resetInFlight() {
         this.opening = !1, this.seekAsked = !1, this.cropAsked = !1, this.cropRunning = !1, this.settleFrames = 0
       }
-      settleOpen(QQ) {
-        const WQ = this.pendingOpen;
-        this.pendingOpen = null, null === QQ ? null === WQ || void 0 === WQ || WQ.resolve() : null === WQ || void 0 === WQ || WQ.reject(QQ)
+      settleOpen(MM) {
+        const rM = this.pendingOpen;
+        this.pendingOpen = null, null === MM ? null === rM || void 0 === rM || rM.resolve() : null === rM || void 0 === rM || rM.reject(MM)
       }
-      rejectSave(QQ) {
-        const WQ = this.pendingSave;
-        this.pendingSave = null, this.saveRefused = !1, null === WQ || void 0 === WQ || WQ.reject(QQ)
+      rejectSave(MM) {
+        const rM = this.pendingSave;
+        this.pendingSave = null, this.saveRefused = !1, null === rM || void 0 === rM || rM.reject(MM)
       }
-      hold(QQ) {
-        const WQ = 0 === this.holds.size;
-        this.holds.set(QQ, this.now()), WQ && this.deps.setHoldDraws(!0)
+      hold(MM) {
+        const rM = 0 === this.holds.size;
+        this.holds.set(MM, this.now()), rM && this.deps.setHoldDraws(!0)
       }
-      release(QQ) {
-        this.holds.delete(QQ) && 0 === this.holds.size && this.deps.setHoldDraws(!1)
+      release(MM) {
+        this.holds.delete(MM) && 0 === this.holds.size && this.deps.setHoldDraws(!1)
       }
       releaseAll() {
         this.holds.size > 0 && (this.holds.clear(), this.deps.setHoldDraws(!1))
       }
     }
   },
-  60859: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      MESH_TAIL_MS: () => PQ,
-      PLAY_START_TIMEOUT_MS: () => sQ,
-      startWasmReplayVideoExport: () => JQ
+  63231: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      MESH_TAIL_MS: () => QM,
+      PLAY_START_TIMEOUT_MS: () => PM,
+      startWasmReplayVideoExport: () => LM
     });
-    var wQ = XQ(39542),
-      qQ = XQ(60861),
-      TQ = XQ(5134),
-      zQ = XQ(2518);
-    const sQ = qQ.HOLD_TIMEOUT_MS + 5e3,
-      FQ = 50,
-      PQ = 200;
+    var OM = iM(40338),
+      SM = iM(63239),
+      jM = iM(5198),
+      aM = iM(2624);
+    const PM = SM.HOLD_TIMEOUT_MS + 5e3,
+      nM = 50,
+      QM = 200;
 
-    function gQ(QQ) {
-      var WQ;
-      return (null === (WQ = QQ.view) || void 0 === WQ ? void 0 : WQ.state) === TQ.td.Cropping || QQ.Ds.includes("crop")
+    function zM(MM) {
+      var rM;
+      return (null === (rM = MM.view) || void 0 === rM ? void 0 : rM.state) === jM.hd.Cropping || MM.sQ.includes("crop")
     }
 
-    function JQ(QQ) {
-      return (0, wQ.d)((() => function(QQ) {
-        var WQ, XQ, wQ, qQ, JQ, rQ;
-        const IQ = QQ.viewer(),
-          jQ = null !== (WQ = null === IQ || void 0 === IQ ? void 0 : IQ.view) && void 0 !== WQ ? WQ : null,
-          BQ = QQ.canvas();
-        if (!IQ || !jQ || jQ.state === TQ.td.None || 0 === jQ.totalTicks || !BQ || gQ(IQ)) return null;
-        const yQ = null !== (XQ = QQ.now) && void 0 !== XQ ? XQ : () => performance.now(),
-          VQ = IQ.id,
-          DQ = () => {
-            const WQ = QQ.viewer();
-            return WQ === IQ && WQ.id === VQ && WQ.isOpen ? WQ : null
+    function LM(MM) {
+      return (0, OM.c)((() => function(MM) {
+        var rM, iM, OM, SM, LM, mM;
+        const HM = MM.viewer(),
+          hM = null !== (rM = null === HM || void 0 === HM ? void 0 : HM.view) && void 0 !== rM ? rM : null,
+          JM = MM.canvas();
+        if (!HM || !hM || hM.state === jM.hd.None || 0 === hM.totalTicks || !JM || zM(HM)) return null;
+        const dM = null !== (iM = MM.now) && void 0 !== iM ? iM : () => performance.now(),
+          yM = HM.id,
+          lM = () => {
+            const rM = MM.viewer();
+            return rM === HM && rM.id === yM && rM.isOpen ? rM : null
           },
-          pQ = Math.min(null !== (wQ = null === (qQ = jQ.mark) || void 0 === qQ ? void 0 : qQ.outTick) && void 0 !== wQ ? wQ : 1 / 0, jQ.totalTicks - 1);
-        let GQ = null,
-          UQ = !1;
-        const bQ = () => {
-          var QQ, WQ;
-          return (null === (QQ = DQ()) || void 0 === QQ || null === (WQ = QQ.view) || void 0 === WQ ? void 0 : WQ.state) === TQ.td.Playing
+          EM = Math.min(null !== (OM = null === (SM = hM.mark) || void 0 === SM ? void 0 : SM.outTick) && void 0 !== OM ? OM : 1 / 0, hM.totalTicks - 1);
+        let UM = null,
+          GM = !1;
+        const CM = () => {
+          var MM, rM;
+          return (null === (MM = lM()) || void 0 === MM || null === (rM = MM.view) || void 0 === rM ? void 0 : rM.state) === jM.hd.Playing
         };
         return {
-          qE: TQ.Kd,
-          playbackMarkInTick: null !== (JQ = null === (rQ = jQ.mark) || void 0 === rQ ? void 0 : rQ.inTick) && void 0 !== JQ ? JQ : null,
+          zk: jM.ud,
+          playbackMarkInTick: null !== (LM = null === (mM = hM.mark) || void 0 === mM ? void 0 : mM.inTick) && void 0 !== LM ? LM : null,
           startFailure: () => {
-            const QQ = DQ();
-            return null === QQ ? "Another replay opened. Export it again from there." : gQ(QQ) ? "Wait for the crop to finish, then export again." : null
+            const MM = lM();
+            return null === MM ? "Another replay opened. Export it again from there." : zM(MM) ? "Wait for the crop to finish, then export again." : null
           },
           fileName: () => {
-            var QQ, WQ;
-            return null !== (QQ = null === (WQ = DQ()) || void 0 === WQ ? void 0 : WQ.fileName) && void 0 !== QQ ? QQ : null
+            var MM, rM;
+            return null !== (MM = null === (rM = lM()) || void 0 === rM ? void 0 : rM.fileName) && void 0 !== MM ? MM : null
           },
           playbackSpeed: () => {
-            var QQ, WQ, XQ;
-            return null !== (QQ = null === (WQ = DQ()) || void 0 === WQ || null === (XQ = WQ.view) || void 0 === XQ ? void 0 : XQ.speed) && void 0 !== QQ ? QQ : 1
+            var MM, rM, iM;
+            return null !== (MM = null === (rM = lM()) || void 0 === rM || null === (iM = rM.view) || void 0 === iM ? void 0 : iM.speed) && void 0 !== MM ? MM : 1
           },
-          setPlaybackSpeed: QQ => {
-            var WQ;
-            null === (WQ = DQ()) || void 0 === WQ || WQ.setSpeed(QQ)
+          setPlaybackSpeed: MM => {
+            var rM;
+            null === (rM = lM()) || void 0 === rM || rM.setSpeed(MM)
           },
           play: () => {
-            var QQ;
-            UQ = !1, GQ = yQ(), null === (QQ = DQ()) || void 0 === QQ || QQ.play()
+            var MM;
+            GM = !1, UM = dM(), null === (MM = lM()) || void 0 === MM || MM.play()
           },
           pause: () => {
-            var QQ;
-            null === (QQ = DQ()) || void 0 === QQ || QQ.pause()
+            var MM;
+            null === (MM = lM()) || void 0 === MM || MM.pause()
           },
-          seekToTick: QQ => {
-            var WQ;
-            null === (WQ = DQ()) || void 0 === WQ || WQ.seek(QQ, !0)
+          seekToTick: MM => {
+            var rM;
+            null === (rM = lM()) || void 0 === rM || rM.seek(MM, !0)
           },
-          seekSettled: () => new Promise((QQ => {
-            const WQ = setInterval((() => {
-              const XQ = DQ();
-              null === XQ ? (clearInterval(WQ), QQ()) : XQ.Ds.includes("seek") || (clearInterval(WQ), setTimeout(QQ, PQ))
-            }), FQ)
+          seekSettled: () => new Promise((MM => {
+            const rM = setInterval((() => {
+              const iM = lM();
+              null === iM ? (clearInterval(rM), MM()) : iM.sQ.includes("seek") || (clearInterval(rM), setTimeout(MM, QM))
+            }), nM)
           })),
           isPlaying: () => {
-            var QQ, WQ, XQ;
-            return null !== GQ && null !== DQ() && (!!bQ() || !UQ && (null !== (QQ = null === (WQ = DQ()) || void 0 === WQ || null === (XQ = WQ.view) || void 0 === XQ ? void 0 : XQ.fJ) && void 0 !== QQ ? QQ : 0) < pQ && yQ() - GQ < sQ)
+            var MM, rM, iM;
+            return null !== UM && null !== lM() && (!!CM() || !GM && (null !== (MM = null === (rM = lM()) || void 0 === rM || null === (iM = rM.view) || void 0 === iM ? void 0 : iM.bL) && void 0 !== MM ? MM : 0) < EM && dM() - UM < PM)
           },
-          watchPlayback: WQ => {
-            const XQ = QQ.watchViewer((() => {
-                UQ ||= null !== GQ && bQ(), WQ()
+          watchPlayback: rM => {
+            const iM = MM.watchViewer((() => {
+                GM ||= null !== UM && CM(), rM()
               })),
-              wQ = setTimeout(WQ, sQ + 1);
+              OM = setTimeout(rM, PM + 1);
             return () => {
-              clearTimeout(wQ), XQ()
+              clearTimeout(OM), iM()
             }
           },
           playbackFailure: () => {
-            var QQ, WQ;
-            const XQ = DQ();
-            return null === XQ ? "The replay closed before the video finished." : (null !== (QQ = null === (WQ = XQ.view) || void 0 === WQ ? void 0 : WQ.fJ) && void 0 !== QQ ? QQ : 0) >= pQ ? null : UQ ? "The replay stopped before the video finished." : "The replay didn't start playing."
+            var MM, rM;
+            const iM = lM();
+            return null === iM ? "The replay closed before the video finished." : (null !== (MM = null === (rM = iM.view) || void 0 === rM ? void 0 : rM.bL) && void 0 !== MM ? MM : 0) >= EM ? null : GM ? "The replay stopped before the video finished." : "The replay didn't start playing."
           },
-          canvas: () => BQ,
+          canvas: () => JM,
           closeViewer: () => {
-            QQ.requestViewer("close")
+            MM.requestViewer("close")
           },
           reopenViewer: () => {
-            QQ.requestViewer("open")
+            MM.requestViewer("open")
           },
-          holdInput: zQ.e
+          holdInput: aM.e
         }
-      }(QQ)))
+      }(MM)))
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

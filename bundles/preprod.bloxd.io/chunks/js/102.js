@@ -1,547 +1,787 @@
 export const id = 102;
 export const ids = [102];
 export const modules = {
-  5231: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      default: () => eQ
+  41634: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      startWasmPadGameplay: () => fM
     });
-    var wQ = XQ(61),
-      qQ = XQ(1581),
-      TQ = XQ(402),
-      zQ = XQ(1268),
-      sQ = XQ(1676),
-      FQ = XQ(1302),
-      PQ = XQ(1607),
-      gQ = XQ(1548),
-      JQ = XQ(2826);
-    const rQ = {
-      retries: 2,
-      minTimeout: 2e3
-    };
-    var IQ = XQ(1154),
-      jQ = XQ(1674),
-      BQ = XQ(1162),
-      yQ = XQ(1975),
-      VQ = XQ(1226),
-      DQ = XQ(1257),
-      pQ = XQ(3732),
-      GQ = XQ(1391),
-      UQ = XQ(1507),
-      bQ = XQ(1567),
-      vQ = XQ(2776),
-      dQ = XQ(2783),
-      HQ = XQ(5239),
-      aQ = XQ(2237),
-      lQ = XQ(1081),
-      hQ = XQ.n(lQ),
-      iQ = XQ(1094),
-      cQ = XQ(5241),
-      AQ = XQ(26),
-      RQ = XQ(2003),
-      EQ = XQ(3871),
-      CQ = XQ(2094),
-      uQ = XQ(3842),
-      LQ = XQ(105),
-      kQ = XQ(4875),
-      fQ = XQ(1145);
-    const SQ = [HQ];
-
-    function tQ(QQ) {
-      let {
-        icon: WQ,
-        label: XQ,
-        value: wQ
-      } = QQ;
-      return (0, fQ.jsxs)("div", {
-        className: "PlayerProfileStat",
-        children: [(0, fQ.jsx)(iQ.d, {
-          name: WQ,
-          className: "PlayerProfileStatIcon"
-        }), (0, fQ.jsxs)("div", {
-          className: "PlayerProfileStatText",
-          children: [(0, fQ.jsx)("div", {
-            className: "PlayerProfileStatLabel SmallTextLight",
-            children: XQ
-          }), (0, fQ.jsx)("div", {
-            className: "PlayerProfileStatValue",
-            children: wQ
-          })]
-        })]
-      })
-    }
-
-    function oQ(QQ) {
-      let {
-        profile: WQ
-      } = QQ;
-      const {
-        t: XQ,
-        selectedLanguage: wQ
-      } = (0, VQ.C)();
-      let qQ = XQ("homePage:profileUnknown");
-      if (WQ.lastOnline) {
-        const QQ = (0, VQ.n)(wQ.code, "homePage:profileTimeAgo");
-        qQ = XQ("homePage:profileTimeAgo", {
-          time: (0, TQ.bb)(QQ, WQ.lastOnline, Date.now())
-        })
-      }
-      let zQ = XQ("homePage:profileUnknown");
-      return WQ.accountCreatedAt && (zQ = new Date(WQ.accountCreatedAt).toLocaleDateString(void 0, {
-        year: "numeric",
-        month: "short",
-        day: "numeric"
-      })), (0, fQ.jsxs)("div", {
-        className: "PlayerProfileStats",
-        children: [(0, fQ.jsx)(tQ, {
-          icon: "hourglass",
-          label: XQ("homePage:profileTimePlayed"),
-          value: (0, EQ.d)(WQ.totalPlayMinutes)
-        }), (0, fQ.jsx)(tQ, {
-          icon: "wifi",
-          label: XQ("homePage:profileLastOnline"),
-          value: qQ
-        }), (0, fQ.jsx)(tQ, {
-          icon: "calendar",
-          label: XQ("homePage:profileJoined"),
-          value: zQ
-        })]
-      })
-    }
-
-    function eQ() {
-      const {
-        t: QQ
-      } = (0, VQ.C)(), WQ = (0, bQ.useNavigatePreserveSearch)(), XQ = (0, IQ.i)(), {
-        playerName: HQ,
-        playerUrlName: lQ
-      } = (0, qQ.E)(), EQ = (0, qQ.w)(), tQ = (0, zQ.f)(EQ.pathname), eQ = tQ && ("urlId" in tQ ? `urlId:${tQ.urlId}` : `name:${tQ.lowerCaseName}`), nQ = (0, wQ.useRef)(eQ);
-      nQ.current = eQ;
-      const {
-        userContext: xQ,
-        isUserContextUpdating: YQ
-      } = (0, BQ.c)(), NQ = (0, wQ.useRef)(null), ZQ = (0, wQ.useRef)(null), OQ = (0, wQ.useRef)(null), KQ = (0, wQ.useRef)(!1), mQ = (0, wQ.useRef)((0, TQ.Yb)(SQ)), [MQ, QW] = (0, wQ.useState)((() => {
-        const QQ = tQ && dQ.e.peek(xQ, tQ);
-        return QQ ? {
-          status: "loaded",
-          profile: QQ,
-          playerKey: eQ
-        } : {
-          status: "loading"
-        }
-      })), [WW, XW] = (0, wQ.useState)(0);
-      (0, wQ.useEffect)(vQ.g, []), (0, wQ.useEffect)((() => {
-        RQ.gameBridge.send("leaveGame", {
-          reloadPath: null
-        }), AQ.b.set({
-          gameState: "landingPage",
-          openEverythingMenuName: null,
-          openInGameMenuName: null
-        })
-      }), [EQ.key]);
-      const wW = () => {
-        const QQ = (0, bQ.getPreviousLocation)();
-        null === QQ || QQ.startsWith("/play") ? (0, bQ.navigateToHomePage)() : WQ(-1)
-      };
-      (0, kQ.b)(wW), (0, wQ.useEffect)((() => {
-        var QQ;
-        if (YQ) return;
-        if (!tQ) return void QW({
-          status: "notFound",
-          playerKey: eQ
-        });
-        const WQ = "urlId" in tQ && (null === (QQ = ZQ.current) || void 0 === QQ ? void 0 : QQ.urlId) === tQ.urlId && OQ.current === xQ;
-        if (WQ && KQ.current) return;
-        const XQ = WQ ? null : dQ.e.peek(xQ, tQ);
-        let wQ = !1;
-        const qQ = QQ => "loaded" === QQ.status && (QQ.playerKey === eQ || "urlId" in tQ && QQ.profile.urlId === tQ.urlId);
-        return XQ ? (OQ.current = xQ, KQ.current = !1, QW({
-          status: "loaded",
-          profile: XQ,
-          playerKey: eQ
-        }), dQ.e.invalidate(tQ)) : QW((QQ => qQ(QQ) ? QQ : {
-          status: "loading"
-        })), async function(QQ, WQ) {
-          if ("lowerCaseName" in WQ && WQ.lowerCaseName.length > FQ.j) return {
-            status: "notFound"
+    iM(41640);
+    var OM = iM(41642),
+      SM = iM(41656),
+      jM = iM(2067),
+      aM = iM(41669),
+      PM = iM(5200),
+      nM = iM(5188),
+      QM = iM(41674),
+      zM = iM(41677),
+      LM = iM(5207),
+      mM = iM(41739),
+      HM = iM(2622),
+      hM = iM(9451),
+      JM = iM(41650),
+      dM = iM(9425),
+      yM = iM(40140);
+    const lM = MM => {
+        const rM = LM.c.indexOf(MM);
+        if (rM < 0) throw new Error(`No core action "${MM}"`);
+        return rM
+      },
+      EM = lM("primary-fire"),
+      UM = lM("alt-fire"),
+      GM = lM("mid-fire"),
+      CM = lM("jump"),
+      eM = lM("ReloadGun"),
+      bM = lM("SwapCameraZoom"),
+      wM = lM("TouchAction1"),
+      tM = {
+        SpecialAction1: lM("SpecialAction1"),
+        SpecialAction2: lM("SpecialAction2")
+      },
+      gM = (MM, rM) => {
+        (0, HM.y)(PM.L.PadAction, MM, 0, 0, (0, HM.u)(rM, performance.now()))
+      },
+      uM = MM => {
+        gM(MM, aM.kd.Down)
+      },
+      RM = MM => {
+        gM(MM, 0)
+      },
+      pM = MM => {
+        uM(MM), RM(MM)
+      },
+      WM = () => {
+        const MM = (0, zM.e)();
+        return null !== MM && void 0 !== MM && MM.isCoreRunning ? MM : null
+      },
+      sM = MM => aM.v.playerFlags(MM.api.apiView, 0),
+      DM = MM => null !== MM && aM.v.targetBlockId(MM.api.apiView, 0) !== aM.Pc,
+      kM = () => {
+        const MM = (0, hM.b)(),
+          rM = new JM.e;
+        let iM = !1;
+        const OM = (MM, rM) => {
+            (0, HM.y)(PM.L.PadLook, aM.rd.Rate, MM, rM, 0)
+          },
+          SM = () => {
+            iM = !1, rM.reset(), OM(0, 0)
           };
-          try {
-            return {
-              status: "loaded",
-              profile: await gQ.e.getPlayerProfile(QQ, WQ, rQ)
-            }
-          } catch (XQ) {
-            return (0, JQ.c)(XQ) ? {
-              status: "notFound"
-            } : (console.error("Failed to load user profile", XQ), {
-              status: "failed"
-            })
-          }
-        }(xQ, tQ).then((QQ => {
-          wQ || ("loaded" === QQ.status && (OQ.current = xQ, KQ.current = !0), QW((WQ => "failed" === QQ.status && qQ(WQ) ? WQ : {
-            ...QQ,
-            playerKey: eQ
-          })))
-        })), () => {
-          wQ = !0
+        return {
+          update: (SM, jM, nM) => {
+            iM || (MM.discardPending(), iM = !0);
+            const QM = (0, JM.n)(rM, SM, jM, nM, performance.now());
+            OM(QM.yawRadPerSec, QM.pitchRadPerSec);
+            const zM = MM.drainLookDelta();
+            0 === zM.PD && 0 === zM.nD || (0, HM.y)(PM.L.PadLook, aM.rd.Gyro, zM.PD, zM.nD, 0)
+          },
+          release: SM,
+          uninstall: SM
         }
-      }), [YQ, eQ, xQ, WW]);
-      const qW = "loading" === MQ.status || MQ.playerKey === eQ || "loaded" === MQ.status && !!tQ && "urlId" in tQ && MQ.profile.urlId === tQ.urlId ? MQ : {
-          status: "loading"
-        },
-        TW = "loaded" === qW.status ? qW.profile : null,
-        zW = "loading" === qW.status ? null : function(QQ) {
-          if ("loaded" === QQ.status) {
-            const {
-              profile: WQ
-            } = QQ;
-            return (0, PQ.Q)({
-              urlId: WQ.urlId,
-              name: WQ.player.name,
-              ranks: WQ.player.ranks,
-              socialLinks: WQ.socialLinks
-            })
+      },
+      ZM = () => {
+        const MM = WM();
+        return null !== MM && 0 !== (sM(MM) & aM.yd.PadSneakToggled)
+      },
+      oM = () => {
+        const MM = (MM => {
+          const rM = MM => function() {
+            return (0, mM.b)(), MM(...arguments)
+          };
+          return {
+            primaryFireDown: rM((MM => (gM(EM, aM.kd.Down | (MM ? aM.kd.Repeat : 0)), 0))),
+            primaryFireUp: rM((() => {
+              RM(EM)
+            })),
+            altFireDown: rM((() => (uM(UM), 0))),
+            altFireUp: rM((() => {
+              RM(UM)
+            })),
+            jumpDown: rM((() => {
+              pM(CM)
+            })),
+            specialActionDown: rM((MM => {
+              uM(tM[MM])
+            })),
+            specialActionUp: rM((MM => {
+              RM(tM[MM])
+            })),
+            reloadGun: rM((() => {
+              pM(eM)
+            })),
+            dropItem: rM((MM => {
+              gM(aM.od.Drop, aM.kd.Down | (MM ? aM.kd.Stack : 0))
+            })),
+            swapCameraZoom: rM((() => {
+              pM(bM)
+            })),
+            pickBlock: rM((() => (pM(GM), DM(MM()))))
           }
-          return "notFound" === QQ.status ? (0, PQ.W)() : null
-        }(qW),
-        sW = null !== TW && void 0 !== TW && TW.urlId ? (0, zQ.h)({
-          urlId: TW.urlId,
-          name: TW.player.name
-        }) : null;
-      (0, jQ.g)(sW);
-      const FW = null !== TW && void 0 !== TW && TW.player.cosmetics.profileEffect ? aQ.d[TW.player.cosmetics.profileEffect] : void 0,
-        PW = null !== TW && !YQ && xQ.getPlayerName().toLowerCase() === TW.player.name.toLowerCase(),
-        gW = (0, CQ.b)(null === TW || void 0 === TW ? void 0 : TW.player.name),
-        JW = PW && xQ.playerHasRank("youtuber");
-      ZQ.current = TW;
-      const rW = (0, wQ.useCallback)((() => {
-          tQ && (dQ.e.invalidate(tQ), dQ.e.get(xQ, tQ).then((QQ => {
-            nQ.current === eQ && (KQ.current = !0, QW({
-              status: "loaded",
-              profile: QQ,
-              playerKey: eQ
-            }))
-          })).catch((QQ => {
-            console.error("Failed to refresh user profile", QQ)
-          })))
-        }), [eQ, xQ]),
-        IW = (0, wQ.useCallback)((() => {
-          var QQ;
-          const WQ = ZQ.current;
-          return !(!WQ || null === (QQ = NQ.current) || void 0 === QQ || !QQ.isReady()) && (NQ.current.setAllCosmetics(WQ.player.cosmetics), !0)
-        }), []);
-      return (0, wQ.useEffect)((() => {
-        if (!TW) return;
-        let QQ, WQ = !1;
-        const XQ = () => {
-          WQ || IW() || (QQ = setTimeout(XQ, 100))
+        })(WM);
+        let rM = !1,
+          iM = null;
+        const OM = () => {
+          var MM;
+          null === (MM = iM) || void 0 === MM || MM(), iM = null
         };
-        return XQ(), () => {
-          WQ = !0, clearTimeout(QQ)
-        }
-      }), [TW, IW]), (0, fQ.jsxs)("div", {
-        className: hQ()("PlayerProfile", {
-          PlayerProfilePortrait: XQ
-        }),
-        children: [zW && (0, fQ.jsx)(sQ.d, {
-          meta: zW
-        }), (0, fQ.jsxs)("div", {
-          className: "PlayerProfileBackgroundContainer",
-          children: [FW && (0, fQ.jsx)(FW, {}), !FW && (0, fQ.jsx)("div", {
-            className: "PlayerProfileBackground",
-            style: {
-              backgroundImage: `url(${mQ.current})`
-            }
-          })]
-        }), (0, fQ.jsxs)("div", {
-          className: "PlayerProfileHeader",
-          children: [(0, fQ.jsx)(UQ.e, {
-            onClick: wW,
-            children: QQ("general:back")
-          }), TW && !YQ && !PW && LQ.featureFlags.useSocialFeatures && (0, fQ.jsx)("div", {
-            className: "PlayerProfileExclusionActions",
-            children: (0, fQ.jsx)(uQ.c, {
-              playerName: TW.player.name,
-              className: "SmallTextLight"
-            })
-          })]
-        }), "loading" === qW.status && (0, fQ.jsx)("div", {
-          className: "PlayerProfileCentredMessage",
-          children: (0, fQ.jsx)(GQ.e, {})
-        }), ("notFound" === qW.status || "failed" === qW.status) && (0, fQ.jsxs)("div", {
-          className: "PlayerProfileCentredMessage PlayerProfileError",
-          children: [(0, fQ.jsx)(iQ.d, {
-            name: "face-dizzy"
-          }), (0, fQ.jsx)("div", {
-            className: "PlayerProfileErrorText",
-            children: "notFound" === qW.status ? QQ("socialBar:playerNotFound", {
-              playerName: null !== lQ && void 0 !== lQ ? lQ : HQ
-            }) : QQ("playerProfile:loadFailed")
-          }), "failed" === qW.status && (0, fQ.jsx)(UQ.h, {
-            onClick: () => {
-              XW((QQ => QQ + 1))
-            },
-            children: QQ("general:tryAgain")
-          })]
-        }), TW && (0, fQ.jsxs)("div", {
-          className: "PlayerProfileContent",
-          children: [(0, fQ.jsxs)("div", {
-            className: "PlayerProfileLeft",
-            children: [(0, fQ.jsx)("div", {
-              className: "PlayerProfileName FullyFancyText",
-              children: (0, fQ.jsx)(yQ.e, {
-                text: (0, DQ.u)(TW.player.ranks, TW.player.name, TW.player.nameColour),
-                friendBadgeFor: gW ? TW.player.name : void 0
-              })
-            }), (0, fQ.jsx)("div", {
-              className: "PlayerProfileModel",
-              children: (0, fQ.jsx)(wQ.Suspense, {
-                fallback: (0, fQ.jsx)("div", {
-                  className: "PlayerProfileModelLoading",
-                  children: (0, fQ.jsx)(GQ.e, {})
-                }),
-                children: (0, fQ.jsx)(vQ.c, {
-                  ref: NQ,
-                  onReady: () => {
-                    IW()
-                  }
-                })
-              })
-            })]
-          }), (0, fQ.jsxs)("div", {
-            className: "PlayerProfileRight",
-            children: [(0, fQ.jsx)(oQ, {
-              profile: TW
-            }), (TW.socialLinks.length > 0 || JW) && (0, fQ.jsx)(cQ.e, {
-              socialLinks: TW.socialLinks,
-              editable: JW,
-              userContext: xQ,
-              onLinksUpdated: rW
-            }), (0, fQ.jsxs)("div", {
-              className: "PlayerProfileGames",
-              children: [(0, fQ.jsx)("div", {
-                className: "PlayerProfileGamesTitle SmallTextBold",
-                children: QQ("homePage:profileReleasedGames")
-              }), 0 === TW.releasedGames.length && (0, fQ.jsx)("div", {
-                className: "PlayerProfileNoGames",
-                children: QQ("homePage:profileNoReleasedGames")
-              }), TW.releasedGames.length > 0 && (0, fQ.jsx)("div", {
-                className: "PlayerProfileGamesGrid",
-                children: TW.releasedGames.map((QQ => (0, fQ.jsx)(pQ.d, {
-                  source: {
-                    type: "preview",
-                    preview: QQ
-                  },
-                  gameWidth: "100%",
-                  useLongRatio: !0,
-                  hideFavourites: !0,
-                  entrySource: "other"
-                }, QQ.schematicId)))
-              })]
-            })]
-          })]
-        })]
-      })
-    }
-  },
-  5241: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      e: () => yQ
-    });
-    var wQ = XQ(1081),
-      qQ = XQ.n(wQ),
-      TQ = XQ(4958),
-      zQ = XQ(1226),
-      sQ = XQ(1094),
-      FQ = XQ(1507),
-      PQ = XQ(1548),
-      gQ = XQ(1404),
-      JQ = XQ(2614),
-      rQ = XQ(1145);
-    const IQ = {
-      youtube: {
-        icon: "youtube",
-        color: "#FF0033",
-        name: "YouTube"
-      },
-      tiktok: {
-        icon: "tiktok",
-        color: "#0F0F0F",
-        name: "TikTok"
-      },
-      instagram: {
-        icon: "instagram",
-        color: "#E1306C",
-        name: "Instagram"
-      },
-      twitter: {
-        icon: "x-twitter",
-        color: "#0F0F0F",
-        name: "X"
-      },
-      twitch: {
-        icon: "twitch",
-        color: "#9146FF",
-        name: "Twitch"
-      }
-    };
-
-    function jQ(QQ) {
-      let {
-        platform: WQ
-      } = QQ;
-      const XQ = "youtube" === WQ;
-      return (0, rQ.jsxs)("span", {
-        className: qQ()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: XQ
-        }),
-        children: [XQ && (0, rQ.jsx)(JQ.c, {
-          variant: "white"
-        }), !XQ && (0, rQ.jsx)(sQ.d, {
-          name: IQ[WQ].icon,
-          kit: "brands"
-        })]
-      })
-    }
-
-    function BQ(QQ) {
-      let {
-        platform: WQ,
-        link: XQ,
-        editable: wQ,
-        userContext: qQ,
-        onLinksUpdated: JQ
-      } = QQ;
-      const {
-        t: BQ
-      } = (0, zQ.C)(), yQ = IQ[WQ];
-      if (!XQ && !wQ) return null;
-
-      function VQ() {
-        var QQ;
-        if (!qQ || !JQ) return;
-        gQ.NotificationProvider.showInputPopup({
-          title: "homePage:profileSocialLinkEditTitle",
-          textOpts: {
-            title: {
-              platform: yQ.name
+        return {
+          bodies: () => MM,
+          look: kM(),
+          move: (MM, iM) => {
+            var SM;
+            OM();
+            const {
+              bits: jM,
+              flips: PM
+            } = (MM => {
+              if (null === MM) return {
+                bits: aM.qd.Peek,
+                flips: 0
+              };
+              const rM = MM.sneakHeld ? aM.qd.SneakHeld : 0;
+              return "hold" === MM.mode ? {
+                bits: rM | aM.qd.SneakHoldMode,
+                flips: MM.sneakTogglePressed ? 1 : 0
+              } : {
+                bits: rM,
+                flips: MM.sneakPressed || MM.sneakTogglePressed ? 1 : 0
+              }
+            })(iM);
+            null !== (SM = WM()) && void 0 !== SM && SM.padMove(MM.x, MM.y, MM.magnitude, MM.headingOffset, (MM => aM.qd.Active | (MM.jumpHeld ? aM.qd.JumpHeld : 0) | (MM.jumpPressed ? aM.qd.JumpPressed : 0) | (MM.running ? aM.qd.Running : 0) | (MM.sprintHeld ? aM.qd.SprintHeld : 0))(MM) | jM, PM) && (rM = !0), (0, dM.g)(ZM())
+          },
+          stopMoving: () => {
+            var MM;
+            rM && (rM = !(null !== (MM = WM()) && void 0 !== MM && MM.padMove(0, 0, 0, 0, 0, 0)), OM(), iM = (0, nM.y)((() => {
+              OM(), (0, dM.g)(ZM())
+            })))
+          },
+          uninstall: OM,
+          deviceChanged: MM => {
+            var iM;
+            "touch" === MM ? ((0, dM.g)(!1), null !== (iM = WM()) && void 0 !== iM && iM.padMove(0, 0, 0, 0, aM.qd.EndToggle, 0) && (rM = !1)) : "gamepad" === MM && (0, dM.g)(ZM())
+          },
+          hasPlayer: () => null !== WM(),
+          isPlayerDead: () => {
+            var MM;
+            return !1 === (null === (MM = WM()) || void 0 === MM ? void 0 : MM.localPlayerAlive())
+          },
+          isReplayMode: () => {
+            const MM = WM();
+            return null !== MM && 0 !== (sM(MM) & aM.yd.Replay)
+          },
+          isFreeCameraOn: () => {
+            const MM = WM();
+            return null !== MM && 0 !== (sM(MM) & aM.yd.FreeCam)
+          },
+          targetsBlock: () => DM(WM()),
+          selectedSlotEmpty: () => {
+            var MM;
+            return !(null !== (MM = WM()) && void 0 !== MM && MM.items.sQ())
+          },
+          pickBlockAllowed: () => !!jM.d.get("creative") && !!jM.d.get("canPickBlocks"),
+          scrollHotbar: MM => {
+            gM(aM.od.Hotbar, aM.kd.Down | (MM > 0 ? aM.kd.Next : 0))
+          },
+          hasFullInventory: QM.m,
+          hasLobbyTab: () => (0, yM.d)({
+            lobbyLeaderboardInfo: jM.d.get("lobbyLeaderboardInfo"),
+            lobbyManage: jM.d.get("lobbyManage")
+          }),
+          contextActionInputs: () => {
+            var MM, rM, iM, OM;
+            const SM = WM();
+            return {
+              holdingGun: !1 !== (null === SM || void 0 === SM ? void 0 : SM.localPlayerAlive()) && "Gun" === (null === SM || void 0 === SM || null === (MM = SM.items.sQ()) || void 0 === MM || null === (rM = MM.typeObj) || void 0 === rM ? void 0 : rM.type),
+              customButtons: null !== (iM = jM.d.get("customButtons")) && void 0 !== iM ? iM : null,
+              touchscreenActionButton: null !== (OM = jM.d.get("touchscreenActionButton")) && void 0 !== OM ? OM : null
             }
           },
-          prefixText: TQ.t[WQ],
-          placeholderText: "playBloxd",
-          initialValue: null !== (QQ = null === XQ || void 0 === XQ ? void 0 : XQ.handle) && void 0 !== QQ ? QQ : "",
-          maxLength: 30,
-          submitText: "general:save",
-          secondaryButtonText: XQ ? "general:remove" : void 0
-        }).getResult().then((async QQ => {
-          if ("notificationTornDown" !== QQ && null !== QQ) try {
-            "submit" === QQ.type ? await PQ.e.setSocialLink(qQ, WQ, QQ.value) : await PQ.e.clearSocialLink(qQ, WQ), JQ()
-          } catch (XQ) {
-            console.error("Failed to update social link", XQ), gQ.NotificationProvider.showAlertPopup({
-              title: XQ.errorMessageForUser,
-              confirmText: "general:ok"
-            })
+          pressTouchButton: MM => {
+            MM ? uM(wM) : RM(wM)
           }
-        }))
+        }
+      },
+      fM = () => {
+        const MM = (0, SM.d)(oM()),
+          rM = (0, OM.c)(),
+          iM = null;
+        return () => {
+          MM(), rM(), null === iM || void 0 === iM || iM()
+        }
       }
-      if (XQ) {
-        const QQ = `@${XQ.handle}`;
-        return (0, rQ.jsxs)("a", {
-          className: "PlayerProfileSocialLink",
-          style: {
-            background: yQ.color
-          },
-          href: XQ.profileUrl,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          children: [(0, rQ.jsxs)("div", {
-            className: "PlayerProfileSocialLinkMain",
-            children: [(0, rQ.jsx)(jQ, {
-              platform: WQ
-            }), (0, rQ.jsx)("span", {
-              className: "PlayerProfileSocialLinkText",
-              children: (0, rQ.jsx)("span", {
-                className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: QQ
-              })
-            })]
-          }), wQ && (0, rQ.jsx)("button", {
-            type: "button",
-            className: "PlayerProfileSocialLinkEditButton",
-            ...(0, FQ.ab)({
-              stopPropagation: !0
-            }),
-            onClick: QQ => {
-              QQ.stopPropagation(), QQ.preventDefault(), VQ()
-            },
-            children: (0, rQ.jsx)(sQ.d, {
-              name: "pen-to-square"
-            })
-          }), !wQ && (0, rQ.jsx)("span", {
-            className: "PlayerProfileSocialLinkArrow",
-            children: (0, rQ.jsx)(sQ.d, {
-              name: "arrow-up-right-from-square"
-            })
-          })]
-        })
-      }
-      return (0, rQ.jsxs)("button", {
-        type: "button",
-        className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
-        style: {
-          background: yQ.color
-        },
-        ...(0, FQ.ab)(),
-        onClick: () => {
-          VQ()
-        },
-        children: [(0, rQ.jsx)(jQ, {
-          platform: WQ
-        }), (0, rQ.jsxs)("span", {
-          className: "PlayerProfileSocialLinkText",
-          children: [(0, rQ.jsx)("span", {
-            className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: yQ.name
-          }), (0, rQ.jsx)("span", {
-            className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: BQ("homePage:profileSocialLinkAdd")
-          })]
-        }), (0, rQ.jsx)("span", {
-          className: "PlayerProfileSocialLinkEditButton",
-          children: (0, rQ.jsx)(sQ.d, {
-            name: "pen-to-square"
-          })
-        })]
-      })
+  },
+  5188: (MM, rM, iM) => {
+    iM.d(rM, {
+      A: () => gM,
+      B: () => uM,
+      F: () => lM,
+      H: () => aM,
+      I: () => PM,
+      K: () => wM,
+      e: () => bM,
+      g: () => UM,
+      i: () => pM,
+      k: () => RM,
+      n: () => yM,
+      r: () => CM,
+      v: () => EM,
+      x: () => GM,
+      y: () => tM
+    });
+    var OM = iM(5196);
+    const SM = {
+      lockPointer: () => !1,
+      unlockPointer: () => {},
+      leaveGame: () => {}
+    };
+    let jM = SM;
+
+    function aM(MM) {
+      jM = null !== MM && void 0 !== MM ? MM : SM
     }
 
-    function yQ(QQ) {
-      let {
-        socialLinks: WQ,
-        editable: XQ = !1,
-        userContext: wQ,
-        onLinksUpdated: qQ
-      } = QQ;
-      if (!XQ && 0 === WQ.length) return null;
-      const zQ = new Map(WQ.map((QQ => [QQ.platform, QQ]))),
-        sQ = XQ ? TQ.s : WQ.map((QQ => QQ.platform));
-      return (0, rQ.jsx)("div", {
-        className: "PlayerProfileSocialLinks",
-        children: (0, rQ.jsx)("div", {
-          className: "PlayerProfileSocialLinksList",
-          children: sQ.map((QQ => (0, rQ.jsx)(BQ, {
-            platform: QQ,
-            link: zQ.get(QQ),
-            editable: XQ,
-            userContext: wQ,
-            onLinksUpdated: qQ
-          }, QQ)))
-        })
-      })
+    function PM() {
+      return jM
+    }
+    const nM = new Set,
+      QM = new Set;
+    let zM = -1;
+    const LM = new Set,
+      mM = new Set;
+    let HM = 0,
+      hM = 0;
+    const JM = new Set,
+      dM = new Set;
+
+    function yM(MM) {
+      return nM.add(MM), () => {
+        nM.delete(MM)
+      }
+    }
+
+    function lM(MM, rM) {
+      for (const OM of nM) try {
+        OM(MM)
+      } catch (iM) {
+        rM(iM)
+      }
+    }
+
+    function EM(MM) {
+      return QM.add(MM), () => {
+        QM.delete(MM)
+      }
+    }
+
+    function UM(MM, rM) {
+      const iM = zM < 0 ? 0 : MM - zM;
+      zM = MM;
+      for (const SM of QM) try {
+        SM(iM)
+      } catch (OM) {
+        rM(OM)
+      }
+    }
+
+    function GM(MM) {
+      return LM.add(MM), () => {
+        LM.delete(MM)
+      }
+    }
+
+    function CM(MM) {
+      return mM.add(MM), () => {
+        mM.delete(MM)
+      }
+    }
+    let eM = 0;
+
+    function bM(MM) {
+      eM += MM
+    }
+
+    function wM() {
+      const MM = eM;
+      return eM = 0, MM
+    }
+
+    function tM(MM) {
+      return JM.add(MM), () => {
+        JM.delete(MM)
+      }
+    }
+
+    function gM(MM) {
+      return dM.add(MM), () => {
+        dM.delete(MM)
+      }
+    }
+
+    function uM() {
+      HM = 0, hM = 0, zM = -1
+    }
+
+    function RM(MM, rM) {
+      if ("paced" === MM) return hM += rM, null;
+      if ("drawn" !== MM && "skipped" !== MM) return null;
+      const iM = rM + hM;
+      return hM = 0, iM
+    }
+
+    function pM(MM, rM, iM, SM) {
+      const jM = (0, OM.l)(rM),
+        aM = MM > 0 ? performance.now() : 0;
+      for (let OM = 0; OM < MM; OM++)
+        for (const MM of JM) try {
+          MM()
+        } catch (PM) {
+          SM(PM)
+        }
+      if (MM > 0 && bM(performance.now() - aM), null !== iM) {
+        for (const MM of LM) try {
+          MM(iM)
+        } catch (PM) {
+          SM(PM)
+        }
+        HM += iM
+      }
+      if ("drawn" === rM) {
+        const MM = HM;
+        HM = 0;
+        for (const rM of mM) try {
+          rM(MM)
+        } catch (PM) {
+          SM(PM)
+        }
+      }
+      for (const OM of dM) try {
+        OM(MM, jM)
+      } catch (PM) {
+        SM(PM)
+      }
     }
   },
-  5239: QQ => {
-    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
+  5207: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => SM,
+      g: () => jM,
+      j: () => aM,
+      n: () => OM,
+      o: () => PM
+    });
+    const OM = {
+        Mouse1: 1,
+        Mouse2: 2,
+        Mouse3: 3,
+        "Alt+Left Click": 4,
+        F2: 5,
+        F4: 6,
+        F5: 7,
+        F8: 8,
+        F9: 9,
+        Digit0: 10,
+        Digit1: 11,
+        Digit2: 12,
+        Digit3: 13,
+        Digit4: 14,
+        Digit5: 15,
+        Digit6: 16,
+        Digit7: 17,
+        Digit8: 18,
+        Digit9: 19,
+        KeyQ: 20,
+        KeyW: 21,
+        KeyE: 22,
+        KeyR: 23,
+        KeyT: 24,
+        KeyY: 25,
+        KeyU: 26,
+        KeyI: 27,
+        KeyO: 28,
+        KeyP: 29,
+        KeyA: 30,
+        KeyS: 31,
+        KeyD: 32,
+        KeyF: 33,
+        KeyG: 34,
+        KeyH: 35,
+        KeyJ: 36,
+        KeyK: 37,
+        KeyL: 38,
+        KeyZ: 39,
+        KeyX: 40,
+        KeyC: 41,
+        KeyV: 42,
+        KeyB: 43,
+        KeyN: 44,
+        KeyM: 45,
+        ArrowUp: 46,
+        ArrowLeft: 47,
+        ArrowRight: 48,
+        ArrowDown: 49,
+        ShiftLeft: 50,
+        ShiftRight: 51,
+        ControlLeft: 52,
+        ControlRight: 53,
+        Minus: 54,
+        Equal: 55,
+        BracketLeft: 56,
+        BracketRight: 57,
+        Tab: 58,
+        Space: 59,
+        CapsLock: 60,
+        Backslash: 61,
+        IntlBackslash: 62,
+        PageUp: 63,
+        PageDown: 64,
+        Backquote: 65,
+        Comma: 66,
+        IntlRo: 67,
+        IntlYen: 68,
+        Period: 69,
+        Quote: 70,
+        Semicolon: 71,
+        Slash: 72,
+        AltLeft: 73,
+        AltRight: 74,
+        Backspace: 75,
+        ContextMenu: 76,
+        Enter: 77,
+        MetaLeft: 78,
+        MetaRight: 79,
+        Convert: 80,
+        KanaMode: 81,
+        Lang1: 82,
+        Lang2: 83,
+        Lang3: 84,
+        Lang4: 85,
+        Lang5: 86,
+        NonConvert: 87,
+        Delete: 88,
+        End: 89,
+        Help: 90,
+        Home: 91,
+        Insert: 92,
+        NumLock: 93,
+        Numpad0: 94,
+        Numpad1: 95,
+        Numpad2: 96,
+        Numpad3: 97,
+        Numpad4: 98,
+        Numpad5: 99,
+        Numpad6: 100,
+        Numpad7: 101,
+        Numpad8: 102,
+        Numpad9: 103,
+        NumpadAdd: 104,
+        NumpadBackspace: 105,
+        NumpadClear: 106,
+        NumpadClearEntry: 107,
+        NumpadComma: 108,
+        NumpadDecimal: 109,
+        NumpadDivide: 110,
+        NumpadEnter: 111,
+        NumpadEqual: 112,
+        NumpadHash: 113,
+        NumpadMemoryAdd: 114,
+        NumpadMemoryClear: 115,
+        NumpadMemoryRecall: 116,
+        NumpadMemoryStore: 117,
+        NumpadMemorySubtract: 118,
+        NumpadMultiply: 119,
+        NumpadParenLeft: 120,
+        NumpadParenRight: 121,
+        NumpadStar: 122,
+        NumpadSubtract: 123,
+        Escape: 124,
+        F1: 125,
+        F3: 126,
+        F6: 127,
+        F7: 128,
+        F10: 129,
+        F11: 130,
+        F12: 131,
+        F13: 132,
+        F14: 133,
+        F15: 134,
+        F16: 135,
+        F17: 136,
+        F18: 137,
+        F19: 138,
+        F20: 139,
+        F21: 140,
+        F22: 141,
+        F23: 142,
+        F24: 143,
+        Fn: 144,
+        FnLock: 145,
+        PrintScreen: 146,
+        ScrollLock: 147,
+        Pause: 148,
+        BrowserBack: 149,
+        BrowserFavorites: 150,
+        BrowserForward: 151,
+        BrowserHome: 152,
+        BrowserRefresh: 153,
+        BrowserSearch: 154,
+        BrowserStop: 155,
+        Eject: 156,
+        LaunchApp1: 157,
+        LaunchApp2: 158,
+        LaunchMail: 159,
+        MediaPlayPause: 160,
+        MediaSelect: 161,
+        MediaStop: 162,
+        MediaTrackNext: 163,
+        MediaTrackPrevious: 164,
+        Power: 165,
+        Sleep: 166,
+        AudioVolumeDown: 167,
+        AudioVolumeMute: 168,
+        AudioVolumeUp: 169,
+        WakeUp: 170,
+        Hyper: 171,
+        Super: 172,
+        Turbo: 173,
+        Abort: 174,
+        Resume: 175,
+        Suspend: 176,
+        Again: 177,
+        Copy: 178,
+        Cut: 179,
+        Find: 180,
+        Open: 181,
+        Paste: 182,
+        Props: 183,
+        Select: 184,
+        Undo: 185,
+        Hiragana: 186,
+        Katakana: 187,
+        TouchJump: 188,
+        TouchCrouch: 189,
+        TouchPov: 190,
+        TouchAction1: 191,
+        TouchAction2: 192,
+        TouchAction3: 193,
+        TouchAttack: 194,
+        TouchUse: 195
+      },
+      SM = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      jM = {
+        forward: [21, 46],
+        backward: [31, 49],
+        left: [30, 47],
+        right: [32, 48],
+        sprint: [50, 51],
+        jump: [59],
+        crouch: [52, 41, 60, 61, 62, 53],
+        "primary-fire": [1],
+        "alt-fire": [3, 22],
+        SpecialAction1: [23],
+        SpecialAction2: [33],
+        ReloadGun: [23],
+        DropItem: [20],
+        "mid-fire": [2, 4],
+        Zoom: [42],
+        SwapCameraZoom: [29, 7],
+        OpenInventory: [58],
+        OpenLobbyLeaderboard: [34],
+        OpenShop: [43],
+        OpenCharacterCustomization: [44],
+        OpenSettings: [28],
+        OpenInviteLink: [27],
+        OpenTasksAndLeaderboard: [45],
+        OpenCodeEditor: [8],
+        OpenEmoteWheel: [39, 2],
+        HideUi: [6],
+        ShowDebugOverlay: [5],
+        HotBarSlot1: [11],
+        HotBarSlot2: [12],
+        HotBarSlot3: [13],
+        HotBarSlot4: [14],
+        HotBarSlot5: [15],
+        HotBarSlot6: [16],
+        HotBarSlot7: [17],
+        HotBarSlot8: [18],
+        HotBarSlot9: [19],
+        HotBarSlot10: [10],
+        toggleFreeCam: [9],
+        freeCamForward: [46],
+        freeCamBackward: [49],
+        freeCamLeft: [47],
+        freeCamRight: [48],
+        freeCamUp: [63],
+        freeCamDown: [64],
+        recordGame: [56],
+        recordClip: [35],
+        replayViewerOpen: [26],
+        replayPlayPause: [42, 58],
+        replaySkipBack: [20],
+        replaySkipForward: [22],
+        replayChangeCameraMode: [23],
+        replayLoad: [38],
+        replaySave: [37],
+        replaySaveAs: [36],
+        replayExit: [29],
+        replaySpeedUp: [55],
+        replaySpeedDown: [54],
+        replayTimelineZoomIn: [10],
+        replayTimelineZoomOut: [19],
+        replayRecordKeyframe: [24],
+        replayExportVideo: [40]
+      },
+      aM = {
+        jump: [188],
+        crouch: [189],
+        SwapCameraZoom: [190],
+        "primary-fire": [194],
+        "alt-fire": [195]
+      },
+      PM = [16]
+  },
+  41739: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => aM,
+      c: () => jM,
+      e: () => SM
+    });
+    let OM = null;
+
+    function SM(MM) {
+      OM = MM
+    }
+
+    function jM(MM) {
+      OM === MM && (OM = null)
+    }
+
+    function aM() {
+      var MM;
+      null === (MM = OM) || void 0 === MM || MM()
+    }
+  },
+  5214: (MM, rM, iM) => {
+    iM.d(rM, {
+      d: () => PM,
+      h: () => aM,
+      k: () => QM
+    });
+    var OM = iM(2619),
+      SM = iM(2622);
+    const jM = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+
+    function aM(MM) {
+      return MM instanceof HTMLElement && (!!(MM.isContentEditable || MM instanceof HTMLTextAreaElement || MM instanceof HTMLSelectElement) || MM instanceof HTMLInputElement && !jM.has(MM.type))
+    }
+
+    function PM(MM) {
+      let rM = null;
+      const iM = iM => {
+          const SM = aM(iM);
+          SM !== rM && (rM = SM, MM(OM.l.UiCapture, OM.C.Keyboard, 0, 0, SM ? OM.C.Keyboard : 0))
+        },
+        SM = MM => {
+          iM(MM.target)
+        },
+        jM = MM => {
+          iM(MM.relatedTarget)
+        },
+        PM = () => {
+          iM(document.activeElement)
+        },
+        nM = {
+          capture: !0,
+          passive: !0
+        };
+      return document.addEventListener("focusin", SM, nM), document.addEventListener("focusout", jM, nM), document.addEventListener("keydown", PM, nM), iM(document.activeElement), () => {
+        document.removeEventListener("focusin", SM, nM), document.removeEventListener("focusout", jM, nM), document.removeEventListener("keydown", PM, nM)
+      }
+    }
+    const nM = new Map;
+
+    function QM(MM, rM) {
+      var iM;
+      let OM = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      nM.set(OM, (null !== (iM = nM.get(OM)) && void 0 !== iM ? iM : 0) & ~MM | rM & MM);
+      let jM = 0;
+      for (const SM of nM.values()) jM |= SM;
+      return (0, SM.B)(MM, jM & MM)
+    }
+  },
+  37858: (MM, rM, iM) => {
+    function OM(MM) {
+      return MM.includes("Leaf Bed")
+    }
+
+    function SM(MM) {
+      return / Bed(?: Head)?(?:\||$)/.test(MM) && !OM(MM)
+    }
+
+    function jM(MM) {
+      return MM.includes(" Strongbed")
+    }
+
+    function aM(MM) {
+      return OM(MM) || SM(MM) || jM(MM)
+    }
+    iM.d(rM, {
+      e: () => aM,
+      g: () => OM,
+      h: () => jM,
+      l: () => SM
+    })
+  },
+  37855: (MM, rM, iM) => {
+    iM.d(rM, {
+      c: () => QM
+    });
+    var OM = iM(37858),
+      SM = iM(9816);
+    const jM = [],
+      aM = [],
+      PM = [],
+      nM = [];
+    for (const zM of Object.keys(SM.p))(0, OM.g)(zM) ? jM.push(zM) : (0, OM.l)(zM) && aM.push(zM), (0, OM.h)(zM) && PM.push(zM), (zM.includes(" Bed Head") || zM.includes(" Strongbed Head")) && nM.push(zM);
+    const QM = {
+      leafBeds: jM,
+      woolBeds: aM,
+      strongBeds: PM,
+      beds: [...jM, ...aM, ...PM],
+      bedHeads: nM,
+      blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
+    }
+  },
+  6944: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => aM,
+      d: () => SM,
+      e: () => nM,
+      h: () => jM,
+      l: () => QM,
+      n: () => OM,
+      o: () => PM
+    });
+    let OM = function(MM) {
+        return MM[MM.DEFAULT = 0] = "DEFAULT", MM[MM.BOAT = 1] = "BOAT", MM[MM.GLIDER = 2] = "GLIDER", MM[MM.BALLOON = 3] = "BALLOON", MM[MM.SLEEPING = 4] = "SLEEPING", MM[MM.RIDING_MOB = 5] = "RIDING_MOB", MM[MM.CAR = 6] = "CAR", MM[MM.HOVERCRAFT = 7] = "HOVERCRAFT", MM
+      }({}),
+      SM = function(MM) {
+        return MM[MM.WOOD = 0] = "WOOD", MM[MM.OBSIDIAN = 1] = "OBSIDIAN", MM[MM.SPEED = 2] = "SPEED", MM
+      }({}),
+      jM = function(MM) {
+        return MM[MM.WOOD = 0] = "WOOD", MM[MM.IRON = 1] = "IRON", MM[MM.GOLD = 2] = "GOLD", MM[MM.DIAMOND = 3] = "DIAMOND", MM
+      }({}),
+      aM = function(MM) {
+        return MM[MM.YELLOW = 0] = "YELLOW", MM[MM.WHITE = 1] = "WHITE", MM[MM.RED = 2] = "RED", MM[MM.PURPLE = 3] = "PURPLE", MM[MM.PINK = 4] = "PINK", MM[MM.ORANGE = 5] = "ORANGE", MM[MM.MAGENTA = 6] = "MAGENTA", MM[MM.LIME = 7] = "LIME", MM[MM.LIGHT_GRAY = 8] = "LIGHT_GRAY", MM[MM.LIGHT_BLUE = 9] = "LIGHT_BLUE", MM[MM.GREEN = 10] = "GREEN", MM[MM.GRAY = 11] = "GRAY", MM[MM.CYAN = 12] = "CYAN", MM[MM.BROWN = 13] = "BROWN", MM[MM.BLUE = 14] = "BLUE", MM[MM.BLACK = 15] = "BLACK", MM
+      }({}),
+      PM = function(MM) {
+        return MM[MM.ROTATION_1 = 0] = "ROTATION_1", MM[MM.ROTATION_2 = 1] = "ROTATION_2", MM[MM.ROTATION_3 = 2] = "ROTATION_3", MM[MM.ROTATION_4 = 3] = "ROTATION_4", MM
+      }({}),
+      nM = function(MM) {
+        return MM[MM.KART = 0] = "KART", MM[MM.OFF_ROADER = 1] = "OFF_ROADER", MM[MM.CAR = 2] = "CAR", MM[MM.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", MM[MM.ARMORED_CAR = 4] = "ARMORED_CAR", MM[MM.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", MM[MM.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", MM[MM.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", MM
+      }({});
+    OM.DEFAULT, OM.BOAT, SM.SPEED, OM.GLIDER, jM.DIAMOND, OM.BALLOON, aM.BLACK, OM.SLEEPING, PM.ROTATION_4, OM.RIDING_MOB, OM.CAR, nM.MOONSTONE_MINING_DRILL, OM.HOVERCRAFT;
+    let QM = function(MM) {
+      return MM[MM.NORMAL = 0] = "NORMAL", MM[MM.GLIDING = 1] = "GLIDING", MM[MM.FLOATING = 2] = "FLOATING", MM
+    }({})
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);

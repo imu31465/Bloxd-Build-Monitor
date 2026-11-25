@@ -1,613 +1,330 @@
 export const id = 209;
 export const ids = [209];
 export const modules = {
-  36693: (QQ, WQ, XQ) => {
-    XQ.r(WQ), XQ.d(WQ, {
-      default: () => XW
+  37207: (MM, rM, iM) => {
+    iM.r(rM), iM.d(rM, {
+      WasmTextureWorker: () => lM
     });
-    var wQ = XQ(61);
-    const qQ = "newPlayerDeal",
-      TQ = 36e5,
-      zQ = [4, 12, 20, 20, 30];
-    const sQ = 12 * TQ;
+    var OM = iM(613),
+      SM = iM(3601),
+      jM = iM(34814),
+      aM = iM.n(jM);
 
-    function FQ(QQ) {
-      return QQ - sQ
+    function PM() {
+      return aM()('(()=>{var MM={d:(rM,iM)=>{for(var OM in iM)MM.o(iM,OM)&&!MM.o(rM,OM)&&Object.defineProperty(rM,OM,{enumerable:!0,get:iM[OM]})},o:(MM,rM)=>Object.prototype.hasOwnProperty.call(MM,rM),r:MM=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(MM,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(MM,"__esModule",{value:!0})}},rM={};MM.r(rM),MM.d(rM,{TS:()=>iM,PQ:()=>OM,default:()=>pM,initSync:()=>RM,HQ:()=>SM});class iM{__destroy_into_raw(){const MM=this.__wbg_ptr;return this.__wbg_ptr=0,aM.unregister(this),MM}free(){const MM=this.__destroy_into_raw();tM.kBjc(MM,0)}On(MM){const rM=function(MM,rM){const iM=rM(1*MM.length,1)>>>0;return hM().set(MM,iM/1),gM=MM.length,iM}(MM,tM.l7ge),iM=gM;return tM.iNBm(this.__wbg_ptr,rM,iM)>>>0}In(){const MM=tM.Hcca(this.__wbg_ptr);var rM=PM(MM[0],MM[1]).slice();return tM.SH6B(MM[0],4*MM[1],4),rM}wh(){let MM,rM;try{const iM=tM.gI3A(this.__wbg_ptr);return MM=iM[0],rM=iM[1],zM(iM[0],iM[1])}finally{tM.SH6B(MM,rM,1)}}th(){return tM.Y3s6(this.__wbg_ptr)>>>0}rd(){return tM.boFw(this.__wbg_ptr)>>>0}nd(){let MM,rM;try{const iM=tM.mxFd(this.__wbg_ptr);return MM=iM[0],rM=iM[1],zM(iM[0],iM[1])}finally{tM.SH6B(MM,rM,1)}}md(){const MM=tM.Ha7W(this.__wbg_ptr);var rM=PM(MM[0],MM[1]).slice();return tM.SH6B(MM[0],4*MM[1],4),rM}ld(){const MM=tM.YbGx(this.__wbg_ptr);var rM,iM,OM=(rM=MM[0],iM=MM[1],rM>>>=0,QM().subarray(rM/8,rM/8+iM)).slice();return tM.SH6B(MM[0],8*MM[1],8),OM}Ed(){return tM.f4r3(this.__wbg_ptr)>>>0}ed(MM){const rM=tM.TEw8(this.__wbg_ptr,MM);if(rM[1])throw EM(rM[0])}bd(){tM.cdJL(this.__wbg_ptr)}td(){tM.DcSa(this.__wbg_ptr)}Cd(){const MM=tM.PxNK(this.__wbg_ptr);if(MM[1])throw EM(MM[0])}ud(){return tM.VL7J(this.__wbg_ptr)>>>0}wd(){const MM=tM.HVwM(this.__wbg_ptr);if(MM[1])throw EM(MM[0])}Rd(MM,rM){const iM=tM.ydSl(this.__wbg_ptr,MM,rM);if(iM[1])throw EM(iM[0])}pd(MM){let rM,iM;try{const jM=tM.iH85(this.__wbg_ptr,MM);var OM=jM[0],SM=jM[1];if(jM[3])throw OM=0,SM=0,EM(jM[2]);return rM=OM,iM=SM,zM(OM,SM)}finally{tM.SH6B(rM,iM,1)}}Wd(MM){return tM.l5zJ(this.__wbg_ptr,MM)>>>0}sd(MM){return tM.MKpo(this.__wbg_ptr,MM)>>>0}Ud(){const MM=tM.Dw7E(this.__wbg_ptr);var rM=PM(MM[0],MM[1]).slice();return tM.SH6B(MM[0],4*MM[1],4),rM}Dd(){return 0!==tM.RYxg(this.__wbg_ptr)}constructor(MM,rM,iM,OM,SM,jM){const PM=lM(MM,tM.l7ge,tM.x3l4),nM=gM,zM=yM(rM,tM.l7ge),LM=gM,mM=function(MM,rM){const iM=rM(8*MM.length,8)>>>0;return QM().set(MM,iM/8),gM=MM.length,iM}(iM,tM.l7ge),HM=gM,hM=yM(OM,tM.l7ge),JM=gM,dM=yM(SM,tM.l7ge),UM=gM,GM=tM.pqki(PM,nM,zM,LM,mM,HM,hM,JM,dM,UM,jM);if(GM[2])throw EM(GM[1]);return this.__wbg_ptr=GM[0],aM.register(this,this.__wbg_ptr,this),this}kd(){let MM,rM;try{const iM=tM.hi9y(this.__wbg_ptr);return MM=iM[0],rM=iM[1],zM(iM[0],iM[1])}finally{tM.SH6B(MM,rM,1)}}Zd(MM,rM){const iM=lM(MM,tM.l7ge,tM.x3l4),OM=gM,SM=yM(rM,tM.l7ge),jM=gM,aM=tM.lN6C(this.__wbg_ptr,iM,OM,SM,jM);if(aM[1])throw EM(aM[0])}od(){return tM.zUXN(this.__wbg_ptr)>>>0}fd(){return tM.xuHy(this.__wbg_ptr)>>>0}gd(){return tM.aVjl(this.__wbg_ptr)>>>0}Gd(){return tM.KH0s(this.__wbg_ptr)>>>0}warnings(){let MM,rM;try{const iM=tM.mwGb(this.__wbg_ptr);return MM=iM[0],rM=iM[1],zM(iM[0],iM[1])}finally{tM.SH6B(MM,rM,1)}}}function OM(MM,rM){const iM=lM(MM,tM.l7ge,tM.x3l4),OM=gM,SM=tM.pKfi(iM,OM,rM);if(SM[1])throw EM(SM[0])}function SM(){tM.zJDg()}function jM(){return{__proto__:null,nlQB:{__proto__:null,boDE:function(MM,rM){return function(MM){dM===JM.length&&JM.push(JM.length+1);const rM=dM;return dM=JM[rM],JM[rM]=MM,rM}(Error(zM(MM,rM)))},opG3:function(MM,rM){throw new Error(zM(MM,rM))},fJWF:function(MM,rM){console.error(zM(MM,rM))}}}}Symbol.dispose&&(iM.prototype[Symbol.dispose]=iM.prototype.free);const aM="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((MM=>tM.kBjc(MM,1)));function PM(MM,rM){return MM>>>=0,mM().subarray(MM/4,MM/4+rM)}let nM=null;function QM(){return null!==nM&&0!==nM.byteLength||(nM=new Float64Array(tM.memory.buffer)),nM}function zM(MM,rM){return function(MM,rM){CM+=rM,CM>=GM&&(UM=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),UM.decode(),CM=rM);return UM.decode(hM().subarray(MM,MM+rM))}(MM>>>0,rM)}let LM=null;function mM(){return null!==LM&&0!==LM.byteLength||(LM=new Uint32Array(tM.memory.buffer)),LM}let HM=null;function hM(){return null!==HM&&0!==HM.byteLength||(HM=new Uint8Array(tM.memory.buffer)),HM}let JM=new Array(1024).fill(void 0);JM.push(void 0,null,!0,!1);let dM=JM.length;function yM(MM,rM){const iM=rM(4*MM.length,4)>>>0;return mM().set(MM,iM/4),gM=MM.length,iM}function lM(MM,rM,iM){if(void 0===iM){const iM=eM.encode(MM),OM=rM(iM.length,1)>>>0;return hM().subarray(OM,OM+iM.length).set(iM),gM=iM.length,OM}let OM=MM.length,SM=rM(OM,1)>>>0;const jM=hM();let aM=0;for(;aM<OM;aM++){const rM=MM.charCodeAt(aM);if(rM>127)break;jM[SM+aM]=rM}if(aM!==OM){0!==aM&&(MM=MM.slice(aM)),SM=iM(SM,OM,OM=aM+3*MM.length,1)>>>0;const rM=hM().subarray(SM+aM,SM+OM);aM+=eM.encodeInto(MM,rM).written,SM=iM(SM,OM,aM,1)>>>0}return gM=aM,SM}function EM(MM){const rM=function(MM){return JM[MM]}(MM);return function(MM){MM<1028||(JM[MM]=dM,dM=MM)}(MM),rM}let UM=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});UM.decode();const GM=2146435072;let CM=0;const eM=new TextEncoder;"encodeInto"in eM||(eM.encodeInto=function(MM,rM){const iM=eM.encode(MM);return rM.set(iM),{read:MM.length,written:iM.length}});let bM,wM,tM,gM=0;function uM(MM,rM){return wM=MM,tM=MM.exports,bM=rM,nM=null,LM=null,HM=null,tM.z8nZ(),tM}function RM(MM){if(void 0!==tM)return tM;void 0!==MM&&(Object.getPrototypeOf(MM)===Object.prototype?({module:MM}=MM):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const rM=jM();MM instanceof WebAssembly.Module||(MM=new WebAssembly.Module(MM));return uM(new WebAssembly.Instance(MM,rM),MM)}async function pM(MM){if(void 0!==tM)return tM;void 0!==MM&&(Object.getPrototypeOf(MM)===Object.prototype?({module_or_path:MM}=MM):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const rM=jM();("string"===typeof MM||"function"===typeof Request&&MM instanceof Request||"function"===typeof URL&&MM instanceof URL)&&(MM=fetch(MM));const{instance:iM,module:OM}=await async function(MM,rM){if("function"===typeof Response&&MM instanceof Response){if(!MM.ok)throw new Error(`failed to fetch Wasm: ${MM.status} ${MM.statusText} fetching \'${MM.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(MM,rM)}catch(iM){if(!function(MM){switch(MM){case"basic":case"cors":case"default":return!0}return!1}(MM.type)||"application/wasm"===MM.headers.get("Content-Type"))throw iM;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",iM)}const OM=await MM.arrayBuffer();return await WebAssembly.instantiate(OM,rM)}{const iM=await WebAssembly.instantiate(MM,rM);return iM instanceof WebAssembly.Instance?{instance:iM,module:MM}:iM}}(await MM,rM);return uM(iM,OM)}let WM=null,sM=null;function DM(MM){if(null!==sM)throw sM;if(null===WM)try{const{memory:iM}=RM({module:MM});WM={wasm:rM,memory:iM}}catch(iM){throw sM=function(MM,rM){return new Error(`${MM}: ${rM instanceof Error?`${rM.name}: ${rM.message}`:String(rM)}`,{cause:rM})}("instantiate",iM),sM}return WM}function kM(MM){return MM instanceof Error?MM.message:String(MM)}const ZM=0,oM=1,fM=2,YM=3,NM=4;Error;function AM(MM){return`the texture module didn\'t load (${kM(MM)})`}function xM(MM){return""===MM?[]:MM.split("\\0")}const vM=self;let FM=null,BM=null,XM=ZM,IM=0;function KM(MM){const rM=performance.now();var iM,OM;(MM!==XM||rM-IM>=1e3)&&(XM=MM,IM=rM,vM.postMessage({type:"progress",stage:MM,wasmBytes:null!==(iM=null===(OM=BM)||void 0===OM?void 0:OM.buffer.byteLength)&&void 0!==iM?iM:0}))}const{FileReaderSync:qM}=self;function TM(MM){return(new qM).readAsDataURL(new Blob([MM],{type:"image/png"}))}function VM(MM,rM){vM.postMessage({type:"sheet",sheet:MM,pixels:rM},[rM.buffer])}function cM(MM){let rM;KM(oM);try{rM=DM(MM.module)}catch(aM){return void vM.postMessage({type:"failed",reason:AM(aM),moduleLoad:!0})}BM=rM.memory,KM(fM);const{assets:iM,layerCap:OM,warnings:SM,generator:jM}=function(MM,rM,iM,OM,SM,jM,aM){var PM;const{wasm:nM,memory:QM}=MM,{strings:zM,blocks:LM,numbers:mM,index:HM,armour:hM}=rM,JM=new nM.TS(zM,LM,mM,HM,hM,iM),dM=OM.sources.map((MM=>(null===jM||void 0===jM||jM(fM),JM.On(MM)))),yM=new Uint32Array(2*OM.sourceOfName.length);for(const[gM,uM]of OM.sourceOfName.entries())yM[2*gM]=gM,yM[2*gM+1]=dM[uM];JM.Zd(OM.names,yM),null===jM||void 0===jM||jM(YM),JM.Rd(SM,null!==(PM=null===aM||void 0===aM?void 0:aM.layers)&&void 0!==PM?PM:0),null===jM||void 0===jM||jM(NM);const lM={};for(const[gM,uM]of xM(JM.kd()).entries())null===jM||void 0===jM||jM(NM),lM[uM]=JM.pd(gM);const EM={},UM=JM.In(),GM=new Map;for(const[gM,uM]of xM(JM.wh()).entries()){const MM=UM[gM];GM.has(MM)||(null===jM||void 0===jM||jM(NM),GM.set(MM,JM.pd(MM))),EM[uM]=GM.get(MM)}JM.bd();const CM=Array.from(JM.Ud()),eM=[],bM=[],wM=(MM,rM)=>new Uint8ClampedArray(QM.buffer,MM,rM).slice();if(aM){for(let MM=0;MM<CM.length;MM++)null===jM||void 0===jM||jM(NM),JM.ed(MM),JM.Cd(),eM.push(aM.dataUrl(new Uint8Array(QM.buffer,JM.gd(),JM.fd()))),aM.onSheet(MM,wM(JM.Gd(),JM.od()));JM.td()}const tM=JM.ud();for(let gM=tM;gM<tM+JM.rd();gM++)null===jM||void 0===jM||jM(NM),eM.push(JM.pd(gM)),bM.push(wM(JM.sd(gM),JM.Wd(gM)));return{assets:{rotatedBlockTextures:lM,animatedBlockTextures:EM,blockAtlasArr:eM,blockAtlasPixels:bM,armourAtlas:JM.pd(JM.th()),imagesPerAtlas:CM,blockAtlasWidth:JM.Ed()},layerCap:JM.Dd()?SM:0,warnings:JM.warnings(),generator:JM}}(rM,MM.inputs,MM.isDefaultPack,{sources:MM.sources,names:MM.names,sourceOfName:MM.sourceOfName},MM.maxLayerWidth,KM,MM.sheetLayers>0?{layers:MM.sheetLayers,onSheet:VM,dataUrl:TM}:void 0);FM=jM,vM.postMessage({type:"required",assets:iM,layerCap:OM,warnings:SM},iM.blockAtlasPixels.map((MM=>MM.buffer)))}self.onmessageerror=()=>{vM.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=MM=>{let{data:rM}=MM;try{"required"===rM.type?cM(rM):function(){if(!FM)throw new Error("No required assets to follow");const{colours:MM,warnings:rM}=function(MM){return MM.wd(),{colours:{blocks:MM.nd(),counts:MM.md(),values:MM.ld()},warnings:MM.warnings()}}(FM);vM.postMessage({type:"optional",...MM,warnings:rM},[MM.counts.buffer,MM.values.buffer])}()}catch(iM){const MM=kM(iM),rM=iM instanceof WebAssembly.RuntimeError?`wasm trapped (${MM})`:MM;vM.postMessage({type:"failed",reason:rM,stack:iM instanceof Error?iM.stack:void 0})}}})();', "Worker", void 0, iM.p + "generation.worker.2dfe4cda.worker.js")
+    }
+    var nM = iM(37215),
+      QM = iM(3629),
+      zM = iM(3647),
+      LM = iM(3640),
+      mM = iM(3606);
+
+    function HM(MM) {
+      return "" === MM ? [] : MM.split("\0")
     }
 
-    function PQ(QQ, WQ, XQ) {
-      const wQ = FQ(XQ);
-      return WQ >= wQ && WQ < XQ && (null === QQ.lastShownAt || QQ.lastShownAt < wQ)
+    function hM(MM) {
+      if ("" !== MM)
+        for (const rM of MM.split("\n")) console.error(rM)
     }
 
-    function gQ(QQ, WQ) {
-      const {
-        arrival: XQ,
-        now: wQ,
-        endsAt: qQ,
-        playedOnDevice: sQ
-      } = WQ;
-      return !(wQ >= qQ || !sQ) && (!(!PQ(QQ, wQ, qQ) && 0 !== QQ.shownCount && null !== QQ.lastShownAt) || "open" === XQ && wQ - QQ.lastShownAt >= (FQ = QQ.shownCount, zQ[Math.min(Math.max(FQ, 1), zQ.length) - 1] * TQ));
-      var FQ
-    }
-    var JQ = XQ(382),
-      rQ = XQ(1532),
-      IQ = XQ(26),
-      jQ = XQ(2359),
-      BQ = XQ(3267),
-      yQ = XQ(3276),
-      VQ = XQ(2030),
-      DQ = XQ(1238),
-      pQ = XQ(1165);
-    var GQ = XQ(1404),
-      UQ = XQ(43),
-      bQ = XQ(698),
-      vQ = XQ(2652),
-      dQ = XQ(1407),
-      HQ = XQ(2655),
-      aQ = XQ(2351),
-      lQ = XQ(1162),
-      hQ = XQ(2699),
-      iQ = XQ(2708),
-      cQ = XQ(3320),
-      AQ = XQ(1226),
-      RQ = XQ(1507),
-      EQ = XQ(3342),
-      CQ = XQ(34557),
-      uQ = XQ(2716),
-      LQ = XQ(34568),
-      kQ = XQ(1145);
-
-    function fQ(QQ) {
-      let {
-        shownView: WQ,
-        close: XQ
-      } = QQ;
-      const {
-        t: qQ
-      } = (0, AQ.C)(), TQ = (0, hQ.Q)(), {
-        purchaseUnderWay: zQ,
-        notice: sQ,
-        needsLogin: FQ,
-        buyPack: PQ
-      } = (0, LQ.d)("popup", ((QQ, WQ) => {
-        XQ(!1), (0, cQ.d)(QQ, WQ)
-      })), gQ = null === TQ;
-      (0, wQ.useEffect)((() => {
-        gQ && XQ(!1)
-      }), [gQ, XQ]);
-      const JQ = null !== TQ && void 0 !== TQ ? TQ : WQ;
-      return (0, kQ.jsxs)("div", {
-        className: "NewPlayerDealPopup",
-        children: [(0, kQ.jsx)("div", {
-          className: "NewPlayerDealPopupTitle",
-          children: qQ("newPlayerDeal:title")
-        }), (0, kQ.jsx)("div", {
-          className: "NewPlayerDealPopupSub",
-          children: qQ("newPlayerDeal:samePrice")
-        }), (0, kQ.jsx)(CQ.d, {
-          className: "NewPlayerDealClockBig",
-          endsAt: JQ.endsAt
-        }), (0, kQ.jsx)(CQ.e, {
-          view: JQ,
-          needsLogin: FQ,
-          busy: zQ,
-          highlight: null,
-          onBuy: QQ => {
-            PQ(JQ, QQ)
-          }
-        }), (0, kQ.jsx)(EQ.h, {
-          notice: sQ,
-          className: "SmallTextBold NewPlayerDealNotice"
-        }), (0, kQ.jsx)(EQ.c, {
-          className: "SmallTextBold NewPlayerDealNotice"
-        }), (0, kQ.jsx)(RQ.h, {
-          className: "NewPlayerDealNoThanks",
-          onClick: () => {
-            XQ(!0)
-          },
-          children: qQ("newPlayerDeal:noThanks")
-        })]
-      })
-    }
-
-    function SQ(QQ) {
-      let {
-        arm: WQ,
-        children: XQ
-      } = QQ;
-      return (0, wQ.useEffect)((() => {
-        (0, hQ.M)(!0)
-      }), []), (0, hQ.S)(WQ, "popup"), XQ
-    }
-
-    function tQ(QQ) {
-      let WQ = null;
-      GQ.NotificationProvider.showCustomPopup({
-        body: XQ => (0, kQ.jsx)(SQ, {
-          arm: QQ.arm,
-          children: (0, kQ.jsx)(fQ, {
-            shownView: QQ,
-            close: QQ => {
-              WQ ??= QQ, XQ()
-            }
-          })
-        }),
-        middleScreenPopupContainerClassName: "NewPlayerDealPopupContainer",
-        middleScreenPopupClassName: "NewPlayerDealPopupPanel",
-        disableExitButton: !0,
-        unlockPointerKey: "NewPlayerDealPopup"
-      }).getResult().then((XQ => {
-        (0, hQ.M)(!1), !1 !== WQ && "notificationTornDown" !== XQ && (0, hQ.F)("new_player_deal.close", (0, uQ.e)(QQ.arm, "popup"))
-      }))
-    }
-    const oQ = 2500,
-      eQ = 6e4;
-    const nQ = 500,
-      xQ = 6e4;
-
-    function YQ(QQ) {
-      const WQ = Date.now() + xQ;
-      return new Promise((XQ => {
-        const wQ = () => {
-          QQ() ? (0, HQ.g)() || GQ.NotificationProvider.hasPopup() || (0, dQ.h)() || (0, hQ.s)() || null !== IQ.b.get("openEverythingMenuName") ? Date.now() > WQ ? XQ(!1) : setTimeout(wQ, nQ) : XQ(!0) : XQ(!1)
-        };
-        wQ()
-      }))
-    }
-    const NQ = "newPlayerDealPointerDeferred_";
-    let ZQ = !1,
-      OQ = null;
-
-    function KQ(QQ, WQ) {
-      var XQ;
-      return (null === (XQ = OQ) || void 0 === XQ ? void 0 : XQ.accountId) === WQ && OQ.shownCount === QQ.shownCount
-    }
-
-    function mQ(QQ, WQ, XQ) {
-      return !!KQ(WQ, XQ) && (OQ = null, (0, hQ.y)(XQ), tQ(QQ), !0)
-    }
-    async function MQ(QQ, WQ, XQ, wQ) {
-      if (ZQ) return !1;
-      let qQ;
-      ZQ = !0;
-      try {
-        qQ = await async function(QQ) {
+    function JM(MM, rM) {
+      return async function(MM, rM) {
+        const iM = Object.keys(MM),
+          OM = [],
+          SM = new Map,
+          jM = new Uint32Array(iM.length);
+        for (const [aM, PM] of iM.entries()) {
           const {
-            newPlayerDeal: WQ,
-            counted: XQ
-          } = await (0, pQ.postJsonWithMetricsCookiesAndJsonResponse)(`${DQ.clientSideServerUrls.indexUrl}/index/new-player-deal/shown`, {
-            shownCount: QQ
-          }, {
-            retries: 1
-          });
-          return {
-            newPlayerDeal: WQ,
-            counted: !0 === XQ
+            url: rM
+          } = MM[PM];
+          SM.has(rM) || (SM.set(rM, OM.length), OM.push(rM)), jM[aM] = SM.get(rM)
+        }
+        return {
+          sources: await rM(OM),
+          names: iM.join("\0"),
+          sourceOfName: jM
+        }
+      }(MM, (async MM => {
+        const iM = await async function(MM, rM) {
+          const iM = new AbortController,
+            OM = () => {
+              iM.abort()
+            };
+          rM.addEventListener("abort", OM);
+          try {
+            const rM = await Promise.all(MM.map((async MM => {
+              try {
+                const rM = await fetch(MM, {
+                  signal: iM.signal
+                });
+                if (!rM.ok) throw new Error(`HTTP ${rM.status}`);
+                return [MM, await rM.blob()]
+              } catch (rM) {
+                throw iM.abort(), new zM.k(zM.j.Fetch, `fetching ${MM} failed: ${(0,LM.d)(rM)}`)
+              }
+            })));
+            return new Map(rM)
+          } finally {
+            rM.removeEventListener("abort", OM)
           }
-        }(WQ.shownCount)
-      } catch (TQ) {
-        return console.error("New player deal: counting a showing of its popup failed", TQ), !1
-      } finally {
-        ZQ = !1
+        }(MM.filter((MM => !MM.startsWith("data:"))), rM);
+        return Promise.all(MM.map((MM => {
+          var rM;
+          return (0, mM.d)(null !== (rM = iM.get(MM)) && void 0 !== rM ? rM : MM)
+        })))
+      }))
+    }
+
+    function dM(MM, rM) {
+      const iM = zM.k.from(MM, rM ? zM.j.Optional : zM.j.Error);
+      return iM.code !== zM.j.Fetch && iM.code !== zM.j.Error && (0, QM.h)(iM.message), iM
+    }
+
+    function yM(MM) {
+      return MM.message ? new Error(`the texture worker failed: ${MM.message}`) : new zM.k(zM.j.Load, "the texture worker failed to start")
+    }
+    class lM {
+      constructor(MM) {
+        this.worker = MM, this.failure = void 0, this.abandonStep = null, MM.addEventListener("error", (MM => {
+          MM.preventDefault(), this.failure ??= yM(MM)
+        }))
       }
-      return (0, hQ.O)(XQ, qQ.newPlayerDeal), qQ.counted && null !== qQ.newPlayerDeal && (OQ = {
-        accountId: wQ,
-        shownCount: qQ.newPlayerDeal.shownCount
-      }, "landingPage" === IQ.b.get("gameState") && mQ(QQ, qQ.newPlayerDeal, wQ)), !0
-    }
-    let QW = null;
-
-    function WW(QQ, WQ, XQ, qQ, TQ) {
-      var zQ;
-      const {
-        gameState: sQ
-      } = (0, IQ.n)(["gameState"]), rQ = "landingPage" === sQ, {
-        pointing: jQ
-      } = (0, vQ.f)(), BQ = (0, wQ.useRef)(jQ);
-      BQ.current = jQ;
-      const yQ = (0, wQ.useRef)(QQ);
-      yQ.current = QQ;
-      const DQ = (0, wQ.useRef)(WQ);
-      DQ.current = WQ;
-      const pQ = (0, wQ.useRef)(XQ);
-      pQ.current = XQ;
-      const [GQ, dQ] = (0, wQ.useState)(null), HQ = (0, wQ.useRef)(0), aQ = (0, wQ.useRef)(0), lQ = (0, wQ.useRef)(!1), hQ = (0, wQ.useCallback)((QQ => {
-        "open" === function(QQ) {
-          const WQ = QQ ? (0, bQ.d)() : (0, bQ.peekVisitSessionId)(),
-            XQ = null !== WQ && WQ === QW ? "return" : "open";
-          return QW = WQ, XQ
-        }(QQ) && (lQ.current = !0), HQ.current++, dQ({
-          seq: HQ.current,
-          kind: lQ.current ? "open" : "return"
-        })
-      }), []);
-      (0, wQ.useEffect)((() => {
-        if (!rQ) return void dQ(null);
-        hQ(!0);
-        const QQ = () => {
-          "visible" === document.visibilityState && hQ(!0)
-        };
-        return document.addEventListener("visibilitychange", QQ), () => {
-          document.removeEventListener("visibilitychange", QQ)
+      static async generateRequired(MM, rM, iM, jM) {
+        let aM = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : zM.c,
+          QM = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        const mM = (0, nM.j)();
+        if (null !== mM) throw dM(new zM.k(zM.j.Load, mM), !1);
+        let HM;
+        const yM = new AbortController;
+        try {
+          HM = new lM(function() {
+            try {
+              return new PM
+            } catch (MM) {
+              throw new zM.k(zM.j.Load, `the texture worker failed to start: ${(0,LM.d)(MM)}`)
+            }
+          }());
+          const mM = (0, nM.c)().catch((MM => {
+              throw new zM.k(zM.j.Load, function(MM) {
+                return `the texture module didn't load (${(0,LM.d)(MM)})`
+              }(MM))
+            })),
+            dM = (async () => {
+              const jM = function(MM, rM, iM) {
+                const OM = [],
+                  SM = new Map,
+                  jM = MM => {
+                    let rM = SM.get(MM);
+                    return void 0 === rM && (rM = OM.length, OM.push(MM), SM.set(MM, rM)), rM
+                  },
+                  aM = [],
+                  PM = [],
+                  nM = new Map,
+                  QM = (MM, rM) => {
+                    const iM = "object" === typeof MM && null !== MM && "animTextures" in MM ? MM.animTextures : void 0;
+                    if (!Array.isArray(iM) || !iM.every((MM => "string" === typeof MM))) throw new Error(`Block ${rM} has textureInfo the encoding doesn't cover`);
+                    aM.push(iM.length, ...iM.map(jM))
+                  };
+                let zM = 0;
+                for (const HM in MM) {
+                  const rM = MM[HM];
+                  aM.push(jM(HM));
+                  const iM = (rM.transTex ? 1 : 0) | (rM.CH ? 2 : 0) | (rM.particlesIgnoreBlack ? 4 : 0),
+                    OM = "string" === typeof rM.itemTexture ? jM(rM.itemTexture) : 4294967295,
+                    SM = `${iM},${OM}`,
+                    LM = rM.textureInfo,
+                    mM = nM.get(LM);
+                  if ((null === mM || void 0 === mM ? void 0 : mM.fields) !== SM)
+                    if (nM.set(LM, {
+                        entry: zM++,
+                        fields: SM
+                      }), aM.push(1, iM, OM), "string" === typeof LM) aM.push(1, jM(LM));
+                    else if (Array.isArray(LM)) {
+                    aM.push(3, LM.length);
+                    for (const MM of LM) "string" === typeof MM ? aM.push(0, jM(MM)) : "number" === typeof MM ? (aM.push(2, PM.length), PM.push(MM)) : (aM.push(1), QM(MM, HM))
+                  } else LM ? (aM.push(2), QM(LM, HM)) : aM.push(0);
+                  else aM.push(0, mM.entry), zM++
+                }
+                const LM = [];
+                for (const HM in rM) LM.push(jM(HM), rM[HM]);
+                const mM = new Uint32Array(iM.map(jM));
+                return {
+                  strings: OM.join("\0"),
+                  blocks: new Uint32Array(aM),
+                  numbers: new Float64Array(PM),
+                  index: new Uint32Array(LM),
+                  armour: mM
+                }
+              }(MM, rM, OM.c.map(SM.g));
+              return {
+                inputs: jM,
+                sources: await JM(iM, yM.signal)
+              }
+            })(),
+            [EM, {
+              inputs: UM,
+              sources: GM
+            }] = await Promise.all([mM, dM]),
+            CM = [UM.blocks.buffer, UM.numbers.buffer, UM.index.buffer, UM.armour.buffer, GM.sourceOfName.buffer];
+          for (const MM of GM.sources) CM.push(MM.buffer);
+          const eM = [],
+            {
+              assets: bM,
+              layerCap: wM,
+              warnings: tM
+            } = await HM.request({
+              type: "required",
+              module: EM,
+              inputs: UM,
+              isDefaultPack: jM,
+              maxLayerWidth: aM,
+              sheetLayers: QM,
+              ...GM
+            }, CM, ((MM, rM) => {
+              eM[MM] = rM
+            }));
+          return QM > 0 && (bM.blockAtlasPixels = function(MM, rM) {
+            const iM = [];
+            for (let OM = 0; OM < rM; OM++) {
+              const SM = MM[OM];
+              if (void 0 === SM) throw new Error(`the texture worker's sheet ${OM} of ${rM} didn't arrive`);
+              iM.push(SM)
+            }
+            return iM
+          }(eM, bM.imagesPerAtlas.length)), hM(tM), {
+            assets: bM,
+            layerCap: wM,
+            worker: HM
+          }
+        } catch (UM) {
+          var EM;
+          throw yM.abort(), null === (EM = HM) || void 0 === EM || EM.terminate(), dM(UM, !1)
         }
-      }), [rQ, hQ]);
-      const iQ = null !== (zQ = null === QQ || void 0 === QQ ? void 0 : QQ.endsAt) && void 0 !== zQ ? zQ : null;
-      (0, wQ.useEffect)((() => {
-        if (!rQ || null === iQ) return;
-        const QQ = FQ(iQ) - Date.now();
-        if (QQ <= 0 || QQ > VQ.c) return;
-        const WQ = setTimeout((() => {
-          hQ(!1)
-        }), QQ);
-        return () => {
-          clearTimeout(WQ)
+      }
+      async generateOptional() {
+        let MM;
+        try {
+          MM = await this.request({
+            type: "optional"
+          }, [])
+        } catch (rM) {
+          throw dM(rM, !0)
+        } finally {
+          this.terminate()
         }
-      }), [rQ, iQ, hQ]);
-      const cQ = null !== QQ && null !== qQ && null === TQ;
-      (0, wQ.useEffect)((() => {
-        if (null === GQ || !cQ || aQ.current >= GQ.seq) return;
-        const QQ = () => HQ.current === GQ.seq && "landingPage" === IQ.b.get("gameState"),
-          WQ = setTimeout((() => {
-            const WQ = yQ.current,
-              XQ = DQ.current;
-            if (null === WQ || null === XQ || !QQ()) return;
-            aQ.current = GQ.seq;
-            const wQ = Date.now(),
-              TQ = KQ(XQ, qQ);
-            if (!(TQ || gQ(XQ, {
-                arrival: GQ.kind,
-                now: wQ,
-                endsAt: WQ.endsAt,
-                playedOnDevice: UQ.i.getItem(JQ.Pb) > 0
-              }))) return void(lQ.current = !1);
-            const zQ = PQ(XQ, wQ, WQ.endsAt);
-            YQ(QQ).then((async QQ => {
-              const WQ = yQ.current;
-              QQ && null !== WQ && DQ.current === XQ && (!BQ.current || zQ || function(QQ, WQ) {
-                return UQ.i.getItem(NQ + QQ) === WQ
-              }(qQ, XQ.shownCount) ? TQ ? mQ(WQ, XQ, qQ) && (lQ.current = !1) : await MQ(WQ, XQ, pQ.current, qQ) && (lQ.current = !1) : function(QQ, WQ) {
-                UQ.i.setItem(NQ + QQ, WQ)
-              }(qQ, XQ.shownCount))
-            }))
-          }), oQ);
-        return () => {
-          clearTimeout(WQ)
-        }
-      }), [GQ, cQ, qQ])
-    }
-
-    function XW() {
-      const {
-        userContext: QQ
-      } = (0, lQ.c)(), WQ = (0, jQ.usePurchasesAllowed)(), [XQ, TQ] = (0, wQ.useState)(iQ.j);
-      (0, wQ.useEffect)((() => (TQ((0, iQ.j)()), (0, iQ.l)(TQ))), []);
-      const zQ = (0, hQ.b)(QQ);
-      ! function(QQ, WQ, XQ) {
-        const [TQ, zQ] = (0, wQ.useState)(0);
-        (0, wQ.useEffect)((() => {
-          if (!WQ || null === QQ) return;
-          if (null !== XQ) return void(0, hQ.J)(QQ, (0, iQ.e)());
-          if (null !== (0, hQ.h)(QQ)) return;
-          let wQ, TQ = !1;
-          return (0, yQ.getBillingClient)().getOfferings(qQ).then((WQ => {
+        return hM(MM.warnings),
+          function(MM) {
             let {
-              offering: XQ
-            } = WQ;
-            (0, hQ.J)(QQ, null === XQ ? [] : XQ.packages.filter(BQ.isPricedPackage))
-          }), (QQ => {
-            console.error("New player deal: loading its prices failed", QQ), TQ || (wQ = setTimeout((() => {
-              zQ((QQ => QQ + 1))
-            }), eQ))
-          })), () => {
-            TQ = !0, clearTimeout(wQ)
-          }
-        }), [QQ, WQ, XQ, TQ])
-      }(zQ, null !== (0, hQ.k)(QQ) && (WQ || null !== XQ), XQ);
-      const sQ = (0, hQ.Q)();
-      return WW(sQ, (0, hQ.k)(QQ), QQ, zQ, XQ),
-        function() {
-          const {
-            userContext: QQ
-          } = (0, lQ.c)(), {
-            gameState: WQ
-          } = (0, IQ.n)(["gameState"]);
-          (0, wQ.useEffect)((() => {
-            if ("landingPage" !== WQ || !QQ.isLoggedIn() && !(0, jQ.guestsMayBuy)()) return;
-            const XQ = (0, hQ.d)(QQ),
-              wQ = (0, aQ.z)((QQ => XQ.includes(QQ.item)));
-            null !== wQ && ((0, rQ.reportAnalyticsClick)({
-              id: "store.login_resume",
-              value: wQ.item
-            }), (0, aQ.q)({
-              mode: "self",
-              source: "loginResume",
-              highlight: wQ.item
+              blocks: rM,
+              counts: iM,
+              values: OM
+            } = MM;
+            const SM = {};
+            let jM = 0;
+            for (const [aM, PM] of HM(rM).entries()) {
+              const MM = [];
+              for (let rM = 0; rM < iM[aM]; rM++, jM += 3) MM.push([OM[jM], OM[jM + 1], OM[jM + 2]]);
+              SM[PM] = MM
+            }
+            return SM
+          }(MM)
+      }
+      terminate() {
+        var MM;
+        this.worker.terminate(), null === (MM = this.abandonStep) || void 0 === MM || MM.call(this)
+      }
+      request(MM, rM, iM) {
+        return new Promise(((OM, SM) => {
+          if (void 0 !== this.failure) return void SM(this.failure);
+          let jM = zM.m.None,
+            aM = 0,
+            PM = null;
+          const nM = () => {
+            var MM;
+            null === (MM = PM) || void 0 === MM || MM.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
+          };
+          this.abandonStep = () => {
+            nM(), SM(new Error("the texture worker was terminated"))
+          }, this.worker.onmessage = rM => {
+            let {
+              data: QM
+            } = rM;
+            var LM;
+            if ("progress" === QM.type) return jM = QM.stage, aM = QM.wasmBytes, void(null === (LM = PM) || void 0 === LM || LM.restart(jM === zM.m.Generating ? zM.f : zM.h));
+            "sheet" === QM.type && iM ? iM(QM.sheet, QM.pixels) : (nM(), "failed" === QM.type ? SM(QM.moduleLoad ? new zM.k(zM.j.Load, QM.reason) : function(MM, rM) {
+              let {
+                reason: iM,
+                stack: OM
+              } = MM;
+              const SM = new Error(EM(iM, rM));
+              void 0 !== OM && (SM.stack = OM);
+              return SM
+            }(QM, aM)) : QM.type !== MM.type ? SM(new Error(`the texture worker answered ${QM.type} to ${MM.type}`)) : OM(QM))
+          }, this.worker.onerror = MM => {
+            nM(), SM(yM(MM))
+          }, this.worker.onmessageerror = () => {
+            nM(), SM(new Error("the texture worker's answer couldn't be read"))
+          };
+          try {
+            this.worker.postMessage(MM, rM), PM = (0, zM.n)((() => {
+              nM();
+              const rM = new zM.k("required" === MM.type ? `${zM.j.Stalled}${jM}` : zM.j.Optional, EM("the texture worker stopped responding", aM));
+              SM(rM)
             }))
-          }), [QQ, WQ])
-        }(),
-        function(QQ, WQ, XQ) {
-          const qQ = (0, wQ.useRef)(null);
-          (0, wQ.useEffect)((() => {
-            if (null === XQ || null === QQ || null === WQ || qQ.current === XQ) return;
-            qQ.current = XQ;
-            const wQ = QQ.packs[0].pack;
-            switch (XQ.show) {
-              case "popup":
-                (0, hQ.y)(WQ), tQ(QQ);
-                break;
-              case "store":
-                (0, aQ.q)({
-                  mode: "self",
-                  source: "newPlayerDeal"
-                });
-                break;
-              case "resume":
-                (0, aQ.q)({
-                  mode: "self",
-                  source: "loginResume",
-                  highlight: wQ.packageId
-                });
-                break;
-              case "bought":
-                (0, aQ.q)({
-                  mode: "self",
-                  source: "newPlayerDeal"
-                }), (0, hQ.u)(WQ), (0, LQ.c)(wQ.gems);
-                break;
-              case "gift":
-                (0, aQ.q)({
-                  mode: "gift",
-                  source: "newPlayerDeal",
-                  giftRecipientName: "Friend"
-                })
-            }
-          }), [XQ, QQ, WQ])
-        }(sQ, zQ, XQ), null
-    }
-  },
-  34557: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      d: () => jQ,
-      e: () => yQ
-    });
-    XQ(34562);
-    var wQ = XQ(61),
-      qQ = XQ(1081),
-      TQ = XQ.n(qQ),
-      zQ = XQ(1226),
-      sQ = XQ(1507),
-      FQ = XQ(2726),
-      PQ = XQ(1094),
-      gQ = XQ(2329),
-      JQ = XQ(3336),
-      rQ = XQ(2366),
-      IQ = XQ(1145);
-
-    function jQ(QQ) {
-      let {
-        endsAt: WQ,
-        className: XQ
-      } = QQ;
-      return (0, IQ.jsxs)("span", {
-        className: TQ()("NewPlayerDealClock", XQ),
-        children: [(0, IQ.jsx)(PQ.d, {
-          name: "hourglass"
-        }), (0, IQ.jsx)(FQ.h, {
-          toTime: WQ
-        })]
-      })
-    }
-
-    function BQ(QQ) {
-      let {
-        offered: WQ,
-        needsLogin: XQ,
-        busy: wQ,
-        highlight: qQ,
-        onBuy: FQ
-      } = QQ;
-      const {
-        t: PQ
-      } = (0, zQ.C)(), {
-        pack: jQ
-      } = WQ, BQ = (0, JQ.i)(WQ.package);
-      return (0, IQ.jsxs)("div", {
-        className: TQ()("NewPlayerDealPack", {
-          NewPlayerDealPackHighlight: qQ
-        }),
-        children: [(0, IQ.jsxs)("div", {
-          className: "NewPlayerDealPackArt",
-          children: [(0, IQ.jsx)("img", {
-            src: rQ.d[WQ.tier],
-            alt: "",
-            draggable: !1
-          }), (0, IQ.jsx)("span", {
-            className: "NewPlayerDealTag",
-            children: PQ("newPlayerDeal:tag")
-          })]
-        }), (0, IQ.jsx)("div", {
-          className: "NewPlayerDealPackText",
-          children: (0, IQ.jsx)(gQ.d, {
-            className: "NewPlayerDealPackAmount",
-            amount: jQ.gems
-          })
-        }), (0, IQ.jsx)(sQ.s, {
-          className: "NewPlayerDealBuy",
-          loading: wQ,
-          onClick: FQ,
-          ariaLabel: PQ("newPlayerDeal:buyLabel", {
-            amount: jQ.gems.toLocaleString(),
-            price: BQ
-          }),
-          children: PQ(XQ ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
-            price: BQ
-          })
-        })]
-      })
-    }
-
-    function yQ(QQ) {
-      let {
-        view: WQ,
-        needsLogin: XQ,
-        busy: qQ,
-        highlight: sQ,
-        onBuy: FQ
-      } = QQ;
-      const {
-        t: PQ
-      } = (0, zQ.C)();
-      return (0, IQ.jsxs)("div", {
-        className: TQ()("NewPlayerDealPacks", WQ.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
-        children: [WQ.packs.map(((QQ, WQ) => (0, IQ.jsxs)(wQ.Fragment, {
-          children: [WQ > 0 && (0, IQ.jsx)("div", {
-            className: "NewPlayerDealDivider",
-            "aria-hidden": !0,
-            children: (0, IQ.jsx)("i", {})
-          }), (0, IQ.jsx)(BQ, {
-            offered: QQ,
-            needsLogin: XQ,
-            busy: qQ,
-            highlight: sQ === QQ.pack.packageId,
-            onBuy: () => {
-              FQ(QQ)
-            }
-          })]
-        }, QQ.pack.packageId))), (0, IQ.jsx)("div", {
-          className: "NewPlayerDealUnder",
-          children: (0, IQ.jsx)("span", {
-            className: "NewPlayerDealLimit",
-            children: PQ("newPlayerDeal:limit")
-          })
-        })]
-      })
-    }
-  },
-  34568: (QQ, WQ, XQ) => {
-    XQ.d(WQ, {
-      c: () => HQ,
-      d: () => lQ
-    });
-    XQ(34562);
-    var wQ = XQ(3330),
-      qQ = XQ(1532),
-      TQ = XQ(2359),
-      zQ = XQ(3320),
-      sQ = XQ(3294),
-      FQ = XQ(3322),
-      PQ = XQ(3276),
-      gQ = XQ(1226),
-      JQ = XQ(1404),
-      rQ = XQ(1162),
-      IQ = XQ(1507),
-      jQ = XQ(1094),
-      BQ = XQ(2329),
-      yQ = XQ(2841),
-      VQ = XQ(2699),
-      DQ = XQ(2708),
-      pQ = XQ(2716),
-      GQ = XQ(1145);
-    const UQ = new FQ.e(PQ.getBillingClient, PQ.addPurchaseRecordListener);
-    let bQ = !1;
-
-    function vQ(QQ, WQ) {
-      null !== QQ && (0, VQ.o)(QQ) || ((0, qQ.reportAnalyticsClick)({
-        id: "store.purchase_done",
-        value: `self:${WQ.pack.packageId}`
-      }), null !== QQ && (0, VQ.u)(QQ), HQ(WQ.pack.gems))
-    }
-
-    function dQ(QQ, WQ, XQ) {
-      const qQ = (0, VQ.b)(WQ);
-      switch (QQ.kind) {
-        case "completed":
-          vQ(qQ, XQ);
-          break;
-        case "pending":
-          TQ = QQ.intentId, zQ = () => {
-            yQ.e.refresh(), vQ(qQ, XQ)
-          }, bQ || (bQ = !0, UQ.listen()), UQ.follow(TQ, zQ);
-          break;
-        case "unknownPackage":
-          (0, VQ.O)(WQ, null);
-          break;
-        case "failed":
-          QQ.errorKey === wQ.e.newPlayerDealUnavailable && (0, VQ.O)(WQ, null)
+          } catch (QM) {
+            nM(), SM(QM)
+          }
+        }))
       }
-      var TQ, zQ
     }
 
-    function HQ(QQ) {
-      JQ.NotificationProvider.showCustomPopup({
-        body: WQ => (0, GQ.jsx)(aQ, {
-          gems: QQ,
-          close: WQ
-        }),
-        middleScreenPopupClassName: "NewPlayerDealAddedPopup",
-        disableExitButton: !0
-      })
+    function EM(MM, rM) {
+      return rM > 0 ? `${MM}, its module's memory ${Math.round(rM/2**20)} MiB` : MM
+    }
+  },
+  37223: (MM, rM, iM) => {
+    iM.d(rM, {
+      b: () => OM,
+      e: () => SM,
+      h: () => jM,
+      l: () => aM
+    });
+    const OM = 1024,
+      SM = 1024 * OM;
+
+    function jM(MM) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, MM / SM)))
     }
 
-    function aQ(QQ) {
-      let {
-        gems: WQ,
-        close: XQ
-      } = QQ;
-      const {
-        t: wQ
-      } = (0, gQ.C)();
-      return (0, GQ.jsxs)("div", {
-        className: "NewPlayerDealAdded",
-        children: [(0, GQ.jsxs)("div", {
-          className: "NewPlayerDealAddedHead",
-          children: [(0, GQ.jsx)(jQ.d, {
-            name: "circle-check"
-          }), (0, GQ.jsx)(BQ.d, {
-            amount: WQ
-          }), (0, GQ.jsx)("span", {
-            children: wQ("newPlayerDeal:added")
-          })]
-        }), (0, GQ.jsx)(IQ.s, {
-          className: "NewPlayerDealAddedOk",
-          onClick: XQ,
-          children: wQ("general:ok")
-        })]
-      })
+    function aM(MM) {
+      return (MM / SM).toFixed(1)
     }
-
-    function lQ(QQ) {
-      let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zQ.d;
-      const {
-        userContext: XQ
-      } = (0, rQ.c)(), {
-        purchaseUnderWay: wQ,
-        notice: qQ,
-        buy: FQ
-      } = (0, sQ.b)(WQ), PQ = (0, DQ.j)(), gQ = XQ.mayBuy() || (0, TQ.guestsMayBuy)(), JQ = null === PQ ? !gQ : PQ.guest && !XQ.isLoggedIn();
-      return {
-        purchaseUnderWay: wQ,
-        notice: qQ,
-        needsLogin: JQ,
-        buyPack: function(wQ, qQ) {
-          (0, VQ.F)("new_player_deal.buy", (0, pQ.e)(wQ.arm, QQ, qQ.pack.packageId)), null === PQ ? FQ(function(QQ) {
-            return {
-              sku: QQ.pack.packageId,
-              tier: QQ.tier,
-              amount: QQ.pack.gems,
-              bonusPercent: 0,
-              package: QQ.package
-            }
-          }(qQ), null, {
-            followPending: !1
-          }).then((QQ => {
-            dQ(QQ, XQ, qQ)
-          })) : JQ ? WQ(qQ.pack.packageId, null) : vQ((0, VQ.b)(XQ), qQ)
+  },
+  34814: MM => {
+    MM.exports = function(MM, rM, iM, OM) {
+      var SM = self || window;
+      try {
+        try {
+          var jM;
+          try {
+            jM = new SM.Blob([MM])
+          } catch (QM) {
+            (jM = new(SM.BlobBuilder || SM.WebKitBlobBuilder || SM.MozBlobBuilder || SM.MSBlobBuilder)).append(MM), jM = jM.getBlob()
+          }
+          var aM = SM.URL || SM.webkitURL,
+            PM = aM.createObjectURL(jM),
+            nM = new SM[rM](PM, iM);
+          return aM.revokeObjectURL(PM), nM
+        } catch (QM) {
+          return new SM[rM]("data:application/javascript,".concat(encodeURIComponent(MM)), iM)
         }
+      } catch (QM) {
+        if (!OM) throw Error("Inline worker is not supported");
+        return new SM[rM](OM, iM)
       }
     }
-  },
-  34562: () => {}
+  }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const MM in modules) Object.freeze(modules[MM]);
